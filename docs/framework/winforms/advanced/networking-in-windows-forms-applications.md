@@ -5,15 +5,15 @@ helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 23251116344af49509547055af824802c4878849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523382"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712368"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Mise en réseau dans les applications Windows Forms
-Le .NET Framework fournit des classes pour afficher des pages Web, téléchargement de contenu Web, interagir avec les sites de protocole (FTP) de transfert de fichiers et consommer des Services Web, ce qui permet de générer des fonctionnalités de réseau dans votre application. Les ressources suivantes vous aideront à comprendre les technologies de mise en réseau de .NET Framework et comment vous pouvez les intégrer dans les Windows Forms.  
+Le .NET Framework fournit des classes pour afficher des pages Web, téléchargement de contenu Web, interagir avec les sites de protocole (FTP) de transfert de fichiers et utilisation de Services Web, ce qui vous permet d’intégrer des fonctionnalités de réseau dans votre application. Les ressources suivantes vous aideront à comprendre les technologies de mise en réseau de .NET Framework et comment vous pouvez les intégrer à Windows Forms.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Net>  
@@ -29,8 +29,8 @@ Le .NET Framework fournit des classes pour afficher des pages Web, téléchargem
  Une classe wrapper managé pour le `WebBrowser` contrôle qui est inclus avec Windows.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Programmation réseau dans le .NET Framework](../../../../docs/framework/network-programming/index.md)  
+ [Programmation réseau dans le .NET Framework](../../network-programming/index.md)  
  Introduction à la mise en réseau dans le .NET Framework.  
   
- [Liaison de données Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Liaison de données Windows Forms](../windows-forms-data-binding.md)  
  Décrit comment afficher le contenu de la base de données dans votre application, à partir d’une banque de données locale ou une base de données située sur un réseau.

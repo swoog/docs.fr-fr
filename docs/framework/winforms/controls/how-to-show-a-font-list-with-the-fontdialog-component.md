@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726401"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717061"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procédure : Afficher une liste de polices avec le composant FontDialog
-Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, mais aussi modifier ses aspects de l’affichage, telles que son poids et la taille.  
+Le [FontDialog](fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, mais aussi modifier ses aspects de l’affichage, telles que son poids et la taille.  
   
  La police sélectionnée dans la boîte de dialogue est retournée dans le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété. Par conséquent, en tirant parti de la police sélectionnée par l’utilisateur est aussi simple que la lecture d’une propriété.  
   
@@ -78,4 +78,4 @@ Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-componen
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.FontDialog>
-- [FontDialog, composant](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [FontDialog, composant](fontdialog-component-windows-forms.md)

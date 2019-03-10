@@ -6,30 +6,30 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 079b4121c3f9e5c55e003b089f85cd08a5bae5d2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 741da635ec187d8605a9f67aa010ff49a83ba86b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304412"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725348"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : Ajouter des Tables et des colonnes au contrôle DataGrid Windows Forms à l’aide du Concepteur
 
 > [!NOTE]
->  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Vous pouvez afficher des données dans les formulaires Windows <xref:System.Windows.Forms.DataGrid> contrôle dans les tables et colonnes en créant <xref:System.Windows.Forms.DataGridTableStyle> objets et en les ajoutant à la <xref:System.Windows.Forms.GridTableStylesCollection> objet, qui est accessible via la <xref:System.Windows.Forms.DataGrid> du contrôle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriété. Chaque style de table affiche le contenu de toute table de données spécifiée dans le <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriété de la <xref:System.Windows.Forms.DataGridTableStyle>. Par défaut, un style de table sans style de colonne spécifié affiche toutes les colonnes des table de données. Vous pouvez limiter les colonnes de la table s’affichent en ajoutant <xref:System.Windows.Forms.DataGridColumnStyle> des objets sur le <xref:System.Windows.Forms.GridColumnStylesCollection>, qui est accessible via la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriété de chaque <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Les procédures suivantes nécessitent un **Windows Application** projet avec un formulaire qui contient un <xref:System.Windows.Forms.DataGrid> contrôle. Pour plus d’informations sur la façon de configurer un tel projet, consultez [Comment : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) et [Comment : Ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Par défaut dans Visual Studio 2005, le <xref:System.Windows.Forms.DataGrid> contrôle n’est pas dans le **boîte à outils**. Pour plus d’informations sur son ajout, consultez [Comment : Ajouter des éléments à la boîte à outils](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+ Les procédures suivantes nécessitent un **Windows Application** projet avec un formulaire qui contient un <xref:System.Windows.Forms.DataGrid> contrôle. Pour plus d’informations sur la façon de configurer un tel projet, consultez [Comment : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) et [Comment : Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md). Par défaut dans Visual Studio 2005, le <xref:System.Windows.Forms.DataGrid> contrôle n’est pas dans le **boîte à outils**. Pour plus d’informations sur son ajout, consultez [Comment : Ajouter des éléments à la boîte à outils](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Pour ajouter une table au contrôle DataGrid dans le Concepteur  
   
-1.  Pour afficher des données dans la table, vous devez d’abord lier le <xref:System.Windows.Forms.DataGrid> contrôle à un jeu de données. Pour plus d'informations, voir [Procédure : Lier le contrôle DataGrid Windows Forms à une Source de données à l’aide du concepteur](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1.  Pour afficher des données dans la table, vous devez d’abord lier le <xref:System.Windows.Forms.DataGrid> contrôle à un jeu de données. Pour plus d'informations, voir [Procédure : Lier le contrôle DataGrid Windows Forms à une Source de données à l’aide du concepteur](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2.  Sélectionnez le <xref:System.Windows.Forms.DataGrid> du contrôle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriété dans la fenêtre Propriétés, puis cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) à côté la propriété à afficher le **éditeur de collections DataGridTableStyle**.  
+2.  Sélectionnez le <xref:System.Windows.Forms.DataGrid> du contrôle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriété dans la fenêtre Propriétés, puis cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté la propriété à afficher le **éditeur de collections DataGridTableStyle**.  
   
 3.  Dans l’éditeur de collections, cliquez sur **ajouter** pour insérer un style de table.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "56304412"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Pour ajouter une colonne au contrôle DataGrid dans le Concepteur  
   
-1.  Dans le **membres** zone de la **éditeur de collections DataGridTableStyle**, sélectionnez le style de table approprié. Dans le **propriétés** zone de l’éditeur de collection, sélectionnez le <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> collection, puis cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) en regard de la propriété à afficher le **éditeur de collections DataGridColumnStyle**.  
+1.  Dans le **membres** zone de la **éditeur de collections DataGridTableStyle**, sélectionnez le style de table approprié. Dans le **propriétés** zone de l’éditeur de collection, sélectionnez le <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> collection, puis cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) en regard de la propriété à afficher le **éditeur de collections DataGridColumnStyle**.  
   
 2.  Dans l’éditeur de collections, cliquez sur **ajouter** pour insérer un style de colonne ou cliquez sur la flèche vers le bas en regard **ajouter** pour spécifier un type de colonne.  
   
@@ -58,5 +58,5 @@ ms.locfileid: "56304412"
 5.  Dans le **propriétés** zone de l’éditeur de collection, sélectionnez le <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valeur pour la colonne que vous souhaitez afficher.  
   
 ## <a name="see-also"></a>Voir aussi
-- [DataGrid, contrôle](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [Guide pratique pour Supprimer ou masquer des colonnes dans le contrôle DataGrid Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid, contrôle](datagrid-control-windows-forms.md)
+- [Guide pratique pour Supprimer ou masquer des colonnes dans le contrôle DataGrid Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

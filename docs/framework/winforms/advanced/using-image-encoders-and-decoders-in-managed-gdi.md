@@ -5,15 +5,15 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: b2e51587209cb4df41ea1fd18ce5c2088ee07a2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf0d3a64ce8860d67f0dcfd37c780f03fbd7471a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524499"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713257"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Utilisation d'encodeurs et de décodeurs d'images dans GDI+ managé
-Le <xref:System.Drawing> espace de noms fournit la <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> classes pour le stockage et la manipulation d’images. À l’aide d’encodeurs d’image dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez écrire des images à partir de la mémoire sur le disque. À l’aide de décodeurs d’images dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez charger des images à partir du disque dans la mémoire. Un encodeur traduit les données dans un <xref:System.Drawing.Image> ou <xref:System.Drawing.Bitmap> objet dans un format de fichier de disque désigné. Un décodeur traduit les données dans un fichier de disque au format requis par le <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> objets.  
+Le <xref:System.Drawing> espace de noms fournit le <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> classes pour stocker et manipuler des images. À l’aide d’encodeurs d’images dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez écrire des images de la mémoire sur le disque. À l’aide de décodeurs d’images dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez charger des images à partir du disque dans la mémoire. Un encodeur traduit les données dans un <xref:System.Drawing.Image> ou <xref:System.Drawing.Bitmap> objet dans un format de fichier de disque désigné. Un décodeur traduit les données dans un fichier de disque au format requis par le <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> objets.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] a intégré encodeurs et décodeurs qui prennent en charge les types de fichiers suivants :  
   
@@ -35,22 +35,22 @@ Le <xref:System.Drawing> espace de noms fournit la <xref:System.Drawing.Image> e
   
 -   ICÔNE  
   
- Les rubriques suivantes abordent les encodeurs et décodeurs plus en détail :  
+ Les rubriques suivantes traitent des encodeurs et décodeurs plus en détail :  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour répertorier les encodeurs installés](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Guide pratique pour Répertorier les encodeurs installés](how-to-list-installed-encoders.md)  
  Décrit comment répertorier les encodeurs disponibles sur un ordinateur.  
   
- [Guide pratique pour répertorier les décodeurs installés](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
+ [Guide pratique pour Répertorier les décodeurs installés](how-to-list-installed-decoders.md)  
  Décrit comment répertorier les décodeurs disponibles sur un ordinateur.  
   
- [Guide pratique pour déterminer les paramètres pris en charge par un encodeur](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ [Guide pratique pour Déterminer les paramètres pris en charge par un encodeur](how-to-determine-the-parameters-supported-by-an-encoder.md)  
  Décrit comment répertorier les <xref:System.Drawing.Imaging.EncoderParameters> pris en charge par un encodeur.  
   
- [Guide pratique pour convertir une image BMP en image PNG](../../../../docs/framework/winforms/advanced/how-to-convert-a-bmp-image-to-a-png-image.md)  
+ [Guide pratique pour Convertir une image BMP en une image PNG](how-to-convert-a-bmp-image-to-a-png-image.md)  
  Décrit comment enregistrer une image dans un format d’image différent.  
   
- [Guide pratique pour définir le niveau de compression JPEG](../../../../docs/framework/winforms/advanced/how-to-set-jpeg-compression-level.md)  
+ [Guide pratique pour Définir au niveau de Compression JPEG](how-to-set-jpeg-compression-level.md)  
  Décrit comment modifier le niveau de qualité d’une image.  
   
 ## <a name="reference"></a>Référence  
@@ -65,6 +65,6 @@ Le <xref:System.Drawing> espace de noms fournit la <xref:System.Drawing.Image> e
  <xref:System.Drawing.Imaging.Encoder>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [À propos du code managé GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [À propos du code managé GDI+](about-gdi-managed-code.md)  
   
- [Images, bitmaps et métafichiers](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+ [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)

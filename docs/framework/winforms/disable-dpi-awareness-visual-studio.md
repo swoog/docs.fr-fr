@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655996"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710535"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
@@ -21,11 +21,11 @@ Visual Studio est un points par pouce (PPP) application prenant en charge, ce qu
 
 Le **Windows Forms Designer** dans Visual Studio n’a pas prise en charge de mise à l’échelle. Cela entraîne des problèmes d’affichage lorsque vous ouvrez des formulaires dans le **Windows Forms Designer** sur élevé de points par pouce (HDPI) moniteurs. Pour obtenir des exemples, les contrôles peuvent semblent se chevaucher comme indiqué dans l’image suivante :
 
-![Concepteur de formulaires Windows sur le moniteur HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Concepteur de formulaires Windows sur le moniteur HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 Dans Visual Studio 2017 version 15,8 et versions ultérieure, lorsque vous ouvrez un formulaire dans le **Windows Forms Designer** sur un moniteur HDPI, Visual Studio affiche un jaune d’information de la barre en haut du concepteur :
 
-![Barre d’information dans Visual Studio à redémarrer en mode dépendant PPP](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Barre d’information dans Visual Studio à redémarrer en mode dépendant PPP](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lit le message **mise à l’échelle sur votre écran d’affichage principal est défini à 200 % (192 PPP). Cela peut entraîner des problèmes de rendu dans la fenêtre du concepteur.**
 
@@ -51,14 +51,14 @@ Il est important de redémarrer Visual Studio en tant que reconnaissant les rés
 
 Vous pouvez marquer Visual Studio comme dépendant PPP en modifiant le Registre. Ouvrez **Éditeur du Registre** et ajouter une entrée à la **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** sous-clé :
 
-**Entrée**: C:\Program fichiers (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Entrée**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > Si vous utilisez l’édition Professional ou Enterprise de Visual Studio 2017, remplacez **Communauté** avec **Professionnel** ou **Enterprise** dans l’entrée. Remplacez la lettre de lecteur en fonction des besoins.
 
 **Type**: REG_SZ
 
-**Valeur**: DPIUNAWARE
+**Valeur** : DPIUNAWARE
 
 > [!NOTE]
 > Visual Studio reste en mode PPP ne dépendant pas jusqu'à ce que vous supprimez l’entrée de Registre.
@@ -75,7 +75,7 @@ Vous pouvez choisir ne pas d’être averti de PPP mise à l’échelle des prob
 
 Pour désactiver les notifications, choisissez **outils** > **Options** pour ouvrir le **Options** boîte de dialogue. Ensuite, choisissez **Windows Forms Designer** > **général**et définissez **Notifications de mise à l’échelle PPP** à **False**.
 
-![Résolution de mise à l’échelle d’option de notifications dans Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Résolution de mise à l’échelle d’option de notifications dans Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Si vous souhaitez réactiver ultérieurement les notifications de mise à l’échelle, définissez la propriété sur **True**.
 

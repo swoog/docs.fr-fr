@@ -21,12 +21,12 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636444"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716905"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procédure : Définir le texte affiché par un Windows Forms de contrôle
 Généralement, les contrôles Windows Forms affichent du texte en rapport avec la fonction principale du contrôle. Par exemple, un contrôle <xref:System.Windows.Forms.Button> affiche habituellement une légende indiquant l'action à exécuter quand le bouton est activé. Pour tous les contrôles, vous pouvez définir ou retourner le texte à l'aide de la propriété <xref:System.Windows.Forms.Control.Text%2A>. Vous pouvez modifier la police en utilisant la propriété <xref:System.Windows.Forms.Control.Font%2A>. Vous pouvez également définir le texte à l'aide du concepteur.  Voir également [Guide pratique pour Créer des touches d’accès rapide pour Windows Forms à l’aide du Concepteur de contrôles](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Comment : Définir le texte affiché par un Windows Forms à l’aide du Concepteur de contrôle](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Comment : Définir l’Image affichée par un Windows Forms à l’aide du Concepteur de contrôle](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
@@ -73,5 +73,5 @@ Généralement, les contrôles Windows Forms affichent du texte en rapport avec 
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Guide pratique pour Créer des clés d’accès pour les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
-- [Guide pratique pour Répondre aux clics de bouton Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Guide pratique pour Créer des clés d’accès pour les contrôles Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Guide pratique pour Répondre aux clics de bouton Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

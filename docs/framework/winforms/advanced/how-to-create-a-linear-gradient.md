@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696293"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725244"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procédure : Créer un dégradé linéaire
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire Modifie uniformément. Toutefois, vous pouvez personnaliser un dégradé linéaire de sorte que la couleur change de façon non uniforme.  
@@ -28,14 +28,14 @@ ms.locfileid: "54696293"
   
  L’illustration suivante montre la ligne, l’ellipse et le rectangle. Notez que le dégradé de couleur se répète à mesure que la coordonnée horizontale augmente au-delà de 200.  
   
- ![Dégradé linéaire](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![Dégradé linéaire](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Pour utiliser des dégradés linéaires horizontales  
   
 -   Transmettre l’opaque rouge et le bleu opaque en tant que l’argument troisième et quatrième, respectivement.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
  Dans l’exemple précédent, les composants de couleur changent linéairement lorsque vous passez de la coordonnée horizontale de 0 à une coordonnée horizontale de 200. Par exemple, un point dont la première coordonnée se trouve à mi-chemin entre 0 et 200 aura un composant bleu qui se trouve à mi-chemin entre 0 et 255.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "54696293"
   
  L’illustration suivante montre l’ellipse qui en résulte et un rectangle.  
   
- ![Dégradé linéaire](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![Dégradé linéaire](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>Pour personnaliser des dégradés linéaires  
   
 -   Transmettre la rouge à noir et opaque opaque en tant que l’argument troisième et quatrième, respectivement.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
  Les dégradés dans les exemples précédents ont été horizontales ; Autrement dit, la couleur passe progressivement à mesure que vous déplacez le long de n’importe quelle ligne horizontale. Vous pouvez également définir des dégradés verticaux et en diagonale.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54696293"
   
  L’illustration suivante montre la ligne et l’ellipse. Notez que la couleur de l’ellipse change progressivement à mesure que vous déplacez le long d’une ligne qui est parallèle à la ligne passant par (0, 0) et (200, 100).  
   
- ![Dégradé linéaire](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![Dégradé linéaire](./media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Pour créer des dégradés linéaires en diagonale  
   
 -   Transmettre l’opaque bleu et le vert opaque en tant que l’argument troisième et quatrième, respectivement.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation d'un pinceau à dégradé pour remplir des formes](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Utilisation d'un pinceau à dégradé pour remplir des formes](using-a-gradient-brush-to-fill-shapes.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

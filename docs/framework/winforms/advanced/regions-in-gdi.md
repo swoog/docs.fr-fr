@@ -9,17 +9,17 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: ae4931a464421639112c8f369bd27a45550fe7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708270"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724971"
 ---
 # <a name="regions-in-gdi"></a>Régions dans GDI+
 Une région est une partie de la zone d’affichage d’un périphérique de sortie. Régions peuvent être simple (un rectangle) ou complexe (combinaison de polygones et des courbes fermées). L’illustration suivante montre deux régions : une construite à partir d’un rectangle, et l’autre construite à partir d’un chemin d’accès.  
   
- ![Regions](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
+ ![Regions](./media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
   
 ## <a name="using-regions"></a>Utilisation de régions  
  Régions sont souvent utilisées pour le découpage et le test de positionnement. Le découpage consiste à restreindre le dessin à une certaine région de la zone d’affichage, généralement la partie qui doit être mis à jour. Le test de positionnement consiste à vérifier pour déterminer si le curseur se trouve dans une région de l’écran lorsqu’un bouton de la souris est enfoncé.  
@@ -28,18 +28,18 @@ Une région est une partie de la zone d’affichage d’un périphérique de sor
   
  L’intersection de deux régions est l’ensemble de tous les points qui appartiennent aux deux régions. L’union est l’ensemble de tous les points appartenant à une ou l’autre ou les deux régions. Le complément d’une région est l’ensemble de tous les points qui ne sont pas dans la région. L’illustration suivante montre l’intersection et l’union des deux régions indiqué dans l’illustration précédente.  
   
- ![Regions](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
+ ![Regions](./media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
   
  Le <xref:System.Drawing.Region.Xor%2A> méthode appliquée à une paire de régions, produit une région qui contient tous les points qui appartiennent à une région ou l’autre, mais pas les deux. Le <xref:System.Drawing.Region.Exclude%2A> méthode appliquée à une paire de régions, produit une région qui contient tous les points de la première région qui ne sont pas dans la seconde région. L’illustration suivante montre les régions qui résultent de l’application le <xref:System.Drawing.Region.Xor%2A> et <xref:System.Drawing.Region.Exclude%2A> méthodes dans les deux régions indiquées au début de cette rubrique.  
   
- ![Regions](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
+ ![Regions](./media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
   
  Pour remplir une région, vous devez un <xref:System.Drawing.Graphics> objet, un <xref:System.Drawing.Brush> objet et un <xref:System.Drawing.Region> objet. Le <xref:System.Drawing.Graphics> objet fournit les <xref:System.Drawing.Graphics.FillRegion%2A> (méthode) et le <xref:System.Drawing.Brush> objet stocke les attributs de remplissage, tels que le motif ou la couleur. L’exemple suivant remplit une zone avec une couleur unie.  
   
- [!code-csharp[LinesCurvesAndShapes#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#61)]
- [!code-vb[LinesCurvesAndShapes#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
+ [!code-csharp[LinesCurvesAndShapes#61](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#61)]
+ [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
-- [Lignes, courbes et formes](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Utilisation de régions](../../../../docs/framework/winforms/advanced/using-regions.md)
+- [Lignes, courbes et formes](lines-curves-and-shapes.md)
+- [Utilisation de régions](using-regions.md)

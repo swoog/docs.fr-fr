@@ -2,12 +2,12 @@
 title: Création et exécution d'une instance de workflow
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: a86835155417692bc332bf51eb5825ce0b017b04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0c59946b6419e7088e3426d7ddd08537cfab5a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527261"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722007"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Création et exécution d'une instance de workflow
 Cet exemple montre comment exécuter une instance de workflow. Il indique comment l’exécuter de façon synchrone et de façon asynchrone.  
@@ -30,4 +30,4 @@ Cet exemple montre comment exécuter une instance de workflow. Il indique commen
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de WorkflowInvoker et WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+- [Utilisation de WorkflowInvoker et WorkflowApplication](../using-workflowinvoker-and-workflowapplication.md)

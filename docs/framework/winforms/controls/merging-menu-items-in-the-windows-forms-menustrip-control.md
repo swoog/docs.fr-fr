@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551850"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722347"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Fusion d'éléments de menu dans le contrôle MenuStrip Windows Forms
 Si vous avez une application d’interface multidocument (MDI), vous pouvez fusionner des éléments de menu ou des menus entiers à partir du formulaire enfant dans les menus du formulaire parent.  
@@ -56,6 +56,6 @@ Si vous avez une application d’interface multidocument (MDI), vous pouvez fusi
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip, contrôle](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [Guide pratique pour Créer une liste des fenêtres MDI avec MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Guide pratique pour Configurer la fusion de menus automatique pour les Applications MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [MenuStrip, contrôle](menustrip-control-windows-forms.md)
+- [Guide pratique pour Créer une liste des fenêtres MDI avec MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Guide pratique pour Configurer la fusion de menus automatique pour les Applications MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

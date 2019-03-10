@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674917"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711787"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Prise en charge de haute résolution dans les Windows Forms
 
@@ -49,7 +49,7 @@ En outre, pour configurer la prise en charge de haute résolution dans votre app
 
 - Activer la sensibilisation à la résolution par moniteur dans le *app.config* fichier.
 
-  Windows Forms propose un nouveau [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) élément pour prendre en charge les nouvelles fonctionnalités et les personnalisations ajoutées en commençant par le .NET Framework 4.7. Pour tirer parti des nouvelles fonctionnalités qui prennent en charge la haute résolution, ajoutez le code suivant au fichier de configuration de votre application.   
+  Windows Forms propose un nouveau [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) élément pour prendre en charge les nouvelles fonctionnalités et les personnalisations ajoutées en commençant par le .NET Framework 4.7. Pour tirer parti des nouvelles fonctionnalités qui prennent en charge la haute résolution, ajoutez le code suivant au fichier de configuration de votre application.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ Définition de la `DpiAwareness` valeur `PerMonitorV2` Active les fonctionnalit�
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Pour obtenir la liste des clés individuelles et leurs valeurs, consultez [élément de Configuration Add Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Pour obtenir la liste des clés individuelles et leurs valeurs, consultez [élément de Configuration Add Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Nouveaux événements de modification de PPP
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Windows Forms Add, élément de Configuration](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Réglage de la taille et de l'échelle des Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms Add, élément de Configuration](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Réglage de la taille et de l'échelle des Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

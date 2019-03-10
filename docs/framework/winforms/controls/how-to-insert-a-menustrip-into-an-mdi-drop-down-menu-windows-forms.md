@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: b12199d049808fcf735002fee3715fe7be966030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06304e012867030936dfeffd129bb8301d31c8e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695697"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718738"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Procédure : Insérer un MenuStrip dans un Menu du menu déroulant MDI (Windows Forms)
 Dans certaines applications, le type d'une fenêtre enfant d'interface multidocument (MDI) peut être différent de celui de la fenêtre parente MDI. Par exemple, le parent MDI peut être une feuille de calcul et l'enfant MDI un graphique. Dans ce cas, vous souhaitez mettre à jour le contenu du menu du parent MDI avec le contenu du menu de l'enfant MDI à mesure que des fenêtres enfants MDI de types différents sont activées.  
@@ -96,6 +96,6 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer des formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Guide pratique pour Créer des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Vue d'ensemble du contrôle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Guide pratique pour Créer des formulaires MDI parents](../advanced/how-to-create-mdi-parent-forms.md)
+- [Guide pratique pour Créer des formulaires MDI enfants](../advanced/how-to-create-mdi-child-forms.md)
+- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497624"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720330"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procédure : Valider les entrées avec le contrôle DataGrid Windows Forms
 
 > [!NOTE]
-> Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
 Il existe deux types de validation d’entrée disponibles pour les formulaires Windows <xref:System.Windows.Forms.DataGrid> contrôle. Si l’utilisateur tente d’entrer une valeur qui est d’un type de données inacceptable pour la cellule, par exemple une chaîne en entier, la nouvelle valeur non valide est remplacée par l’ancienne valeur. Ce type de validation d’entrée est effectué automatiquement et ne peuvent pas être personnalisé.
 
@@ -89,4 +89,4 @@ L’autre type de validation d’entrée peut être utilisé pour refuser des do
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid, contrôle](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid, contrôle](datagrid-control-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536306"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717906"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Options de dimensionnement dans le contrôle DataGridView Windows Forms
 <xref:System.Windows.Forms.DataGridView> lignes, colonnes et en-têtes peuvent modifier la taille à la suite de nombreuses occurrences différentes. Le tableau suivant présente ces occurrences.  
@@ -61,7 +61,7 @@ ms.locfileid: "54536306"
 ## <a name="automatic-sizing"></a>Dimensionnement automatique  
  Il existe deux types de dimensionnement automatique dans le <xref:System.Windows.Forms.DataGridView> contrôle : mode de remplissage de colonne et le dimensionnement automatique basé sur le contenu.  
   
- Mode remplissage des colonnes, les colonnes visibles dans le contrôle pour remplir la largeur de la zone d’affichage du contrôle. Pour plus d’informations sur ce mode, consultez [Mode remplissage des colonnes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Mode remplissage des colonnes, les colonnes visibles dans le contrôle pour remplir la largeur de la zone d’affichage du contrôle. Pour plus d’informations sur ce mode, consultez [Mode remplissage des colonnes dans le contrôle de DataGridView Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
  Vous pouvez également configurer des lignes, colonnes et en-têtes s’ajuste automatiquement leur taille pour s’ajuster à leur contenu de la cellule. Dans ce cas, le réglage de taille se produit chaque fois que le contenu de cellule change.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536306"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

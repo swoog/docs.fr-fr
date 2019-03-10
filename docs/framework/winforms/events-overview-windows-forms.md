@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543710"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710730"
 ---
 # <a name="events-overview-windows-forms"></a>Vue d'ensemble des événements (Windows Forms)
 Un événement est une action à laquelle vous pouvez répondre ou que vous pouvez « gérer » dans le code. Les événements peuvent être déclenchés par une action de l'utilisateur (quand il clique sur un bouton de la souris ou appuie sur une touche), par le code d'un programme ou par le système.  
@@ -26,12 +26,12 @@ Un événement est une action à laquelle vous pouvez répondre ou que vous pouv
 > [!NOTE]
 >  De nombreux événements se produisent conjointement à d'autres événements. Par exemple, les événements <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDown> et <xref:System.Windows.Forms.Control.MouseUp> se produisent en même temps que l'événement <xref:System.Windows.Forms.Control.Click>.  
   
- Pour plus d’informations sur comment déclencher et consommer un événement, consultez [événements](../../../docs/standard/events/index.md).  
+ Pour plus d’informations sur comment déclencher et consommer un événement, consultez [événements](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Rôle des délégués  
  Les délégués sont des classes qui sont communément utilisées dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour générer des mécanismes de gestion des événements. Les délégués sont à peu près équivalents aux pointeurs de fonction communément utilisés dans [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] et d'autres langages orientés objet. Toutefois à la différence des pointeurs de fonction, les délégués sont orientés objet, de type sécurisé et sûrs. De plus, alors qu'un pointeur de fonction ne contient qu'une référence à une fonction spécifique, un délégué consiste en une référence à un objet et des références à une ou plusieurs méthodes de cet objet.  
   
- Ce modèle d’événement utilise *délégués* pour lier les événements aux méthodes servant à les gérer. Le délégué permet aux autres classes de s'inscrire pour la notification d'événement en spécifiant une méthode de gestionnaire. Quand l'événement se produit, le délégué appelle la méthode liée. Pour plus d’informations sur la façon de définir des délégués, consultez [événements](../../../docs/standard/events/index.md).  
+ Ce modèle d’événement utilise *délégués* pour lier les événements aux méthodes servant à les gérer. Le délégué permet aux autres classes de s'inscrire pour la notification d'événement en spécifiant une méthode de gestionnaire. Quand l'événement se produit, le délégué appelle la méthode liée. Pour plus d’informations sur la façon de définir des délégués, consultez [événements](../../standard/events/index.md).  
   
  Les délégués peuvent être liés à une ou plusieurs méthodes (ou multidiffusion). Quand vous créez un délégué pour un événement, vous (ou le Concepteur Windows Forms) créez généralement un événement multidiffusion. Il existe cependant une exception à cette règle : quand un événement déclenche une procédure particulière (par exemple, l'affichage d'une boîte de dialogue) qui logiquement ne se répéterait pas plusieurs fois par événement. Pour plus d’informations sur la création d’un délégué multicast, consultez [Comment : Combiner des délégués (délégués Multicast)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Un événement est une action à laquelle vous pouvez répondre ou que vous pouv
  Le mécanisme de liaison utilisé avec les délégués est dynamique : un délégué peut être lié au moment de l'exécution à n'importe quelle méthode dont la signature correspond à celle du gestionnaire d'événements. Cette fonctionnalité vous permet de configurer ou de modifier la méthode de liaison en fonction d’une condition et d’attacher dynamiquement un gestionnaire d’événements à un contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Vue d'ensemble des gestionnaires d'événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Création de gestionnaires d’événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Vue d'ensemble des gestionnaires d'événements](event-handlers-overview-windows-forms.md)

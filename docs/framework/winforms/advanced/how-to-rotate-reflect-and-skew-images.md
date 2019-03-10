@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 2150e7797095b88227b499ec5481a3ce521270e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667909"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711497"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Procédure : Faire pivoter, refléter et incliner des Images
 Vous pouvez faire pivoter, refléter et incliner une image en spécifiant des points de destination pour les angles supérieur gauche, supérieur droit et inférieur gauche de l’image d’origine. Les trois points de destination déterminent une transformation affine qui mappe l’image rectangulaire d’origine à un parallélogramme.  
@@ -30,23 +30,23 @@ Vous pouvez faire pivoter, refléter et incliner une image en spécifiant des po
   
  L’illustration suivante montre l’image d’origine et l’image mappée au parallélogramme. L’image d’origine a été faussée, reflétée, rotation et traduite. L’axe des abscisses le long du bord supérieur de l’image d’origine sont mappé à la ligne qui s’exécute via (200, 20) et (110, 100). L’axe des y le long du bord gauche de l’image d’origine sont mappé à la ligne qui s’exécute via (200, 20) et (250, 30).  
   
- ![Stripes](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ ![Stripes](./media/stripes1.gif "Stripes1")  
   
  L’illustration suivante montre une transformation similaire appliquée à une image photographique.  
   
- ![Transformé Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![Transformé Climber](./media/transformedclimber.png "TransformedClimber")  
   
  L’illustration suivante montre une transformation similaire appliquée à un métafichier.  
   
- ![Transformé métafichier](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ ![Transformé métafichier](./media/transformedmetafile.png "TransformedMetafile")  
   
  L’exemple suivant produit les images présentées dans la première illustration.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Veillez à remplacer `Stripes.bmp` avec le chemin d’accès à une image qui est valide sur votre système.  
+ L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Veillez à remplacer `Stripes.bmp` avec le chemin d’accès à une image qui est valide sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation des images, bitmaps, icônes et métafichiers](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

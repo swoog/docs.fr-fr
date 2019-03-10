@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643570"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708338"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : Créer un contrôle de liaison Simple dans un formulaire Windows
 Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle qu’une valeur de colonne à partir d’une table de dataset dans un contrôle. Vous pouvez créer une liaison simple n’importe quelle propriété d’un contrôle à une valeur de données.  
@@ -20,7 +20,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
   
 ### <a name="to-simple-bind-a-control"></a>Pour un contrôle à liaison simple  
   
-1.  Connectez-vous à une source de données. Pour plus d’informations, consultez [connexion à une Source de données](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Connectez-vous à une source de données. Pour plus d’informations, consultez [connexion à une Source de données](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  Dans le formulaire, sélectionnez le contrôle et affichez la **propriétés** fenêtre.  
   
@@ -28,7 +28,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
   
      Les propriétés les plus souvent liées sont affichées sous la **(DataBindings)** propriété. Par exemple, dans la plupart des contrôles, le **texte** propriété est liée plus fréquemment.  
   
-4.  Si la propriété dont vous souhaitez lier ne fait pas partie des propriétés couramment liées, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) dans le **(Avancé)** à cocher pour afficher le **mise en forme et liaison avancée** boîte de dialogue avec une liste complète des propriétés pour ce contrôle.  
+4.  Si la propriété dont vous souhaitez lier ne fait pas partie des propriétés couramment liées, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) dans le **(Avancé)** à cocher pour afficher le **mise en forme et liaison avancée** boîte de dialogue avec une liste complète des propriétés pour ce contrôle.  
   
 5.  Sélectionnez la propriété que vous souhaitez lier, puis cliquez sur la flèche déroulante sous **liaison**.  
   
@@ -47,5 +47,5 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.Binding>
-- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)

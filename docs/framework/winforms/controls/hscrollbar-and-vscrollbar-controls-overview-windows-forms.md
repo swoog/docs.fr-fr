@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 4747eb4524a5fd36c27a9c40f16ef291e57bed28
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: cba28acf7e8594cd8eef88436ddde86efacada36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664027"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714097"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Vue d'ensemble des contrôles HScrollBar et VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> contrôles sont utilisés pour fournir une navigation facile dans une longue liste d’éléments ou d’une grande quantité d’informations en faisant défiler horizontalement ou verticalement dans une application ou un contrôle. Barres de défilement sont un élément courant de l’interface Windows, afin que la <xref:System.Windows.Forms.ScrollBar> contrôle est souvent utilisé avec les contrôles qui ne dérivent pas de la <xref:System.Windows.Forms.ScrollableControl> classe. De même, de nombreux développeurs choisissent d’incorporer le <xref:System.Windows.Forms.ScrollBar> contrôler lors de la création de leurs propres contrôles utilisateur.  
@@ -38,4 +38,4 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> contrôles sont utilisés po
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

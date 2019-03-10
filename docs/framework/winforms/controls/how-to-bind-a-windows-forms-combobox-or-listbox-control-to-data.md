@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698373"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709924"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procédure : Lier un contrôle ComboBox de Windows Forms ou d’un contrôle ListBox à des données
 Vous pouvez lier le <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.ListBox> entrant de nouvelles données aux données pour effectuer des tâches telles que l’exploration de données dans une base de données, ou la modification des données existantes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Pour lier un contrôle ComboBox ou ListBox  
   
-1.  Définir le `DataSource` propriété à un objet de source de données. Sources de données possibles incluent un <xref:System.Windows.Forms.BindingSource> lié à des données, une table de données, une vue de données, un jeu de données, une vue de données manager, un tableau ou toute classe qui implémente le <xref:System.Collections.IList> interface. Pour plus d’informations, consultez [Sources de données prises en charge par les Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
+1.  Définir le `DataSource` propriété à un objet de source de données. Sources de données possibles incluent un <xref:System.Windows.Forms.BindingSource> lié à des données, une table de données, une vue de données, un jeu de données, une vue de données manager, un tableau ou toute classe qui implémente le <xref:System.Collections.IList> interface. Pour plus d’informations, consultez [Sources de données prises en charge par les Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
 2.  Si vous liez à une table, définissez la `DisplayMember` propriété le nom d’une colonne dans la source de données.  
   
@@ -56,6 +56,6 @@ Vous pouvez lier le <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Liaison de données Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Liaison de données et Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](../data-binding-and-windows-forms.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 6c3ad0892ea0892b7c4c0e21e14bdb75fe22b447
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554216"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718790"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Rognage et mise à l'échelle d'images dans GDI+
 Vous pouvez utiliser la <xref:System.Drawing.Graphics.DrawImage%2A> méthode de la <xref:System.Drawing.Graphics> classe pour dessiner et positionner des images vectorielles et des images raster. <xref:System.Drawing.Graphics.DrawImage%2A> est une méthode surchargée, donc il existe plusieurs façons, vous pouvez lui fournir arguments.  
@@ -28,24 +28,24 @@ Vous pouvez utiliser la <xref:System.Drawing.Graphics.DrawImage%2A> méthode de 
 ## <a name="drawimage-variations"></a>Variations de DrawImage  
  Une variante de la <xref:System.Drawing.Graphics.DrawImage%2A> méthode reçoit un <xref:System.Drawing.Bitmap> et un <xref:System.Drawing.Rectangle>. Le rectangle spécifie la destination de l’opération de dessin ; Autrement dit, il spécifie le rectangle dans lequel dessiner l’image. Si la taille du rectangle de destination est différente de la taille de l’image d’origine, l’image est étirée pour remplir le rectangle de destination. L’exemple de code suivant montre comment dessiner des trois fois la même image : aucune mise à l’échelle, avec une expansion et avec une compression :  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
  L’illustration suivante montre les trois images.  
   
- ![Scaling](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
+ ![Scaling](./media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
  Des variantes de la <xref:System.Drawing.Graphics.DrawImage%2A> méthode ont un paramètre de rectangle source comme un rectangle de destination. Le paramètre du rectangle source Spécifie la partie de l’image d’origine à dessiner. Le rectangle de destination Spécifie le rectangle dans lequel dessiner la partie de l’image. Si la taille du rectangle de destination est différente de la taille du rectangle source, l’image est étiré pour remplir le rectangle de destination.  
   
  L’exemple de code suivant montre comment construire un <xref:System.Drawing.Bitmap> à partir du fichier Runner.jpg. L’image entière est dessinée avec aucune mise à l’échelle (0, 0). Puis une petite partie de l’image est dessinée à deux reprises : une fois avec une compression et une fois avec une expansion.  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
  L’illustration suivante montre l’image non ajustée et les parties de l’image réduite et agrandie.  
   
- ![Rognage et mise à l’échelle](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
+ ![Rognage et mise à l’échelle](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Voir aussi
-- [Images, bitmaps et métafichiers](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Utilisation des images, bitmaps, icônes et métafichiers](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
+- [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

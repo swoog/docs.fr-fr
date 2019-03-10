@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687243"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710678"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -34,12 +34,12 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
   
 -   Validation des paramètres, avant leur modification ou leur enregistrement  
   
- Les paramètres peuvent être décrits à l’aide d’un nombre d’attributs définis dans le <xref:System.Configuration> espace de noms ; ceux-ci sont décrits dans [attributs des paramètres d’Application](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Lorsque vous définissez un paramètre, vous devez l’appliquer avec soit <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, qui décrit si le paramètre s’applique à l’application entière ou uniquement à l’utilisateur actuel.  
+ Les paramètres peuvent être décrits à l’aide d’un nombre d’attributs définis dans le <xref:System.Configuration> espace de noms ; ceux-ci sont décrits dans [attributs des paramètres d’Application](application-settings-attributes.md). Lorsque vous définissez un paramètre, vous devez l’appliquer avec soit <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, qui décrit si le paramètre s’applique à l’application entière ou uniquement à l’utilisateur actuel.  
   
  L’exemple de code suivant définit une classe de paramètres personnalisés avec un paramètre unique, `BackgroundColor`.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Persistance des paramètres  
  Le <xref:System.Configuration.ApplicationSettingsBase> classe ne pas lui-même sont conservés ou charger les paramètres ; cette tâche incombe au fournisseur de paramètres, une classe qui dérive de <xref:System.Configuration.SettingsProvider>. Si une classe dérivée de <xref:System.Configuration.ApplicationSettingsBase> ne spécifie pas de fournisseur de paramètres via le <xref:System.Configuration.SettingsProviderAttribute>, le fournisseur par défaut, <xref:System.Configuration.LocalFileSettingsProvider>, est utilisé.  
@@ -88,7 +88,7 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
 </configuration>  
 ```  
   
- Pour une définition des éléments dans la section Paramètres d’application d’un fichier de configuration, consultez [Schéma des paramètres d'application](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
+ Pour une définition des éléments dans la section Paramètres d’application d’un fichier de configuration, consultez [Schéma des paramètres d'application](../../configure-apps/file-schema/application-settings-schema.md).  
   
 ### <a name="settings-bindings"></a>Liaisons de paramètres  
  Les paramètres d’application utilisent l’architecture de liaison de données Windows Forms pour fournir une communication bidirectionnelle pour les mises à jour des paramètres entre les composants et l’objet de paramètres. Si vous utilisez Visual Studio pour créer des paramètres d’application et les affecter aux propriétés du composant, ces liaisons sont générées automatiquement.  
@@ -106,7 +106,7 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
   
 3.  Détermine quels paramètres vont dans quels fichiers, selon l’attribut du paramètre.  
   
- Si vous implémentez votre propre classe de paramètres, vous pouvez utiliser la <xref:System.Configuration.SettingsSerializeAsAttribute> pour marquer un paramètre pour la sérialisation binaire ou personnalisée à l’aide du <xref:System.Configuration.SettingsSerializeAs> énumération. Pour plus d’informations sur la création de votre propre classe de paramètres dans le code, consultez [Comment : Créer des paramètres de l’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Si vous implémentez votre propre classe de paramètres, vous pouvez utiliser la <xref:System.Configuration.SettingsSerializeAsAttribute> pour marquer un paramètre pour la sérialisation binaire ou personnalisée à l’aide du <xref:System.Configuration.SettingsSerializeAs> énumération. Pour plus d’informations sur la création de votre propre classe de paramètres dans le code, consultez [Comment : Créer des paramètres de l’Application](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Emplacements des fichiers de paramètres  
  L’emplacement des fichiers `app`.exe.config et *user*.config varie en fonction de la façon dont l’application est installée. Pour une application Windows Forms copiée sur l’ordinateur local, `app`. exe.config résidera dans le même répertoire que le répertoire de base du fichier exécutable principal de l’application, et *utilisateur*.config résidera dans le emplacement spécifié par le <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> propriété. Pour une application installée au moyen de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], ces deux fichiers résident dans le répertoire de données [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] situé sous %InstallRoot%\Documents and Settings\\*nom d’utilisateur*\Local Settings.  
@@ -127,8 +127,8 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
   
  Votre fournisseur devra implémenter une propriété et une méthode dont les implémentations peuvent ne pas être évidentes. Le <xref:System.Configuration.SettingsProvider.ApplicationName%2A> propriété est une propriété abstraite de <xref:System.Configuration.SettingsProvider>; vous devez la programmer pour retourner les éléments suivants :  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  Votre classe dérivée doit également implémenter une méthode `Initialize` qui n’accepte aucun argument et ne retourne aucune valeur. Cette méthode n’est pas définie par <xref:System.Configuration.SettingsProvider>.  
   
@@ -136,8 +136,8 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
   
  Une fois que vous avez implémenté et compilé votre fournisseur, vous devez demander à votre classe de paramètres d’utiliser ce fournisseur au lieu de la valeur par défaut. Vous y parvenir via le <xref:System.Configuration.SettingsProviderAttribute>. Si appliqué à une classe de paramètres entière, le fournisseur est utilisé pour chaque paramètre de la classe définit ; Si appliqué aux paramètres individuels, architecture de paramètres d’Application utilise ce fournisseur pour ces paramètres uniquement et utilise <xref:System.Configuration.LocalFileSettingsProvider> pour le reste. L’exemple de code suivant montre comment indiquer à la classe de paramètres d’utiliser votre fournisseur personnalisé.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  Un fournisseur peut être appelé à partir de plusieurs threads simultanément, mais il écrira toujours au même emplacement de stockage. Par conséquent, l’architecture de paramètres d’application n’instanciera jamais qu’une seule instance de votre classe de fournisseur.  
   
@@ -150,7 +150,7 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Vue d'ensemble des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [Vue d'ensemble des paramètres d'application](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce et paramètres d’application](/visualstudio/deployment/clickonce-and-application-settings)
-- [Schéma des paramètres d'application](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [Schéma des paramètres d'application](../../configure-apps/file-schema/application-settings-schema.md)

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Windows Forms, MDI applications
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
-ms.openlocfilehash: 3fa6f2517b52ecaaf4ad9db4f0de55908eac4c96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523966"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717442"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Applications d'interface multidocument (MDI, Multiple Document Interface)
-Applications d’interface multidocument (MDI) permettent d’afficher plusieurs documents en même temps, chaque document affiché dans sa propre fenêtre. Les applications MDI ont souvent un élément de menu Fenêtre avec les sous-menus de basculer entre les fenêtres et aux documents.  
+Applications d’interface multidocument (MDI) permettent d’afficher plusieurs documents en même temps, chaque document affiché dans sa propre fenêtre. Les applications MDI ont souvent un élément de menu Fenêtre avec les sous-menus pour basculer entre les fenêtres ou aux documents.  
   
 > [!NOTE]
->  Il existe des différences de comportement entre des formulaires MDI et les fenêtres de l’interface monodocument (SDI) dans les Windows Forms. Le `Opacity` propriété n’affecte pas l’apparence des formulaires MDI enfants. En outre, le <xref:System.Windows.Forms.Form.CenterToParent%2A> méthode n’affecte pas le comportement des formulaires MDI enfants.  
+>  Il existe des différences de comportement entre des formulaires MDI et fenêtres d’interface monodocument (SDI) dans les Windows Forms. Le `Opacity` propriété n’affecte pas l’apparence des formulaires enfants MDI. En outre, le <xref:System.Windows.Forms.Form.CenterToParent%2A> méthode n’affecte pas le comportement des formulaires enfants MDI.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour créer des formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Guide pratique pour Créer des formulaires MDI parents](how-to-create-mdi-parent-forms.md)  
  Explique comment créer le conteneur de plusieurs documents dans une application MDI.  
   
- [Guide pratique pour créer des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- Fournit des instructions pour la création d’une ou plusieurs fenêtres qui opèrent dans un formulaire MDI parent.  
+ [Guide pratique pour Créer des formulaires MDI enfants](how-to-create-mdi-child-forms.md)  
+ Fournit des instructions pour la création d’une ou plusieurs fenêtres qui opèrent au sein d’un formulaire MDI parent.  
   
- [Guide pratique pour déterminer l’enfant MDI actif](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- Fournit des instructions pour la vérification de la fenêtre enfant qui a le focus (et envoyer son contenu dans le Presse-papiers).  
+ [Guide pratique pour Déterminer l’enfant MDI actif](how-to-determine-the-active-mdi-child.md)  
+ Explique comment déterminer la fenêtre enfant qui a le focus (et envoyer son contenu dans le Presse-papiers).  
   
- [Guide pratique pour envoyer des données à l’enfant MDI actif](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- Explique comment transmettre des informations à la fenêtre enfant active.  
+ [Guide pratique pour Envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)  
+ Explique comment transmettre des informations dans la fenêtre enfant active.  
   
- [Guide pratique pour réorganiser des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)  
- Fournit des instructions pour la disposition en mosaïque, en cascade ou réorganiser les fenêtres enfants d’une application MDI.
+ [Guide pratique pour Réorganiser des formulaires MDI enfants](how-to-arrange-mdi-child-forms.md)  
+ Explique comment la mosaïque, en cascade ou réorganiser les fenêtres enfants d’une application MDI.

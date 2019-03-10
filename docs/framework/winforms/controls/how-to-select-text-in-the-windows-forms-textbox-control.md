@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649412"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722284"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Procédure : Sélectionner du texte dans le contrôle de zone de texte Windows Forms
 Vous pouvez sélectionner le texte par programmation dans les formulaires Windows <xref:System.Windows.Forms.TextBox> contrôle. Par exemple, si vous créez une fonction qui recherche du texte pour une chaîne particulière, vous pouvez sélectionner le texte afin d’alerter visuellement le lecteur de position de la chaîne trouvée.  
@@ -32,7 +32,7 @@ Vous pouvez sélectionner le texte par programmation dans les formulaires Window
   
 3.  (Facultatif) Accéder au texte sélectionné via la <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> propriété.  
   
-     Le code ci-dessous sélectionne le contenu d’un texte boîte lorsque le contrôle <xref:System.Windows.Forms.Control.Enter> événement se produit. Cet exemple vérifie si la zone de texte a une valeur pour le <xref:System.Windows.Forms.TextBox.Text%2A> propriété qui n’est pas `null` ou une chaîne vide. Lorsque la zone de texte reçoit le focus, le texte actuel dans la zone de texte est sélectionné. Le `TextBox1_Enter` Gestionnaire d’événements doit être lié au contrôle ; pour plus d’informations, consultez [Comment : Créer des gestionnaires d’événements en cours d’exécution pour les Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Le code ci-dessous sélectionne le contenu d’un texte boîte lorsque le contrôle <xref:System.Windows.Forms.Control.Enter> événement se produit. Cet exemple vérifie si la zone de texte a une valeur pour le <xref:System.Windows.Forms.TextBox.Text%2A> propriété qui n’est pas `null` ou une chaîne vide. Lorsque la zone de texte reçoit le focus, le texte actuel dans la zone de texte est sélectionné. Le `TextBox1_Enter` Gestionnaire d’événements doit être lié au contrôle ; pour plus d’informations, consultez [Comment : Créer des gestionnaires d’événements en cours d’exécution pour les Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Pour tester cet exemple, appuyez sur la touche Tab jusqu'à ce que la zone de texte a le focus. Si vous cliquez dans la zone de texte, le texte est désélectionné.  
   
@@ -69,10 +69,10 @@ Vous pouvez sélectionner le texte par programmation dans les formulaires Window
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.TextBox>
-- [Vue d’ensemble du contrôle TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Guide pratique pour Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte en lecture seule](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Guide pratique pour Placez des guillemets doubles dans une chaîne](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Guide pratique pour Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox, contrôle](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Vue d’ensemble du contrôle TextBox](textbox-control-overview-windows-forms.md)
+- [Guide pratique pour Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Guide pratique pour Créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Guide pratique pour Placez des guillemets doubles dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Guide pratique pour Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox, contrôle](textbox-control-windows-forms.md)

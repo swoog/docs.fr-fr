@@ -10,12 +10,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524411"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705296"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Héritage visuel des Windows Forms
 Parfois, vous pouvez choisir qu’un projet appelle un formulaire semblable à celui que vous avez créé dans un projet précédent. Ou bien vous souhaitez créer un formulaire de base avec des paramètres tels qu’un filigrane ou une disposition particulière des contrôles, que vous réutiliserez au sein d’un projet, et faire que chaque nouvelle itération contienne les modifications apportées au modèle de formulaire d’origine. L’héritage de formulaire vous permet de créer un formulaire de base, puis d’en hériter et d’apporter des modifications tout en conservant les paramètres d’origine.  
@@ -23,23 +23,23 @@ Parfois, vous pouvez choisir qu’un projet appelle un formulaire semblable à c
  Vous pouvez créer des formulaires de classe dérivée par programmation ou à l’aide du sélecteur d’héritage visuel.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comment : hériter des Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Guide pratique pour Hériter des Windows Forms](how-to-inherit-windows-forms.md)  
  Explique comment créer des formulaires hérités dans le code.  
   
- [Comment : hériter de formulaires à l’aide de la boîte de dialogue Sélecteur d’héritage](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ [Guide pratique pour Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
  Explique comment créer des formulaires hérités avec le sélecteur d’héritage.  
   
- [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
+ [Conséquences de la modification de l’aspect d’un formulaire de base](effects-of-modifying-base-form-appearance.md)  
  Explique comment modifier les contrôles d’un formulaire de base et leurs propriétés.  
   
- [Procédure pas à pas : démonstration de l’héritage visuel](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [Procédure pas à pas : Démonstration de l’héritage visuel](walkthrough-demonstrating-visual-inheritance.md)  
  Décrit comment créer un Windows Form de base et le compiler dans une bibliothèque de classes. Vous importerez cette bibliothèque de classes dans un autre projet et créerez un formulaire qui hérite du formulaire de base.  
   
- [Comment : utiliser les modificateurs et les propriétés GenerateMember](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
+ [Guide pratique pour Utiliser les modificateurs et les propriétés GenerateMember](how-to-use-the-modifiers-and-generatemember-properties.md)  
  Explique comment utiliser les propriétés `GenerateMember` et `Modifiers`, qui sont tout à fait pertinentes lorsque le Concepteur Windows Forms génère une variable membre pour un composant.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Principes fondamentaux de l’héritage (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Éléments fondamentaux de l’héritage (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Décrit comment définir des classes Visual Basic qui servent de base pour les autres classes.  
   
  [class](~/docs/csharp/language-reference/keywords/class.md)  

@@ -2,12 +2,12 @@
 title: Conseils de migration
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441214"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719674"
 ---
 # <a name="migration-guidance"></a>Conseils de migration
 Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft publie la deuxième version principale de Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] a été intégré dans [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (ce qui comprenait les types dans les espaces de noms System.Workflow.*, à présent désignés sous le nom de WF3) et amélioré dans [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 est également dans le cadre de la [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mais il existe en même temps que la nouvelle technologie de workflow (les types dans System.Activities.\* espaces de noms ; appelée WF4). Lorsque vous pensez au moment opportun d'adopter WF4, il est important de savoir tout d'abord que c'est vous qui décidez.  
@@ -35,7 +35,7 @@ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Micros
  [Guide de WF : Ordinateur d’état](https://go.microsoft.com/fwlink/?LinkId=153855)  
  Explique la modélisation des flux de contrôle WF4 en l'absence d'une activité Ordinateur-État.  
   
- Notez que ces conseils s'appliquent uniquement aux projets de workflow qui ciblent le .NET Framework 4. Les workflows de machine à états ont été ajoutés dans le .NET 4.0.1 avec la mise en production de la mise à jour 1 de la plateforme, et ont été inclus dans le .NET Framework 4.5. Pour plus d’informations sur les workflows machine à états dans .NET 4.0.1 - 4.0.3 et .NET Framework 4.5, consultez [mise à jour 4.0.1 pour Microsoft.NET Framework 4 fonctionnalités](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) et [Workflows Machine à états](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Notez que ces conseils s'appliquent uniquement aux projets de workflow qui ciblent le .NET Framework 4. Les workflows de machine à états ont été ajoutés dans le .NET 4.0.1 avec la mise en production de la mise à jour 1 de la plateforme, et ont été inclus dans le .NET Framework 4.5. Pour plus d’informations sur les workflows machine à états dans .NET 4.0.1 - 4.0.3 et .NET Framework 4.5, consultez [mise à jour 4.0.1 pour Microsoft.NET Framework 4 fonctionnalités](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) et [Workflows Machine à états](state-machine-workflows.md).  
   
  [Guide de Migration WF : Activités personnalisées](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Fournit des exemples et des instructions pour une nouvelle conception des activités personnalisées WF3 sur WF4.  

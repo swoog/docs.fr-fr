@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632125"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717724"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procédure : Modifier l’apparence du contrôle LinkLabel Windows Forms
 Vous pouvez modifier le texte affiché par le <xref:System.Windows.Forms.LinkLabel> contrôle pour l’adapter à différentes fins. Par exemple, il est courant d’indiquer à l’utilisateur que vous pouvez cliquer sur texte en définissant le texte s’affiche dans une couleur spécifique avec un trait de soulignement. Une fois que l’utilisateur clique sur le texte, la couleur est remplacée par une couleur différente. Pour contrôler ce comportement, vous pouvez définir cinq propriétés différentes : le <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, et <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriétés.  
@@ -126,6 +126,6 @@ Vous pouvez modifier le texte affiché par le <xref:System.Windows.Forms.LinkLab
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [Vue d'ensemble du contrôle LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [Guide pratique pour Lier à un objet ou la Page Web avec un contrôle LinkLabel Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel, contrôle](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [Vue d'ensemble du contrôle LinkLabel](linklabel-control-overview-windows-forms.md)
+- [Guide pratique pour Lier à un objet ou la Page Web avec un contrôle LinkLabel Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [LinkLabel, contrôle](linklabel-control-windows-forms.md)

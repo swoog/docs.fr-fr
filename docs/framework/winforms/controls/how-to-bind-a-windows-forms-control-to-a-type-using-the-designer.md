@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 6c307c913fc8deb62bc18ca2c01bb8621d9b0642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496437"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712095"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Procédure : Lier un contrôle de formulaires Windows à un Type à l’aide du Concepteur
 Quand vous créez des contrôles qui interagissent avec des données, vous devez parfois lier un contrôle à un type plutôt qu’à un objet. Cette situation se présente surtout au moment du design, quand les données peuvent ne pas être disponibles mais que vos contrôles liés aux données ont tout de même besoin d’afficher des informations à partir de l’interface publique d’un type. Les procédures suivantes montrent comment créer un nouveau <xref:System.Windows.Forms.BindingSource> qui est lié à un type, puis comment lier une des propriétés du type pour le <xref:System.Windows.Forms.TextBox.Text%2A> propriété d’un <xref:System.Windows.Forms.TextBox>.  
@@ -52,6 +52,6 @@ Quand vous créez des contrôles qui interagissent avec des données, vous devez
 4.  Dans le **éditeur de Type d’interface utilisateur DataSource**, développez le nœud pour le <xref:System.Windows.Forms.BindingSource> ajouté précédemment, puis sélectionnez la propriété du type lié que vous souhaitez lier à la <xref:System.Windows.Forms.TextBox.Text%2A> propriété de la <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource, composant](bindingsource-component.md)
+- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

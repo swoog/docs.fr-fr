@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 33a4d6f7db140023bc33839fec7d5e28b7f5fe51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547304"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719635"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procédure : Créer un workflow séquentiel
-Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Sequence> activité et les activités personnalisées de la précédente [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
+Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Sequence> activité et les activités personnalisées de la précédente [Comment : Créer une activité](how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
   
 > [!NOTE]
->  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Pour effectuer cette rubrique, vous devez tout d’abord effectuer [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Pour effectuer cette rubrique, vous devez tout d’abord effectuer [Comment : Créer une activité](how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).  
@@ -149,19 +149,19 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
      L'exemple suivant illustre le flux de travail terminé.  
   
-     ![Flux de travail séquentiel terminé](../../../docs/framework/windows-workflow-foundation/media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![Flux de travail séquentiel terminé](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
 ### <a name="to-build-the-workflow"></a>Pour générer le flux de travail  
   
 1.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
-     Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow séquentiel à partir de cette étape, passez directement à la [pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow séquentiel à partir de cette étape, passez directement à la [pour générer et exécuter l’application](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
-- [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
-- [Didacticiel Bien démarrer](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Guide pratique pour Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
-- [Guide pratique pour Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+- [Programmation Windows Workflow Foundation](programming.md)
+- [Conception des workflows](designing-workflows.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)
+- [Guide pratique pour Créer une activité](how-to-create-an-activity.md)
+- [Guide pratique pour Exécuter un Workflow](how-to-run-a-workflow.md)

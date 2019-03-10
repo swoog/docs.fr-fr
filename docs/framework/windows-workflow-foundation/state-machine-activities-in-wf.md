@@ -2,12 +2,12 @@
 title: Activités de l'ordinateur d'état dans WF
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 3086348d1c4f29e3f446e9525a12a9c207efb328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee507f873cde3aabce09c9b3fdb1620cd79fdab
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618998"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710314"
 ---
 # <a name="state-machine-activities-in-wf"></a>Activités de l'ordinateur d'état dans WF
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fournit plusieurs activités et concepteurs d'activités fournis par le système pour créer des workflows de machine à états.  
@@ -20,4 +20,4 @@ ms.locfileid: "54618998"
 |<xref:System.Activities.Statements.Transition>|Représente la transition entre deux états. Il existe aucune **boîte à outils** d’élément pour <xref:System.Activities.Statements.Transition>; les transitions sont créées sur le Concepteur de workflow en faisant glisser une ligne entre deux États, ou en déposant un état sur les triangles qui s’affichent lorsqu’un état se trouve sur un autre . Pour plus d’informations, consultez [Concepteur d’activités Transition](/visualstudio/workflow-designer/transition-activity-designer).|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Didacticiel Bien démarrer](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664224"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713772"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procédure : Créer une Interface utilisateur à plusieurs volets avec des formulaires Windows à l’aide du Concepteur
 Dans la procédure suivante, vous allez créer une interface utilisateur à plusieurs volets semblable à celle utilisée dans Microsoft Outlook, avec un **dossier** liste, un **Messages** volet et un **aperçu** volet. Cette disposition est obtenue principalement en ancrant les contrôles dans le formulaire.  
   
- Lorsque vous ancrez un contrôle, vous déterminez le bord du conteneur parent auquel un contrôle est attaché. Par conséquent, si vous définissez la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Right>, le bord droit du contrôle sera ancré sur le bord droit de son contrôle parent. En outre, le bord du contrôle ancré est redimensionné pour correspondre à celle de son contrôle conteneur. Pour plus d’informations sur la façon dont <xref:System.Windows.Forms.SplitContainer.Dock%2A> fonctionne de la propriété, consultez [Comment : Ancrer des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Lorsque vous ancrez un contrôle, vous déterminez le bord du conteneur parent auquel un contrôle est attaché. Par conséquent, si vous définissez la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Right>, le bord droit du contrôle sera ancré sur le bord droit de son contrôle parent. En outre, le bord du contrôle ancré est redimensionné pour correspondre à celle de son contrôle conteneur. Pour plus d’informations sur la façon dont <xref:System.Windows.Forms.SplitContainer.Dock%2A> fonctionne de la propriété, consultez [Comment : Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md).  
   
  Cette procédure se concentre sur la disposition du <xref:System.Windows.Forms.SplitContainer> et d’autres contrôles sur le formulaire, et non sur l’ajout de fonctionnalités pour que l’application ressemble à Microsoft Outlook.  
   
@@ -44,8 +44,8 @@ Dans la procédure suivante, vous allez créer une interface utilisateur à plus
     > [!NOTE]
     >  Lorsque vous placez le pointeur de la souris sur un des séparateurs dans la <xref:System.Windows.Forms.SplitContainer> contrôles, vous pouvez modifier les dimensions internes.  
   
-     À ce stade dans le développement d’applications, vous avez créé une interface utilisateur sophistiquée. L’étape suivante consiste à continuer la programmation de l’application elle-même, peut-être en connectant le <xref:System.Windows.Forms.TreeView> contrôle et <xref:System.Windows.Forms.ListView> contrôles à un certain type de source de données. Pour plus d’informations sur la connexion des contrôles aux données, consultez [une liaison de données et Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).  
+     À ce stade dans le développement d’applications, vous avez créé une interface utilisateur sophistiquée. L’étape suivante consiste à continuer la programmation de l’application elle-même, peut-être en connectant le <xref:System.Windows.Forms.TreeView> contrôle et <xref:System.Windows.Forms.ListView> contrôles à un certain type de source de données. Pour plus d’informations sur la connexion des contrôles aux données, consultez [une liaison de données et Windows Forms](../data-binding-and-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer, contrôle](splitcontainer-control-windows-forms.md)

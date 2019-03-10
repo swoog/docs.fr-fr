@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667555"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711276"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Vue d’ensemble du contrôle PrintPreviewDialog (Windows Forms)
-Les formulaires Windows <xref:System.Windows.Forms.PrintPreviewDialog> contrôle est une boîte de dialogue préconfigurée permettant d’afficher comment un [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) apparaîtra une fois imprimé. Utilisez-la dans votre application Windows comme une solution simple au lieu de configurer votre propre boîte de dialogue. Le contrôle contient des boutons pour l'impression, le zoom avant, l'affichage d'une ou plusieurs pages et la fermeture de la boîte de dialogue.  
+Les formulaires Windows <xref:System.Windows.Forms.PrintPreviewDialog> contrôle est une boîte de dialogue préconfigurée permettant d’afficher comment un [PrintDocument](printdocument-component-windows-forms.md) apparaîtra une fois imprimé. Utilisez-la dans votre application Windows comme une solution simple au lieu de configurer votre propre boîte de dialogue. Le contrôle contient des boutons pour l'impression, le zoom avant, l'affichage d'une ou plusieurs pages et la fermeture de la boîte de dialogue.  
   
 ## <a name="key-properties-and-methods"></a>Méthodes et propriétés de clé  
  Propriété de clé du contrôle est <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, qui définit le document à afficher. Le document doit être un <xref:System.Drawing.Printing.PrintDocument> objet. Pour afficher la boîte de dialogue, vous devez appeler son <xref:System.Windows.Forms.Form.ShowDialog%2A> (méthode). L’anticrénelage peut lisser le texte, mais il peut également apporter de ralentir l’affichage ; pour l’utiliser, définissez la <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> propriété `true`.  
@@ -53,6 +53,6 @@ Si vous utilisez le <xref:System.Drawing.Printing.PrintDocument.QueryPageSetting
 
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [Vue d’ensemble du contrôle PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog, contrôle](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Contrôles et composants de boîte de dialogue](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [Vue d’ensemble du contrôle PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog, contrôle](printpreviewdialog-control-windows-forms.md)
+- [Contrôles et composants de boîte de dialogue](dialog-box-controls-and-components-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 964597f2e47cee8f61111a684375e73e8a13107d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442345"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717932"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Vue d'ensemble des applications Windows Forms et non managées
 Les contrôles et les applications Windows Forms peuvent interagir avec des applications non managées, avec certaines restrictions. Les sections suivantes décrivent les scénarios et les configurations pris en charge et non pris en charge par les applications et les contrôles Windows Forms.  
@@ -51,18 +51,18 @@ Les contrôles et les applications Windows Forms peuvent interagir avec des appl
   
  Pour qu'un Windows Form fonctionne correctement à partir d'une application cliente COM, vous devez l'exécuter sur une boucle de message Windows Forms. Pour cela, utilisez l'une des approches suivantes :  
   
--   Utilisez la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> pour afficher le Windows Form. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).  
+-   Utilisez la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> pour afficher le Windows Form. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
--   Affichez chaque Windows Form sur un nouveau thread. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Affichez chaque Windows Form sur un nouveau thread. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interopérabilité COM dans les applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Exemples d’interopérabilité COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (importateur de contrôles Active X Windows Forms)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Exposition de composants .NET Framework à COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Empaquetage d'un assembly pour COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-- [Inscription d’assemblys dans COM](../../../../docs/framework/interop/registering-assemblies-with-com.md)
-- [Guide pratique pour Prennent en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
-- [Guide pratique pour Prennent en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Aximp.exe (importateur de contrôles Active X Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Exposition de composants .NET Framework à COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Empaquetage d'un assembly pour COM](../../interop/packaging-an-assembly-for-com.md)
+- [Inscription d’assemblys dans COM](../../interop/registering-assemblies-with-com.md)
+- [Guide pratique pour Prennent en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Guide pratique pour Prennent en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

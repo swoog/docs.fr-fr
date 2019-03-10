@@ -2,12 +2,12 @@
 title: Mise à jour dynamique
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496740"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724473"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 
@@ -17,13 +17,13 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
 
 Pour appliquer les mises à jour dynamiques à une instance de workflow persistante, un <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> qui contient les instructions du runtime qui décrivent comment modifier l'instance persistante de workflow est créé pour refléter les modifications souhaitées. Une fois la mise à jour de la carte créée, elle est appliquée aux instances de workflow persistantes souhaitées. Une fois la mise à jour dynamique appliquée, l'instance de workflow peut reprendre à l'aide de la nouvelle définition de workflow mise à jour. Quatre étapes sont requises pour créer et appliquer la mise à jour d'une carte.
 
-1. [Préparer la définition de flux de travail pour la mise à jour dynamique](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [Préparer la définition de flux de travail pour la mise à jour dynamique](dynamic-update.md#Prepare)
 
-2. [Mettre à jour la définition de flux de travail pour refléter les modifications souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [Mettre à jour la définition de flux de travail pour refléter les modifications souhaitées](dynamic-update.md#Update)
 
-3. [Créer la carte de mise à jour](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [Créer la carte de mise à jour](dynamic-update.md#Create)
 
-4. [Appliquer la mise à jour de la carte aux instances de workflow persistantes souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [Appliquer la mise à jour de la carte aux instances de workflow persistantes souhaitées](dynamic-update.md#Apply)
 
 > [!NOTE]
 > Notez que les étapes 1 à 3, qui couvrent la conception de la mise à jour de la carte, peuvent être effectuées indépendamment de la mise à jour. Un scénario courant que le développeur de flux de travail crée la carte de mise à jour en mode hors connexion, et ensuite un administrateur s’applique à la mise à jour à une date ultérieure.
@@ -37,7 +37,7 @@ La première étape du processus de mise à jour dynamique consiste à développ
 Pour préparer un workflow XAML pour la mise à jour dynamique, il peut être chargé dans un <xref:System.Activities.ActivityBuilder>, puis le <xref:System.Activities.ActivityBuilder> est passé dans <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> Pour plus d’informations sur l’utilisation de workflows sérialisés et <xref:System.Activities.ActivityBuilder>, consultez [sérialisation de Workflows et activités vers et depuis XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).
+> Pour plus d’informations sur l’utilisation de workflows sérialisés et <xref:System.Activities.ActivityBuilder>, consultez [sérialisation de Workflows et activités vers et depuis XAML](serializing-workflows-and-activities-to-and-from-xaml.md).
 
 Dans l'exemple suivant, une définition de `MortgageWorkflow` (composée de <xref:System.Activities.Statements.Sequence> avec plusieurs activités enfants) est chargée dans <xref:System.Activities.ActivityBuilder>, puis élaborée pour la mise à jour dynamique. Après le retour de la méthode, <xref:System.Activities.ActivityBuilder> contient la définition de workflow d'origine ainsi qu'une copie.
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 Une fois la mise à jour dynamique appliquée, l'instance de workflow peut reprendre. Notez que la nouvelle définition mise à jour et <xref:System.Activities.WorkflowIdentity> doivent être utilisés.
 
 > [!NOTE]
-> Pour plus d’informations sur l’utilisation de <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowIdentity>, consultez [à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).
+> Pour plus d’informations sur l’utilisation de <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowIdentity>, consultez [à l’aide de WorkflowIdentity et du Versioning](using-workflowidentity-and-versioning.md).
 
 Dans l'exemple suivant, le workflow `MortgageWorkflow_v1.1.xaml` de l'exemple précédent a été compilé, et est chargé et repris à l'aide de la définition mise à jour de workflow.
 

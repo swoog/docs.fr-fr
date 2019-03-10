@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549757"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703021"
 ---
 # <a name="how-to-translate-image-colors"></a>Procédure : Traduire les couleurs d’Image
 Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de couleur. Les entrées de matrice de couleurs qui représentent les traductions sont présentées dans le tableau suivant.  
@@ -31,7 +31,7 @@ Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de c
   
  L’illustration suivante montre l’image d’origine sur la gauche et l’image transformée sur la droite.  
   
- ![Traduire les couleurs](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![Traduire les couleurs](./media/colortrans2.png "colortrans2")  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la traduction rouge. Notez que la valeur maximale pour un composant de couleur est 1, le composant rouge de la deuxième ligne ne change pas. (De même, la valeur minimale d’un composant de couleur est 0.)  
   
@@ -42,14 +42,14 @@ Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de c
 |Vert (0, 1, 0, 1)|(0.75, 1, 0, 1)|  
 |Bleu (0, 0, 1, 1)|(0.75, 0, 1, 1)|  
   
- [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.RecoloringImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez `ColorBars.bmp` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
+ L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Remplacez `ColorBars.bmp` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Recoloriage des images](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Recoloriage des images](recoloring-images.md)

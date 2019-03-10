@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: ca16d2fa2339f8d9110bb748a687f90e093598fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afb58df99ea30f5e7e6ab5b9156af195d273c44d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712706"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Capture de la souris dans les Windows Forms
 *Capture de souris* signifie qu’un contrôle prend de toutes les entrées de souris. Lorsqu’un contrôle a capturé la souris, il reçoit l’entrée de la souris soit ou non le pointeur dans ses bordures.  
@@ -22,4 +22,4 @@ ms.locfileid: "54690326"
  Seule la fenêtre de premier plan peut capturer la souris. Lorsqu’une fenêtre d’arrière-plan tente de capturer la souris, la fenêtre reçoit des messages uniquement pour les événements de souris qui se produisent lorsque le pointeur de la souris se trouve dans la partie visible de la fenêtre. En outre, même si la fenêtre de premier plan a capturé la souris, l’utilisateur peut toujours cliquer sur une autre fenêtre, plaçant au premier plan. Lorsque la souris est capturée, les touches de raccourci ne fonctionnent pas.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Entrée de la souris dans une application Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)

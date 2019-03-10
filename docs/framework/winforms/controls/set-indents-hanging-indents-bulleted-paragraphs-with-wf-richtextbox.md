@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492420"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713027"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procédure : Définir les retraits, les retraits négatifs et des paragraphes à puces avec le contrôle RichTextBox Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de nombreuses options pour mettre en forme le texte affiché. Vous pouvez mettre en forme des paragraphes sélectionnés sous forme de listes à puces en définissant le <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriété. Vous pouvez également utiliser le <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, et <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriétés à définir la mise en retrait des paragraphes par rapport à gauche et les bords droit du contrôle et le bord gauche des autres lignes de texte.  
@@ -70,5 +70,5 @@ Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de n
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox, contrôle](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox, contrôle](richtextbox-control-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

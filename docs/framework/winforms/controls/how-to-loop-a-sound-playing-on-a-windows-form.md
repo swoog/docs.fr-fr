@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260918"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719271"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procédure : Lecture d’un formulaire Windows d’un son en boucle
 L'exemple de code suivant joue un son de manière répétitive. Quand le code du gestionnaire d'événements `stopPlayingButton_Click` est exécuté, le son s'arrête. Si aucun son n'est joué, rien ne se produit.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
@@ -55,5 +55,5 @@ L'exemple de code suivant joue un son de manière répétitive. Quand le code du
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [Vue d’ensemble de la classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Vue d’ensemble de la classe SoundPlayer](soundplayer-class-overview.md)

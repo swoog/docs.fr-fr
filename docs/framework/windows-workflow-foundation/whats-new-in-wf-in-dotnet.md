@@ -2,16 +2,16 @@
 title: Nouveautés de Windows Workflow Foundation dans .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212402"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718920"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Nouveautés de Windows Workflow Foundation dans .NET 4.5
 
-Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduit de nouvelles fonctionnalités, telles que les nouvelles activités, les fonctions du concepteur et les modèles de développement de flux de travail. Nombre des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont prises en charge dans le concepteur de workflow réhébergé. Pour plus d’informations sur les nouvelles fonctionnalités qui sont prises en charge, consultez [prise en charge des nouvelles fonctionnalités de 4.5 Workflow Foundation dans le Concepteur de Workflow réhébergés](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Pour plus d’informations sur la migration applications de workflow .NET 3.0 et 3.5 de .NET à utiliser la dernière version, consultez [conseils de Migration](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Cette rubrique fournit une vue d'ensemble des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduit de nouvelles fonctionnalités, telles que les nouvelles activités, les fonctions du concepteur et les modèles de développement de flux de travail. Nombre des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont prises en charge dans le concepteur de workflow réhébergé. Pour plus d’informations sur les nouvelles fonctionnalités qui sont prises en charge, consultez [prise en charge des nouvelles fonctionnalités de 4.5 Workflow Foundation dans le Concepteur de Workflow réhébergés](wf-features-in-the-rehosted-workflow-designer.md). Pour plus d’informations sur la migration applications de workflow .NET 3.0 et 3.5 de .NET à utiliser la dernière version, consultez [conseils de Migration](migration-guidance.md). Cette rubrique fournit une vue d'ensemble des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
 > [!WARNING]
 > Les nouvelles fonctionnalités de Windows Workflow Foundation introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ne sont pas disponibles pour les projets qui ciblent des versions antérieures du framework. Si un projet qui cible [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] est reciblé vers une version antérieure du .NET Framework, plusieurs problèmes peuvent se produire.
@@ -25,13 +25,13 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
 
 Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] présente plusieurs nouvelles fonctionnalités de contrôle de version basées sur la nouvelle classe <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> fournit aux auteurs d'applications de workflow un mécanisme pour mapper une instance de workflow persistante avec sa définition.
 
-- Les développeurs qui utilisent l'hébergement <xref:System.Activities.WorkflowApplication> peuvent utiliser <xref:System.Activities.WorkflowIdentity> pour permettre l'hébergement de plusieurs versions d'un workflow côte à côte. Les instances de workflow persistantes peuvent être chargées à l'aide de la nouvelle classe <xref:System.Activities.WorkflowApplicationInstance>, puis <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> peut être utilisé par l'hôte pour fournir la version appropriée de la définition de workflow en instanciant <xref:System.Activities.WorkflowApplication>. Pour plus d’informations, consultez [à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) et [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Les développeurs qui utilisent l'hébergement <xref:System.Activities.WorkflowApplication> peuvent utiliser <xref:System.Activities.WorkflowIdentity> pour permettre l'hébergement de plusieurs versions d'un workflow côte à côte. Les instances de workflow persistantes peuvent être chargées à l'aide de la nouvelle classe <xref:System.Activities.WorkflowApplicationInstance>, puis <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> peut être utilisé par l'hôte pour fournir la version appropriée de la définition de workflow en instanciant <xref:System.Activities.WorkflowApplication>. Pour plus d’informations, consultez [à l’aide de WorkflowIdentity et du Versioning](using-workflowidentity-and-versioning.md) et [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- <xref:System.ServiceModel.WorkflowServiceHost> est maintenant un hôte multi-version. Lorsqu'une nouvelle version d'un service de workflow est déployée, les nouvelles instances sont créées à l'aide du nouveau service, mais les instances existantes s'exécutent à l'aide de la version antérieure. Pour plus d’informations, consultez [Versioning côte à côte dans WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- <xref:System.ServiceModel.WorkflowServiceHost> est maintenant un hôte multi-version. Lorsqu'une nouvelle version d'un service de workflow est déployée, les nouvelles instances sont créées à l'aide du nouveau service, mais les instances existantes s'exécutent à l'aide de la version antérieure. Pour plus d’informations, consultez [Versioning côte à côte dans WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Cette rubrique présente la mise à jour dynamique qui fournit un mécanisme pour mettre à jour la définition d'une instance persistante de workflow. Pour plus d’informations, consultez [mise à jour dynamique](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) et [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Cette rubrique présente la mise à jour dynamique qui fournit un mécanisme pour mettre à jour la définition d'une instance persistante de workflow. Pour plus d’informations, consultez [mise à jour dynamique](dynamic-update.md) et [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Le script de base de données SqlWorkflowInstanceStoreSchemaUpgrade.sql est fourni pour mettre à niveau les bases de données de persistance créées à l'aide de scripts de base de données [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Ce script met à jour les bases de données de persistance [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] pour prendre en charge les nouvelles fonctions de versioning introduites dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Des valeurs de versioning par défaut sont attribuées à toutes les instances persistantes de workflow dans la base de données et ces instances peuvent ensuite participer côte à côte à l'exécution et à la mise à jour dynamique. Pour plus d’informations, consultez [mise à niveau de .NET Framework 4 persistance bases de données pour la prise en charge le Versioning de Workflow](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Le script de base de données SqlWorkflowInstanceStoreSchemaUpgrade.sql est fourni pour mettre à niveau les bases de données de persistance créées à l'aide de scripts de base de données [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Ce script met à jour les bases de données de persistance [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] pour prendre en charge les nouvelles fonctions de versioning introduites dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Des valeurs de versioning par défaut sont attribuées à toutes les instances persistantes de workflow dans la base de données et ces instances peuvent ensuite participer côte à côte à l'exécution et à la mise à jour dynamique. Pour plus d’informations, consultez [mise à niveau de .NET Framework 4 persistance bases de données pour la prise en charge le Versioning de Workflow](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Activités
 
@@ -72,7 +72,7 @@ Les workflows dans [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)
 
      Si les exceptions ne doivent pas être sérialisées, assurez-vous qu'elles sont utilisées dans un <xref:System.Activities.Statements.NoPersistScope>.
 
-4. Les auteurs d'activités doivent substituer <xref:System.Activities.Activity.CacheMetadata%2A> pour éviter que le runtime du workflow exécute automatiquement la réflexion sur le type. Les arguments et les activités enfants doivent être non-null, et <xref:System.Activities.ActivityMetadata.Bind%2A> doit être appelé explicitement. Pour plus d’informations sur la substitution <xref:System.Activities.Activity.CacheMetadata%2A>, consultez [exposition de données avec CacheMetadata](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md). En outre, les instances des arguments qui sont d’un type qui est `internal` ou **privé** doit être explicitement créé dans <xref:System.Activities.Activity.CacheMetadata%2A> pour éviter d’être créées par réflexion.
+4. Les auteurs d'activités doivent substituer <xref:System.Activities.Activity.CacheMetadata%2A> pour éviter que le runtime du workflow exécute automatiquement la réflexion sur le type. Les arguments et les activités enfants doivent être non-null, et <xref:System.Activities.ActivityMetadata.Bind%2A> doit être appelé explicitement. Pour plus d’informations sur la substitution <xref:System.Activities.Activity.CacheMetadata%2A>, consultez [exposition de données avec CacheMetadata](exposing-data-with-cachemetadata.md). En outre, les instances des arguments qui sont d’un type qui est `internal` ou **privé** doit être explicitement créé dans <xref:System.Activities.Activity.CacheMetadata%2A> pour éviter d’être créées par réflexion.
 
 5. Les types n'utilisent pas <xref:System.Runtime.Serialization.ISerializable> ou <xref:System.SerializableAttribute> pour la sérialisation ; les types qui doivent être sérialisés doivent prendre en charge <xref:System.Runtime.Serialization.DataContractSerializer>.
 
@@ -118,7 +118,7 @@ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les va
 
 La capture d’écran suivante indique le menu contextuel du concepteur de variable et d’argument.
 
-![Variable et le Menu contextuel du Concepteur de Argument](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![Variable et le Menu contextuel du Concepteur de Argument](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> Le cadrage automatique avec séquence
 
@@ -126,11 +126,11 @@ La capture d’écran suivante indique le menu contextuel du concepteur de varia
 
 La capture d'écran suivante affiche une activité `WriteLine` avec le `Body` d'un `NoPersistScope`.
 
-![Auto&#45;entourent l’emplacement de dépôt](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![Auto&#45;entourent l’emplacement de dépôt](./media/autosurround1.png "AutoSurround1")
 
 La capture d’écran suivante montre l’activité `Sequence` créée automatiquement dans le `Body` lorsqu’un second `WriteLine` est déposé sous le premier.
 
-![Activité sequence créée automatiquement](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![Activité sequence créée automatiquement](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> Mode panoramique
 
@@ -138,7 +138,7 @@ Pour naviguer plus facilement dans un grand workflow dans le concepteur, le mode
 
 La capture d'écran suivante indique le bouton de panoramique qui se trouve dans le coin inférieur droit du concepteur de workflow.
 
-![Bouton panoramique dans le Concepteur de workflow](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![Bouton panoramique dans le Concepteur de workflow](./media/panbutton.png "PanButton")
 
 Le bouton central de la souris ou la barre d'espace peut également être utilisé pour appliquer un panoramique au concepteur de workflow.
 
@@ -152,9 +152,9 @@ Il est également possible de glisser-déplacer plusieurs activités sélectionn
 
 Afin de simplifier la navigation dans les workflows hiérarchiques, les composants d’un workflow s’affichent dans un mode Plan de style arborescent. Le mode plan est affiché dans le **structure du Document** vue. Pour ouvrir cette vue, dans le menu supérieur, sélectionnez **vue**, **Windows autres**, **structure du Document**, ou appuyez sur Ctrl W, U. Cliquer sur un nœud en mode Plan permet d'accéder à l'activité correspondante dans le Concepteur de workflow, et le mode Plan est mis à jour pour afficher les activités qui sont sélectionnées dans le concepteur.
 
-La capture d’écran suivante du workflow terminé à partir de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) montre le mode plan avec un workflow séquentiel.
+La capture d’écran suivante du workflow terminé à partir de la [Getting Started Tutorial](getting-started-tutorial.md) montre le mode plan avec un workflow séquentiel.
 
-![Mode d’affichage dans le Concepteur de flux de travail plan](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Mode d’affichage dans le Concepteur de flux de travail plan](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> Expressions c#
 
@@ -162,7 +162,7 @@ Avant le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], toutes les expres
 
 Les expressions C# sont validées au moment de la conception. Les erreurs dans les expressions C# sont marquées avec un soulignement ondulé rouge.
 
-Pour plus d’informations sur les expressions c#, consultez [Expressions c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).
+Pour plus d’informations sur les expressions c#, consultez [Expressions c#](csharp-expressions.md).
 
 ### <a name="BKMK_Visibility"></a> Plus de visibilité de barre de shell et l’en-tête de contrôle des éléments
 
@@ -174,17 +174,17 @@ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les co
 
 La capture d'écran suivante montre les points d'attachement qui sont visibles lorsqu'une activité est déplacée depuis la boîte à outils.
 
-![Nœud de départ organigramme montrant les points de connexion automatique](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![Nœud de départ organigramme montrant les points de connexion automatique](./media/autoconnect1.png "Autoconnect1")
 
 Les activités peuvent également être déplacées sur les connexions entre des nœuds d'organigramme et des états de façon à insérer automatiquement le nœud entre deux autres nœuds. La capture d’écran suivante montre la ligne de connexion en surbrillance où les activités peuvent être glissées-déposées depuis la boîte à outils.
 
-![Auto&#45;insérer handle pour déposer les activités](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+![Auto&#45;insérer handle pour déposer les activités](./media/autoinsert.png "Autoinsert")
 
 ### <a name="BKMK_Annotations"></a> Annotations du Concepteur
 
 Pour faciliter le développement de plus grands workflows, le concepteur prend désormais en charge l'ajout d'annotations pour faciliter le suivi du processus de création. Une annotation peut être ajoutée aux activités, états, nœuds d'organigramme, variables et arguments. La capture d'écran suivante montre le menu contextuel utilisé pour ajouter des annotations au concepteur.
 
-![Menu contextuel des annotations](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![Menu contextuel des annotations](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>États de débogage
 
@@ -230,12 +230,12 @@ Workflows de machine à états ont été introduits dans le cadre du .NET Framew
 
 4. Les activités utilisées pour créer des workflows Machine à états, notamment : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> et <xref:System.Activities.Statements.Transition>
 
-La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).
+La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md).
 
-![Flux de travail de Machine à états terminé](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Flux de travail de Machine à états terminé](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-Pour plus d’informations sur la création de workflows machine à états, consultez [Workflows Machine à états](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).
+Pour plus d’informations sur la création de workflows machine à états, consultez [Workflows Machine à états](state-machine-workflows.md).
 
 ### <a name="BKMK_ContractFirst"></a> Développement de workflow contrat en premier
 
-L’outil de développement de workflow contrat en premier permet au développeur de concevoir un contrat dans le code tout d’abord, puis, en quelques clics dans Visual Studio, générez automatiquement un modèle d’activité dans la boîte à outils représentant chaque opération. Ces activités sont ensuite utilisées pour créer un workflow qui implémente les opérations définies par le contrat. Le concepteur de workflow validera le service de workflow pour garantir que ces opérations sont implémentées et que la signature du workflow correspond à la signature du contrat. Le développeur peut également associer un service de workflow à une collection de contrats implémentés. Pour plus d’informations sur le développement de service de workflow contrat en premier, consultez [Comment : Créer un service de flux de travail qui utilise un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+L’outil de développement de workflow contrat en premier permet au développeur de concevoir un contrat dans le code tout d’abord, puis, en quelques clics dans Visual Studio, générez automatiquement un modèle d’activité dans la boîte à outils représentant chaque opération. Ces activités sont ensuite utilisées pour créer un workflow qui implémente les opérations définies par le contrat. Le concepteur de workflow validera le service de workflow pour garantir que ces opérations sont implémentées et que la signature du workflow correspond à la signature du contrat. Le développeur peut également associer un service de workflow à une collection de contrats implémentés. Pour plus d’informations sur le développement de service de workflow contrat en premier, consultez [Comment : Créer un service de flux de travail qui utilise un contrat de service existant](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

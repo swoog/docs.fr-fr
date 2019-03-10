@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498906"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711315"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validation des entrées d’utilisateur dans les Windows Forms
 Quand les utilisateurs entrent des données dans votre application, il pourrez que vous souhaitez vérifier que les données sont valides avant que votre application utilise. Vous pouvez avoir besoin que certains champs de texte ne pas être de longueur nulle, qu’un champ soit au format d’un numéro de téléphone ou un autre type de données bien formées ou qu’une chaîne contienne des caractères non sécurisés qui peut servir à compromettre la sécurité d’une base de données. Windows Forms fournit plusieurs méthodes pour valider l’entrée dans votre application.  
@@ -22,14 +22,14 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
   
  Le langage de masquage qui est utilisé par <xref:System.Windows.Forms.MaskedTextBox> est très flexible. Il vous permet de spécifier les caractères requis, des caractères facultatifs, les caractères littéraux, tels que des traits d’union et des parenthèses, devise caractères et les séparateurs de date. Le contrôle fonctionne également bien lorsqu’elle est liée à une source de données. Le <xref:System.Windows.Forms.Binding.Format> événement sur une liaison de données peut être utilisé pour reformater les données entrantes avec le masque et le <xref:System.Windows.Forms.Binding.Parse> événement peut être utilisé pour reformater les données sortantes sont conformes aux spécifications du champ de données.  
   
- Pour plus d’informations, consultez [contrôle MaskedTextBox](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Pour plus d’informations, consultez [contrôle MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md).  
   
 ## <a name="event-driven-validation"></a>Validation pilotée par événements  
  Si vous souhaitez contrôler par programmation complet de validation, ou que vous avez besoin effectuer des vérifications de validation complexe, vous devez utiliser les événements de validation intégrées à la plupart des contrôles Windows Forms. Chaque contrôle qui accepte les entrées d’utilisateur au format libre a un <xref:System.Windows.Forms.Control.Validating> événement qui se produit chaque fois que le contrôle nécessite une validation de données. Dans la <xref:System.Windows.Forms.Control.Validating> méthode de gestion des événements, vous pouvez valider les entrées de plusieurs façons de l’utilisateur. Par exemple, si vous avez une zone de texte qui doit contenir un code postal, vous pouvez effectuer la validation de plusieurs manières :  
   
 -   Si le code postal doit appartenir à un groupe spécifique de codes postaux, vous pouvez effectuer une comparaison de chaînes sur l’entrée pour valider les données entrées par l’utilisateur. Par exemple, si le code postal doit être dans le jeu {10001, 10002, 10003}, vous pouvez utiliser une comparaison de chaînes pour valider les données.  
   
--   Si le code postal doit être un format spécifique, vous pouvez utiliser des expressions régulières pour valider les données entrées par l’utilisateur. Par exemple, pour valider le formulaire `#####` ou `#####-####`, vous pouvez utiliser l’expression régulière `^(\d{5})(-\d{4})?$`. Pour valider le formulaire `A#A #A#`, vous pouvez utiliser l’expression régulière `[A-Z]\d[A-Z] \d[A-Z]\d`. Pour plus d’informations sur les expressions régulières, consultez [Expressions régulières .NET Framework](../../../docs/standard/base-types/regular-expressions.md) et [exemples d’expressions régulières](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Si le code postal doit être un format spécifique, vous pouvez utiliser des expressions régulières pour valider les données entrées par l’utilisateur. Par exemple, pour valider le formulaire `#####` ou `#####-####`, vous pouvez utiliser l’expression régulière `^(\d{5})(-\d{4})?$`. Pour valider le formulaire `A#A #A#`, vous pouvez utiliser l’expression régulière `[A-Z]\d[A-Z] \d[A-Z]\d`. Pour plus d’informations sur les expressions régulières, consultez [Expressions régulières .NET Framework](../../standard/base-types/regular-expressions.md) et [exemples d’expressions régulières](../../standard/base-types/regular-expression-examples.md).  
   
 -   Si le code postal doit être un code postal valide, vous pouvez appeler un service Web de code postal pour valider les données entrées par l’utilisateur.  
   
@@ -94,5 +94,5 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox, contrôle](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [Exemples d'expressions régulières](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox, contrôle](./controls/maskedtextbox-control-windows-forms.md)
+- [Exemples d'expressions régulières](../../standard/base-types/regular-expression-examples.md)

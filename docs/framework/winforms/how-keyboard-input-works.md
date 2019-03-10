@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645481"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718023"
 ---
 # <a name="how-keyboard-input-works"></a>Fonctionnement de l'entrée au clavier
-Windows Forms traite l’entrée au clavier en déclenchant des événements de clavier en réponse aux messages de Windows. La plupart des applications Windows Forms traitent l’entrée au clavier exclusivement en gérant les événements de clavier. Toutefois, vous devez comprendre le fonctionnement des messages de clavier pour pouvoir implémenter des scénarios d’entrée au clavier plus avancés, comme l’interception des touches avant qu’elles n’atteignent un contrôle. Cette rubrique décrit les types de données de touches que Windows Forms reconnaît et fournit une vue d’ensemble du routage des messages de clavier. Pour plus d’informations sur les événements de clavier, consultez [Utilisation des événements de clavier](../../../docs/framework/winforms/using-keyboard-events.md).  
+Windows Forms traite l’entrée au clavier en déclenchant des événements de clavier en réponse aux messages de Windows. La plupart des applications Windows Forms traitent l’entrée au clavier exclusivement en gérant les événements de clavier. Toutefois, vous devez comprendre le fonctionnement des messages de clavier pour pouvoir implémenter des scénarios d’entrée au clavier plus avancés, comme l’interception des touches avant qu’elles n’atteignent un contrôle. Cette rubrique décrit les types de données de touches que Windows Forms reconnaît et fournit une vue d’ensemble du routage des messages de clavier. Pour plus d’informations sur les événements de clavier, consultez [Utilisation des événements de clavier](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Types de touches  
  Windows Forms identifie l’entrée au clavier en tant que codes de touche virtuels qui sont représentés par l’opérateur de bits <xref:System.Windows.Forms.Keys> énumération. Avec le <xref:System.Windows.Forms.Keys> énumération, vous pouvez combiner une série de touches enfoncées pour produire une valeur unique. Ces valeurs correspondent aux valeurs qui accompagnent les messages Windows WM_KEYDOWN et WM_SYSKEYDOWN. Vous pouvez détecter les activations de touches plus physiques en gérant la <xref:System.Windows.Forms.Control.KeyDown> ou <xref:System.Windows.Forms.Control.KeyUp> événements. Touches de caractère sont un sous-ensemble de la <xref:System.Windows.Forms.Keys> énumération et correspondent aux valeurs qui accompagnent les messages WM_CHAR et WM_SYSCHAR Windows. Si la combinaison de touches enfoncées produit un caractère, vous pouvez détecter le caractère en gérant la <xref:System.Windows.Forms.Control.KeyPress> événement. Vous pouvez également utiliser <xref:Microsoft.VisualBasic.Devices.Keyboard>, exposé par l’interface de programmation Visual Basic, pour découvrir quelles touches ont été enfoncées et envoyer les touches. Pour plus d’informations, consultez [Accès au clavier](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ Windows Forms traite l’entrée au clavier en déclenchant des événements de 
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard (objet)](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Accès au clavier](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Utilisation des événements de clavier](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Utilisation des événements de clavier](using-keyboard-events.md)

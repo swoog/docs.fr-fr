@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512552"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714322"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procédure : Déterminer l’enfant MDI actif
 Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a le focus sur le formulaire enfant actif. Par exemple, supposons que vous souhaitez copier le texte sélectionné dans le Presse-papiers à partir de la zone de texte du formulaire enfant. Vous devez créer une procédure qui copie le texte sélectionné dans le Presse-papiers à l’aide de la <xref:System.Windows.Forms.Control.Click> événements de l’élément de menu Copier dans le menu Edition standard.  
@@ -30,7 +30,7 @@ Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a l
 1.  Dans une méthode, copiez le texte du contrôle actif du formulaire enfant active dans le Presse-papiers.  
   
     > [!NOTE]
-    >  Cet exemple suppose il existe un formulaire MDI parent (`Form1`) qui a une ou plusieurs fenêtres MDI enfants contenant un <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [création de formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Cet exemple suppose il existe un formulaire MDI parent (`Form1`) qui a une ou plusieurs fenêtres MDI enfants contenant un <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [création de formulaires MDI parents](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a l
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Applications d’interface multidocument (MDI, Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Guide pratique pour Créer des formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Guide pratique pour Créer des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Guide pratique pour Envoyer des données à l’enfant MDI actif](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Guide pratique pour Réorganiser des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Applications d’interface multidocument (MDI, Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Guide pratique pour Créer des formulaires MDI parents](how-to-create-mdi-parent-forms.md)
+- [Guide pratique pour Créer des formulaires MDI enfants](how-to-create-mdi-child-forms.md)
+- [Guide pratique pour Envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)
+- [Guide pratique pour Réorganiser des formulaires MDI enfants](how-to-arrange-mdi-child-forms.md)

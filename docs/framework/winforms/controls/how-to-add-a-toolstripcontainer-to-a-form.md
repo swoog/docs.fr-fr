@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 47279c5e8fa24accca36280f9a97200982a1451a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441799"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715319"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procédure : Ajouter un ToolStripContainer à un formulaire
 Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripContainer> à un Windows Form et le remplir avec des contrôles.  
@@ -22,8 +22,8 @@ Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripCon
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment ajouter un <xref:System.Windows.Forms.ToolStripContainer> et un <xref:System.Windows.Forms.ToolStrip> à un Windows Forms, comment ajouter des éléments au <xref:System.Windows.Forms.ToolStrip> et comment ajouter le <xref:System.Windows.Forms.ToolStrip> au <xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A> du <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [!code-csharp[System.Windows.Forms.ToolStripContainer2#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/cs/form1.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStripContainer2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/vb/form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStripContainer2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/cs/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripContainer2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/vb/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple de code nécessite :  
@@ -34,5 +34,5 @@ Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripCon
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [ToolStripContainer, contrôle](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)
-- [Contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [ToolStripContainer, contrôle](toolstripcontainer-control.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)

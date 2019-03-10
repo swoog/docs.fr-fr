@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 70ca9c2c0bcaa258acaa7649adad32acdcd90dfb
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441643"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718049"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erreurs au moment du design dans le Concepteur Windows Forms
 Cette rubrique explique la signification et l’utilisation de la liste d’erreurs au moment du design qui apparaît dans Microsoft Visual Studio en cas d’échec du chargement du Concepteur Windows Forms. Si cette liste d’erreurs s’affiche, ne l’interprétez pas comme un bogue du concepteur, mais comme une aide vous permettant de corriger les erreurs dans votre code.  
@@ -54,6 +54,6 @@ Cette rubrique explique la signification et l’utilisation de la liste d’erre
   
 ## <a name="see-also"></a>Voir aussi
 - [Dépannage du développement au moment du Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [Dépannage de la création de contrôles et de composants](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
-- [Développement de contrôles Windows Forms au moment du design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Dépannage de la création de contrôles et de composants](troubleshooting-control-and-component-authoring.md)
+- [Développement de contrôles Windows Forms au moment du design](developing-windows-forms-controls-at-design-time.md)
 - [Messages d’erreur du Concepteur Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

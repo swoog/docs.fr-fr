@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671107"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722436"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procédure : Ajouter charger, enregistrer et annuler des boutons pour les Windows Forms BindingNavigator, contrôle
 Le <xref:System.Windows.Forms.BindingNavigator> contrôle est à usage spécial <xref:System.Windows.Forms.ToolStrip> contrôle qui est destiné à la navigation et la manipulation des contrôles liés aux données sur votre formulaire.  
@@ -34,7 +34,7 @@ Le <xref:System.Windows.Forms.BindingNavigator> contrôle est à usage spécial 
   
 5.  Sélectionnez le contrôle <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Cliquez sur le glyphe de balise active (![glyphe de balise active](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) afin que la **tâches BindingNavigator** boîte de dialogue s’affiche et sélectionnez **modifier des éléments**.  
+6.  Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) afin que la **tâches BindingNavigator** boîte de dialogue s’affiche et sélectionnez **modifier des éléments**.  
   
      Le **éditeur de collections Items** s’affiche.  
   
@@ -113,5 +113,5 @@ Le <xref:System.Windows.Forms.BindingNavigator> contrôle est à usage spécial 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator, contrôle](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Vue d'ensemble du composant BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator, contrôle](bindingnavigator-control-windows-forms.md)
+- [Vue d'ensemble du composant BindingSource](bindingsource-component-overview.md)

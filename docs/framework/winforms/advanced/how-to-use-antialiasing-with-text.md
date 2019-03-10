@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: 64b1c27b9e8b7d405dde5add105ff2e682f8ad87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534102"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718569"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Procédure : Utiliser l’anticrénelage avec du texte
 *Anticrénelage* fait référence au lissage de bords dentelés des graphiques dessinés et du texte pour améliorer leur apparence ou la lisibilité. Avec managé [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes, vous pouvez afficher le texte non crénelé haute qualité, ainsi que le texte de qualité inférieure. En règle générale, un rendu de qualité supérieur prend plus de temps de traitement que le rendu de qualité inférieure. Pour définir le niveau de qualité de texte, définissez la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriété d’un <xref:System.Drawing.Graphics> à un des éléments de la <xref:System.Drawing.Text.TextRenderingHint> énumération  
@@ -24,15 +24,15 @@ ms.locfileid: "54534102"
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant dessine du texte avec deux paramètres de qualité différents.  
   
- [!code-csharp[System.Drawing.FontsAndText#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.FontsAndText#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.FontsAndText#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.FontsAndText#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#21)]  
  
  L’illustration suivante montre la sortie de l’exemple de code :  
   
- ![Polices du texte](../../../../docs/framework/winforms/advanced/media/fontstext10.png "FontsText10")  
+ ![Polices du texte](./media/fontstext10.png "FontsText10")  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  L’exemple de code précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de polices et de texte](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Utilisation de polices et de texte](using-fonts-and-text.md)

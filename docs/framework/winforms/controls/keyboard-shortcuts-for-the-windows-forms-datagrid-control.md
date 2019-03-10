@@ -5,23 +5,23 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509530"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711770"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Raccourcis clavier du contrôle DataGrid Windows Forms
 > [!NOTE]
->  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Le tableau suivant répertorie les raccourcis clavier qui peuvent être utilisées pour la navigation dans les formulaires Windows <xref:System.Windows.Forms.DataGrid> contrôle :  
   
 |Action|Raccourci|  
 |------------|--------------|  
 |Terminer une entrée de cellule et Descendre pour la cellule suivante.<br /><br /> Si le focus est sur un lien de la table enfant, accédez à cette table.|ENTRÉE|  
-|Annuler la modification de la cellule en mode de modification de cellule.<br /><br /> En cas de sélection de texte défilant, annuler la modification de la ligne.|ÉCHAP|  
+|Annuler la modification de la cellule en mode de modification de cellule.<br /><br /> En cas de sélection de texte défilant, annuler la modification de la ligne.|Échap|  
 |Supprimer le caractère avant le point d’insertion lors de la modification d’une cellule.|RETOUR ARRIÈRE|  
 |Supprimer le caractère après le point d’insertion lors de la modification d’une cellule.|SUPPR|  
 |Déplacer vers la première cellule de la ligne actuelle.|ORIGINE|  
@@ -51,5 +51,5 @@ ms.locfileid: "54509530"
 |Entrez un <xref:System.DBNull.Value?displayProperty=nameWithType> valeur dans une cellule en mode édition.|CTRL+0|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du contrôle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [DataGrid, contrôle](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Vue d’ensemble du contrôle DataGrid](datagrid-control-overview-windows-forms.md)
+- [DataGrid, contrôle](datagrid-control-windows-forms.md)

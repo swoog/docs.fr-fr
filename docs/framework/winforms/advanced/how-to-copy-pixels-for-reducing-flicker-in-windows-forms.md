@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559448"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719245"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procédure : Copier des Pixels pour réduire le scintillement dans les Windows Forms
 Lorsque vous animez un graphique simple, les utilisateurs peuvent rencontrer parfois le scintillement ou autres effets visuels indésirables. Une pour limiter ce problème consiste à utiliser un processus « bitblt » sur le graphique. BitBlt est le « transfert de bloc bits » des données de couleur à partir d’un rectangle d’origine de pixels à un rectangle de destination de pixels.  
@@ -66,5 +66,5 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Utilisation d'un stylet pour dessiner des lignes et des formes](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)

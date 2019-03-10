@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558889"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721383"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procédure : S’assurer que plusieurs contrôles liés à la même Source de données restent synchronisés
 Souvent, lorsque vous travaillez avec la liaison de données dans les Windows Forms, plusieurs contrôles sont liés à la même source de données. Dans certains cas, il peut être nécessaire de prendre des mesures supplémentaires pour garantir que les propriétés liées des contrôles restent synchronisées entre eux et à la source de données. Ces étapes sont nécessaires dans deux situations :  
@@ -29,8 +29,8 @@ Souvent, lorsque vous travaillez avec la liaison de données dans les Windows Fo
   
  L’exemple utilise un <xref:System.Windows.Forms.BindingSource> pour lier la source de données et les contrôles. Ou bien, vous pouvez lier les contrôles directement à la source de données et récupérer la <xref:System.Windows.Forms.BindingManagerBase> pour la liaison à partir du formulaire <xref:System.Windows.Forms.Control.BindingContext%2A> , puis gérer la <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> événement pour le <xref:System.Windows.Forms.BindingManagerBase>. Pour obtenir un exemple de procédure à suivre, consultez la page d’aide la <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> événement de <xref:System.Windows.Forms.BindingManagerBase>.  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
@@ -41,7 +41,7 @@ Souvent, lorsque vous travaillez avec la liaison de données dans les Windows Fo
 -   Un formulaire avec le <xref:System.Windows.Forms.Form.Load> événement géré et un appel à la `InitializeControlsAndDataSource` méthode dans l’exemple à partir du formulaire <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Partager des données liées entre des formulaires à l’aide du composant BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Notification de modifications dans la liaison de données Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Interfaces participant à la liaison de données](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Guide pratique pour Partager des données liées entre des formulaires à l’aide du composant BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Interfaces participant à la liaison de données](interfaces-related-to-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

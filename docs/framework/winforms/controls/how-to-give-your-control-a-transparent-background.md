@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 20815518c2a683878e0d3adf6a4bdc9261b614d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a54b76eb92c7d3f518b9bf13e154e6faf58de63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644610"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718166"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Procédure : Affecter un arrière-plan Transparent à votre contrôle
 Dans les versions antérieures de .NET Framework, les contrôles ne prenaient pas en charge la définition de couleurs d’arrière-plan transparentes sans définition préalable de la méthode <xref:System.Windows.Forms.Control.SetStyle%2A> dans le constructeur du formulaire. Dans la version actuelle de l’infrastructure, vous pouvez affecter <xref:System.Drawing.Color.Transparent%2A> comme couleur d’arrière-plan de la plupart des contrôles  dans la fenêtre **Propriétés** au moment du design ou dans le code dans le constructeur du formulaire.  
@@ -28,6 +28,6 @@ Dans les versions antérieures de .NET Framework, les contrôles ne prenaient pa
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Utilisation de classes graphiques managées](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
-- [Guide pratique pour Dessiner des lignes opaques et translucides](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
+- [Utilisation de classes graphiques managées](../advanced/using-managed-graphics-classes.md)
+- [Guide pratique pour Dessiner des lignes opaques et translucides](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

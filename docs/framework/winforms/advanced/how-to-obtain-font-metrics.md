@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 5e37725363640bd02fc3e0f62f66d21151b497fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1701b07958509e663f0ac651471e82a60120618
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657257"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723372"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Procédure : Obtenir des métriques de police
 Le <xref:System.Drawing.FontFamily> classe fournit les méthodes suivantes qui récupèrent diverses métriques pour une combinaison famille/style particulière :  
@@ -30,31 +30,31 @@ Le <xref:System.Drawing.FontFamily> classe fournit les méthodes suivantes qui r
   
  L’illustration suivante montre les différentes mesures.  
   
- ![Polices du texte](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
+ ![Polices du texte](./media/fontstext7a.png "fontstext7A")  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant affiche les métriques pour le style normal de la famille de polices Arial. Le code crée également un <xref:System.Drawing.Font> objet (basé sur la famille Arial) avec la taille de 16 pixels et affiche la métrique (en pixels) pour ce particulier <xref:System.Drawing.Font> objet.  
   
  L’illustration suivante montre la sortie de l’exemple de code.  
   
- ![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")  
+ ![Fonts Text](./media/csfontstext8.png "csFontsText8")  
   
  Notez les deux premières lignes de sortie dans l’illustration précédente. Le <xref:System.Drawing.Font> objet renvoie une taille de 16 et le <xref:System.Drawing.FontFamily> objet retourne une hauteur de 2 048. Ces deux nombres (16 et 2 048) sont la clé à la conversion entre les unités de design de police et les unités (dans ce cas des pixels) de la <xref:System.Drawing.Font> objet.  
   
  Par exemple, vous pouvez convertir le jambage ascendant à partir d’unités de design pixels comme suit :  
   
- ![Polices du texte](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")  
+ ![Polices du texte](./media/fontstext9.png "FontsText9")  
   
  Le code suivant positionne le texte verticalement en définissant le <xref:System.Drawing.PointF.Y%2A> membre de données d’un <xref:System.Drawing.PointF> objet. La coordonnée y est augmentée `font.Height` pour chaque nouvelle ligne de texte. Le <xref:System.Drawing.Font.Height%2A> propriété d’un <xref:System.Drawing.Font> objet retourne l’interligne (en pixels) pour ce particulier <xref:System.Drawing.Font> objet. Dans cet exemple, le nombre retourné par <xref:System.Drawing.Font.Height%2A> est 19. Notez que cela est le même que le nombre (arrondi à un entier) obtenu en convertissant la métrique d’interligne en pixels.  
   
  Notez que la hauteur du carré cadratin (également appelée taille taille ou em) n’est pas la somme de la hauteur et de la profondeur. La somme de la hauteur et de la profondeur est appelée la hauteur de cellule. La hauteur de cellule moins l’espacement interne est égale à la hauteur du carré cadratin. La hauteur de cellule plus l’espacement externe est égale à l’interligne.  
   
- [!code-csharp[System.Drawing.FontsAndText#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
- [!code-vb[System.Drawing.FontsAndText#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
+ [!code-csharp[System.Drawing.FontsAndText#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
+ [!code-vb[System.Drawing.FontsAndText#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Utilisation de polices et de texte](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Utilisation de polices et de texte](using-fonts-and-text.md)

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521776"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709937"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Systèmes de coordonnées et transformations
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit une transformation universelle et une transformation de page afin que vous puissiez transformer (faire pivoter, mettre à l’échelle, traduire et ainsi de suite) les éléments vous dessinez. Les deux transformations permettent également d’utiliser une variété de systèmes de coordonnées.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit une transformation universelle et une transformation de page afin que vous puissiez transformer (faire pivoter, mettre à l’échelle, traduire et ainsi de suite) les éléments que vous dessinez. Les deux transformations également vous autoriser à travailler dans un large éventail de systèmes de coordonnées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Types de systèmes de coordonnées](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
+ [Types de systèmes de coordonnées](types-of-coordinate-systems.md)  
  Présente les systèmes de coordonnées et transformations.  
   
- [Représentation matricielle des transformations](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
+ [Représentation matricielle des transformations](matrix-representation-of-transformations.md)  
  Décrit l’utilisation de matrices pour les transformations de coordonnées.  
   
- [Transformations globales et locales](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
+ [Transformations globales et locales](global-and-local-transformations.md)  
  Décrit les transformations globales et locales.  
   
 ## <a name="reference"></a>Référence  
@@ -31,8 +31,8 @@ ms.locfileid: "33521776"
  Encapsule une matrice affine 3-par-3 qui représente une transformation géométrique.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Utilisation des transformations dans GDI+ managé](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Fournit une liste des rubriques qui fournissent des informations sur l’utilisation de transformations de matrices.  
+ [Utilisation des transformations dans GDI+ managé](using-transformations-in-managed-gdi.md)  
+ Fournit une liste des rubriques qui fournissent des informations supplémentaires sur l’utilisation des transformations de matrice.  
   
- [À propos du code managé GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- Contient une liste de rubriques qui décrivent les constructions graphiques que vous pouvez utiliser dans le .NET Framework.
+ [À propos du code managé GDI+](about-gdi-managed-code.md)  
+ Contient une liste de rubriques qui décrivent les constructions de graphiques que vous pouvez utiliser dans le .NET Framework.

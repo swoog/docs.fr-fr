@@ -12,12 +12,12 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726323"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724499"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procédure : Répondre à un Windows Forms clic du contrôle CheckBox
 Chaque fois qu’un utilisateur clique sur un formulaire Windows <xref:System.Windows.Forms.CheckBox> contrôle, le <xref:System.Windows.Forms.Control.Click> événement se produit. Vous pouvez programmer votre application pour effectuer une action en fonction de l’état de la case à cocher.  
@@ -137,6 +137,6 @@ Chaque fois qu’un utilisateur clique sur un formulaire Windows <xref:System.Wi
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.CheckBox>
-- [Vue d'ensemble du contrôle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [Guide pratique pour Définir des Options avec les contrôles de case à cocher Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [CheckBox, contrôle](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [Vue d'ensemble du contrôle CheckBox](checkbox-control-overview-windows-forms.md)
+- [Guide pratique pour Définir des Options avec les contrôles de case à cocher Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [CheckBox, contrôle](checkbox-control-windows-forms.md)

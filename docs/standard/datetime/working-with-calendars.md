@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6b758dd509ac2d318180c014ac3d262fe331f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b116944a45546604d1d60a5a44afcce8fee2f026
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623233"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721513"
 ---
 # <a name="working-with-calendars"></a>Utilisation des calendriers
 
@@ -138,7 +138,7 @@ Toutefois, il existe une exception importante. La valeur par défaut (non initia
 Les calendriers divisent en général les dates en ères. Toutefois, le <xref:System.Globalization.Calendar> classes dans .NET ne prennent pas en charge chaque ère définie par un calendrier et la plupart de la <xref:System.Globalization.Calendar> classes prennent en charge qu’une seule ère. Seules les classes <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> prennent en charge plusieurs ères.
 
 > [!IMPORTANT]
->  Dans les calendriers <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, une nouvelle ère commence le 1er mai 2019. Ce changement affecte toutes les applications qui utilisent ces calendriers. Pour plus d’informations et pour déterminer si vos applications sont affectées, consultez [Handling a new era in the Japanese calendar in .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/). Consultez [préparer votre application pour la modification de l’ère japonais](/windows/uwp/design/globalizing/japanese-era-change) pour plus d’informations sur le test de vos applications sur Windows pour garantir leur disponibilité pour la modification de l’ère.
+>  Dans les calendriers <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, une nouvelle ère commence le 1er mai 2019. Ce changement affecte toutes les applications qui utilisent ces calendriers. Pour plus d’informations et pour déterminer si vos applications sont affectées, consultez [Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/). Consultez [préparer votre application pour la modification de l’ère japonais](/windows/uwp/design/globalizing/japanese-era-change) pour plus d’informations sur le test de vos applications sur Windows pour garantir leur disponibilité pour la modification de l’ère.
 
 ### <a name="eras-and-era-names"></a>Ères et noms d’ères
 

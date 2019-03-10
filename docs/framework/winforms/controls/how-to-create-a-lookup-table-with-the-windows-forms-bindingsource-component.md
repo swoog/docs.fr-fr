@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539894"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723918"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : Créer une Table de correspondance avec le composant de BindingSource Windows Forms
 Une table de choix est une table de données ayant une colonne qui affiche les données des enregistrements situés dans une table liée. Dans les procédures suivantes, un contrôle <xref:System.Windows.Forms.ComboBox> permet d'afficher le champ avec la relation de clé étrangère entre la table parent et la table enfant.  
@@ -35,7 +35,7 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
  Dans ce scénario, une table, CustomersTable, stocke les informations réelles que vous souhaitez afficher et enregistrer. Mais pour gagner de l'espace, la table délaisse les données qui ajoutent de la clarté. L'autre table, OrdersTable, contient uniquement des informations relatives à l'apparence, notamment l'équivalence entre le numéro d'identification du client, l'ID de date et l'ID de commande. Les noms des clients ne sont pas mentionnés.  
   
- Quatre propriétés importantes sont définies sur le contrôle [ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) pour créer la table de choix.  
+ Quatre propriétés importantes sont définies sur le contrôle [ComboBox](combobox-control-windows-forms.md) pour créer la table de choix.  
   
 -   La propriété <xref:System.Windows.Forms.ComboBox.DataSource%2A> contient le nom de la table.  
   
@@ -53,7 +53,7 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
      Ce contrôle affiche la colonne de la table parent.  
   
-2.  Faites glisser d'autres contrôles pour afficher les détails de la table enfant. Le format des données de la table doit déterminer votre choix des contrôles. Pour plus d’informations, consultez [Classement par fonction des contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Faites glisser d'autres contrôles pour afficher les détails de la table enfant. Le format des données de la table doit déterminer votre choix des contrôles. Pour plus d’informations, consultez [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md).  
   
 3.  Faites glisser un contrôle <xref:System.Windows.Forms.BindingNavigator> vers le formulaire. Cela vous permettra de naviguer parmi les données de la table enfant.  
   
@@ -93,6 +93,6 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox, contrôle](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [BindingSource, composant](bindingsource-component.md)
+- [ComboBox, contrôle](combobox-control-windows-forms.md)
 - [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 1d2c6419e19aee73717bed6cfc17782d2a3f5a4a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3b829b1eea68eed7ff8ded80496620af628d3510
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442735"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707358"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Développement d'un contrôle Windows Forms composite
-Vous pouvez développer un contrôle Windows Forms composite en combinant d'autres contrôles Windows Forms. Les contrôles composites qui dérivent <xref:System.Web.UI.UserControl> sont appelés contrôles utilisateur. La classe de base, <xref:System.Windows.Forms.UserControl>, fournit le routage clavier pour les contrôles enfants, ce qui permet de garantir que les contrôles enfants peuvent recevoir le focus. Pour obtenir un exemple d’un contrôle utilisateur, consultez le <xref:System.Windows.Forms.UserControl> exemple [Comment : Appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+Vous pouvez développer un contrôle Windows Forms composite en combinant d'autres contrôles Windows Forms. Les contrôles composites qui dérivent <xref:System.Web.UI.UserControl> sont appelés contrôles utilisateur. La classe de base, <xref:System.Windows.Forms.UserControl>, fournit le routage clavier pour les contrôles enfants, ce qui permet de garantir que les contrôles enfants peuvent recevoir le focus. Pour obtenir un exemple d’un contrôle utilisateur, consultez le <xref:System.Windows.Forms.UserControl> exemple [Comment : Appliquer des attributs dans les contrôles Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
  Le Concepteur Windows Forms dans Visual Studio fournit la prise en charge au moment du design pour la création de contrôles utilisateur.  
   
@@ -54,6 +54,6 @@ Vous pouvez développer un contrôle Windows Forms composite en combinant d'autr
 -   [Guide pratique pour Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Guide pratique pour Appliquer des attributs dans les contrôles Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
+- [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)

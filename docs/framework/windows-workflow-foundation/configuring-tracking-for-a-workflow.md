@@ -2,12 +2,12 @@
 title: Configuration du suivi d'un workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491254"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719401"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configuration du suivi d'un workflow
 
@@ -67,7 +67,7 @@ Pour un service de workflow hébergé dans <xref:System.ServiceModel.WorkflowSer
 Pour un service de workflow hébergé dans <xref:System.ServiceModel.WorkflowServiceHost>, vous pouvez également ajouter l'extension de comportement <xref:System.Activities.Tracking.EtwTrackingParticipant> dans le code. Pour ajouter un participant au suivi personnalisé, créez une extension de comportement et ajoutez-le au <xref:System.ServiceModel.ServiceHost> comme indiqué dans l'exemple de code suivant.
 
 > [!NOTE]
-> Si vous souhaitez afficher l’exemple de code qui montre comment créer un élément de comportement personnalisé qui ajoute un participant de suivi personnalisé, reportez-vous à la [suivi](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemples.
+> Si vous souhaitez afficher l’exemple de code qui montre comment créer un élément de comportement personnalisé qui ajoute un participant de suivi personnalisé, reportez-vous à la [suivi](./samples/tracking.md) exemples.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configuration du suivi à l'aide de WorkflowInvoker
 
-Pour configurer le suivi pour un workflow exécuté à l’aide de <xref:System.Activities.WorkflowInvoker>, ajoutez le fournisseur de suivi en tant qu’extension à une instance <xref:System.Activities.WorkflowInvoker>. L’exemple de code suivant provient le [suivi personnalisé](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) exemple.
+Pour configurer le suivi pour un workflow exécuté à l’aide de <xref:System.Activities.WorkflowInvoker>, ajoutez le fournisseur de suivi en tant qu’extension à une instance <xref:System.Activities.WorkflowInvoker>. L’exemple de code suivant provient le [suivi personnalisé](./samples/custom-tracking.md) exemple.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ Pour afficher des enregistrements de suivi, procédez comme suit :
 
 L'image suivante montre des événements de suivi dans l'observateur d'événements.
 
-![Affichage de visionneuse d’événement des enregistrements de suivi](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Affichage de visionneuse d’événement des enregistrements de suivi](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Enregistrement d'un ID de fournisseur spécifique à l'application
 

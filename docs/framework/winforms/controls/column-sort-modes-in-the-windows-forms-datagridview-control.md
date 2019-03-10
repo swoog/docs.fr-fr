@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615047"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717854"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modes de tri des colonnes du contrôle DataGridView Windows Forms
 <xref:System.Windows.Forms.DataGridView> colonnes ont trois modes de tri. Le mode de tri pour chaque colonne est spécifié via le <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriété de la colonne, qui peut être définie à une des opérations suivantes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valeurs d’énumération.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615047"
   
  Quand un <xref:System.Windows.Forms.DataGridView> est triée, vous pouvez déterminer la colonne de tri et l’ordre de tri en vérifiant les valeurs de la <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> et <xref:System.Windows.Forms.DataGridView.SortOrder%2A> propriétés. Ces valeurs ne sont pas significatifs après une opération de tri personnalisée. Pour plus d’informations sur le tri personnalisé, consultez la section tri personnalisé plus loin dans cette rubrique.  
   
- Quand un <xref:System.Windows.Forms.DataGridView> contrôle contenant des colonnes dépendantes et indépendantes est trié, les valeurs dans les colonnes indépendantes ne peut pas être gérés automatiquement. Pour conserver ces valeurs, vous devez implémenter le mode virtuel en définissant le <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriété `true` et la gestion de la <xref:System.Windows.Forms.DataGridView.CellValueNeeded> et <xref:System.Windows.Forms.DataGridView.CellValuePushed> événements. Pour plus d'informations, voir [Procédure : Implémenter le Mode virtuel dans les Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Tri par colonnes indépendantes en mode dépendant n’est pas pris en charge.  
+ Quand un <xref:System.Windows.Forms.DataGridView> contrôle contenant des colonnes dépendantes et indépendantes est trié, les valeurs dans les colonnes indépendantes ne peut pas être gérés automatiquement. Pour conserver ces valeurs, vous devez implémenter le mode virtuel en définissant le <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriété `true` et la gestion de la <xref:System.Windows.Forms.DataGridView.CellValueNeeded> et <xref:System.Windows.Forms.DataGridView.CellValuePushed> événements. Pour plus d'informations, voir [Procédure : Implémenter le Mode virtuel dans les Windows Forms DataGridView Control](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Tri par colonnes indépendantes en mode dépendant n’est pas pris en charge.  
   
 ## <a name="programmatic-sorting"></a>Tri par programmation  
  Vous pouvez trier une <xref:System.Windows.Forms.DataGridView> par programmation en appelant son <xref:System.Windows.Forms.DataGridView.Sort%2A> (méthode).  
@@ -65,6 +65,6 @@ ms.locfileid: "54615047"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Tri des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Guide pratique pour Personnaliser le tri dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Tri des données dans le contrôle DataGridView Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Guide pratique pour Personnaliser le tri dans le contrôle DataGridView Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

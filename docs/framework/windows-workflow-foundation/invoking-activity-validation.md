@@ -1,16 +1,16 @@
 ---
-title: Appel de la validation d’activité
+title: Appel de la validation d'activité
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035134"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711146"
 ---
-# <a name="invoking-activity-validation"></a>Appel de la validation d’activité
-La validation d’activité offre une méthode d’identification et de signalisation des erreurs dans la configuration de toute activité, avant son exécution. La validation a lieu lorsque, dans le Concepteur de Workflow, un workflow est modifié et que l'ensemble des erreurs ou avertissements de validation sont affichés. La validation se produit également au moment de l'exécution lorsqu'un workflow est appelé et si des erreurs de validation se produisent, <xref:System.Activities.InvalidWorkflowException> est levée par la logique de validation par défaut. Windows Workflow Foundation (WF) fournit la <xref:System.Activities.Validation.ActivityValidationServices> classe qui peut être utilisée par l’application de flux de travail et les développeurs d’outils pour valider explicitement une activité. Cette rubrique décrit comment utiliser la classe <xref:System.Activities.Validation.ActivityValidationServices> pour valider une activité.  
+# <a name="invoking-activity-validation"></a>Appel de la validation d'activité
+La validation d’activité offre une méthode d’identification et de signalisation des erreurs dans la configuration de toute activité, avant son exécution. La validation a lieu lorsque, dans le Concepteur de Workflow, un workflow est modifié et que l'ensemble des erreurs ou avertissements de validation sont affichés. La validation se produit également au moment de l’exécution lorsqu’un workflow est appelé et si des erreurs de validation se produisent, <xref:System.Activities.InvalidWorkflowException> est levée par la logique de validation par défaut. Windows Workflow Foundation (WF) fournit la <xref:System.Activities.Validation.ActivityValidationServices> classe qui peut être utilisée par l’application de flux de travail et les développeurs d’outils pour valider explicitement une activité. Cette rubrique décrit comment utiliser la classe <xref:System.Activities.Validation.ActivityValidationServices> pour valider une activité.  
   
 ## <a name="using-activityvalidationservices"></a>Utilisation de la classe ActivityValidationServices  
  La classe <xref:System.Activities.Validation.ActivityValidationServices> compte deux surcharges <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, utilisées pour appeler la logique de validation d'une activité. La première surcharge prend l'activité racine à valider et retourne une collection d'erreurs et avertissements de validation. Dans l'exemple suivant, une activité `Add` personnalisée qui compte deux arguments requis est utilisée.  
@@ -76,8 +76,8 @@ else
   
  Lorsque la méthode <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> est appelée sur cet exemple de flux de travail, deux erreurs de validation sont retournées.  
   
- **Erreur : La valeur pour un argument d’activité 'operand2 ' requis n’a pas été fournie.**  
-**Erreur : La valeur pour un argument d’activité 'operand1 ' requis n’a pas été fournie.**  Si ce workflow était appelé, un <xref:System.Activities.InvalidWorkflowException> serait levé, comme indiqué dans l'exemple suivant :  
+ **Erreur : Valeur pour un argument d’activité 'operand2 ' requis n’a pas été fournie.**  
+**Erreur : Valeur pour un argument d’activité 'operand1 ' requis n’a pas été fournie.**  Si ce workflow était appelé, un <xref:System.Activities.InvalidWorkflowException> serait levé, comme indiqué dans l'exemple suivant :  
   
 ```csharp  
 try  
@@ -90,10 +90,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.Activities.InvalidWorkflowException :**  
+ **System.Activities.InvalidWorkflowException:**  
 **Les erreurs suivantes se sont produites lors du traitement de l’arborescence de flux de travail :**   
-**'Add' : valeur d’un argument d’activité 'operand2 ' requis n’a pas été fourni.**   
-**'Add' : valeur d’un argument d’activité 'operand1 ' requis n’a pas été fourni.**  Pour que cet exemple de workflow soit valide, les deux arguments requis de l'activité `Add` doivent être liés. Dans l'exemple suivant, les deux arguments requis sont liés aux variables de flux de travail, tout comme la valeur de résultat. Dans cet exemple, l'argument <xref:System.Activities.Activity%601.Result%2A> est lié, ainsi que les deux arguments requis. L'argument <xref:System.Activities.Activity%601.Result%2A> ne doit pas forcément être lié et ne provoque pas d'erreur de validation s'il ne l'est pas. Il incombe à l'auteur du workflow de lier l'objet <xref:System.Activities.Activity%601.Result%2A>, si sa valeur est utilisée ailleurs dans le flux de travail.  
+**'Add' : Valeur pour un argument d’activité 'operand2 ' requis n’a pas été fournie.**   
+**'Add' : Valeur pour un argument d’activité 'operand1 ' requis n’a pas été fournie.**  Pour que cet exemple de workflow soit valide, les deux arguments requis de l’activité `Add` doivent être liés. Dans l'exemple suivant, les deux arguments requis sont liés aux variables de flux de travail, tout comme la valeur de résultat. Dans cet exemple, l'argument <xref:System.Activities.Activity%601.Result%2A> est lié, ainsi que les deux arguments requis. L'argument <xref:System.Activities.Activity%601.Result%2A> ne doit pas forcément être lié et ne provoque pas d'erreur de validation s'il ne l'est pas. Il incombe à l'auteur du workflow de lier l'objet <xref:System.Activities.Activity%601.Result%2A>, si sa valeur est utilisée ailleurs dans le flux de travail.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException : Les paramètres de l’argument de l’activité racine sont incorrects.**  
+ **System.ArgumentException : Paramètres de l’argument de l’activité racine sont incorrects.**  
 **Corrigez la définition de workflow ou fournir des valeurs d’entrée pour corriger ces erreurs :**   
-**'Add' : valeur d’un argument d’activité 'operand2 ' requis n’a pas été fourni.**   
-**'Add' : valeur d’un argument d’activité 'operand1 ' requis n’a pas été fourni.**  Une fois les arguments appropriés passés, le flux de travail se termine correctement, comme indiqué dans l’exemple suivant :  
+**'Add' : Valeur pour un argument d’activité 'operand2 ' requis n’a pas été fournie.**   
+**'Add' : Valeur pour un argument d’activité 'operand1 ' requis n’a pas été fournie.**  Une fois les arguments appropriés passés, le flux de travail se termine correctement, comme indiqué dans l’exemple suivant :  
   
 ```csharp  
 Add wf = new Add();  
@@ -158,7 +158,7 @@ catch (Exception ex)
   
 ### <a name="invoking-imperative-code-based-validation"></a>Appel de validation basée sur le code impératif
 
-La validation basée sur le code impératif offre un moyen simple de valider une activité ainsi que les activités dérivées de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> et <xref:System.Activities.NativeActivity>. Le code de validation est ajouté à l'activité qui détermine les erreurs ou avertissements de validation ajoutés à l'activité. Lorsque la validation est appelée sur l'activité, ces avertissements ou erreurs sont contenus dans la collection retournée par l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Dans l'exemple suivant, une activité `CreateProduct` est définie. Si la valeur `Cost` est supérieure à la valeur `Price`, une erreur de validation est ajoutée aux métadonnées dans la substitution <xref:System.Activities.CodeActivity.CacheMetadata%2A>.  
+La validation basée sur le code impératif offre un moyen simple de valider une activité ainsi que les activités dérivées de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> et <xref:System.Activities.NativeActivity>. Le code de validation est ajouté à l'activité qui détermine les erreurs ou avertissements de validation ajoutés à l'activité. Lorsque la validation est appelée sur l’activité, ces avertissements ou erreurs sont contenus dans la collection retournée par l’appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Dans l'exemple suivant, une activité `CreateProduct` est définie. Si la valeur `Cost` est supérieure à la valeur `Price`, une erreur de validation est ajoutée aux métadonnées dans la substitution <xref:System.Activities.CodeActivity.CacheMetadata%2A>.  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -229,12 +229,12 @@ else
 ```  
   
  **Erreur : Le coût doit être inférieur ou égal au prix.**  
-**Erreur : La valeur pour un argument d’activité 'Description' n’a pas été fournie.**    
+**Erreur : Valeur pour un argument d’activité 'Description' n’a pas été fournie.**    
 > [!NOTE]
->  Les auteurs d'activités personnalisées peuvent fournir la logique de validation dans la substitution de la méthode <xref:System.Activities.CodeActivity.CacheMetadata%2A> d'une activité. Toutes les exceptions levées à partir de <xref:System.Activities.CodeActivity.CacheMetadata%2A> ne sont pas traitées comme des erreurs de validation. Ces exceptions ne seront pas détectées par l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> et doivent être gérées par l'appelant.  
+>  Les auteurs d’activités personnalisées peuvent fournir la logique de validation dans la substitution de la méthode <xref:System.Activities.CodeActivity.CacheMetadata%2A> d’une activité. Toutes les exceptions levées à partir de <xref:System.Activities.CodeActivity.CacheMetadata%2A> ne sont pas traitées comme des erreurs de validation. Ces exceptions ne seront pas détectées par l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> et doivent être gérées par l'appelant.  
   
 ## <a name="using-validationsettings"></a>Utilisation de ValidationSettings  
- Par défaut, toutes les activités dans l'arborescence d'activité sont évaluées lorsque la validation est appelée par <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> vous permet de personnaliser la validation de plusieurs façons différentes en configurant ses trois propriétés. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> spécifie si le validateur doit parcourir l'arborescence d'activité entière ou uniquement appliquer la logique de validation à l'activité fournie. La valeur par défaut pour ce paramètre est `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> spécifie un mappage de contraintes supplémentaires, d'un type vers une liste de contraintes. Pour le type de base de chaque activité de l'arborescence en cours de validation, il existe une recherche dans la propriété <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Si une liste de contraintes correspondante est trouvée, toutes les contraintes de la liste sont évaluées pour l'activité. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> spécifie si le validateur doit évaluer toutes les contraintes ou seulement celles spécifiées dans la propriété <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. La valeur par défaut est `false`. Grâce aux propriétés <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> et <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>, les auteurs hôtes de flux de travail peuvent ajouter une validation supplémentaire pour les flux de travail comme les contraintes de stratégie pour les outils tels que FxCop. Pour plus d’informations sur les contraintes, consultez [contraintes déclaratives](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ Par défaut, toutes les activités dans l'arborescence d'activité sont évaluées lorsque la validation est appelée par <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> vous permet de personnaliser la validation de plusieurs façons différentes en configurant ses trois propriétés. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> spécifie si le validateur doit parcourir l'arborescence d'activité entière ou uniquement appliquer la logique de validation à l'activité fournie. La valeur par défaut pour ce paramètre est `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> spécifie un mappage de contraintes supplémentaires, d'un type vers une liste de contraintes. Pour le type de base de chaque activité de l'arborescence en cours de validation, il existe une recherche dans la propriété <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Si une liste de contraintes correspondante est trouvée, toutes les contraintes de la liste sont évaluées pour l'activité. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> spécifie si le validateur doit évaluer toutes les contraintes ou seulement celles spécifiées dans la propriété <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. La valeur par défaut est `false`. Grâce aux propriétés <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> et <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>, les auteurs hôtes de flux de travail peuvent ajouter une validation supplémentaire pour les flux de travail comme les contraintes de stratégie pour les outils tels que FxCop. Pour plus d’informations sur les contraintes, consultez [contraintes déclaratives](declarative-constraints.md).  
   
  Pour utiliser l'objet <xref:System.Activities.Validation.ValidationSettings>, configurez les propriétés de votre choix, puis passez-le dans l'appel à la méthode <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Dans cet exemple, un flux de travail, qui consiste en un objet <xref:System.Activities.Statements.Sequence> avec une activité `Add` personnalisée, est validé. L'activité `Add` compte deux arguments requis.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664924"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724542"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 
@@ -27,7 +27,7 @@ ms.locfileid: "56664924"
  Quand vous rencontrez une restriction de sécurité, vous avez deux options : déclarer l'autorisation (en supposant qu'elle a été accordée à votre application) ou utiliser une version de la fonctionnalité écrite pour fonctionner en mode de confiance partielle. Les sections suivantes décrivent comment gérer l'accès aux fichiers, aux bases de données et au Registre à partir d'applications qui s'exécutent dans un environnement de confiance partielle.  
   
 > [!NOTE]
->  Par défaut, les outils qui génèrent des déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] font en sorte que ces déploiements demandent par défaut une confiance totale aux ordinateurs sur lesquels ils s'exécutent. Si vous décidez que vous voulez bénéficier de renforcer la sécurité de l’exécution en confiance partielle, vous devez modifier cette valeur par défaut dans Visual Studio ou un de le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] outils (Mage.exe ou MageUI.exe). Pour plus d’informations sur la sécurité Windows Forms et sur la façon de déterminer le niveau de confiance approprié pour votre application, consultez [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Par défaut, les outils qui génèrent des déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] font en sorte que ces déploiements demandent par défaut une confiance totale aux ordinateurs sur lesquels ils s'exécutent. Si vous décidez que vous voulez bénéficier de renforcer la sécurité de l’exécution en confiance partielle, vous devez modifier cette valeur par défaut dans Visual Studio ou un de le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] outils (Mage.exe ou MageUI.exe). Pour plus d’informations sur la sécurité Windows Forms et sur la façon de déterminer le niveau de confiance approprié pour votre application, consultez [Security in Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accès aux fichiers  
  La classe <xref:System.Security.Permissions.FileIOPermission> contrôle l'accès aux fichiers et aux dossiers dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Par défaut, le système de sécurité n'accorde pas <xref:System.Security.Permissions.FileIOPermission> aux environnements de confiance partielle tels que les zones Intranet local et Internet. Cependant, une application qui nécessite l'accès aux fichiers peut quand même fonctionner dans ces environnements si vous modifiez la conception de votre application ou si vous utilisez des méthodes différentes pour accéder aux fichiers. Par défaut, la zone Intranet local est autorisée à accéder au même site et au même répertoire, à se reconnecter au site de son origine et à lire à partir de son répertoire d'installation. Par défaut, la zone Internet est autorisée uniquement à se reconnecter au site de son origine.  
@@ -137,7 +137,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  Dans Visual c#, veillez à ajouter le code pour activer le Gestionnaire d’événements. En utilisant le code de l'exemple précédent, le code suivant montre comment activer le gestionnaire d'événements.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Autres fichiers  
- Vous devrez parfois lire ou écrire dans des fichiers que l'utilisateur ne spécifie pas, par exemple quand vous devrez conserver les paramètres d'application. Dans les zones Intranet local et Internet, votre application ne sera pas autorisée à stocker des données dans un fichier local. Toutefois, elle pourra stocker des données dans un stockage isolé. Le stockage isolé est un compartiment de données abstrait (et non un emplacement de stockage spécifique) composé d'au moins un fichier de stockage isolé, appelé magasin, contenant les emplacements de répertoire réels où sont stockées les données. Les autorisations d'accès aux fichiers telles que <xref:System.Security.Permissions.FileIOPermission> ne sont pas nécessaires. Au lieu de cela, la classe <xref:System.Security.Permissions.IsolatedStoragePermission> contrôle les autorisations pour le stockage isolé. Par défaut, les applications qui s'exécutent dans les zones Intranet local et Internet peuvent stocker des données à l'aide du stockage isolé. Toutefois, des paramètres tels que les quotas de disque peuvent varier. Pour plus d’informations sur le stockage isolé, consultez [le stockage isolé](../../../docs/standard/io/isolated-storage.md).  
+ Vous devrez parfois lire ou écrire dans des fichiers que l'utilisateur ne spécifie pas, par exemple quand vous devrez conserver les paramètres d'application. Dans les zones Intranet local et Internet, votre application ne sera pas autorisée à stocker des données dans un fichier local. Toutefois, elle pourra stocker des données dans un stockage isolé. Le stockage isolé est un compartiment de données abstrait (et non un emplacement de stockage spécifique) composé d'au moins un fichier de stockage isolé, appelé magasin, contenant les emplacements de répertoire réels où sont stockées les données. Les autorisations d'accès aux fichiers telles que <xref:System.Security.Permissions.FileIOPermission> ne sont pas nécessaires. Au lieu de cela, la classe <xref:System.Security.Permissions.IsolatedStoragePermission> contrôle les autorisations pour le stockage isolé. Par défaut, les applications qui s'exécutent dans les zones Intranet local et Internet peuvent stocker des données à l'aide du stockage isolé. Toutefois, des paramètres tels que les quotas de disque peuvent varier. Pour plus d’informations sur le stockage isolé, consultez [le stockage isolé](../../standard/io/isolated-storage.md).  
   
  L'exemple suivant utilise le stockage isolé pour écrire des données dans un fichier situé dans un magasin. Cet exemple nécessite <xref:System.Security.Permissions.IsolatedStorageFilePermission> et la valeur d'énumération <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. Il illustre comment lire et écrire certaines valeurs de propriétés du contrôle <xref:System.Windows.Forms.Button> dans un fichier dans du stockage isolé. La fonction `Read` est appelée après le démarrage de l'application et la fonction `Write` est appelée avant la fin de l'application. L’exemple exige que le `Read` et `Write` fonctions existent en tant que membres d’un <xref:System.Windows.Forms.Form> qui contient un <xref:System.Windows.Forms.Button> contrôle nommé `MainButton`.  
   
@@ -350,7 +350,7 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Accès à la base de données  
- Les autorisations nécessaires pour accéder à une base de données varient en fonction du fournisseur de base de données. Toutefois, seules les applications qui s'exécutent avec les autorisations appropriées peuvent accéder à une base de données via une connexion de données. Pour plus d’informations sur les autorisations requises pour accéder à une base de données, consultez [Code Access Security and ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ Les autorisations nécessaires pour accéder à une base de données varient en fonction du fournisseur de base de données. Toutefois, seules les applications qui s'exécutent avec les autorisations appropriées peuvent accéder à une base de données via une connexion de données. Pour plus d’informations sur les autorisations requises pour accéder à une base de données, consultez [Code Access Security and ADO.NET](../data/adonet/code-access-security.md).  
   
  Si vous ne pouvez pas accéder directement à une base de données car vous souhaitez que votre application s'exécute en mode de confiance partielle, vous pouvez utiliser un service web comme alternative pour accéder à vos données. Un service web est un élément logiciel accessible par programmation sur un réseau. Avec les services web, les applications peuvent partager des données entre des zones de groupe de code. Par défaut, les applications des zones Intranet local et Internet sont autorisées à accéder à leurs sites d'origine, ce qui leur permet d'appeler un service web hébergé sur le même serveur. Pour plus d’informations, consultez [Services Web dans ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) ou [Windows Communication Foundation](../wcf/index.md).  
   
@@ -360,9 +360,9 @@ public void Write()
  Étant donné que vous ne pouvez pas accéder au Registre avec une confiance partielle, vous devrez peut-être trouver d'autres méthodes pour stocker vos données. Quand vous stockez des paramètres d'application, utilisez le stockage isolé plutôt que le Registre. Vous pouvez aussi utiliser le stockage isolé pour stocker d'autres fichiers spécifiques à l'application. Vous pouvez stocker des informations d'application globales relatives au serveur ou au site d'origine, car par défaut une application a le droit d'accéder au site de son origine.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Impression plus sécurisée dans les Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Considérations supplémentaires sur la sécurité des Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Vue d’ensemble de la sécurité dans les Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Sécurité de Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
-- [Mage.exe (outil Manifest Generation and Editing)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Considérations supplémentaires sur la sécurité des Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Vue d’ensemble de la sécurité dans les Windows Forms](security-in-windows-forms-overview.md)
+- [Sécurité de Windows Forms](windows-forms-security.md)
+- [Mage.exe (outil Manifest Generation and Editing)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

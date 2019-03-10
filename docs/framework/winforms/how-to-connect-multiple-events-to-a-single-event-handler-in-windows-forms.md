@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967865"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722649"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procédure : Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms
 Conception de votre application, vous pouvez s’avérer nécessaire pour utiliser un seul gestionnaire d’événements pour plusieurs événements ou d’avoir plusieurs événements à effectuer la même procédure. Par exemple, il est souvent un temps précieux pour avoir une commande de menu à déclencher l’événement de même qu’un bouton sur votre formulaire peut si elles exposent les mêmes fonctionnalités. Vous pouvez faire à l’aide de l’affichage des événements de la fenêtre Propriétés dans C# ou à l’aide de la `Handles` mot clé et le **nom de la classe** et **nom de la méthode** listes déroulantes dans l’éditeur de Code Visual Basic.  
@@ -50,7 +50,7 @@ Conception de votre application, vous pouvez s’avérer nécessaire pour utilis
   
 1.  Sélectionnez le contrôle auquel vous souhaitez vous connecter à un gestionnaire d’événements.  
   
-2.  Dans la fenêtre Propriétés, cliquez sur le **événements** bouton (![bouton événements](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
+2.  Dans la fenêtre Propriétés, cliquez sur le **événements** bouton (![bouton événements](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3.  Cliquez sur le nom de l’événement que vous souhaitez gérer.  
   
@@ -61,5 +61,5 @@ Conception de votre application, vous pouvez s’avérer nécessaire pour utilis
      Code sera ajouté au formulaire pour lier l’événement au gestionnaire d’événements existant.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Vue d'ensemble des gestionnaires d'événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Création de gestionnaires d’événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Vue d'ensemble des gestionnaires d'événements](event-handlers-overview-windows-forms.md)

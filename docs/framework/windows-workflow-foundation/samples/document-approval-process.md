@@ -2,12 +2,12 @@
 title: Processus d'approbation des documents
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582708"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717707"
 ---
 # <a name="document-approval-process"></a>Processus d'approbation des documents
 Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.
@@ -24,7 +24,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le graphique suivant illustre le workflow de processus d'approbation des documents.  
   
- ![Un flux de travail du processus d’approbation document](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flux de travail du processus d’approbation document](./media/approvalprocess.jpg "ApprovalProcess")  
   
  Du point de vue du client, le processus d'approbation fonctionne comme suit :  
   
@@ -104,7 +104,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour l'autre, tapez `UserType2`.  
   
-6.  Dans le client `UserType1`, sélectionnez le type d'approbation unique dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**.  
+6.  Dans le client `UserType1`, sélectionnez le type d’approbation unique dans le menu déroulant et tapez un nom de document ainsi qu’un contenu. Cliquez sur **demander l’approbation**.  
   
 7.  Dans le client `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
   
@@ -120,7 +120,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour les deux autres, tapez `UserType2`.  
   
-6.  Dans le client `UserType1`, sélectionnez le type d'approbation de quorum dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**. Ceci nécessite que les deux clients `UserType2` approuvent ou rejettent le document. Alors que les deux clients `UserType2` doivent répondre, un seul client doit approuver le document pour qu'il le soit.  
+6.  Dans le client `UserType1`, sélectionnez le type d’approbation de quorum dans le menu déroulant et tapez un nom de document ainsi qu’un contenu. Cliquez sur **demander l’approbation**. Ceci nécessite que les deux clients `UserType2` approuvent ou rejettent le document. Alors que les deux clients `UserType2` doivent répondre, un seul client doit approuver le document pour qu'il le soit.  
   
 7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
   
@@ -130,13 +130,13 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 2.  Naviguez jusqu'au répertoire qui contient la solution.  
   
-3.  Naviguez jusqu’au dossier ApprovalClient\Bin\Debug et exécutez quatre instances d’ApprovalClient.exe.  
+3.  Naviguez jusqu'au dossier ApprovalClient\Bin\Debug et exécutez quatre instances d'ApprovalClient.exe.  
   
 4.  Cliquez sur **découvrir**, attendez que le **s’abonner** bouton est activé.  
   
 5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1`, pour deux utilisations, tapez `UserType2` et, pour le dernier, utilisez `UserType3`.  
   
-6.  Dans le client `UserType1`, sélectionnez le type d'approbation unique dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**.  
+6.  Dans le client `UserType1`, sélectionnez le type d’approbation unique dans le menu déroulant et tapez un nom de document ainsi qu’un contenu. Cliquez sur **demander l’approbation**.  
   
 7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver**, le document est transmis à la `UserType3` client.  
   
