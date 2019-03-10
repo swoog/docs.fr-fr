@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558980"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720863"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procédure : Hériter des Windows Forms
 Créer des Windows Forms en héritant de formulaires de base est un moyen pratique de dupliquer vos efforts sans avoir à recréer entièrement un formulaire chaque fois que vous en avez besoin.  
   
- Pour plus d’informations sur l’héritage des formulaires au moment du design à l’aide du **sélecteur d’héritage** boîte de dialogue et comment distinguer visuellement les niveaux de sécurité des contrôles hérités, consultez [Comment : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Pour plus d’informations sur l’héritage des formulaires au moment du design à l’aide du **sélecteur d’héritage** boîte de dialogue et comment distinguer visuellement les niveaux de sécurité des contrôles hérités, consultez [Comment : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
  **Remarque** Pour hériter d’un formulaire, le fichier ou l’espace de noms contenant ce formulaire doit avoir été intégré dans un fichier exécutable ou une DLL. Pour générer le projet, choisissez **Générer** dans le menu **Générer**. De plus, une référence à l'espace de noms doit être ajoutée à la classe héritant du formulaire. Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -44,5 +44,5 @@ Créer des Windows Forms en héritant de formulaires de base est un moyen pratiq
 - [Inherits (instruction)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports (instruction) (espace de noms et type .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Héritage visuel des Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Conséquences de la modification de l’aspect d’un formulaire de base](effects-of-modifying-base-form-appearance.md)
+- [Héritage visuel des Windows Forms](windows-forms-visual-inheritance.md)

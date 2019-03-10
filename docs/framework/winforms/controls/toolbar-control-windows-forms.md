@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863281"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723033"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar, contrôle (Windows Forms)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863281"
 >  La propriété <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> du contrôle `ToolBar` prend une instance de la classe <xref:System.Windows.Forms.ContextMenu> comme référence. Vous devez faire attention à la référence que vous passez lors de l'implémentation de ce genre de bouton sur les barres d'outils de votre application, car la propriété accepte tout objet qui hérite de la classe <xref:System.Windows.Forms.Menu>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble du contrôle ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [Vue d’ensemble du contrôle ToolBar](toolbar-control-overview-windows-forms.md)  
  Présente les concepts généraux du contrôle `ToolBar`, qui vous permet de concevoir des barres d'outils personnalisées avec lesquelles les utilisateurs peuvent travailler.  
   
- [Guide pratique pour ajouter des boutons à un contrôle ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Guide pratique pour Ajouter des boutons à un contrôle de barre d’outils](how-to-add-buttons-to-a-toolbar-control.md)  
  Décrit comment ajouter des boutons à un contrôle `ToolBar`.  
   
- [Guide pratique pour définir une icône pour un bouton de barre d’outils](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Guide pratique pour Définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)  
  Décrit comment afficher des icônes dans les boutons d'un contrôle `ToolBar`.  
   
- [Guide pratique pour déclencher des événements de menu pour les boutons de barre d’outils](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Explique comment écrire du code pour interpréter le bouton sur lequel l'utilisateur clique dans un contrôle `ToolBar`.  
   
- Consultez également [Comment : définir une icône pour un bouton de barre d’outils à l’aide du concepteur](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Comment : ajouter des boutons à un contrôle barre d’outils à l’aide du concepteur](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Voir également [Guide pratique pour Définir une icône pour un bouton de barre d’outils à l’aide du concepteur](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Comment : Ajouter des boutons à un contrôle de barre d’outils à l’aide du concepteur](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.ToolBar>  
  Fournit des informations de référence sur la classe et ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.  
   
- [Contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Contrôle ToolStrip](toolstrip-control-windows-forms.md)  
  Décrit les barres d’outils qui peuvent héberger des menus, des contrôles et des contrôles utilisateur dans les applications Windows Forms.

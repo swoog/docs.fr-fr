@@ -2,15 +2,15 @@
 title: Participants de persistance
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569503"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723762"
 ---
 # <a name="persistence-participants"></a>Participants de persistance
-Un participant de persistance peut participer à une opération de persistance (enregistrement ou chargement) déclenchée par un hôte d'application. Le [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] est livré avec deux classes abstraites, **PersistenceParticipant** et **PersistenceIOParticipant**, que vous pouvez utiliser pour créer un participant de persistance. Un participant de persistance dérive de l'une de ces classes, implémente les méthodes qui l'intéressent, puis ajoute une instance de la classe à la collection <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> sur le <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'hôte d'application peut rechercher de telles extensions de workflow lorsqu'il rend une instance de workflow persistante et appeler les méthodes appropriées sur les participants de persistance aux moments opportuns.  
+Un participant de persistance peut participer à une opération de persistance (enregistrement ou chargement) déclenchée par un hôte d'application. Le [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] est livré avec deux classes abstraites, **PersistenceParticipant** et **PersistenceIOParticipant**, que vous pouvez utiliser pour créer un participant de persistance. Un participant de persistance dérive de l’une de ces classes, implémente les méthodes qui l’intéressent, puis ajoute une instance de la classe à la collection <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> sur le <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'hôte d'application peut rechercher de telles extensions de workflow lorsqu'il rend une instance de workflow persistante et appeler les méthodes appropriées sur les participants de persistance aux moments opportuns.  
   
  La liste suivante décrit les tâches effectuées par le sous-système de persistance lors des différentes étapes de l'opération de persistance (enregistrement). Les participants de persistance sont utilisés durant les troisième et quatrième étapes. Si le participant est un participant d’e/s (un participant de persistance qui participe également les opérations d’e/s), le participant est également utilisé dans la sixième étape.  
   
@@ -58,7 +58,7 @@ Un participant de persistance peut participer à une opération de persistance (
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Guide pratique pour Créer un Participant de persistance personnalisé](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Guide pratique pour Créer un Participant de persistance personnalisé](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Stocker l’extensibilité](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Stocker l’extensibilité](store-extensibility.md)
