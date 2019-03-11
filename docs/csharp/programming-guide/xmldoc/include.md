@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 982e80696e0a8831397197c0c12d748d1d85c349
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978932"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479959"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -23,7 +23,7 @@ ms.locfileid: "56978932"
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `filename`  
  Nom du fichier XML contenant la documentation. Le nom de fichier peut être qualifié avec un chemin relatif au fichier de code source. Mettez `filename` entre guillemets simples (' ').  
   

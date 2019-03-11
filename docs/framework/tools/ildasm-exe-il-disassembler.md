@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488511"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Désassembleur IL)
 
@@ -32,7 +32,7 @@ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’
 ildasm [options] [PEfilename] [options]
 ```
 
-#### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
 Les options suivantes sont disponibles pour les fichiers *.exe*, *.dll*, *.obj*, *.lib* et *.winmd*.
 
@@ -91,7 +91,7 @@ Les options suivantes sont valides pour les fichiers *.lib* uniquement pour la s
 > [!NOTE]
 > Aucune option d’*Ildasm.exe* ne respecte pas la casse et toutes sont reconnues à leurs trois premières lettres. Par exemple, **/quo** est équivalent à **/quoteallnames**. Les options spécifiant des arguments prennent en charge les deux-points (:) ou le signe égal (=) en tant que séparateur entre l'option et l'argument. Par exemple, **/output:** *filename* équivaut à **/output=** *filename*.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 *Ildasm.exe* ne fonctionne qu'avec des fichiers exécutables portables stockés sur le disque. Il ne fonctionne pas avec des fichiers installés dans le Global Assembly Cache.
 

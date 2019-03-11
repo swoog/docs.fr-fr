@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250960"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466945"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Qu’est-ce que ML.NET et comment comprendre les bases du machine learning ?
 
 ML.NET est un framework d’apprentissage automatique gratuit, open source et multiplateforme qui vous permet de créer des solutions d’apprentissage automatique personnalisées et de les intégrer à vos applications .NET. Avec les API ML.NET, vous pouvez incorporer l’intelligence artificielle dans vos applications en utilisant les connaissances en .NET que vous avez déjà, sans quitter .NET.
+
+> [!NOTE]
+> Cette documentation fait référence à ML.NET, actuellement en préversion. Ce matériau peut être sujet à modification. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="what-is-machine-learning"></a>Qu’est-ce que l’apprentissage automatique ?
 

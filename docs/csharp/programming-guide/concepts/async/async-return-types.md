@@ -2,12 +2,12 @@
 title: Types de retour async (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548242"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368179"
 ---
 # <a name="async-return-types-c"></a>Types de retour async (C#)
 Les méthodes async peuvent avoir les types de retour suivants :
@@ -24,7 +24,7 @@ Pour plus d’informations sur les méthodes async, consultez [Programmation asy
   
 Chaque type de retour est examiné dans l’une des sections suivantes, et vous trouverez un exemple complet qui utilise les trois types à la fin de la rubrique.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>, type de retour  
+## <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>, type de retour  
 Le type de retour <xref:System.Threading.Tasks.Task%601> est utilisé pour une méthode async qui contient une instruction [return](../../../../csharp/language-reference/keywords/return.md) (C#) dans laquelle l’opérande est de type `TResult`.  
   
 Dans l’exemple suivant, la méthode async `GetLeisureHours` contient une instruction `return` qui retourne un entier. La déclaration de méthode doit donc spécifier un type de retour `Task<int>`.  La méthode async <xref:System.Threading.Tasks.Task.FromResult%2A> est un espace réservé pour une opération qui retourne une chaîne.
@@ -40,7 +40,7 @@ Vous pouvez mieux comprendre comment cela se produit en séparant l’appel à `
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Type de retour Task  
+## <a name="BKMK_TaskReturnType"></a> Type de retour Task  
 Les méthodes async qui ne contiennent pas d’instruction `return` ou qui contiennent une instruction `return` ne retournant pas d’opérande ont généralement un type de retour <xref:System.Threading.Tasks.Task>. De telles méthodes retournent `void` si elles s’exécutent de façon synchrone. Si vous utilisez un type de retour <xref:System.Threading.Tasks.Task> pour une méthode async, une méthode d’appel peut utiliser un opérateur `await` pour suspendre l’achèvement de l’appelant jusqu’à ce que la méthode async soit terminée.  
   
 Dans l’exemple suivant, la méthode async `WaitAndApologize` ne contient pas d’instruction `return`. Par conséquent, elle retourne un objet <xref:System.Threading.Tasks.Task>. Cela permet à `WaitAndApologize` d’être attendue. Notez que le type <xref:System.Threading.Tasks.Task> n’inclut pas de propriété `Result`, car il n’a pas de valeur de retour.  
@@ -55,7 +55,7 @@ Le code suivant sépare l’appel à la méthode `WaitAndApologize` de l’atten
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Type de retour void
+## <a name="BKMK_VoidReturnType"></a> Type de retour void
 
 Vous utilisez le type de retour `void` dans les gestionnaires d’événements asynchrones, lesquels exigent un type de retour `void`. Pour les méthodes autres que les gestionnaires d’événements qui ne retournent pas de valeur, vous devez retourner <xref:System.Threading.Tasks.Task> à la place, car une méthode async qui retourne `void` ne peut pas être attendue. Tout appelant d’une telle méthode doit pouvoir continuer jusqu’à l’achèvement sans attendre que la méthode async soit terminée, et l’appelant doit être indépendant des valeurs ou des exceptions générées par la méthode async.  
   

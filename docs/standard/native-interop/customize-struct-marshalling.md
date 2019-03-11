@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411395"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675782"
 ---
 # <a name="customizing-structure-marshalling"></a>Personnalisation de marshaling de structures
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-À l’aide des valeurs `UmanagedType.U1` ou `UnmanagedType.I1` ci-dessous, vous pouvez indiquer au runtime de marshaler le champ `b` comme type `bool` natif sur 1 octet.
+À l’aide des valeurs `UnmanagedType.U1` ou `UnmanagedType.I1` ci-dessous, vous pouvez indiquer au runtime de marshaler le champ `b` comme type `bool` natif sur 1 octet.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 Sur Windows, vous pouvez marshaler des champs de type `object` dans du code natif. Vous pouvez marshaler ces champs dans l’un des trois types suivants :
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 Par défaut, un champ de type `object` sera marshalé dans un `IUnknown*` qui inclut l’objet dans un wrapper.
 

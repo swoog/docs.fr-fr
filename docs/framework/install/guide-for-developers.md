@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093942"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715683"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installer le .NET Framework pour les développeurs
 
@@ -228,7 +228,7 @@ Le tableau suivant répertorie les langues prises en charge.
 
 - Pour plus d’informations sur la migration de votre application du .NET Framework 4 vers [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou l’une de ses versions intermédiaires, consultez le [guide de migration](~/docs/framework/migration-guide/index.md).
 
-- Pour parcourir le code source du .NET Framework en ligne, consultez la [source de référence .NET Framework](https://referencesource.microsoft.com/). La source de référence est aussi disponible sur [GitHub](https://github.com/Microsoft/referencesource). Vous pouvez [télécharger la source de référence](https://referencesource.microsoft.com/download.html) à des fins de consultation hors connexion et parcourir les sources (y compris les correctifs et les mises à jour) pendant le débogage. Pour plus d’informations, consultez l’entrée de blog qui présente [le nouvel aspect de la source de référence .NET](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
+- Pour parcourir le code source du .NET Framework en ligne, consultez la [source de référence .NET Framework](https://referencesource.microsoft.com/). La source de référence est aussi disponible sur [GitHub](https://github.com/Microsoft/referencesource). Vous pouvez [télécharger la source de référence](https://referencesource.microsoft.com/download.html) à des fins de consultation hors connexion et parcourir les sources (y compris les correctifs et les mises à jour) pendant le débogage. Pour plus d’informations, consultez l’entrée de blog qui présente [le nouvel aspect de la source de référence .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>Voir aussi
 

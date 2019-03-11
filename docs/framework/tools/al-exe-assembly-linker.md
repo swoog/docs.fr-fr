@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223193"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492255"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -33,7 +33,7 @@ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’
 al sources options
 ```
 
-#### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
 Vous pouvez spécifier une ou plusieurs des `sources` suivantes.
 
@@ -79,7 +79,7 @@ Vous pouvez spécifier les `options` ci-dessous. L’option **/out** est obligat
 |`@filename`|Spécifie un fichier réponse qui contient les commandes *Al.exe*.<br /><br /> Les commandes du fichier réponse peuvent apparaître chacune sur une ligne ou sur la même ligne, séparées par un ou plusieurs espaces.|
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Tous les compilateurs Visual Studio génèrent des assemblys. Si, toutefois, vous disposez d'un ou de plusieurs modules (métadonnées sans manifeste), vous pouvez utiliser *Al.exe* pour créer un assembly avec le manifeste dans un fichier séparé.
 

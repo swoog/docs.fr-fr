@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665043"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361263"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Options du compilateur C#)
 Spécifie un assembly dont les types non publics sont accessibles par un .netmodule.  
@@ -28,7 +28,7 @@ Spécifie un assembly dont les types non publics sont accessibles par un .netmod
  `assembly_name`  
  Nom de l’assembly dont les types non publics sont accessibles au fichier .netmodule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **-moduleassemblyname** doit être utilisée au moment de créer un fichier .netmodule et quand les conditions suivantes sont réunies :  
   
 -   Le fichier .netmodule doit accéder à des types non publics dans un assembly existant.  
@@ -39,7 +39,7 @@ Spécifie un assembly dont les types non publics sont accessibles par un .netmod
   
  Pour plus d’informations sur la création d’un fichier .netmodule, consultez [-target:module (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Pour plus d’informations sur les assemblys friend, consultez [Assemblys friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Pour plus d’informations sur les assemblys friend, consultez [Assemblys friend](../../../standard/assembly/friend-assemblies.md).  
   
  Cette option n’est pas disponible dans l’environnement de développement ; elle l’est uniquement au moment de compiler à partir de la ligne de commande.  
   

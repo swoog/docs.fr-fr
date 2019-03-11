@@ -3,12 +3,12 @@ title: Branches et boucles – Tutoriel d’introduction à C#
 description: Dans ce tutoriel sur les branches et les boucles, vous allez écrire du code en C# pour explorer la syntaxe du langage qui gère les branches et les boucles conditionnelles permettant d’exécuter des instructions de manière répétée.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153772"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677784"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Découvrir la logique conditionnelle avec des instructions de branches et de boucles
 
@@ -20,7 +20,7 @@ Ce tutoriel suppose de disposer d’un ordinateur utilisable pour le développem
 
 Créez un répertoire nommé **branches-tutorial**. Faites-en le répertoire actuel et exécutez `dotnet new console -n BranchesAndLoops -o .`. Cette commande crée une nouvelle application console .NET Core dans le répertoire actuel.
 
-Ouvrez **Program.cs** dans votre éditeur favori, puis remplacez la ligne `Console.Writeline("Hello World!");` par le code qui suit :
+Ouvrez **Program.cs** dans votre éditeur favori, puis remplacez la ligne `Console.WriteLine("Hello World!");` par le code qui suit :
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Essayez ce code en tapant `dotnet run` dans la fenêtre de console. Le message « La réponse est supérieure à 10 » doit s’afficher dans votre console.
 
-Modifiez la déclaration de `b` pour que la somme soit inférieure à 10 : 
+Modifiez la déclaration de `b` pour que la somme soit inférieure à 10 :
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ L’instruction qui suit le mot clé `else` s’exécute uniquement quand la con
 
 > [!IMPORTANT]
 > La mise en retrait sous les instructions `if` et `else` a simplement pour but de faciliter la lecture.
-> Le langage C# ne considère pas la mise en retrait ou les espaces blancs comme des éléments significatifs. L’instruction qui suit le mot clé `if` ou `else` sera exécutée en fonction de la condition. Tous les exemples de ce tutoriel suivent une pratique courante qui consiste à mettre en retrait les lignes en fonction du flux de contrôle des instructions.
+> Le langage C# ne considère pas la mise en retrait ou les espaces blancs comme des éléments significatifs.
+> L’instruction qui suit le mot clé `if` ou `else` sera exécutée en fonction de la condition. Tous les exemples de ce tutoriel suivent une pratique courante qui consiste à mettre en retrait les lignes en fonction du flux de contrôle des instructions.
 
 Étant donné que la mise en retrait n’est pas significative, vous devez utiliser `{` et `}` pour indiquer quand vous souhaitez inclure plus d’une instruction dans le bloc qui s’exécute de manière conditionnelle. Les programmeurs C# utilisent généralement les accolades pour toutes les clauses `if` et `else`. L’exemple suivant est identique à celui que vous venez de créer. Modifiez votre code ci-dessus pour qu’il corresponde au code suivant :
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ La boucle **for** est couramment utilisée dans C#. Essayez ce code dans votre m
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Cette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement.
@@ -252,7 +253,7 @@ Vous pouvez maintenant suivre le tutoriel [Interpolation de chaînes](interpolat
 
 Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
 
-[Instruction if et else](../../language-reference/keywords/if-else.md)  
-[Instruction while](../../language-reference/keywords/while.md)  
-[Instruction do](../../language-reference/keywords/do.md)  
-[Instruction for](../../language-reference/keywords/for.md)  
+- [Instruction if et else](../../language-reference/keywords/if-else.md)
+- [Instruction while](../../language-reference/keywords/while.md)
+- [Instruction do](../../language-reference/keywords/do.md)
+- [Instruction for](../../language-reference/keywords/for.md)

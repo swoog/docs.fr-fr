@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcf1afdadf9294981674d7e007a6bbda2268969d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496818"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 
@@ -41,7 +41,7 @@ Pour les applications de [!INCLUDE[win8_appname_long](../../../includes/win8-app
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  Tous les arguments à Mpgo.exe sont insensibles à la casse. Les commandes sont préfixées avec un tiret.  
   
 > [!NOTE]
@@ -65,7 +65,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-LeaveNativeImages`|Spécifie que les images natives instrumentées ne doivent pas être supprimées après l'exécution du scénario. Cette option est principalement utilisée lorsque vous exécutez l'application que avez spécifiée pour le scénario. Cela empêchera la recréation d'images natives pour les exécutions suivantes de Mpgo.exe. Lorsque vous avez terminé d'exécuter votre application, il peut y avoir des images natives orphelines dans le cache si vous spécifiez cette option. Dans ce cas, exécutez Mpgo.exe avec le même scénario et la même liste des assemblys, et utilisez le paramètre `–RemoveNativeImages` pour supprimer ces images natives.|
 |`-RemoveNativeImages`|Nettoie dans une exécution où `–LeaveNativeImages` a été spécifié. Si vous spécifiez `-RemoveNativeImages`, Mpgo.exe ignore tous les arguments sauf `-64bit` et `–AssemblyList`, et s'arrête après avoir supprimé toutes les images natives instrumentées.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
  Vous pouvez utiliser `–AssemblyList` et `- AssemblyListFile` plusieurs fois sur la ligne de commande.
 
  Si vous ne spécifiez pas de chemins d'accès complets en spécifiant des assemblys, Mpgo.exe recherche dans le répertoire actif. Si vous spécifiez un chemin d'accès incorrect, Mpgo.exe affiche un message d'erreur mais continue à générer des données pour les autres assemblys. Si vous spécifiez un assembly qui n'est pas chargé pendant le scénario d'apprentissage, aucune donnée d'apprentissage n'est générée pour cet assembly.

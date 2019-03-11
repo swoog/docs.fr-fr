@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066264"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676367"
 ---
 # <a name="design-a-microservice-domain-model"></a>Concevoir un modèle de domaine de microservice
 
@@ -78,7 +78,7 @@ Une personne désignée par un prénom et un nom est généralement une entité,
 
 Les objets de valeur sont difficiles à gérer dans les bases de données relationnelles et les ORM comme EF, alors que dans les bases de données orientées document, ils sont plus faciles à implémenter et à utiliser.
 
-EF Core 2.0 inclut la fonctionnalité [Entités détenues](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), qui facilite la gestion des objets de valeur, comme nous le verrons en détail par la suite.
+EF Core 2.0 inclut la fonctionnalité [Entités détenues](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), qui facilite la gestion des objets de valeur, comme nous le verrons en détail par la suite.
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 

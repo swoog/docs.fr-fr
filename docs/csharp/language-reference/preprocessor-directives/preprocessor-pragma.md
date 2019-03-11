@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 216adebae8a498ef2f4263f46f8ccd7a20d9202f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622375"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471004"
 ---
 # <a name="pragma-c-reference"></a>#pragma (référence C#)
 La directive `#pragma` fournit au compilateur des instructions spéciales pour la compilation du fichier dans lequel elle apparaît. Les instructions doivent être prises en charge par le compilateur. En d’autres termes, vous ne pouvez pas utiliser `#pragma` pour créer des instructions de prétraitement personnalisées. Le compilateur Microsoft C# prend en charge les deux instructions `#pragma` suivantes :  
@@ -27,7 +27,7 @@ La directive `#pragma` fournit au compilateur des instructions spéciales pour l
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pragma-name`  
  Nom d’une directive pragma reconnue.  
   
