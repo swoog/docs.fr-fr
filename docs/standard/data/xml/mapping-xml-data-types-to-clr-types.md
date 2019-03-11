@@ -5,79 +5,79 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364136"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="ad020-102">Mappage entre types de données XML et types CLR</span><span class="sxs-lookup"><span data-stu-id="ad020-102">Mapping XML Data Types to CLR Types</span></span>
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="72d7f-102">Mappage entre types de données XML et types CLR</span><span class="sxs-lookup"><span data-stu-id="72d7f-102">Mapping XML Data Types to CLR Types</span></span>
 
-<span data-ttu-id="ad020-103">Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).</span><span class="sxs-lookup"><span data-stu-id="ad020-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
-  
+<span data-ttu-id="72d7f-103">Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).</span><span class="sxs-lookup"><span data-stu-id="72d7f-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="ad020-104">Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms <https://www.w3.org/2001/XMLSchema> et <https://www.w3.org/2003/05/xpath-datatypes>, respectivement.</span><span class="sxs-lookup"><span data-stu-id="ad020-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
-  
-|<span data-ttu-id="ad020-105">Type XML</span><span class="sxs-lookup"><span data-stu-id="ad020-105">XML Type</span></span>|<span data-ttu-id="ad020-106">Type CLR</span><span class="sxs-lookup"><span data-stu-id="ad020-106">CLR Type</span></span>|  
-|--------------|--------------|  
-|`xs:anyURI`|<xref:System.Uri>|  
-|`xs:base64Binary`|`Byte[]`|  
-|`xs:boolean`|<xref:System.Boolean>|  
-|`xs:byte`|<xref:System.SByte>|  
-|`xs:date`|<xref:System.DateTime>|  
-|`xs:dateTime`|<xref:System.DateTime>|  
-|`xs:decimal`|<xref:System.Decimal>|  
-|`xs:double`|<xref:System.Double>|  
-|`xs:duration`|<xref:System.TimeSpan>|  
-|`xs:ENTITIES`|`String[]`|  
-|`xs:ENTITY`|<xref:System.String>|  
-|`xs:float`|<xref:System.Single>|  
-|`xs:gDay`|<xref:System.DateTime>|  
-|`xs:gMonthDay`|<xref:System.DateTime>|  
-|`xs:gYear`|<xref:System.DateTime>|  
-|`xs:gYearMonth`|<xref:System.DateTime>|  
-|`xs:hexBinary`|`Byte[]`|  
-|`xs:ID`|<xref:System.String>|  
-|`xs:IDREF`|<xref:System.String>|  
-|`xs:IDREFS`|`String[]`|  
-|`xs:int`|<xref:System.Int32>|  
-|`xs:integer`|<xref:System.Decimal>|  
-|`xs:language`|<xref:System.String>|  
-|`xs:long`|<xref:System.Int64>|  
-|`xs:gMmonth`|<xref:System.DateTime>|  
-|`xs:Name`|<xref:System.String>|  
-|`xs:NCName`|<xref:System.String>|  
-|`xs:negativeInteger`|<xref:System.Decimal>|  
-|`xs:NMTOKEN`|<xref:System.String>|  
-|`xs:NMTOKENS`|`String[]`|  
-|`xs:nonNegativeInteger`|<xref:System.Decimal>|  
-|`xs:nonPositiveInteger`|<xref:System.Decimal>|  
-|`xs:normalizedString`|<xref:System.String>|  
-|`xs:NOTATION`|<xref:System.Xml.XmlQualifiedName>|  
-|`xs:positiveInteger`|<xref:System.Decimal>|  
-|`xs:QName`|<xref:System.Xml.XmlQualifiedName>|  
-|`xs:short`|<xref:System.Int16>|  
-|`xs:string`|<xref:System.String>|  
-|`xs:time`|<xref:System.DateTime>|  
-|`xs:token`|<xref:System.String>|  
-|`xs:unsignedByte`|<xref:System.Byte>|  
-|`xs:unsignedInt`|<xref:System.UInt32>|  
-|`xs:unsignedLong`|<xref:System.UInt64>|  
-|`xs:unsignedShort`|<xref:System.UInt16>|  
-|`xdt:dayTimeDuration`|<xref:System.TimeSpan>|  
-|`xdt:yearMonthDuration`|<xref:System.TimeSpan>|  
-|`xdt:untypedAtomic`|<xref:System.String>|  
-|`xdt:anyAtomicType`|<xref:System.Object>|  
-|`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="ad020-107">Nœud Document</span><span class="sxs-lookup"><span data-stu-id="ad020-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-108">Nœud d'élément</span><span class="sxs-lookup"><span data-stu-id="ad020-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-109">Nœud d'attribut</span><span class="sxs-lookup"><span data-stu-id="ad020-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-110">Nœud d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="ad020-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-111">Nœud de texte</span><span class="sxs-lookup"><span data-stu-id="ad020-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-112">Nœud de commentaire</span><span class="sxs-lookup"><span data-stu-id="ad020-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="ad020-113">Nœud d'instruction de traitement</span><span class="sxs-lookup"><span data-stu-id="ad020-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-  
-## <a name="see-also"></a><span data-ttu-id="ad020-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ad020-114">See also</span></span>
+> <span data-ttu-id="72d7f-104">Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms <https://www.w3.org/2001/XMLSchema> et <https://www.w3.org/2003/05/xpath-datatypes>, respectivement.</span><span class="sxs-lookup"><span data-stu-id="72d7f-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
 
-- [<span data-ttu-id="ad020-115">Prise en charge du type dans les classes System.Xml</span><span class="sxs-lookup"><span data-stu-id="ad020-115">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+|<span data-ttu-id="72d7f-105">Type XML</span><span class="sxs-lookup"><span data-stu-id="72d7f-105">XML Type</span></span>|<span data-ttu-id="72d7f-106">Type CLR</span><span class="sxs-lookup"><span data-stu-id="72d7f-106">CLR Type</span></span>|
+|--------------|--------------|
+|`xs:anyURI`|<xref:System.Uri>|
+|`xs:base64Binary`|`Byte[]`|
+|`xs:boolean`|<xref:System.Boolean>|
+|`xs:byte`|<xref:System.SByte>|
+|`xs:date`|<xref:System.DateTime>|
+|`xs:dateTime`|<xref:System.DateTime>|
+|`xs:decimal`|<xref:System.Decimal>|
+|`xs:double`|<xref:System.Double>|
+|`xs:duration`|<xref:System.TimeSpan>|
+|`xs:ENTITIES`|`String[]`|
+|`xs:ENTITY`|<xref:System.String>|
+|`xs:float`|<xref:System.Single>|
+|`xs:gDay`|<xref:System.DateTime>|
+|`xs:gMonthDay`|<xref:System.DateTime>|
+|`xs:gYear`|<xref:System.DateTime>|
+|`xs:gYearMonth`|<xref:System.DateTime>|
+|`xs:hexBinary`|`Byte[]`|
+|`xs:ID`|<xref:System.String>|
+|`xs:IDREF`|<xref:System.String>|
+|`xs:IDREFS`|`String[]`|
+|`xs:int`|<xref:System.Int32>|
+|`xs:integer`|<xref:System.Decimal>|
+|`xs:language`|<xref:System.String>|
+|`xs:long`|<xref:System.Int64>|
+|`xs:gMonth`|<xref:System.DateTime>|
+|`xs:Name`|<xref:System.String>|
+|`xs:NCName`|<xref:System.String>|
+|`xs:negativeInteger`|<xref:System.Decimal>|
+|`xs:NMTOKEN`|<xref:System.String>|
+|`xs:NMTOKENS`|`String[]`|
+|`xs:nonNegativeInteger`|<xref:System.Decimal>|
+|`xs:nonPositiveInteger`|<xref:System.Decimal>|
+|`xs:normalizedString`|<xref:System.String>|
+|`xs:NOTATION`|<xref:System.Xml.XmlQualifiedName>|
+|`xs:positiveInteger`|<xref:System.Decimal>|
+|`xs:QName`|<xref:System.Xml.XmlQualifiedName>|
+|`xs:short`|<xref:System.Int16>|
+|`xs:string`|<xref:System.String>|
+|`xs:time`|<xref:System.DateTime>|
+|`xs:token`|<xref:System.String>|
+|`xs:unsignedByte`|<xref:System.Byte>|
+|`xs:unsignedInt`|<xref:System.UInt32>|
+|`xs:unsignedLong`|<xref:System.UInt64>|
+|`xs:unsignedShort`|<xref:System.UInt16>|
+|`xdt:dayTimeDuration`|<xref:System.TimeSpan>|
+|`xdt:yearMonthDuration`|<xref:System.TimeSpan>|
+|`xdt:untypedAtomic`|<xref:System.String>|
+|`xdt:anyAtomicType`|<xref:System.Object>|
+|`xs:anySimpleType`|<xref:System.String>|
+|<span data-ttu-id="72d7f-107">Nœud Document</span><span class="sxs-lookup"><span data-stu-id="72d7f-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-108">Nœud d'élément</span><span class="sxs-lookup"><span data-stu-id="72d7f-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-109">Nœud d'attribut</span><span class="sxs-lookup"><span data-stu-id="72d7f-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-110">Nœud d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="72d7f-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-111">Nœud de texte</span><span class="sxs-lookup"><span data-stu-id="72d7f-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-112">Nœud de commentaire</span><span class="sxs-lookup"><span data-stu-id="72d7f-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="72d7f-113">Nœud d'instruction de traitement</span><span class="sxs-lookup"><span data-stu-id="72d7f-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+
+## <a name="see-also"></a><span data-ttu-id="72d7f-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="72d7f-114">See also</span></span>
+
+- [<span data-ttu-id="72d7f-115">Prise en charge du type dans les classes System.Xml</span><span class="sxs-lookup"><span data-stu-id="72d7f-115">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
