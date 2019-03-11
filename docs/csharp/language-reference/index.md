@@ -1,19 +1,13 @@
 ---
-title: Référence C#
+title: 'Référence C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472501"
 ---
 # <a name="c-reference"></a>Référence C#
 Cette section fournit des ressources de référence sur les mots clés, les opérateurs, les caractères spéciaux, les directives de préprocesseur, les options du compilateur, et les erreurs et avertissements du compilateur du langage C#.  
@@ -37,8 +31,11 @@ Cette section fournit des ressources de référence sur les mots clés, les opé
  [Erreurs du compilateur C#](../../csharp/language-reference/compiler-messages/index.md)  
  Inclut des extraits de code qui montrent la cause et la correction des erreurs du compilateur et des avertissements C#.  
   
- [Spécification du langage C#](../../csharp/language-reference/language-specification/index.md)  
- Fournit des liens vers les dernières versions de la spécification du langage C#.  
+ [Spécification du langage C#](../../../_csharplang/spec/introduction.md)  
+ Spécification du langage C# 6.0. Il s’agit d’une ébauche de proposition pour le langage C# 6.0. La version 5.0 a été publiée en décembre 2017 dans le document [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+  
+ [Propositions de langage C# 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ De nouvelles fonctionnalités ont été implémentées dans C# 7.0 : critères spéciaux, fonctions locales, déclarations de variables out, expressions throw, littéraux binaires et séparateurs numériques notamment. Ce dossier contient les spécifications de chacune de ces fonctionnalités.
   
 ## <a name="related-sections"></a>Rubriques connexes  
 

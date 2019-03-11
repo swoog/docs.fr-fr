@@ -4,6 +4,7 @@ description: Découvrez comment effectuer des tâches spécifiques pour facilite
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guides pratiques pour l’utilisation de Machine Learning avec .NET - ML.NET
 
 Dans la section Procédures du guide ML.NET, vous trouverez rapidement des réponses à des questions courantes. Dans certains cas, les articles peuvent figurer dans plusieurs sections pour les trouver facilement.
@@ -44,7 +45,7 @@ Dans la section Procédures du guide ML.NET, vous trouverez rapidement des répo
 
 * [Appliquer l’ingénierie des caractéristiques pour l’entraînement des modèles sur des données textuelles avec ML.NET.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Exécuter 
+## <a name="run"></a>Exécuter
 
 * [Inspecter les valeurs de données intermédiaires lors du traitement du pipeline ML.NET.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ Dans la section Procédures du guide ML.NET, vous trouverez rapidement des répo
 
 * [Utiliser PredictionFunction pour créer une prédiction à la fois.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Probabiliste (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabiliste (Infer.NET)
 
 * [Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste.](matchup-app-infer-net.md)
-
