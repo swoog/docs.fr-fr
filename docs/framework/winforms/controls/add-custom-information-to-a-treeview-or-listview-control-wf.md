@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694592"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709661"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procédure : Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)
 Vous pouvez créer un nœud dérivé dans un formulaire Windows <xref:System.Windows.Forms.TreeView> contrôle ou un élément dérivé dans un <xref:System.Windows.Forms.ListView> contrôle. La dérivation vous permet d’ajouter les champs dont vous avez besoin, ainsi que des méthodes et des constructeurs personnalisés pour traiter les champs. Une utilisation de cette fonctionnalité consiste à attacher un objet Customer à chaque élément de liste ou nœud de l’arborescence. Les exemples fournis ici concernent un <xref:System.Windows.Forms.TreeView> contrôle, mais la même approche peut être utilisé pour un <xref:System.Windows.Forms.ListView> contrôle.  
@@ -131,5 +131,5 @@ Vous pouvez créer un nœud dérivé dans un formulaire Windows <xref:System.Win
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [TreeView, contrôle](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [Contrôle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [TreeView, contrôle](treeview-control-windows-forms.md)
+- [Contrôle ListView](listview-control-windows-forms.md)
