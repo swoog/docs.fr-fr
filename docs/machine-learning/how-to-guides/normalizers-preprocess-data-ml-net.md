@@ -1,27 +1,32 @@
 ---
 title: Prétraiter les données d’entraînement avec des normaliseurs pour les utiliser dans le traitement des données - ML.NET
 description: Découvrez comment utiliser des normaliseurs pour prétraiter les données d’entraînement à utiliser dans la création, l’entraînement et le scoring de modèles Machine Learning avec ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 28d358cd381f71b4116e1dd25d847fc51835f09e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2d18f7c19a51fd929ac6efb7f600cb1ac2733de8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093045"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676601"
 ---
-# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="9a312-103">Prétraiter les données d’entraînement avec des normaliseurs pour les utiliser dans le traitement des données - ML.NET</span><span class="sxs-lookup"><span data-stu-id="9a312-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
+# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="99597-103">Prétraiter les données d’entraînement avec des normaliseurs pour les utiliser dans le traitement des données - ML.NET</span><span class="sxs-lookup"><span data-stu-id="99597-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
 
-<span data-ttu-id="9a312-104">ML.NET expose plusieurs [algorithmes paramétriques et non paramétriques](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="9a312-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
+> [!NOTE]
+> <span data-ttu-id="99597-104">Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées.</span><span class="sxs-lookup"><span data-stu-id="99597-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="99597-105">Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="99597-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="9a312-105">Le choix du normaliseur que vous choisissez d’utiliser est **moins** important que celui d’**utiliser** un normaliseur lors de l’entraînement de modèles linéaires ou d’autres modèles paramétriques.</span><span class="sxs-lookup"><span data-stu-id="9a312-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
+<span data-ttu-id="99597-106">Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**.</span><span class="sxs-lookup"><span data-stu-id="99597-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="99597-107">Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="99597-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="9a312-106">Ajoutez toujours le normaliseur directement dans le pipeline d’entraînement de ML.NET, pour :</span><span class="sxs-lookup"><span data-stu-id="9a312-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
+<span data-ttu-id="99597-108">ML.NET expose plusieurs [algorithmes paramétriques et non paramétriques](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="99597-108">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
 
-- <span data-ttu-id="9a312-107">L’entraîner seulement sur les données d’entraînement et non pas sur vos données de test</span><span class="sxs-lookup"><span data-stu-id="9a312-107">is only trained on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="9a312-108">L’appliquer correctement à toutes les nouvelles données entrantes, sans nécessiter de prétraitement supplémentaire au moment de la prédiction.</span><span class="sxs-lookup"><span data-stu-id="9a312-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
+<span data-ttu-id="99597-109">Le choix du normaliseur que vous choisissez d’utiliser est **moins** important que celui d’**utiliser** un normaliseur lors de l’entraînement de modèles linéaires ou d’autres modèles paramétriques.</span><span class="sxs-lookup"><span data-stu-id="99597-109">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
 
-<span data-ttu-id="9a312-109">Voici un extrait de code qui montre la normalisation dans les pipelines d’apprentissage.</span><span class="sxs-lookup"><span data-stu-id="9a312-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="9a312-110">Il suppose l’existence du jeu de données Iris :</span><span class="sxs-lookup"><span data-stu-id="9a312-110">It assumes the Iris dataset:</span></span>
+<span data-ttu-id="99597-110">Ajoutez toujours le normaliseur directement dans le pipeline d’entraînement de ML.NET, pour :</span><span class="sxs-lookup"><span data-stu-id="99597-110">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
+
+- <span data-ttu-id="99597-111">L’entraîner seulement sur les données d’entraînement et non pas sur vos données de test</span><span class="sxs-lookup"><span data-stu-id="99597-111">is only trained on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="99597-112">L’appliquer correctement à toutes les nouvelles données entrantes, sans nécessiter de prétraitement supplémentaire au moment de la prédiction.</span><span class="sxs-lookup"><span data-stu-id="99597-112">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
+
+<span data-ttu-id="99597-113">Voici un extrait de code qui montre la normalisation dans les pipelines d’apprentissage.</span><span class="sxs-lookup"><span data-stu-id="99597-113">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="99597-114">Il suppose l’existence du jeu de données Iris :</span><span class="sxs-lookup"><span data-stu-id="99597-114">It assumes the Iris dataset:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
