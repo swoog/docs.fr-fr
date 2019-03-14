@@ -1,22 +1,17 @@
 ---
-title: Visite guidée du langage C# - Guide du langage C#
-description: Novice en matière de langage C# ? Découvrez les principes de base du langage.
+title: 'Visite guidée du langage C# - Guide du langage C#'
+description: "Novice en matière de langage C#\_? Découvrez les principes de base du langage."
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150392"
 ---
-# <a name="a-tour-of-the-c-language"></a>Présentation rapide du langage C#  
+
+# <a name="a-tour-of-the-c-language"></a>Présentation rapide du langage C#
 
 C# (prononcé « C Sharp ») est un langage de programmation simple, moderne, orienté objet et de type sécurisé. C# prend sa source dans la famille de langages C et sera immédiatement reconnaissable aux programmeurs en C, C++, Java et JavaScript.
 
 C# est un langage orienté objet, mais C# inclut de plus la prise en charge de la programmation ***orientée composant***. La conception logicielle moderne s’appuie de plus en plus sur les composants logiciels sous la forme de packages de fonctionnalités autonomes et autodescriptifs. Point important, ces composants présentent un modèle de programmation avec propriétés, méthodes et événements ; ils ont des attributs qui fournissent des informations déclaratives sur le composant ; et ils intègrent leur propre documentation. C# fournit des constructions de langage qui prennent directement en charge ces concepts, ce qui fait de C# un langage très naturel pour créer et utiliser des composants logiciels.
 
-Plusieurs fonctionnalités de C# participent à la construction d’applications robustes et fiables : le ***garbage collection*** récupère automatiquement la mémoire occupée par les objets inutilisés et inaccessibles ; la ***gestion des exceptions*** fournit une approche structurée et extensible de la détection d’erreurs et la récupération ; et, grâce à la conception ***de type sécurisé*** du langage, il est impossible de lire des variables non initialisées, d’indexer des tableaux au-delà de leurs limites et d’effectuer des transtypages non contrôlés.
+Plusieurs fonctionnalités de C# participent à la construction d’applications robustes et fiables : le ***garbage collection*** récupère automatiquement la mémoire occupée par les objets inutilisés et inaccessibles ; la ***gestion des exceptions*** fournit une approche structurée et extensible de la détection d’erreurs et la récupération ; et, grâce à la conception ***de type sécurisé*** du langage, il est impossible de lire des variables non initialisées, d’indexer des tableaux au-delà de leurs limites et d’effectuer des transtypages non contrôlés.
 
 C# a un ***système de type unifié***. Tous les types C#, y compris les types primitifs tels que `int` et `double`, héritent d’un seul type `object` racine. Par conséquent, tous les types partagent un ensemble d’opérations communes, et des valeurs de tous types peuvent être stockées, transmises et exploitées de manière cohérente. En outre, C# prend en charge les types référence et les types valeur définis par l’utilisateur, ce qui permet l’allocation dynamique d’objets, ainsi que le stockage en ligne de structures légères.
 
@@ -73,7 +68,7 @@ Il y a beaucoup d’autres choses à apprendre sur C#.  Les rubriques suivantes 
 * [Délégués](delegates.md)
     - Un ***type délégué*** représente des références à des méthodes avec une liste de paramètres et un type de retour particuliers. Les délégués permettent de traiter les méthodes en tant qu’entités qui peuvent être affectées à des variables et passées comme paramètres. Les délégués sont similaires au concept de pointeurs de fonction dans d’autres langages, mais, contrairement aux pointeurs de fonction, les délégués sont orientés objet et de type sécurisé.
 * [Attributs](attributes.md)
-    * Les ***attributs*** permettent aux programmes de spécifier des informations déclaratives supplémentaires sur les types, les membres et d’autres entités.
+     * Les ***attributs*** permettent aux programmes de spécifier des informations déclaratives supplémentaires sur les types, les membres et d’autres entités.
 
->[!div class="step-by-step"]
->[Next](program-structure.md)
+> [!div class="step-by-step"]
+> [Next](program-structure.md)
