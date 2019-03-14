@@ -1,16 +1,21 @@
 ---
 title: Former un modèle de régression pour prédire une valeur à l’aide de ML.NET
 description: Découvrez comment former un modèle de régression Machine Learning pour prédire une valeur à l’aide de ML.NET.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092902"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673143"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>Former un modèle de régression pour prédire une valeur à l’aide de ML.NET
+
+> [!NOTE]
+> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 En règle générale, il existe trois étapes pour l’apprentissage du modèle dans ML.NET :
 

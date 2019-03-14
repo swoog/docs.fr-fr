@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285023"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677524"
 ---
 # <a name="async-in-depth"></a>Async en détail
 
@@ -142,7 +142,7 @@ Une fois que `await` a été trouvé, l’exécution de `CalculateResult()` est 
 
 ### <a name="why-does-async-help-here"></a>Pourquoi async est-il utile ici ?
 
-`async` et `await` sont la meilleure approche pour gérer les travaux utilisant l’UC quand vous avez besoin de réactivité. Il existe plusieurs modèles d’utilisation d’async avec des tâches utilisant le processeur. Notez que l’utilisation d’async représente un coût, même s’il est faible, et qu’elle n’est donc pas recommandée pour les boucles serrées.  C’est à vous de déterminer la façon dont vous écrivez votre code autour de cette nouvelle fonctionnalité.
+`async` et `await` représentent la meilleure pratique de gestion des travaux utilisant le processeur de manière intensive en cas d’impératifs de réactivité. Il existe plusieurs modèles d’utilisation d’async avec des tâches utilisant le processeur. Notez que l’utilisation d’async représente un coût, même s’il est faible, et qu’elle n’est donc pas recommandée pour les boucles serrées.  C’est à vous de déterminer la façon dont vous écrivez votre code autour de cette nouvelle fonctionnalité.
 
 ## <a name="see-also"></a>Voir aussi
 

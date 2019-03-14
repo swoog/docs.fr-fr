@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710250"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679331"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Déconstruction de tuples et d’autres types
 
@@ -100,7 +100,7 @@ L’exemple suivant déconstruit un objet `Person` en quatre chaînes (le préno
 
 Si vous n’avez pas créé une classe, un struct ou une interface, vous pouvez néanmoins déconstruire des objets de ce type en implémentant une ou plusieurs `Deconstruct`[méthodes d’extension](programming-guide/classes-and-structs/extension-methods.md) pour retourner les valeurs qui vous intéressent.
 
-L’exemple suivant définit deux méthodes d’extension `Deconstruct` pour la classe <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. La première retourne un ensemble de valeurs qui indique les caractéristiques de la propriété, notamment son type, si elle est statique ou d’instance, si elle est en lecture seule et si elle est indexée. La seconde indique l’accessibilité de la propriété. Comme l’accessibilité des accesseurs get et set peut varier, des valeurs booléennes indiquent si la propriété a des accesseurs get et set distincts et, le cas échéant, s’ils ont la même accessibilité. S’il n’existe qu’un seul accesseur, ou si les deux accesseurs get et set ont la même accessibilité, la variable `access` indique l’accessibilité de la propriété comme un tout. Dans le cas contraire, l’accessibilité des accesseurs get et set est indiquée par les variables `getAccess` et `setAccess`.
+L’exemple suivant définit deux méthodes d’extension `Deconstruct` pour la classe <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. La première retourne un ensemble de valeurs qui indique les caractéristiques de la propriété, notamment son type, si elle est statique ou d’instance, si elle est en lecture seule et si elle est indexée. La seconde indique l’accessibilité de la propriété. Comme l’accessibilité des accesseurs get et set peut varier, des valeurs booléennes indiquent si la propriété a des accesseurs get et set distincts et, le cas échéant, s’ils ont la même accessibilité. S’il n’existe qu’un seul accesseur, ou si les deux accesseurs get et set ont la même accessibilité, la variable `access` indique l’accessibilité de la propriété comme un tout. Sinon, l’accessibilité des accesseurs get et set est indiquée par les variables `getAccess` et `setAccess`.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 

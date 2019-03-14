@@ -4,12 +4,12 @@ description: Explorez les composants d’ingénierie de fonctionnalité pris en 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355405"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformations de données Machine Learning - ML.NET
 
@@ -25,7 +25,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Regroupe les valeurs d’une colonne scalaire dans un vecteur en fonction d’un ID de groupe contigu. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Dissocie des colonnes de vecteur dans des séquences de lignes (inverse de la transformation de regroupement). |
 
-## <a name="conversions"></a>Conversions 
+## <a name="conversions"></a>Conversions
 
 | Transformer | Définition |
 | --- | --- |
@@ -36,7 +36,6 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Convertit une clé en colonne de vecteur. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Modifie le type de colonne sous-jacent si le type peut être converti. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Convertit des valeurs d’entrées (mots, nombres, etc.) en index dans un dictionnaire d’entrées. |
-
 
 ## <a name="deep-learning"></a>Deep Learning
 
@@ -49,17 +48,17 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Supprime une liste spécifiée de mots vides en comparant des jetons individuels (comparaison sensible à la casse) à des mots vides.| 
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Sélectionne une ou plusieurs colonnes ImageType et les convertit en une représentation en nuances de gris de la même image.|
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Supprime une liste spécifiée de mots vides en comparant des jetons individuels (comparaison sensible à la casse) à des mots vides.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Convertit une ou plusieurs colonnes ImageType en une représentation en nuances de gris de la même image.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Sélectionne une ou plusieurs colonnes ReadOnlyMemory et les charge au format ImageType. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Sélectionne une ou plusieurs colonnes ImageType et les convertit en représentation de vecteur.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Sélectionne une ou plusieurs colonnes ImageType et les redimensionne à la hauteur et à la largeur fournies.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implémente LightLDA, une implémentation de pointe de Latent Dirichlet Allocation.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Charge des transformations spécifiques à partir du fichier de modèle spécifié. Permet des transformations de type « cherry picking » à partir d’une chaîne sérialisée, ou l’application d’une transformation préentraînée dans une vue de données différente (mais toujours compatible). |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de valeurs consécutives de longueur 1-n) dans un vecteur de clés donné. Crée pour cela un dictionnaire de ngrams et utilise l’ID dans le dictionnaire en tant qu’index dans le conteneur. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) ou des vecteurs de clés en vecteurs de fonctionnalité numériques. Les vecteurs de fonctionnalité sont des décomptes de ngrams (séquences de jetons consécutifs - mots ou clés - de longueur 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) en vecteurs de fonctionnalité numériques à l’aide d’un hachage. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de mots consécutifs de longueur 1-n) dans un texte donné. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de valeurs consécutives de longueur 1-n) dans un vecteur de clés donné. Crée pour cela un dictionnaire de ngrams et utilise l’ID dans le dictionnaire en tant qu’index dans le conteneur. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) ou des vecteurs de clés en vecteurs de fonctionnalité numériques. Les vecteurs de fonctionnalité sont des décomptes de ngrams (séquences de jetons consécutifs - mots ou clés - de longueur 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) en vecteurs de fonctionnalité numériques à l’aide d’un hachage. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de mots consécutifs de longueur 1-n) dans un texte donné. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Convertit la valeur catégorique en un tableau d’indicateurs en créant un dictionnaire de catégories selon les données et en utilisant l’ID dans le dictionnaire comme index du tableau |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Calcule la projection du vecteur de fonctionnalité sur un sous-espace de rang inférieur. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Utilise un modèle de sentiments préformé pour évaluer les chaînes d’entrée. |
@@ -73,7 +72,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle [AlexNet](https://en.wikipedia.org/wiki/AlexNet) préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle [AlexNet](https://en.wikipedia.org/wiki/AlexNet) préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet18 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet50 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet101 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
@@ -116,7 +115,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 | <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Effectue une approximation de l’échantillonnage d’amorçage en utilisant l’échantillonnage de Poisson. |
 | <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Produit une fonctionnalité de Fourier aléatoire. |
 | <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Générateur de jetons orienté caractère où le texte est considéré comme une séquence de caractères. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Simplifie l’optimisation pour vous aider à identifier les pondérations. |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Simplifie l’optimisation pour aider à identifier les pondérations. |
 
 ## <a name="row-filters"></a>Filtres de lignes
 

@@ -1,22 +1,27 @@
 ---
 title: Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
 description: Découvrez comment utiliser la programmation probabiliste avec Infer.NET pour créer une application de tableau de matchs basée sur une version simplifiée de TrueSkill.
-ms.date: 10/04/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152464"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679132"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
+
+> [!NOTE]
+> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ce guide pratique porte sur la programmation probabiliste avec Infer.NET. La programmation probabiliste est une approche du Machine Learning selon laquelle des modèles personnalisés sont exprimés sous forme de programmes informatiques. Elle permet d’incorporer la connaissance du domaine dans les modèles et rend le système de Machine Learning plus facilement interprétable. Elle gère également l’inférence en ligne, c’est-à-dire le processus d’apprentissage au fil de l’intégration de nouvelles données. Infer.NET est utilisé dans différents produits de Microsoft dans Azure, Xbox et Bing.
 
 ## <a name="what-is-probabilistic-programming"></a>Qu’est-ce que la programmation probabiliste ?
 
-La programmation probabiliste permet de créer des modèles statistiques de processus réels. 
+La programmation probabiliste permet de créer des modèles statistiques de processus réels.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -45,9 +50,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Concevoir le modèle
 
-L’exemple s’appuie sur des matchs de tennis de table ou de babyfoot disputés au bureau. Nous avons les participants et le résultat de chaque match.  Nous souhaitons déduire de ces données les compétences des joueurs. Nous supposons que les compétences latentes de chaque joueur suivent la loi normale, et que leurs performances dans un match donné sont une version bruitée de cette compétence. Les données contraignent les performances du gagnant à être supérieures à celles du perdant. Il s’agit d’une version simplifiée du célèbre modèle [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), qui gère également les équipes, les égalités et d’autres extensions. Une [version avancée](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) de ce modèle est utilisée pour le matchmaking des jeux à succès Halo et Gears of War.
+L’exemple s’appuie sur des matchs de tennis de table ou de babyfoot disputés au bureau. Nous connaissons les participants et le résultat de chaque match.  Nous souhaitons déduire de ces données les compétences des joueurs. Supposons que les compétences latentes de chaque joueur suivent une distribution normale, et que leurs performances dans un match donné représentent une version bruitée de cette compétence. Les données contraignent les performances du gagnant à être supérieures à celles du perdant. Il s’agit d’une version simplifiée du célèbre modèle [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), qui gère également les équipes, les égalités et d’autres extensions. Une [version avancée](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) de ce modèle est utilisée pour le matchmaking des jeux à succès Halo et Gears of War.
 
-Nous devons lister les compétences déduites des joueurs, ainsi que leur écart, qui mesure l’incertitude relative aux compétences.
+Listons les compétences déduites des joueurs, ainsi que leur écart, qui mesure l’incertitude relative aux compétences.
 
 *Exemples de données de résultats des matchs*
 
@@ -85,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -149,7 +154,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-Dans les résultats, on remarque que le joueur 3 est légèrement au-dessus du joueur 4 selon notre modèle. Cela s’explique par le fait que la victoire du joueur 3 sur le joueur 1 a plus d’impact que celle du joueur 4 sur le joueur 2 – notons que le joueur 1 bat le joueur 2. Le joueur 0 est le meilleur joueur !  
+Dans les résultats, on remarque que le joueur 3 est légèrement au-dessus du joueur 4 selon notre modèle. Cela s’explique par le fait que la victoire du joueur 3 sur le joueur 1 a plus d’impact que celle du joueur 4 sur le joueur 2 – notons que le joueur 1 bat le joueur 2. Le joueur 0 est le meilleur joueur !
 
 ## <a name="keep-learning"></a>Continuer à apprendre
 

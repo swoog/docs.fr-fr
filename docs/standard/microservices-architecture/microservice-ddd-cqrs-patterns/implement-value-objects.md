@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET conte
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145265"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675015"
 ---
 # <a name="implement-value-objects"></a>Implémenter des objets de valeur
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,9 +133,9 @@ public class Address : ValueObject
 
 Comme vous pouvez le voir, cette implémentation de l’objet de valeur Address n’a pas d’identité, et donc pas de champ ID, ni dans la classe Address ni dans la classe ValueObject.
 
-L’absence de champ ID dans une classe conçue pour Entity Framework n’était pas possible jusqu’à EF Core 2.0. C’est maintenant beaucoup plus simple d’implémenter correctement des objets de valeur qui n’ont pas d’ID. C’est précisément ce que nous allons expliquer dans la section suivante. 
+L’absence de champ ID dans une classe utilisée par Entity Framework n’était pas possible avant EF Core 2.0. Il est maintenant beaucoup plus simple d’implémenter correctement des objets de valeur sans ID. C’est précisément ce que nous allons expliquer dans la section suivante.
 
-On pourrait penser que les objets de valeur, qui sont immuables, doivent être en lecture seule (avec des propriétés get-only), ce qui est vrai, en effet. Toutefois, les objets de valeur sont généralement sérialisés et désérialisés dans les files d’attente et, s’ils sont en lecture seule, le désérialiseur arrête l’affectation de valeurs. Pour des raisons pratiques, nous allons simplement les laisser définis comme privés, un niveau de lecture seule suffisant.
+On pourrait penser que, comme ils sont immuables, les objets de valeur doivent être en lecture seule (avec des propriétés get-only). C’est exact. Toutefois, ils sont généralement sérialisés et désérialisés dans les files d’attente ; or, s’ils sont en lecture seule, le désérialiseur arrête l’affectation de valeurs. Pour des raisons pratiques, nous allons simplement les laisser définis comme privés, ce qui constitue un niveau de lecture seule suffisant.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Comment rendre des objets de valeur persistants dans la base de données avec EF Core 2.0
 
@@ -143,16 +143,16 @@ Vous venez de voir comment définir un objet de valeur dans votre modèle de dom
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Informations générales et anciennes approches avec EF Core 1.1
 
-L’utilisation d’EF Core 1.0 ou 1.1 présente des limitations, en ce sens que vous ne pouvez pas recourir à des [types complexes](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) tels que ceux définis dans EF 6.x dans le .NET Framework traditionnel. Si vous utilisez EF Core 1.0 ou 1.1, vous devez donc stocker votre objet de valeur sous la forme d’une entité EF avec un champ ID. Ensuite, pour qu’il ressemble plus à un objet de valeur sans identité, vous pouvez masquer son ID pour indiquer clairement que l’identité d’un objet de valeur n’est pas importante dans le modèle de domaine. Vous pouvez masquer cet ID en l’utilisant comme [propriété cachée](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Cette configuration consistant à masquer l’ID dans le modèle étant configurée dans le niveau d’infrastructure EF, elle est en quelque sorte transparente pour votre modèle de domaine.
+À titre d’information, EF Core 1.0 ou 1.1 présente des limitations, en ce sens qu’il n’est pas possible de recourir aux [types complexes](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) définis dans EF 6.x dans le .NET Framework traditionnel. Si vous utilisez EF Core 1.0 ou 1.1, vous devez donc stocker votre objet de valeur sous la forme d’une entité EF avec un champ ID. Ensuite, pour qu’il ressemble plus à un objet de valeur sans identité, vous pouvez masquer son ID pour indiquer clairement que l’identité d’un objet de valeur n’est pas importante dans le modèle de domaine. Vous pouvez masquer cet ID en l’utilisant comme [propriété cachée](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Cette configuration consistant à masquer l’ID dans le modèle étant configurée dans le niveau d’infrastructure EF, elle est en quelque sorte transparente pour votre modèle de domaine.
 
 Dans la version initiale d’eShopOnContainers (.NET Core 1.1), l’ID masqué exigé par l’infrastructure EF Core est implémenté de la manière suivante dans le niveau DbContext, à l’aide de l’API Fluent au niveau du projet d’infrastructure. L’ID est donc masqué du point de vue du modèle de domaine, mais il est toujours présent dans l’infrastructure.
 
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ Dans eShopOnContainers, au niveau d’OrderingContext.cs, dans la méthode OnMod
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 Dans le code suivant, l’infrastructure de persistance est définie pour l’entité Order :
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler. Modèle ValueObject** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre incluant une discussion sur les objets de valeur) \
+- **Eric Evans. Domain-Driven Design : Tackling Complexity in the Heart of Software.** (Livre incluant une discussion sur les objets de valeur) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon. Implementing Domain-Driven Design.** (Livre incluant une discussion sur les objets de valeur) \
@@ -330,6 +330,6 @@ public class Address
 - **Classe d’adresses.** Exemple de classe d’objet de valeur dans eShopOnContainers. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[Précédent](seedwork-domain-model-base-classes-interfaces.md)
->[Suivant](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [Précédent](seedwork-domain-model-base-classes-interfaces.md)
+> [Suivant](enumeration-classes-over-enum-types.md)

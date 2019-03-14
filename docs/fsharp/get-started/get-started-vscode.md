@@ -2,18 +2,21 @@
 title: Prise en main F# dans Visual Studio Code
 description: Découvrez comment utiliser F# avec Visual Studio Code et la suite de plug-in Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 34802551bf4e34abb5aa0130643f32dbce68f1b2
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79863d57abbc71d59ce01fe30abf1db0a569f1e1
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029552"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788490"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Prise en main F# dans Visual Studio Code
 
 Vous pouvez écrire F# dans [Visual Studio Code](https://code.visualstudio.com) avec la [plug-in Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) pour obtenir une bonne expérience d’un environnement de développement intégré (IDE), multiplateforme et léger, des IntelliSense et le code de base refactorisations. Visitez [Ionide.io](http://ionide.io) pour en savoir plus sur le plug-in.
 
 Pour commencer, assurez-vous d’avoir [ F# et le plug-in Ionide correctement installé](install-fsharp.md#install-f-with-visual-studio-code).
+
+> [!NOTE]
+> Ionide générera le .NET Framework F# projets, pas sur dotnet core, ce qui peut avoir des problèmes de compatibilité entre les plate-formes. Si vous exécutez sur **Linux** ou **OSX**, prise en main d’un moyen plus simple consiste à utiliser (les outils de ligne de commande) [https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line].
 
 ## <a name="creating-your-first-project-with-ionide"></a>Créer votre premier projet avec Ionide
 

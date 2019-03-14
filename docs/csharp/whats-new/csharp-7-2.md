@@ -2,17 +2,17 @@
 title: Nouveautés de C# 7.2
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148173"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673221"
 ---
 # <a name="whats-new-in-c-72"></a>Nouveautés de C# 7.2
 
 C# 7.2 est une autre version intermédiaire qui ajoute un certain nombre de fonctionnalités utiles.
-Cette version a notamment pour but d’utiliser plus efficacement les types valeur en évitant des copies ou allocations inutiles. 
+Cette version a notamment pour but d’utiliser plus efficacement les types valeur en évitant des copies ou allocations inutiles.
 
 Les fonctionnalités restantes sont des fonctionnalités réduites, mais pratiques.
 
@@ -36,7 +36,7 @@ Les nouvelles fonctionnalités de langage de cette version sont :
 Les fonctionnalités de langage introduites dans 7.2 vous permettent de travailler avec les types valeur tout en utilisant la sémantique de référence. Elles sont conçues pour améliorer les performances en réduisant la copie des types valeur sans impliquer les allocations de mémoire associées à l’utilisation des types référence. Les fonctionnalités incluent :
 
  - Le modificateur `in` sur les paramètres pour spécifier qu’un argument est passé par référence, mais pas modifié par la méthode appelée. L’ajout du modificateur `in` à un argument est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes).
- - Le modificateur `ref readonly` sur les retours de méthode pour indiquer qu’une méthode retourne sa valeur par référence, mais n’autorise pas les écritures sur cet objet. L’ajout du modificateur `ref readonly` est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes), si une valeur est assignée au retour. L’ajout du modificateur `readonly` à une instruction de retour `ref` existante est une [modification incompatible](version-update-considerations.md#incompatible-changes). Cela nécessite que les appelants mettent à jour de la déclaration de variables locales `ref` pour inclure le modificateur `readonly`.
+ - Le modificateur `ref readonly` sur les retours de méthode pour indiquer qu’une méthode retourne sa valeur par référence, mais n’autorise pas les écritures sur cet objet. L’ajout du modificateur `ref readonly` est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes), si une valeur est assignée au retour. Le fait d’ajouter le modificateur `readonly` à une instruction de retour `ref` existante représente une [modification incompatible](version-update-considerations.md#incompatible-changes). Cela nécessite que les appelants mettent à jour de la déclaration de variables locales `ref` pour inclure le modificateur `readonly`.
  - La déclaration `readonly struct` pour indiquer qu’un struct est immuable et doit être passé comme un paramètre `in` aux méthodes de ses membres. L’ajout du modificateur `readonly` à une déclaration struct existante est une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
  - La déclaration `ref struct` pour indiquer qu’un type struct accède directement à la mémoire managée et doit toujours être alloué par la pile. L’ajout du modificateur `ref` à une déclaration `struct` existante est une [modification incompatible](version-update-considerations.md#incompatible-changes). Un `ref struct` ne peut pas être membre d’une classe ou utilisé dans d’autres emplacements où il pourrait être alloué sur le tas.
 
@@ -48,7 +48,7 @@ Les appels de méthode peuvent désormais utiliser des arguments nommés qui pr�
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Traits de soulignement de début dans les littéraux numériques
 
-L’implémentation de la prise en charge des séparateurs numériques dans C# 7.0 n’autorisait pas `_` comme premier caractère de la valeur littérale. Les littéraux numériques binaires et hexadécimaux peuvent maintenant commencer par un caractère `_`. 
+L’implémentation de la prise en charge des séparateurs numériques dans C# 7.0 n’autorisait pas `_` comme premier caractère de la valeur littérale. Les littéraux numériques binaires et hexadécimaux peuvent maintenant commencer par un caractère `_`.
 
 Par exemple :
 

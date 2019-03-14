@@ -3,12 +3,12 @@ title: Concepts et modèle objet du SDK .NET Compiler Platform
 description: Cette présentation fournit les informations dont vous avez besoin pour utiliser efficacement le SDK .NET Compiler Platform. Vous allez découvrir les différentes couches d’API, les principaux types utilisés et le modèle objet global.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a3104313efa0110699c45a4ce7bca99aab20542a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363686"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675704"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Comprendre le modèle du SDK .NET Compiler Platform
 
@@ -22,7 +22,7 @@ Le SDK .NET Compiler Platform expose les analyses de code des compilateurs C# et
 
 Chaque phase de ce pipeline correspond à un composant distinct. Tout d’abord, la phase d’analyse segmente et analyse le texte source dans la syntaxe grammaticale du langage utilisé. Ensuite, la phase de déclaration analyse les métadonnées sources et importées pour former des symboles nommés. Après cela, la phase de liaison mappe les identificateurs dans le code à des symboles. Enfin, la phase d’émission émet un assembly qui contient toutes les informations générées par le compilateur.
 
-![l’API du pipeline du compilateur fournit l’accès à chaque phase du pipeline du compilateur](media/compiler-api-model/compiler-pipeline-api.png)
+![L’API du pipeline du compilateur fournit l’accès à chaque étape du pipeline du compilateur](media/compiler-api-model/compiler-pipeline-api.png)
 
 Pour chacune de ces phases, le SDK .NET Compiler Platform expose un modèle objet qui permet d’accéder aux informations disponibles à la phase en question. La phase d’analyse expose une arborescence de syntaxe, la phase de déclaration expose une table de symboles hiérarchique, la phase de liaison expose le résultat de l’analyse sémantique du compilateur et la phase d’émission est une API qui produit des codes d’octets IL.
 

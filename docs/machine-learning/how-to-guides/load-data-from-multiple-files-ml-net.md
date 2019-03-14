@@ -1,16 +1,21 @@
 ---
 title: Charger des données à partir de plusieurs fichiers pour le traitement machine learning - ML.NET
 description: Découvrez comment charger des données à partir de plusieurs fichiers pour les utiliser lors de la création, l’entraînement et le scoring de modèles Machine Learning avec ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fbf5e4b5ab9a1a686edb933bdec818fc532bbf42
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092044"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679019"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Charger des données à partir de plusieurs fichiers pour le traitement machine learning - ML.NET
+
+> [!NOTE]
+> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Utilisez `TextLoader` et spécifiez un tableau de fichiers à la méthode `Read`. Les fichiers doivent avoir le même schéma (même nombre et type de colonnes) :
 

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967969"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676016"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
 
@@ -66,7 +66,7 @@ Seules certaines bibliothèques peuvent être partagées entre plusieurs microse
 
 Un bus d’événements permet une communication de type publication/abonnement entre les microservices, sans nécessiter que les composants soient explicitement informés de la présence des uns des autres, comme le montre la figure 6-19.
 
-![Modèle Publication/Abonnement de base : le Microservice A publie sur le bus d’événements, lequel distribue aux microservices d’abonnement B et C, sans que le serveur de publication ait besoin de connaître les abonnés.](./media/image20.png)
+![Modèle Publication/Abonnement de base : le microservice A publie sur le bus d’événements, lequel distribue aux microservices d’abonnement B et C, sans que le serveur de publication ait besoin de connaître les abonnés.](./media/image20.png)
 
 **Figure 6-19.** Principes de base de la communication de type publication/abonnement avec un bus d’événements
 
@@ -76,25 +76,25 @@ Le bus d’événements est lié au modèle Observateur et au modèle Publicatio
 
 Dans le [modèle Observateur](https://en.wikipedia.org/wiki/Observer_pattern), votre objet principal (l’observable) envoie aux autres objets intéressés (les observateurs) des informations pertinentes (des événements).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Modèle Publication/Abonnement 
+### <a name="publishsubscribe-pubsub-pattern"></a>Modèle Publication/Abonnement
 
 L’objectif du [modèle Publication/Abonnement](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) est le même que celui du modèle Observateur, c’est-à-dire que vous souhaitez informer les autres services de certains événements. Toutefois, il existe une différence importante entre ces deux modèles. Dans le modèle Observateur, la diffusion va directement de l’observable aux observateurs, pour qu’ils prennent connaissance des uns des autres. En revanche, lorsque vous utilisez un modèle Publication/Abonnement, un troisième élément est impliqué. Il s’agit du répartiteur (de messages) ou du bus d’événements, qui est connu à la fois de celui qui publie et de celui qui s’abonne. Par conséquent, lorsque vous utilisez le modèle Publication/Abonnement, celui qui publie et ses abonnés sont dissociés grâce au bus d’événements ou au répartiteur de messages.
 
-### <a name="the-middleman-or-event-bus"></a>L’intermédiaire ou le bus d’événements 
+### <a name="the-middleman-or-event-bus"></a>L’intermédiaire ou le bus d’événements
 
 Comment permettre l’anonymat entre celui qui publie les événements et ses abonnés ? Un moyen simple consiste à laisser un intermédiaire s’occuper de toutes les communications. Un bus d’événements joue le rôle de cet intermédiaire.
 
 Un bus d’événements est généralement constitué de deux parties :
 
--   L’abstraction ou interface
+- L’abstraction ou interface
 
--   Une ou plusieurs implémentations
+- Une ou plusieurs implémentations
 
 Dans la figure 6-19, vous pouvez voir que, du point de vue d’une application, le bus d’événements n’est autre qu’un canal de publication/abonnement. La façon dont vous implémentez cette communication asynchrone peut varier. Plusieurs implémentations sont possibles, de sorte que vous pouvez passer de l’une à l’autre, selon les exigences de votre environnement (par exemple, s’il s’agit d’un environnement de production ou d’un environnement de développement).
 
 Dans la figure 6-20, vous pouvez voir une abstraction d’un bus d’événements avec plusieurs implémentations basées sur des technologies de messagerie d’infrastructure, telles que RabbitMQ, Azure Service Bus ou un autre répartiteur de messages/événements.
 
-![Il est judicieux d’avoir le bus d’événements défini par le biais d’une interface, ce qui lui permet d’être implémenté avec plusieurs technologies, telles que RabbitMQ Azure Service Bus ou autre.](./media/image21.png)
+![Il est judicieux de définir le bus d’événements par le biais d’une interface, pour pouvoir l’implémenter avec plusieurs technologies comme RabbitMQ Azure Service Bus ou autre.](./media/image21.png)
 
 **Figure 6-20.** Les différentes implémentations d’un bus d’événements
 
@@ -129,6 +129,6 @@ La méthode `Publish` est simple. Le bus d’événements va diffuser l’évén
 
 Les méthodes `Subscribe` (vous pouvez avoir plusieurs implémentations selon les arguments) sont utilisées par les microservices qui souhaitent recevoir des événements. Cette méthode a deux arguments. Le premier est l’événement d’intégration auquel s’abonner (`IntegrationEvent`). Le deuxième argument est le gestionnaire d’événements d’intégration (ou méthode de rappel) nommé `IIntegrationEventHandler<T>`, qui doit être exécuté lorsque le microservice récepteur obtient le message d’événement d’intégration.
 
->[!div class="step-by-step"]
->[Précédent](database-server-container.md)
->[Suivant](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Précédent](database-server-container.md)
+> [Suivant](rabbitmq-event-bus-development-test-environment.md)

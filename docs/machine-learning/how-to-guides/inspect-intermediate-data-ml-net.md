@@ -1,16 +1,21 @@
 ---
 title: Inspecter les valeurs de données intermédiaires lors du traitement du pipeline ML.NET
 description: Découvrez comment inspecter les valeurs de données intermédiaires pendant le traitement du pipeline de machine learning de ML.NET
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675008"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678642"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Inspecter les valeurs de données intermédiaires lors du traitement du pipeline ML.NET
+
+> [!NOTE]
+> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Pendant l’expérience, il peut être nécessaire d’observer et de valider les résultats du traitement des données à un moment donné. Ce n’est pas si facile, car les opérations de ML.NET progressent lentement et construisent des objets qui sont des « promesses » de données.
 

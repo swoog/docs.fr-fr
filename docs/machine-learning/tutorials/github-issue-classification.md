@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584289"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471474"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification multiclasse pour classifier les problèmes GitHub
 
@@ -28,6 +28,8 @@ Dans ce didacticiel, vous apprendrez à :
 
 > [!NOTE]
 > Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 ## <a name="github-issue-sample-overview"></a>Vue d’ensemble de l’exemple traitant des problèmes GitHub
 

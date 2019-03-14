@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533206"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788425"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Outil Service Model Metadata Tool (Svcutil.exe)
 
@@ -39,11 +39,11 @@ Le tableau suivant récapitule les différentes fonctionnalités fournies par ce
 >
 > En outre, le `/r` et `/ct` sont des commutateurs pour référencer des types pour la génération de contrats de données. Ces commutateurs ne fonctionnent pas lors de l'utilisation de XmlSerializer.
 
-### <a name="timeout"></a>Délai d'expiration
+### <a name="timeout"></a>Délai
 
 L’outil a un délai d’expiration de cinq minutes lors de la récupération des métadonnées. Ce délai d'attente s'applique uniquement à la récupération des métadonnées sur le réseau. Il ne s'applique pas au traitement de ces métadonnées.
 
-### <a name="multi-targetting"></a>Multi-ciblage
+### <a name="multi-targeting"></a>Multi-ciblage
 
 L'outil ne prend pas en charge le multi-ciblage. Si vous souhaitez générer un artefact .NET 4 à partir de *svcutil.exe*, utilisez le *svcutil.exe* à partir du Kit de développement logiciel de .NET 4. Pour générer un artefact .NET 3.5, utilisez le fichier exécutable du Kit de développement logiciel (SDK) de .NET 3.5.
 
@@ -71,7 +71,7 @@ Svcutil.exe peut générer du code pour les contrats de service, les clients et 
 
 Vous pouvez utiliser la *SvcUtil.exe* outil pour générer des contrats de service et de données basés sur un document WSDL prédéfini. Utilisez le commutateur /serviceContract et spécifiez une URL ou un emplacement de fichier dans lequel le document WSDL peut être téléchargé ou disponible. Cette opération génère les contrats de service et de données définis dans le document WSDL qui peut ensuite être utilisé pour implémenter un service conforme. Pour plus d'informations, voir [Procédure : Récupérer les métadonnées et implémenter un Service conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Pour un service avec un point de terminaison BasicHttpContextbinding, *Svcutil.exe* génère un BasicHttpBinding avec le `allowCookies` attribut la valeur `true` à la place. Les cookies sont utilisés pour le contexte sur le serveur. Pour gérer le contexte sur le client lorsque le service utiliser des cookies, vous pouvez modifier manuellement la configuration pour utiliser une liaison de contexte.
+Pour un service avec un point de terminaison BasicHttpContextBinding, *Svcutil.exe* génère un BasicHttpBinding avec le `allowCookies` attribut la valeur `true` à la place. Les cookies sont utilisés pour le contexte sur le serveur. Pour gérer le contexte sur le client lorsque le service utiliser des cookies, vous pouvez modifier manuellement la configuration pour utiliser une liaison de contexte.
 
 > [!CAUTION]
 > Svcutil.exe génère le client sur la base du WSDL ou du fichier de stratégie reçu du service. Le nom d’utilisateur principal (UPN) est généré en concaténant le nom d’utilisateur, «\@» et un nom de domaine complet (FQDN). Toutefois, ce format n'est pas valide pour les utilisateurs Active Directory, et l'UPN généré par l'outil provoque une défaillance dans l'authentification Kerberos et l'affichage du message d'erreur suivant : La tentative d'ouverture de session a échoué. Pour remédier à cela, vous devez corriger manuellement le fichier client généré par cet outil.
@@ -80,7 +80,7 @@ Pour un service avec un point de terminaison BasicHttpContextbinding, *Svcutil.e
 
 |Argument|Description|
 |--------------|-----------------|
-|`epr`|Chemin d’accès à un fichier XML qui contient une référence de point de terminaison WS-Addressing pour un service qui prend en charge WS-Metadata Exchange. Pour plus d'informations, consultez la section consacrée au téléchargement de métadonnées.|
+|`epr`|Chemin d'accès à un fichier XML qui contient une référence de point de terminaison WS-Addressing pour un service qui prend en charge WS-Metadata Exchange. Pour plus d'informations, consultez la section consacrée au téléchargement de métadonnées.|
 |`metadataDocumentPath`|Le chemin d’accès à un document de métadonnées (*wsdl* ou *xsd*) qui contient le contrat à importer dans le code (.wsdl, .xsd, .wspolicy ou .wsmex).<br /><br /> Svcutil effectue des imports et des opérations d'inclusion lorsque vous spécifiez une URL distante pour les métadonnées. Toutefois, si vous souhaitez traiter des fichiers de métadonnées sur le système de fichiers local, vous devez spécifier tous les fichiers dans cet argument. De cette façon, vous pouvez utiliser Svcutil dans un environnement de génération dans lequel vous ne pouvez pas avoir de dépendances de réseau. Vous pouvez utiliser des caractères génériques (*.xsd, \*.wsdl) pour cet argument.|
 |`url`|URL d'accès à un point de terminaison de service qui fournit les métadonnées ou à un document de métadonnées hébergé en ligne. Pour plus d'informations sur la façon dont ces documents sont récupérés, consultez la section consacrée au téléchargement de métadonnées.|
 
@@ -126,7 +126,7 @@ Svcutil.exe peut exporter des métadonnées pour des services, des contrats et d
 |Option|Description|
 |------------|-----------------|
 |/serviceName:\<serviceConfigName>|Spécifie le nom de configuration d'un service à exporter. Si cette option est utilisée, un assembly exécutable avec un fichier de configuration associé doit être passé en tant qu'entrée. Svcutil.exe recherche tous les fichiers de configuration associés la configuration du service. Si les fichiers de configuration contiennent des types d’extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l’aide de l’option `/reference`.|
-|/ reference :\<chemin d’accès de fichier >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d'extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|
+|/ reference :\<chemin d’accès de fichier >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d’extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|
 |/dataContractOnly|Fonctionne uniquement sur les types de contrat de données. Les contrats de service ne sont pas traités.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|
 |/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d'assembly d'un type à exclure de l'exportation. Cette option peut être utilisée lors de l'exportation des métadonnées d'un service (ou d'un ensemble de contrats de services) afin d'exclure certains types de l'opération d'exportation. Cette option ne peut pas être utilisée avec l'option `/dconly`.<br /><br /> Lorsqu'un assembly contient plusieurs services et que chacun d'entre eux utilise des classes séparées tout en portant le même nom XSD, vous devez spécifier le nom du service au lieu du nom de la classe XSD pour ce commutateur.<br /><br /> Les types XSD ou les types de contrat de données ne sont pas pris en charge.<br /><br /> Forme abrégée : `/et`|
 
@@ -138,13 +138,13 @@ La validation peut être utilisée pour détecter des erreurs dans les implémen
 
 |Argument|Description|
 |--------------|-----------------|
-|`assemblyPath`|Spécifie le chemin d'accès à un assembly qui contient des types de service à valider. L'assembly doit posséder un fichier de configuration associé pour pouvoir fournir la configuration du service. Vous pouvez utiliser des caractères génériques de ligne de commande standard pour fournir plusieurs assemblys.|
+|`assemblyPath`|Spécifie le chemin d’accès à un assembly qui contient des types de service à valider. L'assembly doit posséder un fichier de configuration associé pour pouvoir fournir la configuration du service. Vous pouvez utiliser des caractères génériques de ligne de commande standard pour fournir plusieurs assemblys.|
 
 |Option|Description|
 |------------|-----------------|
 |/validate|Valide une implémentation de service spécifiée par l'option `/serviceName`. Si cette option est utilisée, un assembly exécutable avec un fichier de configuration associé doit être passé en tant qu'entrée.<br /><br /> Forme abrégée : `/v`|
-|/serviceName:\<serviceConfigName>|Spécifie le nom de configuration d'un service à valider. Svcutil.exe recherche tous les fichiers de configuration associés de tous les assemblys d'entrée pour la configuration du service. Si les fichiers de configuration contiennent des types d’extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l’aide de l’option `/reference`.|
-|/ reference :\<chemin d’accès de fichier >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d'extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|
+|/serviceName:\<serviceConfigName>|Spécifie le nom de configuration d'un service à valider. Svcutil.exe recherche tous les fichiers de configuration associés de tous les assemblys d'entrée pour la configuration du service. Si les fichiers de configuration contiennent des types d'extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l'aide de l'option `/reference`.|
+|/ reference :\<chemin d’accès de fichier >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d’extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|
 |/dataContractOnly|Fonctionne uniquement sur les types de contrat de données. Les contrats de service ne sont pas traités.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|
 |/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de la validation.<br /><br /> Forme abrégée : `/et`|
 
@@ -167,7 +167,7 @@ Par défaut, Svcutil.exe utilise les liaisons définies dans la classe <xref:Sys
 |Argument|Description|
 |--------------|-----------------|
 |`url`|URL d'accès à un point de terminaison de service qui fournit les métadonnées ou à un document de métadonnées hébergé en ligne.|
-|`epr`|Chemin d’accès à un fichier XML qui contient une référence de point de terminaison WS-Addressing pour un service qui prend en charge WS-Metadata Exchange.|
+|`epr`|Chemin d'accès à un fichier XML qui contient une référence de point de terminaison WS-Addressing pour un service qui prend en charge WS-Metadata Exchange.|
 
 ### <a name="xmlserializer-type-generation"></a>Génération de type XmlSerializer
 
@@ -185,7 +185,7 @@ Svcutil.exe peut améliorer les performances de démarrage de ces applications e
 
 |Argument|Description|
 |--------------|-----------------|
-|`assemblyPath`|Spécifie le chemin d'accès à un assembly qui contient des types de contrat de service. Des types de sérialisation sont générés pour tous les types Xml sérialisables de chaque contrat.|
+|`assemblyPath`|Spécifie le chemin d’accès à un assembly qui contient des types de contrat de service. Des types de sérialisation sont générés pour tous les types Xml sérialisables de chaque contrat.|
 
 |Option|Description|
 |------------|-----------------|
@@ -270,7 +270,7 @@ Créez un fichier appelé svcutil.exe.config et copiez l'exemple de code XML dan
 
 ## <a name="security-concerns"></a>Problèmes de sécurité
 
-Vous devez utiliser la liste de contrôle d'accès appropriée pour protéger le dossier d'installation de Svcutil.exe, Svcutil.config, ainsi que les fichiers vers lesquels pointe `/svcutilConfig`. Cela peut éviter l’enregistrement et l’exécution d’extensions malveillantes.
+Vous devez utiliser la liste de contrôle d'accès appropriée pour protéger le dossier d'installation de Svcutil.exe, Svcutil.config, ainsi que les fichiers vers lesquels pointe `/svcutilConfig`. Cela peut éviter l'enregistrement et l'exécution d'extensions malveillantes.
 
 En outre, pour réduire le risque que la sécurité soit compromise, vous ne devez pas ajouter des extensions non fiables pour faire partie du système ou utiliser des fournisseurs de code non fiable avec Svcutil.exe.
 

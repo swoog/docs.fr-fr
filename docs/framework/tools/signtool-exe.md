@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0176c2fe62d871b265ecd652d2789c7acdfdb765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479153"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (outil Sign Tool)
 L'outil Signature est un outil en ligne de commande qui signe numériquement les fichiers, vérifie les signatures dans les fichiers et horodate les fichiers.  
@@ -27,7 +27,7 @@ L'outil Signature est un outil en ligne de commande qui signe numériquement les
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
   
 |Argument|Description|  
 |--------------|-----------------|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Spécifie un algorithme de hachage facultatif à utiliser lors de la recherche d'un fichier dans un catalogue.|  
 |`/kp`|Spécifie que la vérification doit être effectuée avec la stratégie de signature de pilotes en mode noyau.|  
 |`/ms`|Utilise plusieurs sémantiques de vérification. Il s’agit du comportement par défaut d’un appel [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) sur [!INCLUDE[win8](../../../includes/win8-md.md)] et ultérieur.|  
-|`/o` *Version*|Vérifie le fichier par version du système d'exploitation. *Version* a le format suivant : *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* représente la valeur sous-jacente d’un membre de l’énumération <xref:System.PlatformID>. **Important :**  L'utilisation du commutateur `/o` est recommandée. Si `/o` n'est pas spécifié, SignTool.exe peut retourner des résultats inattendus. Par exemple, si vous n'incluez pas le commutateur `/o`, les catalogues système qui valident correctement sur un système d'exploitation plus ancien peuvent ne pas valider correctement sur un système d'exploitation plus récent.|  
+|`/o` *Version*|Vérifie le fichier par version du système d'exploitation. *Version* a le format suivant : *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* représente la valeur sous-jacente d’un membre de l’énumération <xref:System.PlatformID>. **Important :**  Il est recommandé d’utiliser le commutateur `/o`. Si `/o` n'est pas spécifié, SignTool.exe peut retourner des résultats inattendus. Par exemple, si vous n'incluez pas le commutateur `/o`, les catalogues système qui valident correctement sur un système d'exploitation plus ancien peuvent ne pas valider correctement sur un système d'exploitation plus récent.|  
 |`/p7`|Vérifie les fichiers PKCS #7. Aucune stratégie existante n'est utilisée pour la validation PKCS #7. La signature est vérifiée et une chaîne est générée pour le certificat de signature.|  
 |`/pa`|Spécifie que la stratégie de vérification Authenticode par défaut doit être utilisée. Si l'option `/pa` n'est pas spécifiée, l'outil Signature utilise la stratégie de vérification des pilotes Windows. Cette option ne peut pas être utilisée avec les options `catdb`.|  
 |`/pg` *PolicyGUID*|Spécifie une stratégie de vérification par GUID. *PolicyGUID* correspond à la valeur ActionID de la stratégie de vérification. Cette option ne peut pas être utilisée avec les options `catdb`.|  

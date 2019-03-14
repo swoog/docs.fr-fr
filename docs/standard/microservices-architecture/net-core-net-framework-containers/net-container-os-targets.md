@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374906"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Quel système d’exploitation cibler avec les conteneurs .NET
 
@@ -21,7 +21,7 @@ Pour Linux, plusieurs distributions sont disponibles et prises en charge dans le
 
 La figure 3-1 indique la version du système d’exploitation à utiliser en fonction de la version du .NET Framework utilisée.
 
-![Lorsque vous déployez des applications .NET Framework héritées, vous devez cibler Windows Server Core, compatible avec les applications héritées et IIS, qui a une image plus grande. Lorsque vous déployez des applications .NET Core, vous pouvez cibler Windows Nano Server, optimisé pour le cloud, qui utilise Kestrel, est plus petit et démarre plus rapidement. Vous pouvez également cibler Linux, prenant en charge Debian, Alpine et d’autres. Utilise également Kestrel, est plus petit et démarre plus rapidement.](./media/image1.png)
+![Lorsque vous déployez des applications .NET Framework héritées, vous devez cibler Windows Server Core, compatible avec les applications héritées et IIS, dont l’image est plus grande. Lorsque vous déployez des applications .NET Core, vous pouvez cibler Windows Nano Server, optimisé pour le cloud, qui utilise Kestrel, est plus petit et démarre plus rapidement. Vous pouvez également cibler Linux, prenant en charge Debian, Alpine et d’autres. Utilise également Kestrel, est plus petit et démarre plus rapidement.](./media/image1.png)
 
 **Figure 3-1** : systèmes d’exploitation à cibler en fonction des versions de .NET Framework
 
@@ -57,6 +57,6 @@ Au moment d’ajouter le nom de l’image à votre fichier Dockerfile, vous pouv
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[Précédent](container-framework-choice-factors.md)
->[Suivant](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [Précédent](container-framework-choice-factors.md)
+> [Suivant](official-net-docker-images.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066426"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677168"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -47,12 +47,12 @@ Le .NET Framework (à partir de .NET Framework 4.5.1) et .NET Core intègrent la
 
 La figure 1 illustre un scénario dans lequel le récupérateur de mémoire forme la génération 1 après le premier GC de la génération 0 où `Obj1` et `Obj3` sont morts, et forme la génération 2 après le premier GC de la génération 1 où `Obj2` et `Obj5` sont morts. Notez que cette figure et les suivantes sont uniquement à titre d’illustration. Elles contiennent très peu d’objets pour mieux montrer ce qui se passe sur le tas. En réalité, un GC implique généralement bien plus d’objets.
 
-![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)  
+![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)\
 Figure 1 : GC des générations 0 et 1.
 
 La figure 2 montre qu’après un GC de la génération 2 qui a vu que `Obj1` et `Obj2` étaient morts, le récupérateur de mémoire forme un espace libre contigu dans la mémoire qui était auparavant occupée par `Obj1` et `Obj2`, lequel est ensuite utilisé pour répondre à une demande d’allocation concernant `Obj4`. L’espace entre le dernier objet `Obj3` et la fin du segment peut aussi être utilisé pour répondre aux demandes d’allocation.
 
-![Figure 2 : Après un GC de la génération 2](media/loh/loh-figure-2.jpg)  
+![Figure 2 : Après un GC de la génération 2](media/loh/loh-figure-2.jpg)\
 Figure 2 : Après un GC de la génération 2
 
 Si l’espace libre est insuffisant pour répondre aux demandes d’allocation des grands objets, le récupérateur de mémoire tente d’acquérir d’autres segments du système d’exploitation. En cas d’échec, il déclenche un GC de la génération 2 pour tenter de libérer l’espace.
@@ -61,7 +61,7 @@ Pendant un GC de la génération 1 ou 2, le récupérateur de mémoire libère l
 
 Comme que le LOH est collecté uniquement pendant le GC de la génération 2, le segment LOH peut seulement être libéré pendant ce GC. La figure 3 illustre un scénario où le récupérateur de mémoire rend un segment (segment 2) au système d’exploitation et annule la réservation d’espace supplémentaire sur les segments restants. S’il doit utiliser l’espace libéré à la fin du segment pour répondre aux demandes d’allocation de grands objets, il réserve de nouveau la mémoire. (Pour obtenir une explication de la réservation/libération, consultez la documentation de [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
-![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)  
+![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)\
 Figure 3 : LOH après un GC de la génération 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quand un grand objet est-il collecté ?
@@ -156,7 +156,7 @@ Ces compteurs de performances sont une bonne première étape pour rechercher le
 
 En général, vous surveillez les compteurs de performances par le biais du moniteur de performances (PerfMon.exe). Utilisez « Ajouter des compteurs » pour ajouter le compteur de votre choix pour les processus qui vous intéressent. Vous pouvez enregistrer les données des compteurs de performances dans un fichier journal, comme illustré dans la figure 4.
 
-![Figure 4 : Ajout de compteurs de performance](media/loh/perfcounter.png)  
+![Figure 4 : Ajout de compteurs de performance](media/loh/perfcounter.png)\
 Figure 4 : LOH après un GC de la génération 2
 
 Les compteurs de performances peuvent également être interrogés par programmation. Beaucoup d’utilisateurs les collectent de cette façon dans le cadre de leur processus de test normal. S’ils repèrent des compteurs avec des valeurs anormales, ils utilisent d’autres moyens d’obtenir des données plus détaillées pour les aider dans leurs recherches.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Le résultat ressemble à ceci :
 
-![Figure 5 : Examen des événements ETW à l’aide de PerfView](media/loh/perfview.png)  
-Figure 5 : Événements ETW affichés à l’aide de PerfView
+![Figure 5 : Examen des événements ETW avec PerfView](media/loh/perfview.png) Figure 5 : Événements ETW affichés à l’aide de PerfView
 
 Comme vous pouvez le voir, tous les GC sont effectués sur la génération 2 et ils sont déclenchés par AllocLarge, ce qui signifie que c’est l’allocation d’un grand objet qui a déclenché ce GC. Nous savons que ces allocations sont temporaires parce que la colonne **% de taux de survie LOH** indique 1 %.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 collecte un événement AllocationTick qui est déclenché toutes les 100 000 allocations environ. En d’autres termes, un événement est déclenché chaque fois qu’un grand objet est alloué. Vous pouvez alors examiner une des vues d’allocation de tas du récupérateur de mémoire qui indique les pile d’appels qui ont alloué des grands objets :
 
-![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)  
+![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)\
 Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire
 
 Comme vous pouvez le voir, il s’agit d’un test très simple qui alloue simplement de grands objets à partir de sa méthode `Main`.
@@ -244,7 +243,7 @@ La taille du tas LOH est (16 754 224 + 16 699 288 + 16 284 504) = 49 738 016 oct
 
 Parfois, le débogueur montre que la taille totale du LOH est inférieure à 85 000 octets. C’est parce que le runtime lui-même utilise le LOH pour allouer des objets dont la taille est inférieure à celle d’un grand objet.
 
-Comme le LOH n'est pas compacté, il est parfois soupçonné d’être la source de la fragmentation. Une fragmentation peut désigner :
+Comme le LOH n’est pas compacté, il est parfois perçu comme la source de la fragmentation. Une fragmentation peut désigner :
 
 - La fragmentation du tas managé, indiquée par la quantité d’espace libre entre les objets managés. Dans SoS, la commande `!dumpheap –type Free` affiche la quantité d’espace libre entre les objets managés.
 
@@ -310,7 +309,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 Cette commande arrête le débogueur et affiche la pile des appels uniquement si [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) est appelée avec une taille d’allocation supérieure à 8 Mo (0x800000).
 
-CLR 2.0 a ajouté une fonctionnalité appelée *VM Hoarding* (Réserve de mémoire virtuelle) qui peut être utile dans les scénarios où les segments (aussi bien sur les tas de petits et grands objets) sont fréquemment acquis et libérés. Pour utiliser la fonctionnalité VM Hoarding, vous spécifiez un indicateur de démarrage appelé `STARTUP_HOARD_GC_VM` via l’API d’hébergement. Au lieu de renvoyer des segments vides au système d’exploitation, le CLR annule la réservation de mémoire sur ces segments et les met sur liste d’attente. (Notez que le CLR ne le fait pas pour les segments trop grands.) Le CLR utilise ensuite ces segments pour répondre aux nouvelles demandes de segment. La prochaine fois que votre application a besoin d’un nouveau segment, le CLR en utilise un de cette liste d’attente, s’il est assez grand.
+CLR 2.0 a ajouté une fonctionnalité appelée *VM Hoarding* (Réserve de mémoire virtuelle) qui peut être utile dans les scénarios où des segments (y compris ceux des tas de petits et grands objets) sont fréquemment acquis et libérés. Pour utiliser la fonctionnalité VM Hoarding, vous spécifiez un indicateur de démarrage appelé `STARTUP_HOARD_GC_VM` via l’API d’hébergement. Au lieu de renvoyer des segments vides au système d’exploitation, le CLR annule la réservation de mémoire sur ces segments et les met sur liste d’attente. (Notez que le CLR ne le fait pas pour les segments trop grands.) Le CLR utilise ensuite ces segments pour répondre aux nouvelles demandes de segment. La prochaine fois que votre application a besoin d’un nouveau segment, le CLR en utilise un de cette liste d’attente, s’il est assez grand.
 
 La fonctionnalité VM Hoarding est également utile pour les applications qui veulent garder les segments déjà acquis, comme certaines applications serveur qui sont les applications principales exécutées sur le système, pour éviter les exceptions de mémoire insuffisante.
 

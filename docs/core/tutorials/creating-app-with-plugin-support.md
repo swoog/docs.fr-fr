@@ -4,16 +4,16 @@ description: Découvrez comment créer une application .NET Core qui prend en ch
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363902"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Créer une application .NET Core avec des plug-ins
 
-Ce tutoriel vous montre comment effectuer les opérations suivantes :
+Ce didacticiel vous montre comment effectuer les opérations suivantes :
 
 - Structurer un projet de façon à prendre en charge les plug-ins.
 - Créer un <xref:System.Runtime.Loader.AssemblyLoadContext> personnalisé pour charger chaque plug-in.
@@ -244,7 +244,7 @@ Les plug-ins sont presque tous plus complexes qu’un simple « Hello World »
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Autres exemples de plug-in
 
-L’objet `AssemblyDependencyResolver` peut aussi résoudre les bibliothèques natives incluses dans les packages NuGet ainsi que les assemblys satellites localisés. Ces scénarios sont démontrés dans `UVPlugin` et `FrenchPlugin`, respectivement.
+La totalité du code source de ce tutoriel se trouve dans le référentiel [dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). L’exemple terminé comprend d’autres illustrations du comportement `AssemblyDependencyResolver`. Par exemple, l’objet `AssemblyDependencyResolver` peut aussi résoudre les bibliothèques natives ainsi que les assemblys satellites localisés inclus dans les packages NuGet. Dans le référentiel d’exemples, `UVPlugin` et `FrenchPlugin` illustrent ces scénarios.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Comment référencer un assembly d’interface de plug-in défini dans un package NuGet
 

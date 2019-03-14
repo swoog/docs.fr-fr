@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221249"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677212"
 ---
 # <a name="interop-marshaling"></a>Marshaling d’interopérabilité
 <a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d'interopérabilité est une activité d'exécution effectuée par le service de marshaling du common language runtime.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221249"
   
  L’appel de code non managé et COM Interop utilisent tous deux le marshaling d’interopérabilité pour faire passer les arguments de méthode de l’appelant à l’appelé, puis dans l’autre sens, si nécessaire. Comme le montre l’illustration suivante, un appel de méthode d’appel de code non managé passe du code managé au code non managé et jamais dans l’autre sens, sauf quand des [fonctions de rappel](callback-functions.md) sont impliquées. Même si les appels de code non managé peuvent uniquement passer du code managé au code non managé, les données peuvent circuler dans les deux sens en tant que paramètres d'entrée ou de sortie. Les appels de méthode COM Interop peuvent circuler dans les deux sens.  
   
- ![Appel de code non managé](./media/interopmarshaling.png "interopmarshaling")  
-Flux des appels de code non managé et des appels COM Interop  
+ ![Appel de code non managé](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Flux des appels de code non managé et des appels COM Interop")  
   
  Au niveau le plus bas, ces deux mécanismes utilisent le même service de marshaling d’interopérabilité. Toutefois, certains types de données sont pris en charge exclusivement par COM Interop ou par l’appel de code non managé. Pour plus d’informations, consultez [Comportement de marshaling par défaut](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Flux des appels de code non managé et des appels COM Interop
   
  Étant donné que le client et le serveur se trouvent dans le même cloisonnement, le service de marshaling d’interopérabilité gère automatiquement tout le marshaling de données. L'illustration suivante montre le service de marshaling d'interopérabilité agissant entre les tas managés et non managés au sein du même cloisonnement de style COM.  
   
- ![Marshaling d’interopérabilité](./media/interopheap.gif "interopheap")  
-Processus de marshaling dans un même cloisonnement.  
+ ![Marshaling d’interopérabilité entre tas managés et non managés](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Processus de marshaling dans le même cloisonnement")  
   
  Si vous prévoyez d'exporter un serveur managé, n'oubliez pas que le client COM détermine le cloisonnement du serveur. Un serveur managé appelé par un client COM initialisé dans un MTA doit garantir la cohérence des threads.  
   
@@ -84,8 +82,7 @@ Processus de marshaling dans un même cloisonnement.
   
  Quand un client managé et un serveur non managé se trouvent dans un même cloisonnement, le service de marshaling d'interopérabilité gère tout le marshaling de données. Toutefois, quand le client et le serveur sont initialisés dans des cloisonnements différents, le marshaling COM est également requis. L'illustration suivante montre les éléments d'un appel intercloisonnements.  
   
- ![Marshaling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-Appel intercloisonnements entre un client .NET et un objet COM  
+ ![Marshaling COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Appel multicloisonnement entre un client .NET et un objet COM")  
   
  Pour le marshaling intercloisonnements, vous pouvez procéder comme suit :  
   
@@ -110,14 +107,12 @@ Appel intercloisonnements entre un client .NET et un objet COM
   
  L’illustration suivante montre comment le marshaling d’interopérabilité et le marshaling COM fournissent des canaux de communication entre les limites des hôtes et des processus.  
   
- ![Marshaling COM](./media/interophost.gif "interophost")  
-Marshaling interprocessus  
+ ![Marshaling COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Marshaling interprocessus")  
   
 ### <a name="preserving-identity"></a>Conservation d'identité  
  Le common language runtime préserve l'identité des références managées et non managées. L'illustration suivante montre le flux des références non managées directes (ligne du haut) et des références managées directes (ligne du bas) entre plusieurs hôtes et processus.  
   
- ![Wrapper CCW (COM Callable Wrapper) et wrapper RCW (Runtime Callable Wrapper)](./media/interopdirectref.gif "interopdirectref")  
-Références franchissant les limites d'hôtes et de processus  
+ ![Wrapper CCW et wrapper RCW](./media/interop-marshaling/interop-direct-ref-across-process.gif "Passage de références au-delà des limites des processus et des hôtes")  
   
  Dans cette illustration :  
   
@@ -133,7 +128,7 @@ Références franchissant les limites d'hôtes et de processus
 ### <a name="managed-remoting"></a>Communication à distance managée  
  Le runtime fournit également une communication à distance managée que vous pouvez utiliser pour établir un canal de communication entre des objets managés de plusieurs hôtes et processus. La communication à distance managée peut prendre en charge un pare-feu entre des composants qui communiquent, comme le montre l'illustration suivante.  
   
- ![SOAP ou TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP ou TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Appels distants à travers des pare-feu avec SOAP ou la classe TcpChannel")  
 Appels distants traversant des pare-feu à l'aide de SOAP ou de la classe TcpChannel  
   
  Certains appels non managés peuvent être transmis par le biais de SOAP, tels que les appels entre composants pris en charge et COM.  

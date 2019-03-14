@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479605"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674651"
 ---
 # <a name="official-net-docker-images"></a>Images officielles .NET Docker
 
@@ -23,15 +23,15 @@ La plupart des dépôts d’images fournissent un balisage complet pour vous aid
 
 Au moment de créer des images Docker pour développeurs, Microsoft s’est concentré sur les principaux scénarios suivants :
 
--   Images utilisées pour *développer* et générer des applications .NET Core
+- Images utilisées pour *développer* et générer des applications .NET Core
 
--   Images utilisées pour *exécuter* des applications .NET Core
+- Images utilisées pour *exécuter* des applications .NET Core
 
 Pourquoi plusieurs images ? En règle générale, vos propriétés varient selon que vous développez, générez ou exécutez des applications en conteneur. En proposant des images différentes en fonction des tâches, Microsoft permet d’optimiser ces processus distincts que sont le développement, la génération et le déploiement d’applications.
 
 ### <a name="during-development-and-build"></a>En phase de développement et de génération
 
-En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image de développement .NET Core (*microsoft/dotnet:2.2-sdk*) pendant les processus de développement et de génération. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET.
+En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image .NET Core de développement (*microsoft/dotnet:2.2-sdk*) pendant les processus de développement et de build. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET.
 
 Pourquoi ce type d’image de build est-il important ? Vous ne déployez pas cette image en production. En effet, il s’agit d’une image que vous utilisez pour générer le contenu que vous placez dans une image de production. Cette image est destinée à être utilisée dans votre environnement d’intégration continue (CI) ou votre environnement de génération lorsque vous utilisez des builds Docker à plusieurs phases.
 
@@ -50,6 +50,6 @@ En explorant les dépôts d’images .NET dans Docker Hub, vous trouverez plusie
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, avec le runtime uniquement et les optimisations ASP.NET Core, Linux et Windows (multi-arch) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core, avec les SDK inclus, sur Linux et Windows (multi-arch)                                  |
 
->[!div class="step-by-step"]
->[Précédent](net-container-os-targets.md)
->[Suivant](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Précédent](net-container-os-targets.md)
+> [Suivant](../architect-microservice-container-applications/index.md)

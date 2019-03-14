@@ -1,16 +1,21 @@
 ---
 title: Utiliser des modèles additifs généralisés et des fonctions de forme pour l’explication des modèles dans ML.NET
 description: Utiliser des modèles additifs généralisés et des fonctions de forme pour l’explication des modèles dans ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c6f30a8cc5c07d97c62ded065f1e18a4f0523617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093110"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675587"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Utiliser des modèles additifs généralisés et des fonctions de forme pour l’explication des modèles dans ML.NET
+
+> [!NOTE]
+> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Lorsque vous créez des modèles Machine Learning, se contenter de faire des prédictions n’est souvent pas suffisant. Les développeurs Machine Learning, les décideurs et les personnes affectées par les modèles doivent souvent comprendre comment les modèles Machine Learning prennent les décisions et connaître les fonctionnalités qui affectent leurs performances. **Les modèles additifs généralisés (GAM)** sont utilisés en interne chez Microsoft pour expliquer les modèles et aider les développeurs Machine Learning à créer des modèles de grande capacité facilement interprétés par d’autres.
 

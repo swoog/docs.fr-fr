@@ -19,12 +19,12 @@ Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 - [Création d’une bibliothèque de classes avec Visual Basic](vb-library-with-visual-studio.md)
 - [Test d’une bibliothèque de classes](testing-library-with-visual-studio.md)
 - [Utilisation d’une bibliothèque de classes](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB : bien démarrer avec l’API SQL et .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB : Bien démarrer avec l’API SQL et .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Création d’applications avec Visual Studio Code
 
 - [Prise en main de C# et Visual Studio Code](with-visual-studio-code.md)
-- [Bien démarrer avec .NET Core sur Mac OS](using-on-macos.md)
+- [Bien démarrer avec .NET Core sur macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Création d’applications avec Visual Studio pour Mac
 
@@ -33,7 +33,7 @@ Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Création d’applications avec les outils CLI .NET Core
 
-- [Bien démarrer avec .NET Core sur Windows/Linux/Mac OS à l’aide des outils CLI .NET Core](using-with-xplat-cli.md)
+- [Bien démarrer avec .NET Core sur Windows/Linux/macOS à l’aide des outils CLI .NET Core](using-with-xplat-cli.md)
 - [Organisation et test de projets avec les outils CLI .NET Core](testing-with-cli.md)
 - [Prise en main de F#](../../fsharp/get-started/get-started-command-line.md)
 

@@ -4,12 +4,12 @@ description: Décrit comment créer un Outil global. Un Outil global est une app
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826419"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677862"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Créer un Outil global .NET Core avec la CLI .NET Core
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ Tous les arguments après le délimiteur `--` sont passés à votre application.
 
 Avant de pouvoir compresser et distribuer l’application en tant qu’outil global, vous devez modifier le fichier projet. Ouvrez le fichier `botsay.csproj`, puis ajoutez trois nouveaux nœuds XML au nœud `<Project><PropertyGroup>` :
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [OBLIGATOIRE] Indique que l’application est empaquetée pour une installation en tant qu’outil global.
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [FACULTATIF] Autre nom de l’outil, sinon le nom de commande de l’outil sera nommé après le fichier projet. Vous pouvez avoir plusieurs outils dans un package et choisir un nom unique et convivial vous aide à différencier les outils dans un même package.
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [FACULTATIF] Emplacement où le package NuGet sera produit. Le package NuGet est utilisé par les Outils globaux CLI .NET Core pour installer votre outil.
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 Le fichier `botsay.1.0.0.nupkg` est créé dans le dossier identifié par la valeur XML `<PackageOutputPath>` à partir du fichier `botsay.csproj`, qui dans cet exemple est le dossier `./nupkg`. Cela facilite l’installation et le test. Lorsque vous souhaitez distribuer un outil publiquement, chargez-le dans [https://www.nuget.org](https://www.nuget.org). Une fois l’outil disponible sur NuGet, les développeurs peuvent l’installer à l’échelle de l’utilisateur en utilisant l’option `--global` de la commande [dotnet tool install](dotnet-tool-install.md).
 
-Maintenant que vous avez un package, installez l’outil à partir de ce package : 
+Maintenant que vous avez un package, installez l’outil à partir de ce package :
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay

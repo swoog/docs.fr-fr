@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541220"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492489"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (outil Global Assembly Cache)
 L'outil Global Assembly Cache vous permet d'afficher et de manipuler le contenu du Global Assembly Cache et du cache de téléchargement.  
@@ -39,7 +39,7 @@ L'outil Global Assembly Cache vous permet d'afficher et de manipuler le contenu 
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
   
 |Argument|Description|  
 |--------------|-----------------|  
@@ -63,13 +63,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Spécifie une référence avec trace à un assembly ou des assemblys à installer ou à désinstaller. Spécifiez cette option avec les options **/i**, **/il**, **/u** ou **/ul**.<br /><br /> Pour installer un assembly, spécifiez les paramètres *assemblyPath*, *scheme*, *id* et *description* avec cette option. Pour désinstaller un assembly, spécifiez les paramètres *assemblyName*, *scheme*, *id* et *description*.<br /><br /> Pour supprimer une référence à un assembly, vous devez spécifier les mêmes paramètres *scheme*, *id* et *description* que ceux spécifiés avec les options **/i** et **/r** (ou **/ir**) lors de l’installation de l’assembly. Si vous désinstallez un assembly, l'outil supprime également l'assembly du Global Assembly Cache s'il s'agit de la dernière référence à supprimer et si Windows Installer ne possède aucune référence en suspens à l'assembly.<br /><br /> Le paramètre *scheme* spécifie le type de schéma d’installation. Vous pouvez spécifier l'une des valeurs suivantes :<br /><br /> -   UNINSTALL_KEY : Spécifiez cette valeur si le programme d’installation ajoute l’application à Ajout/Suppression de programmes dans Microsoft Windows. Les applications s'ajoutent elles-mêmes à Ajout/Suppression de programmes en ajoutant une clé de Registre à HKLM\Software\Microsoft\Windows\CurrentVersion.<br />-   FILEPATH : Spécifiez cette valeur si le programme d’installation n’ajoute pas l’application à Ajout/Suppression de programmes.<br />-   OPAQUE : Spécifiez cette valeur si l’indication d’une clé de Registre ou d’un chemin de fichier ne s’applique pas à votre scénario d’installation. Cette valeur vous permet de spécifier des informations personnalisées pour le paramètre *id*.<br /><br /> La valeur à spécifier pour le paramètre *id* dépend de la valeur spécifiée pour le paramètre *scheme* :<br /><br /> Si vous spécifiez UNINSTALL_KEY pour le paramètre *scheme*, spécifiez le nom de l’application défini dans la clé de Registre HKLM\Software\Microsoft\Windows\CurrentVersion. Par exemple, si la clé de Registre est HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, spécifiez MyApp pour le paramètre *id*.<br />Si vous spécifiez FILEPATH pour le paramètre *scheme*, spécifiez le chemin complet du fichier exécutable qui installe l’assembly en tant que paramètre *id*.<br />Si vous spécifiez OPAQUE pour le paramètre *scheme*, vous pouvez fournir n’importe quelles données en tant que paramètre *id*. Les données que vous spécifiez doivent être mises entre guillemets ("").<br /><br /> Le paramètre *description* vous permet de spécifier un texte descriptif concernant l’application à installer. Ces informations sont affichées lorsque des références sont énumérées.|  
 |**/silent**|Supprime l'affichage de toutes les sorties.|  
 |**/u**  *assemblyName*|Désinstalle un assembly du Global Assembly Cache.|  
-|**/uf**  *assemblyName*|Force la désinstallation d'un assembly spécifié en supprimant toutes les références à cet assembly.<br /><br /> La spécification de cette option revient à spécifier les options **/u** et **/f** ensemble. **Remarque :**  Vous ne pouvez pas utiliser cette option pour supprimer un assembly installé à l'aide de Microsoft Windows Installer. Si vous tentez cette opération, l'outil affiche un message d'erreur.|  
+|**/uf**  *assemblyName*|Force la désinstallation d'un assembly spécifié en supprimant toutes les références à cet assembly.<br /><br /> La spécification de cette option revient à spécifier les options **/u** et **/f** ensemble. **Remarque :**  cette option ne permet pas de supprimer un assembly installé avec Microsoft Windows Installer. Si vous tentez cette opération, l'outil affiche un message d'erreur.|  
 |**/ul** *assemblyListFile*|Désinstalle un ou plusieurs assemblys spécifiés dans *assemblyListFile* du Global Assembly Cache.|  
-|**/u**[**ngen**] *assemblyName*|Désinstalle un assembly spécifié du Global Assembly Cache. S'il existe des décomptes de références pour l'assembly spécifié, l'outil les affiche et ne supprime pas l'assembly du Global Assembly Cache. **Remarque :**  Dans la version 2.0 du .NET Framework, `/ungen` n'est pas pris en charge. Utilisez plutôt la commande `uninstall` de [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> Dans le .NET Framework versions 1.0 et 1.1, la spécification de **/ungen** conduit Gacutil.exe à supprimer l’assembly du cache des images natives. Ce cache stocke les images natives pour les assemblys qui ont été créés à l’aide de [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
+|**/u**[**ngen**] *assemblyName*|Désinstalle un assembly spécifié du Global Assembly Cache. S'il existe des décomptes de références pour l'assembly spécifié, l'outil les affiche et ne supprime pas l'assembly du Global Assembly Cache. **Remarque :**  dans la version 2.0 de .NET Framework, `/ungen` n’est pas pris en charge. Utilisez plutôt la commande `uninstall` de [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> Dans le .NET Framework versions 1.0 et 1.1, la spécification de **/ungen** conduit Gacutil.exe à supprimer l’assembly du cache des images natives. Ce cache stocke les images natives pour les assemblys qui ont été créés à l’aide de [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Désinstalle une référence à un assembly spécifié du Global Assembly Cache. Pour supprimer une référence à un assembly, vous devez spécifier les mêmes paramètres *scheme*, *id* et *description* que ceux spécifiés avec les options **/i** et **/r** (ou **/ir)** lors de l’installation de l’assembly. Pour obtenir une description des valeurs valides que vous pouvez spécifier pour ces paramètres, consultez l’option **/r**.<br /><br /> La spécification de cette option revient à spécifier les options **/u** et **/r** ensemble.|  
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 > [!NOTE]
 >  Vous devez disposer des droits d'administrateur pour utiliser Gacutil.exe.  

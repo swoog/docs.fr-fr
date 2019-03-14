@@ -2,12 +2,12 @@
 title: Conservation des espaces blancs lors de la sérialisation3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 1b2a7f3ab2dcad200d6985e6b7bd91637d27dde8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c02524fbd22f56761189ed9ba7bd658dadeda19a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741361"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377169"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Conservation des espaces blancs lors de la sérialisation
 Cette rubrique décrit comment contrôler les espaces blancs lors de la sérialisation d'une arborescence XML.  
@@ -23,9 +23,9 @@ Cette rubrique décrit comment contrôler les espaces blancs lors de la sériali
   
 -   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=nameWithType>  
+-   [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
--   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
+-   [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
  Si la méthode ne prend pas l'objet <xref:System.Xml.Linq.SaveOptions> comme argument, elle mettra en forme (en retrait) le code XML sérialisé. Dans ce cas, tous les espaces blancs non significatifs dans l'arborescence XML seront ignorés.  
   

@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836251"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360249"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Meilleures pratiques pour les tests unitaires avec .NET Core et .NET Standard
 
@@ -47,7 +47,7 @@ L’écriture de tests pour votre code permet de le découpler de manière natur
 - **Isolé**. Les tests unitaires sont autonomes et peuvent être exécutés de manière isolée. Ils ne dépendent d’aucun facteur externe, par exemple un système de fichiers ou une base de données.
 - **Répétable**. L’exécution d’un test unitaire doit être cohérente avec ses résultats. En d’autres termes, il retourne toujours le même résultat si vous ne changez rien entre les exécutions.
 - **Autovérification**. Le test doit pouvoir détecter automatiquement son état de réussite ou d’échec sans aucune interaction humaine.
-- **Délai approprié**. Un test unitaire ne doit pas prendre beaucoup plus de temps à écrire que le code testé. Si vous trouvez que le test du code prend beaucoup de temps par rapport à son écriture, optez pour une conception plus facile à tester.
+- **Délai approprié**. Écrire un test unitaire ne doit pas prendre un temps disproportionné par rapport au code testé. Si vous trouvez que le test du code prend beaucoup de temps par rapport à son écriture, optez pour une conception plus facile à tester.
 
 ## <a name="lets-speak-the-same-language"></a>Parlons la même langue
 Le terme *mock* (élément fictif) est malheureusement utilisé à très mauvais escient quand il s’agit de tests. Voici une définition des types les plus courants de *fakes* (éléments fictifs) pour l’écriture de tests unitaires :

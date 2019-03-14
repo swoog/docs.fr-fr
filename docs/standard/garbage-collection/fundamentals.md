@@ -1,6 +1,7 @@
 ---
 title: Notions de base du garbage collection
-ms.date: 03/30/2017
+description: Découvrez comment fonctionne le récupérateur de mémoire et comment le configurer pour optimiser ses performances.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066321"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712472"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Notions de base du garbage collection
 <a name="top"></a> Dans le Common Language Runtime (CLR), le garbage collector a un rôle de gestionnaire de mémoire automatique. Il fournit les avantages suivants :  
@@ -30,28 +31,8 @@ ms.locfileid: "55066321"
   
 -   Il sécurise la mémoire en s'assurant qu'un objet ne peut pas utiliser le contenu d'un autre objet.  
   
- Cette rubrique décrit les concepts fondamentaux du garbage collection. Elle contient les sections suivantes :  
-  
--   [Notions de base de la mémoire](#fundamentals_of_memory)  
-  
--   [Conditions pour une opération garbage collection](#conditions_for_a_garbage_collection)  
-  
--   [Tas managé](#the_managed_heap)  
-  
--   [Générations](#generations)  
-  
--   [Déroulement d'une opération garbage collection](#what_happens_during_a_garbage_collection)  
-  
--   [Manipulation des ressources non managées](#manipulating_unmanaged_resources)  
-  
--   [Garbage collection de station de travail et de serveur](#workstation_and_server_garbage_collection)  
-  
--   [Garbage collection simultané](#concurrent_garbage_collection)  
-  
--   [Nettoyage de la mémoire de la station de travail en arrière-plan](#background_garbage_collection)  
-  
--   [Nettoyage de la mémoire du serveur en arrière-plan](#background_server_garbage_collection)  
-  
+ Cette rubrique décrit les concepts fondamentaux du garbage collection. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Notions de base de la mémoire  
  La liste suivante résume les concepts importants de la mémoire CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066321"
   
  Le déroulement (fréquence et durée) des garbage collection est le résultat du volume des allocations et de la quantité de mémoire restante sur le tas managé.  
   
- Le tas peut être considéré comme l'accumulation de deux tas : le tas d'objets volumineux et le tas de petits objets.  
+ Le tas peut être considéré comme l’accumulation de deux tas : le [tas de grands objets](large-object-heap.md) et le tas de petits objets.  
   
- Le tas d'objets volumineux contient de très grands objets de 85 000 octets ou plus. Ces objets du tas d'objets volumineux sont généralement des tableaux. Il est rare qu'un objet d'instance soit extrêmement grand.  
+ Le [tas de grands objets](large-object-heap.md) contient des objets d’au moins 85 000 octets. Ces objets du tas d'objets volumineux sont généralement des tableaux. Il est rare qu'un objet d'instance soit extrêmement grand.  
   
  [Retour au début](#top)  
   

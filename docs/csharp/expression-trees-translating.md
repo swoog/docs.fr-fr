@@ -3,12 +3,12 @@ title: Traduction d’arborescences d’expressions
 description: Découvrez comment visiter chaque nœud dans une arborescence d’expressions lors de la génération d’une copie modifiée de cette arborescence d’expressions.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200533"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490071"
 ---
 # <a name="translating-expression-trees"></a>Traduction d’arborescences d’expressions
 
@@ -75,7 +75,7 @@ var addition = Expression.Add(one, two);
 var add2 = Expression.Add(three, four);
 var sum = Expression.Add(addition, add2);
 
-// Declare the delegate, so we can call it 
+// Declare the delegate, so we can call it
 // from itself recursively:
 Func<Expression, int> aggregate = null;
 // Aggregate, return constants, or the sum of the left and right operand.
@@ -93,7 +93,7 @@ Il y a pas mal de code ici, mais les concepts sont très abordables.
 Ce code visite les enfants avec une recherche en profondeur. Quand il rencontre un nœud de constante, le visiteur retourne la valeur de la constante. Une fois que le visiteur a visité les deux enfants, ceux-ci ont calculé la somme calculée pour cette sous-arborescence. Le nœud d’addition peut maintenant calculer sa somme.
 Une fois que tous les nœuds dans l’arborescence d’expressions ont été visités, la somme a été calculée. Vous pouvez suivre l’exécution en exécutant l’exemple dans le débogueur.
 
-Nous allons simplifier le suivi de la façon dont les nœuds sont analysés et de la façon dont la somme est calculée en parcourant l’arborescence. Voici une version mise à jour de la méthode Aggregate qui comprend des informations de suivi :
+Nous allons simplifier le suivi de l’analyse des nœuds et du calcul de la somme en parcourant l’arborescence. Voici une version mise à jour de la méthode Aggregate qui comprend des informations de suivi :
 
 ```csharp
 private static int Aggregate(Expression exp)

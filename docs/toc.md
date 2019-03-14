@@ -94,7 +94,7 @@
 ### [Nouveautés de .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Nouveautés de .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Didacticiels](core/tutorials/index.md)
-### [Bien démarrer avec .NET Core sur Mac OS](core/tutorials/using-on-macos.md)
+### [Bien démarrer avec .NET Core sur macOS](core/tutorials/using-on-macos.md)
 ### [Bien démarrer avec .NET Core sur macOS à l’aide de Visual Studio pour Mac](core/tutorials/using-on-mac-vs.md)
 ### [Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Bien démarrer avec .NET Core à l’aide des outils CLI](core/tutorials/using-with-xplat-cli.md)
@@ -1209,6 +1209,7 @@
 ### Utiliser le modèle entraîné
 #### [Une prédiction à la fois avec PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Utiliser un modèle formé](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Servir un modèle Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Programmation probalistique avec Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Référence

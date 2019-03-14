@@ -6,17 +6,19 @@ ms.author: johalex
 ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d8d324cdcad793ac8ade8124f56734bade695421
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488160"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutoriel : créer un cluster de fleurs d’iris à l’aide d’un apprenant de clustering avec ML.NET
 
 > [!NOTE]
 > Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ce tutoriel montre comment utiliser ML.NET pour générer un [modèle de clustering](../resources/tasks.md#clustering) pour le [jeu de données Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 

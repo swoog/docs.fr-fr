@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220809"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675158"
 ---
 # <a name="deploying-an-interop-application"></a>Déploiement d'une application d'interopérabilité
 Une application d’interopérabilité comporte généralement un assembly client .NET, un ou plusieurs assemblys d’interopérabilité représentant des bibliothèques de types COM distinctes, et un ou plusieurs composants COM inscrits. Visual Studio et le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fournissent des outils pour importer et convertir une bibliothèque de types vers un assembly d’interopérabilité, comme décrit dans [Importation d’une bibliothèque de types sous la forme d’un assembly](importing-a-type-library-as-an-assembly.md). Il existe deux façons de déployer une application d’interopérabilité :  
@@ -38,8 +38,7 @@ Une application d’interopérabilité comporte généralement un assembly clien
 ### <a name="private-assemblies"></a>Assemblys privés  
  Pour installer un assembly destiné à une utilisation privée, vous devez installer l’exécutable de l’application et l’assembly d’interopérabilité qui contient les types COM importés dans la même structure de répertoires. L’illustration suivante montre un assembly d’interopérabilité non signé destiné à une utilisation privée par Client1.exe et Client2.exe, qui se trouvent dans des répertoires distincts de l’application. L’assembly d’interopérabilité, appelé LOANLib.dll dans cet exemple, est installé deux fois.  
   
- ![Structure de répertoires et Registre Windows](media/comdeployprivate.gif "comdeployprivate")  
-Structure de répertoires et entrées du Registre pour un déploiement privé  
+ ![Structure de répertoires et Registre Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Structure de répertoires et entrées du Registre pour un déploiement privé")  
   
  Tous les composants COM associés à l’application doivent être installés dans le Registre Windows. Si les fichiers Client1.exe et Client2.exe de l’illustration sont installés sur des ordinateurs différents, vous devez inscrire les composants COM sur les deux ordinateurs.  
   

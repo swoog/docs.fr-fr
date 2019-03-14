@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618972"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713044"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
@@ -21,17 +21,16 @@ L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone 
 `await` peut uniquement être utilisé dans une méthode asynchrone modifiée par le mot clé [async](../../../csharp/language-reference/keywords/async.md). Une telle méthode, définie à l’aide du modificateur `async` et contenant généralement une ou plusieurs expressions `await`, est appelée *méthode async*.  
   
 > [!NOTE]
->  Les mots clés `async` et `await` ont été introduits dans C# 5. Pour obtenir une introduction à la programmation asynchrone, consultez [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md).  
+> Les mots clés `async` et `await` ont été introduits dans C# 5. Pour obtenir une introduction à la programmation asynchrone, consultez [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-La tâche à laquelle l’opérateur `await` est appliqué est généralement retournée par un appel à une méthode qui implémente le [modèle asynchrone basé sur des tâches](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Cela inclut des méthodes qui retournent des objets <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> et `System.Threading.Tasks.ValueType<TResult>`.  
+La tâche à laquelle l’opérateur `await` est appliqué est généralement retournée par un appel à une méthode qui implémente le [modèle asynchrone basé sur des tâches](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Il s’agit des méthodes qui retournent des objets <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> et <xref:System.Threading.Tasks.ValueTask%601>.  
 
-  
- Dans l’exemple suivant, la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> retourne un `Task<byte[]>`. La tâche est une promesse de produire le tableau d’octets réel quand la tâche est terminée. L’opérateur `await` suspend l’exécution jusqu’à ce que le travail de la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> soit terminé. Entre-temps, le contrôle revient à l'appelant de `GetPageSizeAsync`. Une fois l’exécution de la tâche terminée, l’expression `await` prend comme valeur un tableau d’octets.  
+Dans l’exemple suivant, la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> retourne un `Task<byte[]>`. La tâche est une promesse de produire le tableau d’octets réel quand la tâche est terminée. L’opérateur `await` suspend l’exécution jusqu’à ce que le travail de la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> soit terminé. Entre-temps, le contrôle revient à l'appelant de `GetPageSizeAsync`. Une fois l’exécution de la tâche terminée, l’expression `await` prend comme valeur un tableau d’octets.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Pour un exemple complet, consultez [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger l’exemple à partir des [exemples de code pour les développeurs](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) sur le site web de Microsoft. L'exemple est dans le projet AsyncWalkthrough_HttpClient.  
+> Pour un exemple complet, consultez [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger l’exemple à partir des [exemples de code pour les développeurs](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) sur le site web de Microsoft. L'exemple est dans le projet AsyncWalkthrough_HttpClient.  
   
 Comme indiqué dans l’exemple précédent, si `await` est appliqué au résultat d’un appel de méthode qui retourne un `Task<TResult>`, le type de l’expression `await` est `TResult`. Si `await` est appliqué au résultat d’un appel de méthode qui retourne un `Task`, le type de l’expression `await` est `void`. L'exemple suivant illustre la différence.  
   
@@ -55,7 +54,7 @@ La plupart des méthodes async retournent un <xref:System.Threading.Tasks.Task> 
   
 Si vous attendez une méthode async retournant des tâches qui lève une exception, l’opérateur `await` lève de nouveau l’exception.  
   
-Si vous attendez une méthode async retournant des tâches qui est annulée, l’opérateur `await` lève de nouveau une exception <xref:System.OperationCanceledException>.  
+Si vous attendez une méthode async retournant des tâches qui est annulée, l'opérateur `await` lève de nouveau une exception <xref:System.OperationCanceledException>.  
   
 Une tâche qui se trouve dans un état d’erreur peut refléter plusieurs exceptions. Par exemple, la tâche peut être le résultat d'un appel à <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quand vous attendez une telle tâche, l’opération await lève à nouveau une seule des exceptions. Toutefois, vous ne pouvez pas prédire laquelle de ces exceptions est de nouveau levée.  
   

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981879"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674391"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Conception d’une application orientée microservices
 
@@ -63,11 +63,11 @@ Chaque microservice dispose de sa propre base de données, ce qui le découple e
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers : une application de référence pour .NET Core et des microservices déployés à l’aide de conteneurs
 
-Pour vous éviter d’avoir à réfléchir sur un domaine d’activité hypothétique que vous ne connaissez peut-être pas et ainsi vous concentrer sur l’architecture et les technologies, nous avons choisi un domaine d’activité bien connu, à savoir, une application de commerce électronique simplifiée (boutique en ligne) qui présente un catalogue de produits, accepte les commandes des clients, vérifie les stocks et effectue d’autres fonctions opérationnelles. Le code source de cette application basée sur des conteneurs est disponible sur le dépôt GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
+Pour vous éviter d’avoir à réfléchir sur un domaine d’activité hypothétique que vous ne connaissez peut-être pas et ainsi vous permettre de vous concentrer sur l’architecture et les technologies, nous avons sélectionné un domaine d’activité bien connu, à savoir une application d’e-commerce simplifiée (boutique en ligne) qui présente un catalogue de produits, accepte les commandes des clients, vérifie les stocks et effectue d’autres fonctions opérationnelles. Le code source de cette application basée sur des conteneurs est disponible sur le dépôt GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
 
 L’application est constituée de divers sous-systèmes, notamment de plusieurs front-ends d’interface utilisateur de magasin (une application web et une application mobile native), ainsi que des microservices et des conteneurs back-end pour toutes les opérations côté serveur nécessaires avec plusieurs passerelles d’API comme points d’entrée consolidés dans les microservices internes. La figure 6-1 illustre l’architecture de l’application de référence.
 
-![Les clients mobiles et SPA communiquent avec les points de terminaison de passerelles d’API uniques, lesquels communiquent ensuite avec les microservices. Les clients web traditionnels communiquent avec le microservice MVC, lequel communique avec des microservices](./media/image1.png)
+![Les clients mobiles et SPA communiquent avec les points de terminaison de passerelles d’API uniques, lesquels communiquent ensuite avec les microservices. Les clients web traditionnels communiquent avec le microservice MVC, lequel communique avec des microservices.](./media/image1.png)
 
 **Figure 6-1** : Architecture d’application de référence eShopOnContainers pour l’environnement de développement
 
@@ -77,7 +77,7 @@ L’application est constituée de divers sous-systèmes, notamment de plusieurs
 
 - Communication de client à microservice HTTP via des passerelles d’API. ce type de communication est utilisé pour les requêtes et quand il s’agit d’accepter les commandes de mise à jour ou les commandes transactionnelles des applications clientes. L’approche utilisant des passerelles d’API est expliquée en détail dans des sections ultérieures.
 
-- Communication asynchrone basée sur les événements : celle-ci emprunte un bus d’événements pour propager des mises aux microservices ou pour s’intégrer avec des applications externes. Le bus d’événements peut être implémenté avec n’importe quelle technologie d’infrastructure de répartiteur de messagerie comme RabbitMQ ou en utilisant des Service Bus (de niveau d’abstraction) plus généralistes comme Azure Service Bus, NServiceBus, MassTransit ou Brighter.
+- Communication asynchrone basé sur les événements : celle-ci emprunte un bus d’événements pour propager des mises aux microservices ou pour s’intégrer avec des applications externes. Le bus d’événements peut être implémenté avec n’importe quelle technologie d’infrastructure de répartiteur de messagerie comme RabbitMQ ou en utilisant des Service Bus (de niveau d’abstraction) plus généralistes comme Azure Service Bus, NServiceBus, MassTransit ou Brighter.
 
 L’application est déployée comme un ensemble de microservices sous forme de conteneurs. Les applications clientes peuvent communiquer avec ces microservices exécutés en tant que conteneurs via les URL publiques publiées par les passerelles d’API.
 
@@ -91,7 +91,7 @@ Par conséquent, les unités de déploiement pour les microservices (et même po
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
-- **Code source de l’application de référence eShopOnContainers Code source pour l’application de référence**  
+- **Code source de l’application de référence eShopOnContainers Code source de l’application de référence**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Avantages d’une solution basée sur des microservices
@@ -142,7 +142,7 @@ Comme indiqué dans la section traitant de l’architecture, si vous avez l’in
 
 Une architecture externe est une architecture de microservices composée de plusieurs services, conformément aux principes décrits dans la section de ce guide traitant de l’architecture. Cependant, selon la nature de chaque microservice, et quelle que soit l’architecture de microservices générale que vous choisissez, il est courant et parfois conseillé d’avoir différentes architectures internes, chacune basée sur des modèles différents, pour les différents types de microservice. Les microservices peuvent même utiliser des technologies et des langages de programmation différents. La figure 6-2 illustre cette diversité.
 
-![Différence entre une architecture externe (modèles de microservices, passerelles d’API, communications résilientes, publication/abonnement, etc.) et une architecture interne (modèles pilotés par les données/CRUD, modèles DDD, injection de dépendances, multiples bibliothèques, etc.)](./media/image2.png)
+![Différence entre une architecture externe (modèles de microservices, passerelles d’API, communications résilientes, pub/sub, etc.) et une architecture interne (modèles pilotés par les données/CRUD, DDD, injection de dépendances, multiples bibliothèques, etc.)](./media/image2.png)
 
 **Figure 6-2** : architectures externe/interne et conception
 
@@ -150,7 +150,7 @@ Par exemple, dans notre exemple *eShopOnContainers*, les microservices catalogue
 
 La décision d’utiliser une technologie différente par microservice peut être justifiée par la nature de chaque microservice. Par exemple, il peut être préférable d’utiliser un langage de programmation fonctionnel comme F\#, voire un langage tel que R, si vous ciblez les domaines de l’IA et du machine learning, plutôt qu’un langage de programmation plus orienté objet comme C\#.
 
-Le fait est que chaque microservice peut avoir une architecture interne différente basée sur un modèle de conception différent. Il n’est pas souhaitable d’implémenter tous les microservices avec des modèles DDD élaborés, car cet effort d’ingénierie serait inutile. De la même façon, les microservices complexes dont la logique métier évolue en permanence ne sauraient être implémentés en tant que composants CRUD, car le code qui en résulterait serait de mauvaise qualité. 
+Le fait est que chaque microservice peut avoir une architecture interne différente basée sur un modèle de conception différent. Il n’est pas souhaitable d’implémenter tous les microservices avec des modèles DDD élaborés, car cet effort d’ingénierie serait inutile. De la même façon, les microservices complexes dont la logique métier évolue en permanence ne sauraient être implémentés en tant que composants CRUD, car le code qui en résulterait serait de mauvaise qualité.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>La nouvelle tendance : plusieurs modèles d’architecture et des microservices polyglottes
 
@@ -172,7 +172,7 @@ Vous pouvez aussi générer des microservices avec diverses technologies et dive
 
 Le point important est qu’aucun modèle ou style d’architecture en particulier, ni aucune technologie en particulier, ne convient à toutes les situations. La figure 6-3 présente certaines approches et technologies (dans un ordre aléatoire) qui pourraient être utilisées dans différentes microservices.
 
-![« Modèles à plusieurs architectures et les microservices polyglottes » signifie que vous pouvez combiner les langages et les technologies, et les faire correspondre aux besoins de chaque microservice tout en leur permettant de communiquer entre eux.](./media/image3.png)
+![Le modèle à plusieurs architectures avec microservices polyglottes permet de combiner les langages et les technologies pour les adapter aux besoins de chaque microservice tout en leur permettant de communiquer entre eux.](./media/image3.png)
 
 **Figure 6-3.** l’univers des modèles à plusieurs architectures et des microservices polyglottes
 

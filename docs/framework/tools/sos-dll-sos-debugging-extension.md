@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6f2d001c6513211cf15993285e3564f7613402
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "47863661"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356895"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (extension de débogage SOS)
 
@@ -94,7 +94,7 @@ L’extension de débogage SOS (SOS.dll) vous aide à déboguer des programmes m
 |**VMMap**|Parcourt l'espace d'adressage virtuel et affiche le type de protection appliqué à chaque région.|
 |**VMStat**|Fournit un résumé de l’espace d’adressage virtuel, classé par type de protection appliqué à cette mémoire (libre, réservé, validé, privé, mappé, image). La colonne TOTAL affiche le résultat de la colonne MOYENNE multipliée par la colonne COMPTE BLQ.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L’extension de débogage SOS vous permet d’afficher des informations sur l’exécution du code au sein du CLR. Par exemple, vous pouvez utiliser l’extension de débogage SOS pour afficher des informations sur le tas managé, rechercher des altérations du tas, afficher les types de données internes utilisés par le runtime et afficher des informations sur l’ensemble du code managé exécuté au sein du runtime.
 
@@ -126,79 +126,79 @@ La commande suivante affiche le contenu d'un tableau à l'adresse `00ad28d0`.  L
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
- La commande suivante affiche le contenu d'un assembly à l'adresse `1ca248`.
+La commande suivante affiche le contenu d'un assembly à l'adresse `1ca248`.
 
 ```
 !dumpassembly 1ca248
 ```
 
- La commande suivante affiche des informations sur le tas de récupérateur de mémoire.
+La commande suivante affiche des informations sur le tas de récupérateur de mémoire.
 
 ```
 !dumpheap
 ```
 
- La commande suivante écrit le contenu du journal de contrainte en mémoire dans un fichier appelé StressLog.txt (par défaut) dans le répertoire actif.
+La commande suivante écrit le contenu du journal de contrainte en mémoire dans un fichier appelé StressLog.txt (par défaut) dans le répertoire actif.
 
 ```
 !DumpLog
 ```
 
- La commande suivante affiche la structure `MethodDesc` à l'adresse `902f40`.
+La commande suivante affiche la structure `MethodDesc` à l'adresse `902f40`.
 
 ```
 !dumpmd 902f40
 ```
 
- La commande suivante affiche des informations sur un module à l'adresse `1caa50`.
+La commande suivante affiche des informations sur un module à l'adresse `1caa50`.
 
 ```
 !dumpmodule 1caa50
 ```
 
- La commande suivante affiche des informations sur un objet à l'adresse `a79d40`.
+La commande suivante affiche des informations sur un objet à l'adresse `a79d40`.
 
 ```
 !DumpObj a79d40
 ```
 
- La commande suivante affiche les champs d'une classe de valeur à l'adresse `00a79d9c`, à l'aide de la table de méthodes à l'adresse `0090320c`.
+La commande suivante affiche les champs d'une classe de valeur à l'adresse `00a79d9c`, à l'aide de la table de méthodes à l'adresse `0090320c`.
 
 ```
 !DumpVC 0090320c 00a79d9c
 ```
 
- La commande suivante affiche la mémoire du processus utilisée par le récupérateur de mémoire.
+La commande suivante affiche la mémoire du processus utilisée par le récupérateur de mémoire.
 
 ```
 !eeheap -gc
 ```
 
- La commande suivante affiche tous les objets planifiés pour la finalisation.
+La commande suivante affiche tous les objets planifiés pour la finalisation.
 
 ```
 !finalizequeue
 ```
 
- La commande suivante détermine le domaine d'application d'un objet à l'adresse `00a79d98`.
+La commande suivante détermine le domaine d'application d'un objet à l'adresse `00a79d98`.
 
 ```
 !findappdomain 00a79d98
 ```
 
- La commande suivante affiche tous les handles du récupérateur de mémoire dans le processus actuel.
+La commande suivante affiche tous les handles du récupérateur de mémoire dans le processus actuel.
 
 ```
 !gcinfo 5b68dbb8
 ```
 
- La commande suivante affiche les structures `MethodTable` et `EEClass` pour la méthode `Main`, dans la classe `MainClass`, dans le module `unittest.exe`.
+La commande suivante affiche les structures `MethodTable` et `EEClass` pour la méthode `Main`, dans la classe `MainClass`, dans le module `unittest.exe`.
 
 ```
 !name2ee unittest.exe MainClass.Main
 ```
 
- La commande suivante affiche des informations sur le jeton de métadonnées à l'adresse `02000003` dans le module `unittest.exe`.
+La commande suivante affiche des informations sur le jeton de métadonnées à l'adresse `02000003` dans le module `unittest.exe`.
 
 ```
 !token2ee unittest.exe 02000003

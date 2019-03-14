@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492632"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (outil Strong Name Tool)
 L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms forts](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.  
@@ -40,7 +40,7 @@ L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms for
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -54,10 +54,10 @@ sn [-quiet][option [parameter(s)]]
 |**-i** *infile container*|Installe la paire de clés d’*infile* dans le conteneur de clé spécifié. Le conteneur de clé réside dans le fournisseur de services de chiffrement de noms forts.|  
 |**-k** [*keysize*] *outfile*|Génère une nouvelle clé <xref:System.Security.Cryptography.RSACryptoServiceProvider> de la taille spécifiée et l’écrit dans le fichier spécifié.  Une clé publique et une clé privée sont écrites dans le fichier.<br /><br /> Si vous ne spécifiez pas de taille de clé, une clé de 1 024 bits est générée par défaut si le fournisseur de services de chiffrement avancé Microsoft est installé ; sinon, une clé de 512 bits est générée.<br /><br /> Le paramètre *keysize* prend en charge des longueurs de clé allant de 384 bits à 16 384 bits dans des incréments de 8 bits si le fournisseur de services de chiffrement avancé Microsoft est installé.  Il prend en charge des longueurs de clé allant de 384 bits à 512 bits par incréments de 8 bits si le fournisseur de services de chiffrement de base Microsoft est installé.|  
 |**-m** [**y** *&#124;* **n**]|Spécifie si les conteneurs de clés sont propres à l'ordinateur ou à l'utilisateur. Si vous spécifiez *y*, les conteneurs de clés sont propres à l’ordinateur. Si vous spécifiez *n*, les conteneurs de clés sont propres à l’utilisateur.<br /><br /> Si ni y, ni n ne sont spécifiés, cette option affiche le paramètre actuel.|  
-|**-o**  *infile* [*outfile*]|Extrait la clé publique d’*infile* et la stocke dans un fichier .csv. Chaque octet de la clé publique est séparé par une virgule. Ce format s'avère utile pour les références de codage en dur aux clés sous forme de tableaux initialisés dans le code source. Si *outfile* n’est pas spécifié, cette option place la sortie dans le Presse-papiers. **Remarque :**  Cette option ne vérifie pas si l'entrée est une clé publique uniquement. Si `infile` contient une paire de clés dont une est privée, la clé privée est également extraite.|  
+|**-o**  *infile* [*outfile*]|Extrait la clé publique d’*infile* et la stocke dans un fichier .csv. Chaque octet de la clé publique est séparé par une virgule. Ce format s'avère utile pour les références de codage en dur aux clés sous forme de tableaux initialisés dans le code source. Si *outfile* n’est pas spécifié, cette option place la sortie dans le Presse-papiers. **Remarque :**  cette option ne vérifie pas si l’entrée consiste uniquement en une clé publique. Si `infile` contient une paire de clés dont une est privée, la clé privée est également extraite.|  
 |**-p** *infile outfile* [*hashalg*]|Extrait la clé publique de la paire de clés dans *infile* et la stocke dans *outfile*, éventuellement à l’aide de l’algorithme RSA spécifié par *hashalg*. Cette clé publique permet de différer la signature d’un assembly à l’aide des options **/delaysign+** et **/keyfile** d’[Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). En cas signature différée d'un assembly, seule la clé publique est définie au moment de la compilation et un espace est réservé dans le fichier pour la signature qui sera ajoutée par la suite, lorsque la clé privée sera connue.|  
 |**-pc**  *container* *outfile* [*hashalg*]|Extrait la clé publique de la paire de clés figurant dans *container* et la stocke dans *outfile*. Si vous utilisez l’option *hashalg*, l’algorithme RSA est utilisé pour récupérer la clé publique.|  
-|**-Pb** [**y** *&#124;* **n**]|Spécifie si la stratégie permettant d'ignorer les noms forts est appliquée. Si vous spécifiez *y*, les noms forts pour les assemblys à confiance totale ne sont pas validés en cas de chargement dans un <xref:System.AppDomain> à confiance totale. Si vous spécifiez *n*, l’exactitude des noms forts est validée, mais pas pour un nom fort spécifique. Le <xref:System.Security.Permissions.StrongNameIdentityPermission> n'a aucun effet sur les assemblys à confiance totale. Vous devez procéder à votre propre contrôle pour une correspondance de nom fort.<br /><br /> Si ni `y`, ni `n` ne sont spécifiés, cette option affiche le paramètre actuel. La valeur par défaut est `y`. **Remarque :**  Sur les ordinateurs 64 bits, vous devez définir ce paramètre à la fois sur l'instance 32 bits et sur l'instance 64 bits de Sn.exe.|  
+|**-Pb** [**y** *&#124;* **n**]|Spécifie si la stratégie permettant d'ignorer les noms forts est appliquée. Si vous spécifiez *y*, les noms forts pour les assemblys à confiance totale ne sont pas validés en cas de chargement dans un <xref:System.AppDomain> à confiance totale. Si vous spécifiez *n*, l’exactitude des noms forts est validée, mais pas pour un nom fort spécifique. Le <xref:System.Security.Permissions.StrongNameIdentityPermission> n'a aucun effet sur les assemblys à confiance totale. Vous devez procéder à votre propre contrôle pour une correspondance de nom fort.<br /><br /> Si ni `y`, ni `n` ne sont spécifiés, cette option affiche le paramètre actuel. La valeur par défaut est `y`. **Remarque :**  sur les ordinateurs 64 bits, ce paramètre doit être défini à la fois sur l’instance 32 bits et sur l’instance 64 bits de Sn.exe.|  
 |**-q**[**uiet**]|Spécifie le mode silencieux ; supprime l'affichage des messages d'opération réussie.|  
 |**-R**[**a**] *assembly* *infile*|Resigne un assembly ayant préalablement fait l’objet d’une signature ou dont la signature a été différée avec la paire de clés figurant dans *infile*.<br /><br /> Si **-Ra** est utilisé, les hachages sont recalculés pour tous les fichiers de l’assembly.|  
 |**-Rc**[**a**] *assembly container*|Resigne un assembly ayant préalablement fait l’objet d’une signature ou dont la signature a été différée avec la paire de clés figurant dans *container*.<br /><br /> Si **-Rca** est utilisé, les hachages sont recalculés pour tous les fichiers de l’assembly.|  
@@ -70,7 +70,7 @@ sn [-quiet][option [parameter(s)]]
 |**-vf**  *assembly*|Vérifie le nom fort dans *assembly*. Contrairement à l’option **-v**, **-vf** force la vérification même si celle-ci a été désactivée à l’aide de l’option **-Vr**.|  
 |**-Vk**  *regfile.reg* *assembly* [*userlist*] [*infile*]|Crée un fichier des entrées d'inscription (.reg) que vous pouvez utiliser pour inscrire l'assembly spécifié afin d'ignorer la vérification. Les règles d’affectation des noms d’assemblys qui s’appliquent à l’option **-Vr** s’appliquent également à **-Vk**. Pour plus d’informations sur les options *userlist* et *infile*, consultez l’option **-Vr**.|  
 |**-Vl**|Répertorie les paramètres actuels de la vérification des noms forts sur cet ordinateur.|  
-|**-Vr**  *assembly* [*userlist*] [*infile*]|Inscrit l’*assembly* pour que la vérification soit ignorée. Éventuellement, vous pouvez spécifier une liste de noms d'utilisateurs séparés par une virgule à laquelle l'exception de vérification s'appliquera. Si vous spécifiez *infile*, la vérification reste activée, mais la clé publique figurant dans *infile* est utilisée pendant les opérations de vérification. Vous pouvez spécifier *assembly* sous la forme *\*, strongname* pour inscrire tous les assemblys avec le nom fort spécifié. Pour *strongname*, spécifiez la chaîne de chiffres hexadécimaux représentant la clé publique sous forme de jetons. Consultez les options **-t** et **-T** pour afficher le jeton de clé publique. **Attention :**  N'utilisez cette option que pendant le développement. L'ajout d'un assembly à la liste des omissions de vérification crée une faille de sécurité. Un assembly malveillant peut utiliser le nom complètement spécifié (nom, version, culture et jeton de clé publique) de l'assembly ajouté à la liste des omissions de vérification pour usurper son identité. Cela permet également à l'assembly malveillant d'ignorer la vérification.|  
+|**-Vr**  *assembly* [*userlist*] [*infile*]|Inscrit l’*assembly* pour que la vérification soit ignorée. Éventuellement, vous pouvez spécifier une liste de noms d'utilisateurs séparés par une virgule à laquelle l'exception de vérification s'appliquera. Si vous spécifiez *infile*, la vérification reste activée, mais la clé publique figurant dans *infile* est utilisée pendant les opérations de vérification. Vous pouvez spécifier *assembly* sous la forme *\*, strongname* pour inscrire tous les assemblys avec le nom fort spécifié. Pour *strongname*, spécifiez la chaîne de chiffres hexadécimaux représentant la clé publique sous forme de jetons. Consultez les options **-t** et **-T** pour afficher le jeton de clé publique. **Attention :**  n’utilisez cette option que pendant le développement. L'ajout d'un assembly à la liste des omissions de vérification crée une faille de sécurité. Un assembly malveillant peut utiliser le nom complètement spécifié (nom, version, culture et jeton de clé publique) de l'assembly ajouté à la liste des omissions de vérification pour usurper son identité. Cela permet également à l'assembly malveillant d'ignorer la vérification.|  
 |||  
 |**-Vu**  *assembly*|Annule l’inscription de l’*assembly* pour que la vérification soit ignorée. Les mêmes règles d’affectation de noms aux assemblys s’appliquent aux options **-Vr** et **-Vu**.|  
 |**-Vx**|Supprime toutes les entrées concernées par l'exception de vérification.|  
@@ -79,7 +79,7 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Toutes les options de Sn.exe respectent la casse et doivent être tapées exactement comme indiqué pour pouvoir être reconnues par l'outil.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les options **-R** et **-Rc** sont utiles avec les assemblys dont la signature a été différée. Dans ce cas, seule la clé publique est définie au moment de la compilation et la signature a lieu par la suite, lorsque la clé privée est connue.  
   
 > [!NOTE]

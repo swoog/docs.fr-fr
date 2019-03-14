@@ -2,12 +2,12 @@
 title: Nouveautés de C# 8.0 – Guide C#
 description: Vue d’ensemble des nouvelles fonctionnalités disponibles dans C# 8.0. Cet article est à jour par rapport à la préversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835432"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674443"
 ---
 # <a name="whats-new-in-c-80"></a>Nouveautés de C# 8.0
 
@@ -273,7 +273,7 @@ Plus d’informations sur la fonctionnalité, voir la vue d’ensemble des [type
 1. Elle retourne un <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 1. La méthode contient des instructions `yield return` pour retourner des éléments consécutifs dans le flux asynchrone.
 
-Pour pouvoir consommer un flux asynchrone, il faut ajouter le mot clé `await` avant le mot clé `foreach` au moment d’énumérer les éléments du flux. Le mot clé `await` exige que la méthode qui énumère le flux asynchrone soit déclarée avec le modificateur `async` et retourne un type autorisé pour une méthode `async`, soit en général <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Il peut également s’agir de <xref:System.Threading.Tasks.ValueTask> ou <xref:System.Threading.Tasks.ValueTask%601>. Une méthode peut consommer et produire un flux asynchrone ; elle retournerait alors un <xref:System.Collections.Generic.IAsyncEnumerable%601>. Le code suivant génère une séquence de 1 à 20, en attendant 100 ms entre chaque nombre :
+Pour pouvoir consommer un flux asynchrone, il faut ajouter le mot clé `await` avant le mot clé `foreach` au moment d’énumérer les éléments du flux. Le mot clé `await` exige que la méthode qui énumère le flux asynchrone soit déclarée avec le modificateur `async` et retourne un type autorisé pour une méthode `async`, soit en général <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Il peut également s’agir de <xref:System.Threading.Tasks.ValueTask> ou <xref:System.Threading.Tasks.ValueTask%601>. Une méthode peut consommer et produire un flux asynchrone ; elle retournerait alors un <xref:System.Collections.Generic.IAsyncEnumerable%601>. Le code suivant génère une séquence de 0 à 19, en attendant 100 ms entre chaque nombre :
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -335,7 +335,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 Le code suivant crée une sous-plage qui comporte les mots « quick », « brown » et « fox » et va de `words[1]` à `words[3]`. L'élément `words[4]` ne se trouve pas dans la plage.
 
 ```csharp
-var brownFox = words[1..4];
+var quickBrownFox = words[1..4];
 ```
 
 Le code suivant crée une sous-plage qui comporte « lazy » et « dog » et comprend `words[^2]` et `words[^1]`. L’index de fin `words[^0]` n’est pas inclus :

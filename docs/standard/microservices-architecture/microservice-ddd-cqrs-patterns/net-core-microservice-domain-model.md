@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363018"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implémenter un modèle de domaine de microservice avec .NET Core 
 
@@ -171,11 +171,11 @@ Par exemple, dans l’exemple de code OrderAggregate précédent, il existe plus
 - **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework.** Notez qu’il ne s’agit *pas* d’Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Coder pour la conception pilotée par domaine : conseils pour les développeurs focalisés sur les données** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. Points de données – Coder pour la conception pilotée par domaine : conseils pour les développeurs focalisés sur les données** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. How to create fully encapsulated Domain Models** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Précédent](microservice-domain-model.md)

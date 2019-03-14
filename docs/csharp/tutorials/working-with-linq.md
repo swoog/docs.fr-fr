@@ -3,12 +3,12 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170806"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679652"
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -16,13 +16,13 @@ ms.locfileid: "53170806"
 
 Ce tutoriel vous présente les fonctionnalités de .NET Core et du langage C#. Vous apprendrez à :
 
-*   Générer des séquences avec LINQ.
-*   Écrire des méthodes utilisables dans des requêtes LINQ.
-*   Faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
+- Générer des séquences avec LINQ.
+- écrire des méthodes utilisables dans des requêtes LINQ ;
+- faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 
 Vous apprendrez ces techniques en créant une application qui illustre l’une des compétences de base de tout magicien : le [mélange faro](https://en.wikipedia.org/wiki/Faro_shuffle). En quelques mots, le mélange faro est une technique qui consiste à diviser un paquet de cartes en deux moitiés exactes, puis à intercaler une carte sur deux de chacune des deux moitiés de façon à reconstruire le jeu d’origine.
 
-Les magiciens utilisent cette technique parce que chaque carte se trouve à un emplacement connu après chaque mélange, suivant un motif répétitif. 
+Les magiciens utilisent cette technique parce que chaque carte se trouve à un emplacement connu après chaque mélange, suivant un motif répétitif.
 
 Dans notre cas, c’est une façon plaisante d’envisager la manipulation de séquences de données. L’application que vous allez créer construira un jeu de cartes, puis effectuera une suite de mélanges, en affichant la séquence à chaque fois. Vous comparerez également le nouvel ordre à l’ordre d’origine.
 
@@ -36,7 +36,7 @@ Vous devez configurer votre ordinateur pour exécuter .NET Core. Vous trouverez 
 
 La première étape consiste à créer une nouvelle application. Ouvrez une invite de commandes et créez un nouveau répertoire pour votre application. Réglez-le comme répertoire actuel. Saisissez la commande `dotnet new console` à l’invite. Elle crée les fichiers de démarrage d’une application « Hello World » de base.
 
-Si vous n’avez jamais utilisé C#, [ce didacticiel](console-teleprompter.md) explique la structure d’un programme C#. Vous pouvez le lire, puis revenir ici pour en savoir plus sur LINQ. 
+Si vous n’avez jamais utilisé C#, [ce didacticiel](console-teleprompter.md) explique la structure d’un programme C#. Vous pouvez le lire, puis revenir ici pour en savoir plus sur LINQ.
 
 ## <a name="creating-the-data-set"></a>Création du jeu de données
 
@@ -82,6 +82,7 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+
 Placez-les sous la méthode `Main` dans votre fichier `Program.cs`. Les deux méthodes utilisent la syntaxe `yield return` pour produire une séquence lors de leur exécution. Le compilateur génère un objet qui implémente <xref:System.Collections.Generic.IEnumerable%601> et génère la séquence de chaînes au fur et à mesure.
 
 Maintenant, utilisez ces méthodes d’itération pour créer le jeu de cartes. Placez la requête LINQ dans la méthode `Main` :
@@ -98,16 +99,18 @@ static void Main(string[] args)
     foreach (var card in startingDeck)
     {
         Console.WriteLine(card);
-    } 
+    }
 }
 ```
 
 Les clauses `from` multiples produisent un <xref:System.Linq.Enumerable.SelectMany%2A>, qui crée une séquence unique en combinant chaque élément de la première séquence avec chaque élément de la deuxième séquence. L’ordre est important ici. Le premier élément de la première séquence source (couleurs) est associé à chacun des éléments de la deuxième séquence (rangs). Cette opération génère les treize cartes de la première couleur. Ce processus est reproduit pour chaque élément de la première séquence (couleurs). Le résultat final est un jeu de cartes classé par couleurs, puis par valeurs.
 
 Il est important de garder à l’esprit la chose suivante : que vous choisissiez d’écrire votre code LINQ dans la syntaxe de requête utilisée plus haut ou d’utiliser plutôt la syntaxe de méthode, vous pourrez toujours passer d’une forme syntaxique à l’autre. La requête ci-dessus, écrite dans la syntaxe de requête, s’écrit ainsi dans la syntaxe de méthode :
+
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
+
 Le compilateur traduit les instructions LINQ écrites avec la syntaxe de requête dans la syntaxe d’appel de méthode équivalente. Par conséquent, les deux versions de la requête produisent le même résultat quel que soit le choix de syntaxe. Choisissez la plus adaptée à votre situation : par exemple, si certains membres de votre équipe ont des difficultés à utiliser la syntaxe de méthode, privilégiez dans la mesure du possible la syntaxe de requête.
 
 Ensuite, exécutez l’exemple que vous avez commencé à élaborer. Il affiche les 52 cartes du jeu. Il peut être très utile d’exécuter cet exemple avec un débogueur pour observer la façon dont les méthodes `Suits()` et `Ranks()` s’exécutent. Vous pouvez clairement voir que chaque chaîne de chaque séquence est générée uniquement au moment requis.
@@ -131,7 +134,7 @@ public static void Main(string[] args)
         Console.WriteLine(c);
     }
 
-    // 52 cards in a deck, so 52 / 2 = 26    
+    // 52 cards in a deck, so 52 / 2 = 26
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
 }
@@ -141,7 +144,7 @@ Cependant, il n’y a pas de méthode de battage dans la bibliothèque standard 
 
 Pour ajouter des fonctionnalités aux interactions possibles avec les <xref:System.Collections.Generic.IEnumerable%601> obtenus à partir des requêtes LINQ, vous allez écrire des méthodes d’un genre particulier, nommées [méthodes d’extension](../../csharp/programming-guide/classes-and-structs/extension-methods.md). En bref, une méthode d’extension est une *méthode statique* spéciale qui ajoute de nouvelles fonctionnalités à un type existant sans qu’il soit nécessaire de modifier le type d’origine.
 
-Pour accueillir vos méthodes d’extension, ajoutez à votre programme un nouveau fichier de classe *statique*, nommé `Extensions.cs`, puis créez la première méthode d’extension : 
+Pour accueillir vos méthodes d’extension, ajoutez à votre programme un nouveau fichier de classe *statique*, nommé `Extensions.cs`, puis créez la première méthode d’extension :
 
 ```csharp
 // Extensions.cs
@@ -191,7 +194,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
     var shuffle = top.InterleaveSequenceWith(bottom);
@@ -211,7 +214,7 @@ Vous ne devriez pas avoir de problèmes à écrire une méthode qui détermine s
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Cet exemple montre un autre terme LINQ : les méthodes terminales. Elles prennent une séquence en entrée (ou, dans ce cas, deux séquences) et retournent une valeur scalaire unique. Les méthodes terminales sont toujours la dernière méthode de la chaîne de méthodes d’une requête LINQ ; d’où le nom « terminal ». 
+Cet exemple montre un autre terme LINQ : les méthodes terminales. Elles prennent une séquence en entrée (ou, dans ce cas, deux séquences) et retournent une valeur scalaire unique. Les méthodes terminales sont toujours la dernière méthode de la chaîne de méthodes d’une requête LINQ ; d’où le nom « terminal ».
 
 Vous pourrez les voir en action lorsque vous les utiliserez pour déterminer si le jeu est dans l’ordre d’origine. Placez le code de mélange à l’intérieur d’une boucle, et arrêtez-la lorsque la séquence est à nouveau dans l’ordre d’origine en appliquant la méthode `SequenceEquals()`. Vous pouvez voir qu’il s’agit toujours de la dernière méthode d’une requête, parce qu’elle retourne une valeur unique plutôt qu’une séquence :
 
@@ -279,7 +282,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
@@ -321,24 +324,24 @@ Vous pouvez améliorer les performances du code en réduisant le nombre d’exé
 
 Le mélange extérieur est descendu à 30 requêtes. Si vous repassez au mélange intérieur, vous constaterez des améliorations similaires : il ne comporte plus que 162 requêtes.
 
-Sachez que cet exemple est **conçu** pour mettre en évidence les cas d’usage où l’évaluation paresseuse cause des problèmes de performances. S’il est important de voir son impact sur les performances du code, il faut également comprendre que toutes les requêtes ne doivent pas s’exécuter de manière stricte. La baisse de performances que l’on constate sans <xref:System.Linq.Enumerable.ToArray%2A> est due au fait que chaque nouvelle disposition du jeu de cartes est construite à partir de la configuration précédente. Avec l’évaluation paresseuse, chaque nouvelle configuration du jeu est générée à partir du jeu d’origine, y compris l’exécution du code qui a construit `startingDeck`, ce qui entraîne une grande quantité de travail supplémentaire. 
+Sachez que cet exemple est **conçu** pour mettre en évidence les cas d’usage où l’évaluation paresseuse cause des problèmes de performances. S’il est important de voir son impact sur les performances du code, il faut également comprendre que toutes les requêtes ne doivent pas s’exécuter de manière stricte. La baisse de performances que l’on constate sans <xref:System.Linq.Enumerable.ToArray%2A> est due au fait que chaque nouvelle disposition du jeu de cartes est construite à partir de la configuration précédente. Avec l’évaluation paresseuse, chaque nouvelle configuration du jeu est générée à partir du jeu d’origine, y compris l’exécution du code qui a construit `startingDeck`, ce qui entraîne une grande quantité de travail supplémentaire.
 
 Dans la pratique, certains algorithmes fonctionnent bien avec l’évaluation stricte, d’autres avec l’évaluation paresseuse. Au quotidien, l’évaluation paresseuse est en général un meilleur choix lorsque la source de données est un processus distinct, comme un moteur de base de données. L’évaluation paresseuse permet dans ce cas d’exécuter des requêtes plus complexes avec un seul aller-retour entre le processus de base de données et le reste du code. LINQ peut s’adapter tant à l’évaluation paresseuse qu’à l’évaluation stricte. Par conséquent, examinez vos processus et choisissez le type d’évaluation qui vous offre les meilleures performances.
 
 ## <a name="conclusion"></a>Conclusion
 
 Dans ce projet, nous avons vu comment :
-* utiliser des requêtes LINQ pour agréger des données en une séquence explicite ;
-* écrire des méthodes d’extension pour ajouter des fonctionnalités personnalisées aux requêtes LINQ ;
-* localiser les zones du code où les requêtes LINQ risquent de poser des problèmes de performances, comme une dégradation de la vitesse ;
-* utiliser l’évaluation paresseuse et l’évaluation stricte dans des requêtes LINQ, avec les implications que cela comporte sur les performances de requête.
+- utiliser des requêtes LINQ pour agréger des données en une séquence explicite ;
+- écrire des méthodes d’extension pour ajouter des fonctionnalités personnalisées aux requêtes LINQ ;
+- localiser les zones du code où les requêtes LINQ risquent de poser des problèmes de performances, comme une dégradation de la vitesse ;
+- utiliser l’évaluation paresseuse et l’évaluation stricte dans des requêtes LINQ, avec les implications que cela comporte sur les performances de requête.
 
 En dehors de LINQ, vous avez appris une technique de tour de cartes utilisée par les magiciens. Les magiciens utilisent le mélange faro pour pouvoir contrôler le déplacement de chaque carte dans le jeu. Maintenant que vous le savez, gardez le secret !
 
 Pour plus d’informations sur LINQ, voir :
-* [LINQ (Language Integrated Query)](../programming-guide/concepts/linq/index.md)
-    * [Introduction à LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    * [Bien démarrer avec LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ (Language Integrated Query)](../programming-guide/concepts/linq/index.md)
+    - [Introduction à LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [Bien démarrer avec LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [Opérations de requête LINQ de base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [Transformations de données avec LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
         - [Syntaxe de requête et syntaxe de méthode dans LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

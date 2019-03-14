@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759130"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680267"
 ---
 # <a name="net-api-analyzer"></a>Analyseur d’API .NET
 
@@ -44,7 +44,7 @@ Lorsqu’une API déconseillée, par exemple, <xref:System.Net.WebClient>, est u
 
 La fenêtre **Liste d’erreurs** contient des avertissements avec un ID unique par API déconseillée, comme dans l’exemple suivant (`DE004`) : 
 
-![« Capture d’écran de la fenêtre Liste d’erreurs affichant l’ID et la description de l’avertissement »](media/api-analyzer/warnings.jpg)
+![« Capture d’écran de la fenêtre Liste d’erreurs indiquant l’ID et la description de l’avertissement »](media/api-analyzer/warnings-id-and-descriptions.jpg "Fenêtre Liste d’erreurs comportant les avertissements.")
 
 En cliquant sur l’ID, vous accédez à une page web présentant des informations détaillées sur la raison pour laquelle l’API a été déconseillée, ainsi que des suggestions d’autres API utilisables.
 
@@ -112,5 +112,5 @@ L’utilisateur choisit le mode de traitement des diagnostics : en tant qu’av
 
 ## <a name="see-also"></a>Voir aussi
 
-- Billet de blog [Présentation de l’analyseur d’API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Billet de blog [Présentation de l’analyseur d’API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vidéo de démonstration sur YouTube de [l’analyseur d’API](https://youtu.be/eeBEahYXGd0).

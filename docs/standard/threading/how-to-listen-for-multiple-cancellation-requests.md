@@ -1,5 +1,5 @@
 ---
-title: "Comment : écouter plusieurs demandes d'annulation"
+title: 'Procédure : Écouter plusieurs demandes d’annulation'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178562"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680229"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Comment : écouter plusieurs demandes d'annulation
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procédure : Écouter plusieurs demandes d’annulation
 Cet exemple montre comment écouter simultanément deux jetons d’annulation afin de pouvoir annuler une opération si un des jetons le demande.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ Cet exemple montre comment écouter simultanément deux jetons d’annulation af
   
  Lorsque le jeton lié lève une <xref:System.OperationCanceledException>, le jeton transmis à l’exception est le jeton lié, et non un des jetons prédécesseurs. Pour déterminer quel jeton a été annulé, vérifiez directement l’état des jetons prédécesseurs.  
   
- Dans cet exemple, <xref:System.AggregateException> ne doit jamais être levée, mais elle est interceptée ici car, dans les scénarios réels, toutes les autres exceptions, hormis <xref:System.OperationCanceledException>, levées à partir du délégué de tâche sont encapsulées dans une <xref:System.OperationCanceledException>.  
+ Dans cet exemple, <xref:System.AggregateException> ne doit jamais être levée, mais elle est interceptée ici car, dans les scénarios réels, toutes les autres exceptions, hormis <xref:System.OperationCanceledException>, levées à partir du délégué de tâche sont encapsulées dans une <xref:System.AggregateException>.  
   
 ## <a name="see-also"></a>Voir aussi
 

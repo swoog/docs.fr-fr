@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549208"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492581"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembleur IL)
 
@@ -34,11 +34,11 @@ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
 | Argument | Description |
 | -------- | ----------- |
-|`filename`|Nom du fichier source .il. Ce fichier est composé de directives de déclaration de métadonnées et d'instructions IL symboliques. Plusieurs arguments du fichier source peuvent être fournis pour générer un seul fichier exécutable portable avec *Ilasm.exe*. **Remarque :** Vérifiez que la dernière ligne de code du fichier source .il comporte un espace blanc de fin ou un caractère de fin de ligne.|
+|`filename`|Nom du fichier source .il. Ce fichier est composé de directives de déclaration de métadonnées et d'instructions IL symboliques. Plusieurs arguments du fichier source peuvent être fournis pour générer un seul fichier exécutable portable avec *Ilasm.exe*. **Remarque :** vérifiez que la dernière ligne de code du fichier source .il comporte un espace blanc de fin ou un caractère de fin de ligne.|
 
 | Option | Description |
 | ------ | ----------- |
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > Aucune option d’*Ilasm.exe* ne respecte la casse et toutes se reconnaissent à leurs trois premières lettres. Par exemple, **/lis** équivaut à **/listing** et **/res:** myresfile.res équivaut à **/resource:** myresfile.res. Les options spécifiant des arguments prennent en charge les deux-points (:) ou le signe égal (=) en tant que séparateur entre l'option et l'argument. Par exemple, **/output**:*file.ext* équivaut à **/output**=*file.ext*.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L'Assembleur IL permet aux fournisseurs d'outils de concevoir et d'implémenter des générateurs IL. Avec *Ilasm.exe*, les développeurs d’outils et de compilateurs peuvent se concentrer sur le langage IL et la génération de métadonnées sans se préoccuper de l’émission du langage IL au format de fichier exécutable portable.
 

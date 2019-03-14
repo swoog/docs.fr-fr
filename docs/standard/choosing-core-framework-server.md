@@ -4,12 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828512"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678798"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur l’architecture en microservices, consultez [Mic
 
 Les conteneurs sont couramment utilisés conjointement avec une architecture en microservices. Les conteneurs peuvent également servir à mettre en conteneur des applications ou services web qui suivent un modèle d’architecture. Le .NET Framework peut être utilisé pour les conteneurs Windows, mais par sa modularité et sa légèreté, .NET Core est un meilleur choix pour les conteneurs. Quand vous créez et déployez un conteneur, la taille de son image est beaucoup plus petite avec .NET Core qu’avec le .NET Framework. Grâce à sa nature multiplateforme, vous pouvez déployer des applications serveur sur des conteneurs Docker Linux, par exemple.
 
-Les conteneurs Docker peuvent être hébergés dans votre propre infrastructure Windows ou Linux, ou dans un service cloud comme [Azure Container Service](https://azure.microsoft.com/services/container-service/). Azure Container Service peut gérer, orchestrer et mettre à l’échelle des applications basées sur le conteneur dans le cloud.
+Vous pouvez héberger les conteneurs Docker dans votre propre infrastructure Windows ou Linux, ou dans un service cloud comme [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/). Azure Kubernetes Service permet de gérer, d’orchestrer et de mettre à l’échelle des applications sur conteneur dans le cloud.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Besoin de systèmes scalables et hautes performances
 
@@ -77,7 +77,7 @@ Dans la plupart des cas, vous ne devez pas migrer vos applications existantes ve
 Les bibliothèques adoptent rapidement .NET Standard. .NET standard permet de partager du code sur toutes les implémentations de .NET, y compris .NET Core. Avec .NET 2.0 Standard, cela est encore plus simple :
 
 - La surface de l’API est désormais beaucoup plus grande. 
-- Un mode de compatibilité du .NET Framework a été introduit. Ce mode de compatibilité permet aux projets .NET Standard/.NET Core de référencer des bibliothèques .NET Framework. Pour en savoir plus sur le mode de compatibilité, consultez [Annonce de .NET 2.0 Standard](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
+- Un mode de compatibilité du .NET Framework a été introduit. Ce mode de compatibilité permet aux projets .NET Standard/.NET Core de référencer des bibliothèques .NET Framework. Pour en savoir plus sur le mode de compatibilité, consultez [Annonce de .NET 2.0 Standard](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Ainsi, seulement dans les cas où les bibliothèques ou les packages NuGet utilisent des technologies qui ne sont pas disponibles dans .NET Standard/.NET Core, vous devez utiliser le .NET Framework.
 
