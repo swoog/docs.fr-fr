@@ -5,5 +5,4 @@
 ## [Tableaux en escalier](jagged-arrays.md)
 ## [Utilisation de foreach avec des tableaux](using-foreach-with-arrays.md)
 ## [Passage de tableaux en tant qu’arguments](passing-arrays-as-arguments.md)
-## [Passage de tableaux à l’aide de paramètres ref et out](passing-arrays-using-ref-and-out.md)
 ## [Tableaux implicitement typés](implicitly-typed-arrays.md)
