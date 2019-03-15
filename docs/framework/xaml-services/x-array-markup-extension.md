@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699738"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047882"
 ---
 # <a name="xarray-markup-extension"></a>x:Array, extension de balisage
 Fournit la prise en charge générale pour les tableaux d’objets dans XAML via une extension de balisage. Cela correspond à la `x:ArrayExtension` type XAML dans [MS-XAML].  
@@ -46,9 +46,9 @@ Fournit la prise en charge générale pour les tableaux d’objets dans XAML via
   
  `x:Array` est une extension de balisage. Les extensions de balisage sont généralement implémentées pour éviter que les valeurs d’attribut ne soient autre chose que des valeurs littérales ou des noms de gestionnaire et lorsque l’exigence dépasse le cadre de la définition de convertisseurs de type sur certains types ou propriétés. `x:Array` est partiellement une exception à cette règle, car au lieu de fournir un traitement de valeur d’attribut de remplacement, `x:Array` fournit un autre traitement de son contenu de texte interne. Ce comportement permet aux types qui ne peuvent pas être pris en charge par un modèle de contenu existant d’être regroupés en un tableau et référencés plus loin dans le code-behind en accédant au tableau nommé ; Vous pouvez appeler <xref:System.Array> méthodes pour obtenir les éléments de tableau individuels.  
   
- Toutes les extensions de balisage dans XAML utilisent les accolades ({,} `)` dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter la valeur d’attribut. Pour plus d’informations sur les extensions de balisage en général, consultez [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Toutes les extensions de balisage dans XAML utilisent les accolades ({,} `)` dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter la valeur d’attribut. Pour plus d’informations sur les extensions de balisage en général, consultez [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- Dans XAML 2009, `x:Array` est défini en tant que langage primitif au lieu d’une extension de balisage. Pour plus d’informations, consultez [Types intégrés pour les Primitives de langage XAML commun](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ Dans XAML 2009, `x:Array` est défini en tant que langage primitif au lieu d’une extension de balisage. Pour plus d’informations, consultez [Types intégrés pour les Primitives de langage XAML commun](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Remarques sur l’utilisation WPF  
  En règle générale, les éléments objet qui remplissent un `x:Array` ne sont pas des éléments qui existent dans le [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] espace de noms XAML et requièrent un mappage de préfixe à un espace de noms XAML par défaut.  
@@ -67,8 +67,8 @@ Fournit la prise en charge générale pour les tableaux d’objets dans XAML via
   
  `</x:Array>`  
   
- Pour les types personnalisés qui sont utilisés comme éléments de tableau, la classe doit également en charge la configuration requise pour instanciée en XAML en tant qu’éléments de l’objet. Pour plus d’informations, consultez [XAML et Classes personnalisées pour WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Pour les types personnalisés qui sont utilisés comme éléments de tableau, la classe doit également en charge la configuration requise pour instanciée en XAML en tant qu’éléments de l’objet. Pour plus d’informations, consultez [XAML et Classes personnalisées pour WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Extensions de balisage et XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Types migrés de WPF vers System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

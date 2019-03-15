@@ -2,12 +2,12 @@
 title: Une source de ce nom a déjà été inscrite dans un autre journal des événements.
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: fa4e8a022db1bbc19bff38fd529066b0619add68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646107"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032152"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Une source de ce nom a déjà été inscrite dans un autre journal des événements.
 Il a été tenté d’écrire une entrée dans un journal d’événements dans lequel la source spécifiée est inscrite dans un autre journal d’événements.  
@@ -21,5 +21,5 @@ Il a été tenté d’écrire une entrée dans un journal d’événements dans 
 2.  Inscrivez la source dans le nouveau journal.  
   
 ## <a name="see-also"></a>Voir aussi
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
 
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

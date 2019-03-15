@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542252"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039405"
 ---
 # <a name="xshared-attribute"></a>x:Shared, attribut
 Lorsque la valeur `false`, modifie le comportement de récupération des ressources WPF afin que les requêtes des ressources attribuées créent une nouvelle instance pour chaque requête au lieu de partager la même instance pour toutes les demandes.  
@@ -33,7 +33,7 @@ Lorsque la valeur `false`, modifie le comportement de récupération des ressour
   
  Modification d’un objet qui est retourné via une API de ressource tel que <xref:System.Windows.FrameworkElement.FindResource%2A>, ou la modification d’un objet directement au sein d’un <xref:System.Windows.ResourceDictionary>, modifie la ressource d’origine. Si les références à cette ressource étaient des références de ressources dynamiques, les consommateurs de cette ressource obtiendront la ressource modifiée.  
   
- Si les références à la ressource étaient des références de ressources statiques, modifications apportées à la ressource après [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] le temps de traitement ne soient pas pertinentes. Pour plus d’informations sur les statiques et les références de ressources dynamiques, consultez [XAML ressources](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Si les références à la ressource étaient des références de ressources statiques, modifications apportées à la ressource après [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] le temps de traitement ne soient pas pertinentes. Pour plus d’informations sur les statiques et les références de ressources dynamiques, consultez [XAML ressources](../wpf/advanced/xaml-resources.md).  
   
  Spécification explicite `x:Shared="true"` s’observe rarement, car il s’agit déjà la valeur par défaut. S’il n’existe aucun code directe équivalent pour `x:Shared` dans WPF modèle d’objet ; il peut uniquement être spécifié dans une utilisation XAML et doit être traité par le comportement WPF par défaut ou dans un flux de nœud XAML intermédiaire sur le chemin de chargement si traité à l’aide de .NET Framework XAML Se des services et ses lecteurs XAML.  
   
@@ -51,5 +51,5 @@ Lorsque la valeur `false`, modifie le comportement de récupération des ressour
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.ResourceDictionary>
-- [Ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Éléments de base](../../../docs/framework/wpf/advanced/base-elements.md)
+- [Ressources XAML](../wpf/advanced/xaml-resources.md)
+- [Éléments de base](../wpf/advanced/base-elements.md)

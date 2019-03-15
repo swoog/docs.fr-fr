@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 95d9c0d23d9159758c1dbf9719ed64e6786fa427
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4f55ed9b5de2b96e19bbe78c1cc38baa7fff798f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288819"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034410"
 ---
 # <a name="drive-drivename-not-found"></a>Lecteur '\<nom_lecteur >' introuvable
 Le lecteur est introuvable. Soit votre connexion réseau a été perdue, soit le lecteur auquel vous essayez d’accéder est hors connexion ou n’existe pas.  
@@ -25,5 +25,5 @@ Le lecteur est introuvable. Soit votre connexion réseau a été perdue, soit le
 4.  Reconnectez-vous au réseau et réessayez.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Types d’erreurs](../../visual-basic/programming-guide/language-features/error-types.md)
 
+- [Types d’erreurs](../../visual-basic/programming-guide/language-features/error-types.md)
