@@ -2,12 +2,12 @@
 title: 'Procédure : Créer un service de flux de travail qui utilise un contrat de service existant'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06d4d4f6687979f4fd54e919ca6f236a5b5402e8
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705062"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843006"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procédure : Créer un service de flux de travail qui utilise un contrat de service existant
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offre une meilleure intégration entre les services Web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat.  
@@ -57,7 +57,7 @@ ms.locfileid: "57705062"
   
 4.  Dans **l’Explorateur de solutions**, ouvrez Service1.xamlx. Le service de workflow apparaît dans le concepteur.  
   
-5.  Sélectionnez le **séquence** activité. Dans la fenêtre Propriétés, cliquez sur le **...** bouton dans le **ImplementedContract** propriété. Dans le **éditeur de collections de Type** fenêtre qui s’affiche, cliquez sur le **Type** liste déroulante, puis sélectionnez le **rechercher des Types...** entrée. Dans le **rechercher et sélectionner un .net Type** boîte de dialogue, sous  **\<projet actif >**, ouvrez tous les sous-nœuds et sélectionnez **IBookService**. Cliquez sur **OK**. Dans le **éditeur de collections de Type** boîte de dialogue, cliquez sur **OK**.  
+5.  Sélectionnez le **séquence** activité. Dans la fenêtre Propriétés, cliquez sur le **...** bouton dans le **ImplementedContract** propriété. Dans le **éditeur de collections de Type** fenêtre qui s’affiche, cliquez sur le **Type** liste déroulante, puis sélectionnez le **rechercher des Types...** entrée. Dans le **rechercher et sélectionner un Type .NET** boîte de dialogue, sous  **\<projet actif >**, ouvrez tous les sous-nœuds et sélectionnez **IBookService**. Cliquez sur **OK**. Dans le **éditeur de collections de Type** boîte de dialogue, cliquez sur **OK**.  
   
 6.  Sélectionnez et supprimez le **ReceiveRequest** et **SendResponse** activités.  
   

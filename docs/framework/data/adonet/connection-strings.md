@@ -2,12 +2,12 @@
 title: Chaînes de connexion dans ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627562"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844870"
 ---
 # <a name="connection-strings-in-adonet"></a>Chaînes de connexion dans ADO.NET
 
@@ -16,9 +16,9 @@ Une chaîne de connexion contient des informations d'initialisation qui sont pas
 ## <a name="connection-string-syntax"></a>Syntaxe de chaîne de connexion
 
 Une chaîne de connexion est une liste délimitée par des points-virgules de paires clé/valeur de paramètre :
-  
+
     keyword1=value; keyword2=value;
-  
+
 Mots clés ne respectent pas la casse. Valeurs, toutefois, peuvent être la casse, en fonction de la source de données. Peuvent contenir des mots clés et valeurs [blancs](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espaces de début et de fin est ignoré dans les mots clés et guillemets valeurs.
 
 Si une valeur contient le point-virgule, [caractères de contrôle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), ou à gauche ou un espace blanc, elle doit figurer entre guillemets simples ou doubles. Exemple :
@@ -44,19 +44,21 @@ Fautes de frappe peut provoquer des erreurs. Par exemple, `Integrated Security=t
 
 Chaînes de connexion générées manuellement en cours d’exécution à partir de l’entrée utilisateur non validée sont vulnérables aux attaques par injection de chaîne et mettre en péril la sécurité au niveau de la source de données. Pour résoudre ces problèmes, *ADO.NET* 2.0 a introduit [générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md) pour chaque *.NET Framework* fournisseur de données. Ces générateurs de chaînes de connexion exposent des paramètres en tant que propriétés fortement typées et le rendent possible de valider la chaîne de connexion avant d’être envoyée à la source de données.
 
-## <a name="in-this-section"></a>Dans cette section  
- [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Montre comment utiliser les classes `ConnectionStringBuilder` pour générer des chaînes de connexion valides au moment de l'exécution.
-  
- [Chaînes de connexion et fichiers de configuration](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Montre comment stocker et extraire des chaînes de connexion dans des fichiers de configuration.
-  
- [Syntaxe des chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- Décrit comment configurer des chaînes de connexion spécifiques au fournisseur pour `SqlClient`, `OracleClient`, `OleDb` et `Odbc`.
-  
- [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Montre des techniques pour la protection des informations utilisées pour la connexion à une source de données.
-  
+## <a name="in-this-section"></a>Dans cette section
+
+[Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+Montre comment utiliser les classes `ConnectionStringBuilder` pour générer des chaînes de connexion valides au moment de l'exécution.
+
+[Chaînes de connexion et les fichiers de Configuration](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+Montre comment stocker et extraire des chaînes de connexion dans des fichiers de configuration.
+
+[Syntaxe de chaîne de connexion](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+Décrit comment configurer des chaînes de connexion spécifiques au fournisseur pour `SqlClient`, `OracleClient`, `OleDb` et `Odbc`.
+
+[Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+Montre des techniques pour la protection des informations utilisées pour la connexion à une source de données.
+
 ## <a name="see-also"></a>Voir aussi
+
 - [Connexion à une source de données](/cpp/data/odbc/connecting-to-a-data-source)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

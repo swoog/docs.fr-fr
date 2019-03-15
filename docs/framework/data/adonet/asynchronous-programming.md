@@ -2,12 +2,12 @@
 title: Programmation asynchrone
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366125"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846127"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -38,9 +38,9 @@ Pour plus d'informations sur la fonctionnalité de programmation asynchrone qui 
 
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .net 4.5 (partie 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .NET 4.5 (partie 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .net 4.5 (partie 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .NET 4.5 (partie 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 Lorsque votre interface utilisateur ne répond pas ou votre serveur ne monte pas en charge, il est probable que vous votre code doit être plus asynchrone. Écrire du code asynchrone implique en général l'installation d'un rappel (également appelé suite) pour exprimer la logique qui se produit après que l'opération asynchrone s'est terminée. Cela complique la structure du code asynchrone par rapport au code synchrone.
 

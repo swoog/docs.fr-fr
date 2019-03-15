@@ -2,12 +2,12 @@
 title: Référence des mots clés
 description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857903"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845292"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -50,7 +50,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`inline`|[Fonctions](functions/index.md)<br /><br />[Fonctions inline](functions/inline-functions.md)|Utilisé pour indiquer qu’une fonction qui doit être intégrée directement dans le code de l’appelant.|
 |`interface`|[Interfaces](interfaces.md)|Utilisé pour déclarer et implémenter des interfaces.|
 |`internal`|[Contrôle d'accès](access-control.md)|Permet de spécifier qu’un membre est visible à l’intérieur d’un assembly, mais pas à l’extérieur.|
-|`lazy`|[Calculs tardifs](lazy-computations.md)|Permet de spécifier un calcul qui doit être effectuée uniquement lorsqu’un résultat est nécessaire.|
+|`lazy`|[Expressions différées](lazy-expressions.md)|Permet de spécifier une expression qui doit être effectuée uniquement lorsqu’un résultat est nécessaire.|
 |`let`|[`let` liaisons](functions/let-bindings.md)|Utilisé pour associer ou lier, un nom à une valeur ou une fonction.|
 |`let!`|[Flux de travail asynchrones](asynchronous-workflows.md)<br /><br />[Expressions de calcul](computation-expressions.md)|Utilisé dans le flux de travail asynchrone pour lier un nom au résultat d’un calcul asynchrone, ou, dans d’autres expressions de calcul, utilisées pour lier un nom à un résultat, qui est du type de calcul.|
 |`match`|[Expressions match](match-expressions.md)|Utilisé pour créer une branche en comparant une valeur à un modèle.|

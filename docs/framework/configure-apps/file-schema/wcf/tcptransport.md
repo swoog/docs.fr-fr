@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272017"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845958"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Définit un transport TCP qui peut être utilisé par un canal pour transférer des messages pour une liaison personnalisée.  
@@ -49,7 +49,7 @@ Définit un transport TCP qui peut être utilisé par un canal pour transférer 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Obtient ou définit la limite de temps pour initialiser un canal à accepter.  Durée maximale de l'état d'initialisation du canal avant sa déconnexion (en secondes). Cette propriété détermine la durée d'authentification d'une connexion TCP à l'aide du protocole .NET Message Framing. Un client doit envoyer des données initiales avant que le serveur dispose de suffisamment d'informations pour exécuter l'authentification. La valeur par défaut est 30 secondes.|  
+|channelInitializationTimeout|Obtient ou définit la limite de temps pour initialiser un canal à accepter.  Durée maximale de l'état d'initialisation du canal avant sa déconnexion (en secondes). Ce quota inclut le temps qu'une connexion TCP peut prendre pour s’authentifier à l’aide du protocole .NET Message Framing. Un client doit envoyer des données initiales avant que le serveur dispose de suffisamment d'informations pour exécuter l'authentification. La valeur par défaut est 30 secondes.|  
 |connectionBufferSize|Obtient ou définit la taille de la mémoire tampon utilisée pour transmettre un bloc du message sérialisé sur le câble depuis le client ou le service.|  
 |hostNameComparisonMode|Obtient ou définit une valeur qui indique si le nom d'hôte est utilisé pour atteindre le service lors de la correspondance avec l'URI.|  
 |listenBacklog|Nombre maximal de demandes de connexion en file d'attente pouvant être en attente pour un service Web. L'attribut `connectionLeaseTimeout` limite la durée d'attente d'un client pour être connecté avant de lever une exception de connexion. Il s'agit d'une propriété de niveau socket qui contrôle le nombre maximal de demandes de connexion en file d'attente qui peuvent être en attente pour un service Web. Lorsque ListenBacklog est trop faible, WCF arrête acceptant les demandes et chute par conséquent les nouvelles connexions jusqu'à ce que le serveur accepte certaines des connexions existantes en file d’attente. La valeur par défaut est 16 * nombre de processeurs.|  

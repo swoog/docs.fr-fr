@@ -2,12 +2,12 @@
 title: Fonctionnalités spécifiques à Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721851"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846543"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Fonctionnalités spécifiques à Windows Workflow Foundation
 
@@ -101,7 +101,7 @@ Le schéma de configuration WCF est complexe et fournit aux utilisateurs plusieu
 
 - [Élément de point de terminaison standard](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Service des améliorations de configuration dans .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Améliorations de configuration de service dans .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Erreur utilisateur courante dans .NET 4 : Erreur de frappe le nom de Configuration du Service WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ Un utilisateur doit être invité à entrer des informations. Dans des circonsta
 
 ## <a name="wcf-routing-service"></a>Service de routage WCF
 
-Le Service de routage est conçu pour être une routeur qui vous permet de contrôler le flux des messages WCF entre vos clients et les services des logiciels générique. Le Service de routage vous permet de découpler vos clients à partir de vos services, qui vous donne beaucoup plus de liberté en termes de configurations que vous pouvez prendre en charge et la flexibilité que lorsque vous envisagez d’héberger vos services. Dans .NET 3.5, les clients et services ont été étroitement couplés ; un client devait connaître sur tous les services, il est nécessaire pour communiquer avec et où ils se trouvaient. Par ailleurs, WCF présentait les limitations suivantes dans .Net Framework 3.5 :
+Le Service de routage est conçu pour être une routeur qui vous permet de contrôler le flux des messages WCF entre vos clients et les services des logiciels générique. Le Service de routage vous permet de découpler vos clients à partir de vos services, qui vous donne beaucoup plus de liberté en termes de configurations que vous pouvez prendre en charge et la flexibilité que lorsque vous envisagez d’héberger vos services. Dans .NET 3.5, les clients et services ont été étroitement couplés ; un client devait connaître sur tous les services, il est nécessaire pour communiquer avec et où ils se trouvaient. En outre, WCF dans .NET Framework 3.5 limites était les suivantes :
 
 - La gestion des erreurs était complexe car cette logique devait être codée en dur côté client.
 
@@ -271,7 +271,7 @@ Le Service de routage est conçu pour être une routeur qui vous permet de contr
 
 - Les services étaient rarement conçus de manière appropriée : il est plus facile de faire communiquer le client avec un service qui implémente tout un ensemble, plutôt que de choisir entre plusieurs services.
 
-La conception du service de routage dans .Net 4 facilite la résolution de ces problèmes. Le nouveau service de routage présente les fonctionnalités suivantes :
+Le service de routage dans .NET 4 est conçu pour faciliter la résoudre ces problèmes. Le nouveau service de routage présente les fonctionnalités suivantes :
 
 1. Routage basé sur le contenu (les objets <xref:System.ServiceModel.Dispatcher.MessageFilter> examinent un message afin de déterminer sa destination.)
 
@@ -327,7 +327,7 @@ Un développeur ne souhaite pas coder en dur les points de terminaison car la da
 
 ## <a name="tracking"></a>Suivi
 
-Suivi de workflow fournit un aperçu de l’exécution d’une instance de workflow. Les événements de suivi sont émis à partir d’un flux de travail au niveau de l’instance de flux de travail et lorsque les activités dans le flux de travail s’exécutent. Un participant au suivi du flux de travail doit être ajouté à l'hôte du flux de travail pour s'abonner aux enregistrements de suivi. Les enregistrements de suivi sont filtrés à l'aide d'un profil de suivi. Le .Net Framework fournit un participant au suivi ETW (Event Tracing for Windows) et un profil de base est installé dans le fichier machine.config.
+Suivi de workflow fournit un aperçu de l’exécution d’une instance de workflow. Les événements de suivi sont émis à partir d’un flux de travail au niveau de l’instance de flux de travail et lorsque les activités dans le flux de travail s’exécutent. Un participant au suivi du flux de travail doit être ajouté à l'hôte du flux de travail pour s'abonner aux enregistrements de suivi. Les enregistrements de suivi sont filtrés à l'aide d'un profil de suivi. Le .NET Framework fournit un participant de suivi ETW (Event Tracing pour Windows), et un profil de base est installé dans le fichier machine.config.
 
 ### <a name="getting-started"></a>Prise en main
 

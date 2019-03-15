@@ -4,12 +4,12 @@ description: Moderniser des Applications .NET existantes avec le Cloud Azure et 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674937"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846257"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Procédures pas à pas et technique obtenir vue d’ensemble de prise en main
 
@@ -83,7 +83,7 @@ Les avantages de cette procédure pas à pas sont simples : Simplement vous fam
 Explorez ce contenu plus approfondi sur le wiki GitHub :
 
 - [Visite guidée sur la ligne de base ASP.NET MVC et les applications Web Forms « héritées »](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [Visite sur le service WCF de base et l’application « héritée » de WinForms (niveau 3)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Visite sur le service WCF de base et l’application « héritée » de WinForms (niveau 3)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Procédure pas à pas 2 : Conteneurisez vos applications .NET existantes avec les conteneurs Windows
 

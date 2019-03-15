@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711787"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843607"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Prise en charge de haute résolution dans les Windows Forms
 
-À compter de .NET Framework 4.7, Windows Forms inclut des améliorations pour la haute résolution courants et scénarios de résolution dynamiques. Elles incluent notamment : 
+À compter de .NET Framework 4.7, Windows Forms inclut des améliorations pour la haute résolution courants et scénarios de résolution dynamiques. Elles incluent notamment :
 
-- Améliorations de la mise à l’échelle et la disposition d’un nombre de Windows Forms des contrôles, tels que le <xref:System.Windows.Forms.MonthCalendar> contrôle et le <xref:System.Windows.Forms.CheckedListBox> contrôle. 
+- Améliorations de la mise à l’échelle et la disposition d’un nombre de Windows Forms des contrôles, tels que le <xref:System.Windows.Forms.MonthCalendar> contrôle et le <xref:System.Windows.Forms.CheckedListBox> contrôle.
 
 - Mise à l’échelle seul passage.  Dans le .NET Framework 4.6 et les versions antérieures, la mise à l’échelle a été effectuée via plusieurs passes, ce qui a provoqué des contrôles à l’échelle plus de données nécessaires.
 
@@ -30,7 +30,7 @@ Dans les versions du .NET Framework en commençant par le .NET Framework 4.7, un
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Configuration de votre application Windows Forms pour la prise en charge de haute résolution
 
-Les nouvelles fonctionnalités de Windows Forms qui prennent en charge de la prise en charge DPI élevé sont disponibles uniquement dans les applications qui ciblent le .NET Framework 4.7 et sont en cours d’exécution sur les systèmes d’exploitation Windows en commençant par Windows 10 Creators Update. 
+Les nouvelles fonctionnalités de Windows Forms qui prennent en charge de la prise en charge DPI élevé sont disponibles uniquement dans les applications qui ciblent le .NET Framework 4.7 et sont en cours d’exécution sur les systèmes d’exploitation Windows en commençant par Windows 10 Creators Update.
 
 En outre, pour configurer la prise en charge de haute résolution dans votre application Windows Forms, vous devez procédez comme suit :
 
@@ -49,27 +49,27 @@ En outre, pour configurer la prise en charge de haute résolution dans votre app
 
 - Activer la sensibilisation à la résolution par moniteur dans le *app.config* fichier.
 
-  Windows Forms propose un nouveau [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) élément pour prendre en charge les nouvelles fonctionnalités et les personnalisations ajoutées en commençant par le .NET Framework 4.7. Pour tirer parti des nouvelles fonctionnalités qui prennent en charge la haute résolution, ajoutez le code suivant au fichier de configuration de votre application.   
+  Windows Forms propose un nouveau [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) élément pour prendre en charge les nouvelles fonctionnalités et les personnalisations ajoutées en commençant par le .NET Framework 4.7. Pour tirer parti des nouvelles fonctionnalités qui prennent en charge la haute résolution, ajoutez le code suivant au fichier de configuration de votre application.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > Dans les versions précédentes du .NET Framework, vous avez utilisé le manifeste pour ajouter la prise en charge de haute résolution. Cette approche n’est plus recommandée, car il substitue les paramètres définis dans le fichier app.config.
-   
+
 - Appelez la méthode statique <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> (méthode).
-   
+
   Il doit s’agir du premier appel de méthode dans le point d’entrée de votre application. Exemple :
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ Définition de la `DpiAwareness` valeur `PerMonitorV2` Active les fonctionnalit�
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 Pour obtenir la liste des clés individuelles et leurs valeurs, consultez [élément de Configuration Add Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).

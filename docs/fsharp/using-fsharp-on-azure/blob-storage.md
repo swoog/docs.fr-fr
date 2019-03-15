@@ -3,12 +3,12 @@ title: Prise en main stockage Blob Azure à l’aideF#
 description: Store les données non structurées dans le cloud avec stockage Blob Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981905"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846426"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure avec F\#
 
@@ -102,14 +102,14 @@ Vous pouvez également des objets BLOB de nom avec les informations de chemin d�
 
 Par exemple, prenez l’ensemble suivant d’objets BLOB de blocs dans un conteneur nommé `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 Lorsque vous appelez `ListBlobs` sur un conteneur (comme dans l’exemple ci-dessus), une liste hiérarchique est retournée. Si elle contient à la fois `CloudBlobDirectory` et `CloudBlockBlob` objets représentant les répertoires et les objets BLOB du conteneur, respectivement, puis le résultat ressemble à ceci :
 

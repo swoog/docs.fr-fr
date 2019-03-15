@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845707"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Élément personnalisé pour NameValueSectionHandler et DictionarySectionHandler
 
 Définit les paramètres pour les sections de configuration personnalisées qui utilisent le <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> classes.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
 &nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>Attributs
@@ -37,7 +37,7 @@ Aucun.
 |     | Description |
 | --- | ----------- |
 | [**\<Ajouter >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) pour <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler>  | Ajoute des paramètres d’application personnalisés. |
-| [**\<Supprimer >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) pour <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> |    Supprime un paramètre défini précédemment. |
+| [**\<Supprimer >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) pour <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> | Supprime un paramètre défini précédemment. |
 | [**\<Désactivez >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) pour <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> | Efface tous les paramètres déjà définis dans une section. |
 
 ## <a name="remarks"></a>Notes
@@ -53,7 +53,7 @@ Le tableau suivant présente que le type d’objet de la méthode ConfigurationS
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment déclarer les sections qui utilisent le <xref:System.Configuration.DictionarySectionHandler> et <xref:System.Configuration.NameValueSectionHandler> classes. 
+L’exemple suivant montre comment déclarer les sections qui utilisent le <xref:System.Configuration.DictionarySectionHandler> et <xref:System.Configuration.NameValueSectionHandler> classes.
 
 Le premier élément personnalisé est  **\<dictionarySample >**, qui contient les paramètres lus par le <xref:System.Configuration.DictionarySectionHandler> classe dans le `System.dll` assembly. Le deuxième élément personnalisé est  **\<mySection >**, qui contient les paramètres lus par le <xref:System.Configuration.NameValueSectionHandler> classe dans le `System.dll` assembly.
 

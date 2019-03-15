@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680358"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844247"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Utilisez des outils Docker dans Visual Studio 2017 sur Windows
 
@@ -20,7 +20,8 @@ Le flux de travail de développeur lorsque vous utilisez les outils Docker inclu
 
 Avec les dernières versions de Docker pour Windows, il est plus facile que jamais pour développer des applications Docker, car le programme d’installation est simple, comme expliqué dans les références suivantes.
 
-> [! Pour en savoir plus sur l’installation de Docker pour Windows, accédez à des informations] (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Pour en savoir plus sur l’installation de Docker pour Windows, accédez à (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Prise en charge de docker dans Visual Studio 2017
 
@@ -83,7 +84,8 @@ Le tableau suivant peut vous aider à décider comment définir ces options.
 > [!WARNING]
 > Si le certificat SSL localhost n’est pas approuvé et que vous cochez la case pour supprimer l’invite, les demandes web HTTPS peuvent échouer lors de l’exécution dans votre application ou service. Dans ce cas, désactivez le **ne pas demander** case à cocher, exécuter votre projet et indiquer l’approbation à l’invite.
 
-> [! INFORMATIONS] pour plus d’informations sur la mise en œuvre des services et l’utilisation de Visual Studio Tools pour Docker, lisez les articles suivants :
+> [!TIP]
+> Pour plus d’informations sur la mise en œuvre des services et l’utilisation de Visual Studio Tools pour Docker, lisez les articles suivants :
 >
 >Débogage d’applications dans un conteneur Docker local : <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

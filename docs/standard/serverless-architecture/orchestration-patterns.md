@@ -4,12 +4,12 @@ description: Demande de tirage de fonctions durables Azure
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: c3b9dbe473ba9272a8c8c07cec86e11fcd9fc12d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8be499a24e2c5a94132ce07241e17f675e8a1274
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129309"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843756"
 ---
 # <a name="orchestration-patterns"></a>Modèles d’orchestration
 
@@ -154,7 +154,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 ## <a name="recommended-resources"></a>Ressources recommandées
 
 * [Azure Functions Durable](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Tests unitaires dans .NET Core et .NET Standard](https://docs.microsoft.com/dotnet/core/testing/)
+* [Tests unitaires dans .NET Core et .NET Standard](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
 >[Précédent](durable-azure-functions.md)
