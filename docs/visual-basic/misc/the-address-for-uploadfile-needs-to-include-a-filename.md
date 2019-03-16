@@ -4,22 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
-ms.openlocfilehash: e3e66fc08962a6d940e92d31825c506fc03e5fd3
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c5fa733c856d58ea3e8c0269012771b86c3ed8fe
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738589"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58040987"
 ---
-# <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a><span data-ttu-id="07b94-102">L’adresse de UploadFile doit inclure un nom de fichier</span><span class="sxs-lookup"><span data-stu-id="07b94-102">The address for UploadFile needs to include a filename</span></span>
-<span data-ttu-id="07b94-103">Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.</span><span class="sxs-lookup"><span data-stu-id="07b94-103">When uploading files with the `UploadFile` method, you must supply a file name in the destination path.</span></span>  
+# <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a><span data-ttu-id="6bb8e-102">L’adresse de UploadFile doit inclure un nom de fichier</span><span class="sxs-lookup"><span data-stu-id="6bb8e-102">The address for UploadFile needs to include a filename</span></span>
+<span data-ttu-id="6bb8e-103">Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.</span><span class="sxs-lookup"><span data-stu-id="6bb8e-103">When uploading files with the `UploadFile` method, you must supply a file name in the destination path.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="07b94-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="07b94-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6bb8e-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="6bb8e-104">To correct this error</span></span>  
   
--   <span data-ttu-id="07b94-105">Fournissez un nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="07b94-105">Supply a file name.</span></span>  
+-   <span data-ttu-id="6bb8e-105">Fournissez un nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="6bb8e-105">Supply a file name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07b94-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="07b94-106">See also</span></span>
-- <span data-ttu-id="07b94-107">[Opérations réseau dans le .NET Framework avec Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="07b94-107">[Network Operations in the .NET Framework with Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))</span></span>
-- [<span data-ttu-id="07b94-108">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="07b94-108">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)
-- [<span data-ttu-id="07b94-109">Guide pratique pour charger un fichier</span><span class="sxs-lookup"><span data-stu-id="07b94-109">How to: Upload a File</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
-- [<span data-ttu-id="07b94-110">My.Computer.Network.UploadFile</span><span class="sxs-lookup"><span data-stu-id="07b94-110">My.Computer.Network.UploadFile</span></span>](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
+## <a name="see-also"></a><span data-ttu-id="6bb8e-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6bb8e-106">See also</span></span>
+
+- <span data-ttu-id="6bb8e-107">[Opérations réseau dans le .NET Framework avec Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="6bb8e-107">[Network Operations in the .NET Framework with Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))</span></span>
+- [<span data-ttu-id="6bb8e-108">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="6bb8e-108">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)
+- [<span data-ttu-id="6bb8e-109">Guide pratique pour charger un fichier</span><span class="sxs-lookup"><span data-stu-id="6bb8e-109">How to: Upload a File</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [<span data-ttu-id="6bb8e-110">My.Computer.Network.UploadFile</span><span class="sxs-lookup"><span data-stu-id="6bb8e-110">My.Computer.Network.UploadFile</span></span>](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
