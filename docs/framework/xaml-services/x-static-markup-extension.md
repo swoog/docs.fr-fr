@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619319"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037685"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static, extension de balisage
 Fait référence à une entité de code par valeur statique qui est définie dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– manière conforme. La propriété statique qui est référencée peut être utilisée pour fournir la valeur d’une propriété dans XAML.  
@@ -51,7 +51,7 @@ Les opérations de recherche pour les propriétés statiques peuvent être effec
 
 Soyez prudent lorsque vous apportez `x:Static` références qui ne sont pas directement le type de valeur d’une propriété. Dans le XAML le traitement de séquence, les valeurs fournie d’une extension de balisage n’appellent pas une conversion de valeur supplémentaires. Cela est vrai même si votre `x:Static` référence crée une chaîne de texte et une conversion de valeur pour les valeurs d’attribut en fonction de chaîne de texte généralement se produit pour ce membre spécifique ou pour toutes les valeurs de membre de type de retour.  
 
-La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d'identificateur `x:Static` est assigné en tant que valeur <xref:System.Windows.Markup.StaticExtension.Member%2A> de la classe d'extension <xref:System.Windows.Markup.StaticExtension> sous-jacente.  
+La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d’identificateur `x:Static` est assigné en tant que valeur <xref:System.Windows.Markup.StaticExtension.Member%2A> de la classe d’extension <xref:System.Windows.Markup.StaticExtension> sous-jacente.  
 
 Il existe deux autres utilisations de XAML qui sont techniquement possibles. Toutefois, ces utilisations sont moins courantes, car elles sont inutilement détaillés :  
 
@@ -69,7 +69,7 @@ Il existe deux autres utilisations de XAML qui sont techniquement possibles. Tou
 
 Dans l’implémentation de Services XAML du .NET Framework, la gestion de cette extension de balisage est définie par le <xref:System.Windows.Markup.StaticExtension> classe.  
 
-`x:Static` est une extension de balisage. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit fournir une valeur. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+`x:Static` est une extension de balisage. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit fournir une valeur. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Remarques sur l’utilisation WPF  
  L’espace de noms XAML par défaut vous utilisez pour la programmation WPF ne contient pas de nombreuses propriétés statiques utiles, et la plupart des propriétés statiques utiles prennent en charge tels que les convertisseurs de type qui facilitent l’utilisation sans nécessiter de `{x:Static}` . Pour les propriétés statiques, vous devez mapper un préfixe pour un espace de noms XAML si une des opérations suivantes est vraie :  
@@ -78,10 +78,10 @@ Dans l’implémentation de Services XAML du .NET Framework, la gestion de cette
   
 -   Vous référencez un type à partir d’un assembly personnalisé.  
   
--   Vous référencez un type qui existe dans un assembly WPF, mais que le type se trouve dans un espace de noms CLR qui n’a pas été mappé comme faisant partie de l’espace de noms WPF par défaut XAML. Le mappage d’espaces de noms CLR dans l’espace de noms XAML par défaut pour WPF est exécuté par les définitions dans les différents assemblys WPF (pour plus d’informations sur ce concept, consultez [espaces de noms XAML et mappage Namespace pour WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Espaces de noms CLR non mappés peuvent exister si cet espace de noms CLR est composé principalement de définitions de classe qui sont généralement pas prévues pour XAML, telles que <xref:System.Windows.Threading>.  
+-   Vous référencez un type qui existe dans un assembly WPF, mais que le type se trouve dans un espace de noms CLR qui n’a pas été mappé comme faisant partie de l’espace de noms WPF par défaut XAML. Le mappage d’espaces de noms CLR dans l’espace de noms XAML par défaut pour WPF est exécuté par les définitions dans les différents assemblys WPF (pour plus d’informations sur ce concept, consultez [espaces de noms XAML et mappage Namespace pour WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Espaces de noms CLR non mappés peuvent exister si cet espace de noms CLR est composé principalement de définitions de classe qui sont généralement pas prévues pour XAML, telles que <xref:System.Windows.Threading>.  
   
- Pour plus d’informations sur l’utilisation des préfixes et espaces de noms XAML pour WPF, consultez [espaces de noms XAML et Namespace Mapping for WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Pour plus d’informations sur l’utilisation des préfixes et espaces de noms XAML pour WPF, consultez [espaces de noms XAML et Namespace Mapping for WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [x:Type, extension de balisage](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Type, extension de balisage](x-type-markup-extension.md)
+- [Types migrés de WPF vers System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
