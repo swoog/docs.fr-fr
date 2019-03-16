@@ -3044,12 +3044,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667659"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58022967"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Désolé, nous n'avons pas détails concernant cette erreur Visual Basic
 Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur. Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web. Ou bien, vous pouvez interroger d'autres développeurs au travers des forums suivants :  
@@ -3073,5 +3073,6 @@ Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cet
  [Ressources supplémentaires pour les programmeurs Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide de programmation Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Informations de référence sur Visual Basic](../../visual-basic/reference/index.md)

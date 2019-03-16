@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365722"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034747"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 
@@ -232,7 +232,7 @@ Certaines directives sont conçues spécifiquement pour fournir plus d'informati
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Comportement de XamlObjectWriter et ordre des nœuds
 
-Un nœud`StartObject` pour un <xref:System.Xaml.XamlObjectWriter> ne signifie pas nécessairement que le writer d'objet XAML doit immédiatement créer l'instance d'objet. Le code XAML inclut plusieurs fonctionnalités de langage, qui permettent d'initialiser un objet avec une entrée supplémentaire sans être forcé de compter entièrement sur l'appel d'un constructeur par défaut pour générer l'objet initial, et ensuite définir des propriétés. Ces fonctionnalités sont notamment les suivantes : <xref:System.Windows.Markup.XamlDeferLoadAttribute>; texte d'initialisation ; [x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); paramètres positionnels d'une extension de balisage ; méthodes de fabrique et nœuds [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) associés (XAML 2009). Chacun de ces cas retarde la construction de l'objet réel et, parce que le flux de nœud est réorganisé, le writer d'objet XAML peut compter sur un comportement de construction réelle de l'instance chaque fois qu'un membre de début rencontré n'est pas spécifiquement une directive de construction pour ce type d'objet.
+Un nœud`StartObject` pour un <xref:System.Xaml.XamlObjectWriter> ne signifie pas nécessairement que le writer d'objet XAML doit immédiatement créer l'instance d'objet. Le code XAML inclut plusieurs fonctionnalités de langage, qui permettent d'initialiser un objet avec une entrée supplémentaire sans être forcé de compter entièrement sur l'appel d'un constructeur par défaut pour générer l'objet initial, et ensuite définir des propriétés. Ces fonctionnalités sont notamment les suivantes : <xref:System.Windows.Markup.XamlDeferLoadAttribute>; texte d'initialisation ; [x: TypeArguments](x-typearguments-directive.md); paramètres positionnels d'une extension de balisage ; méthodes de fabrique et nœuds [x: Arguments](x-arguments-directive.md) associés (XAML 2009). Chacun de ces cas retarde la construction de l'objet réel et, parce que le flux de nœud est réorganisé, le writer d'objet XAML peut compter sur un comportement de construction réelle de l'instance chaque fois qu'un membre de début rencontré n'est pas spécifiquement une directive de construction pour ce type d'objet.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Un nœud`StartObject` pour un <xref:System.Xaml.XamlObjectWriter> ne signifie pa
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Xaml.XamlObjectReader>
-- [Services XAML](../../../docs/framework/xaml-services/index.md)
-- [Espaces de noms XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [Services XAML](index.md)
+- [Espaces de noms XAML](xaml-namespaces-for-net-framework-xaml-services.md)

@@ -2,12 +2,12 @@
 title: <address> n’est pas une adresse valide de fichier distant
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-ms.openlocfilehash: 805c7ea3363d465e6fd92c494246f8eafa81e301
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 65fded4d7f9316cda8724b262216de1ad01f9ee3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261545"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039583"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<adresse > n’est pas une adresse valide de fichier distant
 \<adresse > n’est pas une adresse valide de fichier distant. Une adresse valide doit inclure un protocole, un chemin et un nom de fichier.  
@@ -19,7 +19,7 @@ ms.locfileid: "55261545"
 -   Vérifiez l’adresse que vous avez spécifiée pour déterminer l’emplacement de l’erreur et indiquez les informations nécessaires.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
 - [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)
-- [Guide pratique pour Télécharger un fichier](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-
+- [Guide pratique pour télécharger un fichier](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641107"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050601"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code, type XAML intrinsèque
 Permet le placement du code au sein d’une production XAML. Ce code peut être compilé par une implémentation de processeur XAML qui compile XAML, ou à gauche dans la production XAML pour les utilisations ultérieures comme interprétation par un runtime.  
@@ -40,7 +40,7 @@ Permet le placement du code au sein d’une production XAML. Ce code peut être 
   
 -   Le `x:Code` élément de directive doit être un élément enfant immédiat de l’élément racine de la production XAML.  
   
--   [x : Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) doit être fourni sur l’élément racine parent.  
+-   [x : Class Directive](x-class-directive.md) doit être fourni sur l’élément racine parent.  
   
 -   Le code placé dans `x:Code` sera traité par compilation pour figurer dans la portée de la classe partielle qui est déjà en cours de création pour cette page XAML. Par conséquent, tout code que vous définissez doit être membres ou des variables de cette classe partielle.  
   
@@ -49,6 +49,6 @@ Permet le placement du code au sein d’une production XAML. Ce code peut être 
 -   Références aux entités de code en dehors de l’espace de noms CLR classe partielle doivent être qualifiés complet. Si les membres déclarés sont des remplacements pour les membres substituables de classe partielle, cela doit être spécifié avec le mot clé override de spécifique à la langue. Si les membres déclarés dans `x:Code` étendue sont en conflit avec les membres de la classe partielle créée à partir du XAML, de sorte que le compilateur signale le conflit, le fichier XAML ne peut pas compiler ou charger.  
   
 ## <a name="see-also"></a>Voir aussi
-- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Code-behind et XAML dans WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class, directive](x-class-directive.md)
+- [Code-behind et XAML dans WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

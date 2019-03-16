@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530100"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039468"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Attributs CLR XAML pour les bibliothèques et types personnalisés
 Cette rubrique décrit les attributs du common language runtime (CLR) qui sont définis par les Services XAML .NET Framework. Elle décrit également les autres attributs CLR définis dans le .NET Framework qui ont un scénario liés à XAML pour l’application à des assemblys ou des types. Attribution des assemblys, des types ou membres avec ces attributs CLR fournit des informations de système de type XAML relatives à vos types. Vous trouverez des informations à tout consommateur XAML qui utilise les Services XAML .NET Framework pour traiter le flux de nœud XAML directement ou via les lecteurs XAML dédiés et les writers XAML.  
@@ -81,7 +81,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **Arguments :** A <xref:System.Type> qui spécifie le type le plus précis pour que recherchent les `ProvideValue` résultat d’avec attributs <xref:System.Windows.Markup.MarkupExtension>.  
   
- Pour plus d’informations, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Pour plus d’informations, consultez [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Documentation de référence :**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **Arguments :** Chaîne qui spécifie le nom de la propriété de nom d’exécution sur le type avec attributs.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> signale une propriété du type avec attributs qui est mappé à le XAML [Directive x : Name](../../../docs/framework/xaml-services/x-name-directive.md). La propriété doit être de type <xref:System.String> et doit être en lecture/écriture.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> signale une propriété du type avec attributs qui est mappé à le XAML [Directive x : Name](x-name-directive.md). La propriété doit être de type <xref:System.String> et doit être en lecture/écriture.  
   
  Hérite de la définition de tous les types dérivés qui peuvent être assignés au type défini. Vous pouvez remplacer la définition d’un type dérivé spécifique en appliquant <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> sur spécifique au type dérivé.  
   
@@ -114,7 +114,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **Arguments :** Aucun.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> est appliqué aux types spécifiques qui peuvent apparaître comme éléments enfants dans un contenu significatif d’espaces blancs (contenu présent dans une collection qui a <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> s’applique principalement à l’enregistrement chemin d’accès, mais il est disponible dans le système de type XAML dans le chemin de chargement en examinant <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [blancs en XAML traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> est appliqué aux types spécifiques qui peuvent apparaître comme éléments enfants dans un contenu significatif d’espaces blancs (contenu présent dans une collection qui a <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> s’applique principalement à l’enregistrement chemin d’accès, mais il est disponible dans le système de type XAML dans le chemin de chargement en examinant <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [blancs en XAML traitement](whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Documentation de référence :**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  Vous appliquez le <xref:System.ComponentModel.TypeConverterAttribute> à votre type de référencement de votre implémentation de convertisseur de type d’attribut. Vous pouvez définir des convertisseurs de type pour XAML sur les classes, structures ou interfaces. Vous n’avez pas besoin de fournir une conversion de type pour les énumérations, que la conversion est activée en mode natif.  
   
- Votre convertisseur de type doit être en mesure de convertir une chaîne qui est utilisée pour les attributs ou le texte d’initialisation dans le balisage, dans le type de destination prévue. Pour plus d’informations, consultez [TypeConverters et XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Votre convertisseur de type doit être en mesure de convertir une chaîne qui est utilisée pour les attributs ou le texte d’initialisation dans le balisage, dans le type de destination prévue. Pour plus d’informations, consultez [TypeConverters et XAML](../wpf/advanced/typeconverters-and-xaml.md).  
   
  Plutôt que d’appliquer à toutes les valeurs d’un type, un comportement de convertisseur de type pour XAML peut également être établi sur une propriété spécifique. Dans ce cas, vous appliquez <xref:System.ComponentModel.TypeConverterAttribute> à la définition de propriété (la définition externe, et non pas la spécifique `get` et `set` définitions).  
   
@@ -142,7 +142,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **Arguments :** Chaîne qui fait référence à la propriété pertinente par nom.  
   
- Indique la propriété CLR d’une classe qui associe un alias le [Directive x : Uid](../../../docs/framework/xaml-services/x-uid-directive.md).  
+ Indique la propriété CLR d’une classe qui associe un alias le [Directive x : Uid](x-uid-directive.md).  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Documentation de référence :**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -169,7 +169,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **Arguments :** Aucun.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Indique qu’un type de collection doit être traité comme un espace blanc significatif par un processeur XAML, ce qui influence la construction des nœuds de valeur du flux de nœud XAML dans la collection. Pour plus d’informations, consultez [blancs en XAML traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Indique qu’un type de collection doit être traité comme un espace blanc significatif par un processeur XAML, ce qui influence la construction des nœuds de valeur du flux de nœud XAML dans la collection. Pour plus d’informations, consultez [blancs en XAML traitement](whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Documentation de référence :**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -270,4 +270,4 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Attribute>
-- [Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework](defining-custom-types-for-use-with-net-framework-xaml-services.md)

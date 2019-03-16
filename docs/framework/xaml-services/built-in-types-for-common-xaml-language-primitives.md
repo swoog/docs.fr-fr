@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839090"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048671"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Types intégrés pour les primitives associées au langage XAML courant
 XAML 2009 introduit la prise en charge de niveau de langage XAML pour plusieurs types de données qui sont des primitives fréquemment utilisées dans le Common Language Runtime (CLR) et dans d'autres langages de programmation. XAML 2009 ajoute la prise en charge des primitives suivantes : `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`et `x:Array`  
@@ -40,7 +40,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ```  
   
 <a name="xaml_2009_language_primitives"></a>   
-## <a name="xaml-2009-language-primitives"></a>Primitives de langage XAML 2009  
+## <a name="xaml-2009-language-primitives"></a>Primitives de langage XAML 2009  
  Par convention, les primitives de langage pour XAML et tous les autres éléments de langage XAML sont affichés, notamment le préfixe `x:` . C'est ainsi que les éléments de langage XAML sont généralement utilisés dans le balisage réel. Cette convention est suivie de la documentation conceptuelle pour XAML dans WPF, ainsi que dans la spécification XAML.  
   
 ### <a name="xobject"></a>x:Object  
@@ -66,14 +66,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdecimal"></a>x:Decimal  
  Pour le stockage CLR, la primitive `x:Decimal` correspond à <xref:System.Decimal>.  
   
- Notez que l'analyse XAML est effectuée fondamentalement par rapport à la culture `en-US`. Dans la culture `en-US` , le séparateur approprié pour les composants d'une valeur décimale est toujours le point (`.`), indépendamment des paramètres de culture de l'environnement de développement, ou de la cible cliente éventuelle où le code XAML est chargé au moment de l'exécution.  
+ Notez que l'analyse XAML est effectuée fondamentalement par rapport à la culture `en-US` . Dans la culture `en-US` , le séparateur approprié pour les composants d'une valeur décimale est toujours le point (`.`), indépendamment des paramètres de culture de l'environnement de développement, ou de la cible cliente éventuelle où le code XAML est chargé au moment de l'exécution.  
   
  Pour la définition de la spécification du langage XAML, consultez [ \[MS-XAML\] Sections 5.2.14 et 5.4.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xsingle"></a>x:Single  
  Pour le stockage CLR, la primitive `x:Single` correspond à <xref:System.Single>.  
   
- Outre les valeurs numériques, la syntaxe de texte de `x:Single` autorise également les jetons `Infinity`, `-Infinity` et `NaN`. Ces jetons sont traités avec respect de la casse.  
+ Outre les valeurs numériques, la syntaxe de texte de `x:Single` autorise également les jetons `Infinity`, `-Infinity`et `NaN`. Ces jetons sont traités avec respect de la casse.  
   
  `x:Single` peut prendre en charge les valeurs sous forme de notation scientifique, si le premier caractère dans la syntaxe de texte est `e` ou `E`.  
   
@@ -82,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  Pour le stockage CLR, la primitive `x:Double` correspond à <xref:System.Double>.  
   
- Outre les valeurs numériques, la syntaxe de texte de `x:Double` autorise les jetons `Infinity`, `-Infinity` et `NaN`. Ces jetons sont traités avec respect de la casse.  
+ Outre les valeurs numériques, la syntaxe de texte de `x:Double` autorise les jetons `Infinity`, `-Infinity`et `NaN`. Ces jetons sont traités avec respect de la casse.  
   
  `x:Double` peut prendre en charge les valeurs sous forme de notation scientifique. Utilisez le caractère `e` ou `E` pour introduire la partie exposant.  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  Pour le stockage CLR, la primitive `x:Array` correspond à <xref:System.Array>.  
   
- Vous pouvez définir un tableau dans XAML 2006 à l'aide d'une syntaxe d'extension de balisage ; toutefois, la syntaxe XAML 2009 est une primitive définie par le langage qui ne requiert pas l'accès à une extension de balisage. Pour plus d’informations sur la prise en charge de XAML 2006, consultez [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ Vous pouvez définir un tableau dans XAML 2006 à l'aide d'une syntaxe d'extension de balisage ; toutefois, la syntaxe XAML 2009 est une primitive définie par le langage qui ne requiert pas l'accès à une extension de balisage. Pour plus d’informations sur la prise en charge de XAML 2006, consultez [x:Array Markup Extension](x-array-markup-extension.md).  
   
  Pour la définition de la spécification du langage XAML, consultez [ \[MS-XAML\] Sections 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>Prise en charge de WPF  
  Dans WPF, vous pouvez utiliser les fonctionnalités XAML 2009, mais uniquement pour le code XAML qui n'est pas compilé par balisage. Le code XAML compilé par balisage pour WPF et la forme BAML du code XAML ne prennent actuellement pas en charge les mots clés et les fonctionnalités XAML 2009.  
   
- Un scénario où vous pouvez utiliser les fonctionnalités XAML 2009 avec WPF est si vous créez le XAML libre et suivie du chargement de ce XAML dans un graphique d’objet et le runtime WPF avec <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. Le WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> et son <xref:System.Windows.Markup.XamlReader.Load%2A> peut traiter les fonctionnalités et les mots clés du langage XAML 2009 dans une représentation de graphique d’objet valide.
+ La création de code XAML libre, suivie du chargement de ce code XAML dans une exécution de WPF et dans un graphique d'objets avec <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>constitue un scénario dans lequel vous pouvez utiliser les fonctionnalités XAML 2009 avec WPF. La classe <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> WPF et sa méthode <xref:System.Windows.Markup.XamlReader.Load%2A> peuvent traiter les mots clés de langage et fonctionnalités XAML 2009 dans une représentation de graphique d'objets valide.

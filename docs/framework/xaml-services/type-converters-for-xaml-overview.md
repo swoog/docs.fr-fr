@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659148"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049490"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Vue d'ensemble des convertisseurs de types pour XAML
 Les convertisseurs de type fournissent la logique nécessaire à un writer d'objet qui convertit une chaîne de balisage XAML en objets particuliers d'un graphique d'objets. Dans les services XAML .NET Framework, le convertisseur de type doit être une classe dérivée de <xref:System.ComponentModel.TypeConverter>. Certains convertisseurs prennent également en charge le chemin d'enregistrement XAML et peuvent être utilisés pour sérialiser un objet sous forme de chaîne dans le balisage de sérialisation. Cette rubrique décrit comment et quand les convertisseurs de type en XAML sont appelés, et fournit des conseils d'implémentation pour les substitutions de méthode de <xref:System.ComponentModel.TypeConverter>.  
@@ -29,7 +29,7 @@ Les convertisseurs de type fournissent la logique nécessaire à un writer d'obj
 >  Les directives de langage XAML n'utilisent pas de convertisseur de type.  
   
 ### <a name="type-converters-and-markup-extensions"></a>Convertisseurs de type et extensions de balisage  
- Les utilisations d'extension de balisage doivent être gérées par un processeur XAML avant qu'il ne recherche le type de propriété et d'autres considérations. Par exemple, si une propriété définie en tant qu'attribut a généralement une conversion de type, mais que dans un cas particulier, elle est définie par une utilisation d'extension de balisage, le comportement d'extension de balisage est traité en premier. Faire référence à un objet existant constitue une situation courante où il est nécessaire d'utiliser une extension de balisage. Pour ce scénario, un convertisseur de type sans état peut uniquement générer une nouvelle instance, ce qui n'est peut-être pas souhaitable. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Les utilisations d'extension de balisage doivent être gérées par un processeur XAML avant qu'il ne recherche le type de propriété et d'autres considérations. Par exemple, si une propriété définie en tant qu'attribut a généralement une conversion de type, mais que dans un cas particulier, elle est définie par une utilisation d'extension de balisage, le comportement d'extension de balisage est traité en premier. Faire référence à un objet existant constitue une situation courante où il est nécessaire d'utiliser une extension de balisage. Pour ce scénario, un convertisseur de type sans état peut uniquement générer une nouvelle instance, ce qui n'est peut-être pas souhaitable. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Convertisseurs de type natif  
  Dans les implémentations des services WPF et XAML de .NET, il existe certains types CLR qui ont la charge la conversion de type natif, toutefois, ces types CLR ne sont pas traditionnellement considérés comme des primitives. Un exemple d'un tel type est <xref:System.DateTime>. L'une des raisons réside dans le fonctionnement de l'architecture .NET Framework : le type <xref:System.DateTime> est défini dans mscorlib, la bibliothèque la plus élémentaire du .NET. <xref:System.DateTime> ne peut pas être attribué avec un attribut qui provient d'un autre assembly et qui présente une dépendance (<xref:System.ComponentModel.TypeConverterAttribute> vient de System) ; c'est pourquoi le mécanisme de découverte du convertisseur de type habituel par attribution ne peut pas être pris en charge. À la place, l'analyseur XAML dispose d'une liste des types qui doivent faire l'objet d'un traitement natif et traite ces types de la même façon que les véritables primitives. Dans le cas de <xref:System.DateTime>, ce traitement implique un appel à <xref:System.DateTime.Parse%2A>.  
@@ -60,7 +60,7 @@ Les convertisseurs de type fournissent la logique nécessaire à un writer d'obj
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> et <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sont des méthodes de support utilisées lorsqu'un service interroge les fonctions de l'implémentation <xref:System.ComponentModel.TypeConverter> . Vous devez implémenter ces méthodes pour retourner `true` dans des cas spécifiques au type pris en charge par les méthodes de conversion correspondantes de votre convertisseur. Pour le langage XAML, cela correspond généralement au type <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informations de culture et convertisseurs de type pour XAML  
- Chaque implémentation <xref:System.ComponentModel.TypeConverter> peut interpréter de façon unique ce qui constitue une chaîne valide dans le cadre d'une conversion ; elle peut également utiliser ou ignorer la description de type passée en tant que paramètres. Considération importante relative à la culture et à la conversion de type XAML : bien que l'utilisation de chaînes localisables en tant que valeurs d'attribut soit prise en charge par XAML, vous ne pouvez pas employer ces chaînes localisables comme entrée de convertisseur de type avec des spécifications de culture particulières. Cette restriction est due au fait que les convertisseurs de types des valeurs d'attribut XAML impliquent un comportement de traitement XAML de langage fixe qui utilise la culture `en-US` . Pour plus d’informations sur les raisons de conception de cette restriction, consultez la spécification du langage XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) ou [WPF Globalization and Localization Overview](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Chaque implémentation <xref:System.ComponentModel.TypeConverter> peut interpréter de façon unique ce qui constitue une chaîne valide dans le cadre d'une conversion ; elle peut également utiliser ou ignorer la description de type passée en tant que paramètres. Considération importante relative à la culture et à la conversion de type XAML : bien que l'utilisation de chaînes localisables en tant que valeurs d'attribut soit prise en charge par XAML, vous ne pouvez pas employer ces chaînes localisables comme entrée de convertisseur de type avec des spécifications de culture particulières. Cette restriction est due au fait que les convertisseurs de types des valeurs d'attribut XAML impliquent un comportement de traitement XAML de langage fixe qui utilise la culture `en-US` . Pour plus d’informations sur les raisons de conception de cette restriction, consultez la spécification du langage XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) ou [WPF Globalization and Localization Overview](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Par exemple, certaines cultures utilisent une virgule au lieu d'un point comme séparateur décimal pour les nombres sous forme de chaîne, ce qui peut poser un problème. Cette utilisation crée un conflit avec le comportement de nombreux convertisseurs de type existants, qui consiste à utiliser une virgule comme délimiteur. Le passage d'une culture via `xml:lang` dans le code XAML environnant ne résout pas le problème.  
   
@@ -101,7 +101,7 @@ Les convertisseurs de type fournissent la logique nécessaire à un writer d'obj
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Accès au contexte de fournisseur de services à partir d'une implémentation de l'extension du balisage  
- Les services disponibles sont les mêmes pour tous les convertisseurs de valeurs. La seule différence réside dans le mode de réception du contexte de service par chaque convertisseur de valeurs. L’accès aux services et les services disponibles sont documentés dans la rubrique [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Les services disponibles sont les mêmes pour tous les convertisseurs de valeurs. La seule différence réside dans le mode de réception du contexte de service par chaque convertisseur de valeurs. L’accès aux services et les services disponibles sont documentés dans la rubrique [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Convertisseurs de type et flux de nœud XAML  
@@ -109,5 +109,5 @@ Les convertisseurs de type fournissent la logique nécessaire à un writer d'obj
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [Convertisseurs de types et extensions de balisage pour XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Convertisseurs de types et extensions de balisage pour XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

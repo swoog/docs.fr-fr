@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e466775c2634c89e1357b90e028d3d83e248322
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684812"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046778"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
 Introduit une réponse à une erreur d’exécution ou Active une option du compilateur.  
@@ -35,4 +35,5 @@ Introduit une réponse à une erreur d’exécution ou Active une option du comp
  [Option Strict (instruction)](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mots clés](../../visual-basic/language-reference/keywords/index.md)
