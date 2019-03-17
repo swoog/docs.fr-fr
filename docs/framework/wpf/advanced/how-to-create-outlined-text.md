@@ -11,39 +11,34 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 409981e9c751144d26151210977a45b5e1eccf0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368149"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125939"
 ---
 # <a name="how-to-create-outlined-text"></a>Procédure : Créer du texte avec contour
 Dans la plupart des cas, lorsque vous ajoutez ornementation élaborée pour les chaînes de texte dans votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application, à l’aide de texte en termes d’une collection de caractères discrets, ou glyphes. Par exemple, Impossible de créer un pinceau dégradé linéaire et de l’appliquer à la <xref:System.Windows.Controls.Control.Foreground%2A> propriété d’un <xref:System.Windows.Controls.TextBox> objet. Lorsque vous affichez ou modifiez la zone de texte, le pinceau de dégradé linéaire est automatiquement appliqué à l’ensemble actuel de caractères dans la chaîne de texte.  
   
- ![Texte affiché avec un pinceau dégradé linéaire](./media/outlinedtext01.jpg "OutlinedText01")  
-Exemple d’un pinceau de dégradé linéaire appliqué à une zone de texte  
+ ![Texte affiché avec un pinceau de dégradé linéaire](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
   
  Toutefois, vous pouvez également convertir le texte en <xref:System.Windows.Media.Geometry> objets, ce qui vous permet de créer d’autres types de texte visuellement enrichi. Par exemple, vous pouvez créer un <xref:System.Windows.Media.Geometry> objet basé sur le contour d’une chaîne de texte.  
   
- ![Contour du texte à l’aide d’un pinceau dégradé linéaire](./media/outlinedtext02.jpg "OutlinedText02")  
-Exemple d’un pinceau de dégradé linéaire appliqué à la géométrie de contour du texte  
+ ![Contour du texte utilisant un pinceau de dégradé linéaire](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
  Lorsque le texte est converti en un <xref:System.Windows.Media.Geometry> de l’objet, il n’est plus une collection de caractères, vous ne pouvez pas modifier les caractères dans la chaîne de texte. Vous pouvez néanmoins modifier l’apparence du texte converti en changeant ses propriétés de trait et de remplissage. Le trait fait référence au contour du texte converti et le remplissage à la zone située à l’intérieur du contour du texte converti.  
   
  Les exemples suivants illustrent plusieurs façons de créer des effets visuels en modifiant le trait et le remplissage de texte converti.  
   
- ![Texte avec différentes couleurs de trait et de remplissage](./media/outlinedtext03.jpg "OutlinedText03")  
-Exemple de définition du trait et du remplissage de différentes couleurs  
+ ![Texte avec différentes couleurs de trait et de remplissage](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Texte avec pinceau image appliqué au trait](./media/outlinedtext04.jpg "OutlinedText04")  
-Exemple de pinceau image appliqué au trait  
+ ![Texte avec pinceau image appliqué au trait](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
  Il est également possible de modifier le rectangle de cadre englobant ou mise en surbrillance, du texte converti. L’exemple suivant illustre un moyen de créer des effets visuels en modifiant le trait et surbrillance du texte converti.  
   
- ![Texte avec pinceau image appliqué au trait](./media/outlinedtext05.jpg "OutlinedText05")  
-Exemple de pinceau image appliqué au trait et surbrillance  
-  
+ ![Texte avec pinceau image appliqué pour tracer et mettre en surbrillance](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+
 ## <a name="example"></a>Exemple  
  La clé pour la conversion de texte à un <xref:System.Windows.Media.Geometry> objet consiste à utiliser le <xref:System.Windows.Media.FormattedText> objet. Une fois que vous avez créé cet objet, vous pouvez utiliser la <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> et <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> méthodes pour convertir le texte à <xref:System.Windows.Media.Geometry> objets. La première méthode retourne la géométrie du texte mis en forme ; la deuxième méthode retourne que la géométrie de la mise en forme du texte de la zone de délimitation. L’exemple de code suivant montre comment créer un <xref:System.Windows.Media.FormattedText> objet et récupérer les géométries du texte mis en forme et son cadre englobant.  
   

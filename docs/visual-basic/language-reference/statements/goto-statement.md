@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968931"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125562"
 ---
 # <a name="goto-statement"></a>GoTo, instruction
 Crée une branche inconditionnelle vers une ligne spécifiée d’une procédure.  
@@ -54,8 +54,7 @@ GoTo line
   
  L’illustration suivante montre une `Try` imbriquée dans une autre. Différentes branches entre les blocs des deux constructions sont indiquées comme valide ou non valide.  
   
- ![Diagramme graphique de branchement dans des constructions Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Branches valides et non valides dans les constructions Try  
+ ![Diagramme graphique de branchement dans des constructions Try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `GoTo` instruction pour les étiquettes de ligne dans une procédure.  

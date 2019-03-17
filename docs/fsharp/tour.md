@@ -2,12 +2,12 @@
 title: Visite guidée de F#
 description: Examiner certaines des fonctionnalités clés de la langue dans cette visite guidée avec exemples de code de programmation F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968294"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125575"
 ---
 # <a name="tour-of-f"></a>Présentation du langage F\#
 
@@ -136,10 +136,6 @@ Suivez la méthode ci-dessus entraîne une erreur de compilation.
 [Correspondance de modèle](language-reference/pattern-matching.md) est la fonctionnalité du langage F# qui est correct pour l’exploitation de types F#.  Dans les exemples ci-dessus, vous avez probablement remarqué un peu de `match x with ...` syntaxe.  Cette construction permet au compilateur, ce qui peut comprendre la « forme » des types de données, à vous obliger à prendre en compte pour tous les cas possibles lors de l’utilisation d’un type de données via ce qui est connu comme Exhaustive des critères spéciaux.  Cela est incroyablement puissante est correcte et peut être intelligemment à « élèvent » ce qui serait normalement pas un problème d’exécution dans la compilation.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-Vous pouvez également utiliser la syntaxe raccourcie `function` construction de critères spéciaux, ce qui est utile lorsque vous écrivez des fonctions qui utilisent des [Application partielle](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Quelque chose que vous avez peut-être remarqué est l’utilisation de la `_` modèle.  Il s’agit du [modèle de caractère générique](language-reference/pattern-matching.md#wildcard-pattern), qui est une façon de dire « Peu importe ce que quelque chose est ».  Bien que pratique, vous pouvez accidentellement contourner Exhaustive des critères spéciaux et ne bénéficie plus des mises en conformité de la compilation si vous ne faites pas attention à l’aide de `_`.  Il est particulièrement adapté lorsque vous ne vous souciez certains éléments d’un type décomposé lorsque modèle mise en correspondance ou la clause finale lorsque vous avez énuméré tous les cas significatives dans une expression de critères spéciaux.
 

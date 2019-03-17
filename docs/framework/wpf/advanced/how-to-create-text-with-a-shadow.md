@@ -6,12 +6,12 @@ helpviewer_keywords:
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-ms.openlocfilehash: 4d200aa980e8f2e6d22291669dfb07db54a5f0c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370672"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125783"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Procédure : Créer du texte avec une ombre
 Les exemples de cette section indiquent comment créer un effet d’ombre pour du texte affiché.  
@@ -19,8 +19,7 @@ Les exemples de cette section indiquent comment créer un effet d’ombre pour d
 ## <a name="example"></a>Exemple  
  Le <xref:System.Windows.Media.Effects.DropShadowEffect> objet permet de créer des effets d’ombre pour une variété de dépôt [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objets. L’exemple suivant présente un effet d’ombre portée appliqué au texte. Dans ce cas, l’ombre est une ombre légère, ce qui signifie que sa couleur devient floue.  
   
- ![Ombre du texte avec adoucissement &#61; 0,25](./media/shadowtext01.jpg "ShadowText01")  
-Exemple de texte avec une ombre légère  
+ ![Ombre du texte avec adoucissement &#61; 0,25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
   
  Vous pouvez contrôler la largeur d’une ombre en définissant le <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> propriété. La valeur `4.0` indique une largeur d’ombre de 4 pixels. Vous pouvez contrôler la douceur, ou flou d’une ombre en modifiant le <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propriété. La valeur `0.0` indique aucun flou. L’exemple de code suivant montre comment créer une ombre légère.  
   
@@ -31,13 +30,11 @@ Exemple de texte avec une ombre légère
   
  L’exemple suivant présente un effet d’ombre portée marquée appliqué au texte. Dans ce cas, l’ombre n’est pas floue.  
   
- ![Ombre du texte avec adoucissement &#61; 0](./media/shadowtext02.jpg "ShadowText02")  
-Exemple de texte avec une ombre marquée  
+ ![Ombre du texte avec adoucissement &#61; 0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
   
  Vous pouvez créer une ombre en définissant le <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propriété `0.0`, qui indique qu’aucun flou n’est utilisé. Vous pouvez contrôler la direction de l’ombre en modifiant le <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> propriété. Définissez la valeur directionnelle de cette propriété à un degré entre `0` et `360`. L’illustration suivante montre les valeurs directionnelles du <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> paramètre de propriété.  
   
- ![Paramètre de degré DropShadow de l’ombre](./media/shadowtext08.png "ShadowText08")  
-Diagramme de direction DropShadow  
+ ![Paramètre de degré DropShadow de l’ombre](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
   
  L’exemple de code suivant montre comment créer une ombre marquée.  
   
@@ -48,8 +45,7 @@ Diagramme de direction DropShadow
   
  L’exemple suivant présente un effet de flou appliqué au texte.  
   
- ![Ombre du texte utilisant BlurBitmapEffect](./media/shadowtext06.jpg "ShadowText06")  
-Exemple de texte avec un effet de flou  
+ ![Ombre du texte utilisant BlurBitmapEffect](./media/how-to-create-text-with-a-shadow/text-shadow-blur-effect.jpg)  
   
  L’exemple de code suivant montre comment créer un effet de flou.  
   
@@ -60,8 +56,7 @@ Exemple de texte avec un effet de flou
   
  Le code suivant exemple utilise un <xref:System.Windows.Media.TranslateTransform> pour décaler le texte. Dans cet exemple, une copie légèrement décalée de texte en dessous du texte principal crée un effet d’ombre.  
   
- ![Ombre du texte utilisant TranslateTransform](./media/shadowtext07.jpg "ShadowText07")  
-Exemple de texte utilisant une transformation pour un effet d’ombre  
+ ![Ombre du texte utilisant TranslateTransform](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
   
  L’exemple de code suivant indique comment créer une transformation pour un effet d’ombre.  
   

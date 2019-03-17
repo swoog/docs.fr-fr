@@ -8,38 +8,38 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: cb3824d8a5a5674b83124301dbfbd5a3ba60effa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720616"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125887"
 ---
 # <a name="how-to-rotate-colors"></a>Procédure : Rotation des couleurs
 Rotation dans un espace de couleurs à quatre dimensions est difficile à visualiser. Nous pouvons facilitent la visualisation, choisissez de conserver un seul des composants de couleur fixe. Supposons que nous mettre d’accord conserver le composant alpha fixé à 1 (totalement opaque). Vous pouvez ensuite visualiser un espace de couleurs à trois dimensions avec des axes rouges, vert et bleus, comme indiqué dans l’illustration suivante.  
   
- ![Recoloriage](./media/recoloring03.gif "recoloring03")  
+ ![Illustration des rotation avec les axes de rouges, vert et bleus.](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
   
  Une couleur peut être considérée comme un point dans l’espace 3D. Par exemple, le point (1, 0, 0) dans l’espace représente la couleur rouge, et le point (0, 1, 0) dans l’espace représente la couleur verte.  
   
  L’illustration suivante montre ce que cela signifie pour faire pivoter la couleur (1, 0, 0) via un angle de 60 degrés dans le plan rouge-vert. Rotation d’un plan parallèle au plan rouge-vert peut être considérée comme une rotation sur l’axe bleu.  
   
- ![Recoloriage](./media/recoloring04.gif "recoloring04")  
+ ![Illustration qui montre une rotation sur l’axe bleu.](./media/how-to-rotate-colors/rotation-about-blue-axis.gif)  
   
- L’illustration suivante montre comment initialiser une matrice de couleurs pour effectuer des rotations sur chacun des trois axes de coordonnées (rouge, vert, bleu).  
+ L’illustration suivante montre comment initialiser une matrice de couleurs pour effectuer des rotations sur chacun des trois axes de coordonnées (rouge, vert, bleu) :  
   
- ![Recoloring](./media/recoloring05.gif "recoloring05")  
+ ![Initialiser une matrice de couleurs pour effectuer des rotations sur trois axes.](./media/how-to-rotate-colors/rotation-about-three-axes.gif)  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant prend une image qui est une couleur (1, 0, 0.6) et applique une rotation de 60 degrés autour de l’axe bleu. L’angle de rotation est balayé pour passer d’un plan parallèle au plan rouge-vert.  
   
- L’illustration suivante montre l’image d’origine sur la gauche et l’image pivoté de couleur sur la droite.  
+ L’illustration suivante montre l’image d’origine sur la gauche et l’image pivoté de couleur sur la droite :  
   
- ![Faire pivoter des couleurs](./media/colortrans5.png "colortrans5")  
+ ![Illustration qui montre l’image d’origine et image pivoté de couleur.](./media/how-to-rotate-colors/original-color-rotated-images.png)  
   
- L’illustration suivante montre une visualisation de la rotation de couleurs effectuée dans le code suivant.  
+ L’illustration suivante montre une visualisation de la rotation de couleurs effectuée dans le code suivant :
   
- ![Recoloriage](./media/recoloring06.gif "recoloring06")  
+ ![Illustration qui montre la visualisation de la rotation de couleur.](./media/how-to-rotate-colors/visualization-color-rotation.gif)  
   
  [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  

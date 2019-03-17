@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720395"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126225"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procédure : Créer un dégradé de tracé
 Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de personnaliser la façon dont vous remplissez une forme avec des couleurs progressifs. Par exemple, vous pouvez spécifier une couleur pour le centre d’un chemin d’accès et un autre pour la limite d’un chemin d’accès. Vous pouvez également spécifier des couleurs distinctes pour chacun des points le long de la limite d’un chemin d’accès.  
@@ -26,13 +26,13 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
   
 -   L’exemple suivant remplit une ellipse avec un pinceau de dégradé de chemin d’accès. La couleur centrale est définie sur le bleu et la couleur de la limite est définie sur « cyan ». L’illustration suivante montre l’ellipse remplie.  
   
-     ![Tracé en dégradé](./media/pathgradient1.png "pathgradient1")  
+     ![Tracé en dégradé remplit une ellipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Par défaut, un pinceau de dégradé de chemin d’accès ne s’étend pas au-delà de la limite du chemin d’accès. Si vous utilisez le pinceau à dégradé pour remplir une illustration qui s’étend au-delà de la limite du chemin d’accès, il se peut que la zone de l’écran en dehors du tracé ne sera pas remplie.  
   
-     L’illustration suivante montre que se passe-t-il si vous modifiez le <xref:System.Drawing.Graphics.FillEllipse%2A> appeler dans le code suivant à `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     L’illustration suivante montre que se passe-t-il si vous modifiez le <xref:System.Drawing.Graphics.FillEllipse%2A> appeler dans le code suivant à `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Tracé en dégradé](./media/pathgradient2.png "pathgradient2")  
+     ![Tracé en dégradé étendu au-delà des limites du chemin d’accès.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   L’exemple suivant dessine un dégradé de tracé sans un <xref:System.Drawing.Drawing2D.GraphicsPath> objet dans le code. Le particulier <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructeur dans l’exemple reçoit un tableau de points, mais ne nécessite pas un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Notez également que le <xref:System.Drawing.Drawing2D.PathGradientBrush> est utilisé pour remplir un rectangle, pas un chemin d’accès. Le rectangle est supérieur à la trajectoire fermée utilisé pour définir la brosse, le rectangle n’est pas dessiné par le pinceau. L’illustration suivante montre le rectangle (ligne en pointillés) et la partie du rectangle peint par le pinceau de dégradé de chemin d’accès.  
+-   L’exemple suivant dessine un dégradé de tracé sans un <xref:System.Drawing.Drawing2D.GraphicsPath> objet dans le code. Le particulier <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructeur dans l’exemple reçoit un tableau de points, mais ne nécessite pas un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Notez également que le <xref:System.Drawing.Drawing2D.PathGradientBrush> est utilisé pour remplir un rectangle, pas un chemin d’accès. Le rectangle est supérieur à la trajectoire fermée utilisé pour définir la brosse, le rectangle n’est pas dessiné par le pinceau. L’illustration suivante montre le rectangle (ligne en pointillés) et la partie du rectangle peint par le pinceau de dégradé de chemin d’accès : 
   
-     ![Dégradé](./media/gradient4.png "gradient4")  
+     ![Partie dégradée peinte par le pinceau de dégradé de chemin d’accès.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
   
      L'illustration suivante montre la sortie du code suivant. L’ellipse sur la gauche est aqua uniquement au point central. Les points de suspension à droite est aqua partout dans le chemin d’accès interne.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Effet de dégradé d’échelles de focus](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
   
      L’illustration suivante montre le triangle rempli avec le pinceau de dégradé de chemin d’accès personnalisé.  
   
-     ![Tracé en dégradé](./media/pathgradient4.png "pathgradient4")  
+     ![Triangle rempli avec un pinceau de dégradé de chemin d’accès personnalisé.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     L’illustration suivante montre l’ellipse remplie et le point central du pinceau de dégradé de chemin d’accès.  
+     L’illustration suivante montre l’ellipse remplie et le point central du pinceau de dégradé de chemin d’accès :  
   
-     ![Tracé en dégradé](./media/pathgradient5.png "pathgradient5")  
+     ![Tracé en dégradé avec rempli ellipse et le point central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Vous pouvez définir le point central d’un pinceau de dégradé de chemin d’accès à un emplacement en dehors du tracé qui a été utilisé pour construire le pinceau. L’exemple suivant remplace l’appel pour définir le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriété dans le code précédent.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     L’illustration suivante montre la sortie avec cette modification.  
+     L’illustration suivante montre la sortie avec cette modification :  
   
-     ![Tracé en dégradé](./media/pathgradient6.png "pathgradient6")  
+     ![Tracé en dégradé avec point central en dehors du tracé.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      Dans l’illustration précédente, les points à l’extrême droite de l’ellipse ne sont pas bleu pur (même s’ils sont très proches). Les couleurs de dégradé sont positionnés comme si le remplissage atteint le point (145, 35) où la couleur serait un bleu pur (0, 0, 255). Mais le remplissage n’atteint jamais (145, 35), car un pinceau à dégradé peint uniquement à l’intérieur de son chemin d’accès.  
   

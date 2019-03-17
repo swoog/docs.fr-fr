@@ -2,12 +2,12 @@
 title: Configuration du suivi d'un workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719401"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126199"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configuration du suivi d'un workflow
 
@@ -183,9 +183,9 @@ Pour afficher des enregistrements de suivi, procédez comme suit :
 
 6. Cliquez sur le **analyse** nœud et sélectionnez **Actualiser.** Les enregistrements de suivi doivent être visibles dans le volet central.
 
-L'image suivante montre des événements de suivi dans l'observateur d'événements.
+L’illustration suivante montre les événements de suivi dans l’Observateur d’événements :
 
-![Affichage de visionneuse d’événement des enregistrements de suivi](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![Capture d’écran de l’affichage de l’Observateur d’événements des enregistrements de suivi.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Enregistrement d'un ID de fournisseur spécifique à l'application
 

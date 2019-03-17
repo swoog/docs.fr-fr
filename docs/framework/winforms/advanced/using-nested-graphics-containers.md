@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714175"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125861"
 ---
 # <a name="using-nested-graphics-containers"></a>Utilisation de conteneurs graphiques imbriqués
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit des conteneurs que vous pouvez utiliser pour remplacer ou augmenter la partie de l’état dans temporairement un <xref:System.Drawing.Graphics> objet. Vous créez un conteneur en appelant le <xref:System.Drawing.Graphics.BeginContainer%2A> méthode d’un <xref:System.Drawing.Graphics> objet. Vous pouvez appeler <xref:System.Drawing.Graphics.BeginContainer%2A> à plusieurs reprises pour former des conteneurs imbriqués. Chaque appel à <xref:System.Drawing.Graphics.BeginContainer%2A> doit être associé à un appel à <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -25,9 +25,9 @@ ms.locfileid: "57714175"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- Dans le code précédent, le rectangle dessiné à l’intérieur du conteneur est modifié d’abord par la transformation universelle du conteneur (rotation), puis par la transformation universelle de la <xref:System.Drawing.Graphics> objet (translation). Le rectangle dessiné à l’extérieur du conteneur est transformé uniquement par la transformation universelle de la <xref:System.Drawing.Graphics> objet (translation). L’illustration suivante montre les deux rectangles.  
+ Dans le code précédent, le rectangle dessiné à l’intérieur du conteneur est modifié d’abord par la transformation universelle du conteneur (rotation), puis par la transformation universelle de la <xref:System.Drawing.Graphics> objet (translation). Le rectangle dessiné à l’extérieur du conteneur est transformé uniquement par la transformation universelle de la <xref:System.Drawing.Graphics> objet (translation). L’illustration suivante montre les deux rectangles : 
   
- ![Imbriquée de conteneurs](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Illustration des conteneurs imbriqués.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>Découpage dans les conteneurs imbriqués  
  L’exemple suivant montre les conteneurs imbriqués comment gérer les régions de découpage. Le code crée un <xref:System.Drawing.Graphics> objet et un conteneur dans qui <xref:System.Drawing.Graphics> objet. La zone de découpage de le <xref:System.Drawing.Graphics> objet est un rectangle et la zone de découpage du conteneur est une ellipse. Le code effectue deux appels à la <xref:System.Drawing.Graphics.DrawLine%2A> (méthode). Le premier appel à <xref:System.Drawing.Graphics.DrawLine%2A> se trouve dans le conteneur et le deuxième appel à <xref:System.Drawing.Graphics.DrawLine%2A> est en dehors du conteneur (après l’appel à <xref:System.Drawing.Graphics.EndContainer%2A>). La première ligne est découpée par l’intersection des deux régions de découpage. La deuxième ligne est découpée par la région de découpage rectangulaire de la <xref:System.Drawing.Graphics> objet.  
@@ -35,9 +35,9 @@ ms.locfileid: "57714175"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- L’illustration suivante montre les deux traits découpés.  
+ L’illustration suivante montre les deux lignes ajustées :
   
- ![Imbriqué conteneur](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![Illustration qui montre un conteneur imbriqué avec traits découpés.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  Comme les deux exemples précédents montrent, les transformations et les régions de découpage sont cumulatifs dans des conteneurs imbriqués. Si vous définissez les transformations universelles du conteneur et le <xref:System.Drawing.Graphics> de l’objet, les deux transformations s’appliqueront aux éléments dessinés à l’intérieur du conteneur. La transformation du conteneur sera appliquée en premier et la transformation de la <xref:System.Drawing.Graphics> objet s’appliquera ensuite. Si vous définissez les régions de découpage du conteneur et le <xref:System.Drawing.Graphics> de l’objet, les éléments dessinés à l’intérieur du conteneur seront découpés par l’intersection des deux régions de découpage.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714175"
   
  L’illustration suivante montre les trois chaînes. Les chaînes dessinées dans le conteneur interne et à partir de la <xref:System.Drawing.Graphics> objet sont lissées par l’anticrénelage. La chaîne dessinée dans le conteneur externe n’est pas lissée par l’anticrénelage car le <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriété est définie sur <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Imbriquée de conteneurs](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![Illustration qui affiche les chaînes issues des conteneurs imbriqués.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Drawing.Graphics>
