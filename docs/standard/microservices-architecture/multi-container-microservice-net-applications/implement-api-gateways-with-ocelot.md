@@ -4,12 +4,12 @@ description: Découvrez comment implémenter des passerelles d’API avec Ocelot
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679487"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846101"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implémenter des passerelles API avec Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Toutefois, l’entrée redirige simplement les requêtes HTTP et n’essaie pas 
 
 Le fait d’avoir un niveau Nginx d’entrée dans Kubernetes en face des applications web, ainsi que plusieurs passerelles d’API/BFF Ocelot, constitue l’architecture idéale, telle qu’elle est illustrée dans le diagramme suivant.
 
- ![Une entrée Kubernetes agit comme un proxy inverse pour tout le trafic vers l’application, notamment les applications web, qui sont généralement en dehors de l’étendue de la passerelle API.](./media/image41.png)
+![Une entrée Kubernetes agit comme un proxy inverse pour tout le trafic vers l’application, notamment les applications web, qui sont généralement en dehors de l’étendue de la passerelle API.](./media/image41.png)
 
 **Figure 6-41.** Niveau d’entrée dans eShopOnContainers lors d’un déploiement dans Kubernetes
 
 Quand vous déployez eShopOnContainers dans Kubernetes, il expose simplement quelques services ou points de terminaison via _l’entrée_, en fait la liste suivante de suffixes sur les URL :
 
--   `/` pour l’application web SPA cliente
--   `/webmvc` pour l’application web MVC cliente
--   `/webstatus` pour l’application web cliente affichant l’état/les vérifications d’intégrité
--   `/webshoppingapigw` pour les processus métier d’achat et BFF web
--   `/webmarketingapigw` pour les processus métier marketing et BFF web
--   `/mobileshoppingapigw` pour les processus métier d’achat et BFF mobiles
--   `/mobilemarketingapigw` pour les processus métier marketing et BFF mobiles
+- `/` pour l’application web SPA cliente
+- `/webmvc` pour l’application web MVC cliente
+- `/webstatus` pour l’application web cliente affichant l’état/les vérifications d’intégrité
+- `/webshoppingapigw` pour les processus métier d’achat et BFF web
+- `/webmarketingapigw` pour les processus métier marketing et BFF web
+- `/mobileshoppingapigw` pour les processus métier d’achat et BFF mobiles
+- `/mobilemarketingapigw` pour les processus métier marketing et BFF mobiles
 
 Lorsque vous déployez dans Kubernetes, chaque passerelle d’API Ocelot utilise un fichier « configuration.json » différent pour chaque _pod_ exécutant les passerelles d’API. Ces fichiers « configuration.json » sont fournis en montant (initialement avec le script deploy.ps1) un volume créé sur la base d’une _carte de configuration_ Kubernetes et nommé « ocelot ». Chaque conteneur monte le fichier de configuration qui lui est associé dans le dossier du conteneur nommé `/app/configuration`.
 

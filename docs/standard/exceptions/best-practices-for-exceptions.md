@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: e069e9556b02221a91dafdd9f224940aed8476b8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030423"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845932"
 ---
 # <a name="best-practices-for-exceptions"></a>Bonnes pratiques pour les exceptions
 
@@ -32,13 +32,13 @@ En ce qui concerne les conditions susceptibles de se produire, mais pouvant déc
 
 [!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
 [!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]  
+[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 Si vous ne vérifiez pas l’état de la connexion avant de la fermer, vous pouvez intercepter l’exception `InvalidOperationException`.
 
 [!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
 [!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]  
+[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 Le choix de la méthode dépend de la fréquence à laquelle l’événement doit se produire.
 
@@ -52,7 +52,7 @@ Une classe peut fournir des méthodes ou propriétés qui vous permettent d’é
 
 [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
+[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 Un autre moyen d’éviter les exceptions est de retourner `null` pour les cas d’erreur très répandus au lieu de lever une exception. Un cas d'erreur très répandu peut être considéré comme un flux de contrôle normal. En retournant `null` dans ces cas-là, vous réduisez l’impact sur les performances d’une application.
 
@@ -74,23 +74,23 @@ Quand une exception personnalisée est nécessaire, nommez-la de manière approp
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]  
+[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>Inclure trois constructeurs dans des classes d’exception personnalisées
 
 Utilisez au moins les trois constructeurs communs pendant la création de vos propres classes d’exception : le constructeur par défaut, un constructeur qui prend un message de type chaîne et un constructeur qui prend un message de type chaîne et une exception interne.
 
 * <xref:System.Exception.%23ctor>, qui utilise les valeurs par défaut.
-  
-* <xref:System.Exception.%23ctor%28System.String%29>, qui accepte un message de type chaîne.  
-  
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, qui accepte un message de type chaîne et une exception interne.  
-  
+
+* <xref:System.Exception.%23ctor%28System.String%29>, qui accepte un message de type chaîne.
+
+* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, qui accepte un message de type chaîne et une exception interne.
+
 Pour voir un exemple, consultez [Comment : Créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Vérifier que les données d’exception sont disponibles quand le code s’exécute à distance
 
-Quand vous créez des exceptions définies par l’utilisateur, vous devez vérifier que les métadonnées des exceptions sont disponibles pour le code qui s’exécute à distance. 
+Quand vous créez des exceptions définies par l’utilisateur, vous devez vérifier que les métadonnées des exceptions sont disponibles pour le code qui s’exécute à distance.
 
 Par exemple, sur les implémentations .NET qui prennent en charge des domaines d’application, des exceptions peuvent se produire entre domaines d’application. Supposons que le domaine d’application A crée le domaine d’application B, lequel exécute du code qui lève une exception. Pour que le domaine d’application A intercepte et gère l’exception correctement, il doit pouvoir trouver l’assembly qui contient l’exception levée par le domaine d’application B. Si le domaine d’application B lève une exception qui est contenue dans un assembly sous sa base d’application, mais pas sous la base d’application du domaine d’application A, le domaine d’application A ne peut pas trouver l’exception et le Common Language Runtime lève une exception <xref:System.IO.FileNotFoundException>. Pour éviter cette situation, vous pouvez déployer l'assembly qui contient les informations sur les exceptions de deux façons :
 
@@ -106,7 +106,7 @@ Par exemple, sur les implémentations .NET qui prennent en charge des domaines d
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>Inclure une chaîne de message localisée dans chaque exception
 
-Le message d’erreur que l’utilisateur voit est dérivé de la propriété <xref:System.Exception.Message?displayProperty=nameWithType> de l’exception qui a été levée, et non pas du nom de la classe d’exception. En règle générale, vous affectez une valeur à la propriété <xref:System.Exception.Message?displayProperty=nameWithType> en passant la chaîne de message à l’argument `message` d’un [constructeur d’exception](xref:System.Exception.%23ctor%2A). 
+Le message d’erreur que l’utilisateur voit est dérivé de la propriété <xref:System.Exception.Message?displayProperty=nameWithType> de l’exception qui a été levée, et non pas du nom de la classe d’exception. En règle générale, vous affectez une valeur à la propriété <xref:System.Exception.Message?displayProperty=nameWithType> en passant la chaîne de message à l’argument `message` d’un [constructeur d’exception](xref:System.Exception.%23ctor%2A).
 
 Pour les applications localisées, vous devez fournir une chaîne de message localisée pour chaque exception que votre application peut lever. Vous utilisez des fichiers de ressources pour fournir les messages d’erreur localisés. Pour plus d’informations sur la localisation d’applications et la récupération des chaînes localisées, consultez [Ressources dans les applications pour poste de travail](../../framework/resources/index.md) et <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
@@ -124,8 +124,8 @@ Il est fréquent qu'une classe lève la même exception à partir de différents
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
-  
+[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+
 Dans certains cas, il est plus approprié d’utiliser le constructeur de l’exception pour générer l’exception. Par exemple, une classe d’exception globale comme <xref:System.ArgumentException>.
 
 ## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Restaurer l’état quand les méthodes ne sont pas exécutées en raison d’exceptions
@@ -136,7 +136,7 @@ Les appelants doivent supposer qu'il n'y a aucun effet secondaire quand une exce
 public void TransferFunds(Account from, Account to, decimal amount)
 {
     from.Withdrawal(amount);
-    // If the deposit fails, the withdrawal shouldn't remain in effect. 
+    // If the deposit fails, the withdrawal shouldn't remain in effect.
     to.Deposit(amount);
 }
 ```

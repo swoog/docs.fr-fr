@@ -3,12 +3,12 @@ title: Bien démarrer avec la transformation de la syntaxe (API Roslyn)
 description: Une introduction à la façon de parcourir et d’interroger les arborescences de syntaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122564"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788438"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Bien démarrer avec la transformation de la syntaxe
 
@@ -152,7 +152,7 @@ Ajoutez maintenant cette instruction pour lier l’expression de l’initialiseu
 
 Enfin, ajoutez l’instruction `if` suivante pour remplacer le nom de type existant par le mot clé `var` si le type de l’expression de l’initialiseur correspond au type spécifié :
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 Cette condition est nécessaire car la déclaration peut effectuer un cast de l’expression de l’initialiseur dans une classe de base ou une interface. Si vous le souhaitez, les types à gauche et à droite de l’affectation ne correspondent pas. Dans ce cas, la suppression du type explicite modifierait la sémantique d’un programme. `var` est spécifié comme un identificateur plutôt qu’un mot clé car `var` est un mot clé contextuel. Les trivias de début et de fin (espaces blancs) sont transférés de l’ancien nom de type vers le mot clé `var` afin de conserver les espaces blancs verticaux et l’indentation. Il est plus simple d’utiliser `ReplaceNode` plutôt que `With*` pour transformer la <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, car le nom de type est en fait le petit-enfant de l’instruction de déclaration.
 

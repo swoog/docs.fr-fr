@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 99f17f713a1193e82ad64036a4b3f5e0caa20fd7
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677745"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845971"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test d’applications web et de services ASP.NET Core
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 - **Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Site officiel. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -128,7 +128,7 @@ public class PrimeWebDefaultRequestShould
 
 Comme mentionné précédemment, lorsque vous testez des applications à plusieurs conteneurs, tous les microservices doivent être exécutés au sein de l’hôte Docker ou du cluster de conteneurs. Les tests de service de bout en bout qui incluent plusieurs opérations impliquant plusieurs microservices nécessitent le déploiement et le démarrage de l’application entière dans l’hôte Docker en exécutant docker-compose up (ou d’un mécanisme comparable si vous utilisez un orchestrateur). Une fois que l’application entière et tous ses services sont exécutés, vous pouvez exécuter des tests d’intégration et des tests fonctionnels de bout en bout.
 
-Il existe pour cela plusieurs méthodes. Dans le fichier docker-compose.yml que vous utilisez pour déployer l’application au niveau de la solution, vous pouvez développer le point d’entrée pour utiliser la commande [dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test). Vous pouvez également utiliser un autre fichier Compose pour exécuter vos tests dans l’image que vous ciblez. En utilisant un autre fichier Compose pour les tests d’intégration comprenant vos microservices et vos bases de données dans des conteneurs, vous pouvez être sûr que les données associées sont toujours réinitialisées à leur état d’origine avant d’exécuter les tests.
+Il existe pour cela plusieurs méthodes. Dans le fichier docker-compose.yml que vous utilisez pour déployer l’application au niveau de la solution, vous pouvez développer le point d’entrée pour utiliser la commande [dotnet test](../../../core/tools/dotnet-test.md). Vous pouvez également utiliser un autre fichier Compose pour exécuter vos tests dans l’image que vous ciblez. En utilisant un autre fichier Compose pour les tests d’intégration comprenant vos microservices et vos bases de données dans des conteneurs, vous pouvez être sûr que les données associées sont toujours réinitialisées à leur état d’origine avant d’exécuter les tests.
 
 Une fois que l’application Compose est fonctionnelle, vous pouvez tirer parti des points d’arrêt et des exceptions si vous exécutez Visual Studio. Vous pouvez également exécuter les tests d’intégration automatiquement dans votre pipeline d’intégration continue dans Azure DevOps Services, ou dans un autre système d’intégration ou de livraison continue prenant en charge les conteneurs Docker.
 

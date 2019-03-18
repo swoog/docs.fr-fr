@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836550"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846465"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que développeur, vous pouvez développer dans l'un des nombreux langages qui ciblent le .NET Framework, tels que C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL et Windows PowerShell. Vous pouvez accéder aux types et aux membres des bibliothèques de classes développées pour le .NET Framework sans avoir à connaître le langage dans lequel ils ont été initialement écrits ni à suivre les conventions du langage d'origine. Si vous développez des composants, votre composant est accessible par toute application .NET Framework, indépendamment de son langage.  
@@ -209,7 +209,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
- Pour supprimer les avertissements du compilateur, remplacez les types non conformes à CLS de l'interface publique `InvoiceItem` par des types conformes :  
+ Pour supprimer les avertissements du compilateur, remplacez les types non conforme à CLS de l'interface publique `InvoiceItem` par des types conformes :  
   
  [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
  [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
@@ -343,7 +343,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 ### <a name="member-accessibility"></a>Accessibilité des membres  
  Le remplacement d'un membre hérité ne peut pas modifier l'accessibilité de ce membre. Par exemple, une méthode publique dans une classe de base ne peut pas être remplacée par une méthode privée dans une classe dérivée. Il existe une exception : un membre `protected internal` (en C#) ou `Protected Friend` (en Visual Basic) dans un assembly qui est remplacé par un type dans un autre assembly. Dans ce cas, l'accessibilité du remplacement est `Protected`.  
   
- L'exemple suivant illustre l'erreur générée lorsque l'attribut <xref:System.CLSCompliantAttribute> a la valeur `true`, et que `Person`, qui est une classe dérivée de `Animal`, essaie de remplacer l'accessibilité publique de la propriété `Species` par une accessibilité privée. L'exemple se compile correctement si son accessibilité devient publique.  
+ L'exemple suivant illustre l'erreur générée lorsque l'attribut <xref:System.CLSCompliantAttribute> a la valeur `true`, et que `Human`, qui est une classe dérivée de `Animal`, essaie de remplacer l'accessibilité publique de la propriété `Species` par une accessibilité privée. L'exemple se compile correctement si son accessibilité devient publique.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

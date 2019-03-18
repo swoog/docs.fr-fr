@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287818"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018746"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Éléments obsolètes dans la bibliothèque de classes .NET Framework
 Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et membres de type qui fournissent de nouvelles fonctionnalités. Les types existants et leurs membres évoluent aussi. Par exemple, certains types deviennent moins importants quand la technologie qu'ils prennent en charge est remplacée par une nouvelle, tandis que certaines méthodes sont remplacées par de nouvelles méthodes qui sont soit plus pratiques, soit plus complètes.  
@@ -68,9 +68,9 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listes des éléments obsolètes pour .NET Framework 4.5 et versions ultérieures  
- [Types obsolètes](../../../docs/framework/whats-new/obsolete-types.md)  
+ [Types obsolètes](obsolete-types.md)  
   
- [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md)  
+ [Membres obsolètes](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listes des éléments obsolètes pour les versions antérieures  
  [Types obsolètes dans le .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
  [Liste des éléments obsolètes pour le .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Voir aussi
-- [\<supportedRuntime>, élément](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime>, élément](../configure-apps/file-schema/startup/supportedruntime-element.md)

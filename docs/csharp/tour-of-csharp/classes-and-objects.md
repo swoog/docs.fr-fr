@@ -3,12 +3,12 @@ title: Classes et objets dans C# - Visite guidée du langage C#
 description: Novice en matière de langage C# ? Lisez cette présentation des classes, des objets et de l’héritage
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147546"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846140"
 ---
 # <a name="classes-and-objects"></a>Classes et objets
 
@@ -123,7 +123,7 @@ La *signature* d’une méthode doit être unique dans la classe dans laquelle l
 
 Les paramètres sont utilisés pour passer des valeurs ou des références variables aux méthodes. Les paramètres d’une méthode obtiennent leurs valeurs réelles à partir des *arguments* qui sont spécifiés lorsque la méthode est appelée. Il existe quatre types de paramètres : les paramètres de valeur, les paramètres de référence, les paramètres de sortie et les tableaux de paramètres.
 
-Un *paramètre de valeur* est utilisé pour passer des arguments en entrée. Un paramètre de valeur correspond à une variable locale qui obtient sa valeur initiale de l’argument qui a été transmis pour le paramètre. Les modifications apportées à un paramètre de valeur n’affectent pas l’argument qui a été transmis pour le paramètre. 
+Un *paramètre de valeur* est utilisé pour passer des arguments en entrée. Un paramètre de valeur correspond à une variable locale qui obtient sa valeur initiale de l’argument qui a été transmis pour le paramètre. Les modifications apportées à un paramètre de valeur n’affectent pas l’argument qui a été transmis pour le paramètre.
 
 Les paramètres de valeur peuvent être facultatifs, en spécifiant une valeur par défaut afin que les arguments correspondants puissent être omis.
 
@@ -293,6 +293,6 @@ Le récupérateur de mémoire est libre de déterminer quand collecter des objet
 
 L’instruction `using` fournit une meilleure approche pour la destruction d’objets.
 
->[!div class="step-by-step"]
->[Précédent](statements.md)
->[Suivant](structs.md)
+> [!div class="step-by-step"]
+> [Précédent](statements.md)
+> [Suivant](structs.md)
