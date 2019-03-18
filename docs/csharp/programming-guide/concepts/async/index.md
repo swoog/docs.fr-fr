@@ -98,9 +98,9 @@ Les caractéristiques suivantes résument ce qui fait de l'exemple précédent u
  Pour plus d’informations sur le comportement asynchrone dans les versions antérieures de .NET Framework, consultez la page [Programmation asynchrone .NET Framework traditionnelle et TPL](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Ce qui se produit dans une méthode async  
- La chose la plus importante à comprendre en programmation asynchrone est le déplacement du flux de contrôle d'une méthode à l'autre. Le diagramme suivant vous guide à travers le processus.  
+ La chose la plus importante à comprendre en programmation asynchrone est le déplacement du flux de contrôle d'une méthode à l'autre. Le diagramme suivant présente le processus :  
   
- ![Tracer un programme async](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![Diagramme illustrant le suivi d’un programme asynchrone.](./media/index/navigation-trace-async-program.png)  
   
  Les numéros du diagramme correspondent aux étapes suivantes.  
   

@@ -43,7 +43,11 @@ Tous les tutoriels de présentation proposés après la leçon Hello World sont 
 
 ## <a name="explore-new-features-in-c"></a>Explorer les nouvelles fonctionnalités du langage C\#
 
-Essayez les nouvelles fonctionnalités dans [C# 6](../whats-new/csharp-6.md) grâce à cette [exploration interactive](exploration/csharp-6.yml).
+* [Essayer interactivement les nouvelles fonctionnalités de C# 6](exploration/csharp-6.yml) : explorez interactivement les fonctionnalités ajoutées à [C# 6](../whats-new/csharp-6.md) dans votre navigateur.
+* [Interpolation de chaîne](string-interpolation.md): ce tutoriel décrit comment utiliser l’interpolation de chaîne pour créer des chaînes mises en forme en C#.
+* [Types de référence Nullable](nullable-reference-types.md) : montre comment utiliser des types de référence nullable pour exprimer votre intention en matière de références null.
+* [Mettre à jour un projet de façon à utiliser des types référence Nullables](upgrade-to-nullable-references.md) : illustre des techniques de mise à niveau d’un projet existant visant à utiliser des types référence Nullables.
+* [Étendre les fonctionnalités des données avec les critères spéciaux](pattern-matching.md) : montre comment utiliser les critères spéciaux pour étendre les types au-delà de leurs fonctionnalités principales.
 
 ## <a name="general-tutorials"></a>Tutoriels généraux
 
@@ -53,6 +57,4 @@ Les didacticiels suivants vous permettent de générer des programmes C# à l’
 * [Client REST](console-webapiclient.md) : ce tutoriel présente les communications web, la sérialisation JSON et les fonctionnalités orientées objet du langage C#.
 * [Héritage dans C# et .NET](inheritance.md) : ce didacticiel présente l’héritage dans C#, notamment l’utilisation de l’héritage pour définir des classes de base, des classes de base abstraites et des classes dérivées.
 * [Utilisation de LINQ](working-with-linq.md) : ce didacticiel illustre plusieurs fonctionnalités de LINQ et les éléments de langage qui le prennent en charge.
-* [Interpolation de chaîne](string-interpolation.md): ce tutoriel décrit comment utiliser l’interpolation de chaîne pour créer des chaînes mises en forme en C#.
 * [Utilisation d’attributs](attributes.md) : ce tutoriel décrit comment créer et utiliser des attributs en C#.
-* [Types de référence Nullable](nullable-reference-types.md) : montre comment utiliser des types de référence nullable pour exprimer votre intention en matière de références null.

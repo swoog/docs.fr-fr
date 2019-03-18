@@ -26,7 +26,7 @@ Cet article résume les principales nouvelles fonctionnalités et améliorations
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Cet article ne fournit pas d'informations complètes sur chacune des nouvelles fonctionnalités et peut faire l'objet de modifications. Pour obtenir des informations générales sur le .NET Framework, consultez [Prise en main](../../../docs/framework/get-started/index.md). Pour connaître les plateformes prises en charge, consultez [Configuration requise](~/docs/framework/get-started/system-requirements.md). Pour obtenir des liens de téléchargement et des instructions d’installation, consultez [Guide d’installation](../../../docs/framework/install/guide-for-developers.md).
+Cet article ne fournit pas d'informations complètes sur chacune des nouvelles fonctionnalités et peut faire l'objet de modifications. Pour obtenir des informations générales sur le .NET Framework, consultez [Prise en main](../get-started/index.md). Pour connaître les plateformes prises en charge, consultez [Configuration requise](~/docs/framework/get-started/system-requirements.md). Pour obtenir des liens de téléchargement et des instructions d’installation, consultez [Guide d’installation](../install/guide-for-developers.md).
 
 > [!NOTE]
 > L’équipe .NET Framework publie aussi des fonctionnalités hors bande avec NuGet pour étendre la prise en charge des plateformes et introduire des nouveautés, telles que les collections immuables et les types de vecteurs compatibles SIMD. Pour plus d’informations, consultez [Autres bibliothèques de classes et API](../additional-apis/index.md) et [Versions finales hors plage de .NET Framework](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Consultez la [liste complète des packages NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) pour le .NET Framework, ou abonnez-vous à [notre flux](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
@@ -70,7 +70,7 @@ Vous pouvez cibler .NET Framework 4.7.2 dans Visual Studio 2012 ou ultérieur e
 
 **Nouvelles surcharges de RSA.Create et DSA.Create**
 
-Les méthodes <xref:System.Security.Cryptography.DSA.Create(System.Security.Cryptography.DSAParameters)?displayProperty=nameWithType> et <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> vous permettent de fournir des paramètres de clés en cas d’instanciation d’une nouvelle clé <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA>. Elles vous permettent de remplacer du code tel que le suivant :
+Les méthodes <xref:System.Security.Cryptography.DSA.Create(System.Security.Cryptography.DSAParameters)?displayProperty=nameWithType> et <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> permettent d’indiquer des paramètres de clés en cas d’instanciation d’une nouvelle clé <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA>. Elles vous permettent de remplacer du code tel que le suivant :
 
 ```csharp
 // Before .NET Framework 4.7.2
@@ -535,7 +535,7 @@ Vous pouvez voir un [exemple des améliorations apportées au chiffrement de .NE
 
 **Meilleure prise en charge des caractères de contrôle par le DataContractJsonSerializer**
 
-Dans le .NET Framework 4.7, le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sérialise les caractères de contrôle conformément à la norme ECMAScript 6. Ce comportement est activé par défaut pour les applications qui ciblent le .NET Framework 4.7, et cette fonctionnalité doit être activée pour les applications qui s’exécutent sous le .NET Framework 4.7 mais qui ciblent une version antérieure du .NET Framework. Pour plus d'informations, consultez [Modifications de reciblage dans le .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Dans le .NET Framework 4.7, le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sérialise les caractères de contrôle conformément à la norme ECMAScript 6. Ce comportement est activé par défaut pour les applications qui ciblent le .NET Framework 4.7, et cette fonctionnalité doit être activée pour les applications qui s’exécutent sous le .NET Framework 4.7 mais qui ciblent une version antérieure du .NET Framework. Pour plus d'informations, consultez [Modifications de reciblage dans le .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 
@@ -728,7 +728,7 @@ public interface ISessionStateModule : IHttpModule {
 
 Dans le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], les caractères sont classés d’après la [norme Unicode, version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et le [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], les caractères étaient classés en fonction des catégories de caractères Unicode 6.3.
 
-La prise en charge d’Unicode 8.0 se limite à la classification des caractères de la classe <xref:System.Globalization.CharUnicodeInfo> et aux types et méthodes qui en dépendent. Il s’agit notamment de la classe <xref:System.Globalization.StringInfo>, de la méthode <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> surchargée et des [classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) reconnues par le moteur d’expressions régulières du .NET Framework.  La comparaison et le tri des caractères et des chaînes ne sont pas affectés par cette évolution et continuent de s’appuyer sur le système d’exploitation sous-jacent ou bien, dans le cas des systèmes Windows 7, sur les données de caractères fournies par le .NET Framework.
+La prise en charge d’Unicode 8.0 se limite à la classification des caractères de la classe <xref:System.Globalization.CharUnicodeInfo> et aux types et méthodes qui en dépendent. Il s’agit notamment de la classe <xref:System.Globalization.StringInfo>, de la méthode <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> surchargée et des [classes de caractères](../../standard/base-types/character-classes-in-regular-expressions.md) reconnues par le moteur d’expressions régulières du .NET Framework.  La comparaison et le tri des caractères et des chaînes ne sont pas affectés par cette évolution et continuent de s’appuyer sur le système d’exploitation sous-jacent ou bien, dans le cas des systèmes Windows 7, sur les données de caractères fournies par le .NET Framework.
 
 Pour en savoir plus sur l’évolution des catégories de caractères entre Unicode 6.0 et Unicode 7.0, consultez l’article traitant de la [norme Unicode, version 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) sur le site web du consortium Unicode. Pour en savoir plus sur les changements intervenus entre Unicode 7.0 et Unicode 8.0, consultez l’article traitant de la [norme Unicode, version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) sur le site web du consortium Unicode.
 
@@ -862,7 +862,7 @@ Le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.Sql
 
 **Regroupement de connexions et expirations de délai avec les bases de données Azure SQL**
 
-Quand le regroupement de connexions est activé et qu’une expiration de délai ou toute autre erreur de connexion se produit, une exception est mise en cache ; cette exception mise en cache est levée chaque fois qu’une nouvelle tentative de connexion intervient entre 5 secondes et 1 minute après.  Pour plus d’informations, consultez [Regroupement de connexions (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+Quand le regroupement de connexions est activé et qu’une expiration de délai ou toute autre erreur de connexion se produit, une exception est mise en cache ; cette exception mise en cache est levée chaque fois qu’une nouvelle tentative de connexion intervient entre 5 secondes et 1 minute après.  Pour plus d’informations, consultez [Regroupement de connexions (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
 
 Ce comportement n’est pas souhaitable quand il s’agit d’établir des connexions à des bases de données Azure SQL Database, car les tentatives de connexion peuvent échouer avec des erreurs transitoires qui sont en général récupérées rapidement. Pour des nouvelles tentatives de connexion plus abouties, le comportement de période de blocage de pool de connexions est supprimé quand les connexions aux bases de données Azure SQL Database échouent.
 
@@ -906,7 +906,7 @@ Dans le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communic
 
 La sécurité du transport WCF prend en charge les certificats stockés à l’aide de la bibliothèque de chiffrement Windows (CNG). Dans le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], cette prise en charge se limite à l’utilisation de certificats avec une clé publique dont l’exposant ne dépasse pas 32 bits de longueur. Quand une application cible le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], cette fonctionnalité est activée par défaut.
 
-Pour les applications qui ciblent le [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ou des versions antérieures, mais qui s’exécutent sur le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], cette fonctionnalité peut être activée en ajoutant la ligne suivante à la section [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) du fichier app.config ou web.config.
+Pour les applications qui ciblent le [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ou des versions antérieures, mais qui s’exécutent sur le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], cette fonctionnalité peut être activée en ajoutant la ligne suivante à la section [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) du fichier app.config ou web.config.
 
 ```xml
 <AppContextSwitchOverrides
@@ -938,7 +938,7 @@ Les clients peuvent utiliser un paramètre de configuration d’application pour
 
 Quand cette fonctionnalité est activée, un objet <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> utilise le type <xref:System.TimeZoneInfo> à la place du type <xref:System.TimeZone> pour désérialiser les données de date et d’heure. <xref:System.TimeZoneInfo> prend en charge plusieurs règles d’ajustement, ce qui permet d’utiliser des données de fuseau horaire historiques ; ce n’est pas le cas de <xref:System.TimeZone>.
 
-Pour plus d’informations sur la structure <xref:System.TimeZoneInfo> et les ajustements de fuseau horaire, consultez [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md).
+Pour plus d’informations sur la structure <xref:System.TimeZoneInfo> et les ajustements de fuseau horaire, consultez [Vue d’ensemble des fuseaux horaires](../../standard/datetime/time-zone-overview.md).
 
 **Meilleure correspondance NetNamedPipeBinding**
 
@@ -967,9 +967,9 @@ Quand vous utilisez NetTcp avec la sécurité du transport et un type d’inform
 
 - La propriété <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType>
 
-- La section [\<transport>](../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) de la section [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- La section [\<transport>](../configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) de la section [\<netTcpBinding>](../configure-apps/file-schema/wcf/nettcpbinding.md)
 
-- La section [\<sslStreamSecurity>](../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) de la section [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- La section [\<sslStreamSecurity>](../configure-apps/file-schema/wcf/sslstreamsecurity.md) de la section [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md)
 
 <a name="WPF462" />
 
@@ -1013,7 +1013,7 @@ Pour faire face à la prolifération récente des environnements à haute résol
 
 Dans les versions précédentes du .NET Framework, les applications WPF prennent en charge la résolution au niveau du système. En d’autres termes, l’interface utilisateur de l’application est éventuellement mise à l’échelle par le système d’exploitation, en fonction de la résolution du moniteur sur lequel l’application est affichée. ,
 
-Pour les applications s’exécutant sous le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], vous pouvez désactiver les changements de résolution par moniteur dans les applications WPF en ajoutant une instruction de configuration à la section [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) du fichier de configuration de votre application, comme suit :
+Pour les applications s’exécutant sous le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], vous pouvez désactiver les changements de résolution par moniteur dans les applications WPF en ajoutant une instruction de configuration à la section [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) du fichier de configuration de votre application, comme suit :
 
 ```xml
 <runtime>
@@ -1071,9 +1071,9 @@ Les applications de bureau converties obtiennent une identité d’application c
 
 L’*API de débogage non managé* a été améliorée dans le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] de façon à effectuer des analyses supplémentaires quand une <xref:System.NullReferenceException> est levée, dans le but de permettre l’identification de la variable qui a la valeur `null` dans une même ligne de code source.   Pour favoriser ce scénario, les API ci-dessous ont été ajoutées à l’API de débogage non managé.
 
-- Les interfaces [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) et [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), qui exposent les dossiers natifs des variables managées. Les débogueurs peuvent ainsi effectuer des analyses de flux de code quand une exception <xref:System.NullReferenceException> se produit et revenir en arrière pour identifier la variable managée qui correspond à l’emplacement natif qui avait la valeur `null`.
+- Les interfaces [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) et [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), qui exposent les dossiers natifs des variables managées. Les débogueurs peuvent ainsi effectuer des analyses de flux de code quand une exception <xref:System.NullReferenceException> se produit et revenir en arrière pour identifier la variable managée qui correspond à l’emplacement natif qui avait la valeur `null`.
 
-- La méthode [ICorDebugType2::GetTypeID](../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) propose un mappage de ICorDebugType à [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), ce qui permet au débogueur d’obtenir un [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) sans instance de ICorDebugType. Les API existantes sur [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) peuvent ensuite servir à déterminer la disposition de classe du type.
+- La méthode [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) propose un mappage de ICorDebugType à [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), ce qui permet au débogueur d’obtenir un [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) sans instance de ICorDebugType. Les API existantes sur [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) peuvent ensuite servir à déterminer la disposition de classe du type.
 
 <a name="v461" />
 
@@ -1097,7 +1097,7 @@ Pour plus d’informations sur [!INCLUDE[net_v461](../../../includes/net-v461-md
 
 - La [liste des modifications du .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [Compatibilité des applications dans la version 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [Compatibilité des applications dans la version 4.6.1](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
 
 - [Différences de l’API .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (sur GitHub)
 
@@ -1111,13 +1111,13 @@ ECDSA offre de meilleures performances et constitue un algorithme de chiffrement
 
 L’exemple de code suivant montre combien il est facile de générer une signature pour un flux d’octets à l’aide de la nouvelle prise en charge des certificats X509 ECDSA inclus dans [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
 
-[!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
-[!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+[!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
+[!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
 Cela contraste fortement avec le code nécessaire pour générer une signature dans .NET Framework 4.6.
 
-[!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
-[!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+[!code-csharp[whatsnew.461.crypto#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
+[!code-vb[whatsnew.461.crypto#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461" />
 
@@ -1133,7 +1133,7 @@ Les clients doivent installer le fournisseur CSP fourni par le fabricant des mod
 
 **Amélioration du comportement de connexion de <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> pour AlwaysOn**
 
-Désormais, SqlClient fournit automatiquement une connexion plus rapide à un groupe de disponibilité AlwaysOn. Il détecte de façon transparente si votre application se connecte à un groupe de disponibilité AlwaysOn sur un autre sous-réseau, détecte rapidement le serveur actif actuel et fournit une connexion au serveur. Avant cette mise en production, une application devait définir la chaîne de connexion à inclure `"MultisubnetFailover=true"` pour indiquer qu’elle était connectée à un groupe de disponibilité AlwaysOn. Si le mot clé de connexion n’était pas défini sur `true`, une application pouvait rencontrer un dépassement du délai lors de la connexion à un groupe de disponibilité AlwaysOn. Avec cette version, une application *n’a plus* besoin de définir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> sur `true`. Pour plus d’informations sur la prise en charge de SqlClient pour les groupes de disponibilité AlwaysOn, consultez [Prise en charge de SqlClient pour la haute disponibilité et la récupération d’urgence](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+Désormais, SqlClient fournit automatiquement une connexion plus rapide à un groupe de disponibilité AlwaysOn. Il détecte de façon transparente si votre application se connecte à un groupe de disponibilité AlwaysOn sur un autre sous-réseau, détecte rapidement le serveur actif actuel et fournit une connexion au serveur. Avant cette mise en production, une application devait définir la chaîne de connexion à inclure `"MultisubnetFailover=true"` pour indiquer qu’elle était connectée à un groupe de disponibilité AlwaysOn. Si le mot clé de connexion n’était pas défini sur `true`, une application pouvait rencontrer un dépassement du délai lors de la connexion à un groupe de disponibilité AlwaysOn. Avec cette version, une application *n’a plus* besoin de définir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> sur `true`. Pour plus d’informations sur la prise en charge de SqlClient pour les groupes de disponibilité AlwaysOn, consultez [Prise en charge de SqlClient pour la haute disponibilité et la récupération d’urgence](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1208,13 +1208,13 @@ Les utilisateurs de la nouvelle surcharge <xref:System.Transactions.Transaction.
 
 L’API de profilage non managée a été améliorée comme suit :
 
-- Meilleure prise en charge de l’accès aux fichiers PDB dans l’interface [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md).
+- Meilleure prise en charge de l’accès aux fichiers PDB dans l’interface [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md).
 
-   Dans ASP.NET Core, la compilation des assemblys en mémoire par Roslyn est beaucoup plus courante. Pour les développeurs qui créent des outils de profilage, cela signifie que les fichiers PDB qui étaient historiquement sérialisés sur le disque risquent de ne plus être présents. Les outils de profilage utilisent souvent des fichiers PDB pour remapper du code aux lignes sources pour des tâches telles que la couverture du code ou l’analyse des performances ligne par ligne. L’interface [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) inclut désormais deux nouvelles méthodes, [ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) et [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), qui permettent de fournir ces outils de profilage avec un accès aux données PDB en mémoire. En utilisant les nouvelles API, un profileur peut obtenir le contenu d’un fichier PDB en mémoire sous la forme d’un tableau d’octets, puis le traiter ou le sérialiser sur le disque.
+   Dans ASP.NET Core, la compilation des assemblys en mémoire par Roslyn est beaucoup plus courante. Pour les développeurs qui créent des outils de profilage, cela signifie que les fichiers PDB qui étaient historiquement sérialisés sur le disque risquent de ne plus être présents. Les outils de profilage utilisent souvent des fichiers PDB pour remapper du code aux lignes sources pour des tâches telles que la couverture du code ou l’analyse des performances ligne par ligne. L’interface [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) inclut désormais deux nouvelles méthodes, [ICorProfilerInfo7::GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) et [ICorProfilerInfo7::ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), qui permettent de fournir ces outils de profilage avec un accès aux données PDB en mémoire. En utilisant les nouvelles API, un profileur peut obtenir le contenu d’un fichier PDB en mémoire sous la forme d’un tableau d’octets, puis le traiter ou le sérialiser sur le disque.
 
 - Meilleure instrumentation avec l’interface ICorProfiler.
 
-   Les profileurs qui utilisent la fonctionnalité ReJit des API `ICorProfiler` pour l’instrumentation dynamique peuvent maintenant modifier certaines métadonnées. Précédemment, ces outils pouvaient instrumenter le langage intermédiaire à tout moment, mais les métadonnées ne pouvaient être modifiées qu’au moment du chargement du module. Étant donné que le langage intermédiaire fait référence aux métadonnées, cela limitait les types d’instrumentation qui pouvaient être effectuées. Nous avons levé certaines de ces limites en ajoutant la méthode [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) pour prendre en charge un sous-ensemble des modifications de métadonnées après le chargement du module, notamment en ajoutant de nouveaux enregistrements `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` et `UserString`. Cette modification permet une plus large gamme d’instrumentations instantanées possibles.
+   Les profileurs qui utilisent la fonctionnalité ReJit des API `ICorProfiler` pour l’instrumentation dynamique peuvent maintenant modifier certaines métadonnées. Précédemment, ces outils pouvaient instrumenter le langage intermédiaire à tout moment, mais les métadonnées ne pouvaient être modifiées qu’au moment du chargement du module. Étant donné que le langage intermédiaire fait référence aux métadonnées, cela limitait les types d’instrumentation qui pouvaient être effectuées. Nous avons levé certaines de ces limites en ajoutant la méthode [ICorProfilerInfo7::ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) pour prendre en charge un sous-ensemble des modifications de métadonnées après le chargement du module, notamment en ajoutant de nouveaux enregistrements `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` et `UserString`. Cette modification permet une plus large gamme d’instrumentations instantanées possibles.
 
 <a name="NGEN461" />
 
@@ -1339,13 +1339,13 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
 
         - Améliorations apportées à l'API RSA afin que les opérations courantes ne nécessitent plus de conversion. Par exemple, le chiffrement des données utilisant un objet <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> nécessite un code comme celui qui suit dans les versions antérieures du .NET Framework.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
+             [!code-vb[WhatsNew.Casting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              Le code qui utilise les nouvelles API de chiffrement dans le .NET Framework 4.6 peut être réécrit comme suit pour éviter la conversion.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
+             [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **Prise en charge de la conversion des dates et heures vers ou à partir d’Unix**
 
@@ -1433,7 +1433,7 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
 
     - **Améliorations HDPI**
 
-         La prise en charge HDPI dans WPF est désormais mieux assurée dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Des améliorations ont été apportées à l'arrondi de disposition pour réduire les instances de découpage dans les contrôles avec bordures. Par défaut, cette fonctionnalité est activée uniquement si votre <xref:System.Runtime.Versioning.TargetFrameworkAttribute> a la valeur .NET 4.6.  Les applications qui ciblent les versions antérieures du framework mais qui s’exécutent sur le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] peuvent adopter le nouveau comportement en ajoutant la ligne suivante à la section [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) du fichier app.config :
+         La prise en charge HDPI dans WPF est désormais mieux assurée dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Des améliorations ont été apportées à l'arrondi de disposition pour réduire les instances de découpage dans les contrôles avec bordures. Par défaut, cette fonctionnalité est activée uniquement si votre <xref:System.Runtime.Versioning.TargetFrameworkAttribute> a la valeur .NET 4.6.  Les applications qui ciblent les versions antérieures du framework mais qui s’exécutent sur le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] peuvent adopter le nouveau comportement en ajoutant la ligne suivante à la section [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) du fichier app.config :
 
         ```xml
         <AppContextSwitchOverrides
@@ -1560,15 +1560,15 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
 
 - **.NET Native**
 
-     Les applications Windows pour Windows 10 qui ciblent le [!INCLUDE[net_core](../../../includes/net-core-md.md)] et sont écrites en C# ou Visual Basic peuvent désormais tirer parti d'une nouvelle technologie qui compile les applications en code natif plutôt qu'en code IL (Intermediate Language). Il en résulte des applications caractérisées par un démarrage plus rapide et un temps d'exécution accéléré. Pour plus d’informations, consultez [Compilation d’applications avec .NET Native](../../../docs/framework/net-native/index.md). Pour obtenir une vue d’ensemble de .NET Native illustrant sa différence par rapport à la compilation JIT et NGEN, et pour connaître ses implications au niveau de votre code, consultez [Compilation et .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md).
+     Les applications Windows pour Windows 10 qui ciblent le [!INCLUDE[net_core](../../../includes/net-core-md.md)] et sont écrites en C# ou Visual Basic peuvent désormais tirer parti d'une nouvelle technologie qui compile les applications en code natif plutôt qu'en code IL (Intermediate Language). Il en résulte des applications caractérisées par un démarrage plus rapide et un temps d'exécution accéléré. Pour plus d’informations, consultez [Compilation d’applications avec .NET Native](../net-native/index.md). Pour obtenir une vue d’ensemble de .NET Native illustrant sa différence par rapport à la compilation JIT et NGEN, et pour connaître ses implications au niveau de votre code, consultez [Compilation et .NET Native](../net-native/net-native-and-compilation.md).
 
-     Vos applications sont compilées en code natif par défaut dans Visual Studio 2015 ou ultérieur. Pour plus d’informations, consultez [Prise en main de .NET Native](../../../docs/framework/net-native/getting-started-with-net-native.md).
+     Vos applications sont compilées en code natif par défaut dans Visual Studio 2015 ou ultérieur. Pour plus d’informations, consultez [Prise en main de .NET Native](../net-native/getting-started-with-net-native.md).
 
-     Pour permettre la prise en charge du débogage des applications .NET Native, un certain nombre de nouvelles interfaces et d'énumérations ont été ajoutées à l'API de débogage non managée. Pour plus d’informations, consultez la rubrique [Débogage (Référence des API non managées)](../../../docs/framework/unmanaged-api/debugging/index.md).
+     Pour permettre la prise en charge du débogage des applications .NET Native, un certain nombre de nouvelles interfaces et d'énumérations ont été ajoutées à l'API de débogage non managée. Pour plus d’informations, consultez la rubrique [Débogage (Référence des API non managées)](../unmanaged-api/debugging/index.md).
 
 - **Packages du .NET Framework open source**
 
-     Les packages .NET Core, comme les collections immuables, les [API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) et les API de mise en réseau comme celles rencontrées dans l’espace de noms <xref:System.Net.Http>, sont désormais disponibles en tant que packages open source sur [GitHub](https://github.com/). Pour accéder au code, consultez [CoreFx sur GitHub](https://github.com/dotnet/corefx). Pour plus d’informations, notamment sur la manière de contribuer à ces packages, consultez [.NET Core et Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md), la [page d’accueil .NET sur GitHub](https://github.com/dotnet/home).
+     Les packages .NET Core, comme les collections immuables, les [API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) et les API de mise en réseau comme celles rencontrées dans l’espace de noms <xref:System.Net.Http>, sont désormais disponibles en tant que packages open source sur [GitHub](https://github.com/). Pour accéder au code, consultez [CoreFx sur GitHub](https://github.com/dotnet/corefx). Pour plus d’informations, notamment sur la manière de contribuer à ces packages, consultez [.NET Core et Open-Source](../get-started/net-core-and-open-source.md), la [page d’accueil .NET sur GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1607,23 +1607,23 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
 
 - **Améliorations du profilage.** Les nouvelles API de profilage non managées suivantes proposent un profilage plus robuste :
 
-    - [COR_PRF_ASSEMBLY_REFERENCE_INFO, structure](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
-    - [COR_PRF_MODULE_FLAGS, énumération](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
-    - [GetAssemblyReferences, méthode](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
-    - [GetEventMask2, méthode](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
-    - [SetEventMask2, méthode](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
-    - [AddAssemblyReference, méthode](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+    - [COR_PRF_ASSEMBLY_REFERENCE_INFO, structure](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [COR_PRF_MODULE_FLAGS, énumération](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+    - [GetAssemblyReferences, méthode](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+    - [GetEventMask2, méthode](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+    - [SetEventMask2, méthode](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+    - [AddAssemblyReference, méthode](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
      Les implémentations précédentes d'`ICorProfiler` prenaient en charge le chargement tardif des assemblys dépendants. Les nouvelles API de profilage ont besoin que les assemblys dépendants soient injectés par le profileur pour qu'ils puissent être chargés immédiatement, plutôt qu'une fois que l'application est entièrement initialisée. Cette modification ne concerne pas les utilisateurs des API `ICorProfiler` existantes.
 
 - **Améliorations du débogage.** Les nouvelles API de débogage non managées suivantes améliorent l'intégration à un profileur. Vous pouvez à présent accéder aux métadonnées insérées par le profileur ainsi qu'aux variables locales et au code produit par les demandes ReJIT du compilateur pendant le débogage de dump.
 
-    - [SetWriteableMetadataUpdateMode, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
-    - [EnumerateLocalVariablesEx, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
-    - [GetLocalVariableEx, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
-    - [GetCodeEx, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
-    - [GetActiveReJitRequestILCode, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
-    - [GetInstrumentedILMap, méthode](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+    - [SetWriteableMetadataUpdateMode, méthode](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+    - [EnumerateLocalVariablesEx, méthode](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
+    - [GetLocalVariableEx, méthode](../unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
+    - [GetCodeEx, méthode](../unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
+    - [GetActiveReJitRequestILCode, méthode](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
+    - [GetInstrumentedILMap, méthode](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **Modifications du suivi d’événements.** .NET Framework 4.5.2 permet le traçage des activités de type Suivi d'événements pour Windows (ETW) hors processus pour une surface d'exposition plus importante. Ce dernier permet aux fournisseurs de gestion avancée de l'alimentation (APM) de fournir des outils légers qui suivent avec précision les coûts des demandes et activités individuelles qui traversent les threads.  Ces événements sont déclenchés uniquement quand les contrôleurs ETW les autorisent ; par conséquent, les modifications ne concernent pas le code ETW écrit auparavant ni le code qui s'exécute avec la fonctionnalité ETW désactivée.
 
@@ -1657,15 +1657,15 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
 
     - Vous pouvez recibler une bibliothèque de classes du Windows Store ou du Windows Phone Store, par exemple une bibliothèque de classes portable.
 
-     Pour plus d’informations sur ces modifications, consultez [Bibliothèque de classes portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+     Pour plus d’informations sur ces modifications, consultez [Bibliothèque de classes portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- Le jeu de contenus du .NET Framework inclut à présent la documentation relative à [!INCLUDE[net_native](../../../includes/net-native-md.md)], une technologie de précompilation qui permet de générer et déployer des applications Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] compile directement vos applications en code natif, plutôt qu'en langage intermédiaire, pour de meilleures performances. Pour plus d’informations, consultez [Compilation d’applications avec .NET Native](../../../docs/framework/net-native/index.md).
+- Le jeu de contenus du .NET Framework inclut à présent la documentation relative à [!INCLUDE[net_native](../../../includes/net-native-md.md)], une technologie de précompilation qui permet de générer et déployer des applications Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] compile directement vos applications en code natif, plutôt qu'en langage intermédiaire, pour de meilleures performances. Pour plus d’informations, consultez [Compilation d’applications avec .NET Native](../net-native/index.md).
 
 - Le site [.NET Framework Reference Source](https://referencesource.microsoft.com/) propose une nouvelle expérience de navigation et des fonctionnalités améliorées. Vous pouvez à présent parcourir le code source .NET Framework en ligne, [télécharger la référence](https://referencesource.microsoft.com/download.html) à des fins de consultation hors connexion et parcourir les sources (notamment les correctifs et mises à jour) pendant le débogage. Pour plus d’informations, consultez l’entrée de blog qui présente [le nouvel aspect de la source de référence .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 Les principales fonctionnalités et améliorations nouvelles dans le .NET Framework 4.5.1 sont les suivantes :
 
-- Redirection de liaison automatique des assemblys. Depuis Visual Studio 2013, lorsque vous compilez une application qui cible [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], il est possible d'ajouter des redirections de liaison au fichier de configuration de l'application, si votre application ou ses composants référencent plusieurs versions du même assembly. Vous pouvez également activer cette fonctionnalité pour les projets qui ciblent des versions antérieures du .NET Framework. Pour plus d'informations, voir [Procédure : Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirection de liaison automatique des assemblys. Depuis Visual Studio 2013, lorsque vous compilez une application qui cible [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], il est possible d'ajouter des redirections de liaison au fichier de configuration de l'application, si votre application ou ses composants référencent plusieurs versions du même assembly. Vous pouvez également activer cette fonctionnalité pour les projets qui ciblent des versions antérieures du .NET Framework. Pour plus d'informations, voir [Procédure : Activer et désactiver la redirection de liaison automatique](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacité à collecter des informations de diagnostic pour aider les développeurs à améliorer les performances des applications serveur et cloud. Pour plus d'informations, consultez les méthodes <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> et <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> de la classe <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1699,7 +1699,7 @@ Les améliorations lors du débogage de vos applications .NET Framework dans Vis
 
 - Meilleure prise en charge des exceptions pour les composants Windows Runtime. Dans [!INCLUDE[win81](../../../includes/win81-md.md)], une exception qui provient des applications Windows Store conserve les informations sur l'erreur qui a provoqué l'exception, même au-delà des limites du langage. Vous pouvez en savoir plus sur cette fonctionnalité en lisant la section sur le développement d’applications du Windows Store dans l’[annonce relative au .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-Depuis Visual Studio 2013, vous pouvez utiliser [Mpgo.exe (Outil d'optimisation guidée par profil managé)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], ainsi que les applications de bureau.
+Depuis Visual Studio 2013, vous pouvez utiliser [Mpgo.exe (Outil d'optimisation guidée par profil managé)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], ainsi que les applications de bureau.
 
 Pour les nouvelles fonctionnalités dans ASP.NET 4.5.1, consultez [Notes de mise à jour ASP.NET et Web Tools pour Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1709,11 +1709,11 @@ Pour les nouvelles fonctionnalités dans ASP.NET 4.5.1, consultez [Notes de mis
 
 ### <a name="core-new-features-and-improvements"></a>Principales fonctionnalités et améliorations nouvelles
 
-- Capacité à réduire les redémarrages du système en détectant et en fermant les applications .NET Framework 4 pendant le déploiement. Consultez [Réduction des redémarrages système durant les installations de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md).
+- Capacité à réduire les redémarrages du système en détectant et en fermant les applications .NET Framework 4 pendant le déploiement. Consultez [Réduction des redémarrages système durant les installations de .NET Framework 4.5](../deployment/reducing-system-restarts.md).
 
-- Prise en charge de tableaux supérieurs à 2 gigaoctets (Go) sur les plateformes 64 bits. Cette fonctionnalité peut être activée dans le fichier de configuration de l'application. Consultez l’[élément \<gcAllowVeryLargeObjects>](../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), qui répertorie également d’autres restrictions sur la taille des objets et la taille des tableaux.
+- Prise en charge de tableaux supérieurs à 2 gigaoctets (Go) sur les plateformes 64 bits. Cette fonctionnalité peut être activée dans le fichier de configuration de l'application. Consultez l’[élément \<gcAllowVeryLargeObjects>](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), qui répertorie également d’autres restrictions sur la taille des objets et la taille des tableaux.
 
-- Meilleures performances via une opération garbage collection en arrière-plan pour les serveurs. Lorsque vous utilisez le garbage collection de serveur dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le garbage collection en arrière-plan est automatiquement activé. Consultez la section Garbage collection de serveur en arrière-plan, dans la rubrique [Notions de base du garbage collection](../../../docs/standard/garbage-collection/fundamentals.md).
+- Meilleures performances via une opération garbage collection en arrière-plan pour les serveurs. Lorsque vous utilisez le garbage collection de serveur dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le garbage collection en arrière-plan est automatiquement activé. Consultez la section Garbage collection de serveur en arrière-plan, dans la rubrique [Notions de base du garbage collection](../../standard/garbage-collection/fundamentals.md).
 
 - Compilation juste-à-temps (JIT) en arrière-plan, disponible en option sur les processeurs multicœurs pour améliorer les performances de l'application. Consultez <xref:System.Runtime.ProfileOptimization>.
 
@@ -1725,7 +1725,7 @@ Pour les nouvelles fonctionnalités dans ASP.NET 4.5.1, consultez [Notes de mis
 
 - Prise en charge du versioning des données de classement et de comparaison des chaînes culturelles. Voir la classe <xref:System.Globalization.SortVersion>.
 
-- Meilleures performances lors de l'extraction des ressources. Consultez [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+- Meilleures performances lors de l'extraction des ressources. Consultez [Empaquetage et déploiement de ressources](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
 - Améliorations de la compression Zip pour réduire la taille d'un fichier compressé. Voir l'espace de noms <xref:System.IO.Compression?displayProperty=nameWithType>.
 
@@ -1735,9 +1735,9 @@ Pour les nouvelles fonctionnalités dans ASP.NET 4.5.1, consultez [Notes de mis
 
 - Délégation de comparaison de chaînes au système d'exploitation, qui implémente Unicode 6.0, lorsque .NET Framework est utilisé dans [!INCLUDE[win8](../../../includes/win8-md.md)]. Lorsqu'il s'exécute sur d'autres plateformes, .NET Framework inclut ses propres données de comparaison de chaînes, qui implémentent Unicode 5.x. Voir la classe <xref:System.String> et la section Notes de la classe <xref:System.Globalization.SortVersion>.
 
-- Possibilité de calculer les codes de hachage des chaînes par domaine d'application. Voir [\<UseRandomizedStringHashAlgorithm>, élément](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
+- Possibilité de calculer les codes de hachage des chaînes par domaine d'application. Voir [\<UseRandomizedStringHashAlgorithm>, élément](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- Prise en charge de la réflexion de type fractionnée entre les classes <xref:System.Type> et <xref:System.Reflection.TypeInfo>. Consultez [Réflexion dans le .NET Framework pour les applications du Windows Store](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Prise en charge de la réflexion de type fractionnée entre les classes <xref:System.Type> et <xref:System.Reflection.TypeInfo>. Consultez [Réflexion dans le .NET Framework pour les applications du Windows Store](../reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -1751,19 +1751,19 @@ Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le package Managed Ex
 
 - Sous-ensemble MEF que vous pouvez utiliser lorsque vous créez des applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ce sous-ensemble est disponible sous la forme d’un [package téléchargeable](https://go.microsoft.com/fwlink/?LinkId=256238) à partir de la galerie NuGet. Pour installer ce package, ouvrez votre projet dans Visual Studio, dans le menu **Projet** choisissez **Gérer les packages NuGet**, puis recherchez en ligne le package `Microsoft.Composition`.
 
-Pour plus d’informations, consultez [Vue d’ensemble de Managed Extensibility Framework](../../../docs/framework/mef/index.md).
+Pour plus d’informations, consultez [Vue d’ensemble de Managed Extensibility Framework](../mef/index.md).
 
 ### <a name="asynchronous-file-operations"></a>Opérations asynchrones sur les fichiers
 
-Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], de nouvelles fonctionnalités asynchrones ont été ajoutées aux langages C# et Visual Basic. Ces fonctionnalités ajoutent un modèle basé sur les tâches pour exécuter des opérations asynchrones. Pour utiliser ce nouveau modèle, utilisez les méthodes asynchrones dans les classes d'E/S. Consultez [E/S de fichier asynchrone](../../../docs/standard/io/asynchronous-file-i-o.md).
+Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], de nouvelles fonctionnalités asynchrones ont été ajoutées aux langages C# et Visual Basic. Ces fonctionnalités ajoutent un modèle basé sur les tâches pour exécuter des opérations asynchrones. Pour utiliser ce nouveau modèle, utilisez les méthodes asynchrones dans les classes d'E/S. Consultez [E/S de fichier asynchrone](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Outils
 
-Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], l'outil Resource File Generator (Resgen.exe) vous permet de créer un fichier .resw à utiliser dans les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] à partir d'un fichier .resources incorporé dans un assembly .NET Framework. Pour plus d’informations, consultez [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
+Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], l'outil Resource File Generator (Resgen.exe) vous permet de créer un fichier .resw à utiliser dans les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] à partir d'un fichier .resources incorporé dans un assembly .NET Framework. Pour plus d’informations, consultez [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md).
 
-L'outil d'optimisation guidée par profil managé (Mpgo.exe) vous permet d'améliorer le temps de démarrage de l'application, l'utilisation de la mémoire (taille du jeu de travail) et le débit en optimisant les assemblys d'image natifs. L'outil en ligne de commande génère des données de profil pour les assemblys natifs d'application graphique. Consultez [Mpgo.exe (Outil d’optimisation guidée par profil managé)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Depuis Visual Studio 2013, vous pouvez utiliser Mpgo.exe pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], ainsi que les applications de bureau.
+L'outil d'optimisation guidée par profil managé (Mpgo.exe) vous permet d'améliorer le temps de démarrage de l'application, l'utilisation de la mémoire (taille du jeu de travail) et le débit en optimisant les assemblys d'image natifs. L'outil en ligne de commande génère des données de profil pour les assemblys natifs d'application graphique. Consultez [Mpgo.exe (Outil d’optimisation guidée par profil managé)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Depuis Visual Studio 2013, vous pouvez utiliser Mpgo.exe pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], ainsi que les applications de bureau.
 
 <a name="parallel" />
 
@@ -1927,11 +1927,11 @@ Les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-lon
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliothèques de classes portables<a name="portable" />
 
-Le projet Bibliothèque de classes portable dans Visual Studio 2012 (et les versions ultérieures) vous permet d'écrire et de générer des assemblys managés qui fonctionnent sur plusieurs plateformes .NET Framework. Un projet Bibliothèque de classes portable vous permet de choisir les plateformes (telles que Windows Phone et [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) à cibler. Les types et les membres disponibles dans votre projet sont automatiquement restreints aux types et aux membres communs entre ces plateformes. Pour plus d’informations, consultez [Bibliothèque de classes portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Le projet Bibliothèque de classes portable dans Visual Studio 2012 (et les versions ultérieures) vous permet d'écrire et de générer des assemblys managés qui fonctionnent sur plusieurs plateformes .NET Framework. Un projet Bibliothèque de classes portable vous permet de choisir les plateformes (telles que Windows Phone et [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) à cibler. Les types et les membres disponibles dans votre projet sont automatiquement restreints aux types et aux membres communs entre ces plateformes. Pour plus d’informations, consultez [Bibliothèque de classes portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Versions finales hors plage de .NET Framework](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [Versions finales hors plage de .NET Framework](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Nouveautés de l’accessibilité dans le .NET Framework](whats-new-in-accessibility.md)
 - [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
 - [ASP.NET](/aspnet)
