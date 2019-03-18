@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728353"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048037"
 ---
 # <a name="white-space-processing-in-xaml"></a>Espace blanc dans XAML de traitement
 Les règles de langage pour XAML d’état que l’espace blanc significatif doit être traité par un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implémentation du processeur. Cette rubrique documente ces règles de langage XAML. Il traite également de la gestion des espaces blancs supplémentaires définie par le [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implémentation du processeur XAML et le writer XAML pour la sérialisation.  
@@ -35,7 +35,7 @@ Les règles de langage pour XAML d’état que l’espace blanc significatif doi
   
 5.  Un espace qui précède immédiatement la balise de fin est supprimé.  
   
- La « valeur par défaut » correspond à l'état désigné par la valeur par défaut de l'attribut [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) .  
+ La « valeur par défaut » correspond à l'état désigné par la valeur par défaut de l'attribut [xml:space](xml-space-handling-in-xaml.md) .  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Espace blanc dans le texte interne et primitives de chaîne  
@@ -75,6 +75,6 @@ Les règles de langage pour XAML d’état que l’espace blanc significatif doi
  En outre, certains éléments inclus qui correspondent à un saut de ligne dans un modèle de document de flux ne doivent pas introduire délibérément un espace supplémentaire même dans une collection d’espaces blancs significative. Par exemple, le <xref:System.Windows.Documents.LineBreak> élément a le même objectif que le \<BR / > baliser dans [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]et pour une meilleure lisibilité dans le balisage, généralement un <xref:System.Windows.Documents.LineBreak> n’importe quel texte qui suit est séparé par un saut de ligne créé. Ce saut de ligne ne doit pas être normalisé pour devenir un espace de début dans la ligne suivante. Pour activer ce comportement, la définition de classe pour le <xref:System.Windows.Documents.LineBreak> élément s’applique le <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, qui est ensuite interprété par le [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processeur comme signifiant que l’espace blanc qui entoure <xref:System.Windows.Documents.LineBreak> est toujours supprimé.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Entités de caractères XML et XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [XML : space en XAML de gestion des](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Entités de caractères XML et XAML](xml-character-entities-and-xaml.md)
+- [XML : space en XAML de gestion des](xml-space-handling-in-xaml.md)

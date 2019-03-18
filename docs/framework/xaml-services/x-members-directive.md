@@ -2,15 +2,15 @@
 title: x:Members, directive
 ms.date: 03/30/2017
 ms.assetid: 155b393d-3b49-4c5a-8c9e-b3d9893af4e4
-ms.openlocfilehash: 2c273fce1f15d9a5af72bc3f5a530d3c26dfc77e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d23e6b459af932e0a6f69309f26a1cce70a9d256
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564134"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034506"
 ---
 # <a name="xmembers-directive"></a>x:Members, directive
-Contient un jeu de membres qui sont définis dans le balisage, et qui s’appliquent à x : Class de l’élément parent.  
+Contient un jeu de membres qui sont définis dans le balisage, qui s’appliquent à x : Class de l’élément parent.  
   
 ## <a name="xaml-attribute-usage"></a>Utilisation d'attributs XAML  
   
@@ -30,9 +30,9 @@ Contient un jeu de membres qui sont définis dans le balisage, et qui s’appliq
 |`oneOrMoreMembers`|Un ou plusieurs éléments objet qui représentent des définitions de membre. En règle générale, il s’agit `x:Property` éléments objet. Consultez la section Notes.|  
   
 ## <a name="remarks"></a>Notes  
- Dans l’implémentation de Services XAML .NET Framework, il n’existe aucune classe de stockage ou d’une implémentation d’un membre sous-jacent pour `x:Members`. `x:Members` est un membre XAML spécial qui peut exister en tant que membre sur n’importe quel type. Dans un flux de nœud XAML, `x:Members` est représenté sous la forme d’un membre nommé `Members`, à partir de l’espace de noms XAML du langage XAML. Le membre `Members` contient une liste générique en lecture seule de `Member` objets. Dans le balisage par défaut, les membres individuels sont spécifiés comme `x:Property` éléments de propriété. `x:Property` est un type plus précis, en particulier pour les propriétés des types et ne peut être assigné à `x:Member`. Pour plus d’informations, consultez [x : Property Directive](../../../docs/framework/xaml-services/x-property-directive.md).  
+ Dans l’implémentation de Services XAML du .NET Framework, il n’existe aucune classe de stockage ou l’implémentation sous-jacente de membre pour `x:Members`. `x:Members` est un membre XAML spécial qui peut exister en tant que membre sur n’importe quel type. Dans un flux de nœud XAML, `x:Members` est représenté en tant que membre nommé `Members`, à partir de l’espace de noms XAML du langage XAML. Le membre `Members` contient une liste générique en lecture seule de `Member` objets. Dans le balisage classique, les membres individuels sont spécifiées en tant que `x:Property` éléments de propriété. `x:Property` est un type plus précis en particulier pour les propriétés de types et ne peut être assigné à `x:Member`. Pour plus d’informations, consultez [x : Property Directive](x-property-directive.md).  
   
  Pour pouvoir utiliser `x:Members` afin de spécifier des définitions de membre dans le balisage, les membres doivent être associés à une classe modifiable. Dans le modèle prévu, `x:Members` existe en tant que membre d'un type qui spécifie un objet `x:Class`. Toutefois, le mécanisme permettant d'associer des types et des membres ou de générer des définitions de membre dynamique n'est pas pris en charge au niveau des services XAML .NET Framework. En revanche, chaque infrastructure dispose de modèles d'application qui prennent en charge les définitions de membre XAML. Généralement, les actions de génération MSBUILD qui balisent-compilent le XAML et, soit lui intègre du code-behind, soit produisent des assemblys purement XAML, sont nécessaires pour prendre en charge cette fonctionnalité.  
   
 ## <a name="xmembers-for-windows-workflow-foundation"></a>x : Members pour Windows Workflow Foundation  
- Pour Windows Workflow Foundation, `x:Members` contient les membres d’une activité personnalisée entièrement composée en XAML ou XAML : défini par les membres dynamiques pour un concepteur d’activités avec code-behind. L'objet `x:Class` doit également être spécifié sur l'élément racine de la production XAML. Cela n’est pas obligatoire dans le cadre des services XAML .NET Framework, mais le devient quand la production XAML est chargée par les actions de génération MSBUILD qui prennent en charge les activités personnalisées et le XAML de Windows Workflow Foundation en général. `x:Members` doit être le premier élément enfant dans le balisage de l’élément objet qui déclare le `x:Class`.
+ Pour Windows Workflow Foundation, `x:Members` contient les membres d’une activité personnalisée entièrement composée en XAML ou XAML : défini par les membres dynamiques pour un concepteur d’activités avec code-behind. L'objet `x:Class` doit également être spécifié sur l'élément racine de la production XAML. Cela n'est pas obligatoire dans le cadre des services XAML .NET Framework, mais le devient quand la production XAML est chargée par les actions de génération MSBUILD qui prennent en charge les activités personnalisées et le XAML de Windows Workflow Foundation en général. `x:Members` doit être le premier élément enfant dans le balisage de l’élément objet qui déclare le `x:Class`.

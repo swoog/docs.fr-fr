@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 67d699782cd2ce2b13e159d2b7218b4868a8794c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670925"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048001"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass, directive
 Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est également fourni. Au lieu de créer une classe partielle qui est basée sur `x:Class`, fourni `x:Class` est créée comme une classe intermédiaire, et ensuite votre classe dérivée fournie est censée être basée sur `x:Class`.  
@@ -38,7 +38,7 @@ Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est é
 |`subclassName`|Obligatoire. Spécifie le nom CLR de la sous-classe.|  
   
 ## <a name="dependencies"></a>Dépendances  
- [x : Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) doit également être fourni dans le même objet, et cet objet doit être l’élément racine de la production XAML.  
+ [x : Class Directive](x-class-directive.md) doit également être fourni dans le même objet, et cet objet doit être l’élément racine de la production XAML.  
   
 ## <a name="remarks"></a>Notes  
  `x:Subclass` l’utilisation est destiné aux langages qui ne prennent pas en charge les déclarations de classe partielle.  
@@ -57,5 +57,5 @@ Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est é
  Lorsque vous définissez les deux `x:Class` et `x:Subclass`, vous n’avez pas besoin de fournir une implémentation de la classe qui est référencée par `x:Class`. Vous devez uniquement lui donner un nom via le `x:Class` attribut afin que le compilateur présente quelques conseils pour la classe qu’il crée dans les fichiers intermédiaires (dans ce cas, le compilateur ne sélectionne pas de nom par défaut). Vous pouvez donner le `x:Class` une implémentation de la classe ; Toutefois, ce n’est pas le scénario classique d’utilisation à la fois `x:Class` et `x:Subclass`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)
-- [XAML et classes personnalisées pour WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:Class, directive](x-class-directive.md)
+- [XAML et classes personnalisées pour WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

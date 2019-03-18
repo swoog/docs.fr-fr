@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 3bcf78ce6fe0e56e027b2d473a95d6663971744d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588221"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050532"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertisseurs de types et extensions de balisage pour XAML
 Les convertisseurs de type et les extensions de balisage sont deux techniques que les systèmes de type XAML et les writers XAML utilisent pour générer des composants de graphique d'objets. Bien qu'ils partagent certaines caractéristiques, les convertisseurs de type et les extensions de balisage sont représentés différemment dans un flux de nœud XAML. Dans cet ensemble de documentation, les convertisseurs de type, les extensions de balisage et les constructions similaires sont parfois désignés collectivement sous le nom de « convertisseurs de valeurs ».  
@@ -32,7 +32,7 @@ Les convertisseurs de type et les extensions de balisage sont deux techniques qu
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertisseurs de type  
- Dans la définition des services XAML .NET Framework, les convertisseurs de type sont des classes qui dérivent de la classe CLR <xref:System.ComponentModel.TypeConverter> . <xref:System.ComponentModel.TypeConverter> est une classe qui se trouvait dans le Microsoft .NET Framework antérieures à l’introduction de XAML. Son rôle initial était de prendre en charge les fenêtres de propriétés et les métaphores de modification de texte similaires pour les propriétés de l' [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L’introduction de XAML dans le .NET Framework utilise <xref:System.ComponentModel.TypeConverter> pour convertir une syntaxe de texte (comme dans une valeur d’attribut ou un nœud de valeur XAML) en objet. <xref:System.ComponentModel.TypeConverter> peut également être utilisée pour sérialiser une valeur d’objet en syntaxe de texte. <xref:System.ComponentModel.TypeConverter> était également utilisée dans les implémentations XAML spécifiques à l’infrastructure précédentes dans Windows Presentation Foundation (WPF) et Windows Communication Foundation (WCF). Pour plus d’informations sur le <xref:System.ComponentModel.TypeConverter> en XAML, consultez [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ Dans la définition des services XAML .NET Framework, les convertisseurs de type sont des classes qui dérivent de la classe CLR <xref:System.ComponentModel.TypeConverter> . <xref:System.ComponentModel.TypeConverter> est une classe qui se trouvait dans le Microsoft .NET Framework antérieures à l’introduction de XAML. Son rôle initial était de prendre en charge les fenêtres de propriétés et les métaphores de modification de texte similaires pour les propriétés de l' [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L’introduction de XAML dans le .NET Framework utilise <xref:System.ComponentModel.TypeConverter> pour convertir une syntaxe de texte (comme dans une valeur d’attribut ou un nœud de valeur XAML) en objet. <xref:System.ComponentModel.TypeConverter> peut également être utilisée pour sérialiser une valeur d’objet en syntaxe de texte. <xref:System.ComponentModel.TypeConverter> était également utilisée dans les implémentations XAML spécifiques à l’infrastructure précédentes dans Windows Presentation Foundation (WPF) et Windows Communication Foundation (WCF). Pour plus d’informations sur le <xref:System.ComponentModel.TypeConverter> en XAML, consultez [Type Converters for XAML Overview](type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Extensions de balisage  
@@ -42,10 +42,10 @@ Les convertisseurs de type et les extensions de balisage sont deux techniques qu
   
  Les extensions de balisage sont associées à une seule classe de service de prise en charge, mais peuvent être appliquées pour toute valeur de membre. (Toutefois, vous pouvez implémenter votre extension de balisage pour limiter délibérément son utilisation à certains membres ou types de destination, à l'aide du contexte de service). Les extensions de balisage peuvent remplacer une association de convertisseurs de type. Ou vous pouvez les utiliser pour spécifier une valeur d'attribut pour les membres qui, sans cela, ne prendrait pas en charge une syntaxe de texte.  
   
- Pour plus d’informations sur le modèle d’implémentation d’extensions de balisage pour XAML, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Pour plus d’informations sur le modèle d’implémentation d’extensions de balisage pour XAML, consultez [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Les types <xref:System.Windows.Markup.MarkupExtension> et <xref:System.Windows.Markup.ValueSerializer> sont trouvent tous les deux dans l'espace de noms <xref:System.Windows.Markup> , et non dans l'espace de noms <xref:System.Xaml> . Cela ne signifie pas que ces types sont spécifiques aux technologies WPF ou Windows Forms qui remplissent normalement les espaces de noms CLR contenant la chaîne `Windows`. <xref:System.Windows.Markup.MarkupExtension> et <xref:System.Windows.Markup.ValueSerializer> se trouvent dans l'assembly System.Xaml et n'ont pas de dépendance d'infrastructure spécifique. Ces types existaient dans l'espace de noms CLR pour [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] et restent dans l'espace de noms CLR dans [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pour éviter de rompre des références dans des projets WPF existants. Pour plus d'informations, consultez [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  Les types <xref:System.Windows.Markup.MarkupExtension> et <xref:System.Windows.Markup.ValueSerializer> sont trouvent tous les deux dans l'espace de noms <xref:System.Windows.Markup> , et non dans l'espace de noms <xref:System.Xaml> . Cela ne signifie pas que ces types sont spécifiques aux technologies WPF ou Windows Forms qui remplissent normalement les espaces de noms CLR contenant la chaîne `Windows`. <xref:System.Windows.Markup.MarkupExtension> et <xref:System.Windows.Markup.ValueSerializer> se trouvent dans l'assembly System.Xaml et n'ont pas de dépendance d'infrastructure spécifique. Ces types existaient dans l'espace de noms CLR pour [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] et restent dans l'espace de noms CLR dans [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pour éviter de rompre des références dans des projets WPF existants. Pour plus d'informations, consultez [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Sérialiseurs de valeur  
@@ -63,11 +63,11 @@ Les convertisseurs de type et les extensions de balisage sont deux techniques qu
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>Contexte de service pour un convertisseur de valeurs  
- Lorsque vous implémentez un convertisseur de valeurs, vous devez souvent accéder à un contexte dans lequel le convertisseur de valeurs est appliqué. Ce contexte est appelé « contexte de service ». Le contexte de service peut inclure des informations telles que le contexte de schéma XAML actif, l'accès au système de mappage de type fourni par le contexte de schéma XAML et le writer d'objet XAML, etc. Pour plus d’informations sur les contextes de services disponibles pour un convertisseur de valeurs et pour savoir comment accéder aux services pouvant être fournis par un contexte de service, consultez [Contextes de services disponibles aux convertisseurs de types ou aux extensions de balisage](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+ Lorsque vous implémentez un convertisseur de valeurs, vous devez souvent accéder à un contexte dans lequel le convertisseur de valeurs est appliqué. Ce contexte est appelé « contexte de service ». Le contexte de service peut inclure des informations telles que le contexte de schéma XAML actif, l'accès au système de mappage de type fourni par le contexte de schéma XAML et le writer d'objet XAML, etc. Pour plus d’informations sur les contextes de services disponibles pour un convertisseur de valeurs et pour savoir comment accéder aux services pouvant être fournis par un contexte de service, consultez [Contextes de services disponibles aux convertisseurs de types ou aux extensions de balisage](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Vue d’ensemble des extensions de balisage pour XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Vue d'ensemble des convertisseurs de types pour XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
-- [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Vue d’ensemble des extensions de balisage pour XAML](markup-extensions-for-xaml-overview.md)
+- [Vue d'ensemble des convertisseurs de types pour XAML](type-converters-for-xaml-overview.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661346"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048049"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entités de caractères XML et XAML
 XAML utilise des entités de caractères définies en XML pour les caractères spéciaux. Cette rubrique décrit des entités de caractères spécifiques et les considérations générales pour d'autres concepts XML en XAML.  
@@ -34,7 +34,7 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>Entités de caractères et problèmes d'échappement propres à XAML  
  Le balisage XAML utilise généralement les mêmes entités de caractères et séquences d'échappement que celles définies en XML.  
   
- La principale exception réside dans le fait que les accolades ({ et }) ont de l’importance en XAML car ces caractères informent un processeur XAML qu’une séquence de caractères comprise entre les accolades doit être interprétée comme une extension du balisage. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ La principale exception réside dans le fait que les accolades ({ et }) ont de l'importance en XAML car ces caractères informent un processeur XAML qu'une séquence de caractères comprise entre les accolades doit être interprétée comme une extension du balisage. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
  Toutefois, vous pouvez toujours afficher les accolades comme des caractères littéraux en utilisant une séquence d'échappement propre à XAML plutôt qu'à XML. Pour plus d’informations, consultez [{} séquence d’échappement - Extension de balisage](escape-sequence-markup-extension.md).  
   
@@ -47,12 +47,12 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
 |Caractère|Entité|Notes|  
 |---------------|------------|-----------|  
 |& (et commercial)|\&amp;|Doit être utilisé à la fois pour les valeurs d'attribut et pour le contenu d'un élément.|  
-|> (supérieur à)|\&gt;|Doit être utilisé pour la valeur d'attribut, mais le caractère > est acceptable comme contenu d'un élément à condition que le caractère < ne le précède pas.|  
-|< (inférieur à)|\&lt;|Doit être utilisé pour une valeur d’attribut, mais \< est acceptable comme contenu d’un élément en tant que > ne la respecte pas.|  
+|> (supérieur-que le caractère)|\&gt;|Doit être utilisé pour une valeur d’attribut, mais > est acceptable comme contenu d’un élément en tant que < ne le précède pas.|  
+|< (moins-que le caractère)|\&lt;|Doit être utilisé pour une valeur d’attribut, mais \< est acceptable comme contenu d’un élément en tant que > ne la respecte pas.|  
 |" (guillemets droits)|\&quot;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit (") est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
 |' (guillemet droit unique)|\&apos;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit unique (') est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
 |(mappages de caractères numériques)|&#*[integer]*; or &#x *[hex]*;|XAML prend en charge les mappages de caractères numériques dans de l'encodage actif.|  
-|(espace insécable)|&\#160 ; (en supposant que le codage UTF-8)|Pour les éléments de document dynamique ou les éléments qui acceptent du texte tels que le <xref:System.Windows.Controls.TextBox> WPF, les espaces insécables ne sont pas normalisés hors du balisage, même pour `xml:space="default"`. (Pour plus d’informations, consultez [blancs en XAML traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
+|(espace insécable)|&\#160 ; (en supposant que le codage UTF-8)|Pour les éléments de document dynamique ou les éléments qui acceptent du texte tels que le <xref:System.Windows.Controls.TextBox> WPF, les espaces insécables ne sont pas normalisés hors du balisage, même pour `xml:space="default"`. (Pour plus d’informations, consultez [blancs en XAML traitement](whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>Format de commentaire XML  
@@ -63,7 +63,7 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
  XAML gère les instructions de traitement XML conformément aux spécifications XML, qui déclarent que les instructions doivent être transmises. XAML de traitement dans les Services XAML .NET Framework n’utilise pas les instructions de traitement. Les autres infrastructures existantes qui utilisent XAML n'utilisent pas non plus d'instructions de traitement de XAML.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensions de balisage et XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName, grammaire](../../../docs/framework/xaml-services/xamlname-grammar.md)
-- [Espace blanc dans XAML de traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName, grammaire](xamlname-grammar.md)
+- [Espace blanc dans XAML de traitement](whitespace-processing-in-xaml.md)
