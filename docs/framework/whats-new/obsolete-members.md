@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635973"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038177"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membres obsolètes dans le .NET Framework
-Les tableaux de cet article listent les membres de type obsolètes dans le .NET Framework 4.5 et versions ultérieures, organisés par assembly. Utilisez les liens suivants pour consulter la liste des membres obsolètes et des alternatives recommandées dans chaque assembly. Cette rubrique ne répertorie pas les membres des types obsolètes. Pour obtenir la liste des types obsolètes, consultez [Types obsolètes](../../../docs/framework/whats-new/obsolete-types.md).  
+Les tableaux de cet article listent les membres de type obsolètes dans le .NET Framework 4.5 et versions ultérieures, organisés par assembly. Utilisez les liens suivants pour consulter la liste des membres obsolètes et des alternatives recommandées dans chaque assembly. Cette rubrique ne répertorie pas les membres des types obsolètes. Pour obtenir la liste des types obsolètes, consultez [Types obsolètes](obsolete-types.md).  
   
 -   [Membres obsolètes dans les assemblys système](#SystemMembers)  
   
@@ -799,5 +799,5 @@ Les tableaux de cet article listent les membres de type obsolètes dans le .NET 
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La clé de Registre `DynData` fonctionne uniquement sur Win9x, qui n'est pas pris en charge par cette version du .NET Framework. Utilisez plutôt la clé de Registre `PerformanceData`. Cette propriété sera supprimée dans une prochaine version du .NET Framework.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Types obsolètes](../../../docs/framework/whats-new/obsolete-types.md)
+- [Éléments obsolètes dans la bibliothèque de classes](whats-obsolete.md)
+- [Types obsolètes](obsolete-types.md)

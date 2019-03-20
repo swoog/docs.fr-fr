@@ -3,12 +3,12 @@ title: Concevoir avec des types référence Nullable
 description: Ce tutoriel avancé présente les types référence Nullable. Il explique comment exprimer une intention de conception lorsque les valeurs de référence peuvent être Null et comment, dans le cas contraire, indiquer au compilateur qu’elles ne peuvent pas être Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442098"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846582"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutoriel : Exprimer plus clairement une intention de conception avec les types référence Nullable et non Nullable
 
@@ -24,7 +24,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019 Preview 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou [.NET Core 3.0 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Ce tutoriel suppose de connaître C# et .NET, y compris Visual Studio ou l’interface CLI .NET Core.
 

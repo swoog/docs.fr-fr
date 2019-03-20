@@ -4,16 +4,16 @@ description: Ce didacticiel explique comment organiser et tester des projets .NE
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242706"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845906"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organiser et tester des projets avec la ligne de commande .NET Core
 
-Ce didacticiel, qui fait suite à la rubrique [Bien démarrer avec .NET Core sur Windows/Linux/macOS à l’aide de la ligne de commande](using-with-xplat-cli.md), montre comment aller au-delà de la création d’une application console simple pour développer des applications avancées et bien organisées. Après une présentation des dossiers disponibles pour organiser votre code, ce didacticiel vous montre comment étendre une application console avec le framework de tests [xUnit](https://xunit.github.io/).
+Ce tutoriel, qui fait suite à [Bien démarrer avec .NET Core sur Windows/Linux/macOS en ligne de commande](using-with-xplat-cli.md), montre comment aller au-delà de la création d’une application console simple pour développer des applications avancées et bien organisées. Après une présentation des dossiers disponibles pour organiser votre code, ce didacticiel vous montre comment étendre une application console avec le framework de tests [xUnit](https://xunit.github.io/).
 
 ## <a name="using-folders-to-organize-code"></a>Utilisation de dossiers pour organiser le code
 
@@ -48,7 +48,7 @@ Les projets qui regroupent logiquement les fichiers dans des dossiers simplifien
 
 Pour les étapes suivantes, vous pouvez soit suivre [l’exemple NewTypes Pets](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild), soit créer vos propres fichiers et dossiers. Les types et les tests sont logiquement organisés dans une structure de dossiers qui autorise l’ajout d’autres types et tests par la suite.
 
-L’exemple contient deux types, `Dog` et `Cat`, qui implémentent une interface commune `IPet`. Pour le projet `NewTypes`, votre objectif est d’organiser les types liés aux animaux domestiques dans un dossier *Pets*. Si un autre jeu de types est ajouté par la suite, *WildAnimals* par exemple, il est placé dans le dossier *NewTypes* aux côtés du dossier *Pets*. Le dossier *WildAnimals* peut contenir des types pour des animaux non domestiques, par exemple `Squirrel` et `Rabbit`. De cette façon, à mesure que vous ajoutez des types, le projet reste bien organisé. 
+L’exemple contient deux types, `Dog` et `Cat`, qui implémentent une interface commune `IPet`. Pour le projet `NewTypes`, votre objectif est d’organiser les types liés aux animaux domestiques dans un dossier *Pets*. Si un autre jeu de types est ajouté par la suite, *WildAnimals* par exemple, il est placé dans le dossier *NewTypes* aux côtés du dossier *Pets*. Le dossier *WildAnimals* peut contenir des types pour des animaux non domestiques, par exemple `Squirrel` et `Rabbit`. De cette façon, à mesure que vous ajoutez des types, le projet reste bien organisé.
 
 Créez la structure de dossiers suivante avec le contenu de fichier indiqué :
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ Le code suivant montre la structure complète du projet :
 
 Démarrez dans le répertoire *test/NewTypesTests*. Restaurez le projet de test avec la commande [`dotnet restore`](../tools/dotnet-restore.md). Exécutez les tests avec la commande [`dotnet test`](../tools/dotnet-test.md). Cette commande démarre le Test Runner spécifié dans le fichier projet.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Comme prévu, les tests échouent et la console affiche la sortie suivante :
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 Les tests réussissent. Les méthodes des types d’animaux domestiques retournent des valeurs correctes quand elles communiquent avec le propriétaire.
 
 Vous avez appris les techniques permettant d’organiser et de tester des projets à l’aide de xUnit. Vous pouvez maintenant les mettre en pratique dans vos propres projets. *Bon développement !*
-

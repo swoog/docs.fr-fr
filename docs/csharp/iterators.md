@@ -3,12 +3,12 @@ title: Iterators
 description: Apprenez à utiliser les itérateurs C# intégrés et à créer vos propres méthodes d’itérateur personnalisées.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218343"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126043"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -27,7 +27,7 @@ Ce didacticiel comporte plusieurs étapes. Après chaque étape, vous pourrez ex
 
 ## <a name="iterating-with-foreach"></a>Itération avec foreach
 
-L’énumération d’une collection est simple : le mot clé `foreach` énumère une collection en exécutant l’instruction incorporée une fois pour chaque élément de la collection :
+Il est facile d’énumérer une collection : le mot clé `foreach` s’en charge en exécutant l’instruction incorporée une fois pour chaque élément de la collection :
  
 ```csharp
 foreach (var item in collection)
@@ -191,7 +191,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Ceci a été changé, car le comportement antérieur pouvait entraîner des bogues subtils et difficiles à diagnostiquer impliquant des expressions lambda. Pour plus d’informations, consultez la section [expressions lambda](lambda-expressions.md). 
+Ceci a été changé, car le comportement antérieur pouvait entraîner des bogues subtils et difficiles à diagnostiquer impliquant des expressions lambda. Pour plus d’informations sur les expressions lambda, voir [Expressions lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md).
 
 Le code exact généré par le compilateur est un peu plus compliqué et gère les cas où l’objet retourné par `GetEnumerator()` implémente l’interface `IDisposable`. L’expansion complète génère un code qui ressemble davantage à celui-ci :
 

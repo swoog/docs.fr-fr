@@ -2,19 +2,19 @@
 title: Tri des données (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721965"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125718"
 ---
 # <a name="sorting-data-c"></a>Tri des données (C#)
 Une opération de tri ordonne les éléments d’une séquence en fonction d’un ou de plusieurs attributs. Le premier critère de tri effectue un tri principal sur les éléments. En spécifiant un deuxième critère de tri, vous pouvez trier les éléments dans chaque groupe de tri principal.  
   
- L’illustration suivante montre les résultats d’une opération de tri alphabétique sur une séquence de caractères.  
+ L’illustration suivante montre les résultats d’une opération de tri par ordre alphabétique sur une séquence de caractères : 
   
- ![Opération de tri LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![Graphique montrant une opération de tri par ordre alphabétique.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Les méthodes d’opérateurs de requête standard qui trient les données sont répertoriées dans la section suivante.  
   

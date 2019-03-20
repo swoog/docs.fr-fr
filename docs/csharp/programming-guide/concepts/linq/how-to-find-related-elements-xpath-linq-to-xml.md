@@ -2,12 +2,12 @@
 title: 'Procédure : Rechercher des éléments connexes (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617406"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843337"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Procédure : Rechercher des éléments connexes (XPath-LINQ to XML) (C#)
 Cette rubrique montre comment obtenir un élément en sélectionnant un attribut auquel il est fait référence par la valeur d'un autre élément.  
@@ -19,7 +19,7 @@ Cette rubrique montre comment obtenir un élément en sélectionnant un attribut
 ## <a name="example"></a>Exemple  
  Cet exemple recherche le douzième élément `Order`, puis recherche le client associé à cette commande.  
   
- Notez que l'indexation dans une liste dans .Net est basée sur « zéro ». L'indexation dans une collection de nœuds dans un prédicat XPath est basée sur « un ». Cet exemple reflète cette différence.  
+ Notez que l’indexation dans une liste en .NET est en base « zéro ». L'indexation dans une collection de nœuds dans un prédicat XPath est basée sur « un ». Cet exemple reflète cette différence.  
   
  Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   

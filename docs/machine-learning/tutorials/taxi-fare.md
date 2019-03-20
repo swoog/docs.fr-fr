@@ -3,15 +3,15 @@ title: Prédire des prix en utilisant un apprenant de régression avec ML.NET
 description: Prédisez des prix en utilisant un apprenant de régression avec ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/05/2019
+ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678389"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846327"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutoriel : Prédire des prix en utilisant un apprenant de régression avec ML.NET
 
@@ -20,7 +20,7 @@ Ce tutoriel montre comment utiliserML.NET pour créer un [modèle de régression
 > [!NOTE]
 > Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.11**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Dans ce didacticiel, vous apprendrez à :
 > [!div class="checklist"]
@@ -92,7 +92,7 @@ Supprimez la définition de classe existante et ajoutez le code suivant, qui con
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` est la classe des données d’entrée et a des définitions pour chacune des colonnes du jeu de données. Utilisez l’attribut <xref:Microsoft.ML.Data.ColumnAttribute> pour spécifier les index des colonnes sources dans le jeu de données.
+`TaxiTrip` est la classe des données d’entrée et a des définitions pour chacune des colonnes du jeu de données. Utilisez l’attribut <xref:Microsoft.ML.Data.LoadColumnAttribute> pour spécifier les index des colonnes sources dans le jeu de données.
 
 La classe `TaxiTripFarePrediction` représente les résultats prédits. Elle comporte un seul champ float, `FareAmount`, avec un attribut `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> appliqué. Dans le cas de la tâche de régression, la colonne **Score** contient les valeurs d’étiquette prédites.
 
@@ -105,12 +105,11 @@ Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-Vous devez créer trois champs pour contenir les chemins des fichiers avec des jeux de données et le fichier pour enregistrer le modèle, ainsi qu’une variable globale pour `TextLoader` :
+Il faut créer trois champs qui contiendront les chemins des fichiers comportant des jeux de données et le fichier permettant d’enregistrer le modèle :
 
 * `_trainDataPath` contient le chemin du fichier avec le jeu de données utilisé pour l’apprentissage du modèle.
 * `_testDataPath` contient le chemin du fichier avec le jeu de données utilisé pour l’évaluation du modèle.
 * `_modelPath` contient le chemin du fichier où le modèle formé est stocké.
-* `_textLoader` est l’élément <xref:Microsoft.ML.Data.TextLoader> utilisé pour charger et transformer les jeux de données.
 
 Ajoutez le code suivant juste au-dessus de la méthode `Main` pour spécifier ces chemins et pour la variable `_textLoader` :
 
@@ -123,14 +122,6 @@ Lors de la création d’un modèle avec ML.NET, vous commencez par créer un co
 Créez une variable appelée `mlContext` et initialisez-la avec une nouvelle instance de `MLContext`.  Remplacez la ligne `Console.WriteLine("Hello World!")` par le code suivant dans la méthode `Main` :
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
-
-Ensuite, pour configurer le chargement des données, initialisez variable globale `_textLoader` afin de la réutiliser. Quand vous créez un `TextLoader`, vous passez le contexte nécessaire et la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> qui permet la personnalisation. Spécifiez le schéma de données en passant un tableau d’objets <xref:Microsoft.ML.Data.TextLoader.Column> au `TextLoader` contenant tous les noms de colonne et leurs types. Nous avons défini précédemment le schéma de données en créant notre classe `TaxiTrip`.
-
-La classe `TextLoader` retourne une variable <xref:Microsoft.ML.Data.TextLoader> totalement initialisée  
-
-Pour initialiser la variable globale `_textLoader` afin de la réutiliser pour les jeux de données nécessaires, ajoutez le code suivant après l’initialisation de `mlContext` :
-
-[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#4 "Initialize the TextLoader")]
 
 Ajoutez le code suivant comme prochaine ligne dans la méthode `Main` afin d’appeler la méthode `Train` :
 
@@ -157,11 +148,13 @@ Nous passons deux paramètres à la méthode `Train` ; un paramètre `MLContext
 
 ## <a name="load-and-transform-data"></a>Charger et transformer les données
 
-Nous allons charger les données en utilisant la variable globale `_textLoader` et le paramètre `dataPath`. Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. Comme entrée et sortie de transformations, un `IDataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
+Chargez les données avec le wrapper `MLContext.Data.LoadFromTextFile` de la [méthode LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. 
 
-Dans ML.NET, les données sont semblables à une vue SQL. Elles sont évaluées tardivement, schématisées et hétérogènes. L’objet est la première partie du pipeline, et charge les données. Pour ce tutoriel, il charge un jeu de données avec des informations sur les courses de taxi, utiles pour en prédire le prix. Cette méthode permet de créer puis de former le modèle.
+En tant qu’entrée et sortie de `Transforms`, un `DataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
 
- Ajoutez le code suivant comme première ligne de la méthode `Train` :
+Dans ML.NET, les données sont semblables à une vue SQL. Elles sont évaluées tardivement, schématisées et hétérogènes. L’objet est la première partie du pipeline, et charge les données. Pour ce tutoriel, il charge un jeu de données avec des commentaires et les sentiments positifs ou négatifs correspondants. Cette méthode permet de créer puis de former le modèle.
+
+Ajoutez le code suivant comme première ligne de la méthode `Train` :
 
 [!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
@@ -171,11 +164,11 @@ Quand le modèle fait l’objet d’un apprentissage et d’une évaluation, les
 
 [!code-csharp[CopyColumnsEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-L’algorithme qui effectue l’apprentissage du modèle nécessite des fonctionnalités **numériques**, car vous transformez les données catégoriques (`VendorId`, `RateCode` et `PaymentType`) en nombres. Pour ce faire, utilisez la classe de transformation `OneHotEncodingEstimator`, qui attribue différentes valeurs de clé numériques aux différentes valeurs de chaque colonne, et ajoutez le code suivant :
+L’algorithme qui effectue l’apprentissage du modèle exige des fonctionnalités **numériques**. Il faut donc transformer les données catégoriques (`VendorId`, `RateCode` et `PaymentType`) en nombres (`VendorIdEncoded`, `RateCodeEncoded` et `PaymentTypeEncoded`). Pour cela, utilisez la classe de transformation Microsoft.ML.Transforms.OneHotEncodingTransformer>, qui attribue différentes valeurs de clé numériques aux différentes valeurs de chaque colonne, et ajoutez le code suivant :
 
 [!code-csharp[OneHotEncodingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-La dernière étape de préparation des données regroupe toutes les colonnes de fonctionnalités dans la colonne **Fonctionnalités** à l’aide de la classe de transformation `ColumnConcatenatingEstimator`. Par défaut, un algorithme d’apprentissage traite uniquement les caractéristiques issues de la colonne **Features**. Ajoutez le code suivant :
+La dernière étape de préparation des données regroupe toutes les colonnes de fonctionnalités dans la colonne **Fonctionnalités** à l’aide de la classe de transformation `mlContext.Transforms.Concatenate`. Par défaut, un algorithme d’apprentissage traite uniquement les caractéristiques issues de la colonne **Features**. Ajoutez le code suivant :
 
 [!code-csharp[ColumnConcatenatingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
@@ -183,7 +176,7 @@ La dernière étape de préparation des données regroupe toutes les colonnes de
 
 Après avoir ajouté les données au pipeline et les avoir transformées au format d’entrée approprié, sélectionnons un algorithme d’apprentissage (**apprenant**). L’apprenant effectue l’apprentissage du modèle. Nous avez choisi une tâche de **régression** pour ce problème. Nous utilisons donc un apprenant `FastTreeRegressionTrainer`, qui est l’un des apprenants de régression fournis par ML.NET.
 
-L’apprenant `FastTreeRegressionTrainer` utilise le boosting de gradient. Le boosting de gradient est une technique d’apprentissage automatique pour résoudre les problèmes de régression. Il génère chaque arbre de régression étape par étape. Il utilise une fonction de perte prédéfinie pour mesurer l’erreur à chaque étape et la corriger à la prochaine. Le résultat est un modèle de prévision qui est en fait un ensemble de modèles de prédiction moins efficaces. Pour plus d’informations sur le boosting de gradient, consultez [Régression d’arbre de décision boostée](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
+L’algorithme d’apprentissage `FastTreeRegressionTrainer` s’appuie sur le boosting de gradient. Le boosting de gradient est une technique d’apprentissage automatique pour résoudre les problèmes de régression. Il génère chaque arbre de régression étape par étape. Il utilise une fonction de perte prédéfinie pour mesurer l’erreur à chaque étape et la corriger à la prochaine. Le résultat est un modèle de prévision qui est en fait un ensemble de modèles de prédiction moins efficaces. Pour plus d’informations sur le boosting de gradient, consultez [Régression d’arbre de décision boostée](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
 Ajoutez le code suivant dans la méthode `Train` afin d’ajouter le `FastTreeRegressionTrainer` au code de traitement des données ajouté à l’étape précédente :
 
@@ -251,11 +244,11 @@ Ajoutez un appel à la nouvelle méthode à partir de la méthode `Main`, juste 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Call the Evaluate method")]
 
-Nous allons charger le jeu de données de test à l’aide de la variable globale `_textLoader` précédemment initialisée avec le champ global `_testDataPath`. Vous pouvez évaluer le modèle à l’aide de ce jeu de données afin de contrôler la qualité. Ajoutez le code suivant à la méthode `Evaluate` :
+Chargez le jeu de données de test à l’aide du wrapper `MLContext.Data.LoadFromTextFile`. Vous pouvez évaluer le modèle à l’aide de ce jeu de données afin de contrôler la qualité. Ajoutez le code suivant à la méthode `Evaluate` :
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Nous allons ensuite utiliser le paramètre Machine Learning `model` (un transformateur) pour saisir les fonctionnalités et retourner des prédictions. Ajoutez comme nouvelle ligne le code suivant à la méthode `Evaluate` :
+Utilisons maintenant le paramètre Machine Learning `model` (transformateur) pour passer en entrée les fonctionnalités et retourner des prédictions. Ajoutez comme nouvelle ligne le code suivant à la méthode `Evaluate` :
 
 [!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 

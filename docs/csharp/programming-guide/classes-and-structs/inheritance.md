@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202351"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125913"
 ---
 # <a name="inheritance-c-programming-guide"></a>Héritage (Guide de programmation C#)
 
@@ -30,8 +30,7 @@ L’héritage, avec l’encapsulation et le polymorphisme, est l’une des trois
   
  L’illustration suivante montre une classe `WorkItem` qui représente un élément de travail dans un processus métier. Comme toutes les classes, elle dérive de <xref:System.Object?displayProperty=nameWithType> et hérite de toutes ses méthodes. `WorkItem` ajoute cinq de ses propres membres. Cela inclut un constructeur, parce que les constructeurs ne sont pas hérités. La classe `ChangeRequest` hérite de `WorkItem` et représente un type particulier d’élément de travail. `ChangeRequest` ajoute deux membres supplémentaires aux membres qu’elle hérite de `WorkItem` et de <xref:System.Object>. Elle doit ajouter son propre constructeur et ajoute également `originalItemID`. La propriété `originalItemID` permet à l’instance `ChangeRequest` d’être associée au `WorkItem` d’origine auquel s’applique la demande de modification.  
   
- ![Héritage de classe](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Héritage de classe  
+ ![Diagramme illustrant l’héritage de classe](./media/inheritance/class-inheritance-diagram.png)  
   
  L’exemple suivant montre comment les relations de classe de l’illustration précédente sont exprimées en langage C#. L’exemple montre également comment `WorkItem` substitue la méthode virtuelle <xref:System.Object.ToString%2A?displayProperty=nameWithType>, et comment la classe `ChangeRequest` hérite de l’implémentation `WorkItem` de la méthode.  
   

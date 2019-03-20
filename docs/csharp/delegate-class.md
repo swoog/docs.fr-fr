@@ -3,12 +3,12 @@ title: System.Delegate et le mot clé `delegate`
 description: En savoir plus sur les classes du .NET Framework qui prennent en charge les délégués et sur le mode de mappage de ces délégués au mot clé 'delegate'.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827298"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126173"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate et le mot clé `delegate`
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 Dans la ligne ci-dessus, le code *appelle* la méthode attachée au délégué.
 Vous traitez la variable comme un nom de méthode et vous l’appelez à l’aide de la syntaxe d’appel de méthode normale.
 
-Cette ligne de code effectue une hypothèse hasardeuse : il n’existe aucune garantie qu’une cible a été ajoutée au délégué. Si aucune cible n’a été attachée, la ligne ci-dessus entraîne la levée de `NullReferenceException`. Les idiomes utilisés pour résoudre ce problème sont plus compliqués qu’un simple contrôle de valeur Null. Ils sont traités plus loin dans cette [série](delegates-patterns.md).
+Cette ligne de code effectue une hypothèse hasardeuse : il n’y a aucune garantie qu’une cible ait été ajoutée au délégué. Si aucune cible n’a été attachée, la ligne ci-dessus entraîne la levée de `NullReferenceException`. Les idiomes utilisés pour résoudre ce problème sont plus compliqués qu’un simple contrôle de valeur Null. Ils sont traités plus loin dans cette [série](delegates-patterns.md).
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Assignation, ajout et suppression des cibles d’invocation
 
@@ -99,7 +99,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-Quand la méthode utilisée comme cible du délégué est une petite méthode, il est courant d’utiliser la syntaxe des [expressions lambda](lambda-expressions.md) pour effectuer l’assignation :
+Quand la méthode utilisée comme cible du délégué est petite, il est courant d’utiliser la syntaxe des [expressions lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) pour effectuer l’assignation :
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

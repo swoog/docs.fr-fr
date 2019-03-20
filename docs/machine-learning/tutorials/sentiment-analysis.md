@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723320"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845789"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>Charger les données
 
-Comme le type de modèle de données `SentimentData` créé précédemment correspond au schéma du jeu de données, il est possible de combiner l’initialisation, le mappage et le chargement du jeu de données en une seule ligne de code avec le wrapper `MLContext.Data.ReadFromTextFile` de <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29>. Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. 
+Comme le type de modèle de données `SentimentData` créé précédemment correspond au schéma du jeu de données, il est possible de combiner l’initialisation, le mappage et le chargement du jeu de données en une seule ligne de code avec le wrapper `MLContext.Data.LoadFromTextFile` de la [méthode LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. 
 
  En tant qu’entrée et sortie de `Transforms`, un `DataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
 
@@ -215,7 +215,7 @@ La méthode `BuildAndTrainModel` exécute les tâches suivantes :
 * Prédit les sentiments en fonction des données de test.
 * Retourne le modèle.
 
-Créez la méthode `Train` juste après la méthode `Main`, en utilisant le code suivant :
+Créez la méthode `BuildAndTrainModel` juste après la méthode `Main`, en utilisant le code suivant :
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

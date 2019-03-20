@@ -4,12 +4,12 @@ description: Découvrez comment prendre une application console .NET Framework e
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145278"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126082"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Exécution d’applications console dans des conteneurs Windows
 
@@ -50,7 +50,7 @@ Les conteneurs Windows sont pris en charge sur [Mise à jour anniversaire Window
 
 Vous devez disposer de Docker pour Windows, version 1.12 bêta 26 ou ultérieure, pour prendre en charge les conteneurs Windows. Par défaut, Docker autorise les conteneurs Linux ; basculez vers les conteneurs Windows en cliquant avec le bouton droit sur l’icône Docker dans la barre d’état système et en sélectionnant **Switch to Windows containers** (Basculer vers les conteneurs Windows). Docker exécute le processus de modification et un redémarrage peut être nécessaire.
 
-![Conteneurs Windows](./media/console/SwitchContainer.png)
+![Capture d’écran de l’option de menu du conteneur Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Génération de l’application
 En général, les applications console sont distribuées par le biais d’un programme d’installation, de FTP ou d’un déploiement avec partage de fichiers. Pendant le déploiement sur un conteneur, les ressources doivent être compilées et transférées vers un emplacement qui peut être utilisé au moment de la création de l’image Docker.

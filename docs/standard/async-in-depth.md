@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677524"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844734"
 ---
 # <a name="async-in-depth"></a>Async en détail
 
@@ -21,12 +21,12 @@ L’écriture de code asynchrone utilisant des E/S et le processeur est simple a
 
 Les tâches sont des constructions utilisées pour implémenter ce que l’on appelle le [modèle de promesses de concurrence](https://en.wikipedia.org/wiki/Futures_and_promises).  En bref, elles vous offrent la « promesse » que le travail sera terminé à un moment ultérieur, ce qui vous permet de coordonner la promesse et une nouvelle API.
 
-*   `Task` représente une opération unique qui ne retourne pas de valeur.
-*   `Task<T>` représente une opération unique qui retourne une valeur de type `T`.
+* `Task` représente une opération unique qui ne retourne pas de valeur.
+* `Task<T>` représente une opération unique qui retourne une valeur de type `T`.
 
 Il est important de considérer les tâches comme des abstractions de travail effectuées de manière asynchrone et *pas* comme une abstraction sur le modèle de thread. Par défaut, les tâches s’exécutent sur le thread actuel et délèguent le travail au système d’exploitation, comme il convient. Éventuellement, l’API `Task.Run` peut servir à demander explicitement aux tâches de s’exécuter sur un thread distinct.
 
-Les tâches exposent un protocole d’API pour surveiller et attendre la valeur de résultat d’une tâche et y accéder (dans le cas de `Task<T>`). L’intégration au langage, avec le mot clé `await`, fournit une abstraction de niveau supérieur pour l’utilisation des tâches. 
+Les tâches exposent un protocole d’API pour surveiller et attendre la valeur de résultat d’une tâche et y accéder (dans le cas de `Task<T>`). L’intégration au langage, avec le mot clé `await`, fournit une abstraction de niveau supérieur pour l’utilisation des tâches.
 
 L’utilisation de `await` permet à votre application ou service d’effectuer un travail utile pendant l’exécution d’une tâche en cédant le contrôle à son appelant jusqu’à ce que la tâche soit terminée. Votre code n’a pas besoin de s’appuyer sur des rappels ou des événements pour continuer l’exécution une fois la tâche terminée. L’intégration des API de langage et de tâche s’en charge pour vous. Si vous utilisez `Task<T>`, le mot clé `await` « désencapsule » également la valeur retournée quand la tâche est terminée.  Les détails de ce fonctionnement sont expliqués plus bas.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-L’appel de `GetStringAsync()` s’effectue par le biais de bibliothèques .NET de niveau inférieur (peut-être en appelant d’autres méthodes async) jusqu’à ce qu’il atteigne un appel interop P/Invoke dans une bibliothèque de réseau native. La bibliothèque native peut ensuite effectuer un appel de l’API système (tel que `write()` pour un socket sur Linux). Un objet de tâche est créé dans la limite native/managée, éventuellement à l’aide de [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). L’objet de tâche est transmis à travers les couches, éventuellement traité ou directement retourné, ou retourné à l’appelant initial. 
+L’appel de `GetStringAsync()` s’effectue par le biais de bibliothèques .NET de niveau inférieur (peut-être en appelant d’autres méthodes async) jusqu’à ce qu’il atteigne un appel interop P/Invoke dans une bibliothèque de réseau native. La bibliothèque native peut ensuite effectuer un appel de l’API système (tel que `write()` pour un socket sur Linux). Un objet de tâche est créé dans la limite native/managée, éventuellement à l’aide de [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). L’objet de tâche est transmis à travers les couches, éventuellement traité ou directement retourné, ou retourné à l’appelant initial.
 
 Dans le deuxième exemple ci-dessus, un objet `Task<T>` est retourné par `GetStringAsync`. L’utilisation du mot clé `await` indique à la méthode de retourner un objet de tâche nouvellement créé. Le contrôle retourne à l’appelant à partir de cet emplacement dans la méthode `GetFirstCharactersCountAsync`. Les méthodes et propriétés de l’objet [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) permettent aux appelants de surveiller la progression de la tâche, qui se termine quand le code restant dans GetFirstCharactersCountAsync a été exécuté.
 
@@ -82,7 +82,7 @@ Après l’appel de l’API système, la demande se trouve dans l’espace du no
 
 Par exemple, dans Windows, un thread de système d’exploitation effectue un appel au pilote de périphérique réseau et lui demande d’effectuer l’opération de mise en réseau via un paquet de requêtes d’interruption qui représente l’opération.  Le pilote de périphérique reçoit le paquet de requêtes d’interruption, effectue l’appel au réseau, marque le paquet comme étant « en attente » et le renvoie au système d’exploitation.  Le thread du système d’exploitation sait maintenant que le paquet de requêtes d’interruption est « en attente », il n’a donc rien d’autre à faire pour ce travail et « revient » pour pouvoir être utilisé pour une autre opération.
 
-Quand la demande est satisfaite et que les données reviennent à travers le pilote de périphérique, il avertit le processeur que de nouvelles données sont reçues via une interruption.  La façon dont cette interruption est gérée varie selon le système d’exploitation, mais les données sont ensuite transmises au système d’exploitation jusqu’à ce que se produise un appel d’interopérabilité système (par exemple, dans Linux, un gestionnaire d’interruptions planifie la moitié inférieure de l’IRQ pour qu’elle transmette les données via le système d’exploitation de façon asynchrone).  Notez que cela se produit *également* de façon asynchrone !  Le résultat est placé en file d’attente jusqu’à ce que le prochain thread disponible soit en mesure d’exécuter la méthode async et de « désencapsuler » le résultat de la tâche effectuée.
+Quand la demande est satisfaite et que les données reviennent à travers le pilote de périphérique, il avertit le processeur que de nouvelles données sont reçues via une interruption.  La façon dont cette interruption est gérée varie selon le système d’exploitation, mais les données sont ensuite transmises au système d’exploitation jusqu’à ce que se produise un appel d’interopérabilité système (par exemple, dans Linux, un gestionnaire d’interruptions planifie la moitié inférieure de l’IRQ pour qu’elle transmette les données via le système d’exploitation de façon asynchrone).  Notez que cela se produit *également* de façon asynchrone !  Le résultat est placé en file d’attente jusqu’à ce que le prochain thread disponible soit en mesure d’exécuter la méthode asynchrone et de « désencapsuler » le résultat de la tâche effectuée.
 
 Tout au long de ce processus, un élément clé à retenir est qu’**aucun thread n’est dédié à l’exécution de la tâche**.  Bien que le travail soit exécuté dans un contexte (c’est-à-dire que le système d’exploitation doit passer des données à un pilote de périphérique et répondre à une interruption), aucun thread n’est destiné à *attendre* le retour des données de la demande.  Cela permet au système de gérer une plus grande quantité de travail au lieu d’attendre la fin des appels d’E/S.
 
@@ -90,9 +90,9 @@ Bien que les étapes ci-dessus puissent donner l’impression d’un grand nombr
 
 0-1————————————————————————————————————————————————–2-3
 
-*   La durée entre les points `0` et `1` représente tout ce qui se passe avant qu’une méthode async cède le contrôle à son appelant.
-*   La durée entre les points `1` et `2` représente le temps consacré aux E/S, sans coût de processeur.
-*   Enfin, la durée entre les points `2` et `3` représente le temps consacré à rendre le contrôle (et éventuellement une valeur) à la méthode async, moment à partir duquel elle s’exécute à nouveau.
+* La durée entre les points `0` et `1` représente tout ce qui se passe avant qu’une méthode async cède le contrôle à son appelant.
+* La durée entre les points `1` et `2` représente le temps consacré aux E/S, sans coût de processeur.
+* Enfin, la durée entre les points `2` et `3` représente le temps consacré à rendre le contrôle (et éventuellement une valeur) à la méthode async, moment à partir duquel elle s’exécute à nouveau.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Qu’est-ce que cela signifie dans un scénario de serveur ?
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

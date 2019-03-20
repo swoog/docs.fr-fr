@@ -2,12 +2,12 @@
 title: Nouveautés de C# 7.3
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873798"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028673"
 ---
 # <a name="whats-new-in-c-73"></a>Nouveautés de C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-Dans les versions antérieures de C#, vous deviez épingler une variable pour accéder à un des entiers faisant partie de `myFixedField`. À présent, le code suivant se compile dans un contexte sécurisé :
+Dans les versions antérieures de C#, vous deviez épingler une variable pour accéder à un des entiers faisant partie de `myFixedField`. À présent, le code suivant se compile sans épingler la variable `p` à l’intérieur d’une instruction `fixed` distincte :
 
 ```csharp
 class C

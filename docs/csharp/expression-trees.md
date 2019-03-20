@@ -3,16 +3,16 @@ title: Arborescences de l’expression
 description: En savoir plus sur les arborescences d’expressions dans .NET Core et comment les utiliser pour représenter le code en tant que structures que vous pouvez examiner, modifier et exécuter.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190734"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125835"
 ---
 # <a name="expression-trees"></a>Arborescences de l’expression
 
-Si vous avez déjà utilisé LINQ, vous connaissez une bibliothèque enrichie où les types `Func` font partie de l’ensemble d’API. (Si vous ne connaissez pas LINQ, nous vous conseillons de lire le [didacticiel LINQ](linq/index.md) et le didacticiel sur les [expressions lambda](lambda-expressions.md) avant celui-ci.) Les *arborescences d’expressions* fournissent une interaction plus complète avec les arguments qui sont des fonctions.
+Si vous avez déjà utilisé LINQ, vous connaissez une bibliothèque enrichie où les types `Func` font partie de l’ensemble d’API. (Si vous ne connaissez pas LINQ, nous vous conseillons de lire le [tutoriel LINQ](linq/index.md) et l’article sur les [expressions lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) avant celui-ci.) Les *arborescences d’expressions* fournissent une interaction plus complète avec les arguments qui sont des fonctions.
 
 Vous écrivez des arguments de fonction, généralement à l’aide d’expressions lambda, quand vous créez des requêtes LINQ. Dans une requête LINQ classique, ces arguments de fonction sont transformés en un délégué créé par le compilateur. 
 
