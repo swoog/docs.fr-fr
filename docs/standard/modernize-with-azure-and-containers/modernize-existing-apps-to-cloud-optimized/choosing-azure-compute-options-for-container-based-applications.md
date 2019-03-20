@@ -4,12 +4,12 @@ description: Moderniser des applications .NET existantes avec des conteneurs de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125494"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186102"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Choisir des plates-formes de calcul Azure pour les applications en conteneur
 
@@ -17,12 +17,12 @@ Comme vous l’avez remarqué après avoir lu les sections précédentes, Azure 
 
 Comme un *par défaut* recommandation, ce qui suit est le principal critère recommandé dans ce guide :
 
-  - **Application monolithique unique :** Choisissez Azure App Service
-  - **Application multiniveau :** Choisissez des orchestrateurs tels que App Service, Service Fabric (SF) ou Azure Kubernetes Service (AKS) si vous avez un seul ou plusieurs services back-end
-  - **Microservices de Linux :** Choisissez AKS/Kubernetes
-  - **Microservices de Windows :** Choisissez Service Fabric
-  - **& Gestionnaires d’événements de fonctions sans serveur :** Choisissez Azure Functions
-  - **Lots à grande échelle :** Choisissez Azure Batch
+- **Application monolithique unique :** Choisissez Azure App Service
+- **Application multiniveau :** Choisissez des orchestrateurs tels que App Service, Service Fabric (SF) ou Azure Kubernetes Service (AKS) si vous avez un seul ou plusieurs services back-end
+- **Microservices de Linux :** Choisissez AKS/Kubernetes
+- **Microservices de Windows :** Choisissez Service Fabric
+- **& Gestionnaires d’événements de fonctions sans serveur :** Choisissez Azure Functions
+- **Lots à grande échelle :** Choisissez Azure Batch
 
 Toutefois, cette recommandation à entreprendre avec une pincée de salt, comme la sélection du produit varie selon les besoins spécifiques de votre application et de caractéristiques. Pas toutes les applications sont les mêmes, même lorsque initialement, il peut présenter des types similaires.
 
@@ -36,6 +36,6 @@ Notez comment la sous-jacente du système d’exploitation (Windows Visual Studi
 
 Cependant, ces différences de maturité de système d’exploitation seront estompe à l’avenir, plusieurs plateformes auront comparable maturité du système d’exploitation et la décision sera mise en page plus sur les préférences en fonction des fonctionnalités spécifiques, votre application peut avoir besoin, ou en fonction de l’écosystème de chaque plateforme raisons.
 
->[!div class="step-by-step"]
->[Précédent](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Suivant](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Précédent](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Suivant](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

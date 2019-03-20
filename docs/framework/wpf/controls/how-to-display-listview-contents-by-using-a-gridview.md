@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView controls [WPF], displaying contents with GridView
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
-ms.openlocfilehash: 9a4bcc8b613637521ee91a11b0bdac8f77f90a03
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1066869c80bf5bd87d656bcb4994c188ee0e8efc
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354399"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185608"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Procédure : Afficher un contenu ListView à l'aide d'un GridView
 Cet exemple montre comment définir un <xref:System.Windows.Controls.GridView> mode d’affichage pour un <xref:System.Windows.Controls.ListView> contrôle.  
@@ -22,7 +22,7 @@ Cet exemple montre comment définir un <xref:System.Windows.Controls.GridView> m
   
  L’illustration suivante montre comment cet exemple s’affiche.  
   
- ![Sortie de ListView avec GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Capture d’écran montrant un ListView avec GridView sortie.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.ListView>
