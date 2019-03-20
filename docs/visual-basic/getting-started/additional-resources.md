@@ -25,7 +25,7 @@ Les sites web suivants fournissent des instructions et peuvent vous aider à tro
 
 |Terme|Définition|
 |----------|----------------|
-|[Conception du langage Visual Basic .NET](https://github.com/dotnet/vblang)|Dépôt officiel sur GitHub pour la conception du langage .Visual Studio .NET.|
+|[Conception du langage Visual Basic .NET](https://github.com/dotnet/vblang)|Dépôt officiel sur GitHub pour la conception du langage .Visual Basic .NET.|
 |[Blog de l’équipe Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Permet d’accéder au blog de l’équipe Visual Basic.|
 
 ### <a name="code-samples"></a>Exemples de code

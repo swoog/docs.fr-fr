@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719635"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262575"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procédure : Créer un workflow séquentiel
 Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Sequence> activité et les activités personnalisées de la précédente [Comment : Créer une activité](how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
@@ -21,7 +21,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
 > [!NOTE]
 >  Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).  
   
-### <a name="to-create-the-workflow"></a>Pour créer le flux de travail  
+## <a name="to-create-the-workflow"></a>Pour créer le flux de travail  
   
 1.  Avec le bouton droit **NumberGuessWorkflowActivities** dans **l’Explorateur de solutions** et sélectionnez **ajouter**, **un nouvel élément**.  
   
@@ -31,7 +31,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 4.  Faites glisser un **séquence** activité à partir de la **flux de contrôle** section de la **boîte à outils** et déposez-le sur le **déposer l’activité ici** étiquette sur le aire de conception de workflow.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Pour créer les variables et arguments du flux de travail  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Pour créer les variables et arguments du flux de travail  
   
 1.  Double-cliquez sur **SequentialNumberGuessWorkflow.xaml** dans **l’Explorateur de solutions** pour afficher le flux de travail dans le concepteur, si ce n’est pas déjà fait.  
   
@@ -62,7 +62,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 13. Cliquez sur **Variables** dans la partie inférieure gauche du Concepteur d’activités pour fermer la **Variables** volet.  
   
-### <a name="to-add-the-workflow-activities"></a>Pour ajouter les activités de flux de travail  
+## <a name="to-add-the-workflow-activities"></a>Pour ajouter les activités de flux de travail  
   
 1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et déposez-le sur le **séquence** activité. Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une expression c#** ou **entrer une expression VB** boîte.  
   
@@ -137,13 +137,13 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 13. Cliquez sur le **WriteLine** activité dans le **puis** pour le sélectionner, puis tapez l’expression suivante dans le **texte** zone valeur de propriété.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Cliquez sur le **WriteLine** activité dans le **Else** pour le sélectionner, puis tapez l’expression suivante dans le **texte** zone valeur de propriété.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
      ![Flux de travail séquentiel terminé](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>Pour générer le flux de travail  
+## <a name="to-build-the-workflow"></a>Pour générer le flux de travail  
   
 1.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
