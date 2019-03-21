@@ -21,9 +21,9 @@ Le nom du struct doit être un [nom d’identificateur](../inside-a-program/iden
 
 Toute classe ou tout struct qui implémentent l'interface <xref:System.IEquatable%601> doivent contenir une définition pour une méthode <xref:System.IEquatable%601.Equals%2A> qui correspond à la signature spécifiée par l'interface. Ainsi, vous pouvez compter sur une classe qui implémente `IEquatable<T>` pour contenir une méthode `Equals` avec laquelle une instance de la classe peut déterminer si elle est égale à une autre instance de la même classe.  
   
-La définition de `IEquatable<T>` ne fournit pas d'implémentation pour `Equals`. L'interface définit uniquement la signature. De cette façon, une interface en C# est semblable à une classe abstraite dans laquelle toutes les méthodes sont abstraites. En revanche, une classe ou un struct peuvent implémenter plusieurs interfaces, mais une classe peut uniquement hériter d'une seule classe, abstraite ou non. Ainsi, en utilisant des interfaces, vous pouvez inclure le comportement de plusieurs sources dans une classe.  
+La définition de `IEquatable<T>` ne fournit pas d'implémentation pour `Equals`. L'interface définit uniquement la signature. De cette façon, une interface en C# est semblable à une classe abstraite dans laquelle toutes les méthodes sont abstraites. En revanche, une classe ou un struct peuvent implémenter plusieurs interfaces, mais une classe peut uniquement hériter d'une seule classe, abstraite ou non.
   
-Pour plus d'informations sur les classes abstraites, consultez [Classes abstract et sealed et membres de classe](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+Pour plus d’informations sur les classes abstraites, consultez [Classes abstract et sealed et membres de classe](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 Les interfaces peuvent contenir des méthodes, propriétés, événements, indexeurs ou toute combinaison de ces quatre types de membres. Pour obtenir des liens vers des exemples, consultez les [Sections connexes](../interfaces/index.md#BKMK_RelatedSections). Une interface ne peut pas contenir de constantes, champs, opérateurs, constructeurs d'instance, finaliseurs ou types. Les membres d’interface sont automatiquement publics et ils ne peuvent pas inclure de modificateurs d’accès. Les membres ne peuvent pas non plus être [statiques](../../language-reference/keywords/static.md).  
   
@@ -45,7 +45,7 @@ Une classe de base peut également implémenter des membres d'interface à l'aid
 
 Une interface possède les propriétés suivantes :  
 
-- Une interface est comme une classe de base abstraite. Toute classe ou tout struct qui implémentent l'interface doivent implémenter tous ses membres.
+- Une interface est comme une classe de base abstraite avec uniquement des membres abstraits. Toute classe ou tout struct qui implémentent l'interface doivent implémenter tous ses membres.
 - Une interface ne peut pas être instanciée directement. Ses membres sont implémentées par une classe ou un struct qui implémentent l'interface.
 - Les interfaces peuvent contenir des événements, des indexeurs, des méthodes et des propriétés.
 - Les interfaces ne contiennent aucune implémentation de méthodes.
