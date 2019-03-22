@@ -6,23 +6,28 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: d30d452a7c140a0c56529386b14ef3a3512df490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722151"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348763"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. et ? opérateurs de condition null () (Visual Basic)
 
-Teste la valeur de l’opérande de gauche pour la valeur null (`Nothing`) avant d’effectuer un accès au membre (`?.`) ou d’un index (`?()`) de l’opération ; retourne `Nothing` si l’opérande de gauche a la valeur `Nothing`. Notez que, dans les expressions qui renverrait habituellement des types valeur, l’opérateur conditionnel null renvoie un <xref:System.Nullable%601>.
+Teste la valeur de l’opérande de gauche pour la valeur null (`Nothing`) avant d’effectuer un accès au membre (`?.`) ou d’un index (`?()`) de l’opération ; retourne `Nothing` si l’opérande de gauche a la valeur `Nothing`. Notez que dans les expressions qui retournent des types valeur en règle générale, l’opérateur conditionnel null renvoie un <xref:System.Nullable%601>.
 
 Ces opérateurs permettent d’écrire moins de code pour gérer les vérifications « null », en particulier lors de la descente dans les structures de données. Exemple :
 
 ```vb
-Dim length As Integer? = customers?.Length  ' Nothing if customers is Nothing  
-Dim first As Customer = customers?(0)  ' Nothing if customers is Nothing  
-Dim count As Integer? = customers?(0)?.Orders?.Count()  ' Nothing if customers, the first customer, or Orders is Nothing  
+' Nothing if customers is Nothing  
+Dim length As Integer? = customers?.Length  
+
+' Nothing if customers is Nothing
+Dim first As Customer = customers?(0)
+
+' Nothing if customers, the first customer, or Orders is Nothing
+Dim count As Integer? = customers?(0)?.Orders?.Count()   
 ```
 
 Pour la comparaison, le code de remplacement pour la première de ces expressions sans opérateur conditionnel null est :
@@ -34,27 +39,57 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Les opérateurs conditionnels Null ont un effet de court-circuit.  Si une opération dans une chaîne d’opérations d’accès et des index membre conditionnel ne retourne rien, le reste de l’exécution de la chaîne s’arrête.  Dans l’exemple suivant, c (e) n’est pas évaluée si `A`, `B`, ou `C` a la valeur Nothing.
+Les opérateurs conditionnels Null ont un effet de court-circuit.  Si une opération dans une chaîne d’opérations d’accès et des index membre conditionnel retourne `Nothing`, le reste de le de la chaîne exécution s’arrête.  Dans l’exemple suivant, `C(E)` n’est pas évaluée si `A`, `B`, ou `C` prend la valeur `Nothing`.
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Utilisez un autre pour l’accès aux membres conditionnels null consiste à appeler des délégués de façon thread-safe avec beaucoup moins de code.  Avec l'ancienne méthode, vous deviez utiliser un code similaire au suivant :  
+Utilisez un autre pour l’accès aux membres conditionnels null consiste à appeler des délégués de façon thread-safe avec beaucoup moins de code.  L’exemple suivant définit deux types, un `NewsBroadcaster` et un `NewsReceiver`. Éléments de News sont envoyés au destinataire par le `NewsBroadcaster.SendNews` déléguer.
+
+```vb
+Public Module NewsBroadcaster
+   Dim SendNews As Action(Of String) 
+
+   Public Sub Main()
+      Dim rec As New NewsReceiver()
+      Dim rec2 As New NewsReceiver()
+      SendNews?.Invoke("Just in: A newsworthy item...")
+   End Sub
+
+   Public Sub Register(client As Action(Of String))
+      SendNews = SendNews.Combine({SendNews, client})
+   End Sub
+End Module
+
+Public Class NewsReceiver
+   Public Sub New()
+      NewsBroadcaster.Register(AddressOf Me.DisplayNews)
+   End Sub
+
+   Public Sub DisplayNews(newsItem As String)
+      Console.WriteLine(newsItem)
+   End Sub
+End Class
+```
+
+Si aucun élément dans le `SendNews` liste d’appel, le `SendNews` délégué lève un <xref:System.NullReferenceException>. Avant les opérateurs conditionnels null, de code comme celui-ci assuré que la liste d’appel de délégué n’était pas `Nothing`:
 
 ```vb  
-Dim handler = AddressOf(Me.PropertyChanged)  
-If handler IsNot Nothing  
-    Call handler(…)  
+SendNews = SendNews.Combine({SendNews, client})  
+If SendNews IsNot Nothing Then 
+   SendNews("Just in...")
+End If
 ```
 
 La nouvelle méthode est beaucoup plus simple :  
 
 ```vb
-PropertyChanged?.Invoke(…)
+SendNews = SendNews.Combine({SendNews, client})  
+SendNews?.Invoke("Just in...")
 ```
 
-La nouvelle méthode est thread-safe, car le compilateur génère du code qui évalue `PropertyChanged` une seule fois, en conservant le résultat dans une variable temporaire. Vous devez explicitement appeler la méthode `Invoke`, car il n'existe pas de syntaxe d'appel de délégué conditionnel Null `PropertyChanged?(e)`.  
+La nouvelle méthode est thread-safe, car le compilateur génère du code qui évalue `SendNews` une seule fois, en conservant le résultat dans une variable temporaire. Vous devez explicitement appeler la méthode `Invoke`, car il n'existe pas de syntaxe d'appel de délégué conditionnel Null `SendNews?(String)`.  
 
 ## <a name="see-also"></a>Voir aussi
 
