@@ -4,12 +4,12 @@ description: Aide destinée aux propriétaires de projet qui souhaitent compiler
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904021"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186063"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organiser votre projet pour prendre en charge à la fois le .NET Framework et .NET Core
 
@@ -36,7 +36,7 @@ Découvrez comment créer une solution qui se compile parallèlement pour .NET F
 
 Considérez le dépôt ci-dessous :
 
-![Projet existant](media/project-structure/project.png)
+![Projet existant](./media/project-structure/existing-project-structure.png)
 
 [**Code source**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ La section suivante décrit plusieurs méthodes pour ajouter la prise en charge 
 
 Réorganisez le dépôt de sorte que tous les fichiers *\*.csproj* existants soient supprimés et qu’un seul fichier *\*.csproj* ciblant plusieurs frameworks soit créé. Il s’agit d’une option intéressante car un même projet peut être compilé pour différents frameworks. Elle permet également de gérer différentes options de compilation et dépendances par framework ciblé.
 
-![Créer un csproj qui cible plusieurs frameworks](media/project-structure/project.csproj.png)
+![Créer un csproj qui cible plusieurs frameworks](./media/project-structure/multi-targeted-project.png)
 
 [**Code source**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Les modifications à noter sont :
 
 Si des projets existants ciblent des frameworks plus anciens, vous pouvez laisser ces projets inchangés et utiliser un projet .NET Core pour cibler les futurs frameworks.
 
-![Projet .NET Core avec un projet existant dans un dossier différent](media/project-structure/project.csproj.different.png)
+![Projet .NET Core avec un projet existant dans un dossier différent](./media/project-structure/separate-projects-same-source.png)
 
 [**Code source**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
