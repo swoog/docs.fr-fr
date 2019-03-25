@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973169"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411536"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Déclare une référence à une procédure implémentée dans un fichier externe.  
@@ -53,17 +53,17 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Optionnel. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Facultatif. Spécifie le jeu de caractères et le fichier d’informations de recherche. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (valeur par défaut)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`charsetmodifier`|Optionnel. Spécifie le jeu de caractères et le fichier d’informations de recherche. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (valeur par défaut)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Facultatif, mais `Sub` ou `Function` doit apparaître. Indique que la procédure externe ne retourne pas de valeur.|  
 |`Function`|Facultatif, mais `Sub` ou `Function` doit apparaître. Indique que la procédure externe retourne une valeur.|  
 |`name`|Obligatoire. Nom de cette référence externe. Pour plus d’informations, consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Lib`|Obligatoire. Introduit un `Lib` clause qui identifie le fichier externe (DLL ou ressource de code) qui contient une procédure externe.|  
 |`libname`|Obligatoire. Nom du fichier qui contient la procédure déclarée.|  
-|`Alias`|Facultatif. Indique que la procédure déclarée ne peut pas être identifiée dans son fichier par le nom spécifié dans `name`. Vous spécifiez son identification dans `aliasname`.|  
-|`aliasname`|Requis si vous utilisez le `Alias` mot clé. Chaîne qui identifie la procédure de deux manières :<br /><br /> Le nom de point d’entrée de la procédure dans son fichier, entre guillemets (`""`)<br /><br /> ou<br /><br /> Un signe dièse (`#`) suivie d’un entier spécifiant le nombre ordinal du point d’entrée de la procédure dans son fichier|  
+|`Alias`|Optionnel. Indique que la procédure déclarée ne peut pas être identifiée dans son fichier par le nom spécifié dans `name`. Vous spécifiez son identification dans `aliasname`.|  
+|`aliasname`|Requis si vous utilisez le `Alias` mot clé. Chaîne qui identifie la procédure de deux manières :<br /><br /> Le nom de point d’entrée de la procédure dans son fichier, entre guillemets (`""`)<br /><br /> - ou -<br /><br /> Un signe dièse (`#`) suivie d’un entier spécifiant le nombre ordinal du point d’entrée de la procédure dans son fichier|  
 |`parameterlist`|Obligatoire si la procédure accepte des paramètres. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Obligatoire si `Function` est spécifié et `Option Strict` est `On`. Type de données de la valeur retournée par la procédure.|  
   
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mécanisme.** Visual Basic utilise le .NET Framework *non managé* mécanisme (PInvoke) pour résoudre et accéder aux procédures externes. Le `Declare` instruction et la <xref:System.Runtime.InteropServices.DllImportAttribute> classe les deux utilisent ce mécanisme automatiquement et vous n’avez pas besoin d’aucune connaissance de PInvoke. Pour plus d’informations, consultez [Procédure pas à pas : Appel d’API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Si la procédure externe s’exécute en dehors du common language runtime (CLR), il est *du code non managé*. Lorsque vous appelez une telle procédure, par exemple une fonction API Win32 ou une méthode COM, vous pouvez exposer votre application à des risques de sécurité. Pour plus d’informations, consultez [instructions de codage sécurisé pour le Code non managé](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Si la procédure externe s’exécute en dehors du common language runtime (CLR), il est *du code non managé*. Lorsque vous appelez une telle procédure, par exemple une fonction API de Windows ou une méthode COM, vous pouvez exposer votre application à des risques de sécurité. Pour plus d’informations, consultez [instructions de codage sécurisé pour le Code non managé](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant déclare une référence externe à un `Function` procédure qui retourne le nom d’utilisateur actuel. Il appelle ensuite la procédure externe `GetUserNameA` dans le cadre de la `getUser` procédure.  

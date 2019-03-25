@@ -74,8 +74,7 @@ Le **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type accepte u
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> accepte des valeurs de type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> et <xref:System.IO.Stream>.
 
-
-  <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, et l'objet <xref:System.IO.Stream> seront envoyés jusqu'à la valeur définie par <xref:System.Data.SqlClient.SqlParameter.Size%2A>.
+<xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, et l'objet <xref:System.IO.Stream> seront envoyés jusqu'à la valeur définie par <xref:System.Data.SqlClient.SqlParameter.Size%2A>.
 
 ## <a name="sample----streaming-from-sql-server"></a>Exemple--Diffusion en continu à partir de SQL Server
 

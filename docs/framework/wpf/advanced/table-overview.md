@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379010"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410816"
 ---
 # <a name="table-overview"></a>Vue d'ensemble de Table
 <xref:System.Windows.Documents.Table> est un élément de niveau bloc qui prend en charge sous forme de grille de présentation du contenu de document dynamique. La flexibilité de cet élément est très utile, mais rend plus difficiles sa compréhension et son utilisation.  
@@ -72,7 +72,7 @@ ms.locfileid: "57379010"
   
  La figure suivante montre le rendu de cet exemple.  
   
- ![Capture d’écran : Affichage d’une table de base](./media/basictablerrender.png "BasicTablerRender")  
+ ![Capture d’écran montre le rendu d’une table de base.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Imbrication des tables  

@@ -2,12 +2,12 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645416"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409833"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 Cet exemple illustre comment personnaliser des processus tels que la sérialisation, la désérialisation, l’exportation et l’importation de schémas à l’aide d’une classe de substitution d’un contrat de données. Cet exemple montre comment utiliser un substitut dans un scénario client et le serveur où les données sont sérialisées et transmises entre un client Windows Communication Foundation (WCF) et le service.  
@@ -64,9 +64,9 @@ public class Person
 }  
 ```  
   
- Vous pouvez appliquer l'attribut `DataContract` à la classe `Person`, mais cela n'est pas toujours possible. Par exemple, la classe `Person` peut être définie dans un assembly distinct sur lequel vous n'exercez aucun contrôle.  
+ Vous pouvez appliquer l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> à la classe `Person`, mais cela n'est pas toujours possible. Par exemple, la classe `Person` peut être définie dans un assembly distinct sur lequel vous n'exercez aucun contrôle.  
   
- L'une des solutions permettant alors de sérialiser la classe `Person` consiste à la remplacer par une autre classe signalée par l'attribut `DataContractAttribute`, puis à copier les données requises dans cette nouvelle classe. L'objectif de l'opération ci-dessus est le suivant : présenter la classe `Person` comme DataContract au <xref:System.Runtime.Serialization.DataContractSerializer>. Remarque : il s'agit d'une solution parmi d'autres permettant de sérialiser les classes n'appartenant pas à un contrat de données.  
+ L'une des solutions permettant alors de sérialiser la classe `Person` consiste à la remplacer par une autre classe signalée par l'attribut <xref:System.Runtime.Serialization.DataContractAttribute>, puis à copier les données requises dans cette nouvelle classe. L'objectif de l'opération ci-dessus est le suivant : présenter la classe `Person` comme DataContract au <xref:System.Runtime.Serialization.DataContractSerializer>. Remarque : il s'agit d'une solution parmi d'autres permettant de sérialiser les classes n'appartenant pas à un contrat de données.  
   
  L'exemple remplace logiquement la classe `Person` par une classe différente nommée `PersonSurrogated`.  
   
@@ -87,7 +87,7 @@ public class PersonSurrogated
   
  Le substitut de contrat de données est utilisé pour effectuer ce remplacement. Un substitut de contrat de données est une classe qui implémente <xref:System.Runtime.Serialization.IDataContractSurrogate>. Dans cet exemple, la classe `AllowNonSerializableTypesSurrogate` implémente cette interface.  
   
- Dans l'implémentation d'interface, la première tâche consiste à définir un type mappant la classe `Person` à la classe `PersonSurrogated`. Ce processus de mappage est utilisé à la fois pendant la sérialisation et l'exportation des schémas. Il s'effectue en implémentant la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>.  
+ Dans l’implémentation d’interface, la première tâche consiste à définir un type mappant la classe `Person` à la classe `PersonSurrogated`. Ce processus de mappage est utilisé à la fois pendant la sérialisation et l'exportation des schémas. Il s'effectue en implémentant la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>.  
   
 ```  
 public Type GetDataContractType(Type type)  

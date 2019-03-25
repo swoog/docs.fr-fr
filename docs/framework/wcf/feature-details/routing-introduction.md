@@ -2,12 +2,12 @@
 title: Introduction au routage
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563767"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409846"
 ---
 # <a name="routing-introduction"></a>Introduction au routage
 Le service de routage fournit un intermédiaire SOAP générique connectable, capable de router des messages en fonction du contenu. Le service de routage vous permet de créer une logique de routage complexe et d'implémenter des scénarios, tels que l'agrégation de service, le contrôle des versions de service, le routage par priorité et en mode multidiffusion. Le service de routage fournit également une gestion des erreurs qui vous permet de définir des listes de points de terminaison de sauvegarde auxquels sont envoyés les messages en cas d'échec de l'envoi au point de terminaison de destination primaire.  
@@ -29,7 +29,7 @@ Le service de routage fournit un intermédiaire SOAP générique connectable, ca
  Cela signifie que si vos points de terminaison de destination utilisent des contrats avec plusieurs modèles de communication (comme une combinaison d'opérations monodirectionnelles et bidirectionnelles), vous ne pouvez pas créer de point de terminaison de service unique qui puisse recevoir et router des messages vers tous les points de terminaison de destination. Vous devez déterminer les points de terminaison qui ont des formes compatibles et définir un ou plusieurs points de terminaison de service qui permettront de recevoir les messages devant être routés vers les points de terminaison de destination.  
   
 > [!NOTE]
-> En cas d'utilisation de contrats spécifiant plusieurs modèles de communication (comme une combinaison d'opérations monodirectionnelles et bidirectionnelles), vous pouvez utiliser un contrat duplex au service de routage tel que l'interface <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Cependant, cela suppose que la liaison soit capable d'une communication duplex, ce qui n'est pas le cas dans tous les scénarios. Dans les scénarios où cela n'est pas possible, il faudra peut-être développer la communication en plusieurs points de terminaison ou modifier l'application.  
+> En cas d’utilisation de contrats spécifiant plusieurs modèles de communication (comme une combinaison d’opérations monodirectionnelles et bidirectionnelles), vous pouvez utiliser un contrat duplex au service de routage tel que l’interface <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Cependant, cela suppose que la liaison soit capable d’une communication duplex, ce qui n’est pas le cas dans tous les scénarios. Dans les scénarios où cela n'est pas possible, il faudra peut-être développer la communication en plusieurs points de terminaison ou modifier l'application.  
   
  Pour plus d’informations sur les contrats de routage, consultez [contrats de routage](routing-contracts.md).  
   
@@ -351,28 +351,28 @@ RoutingConfiguration rc = new RoutingConfiguration();
 rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);  
 ```  
   
-### <a name="supported-error-patterns"></a>Modèles d'erreurs pris en charge  
- Le tableau suivant décrit les modèles compatibles avec l'utilisation des listes de point de terminaison de sauvegarde, avec une description des détails de gestion des erreurs pour chaque modèle spécifique.  
+### <a name="supported-error-patterns"></a>Modèles d’erreurs pris en charge  
+ Le tableau suivant décrit les modèles compatibles avec l’utilisation des listes de point de terminaison de sauvegarde, avec une description des détails de gestion des erreurs pour chaque modèle spécifique.  
   
-|Modèle|Session|Transaction|Contexte de réception|Liste de sauvegarde prise en charge|Remarques|  
+|Motif|Session|Transaction|Contexte de réception|Liste de sauvegarde prise en charge|Notes|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |One-Way||||Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Si ce message est en mode multidiffusion, seul le message sur le canal en échec est déplacé vers sa destination de sauvegarde.|  
-|One-Way||![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
-|One-Way|||![Case à cocher](media/checkmark.gif "coche")|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois le message correctement reçu, effectuez tous les contextes de réception. Si le message n'a pas été correctement reçu par un point de terminaison, n'effectuez pas le contexte de réception.<br /><br /> Lorsque ce message est envoyé en mode multidiffusion, le contexte de réception n'est effectué que si le message a été correctement reçu par au moins un point de terminaison (primaire ou de sauvegarde). Si aucun des points de terminaison situés sur les chemins d'accès de multidiffusion ne reçoit correctement le message, n'effectuez pas le contexte de réception.|  
-|One-Way||![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|Oui|Abandonnez la transaction précédente, créez une nouvelle transaction et renvoyez tous les messages. Les messages qui ont rencontré une erreur sont transmis à une destination de sauvegarde.<br /><br /> Une fois créée une transaction dont toutes les transmissions ont réussi, effectuez les contextes de réception et validez la transaction.|  
-|One-Way|![Case à cocher](media/checkmark.gif "coche")|||Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Dans un scénario de multidiffusion, seuls les messages qui se trouvent dans une session ayant rencontré une erreur ou dont la fin de session a échoué sont renvoyés aux destinations de sauvegarde.|  
-|One-Way|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
-|One-Way|![Case à cocher](media/checkmark.gif "coche")||![Case à cocher](media/checkmark.gif "coche")|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois tous les messages envoyés sans erreur, la session indique qu'il n'y a plus de messages, le service de routage ferme correctement tous les canaux de session sortante, tous les contextes de réception sont effectués et le canal de session entrante est fermé.|  
-|One-Way|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|Oui|Abandonnez la transaction actuelle et créez en une nouvelle. Renvoyez tous les messages précédents de la session. Une fois créée une transaction dont tous les messages ont été correctement envoyés et lorsque la session indique qu'il n'y a plus de messages, tous les canaux de session sortante sont fermés, les contextes de réception sont tous effectués avec la transaction, le canal de session entrante est fermé et la transaction est validée.<br /><br /> Lorsque les sessions sont en mode multidiffusion, les messages qui n'ont eu aucune erreur sont renvoyés à la même destination qu'avant, et les messages qui ont rencontré une erreur sont envoyés aux destinations de sauvegarde.|  
+|One-Way||✓||Non|Une exception est levée et la transaction est restaurée.|  
+|One-Way|||✓|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois le message correctement reçu, effectuez tous les contextes de réception. Si le message n'a pas été correctement reçu par un point de terminaison, n'effectuez pas le contexte de réception.<br /><br /> Lorsque ce message est envoyé en mode multidiffusion, le contexte de réception n'est effectué que si le message a été correctement reçu par au moins un point de terminaison (primaire ou de sauvegarde). Si aucun des points de terminaison situés sur les chemins d’accès de multidiffusion ne reçoit correctement le message, n’effectuez pas le contexte de réception.|  
+|One-Way||✓|✓|Oui|Abandonnez la transaction précédente, créez une nouvelle transaction et renvoyez tous les messages. Les messages qui ont rencontré une erreur sont transmis à une destination de sauvegarde.<br /><br /> Une fois créée une transaction dont toutes les transmissions ont réussi, effectuez les contextes de réception et validez la transaction.|  
+|One-Way|✓|||Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Dans un scénario de multidiffusion, seuls les messages qui se trouvent dans une session ayant rencontré une erreur ou dont la fin de session a échoué sont renvoyés aux destinations de sauvegarde.|  
+|One-Way|✓|✓||Non|Une exception est levée et la transaction est restaurée.|  
+|One-Way|✓||✓|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois tous les messages envoyés sans erreur, la session indique qu'il n'y a plus de messages, le service de routage ferme correctement tous les canaux de session sortante, tous les contextes de réception sont effectués et le canal de session entrante est fermé.|  
+|One-Way|✓|✓|✓|Oui|Abandonnez la transaction actuelle et créez en une nouvelle. Renvoyez tous les messages précédents de la session. Une fois créée une transaction dont tous les messages ont été correctement envoyés et lorsque la session indique qu'il n'y a plus de messages, tous les canaux de session sortante sont fermés, les contextes de réception sont tous effectués avec la transaction, le canal de session entrante est fermé et la transaction est validée.<br /><br /> Lorsque les sessions sont en mode multidiffusion, les messages qui n'ont eu aucune erreur sont renvoyés à la même destination qu'avant, et les messages qui ont rencontré une erreur sont envoyés aux destinations de sauvegarde.|  
 |Bidirectionnel||||Oui|Envoyez à une destination de sauvegarde.  Après qu'un canal a retourné un message de réponse, retournez la réponse au client d'origine.|  
-|Bidirectionnel|![Case à cocher](media/checkmark.gif "coche")|||Oui|Envoyez tous les messages sur le canal à une destination de sauvegarde.  Après qu'un canal a retourné un message de réponse, retournez la réponse au client d'origine.|  
-|Bidirectionnel||![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
-|Bidirectionnel|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
+|Bidirectionnel|✓|||Oui|Envoyez tous les messages sur le canal à une destination de sauvegarde.  Après qu'un canal a retourné un message de réponse, retournez la réponse au client d'origine.|  
+|Bidirectionnel||✓||Non|Une exception est levée et la transaction est restaurée.|  
+|Bidirectionnel|✓|✓||Non|Une exception est levée et la transaction est restaurée.|  
 |Duplex||||Non|La communication duplex sans session n'est pas prise en charge actuellement.|  
-|Duplex|![Case à cocher](media/checkmark.gif "coche")|||Oui|Envoyez à une destination de sauvegarde.|  
+|Duplex|✓|||Oui|Envoyez à une destination de sauvegarde.|  
   
 ## <a name="hosting"></a>Hébergement  
- Le service de routage étant implémenté en tant que service WCF, il doit être soit auto-hébergé dans une application, soit hébergé par les services IIS ou WAS. Il est préférable que le service de routage soit hébergé dans les services IIS ou WAS ou dans une application de service Windows afin de tirer parti des fonctionnalités de démarrage automatique et de gestion du cycle de vie, disponibles dans ces environnements d'hébergement.  
+ Le service de routage étant implémenté en tant que service WCF, il doit être soit auto-hébergé dans une application, soit hébergé par les services IIS ou WAS. Il est préférable que le service de routage soit hébergé dans les services IIS ou WAS ou dans une application de service Windows afin de tirer parti des fonctionnalités de démarrage automatique et de gestion du cycle de vie, disponibles dans ces environnements d’hébergement.  
   
  L'exemple suivant montre l'hébergement du service de routage dans une application.  
   

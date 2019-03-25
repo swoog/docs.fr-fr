@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828343"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409950"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Chaînes de connexion et fichiers de configuration
 L'incorporation de chaînes de connexion dans le code de votre application peut entraîner des vulnérabilités de sécurité et des problèmes de maintenance. Les chaînes de connexion non chiffrées compilées dans le code source d’une application peuvent être affichées à l’aide de l’outil [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). En outre, si la chaîne de connexion change, votre application doit être recompilée. Pour ces raisons, nous vous recommandons de stocker les chaînes de connexion dans un fichier de configuration de l'application.  
@@ -81,7 +81,7 @@ L'incorporation de chaînes de connexion dans le code de votre application peut 
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Chaîne de connexion Correspond à l’attribut **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Exemple : Liste de toutes les chaînes de connexion  
- Cet exemple itère au sein de la collection `ConnectionStringSettings` et affiche les propriétés <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> et <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> dans la fenêtre de console.  
+ Cet exemple effectue une itération dans le <xref:System.Configuration.ConnectionStringSettingsCollection> et affiche le <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, et <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> propriétés dans la fenêtre de console.  
   
 > [!NOTE]
 >  Le fichier System.Configuration.dll n'est pas inclus dans tous les types de projets et vous pouvez être amené à définir une référence à ce fichier afin d'utiliser les classes de configuration. Le nom et l'emplacement d'un fichier de configuration particulier de l'application varient selon le type d'application et le processus d'hébergement.  
@@ -139,7 +139,7 @@ L'incorporation de chaînes de connexion dans le code de votre application peut 
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Utilise l'algorithme de chiffrement RSA pour chiffrer et déchiffrer des données. L'algorithme RSA peut être utilisé pour le chiffrement de clé publique et les signatures numériques. Il est également appelé « clé publique » ou chiffrement asymétrique, car il utilise deux clés différentes. Vous pouvez utiliser l’[Outil d’inscription IIS ASP.NET (aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) pour chiffrer des sections dans un fichier Web.config et gérer les clés de chiffrement. ASP.NET déchiffre le fichier de configuration lorsqu'il traite le fichier. L'identité de l'application ASP.NET doit disposer d'un accès à la clé de chiffrement utilisée pour chiffrer et déchiffrer les sections chiffrées.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Utilise l'API de protection de données (DPAPI) Windows pour chiffrer les sections de configuration. Il utilise les services de chiffrement intégrés de Windows et peut être configuré pour une protection spécifique à un ordinateur ou spécifique à un compte d'utilisateur. La protection spécifique à un ordinateur est utile pour plusieurs applications sur le même serveur qui doivent partager des informations. La protection spécifique à un compte d'utilisateur peut être utilisée avec des services qui s'exécutent avec une identité d'utilisateur spécifique, telle qu'un environnement d'hébergement partagé. Chaque application s'exécute sous une identité différente qui restreint l'accès aux ressources telles que les fichiers et les bases de données.|  
   
- Les deux fournisseurs offrent un chiffrement renforcé des données. Cependant, si vous prévoyez d'utiliser le même fichier de configuration chiffré sur plusieurs serveurs, comme une batterie de serveurs Web, seul `RsaProtectedConfigurationProvider` vous permet d'exporter les clefs de chiffrement utilisées pour chiffrer les données et les importer sur un autre serveur. Pour plus d’informations, consultez [Importation et exportation des conteneurs de clé RSA de la configuration protégée](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Les deux fournisseurs offrent un chiffrement renforcé des données. Cependant, si vous prévoyez d'utiliser le même fichier de configuration chiffré sur plusieurs serveurs, comme une batterie de serveurs Web, seul <xref:System.Configuration.RsaProtectedConfigurationProvider> vous permet d'exporter les clefs de chiffrement utilisées pour chiffrer les données et les importer sur un autre serveur. Pour plus d’informations, consultez [Importation et exportation des conteneurs de clé RSA de la configuration protégée](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Utilisation des classes de configuration  
  L'espace de noms <xref:System.Configuration> fournit des classes pour utiliser des paramètres de configuration par programme. La classe <xref:System.Configuration.ConfigurationManager> fournit un accès aux fichiers de configuration d'ordinateur, d'application et d'utilisateur. Si vous créez une application ASP.NET, vous pouvez utiliser la classe <xref:System.Web.Configuration.WebConfigurationManager>, qui fournit la même fonctionnalité tout en vous permettant également d’accéder à des paramètres qui sont uniques aux applications ASP.NET, comme celles qui se trouvent dans **\<system.web>**.  
@@ -148,7 +148,7 @@ L'incorporation de chaînes de connexion dans le code de votre application peut 
 >  L'espace de noms <xref:System.Security.Cryptography> contient des classes qui fournissent des options supplémentaires pour le chiffrement et déchiffrement de données. Utilisez ces classes si vous avez besoin de services de chiffrement qui ne sont pas disponibles via la configuration protégée. Certaines de ces classes sont des wrappers pour l'interface Microsoft CryptoAPI non managée, tandis que d'autres ne sont purement que des implémentations managées. Pour plus d’informations, consultez [Services de cryptographie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>Exemple App.config  
- Cet exemple montre comment basculer le chiffrement de la section **connectionStrings** dans un fichier **app.config** pour une application Windows. Dans cet exemple, la procédure prend le nom de l’application en tant qu’argument, par exemple, « MyApplication.exe ». Le fichier **app.config** est ensuite chiffré et copié dans le dossier qui contient le fichier exécutable sous le nom « MyApplication.exe.config ».  
+ Cet exemple montre comment basculer le chiffrement de la section **connectionStrings** dans un fichier **app.config** pour une application Windows. Dans cet exemple, la procédure prend le nom de l'application en tant qu'argument, par exemple, « MyApplication.exe ». Le fichier **app.config** est ensuite chiffré et copié dans le dossier qui contient le fichier exécutable sous le nom « MyApplication.exe.config ».  
   
 > [!NOTE]
 >  La chaîne de connexion peut uniquement être déchiffrée sur l'ordinateur sur lequel elle a été chiffrée.  

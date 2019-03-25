@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370187"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410159"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Vue d'ensemble des applications de navigateur XAML
 <a name="introduction"></a>
@@ -154,7 +154,7 @@ ms.locfileid: "57370187"
   
 -   Dans le fichier projet, la valeur de l’élément `<TargetZone>` devient `Custom`.  
   
--   Dans le manifeste de l’application (app.manifest), un attribut `Unrestricted="true"` est ajouté à l’élément `PermissionSet`.  
+-   Dans le manifeste d’application (App.manifest), un `Unrestricted="true"` attribut est ajouté à la «<xref:System.Security.PermissionSet> élément.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

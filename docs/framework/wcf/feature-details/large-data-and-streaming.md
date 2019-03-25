@@ -2,12 +2,12 @@
 title: Données volumineuses et diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674113"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411055"
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 Windows Communication Foundation (WCF) est une infrastructure de communications basées sur XML. Étant donné que les données XML sont généralement codées au format texte standard défini dans le [spécification XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), connecté les architectes et développeurs de systèmes sont généralement concernées par l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte du XML pose des défis particuliers pour le transfert efficace de données binaires.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
 ### <a name="encoding-data-text-vs-binary"></a>Encodage de données : Visual Studio de texte. Binaire  
  Les préoccupations couramment exprimées par les développeurs incluent l’idée que le XML possède une charge mémoire considérable par rapport aux formats binaires en raison de la nature répétitive des étiquettes de début et de fin, que l’encodage de valeurs numériques est considéré comme nettement plus volumineux parce qu’elles sont exprimées en valeurs texte, et que ces données binaires ne peuvent pas être exprimées efficacement parce qu’elles doivent être encodées spécialement à des fins d’incorporation dans un format texte.  
   
- Même si de nombreuses préoccupations comme celle-ci ainsi que d'autres sont justifiées, la différence réelle entre les messages à encodage texte XML dans un environnement de services Web XML et les messages à encodage binaire dans un environnement d'appel de procédure distante (RPC) hérité est souvent beaucoup moins importante que la considération initiale peut le suggérer.  
+ Même si de nombreuses préoccupations comme celle-ci ainsi que d’autres sont justifiées, la différence réelle entre les messages à encodage texte XML dans un environnement de services web XML et les messages à encodage binaire dans un environnement d’appel de procédure distante (RPC) hérité est souvent beaucoup moins importante que la considération initiale peut le suggérer.  
   
  Alors que les messages à encodage texte XML sont transparents et lisibles par l'utilisateur, les messages binaires sont souvent assez opaques en comparaison et difficiles à décoder sans outils. Cette différence de lisibilité amène à négliger le fait que ces messages binaires comportent aussi souvent des métadonnées inline dans la charge utile, ce qui ajoute une charge mémoire tout comme avec les messages texte XML. Ceci s'avère particulièrement vrai pour les formats binaires qui ont pour but de fournir des fonctionnalités de couplage faible et d'appel dynamique.  
   
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
   
  Pour éviter cette charge lié à l'encodage, la norme MTOM (Message Transmission Optimization Mechanism) tient compte de l'extériorisation des éléments de données volumineux contenus dans un message et de leur transport avec le message en tant que données binaires sans encodage spécial. Avec MTOM, les messages sont échangés de manière similaire aux messages de courrier électronique SMTP Simple Mail Transfer Protocol () avec des pièces jointes ou du contenu incorporé (images et autre contenu incorporé) ; Les messages MTOM sont empaquetés sous forme de séquences MIME à parties multiples/associée avec la partie racine constituant le message SOAP réel.  
   
- Un message SOAP MTOM est modifié par rapport à sa version non encodée afin que les étiquettes d’éléments spéciales qui font référence aux parties MIME respectives prennent la place des éléments d’origine dans le message contenait des données binaires. En conséquence, le message SOAP fait référence au contenu binaire en pointant vers les parties MIME envoyées avec lui, mais sinon il transporte uniquement les données texte XML. Parce que ce modèle s'aligne étroitement sur le modèle SMTP bien établi, il existe une large prise en charge d'outils permettant d'encoder et de décoder les messages MTOM sur de nombreuses plateformes, ce qui en fait un choix extrêmement interopérable.  
+ Un message SOAP MTOM est modifié par rapport à sa version non encodée afin que les balises d'éléments spéciales qui font référence aux parties MIME respectives prennent la place des éléments d'origine dans le message contenait des données binaires. En conséquence, le message SOAP fait référence au contenu binaire en pointant vers les parties MIME envoyées avec lui, mais sinon il transporte uniquement les données texte XML. Parce que ce modèle s'aligne étroitement sur le modèle SMTP bien établi, il existe une large prise en charge d'outils permettant d'encoder et de décoder les messages MTOM sur de nombreuses plateformes, ce qui en fait un choix extrêmement interopérable.  
   
  Pour autant, comme avec Base64, MTOM s'accompagne également d'une charge mémoire nécessaire pour le format MIME, de sorte que les avantages de l'utilisation de MTOM s'aperçoivent uniquement quand la taille d'un élément de données binaires dépasse 1 Ko environ. En raison de la charge mémoire, les messages encodés MTOM peuvent être plus volumineux que les messages qui utilisent l'encodage Base64 pour les données binaires, si la charge utile binaire reste sous ce seuil. Pour plus d’informations, consultez la section « Encodages » plus loin dans cette rubrique.  
   
@@ -65,9 +65,9 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
   
  Chacune des liaisons standard inclut un encodeur préconfiguré, selon lequel les liaisons avec le préfixe Net* utilisent l’encodeur binaire (en incluant la classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) pendant que les classes <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WSHttpBinding> utilisent l’encodeur de message texte par défaut (au moyen de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
-|Élément de liaison d'encodeur|Description|  
+|Élément de liaison d’encodeur|Description|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|L’encodeur de message texte constitue l’encodeur par défaut de toutes les liaisons HTTP et le choix approprié pour toutes les liaisons personnalisées où l’interopérabilité est la première préoccupation. Cet encodeur lit et écrit les messages texte SOAP 1.1/SOAP 1.2 standard sans gestion spéciale des données binaires. Si la <xref:System.ServiceModel.Channels.MessageVersion> d'un message a la valeur `None`, le wrapper d'enveloppe SOAP est omis à partir de la sortie et seul le contenu du corps du message est sérialisé.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|L’encodeur de message texte constitue l’encodeur par défaut de toutes les liaisons HTTP et le choix approprié pour toutes les liaisons personnalisées où l’interopérabilité est la première préoccupation. Cet encodeur lit et écrit les messages texte SOAP 1.1/SOAP 1.2 standard sans gestion spéciale des données binaires. Si le <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> propriété d’un message est définie sur <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, le wrapper d’enveloppe SOAP est omis de la sortie et seul le contenu du corps de message est sérialisé.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|L’encodeur de message MTOM est un encodeur de texte qui implémente une gestion spéciale pour les données binaires et qui n’est pas utilisé par défaut dans chacune des liaisons standard parce qu’il s’agit strictement d’un utilitaire d’optimisation au cas par cas. Si le message contient des données binaires qui dépassent un seuil auquel l'encodage MTOM apporte un avantage, les données sont externalisées dans une partie MIME qui suit l'enveloppe de message. Consultez le paragraphe Activation de MTOM plus loin dans cette section.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|L’encodeur de message binaire est l’encodeur par défaut pour les liaisons Net * et le choix approprié chaque fois que les deux parties communicantes sont basées sur WCF. L'encodeur de message binaire utilise le format XML binaire .NET, une représentation binaire spécifique à Microsoft pour les jeux d'informations XML qui en général engendre un plus petit encombrement que la représentation XML 1.0 équivalente et qui encode les données binaires en un flux d'octets.|  
   
@@ -203,7 +203,7 @@ public interface IStreamedService
 }  
 ```  
   
- L'opération `Echo` dans l'exemple précédent reçoit et renvoie un flux et doit donc être utilisée sur une liaison avec <xref:System.ServiceModel.TransferMode.Streamed>. Pour l'opération `RequestInfo`, <xref:System.ServiceModel.TransferMode.StreamedResponse> convient mieux, car seul un <xref:System.IO.Stream> est renvoyé. L'opération unidirectionnelle convient mieux à <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
+ L’opération `Echo` dans l’exemple précédent reçoit et renvoie un flux et doit donc être utilisée sur une liaison avec <xref:System.ServiceModel.TransferMode.Streamed>. Pour l’opération `RequestInfo`, <xref:System.ServiceModel.TransferMode.StreamedResponse> convient mieux, car seul un <xref:System.IO.Stream> est renvoyé. L'opération unidirectionnelle convient mieux à <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
   
  Notez que l'ajout d'un deuxième paramètre à `Echo` ou aux opérations `ProvideInfo` suivantes engendre le retour du modèle de service à une stratégie de mise en mémoire tampon et l'utilisation de la représentation de sérialisation à l'exécution du flux. Seules les opérations avec un paramètre de flux d'entrée unique sont compatibles avec la diffusion en continu des demandes de bout en bout.  
   

@@ -2,12 +2,12 @@
 title: Opérations ensemblistes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679292"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409248"
 ---
 # <a name="set-operations-visual-basic"></a>Opérations ensemblistes (Visual Basic)
 Les opérations ensemblistes dans LINQ font référence à des opérations de requête qui génèrent un jeu de résultats basé sur la présence ou l’absence d’éléments équivalents dans la même collection (ou le même ensemble) ou dans une collection distincte (ou un ensemble distinct).  
@@ -28,23 +28,21 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
 ### <a name="distinct"></a>distinct  
  L’illustration suivante représente le comportement de la méthode <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> sur une séquence de caractères. La séquence retournée contient les éléments uniques de la séquence d’entrée.  
   
- ![Graphique illustrant le comportement de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![Graphique illustrant le comportement de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>À l'exception  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La séquence retournée contient uniquement les éléments de la première séquence d’entrée qui ne figurent pas dans la seconde séquence d’entrée.  
   
- ![Graphique montrant l’action de sauf&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Montre le comportement d’à l’exception.")  
+ ![Graphique montrant l’action de Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Montre le comportement de Except.")  
   
 ### <a name="intersect"></a>Définir une intersection  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La séquence retournée contient les éléments qui sont communs aux deux séquences d’entrée.  
   
- ![Graphique illustrant l’intersection de deux séquences.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![Graphique illustrant l'intersection de deux séquences.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Union  
  L’illustration suivante représente une opération d’union sur deux séquences de caractères. La séquence retournée contient les éléments uniques des deux séquences d’entrée.  
   
- ![Graphique illustrant l’union de deux séquences.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![Graphique illustrant l'union de deux séquences.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Exemple de syntaxe d’expression de requête  
  L’exemple suivant utilise le `Distinct` clause dans une requête LINQ pour retourner les nombres uniques d’une liste d’entiers.  
   

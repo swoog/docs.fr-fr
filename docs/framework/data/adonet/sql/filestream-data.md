@@ -2,12 +2,12 @@
 title: Données FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674733"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410275"
 ---
 # <a name="filestream-data"></a>Données FILESTREAM
 
@@ -42,11 +42,11 @@ GO
 
 ### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Exemple : Lecture, remplacement et insertion de données FILESTREAM
 
-L'exemple suivant montre comment lire les données à partir d'un fichier FILESTREAM. Le code obtient le chemin d'accès logique au fichier, en affectant la valeur `FileAccess` à `Read` et la valeur `FileOptions` à `SequentialScan`. Puis le code lit les octets à partir du SqlFileStream dans la mémoire tampon. Les octets s'affichent ensuite dans la fenêtre de console.
+L'exemple suivant montre comment lire les données à partir d'un fichier FILESTREAM. Le code obtient le chemin d’accès logique au fichier, en affectant la valeur `FileAccess` à `Read` et la valeur `FileOptions` à `SequentialScan`. Puis le code lit les octets à partir du SqlFileStream dans la mémoire tampon. Les octets s'affichent ensuite dans la fenêtre de console.
 
-Cet exemple montre également comment écrire des données dans un fichier FILESTREAM dans lequel toutes les données existantes sont remplacées. Le code obtient le chemin d'accès logique au fichier et crée l'élément `SqlFileStream`, en affectant la valeur `FileAccess` à `Write` et la valeur `FileOptions` à `SequentialScan`. Un seul octet est écrit dans le `SqlFileStream`, remplaçant ainsi les données du fichier.
+Cet exemple montre également comment écrire des données dans un fichier FILESTREAM dans lequel toutes les données existantes sont remplacées. Le code obtient le chemin d’accès logique au fichier et crée l’élément `SqlFileStream`, en affectant la valeur `FileAccess` à `Write` et la valeur `FileOptions` à `SequentialScan`. Un seul octet est écrit dans le `SqlFileStream`, remplaçant ainsi les données du fichier.
 
-L'exemple également montre comment écrire des données dans un fichier FILESTREAM en utilisant la méthode Seek pour ajouter des données à la fin du fichier. Le code obtient le chemin d'accès logique au fichier et crée le `SqlFileStream`, en affectant la valeur `FileAccess` à `ReadWrite` et la valeur `FileOptions` à `SequentialScan`. Le code utilise la méthode Seek pour ajouter un seul octet à la fin du fichier existant.
+L'exemple également montre comment écrire des données dans un fichier FILESTREAM en utilisant la méthode Seek pour ajouter des données à la fin du fichier. Le code obtient le chemin d’accès logique au fichier et crée l’élément `SqlFileStream`, en affectant la valeur `FileAccess` à `ReadWrite` et la valeur `FileOptions` à `SequentialScan`. Le code utilise la méthode Seek pour ajouter un seul octet à la fin du fichier existant.
 
 ```csharp
 using System;
@@ -180,7 +180,7 @@ La documentation complète relative à FILESTREAM se trouve dans les sections su
 |Rubrique|Description|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Explique quand utiliser le stockage FILESTREAM et comment il intègre le moteur de base de données SQL Server avec un système de fichiers NTFS.|
-|[Créer des Applications clientes pour les données FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Décrit les fonctions API Win32 pour une utilisation avec des données FILESTREAM.|
+|[Créer des Applications clientes pour les données FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Décrit les fonctions API de Windows pour utiliser les données FILESTREAM.|
 |[FILESTREAM et autres fonctionnalités SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Fournit des considérations, indications et limitations relatives à l’utilisation des données FILESTREAM avec d’autres fonctionnalités de SQL Server.|
 
 ## <a name="see-also"></a>Voir aussi

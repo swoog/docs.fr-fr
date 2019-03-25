@@ -1,63 +1,100 @@
 ---
-title: Dépannage du didacticiel de mise en route
-ms.date: 03/30/2017
+title: Résoudre les problèmes de la méthode Get en main des didacticiels de Windows Communication Foundation
+ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 5b8cd04ef4d98e522e255e1b7529e848351b2e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695658"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410496"
 ---
-# <a name="troubleshooting-the-getting-started-tutorial"></a>Dépannage du didacticiel de mise en route
-Cette rubrique décrit les problèmes les plus courants rencontrés pendant l'exécution du didacticiel de prise en main et comment les résoudre.  
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Résoudre les problèmes de la méthode Get en main des didacticiels de Windows Communication Foundation
+
+Cet article fournit des solutions pour les problèmes courants et les erreurs que vous pouvez rencontrer lorsque vous suivez les étapes décrites dans le [didacticiel : Prise en main les applications Windows Communication Foundation](getting-started-tutorial.md). 
   
-**Je n’arrive pas à trouver les fichiers de projet sur mon disque dur.**
+## <a name="common-problems"></a>Problèmes courants
 
- Visual Studio enregistre les fichiers projet dans c:\users\\<user name>\Documents\\< version de Visual Studio\>\Projects.  
+**Impossible de trouver les fichiers de projet sur mon disque dur.**
+
+ Visual Studio enregistre les fichiers de projet dans *C:\Users\\&lt;nom d’utilisateur&gt;\source\repos*.  
+
+**Impossible de trouver le *App.config* fichier généré par *Svcutil.exe*.**
+
+ Dans Visual Studio, le **ajouter un élément existant** fenêtre affiche uniquement les fichiers portant les extensions suivantes par défaut : 
+- *.cs* 
+- *.resx* 
+- *.settings*
+- *.xsd* 
+- *.wsdl*
+
+Pour afficher tous les types de fichier, sélectionnez **tous les fichiers (\*.\*)**  dans la liste déroulante dans le coin inférieur droit de la **ajouter un élément existant** fenêtre.  
   
-**Tente d’exécuter l’application de service : HTTP n’a pas pu inscrire URL `http://+:8000/ServiceModelSamples/Service/`.** 
- **Votre processus ne dispose pas de droits d’accès à cet espace de noms.** 
+## <a name="common-errors"></a>Erreurs courantes
 
- Le processus qui héberge un service WCF doit être exécuté avec des privilèges d’administrateur. Si vous exécutez le service à partir de Visual Studio, vous devez exécuter Visual Studio en tant qu’administrateur. Pour cela, cliquez sur **Démarrer**, avec le bouton droit **Visual Studio \< *version* >**  et sélectionnez **Run As Administrator**. Si vous exécutez le service à partir d’une invite de ligne de commande dans une fenêtre de console, vous devez démarrer la fenêtre de console en tant qu’administrateur de la même façon. Cliquez sur **Démarrer**, avec le bouton droit **invite de commandes** et sélectionnez **exécuter en tant qu’administrateur**.  
+### <a name="compile-the-service-application"></a>Compilez l’application de service 
+
+**Erreur BC30420 'Sub Main' est introuvable dans 'GettingStartedHost.Module1'.**
+
+Le point d’entrée est incorrect pour l’application Visual Basic. Apportez la modification suivante :
+
+   1. Dans le **l’Explorateur de solutions** fenêtre, sélectionnez le **GettingStartedHost** dossier, puis sélectionnez **propriétés** dans le menu contextuel.
+    a. Dans le **GettingStartedHost** fenêtre, pour **objet de démarrage**, sélectionnez **Service.Program** (ou le point d’entrée pour votre application) dans la liste. 
+    b. Dans le menu principal, sélectionnez **fichier** > **Enregistrer tout**.
+
+### <a name="run-the-service-application"></a>Exécutez l’application de service 
+
+**HTTP n’a pas pu inscrire URL « http :\// + : 8000/GettingStarted/CalculatorService ». Le processus n'a pas de droits d'accès à cet espace de noms.** 
+
+ Pour permettre l’accès, démarrez le processus qui héberge le service Windows Communication Foundation (WCF) avec des privilèges d’administrateur :
+- Pour Visual Studio : Sélectionnez le programme Visual Studio dans le **Démarrer** menu, puis sélectionnez **plus** > **exécuter en tant qu’administrateur** dans le menu contextuel.
+- Pour une fenêtre de console : Sélectionnez **invite de commandes** dans le **Démarrer** menu, puis sélectionnez **plus** > **exécuter en tant qu’administrateur** à partir du raccourci menu.
+- Pour Explorer de Windows : Sélectionnez le fichier exécutable, puis **exécuter en tant qu’administrateur** dans le menu contextuel.
+
+### <a name="compile-the-client-application"></a>Compilez l’application cliente
+
+**'CalculatorClient', ne contient pas de définition pour '\<nom de la méthode >' et aucune méthode d’extension '\<nom de la méthode >' acceptant un premier argument de type 'CalculatorClient' est introuvable (vous manque-t-il une à l’aide la directive ou un référence d’assembly ?)**  
+
+Uniquement les méthodes que vous marquez avec le `ServiceOperationAttribute` attribut sont exposés publiquement. Si vous omettez le `ServiceOperationAttribute` attribut à partir d’une méthode dans le `ICalculator` interface, vous recevez ce message d’erreur pendant la compilation.  
+
+**Le nom du type ou espace de noms 'CalculatorClient' est introuvable (vous manque-t-il une à l’aide de la directive ou une référence d’assembly ?)**
+
+ Vous recevez cette erreur si vous n’ajoutez pas le *generatedProxy.cs* (ou *generatedProxy.vb*) le fichier à votre projet client lorsque vous avez généré avec la *Svcutil.exe* outil .  
+
+### <a name="run-the-client-application"></a>Exécutez l’application cliente
+
+**Exception non gérée : System.ServiceModel.EndpointNotFoundException: Ne peut pas se connecter à « http :\//localhost:8000/GettingStarted/CalculatorService ». Code d’erreur TCP 10061 : Aucune connexion a pu être établie car l’ordinateur cible l’a activement refusée.**
+
+Cette erreur se produit si vous exécutez l’application cliente sans premier démarrage du service. Tout d’abord, exécutez l’application hôte pour démarrer le service, puis exécutez l’application cliente.
+
+### <a name="use-the-svcutilexe-tool"></a>Utilisez l’outil Svcutil.exe
+   
+**'Svcutil' n’est pas reconnu comme une commande interne ou externe, un programme exécutable ou un fichier de commandes.**
+
+ *SvcUtil.exe* doit se trouver dans le chemin d’accès système. La solution la plus simple consiste à utiliser l’invite de commandes de Visual Studio. À partir de la **Démarrer** menu, sélectionnez le **Visual Studio \<version >** répertoire, puis sélectionnez **invite de commandes développeur pour VS \<version >**. Cette invite de commande définit le chemin d’accès système pour les emplacements corrects pour tous les outils fournis dans le cadre de Visual Studio.  
   
-**Essayez d’utiliser l’outil Svcutil.exe : 'svcutil' n’est pas reconnu comme une commande interne ou externe, un programme exécutable ou un fichier de commandes.**
+### <a name="run-the-service-and-client-applications"></a>Exécuter les applications clientes et de service
 
- Svcutil.exe doit figurer dans le chemin d’accès système. La solution la plus simple consiste à utiliser l'invite de commandes. Cliquez sur **Démarrer**, sélectionnez **tous les programmes**, **Visual Studio \< *version*>**,  **Visual Studio Tools**, et **invite de commandes développeur pour Visual Studio**. Cette invite de commande définit le chemin d’accès système pour les emplacements corrects pour tous les outils fournis dans le cadre de Visual Studio.  
+**System.ServiceModel.Security.SecurityNegotiationException: Négociation de sécurité SOAP avec « http :\//localhost:8000/GettingStarted/CalculatorService » pour la cible ' http :\//localhost:8000/GettingStarted/CalculatorService ' a échoué**  
 
-**Impossible de trouver le fichier App.config généré par Svcutil.exe.**
+Cette erreur se produit sur un ordinateur joint au domaine n’ayant pas de connectivité réseau. Connecter votre ordinateur au réseau ou de désactiver la sécurité pour le service et le client. 
 
- Le **ajouter un élément existant** boîte de dialogue affiche uniquement les fichiers portant les extensions suivantes par défaut : .cs, .resx, .settings, .xsd, .wsdl. Vous pouvez spécifier que vous souhaitez voir tous les types de fichiers en sélectionnant **tous les fichiers (\*.\*)**  dans la zone de liste déroulante dans le coin inférieur droit de la **ajouter un élément existant** boîte de dialogue.  
+Pour désactiver la sécurité :
 
-
-**Compilation de l’application cliente : 'CalculatorClient' ne contient-elle pas de définition pour '\<nom de la méthode >' et aucune méthode d’extension '\<nom de la méthode >' acceptant un premier argument de type 'CalculatorClient' est introuvable (vous manque-t-il une à l’aide la directive ou un référence d’assembly ?)**  
-
-Seules les méthodes marquées avec `ServiceOperationAttribute` sont exposées au monde extérieur. Si vous avez omis le `ServiceOperationAttribute` attribut à partir d’une des méthodes dans le `ICalculator` interface, vous obtenez ce message d’erreur lors de la compilation d’une application cliente qui effectue un appel à l’opération de l’attribut manquant.  
-
-**Compilation de l’application cliente : Le nom du type ou espace de noms 'CalculatorClient' est introuvable (vous manque-t-il une à l’aide de la directive ou une référence d’assembly ?)**
-
- Vous obtenez cette erreur si vous n'ajoutez pas le fichier Proxy.cs ou Proxy.vb à votre projet client.  
-
-**Le client en cours d’exécution : Exception non prise en charge : System.ServiceModel.EndpointNotFoundException: Ne peut pas se connecter à `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Code d’erreur TCP 10061 : Aucune connexion a pu être établie car l’ordinateur cible l’a activement refusée.**
-
-Cette erreur se produit si vous exécutez l'application cliente sans exécuter le service.  
+- Pour le service, remplacez le code qui crée le `WSHttpBinding` par le code suivant :  
   
-**Exception non gérée : System.ServiceModel.Security.SecurityNegotiationException: Négociation de sécurité SOAP avec `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` pour cible `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` a échoué**  
+    ```csharp
+    // Step 3: Add a service endpoint.
+    selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
+    ```
 
-Cette erreur se produit sur un ordinateur appartenant à un domaine qui ne bénéficie d'aucune connectivité réseau. Soit vous connectez votre ordinateur au réseau, soit vous désactivez la sécurité à la fois pour le client et le service. Pour le service, modifiez le code qui crée WSHttpBinding par ce qui suit.  
+- Pour le client, dans le fichier de configuration, mise à jour le  **\<sécurité >** élément sous le  **\<liaison >** élément comme suit :  
   
-```csharp
-// Step 3 of the hosting procedure: Add a service endpoint  
-selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
-```
+    ```xml
+    <binding name="WSHttpBinding_ICalculator" security mode="None" />
+    ```  
 
-Pour le client, modifiez le  **\<sécurité >** élément sous le  **\<liaison >** élément à ce qui suit :  
-  
-```xml
-<security mode="Node" />  
-```  
-
-## <a name="see-also"></a>Voir aussi
-- [Didacticiel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Démarrage rapide de la résolution des problèmes WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)
-- [Résolution des problèmes d’installation](../../../docs/framework/wcf/troubleshooting-setup-issues.md)
+## <a name="see-also"></a>Voir aussi  
+ [Prise en main les applications WCF](getting-started-tutorial.md)  
+ [Démarrage rapide de la résolution des problèmes de WCF](wcf-troubleshooting-quickstart.md)  
+ [Dépannage des problèmes d’installation](troubleshooting-setup-issues.md)

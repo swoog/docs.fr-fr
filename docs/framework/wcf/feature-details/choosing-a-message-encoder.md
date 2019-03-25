@@ -2,21 +2,21 @@
 title: Sélection d'un encodeur de message
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538425"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409482"
 ---
 # <a name="choosing-a-message-encoder"></a>Sélection d'un encodeur de message
 Cette rubrique traite des critères permettant de choisir parmi les encodeurs de message sont inclus dans Windows Communication Foundation (WCF) : fichier binaire, texte et Message Transmission Optimization Mechanism (MTOM).  
   
- Dans WCF, vous spécifiez comment transférer des données sur un réseau entre les points de terminaison au moyen d’un *liaison*, qui se compose d’une séquence de *éléments de liaison*. Un encodeur de message est représenté par un élément de liaison d’encodage de message dans la pile de liaison. Une liaison inclut des éléments de liaison de protocole facultatifs, tels qu'un élément de liaison de sécurité ou un élément de liaison de messagerie fiable, un élément de liaison d'encodage de message requis, et un élément de liaison de transport requis.  
+ Dans WCF, vous spécifiez comment transférer des données sur un réseau entre les points de terminaison au moyen d’un *liaison*, qui se compose d’une séquence de *éléments de liaison*. Un encodeur de message est représenté par un élément de liaison d’encodage de message dans la pile de liaison. Une liaison inclut des éléments de liaison de protocole facultatifs, tels qu’un élément de liaison de sécurité ou un élément de liaison de messagerie fiable, un élément de liaison d’encodage de message requis, et un élément de liaison de transport requis.  
   
  L'élément de liaison d'encodage de message se trouve au-dessous des éléments de liaison de protocole facultatifs et au-dessus de l'élément de liaison de transport requis. Sur le côté sortant, un encodeur de message sérialise le <xref:System.ServiceModel.Channels.Message> sortant et le transmet au transport. Sur le côté entrant, un encodeur de message reçoit le formulaire sérialisé d'un <xref:System.ServiceModel.Channels.Message> du transport et le passe à la couche de protocole supérieure, si celle-ci est présente, ou à l'application, dans le cas contraire.  
   
- Lors de la connexion à un client ou serveur préexistant, il se peut que vous n'ayez pas le choix de l'utilisation d'un encodage de message spécifique car vous devez encoder vos messages conformément à ce que l'autre côté attend. Toutefois, si vous écrivez un service WCF, vous pouvez exposer votre service via plusieurs points de terminaison, chacun utilisant un encodage de message différent. Cela permet aux clients de choisir l'encodage le plus approprié pour communiquer avec votre service sur le point de terminaison le plus adapté pour eux, et à vos clients de choisir l'encodage le plus adéquat. L'utilisation de plusieurs points de terminaison vous permet également de combiner les avantages d'encodages de message différents avec d'autres éléments de liaison.  
+ Lors de la connexion à un client ou serveur préexistant, il se peut que vous n'ayez pas le choix de l'utilisation d'un encodage de message spécifique car vous devez encoder vos messages conformément à ce que l'autre côté attend. Toutefois, si vous écrivez un service WCF, vous pouvez exposer votre service via plusieurs points de terminaison, chacun utilisant un encodage de message différent. Cela permet aux clients de choisir l'encodage le plus approprié pour communiquer avec votre service sur le point de terminaison le plus adapté pour eux, et à vos clients de choisir l'encodage le plus adéquat. L’utilisation de plusieurs points de terminaison vous permet également de combiner les avantages d’encodages de message différents avec d’autres éléments de liaison.  
   
 ## <a name="system-provided-encoders"></a>Encodeurs fournis par le système  
  WCF inclut trois encodeurs de message, qui sont représentées par les trois classes suivantes :  
@@ -65,9 +65,9 @@ Le paramètre IgnoreWhitespace est ignoré.
 
 Depuis WCF 4.5, l'encodeur binaire WCF ajoute la prise en charge de la compression. Cela vous permet d'utiliser l'algorithme gzip/deflate pour envoyer des messages compressés d'un client WCF et répondre avec les messages compressés d'un service WCF auto-hébergé. Cette fonctionnalité permet la compression sur les transports HTTP et TCP. Un service WCF hébergé par IIS peut toujours être activé pour envoyer des réponses compressées en configurant le serveur hôte IIS. Le type de compression est configuré avec la propriété <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Cette propriété a l'une des valeurs d'énumération <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> :
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Dans la mesure où cette propriété est exposée uniquement sur le binaryMessageEncodingBindingElement, vous devez créer une liaison personnalisée comme suit pour utiliser cette fonctionnalité :
 

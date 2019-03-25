@@ -2,21 +2,21 @@
 title: Utilisation de NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658726"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411068"
 ---
 # <a name="using-the-nethttpbinding"></a>Utilisation de NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte si elle est utilisée avec un contrat demande-réponse ou un contrat duplex et modifie son comportement pour le faire correspondre - elle utilise HTTP pour les contrats de demande-réponse et WebSockets pour les contrats duplex. Vous pouvez substituer ce comportement au moyen du paramètre <xref:System.ServiceModel.Channels.WebSocketTransportUsage> :  
   
-1. `Always` -Cela force l’utilisation de WebSockets même pour les contrats demande-réponse.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Cela force l’utilisation de WebSockets même pour les contrats demande-réponse.  
   
-2. `Never` -WebSockets cela empêche l’utilisation. Toute tentative d'utiliser un contrat duplex avec ce paramètre entraîne une exception.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -WebSockets cela empêche l’utilisation. Toute tentative d'utiliser un contrat duplex avec ce paramètre entraîne une exception.  
   
-3. `WhenDuplex` -C’est la valeur par défaut et se comporte comme décrit ci-dessus.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -C’est la valeur par défaut et se comporte comme décrit ci-dessus.  
   
  <xref:System.ServiceModel.NetHttpBinding> prend en charge les sessions fiables en mode HTTP et en mode WebSocket. Les sessions en mode WebSocket sont fournies par le transport.  
   

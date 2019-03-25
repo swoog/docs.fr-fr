@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369927"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409456"
 ---
 # <a name="expander-overview"></a>Vue d'ensemble de l'expanseur
 Un <xref:System.Windows.Controls.Expander> contrôle offre un moyen pour fournir du contenu dans une zone extensible qui ressemble à une fenêtre et inclut un en-tête.  
@@ -45,7 +45,7 @@ Un <xref:System.Windows.Controls.Expander> contrôle offre un moyen pour fournir
   
  **Expander dans un ScrollViewer**  
   
- ![Expander avec ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Capture d’écran montrant un expander avec barre de défilement.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Lorsque vous placez un <xref:System.Windows.Controls.Expander> contrôler dans un <xref:System.Windows.Controls.ScrollViewer>, définissez le <xref:System.Windows.Controls.ScrollViewer> dimension de propriété qui correspond à la direction dans laquelle le <xref:System.Windows.Controls.Expander> contenu s’ouvre à la taille de la <xref:System.Windows.Controls.Expander> zone de contenu. Par exemple, si vous définissez la <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propriété sur le <xref:System.Windows.Controls.Expander> à <xref:System.Windows.Controls.ExpandDirection.Down> (la zone de contenu s’ouvre vers le bas), définir la <xref:System.Windows.FrameworkElement.Height%2A> propriété sur le <xref:System.Windows.Controls.ScrollViewer> contrôle la hauteur requise pour la zone de contenu. Si vous définissez à la place la hauteur sur le contenu lui-même, <xref:System.Windows.Controls.ScrollViewer> ne reconnaît pas ce paramètre et par conséquent, ne fournit pas de contenu déroulant.  
   

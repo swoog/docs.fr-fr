@@ -2,12 +2,12 @@
 title: type d'association
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 65fb5c8e37c8edf7f36cc08258874eeaf234c402
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185595"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411445"
 ---
 # <a name="association-type"></a>type d'association
 Un *type d’association* (également appelé une association) est le bloc de construction fondamental pour la description des relations dans le modèle EDM (Entity Data Model). Dans un modèle conceptuel, une association représente une relation entre deux [types d’entité](../../../../docs/framework/data/adonet/entity-type.md) (tel que `Customer` et `Order`). Dans une application, une instance d'une association représente une association spécifique (comme une association entre une instance de `Customer` et une instance d'`Order`). Instances d’association sont regroupées logiquement dans un [ensemble d’associations](../../../../docs/framework/data/adonet/association-set.md).  
@@ -28,7 +28,7 @@ Un *type d’association* (également appelé une association) est le bloc de co
 ## <a name="example"></a>Exemple  
  Le diagramme suivant montre un modèle conceptuel avec deux associations : `PublishedBy` et `WrittenBy`. Les terminaisons d'association pour l'association `PublishedBy` sont les types d'entité `Book` et `Publisher`. La multiplicité de la `Publisher` fin est un (1) et la multiplicité de la `Book` fin est plusieurs (\*), indiquant qu’un éditeur publie de nombreux livres et un livre est publié par un seul éditeur.  
   
- ![Exemple de modèle](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Exemple de modèle avec trois types d’entité](./media/association-type/example-model-three-entity-types.gif)  
   
  Le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé langage de définition de schéma conceptuel ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit l'association `PublishedBy` présentée dans le diagramme ci-dessus :  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492666"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412030"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Vue d’ensemble de la globalisation et de la localisation WPF
 
@@ -144,9 +144,9 @@ Le processus de localisation commence après le non localisé `MyDialog.resource
   
  Notez que de l’exemple utilise la fonctionnalité de dimensionnement partagé de <xref:System.Windows.Controls.Grid>. Les trois dernières colonnes en tirent parti en se plaçant dans le même <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Comme vous pouvez vous y attendre d’après le nom de la propriété, ceci permet aux colonnes de partager la même taille. Par conséquent, lorsque le paramètre « Parcourir... » obtient localisé dans la chaîne plus longue « Durchsuchen... », tous les boutons se largeur au lieu d’avoir un petit bouton « OK » et un bouton « Durchsuchen... » disproportionnellement élevée.  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  Notez que le [XML : lang dans XAML de gestion des](../../xaml-services/xml-lang-handling-in-xaml.md) placé sur l’élément racine de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Cette propriété décrit la culture d’un élément donné et de ses enfants. Cette valeur est utilisée par plusieurs fonctions dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et doit être modifiée de façon appropriée lors de la localisation. Cette valeur change le dictionnaire de langue utilisé pour la coupure et la vérification de l’orthographe des mots. Elle affecte également l’affichage des chiffres et la façon dont le système de police de base sélectionne la police à utiliser. Enfin, la propriété affecte la façon dont les nombres sont affichés et celle dont les textes écrits dans des écritures complexes sont mis en forme. La valeur par défaut est « en-US ».  
   

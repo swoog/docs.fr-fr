@@ -2,12 +2,12 @@
 title: type d'entité
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 3955de1873d80e85df713a557750e34e76efeb41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502882"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410886"
 ---
 # <a name="entity-type"></a>type d'entité
 Le *type d’entité* est le bloc de construction fondamental pour décrire la structure de données avec le modèle EDM (Entity Data Model). Dans un modèle conceptuel, un type d'entité représente la structure des concepts de niveau supérieur, comme les clients ou les commandes. Un type d'entité est un modèle pour les instances de type d'entité. Chaque modèle contient les informations suivantes :  
@@ -27,7 +27,7 @@ Le *type d’entité* est le bloc de construction fondamental pour décrire la s
 ## <a name="example"></a>Exemple  
  Le diagramme suivant montre un modèle conceptuel avec trois types d'entité : `Book`, `Publisher` et `Author`.  
   
- ![Exemple de modèle](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Exemple de modèle avec trois types d’entité](./media/entity-type/example-model-three-entity-types.gif)  
   
  Notez que les propriétés de chaque type d'entité qui composent sa clé d'entité sont signalées par « (Key) ».  
   

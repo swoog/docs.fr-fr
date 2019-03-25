@@ -1,69 +1,76 @@
 ---
-title: Mise en route Tutorial1
-ms.date: 03/30/2017
+title: 'Tutoriel : Prise en main les applications Windows Communication Foundation'
+description: Ces didacticiels fournit une introduction à la création d’applications WCF.
+ms.date: 01/25/2019
 helpviewer_keywords:
-- WCF [WCF], getting started
-- Windows Communication Foundation [WCF], getting started
-- getting started [WCF]
+- WCF [WCF], get started
+- Windows Communication Foundation [WCF], get started
+- get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200882"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408858"
 ---
-# <a name="getting-started-tutorial"></a>Didacticiel de mise en route
-Les rubriques contenues dans cette section sont conçues pour vous permettre l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous offre une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fourni par le service à ses clients.
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Tutoriel : Prise en main les applications Windows Communication Foundation
+Les séries suivantes de didacticiels présentent pour le Windows Communication Foundation (WCF) expérience de programmation. Utilisation de ces didacticiels dans l’ordre vous donnera une compréhension de base des étapes requises pour créer des applications WCF. Une fois que vous avez terminé, vous disposerez d’un service WCF en cours d’exécution et un client WCF qui appelle le service. 
 
- Une fois que vous aurez terminé la séquence de rubriques de ce didacticiel, vous disposerez d'un service opérationnel et d'un client qui appelle le service. Les trois premières rubriques décrivent comment définir un contrat de service, comment implémenter le contrat de service et comment héberger le service. Le service créé est auto-hébergé dans une application console. Les services peuvent également être hébergés sous IIS (Internet Information Services). Pour plus d’informations sur la manière de procéder, consultez [Guide pratique pour Héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Le service est configuré dans le code ; toutefois, les services peuvent également être configurés dans un fichier de configuration. Pour plus d’informations sur l’utilisation d’un fichier de configuration, consultez [fichiers de configuration des Services à l’aide de la Configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
+Ce didacticiel suppose que vous utilisez Visual Studio comme environnement de développement. Si vous utilisez un autre environnement de développement, ignorer les instructions spécifiques à Visual Studio. 
 
- Les trois rubriques suivantes décrivent comment créer un proxy client, comment configurer l'application cliente et comment utiliser le proxy client pour appeler l'opération de service exposée par le service. Les services publient les métadonnées qui définissent les informations dont une application cliente a besoin pour communiquer avec le service. Visual Studio 2012 automatise le processus d’accès à ces métadonnées et l’utilise pour construire et configurer l’application cliente pour le service. Si vous n’utilisez pas Visual Studio 2012, vous pouvez utiliser la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer et configurer l’application cliente pour le service.
+Pour plus d’exemples d’applications WCF que vous pouvez télécharger et exécuter, consultez [exemples Windows Communication Foundation](samples/index.md). Pour une introduction aux exemples, consultez [exemple de mise en route](samples/getting-started-sample.md).
 
-Les rubriques de cette section supposent que vous utilisez Visual Studio comme environnement de développement. Si vous utilisez un autre environnement de développement, ignorer les instructions spécifiques à Visual Studio.
+Pour plus d’informations sur la création de services et les clients, consultez [programmation WCF de base](basic-wcf-programming.md).
 
-Pour des exemples d’applications qui peuvent être téléchargés sur votre disque dur et exécuter, consultez les rubriques dans [les exemples Windows Communication Foundation (WCF)](./samples/index.md). Pour cette rubrique, consultez, en particulier, le [mise en route](../../../docs/framework/wcf/samples/getting-started-sample.md).
+## <a name="wcf-tutorials"></a>Didacticiels WCF
 
-Pour plus d’informations sur la création de services et les clients, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).
+Les trois premiers didacticiels décrivent comment définir un contrat de service WCF, comment l’implémenter et comment héberger. Le service que vous créez est auto-hébergé dans une application console. Vous pouvez également héberger des services sous Microsoft Internet Information Services (IIS). Pour plus d'informations, voir [Procédure : Héberger un Service WCF dans IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Bien que vous utilisez le code pour configurer le service dans le didacticiel, vous pouvez également [configurer des services au sein d’un fichier de configuration](configuring-services-using-configuration-files.md). 
 
-## <a name="in-this-section"></a>Dans cette section
- [Guide pratique pour Définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Tutoriel : Définir un contrat de service](how-to-define-a-wcf-service-contract.md)
 
- Décrit comment créer un contrat WCF à l’aide d’une interface définie par l’utilisateur. Le contrat définit les fonctionnalités exposées par le service.
+    Vous créez un contrat WCF avec une interface définie par l’utilisateur. Ce contrat définit les fonctionnalités exposées par le service.
 
- [Guide pratique pour Implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Tutoriel : Implémenter un contrat de service](how-to-implement-a-wcf-contract.md)
 
- Décrit comment implémenter un contrat de service. Une fois qu’un contrat est défini, il doit être implémenté avec une classe de service.
+    Une fois que vous définissez un contrat, vous devez l’implémenter avec une classe de service.
 
- [Guide pratique pour Héberger et exécuter un Service de base](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+- [Tutoriel : Héberger et exécuter un service de base](how-to-host-and-run-a-basic-wcf-service.md)
 
- Décrit comment configurer un point de terminaison pour le service dans du code et comment héberger le service dans une application console. Pour qu'il devienne actif, un service doit être configuré et hébergé dans un environnement d'exécution. Cet environnement crée le service et contrôle son contexte et sa durée de vie.
+    Configurer un point de terminaison pour le service et héberger le service dans une application console. Pour un service devienne actif, vous devez le configurer et héberger dans un environnement d’exécution. Cet environnement d’exécution crée le service et contrôle son contexte et la durée de vie.
 
- [Guide pratique pour Créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+Les deux didacticiels expliquent comment créer, configurer et utiliser une application cliente pour appeler les opérations du service expose. Les services publient les métadonnées qui définissent les informations dont une application cliente a besoin pour communiquer avec le service. Visual Studio automatise le processus d’accès à ces métadonnées et l’utilise pour construire l’application cliente pour le service. Si vous décidez de ne pas utiliser Visual Studio, vous pouvez utiliser la [outil ServiceModel Metadata Utility (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) à la place.
 
- Décrit comment extraire les métadonnées utilisées pour créer un proxy de client WCF à partir d’un service WCF. Ce processus utilise la fonctionnalité Ajouter une référence de Service au sein de Visual Studio.
+- [Tutoriel : Créer un client](how-to-create-a-wcf-client.md)
 
- [Guide pratique pour Configurer un Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+    Récupérer les métadonnées pour la création d’un proxy de client WCF à partir d’un service WCF. Récupérer des métadonnées à l’aide de Visual Studio pour ajouter une référence de service, ou vous pouvez utiliser l’outil ServiceModel Metadata Utility. Vous spécifiez le point de terminaison que le client utilise pour accéder au service.
 
- Décrit comment configurer un client WCF. La configuration du client nécessite la spécification du point de terminaison que le client utilise pour accéder au service.
+- [Tutoriel : Utiliser un client](how-to-use-a-wcf-client.md)
 
- [Guide pratique pour Utiliser un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
-
- Décrit comment utiliser le proxy client WCF pour appeler des opérations de service.
+    Utiliser le proxy client WCF pour appeler les opérations de service.
 
 ## <a name="reference"></a>Référence
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 
-## <a name="related-sections"></a>Rubriques connexes
-
-- [Exemples Windows Communication Foundation (WCF)](./samples/index.md)
-- [Cycle de vie de la programmation de base](../../../docs/framework/wcf/basic-programming-lifecycle.md)
-
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble conceptuelle](../../../docs/framework/wcf/conceptual-overview.md)
-- [Guide de la documentation](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Informations détaillées sur les fonctionnalités de WCF](../../../docs/framework/wcf/feature-details/index.md)
+- [Vue d’ensemble conceptuelle](conceptual-overview.md)
+- [Guide de la documentation](guide-to-the-documentation.md)
+- [Nouveautés de Windows Communication Foundation](whats-wcf.md)
+- [Informations sur les fonctionnalités WCF](feature-details/index.md)
+- [Cycle de vie de programmation base](basic-programming-lifecycle.md)
+- [Génération de clients](building-clients.md)
+- [Programmation de WCF de base](basic-wcf-programming.md)
+- [Guide pratique pour Créer un contrat duplex](feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Access services avec un contrat duplex](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Guide pratique pour Utiliser Svcutil.exe pour télécharger des documents de métadonnées](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Guide pratique pour Publier les métadonnées pour un service à l’aide d’un fichier de configuration](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [À l’aide de liaisons pour configurer les clients et services](using-bindings-to-configure-services-and-clients.md)
+- [Getting started, exemple](samples/getting-started-sample.md)
+- [Exemples Windows Communication Foundation](samples/index.md)
+- [Auto-hébergement](samples/self-host.md)
+
+

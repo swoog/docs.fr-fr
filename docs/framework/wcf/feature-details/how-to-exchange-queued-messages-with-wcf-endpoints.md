@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303645"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411029"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procédure : Échanger des Messages en file d’attente avec les points de terminaison WCF
 Files d’attente vous assurer que la messagerie fiable peut se produire entre un client et un service Windows Communication Foundation (WCF), même si le service n’est pas disponible au moment de la communication. Les procédures suivantes indiquent comment garantir une communication durable entre un client et un service à l’aide de la norme en file d’attente liaison lors de l’implémentation du service WCF.  
@@ -24,7 +24,7 @@ Files d’attente vous assurer que la messagerie fiable peut se produire entre u
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Lorsque le contrat de service passe des types définis par l'utilisateur, vous devez définir des contrats de données pour ces types. Le code suivant présente deux contrats de données, `PurchaseOrder` et `PurchaseOrderLineItem`. Ces deux types définissent les données qui sont envoyées au service. (Notez que les classes qui définissent ce contrat de données définissent également plusieurs méthodes. Ces méthodes ne sont pas considérées comme des parties intégrantes du contrat de données. Seuls les membres déclarés avec l'attribut `DataMember` font partie du contrat de données.)  
+2.  Lorsque le contrat de service passe des types définis par l'utilisateur, vous devez définir des contrats de données pour ces types. Le code suivant présente deux contrats de données, `PurchaseOrder` et `PurchaseOrderLineItem`. Ces deux types définissent les données qui sont envoyées au service. (Notez que les classes qui définissent ce contrat de données définissent également plusieurs méthodes. Ces méthodes ne sont pas considérées comme des parties intégrantes du contrat de données. Seuls les membres déclarés avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> font partie du contrat de données.)  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

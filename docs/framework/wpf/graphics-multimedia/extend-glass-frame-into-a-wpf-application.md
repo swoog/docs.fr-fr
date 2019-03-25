@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843530"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412212"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Étendre le cadre de transparence dans une application WPF
 
@@ -26,11 +26,9 @@ Cette rubrique montre comment étendre le [!INCLUDE[TLA#tla_winvista](../../../.
 
 ## <a name="example"></a>Exemple
 
-L’image suivante montre le cadre de transparence étendu dans la barre d’adresse d’Internet Explorer 7.
+L’image suivante illustre le cadre de transparence étendu dans la barre d’adresse d’Internet Explorer 7 :
 
-**Internet Explorer avec cadre de transparence derrière la barre d’adresse.**
-
-![IE7 avec trame transparente étendue derrière la barre d'adresse.](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Capture d’écran cadre de transparence étendu derrière la barre d’adresse IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Pour étendre le cadre de transparence sur une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], un accès à l’élément non géré [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] est nécessaire. L’exemple de code suivant effectue un appel de code non géré (pinvoke) pour les deux éléments [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nécessaires pour étendre le cadre dans la zone cliente. Chacun de ces éléments [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] sont déclarés dans une classe appelée **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ L’exemple suivant montre une simple fenêtre dans laquelle le cadre est étend
 </Window>
 ```
 
-L’image suivante montre le cadre de transparence étendu dans une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+L’image suivante illustre le cadre de transparence étendu dans une [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application :
 
-**Cadre de transparence étendu dans une** application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**.**
-
-![Cadre de transparence étendu dans une application WPF.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Capture d’écran montrant un cadre de transparence étendu dans une application WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Voir aussi
 

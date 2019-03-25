@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353073"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409872"
 ---
 # <a name="reliability-best-practices"></a>Meilleures pratiques pour la fiabilité
 
@@ -241,7 +241,7 @@ Pour SQL Server, toutes les méthodes utilisées pour introduire la synchronisat
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Évitez des blocages indéfinis dans du code non managé
 
-Le blocage d’un thread dans du code non managé au lieu du code managé peut provoquer une attaque par déni de service, car le CLR n’est pas en mesure d’interrompre le thread.  Un thread bloqué empêche le CLR de décharger le <xref:System.AppDomain>, ou alors en exécutant des opérations très peu sécurisées.  Un blocage effectué à l’aide d’une primitive de synchronisation Win32 est un exemple clair d’action non autorisée.  Le blocage dans un appel à `ReadFile` sur un socket doit être évité dans la mesure du possible. L’API Win32 devrait idéalement fournir un mécanisme permettant l’expiration d’une opération de ce type.
+Le blocage d’un thread dans du code non managé au lieu du code managé peut provoquer une attaque par déni de service, car le CLR n’est pas en mesure d’interrompre le thread.  Un thread bloqué empêche le CLR de décharger le <xref:System.AppDomain>, ou alors en exécutant des opérations très peu sécurisées.  Blocage à l’aide d’un Windows primitive de synchronisation est un exemple clair d’action que non autorisée.  Blocage dans un appel à `ReadFile` sur un socket doit être évitée si possible, dans l’idéal, l’API Windows doit fournir un mécanisme pour une opération de ce délai d’attente.
 
 Toute méthode qui effectue des appels dans du code natif doit de préférence utiliser un appel Win32 avec un délai d’attente raisonnable et limité.  Si l’utilisateur est autorisé à spécifier le délai d’attente, il ne doit pas être autorisé à spécifier un délai d’attente infini sans une autorisation de sécurité spécifique.  À titre indicatif, si une méthode se bloque pendant plus de 10 secondes, vous devez utiliser une version qui prend en charge des délais d’attente ou vous avez besoin d’une assistance CLR supplémentaire.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8aed2b2efa0408371a8da47fef64340fd30fffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577098"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410418"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilisation de liaisons pour configurer des services et des clients
 Les liaisons sont des objets qui spécifient les détails de communication requis pour se connecter à un point de terminaison. Plus spécifiquement, les liaisons contiennent des informations de configuration utilisées pour créer l’exécution du client ou du service en définissant les caractéristiques des transports, les formats de transmission (encodage de message) et les protocoles à utiliser pour le point de terminaison ou canal client respectif. Pour créer un service Windows Communication Foundation (WCF) fonctionnel, chaque point de terminaison dans le service nécessite une liaison. Cette rubrique explique ce que sont les liaisons, comment elles sont définies et comment une liaison particulière est spécifiée pour un point de terminaison.  
@@ -40,21 +40,21 @@ Les liaisons sont des objets qui spécifient les détails de communication requi
  Pour obtenir la liste complète des liaisons fournies par le système, avec leurs descriptions, consultez [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Liaisons personnalisées  
- Si la collection de liaisons fournie par le système n’a pas la combinaison correcte de fonctionnalités requises par une application de service, vous pouvez créer une liaison <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur les éléments d’un <xref:System.ServiceModel.Channels.CustomBinding> liaison, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) et [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Si la collection de liaisons fournie par le système n'a pas la combinaison correcte de fonctionnalités requises par une application de service, vous pouvez créer une liaison <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur les éléments d’un <xref:System.ServiceModel.Channels.CustomBinding> liaison, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) et [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilisation des liaisons  
- L'utilisation des liaisons implique deux étapes simples :  
+ L’utilisation des liaisons implique deux étapes simples :  
   
-1.  Sélectionner ou définir une liaison. La méthode la plus simple consiste à choisir l'une des liaisons fournies par le système et à utiliser ses paramètres par défaut. Vous pouvez également choisir une liaison fournie par le système et réinitialiser ses valeurs de propriété en fonction de vos spécifications. En guise d'alternative, vous pouvez créer une liaison personnalisée et définir chaque propriété selon vos besoins.  
+1.  Sélectionner ou définir une liaison. La méthode la plus simple consiste à choisir l’une des liaisons fournies par le système et à utiliser ses paramètres par défaut. Vous pouvez également choisir une liaison fournie par le système et réinitialiser ses valeurs de propriété en fonction de vos spécifications. En guise d’alternative, vous pouvez créer une liaison personnalisée et définir chaque propriété selon vos besoins.  
   
 2.  Créer un point de terminaison qui utilise cette liaison.  
   
 ## <a name="code-and-configuration"></a>Code et configuration  
- Vous pouvez définir ou configurer des liaisons par le biais de code ou de configuration. Ces deux approches sont indépendantes du type de liaison utilisé, par exemple si vous utilisez une liaison <xref:System.ServiceModel.Channels.CustomBinding> ou fournie par le système. En général, l’utilisation de code permet de bénéficier d’un contrôle total sur la définition d’une liaison lorsque vous compilez. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou le client pour modifier les paramètres des liaisons. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir l’exigences spécifiques du matériel et des conditions dans lesquelles une application WCF doit être déployée réseau. Le fait de séparer les informations de liaison (et d’adressage) du code permet aux administrateurs de modifier les détails de liaison sans avoir à recompiler ou à redéployer l’application. Notez que si la liaison est définie dans du code, elle remplace toute définition basée sur la configuration effectuée dans le fichier de configuration. Pour obtenir des exemples de ces approches, consultez les rubriques suivantes :  
+ Vous pouvez définir ou configurer des liaisons par le biais de code ou de configuration. Ces deux approches sont indépendantes du type de liaison utilisé, par exemple si vous utilisez une liaison <xref:System.ServiceModel.Channels.CustomBinding> ou fournie par le système. En général, l’utilisation de code permet de bénéficier d’un contrôle total sur la définition d’une liaison lorsque vous compilez. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou le client pour modifier les paramètres des liaisons. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir l’exigences spécifiques du matériel et des conditions dans lesquelles une application WCF doit être déployée réseau. Le fait de séparer les informations de liaison (et d'adressage) du code permet aux administrateurs de modifier les détails de liaison sans avoir à recompiler ou à redéployer l'application. Notez que si la liaison est définie dans du code, elle remplace toute définition basée sur la configuration effectuée dans le fichier de configuration. Pour obtenir des exemples de ces approches, consultez les rubriques suivantes :  
   
 -   [Guide pratique pour Héberger un Service WCF dans une Application gérée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fournit un exemple de création d’une liaison dans le code.  
   
--   [Guide pratique pour Configurer un Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) fournit un exemple de création d’un client à l’aide de la configuration.  
+-   [Tutoriel : Créer un client Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fournit un exemple de création d’un client à l’aide de configuration.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)

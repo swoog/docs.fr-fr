@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358923"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409014"
 ---
 # <a name="groupbox"></a>GroupBox
 Le <xref:System.Windows.Controls.GroupBox> contrôle est un <xref:System.Windows.Controls.HeaderedContentControl> qui fournit un conteneur intitulé pour [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] contenu.  
   
  L’illustration suivante montre un <xref:System.Windows.Controls.GroupBox> qui contient un <xref:System.Windows.Controls.TabControl> et un <xref:System.Windows.Controls.Button> délimitées par un <xref:System.Windows.Controls.StackPanel>.  
   
- ![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")  
+ ![Capture d’écran montrant un groupbox.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Définir un modèle GroupBox](how-to-define-a-groupbox-template.md)  

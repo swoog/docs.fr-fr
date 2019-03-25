@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196692"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408871"
 ---
 # <a name="data-contract-names"></a>Noms de contrats de données
 
@@ -64,7 +64,7 @@ Dans cet exemple, le type `Drawing<Square,RegularRedBrush>` a le nom de contrat 
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Pour les types génériques, les noms de contrat de données de personnalisation
 
-Il arrive parfois que les noms de contrat de données générés pour les types génériques, comme décrit précédemment, soient inacceptables. Par exemple, peut-être savez-vous déjà qu'il n'y aura pas de conflit de noms et souhaitez supprimer le hachage. Dans ce cas, vous pouvez utiliser l'attribut <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> de l'attribut `DataContractAttribute` pour spécifier une autre méthode de génération de noms. Vous pouvez utiliser des nombres dans les accolades à l'intérieur de la propriété `Name` pour faire référence aux noms de contrat de données des paramètres génériques. (0 fait référence au premier paramètre, 1 au deuxième, et ainsi de suite.) Vous pouvez utiliser un signe dièse (#) à l'intérieur des accolades pour faire référence au hachage. Vous pouvez utiliser chacune de ces références à plusieurs reprises ou ne pas les utiliser du tout.
+Il arrive parfois que les noms de contrat de données générés pour les types génériques, comme décrit précédemment, soient inacceptables. Par exemple, peut-être savez-vous déjà qu'il n'y aura pas de conflit de noms et souhaitez supprimer le hachage. Dans ce cas, vous pouvez utiliser le <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> propriété pour spécifier une autre méthode pour générer des noms. Vous pouvez utiliser des nombres dans les accolades à l'intérieur de la propriété `Name` pour faire référence aux noms de contrat de données des paramètres génériques. (0 fait référence au premier paramètre, 1 au deuxième, et ainsi de suite.) Vous pouvez utiliser un signe dièse (#) à l'intérieur des accolades pour faire référence au hachage. Vous pouvez utiliser chacune de ces références à plusieurs reprises ou ne pas les utiliser du tout.
 
 Par exemple, le type `Drawing` générique précédent aurait pu être déclaré comme indiqué dans l'exemple suivant.
 

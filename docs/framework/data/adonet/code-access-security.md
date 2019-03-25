@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826258"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411562"
 ---
 # <a name="code-access-security-and-adonet"></a>Sécurité d'accès du code et ADO.NET
 Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécurité d'accès du code (CAS, Code Access Security) implémentées à l'aide d'une infrastructure commune fournie par le Common Language Runtime (CLR). Dans l'univers du code non managé, la plupart des applications s'exécutent avec les autorisations de l'utilisateur ou d'une principal de sécurité. C'est pourquoi les systèmes informatiques peuvent être endommagés et des données privées compromises lorsqu'un utilisateur bénéficiant de privilèges élevés exécute des logiciels malveillants ou remplis d'erreurs.  
   
  En revanche, le code managé exécuté dans le .NET Framework inclut une sécurité d'accès du code qui s'applique au code seul. L'autorisation ou l'interdiction pour le code de s'exécuter dépend de son origine et d'autres aspects de son identité, et pas seulement de l'identité de la principal de sécurité. Cela réduit la probabilité que du code managé puisse être utilisé de façon abusive.  
   
-## <a name="code-access-permissions"></a>Autorisations d'accès du code  
+## <a name="code-access-permissions"></a>Autorisations d’accès du code  
  Lors de l'exécution du code, ce dernier présente une preuve qui est évaluée par le système de sécurité CLR. Généralement, cette preuve comprend l'origine du code, notamment l'URL, le site, la zone et les signatures numériques qui garantissent l'identité de l'assembly.  
   
  Le CLR permet au code d'effectuer uniquement les opérations pour lesquelles il dispose d'une autorisation. Le code peut demander des autorisations qui lui sont accordées en fonction de la stratégie de sécurité définie par un administrateur.  
   
 > [!NOTE]
->  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l'octroi d'autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d'exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [configuration de la stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) et [gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
+>  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l’octroi d’autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d’exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [configuration de la stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) et [gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Il existe trois types d'autorisations d'accès du code :  
   
@@ -58,7 +58,7 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
  L'attribution d'un nom fort à un assembly donne à une application ou un composant une identité unique que d'autres logiciels peuvent utiliser pour s'y référer explicitement. L'attribution de noms forts aux assemblys les protège contre des falsifications par un assembly contenant un code hostile. Elle garantit également la cohérence du contrôle des versions d'un composant. Vous devez attribuer un nom fort aux assemblys qui seront déployés sur le cache GAC (Global Assembly Cache). Pour plus d’informations, consultez [Création et utilisation d’assemblys avec nom fort](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Confiance partielle dans ADO.NET 2.0  
- Dans ADO.NET 2.0, le fournisseur de données .NET Framework pour SQL Server , le fournisseur de données .NET Framework pour OLE DB, le fournisseur de données .NET Framework pour ODBC et le fournisseur de données .NET Framework pour Oracle peuvent tous s'exécuter dans des environnements bénéficiant d'une confiance partielle. Dans les versions précédentes du .NET Framework, seul <xref:System.Data.SqlClient> était pris en charge dans des applications ne bénéficiant pas d'une confiance totale.  
+ Dans ADO.NET 2.0, le fournisseur de données .NET Framework pour SQL Server , le fournisseur de données .NET Framework pour OLE DB, le fournisseur de données .NET Framework pour ODBC et le fournisseur de données .NET Framework pour Oracle peuvent tous s'exécuter dans des environnements bénéficiant d'une confiance partielle. Dans les mises en production précédentes du .NET Framework, seul <xref:System.Data.SqlClient> était pris en charge dans des applications ne bénéficiant pas d’une confiance totale.  
   
  Au minimum, une application avec confiance partielle utilisant le fournisseur SQL Server doit disposer d'autorisations d'exécution et de l'objet <xref:System.Data.SqlClient.SqlClientPermission>.  
   
@@ -190,7 +190,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interopérabilité avec du code non managé  
- Le code qui s'exécute en dehors du CLR est appelé code non managé. Par conséquent, les mécanismes de sécurité, tels que la sécurité d'accès du code, ne peuvent pas être appliqués à du code non managé. Les composants COM, les interfaces ActiveX et les fonctions API Win32 sont des exemples de code non managé. Des considérations de sécurité particulières s'appliquent lors de l'exécution de code non managé pour éviter de compromettre la sécurité globale des applications. Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md).  
+ Le code qui s'exécute en dehors du CLR est appelé code non managé. Par conséquent, les mécanismes de sécurité, tels que la sécurité d'accès du code, ne peuvent pas être appliqués à du code non managé. Composants COM, les interfaces ActiveX et les fonctions API de Windows sont des exemples de code non managé. Des considérations de sécurité particulières s'appliquent lors de l'exécution de code non managé pour éviter de compromettre la sécurité globale des applications. Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md).  
   
  Le .NET Framework prend également en charge la compatibilité descendante avec des composants COM existants en offrant un accès via COM Interop. Vous pouvez incorporer des composants COM dans une application .NET Framework en utilisant des outils de COM Interop pour importer les types COM pertinents. Une fois importés, les types COM sont prêts à être utilisés. COM Interop permet également aux clients COM d'accéder à du code managé en exportant des métadonnées d'assembly dans une bibliothèque de types et en inscrivant le composant managé en tant que composant COM. Pour plus d’informations, consultez [interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   

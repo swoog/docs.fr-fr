@@ -2,19 +2,19 @@
 title: Opérations de quantificateur (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c358c3181ecbefeedcbe22e6f3c877d2924c66b3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976744"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409508"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Opérations de quantificateur (Visual Basic)
 Les opérations de quantificateur retournent une valeur <xref:System.Boolean> qui indique si certains ou tous les éléments d’une séquence remplissent une condition.  
   
  L’illustration suivante représente deux opérations de quantificateur différentes sur deux séquences sources différentes. La première opération demande si un ou plusieurs des éléments sont le caractère 'A' et le résultat est `true`. La deuxième opération demande si tous les éléments sont le caractère 'A' et le résultat est `true`.  
   
- ![Opérations de quantificateur LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_quantifier.png "Quantificateur_LINQ")  
+ ![Opérations de quantificateur LINQ](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  Les méthodes d’opérateur de requête standard qui effectuent des opérations de quantificateur sont répertoriées dans la section suivante.  
   

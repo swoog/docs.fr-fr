@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 3bca6cd364ed4e0d0179c13fb378449b7cf05739
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705344"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412238"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Procédure : Dessiner du texte à un emplacement spécifié
 Lorsque vous effectuez un dessin personnalisé, vous pouvez dessiner du texte dans une seule ligne horizontale, en commençant à un point spécifié. Vous pouvez dessiner du texte de cette manière à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Point> ou <xref:System.Drawing.PointF> paramètre. Le <xref:System.Drawing.Graphics.DrawString%2A> méthode requiert également un <xref:System.Drawing.Brush> et <xref:System.Drawing.Font>  
@@ -24,7 +24,7 @@ Lorsque vous effectuez un dessin personnalisé, vous pouvez dessiner du texte da
   
  L’illustration suivante montre la sortie du texte dessiné à un point spécifié lorsque vous utilisez le <xref:System.Drawing.Graphics.DrawString%2A> la méthode surchargée.  
   
- ![Polices du texte](./media/csfontstext1.png "csfontstext1")  
+ ![Capture d’écran montrant la sortie de texte à un point spécifié.](./media/how-to-draw-text-at-a-specified-location/font-text-specified-point.png)  
   
 ### <a name="to-draw-a-line-of-text-with-gdi"></a>Pour dessiner une ligne de texte avec GDI +  
   

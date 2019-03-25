@@ -2,12 +2,12 @@
 title: Processus d'approbation des documents
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4451719bfb1d46a4e0e4dcde19666d1f8b2de427
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717707"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409547"
 ---
 # <a name="document-approval-process"></a>Processus d'approbation des documents
 Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.
@@ -22,9 +22,9 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Le graphique suivant illustre le workflow de processus d'approbation des documents.  
+ Le graphique suivant illustre le flux de travail du processus d’approbation document :  
   
- ![Un flux de travail du processus d’approbation document](./media/approvalprocess.jpg "ApprovalProcess")  
+ ![Flux de travail du processus d'approbation d'un document](./media/document-approval-process/document-approval-process.jpg)  
   
  Du point de vue du client, le processus d'approbation fonctionne comme suit :  
   
@@ -72,7 +72,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 7.  Selon le type de demande (simple, quorum ou complexe), une activité différente est exécutée.  
   
-8.  Les activités Send et Receive avec corrélation sont utilisées pour envoyer la demande d'approbation au client à des fins de révision et pour recevoir la réponse.  
+8.  Les activités Send et Receive avec corrélation sont utilisées pour envoyer la demande d’approbation au client à des fins de revue et pour recevoir la réponse.  
   
 9. Le résultat du workflow de processus d'approbation est envoyé au client.  
   

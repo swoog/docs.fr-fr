@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377311"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411276"
 ---
 # <a name="pack-uris-in-wpf"></a>URI à en-tête pack dans WPF
 Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] sont utilisés pour identifier et charger des fichiers de plusieurs façons, notamment les éléments suivants :  
@@ -44,7 +44,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
 ## <a name="the-pack-uri-scheme"></a>Schéma URI à en-tête pack  
  Le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schéma est utilisé par le [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) spécification (OPC), qui décrit un modèle d’organisation et d’identification du contenu. Les éléments clés de ce modèle sont des packages et des parties, où un *package* est un conteneur logique pour un ou plus logique *parties*. La figure suivante illustre ce concept.  
   
- ![Diagramme de package et de parties](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![Diagramme Package et pièces](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  Pour identifier les parties, la spécification OPC exploite l’extensibilité de la RFC 2396 (identificateurs de ressource uniforme (URI) : Syntaxe générique) pour définir le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schéma.  
   
@@ -56,7 +56,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
  Ce concept est illustré par le figure suivante :  
   
- ![Relation entre package, autorité et chemin](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![Relation entre package, autorité et chemin d’accès](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  Les packages et les parties s’apparentent à des applications et des fichiers, où une application (package) peut inclure un ou plusieurs fichiers (parties), notamment :  
   
@@ -72,7 +72,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
  Accéder à ces types de fichiers, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] prend en charge deux autorités : application : / / / et siteoforigin : / / /. L’autorité application:/// identifie les fichiers de données d’application qui sont connus au moment de la compilation, notamment les fichiers de ressources et de contenu. L’autorité siteoforigin:/// identifie les fichiers de site d’origine. La portée de chaque autorité est indiquée dans la figure suivante.  
   
- ![Diagramme d’URI à en-tête pack](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Diagramme URI à en-tête pack](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  Le composant d’autorité d’un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] est incorporé [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui pointe vers un package et doit être conforme à la norme RFC 2396. De plus, le caractère « / » doit être remplacé par le caractère « , » et les caractères réservés tels que « % » et « ? » doivent être échappés. Pour plus d’informations, consultez l’OPC.  

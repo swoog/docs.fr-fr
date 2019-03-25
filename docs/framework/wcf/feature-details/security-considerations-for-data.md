@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363083"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411432"
 ---
 # <a name="security-considerations-for-data"></a>Considérations sur la sécurité des données
 
@@ -276,7 +276,7 @@ Cette situation peut être évitée en prenant conscience des points suivants :
 
 - Faites preuve de prudence lorsque vous utilisez des types hérités marqués avec l'attribut <xref:System.SerializableAttribute> . Beaucoup d'entre eux ont été conçus pour fonctionner avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting à des fins d'utilisation avec des données approuvées uniquement. Les types existants marqués avec cet attribut n'ont peut-être pas été conçus en tenant compte de la sécurité des états.
 
-- Ne comptez pas sur la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de l'attribut `DataMemberAttribute` pour garantir la présence des données en ce qui concerne la sécurité des états. Les données pourraient toujours être `null`, `zero`ou `invalid`.
+- Ne comptez pas sur la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> pour garantir la présence des données en ce qui concerne la sécurité des états. Les données pourraient toujours être `null`, `zero`ou `invalid`.
 
 - N'approuvez jamais un graphique d'objets désérialisé provenant d'une source de données non fiable sans le valider au préalable. Chaque objet individuel peut être dans un état cohérent, à la différence du graphique d'objets dans son ensemble. En outre, même si le mode de conservation des graphiques d'objets est désactivé, le graphique désérialisé peut avoir plusieurs références au même objet ou des références circulaires. Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Notez les préoccupations suivantes concernant des menaces liées à l'exécutio
 
 - Si vous autorisez l’accès du code partiellement fiable à votre <xref:System.Runtime.Serialization.DataContractSerializer> instance ou le contrôle le [substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), il peut exercer un grand contrôle sur le processus de sérialisation/désérialisation. Par exemple, il peut injecter des types arbitraires, entraîner la divulgation d'informations, falsifier les données sérialisées ou le graphique résultant ou dépasser le flux sérialisé résultant. Une menace <xref:System.Runtime.Serialization.NetDataContractSerializer> équivalente est décrite dans la section « Utilisation de NetDataContractSerializer en toute sécurité ».
 
-- Si l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est appliqué à un type (ou au type marqué comme `[Serializable]` mais qu'il n'est pas `ISerializable`), le désérialiseur peut créer une instance d'un tel type même si tous les constructeurs sont non publics ou protégés par des demandes.
+- Si l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est appliqué à un type (ou au type marqué comme <xref:System.SerializableAttribute> mais qu'il n'est pas <xref:System.Runtime.Serialization.ISerializable>), le désérialiseur peut créer une instance d'un tel type même si tous les constructeurs sont non publics ou protégés par des demandes.
 
 - N'approuvez jamais le résultat de la désérialisation sauf si les données à désérialiser sont approuvées et que vous êtes certain que tous les types connus sont des types que vous approuvez. Notez que les types connus ne sont pas chargés depuis le fichier de configuration de l'application (mais sont chargés depuis le fichier de configuration de l'ordinateur) lorsqu'ils s'exécutent en confiance partielle.
 
-- Si vous passez une instance `DataContractSerializer` avec un substitut ajouté au code de niveau de confiance partiel, le code peut modifier tous les paramètres modifiables sur ce substitut.
+- Si vous passez une instance <xref:System.Runtime.Serialization.DataContractSerializer> avec un substitut ajouté au code de niveau de confiance partiel, le code peut modifier tous les paramètres modifiables sur ce substitut.
 
 - Pour un objet désérialisé, si le lecteur XML (ou les données qui s'y trouvent) vient de code de niveau de confiance partiel, traitez l'objet désérialisé obtenu comme des données non fiables.
 
 - Le fait que le type <xref:System.Runtime.Serialization.ExtensionDataObject> n'ait pas de membres publics ne signifie pas que les données qu'il contient sont sécurisées. Par exemple, si vous désérialisez à partir d'une source de données privilégiée dans un objet dans lequel certaines données résident, puis remettez cet objet à du code de niveau de confiance partiel, le code de niveau de confiance partiel peut lire les données dans `ExtensionDataObject` en sérialisant l'objet. Envisagez d'affecter à <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> la valeur `true` lors d'une désérialisation à partir d'une source de données privilégiée dans un objet qui est passé ultérieurement à du code de niveau de confiance partiel.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> prennent en charge la sérialisation de membres privés, protégés, internes et publics en mode de confiance totale. Toutefois, en mode de confiance partielle, seuls les membres publics peuvent être sérialisés. Une `SecurityException` est levée si une application tente de sérialiser un membre qui n'est pas public.
+- <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> prennent en charge la sérialisation de membres privés, protégés, internes et publics en mode de confiance totale. Toutefois, en mode de confiance partielle, seuls les membres publics peuvent être sérialisés. Une <xref:System.Security.SecurityException> est levée si une application tente de sérialiser un membre qui n'est pas public.
 
-    Pour autoriser la sérialisation de membres internes ou protégés en mode de confiance partielle, utilisez l'attribut d'assembly `System.Runtime.CompilerServices.InternalsVisibleTo` . Cet attribut permet à un assembly de déclarer que ses membres internes sont visibles à certains autres assemblys. Dans ce cas, un assembly qui souhaite sérialiser ses membres internes déclare que ces derniers sont visibles à System.Runtime.Serialization.dll.
+    Pour autoriser la sérialisation de membres internes ou protégés en mode de confiance partielle, utilisez l'attribut d'assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> . Cet attribut permet à un assembly de déclarer que ses membres internes sont visibles à certains autres assemblys. Dans ce cas, un assembly qui souhaite sérialiser ses membres internes déclare que ces derniers sont visibles à System.Runtime.Serialization.dll.
 
     L'avantage de cette approche réside dans le fait qu'elle ne nécessite pas de chemin de génération de code élevé.
 
     Toutefois, elle présente deux inconvénients principaux.
 
-    Le premier étant que la propriété de sélection de l'attribut `InternalsVisibleTo` est au niveau de l'assembly. En d'autres termes, vous ne pouvez pas spécifier que seule une certaine classe peut avoir ses membres internes sérialisés. Il va de soi que vous pouvez toujours choisir de ne pas sérialiser un membre interne spécifique, en n'ajoutant pas d'attribut `DataMember` à ce membre. De la même façon, un développeur peut aussi choisir de rendre un membre interne au lieu de privé ou protégé, avec de légers problèmes de visibilité.
+    Le premier étant que la propriété de sélection de l'attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> est au niveau de l'assembly. En d'autres termes, vous ne pouvez pas spécifier que seule une certaine classe peut avoir ses membres internes sérialisés. Il va de soi que vous pouvez toujours choisir de ne pas sérialiser un membre interne spécifique, en n'ajoutant pas d'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> à ce membre. De la même façon, un développeur peut aussi choisir de rendre un membre interne au lieu de privé ou protégé, avec de légers problèmes de visibilité.
 
     Le second réside dans le fait que cette approche ne prend pas encore en charge les membres privés ou protégés.
 
-    Pour illustrer l'utilisation de l'attribut `InternalsVisibleTo` en mode de confiance partielle, prenons l'exemple du programme suivant :
+    Pour illustrer l'utilisation de l'attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> en mode de confiance partielle, prenons l'exemple du programme suivant :
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    Dans l'exemple ci-dessus, l'objet `PermissionsHelper.InternetZone` correspond à l'objet `PermissionSet` en mode de confiance partielle. Désormais, sans `InternalsVisibleToAttribute`, l'application échouera, en levant une `SecurityException` qui indique qu'il est impossible de sérialiser les membres qui ne sont pas publics en mode de confiance partielle.
+    Dans l'exemple ci-dessus, l'objet `PermissionsHelper.InternetZone` correspond à l'objet <xref:System.Security.PermissionSet> en mode de confiance partielle. Maintenant, sans le <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribut, l’application échoue, lever un <xref:System.Security.SecurityException> indiquant que les membres non publics ne peuvent pas être sérialisés en confiance partielle.
 
     Toutefois, si nous ajoutons la ligne suivante au fichier source, le programme s'exécute.
 

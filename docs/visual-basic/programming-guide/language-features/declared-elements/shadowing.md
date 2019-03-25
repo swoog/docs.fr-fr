@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580861"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411003"
 ---
 # <a name="shadowing-in-visual-basic"></a>Occultation dans Visual Basic
 Lorsque deux éléments de programmation partagent le même nom, un d’eux peut masquer, ou *ombre*, autre. Dans ce cas, l’élément occulté n’est pas disponible pour référence ; au lieu de cela, lorsque votre code utilise le nom d’élément, le compilateur Visual Basic les résout à l’élément d’occultation.  
@@ -41,8 +41,7 @@ Lorsque deux éléments de programmation partagent le même nom, un d’eux peut
   
  L’illustration suivante montre deux variables, toutes deux nommées `temp`. La variable locale `temp` occulte la variable membre `temp` lors de l’accès à partir de sa propre procédure `p`. Toutefois, le `MyClass` mot clé contourne l’occultation et accède à la variable de membre.  
   
- ![Diagramme graphique d’une occultation par portée](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Occultation par portée  
+ ![Graphique montrant occultation par portée.](./media/shadowing/shadow-scope-diagram.gif)
   
  Pour obtenir un exemple d’une occultation par portée, consultez [Comment : Masquer une Variable portant le même nom que votre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Occultation par portée
   
  L’illustration suivante montre une classe de base `b` et une classe dérivée `d` qui hérite de `b`. La classe de base définit une procédure nommée `proc`, et la classe dérivée l’occulte avec une autre procédure du même nom. La première `Call` instruction accède à l’occultation `proc` dans la classe dérivée. Toutefois, le `MyBase` mot clé contourne l’occultation et accède à la procédure occultée dans la classe de base.  
   
- ![Diagramme graphique d’une occultation par héritage](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Occultation par héritage  
+ ![Diagramme graphique d'une occultation par héritage](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Pour obtenir un exemple d’une occultation par héritage, consultez [Comment : Masquer une Variable portant le même nom que votre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) et [Comment : Masquer une Variable héritée](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

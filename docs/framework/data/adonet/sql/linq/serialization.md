@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593574"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408923"
 ---
 # <a name="serialization"></a>Sérialisation
 Cette rubrique décrit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fonctions de sérialisation. Les paragraphes qui suivent fournissent des informations sur l'ajout de la sérialisation pendant la génération de code au moment du design et le comportement de sérialisation à l'exécution de classes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -50,7 +50,7 @@ Cette rubrique décrit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdli
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- Pour la classe `Order` de l'exemple suivant, seule la propriété d'association inverse correspondant à la classe `Customer` est montrée, par souci de concision. Elle n'a pas d'attribut `DataMember` pour éviter un cycle.  
+ Pour la classe `Order` de l'exemple suivant, seule la propriété d'association inverse correspondant à la classe `Customer` est montrée, par souci de concision. Elle n'a pas d'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> pour éviter un cycle.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +65,7 @@ Cette rubrique décrit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdli
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>Relations auto-récursives  
- Les relations auto-récursives suivent le même modèle. La propriété d'association qui correspond à la clé étrangère n'a pas d'attribut `DataMember`, contrairement à la propriété parente.  
+ Les relations auto-récursives suivent le même modèle. La propriété d'association qui correspond à la clé étrangère n'a pas d'attribut <xref:System.Runtime.Serialization.DataMemberAttribute>, contrairement à la propriété parente.  
   
  Considérez la classe suivante, qui a deux relations auto-récursives : Employee.Manager/Reports et Employee.mentor/mentees.  
   

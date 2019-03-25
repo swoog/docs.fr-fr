@@ -2,12 +2,12 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283281"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412108"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 Spécifie les paramètres de configuration du service d'activation du canal nommé, qui gère la durée de vie de la connexion du canal nommé et les demandes d'activation qui arrivent par des canaux nommés.  
@@ -52,7 +52,7 @@ Spécifie les paramètres de configuration du service d'activation du canal nomm
 |---------------|-----------------|  
 |`maxPendingAccepts`|Entier qui spécifie le nombre maximal de threads d'acceptation simultanés en attente sur le point de terminaison d'écoute du service de partage. La valeur par défaut est 2.|  
 |`maxPendingConnections`|Entier qui définit le nombre maximal de connexions qui peuvent attendre la distribution. La valeur par défaut est 100.|  
-|`receiveTimeout`|`TimeSpan` qui spécifie le délai d'attente pour lire les données d'encadrement et effectuer la distribution de la connexion à partir des connexions sous-jacentes. La valeur par défaut est « 00:00:10 ».|  
+|`receiveTimeout`|<xref:System.TimeSpan> qui spécifie le délai d'attente pour lire les données d'encadrement et effectuer la distribution de la connexion à partir des connexions sous-jacentes. La valeur par défaut est « 00:00:10 ».|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   

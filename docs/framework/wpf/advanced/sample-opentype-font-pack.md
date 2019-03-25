@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377080"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412160"
 ---
 # <a name="sample-opentype-font-pack"></a>Exemple de pack de polices OpenType
 Cette rubrique fournit une vue d’ensemble des polices d’exemple [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] qui sont distribuées avec le [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Les exemples de polices prennent en charge des fonctionnalités [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] étendues qui peuvent être utilisées par les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,8 +34,7 @@ Cette rubrique fournit une vue d’ensemble des polices d’exemple [!INCLUDE[TL
   
  L’illustration suivante montre à quoi ressemblent les exemples de polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
- ![Liste de noms de polices dans l’exemple de pack de polices](./media/samplefontpack01.gif "samplefontpack01")  
-Polices du pack de polices OpenType  
+ ![Liste des noms de police de l'exemple de pack de polices](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
  Les exemples de polices sont fournis sous licence Ascender Corporation. Ascender est un fournisseur de polices avancées. Pour obtenir une licence des versions étendues ou personnalisées des exemples de polices, consultez le [site web d’Ascender Corporation](https://go.microsoft.com/fwlink/?LinkId=182627).  
   

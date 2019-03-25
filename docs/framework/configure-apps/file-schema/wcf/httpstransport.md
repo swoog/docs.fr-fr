@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: efc568990c6af87f24f93790886388e4c505456c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289781"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411315"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Spécifie un transport HTTP pour la transmission des messages SOAP d’une liaison personnalisée.  
@@ -54,7 +54,7 @@ Spécifie un transport HTTP pour la transmission des messages SOAP d’une liais
 |maxBufferSize|Entier positif qui spécifie la taille maximale de la mémoire tampon. La valeur par défaut est 524 288.|  
 |maxReceivedMessageSize|Entier positif qui spécifie la taille de message maximale autorisée pouvant être reçue. La valeur par défaut est 65536.|  
 |proxyAddress|URI qui spécifie l'adresse du proxy HTTP. Si `useSystemWebProxy` est `true`, ce paramètre doit avoir la valeur `null`. La valeur par défaut est `null`.|  
-|proxyAuthenticationScheme|Spécifie le protocole utilisé pour l'authentification des demandes du client qui sont traitées par un proxy HTTP. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucune authentification n’est effectuée.<br />-Digest : Spécifie l’authentification Digest.<br />-Par négociation : Négocie avec le client afin de déterminer le schéma d’authentification. Si le client et le serveur prennent tous les deux en charge Kerberos, ce protocole est utilisé ; sinon, NTLM est utilisé.<br />-Ntlm : Spécifie l'authentification NTLM.<br />-De base : Spécifie l'authentification de base.<br />-Anonyme : Spécifie l'authentification anonyme.<br /><br /> La valeur par défaut est Anonymous. Cet attribut est de type <xref:System.Net.AuthenticationSchemes>. Notez que `IntegratedWindowsAuthentication` n’est pas pris en charge.|  
+|proxyAuthenticationScheme|Spécifie le protocole utilisé pour l'authentification des demandes du client qui sont traitées par un proxy HTTP. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucune authentification n’est effectuée.<br />-Digest : Spécifie l’authentification Digest.<br />-Par négociation : Négocie avec le client afin de déterminer le schéma d’authentification. Si le client et le serveur prennent tous les deux en charge Kerberos, ce protocole est utilisé ; sinon, NTLM est utilisé.<br />-Ntlm : Spécifie l'authentification NTLM.<br />-De base : Spécifie l'authentification de base.<br />-Anonyme : Spécifie l'authentification anonyme.<br /><br /> La valeur par défaut est Anonymous. Cet attribut est de type <xref:System.Net.AuthenticationSchemes>. Notez que <xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType> n’est pas pris en charge.|  
 |realm|Chaîne qui spécifie le domaine à utiliser sur le proxy/serveur. La valeur par défaut est une chaîne vide.<br /><br /> Les serveurs utilisent des domaines pour partitionner des ressources protégées. Chaque partition peut posséder son propre schéma d'authentification et/ou sa base de données d'autorisation. Les domaines sont utilisés uniquement pour les authentifications Digest et de base. Lorsqu'un client est correctement authentifié, l'authentification est valide pour toutes les ressources contenues dans un domaine donné. Pour obtenir une description détaillée des domaines, consultez la RFC 2617 à le [site Web IETF](https://www.ietf.org).|  
 |requireClientCertificate|Valeur booléenne qui spécifie si le serveur impose que le client fournisse un certificat client dans le cadre du protocole de transfert HTTPS. La valeur par défaut est `false`.|  
 |transferMode|Spécifie si les messages sont mis en mémoire tampon ou transmis en continu ou s'il s'agit d'une demande ou d'une réponse. Les valeurs valides sont les suivantes :<br /><br /> -Mise en mémoire tampon : Les messages de demande et de réponse sont mis en mémoire tampon.<br />-Transmis en continu : Les messages de demande et de réponse sont transmis en continu.<br />-   StreamedRequest: Le message de demande est transmis en continu et le message de réponse est mis en mémoire tampon.<br />-   StreamedResponse: Le message de demande est mis en mémoire tampon et le message de réponse est transmis en continu.<br /><br /> La valeur par défaut est Buffered. Cet attribut est de type <xref:System.ServiceModel.TransferMode>.|  

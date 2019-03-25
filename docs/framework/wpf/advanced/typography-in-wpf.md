@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125627"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412134"
 ---
 # <a name="typography-in-wpf"></a>Typographie dans WPF
 Cette rubrique présente les principales fonctionnalités typographiques de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces fonctionnalités incluent l’amélioration de la qualité et des performances de rendu de texte, une prise en charge de la typographie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], un texte international amélioré, une prise en charge de police améliorée et de nouvelles interfaces de programmation d’applications (API, Application Programming Interface) texte.  
@@ -121,7 +121,7 @@ Texte avec anticrénelage ClearType dans la direction y
  Pour plus d’informations, consultez [Documents dans WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Dessin de texte léger  
- Vous pouvez dessiner du texte directement à [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objets à l’aide de la <xref:System.Windows.Media.DrawingContext.DrawText%2A> méthode de la <xref:System.Windows.Media.DrawingContext> objet. Pour utiliser cette méthode, vous créez un <xref:System.Windows.Media.FormattedText> objet. Cet objet vous permet de dessiner du texte multiligne dans lequel chaque caractère du texte peut être mis en forme individuellement. Les fonctionnalités de la <xref:System.Windows.Media.FormattedText> objet contient la plupart des fonctionnalités des indicateurs DrawText dans l’API Win32. En outre, le <xref:System.Windows.Media.FormattedText> objet contient des fonctionnalités telles que la prise en charge des points de suspension, dans lequel les points de suspension s’affiche lorsque le texte dépasse les limites. L’exemple suivant présente un texte auquel plusieurs formats sont appliqués, notamment un dégradé linéaire sur les deuxième et troisième mots.  
+ Vous pouvez dessiner du texte directement à [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objets à l’aide de la <xref:System.Windows.Media.DrawingContext.DrawText%2A> méthode de la <xref:System.Windows.Media.DrawingContext> objet. Pour utiliser cette méthode, vous créez un <xref:System.Windows.Media.FormattedText> objet. Cet objet vous permet de dessiner du texte multiligne dans lequel chaque caractère du texte peut être mis en forme individuellement. Les fonctionnalités de la <xref:System.Windows.Media.FormattedText> objet contient la plupart des fonctionnalités des indicateurs DrawText dans l’API Windows. En outre, le <xref:System.Windows.Media.FormattedText> objet contient des fonctionnalités telles que la prise en charge des points de suspension, dans lequel les points de suspension s’affiche lorsque le texte dépasse les limites. L’exemple suivant présente un texte auquel plusieurs formats sont appliqués, notamment un dégradé linéaire sur les deuxième et troisième mots.  
   
  ![Texte affiché à l'aide de l'objet FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

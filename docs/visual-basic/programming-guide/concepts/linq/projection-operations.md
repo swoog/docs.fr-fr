@@ -2,12 +2,12 @@
 title: Opérations de projection (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 4d92405d9f3da69df4fa3964468599d6549480cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740958"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408949"
 ---
 # <a name="projection-operations-visual-basic"></a>Opérations de projection (Visual Basic)
 La projection désigne l’opération de transformation d’un objet en une nouvelle forme qui se compose souvent uniquement des propriétés à utiliser ensuite. À l'aide de la projection, vous pouvez créer un nouveau type qui est généré à partir de chaque objet. Vous pouvez projeter une propriété et effectuer une fonction mathématique sur celle-ci. Vous pouvez également projeter l’objet d’origine sans le modifier.  
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  Cette illustration montre de quelle manière `Select()` retourne une collection qui a le même nombre d’éléments que la collection source.  
   
- ![Illustration de l’action de la clause Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Graphique montrant l’action de Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
  Cette illustration montre de quelle façon `SelectMany()` concatène la séquence intermédiaire de tableaux en une seule valeur de résultat final qui contient chaque valeur de chaque tableau intermédiaire.  
   
- ![Graphique montrant l’action de SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![Graphique montrant l’action de SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Exemple de code  
  L’exemple suivant compare le comportement de `Select()` et de `SelectMany()`. Le code crée un « bouquet » de fleurs en prenant les deux premiers éléments de chaque liste de noms de fleurs de la collection source. Dans cet exemple, la « valeur unique » que la fonction de transformation <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> utilise est elle-même une collection de valeurs. Cela nécessite d’utiliser la boucle `For Each` supplémentaire pour énumérer chaque chaîne dans chaque sous-séquence.  

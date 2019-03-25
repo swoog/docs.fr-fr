@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0ffb85dc5f321e45432d6c2fa9448919957f0e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55463985a7ac93bf0ec3cda92f91f8a326f92406
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665199"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410561"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable, énumération
-Contient des valeurs qui indiquent la quantité de mémoire physique disponible sur l’ordinateur. Ces valeurs mappent logiquement aux événements de haute et basse mémoire retournée à partir de la `CreateMemoryResourceNotification` fonction dans l’API Win32.  
+Contient des valeurs qui indiquent la quantité de mémoire physique disponible sur l’ordinateur. Ces valeurs mappent logiquement aux événements de haute et basse mémoire retournée à partir de la `CreateMemoryResourceNotification` fonction dans l’API Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ typedef enum {
 ## <a name="remarks"></a>Notes  
  Cette valeur est passée par l’hôte pour le common language runtime (CLR) à l’aide d’un appel à la [ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) (méthode).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  

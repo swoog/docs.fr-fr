@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657556"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410925"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procédure : Sécuriser un Service avec les informations d’identification Windows
 Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelé par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité du Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez le [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
@@ -52,7 +52,7 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
   
 2.  Créez une variable <xref:System.Type> nommée `contractType` et assignez-lui le type de l'interface (`ICalculator`). Lorsque vous utilisez Visual Basic, utilisez la `GetType` opérateur ; lorsque vous utilisez c#, utilisez le `typeof` mot clé.  
   
-3.  Créez une deuxième variable `Type` nommée `serviceType` et assignez-lui le type du contrat implémenté (`Calculator`).  
+3.  Créez une deuxième variable <xref:System.Type> nommée `serviceType` et assignez-lui le type du contrat implémenté (`Calculator`).  
   
 4.  Créez une instance de la classe <xref:System.Uri> nommée `baseAddress` avec l'adresse de base du service. L'adresse de base doit avoir un schéma qui correspond au transport. Dans ce cas, le schéma de transport est HTTP, et l’adresse inclut spéciale identificateur URI (Uniform Resource) « localhost » et un port number (8036), ainsi qu’une adresse de point de terminaison de base (« serviceModelSamples /) : `http://localhost:8036/serviceModelSamples/`.  
   
@@ -102,11 +102,11 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
   
 1.  Ajouter un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) élément à la [ \<liaisons >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) section du fichier de configuration de l’élément.  
   
-2.  Ajoutez un élément <`binding`> à l'élément <`WSHttpBinding`> et définissez l'attribut `configurationName` sur une valeur appropriée pour votre application.  
+2.  Ajouter un <`binding`> élément à la <`WSHttpBinding`> et affectez le `configurationName` par une valeur appropriée pour votre application.  
   
-3.  Ajoutez un élément <`security`> et définissez l'attribut `mode` sur la valeur Message.  
+3.  Ajouter un <`security`> et affectez le `mode` attribut au Message.  
   
-4.  Ajoutez un élément <`message`> et définissez l'attribut `clientCredentialType` sur la valeur Windows.  
+4.  Ajouter un <`message`> et affectez le `clientCredentialType` attribut Windows.  
   
 5.  Dans le fichier de configuration du service, remplacez la section `<bindings>` par le code suivant. Si vous n’avez pas déjà un fichier de configuration de service, consultez [à l’aide de liaisons pour configurer les Services et Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

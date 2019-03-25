@@ -2,12 +2,12 @@
 title: Durée de vie personnalisée
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520769"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410379"
 ---
 # <a name="custom-lifetime"></a>Durée de vie personnalisée
 
@@ -64,7 +64,7 @@ Dans WCF, <xref:System.ServiceModel.InstanceContext> est le lien entre l’insta
 
 Le <xref:System.ServiceModel.IExtensibleObject%601> interface est implémentée par les objets pour autoriser les extensions qui personnalisent leurs fonctionnalités.
 
-L'interface <xref:System.ServiceModel.IExtension%601> est implémentée par des objets qui peuvent être des extensions de classes de type `T`.
+L’interface <xref:System.ServiceModel.IExtension%601> est implémentée par des objets qui peuvent être des extensions de classes de type `T`.
 
 Et enfin, le <xref:System.ServiceModel.IExtensionCollection%601> interface est une collection de <xref:System.ServiceModel.IExtension%601> implémentations qui permet de récupérer une implémentation de <xref:System.ServiceModel.IExtension%601> par leur type.
 
@@ -76,7 +76,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>
 }
 ```
 
-L'interface <xref:System.ServiceModel.IExtension%601> possède deux méthodes : <xref:System.ServiceModel.IExtension%601.Attach%2A> et <xref:System.ServiceModel.IExtension%601.Detach%2A>. Comme leur nom le laisse supposer, ces deux méthodes sont appelées lorsque le runtime attache l'extension à une instance de la classe <xref:System.ServiceModel.InstanceContext> et l'en détache. Dans cet exemple, la méthode `Attach` est utilisée pour effectuer le suivi de l'objet <xref:System.ServiceModel.InstanceContext> qui appartient à l'instance actuelle de l'extension.
+L'interface <xref:System.ServiceModel.IExtension%601> possède deux méthodes : <xref:System.ServiceModel.IExtension%601.Attach%2A> et <xref:System.ServiceModel.IExtension%601.Detach%2A>. Comme leur nom le laisse supposer, ces deux méthodes sont appelées lorsque le runtime attache l’extension à une instance de la classe <xref:System.ServiceModel.InstanceContext> et l’en détache. Dans cet exemple, la méthode `Attach` est utilisée pour effectuer le suivi de l’objet <xref:System.ServiceModel.InstanceContext> qui appartient à l’instance actuelle de l’extension.
 
 ```csharp
 InstanceContext owner;
@@ -165,7 +165,7 @@ public bool IsIdle(InstanceContext instanceContext)
 }
 ```
 
-Si le <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> retourne de la méthode `false`, le répartiteur inscrit une fonction de rappel à l’aide de la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> (méthode). Cette méthode reçoit une référence à l'<xref:System.ServiceModel.InstanceContext> libéré. Par conséquent, l’exemple de code peut interroger le `ICustomLease` type d’extension et de vérifier le `ICustomLease.IsIdle` propriété dans l’état étendu.
+Si le <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> retourne de la méthode `false`, le répartiteur inscrit une fonction de rappel à l’aide de la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> (méthode). Cette méthode reçoit une référence à l’<xref:System.ServiceModel.InstanceContext> libéré. Par conséquent, l’exemple de code peut interroger le `ICustomLease` type d’extension et de vérifier le `ICustomLease.IsIdle` propriété dans l’état étendu.
 
 ```csharp
 public void NotifyIdle(InstanceContextIdleCallback callback,
@@ -187,7 +187,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
 
 Avant du `ICustomLease.IsIdle` propriété est activée, la propriété Callback doit être définie, cette opération est essentielle pour `CustomLeaseExtension` pour notifier le répartiteur lorsqu’elle devient inactive. Si `ICustomLease.IsIdle` retourne `true`, le membre privé `isIdle` reçoit simplement dans `CustomLifetimeLease` la valeur `true` et appelle la méthode de rappel. Étant donné que le code maintient un verrou, les autres threads ne peut pas modifier la valeur de ce membre privé. Et la prochaine fois répartiteur appelle la <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, elle retourne `true` et laisse le répartiteur libérer l’instance.
 
-Le travail préparatoire étant à présent terminé, l’extension personnalisée doit être raccordée au modèle de service. Pour raccorder la `CustomLeaseExtension` implémentation à la <xref:System.ServiceModel.InstanceContext>, WCF fournit le <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> interface pour effectuer l’amorçage de <xref:System.ServiceModel.InstanceContext>. Dans l'exemple, la classe `CustomLeaseInitializer` implémente cette interface et ajoute une instance de `CustomLeaseExtension` à la collection <xref:System.ServiceModel.InstanceContext.Extensions%2A> à partir de la seule initialisation de la méthode. Cette méthode est appelée par le répartiteur en initialisant l'<xref:System.ServiceModel.InstanceContext>.
+Le travail préparatoire étant à présent terminé, l’extension personnalisée doit être raccordée au modèle de service. Pour raccorder la `CustomLeaseExtension` implémentation à la <xref:System.ServiceModel.InstanceContext>, WCF fournit le <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> interface pour effectuer l’amorçage de <xref:System.ServiceModel.InstanceContext>. Dans l’exemple, la classe `CustomLeaseInitializer` implémente cette interface et ajoute une instance de `CustomLeaseExtension` à la collection <xref:System.ServiceModel.InstanceContext.Extensions%2A> à partir de la seule initialisation de la méthode. Cette méthode est appelée par le répartiteur en initialisant l'<xref:System.ServiceModel.InstanceContext>.
 
 ```csharp
 public void InitializeInstanceContext(InstanceContext instanceContext,
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Enfin le <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implémentation est raccordée au modèle de service à l’aide de la <xref:System.ServiceModel.Description.IServiceBehavior> implémentation. Cette implémentation est placée dans la classe `CustomLeaseTimeAttribute` et dérive également de la classe de base `Attribute` pour exposer ce comportement en tant qu'attribut.
+ Enfin le <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implémentation est raccordée au modèle de service à l’aide de la <xref:System.ServiceModel.Description.IServiceBehavior> implémentation. Cette implémentation est placée dans la classe `CustomLeaseTimeAttribute` et dérive également de la classe de base <xref:System.Attribute> pour exposer ce comportement en tant qu'attribut.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ Lorsque vous exécutez l'exemple, les requêtes et réponses de l'opération s'a
 
 1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Pour générer l’édition c# ou Visual Basic .NET de la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](building-the-samples.md).
+2. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
 3. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](running-the-samples.md).
 

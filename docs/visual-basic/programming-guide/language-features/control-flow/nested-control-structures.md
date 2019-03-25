@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185725"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409794"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Structures de contrôle imbriquées (Visual Basic)
 Vous pouvez placer des instructions de contrôle à l’intérieur d’autres instructions de contrôle, par exemple un `If...Then...Else` bloquer dans un `For...Next` boucle. Une instruction de contrôle à l’intérieur d’une autre instruction de contrôle est dite *imbriquée*.  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>Structures de contrôle qui se chevauchent  
  Vous ne peut pas chevaucher les structures de contrôle. Cela signifie que toute structure imbriquée doit être entièrement contenue dans la structure la plus profonde suivante. Par exemple, la disposition suivante n’est pas valide, car le `For` boucle se termine avant interne `With` bloc se termine.  
   
- ![Diagramme graphique d’imbrication non valide](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Imbrication non valide de pour et avec des structures  
+ ![Diagramme qui montre un exemple d’imbrication non valide.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  Le compilateur Visual Basic détecte ces structures de contrôle qui se chevauchent et signale une erreur de compilation.  
   

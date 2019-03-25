@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738350"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409469"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Meilleures pratiques : Contrôle de version des contrats de données
 Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. Pour plus d’informations sur les contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
     2.  Si le membre ne peut pas avoir de valeur par défaut `null` ou zéro, une méthode de rappel doit être fournie à l'aide de <xref:System.Runtime.Serialization.OnDeserializingAttribute> pour fournir une valeur par défaut acceptable au cas où le membre ne serait pas présent dans le flux de données entrant. Pour plus d’informations sur le rappel, consultez [des rappels de sérialisation avec tolérance de Version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  La propriété `Order` sur le `DataMemberAttribute` doit être utilisée pour garantir que les membres de données ajoutés récemment apparaissent à la suite des membres de données existants. La méthode recommandée de cette opération est la suivante : Aucun des membres de données dans la première version du contrat de données doivent avoir leurs `Order` jeu de propriétés. La propriété `Order` de tous les membres de données ajoutés à la version 2 du contrat de données doit avoir la valeur 2. La propriété `Order` de tous les membres de données ajoutés à la version 3 du contrat de données doit avoir la valeur 3, etc. Il est possible que plusieurs membres de données aient le même numéro d'`Order`.  
+    3.  Le <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> propriété doit être utilisée pour vous assurer que tous les membres de données nouvellement ajoutées s’affichent après les membres de données existant. La méthode recommandée de cette opération est la suivante : Aucun des membres de données dans la première version du contrat de données doivent avoir leurs `Order` jeu de propriétés. La propriété `Order` de tous les membres de données ajoutés à la version 2 du contrat de données doit avoir la valeur 2. La propriété `Order` de tous les membres de données ajoutés à la version 3 du contrat de données doit avoir la valeur 3, etc. Il est possible que plusieurs membres de données aient le même numéro d'`Order`.  
   
 9. Ne supprimez pas de membres de données dans les versions ultérieures, même si la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> conserve sa propriété `false` par défaut dans les versions antérieures.  
   
@@ -86,7 +86,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
 14. Vous ne devez pas ajouter ou supprimer des membres de l'énumération entre des versions. Vous ne devez pas non plus renommer de membres de l'énumération, sauf si vous utilisez la propriété Name sur l'attribut `EnumMemberAttribute` pour conserver les mêmes noms dans le modèle de contrat de données.  
   
-15. Les collections sont interchangeables dans le modèle de contrat de données comme décrit dans [Types de collections dans les contrats de données](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Cela permet un plus grand degré de souplesse. Toutefois, veillez à ne pas modifier accidentellement un type de collection de manière non interchangeable d'une version à l'autre. Par exemple, ne passez pas d'une collection non personnalisée (autrement dit, sans l'attribut `CollectionDataContractAttribute`) à une collection personnalisée ou vice versa. Ne modifiez pas non plus les propriétés sur `CollectionDataContractAttribute` d'une version à l'autre. La seule modification autorisée consiste à ajouter une propriété Name ou Namespace si le nom ou l'espace de noms du type de collection sous-jacent a changé et si vous conservez le même nom et espace de noms de contrat de données que dans une version antérieure.  
+15. Les collections sont interchangeables dans le modèle de contrat de données comme décrit dans [Types de collections dans les contrats de données](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Cela permet un plus grand degré de souplesse. Toutefois, veillez à ne pas modifier accidentellement un type de collection de manière non interchangeable d'une version à l'autre. Par exemple, ne passez pas d’une collection non personnalisée (autrement dit, sans l’attribut `CollectionDataContractAttribute`) à une collection personnalisée ou vice versa. Ne modifiez pas non plus les propriétés sur `CollectionDataContractAttribute` d'une version à l'autre. La seule modification autorisée consiste à ajouter une propriété Name ou Namespace si le nom ou l’espace de noms du type de collection sous-jacent a changé et si vous conservez le même nom et espace de noms de contrat de données que dans une version antérieure.  
   
  Certaines instructions répertoriées dans cette rubrique peuvent être ignorées sans risque si des circonstances particulières s'appliquent. Veillez à bien maîtriser la sérialisation, la désérialisation et les mécanismes de schéma concernés avant de prendre des libertés avec les instructions.  
   

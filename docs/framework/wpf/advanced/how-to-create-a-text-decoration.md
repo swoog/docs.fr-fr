@@ -16,33 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: a142604fdb36ec6f85e9411b37077bfffff587d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363915"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411328"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Procédure : Créer une décoration de texte
 Un <xref:System.Windows.TextDecoration> objet est un ornement visuel que vous pouvez ajouter au texte. Il existe quatre types de décorations de texte : souligné, ligne de base, barré et surligné. L’exemple suivant montre les emplacements des ornements de texte par rapport au texte.  
   
- ![Diagramme des emplacements de décoration de texte](./media/textdecoration01.gif "TextDecoration01")  
-Exemple de types de décoration de texte  
+ ![Diagramme des types de décoration de texte](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
  Pour ajouter une décoration de texte au texte, créez un <xref:System.Windows.TextDecoration> de l’objet et modifiez ses propriétés. Utilisez le <xref:System.Windows.TextDecoration.Location%2A> propriété pour spécifier où la décoration de texte s’affiche, comme souligné. Utilisez le <xref:System.Windows.TextDecoration.Pen%2A> propriété pour spécifier l’apparence de la décoration de texte, tel qu’un remplissage uni ou la couleur de dégradé. Si vous ne spécifiez pas une valeur pour le <xref:System.Windows.TextDecoration.Pen%2A> propriété, les valeurs par défaut des ornements à la même couleur que le texte. Une fois que vous avez défini un <xref:System.Windows.TextDecoration> de l’objet, ajoutez-la à la <xref:System.Windows.TextDecorations> collection de l’objet de texte souhaité.  
   
  L’exemple suivant montre une décoration de texte qui a été mise en forme avec un pinceau dégradé linéaire et un stylet en pointillés.  
   
- ![Décoration de texte avec souligné dégradé linéaire](./media/textdecoration02.png "TextDecoration02")  
-Exemple d’un soulignement mis en forme avec un dégradé linéaire pinceau et le stylet en pointillés  
+ ![Ornement de texte avec souligné dégradé linéaire](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
  Le <xref:System.Windows.Documents.Hyperlink> objet est un élément de contenu de flux inline qui permet d’héberger des liens hypertexte dans le contenu de flux. Par défaut, <xref:System.Windows.Documents.Hyperlink> utilise un <xref:System.Windows.TextDecoration> objet pour afficher un trait de soulignement. <xref:System.Windows.TextDecoration> les objets peuvent être des performances, en particulier si vous disposez de nombreuses <xref:System.Windows.Documents.Hyperlink> objets. Si vous utilisez beaucoup de <xref:System.Windows.Documents.Hyperlink> éléments, vous souhaiterez afficher un soulignement uniquement lors du déclenchement d’un événement, tel que le <xref:System.Windows.ContentElement.MouseEnter> événement.  
   
  Dans l’exemple suivant, le trait de soulignement pour le lien « Mon MSN » est dynamique, il s’affiche uniquement quand le <xref:System.Windows.ContentElement.MouseEnter> est déclenché.  
   
- ![Liens hypertexte affichant TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Lien hypertexte est défini avec TextDecorations  
-  
+ ![Liens hypertexte affichant TextDecorations](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
  Pour plus d’informations, consultez [Spécifier si un lien hypertexte est souligné ou non](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
 ## <a name="example"></a>Exemple  

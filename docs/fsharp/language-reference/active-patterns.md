@@ -2,12 +2,12 @@
 title: Modèles actifs
 description: Découvrez comment utiliser des modèles actifs pour définir des partitions nommées qui subdivisent les données d’entrée dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612840"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412082"
 ---
 # <a name="active-patterns"></a>Modèles actifs
 
@@ -86,23 +86,23 @@ La sortie de l’exemple précédent est comme suit :
 Something else : Not matched.
 ```
 
-Lorsque vous utilisez des modèles actifs partiels, parfois les choix individuels peuvent être disjoints ou mutuellement exclusifs, mais ils ne sont pas nécessairement. Dans l’exemple suivant, le carré de modèle et le modèle de Cube ne sont pas disjoints, car certains nombres sont des carrés et des cubes, tels que 64. Le programme suivant imprime tous les entiers jusqu'à 1 000 000 qui sont des carrés et des cubes.
+Lorsque vous utilisez des modèles actifs partiels, parfois les choix individuels peuvent être disjoints ou mutuellement exclusifs, mais ils ne sont pas nécessairement. Dans l’exemple suivant, le carré de modèle et le modèle de Cube ne sont pas disjoints, car certains nombres sont des carrés et des cubes, tels que 64. Le programme suivant utilise le modèle AND pour combiner les modèles carré et du Cube. Il imprime tous les entiers jusqu'à 1 000 qui sont à la fois des carrés et des cubes, ainsi que celles qui sont uniquement des cubes. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 La sortie est la suivante :
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Modèles actifs paramétrables

@@ -2,12 +2,12 @@
 title: 'Procédure : Migrer les Services Web ASP.NET compatibles AJAX vers WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638286"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410938"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procédure : Migrer les Services Web ASP.NET compatibles AJAX vers WCF
 Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJAX à un service compatible AJAX Windows Communication Foundation (WCF) équivalente. Il montre comment créer une version WCF fonctionnellement équivalente d’un service ASP.NET AJAX. Les deux services peuvent ensuite servir côte à côte, ou le service WCF peut être utilisé pour remplacer le service ASP.NET AJAX.
@@ -87,7 +87,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     { … }
     ```
 
-7.  Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n’est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7.  Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n'est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -113,7 +113,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
 ## <a name="example"></a>Exemple
  Le code qui résulte de l'exécution des procédures mentionnées dans cette rubrique est fourni dans l'exemple suivant.
 
-```
+```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
 
 using System;
@@ -205,8 +205,8 @@ d.Add("two", 2);
 |-----------------------------|--------------------------------|---------------------------------------|
 |Désérialisation de la mémoire tampon vide (nouvel octet [0]) dans <xref:System.Object> (ou <xref:System.Uri> ou d'autres classes).|SerializationException|null|
 |Sérialisation de <xref:System.DBNull.Value>|{} (ou {« __type » : « #System »})|Null|
-|Sérialisation des membres privés de types [Sérialisable].|sérialisé|n'est pas sérialisé|
-|Sérialisation des propriétés publiques de types <xref:System.Runtime.Serialization.ISerializable>.|n'est pas sérialisé|sérialisé|
+|Sérialisation des membres privés de types [Sérialisable].|sérialisée|n'est pas sérialisé|
+|Sérialisation des propriétés publiques de types <xref:System.Runtime.Serialization.ISerializable>.|n'est pas sérialisé|sérialisée|
 |« Extensions » de JSON|Respecte la spécification JSON, qui exige des guillemets sur les noms de membres d'objet ({"a":"hello"}).|Prend en charge les noms de membres d'objet sans guillemets ({a:"hello"}).|
 |<xref:System.DateTime> temps universel (UTC, Universal Time Coordinated)|Ne prend pas en charge le format «\\/Date(123456789U)\\/ » ou «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\\\/)".|Format de prend en charge «\\/Date(123456789U)\\/ » et «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\ \\/) » en tant que valeurs de date/heure.|
 |Représentation de dictionnaires|Un tableau de KeyValuePair\<K, V >, gère les types de clés qui ne sont pas des chaînes.|Comme objets JSON réels - mais gère uniquement des types de clé qui sont des chaînes.|

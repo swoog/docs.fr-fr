@@ -3,12 +3,12 @@ title: Modèle d’identité basée sur les revendications
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197940"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411732"
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
 Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, un autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
@@ -55,7 +55,7 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
  Un service d'émission de jetons de sécurité (STS) est le composant de service qui crée, signe, puis émet les jetons de sécurité selon les protocoles WS-Trust et WS-Federation. L'implémentation de ces protocoles demande beaucoup de travail, mais WIF effectue tout ce travail pour vous, ce qui permet à un utilisateur qui n'est pas expert en matière de protocoles d'obtenir facilement un STS fonctionnel. Vous pouvez utiliser un STS prégénéré comme [Active Directory® Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516), un STS Cloud tel que [Microsoft Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517) ou, si vous souhaitez émettre des jetons personnalisés ou fournir une authentification ou une autorisation personnalisée, vous pouvez générer votre propre STS personnalisé à l’aide de WIF. WIF vous permet de créer facilement votre propre STS.  
   
 ### <a name="relying-party-application"></a>Application de partie de confiance  
- Lorsque vous créez une application qui se base sur les revendications, vous créez une application de partie de confiance. Parmi les synonymes de partie de confiance on trouve « application prenant en charge les revendications » et « application basée sur les revendications ». Les applications Web et les services Web peuvent être des parties de confiance. Une application de partie de confiance consomme des jetons créés par STS et extrait les revendications des jetons pour les utiliser pour les tâches d'identité associées. WIF offre des fonctionnalités pour vous aider à générer des applications de partie de confiance.  
+ Lorsque vous créez une application qui se base sur les revendications, vous créez une application de partie de confiance. Parmi les synonymes de partie de confiance on trouve « application prenant en charge les revendications » et « application basée sur les revendications ». Les applications Web et les services Web peuvent être des parties de confiance. Une application de partie de confiance consomme des jetons créés par STS et extrait les revendications des jetons pour les utiliser pour les tâches d’identité associées. WIF offre des fonctionnalités pour vous aider à générer des applications de partie de confiance.  
   
 ### <a name="standards"></a>Normes  
  Afin de rendre tout cela interopérable, plusieurs normes WS-* sont utilisées dans le scénario précédent. La stratégie est récupérée à l'aide de WS-MetadataExchange, et la stratégie elle-même est structurée selon la spécification WS-Policy. STS expose les points de terminaison qui implémentent la spécification WS-Trust, qui décrit comment demander et recevoir des jetons de sécurité. La plupart des STS publient aujourd'hui des jetons mis en forme avec SAML (Security Assertion Markup Language). SAML est une terminologie XML reconnue dans l'industrie qui peut être utilisée pour représenter les revendications de façon interopérable. Ou, dans une situation de multi-plateforme, cela vous permet de communiquer avec STS sur une plateforme entièrement différente et d'obtenir une authentification unique pour toutes vos applications, indépendamment de la plateforme.  
@@ -73,10 +73,10 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
   
  Ce diagramme illustre un site web (l’application de la partie de confiance) configuré pour utiliser WIF pour l’authentification et un client, un navigateur Web, qui veut utiliser ce site.  
   
-1.  Lorsqu'un utilisateur non authentifié demande une page, son navigateur est redirigé vers les pages du fournisseur d'identité (IP).  
+1.  Lorsqu’un utilisateur non authentifié demande une page, son navigateur est redirigé vers les pages de fournisseur (IdP) d’identité.  
   
-2.  L'adresse IP oblige l'utilisateur à afficher les informations d'identification, par exemple le nom d'utilisateur/mot de passe, Kerberos, etc.  
+2.  Le fournisseur d’identité oblige l’utilisateur à présenter leurs informations d’identification, telles que le nom d’utilisateur/mot de passe ou l’authentification Kerberos.  
   
-3.  L'adresse IP publie à son tour un jeton qui est retourné au navigateur.  
+3.  Les problèmes de fournisseur d’identité un jeton qui est renvoyé au navigateur.  
   
 4.  Le navigateur est à présent redirigé vers la page demandée à l'origine où WIF détermine si le jeton répond aux besoins pour accéder à la page. Si c'est le cas, un cookie est publié pour établir une session afin que l'authentification ne se produise qu'une fois et que le contrôle soit transmis à l'application.
