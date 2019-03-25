@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57845789"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307939"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -173,7 +173,7 @@ La méthode `LoadData` exécute les tâches suivantes :
 Créez la méthode `LoadData` juste après la méthode `Main`, en utilisant le code suivant :
 
 ```csharp
-public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 {
 
 }
@@ -321,8 +321,6 @@ La méthode `SaveModelAsFile` exécute les tâches suivantes :
 Créez ensuite une méthode pour enregistrer le modèle afin qu’il puisse être réutilisé et consommé dans d’autres applications. Le `ITransformer` comporte une méthode <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> qui accepte le champ global `_modelPath` et un <xref:System.IO.Stream>. Pour l’enregistrer en tant que fichier .zip, nous allons créer le `FileStream` immédiatement avant d’appeler la méthode `SaveTo`. Ajoutez comme nouvelle ligne le code suivant à la méthode `SaveModelAsFile` :
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
-
-## <a name="deploy-and-predict-with-a-loaded-model"></a>Déployer et prédire avec un modèle chargé
 
 Vous pouvez également afficher l’endroit où le fichier a été écrit en créant un message de console avec l’élément `_modelPath`, et en utilisant le code suivant :
 

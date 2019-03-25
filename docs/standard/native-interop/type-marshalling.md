@@ -4,12 +4,12 @@ description: Découvrez comment .NET marshale vos types en une représentation n
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411390"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185413"
 ---
 # <a name="type-marshalling"></a>Marshaling de types
 
@@ -38,8 +38,8 @@ La première table décrit les correspondances de différents types pour lesquel
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | `char` ou `char16_t` selon le `CharSet` de P/Invoke ou de la structure. Voir la [documentation charset](/.charset.md). |
-| `string`  | `char*` ou `char16_t*` selon le `CharSet` de P/Invoke ou de la structure. Voir la [documentation charset](/.charset.md). |
+| `char`    | `char` ou `char16_t` selon le `CharSet` de P/Invoke ou de la structure. Voir la [documentation charset](charset.md). |
+| `string`  | `char*` ou `char16_t*` selon le `CharSet` de P/Invoke ou de la structure. Voir la [documentation charset](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Types pointeur .NET (p. ex., `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Certains types ne peuvent être marshalés que comme paramètres, et non comme c
 
 | Type .NET | Type natif (paramètre uniquement) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | `char*` ou `char16_t*` selon le `CharSet` de P/Invoke.  Voir la [documentation charset](/.charset.md). |
+| `System.Text.StringBuilder` | `char*` ou `char16_t*` selon le `CharSet` de P/Invoke.  Voir la [documentation charset](charset.md). |
 | `System.ArgIterator` | `va_list` (sur Windows x86/x64/arm64 uniquement) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

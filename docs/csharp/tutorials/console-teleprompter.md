@@ -3,12 +3,12 @@ title: Application console
 description: Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058397"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348828"
 ---
 # <a name="console-application"></a>Application console
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Placez cette classe dans un nouveau fichier et ajoutez-la à l’espace de noms 
 ```csharp
 using static System.Math;
 ```
-
-L’autre fonctionnalité de langage qui est une nouveauté est l’instruction [`lock`](../language-reference/keywords/lock-statement.md). Cette instruction permet de garantir qu’un seul thread peut se trouver dans ce code à un moment donné. Si un thread se trouve dans la section verrouillée, les autres threads doivent attendre que le premier thread quitte cette section. L’instruction `lock` utilise un objet qui assure la protection de la section de verrou. Cette classe suit un idiome standard pour verrouiller un objet privé dans la classe.
 
 Ensuite, vous devez mettre à jour les méthodes `ShowTeleprompter` et `GetInput` pour utiliser le nouvel objet `config`. Écrivez une dernière `Task` renvoyant une méthode `async` pour démarrer les deux tâches et quitter lorsque la première tâche est terminée :
 
