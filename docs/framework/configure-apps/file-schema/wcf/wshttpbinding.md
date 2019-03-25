@@ -96,8 +96,7 @@ Définit une liaison sécurisée, fiable, interopérable adaptée aux contrats d
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- 
-  `WSHttpBinding` est semblable à `BasicHttpBinding` mais fournit plus de fonctionnalités de service Web. Il utilise le transport HTTP et assure la sécurité des messages, comme BasicHttpBinding, mais il fournit également des transactions, une messagerie fiable et WS-Addressing, qu’il soit actif par défaut ou disponible par l’intermédiaire d’un paramètre de contrôle unique.  
+ `WSHttpBinding` est semblable à `BasicHttpBinding` mais fournit plus de fonctionnalités de service Web. Il utilise le transport HTTP et assure la sécurité des messages, comme BasicHttpBinding, mais il fournit également des transactions, une messagerie fiable et WS-Addressing, qu’il soit actif par défaut ou disponible par l’intermédiaire d’un paramètre de contrôle unique.  
   
 ## <a name="example"></a>Exemple  
   
