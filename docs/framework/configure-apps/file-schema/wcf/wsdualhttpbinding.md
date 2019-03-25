@@ -91,8 +91,7 @@ Définit une liaison sécurisée, fiable et interopérable qui est appropriée p
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- 
-  `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` prend uniquement en charge la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
+ `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` prend uniquement en charge la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
   
  Cette liaison peut être utilisée pour une communication fiable via un ou plusieurs intermédiaires SOAP.  
   

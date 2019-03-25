@@ -16,8 +16,7 @@ ms.locfileid: "57704308"
 |-|-|  
 |<xref:System.Activities.Statements.Flowchart>|Exécute des activités contenues à l'aide du modèle d'organigramme familier.|  
 |<xref:System.Activities.Statements.FlowDecision>|<xref:System.Activities.Statements.FlowNode> spécialisé qui permet de modéliser un nœud conditionnel avec deux résultats.|  
-|<xref:System.Activities.Statements.FlowSwitch%601>|
-  <xref:System.Activities.Statements.FlowNode> spécialisé qui autorise la modélisation d'une construction de commutateur, avec une expression d'un type défini dans le spécificateur de type de l'activité et un résultat unique pour chaque correspondance.|  
+|<xref:System.Activities.Statements.FlowSwitch%601>|<xref:System.Activities.Statements.FlowNode> spécialisé qui autorise la modélisation d'une construction de commutateur, avec une expression d'un type défini dans le spécificateur de type de l'activité et un résultat unique pour chaque correspondance.|  
   
 ## <a name="see-also"></a>Voir aussi
 - [Didacticiel Bien démarrer](getting-started-tutorial.md)
