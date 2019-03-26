@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333025"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466164"
 ---
 # <a name="queues-overview"></a>Vue d'ensemble des files d'attente
 Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes passent en plus d’informations sur la façon dont les concepts de file d’attente décrits ici sont représentées dans Windows Communication Foundation (WCF).  
@@ -33,8 +33,8 @@ Cette section présente les concepts généraux et principaux relatifs à la com
   
  Ainsi, le gestionnaire de files d'attente fournit l'isolement nécessaire qui autorise la défaillance possible de l'expéditeur et du récepteur de manière indépendante sans affecter la communication elle-même. L'avantage de l'indirection supplémentaire fournie par les files d'attente permet aussi à plusieurs instances d'application de lire la même file d'attente et aux nœuds d'obtenir un débit plus élevé. Par conséquent, il n'est pas rare de faire appel aux files d'attente pour répondre à des exigences de débit et d'échelle supérieures.  
   
-## <a name="queues-and-transactions"></a>Files d'attente et transactions  
- Les transactions vous permettent de regrouper un jeu d'opérations pour que toutes les opérations échouent si une seule opération échoue. Un exemple d'utilisation des transactions est lorsqu'une personne utilise un distributeur de billets pour transférer 1 000 € de son compte épargne vers son compte chèques. Cela entraîne les opérations suivantes :  
+## <a name="queues-and-transactions"></a>Files d’attente et transactions  
+ Les transactions vous permettent de regrouper un jeu d'opérations pour que toutes les opérations échouent si une seule opération échoue. Un exemple d’utilisation des transactions est lorsqu’une personne utilise un distributeur de billets pour transférer 1 000 € de son compte épargne vers son compte chèques. Cela entraîne les opérations suivantes :  
   
 -   Le retrait de 1 000 € du compte épargne.  
   
@@ -42,7 +42,7 @@ Cette section présente les concepts généraux et principaux relatifs à la com
   
  Si la première opération réussit et que les 1 000 € sont retirés du compte épargne mais que la deuxième opération échoue, les 1 000 € sont perdus parce qu'ils ont déjà été retirés du compte épargne. Pour garantir la validité des comptes, si une opération échoue, les deux opérations doivent échouer.  
   
- En messagerie transactionnelle, les messages peuvent être envoyés à la file d'attente et reçus de la file d'attente sous une transaction. Donc, si un message est envoyé dans une transaction et que celle-ci est restaurée, cela revient à n'avoir jamais envoyé le message à la file d'attente. De même, si un message est reçu dans une transaction et que celle-ci est restaurée, cela revient à n'avoir jamais reçu le message. Le message reste dans la file d'attente pour être lu.  
+ En messagerie transactionnelle, les messages peuvent être envoyés à la file d'attente et reçus de la file d'attente sous une transaction. Donc, si un message est envoyé dans une transaction et que celle-ci est restaurée, cela revient à n’avoir jamais envoyé le message à la file d’attente. De même, si un message est reçu dans une transaction et que celle-ci est restaurée, cela revient à n’avoir jamais reçu le message. Le message reste dans la file d'attente pour être lu.  
   
  En raison d'une latence élevée, lorsque vous envoyez un message, vous ne pouvez pas connaître le temps nécessaire pour que celui-ci atteigne sa file d'attente cible, ni le temps qu'il faudra au service pour le traiter. De ce fait, il est souhaitable de ne pas utiliser une transaction unique pour envoyer le message, le recevoir puis le traiter. Cela crée une transaction qui reste invalidée durant une période indéterminée. Lorsqu'un client et un service communiquent par l'intermédiaire d'une file d'attente à l'aide d'une transaction, deux transactions sont impliquées : une sur le client et une sur le service. L’illustration suivante montre les limites de la transaction dans une communication en file d’attente standard.  
   
@@ -50,7 +50,7 @@ Cette section présente les concepts généraux et principaux relatifs à la com
   
  La communication en file d’attente affiche des transactions distinctes pour la capture et la remise.  
   
- La transaction cliente traite et envoie le message. Lorsque la transaction est validée, le message est dans la file d'attente de transmission. Sur le service, la transaction lit le message de la file d'attente cible, traite le message, puis valide la transaction. Si une erreur se produit pendant le traitement, le message est annulé et placé dans la file d'attente cible.  
+ La transaction cliente traite et envoie le message. Lorsque la transaction est validée, le message est dans la file d'attente de transmission. Sur le service, la transaction lit le message de la file d’attente cible, traite le message, puis valide la transaction. Si une erreur se produit pendant le traitement, le message est annulé et placé dans la file d'attente cible.  
   
 ## <a name="asynchronous-communication-using-queues"></a>Communication asynchrone à l'aide de files d'attente  
  Les files d'attente fournissent un moyen asynchrone de communication. Les applications qui envoient des messages à l'aide de files d'attente ne peuvent pas attendre la réception du message et son traitement par le récepteur en raison de la latence élevée que présente le gestionnaire de files d'attente. Les messages peuvent rester dans la file d'attente pour une durée bien supérieure à celle prévue par l'application. Pour éviter cela, l'application peut spécifier une valeur de durée de vie sur le message. Cette valeur spécifie combien de temps le message doit rester dans la file d'attente de transmission. Si cette valeur de temps est dépassée, et que le message n'a pas encore été envoyé à la file d'attente cible, le message peut être transféré à une file d'attente de lettres mortes.  
@@ -74,7 +74,6 @@ Cette section présente les concepts généraux et principaux relatifs à la com
  Une fois qu'un message parvient dans la file d'attente cible, son traitement par le service peut faire l'objet de plusieurs échecs. Par exemple, une application qui lit un message de la file d'attente sous une transaction et met à jour une base de données peut être confronté à une déconnexion temporaire de la base de données. Dans ce cas, la transaction est restaurée, une nouvelle transaction est créée et le message est relu dans la file d'attente. Une deuxième tentative peut réussir ou échouer. Dans certains cas, selon la cause de l'erreur, la remise du message à l'application peut connaître plusieurs échecs. Dans ce cas, le message est considéré comme « incohérent ». Ces messages sont déplacés vers une file d'attente de messages incohérents pour être lus par une application chargée de traiter les messages incohérents.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Files d’attente de lettres mortes](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

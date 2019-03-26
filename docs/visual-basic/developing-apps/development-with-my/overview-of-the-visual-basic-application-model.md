@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517381"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464097"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Vue d'ensemble du modèle d'application Visual Basic
 Visual Basic fournit un modèle précis pour contrôler le comportement des applications Windows Forms : le modèle d’Application Visual Basic. Ce modèle inclut les événements pour de l’application démarrage et arrêt, ainsi que les événements pour l’interception des exceptions non gérées. Il fournit également la prise en charge pour le développement d’applications à instance unique. Le modèle d’application est extensible, afin que les développeurs nécessitant davantage de contrôle peuvent personnaliser ses méthodes substituables.  
@@ -26,9 +26,9 @@ Visual Basic fournit un modèle précis pour contrôler le comportement des appl
   
 -   Chaque nouvelle tentative pour démarrer l’application, tandis que la première instance s’exécute, entraîne un comportement très différent. La tentative suivante notifie la première instance sur les arguments de ligne de commande, puis quitte immédiatement. La première instance gère la `StartupNextInstance` événement pour déterminer ce que les arguments de ligne de commande de l’instance suivante, puis continue à s’exécuter.  
   
-     Ce diagramme illustre comment une instance suivante signale la première instance.  
+     Ce diagramme illustre comment une instance suivante signale la première instance :  
   
-     ![L’unique Instance Application Image](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Diagramme illustrant une image application à instance unique.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  En gérant la `StartupNextInstance` événement, vous pouvez contrôler le comportement de votre application à instance unique. Par exemple, Microsoft Outlook s’exécute généralement en tant qu’une application à instance unique ; Lorsqu’Outlook est en cours d’exécution et que vous essayez de démarrer Outlook là encore, la sélection se déplace vers l’instance d’origine mais une autre instance ne s’ouvre pas.  
   

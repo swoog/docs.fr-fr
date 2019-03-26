@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603116"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466229"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Service et client intranet non sécurisés
 L’illustration suivante représente un service Windows Communication Foundation (WCF) simple développé pour fournir des informations sur un réseau privé sécurisé à une application WCF. Sécurité n’est pas nécessaire, car les données sont d’importance basse, le réseau doit être sécurisé par nature, ou sécurité est fournie par une couche ci-dessous l’infrastructure WCF.  
   
- ![Scénario de service et client intranet non sécurisés](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Scénario de service et client intranet non sécurisés.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Mode de sécurité|None|  
+|Mode de sécurité|Aucun.|  
 |Transport|TCP|  
-|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
+|Liaison|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interopérabilité|WCF uniquement|  
-|Authentification|None|  
-|Intégrité|None|  
-|Confidentialité|None|  
+|Authentification|Aucun.|  
+|Intégrité|Aucun.|  
+|Confidentialité|Aucun.|  
   
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
@@ -75,7 +75,7 @@ L’illustration suivante représente un service Windows Communication Foundatio
   
 -   Créez un client autonome à l'aide du code (et du code client).  
   
--   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Par exemple :  
+-   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573947"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465137"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procédure : Créer un gestionnaire d’autorisation personnalisé pour un Service
 L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle extensible d’autorisation basée sur les revendications. Les revendications sont extraites de jetons et sont éventuellement traitées par les stratégies d'autorisation personnalisées puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>. Un gestionnaire d'autorisations examine les revendications dans le <xref:System.IdentityModel.Policy.AuthorizationContext> pour prendre des décisions concernant les autorisations.  
@@ -63,7 +63,7 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 3.  Ajoutez une liaison qui sécurise la communication entre le client et le service.  
   
-     La liaison choisie pour cette communication détermine les revendications ajoutées au <xref:System.IdentityModel.Policy.AuthorizationContext>, que le gestionnaire d’autorisations personnalisé utilise pour prendre des décisions concernant les autorisations. Pour plus d’informations sur les liaisons fournies par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     La liaison choisie pour cette communication détermine les revendications ajoutées au <xref:System.IdentityModel.Policy.AuthorizationContext>, que le gestionnaire d'autorisations personnalisé utilise pour prendre des décisions concernant les autorisations. Pour plus d’informations sur les liaisons fournies par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 4.  Associez le comportement à un point de terminaison de service, en ajoutant un [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément et définissez la valeur de la `behaviorConfiguration` avec la valeur de l’attribut de nom pour le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément.  
   
@@ -119,5 +119,4 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)

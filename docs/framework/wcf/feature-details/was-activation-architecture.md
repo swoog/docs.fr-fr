@@ -2,12 +2,12 @@
 title: Architecture d'activation WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557105"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465757"
 ---
 # <a name="was-activation-architecture"></a>Architecture d'activation WAS
 Cette rubrique détaille et décrit les composants du service d'activation des processus de Windows (également appelé WAS).  
@@ -27,7 +27,7 @@ Cette rubrique détaille et décrit les composants du service d'activation des p
   
  Lorsque le service WAS active une instance de processus de traitement, il charge les gestionnaires de protocoles de processus requis dans le processus de traitement et utilise le gestionnaire d'application pour créer un domaine d'application destiné à héberger l'application. Le domaine d'application charge le code de l'application ainsi que les gestionnaires de protocoles AppDomain requis par l'application.  
   
- ![Architecture WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Capture d’écran montrant l’architecture WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptateurs d'écouteur  
  Les adaptateurs d'écouteur sont des services Windows individuels qui implémentent la logique de la communication réseau utilisée pour recevoir les messages à l'aide du protocole réseau sur lequel ils écoutent. Le tableau suivant répertorie les adaptateurs d’écouteur pour les protocoles de Windows Communication Foundation (WCF).  

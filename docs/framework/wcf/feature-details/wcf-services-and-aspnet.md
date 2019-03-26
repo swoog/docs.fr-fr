@@ -2,12 +2,12 @@
 title: Services WCF et ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282605"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463473"
 ---
 # <a name="wcf-services-and-aspnet"></a>Services WCF et ASP.NET
 
@@ -17,7 +17,7 @@ Cette rubrique présente l’hébergement Windows Communication Foundation (WCF)
 
 Services WCF hébergés dans Internet Information Services (IIS) peuvent se trouver avec. Les pages ASPX et les services Web ASMX dans un domaine d’Application unique et commun. ASP.NET fournit des services d’infrastructure communs tels que la gestion AppDomain et la compilation dynamique pour WCF et le runtime HTTP ASP.NET. La configuration par défaut pour WCF est côte à côte avec ASP.NET.
 
-![Les Services WCF et ASP .NET : partage d’état](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Capture d’écran montrant les Services WCF et ASP .NET : partage d’état.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 Le runtime ASP.NET HTTP gère des demandes ASP.NET mais ne pas participe au traitement des demandes destinées aux services WCF, même si ces services sont hébergés dans le même AppDomain que ASP.NET n’est contenu. Au lieu de cela, le modèle de Service WCF intercepte les messages adressés aux services WCF et les route via la pile de transport/canal WCF.
 

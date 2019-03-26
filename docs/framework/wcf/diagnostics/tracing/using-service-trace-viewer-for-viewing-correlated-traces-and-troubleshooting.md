@@ -2,12 +2,12 @@
 title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594808"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465059"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 Cette rubrique décrit le format des données de suivi, leur mode de consultation, et les approches qui utilisent Service Trace Viewer pour résoudre les problèmes posés par votre application.  
@@ -41,7 +41,7 @@ Cette rubrique décrit le format des données de suivi, leur mode de consultatio
   
  De plus, la vue mise en forme fournit également une description du suivi et des informations détaillées supplémentaires lorsqu'elles sont disponibles. Ces informations peuvent contenir le type d'exception et le message, les piles d'appel, l'action du message, les champs De/À, et d'autres informations sur les exceptions.  
   
- Dans la vue XML, les étiquettes xml utiles incluent les éléments suivants :  
+ Dans la vue XML, les balises xml utiles incluent les éléments suivants :  
   
 -   `<SubType>` (niveau de trace).  
   
@@ -130,20 +130,23 @@ Cette rubrique décrit le format des données de suivi, leur mode de consultatio
 > [!NOTE]
 >  Dans WCF, nous expliquons les messages de réponse qui sont traités initialement dans une activité séparée (traiter le message) avant de les corréler à l’activité traiter l’Action correspondante qui inclut le message de demande, via un transfert. Cette opération a lieu pour les messages d'infrastructure et les demandes asynchrones et tient au fait que nous devons inspecter le message, lire l'en-tête activityId et identifier l'activité Traiter l'action existante avec cet ID pour le corréler. Pour les demandes synchrones, nous attendons la réponse et donc nous savons à quelle activité de traitement d’action se rapporte la réponse.  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
-Activités clientes WCF répertoriées selon l'heure de création (volet gauche) et leurs activités et suivis imbriqués (volet supérieur droit)  
+L’illustration suivante montre des activités clientes WCF répertoriées par heure de création (volet gauche) et leurs activités imbriquées et les traces (volet supérieur droit) :
+
+ ![Capture d’écran montrant des activités répertoriées par heure de création de client WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-activities-creation-time.gif)  
   
  Lorsque nous sélectionnons une activité dans le volet gauche, le volet supérieur droit affiche des activités et des suivis imbriqués. Par conséquent, il s'agit d'une vue hiérarchique réduite de la liste des activités de gauche basées sur l'activité parente sélectionnée. Comme l'activité « Traiter l'action Add » sélectionnée est la première demande effectuée, cette activité contient l'activité Configurer une session sécurisée (transférer vers, transférer en retour) et les suivis du traitement réel de l'action Ajouter.  
   
  En double-cliquant sur l’action de processus ajouter une activité dans le volet gauche, nous pouvons voir une représentation graphique des activités WCF client liés à ajouter. La première activité à gauche est l'activité racine (0000), l'activité par défaut. WCF transfère hors de l’activité ambiante. Si ce n’est pas défini, WCF transfère hors de 0000. Dans ce contexte, la deuxième activité (« Traiter l'action Add ») transfère hors de 0. Elle est suivie de Configurer la session sécurisée.  
-  
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Vue du graphique d’activités de client WCF : Ambiante d’activité (ici 0), de traiter l’action et de configurer une Session sécurisée  
+
+ L’illustration suivante montre une vue du graphique de client WCF activités, en particulier des activité ambiante (ici 0), de traiter l’action et de configurer une Session sécurisée :   
+
+ ![Dans la visionneuse de Trace montrant l’action d’activité ambiante et le processus du graphique.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-activities-graph-ambient-process.gif)   
   
  Dans le volet supérieur droit, nous pouvons consulter tous les suivis se rapportant à l'activité Traiter l'action Add. Spécifiquement, nous avons envoyé le message de demande (« Envoi d'un message sur un canal ») et avons reçu la réponse (« Réception d'un message sur un canal ») dans la même activité. Ce cas est illustré dans le graphique suivant. À des fins de clarté, l‘activité Configurer une session sécurisée est réduite dans le graphique.  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
-Liste de suivis pour l'activité Traiter l'action : nous envoyons la demande et recevons la réponse dans la même activité.  
+ L’illustration suivante montre une liste des suivis pour l’activité traiter l’Action. Nous envoyer la demande et recevoir la réponse dans la même activité.
+ 
+ ![Capture d’écran de visionneuse de Trace affichant une liste de traces pour l’activité traiter l’Action](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/process-action-traces.gif)  
   
  Ici, nous chargeons suivis clients uniquement par souci de clarté, mais les suivis de service (message de demande reçu et message de réponse envoyé) apparaissent dans la même activité si elles sont également chargés dans l’outil et `propagateActivity` a été défini sur `true.` cela est illustré plus loin.  
   
@@ -162,14 +165,17 @@ Liste de suivis pour l'activité Traiter l'action : nous envoyons la demande et
 6.  Pour l’action out-of-process, nous créons une activité « Exécuter le code utilisateur » pour isoler les suivis émis dans le code utilisateur à partir de ceux émis dans WCF. Dans l’exemple précédent, le suivi de « Service envoie la réponse ajouter » est émis dans l’activité « Exécuter le code utilisateur », pas dans l’activité propagée par le client, le cas échéant.  
   
  Dans l'illustration suivante, la première activité à gauche est l'activité racine (0000), l'activité par défaut. Les trois activités suivantes consistent à ouvrir le ServiceHost. L'activité dans la colonne 5 est l'écouteur, et les activités restantes (6 à 8) décrivent le traitement WCF d'un message, du traitement des octets à l'activation du code utilisateur.  
+
+ L’illustration suivante montre une vue du graphique d’activités de service WCF :   
+
+ ![Capture d’écran de visionneuse de Trace affichant une liste d’activités de service WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
-Liste des activités de service WCF  
   
  La capture d'écran suivante affiche les activités pour le client et le service, et met en surbrillance l'activité Traiter l'action Add dans les processus (orange). Les flèches lient les messages de demande et de réponse envoyés et reçus par le client et le service. Les suivis de Traiter l'action sont séparés par processus dans le graphique, mais sont affichés dans le cadre de la même activité dans le volet supérieur droit. Dans ce volet, nous pouvons voir les suivis clients pour les messages envoyés qui précèdent les suivis de service pour les messages reçus et traités.  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
-Vue graphique des activités de client et de service WCF  
+ Les images suivantes indiquent une vue du graphique de ces deux activités de client et le service WCF  
+ 
+ ![Graphique à partir de la visionneuse de Trace qui montre les deux activités de client et le service WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-service-activities.gif)   
   
  Dans le scénario d'erreur suivant, les suivis d'erreur et d'avertissement au niveau du service et du client sont liés. Une exception est levée d'abord dans le code utilisateur sur le service (activité verte la plus à droite qui inclut un suivi d'avertissement pour l'exception « Le service ne peut pas traiter cette demande dans le code utilisateur »). Lorsque la réponse est envoyée au client, un suivi d'avertissement est encore émis pour désigner le message d'erreur (activité rose à gauche). Le client ferme ensuite son client WCF (activité jaune sur le côté inférieur gauche) qui abandonne la connexion au service. Le service génère une erreur (activité rose la plus longue, à droite).  
   
@@ -181,22 +187,24 @@ Corrélation d'erreurs dans le service et le client
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>Résolution des problèmes à l'aide de Service Trace Viewer  
  Lorsque vous chargez des fichiers de suivi dans l'outil Service Trace Viewer, vous pouvez sélectionner une activité rouge ou jaune dans le volet gauche pour localiser la cause d'un problème dans votre application. En général, l'activité 000 contient des exceptions non prises en charge qui se présentent à l'utilisateur.  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
-Sélection de l'activité rouge ou jaune pour localiser l'origine d'un problème  
+  L’image suivante montre comment sélectionner une activité rouge ou jaune pour localiser l’origine d’un problème.   
+ ![Capture d’écran des activités rouges ou jaunes pour localiser la racine d’un problème.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
+ 
   
  Dans le volet supérieur droit, vous pouvez examiner des suivis de l'activité que vous avez sélectionnée sur la gauche. Vous pouvez examiner ensuite des suivis rouges ou jaunes dans ce volet et observer la manière dont ils sont corrélés. Dans le graphique précédent, nous voyons des suivis d'avertissement à la fois pour le client et le service dans la même activité Traiter l'action.  
   
- Si ces suivis n'indiquent pas l'origine de l'erreur, vous pouvez utiliser le graphique en double-cliquant sur l'activité sélectionnée dans le volet gauche (ici, Traiter l'action). Puis le graphique avec les activités connexes est affiché. Vous pouvez développer des activités connexes (en cliquant sur les signes « + ») pour rechercher le premier suivi émis en rouge ou jaune dans une activité connexe. Continuez à développer les activités qui se sont produites avant le suivi rouge ou jaune présentant un intérêt, les transferts aux flux d’activités ou de messages connexes sur des points de terminaison, jusqu’à ce que vous localisiez la cause racine du problème.  
+ Si ces suivis n’indiquent pas la cause racine de l’erreur, vous pouvez utiliser le graphique en double-cliquant sur l’activité sélectionnée dans le volet gauche (ici, Traiter l’action). Puis le graphique avec les activités connexes est affiché. Vous pouvez développer des activités connexes (en cliquant sur les signes « + ») pour rechercher le premier suivi émis en rouge ou jaune dans une activité connexe. Continuez à développer les activités qui se sont produites avant le suivi rouge ou jaune présentant un intérêt, les transferts aux flux d’activités ou de messages connexes sur des points de terminaison, jusqu’à ce que vous localisiez l’origine du problème.  
   
  ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
-Développement des activités pour localiser la cause racine d’un problème  
+Développement des activités pour localiser l’origine d’un problème  
   
  Si `ActivityTracing` ServiceModel est désactivé mais le suivi ServiceModel est activé, vous pouvez consulter des suivis ServiceModel émis dans l'activité 0000. Toutefois, la corrélation de ces suivis demande un effort d'interprétation plus grand.  
   
  Si l'enregistrement des messages est activé, vous pouvez utiliser l'onglet Message pour voir quel message est concerné par l'erreur. En double-cliquant sur un message en rouge ou en jaune, vous pouvez consulter la vue graphique des activités connexes. Ces activités sont celles qui sont le plus étroitement liées à la demande où une erreur s'est produite.  
   
- ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
-Pour commencer la résolution des problèmes, vous pouvez aussi sélectionner un suivi de message rouge ou jaune et double-cliquer dessus pour localiser la cause racine.  
+ ![Capture d’écran de visionneuse de Trace avec la journalisation des messages est activée.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/message-logging-enabled.gif)  
+
+Pour commencer le dépannage, vous pouvez également choisir une trace de message rouge ou jaune et double-cliquer dessus pour effectuer le suivi de la cause racine.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

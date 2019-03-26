@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379638"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464955"
 ---
 # <a name="toolbar-overview"></a>Vue d'ensemble de ToolBar
 <xref:System.Windows.Controls.ToolBar> les contrôles sont des conteneurs d’un groupe de commandes ou de contrôles qui sont généralement associés dans leur fonction. Un <xref:System.Windows.Controls.ToolBar> contient généralement des boutons qui appellent des commandes.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379638"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Contrôles ToolBar avec éléments de dépassement  
- Souvent <xref:System.Windows.Controls.ToolBar> contrôles contiennent plus d’éléments que s’adaptent à la taille de la barre d’outils. Dans ce cas, la <xref:System.Windows.Controls.ToolBar> affiche un bouton de dépassement de capacité. Pour afficher les éléments de dépassement de capacité, un utilisateur clique sur le bouton de dépassement de capacité et les éléments sont affichés dans une fenêtre contextuelle ci-dessous le <xref:System.Windows.Controls.ToolBar>. L’illustration suivante montre un <xref:System.Windows.Controls.ToolBar> avec éléments de dépassement de capacité.  
+ Souvent <xref:System.Windows.Controls.ToolBar> contrôles contiennent plus d’éléments que s’adaptent à la taille de la barre d’outils. Dans ce cas, la <xref:System.Windows.Controls.ToolBar> affiche un bouton de dépassement de capacité. Pour afficher les éléments de dépassement de capacité, un utilisateur clique sur le bouton de dépassement de capacité et les éléments sont affichés dans une fenêtre contextuelle ci-dessous le <xref:System.Windows.Controls.ToolBar>. L’illustration suivante montre un <xref:System.Windows.Controls.ToolBar> avec éléments de dépassement de capacité :  
   
- ![Barre d’outils avec dépassement de capacité](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-ToolBar avec éléments de dépassement  
+ ![Capture d’écran montrant une barre d’outils avec des éléments de dépassement de capacité.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Vous pouvez spécifier quand un élément dans une barre d’outils est placé sur le panneau de dépassement de capacité en définissant le <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> propriété jointe <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, ou <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. L’exemple suivant spécifie que les quatre derniers boutons de la barre d’outils doivent toujours se trouver sur le panneau de dépassement.  
   

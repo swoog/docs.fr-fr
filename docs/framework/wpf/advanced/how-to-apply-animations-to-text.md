@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356960"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463122"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Procédure : Appliquer des animations à du texte
 Les animations peuvent modifier l’affichage et l’apparence du texte dans votre application. Les exemples suivants utilisent différents types d’animations pour changer l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  
@@ -26,9 +26,8 @@ Les animations peuvent modifier l’affichage et l’apparence du texte dans vot
   
  Le diagramme suivant montre l’effet de la <xref:System.Windows.Controls.TextBlock> contrôle quand son opacité passe de `1.00` à `0.00` pendant l’intervalle de 5 secondes défini par le <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Modification du texte Opacité de 1.00 à 0.00](./media/fadedtext01.png "FadedText01")  
-Opacité du texte variant de 1.00 à 0.00  
-  
+ ![Opacité de 1.00 à 0.00 du texte.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  L’exemple suivant utilise un <xref:System.Windows.Media.Animation.ColorAnimation> pour animer la couleur de premier plan du bloc de texte. La valeur de la couleur de premier plan passe d’une couleur à une autre sur une durée de 5 secondes, puis les valeurs de couleur sont inversées et la procédure continue.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  

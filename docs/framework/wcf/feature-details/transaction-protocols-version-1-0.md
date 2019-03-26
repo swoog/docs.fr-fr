@@ -2,17 +2,17 @@
 title: Protocoles de transaction version 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258017"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463902"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocoles de transaction version 1.0
 Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des protocoles WS-Atomic Transaction et WS-Coordination. Pour plus d’informations sur la version 1.1, consultez [protocoles de Transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
-|Spécification/Document|Link|  
+|Spécification/Document|Lien|  
 |-----------------------------|----------|  
 |WS-Coordination|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
 |WS-AtomicTransaction|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
   
  Cette rubrique décrit une composition de la spécification WS-AT (WS-Atomic Transaction) avec sécurité et décrit la liaison sécurisée utilisée pour la communication entre les gestionnaires de transactions. L'approche décrite dans ce document a été testée avec succès avec d'autres implémentations de WS-AT et WS-Coordination, dont IBM, IONA, Sun Microsystems, etc.  
   
- La figure suivante représente l’interopérabilité entre deux gestionnaires de transactions (Gestionnaire de transactions 1 et Gestionnaire de transactions 2) et deux applications (Application 1 et Application 2).  
+ La figure suivante illustre l’interopérabilité entre les deux gestionnaires de transactions, Gestionnaire de transactions 1 et 2 du Gestionnaire de Transaction et les deux applications, Application 1 et 2 de l’Application :  
   
- ![Protocoles de transaction](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Capture d’écran qui illustre l’interaction entre la transaction gestionnaires.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Examinons un scénario WS-Coordination/WS-Atomic Transaction classique avec un Initiateur (I) et un Participant (P). L’Initiateur et le Participant ont des Gestionnaires de transactions (ITM et PTM, respectivement). La validation en deux phases est désignée sous le terme « 2PC » dans cette rubrique.  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
   
 -   Messages d'application  
   
- Les trois premières classes de message sont considérées comme des messages de gestionnaire de transactions et leur configuration de liaison est décrite dans la section « Échange de messages d'application » développée ultérieurement dans cette rubrique. La quatrième classe de message concerne les messages interapplication et est décrite dans la section « Exemples de message » développée ultérieurement dans cette rubrique. Cette section décrit les liaisons de protocole utilisées pour chacune de ces classes par WCF.  
+ Les trois premières classes de message sont considérées comme des messages de gestionnaire de transactions et leur configuration de liaison est décrite dans la section « Échange de messages d’application » développée ultérieurement dans cette rubrique. La quatrième classe de message concerne les messages interapplication et est décrite dans la section « Exemples de message » développée ultérieurement dans cette rubrique. Cette section décrit les liaisons de protocole utilisées pour chacune de ces classes par WCF.  
   
  Les espaces de noms XML suivants et préfixes associés sont utilisés dans l'ensemble de ce document.  
   
@@ -82,8 +82,8 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
   
 -   B1112 : DNS doit être fonctionnel entre chaque paire expéditeur-récepteur dans le système pour les vérifications du nom de sujet X.509 réussisse.  
   
-#### <a name="activation-and-registration-binding-configuration"></a>Configuration de liaison d’activation et d’inscription  
- WCF nécessite une liaison duplex de demande/réponse avec corrélation sur HTTPS. (Pour plus d’informations sur la corrélation et les descriptions des modèles d’échange de messages demande/réponse, consultez WS-Atomic Transaction, section 8.)  
+#### <a name="activation-and-registration-binding-configuration"></a>Configuration de liaison d'activation et d'inscription  
+ WCF nécessite une liaison duplex de demande/réponse avec corrélation sur HTTPS. (Pour plus d'informations sur la corrélation et les descriptions des modèles d'échange de messages demande/réponse, consultez WS-Atomic Transaction, section 8.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuration de liaison de protocole 2PC  
  WCF prend en charge les messages monodirectionnels (datagramme) via le protocole HTTPS. La corrélation au sein des messages est considérée comme un détail d'implémentation.  
@@ -94,14 +94,14 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
  Il s’agit d’un autre (mode mixte) qui utilise la sécurité transport combinée avec le modèle WS-Coordination Issued Token à des fins identité établissement de liaison.  L’activation et l’inscription sont les seuls éléments qui diffèrent entre les deux liaisons.  
   
 #### <a name="https-transport-configuration"></a>Configuration du transport HTTPS  
- Les certificats X.509 permettent d’établir l’identité de gestionnaire de transactions. L'authentification client/serveur est requise, et l'autorisation client/serveur est considérée comme un détail d'implémentation.  
+ Les certificats X.509 permettent d'établir l'identité de gestionnaire de transactions. L'authentification client/serveur est requise, et l'autorisation client/serveur est considérée comme un détail d'implémentation.  
   
 #### <a name="activation-message-binding-configuration"></a>Configuration de liaison de message d’activation  
  En général, les messages d’activation ne participent pas à l’interopérabilité car ils se produisent habituellement entre une application et son gestionnaire de transactions local.  
   
  B1221 : WCF utilise la liaison HTTPS duplex (décrite dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) pour les messages d’Activation. Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
   
- La spécification WS-Atomic Transaction, section 8, fournit des informations supplémentaires sur la corrélation et les modèles d’échange de messages.  
+ La spécification WS-Atomic Transaction, section 8, fournit des informations supplémentaires sur la corrélation et les modèles d'échange de messages.  
   
 -   R1222 : À la réception une `CreateCoordinationContext`, le coordinateur doit émettre un `SecurityContextToken` avec secret associé `STx`. Ce jeton est retourné à l'intérieur d'un en-tête `t:IssuedTokens` selon la spécification WS-Trust.  
   
@@ -109,7 +109,7 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
   
  Un nouveau `t:IssuedTokens` en-tête doit être généré pour attacher à sortant `wscoor:CreateCoordinationContextResponse` message.  
   
-#### <a name="registration-message-binding-configuration"></a>Configuration de liaison de message d’inscription  
+#### <a name="registration-message-binding-configuration"></a>Configuration de liaison de message d'inscription  
  B1231 : WCF utilise la liaison HTTPS duplex (décrite dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
   
  WS-AtomicTransaction, section 8, fournit des informations supplémentaires sur la corrélation et des descriptions des modèles d’échange de messages.  

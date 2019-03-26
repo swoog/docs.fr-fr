@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516510"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463005"
 ---
 # <a name="using-the-assert-method"></a>Utilisation de la méthode Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516510"
   
 -   La méthode A est contenue dans l'assembly A, la méthode B dans l'assembly B, et ainsi de suite.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Utilisation de l'instruction Assert  
+ ![Diagramme illustrant les assemblys de la méthode Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  Dans ce scénario de méthode A appelle B, B appelle C, C appelle E et E appelle F. la méthode C déclare l’autorisation de lire des fichiers sur le lecteur C (autorisation P1) et la méthode E demande l’autorisation de lire les fichiers .txt sur le lecteur C (autorisation P1A). Lorsque la demande de F est rencontrée au moment de l’exécution, un parcours de pile est effectué pour vérifier les autorisations de tous les appelants de F, en commençant par E. E a été accordée autorisation P1A, le parcours de pile se poursuit pour examiner les autorisations de C, où l’assertion de C est trouvée. Étant donné que l'autorisation demandée (P1A) est un sous-ensemble de l'autorisation ayant fait l'objet de l'assertion (P1), le parcours de pile s'arrête et la vérification de sécurité réussit automatiquement. Il n'est pas important que les assemblys A et B ne disposent pas de l'autorisation P1A. En procédant à l'assertion de P1, la méthode C garantit que ses appelants puissent accéder à la ressource protégée par P1, même s'ils n'ont pas reçu l'autorisation d'y accéder.  
   

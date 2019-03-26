@@ -2,12 +2,12 @@
 title: Participants de suivi
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711965"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462992"
 ---
 # <a name="tracking-participants"></a>Participants de suivi
 Les participants de traçage sont des points d'extensibilité qui permettent à un développeur de workflow d'accéder aux objets <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> et de les traiter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclut un participant de trace standard qui écrit des enregistrements de suivi en tant qu'événements de suivi d'événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé.  
@@ -60,7 +60,7 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
   
  L'illustration suivante montre le flux des données de suivi via le participant de suivi ETW. Une fois que les données de suivi ont atteint la session ETW, il est possible d'y accéder de plusieurs façons. L'observateur d'événements, un outil Windows courant utilisé pour l'affichage des journaux et des suivis provenant d'applications et de services constitue l'un des moyens les plus pratiques pour accéder à ces événements.  
   
- ![Le flux de suivi et le fournisseur de suivi ETW](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Flux de données via le fournisseur de suivi ETW de suivi.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Données d'événement des participants de suivi  
  Un participant de suivi sérialise les données d'événement ayant fait l'objet d'un suivi dans une session ETW sous la forme d'un événement par enregistrement de suivi.  Un événement est identifié à l'aide d'un ID compris entre 100 et 199. Pour les définitions de l’événement de suivi émis par un participant de suivi, des enregistrements, consultez la [référence de suivi des événements](tracking-events-reference.md) rubrique.  
@@ -90,7 +90,7 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
 4.  Avec le bouton droit le **analyse** et sélectionnez **activer le journal**. Le journal existera dans le fichier %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participant de suivi personnalisé  
- L'API de participant de suivi permet d'étendre l'exécution du suivi avec un participant de suivi fourni par l'utilisateur, qui peut inclure une logique personnalisée permettant de gérer les enregistrements de suivi émis par l'exécution du workflow. Pour écrire un participant de suivi personnalisé, le développeur doit implémenter la méthode `Track` sur la classe <xref:System.Activities.Tracking.TrackingParticipant>. Cette méthode est appelée lorsqu'un enregistrement de suivi est émis par l'exécution du workflow.  
+ L’API de participant de suivi permet l’extension de l’exécution du suivi avec un participant de suivi fourni par l’utilisateur, qui peut inclure une logique personnalisée permettant de gérer les enregistrements de suivi émis par l’exécution du workflow. Pour écrire un participant de suivi personnalisé, le développeur doit implémenter la méthode `Track` sur la classe <xref:System.Activities.Tracking.TrackingParticipant>. Cette méthode est appelée lorsqu'un enregistrement de suivi est émis par l'exécution du workflow.  
   
  Les participants de suivi dérivent de la classe <xref:System.Activities.Tracking.TrackingParticipant>. Le <xref:System.Activities.Tracking.EtwTrackingParticipant> fourni par le système émet un événement de suivi des événements pour Windows pour chaque enregistrement de suivi reçu. Pour créer un participant de suivi personnalisé, une classe qui dérive de <xref:System.Activities.Tracking.TrackingParticipant> est créée. Pour fournir des fonctionnalités de suivi de base, substituez <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. La méthode <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> est appelée lorsqu'un enregistrement de suivi est transmis par l'exécution et qu'il peut être traité de la manière souhaitée. Dans l'exemple suivant, une classe de participant de suivi personnalisé émettant tous les enregistrements de suivi vers la fenêtre de console est définie. Vous pouvez également implémenter un objet <xref:System.Activities.Tracking.TrackingParticipant> qui traite les enregistrements de suivi de façon asynchrone à l'aide de ses méthodes `BeginTrack` et `EndTrack`.  
   
@@ -114,8 +114,7 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- Dans l'exemple suivant, un workflow consistant en une activité <xref:System.Activities.Statements.Sequence> qui contient une activité <xref:System.Activities.Statements.WriteLine> est créé. 
-  `ConsoleTrackingParticipant` est ajouté aux extensions et le workflow est appelé.  
+ Dans l'exemple suivant, un workflow consistant en une activité <xref:System.Activities.Statements.Sequence> qui contient une activité <xref:System.Activities.Statements.WriteLine> est créé. `ConsoleTrackingParticipant` est ajouté aux extensions et le workflow est appelé.  
   
 ```csharp  
 Activity activity= new Sequence()  

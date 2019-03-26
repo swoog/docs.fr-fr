@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373095"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466216"
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
 Les utilisateurs interagissent avec les applications Windows Presentation Foundation (WPF) autonome via windows. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente <xref:System.Windows.Window> avant d’aborder les principes fondamentaux de la création et la gestion des fenêtres dans des applications autonomes.  
@@ -44,9 +44,9 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window, classe  
- La figure suivante illustre les éléments constitutifs d’une fenêtre.  
+ L’exemple suivant illustre les éléments constitutifs d’une fenêtre :  
   
- ![Éléments de fenêtre](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Capture d’écran montrant les éléments de la fenêtre.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Une fenêtre est divisée en deux zones : la zone non cliente et la zone cliente.  
   
@@ -146,7 +146,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
  Pour finir la fenêtre ouverte en appelant le <xref:System.Windows.Window.Show%2A> méthode ; le résultat est illustré dans la figure suivante.  
   
- ![Fenêtre ouverte en appelant Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Une fenêtre ouverte en appelant Window.Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Une fenêtre est ouverte en appelant <xref:System.Windows.Window.Show%2A> est une fenêtre non modale, ce qui signifie que l’application fonctionne dans un mode qui permet aux utilisateurs d’activer d’autres fenêtres dans la même application.  
   
@@ -282,13 +282,13 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Événements de la durée de vie d’une fenêtre  
- L’illustration suivante montre la séquence des événements principaux de la durée de vie d’une fenêtre.  
+ L’illustration suivante montre la séquence des principaux événements de la durée de vie d’une fenêtre :  
   
- ![Durée de vie d’une fenêtre](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagramme illustrant les événements de durée de vie d’une fenêtre.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- L’illustration suivante montre la séquence des principaux événements de la durée de vie d’une fenêtre affichée sans activation (<xref:System.Windows.Window.ShowActivated%2A> est définie sur `false` avant l’affichage de la fenêtre).  
+ L’illustration suivante montre la séquence des principaux événements de la durée de vie d’une fenêtre affichée sans activation (<xref:System.Windows.Window.ShowActivated%2A> est définie sur `false` avant que la fenêtre est affichée) :  
   
- ![Durée de vie d’une fenêtre &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagramme illustrant les événements de durée de vie d’une fenêtre sans activation.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Emplacement d’une fenêtre  
@@ -351,21 +351,21 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
  **Pour les propriétés de hauteur :**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Pour les propriétés de largeur :**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- L’effet de ces styles de fenêtre est illustré dans la figure suivante.  
+ L’effet de ces styles de fenêtre sont illustrées dans la figure suivante :  
   
- ![Styles de fenêtre](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Illustration des styles de bordure de fenêtre.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Vous pouvez définir <xref:System.Windows.Window.WindowStyle%2A> à l’aide [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] balisage ou le code ; car il est peu susceptible de changer pendant la durée de vie d’une fenêtre, vous configurerez très probablement à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] balisage.  
   
@@ -448,9 +448,9 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
 #### <a name="non-rectangular-window-style"></a>Style de fenêtre non rectangulaire  
  Il existe également des situations où les styles de bordure qui <xref:System.Windows.Window.WindowStyle%2A> permet que vous disposiez ne sont pas suffisantes. Par exemple, vous souhaiterez peut-être créer une application avec une bordure non rectangulaire, comme [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] utilise.  
   
- Prenons le cas de la fenêtre de bulle de commentaire représentée dans la figure suivante.  
+ Par exemple, considérez la fenêtre de bulle vocale illustrée dans la figure suivante :  
   
- ![Fenêtre non rectangulaire](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Une fenêtre de bulle vocale indiquant glisser Me.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Ce type de fenêtre peut être créé en définissant le <xref:System.Windows.Window.WindowStyle%2A> propriété <xref:System.Windows.WindowStyle.None>et à l’aide de spécial prend en charge que <xref:System.Windows.Window> a pour la transparence.  
   
@@ -460,9 +460,10 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Présence de la barre des tâches  
- L’apparence par défaut d’une fenêtre inclut un bouton de barre des tâches, comme celui illustré dans la figure suivante.  
-  
- ![Fenêtre avec un bouton de barre des tâches](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+L’apparence par défaut d’une fenêtre inclut un bouton de barre des tâches, comme celui illustré dans la figure suivante :
+
+ ![Capture d’écran qui affiche une fenêtre avec un bouton de barre des tâches.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Certains types de windows n’ont pas un bouton de barre des tâches, telles que les boîtes de message et les boîtes de dialogue (consultez [vue d’ensemble des boîtes de dialogue](dialog-boxes-overview.md)). Vous pouvez contrôler si le bouton de barre des tâches pour une fenêtre est affiché en définissant le <xref:System.Windows.Window.ShowInTaskbar%2A> propriété (`true` par défaut).  
   

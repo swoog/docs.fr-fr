@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369849"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464565"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
@@ -41,7 +41,7 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
  L’illustration suivante représente une disposition simple.  
   
- ![Grille classique, sans zone englobante superposée.](./media/boundingbox1.png "boudingbox1")  
+ ![Capture d’écran qui affiche une grille classique, sans cadre englobant superposé.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Cette disposition peut être obtenue en utilisant le code [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] suivant.  
   
@@ -49,7 +49,7 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
  Un seul <xref:System.Windows.Controls.TextBlock> élément est hébergé dans un <xref:System.Windows.Controls.Grid>. Tandis que le texte remplit uniquement l’angle supérieur gauche de la première colonne, l’espace alloué pour le <xref:System.Windows.Controls.TextBlock> est en fait beaucoup plus important. La zone englobante de n’importe quel <xref:System.Windows.FrameworkElement> peuvent être récupérées à l’aide de la <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (méthode). L’illustration suivante montre le cadre englobant pour le <xref:System.Windows.Controls.TextBlock> élément.  
   
- ![La zone englobante du TextBlock est maintenant visible.](./media/boundingbox2.png "boundingbox2")  
+ ![Capture d’écran montrant que la zone englobante du TextBlock est maintenant visible.](./media/layout/visible-textblock-bounding-box.png)  
   
  Comme indiqué par le rectangle jaune, l’espace alloué pour le <xref:System.Windows.Controls.TextBlock> élément est en fait bien plus important qu’il s’affiche. Comme les éléments supplémentaires sont ajoutés à la <xref:System.Windows.Controls.Grid>, cette allocation pourrait réduire ou développer, selon le type et la taille des éléments qui sont ajoutés.  
   

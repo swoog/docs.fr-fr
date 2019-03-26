@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718569"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464721"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Procédure : Utiliser l’anticrénelage avec du texte
 *Anticrénelage* fait référence au lissage de bords dentelés des graphiques dessinés et du texte pour améliorer leur apparence ou la lisibilité. Avec managé [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes, vous pouvez afficher le texte non crénelé haute qualité, ainsi que le texte de qualité inférieure. En règle générale, un rendu de qualité supérieur prend plus de temps de traitement que le rendu de qualité inférieure. Pour définir le niveau de qualité de texte, définissez la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriété d’un <xref:System.Drawing.Graphics> à un des éléments de la <xref:System.Drawing.Text.TextRenderingHint> énumération  
@@ -29,7 +29,7 @@ ms.locfileid: "57718569"
  
  L’illustration suivante montre la sortie de l’exemple de code :  
   
- ![Polices du texte](./media/fontstext10.png "FontsText10")  
+ ![Capture d’écran qui affiche le texte avec deux paramètres de qualité différents.](./media/how-to-use-antialiasing-with-text/antialiasing-text-quality-settings.png)  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  L’exemple de code précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  

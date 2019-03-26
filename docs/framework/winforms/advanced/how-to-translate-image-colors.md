@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464461"
 ---
 # <a name="how-to-translate-image-colors"></a>Procédure : Traduire les couleurs d’Image
 Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de couleur. Les entrées de matrice de couleurs qui représentent les traductions sont présentées dans le tableau suivant.  
@@ -29,9 +29,9 @@ Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de c
 ## <a name="example"></a>Exemple  
  L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir du fichier ColorBars.bmp. Le code ajoute ensuite 0,75 au composant rouge de chaque pixel dans l’image. L’image d’origine est dessinée en même temps que l’image transformée.  
   
- L’illustration suivante montre l’image d’origine sur la gauche et l’image transformée sur la droite.  
+ L’illustration suivante montre l’image d’origine sur la gauche et l’image transformée sur la droite :  
   
- ![Traduire les couleurs](./media/colortrans2.png "colortrans2")  
+ ![Capture d’écran de l’image d’origine et transformée.](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la traduction rouge. Notez que la valeur maximale pour un composant de couleur est 1, le composant rouge de la deuxième ligne ne change pas. (De même, la valeur minimale d’un composant de couleur est 0.)  
   

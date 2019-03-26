@@ -3,17 +3,17 @@ title: Modèle de programmation de revendications WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316504"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462810"
 ---
 # <a name="wif-claims-programming-model"></a>Modèle de programmation de revendications WIF
 Les développeurs ASP.NET et WCF (Windows Communication Foundation) utilisent généralement les interfaces IIdentity et IPrincipal pour traiter les informations d’identité de l’utilisateur. Dans .NET 4.5, WIF (Windows Identity Foundation) a été intégré pour que les revendications soient maintenant toujours présentes pour tous les principaux, comme illustré dans le diagramme suivant :
 
- ![Modèle de programmation de revendications WIF](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Diagramme illustrant le modèle de programmation de revendications WIF.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  Dans .NET 4.5, System.Security.Claims contient les nouvelles classes ClaimsPrincipal et ClaimsIdentity (voir le diagramme ci-dessus). Tous les principaux dans .NET sont désormais dérivés de ClaimsPrincipal. Toutes les classes d’identité intégrées, comme FormsIdentity pour ASP.NET et WindowsIdentity, sont maintenant dérivées de ClaimsIdentity. De même, toutes les classes de principal intégrées comme GenericPrincipal et WindowsPrincipal, sont dérivées de ClaimsPrincipal.
 
@@ -59,7 +59,7 @@ WIF prend en charge plusieurs combinaisons de mécanismes d’authentification i
 |SAML 2.0|Identique à « SAML 1.1 ».|Identique à « SAML 1.1 mappé au compte Windows ».|
 |X509|1.  Les revendications avec les propriétés nom unique X500, emailName, dnsName, SimpleName, UpnName, UrlName, thumbprint, RsaKey (extraction à l’aide de la méthode RSACryptoServiceProvider.ExportParameters de la propriété X509Certificate2.PublicKey.Key), DsaKey (extraction à l’aide de la méthode DSACryptoServiceProvider.ExportParameters de la propriété X509Certificate2.PublicKey.Key) et SerialNumber générées à partir du certificat X509.<br />2.  La revendication AuthenticationMethod avec la valeur `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. La revendication AuthenticationInstant avec la valeur d’horodatage de la validation du certificat au format DateTime XMLSchema.|1.  Utilise le nom de domaine complet du compte Windows comme valeur de la revendication `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. .<br />2.  Les revendications générées à partir du certificat X509 non mappé à Windows, et les revendications générées à partir du compte Windows en mappant le certificat à Windows.|
 |UPN|1.  Les revendications sont similaires aux revendications répertoriées dans la section de l’authentification Windows.<br />2.  La revendication AuthenticationMethod avec la valeur `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. La revendication AuthenticationInstant avec la valeur d’horodatage de la validation du mot de passe au format DateTime XMLSchema.||
-|Windows (Kerberos ou NTLM)|1.  Les revendications générées à partir du jeton d’accès, telles que PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID et Name.<br />2.  AuthenticationMethod avec la valeur `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. La revendication AuthenticationInstant avec la valeur d’horodatage de la création du jeton d’accès Windows au format DateTime XMLSchema.||
+|Windows (Kerberos ou NTLM)|1.  Revendications générées à partir du jeton d’accès telles que : PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID et nom<br />2.  AuthenticationMethod avec la valeur `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. La revendication AuthenticationInstant avec la valeur d’horodatage de la création du jeton d’accès Windows au format DateTime XMLSchema.||
 |Paire de clés RSA|1.  La revendication `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` avec la valeur de RSAKeyValue.<br />2.  La revendication AuthenticationMethod avec la valeur `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. La revendication AuthenticationInstant avec la valeur d’horodatage de l’authentification de la clé RSA (vérification de la signature) au format DateTime XMLSchema.||
 
 |Type d’authentification|URI émis dans une revendication AuthenticationMethod|

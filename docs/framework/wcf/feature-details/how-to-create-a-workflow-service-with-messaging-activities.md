@@ -2,12 +2,12 @@
 title: 'Procédure : Créer un Service de flux de travail avec les activités de messagerie'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584975"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466203"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : Créer un Service de flux de travail avec les activités de messagerie
 Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [How To : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  
@@ -22,7 +22,7 @@ Cette rubrique décrit comment créer un service de workflow simple, à l'aide d
   
 3.  Lorsque le projet est créé, le fichier Service1.xamlx s'ouvre dans le concepteur, comme indiqué dans l'illustration suivante.  
   
-     ![Le flux de travail par défaut affiché dans le concepteur](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
+     ![Capture d’écran montre le fichier Service1.xamlx ouvert dans le concepteur.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
   
      Avec le bouton droit de l’activité intitulée **Service séquentiel** et sélectionnez **supprimer**.  
   
@@ -30,37 +30,37 @@ Cette rubrique décrit comment créer un service de workflow simple, à l'aide d
   
 1.  Sélectionnez le **boîte à outils** onglet sur le côté gauche de l’écran pour afficher la boîte à outils et cliquez sur la punaise pour garder la fenêtre ouverte. Développez le **Messaging** section de la boîte à outils pour afficher les activités de messagerie et les modèles d’activité messagerie comme indiqué dans l’illustration suivante.  
   
-     ![La boîte à outils avec l’onglet messagerie développé](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")  
+     ![Capture d’écran montrant la boîte à outils avec section messagerie développé.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
 2.  Faites glisser et déposez un **ReceiveAndSendReply** modèle vers le Concepteur de flux de travail. Cette opération crée un <xref:System.Activities.Statements.Sequence> activité avec un **réception** activité suivie par un <xref:System.ServiceModel.Activities.SendReply> activité, comme indiqué dans l’illustration suivante.  
   
-     ![Modèle ReceiveAndSendReply dans le concepteur](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")  
+     ![Capture d’écran montre le modèle ReceiveAndSendReply.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
      Remarque : l'activité <xref:System.ServiceModel.Activities.SendReply> possède une propriété <xref:System.ServiceModel.Activities.SendReply.Request%2A> qui est définie sur `Receive`, le nom de l'activité <xref:System.ServiceModel.Activities.Receive> à laquelle répond l'activité <xref:System.ServiceModel.Activities.SendReply>.  
   
 3.  Dans le <xref:System.ServiceModel.Activities.Receive> type d’activité `Echo` dans la zone de texte intitulée **NomOpération**. Cela définit le nom de l'opération que le service implémente.  
   
-     ![Spécifiez le nom d’opération](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")  
+     ![Capture d’écran montrant où spécifier le nom de l’opération.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
 4.  Avec le <xref:System.ServiceModel.Activities.Receive> activité sélectionnée, ouvrez la fenêtre Propriétés si ce n’est pas déjà ouvert en cliquant sur le **vue** menu et en sélectionnant **fenêtre Propriétés**. Dans le **fenêtre Propriétés** défiler vers le bas jusqu'à ce que vous voyiez **CanCreateInstance** et cliquez sur la case à cocher comme illustré dans l’illustration suivante. Ce paramètre active l'hôte de service de workflow pour créer une nouvelle instance du service (si requis) lorsqu'un message est reçu.  
   
-     ![Propriété CanCreateInstance](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")  
+     ![Capture d’écran montrant la propriété CanCreateInstance.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
 5.  Sélectionnez le <xref:System.Activities.Statements.Sequence> activité et cliquez sur le **Variables** bouton dans le coin inférieur gauche du concepteur. Cela affiche l'éditeur de variables. Cliquez sur le **créer une Variable** lien permettant d’ajouter une variable pour stocker la chaîne envoyée à l’opération. Nommez la variable `msg` et définissez son **Variable** tapez en chaîne, comme indiqué dans l’illustration suivante.  
   
-     ![Ajouter une variable](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")  
+     ![Capture d’écran qui montre comment ajouter une variable.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
   
      Cliquez sur le **Variables** bouton Nouveau pour fermer l’éditeur de variables.  
   
 6.  Cliquez sur le **définir...** lien dans le **contenu** zone de texte dans le <xref:System.ServiceModel.Activities.Receive> activité pour afficher le **définition du contenu** boîte de dialogue. Sélectionnez le **paramètres** case d’option, cliquez sur le **ajouter un nouveau paramètre** lien, tapez `inMsg` dans le **nom** zone de texte, sélectionnez **chaîne**dans les **Type** déroulante de la zone de liste et le type `msg` dans le **affecter à** zone de texte, comme indiqué dans l’illustration suivante.  
   
-     ![Ajout de paramètres contenu](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")  
+     ![Capture d’écran qui illustre l’ajout de paramètres de contenu.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      Cela spécifie que l'activité Receive reçoit le paramètre de chaîne et que les données sont liées à la variable `msg`. Cliquez sur **OK** pour fermer la **définition du contenu** boîte de dialogue.  
   
 7.  Cliquez sur le **définir...**  lien dans le **contenu** zone le <xref:System.ServiceModel.Activities.SendReply> activité pour afficher le **définition du contenu** boîte de dialogue. Sélectionnez le **paramètres** case d’option, cliquez sur le **ajouter un nouveau paramètre** lien, tapez `outMsg` dans le **nom** zone de texte, sélectionnez **chaîne**dans les **Type** zone de liste déroulante, et `msg` dans le **valeur** zone de texte, comme indiqué dans l’illustration suivante.  
   
-     ![Ajout de paramètres contenu](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
+     ![Capture d’écran qui montre comment ajouter le paramètre outMsg.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   
      Cela spécifie que l'activité <xref:System.ServiceModel.Activities.SendReply> envoie un message ou un type de contrat de message et que les données sont liées à la variable `msg`. Comme il s'agit d'une activité <xref:System.ServiceModel.Activities.SendReply>, cela signifie que les données dans `msg` sont utilisées pour remplir le message que l'activité renvoie au client. Cliquez sur **OK** pour fermer la **définition du contenu** boîte de dialogue.  
   
@@ -75,17 +75,17 @@ Cette rubrique décrit comment créer un service de workflow simple, à l'aide d
   
 2.  Sélectionnez le **Web** onglet et sélectionnez **Page spécifique** sous **Action de démarrage** et type `Service1.xamlx` dans la zone de texte, comme indiqué dans l’illustration suivante.  
   
-     ![La boîte de dialogue de propriétés de projet](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")  
+     ![Capture d’écran qui affiche la boîte de dialogue de propriétés de projet.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
   
      Cela héberge le service défini dans Service1.xamlx dans le serveur de développement ASP.NET.  
   
 3.  Appuyez sur Ctrl + F5 pour lancer le service. L'icône du serveur de développement ASP.NET s'affiche dans la partie inférieure droite du Bureau, comme le montre l'image suivante.  
   
-     ![L’icône serveur de développement ASP.NET](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     ![Capture d’écran montrant l’icône serveur de développement ASP.NET.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
   
      De plus, Internet Explorer affiche la page d'aide du service WCF pour le service.  
   
-     ![Page d’aide WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
+     ![Capture d’écran montrant la Page d’aide WCF Service.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
   
 4.  Passez à la [Comment : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) rubrique pour créer un client de workflow qui appelle ce service.  
   
