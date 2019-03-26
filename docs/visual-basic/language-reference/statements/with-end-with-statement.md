@@ -38,7 +38,7 @@ End With
 |Terme|Définition|  
 |---|---|  
 |`objectExpression`|Obligatoire. Expression qui correspond à un objet. L'expression peut être arbitrairement complexe et n'est évaluée qu'une seule fois. L'expression peut correspondre à tout type de données, y compris des types élémentaires.|  
-|`statements`|Facultatif. Une ou plusieurs instructions entre `With` et `End With` qui peuvent faire référence aux membres d'un objet produit par l'évaluation de `objectExpression`.|  
+|`statements`|Optionnel. Une ou plusieurs instructions entre `With` et `End With` qui peuvent faire référence aux membres d'un objet produit par l'évaluation de `objectExpression`.|  
 |`End With`|Obligatoire. Met fin à la définition du bloc `With`.|  
   
 ## <a name="remarks"></a>Notes  
@@ -54,8 +54,7 @@ End With
   
  Le type de données de `objectExpression` peut être un type de classe ou de structure, ou même un type élémentaire Visual Basic, tel que `Integer`.  Si `objectExpression` est autre chose qu'un objet, vous ne pouvez lire que les valeurs de ses membres ou de ses méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  Il s'agit de la même erreur que celle que vous obtenez si vous appelez une méthode qui a retourné une structure et qui a immédiatement accédé à une valeur pour l'assigner à un membre du résultat de la fonction, par exemple `GetAPoint().x = 1`.  Dans les deux cas, le problème vient du fait que la structure existe uniquement dans la pile des appels. Par ailleurs, il n'existe aucun moyen dans ce cas pour qu'un membre de structure modifié puisse écrire dans un emplacement de manière à ce qu'une autre partie du code du programme puisse observer la modification.  
   
- 
-  `objectExpression` est évalué une seule fois, à l'entrée dans le bloc. Vous ne pouvez pas réassigner `objectExpression` à partir de l'intérieur du bloc `With`.  
+ `objectExpression` est évalué une seule fois, à l'entrée dans le bloc. Vous ne pouvez pas réassigner `objectExpression` à partir de l'intérieur du bloc `With`.  
   
  Dans un bloc `With`, vous pouvez accéder aux méthodes et propriétés de l'objet spécifié uniquement sans les qualifier. Vous pouvez utiliser les méthodes et propriétés des autres objets, mais vous devez les qualifier par leurs noms d'objets.  
   

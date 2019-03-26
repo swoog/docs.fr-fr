@@ -2,28 +2,22 @@
 title: Interopération avec du code non managé
 ms.date: 01/17/2018
 helpviewer_keywords:
-- unmanaged code, interoperation
-- managed code, interoperation with unmanaged code
-- .NET Framework, interoperation with unmanaged code
-- unmanaged code
-- interoperation with unmanaged code
-- interoperation with unmanaged code, about interoperation
-- components [.NET Framework], interoperation with unmanaged code
+  - 'unmanaged code, interoperation'
+  - 'managed code, interoperation with unmanaged code'
+  - '.NET Framework, interoperation with unmanaged code'
+  - unmanaged code
+  - interoperation with unmanaged code
+  - 'interoperation with unmanaged code, about interoperation'
+  - 'components [.NET Framework], interoperation with unmanaged code'
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389507"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interopération avec du code non managé
 
 Le .NET Framework assure l’interaction avec les composants COM, les services COM+, les bibliothèques de types externes et de nombreux services de systèmes d’exploitation. Les types de données, les signatures de méthode et les mécanismes de gestion des erreurs varient selon les modèles objet managés et non managés. Pour simplifier l’interopérabilité entre les composants .NET Framework et le code non managé ainsi que pour faciliter la migration, le common language runtime dissimule à la fois aux clients et aux serveurs les différences entre ces modèles objet.
 
-Le code qui s’exécute sous le contrôle du runtime est appelé code managé. Inversement, le code qui s’exécute en dehors du runtime est appelé code non managé. Les composants COM, les interfaces ActiveX et les fonctions API Win32 sont des exemples de code non managé.
+Le code qui s’exécute sous le contrôle du runtime est appelé code managé. Inversement, le code qui s’exécute en dehors du runtime est appelé code non managé. Les composants COM, les interfaces ActiveX et les fonctions API Windows sont des exemples de code non managé.
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -48,10 +42,10 @@ Décrit les wrappers fournis par COM Interop.
 [Équivalence de type et types interop incorporés](type-equivalence-and-embedded-interop-types.md)  
 Décrit comment les informations de type pour les types COM sont incorporées dans les assemblys, et comment le common language runtime détermine l’équivalence des types COM incorporés.
 
-[Comment : générer des assemblys PIA à l'aide de Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Guide pratique pour générer des assemblys PIA à l’aide de Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Décrit comment produire des assemblys PIA à l’aide de *Tlbimp.exe* (importateur de bibliothèques de types).
 
-[Comment : enregistrer des assemblys PIA](how-to-register-primary-interop-assemblies.md)  
+[Guide pratique pour enregistrer des assemblys PIA](how-to-register-primary-interop-assemblies.md)  
 Décrit comment inscrire les assemblys PIA avant de les référencer dans vos projets.
 
 [COM Interop sans inscription](registration-free-com-interop.md)  

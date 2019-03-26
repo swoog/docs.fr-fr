@@ -14,8 +14,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57710284"
 ---
 # <a name="timer-component-windows-forms"></a>Timer, composant (Windows Forms)
-
-  <xref:System.Windows.Forms.Timer> est un composant Windows Forms qui déclenche un événement à intervalles réguliers. Ce composant est conçu pour un environnement Windows Forms.  
+<xref:System.Windows.Forms.Timer> est un composant Windows Forms qui déclenche un événement à intervalles réguliers. Ce composant est conçu pour un environnement Windows Forms.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble du composant Timer](timer-component-overview-windows-forms.md)  

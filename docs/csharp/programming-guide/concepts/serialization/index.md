@@ -8,9 +8,9 @@ La sérialisation est le processus de conversion d’un objet en flux d’octets
 
 ## <a name="how-serialization-works"></a>Fonctionnement de la sérialisation
 
-Cette illustration montre le processus global de sérialisation.
+Cette illustration montre le processus global de sérialisation :
 
-![Graphisme de sérialisation](./media/serialization.gif "sérialisation")
+![Graphique sérialisation](./media/index/serialization-process.gif)
 
 L’objet est sérialisé en un flux, qui contient non seulement les données, mais aussi des informations sur le type de l’objet, telles que sa version, sa culture et son nom d’assembly. À partir de ce flux, il peut être stocké dans une base de données, dans un fichier ou en mémoire.
 
