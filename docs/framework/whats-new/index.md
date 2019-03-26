@@ -868,7 +868,7 @@ Ce comportement n’est pas souhaitable quand il s’agit d’établir des conne
 
 L’ajout du nouveau mot clé `PoolBlockingPeriod` vous permet de sélectionner la période de blocage qui convient le mieux à votre application. Les valeurs incluent :
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 La période de blocage de pool de connexions d’une application qui se connecte à une base de données Azure SQL Database est désactivée, pendant que celle d’une application qui se connecte à une autre instance SQL Server est activée. Valeur par défaut. Si le nom de point de terminaison d’un serveur se termine par l’un des éléments suivants, il est considéré comme une base de données Azure SQL Database :
 
@@ -880,11 +880,11 @@ La période de blocage de pool de connexions d’une application qui se connecte
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 La période de blocage de pool de connexion est toujours activée.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 La période de blocage de pool de connexion est toujours désactivée.
 
