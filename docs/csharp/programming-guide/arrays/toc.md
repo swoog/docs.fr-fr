@@ -1,8 +1,0 @@
-# [Tableaux](index.md)
-## [Tableaux comme objets](arrays-as-objects.md)
-## [Tableaux unidimensionnels](single-dimensional-arrays.md)
-## [Tableaux multidimensionnels](multidimensional-arrays.md)
-## [Tableaux en escalier](jagged-arrays.md)
-## [Utilisation de foreach avec des tableaux](using-foreach-with-arrays.md)
-## [Passage de tableaux en tant qu’arguments](passing-arrays-as-arguments.md)
-## [Tableaux implicitement typés](implicitly-typed-arrays.md)
