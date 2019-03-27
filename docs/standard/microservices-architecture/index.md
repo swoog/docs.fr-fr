@@ -1,15 +1,9 @@
 ---
 title: Microservices .NET. Architecture pour les applications .NET en conteneur
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Les microservices sont des services modulables qui peuvent se déployer indépendamment. Les conteneurs Docker (pour Linux et Windows) simplifient le déploiement et les tests en regroupant un service et ses dépendances dans une seule unité, laquelle est ensuite exécutée dans un environnement isolé.
+description: 'Architecture des microservices .NET pour les applications .NET en conteneur | Les microservices sont des services modulables qui peuvent se déployer indépendamment. Les conteneurs Docker (pour Linux et Windows) simplifient le déploiement et les tests en regroupant un service et ses dépendances dans une seule unité, laquelle est ensuite exécutée dans un environnement isolé.'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479943"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservices .NET : Architecture pour les applications .NET en conteneur
 
@@ -58,7 +52,7 @@ Ce guide ne traite pas du cycle de vie des applications, de DevOps, des pipeline
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (livre électronique téléchargeable)  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Public visé par ce guide
 

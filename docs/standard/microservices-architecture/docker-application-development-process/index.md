@@ -26,13 +26,13 @@ En installant les outils [Docker Community Edition (CE)](https://www.docker.com/
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Visual Studio**. Site officiel. \
-  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 
 - **Visual Studio Code**. Site officiel. \
-  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 - **Docker Community Edition (CE) pour Mac et Windows** \
-  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Langages et frameworks .NET pour conteneurs Docker
 

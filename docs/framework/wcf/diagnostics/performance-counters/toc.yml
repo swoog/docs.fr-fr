@@ -1,0 +1,153 @@
+items:
+- name: Compteurs de performances
+  href: index.md
+  items:
+  - name: Compteurs de performance d'opération
+    href: operation-performance-counters.md
+    items:
+    - name: Appels
+      href: calls.md
+    - name: Appels par seconde
+      href: calls-per-second.md
+    - name: Appels en attente
+      href: calls-outstanding.md
+    - name: Appels ayant échoué
+      href: calls-failed.md
+    - name: Nombre d'appels ayant échoué par seconde
+      href: calls-failed-per-second.md
+    - name: Appels ayant renvoyé des erreurs
+      href: calls-faulted.md
+    - name: Appels ayant renvoyé une erreur par seconde
+      href: calls-faulted-per-second.md
+    - name: Durée des appels
+      href: calls-duration.md
+    - name: Nombre d’échecs de la validation de la sécurité et de l’authentification
+      href: security-validation-and-authentication-failures.md
+    - name: Nombre d'échecs de validation de la sécurité et d'authentification par seconde
+      href: security-validation-and-authentication-failures-per-second.md
+    - name: Appels de sécurité non autorisés
+      href: security-calls-not-authorized.md
+    - name: Appels de sécurité non autorisés par seconde
+      href: security-calls-not-authorized-per-second.md
+    - name: Transactions passées
+      href: transactions-flowed.md
+    - name: Transactions passées par seconde
+      href: transactions-flowed-per-second.md
+  - name: Compteurs de performance de service
+    href: service-performance-counters.md
+    items:
+    - name: Appels
+      href: service-calls.md
+    - name: Appels par seconde
+      href: service-calls-per-second.md
+    - name: Appels en attente
+      href: service-calls-outstanding.md
+    - name: Appels ayant échoué
+      href: service-calls-failed.md
+    - name: Nombre d'appels ayant échoué par seconde
+      href: service-calls-failed-per-second.md
+    - name: Appels ayant renvoyé des erreurs
+      href: service-calls-faulted.md
+    - name: Appels ayant renvoyé une erreur par seconde
+      href: service-calls-faulted-per-second.md
+    - name: Durée des appels
+      href: service-calls-duration.md
+    - name: Instances
+      href: instances.md
+    - name: Instances par seconde
+      href: instances-per-second.md
+    - name: Pourcentage du nombre maximal d'appels simultanés
+      href: percent-of-max-concurrent-calls.md
+    - name: Pourcentage du nombre maximal d'instances simultanées
+      href: percent-of-max-concurrent-instances.md
+    - name: Pourcentage du nombre maximal de sessions simultanées
+      href: percent-of-max-concurrent-sessions.md
+    - name: Messages mis en file d’attente déposés
+      href: queue-dropped-messages.md
+    - name: Messages déposés par le transport de mise en file d'attente par seconde
+      href: queue-dropped-messages-per-second.md
+    - name: Messages incohérents mis en file d'attente
+      href: queued-poison-messages.md
+    - name: Messages incohérents en file d'attente par seconde
+      href: queued-poison-messages-per-second.md
+    - name: Messages rejetés mis en file d'attente
+      href: queued-rejected-messages.md
+    - name: Messages rejetés par le transport de mise en file d'attente par seconde
+      href: queued-rejected-messages-per-second.md
+    - name: Messages de messagerie fiable déposés
+      href: reliable-messaging-messages-dropped.md
+    - name: Messages de messagerie fiable déposés par seconde
+      href: reliable-messaging-messages-dropped-per-second.md
+    - name: Sessions de messagerie fiable ayant renvoyé des erreurs
+      href: reliable-messaging-sessions-faulted.md
+    - name: Sessions de messagerie fiable ayant renvoyé une erreur par seconde
+      href: reliable-messaging-sessions-faulted-per-second.md
+    - name: Appels de sécurité non autorisés
+      href: service-security-calls-not-authorized.md
+    - name: Appels de sécurité non autorisés par seconde
+      href: service-security-calls-not-authorized-per-second.md
+    - name: Nombre d’échecs de la validation de la sécurité et de l’authentification
+      href: service-security-validation-and-authentication-failures.md
+    - name: Nombre d'échecs de validation de la sécurité et d'authentification par seconde
+      href: service-security-validation-and-authentication-failures-per-second.md
+    - name: Transactions passées
+      href: service-transactions-flowed.md
+    - name: Transactions passées par seconde
+      href: service-transactions-flowed-per-second.md
+    - name: Opérations traitées annulées
+      href: transacted-operations-aborted.md
+    - name: Nombre d'opérations traitées abandonnées par seconde
+      href: transacted-operations-aborted-per-second.md
+    - name: Opérations traitées validées
+      href: transacted-operations-committed.md
+    - name: Opérations traitées validées par seconde
+      href: transacted-operations-committed-per-second.md
+    - name: Opérations traitées avec des résultats incertains
+      href: transacted-operations-in-doubt.md
+    - name: Opérations traitées avec des résultats incertains par seconde
+      href: transacted-operations-in-doubt-per-second.md
+  - name: Compteurs de performance de point de terminaison
+    href: endpoint-performance-counters.md
+    items:
+    - name: Appels
+      href: endpoint-calls.md
+    - name: Appels par seconde
+      href: endpoint-calls-per-second.md
+    - name: Appels en attente
+      href: endpoint-calls-outstanding.md
+    - name: Appels ayant échoué
+      href: endpoint-calls-failed.md
+    - name: Nombre d'appels ayant échoué par seconde
+      href: endpoint-calls-failed-per-second.md
+    - name: Appels ayant renvoyé des erreurs
+      href: endpoint-calls-faulted.md
+    - name: Appels ayant renvoyé une erreur par seconde
+      href: endpoint-calls-faulted-per-second.md
+    - name: Durée des appels
+      href: endpoint-calls-duration.md
+    - name: Messages de messagerie fiable déposés
+      href: endpoint-reliable-messaging-messages-dropped.md
+    - name: Messages de messagerie fiable déposés par seconde
+      href: endpoint-reliable-messaging-messages-dropped-per-second.md
+    - name: Sessions de messagerie fiable ayant renvoyé des erreurs
+      href: endpoint-reliable-messaging-sessions-faulted.md
+    - name: Sessions de messagerie fiable ayant renvoyé une erreur par seconde
+      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+    - name: Appels de sécurité non autorisés
+      href: endpoint-security-calls-not-authorized.md
+    - name: Appels de sécurité non autorisés par seconde
+      href: endpoint-security-calls-not-authorized-per-second.md
+    - name: Nombre d’échecs de la validation de la sécurité et de l’authentification
+      href: endpoint-security-validation-and-authentication-failures.md
+    - name: Nombre d'échecs de validation de la sécurité et d'authentification par seconde
+      href: endpoint-security-validation-and-authentication-failures-per-second.md
+    - name: Transactions passées
+      href: endpoint-transactions-flowed.md
+    - name: Transactions passées par seconde
+      href: endpoint-transactions-flowed-per-second.md
+ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468770"
