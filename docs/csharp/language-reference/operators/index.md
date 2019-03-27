@@ -1,29 +1,23 @@
 ---
-title: Opérateurs C#
+title: 'Opérateurs C#'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333406"
 ---
 # <a name="c-operators"></a>Opérateurs C#
 
@@ -47,9 +41,9 @@ Ce sont les opérateurs dont la priorité est la plus élevée.
 
 [a&#91;x&#93;](index-operator.md) : indexation de l’objet d’agrégation.
 
-[x++](increment-operator.md) : incrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).
+[x++](arithmetic-operators.md#increment-operator-) : incrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).
 
-[x--](decrement-operator.md) : décrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x diminuée de un (soustrait généralement l'entier 1).
+[x--](arithmetic-operators.md#decrement-operator---) : décrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x diminuée de un (soustrait généralement l'entier 1).
 
 [new](../keywords/new-operator.md) : instanciation de type.
 
@@ -79,9 +73,9 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 [~x](bitwise-complement-operator.md) : complément au niveau du bit.
 
-[++x](increment-operator.md) : incrément préfixé. Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).
+[++x](arithmetic-operators.md#increment-operator-) : incrément préfixé. Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).
 
-[--x](decrement-operator.md) : décrément préfixé. Retourne la valeur de x après avoir mis à jour l’emplacement de stockage avec la valeur de x diminuée d’une unité (soustrait généralement l’entier 1).
+[--x](arithmetic-operators.md#decrement-operator---) : décrément préfixé. Retourne la valeur de x après avoir mis à jour l’emplacement de stockage avec la valeur de x diminuée d’une unité (soustrait généralement l’entier 1).
 
 [(T)x](invocation-operator.md) : cast de type.
 
@@ -95,19 +89,19 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x * y](multiplication-operator.md) : multiplication.
+[x * y](arithmetic-operators.md#multiplication-operator-) : multiplication.
 
-[x / y](division-operator.md) : division. Si les opérandes sont des entiers, le résultat est un entier tronqué vers zéro (par exemple, `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-) : division. Si les opérandes sont des entiers, le résultat est un entier tronqué vers zéro (par exemple, `-7 / 2 is -3`).
 
-[x % y](remainder-operator.md) : reste. Si les opérandes sont des entiers, cet opérateur renvoie le reste de la division de x par y.  Si `q = x / y` et `r = x % y`, alors `x = q * y + r`.
+[x % y](arithmetic-operators.md#remainder-operator-) : reste. Si les opérandes sont des entiers, cet opérateur renvoie le reste de la division de x par y.  Si `q = x / y` et `r = x % y`, alors `x = q * y + r`.
 
 ## <a name="additive-operators"></a>Opérateurs additifs
 
 Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x + y](addition-operator.md) : addition.
+[x + y](arithmetic-operators.md#addition-operator-) : addition.
 
-[x – y](subtraction-operator.md) : soustraction.
+[x – y](arithmetic-operators.md#subtraction-operator--) : soustraction.
 
 ## <a name="shift-operators"></a>Opérateurs de décalage
 
@@ -195,9 +189,9 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 [x *= y](multiplication-assignment-operator.md) : affectation de multiplication. Multiplie la valeur de `y` par la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.
 
-[x /= y](division-assignment-operator.md) : affectation de division. Divise la valeur de `x` par la valeur de `y`, stocke le résultat dans `x` et retourne la nouvelle valeur.
+[x /= y](arithmetic-operators.md#compound-assignment) : affectation de division. Divise la valeur de `x` par la valeur de `y`, stocke le résultat dans `x` et retourne la nouvelle valeur.
 
-[x %= y](remainder-assignment-operator.md) : assignation de reste. Divise la valeur de `x` par la valeur de `y`, stocke le reste dans `x` et retourne la nouvelle valeur.
+[x %= y](arithmetic-operators.md#compound-assignment) : assignation de reste. Divise la valeur de `x` par la valeur de `y`, stocke le reste dans `x` et retourne la nouvelle valeur.
 
 [x &= y](and-assignment-operator.md) : affectation ET. Assigne l'opérateur AND à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.
 
@@ -210,20 +204,6 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 [x >>= y](right-shift-assignment-operator.md) : affectation de décalage vers la droite. Décale la valeur de `x` vers la droite de `y` places, stocke le résultat dans `x` et retourne la nouvelle valeur.
 
 [=>](lambda-operator.md) : déclaration lambda.
-
-## <a name="arithmetic-overflow"></a>Dépassement arithmétique
-
-Les opérateurs arithmétiques ([+](addition-operator.md), [-](subtraction-operator.md), [*](multiplication-operator.md) et [/](division-operator.md)) peuvent produire des résultats qui sont en dehors de la plage de valeurs possibles pour le type numérique concerné. Reportez-vous à la section d'un opérateur particulier pour obtenir plus d'informations, mais en règle générale, les points suivants s'appliquent :
-
-- Le dépassement arithmétique d'un entier lève soit une exception <xref:System.OverflowException> ou ignore les bits les plus significatifs du résultat. La division d'un entier par zéro lève toujours une exception <xref:System.DivideByZeroException>.
-
-   En cas de dépassement d’un entier, ce qui se produit dépend du contexte d’exécution, lequel peut être [checked ou unchecked](../keywords/checked-and-unchecked.md). Dans un contexte checked, une exception <xref:System.OverflowException> est levée. Dans un contexte unchecked, les bits les plus significatifs du résultat sont ignorés et l'exécution se poursuit. Ainsi, C# vous donne la possibilité de traiter ou d'ignorer le dépassement. Par défaut, les opérations arithmétiques se produisent dans un contexte *unchecked*.
-
-   En plus des opérations arithmétiques, des casts entre types intégraux peuvent générer un dépassement (par exemple en cas de conversion de type de [long](../keywords/long.md) en [int](../keywords/int.md)). Ils sont sujets à une exécution checked ou unchecked. En revanche, les opérateurs de bits et les opérateurs de décalage ne génèrent jamais de dépassement.
-
-- Le dépassement arithmétique ou la division par zéro d'une virgule flottante ne lèvent jamais d'exception, car les types à virgule flottante se basent sur IEEE 754 et peuvent représenter l'infini et NaN (n'est pas un nombre).
-
-- Le dépassement arithmétique d’un nombre [décimal](../keywords/decimal.md) lève toujours une exception <xref:System.OverflowException>. La division d'un nombre décimal par zéro lève toujours une exception <xref:System.DivideByZeroException>.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,12 +3,12 @@ title: Utiliser les fonctionnalités de critères spéciaux pour étendre les ty
 description: Ce tutoriel avancé montre comment utiliser des techniques de critères spéciaux pour créer des fonctionnalités à l’aide de données et d’algorithmes créés séparément.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125809"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262519"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutoriel : Utiliser les fonctionnalités de critères spéciaux pour étendre les types de données
 
@@ -17,9 +17,9 @@ C# 7 a introduit des fonctionnalités de critères spéciaux de base. Elles ont 
 Dans ce tutoriel, vous allez apprendre à :
 
 > [!div class="checklist"]
-> * reconnaître les situations dans lesquelles les critères spéciaux sont nécessaires ;
-> * utiliser des expressions de critères spéciaux pour implémenter des comportements en fonction des types et des valeurs de propriété ;
-> * combiner les critères spéciaux avec d’autres techniques pour créer des algorithmes complets.
+> * Reconnaître les situations dans lesquelles les critères spéciaux sont nécessaires.
+> * Utiliser des expressions de critères spéciaux pour implémenter des comportements en fonction des types et des valeurs de propriété.
+> * Combiner des critères spéciaux avec d’autres techniques pour créer des algorithmes complets.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -45,12 +45,12 @@ Vous pouvez télécharger l’exemple de démarrage à partir du référentiel G
 
 ## <a name="pattern-matching-designs"></a>Conception avec les critères spéciaux
 
-Le scénario utilisé dans ce tutoriel met en évidence les types de problèmes adaptés aux critères spéciaux : 
+Le scénario utilisé dans ce tutoriel met en évidence les types de problèmes que les critères spéciaux peuvent parfaitement résoudre :
 
 - Les objets dont vous avez besoin ne figurent pas dans une hiérarchie d’objets correspondant à vos objectifs. Vous utilisez peut-être des classes faisant partie de systèmes non liés les uns aux autres.
 - Les fonctionnalités ajoutées ne font pas partie de l’abstraction de base de ces classes. Le péage payé *change* selon les types de véhicules, mais il ne s’agit pas d’une fonction essentielle du véhicule.
 
-Lorsque la *forme* des données et les *opérations* effectuées sur celles-ci ne sont pas décrites ensemble, les fonctionnalités de critères spéciaux de C# facilitent la tâche. 
+Lorsque la *forme* des données et les *opérations* effectuées sur celles-ci ne sont pas décrites ensemble, les fonctionnalités de critères spéciaux de C# facilitent la tâche.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implémenter les calculs de péage de base
 
@@ -61,7 +61,7 @@ Le calcul de péage le plus élémentaire s’appuie uniquement sur le type de v
 - `Bus` : 5,00 $.
 - `DeliveryTruck` : 10,00 $.
 
-Créez une classe `TollCalculator` et implémentez les critères spéciaux sur le type de véhicule pour obtenir le montant du péage.
+Créez une classe `TollCalculator` et implémentez les critères spéciaux sur le type de véhicule pour obtenir le montant du péage. Le code suivant montre l’implémentation initiale de `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-Le code précédent utilise une **expression switch** (différente d’une instruction [`switch`](../language-reference/keywords/switch.md)) qui teste le **modèle de type**. Une **expression switch** commence par la variable, `vehicle` dans le code précédent, suivie du mot clé `switch`. Viennent ensuite toutes les **branches switch** entre accolades. L’expression `switch` ajoute d’autres perfectionnements à la syntaxe qui entoure l’instruction `switch`. Le mot clé `case` est omis, et le résultat de chaque branche est une expression. Les deux dernières montrent une nouvelle fonctionnalité du langage. Le cas `{ }` représente n’importe quel objet non Null ne correspondant à aucune des branches antérieures. Il intercepte tous les types incorrects passés à cette méthode. Enfin, le modèle `null` gère le cas où `null` est transmis à cette méthode. Le `null` modèle peut être en dernier, car les autres modèles de type correspondent uniquement à un objet non null du type correct.
+Le code précédent utilise une **expression switch** (différente d’une instruction [`switch`](../language-reference/keywords/switch.md)) qui teste le **modèle de type**. Une **expression switch** commence par la variable, `vehicle` dans le code précédent, suivie du mot clé `switch`. Viennent ensuite toutes les **branches switch** entre accolades. L’expression `switch` ajoute d’autres perfectionnements à la syntaxe qui entoure l’instruction `switch`. Le mot clé `case` est omis, et le résultat de chaque branche est une expression. Les deux dernières montrent une nouvelle fonctionnalité du langage. Le cas `{ }` représente n’importe quel objet non Null ne correspondant à aucune des branches antérieures. Il intercepte tous les types incorrects passés à cette méthode.  Le cas `{ }` doit suivre les cas de chaque type de véhicule. Si l’ordre était inversé, le cas `{ }` serait prioritaire. Enfin, le modèle `null` détecte si un `null` est passé à cette méthode. Le `null` modèle peut être en dernier, car les autres modèles de type correspondent uniquement à un objet non null du type correct.
 
 Pour tester ce code, utilisez le code suivant dans `Program.cs` :
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ L’autorité de péage souhaite inciter les véhicules à circuler à capacité
 - Bus remplis à moins de 50 % : +2,00 $.
 - Bus remplis à plus de 90 % : -1,00 $.
 
-Il est possible d’implémenter ces règles avec le **modèle de propriété** dans la même expression switch. Le modèle de propriété examine les propriétés de l’objet une fois que le type a été déterminé.  L’unique cas `Car` est étendu à quatre cas différents :
+Il est possible d’implémenter ces règles avec le **modèle de propriété** dans la même expression switch. Le modèle de propriété examine les propriétés de l’objet une fois que le type a été déterminé. L’unique cas `Car` est étendu à quatre cas différents :
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Les trois premiers cas testent le type `Car`, puis vérifient la valeur de la propriété `Passengers`. Si les deux correspondent, cette expression est évaluée et retournée. La clause finale montre la clause `when` d’une branche switch. Cette clause `when` sert à tester les conditions autres que l’égalité sur une propriété. Dans l’exemple précédent, le `when` clause vérifie qu’il n’y a plus de 2 passagers dans la voiture. ce qui n’est à proprement parler pas nécessaire.
+Les trois premiers cas testent le type `Car`, puis vérifient la valeur de la propriété `Passengers`. Si les deux correspondent, cette expression est évaluée et retournée.
 
 Les cas des taxis sont étendus de la même manière :
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-L’autorité de péage ne se soucie pas du nombre de passagers des camions de livraison, mais fixe le tarif en fonction de leur classe de poids. Camions de plus de 5 000 lb : +5,00 $. Camions de moins de 3 000 lb : -2,00 $.  Cette règle est implémentée dans le code suivant :
+L’autorité de péage ne se soucie pas du nombre de passagers des camions de livraison, mais fixe le tarif en fonction de leur classe de poids. Camions de plus de 5 000 lb : +5,00 $. Camions de moins de 3000 lb : -2,00 $. Cette règle est implémentée dans le code suivant :
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Une fois terminée, la méthode se présente ainsi :
+Le code précédent montre la clause `when` d’une branche switch. Cette clause `when` sert à tester les conditions autres que l’égalité sur une propriété. Une fois terminée, la méthode se présente ainsi :
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -280,7 +280,7 @@ Dans l’exemple précédent, l’expression récursive évite de répéter les 
 
 En guise de fonctionnalité finale, l’autorité de péage souhaite ajouter une tarification soumise à une contrainte horaire. Pendant les heures d’affluence du matin et du soir, les péages sont doublés. Cette règle ne s’applique au trafic que dans un sens : en allant vers la ville le matin et en en sortant le soir. Le reste du temps, pendant la journée de travail, les péages augmentent de 50 %. Tard le soir et tôt le matin, ils sont réduits de 25 %. Le taux normal s’applique le weekend, quelle que soit l’heure.
 
-Pour cette fonctionnalité, nous allons utiliser les critères spéciaux, mais en les associant à d’autres techniques. On pourrait élaborer une seule expression de critères spéciaux qui tiendrait compte de toutes les combinaisons direction/jour de la semaine/heure. Elle serait cependant complexe, difficile à lire, à comprendre et à vérifier. Combinons plutôt ces méthodes afin de créer un tuple de valeurs décrivant de manière concise tous ces états. Ensuite, utilisons les critères spéciaux pour calculer un multiplicateur de péage. Le tuple comporte trois conditions discrètes :
+Pour cette fonctionnalité, nous allons utiliser les critères spéciaux, mais en les associant à d’autres techniques. Vous pourriez élaborer une seule expression de critères spéciaux qui tiendrait compte de toutes les combinaisons direction/jour de la semaine/heure. Elle serait cependant complexe, difficile à lire, à comprendre et à vérifier. Combinons plutôt ces méthodes afin de créer un tuple de valeurs décrivant de manière concise tous ces états. Ensuite, utilisons les critères spéciaux pour calculer un multiplicateur de péage. Le tuple comporte trois conditions discrètes :
 
 - le jour : semaine / weekend ;
 - la tranche horaire ;
@@ -309,7 +309,7 @@ Le tableau suivant montre les combinaisons de valeurs d’entrée et le multipli
 
 Les trois variables produisent 16 combinaisons différentes. On peut simplifier l’expression switch finale en associant certaines conditions.
 
-Le système qui collecte les péages utilise une structure <xref:System.DateTime> pour indiquer l’heure de collecte. Élaborons les méthodes de membre qui créent des variables à partir du tableau précédent.  La fonction suivante utilise une expression switch de critères spéciaux pour exprimer si <xref:System.DateTime> représente un jour de weekend ou de semaine :
+Le système qui collecte les péages utilise une structure <xref:System.DateTime> pour indiquer l’heure de collecte. Élaborons les méthodes de membre qui créent des variables à partir du tableau précédent. La fonction suivante utilise une expression switch de critères spéciaux pour exprimer si <xref:System.DateTime> représente un jour de weekend ou de semaine :
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,7 +339,7 @@ Maintenant que nous avons créé ces méthodes, utilisons une autre expression `
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-Le code ci-dessus fonctionne, mais on peut le simplifier. Les huit combinaisons du weekend correspondent au même péage. Elles sont remplaçables par l’unique ligne suivante :
+Le code ci-dessus fonctionne, mais on peut le simplifier. Les huit combinaisons du weekend correspondent au même péage. Elles sont remplaçables par la ligne suivante :
 
 ```csharp
 (false, _, _) => 1.0m,
@@ -372,9 +372,9 @@ Enfin, on peut supprimer les deux branches des heures de pointe au tarif normal,
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Cet exemple met en évidence l’un des avantages des critères spéciaux. Les branches du modèle sont évaluées dans l’ordre. Si on les réorganise de telle sorte qu’une branche antérieure gère un des cas suivants, le compilateur envoie un avertissement. Grâce à ces règles de langage, nous avons pu effectuer facilement les simplifications précédentes sans craindre de modifier le code.
+Cet exemple met en évidence un des avantages des critères spéciaux : les branches du modèle sont évaluées dans l’ordre. Si vous les réorganisez de telle sorte qu’une branche antérieure gère un des cas suivants, le compilateur vous avertit que le code est inaccessible. Grâce à ces règles de langage, nous avons pu effectuer facilement les simplifications précédentes sans craindre de modifier le code.
 
-Les critères spéciaux représentent une syntaxe naturelle qui permet d’implémenter d’autres solutions qu’avec les techniques orientées objet. Le cloud est à l’origine d’une séparation entre les données et les fonctionnalités. La *forme* des données et les *opérations* effectuées sur ces dernières ne sont pas nécessairement décrites ensemble. Dans ce tutoriel, nous avons exploité les données existantes d’une manière totalement différente de leur fonction d’origine. Les critères spéciaux offrent la possibilité d’écrire des fonctionnalités qui remplacent ces types, même sans pouvoir les étendre.
+Les critères spéciaux rendent certains types de code plus lisibles et offrent une alternative aux techniques orientées objet quand vous ne pouvez pas ajouter de code à vos classes. Le cloud est à l’origine d’une séparation entre les données et les fonctionnalités. La *forme* des données et les *opérations* effectuées sur ces dernières ne sont pas nécessairement décrites ensemble. Dans ce tutoriel, nous avons exploité les données existantes d’une manière totalement différente de leur fonction d’origine. Les critères spéciaux offrent la possibilité d’écrire des fonctionnalités qui remplacent ces types, même sans pouvoir les étendre.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

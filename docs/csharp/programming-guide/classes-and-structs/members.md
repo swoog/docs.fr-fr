@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592848"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262483"
 ---
 # <a name="members-c-programming-guide"></a>Membres (Guide de programmation C#)
 Les classes et les structs ont des membres qui représentent leurs données et leur comportement. Les membres d’une classe incluent tous les membres déclarés de la classe, ainsi que tous les membres (à l’exception des constructeurs et des finaliseurs) déclarés dans toutes les classes de sa hiérarchie d’héritage. Les membres privés dans les classes de base sont hérités, mais ne sont pas accessibles à partir des classes dérivées.  
@@ -21,7 +21,7 @@ Les classes et les structs ont des membres qui représentent leurs données et l
 |Membre|Description|  
 |------------|-----------------|  
 |[Champs](../../../csharp/programming-guide/classes-and-structs/fields.md)|Les champs sont des variables déclarées au niveau de la classe. Un champ peut être un type numérique intégré ou une instance d’une autre classe. Par exemple, une classe de calendrier peut avoir un champ qui contient la date actuelle.|  
-|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Les constantes sont des champs ou des propriétés dont la valeur est définie au moment de la compilation et ne peut pas être modifiée.|  
+|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Les constantes sont des champs dont la valeur est définie au moment de la compilation et ne peut pas être modifiée.|  
 |[Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)|Les propriétés sont des méthodes sur une classe, accessibles comme si elles étaient des champs de cette classe. Une propriété peut fournir une protection pour un champ de classe afin d’éviter qu’il ne soit modifié sans que de l’objet en ait connaissance.|  
 |[Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)|Les méthodes définissent les actions qu’une classe peut effectuer. Les méthodes peuvent accepter des paramètres qui fournissent des données d’entrée et peuvent retourner des données de sortie au moyen de paramètres. Les méthodes peuvent également retourner une valeur directement, sans utiliser de paramètre.|  
 |[Événements](../../../csharp/programming-guide/events/index.md)|Les événements fournissent des notifications d’occurrences, comme des clics de bouton ou l’exécution réussie d’une méthode, sur d’autres objets. Les événements sont définis et déclenchés à l’aide de délégués.|  

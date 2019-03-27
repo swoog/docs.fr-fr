@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 38298cded904cbfedeaf3c6b66c74d610d714902
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 9cbf8a0f860f0bc0328cd98e558b20b5e8e1bf8f
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333237"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348841"
 ---
-# <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. et ?[], opérateurs conditionnels Null (C# et Visual Basic)
+# <a name="-and--null-conditional-operators-c-reference"></a>?. et ?[] - Opérateurs conditionnels Null - (Référence C#)
 
 Teste si l’opérande de gauche a une valeur Null avant d’effectuer une opération d’accès au membre (`?.`) ou d’index (`?[]`) ; retourne `null` si l’opérande de gauche s’évalue à `null`.
 
