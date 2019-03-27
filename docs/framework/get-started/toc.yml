@@ -1,0 +1,18 @@
+items:
+- name: Prise en main
+  href: index.md
+  items:
+  - name: Vue d'ensemble
+    href: overview.md
+  - name: Versions finales hors plage de .NET Framework
+    href: the-net-framework-and-out-of-band-releases.md
+  - name: .NET Core et Open-Source
+    href: net-core-and-open-source.md
+  - name: Configuration système requise
+    href: system-requirements.md
+ms.openlocfilehash: 97d711d4e038084e307fbdf2f84438ddd824ca14
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468668"
