@@ -1,0 +1,349 @@
+items:
+- name: ADO.NET
+  href: index.md
+- name: Nouveautés dans ADO.NET
+  href: whats-new.md
+- name: Vue d'ensemble d'ADO.NET
+  href: ado-net-overview.md
+  items:
+  - name: Architecture ADO.NET
+    href: ado-net-architecture.md
+  - name: Options et instructions de technologie ADO.NET
+    href: ado-net-technology-options-and-guidelines.md
+  - name: LINQ et ADO.NET
+    href: linq-and-ado-net.md
+  - name: Fournisseur de données .NET Framework
+    href: data-providers.md
+  - name: Datasets ADO.NET
+    href: ado-net-datasets.md
+  - name: Exécution côte à côte dans ADO.NET
+    href: side-by-side-execution.md
+  - name: Exemples de code ADO.NET
+    href: ado-net-code-examples.md
+- name: Sécurisation des applications ADO.NET
+  href: securing-ado-net-applications.md
+  items:
+  - name: Vue d'ensemble de la sécurité
+    href: security-overview.md
+  - name: Sécuriser l'accès aux données
+    href: secure-data-access.md
+  - name: Applications clientes sécurisées
+    href: secure-client-applications.md
+  - name: Sécurité d'accès du code et ADO.NET
+    href: code-access-security.md
+  - name: Confidentialité et sécurité des données
+    href: privacy-and-data-security.md
+- name: Mappages de types de données dans ADO.NET
+  href: data-type-mappings-in-ado-net.md
+  items:
+  - name: Mappages de types de données SQL Server
+    href: sql-server-data-type-mappings.md
+  - name: Mappages de types de données OLE DB
+    href: ole-db-data-type-mappings.md
+  - name: Mappages de types de données ODBC
+    href: odbc-data-type-mappings.md
+  - name: Mappages des types de données Oracle
+    href: oracle-data-type-mappings.md
+  - name: Nombres à virgule flottante
+    href: floating-point-numbers.md
+- name: Extraction et modification de données dans ADO.NET
+  href: retrieving-and-modifying-data.md
+  items:
+  - name: Connexion à une source de données
+    href: connecting-to-a-data-source.md
+    items:
+    - name: Établissement de la connexion
+      href: establishing-the-connection.md
+    - name: Événements de connexion
+      href: connection-events.md
+  - name: Chaînes de connexion
+    href: connection-strings.md
+    items:
+    - name: Builders de chaînes de connexion
+      href: connection-string-builders.md
+    - name: Chaînes de connexion et fichiers de configuration
+      href: connection-strings-and-configuration-files.md
+    - name: Syntaxe des chaînes de connexion
+      href: connection-string-syntax.md
+    - name: Protection des informations de connexion
+      href: protecting-connection-information.md
+  - name: Regroupement de connexions
+    href: connection-pooling.md
+    items:
+    - name: Regroupement de connexions SQL Server (ADO.NET)
+      href: sql-server-connection-pooling.md
+    - name: Regroupement de connexions OLE DB, ODBC et Oracle Connection
+      href: ole-db-odbc-and-oracle-connection-pooling.md
+  - name: Commandes et paramètres
+    href: commands-and-parameters.md
+    items:
+    - name: Exécution d'une commande
+      href: executing-a-command.md
+    - name: Configuration des paramètres et des types de données des paramètres
+      href: configuring-parameters-and-parameter-data-types.md
+    - name: Génération de commandes avec CommandBuilders
+      href: generating-commands-with-commandbuilders.md
+    - name: Obtention d'une valeur unique à partir d'une base de données
+      href: obtaining-a-single-value-from-a-database.md
+    - name: Utilisation des commandes pour modifier les données
+      href: using-commands-to-modify-data.md
+      items:
+      - name: Mise à jour des données dans une source de données
+        href: updating-data-in-a-data-source.md
+      - name: Exécution d'opérations du catalogue
+        href: performing-catalog-operations.md
+  - name: DataAdapters et DataReaders
+    href: dataadapters-and-datareaders.md
+    items:
+    - name: Récupération de données à l'aide d'un DataReader
+      href: retrieving-data-using-a-datareader.md
+    - name: Remplissage d'un DataSet à partir d'un DataAdapter
+      href: populating-a-dataset-from-a-dataadapter.md
+    - name: Paramètres DataAdapter
+      href: dataadapter-parameters.md
+    - name: Ajout de contraintes existantes à un DataSet
+      href: adding-existing-constraints-to-a-dataset.md
+    - name: Mappages de DataAdapter DataTable et DataColumn
+      href: dataadapter-datatable-and-datacolumn-mappings.md
+    - name: Pagination à travers un résultat de requête
+      href: paging-through-a-query-result.md
+    - name: Mise à jour des sources de données avec les DataAdapter
+      href: updating-data-sources-with-dataadapters.md
+    - name: 'Gestion des événements DataAdapter '
+      href: handling-dataadapter-events.md
+    - name: Exécution d'opérations en lot à l'aide des DataAdapter
+      href: performing-batch-operations-using-dataadapters.md
+  - name: Transactions et accès simultané
+    href: transactions-and-concurrency.md
+    items:
+    - name: Transactions locales
+      href: local-transactions.md
+    - name: Transactions distribuées
+      href: distributed-transactions.md
+    - name: Intégration de System.Transactions à SQL Server
+      href: system-transactions-integration-with-sql-server.md
+    - name: Accès concurrentiel optimiste
+      href: optimistic-concurrency.md
+  - name: Extraction de l'identité ou de valeurs à numérotation automatique
+    href: retrieving-identity-or-autonumber-values.md
+  - name: Extraction de données binaires
+    href: retrieving-binary-data.md
+  - name: Modification des données avec les procédures stockées
+    href: modifying-data-with-stored-procedures.md
+  - name: Extraction des informations de schéma de base de données
+    href: retrieving-database-schema-information.md
+    items:
+    - name: Collections GetSchema et Schema
+      href: getschema-and-schema-collections.md
+    - name: Restrictions de schéma
+      href: schema-restrictions.md
+    - name: Collections de schémas courantes
+      href: common-schema-collections.md
+    - name: Collections de schémas SQL Server
+      href: sql-server-schema-collections.md
+    - name: Collections de schémas Oracle
+      href: oracle-schema-collections.md
+    - name: Collections de schémas ODBC
+      href: odbc-schema-collections.md
+    - name: Collections de schémas OLE DB
+      href: ole-db-schema-collections.md
+  - name: DbProviderFactories
+    href: dbproviderfactories.md
+    items:
+    - name: Vue d'ensemble du modèle Factory
+      href: factory-model-overview.md
+    - name: Obtention d'un DbProviderFactory
+      href: obtaining-a-dbproviderfactory.md
+    - name: DbConnection, DbCommand et DbException
+      href: dbconnection-dbcommand-and-dbexception.md
+    - name: Modification des données avec un DbDataAdapter
+      href: modifying-data-with-a-dbdataadapter.md
+  - name: Traçage de données dans ADO.NET
+    href: data-tracing.md
+  - name: Compteurs de performances
+    href: performance-counters.md
+  - name: Programmation asynchrone
+    href: asynchronous-programming.md
+  - name: Prise en charge de la diffusion en continu pour SqlClient
+    href: sqlclient-streaming-support.md
+  - name: LINQ to DataSet
+    href: linq-to-dataset.md
+    items:
+    - name: Prise en main
+      href: getting-started-linq-to-dataset.md
+      items:
+      - name: Vue d'ensemble de LINQ to DataSet
+        href: linq-to-dataset-overview.md
+      - name: Chargement de données dans un DataSet
+        href: loading-data-into-a-dataset.md
+      - name: Téléchargement d’exemples de base de données
+        href: downloading-sample-databases-linq-to-dataset.md
+      - name: 'Procédure : Créer un projet LINQ to DataSet dans Visual Studio'
+        href: how-to-create-a-linq-to-dataset-project-in-vs.md
+    - name: Guide de programmation
+      href: programming-guide-linq-to-dataset.md
+      items:
+      - name: Requêtes dans LINQ to DataSet
+        href: queries-in-linq-to-dataset.md
+      - name: Interrogation de DataSets
+        href: querying-datasets-linq-to-dataset.md
+        items:
+        - name: Requêtes de table unique
+          href: single-table-queries-linq-to-dataset.md
+        - name: Requêtes de table croisée
+          href: cross-table-queries-linq-to-dataset.md
+        - name: Interrogation de DataSets typés
+          href: querying-typed-datasets.md
+      - name: Comparaison de DataRows
+        href: comparing-datarows-linq-to-dataset.md
+      - name: Création d’un DataTable à partir d’une requête
+        href: creating-a-datatable-from-a-query-linq-to-dataset.md
+      - name: 'Procédure : Implémenter CopyToDataTable<T> quand le type générique T n’est pas un DataRow'
+        href: implement-copytodatatable-where-type-not-a-datarow.md
+      - name: Méthodes génériques Field et SetField
+        href: generic-field-and-setfield-methods-linq-to-dataset.md
+      - name: Liaison de données et LINQ to DataSet
+        href: data-binding-and-linq-to-dataset.md
+        items:
+        - name: Création d’un objet DataView
+          href: creating-a-dataview-object-linq-to-dataset.md
+        - name: Filtrage avec DataView
+          href: filtering-with-dataview-linq-to-dataset.md
+        - name: Tri avec DataView
+          href: sorting-with-dataview-linq-to-dataset.md
+        - name: Interrogation de la collection DataRowView dans un DataView
+          href: querying-the-datarowview-collection-in-a-dataview.md
+        - name: Performances des DataViews
+          href: dataview-performance.md
+        - name: 'Procédure : Lier un objet DataView à un contrôle DataGridView Windows Forms'
+          href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
+      - name: Débogage des requêtes LINQ to DataSet
+        href: debugging-linq-to-dataset-queries.md
+      - name: Sécurité
+        href: security-linq-to-dataset.md
+      - name: Exemples de LINQ to DataSet
+        href: linq-to-dataset-examples.md
+        items:
+        - name: Exemples d’expressions de requête
+          href: query-expression-examples-linq-to-dataset.md
+          items:
+          - name: Projection
+            href: query-expression-syntax-examples-projection-linq-to-dataset.md
+          - name: Restriction
+            href: query-expression-syntax-examples-restriction-linq-to-dataset.md
+          - name: Partitionnement
+            href: query-expression-syntax-examples-partitioning.md
+          - name: Classement
+            href: query-expression-syntax-examples-ordering-linq-to-dataset.md
+          - name: Opérateurs d’élément
+            href: query-expression-syntax-examples-element-operators.md
+          - name: Opérateurs d’agrégation
+            href: query-expression-syntax-examples-aggregate-operators.md
+          - name: Opérateurs de jointure
+            href: query-expression-syntax-examples-join-operators.md
+        - name: Exemples de requêtes fondées sur une méthode
+          href: method-based-query-examples-linq-to-dataset.md
+          items:
+          - name: Projection
+            href: method-based-query-syntax-examples-projection.md
+          - name: Partitionnement
+            href: method-based-query-syntax-examples-partitioning-linq.md
+          - name: Classement
+            href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
+          - name: Opérateurs de jeu
+            href: method-based-query-syntax-examples-set-operators.md
+          - name: Opérateurs de conversion
+            href: method-based-query-syntax-examples-conversion-operators.md
+          - name: Opérateurs d’élément
+            href: method-based-query-syntax-examples-element-operators.md
+          - name: Opérateurs d’agrégation
+            href: method-based-query-syntax-examples-aggregate-operators.md
+          - name: Join
+            href: method-based-query-syntax-examples-join-linq-to-dataset.md
+        - name: Exemples d’opérateurs spécifiques aux DataSets
+          href: dataset-specific-operator-examples-linq-to-dataset.md
+- name: Entity Data Model
+  href: entity-data-model.md
+  items:
+  - name: Concepts clés d'Entity Data Model
+    href: entity-data-model-key-concepts.md
+  - name: 'Entity Data Model : Espaces de noms'
+    href: entity-data-model-namespaces.md
+  - name: 'Entity Data Model : types de données primitifs'
+    href: entity-data-model-primitive-data-types.md
+  - name: 'Entity Data Model : Héritage'
+    href: entity-data-model-inheritance.md
+  - name: terminaison d'association
+    href: association-end.md
+  - name: multiplicité de terminaison d'association
+    href: association-end-multiplicity.md
+  - name: jeu d'associations
+    href: association-set.md
+  - name: terminaison d'ensemble d'associations
+    href: association-set-end.md
+  - name: type d'association
+    href: association-type.md
+  - name: type complexe
+    href: complex-type.md
+  - name: conteneur d'entités
+    href: entity-container.md
+  - name: clé d'entité
+    href: entity-key.md
+  - name: jeu d'entités
+    href: entity-set.md
+  - name: type d'entité
+    href: entity-type.md
+  - name: facet
+    href: facet.md
+  - name: Propriété de clé étrangère
+    href: foreign-key-property.md
+  - name: fonction déclarée par modèle
+    href: model-declared-function.md
+  - name: fonction définie par modèle
+    href: model-defined-function.md
+  - name: propriété de navigation
+    href: navigation-property.md
+  - name: propriété
+    href: property.md
+  - name: contrainte d'intégrité référentielle
+    href: referential-integrity-constraint.md
+- name: Oracle et ADO.NET
+  href: oracle-and-adonet.md
+  items:
+  - name: Configuration système requise
+    href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
+  - name: BFILE Oracle
+    href: oracle-bfiles.md
+  - name: LOB Oracle
+    href: oracle-lobs.md
+  - name: REF CURSOR Oracle
+    href: oracle-ref-cursors.md
+    items:
+    - name: Exemples REF CURSOR
+      href: ref-cursor-examples.md
+    - name: Paramètres REF CURSOR dans un OracleDataReader
+      href: ref-cursor-parameters-in-an-oracledatareader.md
+    - name: Extraction de données à partir de plusieurs REF CURSOR à l'aide d'un OracleDataReader
+      href: retrieving-data-from-multiple-ref-cursors.md
+    - name: Remplissage d'un DataSet à l'aide d'un ou de plusieurs REF CURSOR
+      href: filling-a-dataset-using-one-or-more-ref-cursors.md
+  - name: OracleTypes
+    href: oracletypes.md
+  - name: Séquences Oracle
+    href: oracle-sequences.md
+  - name: Mappages des types de données Oracle
+    href: oracle-data-type-mappings.md
+  - name: Transactions distribuées Oracle
+    href: oracle-distributed-transactions.md
+- name: ADO.NET Entity Framework
+  href: ef/
+- name: SQL Server et ADO.NET
+  href: sql/
+- name: DataSets, DataTables et DataViews
+  href: dataset-datatable-dataview/
+ms.openlocfilehash: 53eb24e8a320ec9d6b3cce0acfde59facc8b1511
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469593"

@@ -1,0 +1,48 @@
+items:
+- name: Kit SDK .NET Compiler Platform (API Roslyn)
+  href: index.md
+  items:
+  - name: Comprendre le modèle de l’API du compilateur
+    href: compiler-api-model.md
+  - name: Utiliser la syntaxe
+    href: work-with-syntax.md
+  - name: Utiliser la sémantique
+    href: work-with-semantics.md
+  - name: Utiliser un espace de travail
+    href: work-with-workspace.md
+  - name: Explorer le code avec le visualiseur de syntaxe
+    href: syntax-visualizer.md
+  - name: Guides de démarrage rapide
+    items:
+    - name: Analyse de la syntaxe
+      href: get-started/syntax-analysis.md
+    - name: Analyse sémantique
+      href: get-started/semantic-analysis.md
+    - name: Transformation de syntaxe
+      href: get-started/syntax-transformation.md
+  - name: Didacticiels
+    items:
+    - name: Créer votre premier analyseur et correcteur de code
+      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
+    - name: Bien démarrer avec l’écriture des analyseurs personnalisés et des correcteurs de code
+  - name: Didacticiels
+    items:
+    - name: Créer votre premier analyseur
+    - name: Créer votre premier correcteur de code
+    - name: Déployer votre analyseur comme une extension VSIX
+    - name: Déployer votre analyseur comme un package NuGet
+- name: Exemples
+  items:
+  - name: Packages asynchrones
+  - name: Classifieur de console
+  - name: Convertir en propriété auto
+  - name: Format de la solution
+  - name: Implémenter la notification en cas de modification des propriétés
+  - name: Convertir en constante
+  - name: Guides de procédure
+ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469137"

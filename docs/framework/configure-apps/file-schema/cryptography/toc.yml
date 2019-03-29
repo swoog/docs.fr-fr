@@ -1,0 +1,26 @@
+items:
+- name: Schéma des paramètres de chiffrement
+  href: index.md
+  items:
+  - name: Élément <cryptoClasses>
+    href: cryptoclasses-element.md
+  - name: Élément <cryptoClass>
+    href: cryptoclass-element.md
+  - name: Élément <cryptographySettings>
+    href: cryptographysettings-element.md
+  - name: Élément <cryptoNameMapping>
+    href: cryptonamemapping-element.md
+  - name: Élément <mscorlib> pour les paramètres de chiffrement
+    href: mscorlib-element-for-cryptography-settings.md
+  - name: Élément <nameEntry>
+    href: nameentry-element.md
+  - name: Élément <oidEntry>
+    href: oidentry-element.md
+  - name: Élément <oidMap>
+    href: oidmap-element.md
+ms.openlocfilehash: 71237984ce59000cbef102480f7610f5a7b1bc43
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469545"

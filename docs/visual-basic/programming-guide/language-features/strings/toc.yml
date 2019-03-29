@@ -1,0 +1,57 @@
+items:
+- name: Chaînes en Visual Basic
+  href: index.md
+  items:
+  - name: Présentation des chaînes
+    href: introduction-to-strings.md
+    items:
+    - name: Concepts de base des chaînes
+      href: string-basics.md
+    - name: Types de méthodes de manipulation de chaînes
+      href: types-of-string-manipulation-methods.md
+    - name: Nothing et chaînes
+      href: nothing-and-strings.md
+    - name: Comment les informations de culture affectent les chaînes
+      href: how-culture-affects-strings.md
+    - name: Chaînes interpolées
+      href: interpolated-strings.md
+    - name: Accès à une chaîne de base zéro et accès à une chaîne de base un
+      href: zero-based-vs-one-based-string-access.md
+  - name: 'Procédure : créer des chaînes à l’aide de StringBuilder'
+    href: how-to-create-strings-using-a-stringbuilder.md
+  - name: 'Procédure : rechercher dans une chaîne'
+    href: how-to-search-within-a-string.md
+  - name: Conversion entre des chaînes et d’autres types de données
+    href: converting-between-strings-and-other-data-types.md
+    items:
+    - name: 'Procédure : convertir un tableau d’octets en chaîne'
+      href: how-to-convert-an-array-of-bytes-into-a-string.md
+    - name: 'Procédure : convertir des chaînes en tableau d’octets'
+      href: how-to-convert-strings-into-an-array-of-bytes.md
+    - name: 'Procédure : créer une chaîne à partir d’un tableau de valeurs de caractères'
+      href: how-to-create-a-string-from-an-array-of-char-values.md
+    - name: 'Procédure : convertir des chaînes hexadécimales en nombres'
+      href: how-to-convert-hexadecimal-strings-to-numbers.md
+    - name: 'Procédure : convertir une chaîne en tableau de caractères'
+      href: how-to-convert-a-string-to-an-array-of-characters.md
+    - name: 'Procédure : accès aux caractères dans les chaînes'
+      href: how-to-access-characters-in-strings.md
+  - name: Validation de chaînes
+    href: validating-strings.md
+    items:
+    - name: 'Procédure : valider des noms de fichiers et de chemins'
+      href: how-to-validate-file-names-and-paths.md
+    - name: 'Procédure : valider des chaînes qui représentent des dates ou heures'
+      href: how-to-validate-strings-that-represent-dates-or-times.md
+    - name: Utilisation d’expressions régulières avec le contrôle MaskedTextBox
+      href: using-regular-expressions-with-the-maskedtextbox-control.md
+    - name: 'Procédure pas à pas : Validation de mots de passe complexes'
+      href: walkthrough-validating-that-passwords-are-complex.md
+  - name: 'Procédure pas à pas : Chiffrement et déchiffrement de chaînes'
+    href: walkthrough-encrypting-and-decrypting-strings.md
+ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469311"

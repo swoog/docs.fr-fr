@@ -1,0 +1,58 @@
+items:
+- name: Informations de référence sur les exceptions
+  href: index.md
+  items:
+  - name: Intégration COM+
+    href: com-integration.md
+  - name: Configuration
+    href: configuration.md
+  - name: 'Communications principales : Framework de canal'
+    href: core-communications-channel-framework.md
+  - name: 'Communications principales : Framework de connexion'
+    href: core-communications-connection-framework.md
+  - name: 'Communications principales : Canaux de transport HTTP/HTTPS'
+    href: core-communications-http-https-transport-channels.md
+  - name: 'Communications principales : Canaux de transport duplex internes'
+    href: core-communications-internal-duplex-transport-channels.md
+  - name: 'Communications principales : Canaux de transport de canal nommé'
+    href: core-communications-named-pipe-transport-channels.md
+  - name: 'Communications principales : Canaux de transport TCP'
+    href: core-communications-tcp-transport-channels.md
+  - name: 'Communications principales : Framework de transport'
+    href: core-communications-transport-framework.md
+  - name: 'Communications principales : Utilitaires'
+    href: core-communications-utilities.md
+  - name: 'Communications principales : Prise en charge de Webhost'
+    href: core-communications-webhost-support.md
+  - name: Hébergement
+    href: hosting-exceptions.md
+  - name: IdentityModel
+    href: identitymodel-exceptions.md
+  - name: Transport d'intégration MSMQ
+    href: msmq-integration-transport.md
+  - name: Transport MSMQ
+    href: msmq-transport.md
+  - name: Canal homologue
+    href: peer-channel.md
+  - name: Messagerie fiable
+    href: reliable-messaging.md
+  - name: Exceptions de sécurité
+    href: security-exceptions.md
+  - name: Infrastructure de service
+    href: service-framework.md
+  - name: Données d'infrastructure de service
+    href: service-framework-data.md
+  - name: Métadonnées de l'infrastructure de service
+    href: service-framework-metadata.md
+  - name: Transaction
+    href: transaction-exceptions.md
+  - name: Module de formatage de transactions
+    href: transaction-formatter.md
+  - name: Outils
+    href: tools.md
+ms.openlocfilehash: e3ba9b5630ceaa9e4124fb4577759cfddb536951
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468776"

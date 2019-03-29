@@ -1,0 +1,51 @@
+items:
+- name: Variables en Visual Basic
+  href: index.md
+  items:
+  - name: Déclaration de variable
+    href: variable-declaration.md
+    items:
+    - name: 'Procédure : créer une variable'
+      href: how-to-create-a-new-variable.md
+    - name: 'Procédure : créer une variable qui ne change pas de valeur'
+      href: how-to-create-a-variable-that-does-not-change-in-value.md
+    - name: 'Procédure : déplacer des données dans un variable et en dehors'
+      href: how-to-move-data-into-and-out-of-a-variable.md
+  - name: Variables objets
+    href: object-variables.md
+    items:
+    - name: 'Procédure : accélérer l’accès à un objet avec un chemin de qualification long'
+      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+  - name: Déclaration des variables objets
+    href: object-variable-declaration.md
+    items:
+    - name: 'Procédure : accéder aux membres d’un objet'
+      href: how-to-access-members-of-an-object.md
+    - name: Affectation des variables objets
+      href: object-variable-assignment.md
+      items:
+      - name: 'Procédure : déclarer une variable objet et lui affecter un objet'
+        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+      - name: 'Procédure : définir une variable objet pour qu’elle ne fasse référence à aucune instance'
+        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+    - name: Valeurs des variables objets
+      href: object-variable-values.md
+      items:
+      - name: 'Procédure : faire référence à l’instance actuelle d’un objet'
+        href: how-to-refer-to-the-current-instance-of-an-object.md
+      - name: 'Procédure : déterminer le type auquel fait référence une variable objet'
+        href: how-to-determine-what-type-an-object-variable-refers-to.md
+      - name: 'Procédure : déterminer si deux objets sont liés'
+        href: how-to-determine-whether-two-objects-are-related.md
+      - name: 'Procédure : déterminer si deux objets sont identiques'
+        href: how-to-determine-whether-two-objects-are-identical.md
+  - name: Inférence de type local
+    href: local-type-inference.md
+  - name: Résolution des problèmes de variables
+    href: troubleshooting-variables.md
+ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469323"

@@ -1,0 +1,153 @@
+items:
+- name: Extension de WCF
+  href: index.md
+  items:
+  - name: Extension de ServiceHost et de la couche de modèle de service
+    href: extending-servicehost-and-the-service-model-layer.md
+    items:
+    - name: Extension de clients
+      href: extending-clients.md
+      items:
+      - name: 'Procédure : inspecter ou modifier des messages sur le client'
+        href: how-to-inspect-or-modify-messages-on-the-client.md
+      - name: 'Procédure : inspecter ou modifier des paramètres'
+        href: how-to-inspect-or-modify-parameters.md
+    - name: Extension des répartiteurs
+      href: extending-dispatchers.md
+      items:
+      - name: 'Procédure : inspecter et modifier des messages sur le service'
+        href: how-to-inspect-and-modify-messages-on-the-service.md
+      - name: 'Procédure : verrouiller des points de terminaison dans l’entreprise'
+        href: how-to-lock-down-endpoints-in-the-enterprise.md
+    - name: Objets extensibles
+      href: extensible-objects.md
+    - name: Configuration et extension de l'exécution à l'aide de comportements
+      href: configuring-and-extending-the-runtime-with-behaviors.md
+    - name: Extension de l'hébergement à l'aide de ServiceHostFactory
+      href: extending-hosting-using-servicehostfactory.md
+  - name: Extension de liaisons
+    href: extending-bindings.md
+    items:
+    - name: Liaisons et éléments de liaison
+      href: bindings-and-binding-elements.md
+    - name: Liaisons personnalisées
+      href: custom-bindings.md
+      items:
+      - name: 'Procédure : personnaliser une liaison fournie par le système'
+        href: how-to-customize-a-system-provided-binding.md
+    - name: Création de liaisons définies par l’utilisateur
+      href: creating-user-defined-bindings.md
+  - name: Extension de la couche du canal
+    href: extending-the-channel-layer.md
+    items:
+    - name: Vue d'ensemble du modèle de canal
+      href: channel-model-overview.md
+      items:
+      - name: Programmation au niveau du canal client
+        href: client-channel-level-programming.md
+      - name: Programmation de service au niveau du canal
+        href: service-channel-level-programming.md
+      - name: Fonctionnement des modifications d'état
+        href: understanding-state-changes.md
+      - name: Sélection d’un modèle d’échange de messages
+        href: choosing-a-message-exchange-pattern.md
+      - name: Gestion des exceptions et des erreurs
+        href: handling-exceptions-and-faults.md
+    - name: Développement de canaux
+      href: developing-channels.md
+      items:
+      - name: 'Service : Écouteurs de canal et canaux'
+        href: service-channel-listeners-and-channels.md
+      - name: 'Client : Fabrications de canaux et canaux'
+        href: client-channel-factories-and-channels.md
+      - name: Création d’un élément de liaison
+        href: creating-a-bindingelement.md
+      - name: Prise en charge de la configuration et des métadonnées
+        href: configuration-and-metadata-support.md
+    - name: Encodeurs personnalisés
+      href: custom-encoders.md
+    - name: Mises à niveau de flux personnalisées
+      href: custom-stream-upgrades.md
+  - name: Extension de la sécurité
+    href: extending-security.md
+    items:
+    - name: Spécification d'un algorithme de chiffrement personnalisé
+      href: specifying-a-custom-crypto-algorithm.md
+    - name: Informations d’identification personnalisées et validation d’informations d’identification
+      href: custom-credential-and-credential-validation.md
+      items:
+      - name: 'Procédure pas à pas : création d’informations d’identification de client et de service personnalisées'
+        href: walkthrough-creating-custom-client-and-service-credentials.md
+      - name: 'Procédure : créer un service qui utilise un validateur de certificat personnalisé'
+        href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
+      - name: 'Procédure : créer un fournisseur de jetons de sécurité personnalisé'
+        href: how-to-create-a-custom-security-token-provider.md
+      - name: 'Procédure : créer un authentificateur de jetons de sécurité personnalisé'
+        href: how-to-create-a-custom-security-token-authenticator.md
+    - name: Jetons personnalisés
+      href: custom-tokens.md
+      items:
+      - name: 'Procédure : créer un jeton personnalisé'
+        href: how-to-create-a-custom-token.md
+    - name: Autorisation personnalisée
+      href: custom-authorization.md
+      items:
+      - name: 'Procédure : créer une stratégie d’autorisation personnalisée'
+        href: how-to-create-a-custom-authorization-policy.md
+      - name: 'Procédure : créer un gestionnaire d’autorisations personnalisé pour un service'
+        href: how-to-create-a-custom-authorization-manager-for-a-service.md
+      - name: 'Procédure : créer une revendication personnalisée'
+        href: how-to-create-a-custom-claim.md
+      - name: 'Procédure : comparer des revendications'
+        href: how-to-compare-claims.md
+      - name: 'Procédure : créer une identité de principal de sécurité personnalisée'
+        href: how-to-create-a-custom-principal-identity.md
+    - name: Substitution de l'identité d'un service pour l'authentification
+      href: overriding-the-identity-of-a-service-for-authentication.md
+    - name: 'Procédure : créer un vérificateur d’identité du client personnalisé'
+      href: how-to-create-a-custom-client-identity-verifier.md
+    - name: 'Procédure : utiliser des certificats X.509 distincts pour les signatures et le chiffrement'
+      href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
+    - name: 'Procédure : remplacer le fournisseur de services de chiffrement par la clé privée d’un certificat X.509'
+      href: change-cryptographic-provider-x509-certificate-private-key.md
+  - name: Extension du système de métadonnées
+    href: extending-the-metadata-system.md
+    items:
+    - name: Exportation de métadonnées personnalisées pour une extension WCF
+      href: exporting-custom-metadata-for-a-wcf-extension.md
+      items:
+      - name: 'Procédure : exporter un WSDL personnalisé'
+        href: how-to-export-custom-wsdl.md
+      - name: 'Procédure : exporter des assertions de stratégie personnalisées'
+        href: how-to-export-custom-policy-assertions.md
+    - name: Importation de métadonnées personnalisées pour une extension WCF
+      href: importing-custom-metadata-for-a-wcf-extension.md
+      items:
+      - name: 'Procédure : importer un WSDL personnalisé'
+        href: how-to-import-custom-wsdl.md
+      - name: 'Procédure : importer des assertions de stratégie personnalisées'
+        href: how-to-import-custom-policy-assertions.md
+      - name: 'Procédure : écrire une extension pour le ServiceContractGenerator'
+        href: how-to-write-an-extension-for-the-servicecontractgenerator.md
+    - name: Publication et récupération de métadonnées sur une liaison personnalisée
+      href: publishing-and-retrieving-metadata-over-a-custom-binding.md
+      items:
+      - name: Liaisons WS-MetadataExchange
+        href: ws-metadataexchange-bindings.md
+      - name: 'Procédure : configurer une liaison WS-Metadata Exchange personnalisée'
+        href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
+      - name: 'Procédure : récupérer des métadonnées sur une liaison non-MEX'
+        href: how-to-retrieve-metadata-over-a-non-mex-binding.md
+  - name: Extension des encodeurs et des sérialiseurs
+    href: extending-encoders-and-serializers.md
+    items:
+    - name: Substituts de contrats de données
+      href: data-contract-surrogates.md
+    - name: Formateurs de messages personnalisés
+      href: custom-message-formatters.md
+ms.openlocfilehash: 0d1efdeca48a3bf64f26a69635707398737420fd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469257"

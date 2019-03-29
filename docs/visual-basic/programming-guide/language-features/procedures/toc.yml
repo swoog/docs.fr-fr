@@ -1,0 +1,121 @@
+items:
+- name: Procédures dans Visual Basic
+  href: index.md
+  items:
+  - name: 'Procédure : créer une procédure'
+    href: how-to-create-a-procedure.md
+  - name: Procédures Sub
+    href: sub-procedures.md
+    items:
+    - name: 'Procédure : appeler une procédure qui ne retourne pas de valeur'
+      href: how-to-call-a-procedure-that-does-not-return-a-value.md
+    - name: 'Procédure : appeler un gestionnaire d’événements'
+      href: how-to-call-an-event-handler.md
+  - name: Procédures Function
+    href: function-procedures.md
+    items:
+    - name: 'Procédure : créer une procédure qui retourne une valeur'
+      href: how-to-create-a-procedure-that-returns-a-value.md
+    - name: 'Procédure : retourner une valeur à partir d’une procédure'
+      href: how-to-return-a-value-from-a-procedure.md
+    - name: 'Procédure : appeler une procédure qui retourne une valeur'
+      href: how-to-call-a-procedure-that-returns-a-value.md
+  - name: Procédures Property
+    href: property-procedures.md
+    items:
+    - name: Propriétés implémentées automatiquement
+      href: auto-implemented-properties.md
+    - name: Différences entre les propriétés et les variables
+      href: differences-between-properties-and-variables.md
+    - name: 'Procédure : créer une propriété'
+      href: how-to-create-a-property.md
+    - name: 'Procédure : déclarer une propriété avec des niveaux d’accès mixtes'
+      href: how-to-declare-a-property-with-mixed-access-levels.md
+    - name: 'Procédure : appeler une procédure Property'
+      href: how-to-call-a-property-procedure.md
+    - name: 'Procédure : déclarer et appeler une propriété par défaut'
+      href: how-to-declare-and-call-a-default-property.md
+    - name: 'Procédure : placer une valeur dans une propriété'
+      href: how-to-put-a-value-in-a-property.md
+    - name: 'Procédure : obtenir une valeur à partir d’une propriété'
+      href: how-to-get-a-value-from-a-property.md
+  - name: Procédures d'opérateur
+    href: operator-procedures.md
+    items:
+    - name: 'Procédure : définir un opérateur'
+      href: how-to-define-an-operator.md
+    - name: 'Procédure : définir un opérateur de conversion'
+      href: how-to-define-a-conversion-operator.md
+    - name: 'Procédure : appeler une procédure d’opérateur'
+      href: how-to-call-an-operator-procedure.md
+    - name: 'Procédure : utiliser une classe qui définit des opérateurs'
+      href: how-to-use-a-class-that-defines-operators.md
+  - name: Paramètres et arguments d’une procédure
+    href: procedure-parameters-and-arguments.md
+    items:
+    - name: Différences entre les paramètres et les arguments
+      href: differences-between-parameters-and-arguments.md
+    - name: 'Procédure : définir un paramètre pour une procédure'
+      href: how-to-define-a-parameter-for-a-procedure.md
+    - name: 'Procédure : passer des arguments à une procédure'
+      href: how-to-pass-arguments-to-a-procedure.md
+    - name: Passage des arguments par valeur et par référence
+      href: passing-arguments-by-value-and-by-reference.md
+      items:
+      - name: Différences entre les arguments modifiables et non modifiables
+        href: differences-between-modifiable-and-nonmodifiable-arguments.md
+      - name: Différences entre le passage d’un argument par valeur et par référence
+        href: differences-between-passing-an-argument-by-value-and-by-reference.md
+      - name: 'Procédure : modifier la valeur d’un argument de procédure'
+        href: how-to-change-the-value-of-a-procedure-argument.md
+      - name: 'Procédure : protéger un argument de procédure contre les modifications de valeur'
+        href: how-to-protect-a-procedure-argument-against-value-changes.md
+      - name: 'Procédure : forcer le passage par valeur d’un argument'
+        href: how-to-force-an-argument-to-be-passed-by-value.md
+    - name: Passage des arguments par position et par nom
+      href: passing-arguments-by-position-and-by-name.md
+    - name: Paramètres facultatifs
+      href: optional-parameters.md
+    - name: Tableaux de paramètres
+      href: parameter-arrays.md
+  - name: Valeurs de retour de référence
+    href: ref-return-values.md
+  - name: Procédures récursives
+    href: recursive-procedures.md
+  - name: Surcharge de procédure
+    href: procedure-overloading.md
+    items:
+    - name: 'Procédure : définir plusieurs versions d’une procédure'
+      href: how-to-define-multiple-versions-of-a-procedure.md
+    - name: 'Procédure : appeler une procédure surchargée'
+      href: how-to-call-an-overloaded-procedure.md
+    - name: 'Procédure : surcharger une procédure qui accepte des paramètres facultatifs'
+      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+    - name: 'Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres'
+      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+    - name: Considérations liées à la surcharge des procédures
+      href: considerations-in-overloading-procedures.md
+    - name: Résolution de surcharge
+      href: overload-resolution.md
+  - name: Procédures de dépannage
+    href: troubleshooting-procedures.md
+  - name: Méthodes d’extension
+    href: extension-methods.md
+    items:
+    - name: 'Procédure : écrire une méthode d’extension'
+      href: how-to-write-an-extension-method.md
+    - name: 'Procédure : appeler une méthode d’extension'
+      href: how-to-call-an-extension-method.md
+  - name: Expressions lambda
+    href: lambda-expressions.md
+    items:
+    - name: 'Procédure : créer une expression lambda'
+      href: how-to-create-a-lambda-expression.md
+  - name: Méthodes partielles
+    href: partial-methods.md
+ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468867"

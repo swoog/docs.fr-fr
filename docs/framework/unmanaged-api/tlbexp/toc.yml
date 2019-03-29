@@ -1,0 +1,19 @@
+items:
+- name: Fonctions d’assistance Tlbexp
+  href: index.md
+  items:
+  - name: Fonction GetTypeLibInfo
+    href: gettypelibinfo-function.md
+  - name: LoadTypeLibWithResolver, fonction
+    href: loadtypelibwithresolver-function.md
+  - name: ITypeLibResolver, interface
+    href: itypelibresolver-interface.md
+    items:
+    - name: ResolveTypeLib, méthode
+      href: resolvetypelib-method.md
+ms.openlocfilehash: 0e93432ddbf8f67674a555cac4be9d07c268d9b7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468897"
