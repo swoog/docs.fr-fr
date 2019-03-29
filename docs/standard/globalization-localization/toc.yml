@@ -1,0 +1,32 @@
+items:
+- name: Globalisation et localisation
+  href: index.md
+  items:
+  - name: Globalisation
+    href: globalization.md
+  - name: Révision de l’adaptabilité
+    href: localizability-review.md
+  - name: Localisation
+    href: localization.md
+  - name: Opérations de chaînes indépendantes de la culture
+    href: culture-insensitive-string-operations.md
+    items:
+    - name: Effectuer des opérations de chaînes indépendantes de la culture
+      href: performing-culture-insensitive-string-operations.md
+      items:
+      - name: Comparaisons de chaînes
+        href: performing-culture-insensitive-string-comparisons.md
+      - name: Changements de casse
+        href: performing-culture-insensitive-case-changes.md
+      - name: Opérations de chaînes dans les collections
+        href: performing-culture-insensitive-string-operations-in-collections.md
+      - name: Opérations de chaînes dans les tableaux
+        href: performing-culture-insensitive-string-operations-in-arrays.md
+  - name: Bonnes pratiques de développement d’applications mondialisables
+    href: best-practices-for-developing-world-ready-apps.md
+ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469214"

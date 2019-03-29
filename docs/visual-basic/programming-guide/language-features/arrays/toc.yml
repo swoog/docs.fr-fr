@@ -1,0 +1,20 @@
+items:
+- name: Tableaux dans Visual Basic
+  href: index.md
+  items:
+  - name: Dimensions du tableau
+    href: array-dimensions.md
+  - name: 'Procédure : initialiser une variable de tableau'
+    href: how-to-initialize-an-array-variable.md
+  - name: 'Procédure : trier un tableau'
+    href: how-to-sort-an-array.md
+  - name: 'Procédure : attribuer un tableau à un autre tableau'
+    href: how-to-assign-one-array-to-another-array.md
+  - name: Résolution des problèmes de tableaux
+    href: troubleshooting-arrays.md
+ms.openlocfilehash: cec0bed9cd5de72b0b48d6e8392715bb792e0836
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468711"

@@ -1,0 +1,79 @@
+items:
+- name: Sécurité
+  href: index.md
+  items:
+  - name: Concepts fondamentaux sur la sécurité
+    href: key-security-concepts.md
+  - name: Sécurité basée sur les rôles
+    href: role-based-security.md
+    items:
+    - name: Objets Principal et Identity
+      href: principal-and-identity-objects.md
+    - name: 'Procédure : créer un objet WindowsPrincipal'
+      href: how-to-create-a-windowsprincipal-object.md
+    - name: 'Procédure : créer des objets GenericPrincipal et GenericIdentity'
+      href: how-to-create-genericprincipal-and-genericidentity-objects.md
+    - name: Remplacement d'un objet Principal
+      href: replacing-a-principal-object.md
+    - name: Emprunt et restauration d'identité
+      href: impersonating-and-reverting.md
+  - name: Modèle de chiffrement
+    href: cryptography-model.md
+    items:
+    - name: services de chiffrement
+      href: cryptographic-services.md
+    - name: Génération de clés pour le chiffrement et le déchiffrement
+      href: generating-keys-for-encryption-and-decryption.md
+    - name: 'Procédure : stocker des clés asymétriques dans un conteneur de clé'
+      href: how-to-store-asymmetric-keys-in-a-key-container.md
+    - name: Chiffrement de données
+      href: encrypting-data.md
+    - name: Déchiffrement de données
+      href: decrypting-data.md
+    - name: Signatures de chiffrement
+      href: cryptographic-signatures.md
+    - name: Garantie de l'intégrité des données à l'aide des codes de hachage
+      href: ensuring-data-integrity-with-hash-codes.md
+    - name: Création d'un modèle de chiffrement
+      href: creating-a-cryptographic-scheme.md
+    - name: 'Procédure : chiffrer des éléments XML avec des clés symétriques'
+      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Procédure : déchiffrer des éléments XML avec des clés symétriques'
+      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Procédure : chiffrer des éléments XML avec des clés asymétriques'
+      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Procédure : déchiffrer des éléments XML avec des clés asymétriques'
+      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Procédure : chiffrer des éléments XML avec des certificats X.509'
+      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Procédure : déchiffrer des éléments XML avec des certificats X.509'
+      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Procédure : signer des documents XML avec des signatures numériques'
+      href: how-to-sign-xml-documents-with-digital-signatures.md
+    - name: 'Procédure : vérifier les signatures numériques de documents XML'
+      href: how-to-verify-the-digital-signatures-of-xml-documents.md
+    - name: 'Procédure : utiliser la protection des données'
+      href: how-to-use-data-protection.md
+    - name: 'Procédure : accéder aux appareils de chiffrement matériel'
+      href: how-to-access-hardware-encryption-devices.md
+    - name: 'Procédure pas à pas : création d’une application de chiffrement'
+      href: walkthrough-creating-a-cryptographic-application.md
+  - name: Instructions de codage sécurisé
+    href: secure-coding-guidelines.md
+    items:
+    - name: Sécurisation des données d'état
+      href: securing-state-data.md
+    - name: Sécurité et entrées d'utilisateur
+      href: security-and-user-input.md
+    - name: Sécurité et conditions de concurrence
+      href: security-and-race-conditions.md
+    - name: Sécurité et génération de code immédiate
+      href: security-and-on-the-fly-code-generation.md
+    - name: Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
+      href: vulnerabilities-cbc-mode.md
+ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469335"

@@ -1,0 +1,24 @@
+items:
+- name: Flux de contrôle
+  href: index.md
+  items:
+  - name: Structures de décision
+    href: decision-structures.md
+  - name: Structures de boucle
+    href: loop-structures.md
+    items:
+    - name: 'Procédure pas à pas : implémentation de IEnumerable(Of T)'
+      href: walkthrough-implementing-ienumerable-of-t.md
+  - name: Autres structures de contrôle
+    href: other-control-structures.md
+    items:
+    - name: 'Procédure : supprimer une ressource système'
+      href: how-to-dispose-of-a-system-resource.md
+  - name: Structures de contrôle imbriquées
+    href: nested-control-structures.md
+ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469184"

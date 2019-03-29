@@ -1,0 +1,41 @@
+items:
+- name: Applications de service Windows
+  href: index.md
+  items:
+  - name: Introduction aux applications de service Windows
+    href: introduction-to-windows-service-applications.md
+  - name: 'Procédure pas à pas : créer une application de service Windows'
+    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - name: Architecture de programmation d'une application de service
+    href: service-application-programming-architecture.md
+  - name: 'Procédure : créer des services Windows'
+    href: how-to-create-windows-services.md
+    items:
+    - name: 'Procédure : écrire les services par programmation'
+      href: how-to-write-services-programmatically.md
+    - name: 'Procédure : ajouter des programmes d’installation à votre application de service'
+      href: how-to-add-installers-to-your-service-application.md
+    - name: 'Procédure : spécifier le contexte de sécurité des services'
+      href: how-to-specify-the-security-context-for-services.md
+    - name: 'Procédure : Installer et désinstaller des services'
+      href: how-to-install-and-uninstall-services.md
+    - name: 'Procédure : démarrer des services'
+      href: how-to-start-services.md
+    - name: 'Procédure : interrompre un service Windows (Visual Basic)'
+      href: how-to-pause-a-windows-service-visual-basic.md
+    - name: 'Procédure : poursuivre un service Windows (Visual Basic)'
+      href: how-to-continue-a-windows-service-visual-basic.md
+    - name: 'Procédure : déboguer les applications de service Windows'
+      href: how-to-debug-windows-service-applications.md
+    - name: 'Procédure : enregistrer des informations relatives aux services'
+      href: how-to-log-information-about-services.md
+    - name: 'Résolution des problèmes : débogage des services Windows'
+      href: troubleshooting-debugging-windows-services.md
+    - name: 'Résolution des problèmes : impossibilité d’installer une application de service'
+      href: troubleshooting-service-application-wont-install.md
+ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468866"

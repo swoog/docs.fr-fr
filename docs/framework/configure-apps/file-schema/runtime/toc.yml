@@ -1,0 +1,118 @@
+items:
+- name: Schéma des paramètres d'exécution
+  href: index.md
+  items:
+  - name: Élément <runtime>
+    href: runtime-element.md
+    items:
+    - name: Élément <alwaysFlowImpersonationPolicy>
+      href: alwaysflowimpersonationpolicy-element.md
+    - name: Élément <AppContextSwitchOverrides>
+      href: appcontextswitchoverrides-element.md
+    - name: Élément <appDomainManagerAssembly>
+      href: appdomainmanagerassembly-element.md
+    - name: Élément <appDomainManagerType>
+      href: appdomainmanagertype-element.md
+    - name: Élément <appDomainResourceMonitoring>
+      href: appdomainresourcemonitoring-element.md
+    - name: Élément <assemblyBinding>
+      href: assemblybinding-element-for-runtime.md
+      items:
+      - name: Élément <dependentAssembly>
+        href: dependentassembly-element.md
+        items:
+        - name: Élément <assemblyIdentity>
+          href: assemblyidentity-element-for-runtime.md
+        - name: Élément <bindingRedirect>
+          href: bindingredirect-element.md
+        - name: Élément <codeBase>
+          href: codebase-element.md
+      - name: Élément <probing>
+        href: probing-element.md
+      - name: Élément <publisherPolicy>
+        href: publisherpolicy-element.md
+      - name: Élément <qualifyAssembly>
+        href: qualifyassembly-element.md
+    - name: Élément <bypassTrustedAppStrongNames>
+      href: bypasstrustedappstrongnames-element.md
+    - name: Élément <CompatSortNLSVersion>
+      href: compatsortnlsversion-element.md
+    - name: Élément <developmentMode>
+      href: developmentmode-element.md
+    - name: Élément <disableCachingBindingFailures>
+      href: disablecachingbindingfailures-element.md
+    - name: Élément <disableCommitThreadStack>
+      href: disablecommitthreadstack-element.md
+    - name: Élément <disableFusionUpdatesFromADManager>
+      href: disablefusionupdatesfromadmanager-element.md
+    - name: Élément <EnableAmPmParseAdjustment>
+      href: enableampmparseadjustment-element.md
+    - name: Élément <enforceFIPSPolicy>
+      href: enforcefipspolicy-element.md
+    - name: Élément <etwEnable>
+      href: etwenable-element.md
+    - name: Élément <forcePerformanceCounterUniqueSharedMemoryReads>
+      href: forceperformancecounteruniquesharedmemoryreads-element.md
+    - name: Élément <gcAllowVeryLargeObjects>
+      href: gcallowverylargeobjects-element.md
+    - name: Élément <gcConcurrent>
+      href: gcconcurrent-element.md
+    - name: Élément <GCCpuGroup>
+      href: gccpugroup-element.md
+    - name: Élément <gcServer>
+      href: gcserver-element.md
+    - name: Élément <generatePublisherEvidence>
+      href: generatepublisherevidence-element.md
+    - name: Élément <legacyCorruptedStateExceptionsPolicy>
+      href: legacycorruptedstateexceptionspolicy-element.md
+    - name: Élément <legacyImpersonationPolicy>
+      href: legacyimpersonationpolicy-element.md
+    - name: <loadFromRemoteSources>
+      href: loadfromremotesources-element.md
+    - name: <NetFx40_LegacySecurityPolicy>, élément
+      href: netfx40-legacysecuritypolicy-element.md
+    - name: <NetFx40_PInvokeStackResilience>, élément
+      href: netfx40-pinvokestackresilience-element.md
+    - name: <NetFx45_CultureAwareComparerGetHashCode_LongStrings>, élément
+      href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+    - name: Élément <PreferComInsteadOfManagedRemoting>
+      href: prefercominsteadofmanagedremoting-element.md
+    - name: Élément <relativeBindForResources>
+      href: relativebindforresources-element.md
+    - name: Élément <shadowCopyVerifyByTimestamp>
+      href: shadowcopyverifybytimestamp-element.md
+    - name: Élément <supportPortability>
+      href: supportportability-element.md
+    - name: <system.runtime.caching>, élément (paramètres de cache)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+      - name: <memoryCache>, élément (paramètres de cache)
+        href: memorycache-element-cache-settings.md
+        items:
+        - name: <namedCaches>, élément (paramètres de cache)
+          href: namedcaches-element-cache-settings.md
+          items:
+          - name: <add>, élément de <namedCaches>
+            href: add-element-for-namedcaches.md
+          - name: <clear>, élément de <namedCaches>
+            href: clear-element-for-namedcaches.md
+          - name: <remove>, élément de <namedCaches>
+            href: remove-element-for-namedcaches.md
+    - name: <Thread_UseAllCpuGroups>, élément
+      href: thread-useallcpugroups-element.md
+    - name: Élément <ThrowUnobservedTaskExceptions>
+      href: throwunobservedtaskexceptions-element.md
+    - name: <TimeSpan_LegacyFormatMode>, élément
+      href: timespan-legacyformatmode-element.md
+    - name: Élément <useLegacyJit>
+      href: uselegacyjit-element.md
+    - name: Élément <UseRandomizedStringHashAlgorithm>
+      href: userandomizedstringhashalgorithm-element.md
+    - name: Élément <UseSmallInternalThreadStacks>
+      href: usesmallinternalthreadstacks-element.md
+ms.openlocfilehash: eb118bcc739543a13b512d481cbaa04883095582
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469239"

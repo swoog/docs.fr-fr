@@ -1,0 +1,30 @@
+items:
+- name: LINQ en Visual Basic
+  href: index.md
+  items:
+  - name: Introduction à LINQ
+    href: introduction-to-linq.md
+  - name: 'Procédure : interroger une base de données à l’aide de LINQ'
+    href: how-to-query-a-database-by-using-linq.md
+  - name: 'Procédure : appeler une procédure stockée à l’aide de LINQ'
+    href: how-to-call-a-stored-procedure-by-using-linq.md
+  - name: 'Procédure : modifier des données dans une base de données à l’aide de LINQ'
+    href: how-to-modify-data-in-a-database-by-using-linq.md
+  - name: 'Procédure : combiner des données avec LINQ à l’aide de jointures'
+    href: how-to-combine-data-with-linq-by-using-joins.md
+  - name: 'Procédure : trier les résultats de la requête à l’aide de LINQ'
+    href: how-to-sort-query-results-by-using-linq.md
+  - name: 'Procédure : filtrer les résultats de la requête à l’aide de LINQ'
+    href: how-to-filter-query-results-by-using-linq.md
+  - name: 'Procédure : calculer le nombre, la somme ou la moyenne des données à l’aide de LINQ'
+    href: how-to-count-sum-or-average-data-by-using-linq.md
+  - name: 'Procédure : rechercher la valeur minimale ou maximale dans un résultat de requête à l’aide de LINQ'
+    href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
+  - name: 'Procédure : retourner un résultat de requête LINQ en tant que type spécifique'
+    href: how-to-return-a-linq-query-result-as-a-specific-type.md
+ms.openlocfilehash: 0d56e6e5c147b71bbd4aa35bab93751b15e63a8d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469592"

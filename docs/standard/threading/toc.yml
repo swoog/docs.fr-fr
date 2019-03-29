@@ -1,0 +1,87 @@
+items:
+- name: Thread
+  href: index.md
+  items:
+  - name: Éléments fondamentaux du threading managé
+    href: managed-threading-basics.md
+    items:
+    - name: Threads et threading
+      href: threads-and-threading.md
+    - name: Exceptions dans les threads managés
+      href: exceptions-in-managed-threads.md
+    - name: Synchronisation des données pour le multithreading
+      href: synchronizing-data-for-multithreading.md
+    - name: Threads de premier plan et d'arrière-plan
+      href: foreground-and-background-threads.md
+    - name: Threading managé et non managé dans Windows
+      href: managed-and-unmanaged-threading-in-windows.md
+    - name: Thread.Suspend, Garbage Collection et les points sans risque
+      href: thread-suspend-garbage-collection-and-safe-points.md
+    - name: 'Stockage local des threads : champs statiques et emplacements de données relatifs à un thread'
+      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+  - name: Utilisation des threads et du threading
+    href: using-threads-and-threading.md
+    items:
+    - name: Création de threads et passage de données au démarrage
+      href: creating-threads-and-passing-data-at-start-time.md
+    - name: Suspension et interruption de threads
+      href: pausing-and-resuming-threads.md
+    - name: Détruire des threads
+      href: destroying-threads.md
+    - name: Planification de threads
+      href: scheduling-threads.md
+    - name: Annulation dans les threads managés
+      href: cancellation-in-managed-threads.md
+      items:
+      - name: Annulation de threads de façon coopérative
+        href: canceling-threads-cooperatively.md
+      - name: 'Procédure : écouter les requêtes d’annulation par interrogation'
+        href: how-to-listen-for-cancellation-requests-by-polling.md
+      - name: 'Procédure : enregistrer des rappels pour les requêtes d’annulation'
+        href: how-to-register-callbacks-for-cancellation-requests.md
+      - name: 'Procédure : écouter les requêtes d’annulation qui ont des handles d’attente'
+        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+      - name: 'Procédure : Écouter plusieurs demandes d’annulation'
+        href: how-to-listen-for-multiple-cancellation-requests.md
+  - name: Meilleures pratiques pour le threading managé
+    href: managed-threading-best-practices.md
+  - name: Fonctionnalités et objets de threading
+    href: threading-objects-and-features.md
+    items:
+    - name: Le pool de threads managés
+      href: the-managed-thread-pool.md
+    - name: Minuteries
+      href: timers.md
+    - name: Vue d’ensemble des primitives de synchronisation
+      href: overview-of-synchronization-primitives.md
+    - name: EventWaitHandle
+      href: eventwaithandle.md
+    - name: CountdownEvent
+      href: countdownevent.md
+    - name: Mutex
+      href: mutexes.md
+    - name: Semaphore et SemaphoreSlim
+      href: semaphore-and-semaphoreslim.md
+    - name: Cloisonnement
+      href: barrier.md
+      items:
+      - name: 'Procédure : synchroniser des opérations simultanées avec un objet Barrier'
+        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+    - name: SpinLock
+      href: spinlock.md
+      items:
+      - name: 'Procédure : utiliser le verrouillage tournant pour une synchronisation de bas niveau'
+        href: how-to-use-spinlock-for-low-level-synchronization.md
+      - name: 'Procédure : activer le mode de suivi des threads dans le verrouillage tournant'
+        href: how-to-enable-thread-tracking-mode-in-spinlock.md
+    - name: SpinWait
+      href: spinwait.md
+      items:
+      - name: 'Procédure : utiliser SpinWait pour implémenter une opération d’attente en deux phases'
+        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
+ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468758"

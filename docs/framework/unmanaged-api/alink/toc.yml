@@ -1,0 +1,113 @@
+items:
+- name: API ALink
+  href: index.md
+  items:
+  - name: AssemblyAttributesGoHere
+    href: assemblyattributesgohere.md
+  - name: AssemblyAttributesGoHereM
+    href: assemblyattributesgoherem.md
+  - name: AssemblyAttributesGoHereS
+    href: assemblyattributesgoheres.md
+  - name: AssemblyAttributesGoHereSM
+    href: assemblyattributesgoheresm.md
+  - name: Énumération AssemblyOptions
+    href: assemblyoptions-enumeration.md
+  - name: CreateALink, fonction
+    href: createalink-function.md
+  - name: GetALinkMessageDll, fonction
+    href: getalinkmessagedll-function.md
+  - name: IALink, interface
+    href: ialink-interface.md
+    items:
+    - name: Init, méthode
+      href: init-method.md
+    - name: ImportFile, méthode
+      href: importfile-method.md
+    - name: SetAssemblyFile, méthode
+      href: setassemblyfile-method.md
+    - name: AddFile, méthode
+      href: addfile-method.md
+    - name: AddImport, méthode
+      href: addimport-method.md
+    - name: GetScope, méthode
+      href: getscope-method.md
+    - name: GetAssemblyRefHash, méthode
+      href: getassemblyrefhash-method.md
+    - name: ImportTypes, méthode
+      href: importtypes-method.md
+    - name: EnumCustomAttributes, méthode
+      href: enumcustomattributes-method.md
+    - name: EnumImportTypes, méthode
+      href: enumimporttypes-method.md
+    - name: CloseEnum, méthode
+      href: closeenum-method.md
+    - name: ExportType, méthode
+      href: exporttype-method.md
+    - name: ExportNestedType, méthode
+      href: exportnestedtype-method.md
+    - name: EmbedResource, méthode
+      href: embedresource-method.md
+    - name: LinkResource, méthode
+      href: linkresource-method.md
+    - name: GetResolutionScope, méthode
+      href: getresolutionscope-method.md
+    - name: SetAssemblyProps, méthode
+      href: setassemblyprops-method.md
+    - name: EmitAssemblyCustomAttribute, méthode
+      href: emitassemblycustomattribute-method.md
+    - name: GetWin32ResBlob, méthode
+      href: getwin32resblob-method.md
+    - name: FreeWin32ResBlob, méthode
+      href: freewin32resblob-method.md
+    - name: EmitManifest, méthode
+      href: emitmanifest-method.md
+    - name: PreCloseAssembly, méthode
+      href: precloseassembly-method.md
+    - name: CloseAssembly, méthode
+      href: closeassembly-method.md
+    - name: EndMerge, méthode
+      href: endmerge-method.md
+    - name: SetNonAssemblyFlags, méthode
+      href: setnonassemblyflags-method.md
+    - name: ImportFile2, méthode
+      href: importfile2-method.md
+    - name: ExportTypeForwarder, méthode
+      href: exporttypeforwarder-method.md
+    - name: ExportNestedTypeForwarder, méthode
+      href: exportnestedtypeforwarder-method.md
+  - name: IALink2, interface
+    href: ialink2-interface.md
+    items:
+    - name: SetAssemblyFile2, méthode
+      href: setassemblyfile2-method.md
+    - name: AddFile2, méthode
+      href: addfile2-method.md
+    - name: GetScope2, méthode
+      href: getscope2-method.md
+    - name: ImportTypes2, méthode
+      href: importtypes2-method.md
+    - name: GetFileDef, méthode
+      href: getfiledef-method.md
+    - name: GetPublicKeyToken, méthode
+      href: getpublickeytoken-method.md
+    - name: EmitInternalExportedTypes, méthode
+      href: emitinternalexportedtypes-method.md
+    - name: ImportFileEx, méthode
+      href: importfileex-method.md
+    - name: ImportFileEx2, méthode
+      href: importfileex2-method.md
+    - name: SetPEKind, méthode
+      href: setpekind-method.md
+    - name: EmitAssembly, méthode
+      href: emitassembly-method.md
+  - name: IALink3, interface
+    href: ialink3-interface.md
+    items:
+    - name: SetManifestFile, méthode
+      href: setmanifestfile-method.md
+ms.openlocfilehash: c4c5d53634a8585c80f60aa77a3511440a77b9b3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469310"
