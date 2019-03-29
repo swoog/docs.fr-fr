@@ -131,9 +131,9 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x == y](equality-comparison-operator.md) : égalité. Par défaut, pour les types de référence autres que `string`, cet opérateur retourne l'égalité de référence (test d'identité). Toutefois, des types peuvent surcharger `==`, donc si votre objectif est de tester l'identité, il est préférable d'utiliser la méthode `ReferenceEquals` sur `object`.
+[x == y](equality-operators.md#equality-operator-) : égalité. Par défaut, pour les types de référence autres que `string`, cet opérateur retourne l'égalité de référence (test d'identité). Toutefois, des types peuvent surcharger `==`, donc si votre objectif est de tester l'identité, il est préférable d'utiliser la méthode `ReferenceEquals` sur `object`.
 
-[x != y](not-equal-operator.md) : différent. Consultez le commentaire sur `==`. Si un type surcharge `==`, alors il doit surcharger `!=`.
+[x != y](equality-operators.md#inequality-operator-) : différent. Consultez le commentaire sur `==`. Si un type surcharge `==`, alors il doit surcharger `!=`.
 
 ## <a name="logical-and-operator"></a>Opérateur AND logique
 
