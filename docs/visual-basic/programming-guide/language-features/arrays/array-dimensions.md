@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708530"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634165"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensions du tableau dans Visual Basic
 Un *dimension* est une direction dans laquelle vous pouvez modifier la spécification d’éléments d’un tableau. Un tableau qui contient les ventes total pour chaque jour du mois possède une dimension (le jour du mois). Un tableau qui concerne les ventes total par service pour chaque jour du mois possède deux dimensions (le numéro de service et le jour du mois). Le nombre de dimensions que possède un tableau est appelé son *rang*.  
@@ -27,14 +27,11 @@ Un *dimension* est une direction dans laquelle vous pouvez modifier la spécific
   
  Les illustrations suivantes montrent la structure conceptuelle de tableaux avec des classements différents. Chaque élément dans les illustrations affiche les valeurs d’index qui y accèdent. Par exemple, vous pouvez accéder le premier élément de la deuxième ligne du tableau à deux dimensions en spécifiant l’index `(1, 0)`.  
   
- ![Diagramme graphique d’un&#45;tableau unidimensionnel](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Tableau unidimensionnel  
+ ![Diagramme illustrant un tableau unidimensionnel.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Diagramme graphique de deux&#45;tableau unidimensionnel](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-tableau à deux dimensions  
+ ![Diagramme illustrant un tableau à deux dimensions.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Diagramme graphique de trois&#45;tableau unidimensionnel](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-tableau tridimensionnel  
+ ![Diagramme illustrant un tableau tridimensionnel.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Une Dimension  
  De nombreux groupes ont une seule dimension, telles que le nombre de personnes chaque âge. La seule exigence pour spécifier un élément est l’âge pour lequel cet élément conserve le nombre. Par conséquent, un tel tableau utilise un seul index. L’exemple suivant déclare une variable qui doit contenir un *tableau unidimensionnel* d’âge du nombre d’âges 0 à 120.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356505"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634217"
 ---
 # <a name="application-management-overview"></a>Vue d'ensemble de la gestion d'applications
 Toutes les applications tendent à partager un jeu de fonctionnalités commun qui s’applique à l’implémentation et à la gestion. Cette rubrique fournit une vue d’ensemble des fonctionnalités dans le <xref:System.Windows.Application> classe pour la création et la gestion des applications.  
@@ -323,7 +323,7 @@ Toutes les applications tendent à partager un jeu de fonctionnalités commun qu
 ### <a name="unhandled-exceptions"></a>Exceptions non gérées  
  Il peut parfois arriver qu’une application s’arrête anormalement, par exemple en cas d’exception inattendue. Dans ce cas, il est possible qu’elle n’ait pas le code nécessaire à la détection et au traitement de l’exception. Ce type d’exception est une exception non gérée ; une notification similaire à celle illustrée dans la figure ci-dessous s’affiche avant la fermeture de l’application.  
   
- ![Notification d’exception non gérée](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Capture d’écran montrant une notification d’exception non gérée.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Du point de vue de l’expérience utilisateur, il est préférable pour une application d’éviter ce comportement par défaut en effectuant certaines ou l’ensemble des opérations suivantes :  
   

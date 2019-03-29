@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359131"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634451"
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
 Les applications autonomes ont en général une fenêtre principale qui affiche les données principales sur lesquelles l’application fonctionne et expose les fonctionnalités pour traiter ces données via [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des mécanismes tels que les barres de menus, barres d’outils et barres d’état. Une application non triviale peut également afficher des fenêtres supplémentaires pour effectuer les opérations suivantes :  
@@ -40,7 +40,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ## <a name="message-boxes"></a>Boîtes de message  
  Un *boîte de message* est une boîte de dialogue qui peut être utilisée pour afficher des informations textuelles et pour permettre aux utilisateurs de prendre des décisions avec des boutons. L’illustration suivante montre une boîte de message qui affiche des informations textuelles, pose une question et fournit à l’utilisateur trois boutons pour répondre à la question.  
   
- ![Boîte de dialogue de traitement de texte](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Une boîte de dialogue de traitement de texte demandant si vous souhaitez enregistrer les modifications dans le document avant que l’application se ferme.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Pour créer une boîte de message, vous utilisez la <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> vous permet de configurer le texte du message, un titre, une icône et une boutons, à l’aide de code semblable au suivant.  
   
@@ -73,7 +73,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ### <a name="open-file-dialog"></a>Boîte de dialogue d’ouverture de fichier  
  La boîte de dialogue d’ouverture de fichier, illustrée ci-dessous, est utilisée par la fonctionnalité d’ouverture de fichier pour récupérer le nom d’un fichier à ouvrir.  
   
- ![Boîte de dialogue Ouvrir](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Une boîte de dialogue Ouvrir affichant l’emplacement pour récupérer le fichier.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  La boîte de dialogue Ouvrir un fichier est implémentée en tant que le <xref:Microsoft.Win32.OpenFileDialog> classe et se trouve dans le <xref:Microsoft.Win32> espace de noms. Le code suivant montre comment en créer, configurer et afficher une, et comment traiter le résultat.  
   
@@ -89,7 +89,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ### <a name="save-file-dialog-box"></a>Boîte de dialogue d’enregistrement de fichier  
  La boîte de dialogue d’enregistrement de fichier, illustrée ci-dessous, est utilisée par la fonctionnalité d’enregistrement de fichier pour récupérer le nom d’un fichier à enregistrer.  
   
- ![Boîte de dialogue Enregistrer sous](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Enregistrer en tant que boîte de dialogue affichant l’emplacement pour enregistrer le fichier.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Le commune d’enregistrement de boîte de dialogue fichier est implémentée en tant que le <xref:Microsoft.Win32.SaveFileDialog> classe et se trouve dans le <xref:Microsoft.Win32> espace de noms. Le code suivant montre comment en créer, configurer et afficher une, et comment traiter le résultat.  
   
@@ -102,7 +102,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ### <a name="print-dialog-box"></a>Boîte de dialogue d’impression  
  La boîte de dialogue d’impression, illustrée ci-dessous, est utilisée par la fonctionnalité d’impression pour choisir et configurer l’imprimante sur laquelle un utilisateur souhaite imprimer des données.  
   
- ![Boîte de dialogue Imprimer](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Capture d’écran qui affiche une boîte de dialogue Imprimer.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  La boîte de dialogue d’impression est implémentée en tant que le <xref:System.Windows.Controls.PrintDialog> classe et se trouve dans le <xref:System.Windows.Controls> espace de noms. Le code suivant montre comment en créer, configurer et afficher une.  
   
@@ -119,7 +119,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ### <a name="creating-a-modal-custom-dialog-box"></a>Création d’une boîte de dialogue personnalisée modale  
  Cette rubrique montre comment utiliser <xref:System.Windows.Window> pour créer une implémentation de boîte de dialogue modale classique, à l’aide de la `Margins` boîte de dialogue comme exemple (consultez [exemple de boîte de dialogue](https://go.microsoft.com/fwlink/?LinkID=159984)). Le `Margins` boîte de dialogue est affichée dans la figure suivante.  
   
- ![Boîte de dialogue Margins](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Une boîte de dialogue marges avec des champs pour définir la marge de gauche, marge supérieure, la marge de droite et marge inférieure.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Configuration d’une boîte de dialogue modale  
  L’interface utilisateur pour une boîte de dialogue classique comprend les éléments suivants :  
@@ -208,7 +208,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
   
  Une fois que la règle de validation est associée, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] appliquera automatiquement lorsque les données entrées dans le contrôle dépendant. Lorsqu’un contrôle contient des données non valides, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] affiche une bordure rouge autour du contrôle non valide, comme illustré dans la figure suivante.  
   
- ![Marge gauche non valide](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Une boîte de dialogue marges avec une bordure rouge autour de la valeur de la marge gauche non valide.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] n’empêche pas l’utilisateur de sortir du contrôle non valide s’il n’a pas entré des données valides. Il s’agit d’un bon comportement pour une boîte de dialogue. En effet, un utilisateur doit pouvoir naviguer librement entre les contrôles d’une boîte de dialogue, que les données soient valides ou non. Toutefois, cela signifie qu’un utilisateur peut entrer des données non valides, puis appuyez sur la **OK** bouton. Pour cette raison, votre code doit également valider tous les contrôles dans une boîte de dialogue boîte lorsque le **OK** bouton est enfoncé en gérant la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
   
@@ -277,7 +277,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Création d’une boîte de dialogue personnalisée non modale  
  Une boîte de dialogue non modale, telle que la boîte de dialogue Rechercher affichée ci-dessous, a la même apparence fondamentale que la boîte de dialogue modale.  
   
- ![Boîte de dialogue Rechercher](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Capture d’écran qui affiche une boîte de dialogue Rechercher.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  Toutefois, le comportement est légèrement différent, comme décrit dans les sections suivantes.  
   

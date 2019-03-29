@@ -1,17 +1,17 @@
 ---
 title: Désactiver la prise en charge-DPI dans Visual Studio
 description: Présente les limitations du Concepteur de formulaires Windows sur les écrans HDPI et l’exécution de Visual Studio comme un processus dépendant PPP.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710535"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633866"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
@@ -23,11 +23,14 @@ Le **Windows Forms Designer** dans Visual Studio n’a pas prise en charge de mi
 
 ![Concepteur de formulaires Windows sur le moniteur HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-Dans Visual Studio 2017 version 15,8 et versions ultérieure, lorsque vous ouvrez un formulaire dans le **Windows Forms Designer** sur un moniteur HDPI, Visual Studio affiche un jaune d’information de la barre en haut du concepteur :
+Lorsque vous ouvrez un formulaire dans le **Windows Forms Designer** dans Visual Studio sur un moniteur HDPI, Visual Studio affiche un jaune d’information de la barre en haut du concepteur :
 
 ![Barre d’information dans Visual Studio à redémarrer en mode dépendant PPP](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lit le message **mise à l’échelle sur votre écran d’affichage principal est défini à 200 % (192 PPP). Cela peut entraîner des problèmes de rendu dans la fenêtre du concepteur.**
+
+> [!NOTE]
+> Cette barre d’information a été introduite dans Visual Studio 2017 version 15.8.
 
 Si vous ne travaillez pas dans le concepteur et que vous n’avez pas besoin d’ajuster la disposition de votre formulaire, vous pouvez ignorer la barre d’information et continuer à travailler dans l’éditeur de code ou dans d’autres types de concepteurs. (Vous pouvez également [désactiver les notifications](#disable-notifications) afin que la barre d’information ne continue de s’afficher.) Uniquement les **Windows Forms Designer** est affecté. Si vous n’avez pas besoin de travailler dans le **Windows Forms Designer**, la section suivante vous aide à [résoudre le problème](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Il est important de redémarrer Visual Studio en tant que reconnaissant les rés
 
 Vous pouvez marquer Visual Studio comme dépendant PPP en modifiant le Registre. Ouvrez **Éditeur du Registre** et ajouter une entrée à la **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** sous-clé :
 
-**Entrée**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Entrée**: Selon que vous utilisez Visual Studio 2017 ou 2019, utilisez une des valeurs suivantes :
 
-   > [!NOTE]
-   > Si vous utilisez l’édition Professional ou Enterprise de Visual Studio 2017, remplacez **Communauté** avec **Professionnel** ou **Enterprise** dans l’entrée. Remplacez la lettre de lecteur en fonction des besoins.
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Si vous utilisez l’édition Professional ou Enterprise de Visual Studio, remplacez **Communauté** avec **Professionnel** ou **Enterprise** dans l’entrée. Remplacez la lettre de lecteur en fonction des besoins.
 
 **Type**: REG_SZ
 

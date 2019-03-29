@@ -3,8 +3,7 @@ title: Méthode SqlStreamChars.Dispose(Boolean) (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4e6cfd6d4c04b1a2835b6e34b82c95b564dea588
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: cc8df68a608000d89dd322b0d396504483bbf372
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826861"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633723"
 ---
 # <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars.Dispose(Boolean) (méthode)
 
@@ -40,7 +39,7 @@ protected virtual void Dispose (bool disposing);
 >
 > Microsoft ne prend pas en charge l’utilisation de ce champ dans une application de production en toute circonstance.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** <xref:System.Data.SqlTypes>
 

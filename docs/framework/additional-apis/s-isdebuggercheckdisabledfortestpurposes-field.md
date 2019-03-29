@@ -1,8 +1,7 @@
 ---
 title: s_isDebuggerCheckDisabledForTestPurposes, champ
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-wpf
+ms.technology: dotnet-wpf
 topic_type:
 - apiref
 api_name:
@@ -12,12 +11,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: b6490919163a7c4a618bf9a8d0e2aa145f60eda1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab71ab6aa2b0ed454b86388ba369204a2131cca5
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372306"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634425"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes, champ
 
@@ -34,7 +33,7 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 >
 > Microsoft ne prend pas en charge l’utilisation de ce champ dans une application de production en toute circonstance.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** <xref:System.Windows.Diagnostics>
 

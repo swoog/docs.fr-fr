@@ -2,12 +2,12 @@
 title: 'Champs explicites : Val mot clé'
 description: En savoir plus sur les F# mot clé « val », ce qui est utilisée pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans initialiser le type.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773625"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634009"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Champs explicites : Val mot clé
 
@@ -40,9 +40,9 @@ Par exemple, un champ immuable appelé `someField` a un champ de stockage dans l
 Pour un champ mutable, la représentation compilée .NET est un champ .NET.
 
 >[!WARNING]
-`Note` L’espace de noms .NET Framework `System.ComponentModel` contient un attribut qui porte le même nom. Pour plus d'informations sur cet attribut, consultez `System.ComponentModel.DefaultValueAttribute`.
+>L’espace de noms .NET Framework `System.ComponentModel` contient un attribut qui porte le même nom. Pour plus d'informations sur cet attribut, consultez `System.ComponentModel.DefaultValueAttribute`.
 
-Le code suivant illustre l'utilisation de champs explicites et, à titre de comparaison, d'une liaison `let` dans une classe qui a un constructeur principal. Notez que le champ lié à `let` `myInt1` est privé. Quand le champ lié à `let` `myInt1` est référencé à partir d'une méthode membre, l'auto-identificateur `this` n'est pas requis. Mais quand vous référencez les champs explicites `myInt2` et `myString`, l'auto-identificateur est requis.
+Le code suivant illustre l'utilisation de champs explicites et, à titre de comparaison, d'une liaison `let` dans une classe qui a un constructeur principal. Notez que le champ lié à `let``myInt1` est privé. Quand le champ lié à `let``myInt1` est référencé à partir d'une méthode membre, l'auto-identificateur `this` n'est pas requis. Mais quand vous référencez les champs explicites `myInt2` et `myString`, l'auto-identificateur est requis.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
@@ -69,7 +69,7 @@ Le résultat est `11 xyz`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-Les champs explicites n'ont pas vocation à être utilisés dans le cadre d'une routine. En général, quand cela est possible, vous devez utiliser une liaison `let` dans une classe au lieu d'un champ explicite. Les champs explicites s'avèrent utiles dans certains scénarios d'interopérabilité, notamment quand vous devez définir une structure qui sera utilisée dans un appel de code non managé à une API native ou dans des scénarios COM interop. Pour plus d’informations, consultez [fonctions externes](../functions/external-functions.md). Une autre situation dans laquelle un champ explicite peut s'avérer nécessaire est liée à l'utilisation d'un générateur de code F# qui émet des classes sans constructeur principal. Les champs explicites s'avèrent également utiles pour les variables static de thread ou les constructions similaires. Pour plus d'informations, consultez `System.ThreadStaticAttribute`.
+Les champs explicites n'ont pas vocation à être utilisés dans le cadre d'une routine. En général, quand cela est possible, vous devez utiliser une liaison `let` dans une classe au lieu d’un champ explicite. Les champs explicites s'avèrent utiles dans certains scénarios d'interopérabilité, notamment quand vous devez définir une structure qui sera utilisée dans un appel de code non managé à une API native ou dans des scénarios COM interop. Pour plus d’informations, consultez [fonctions externes](../functions/external-functions.md). Une autre situation dans laquelle un champ explicite peut s'avérer nécessaire est liée à l'utilisation d'un générateur de code F# qui émet des classes sans constructeur principal. Les champs explicites s'avèrent également utiles pour les variables static de thread ou les constructions similaires. Pour plus d'informations, consultez `System.ThreadStaticAttribute`.
 
 Quand les mots clés `member val` apparaissent ensemble dans une définition de type, il s'agit de la définition d'une propriété implémentée automatiquement. Pour plus d'informations, consultez [Propriétés](properties.md).
 

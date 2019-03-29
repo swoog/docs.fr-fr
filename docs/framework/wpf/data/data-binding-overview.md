@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364825"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634555"
 ---
 # <a name="data-binding-overview"></a>Vue d’ensemble de la liaison de données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  
@@ -61,7 +61,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Quels que soient l’élément que vous liez et la nature de votre source de données, chaque liaison suit toujours le modèle illustré par l’illustration suivante :  
   
- ![Diagramme de liaison de données de base](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagramme illustrant le modèle de liaison de données de base.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Comme présenté sur l’illustration ci-dessus, la liaison de données est essentiellement la passerelle entre votre cible de liaison et de votre source de liaison. L’illustration présente les concepts de liaison de données [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] essentiels suivants :  
   
@@ -101,7 +101,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Toutefois, est-ce que votre valeur source est mise à jour lorsque vous modifiez le texte ou après avoir fini de modifier le texte et pointé votre souris en dehors de la zone de texte ? Le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété de la liaison détermine ce qui déclenche la mise à jour de la source. Les points des flèches droites dans l’illustration suivante montrent le rôle de la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété :  
   
- ![Diagramme UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Diagramme montrant le rôle de la propriété UpdateSourceTrigger.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Si le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, puis la valeur vers laquelle pointe la flèche droite de <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons est mis à jour dès que la propriété cible change. Toutefois, si le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur est <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, puis cette valeur uniquement est mis à jour avec la nouvelle valeur lorsque la propriété cible perd le focus.  
   
@@ -132,7 +132,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Si nous appliquons cet exemple à notre diagramme de base, l’illustration qui en résulte ressemble à ce qui suit. Il s’agit d’un <xref:System.Windows.Data.BindingMode.OneWay> , car la propriété Background prend en charge la liaison <xref:System.Windows.Data.BindingMode.OneWay> liaison par défaut.  
   
- ![Diagramme de liaison de données](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Diagramme illustrant la propriété d’arrière-plan de la liaison de données.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  Vous vous demanderez peut-être pourquoi cela fonctionne même si le *ColorName* propriété est de type chaîne alors que le <xref:System.Windows.Controls.Control.Background%2A> propriété est de type <xref:System.Windows.Media.Brush>. Il s’agit de la conversion de type par défaut en action, et nous l’évoquons dans la section [Conversion de données](#data_conversion).  
   
@@ -185,7 +185,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Pour ajouter ces informations à l’illustration dans la section [Création d’une liaison](#creating_a_binding), le diagramme présente l’aspect suivant :  
   
- ![Diagramme de liaison de données](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Diagramme illustrant la propriété par défaut de la liaison de données.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Toutefois, que se passe-t-il si, au lieu d’avoir une propriété de type chaîne, votre objet de source de liaison a un *couleur* propriété de type <xref:System.Windows.Media.Color>? Dans ce cas, afin que la liaison fonctionne vous devrez premier tour le *couleur* valeur de propriété en quelque chose qui le <xref:System.Windows.Controls.Control.Background%2A> accepte de propriété. Vous devez créer un convertisseur personnalisé en implémentant le <xref:System.Windows.Data.IValueConverter> interface, comme dans l’exemple suivant :  
   
@@ -196,7 +196,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Maintenant, le convertisseur personnalisé est utilisé au lieu de la conversion par défaut, et notre diagramme ressemble à ceci :  
   
- ![Diagramme de liaison de données](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Diagramme illustrant le convertisseur personnalisé de liaison de données.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Pour rappel, des conversions par défaut peuvent être disponibles si des convertisseurs de type sont présents dans le type lié. Ce comportement dépendra des convertisseurs de type sont disponibles dans la cible. En cas de doute, créez votre propre convertisseur.  
   
@@ -217,7 +217,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Heureusement, notre diagramme de base est toujours applicable. Si vous liez un <xref:System.Windows.Controls.ItemsControl> à une collection, le diagramme ressemble à ceci :  
   
- ![Diagramme ItemsControl de liaison de données](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Diagramme qui affiche l’objet ItemsControl de liaison de données.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Comme illustré dans ce diagramme, pour lier un <xref:System.Windows.Controls.ItemsControl> à un objet de collection, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété est la propriété à utiliser. Vous pouvez considérer <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété en tant que le contenu de la <xref:System.Windows.Controls.ItemsControl>. Notez que la liaison est <xref:System.Windows.Data.BindingMode.OneWay> , car le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> prend en charge de la propriété <xref:System.Windows.Data.BindingMode.OneWay> liaison par défaut.  
   
@@ -340,7 +340,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="data-templating"></a>Modèles de données  
  Sans l’utilisation de modèles de données, notre application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans la section [Qu’est-ce que la liaison de données ?](#what_is_data_binding) se présente comme suit :  
   
- ![Démo de liaison de données sans modèles de données](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Démo de liaison de données sans modèles de données](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Comme indiqué dans l’exemple dans la section précédente, à la fois le <xref:System.Windows.Controls.ListBox> contrôle et le <xref:System.Windows.Controls.ContentControl> sont liés à l’objet de collection entier (ou plus spécifiquement, la vue sur l’objet de collection) de *AuctionItem*s. Sans instructions spécifiques afficher la collecte de données, le <xref:System.Windows.Controls.ListBox> affiche une représentation de chaîne de chaque objet dans la collection sous-jacente et le <xref:System.Windows.Controls.ContentControl> affiche une représentation de chaîne de l’objet auquel il est lié.  
   

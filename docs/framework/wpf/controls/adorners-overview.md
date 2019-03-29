@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357940"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634529"
 ---
 # <a name="adorners-overview"></a>Vue d'ensemble des ornements
 Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, utilisé pour fournir des signaux visuels à un utilisateur. Les ornements permettent notamment d’ajouter des descripteurs fonctionnels à des éléments ou de fournir des informations d’état sur un contrôle.  
@@ -55,7 +55,7 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
   
  L’illustration suivante montre le SimpleCircleAdorner appliqué à un <xref:System.Windows.Controls.TextBox>.  
   
- ![Exemple d’ornements : Zone de texte ornée](./media/adornedtextbox.png "AdornedTextBox")  
+ ![Capture d’écran qui affiche une zone de texte ornée.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Comportement de rendu des ornements  
