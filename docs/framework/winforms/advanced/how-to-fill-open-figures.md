@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: e9743d3268a7a2acfb6266872c3346a05269c369
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702723"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654079"
 ---
 # <a name="how-to-fill-open-figures"></a>Procédure : Remplir des Figures ouvertes
 Vous pouvez remplir un chemin d’accès en passant un <xref:System.Drawing.Drawing2D.GraphicsPath> de l’objet à le <xref:System.Drawing.Graphics.FillPath%2A> (méthode). Le <xref:System.Drawing.Graphics.FillPath%2A> méthode remplit le chemin d’accès selon le mode de remplissage (de substitution ou par balayage) actuellement défini pour le chemin d’accès. Si le chemin d’accès comporte des figures ouvertes, le chemin d’accès est rempli comme si ces figures étaient fermées. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ferme une figure en dessinant une ligne droite de son point d’arrivée à son point de départ.  
@@ -23,13 +23,13 @@ Vous pouvez remplir un chemin d’accès en passant un <xref:System.Drawing.Draw
   
  L’illustration suivante montre la sortie de l’exemple de code. Notez que le chemin d’accès est rempli (conformément à <xref:System.Drawing.Drawing2D.FillMode.Alternate>) comme si la figure ouverte était fermée par une ligne droite de son point d’arrivée à son point de départ.  
   
- ![Remplir le tracé ouvert](./media/fillopenpath.png "FillOpenPath")  
+ ![Diagramme qui montre la sortie de la méthode FillPath](./media/how-to-fill-open-figures/fill-path-alternate-mode.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Drawing.Drawing2D.GraphicsPath>

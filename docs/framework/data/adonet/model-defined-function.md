@@ -2,12 +2,12 @@
 title: fonction définie par modèle
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 371af3ae090e37cfd425a9e9d5946bb0751dc527
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538880"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653858"
 ---
 # <a name="model-defined-function"></a>fonction définie par modèle
 Un *fonction définie par modèle* est une fonction qui est définie dans un modèle conceptuel. Le corps d’une fonction définie par modèle est exprimé en [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), ce qui permet la fonction exprimer indépendamment de règles ou les langues prises en charge dans la source de données.  
@@ -19,7 +19,7 @@ Un *fonction définie par modèle* est une fonction qui est définie dans un mod
 -   Type de la valeur de retour. (facultatif)  
   
     > [!NOTE]
-    >  Si aucun type de retour n'est spécifié, la valeur de retour est void.  
+    >  Si aucun type de retour n’est spécifié, la valeur de retour est void.  
   
 -   Informations sur les paramètres. (facultatif)  
   
@@ -30,7 +30,7 @@ Un *fonction définie par modèle* est une fonction qui est définie dans un mod
 ## <a name="example"></a>Exemple  
  Le diagramme suivant montre un modèle conceptuel avec trois types d'entités : `Book`, `Publisher` et `Author`.  
   
- ![Modèle avec Date publiée](../../../../docs/framework/data/adonet/media/modelwithpublisheddate.gif "ModelWithPublishedDate")  
+ ![Capture d’écran montre un modèle avec la date de publication.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
  Le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé langage de définition de schéma conceptuel ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit une fonction dans le modèle conceptuel qui retourne le nombre d'années écoulées depuis la publication d'une instance de `Book` (dans le diagramme ci-dessus).  
   

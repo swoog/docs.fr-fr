@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c009d86deada690f673736e0e35eb710e25f7781
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370499"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654378"
 ---
 # <a name="printing-overview"></a>Vue d'ensemble de l'impression
 Avec Microsoft .NET Framework, les développeurs d’applications à l’aide de Windows Presentation Foundation (WPF) ont un nouvel ensemble étoffé d’impression et impression de gestion système [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Avec [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], certaines de ces améliorations du système d'impression sont aussi accessibles aux développeurs créant des applications [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et à ceux utilisant du code non managé. Le nouveau format de fichier [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] et le chemin d'impression [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sont au cœur de cette nouvelle fonctionnalité.  
@@ -64,9 +64,9 @@ Avec Microsoft .NET Framework, les développeurs d’applications à l’aide de
   
  Pour activer l’utilisation d’imprimantes XPSDrv par [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] et les applications Windows Forms, le [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] pilote d’imprimante (XPSDrv) prend en charge la conversion de [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] à [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] format. Le modèle XPSDrv fournit également un convertisseur du format [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] au format [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] pour permettre aux applications [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] d'imprimer des documents [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Pour [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications, la conversion du [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] à [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] format est effectué automatiquement par le <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> et <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> méthodes de la <xref:System.Windows.Xps.XpsDocumentWriter> chaque fois que la file d’attente d’impression cible de l’opération d’écriture n’a pas de classe un pilote XPSDrv. (Applications Windows Forms ne peuvent pas imprimer [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Documents.)  
   
- L'illustration suivante représente le sous-système d'impression et définit les parties fournies par [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] et celles définies par les fournisseurs de matériel et de logiciels.  
+ L’illustration suivante représente le sous-système d’impression et définit les parties fournies par [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]et celles définies par les fournisseurs de matériel et logiciel :  
   
- ![Système d’impression XPS](./media/xpsprint.PNG "XPSPrint")  
+ ![Capture d’écran montre le que système d’impression XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Impression XPS de base  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] définit une [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] de base et avancée. Pour les applications qui n'exigent pas une personnalisation étendue de l'impression ou un accès à l'ensemble complet de fonctionnalités [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], la prise en charge de l'impression de base est disponible. La prise en charge de l'impression de base est exposé via un contrôle de boîte de dialogue d'impression qui nécessite une configuration minime et présente une [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] familière. De nombreuses fonctionnalités [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sont disponibles en utilisant ce modèle d'impression simplifié.  

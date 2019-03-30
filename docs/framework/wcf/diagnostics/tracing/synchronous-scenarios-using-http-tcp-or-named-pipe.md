@@ -2,15 +2,15 @@
 title: Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28e612b190f4993e1ce7da0d1083c4e55f827d4a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810172"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654001"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
-Cette rubrique décrit les activités et transferts pour différents scénarios demande/réponse synchrones, avec un client à thread unique, utilisant une connexion HTTP, TCP ou de canal nommé. Consultez [scénarios asynchrones à l’aide de HTTP, TCP ou canal nommé](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) pour plus d’informations sur les requêtes multithreads.  
+Cette rubrique décrit les activités et transferts pour différents scénarios demande/réponse synchrones, avec un client à thread unique, utilisant une connexion HTTP, TCP ou de canal nommé. Consultez [scénarios asynchrones utilisant HTTP, TCP ou canal nommé](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) pour plus d’informations sur les demandes multi-threads.  
   
 ## <a name="synchronous-requestreply-without-errors"></a>Demande/Réponse synchrone sans erreurs  
  Cette section décrit les activités et transferts pour un scénario demande/réponse synchrone valide, avec un client à thread unique.  
@@ -45,17 +45,17 @@ Cette rubrique décrit les activités et transferts pour différents scénarios 
 #### <a name="closing-a-service-host"></a>Fermeture d'un hôte de service  
  L'activité de fermeture (Z) de ServiceHost est créée à partir de l'activité ambiante.  
   
- ![Scénarios synchrones utilisant HTTP&#47;TCP&#47; canaux nommés](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "synchronisation")  
+ ![Diagramme montrant les scénarios synchrones : HTTP, TCP ou canaux nommés.](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
   
  Dans \<A: name >, `A` est un symbole de raccourci qui décrit l’activité dans le texte précédent et dans le tableau 3. `Name` est un nom raccourci de l'activité.  
   
  Si `propagateActivity` = `true`, traiter l’Action sur le client et le service ont le même ID d’activité.  
   
 ## <a name="synchronous-requestreply-with-errors"></a>Demande/Réponse synchrone avec erreurs  
- La seule différence avec le scénario précédent est qu'un message d'erreur SOAP est retourné en tant que message de réponse. Si `propagateActivity` = `true`, l’ID d’activité du message de demande est ajoutée au message d’erreur SOAP.  
+ La seule différence avec le scénario précédent est qu'un message d'erreur SOAP est retourné en tant que message de réponse. Si `propagateActivity` = `true`, l’ID d’activité du message de demande est ajouté au message d’erreur SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Unidirectionnel synchrone sans erreurs  
- La seule différence avec le premier scénario est qu'aucun message n'est retourné au serveur. Pour les protocoles basés sur HTTP, un état (valide ou erreur) est encore retourné au client. Il s’agit, car le protocole HTTP est le seul protocole avec une sémantique de requête-réponse qui fait partie de la pile de protocole WCF. Étant donné que WCF est masqué pour le traitement TCP, aucun accusé de réception n’est envoyé au client.  
+ La seule différence avec le premier scénario est qu'aucun message n'est retourné au serveur. Pour les protocoles basés sur HTTP, un état (valide ou erreur) est encore retourné au client. Il s’agit, car le protocole HTTP est le seul protocole avec une sémantique de requête-réponse qui fait partie de la pile de protocole WCF. Étant donné que le traitement TCP est masqué à partir de WCF, aucun accusé de réception n’est envoyé au client.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Unidirectionnel synchrone avec erreurs  
  Si une erreur se produit lors du traitement du message (Q ou au-delà), aucune notification n'est retournée au client. Cela est identique au scénario « Unidirectionnel synchrone sans erreurs ». Vous ne devez pas utiliser de scénario unidirectionnel si vous souhaitez recevoir un message d'erreur.  

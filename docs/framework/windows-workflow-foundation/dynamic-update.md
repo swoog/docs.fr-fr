@@ -2,12 +2,12 @@
 title: Mise à jour dynamique
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724473"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653884"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 
@@ -32,7 +32,7 @@ Cette rubrique fournit une vue d'ensemble du processus de mise à jour dynamique
 
 ### <a name="Prepare"></a> Préparer la définition de flux de travail pour la mise à jour dynamique
 
-La première étape du processus de mise à jour dynamique consiste à développer la définition de workflow souhaitée pour la mise à jour. Pour ce faire, il suffit d'appeler la méthode <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> et de passer la définition de workflow à modifier. Cette méthode valide et parcourt l'arborescence de workflow pour identifier tous les objets, tels que les activités et les variables publiques qui doivent être référencées de sorte qu'elles puissent être comparées ultérieurement à la définition modifiée de workflow. Une fois cette opération terminée, l'arborescence de workflow est clonée et attachée à la définition de workflow d'origine. Lorsque la mise à jour de la carte est créée, la version mise à jour de la définition du workflow est comparée à la définition de workflow d'origine et la mise à jour de la carte est générée selon les différences.
+La première étape du processus de mise à jour dynamique consiste à développer la définition de workflow souhaitée pour la mise à jour. Pour ce faire, il suffit d'appeler la méthode <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> et de passer la définition de workflow à modifier. Cette méthode valide et parcourt l'arborescence de workflow pour identifier tous les objets, tels que les activités et les variables publiques qui doivent être référencées de sorte qu'elles puissent être comparées ultérieurement à la définition modifiée de workflow. Une fois cette opération terminée, l’arborescence de workflow est clonée et attachée à la définition de workflow d’origine. Lorsque la mise à jour de la carte est créée, la version mise à jour de la définition du workflow est comparée à la définition de workflow d'origine et la mise à jour de la carte est générée selon les différences.
 
 Pour préparer un workflow XAML pour la mise à jour dynamique, il peut être chargé dans un <xref:System.Activities.ActivityBuilder>, puis le <xref:System.Activities.ActivityBuilder> est passé dans <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
 
@@ -64,7 +64,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 
 ### <a name="Update"></a> Mettre à jour la définition de flux de travail pour refléter les modifications souhaitées
 
-Une fois que la définition de workflow a été élaborée pour la mise à jour, les modifications souhaitées peuvent être apportées. Vous pouvez ajouter ou supprimer des activités, ajouter, déplacer ou supprimer des variables publiques, ajouter ou supprimer des arguments et apporter des modifications à la signature des délégués d'activité. Vous ne pouvez pas supprimer une activité en cours d'exécution ou modifier la signature d'un délégué en cours d'exécution. Ces modifications peuvent être effectuées à l'aide du code, ou dans un concepteur de workflow réhébergé. Dans l'exemple suivant, une activité `VerifyAppraisal` personnalisée est ajoutée à la séquence qui constitue le corps de `MortgageWorkflow` à partir de l'exemple précédent.
+Une fois que la définition de workflow a été élaborée pour la mise à jour, les modifications souhaitées peuvent être apportées. Vous pouvez ajouter ou supprimer des activités, ajouter, déplacer ou supprimer des variables publiques, ajouter ou supprimer des arguments et apporter des modifications à la signature des délégués d’activité. Vous ne pouvez pas supprimer une activité en cours d'exécution ou modifier la signature d'un délégué en cours d'exécution. Ces modifications peuvent être effectuées à l'aide du code, ou dans un concepteur de workflow réhébergé. Dans l'exemple suivant, une activité `VerifyAppraisal` personnalisée est ajoutée à la séquence qui constitue le corps de `MortgageWorkflow` à partir de l'exemple précédent.
 
 ```csharp
 // Make desired changes to the definition. In this example, we are
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Lorsque <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> retourne, la définition clonée de workflow et d'autres informations de mise à jour dynamique qui ont été ajoutées dans l'appel à <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> sont supprimées, et la définition modifiée de workflow est prête à être enregistrée afin qu'elle puisse être utilisée ultérieurement en reprenant les instances de workflow mises à jour. Dans l'exemple suivant, la définition modifiée de workflow est enregistrée dans `MortgageWorkflow_v2.xaml`.
+Lorsque <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> retourne, la définition clonée de workflow et d'autres informations de mise à jour dynamique qui ont été ajoutées dans l'appel à <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> sont supprimées, et la définition modifiée de workflow est prête à être enregistrée afin qu'elle puisse être utilisée ultérieurement en reprenant les instances de workflow mises à jour. Dans l'exemple suivant, la définition modifiée de workflow est enregistrée dans `MortgageWorkflow_v1.1.xaml`.
 
 ```csharp
 // Save the modified workflow definition.

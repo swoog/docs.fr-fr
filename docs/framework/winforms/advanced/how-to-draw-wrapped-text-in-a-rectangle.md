@@ -9,21 +9,21 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 5c4e76cda37527d0167b21c0d206749ba6dab4a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708858"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654525"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procédure : Dessiner du texte encapsulé dans un Rectangle
 Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> paramètre. Vous utiliserez également un <xref:System.Drawing.Brush> et un <xref:System.Drawing.Font>.  
   
  Vous pouvez également dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> surchargées de la <xref:System.Windows.Forms.TextRenderer> qui accepte un <xref:System.Drawing.Rectangle> et un <xref:System.Windows.Forms.TextFormatFlags> paramètre. Vous utiliserez également un <xref:System.Drawing.Color> et un <xref:System.Drawing.Font>.  
   
- L’illustration suivante montre la sortie du texte dessiné dans le rectangle lorsque vous utilisez le <xref:System.Drawing.Graphics.DrawString%2A> (méthode).  
+ L’illustration suivante montre la sortie du texte dessiné dans le rectangle lorsque vous utilisez la <xref:System.Drawing.Graphics.DrawString%2A> méthode :
   
- ![Polices du texte](./media/csfontstext2.png "csfontstext2")  
+ ![Capture d’écran montrant la sortie lorsque vous utilisez la méthode DrawString.](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Inclus pour dessiner le texte dans un rectangle avec GDI +  
   

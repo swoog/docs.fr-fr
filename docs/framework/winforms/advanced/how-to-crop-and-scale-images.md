@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705816"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654495"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Procédure : Rogner et mettre à l’échelle des Images
 Le <xref:System.Drawing.Graphics> classe fournit plusieurs <xref:System.Drawing.Graphics.DrawImage%2A> méthodes, dont certaines ont des paramètres de rectangle source et destination que vous pouvez utiliser pour rogner et mettre à l’échelle des images.  
@@ -27,13 +27,13 @@ Le <xref:System.Drawing.Graphics> classe fournit plusieurs <xref:System.Drawing.
   
  L’illustration suivante montre la pomme d’origine et la mise à l’échelle, rognage d’apple.  
   
- ![Rogner et mettre à l’échelle](./media/cscropscale1.png "csCropScale1")  
+ ![Capture d’écran d’une image d’origine et de la même image rognée.](./media/how-to-crop-and-scale-images/original-image-cropped-image.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Veillez à remplacer `Apple.gif` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Veillez à remplacer `Apple.gif` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: a23026e0ac377294e3e4356d341c45d31b4ecd79
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724438"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653819"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procédure : Dessiner une Bitmap existante à l’écran
 Vous pouvez facilement dessiner une image existante sur l’écran. Vous devez d’abord créer un <xref:System.Drawing.Bitmap> objet à l’aide du constructeur de bitmap qui prend un nom de fichier <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Ce constructeur accepte des images avec différents formats de fichiers, notamment BMP, GIF, JPEG, PNG et TIFF. Après avoir créé le <xref:System.Drawing.Bitmap> d’objet, qui passez <xref:System.Drawing.Bitmap> de l’objet à la <xref:System.Drawing.Graphics.DrawImage%2A> méthode d’un <xref:System.Drawing.Graphics> objet.  
@@ -22,15 +22,15 @@ Vous pouvez facilement dessiner une image existante sur l’écran. Vous devez d
 ## <a name="example"></a>Exemple  
  Cet exemple crée un <xref:System.Drawing.Bitmap> objet à partir d’un fichier JPEG, puis dessine l’image bitmap avec son coin supérieur gauche à (60, 10).  
   
- L’illustration suivante montre l’image bitmap dessinée à l’emplacement spécifié.  
+ L’illustration suivante montre l’image bitmap dessinée à l’emplacement spécifié :  
   
- ![Position de l’image](./media/csimageposition1.png "csimageposition1")  
+ ![Capture d’écran montrant une image à une position spécifiée.](./media/how-to-draw-an-existing-bitmap-to-the-screen/bitmap-specified-position.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.WorkingWithImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

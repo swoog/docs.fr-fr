@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523387"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654365"
 ---
 # <a name="loop-structures-visual-basic"></a>Structures de boucle (Visual Basic)
 Structures de boucle de Visual Basic vous permettent de vous permettent d’exécuter une ou plusieurs lignes de code de façon répétée. Vous pouvez répéter les instructions dans une structure de boucle jusqu'à ce qu’une condition est `True`, jusqu'à ce qu’une condition est `False`, un nombre de fois, ou qu’une seule fois pour chaque élément spécifié dans une collection.  
   
- L’illustration suivante montre une structure de boucle qui exécute un ensemble d’instructions jusqu'à ce qu’une condition devienne true.  
+ L’illustration suivante montre une structure de boucle qui exécute un ensemble d’instructions jusqu'à ce qu’une condition devienne true :  
   
- ![Organigramme d’une boucle Do... Boucle Until](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-Exécution d’un ensemble d’instructions jusqu'à ce qu’une condition devienne true  
+ ![Organigramme illustrant un Do... Jusqu'à ce que la boucle.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>Boucles while  
  Le `While`... `End While` construction exécute un ensemble d’instructions tant que la condition spécifiée dans le `While` instruction est `True`. Pour plus d’informations, consultez [tandis que... Fin While, instruction](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359716"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654222"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace de réutiliser au moins certains de ce code dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application plutôt que de réécrire de zéro. Le scénario le plus courant est lorsque vous avez des contrôles Windows Forms existants. Dans certains cas, il est possible que vous n’ayez même pas accès au code source de ces contrôles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit une procédure simple pour l’hébergement de tels contrôles dans un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. Par exemple, vous pouvez utiliser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour la plupart de votre programmation tout en hébergeant votre spécialisé <xref:System.Windows.Forms.DataGridView> contrôles.  
@@ -36,9 +36,10 @@ Cette procédure pas à pas nécessite Visual Studio.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implémentation du contrôle composite Windows Forms  
  Le contrôle composite Windows Forms utilisé dans cet exemple est un formulaire de saisie de données simple. Ce formulaire prend le nom et l’adresse de l’utilisateur, puis utilise un événement personnalisé pour retourner ces informations à l’hôte. L’illustration suivante montre le rendu du contrôle.  
-  
- ![Contrôle simple Windows Forms](./media/wfcontrol.gif "WFControl")  
-Contrôle composite Windows Forms  
+
+ L’illustration suivante montre un contrôle composite Windows Forms :  
+
+ ![Capture d’écran montrant un contrôle Windows Forms simple.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Création du projet  
  Pour démarrer le projet :  
@@ -128,7 +129,9 @@ Contrôle composite Windows Forms
 ## <a name="implementing-the-wpf-host-application"></a>Implémentation de l’application hôte WPF
  Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] héberger l’application utilise le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle à héberger `MyControl1`. L’application gère le `OnButtonClick` événement pour recevoir les données à partir du contrôle. Il possède également une collection de cases d’option qui vous permettent de modifier certaines propriétés du contrôle à partir de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. L’illustration suivante montre l’application finale.
 
- ![Contrôle incorporé dans une page WPF](./media/avalonhost.gif "AvalonHost") l’application complète, avec le contrôle incorporé dans l’application WPF
+L’illustration suivante montre l’application complète, y compris le contrôle incorporé dans l’application WPF :
+
+ ![Capture d’écran montrant un contrôle incorporé dans une page WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Création du projet
  Pour démarrer le projet :

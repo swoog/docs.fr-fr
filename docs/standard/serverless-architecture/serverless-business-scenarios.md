@@ -4,14 +4,14 @@ description: Découvrez sans serveur avec une approche pratique en accédant à 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153785"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653897"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>Scénarios d’entreprise sans serveur et cas d’utilisation
+# <a name="serverless-business-scenarios-and-use-cases"></a>Scénarios métier et cas d’usage serverless
 
 Il existe de nombreux cas d’usage et scénarios pour les applications sans serveur. Ce chapitre inclut des exemples qui illustrent les différents scénarios. Les scénarios incluent des liens vers la documentation connexe et les référentiels de code source publics. Les exemples de ce chapitre permettent de prendre en main votre propre création et d’implémentation de solutions sans serveur.
 
@@ -61,7 +61,7 @@ Vous pouvez afficher une vidéo qui vous guide à travers toute la migration : 
 
 Extraire, transformer et chargement (ETL) est une fonction métier courants qui s’intègre différents systèmes. Les approches traditionnelles impliquent souvent la configuration des serveurs dédiés de FTP, puis déployer des tâches planifiées pour analyser des fichiers et de les traduire pour une utilisation professionnelle. Architecture sans serveur facilite le travail, car un déclencheur peut être activé lorsque le fichier est téléchargé. Tâches de s’attaque de fonctions Azure telles que ETL via sa composition idéal de petits morceaux de code qui se concentrent sur un problème spécifique.
 
-![Architecture de l’ETL](./media/csvimport.png)
+![Capture d’écran montrant le processus d’analyse du csv.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 Pour le code source et des exercices pratiques, consultez [CSV importer lab](https://github.com/JeremyLikness/azure-fn-file-process-hol).
 

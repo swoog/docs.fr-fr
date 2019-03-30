@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368270"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654547"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace d’étendre votre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plutôt que de réécrire de zéro. Un scénario courant est lorsque vous souhaitez incorporer un ou plusieurs contrôles implémentés avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] au sein de votre application Windows Forms. Pour plus d’informations sur la personnalisation des contrôles WPF, consultez [personnalisation des contrôles](../controls/control-customization.md).  
@@ -31,10 +31,12 @@ ms.locfileid: "57368270"
 Cette procédure pas à pas nécessite Visual Studio.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implémentation du contrôle composite WPF  
- Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite utilisée dans cet exemple est un formulaire de saisie de données simple qui prend le nom et l’adresse de l’utilisateur. Lorsque l’utilisateur clique sur l’un des deux boutons pour indiquer que la tâche est terminée, le contrôle déclenche un événement personnalisé pour retourner ces informations à l’hôte. L’illustration suivante montre le rendu du contrôle.  
+ Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite utilisée dans cet exemple est un formulaire de saisie de données simple qui prend le nom et l’adresse de l’utilisateur. Lorsque l’utilisateur clique sur l’un des deux boutons pour indiquer que la tâche est terminée, le contrôle déclenche un événement personnalisé pour retourner ces informations à l’hôte. L’illustration suivante montre le rendu du contrôle. 
+
+ L’illustration suivante montre un contrôle composite WPF : 
+
   
- ![Contrôle WPF simple](./media/avaloncontrol.png "AvalonControl")  
-Contrôle composite WPF  
+ ![Capture d’écran montrant un contrôle WPF simple.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Création du projet  
  Pour démarrer le projet :  
@@ -180,9 +182,10 @@ namespace MyControls
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Implémentation de l’application hôte Windows Forms  
  Les formulaires Windows héberger l’application utilise un <xref:System.Windows.Forms.Integration.ElementHost> objet pour héberger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite. L’application gère le `OnButtonClick` événement pour recevoir les données à partir du contrôle composite. L’application comprend également un ensemble de cases d’option que vous pouvez utiliser pour modifier l’apparence du contrôle. L’illustration suivante présente l’application.  
-  
- ![Formulaire Windows contrôle Avalon d’hébergement](./media/wfhost.png "WFHost")  
-Contrôle composite WPF hébergé dans une application Windows Forms  
+
+L’illustration suivante montre un contrôle composite WPF hébergé dans une application Windows Forms »  
+
+ ![Scteenshot qui affiche un contrôle Avalon d’hébergement de formulaire Windows.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Création du projet  
  Pour démarrer le projet :  
@@ -228,7 +231,7 @@ Contrôle composite WPF hébergé dans une application Windows Forms
   
 4.  Ajoutez le code suivant <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles au formulaire.  
   
-    |Name|Texte|  
+    |Nom|Texte|  
     |----------|----------|  
     |groupBox1|Couleur d'arrière-plan|  
     |groupBox2|Couleur de premier plan|  
@@ -240,7 +243,7 @@ Contrôle composite WPF hébergé dans une application Windows Forms
   
 5.  Ajoutez le code suivant <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> de contrôles à la <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles.  
   
-    |GroupBox|Name|Texte|  
+    |GroupBox|Nom|Texte|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|D'origine|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -261,7 +264,7 @@ Contrôle composite WPF hébergé dans une application Windows Forms
   
 6.  Ajoutez le code suivant <xref:System.Windows.Forms.Label?displayProperty=nameWithType> contrôle au dernier <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Ces contrôles affichent les données retournées par la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite.  
   
-    |GroupBox|Name|Texte|  
+    |GroupBox|Nom|Texte|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Nom :|  
     |groupBox7|lblAddress|Adresse :|  

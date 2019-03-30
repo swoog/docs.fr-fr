@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371981"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654313"
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
 <a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](./app-development/wpf-add-ins-overview.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "57371981"
   
  La *navigation dans une application* est la navigation entre les éléments de contenu dans une application hébergée par un navigateur. La *navigation dans un navigateur* est la navigation qui modifie l’URL de contenu et d’emplacement d’un navigateur lui-même. La relation entre la navigation dans une application (en général XAML) et la navigation dans un navigateur (en général HTML) est illustrée dans l’illustration suivante :
   
- ![Diagramme de navigation](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![Relation entre la navigation dans une application et navigation dans un navigateur.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  Le type de contenu qui est considérée comme sûre pour un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] à atteindre est déterminée principalement par indique si la navigation dans une application ou la navigation dans un navigateur est utilisée.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57371981"
 |Ressource|Les fichiers ajoutés à un projet avec un type de build **ressources**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Contenu|Les fichiers ajoutés à un projet avec un type de build **contenu**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Site d’origine|Les fichiers ajoutés à un projet avec un type de build **aucun**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Code de l’application|Ressources XAML avec un code-behind compilé.<br /><br /> ou<br /><br /> Les fichiers XAML qui sont ajoutés à un projet avec un type de build **Page**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Code de l’application|Ressources XAML avec un code-behind compilé.<br /><br /> - ou -<br /><br /> Les fichiers XAML qui sont ajoutés à un projet avec un type de build **Page**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Pour plus d’informations sur les fichiers de données d’application et pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], consultez [ressource d’Application WPF, de contenu et de fichiers de données](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -115,7 +115,7 @@ ms.locfileid: "57371981"
   
      Le **paramètres de sécurité** boîte de dialogue s’affiche et vous pouvez configurer les paramètres de sécurité pour la zone sélectionnée.  
   
-     ![Boîte de dialogue Paramètres de sécurité](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![Capture d’écran qui affiche la boîte de dialogue Paramètres de sécurité.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  Vous pouvez également accéder à la boîte de dialogue Options Internet à partir d’Internet Explorer. Cliquez sur **outils** puis cliquez sur **Options Internet**.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705336"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653793"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procédure : Améliorer les performances en évitant la mise à l’échelle automatique
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut automatiquement mettre à l’échelle une image pendant que vous la dessinez, ce qui diminue les performances. Ou bien, vous pouvez contrôler la mise à l’échelle de l’image en passant les dimensions du rectangle de destination pour le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  
@@ -30,15 +30,15 @@ ms.locfileid: "57705336"
  Même si votre résolution d’écran est différente de 96 points par pouce, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sera probablement mise à l’échelle l’image comme si la résolution d’écran était de 96 points par pouce. C’est parce qu’une [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> objet est associé à un contexte de périphérique et à quel moment [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] requêtes le contexte de périphérique pour la résolution d’écran, le résultat est habituellement 96, quelle que soit la résolution réelle de l’écran. Vous pouvez éviter la mise à l’échelle automatique en spécifiant le rectangle de destination dans le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant dessine deux fois la même image. Dans le premier cas, la largeur et la hauteur du rectangle de destination ne sont pas spécifiés, et l’image est ajustée automatiquement. Dans le deuxième cas, la largeur et la hauteur (en pixels) du rectangle de destination sont spécifiées pour être le même que la largeur et la hauteur de l’image d’origine. L’illustration suivante montre l’image rendue deux fois.  
+ L’exemple suivant dessine deux fois la même image. Dans le premier cas, la largeur et la hauteur du rectangle de destination ne sont pas spécifiés, et l’image est ajustée automatiquement. Dans le deuxième cas, la largeur et la hauteur (en pixels) du rectangle de destination sont spécifiées pour être le même que la largeur et la hauteur de l’image d’origine. L’illustration suivante montre l’image rendue deux fois :  
   
- ![Mise à l’échelle de Texture](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Capture d’écran qui affiche des images avec mise à l’échelle de la texture.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Remplacez Texture.jpg avec un nom de l’image et le chemin d’accès valides sur votre système.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez Texture.jpg avec un nom de l’image et le chemin d’accès valides sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)

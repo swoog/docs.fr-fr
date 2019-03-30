@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972541"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654235"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Paramètres et arguments d’une procédure (Visual Basic)
 Dans la plupart des cas, une procédure a besoin d’informations sur les circonstances dans lesquelles elle a été appelée. Une procédure qui effectue les tâches répétitives ou partagées utilise des informations différentes pour chaque appel. Ces informations se composent des variables, constantes et expressions que vous passez à la procédure lorsque vous l’appelez.  
@@ -36,8 +36,7 @@ Dans la plupart des cas, une procédure a besoin d’informations sur les circon
   
  L’illustration suivante montre le code appelant la procédure `safeSquareRoot` à partir de deux emplacements différents. Le premier appel passe la valeur de la variable `x` (4.0) au paramètre `number`et la valeur de retour dans `root` (2.0) est affectée à la variable `y`. Le deuxième appel passe la valeur de littéral 9.0 à `number`et assigne la valeur de retournée (3.0) à la variable `z`.  
   
- ![Diagramme graphique du passage d’argument au paramètre](./media/parametersargue.gif "ParametersArgue")  
-Passage d’un argument à un paramètre  
+ ![Diagramme illustrant le passage d’un argument à un paramètre](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Pour plus d’informations, consultez [différences entre les paramètres et Arguments](./differences-between-parameters-and-arguments.md).  
   

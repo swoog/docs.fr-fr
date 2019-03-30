@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717620"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653780"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gestion de l'état d'un objet graphique
 Le <xref:System.Drawing.Graphics> classe est au cœur de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Pour dessiner quoi que ce soit, vous obtenez un <xref:System.Drawing.Graphics> de l’objet, définissez ses propriétés et appeler ses méthodes <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, etc.).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  L’illustration suivante montre les deux points de suspension. Notez que la rotation de 30 degrés est à l’origine du système de coordonnées (coin supérieur gauche de la zone cliente), mais pas sur les centres des ellipses. Notez également que la largeur du stylet de 1 signifie 1 pixel pour la première ellipse et 1 millimètre pour la seconde.  
   
- ![Ovals](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Illustration des deux points de suspension : largeur de rotation et d’un stylet.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Zone de découpage  
  Un <xref:System.Drawing.Graphics> objet gère une région de découpage qui s’applique à tous les éléments dessinés par cet <xref:System.Drawing.Graphics> objet. Vous pouvez définir la zone de découpage en appelant le <xref:System.Drawing.Graphics.SetClip%2A> (méthode).  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- L’illustration suivante montre les lignes ajustées.  
+ L’illustration suivante montre les lignes ajustées :  
   
- ![Zone de découpage de limitée](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagramme illustrant la zone de découpage limitée.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Voir aussi
 - [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

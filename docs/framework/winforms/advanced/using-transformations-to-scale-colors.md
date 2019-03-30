@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707428"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653988"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilisation de transformations pour mettre à l'échelle des couleurs
 Une transformation de mise à l’échelle multiplie une ou plusieurs des quatre composantes de couleur par un nombre. Les entrées de matrice de couleurs qui représentent la mise à l’échelle sont présentées dans le tableau suivant.  
@@ -31,9 +31,9 @@ Une transformation de mise à l’échelle multiplie une ou plusieurs des quatre
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- L’illustration suivante montre l’image d’origine sur la gauche et l’image à l’échelle sur la droite.  
+ L’illustration suivante montre l’image d’origine sur la gauche et l’image à l’échelle sur la droite :  
   
- ![Mettre à l’échelle de couleurs](./media/colortrans3.png "colortrans3")  
+ ![Capture d’écran qui compare les couleurs d’origine et à l’échelle.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la mise à l’échelle bleu. Notez que le composant bleu dans la quatrième barre de couleurs est passé de 0,8 à 0,6. C’est parce que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] conserve uniquement la partie fractionnaire du résultat. Par exemple, (2)(0.8) = 1.6, et la partie fractionnaire de 1,6 est 0,6. En conservant uniquement la partie fractionnaire garantit que le résultat est toujours dans l’intervalle [0, 1].  
   
@@ -50,9 +50,9 @@ Une transformation de mise à l’échelle multiplie une ou plusieurs des quatre
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- L’illustration suivante montre l’image d’origine sur la gauche et l’image à l’échelle sur la droite.  
+ L’illustration suivante montre l’image d’origine sur la gauche et l’image à l’échelle sur la droite :  
   
- ![Mettre à l’échelle de couleurs](./media/colortrans4.png "colortrans4")  
+ ![Capture d’écran qui compare les couleurs d’origine et à l’échelle.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après le rouge, vert et bleu mise à l’échelle.  
   

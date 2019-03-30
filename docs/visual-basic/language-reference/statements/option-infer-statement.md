@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965820"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654326"
 ---
 # <a name="option-infer-statement"></a>Instruction Option Infer
 Permet l'utilisation de l'inférence de type de variable locale dans les variables déclaratives.  
@@ -31,23 +31,25 @@ Option Infer { On | Off }
   
 |Terme|Définition|  
 |---|---|  
-|`On`|Facultatif. Active l'inférence de type de variable locale.|  
-|`Off`|Facultatif. Désactive l'inférence de type de variable locale.|  
+|`On`|Optionnel. Active l'inférence de type de variable locale.|  
+|`Off`|Optionnel. Désactive l'inférence de type de variable locale.|  
   
 ## <a name="remarks"></a>Notes  
  Pour définir `Option Infer` dans un fichier, tapez `Option Infer On` ou `Option Infer Off` en haut du fichier, avant tout autre code source. Si la valeur définie pour `Option Infer` dans un fichier est en conflit avec la valeur définie dans l'IDE ou sur la ligne de commande, la valeur contenue dans le fichier est prioritaire.  
   
  Quand vous affectez à `Option Infer` la valeur `On`, vous pouvez déclarer des variables locales sans déclarer explicitement un type de données. Le compilateur déduit le type de données d'une variable à partir du type de son expression d'initialisation.  
   
- Dans l'illustration suivante, `Option Infer` est activé. La variable contenue dans la déclaration `Dim someVar = 2` est déclarée en tant qu'entier par l'inférence de type.  
+ Dans l'illustration suivante, `Option Infer` est activé. La variable contenue dans la déclaration `Dim someVar = 2` est déclarée en tant qu'entier par l'inférence de type.
+
+ La capture d’écran suivante montre IntelliSense quand Option Infer est activé : 
   
- ![Vue IntelliSense de la déclaration. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-IntelliSense quand Option Infer est activé  
+ ![Capture d’écran montrant la vue IntelliSense quand Option Infer est activé.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
  Dans l'illustration suivante, `Option Infer` est désactivé. La variable contenue dans la déclaration `Dim someVar = 2` est déclarée comme `Object` par l'inférence de type. Dans cet exemple, le **Option Strict** est défini sur **hors** sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Vue IntelliSense de la déclaration. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-IntelliSense quand Option Infer est désactivé  
+ La capture d’écran suivante montre IntelliSense quand Option Infer est désactivé :
+ 
+ ![Capture d’écran montrant la vue IntelliSense quand Option Infer est désactivé.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  Quand une variable est déclarée comme `Object`, le type au moment de l'exécution peut changer pendant que le programme s'exécute. Visual Basic exécute des opérations appelées *boxing* et *unboxing* effectuer une conversion entre un `Object` et un type valeur, ce qui ralentit l’exécution. Pour plus d’informations sur les conversions boxing et unboxing, consultez le [spécification du langage Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).

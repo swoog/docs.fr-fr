@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977251"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654664"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espaces de noms dans Visual Basic
 Les espaces de noms permettent d’organiser les objets définis dans un assembly. Les assemblys peuvent contenir plusieurs espaces de noms, qui peuvent à leur tour contenir d’autres espaces de noms. Les espaces de noms permettent d’éviter les ambiguïtés et de simplifier les références quand de grands groupes d’objets, tels que des bibliothèques de classes, sont utilisés.  
@@ -37,9 +37,9 @@ Les espaces de noms permettent d’organiser les objets définis dans un assembl
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- L’illustration ci-dessous montre deux hiérarchies d’espaces de noms, chacune contenant un objet nommé `ListBox`.  
+ L’illustration suivante montre deux hiérarchies d’espace de noms, chacune contenant un objet nommé `ListBox`:  
   
- ![Hiérarchie de Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
+ ![Capture d’écran montre deux hiérarchies d’espace de noms.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  Par défaut, chaque fichier exécutable que vous créez avec Visual Basic contient un espace de noms portant le même nom que votre projet. Par exemple, si vous définissez un objet dans un projet nommé `ListBoxProject`, le fichier exécutable, ListBoxProject.exe, contient un espace de noms appelé `ListBoxProject`.  
   

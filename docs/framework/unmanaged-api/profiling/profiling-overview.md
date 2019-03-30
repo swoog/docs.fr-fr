@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862314"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654092"
 ---
 # <a name="profiling-overview"></a>Vue d'ensemble du profilage
 <a name="top"></a> Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  
@@ -78,8 +78,7 @@ ms.locfileid: "43862314"
   
  L'illustration suivante montre comment la DLL du profileur interagit avec l'application en cours de profilage et le CLR.  
   
- ![Architecture de profilage](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Architecture de profilage  
+ ![Capture d’écran montrant l’architecture de profilage.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Interfaces de notification  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) et [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) peuvent être considérées comme des interfaces de notification. Ces interfaces se composent de méthodes telles que [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), et [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Chaque fois que le CLR charge ou décharge une classe, compile une fonction, etc., il appelle la méthode correspondante dans l'interface `ICorProfilerCallback` ou `ICorProfilerCallback2` du profileur.  
@@ -131,7 +130,7 @@ Architecture de profilage
   
  L'API de profilage s'avère utile à la fois pour les profileurs d'échantillonnage et de non-échantillonnage. Un *profileur d’échantillonnage* inspecte le profil à des battements d’horloge réguliers, par exemple, toutes les 5 millisecondes. Un *profileur de non échantillonnage* est informé d’un événement de façon synchrone avec le thread qui provoque l’événement.  
   
-### <a name="unsupported-functionality"></a>Fonctionnalité non prise en charge  
+### <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  L'API de profilage ne prend pas en charge les fonctionnalités suivantes :  
   
 -   Code non managé, qui doit être profilé à l'aide de méthodes Win32 classiques. Toutefois, le profileur CLR inclut des événements de transition pour déterminer les limites entre code managé et non managé.  
@@ -170,7 +169,7 @@ Architecture de profilage
 ## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>Combinaison de code managé et non managé dans un profileur de code  
  Un profileur incorrectement écrit peut provoquer des références circulaires à lui-même, ce qui entraîne un comportement imprévisible.  
   
- Un examen de l'API de profilage CLR peut donner l'impression de pouvoir écrire un profileur contenant des composants managés et non managés qui s'appellent mutuellement via COM interop ou des appels indirects.  
+ Une revue de l’API de profilage CLR peut donner l’impression de pouvoir écrire un profileur contenant des composants managés et non managés qui s’appellent mutuellement via COM interop ou des appels indirects.  
   
  Bien que cela soit possible du point de vue de la conception, l'API de profilage ne prend pas en charge les composants managés. Un profileur CLR doit être entièrement non managé. Toute tentative de combiner du code managé et non managé dans un profileur CLR risque d'entraîner des violations d'accès, des échecs de programme ou des interblocages. Les composants managés du profileur déclenchent des événements sur leurs composants non managés, qui rappellent ensuite les composants managés, ce qui entraîne des références circulaires.  
   
