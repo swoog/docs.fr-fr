@@ -2,12 +2,12 @@
 title: Properties
 description: En savoir plus sur F# propriétés, qui sont des membres qui représentent des valeurs associées à un objet.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614504"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675690"
 ---
 # <a name="properties"></a>Properties
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 La sortie du code précédent montre que la valeur de AutoProperty est inchangée lorsqu’elle est appelée à plusieurs reprises, tandis que le ExplicitProperty change chaque fois qu’elle est appelée. Cet exemple montre que l’expression pour une propriété implémentée automatiquement n’est pas évaluée à chaque fois, en l’état de la méthode d’accesseur Get pour la propriété explicite.
 
 >[!WARNING]
-Il existe certaines bibliothèques, telles que de Entity Framework (`System.Data.Entity`) qui effectuent des opérations personnalisées dans les constructeurs de classe de base qui ne fonctionnent pas correctement avec l’initialisation des propriétés implémentées automatiquement. Dans ce cas, essayez d’utiliser des propriétés explicites.
+>Il existe certaines bibliothèques, telles que de Entity Framework (`System.Data.Entity`) qui effectuent des opérations personnalisées dans les constructeurs de classe de base qui ne fonctionnent pas correctement avec l’initialisation des propriétés implémentées automatiquement. Dans ce cas, essayez d’utiliser des propriétés explicites.
 
 Propriétés peuvent être membres de classes, des structures, des unions discriminées, des enregistrements, des interfaces et des extensions de type et peuvent également être définies dans les expressions d’objet.
 
