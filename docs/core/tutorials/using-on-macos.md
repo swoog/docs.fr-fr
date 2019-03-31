@@ -4,12 +4,12 @@ description: Ce document présente les étapes et les flux de travail permettant
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788451"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409495"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Bien démarrer avec .NET Core sur macOS
 
@@ -215,7 +215,7 @@ Définissez un point d’arrêt au niveau de l’instruction `WriteLine` dans la
 
 Ouvrez l’onglet du débogueur. Pour cela, sélectionnez l’icône de débogage dans la barre d’outils de Visual Studio Code, puis **Affichage > Déboguer** à partir de la barre de menus, ou utilisez le raccourci clavier <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>D</kbd> :
 
-![Débogueur Visual Studio Code](./media/using-on-macos/vscodedebugger.png)
+![Débogueur Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
 Appuyez sur le bouton de lecture pour démarrer l’application sous le débogueur. L’application s’exécute jusqu’au point d’arrêt. Exécutez pas à pas la méthode `Get`, puis vérifiez que vous avez passé les arguments appropriés. Vérifiez que la réponse est 42.
 

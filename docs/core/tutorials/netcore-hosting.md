@@ -4,12 +4,12 @@ description: Découvrez comment héberger le runtime .NET Core à partir du code
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980371"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654053"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Écrire un hôte .NET Core personnalisé pour contrôler le runtime .NET à partir de votre code natif
 
@@ -208,4 +208,4 @@ Une fois que votre hôte est créé, il peut être testé en l’exécutant à p
 
 Si vous n’obtenez pas les résultats attendus, vérifiez que *coreclr.dll* est disponible dans l’emplacement attendu par l’hôte, que toutes les bibliothèques Framework nécessaires sont dans la liste TPA et que le nombre de bits de CoreCLR (32 ou 64 bits) correspond au mode de génération de l’hôte.
 
-L’hébergement du runtime .NET Core est un scénario avancé sans utilité pour un grand nombre de développeurs, mais qui peut être très utile pour ceux qui doivent lancer du code managé à partir d’un processus natif ou qui ont besoin de davantage de contrôle sur le comportement du runtime .NET Core. Comme .NET Core est capable de s’exécuter côte à côte avec lui-même, il est même possible de créer des hôtes qui initialisent et démarrent plusieurs versions du runtime .NET Core et exécutent des applications sur chacun d'eux dans le même processus.
+L’hébergement du runtime .NET Core est un scénario avancé sans utilité pour un grand nombre de développeurs, mais qui peut être très utile pour ceux qui doivent lancer du code managé à partir d’un processus natif ou qui ont besoin de davantage de contrôle sur le comportement du runtime .NET Core.
