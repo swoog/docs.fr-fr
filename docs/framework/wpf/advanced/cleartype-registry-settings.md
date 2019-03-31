@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369719"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675898"
 ---
 # <a name="cleartype-registry-settings"></a>Paramètres du Registre ClearType
 Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] des paramètres de Registre qui sont utilisés par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
@@ -57,7 +57,7 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
   
  Pour chaque nom de périphérique d’affichage pour un utilisateur, un `ClearTypeLevel` valeur DWORD est définie. La capture d’écran suivante montre le paramètre de l’Éditeur du Registre pour le [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] niveau.  
   
- ![Paramètres ClearType dans l’Éditeur de Registre](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Paramètres ClearType dans l’Éditeur du Registre.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications restituent le texte dans un des deux modes, avec ou sans [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Lorsque le texte est restitué sans [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], il est appelé rendu à l’échelle de gris.  
@@ -75,7 +75,7 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
   
  Pour chaque nom de périphérique d’affichage pour un utilisateur, un `GammaLevel` valeur DWORD est définie. La capture d’écran suivante indique le paramètre du niveau gamma dans l’Éditeur du Registre.  
   
- ![Paramètres ClearType dans l’Éditeur de Registre](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Paramètres de niveau de gamma dans l’Éditeur du Registre ClearType](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Structure des pixels  
@@ -99,7 +99,7 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
   
  Pour chaque nom de périphérique d’affichage pour un utilisateur, un `PixelStructure` valeur DWORD est définie. La capture d’écran suivante indique le paramètre de la structure des pixels dans l’Éditeur du Registre.  
   
- ![Paramètres ClearType dans l’Éditeur de Registre](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Paramètres de niveau de gamma dans l’Éditeur du Registre ClearType](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Niveau de contraste du texte  
@@ -112,7 +112,7 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
   
  Pour chaque nom de périphérique d’affichage pour un utilisateur, un `TextContrastLevel` valeur DWORD est définie. La capture d’écran suivante indique le paramètre du niveau de contraste du texte dans l’Éditeur du Registre.  
   
- ![Paramètres ClearType dans l’Éditeur de Registre](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Paramètres ClearType dans l’Éditeur du Registre.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Voir aussi
 - [Vue d’ensemble ClearType](cleartype-overview.md)
