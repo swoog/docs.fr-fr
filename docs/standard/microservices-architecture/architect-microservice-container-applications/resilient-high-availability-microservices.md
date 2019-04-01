@@ -4,12 +4,12 @@ description: Les microservices doivent être conçus pour gérer les pannes de d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846621"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465813"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Résilience et haute disponibilité dans les microservices
 
@@ -59,25 +59,25 @@ Les différents orchestrateurs peuvent sembler similaires, mais les diagnostics 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - **The Twelve-Factor App. XI. Journaux : traiter les journaux sous forme de flux d’événements** \
-  [*https://12factor.net/logs*](https://12factor.net/logs)
+  [https://12factor.net/logs](https://12factor.net/logs)
 
 - Dépôt GitHub **Microsoft Diagnostic EventFlow Library**. \
-  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
 
-- **Présentation d’Azure Diagnostics** \
-  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Présentation de Diagnostics Azure** \
+  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
 
 - **Connecter des ordinateurs Windows au service Log Analytics dans Azure** \
-  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
 - **Journalisation sémantique : utilisation du bloc applicatif de journalisation sémantique** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Site officiel de **Splunk**. \
-  [*https://www.splunk.com/*](https://www.splunk.com/)
+  [https://www.splunk.com/](https://www.splunk.com/)
 
 - **Classe EventSource** API pour le suivi d’événements pour Windows (ETW) \
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+  [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[Précédent](microservice-based-composite-ui-shape-layout.md)

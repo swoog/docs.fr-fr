@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981580"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545466"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
 
@@ -45,8 +45,8 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Accès au membre<br /><br /> Accès au membre conditionnel.|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Méthode et appel de délégué|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Tableau et accès d'indexeur<br /><br /> Tableau et accès d'indexeur conditionnels|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Post-incrémentation|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Post-décrémentation|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Post-incrémentation|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Post-décrémentation|  
 |[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Création d'objet et de délégué|  
 |`new` T(...){...}|Création d'objet avec l'initialiseur. Consultez [Initialiseurs d’objets et de collections](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Initialiseur d'objet anonyme. Consultez [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
@@ -65,17 +65,17 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Négation|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Négation logique|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Négation d'opération de bits|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Pré-incrémentation|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Pré-décrémentation|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Pré-incrémentation|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pré-décrémentation|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertir explicitement x en type T|  
   
  **Opérateurs multiplicatifs**  
   
 |Expression|Description|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Multiplication|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Division|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Reste|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Multiplication|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Division|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Reste|  
   
  **Opérateurs additifs**  
   
@@ -106,8 +106,8 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
   
 |Expression|Description|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Égal|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Différence|  
+|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Égal|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Différence|  
   
  **Opérateurs logiques, conditionnels et Null**  
   
@@ -126,7 +126,7 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |Expression|Description|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Attribution|  
-|x op= y|Assignation composée. Prend en charge les opérateurs suivants : [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|Assignation composée. Prend en charge les opérateurs suivants : [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Fonction anonyme (expression lambda)|  
   
 ## <a name="associativity"></a>l'associativité

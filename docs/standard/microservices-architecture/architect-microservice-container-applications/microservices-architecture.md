@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour applications .NET conteneu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8cac40c0a6e5f31087296416616c8a8b9e54b528
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145248"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465189"
 ---
 # <a name="microservices-architecture"></a>Architecture en microservices
 
@@ -46,19 +46,19 @@ Parmi ces aspects, seuls les trois premiers sont couverts ou présentés dans ce
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Mark Russinovich. Microservices : Une révolution des applications grâce au cloud** \
-  [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 - **Martin Fowler. Microservices** \
-  [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
+  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
 
 - **Martin Fowler. Microservice Prerequisites** \
-  [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 - **Jimmy Nilsson. Chunk Cloud Computing** \
-  [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
 - **Cesar de la Torre. Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (livre électronique téléchargeable) \
-  [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 >[!div class="step-by-step"]
 >[Précédent](service-oriented-architecture.md)

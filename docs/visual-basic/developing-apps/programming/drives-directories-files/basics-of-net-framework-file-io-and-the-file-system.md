@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 365c3b8f0aa107f7106e0c83d1fa60de6f4903f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674560"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462771"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)
 
@@ -29,7 +29,7 @@ L’espace de noms <xref:System.IO> contient les classes <xref:System.IO.File> e
 
 Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utilise des flux pour prendre en charge la lecture et l’écriture dans des fichiers. Vous pouvez considérer un flux comme un ensemble unidimensionnel de données contiguës, ayant un début et une fin, et où le curseur indique la position actuelle dans le flux.
 
-![Le curseur montre la position actuelle dans le flux de fichier.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")
+![Le curseur montre la position actuelle dans FileStream.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
 ## <a name="stream-operations"></a>Opérations de flux
 

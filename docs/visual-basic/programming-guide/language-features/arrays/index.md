@@ -56,7 +56,7 @@ L’illustration suivante montre le `students` tableau. Pour chaque élément du
 
 - La valeur contenue dans l’élément représente le nombre d’élèves de cette catégorie.
 
-![Image d’un tableau montrant le nombre d’étudiants](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") éléments du tableau « students »
+![Diagramme montrant un tableau des nombres d’étudiants](./media/index/students-array-elements.gif)
 
 L’exemple suivant contient le code Visual Basic qui crée et utilise le tableau :
 

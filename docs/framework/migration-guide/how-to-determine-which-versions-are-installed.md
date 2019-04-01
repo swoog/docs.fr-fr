@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262436"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504429"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procédure : déterminer les versions du .NET Framework installées
 
@@ -44,14 +44,14 @@ Pour obtenir la liste des versions du .NET Framework installées sur un ordinate
      - [Utiliser l’Éditeur du Registre pour déterminer les versions du .NET Framework](#net_b)  
      - [Utiliser du code pour interroger le Registre sur les versions du .NET Framework](#net_d)  
      - [Utiliser PowerShell pour interroger le Registre sur les versions du .NET Framework](#ps_a)
- - Identifiez des versions antérieures du .NET Framework (1&#8211;4) :
+- Identifiez des versions antérieures du .NET Framework (1&#8211;4) :
      - [Utiliser l’Éditeur du Registre pour déterminer les versions du .NET Framework](#net_a)
      - [Utiliser du code pour interroger le Registre sur les versions du .NET Framework](#net_c)   
 
 Pour obtenir la liste des versions du CLR installées sur un ordinateur, utilisez un outil ou du code :  
   
- - [Utiliser l’outil Clrver](#clr_a)  
- - [Utiliser du code pour interroger la classe Environment](#clr_b)  
+- [Utiliser l’outil Clrver](#clr_a)  
+- [Utiliser du code pour interroger la classe Environment](#clr_b)  
 
 Pour plus d’informations sur la détection des mises à jour installées pour chaque version de .NET Framework, consultez [Guide pratique pour déterminer les mises à jour .NET Framework installées](how-to-determine-which-net-framework-updates-are-installed.md). 
   
@@ -133,7 +133,7 @@ Les exemples suivants vérifient la valeur de l’entrée **Release** pour déte
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 Pour rechercher une autre version minimale exigée du .NET Framework, remplacez *394802* dans ces exemples par une valeur **Release** indiquée dans le [tableau des versions du .NET Framework](#version_table).

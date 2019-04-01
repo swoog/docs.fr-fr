@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203108"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545440"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procédure : Définir une égalité de valeurs pour un type (Guide de programmation C#)
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  
@@ -37,7 +37,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
   
 2.  Implémentez l’interface <xref:System.IEquatable%601?displayProperty=nameWithType> en fournissant une méthode `Equals` propre au type. C’est ici qu’est effectuée la comparaison d’équivalence. Par exemple, vous pouvez décider de définir l’égalité en comparant seulement un ou deux champs de votre type. Ne levez pas d'exceptions à partir de la méthode `Equals`. Pour les classes uniquement : cette méthode doit examiner uniquement les champs qui sont déclarés dans la classe. Elle doit appeler `base.Equals` pour examiner les champs qui sont dans la classe de base. (Ne faites pas cela si le type hérite directement d’<xref:System.Object>, car l’implémentation <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> effectue une vérification de l’égalité de référence.)  
   
-3.  Facultatif, mais recommandé : Surcharger les opérateurs [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) et [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Facultatif, mais recommandé : Surcharger les opérateurs [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Substituez <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> pour que deux objets ayant une égalité des valeurs produisent le même code de hachage.  
   
@@ -61,7 +61,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
   
  Pour les structs, l’implémentation par défaut de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (qui est la version substituée dans <xref:System.ValueType?displayProperty=nameWithType>) effectue une vérification de l’égalité des valeurs à l’aide de la réflexion pour comparer les valeurs de chaque champ dans le type. Quand un implémenteur substitue la méthode `Equals` virtuelle dans un struct, l’objectif est de fournir un moyen plus efficace d’effectuer la vérification de l’égalité des valeurs, et éventuellement de baser la comparaison sur un sous-ensemble des propriétés ou du champ du struct.  
   
- Les opérateurs [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) et [!=](../../../csharp/language-reference/operators/not-equal-operator.md) ne peuvent pas opérer sur un struct, sauf si le struct les surcharge explicitement.  
+ Les opérateurs [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) ne peuvent pas opérer sur un struct, sauf si le struct les surcharge explicitement.  
   
 ## <a name="see-also"></a>Voir aussi
 

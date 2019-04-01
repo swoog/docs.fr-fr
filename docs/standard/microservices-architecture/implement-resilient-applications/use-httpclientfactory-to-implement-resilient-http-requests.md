@@ -4,12 +4,12 @@ description: Découvrez comment utiliser HttpClientFactory, disponible à partir
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 679de8577d1ce876823954cb7917c50daae9e230
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348711"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465930"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Utiliser HttpClientFactory pour implémenter des requêtes HTTP résilientes
 
@@ -158,10 +158,10 @@ Jusqu’à ce stade, le code indiqué effectue simplement des requêtes Http nor
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Utilisation de HttpClientFactory dans .NET Core**\
-  [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Dépôt GitHub de HttpClientFactory**\
-  [*https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory*](https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory)
+  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
 >[!div class="step-by-step"]
 >[Précédent](explore-custom-http-call-retries-exponential-backoff.md)
