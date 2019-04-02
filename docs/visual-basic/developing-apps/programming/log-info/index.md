@@ -2,19 +2,13 @@
 title: Enregistrement d'informations provenant de l'application (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Log object
-- My.Log object
-- applications [Visual Basic], logging information from
-- logging
-- My.Application.Log object
-- examples [Visual Basic], logging application information
+  - Log object
+  - My.Log object
+  - 'applications [Visual Basic], logging information from'
+  - logging
+  - My.Application.Log object
+  - 'examples [Visual Basic], logging application information'
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746806"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Enregistrement d'informations provenant de l'application (Visual Basic)
 Cette section contient des rubriques sur l’enregistrement d’informations provenant de l’application à l’aide de l’objet `My.Application.Log` ou `My.Log`, et sur l’extension des fonctionnalités de journalisation de l’application.  
@@ -38,6 +32,7 @@ Cette section contient des rubriques sur l’enregistrement d’informations pro
 |Filtrer la sortie des journaux `My.Application.Log`.|[Procédure pas à pas : Filtrage de la sortie de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Utilisation des journaux des applications](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Résolution des problèmes : Écouteurs de journalisation](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

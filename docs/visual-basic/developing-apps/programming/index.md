@@ -32,6 +32,7 @@ Cette section décrit les tâches de programmation qu’il peut être intéressa
  Contient une documentation sur l’accès du système de fichier avec l’objet `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fonctionnalités du langage Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Concepts de programmation](../../../visual-basic/programming-guide/concepts/index.md)
 - [Collections](../../../visual-basic/programming-guide/concepts/collections.md)
