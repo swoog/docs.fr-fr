@@ -36,10 +36,6 @@ Les rubriques suivantes sont disponibles :
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-* [Utilisation de l’environnement de développement Visual Studio pour C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Fournit un guide d’utilisation de l’environnement de développement intégré Visual C#.
-
 * [Guide de programmation C#](../../csharp/programming-guide/index.md)
 
     Fournit des informations sur les concepts de la programmation C# et explique comment effectuer différentes tâches en C#.
@@ -48,14 +44,10 @@ Les rubriques suivantes sont disponibles :
 
     Fournit des informations de référence détaillées sur les mots clés C#, les opérateurs, les directives de préprocesseur, les options du compilateur, et les erreurs et avertissements du compilateur.
 
-* [Exemples Visual Studio](/visualstudio/ide/visual-studio-samples)
-
-    Fournit des informations sur la façon dont vous pouvez accéder aux exemples en ligne.
-
 * [Procédures pas à pas](../../csharp/walkthroughs.md)
 
     Fournit des liens vers des procédures pas-à-pas de programmation qui utilisent C# et une brève description de chaque procédure pas-à-pas.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Bien démarrer avec Visual C# et Visual Basic à l’aide de Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Développement C# avec Visual Studio](/visualstudio/get-started/csharp/)

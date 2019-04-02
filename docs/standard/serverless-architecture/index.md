@@ -1,19 +1,14 @@
 ---
-title: 'Applications serverless : Architecture, modèles et implémentation Azure'
-description: Guide sur l’architecture serverless. Découvrez quand, pourquoi et comment implémenter une architecture serverless (par opposition à une infrastructure IaaS ou une plateforme PaaS) pour les applications de votre entreprise.
+title: "Applications serverless\_: architecture, modèles et implémentation Azure"
+description: 'Guide sur l’architecture serverless. Découvrez quand, pourquoi et comment implémenter une architecture serverless (par opposition à une infrastructure IaaS ou une plateforme PaaS) pour les applications de votre entreprise.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745314"
 ---
-# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Applications serverless : Architecture, modèles et implémentation Azure
 
-![](./media/Cover.jpg)
+# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Applications serverless : architecture, modèles et implémentation Azure
+
+![Capture d’écran montrant la couverture du livre électronique Applications serverless.](./media/index/serverless-apps-cover.jpg)
 
 > TÉLÉCHARGEMENT disponible à l’adresse suivante : <https://aka.ms/serverless-ebook>
 
