@@ -6,49 +6,50 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: a7a0952ebe13b732ce706c3dad97a6da3b5cb85d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966552"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833514"
 ---
-# <a name="isnot-operator-visual-basic"></a><span data-ttu-id="2b3f6-102">Opérateur IsNot (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b3f6-102">IsNot Operator (Visual Basic)</span></span>
-<span data-ttu-id="2b3f6-103">Compare deux variables de référence d’objet.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-103">Compares two object reference variables.</span></span>  
+# <a name="isnot-operator-visual-basic"></a><span data-ttu-id="442d1-102">Opérateur IsNot (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="442d1-102">IsNot Operator (Visual Basic)</span></span>
+<span data-ttu-id="442d1-103">Compare deux variables de référence d’objet.</span><span class="sxs-lookup"><span data-stu-id="442d1-103">Compares two object reference variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b3f6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2b3f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="442d1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="442d1-104">Syntax</span></span>  
   
 ```  
 result = object1 IsNot object2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="2b3f6-105">Composants</span><span class="sxs-lookup"><span data-stu-id="2b3f6-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="442d1-105">Composants</span><span class="sxs-lookup"><span data-stu-id="442d1-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="2b3f6-106">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-106">Required.</span></span> <span data-ttu-id="2b3f6-107">Valeur `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-107">A `Boolean` value.</span></span>  
+ <span data-ttu-id="442d1-106">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="442d1-106">Required.</span></span> <span data-ttu-id="442d1-107">Valeur `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="442d1-107">A `Boolean` value.</span></span>  
   
  `object1`  
- <span data-ttu-id="2b3f6-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-108">Required.</span></span> <span data-ttu-id="2b3f6-109">N’importe quel `Object` variable ou une expression.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-109">Any `Object` variable or expression.</span></span>  
+ <span data-ttu-id="442d1-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="442d1-108">Required.</span></span> <span data-ttu-id="442d1-109">N’importe quel `Object` variable ou une expression.</span><span class="sxs-lookup"><span data-stu-id="442d1-109">Any `Object` variable or expression.</span></span>  
   
  `object2`  
- <span data-ttu-id="2b3f6-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-110">Required.</span></span> <span data-ttu-id="2b3f6-111">N’importe quel `Object` variable ou une expression.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-111">Any `Object` variable or expression.</span></span>  
+ <span data-ttu-id="442d1-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="442d1-110">Required.</span></span> <span data-ttu-id="442d1-111">N’importe quel `Object` variable ou une expression.</span><span class="sxs-lookup"><span data-stu-id="442d1-111">Any `Object` variable or expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2b3f6-112">Notes</span><span class="sxs-lookup"><span data-stu-id="2b3f6-112">Remarks</span></span>  
- <span data-ttu-id="2b3f6-113">Le `IsNot` opérateur détermine si deux références d’objet font référence à des objets différents.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-113">The `IsNot` operator determines if two object references refer to different objects.</span></span> <span data-ttu-id="2b3f6-114">Toutefois, il n’effectue pas de comparaisons de valeurs.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="2b3f6-115">Si `object1` et `object2` se rapportent à la même instance d’objet, `result` est `False`; si elles ne le faites pas, `result` est `True`.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="442d1-112">Notes</span><span class="sxs-lookup"><span data-stu-id="442d1-112">Remarks</span></span>  
+ <span data-ttu-id="442d1-113">Le `IsNot` opérateur détermine si deux références d’objet font référence à des objets différents.</span><span class="sxs-lookup"><span data-stu-id="442d1-113">The `IsNot` operator determines if two object references refer to different objects.</span></span> <span data-ttu-id="442d1-114">Toutefois, il n’effectue pas de comparaisons de valeurs.</span><span class="sxs-lookup"><span data-stu-id="442d1-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="442d1-115">Si `object1` et `object2` se rapportent à la même instance d’objet, `result` est `False`; si elles ne le faites pas, `result` est `True`.</span><span class="sxs-lookup"><span data-stu-id="442d1-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.</span></span>  
   
- <span data-ttu-id="2b3f6-116">`IsNot` est l’opposé de le `Is` opérateur.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-116">`IsNot` is the opposite of the `Is` operator.</span></span> <span data-ttu-id="2b3f6-117">L’avantage de `IsNot` est que vous pouvez éviter la syntaxe difficile avec `Not` et `Is`, qui peut être difficile à lire.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-117">The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.</span></span>  
+ <span data-ttu-id="442d1-116">`IsNot` est l’opposé de le `Is` opérateur.</span><span class="sxs-lookup"><span data-stu-id="442d1-116">`IsNot` is the opposite of the `Is` operator.</span></span> <span data-ttu-id="442d1-117">L’avantage de `IsNot` est que vous pouvez éviter la syntaxe difficile avec `Not` et `Is`, qui peut être difficile à lire.</span><span class="sxs-lookup"><span data-stu-id="442d1-117">The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.</span></span>  
   
- <span data-ttu-id="2b3f6-118">Vous pouvez utiliser la `Is` et `IsNot` opérateurs pour tester des objets à liaison anticipée et liaison tardive.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-118">You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.</span></span>  
+ <span data-ttu-id="442d1-118">Vous pouvez utiliser la `Is` et `IsNot` opérateurs pour tester des objets à liaison anticipée et liaison tardive.</span><span class="sxs-lookup"><span data-stu-id="442d1-118">You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2b3f6-119">Le `IsNot` opérateur ne peut pas être utilisé pour comparer des expressions retournées à partir de la `TypeOf` opérateur.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-119">The `IsNot` operator cannot be used to compare expressions returned from the `TypeOf` operator.</span></span> <span data-ttu-id="2b3f6-120">Au lieu de cela, vous devez utiliser le `Not` et `Is` opérateurs.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-120">Instead, you must use the `Not` and `Is` operators.</span></span>  
+>  <span data-ttu-id="442d1-119">Le `IsNot` opérateur ne peut pas être utilisé pour comparer des expressions retournées à partir de la `TypeOf` opérateur.</span><span class="sxs-lookup"><span data-stu-id="442d1-119">The `IsNot` operator cannot be used to compare expressions returned from the `TypeOf` operator.</span></span> <span data-ttu-id="442d1-120">Au lieu de cela, vous devez utiliser le `Not` et `Is` opérateurs.</span><span class="sxs-lookup"><span data-stu-id="442d1-120">Instead, you must use the `Not` and `Is` operators.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2b3f6-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="2b3f6-121">Example</span></span>  
- <span data-ttu-id="2b3f6-122">L’exemple de code suivant utilise à la fois le `Is` opérateur et la `IsNot` opérateur pour effectuer la même comparaison.</span><span class="sxs-lookup"><span data-stu-id="2b3f6-122">The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.</span></span>  
+## <a name="example"></a><span data-ttu-id="442d1-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="442d1-121">Example</span></span>  
+ <span data-ttu-id="442d1-122">L’exemple de code suivant utilise à la fois le `Is` opérateur et la `IsNot` opérateur pour effectuer la même comparaison.</span><span class="sxs-lookup"><span data-stu-id="442d1-122">The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.</span></span>  
   
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]  
   
-## <a name="see-also"></a><span data-ttu-id="2b3f6-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2b3f6-123">See also</span></span>
-- [<span data-ttu-id="2b3f6-124">Is (opérateur)</span><span class="sxs-lookup"><span data-stu-id="2b3f6-124">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="2b3f6-125">TypeOf (opérateur)</span><span class="sxs-lookup"><span data-stu-id="2b3f6-125">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="2b3f6-126">Priorité des opérateurs en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2b3f6-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="2b3f6-127">Guide pratique pour Tester si deux objets sont identiques</span><span class="sxs-lookup"><span data-stu-id="2b3f6-127">How to: Test Whether Two Objects Are the Same</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+## <a name="see-also"></a><span data-ttu-id="442d1-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="442d1-123">See also</span></span>
+
+- [<span data-ttu-id="442d1-124">Is (opérateur)</span><span class="sxs-lookup"><span data-stu-id="442d1-124">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="442d1-125">TypeOf (opérateur)</span><span class="sxs-lookup"><span data-stu-id="442d1-125">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="442d1-126">Priorité des opérateurs en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="442d1-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="442d1-127">Guide pratique pour Tester si deux objets sont identiques</span><span class="sxs-lookup"><span data-stu-id="442d1-127">How to: Test Whether Two Objects Are the Same</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

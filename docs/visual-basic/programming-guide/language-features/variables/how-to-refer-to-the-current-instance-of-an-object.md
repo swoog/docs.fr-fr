@@ -8,30 +8,31 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542195"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823361"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="c47e9-102">Procédure : Reportez-vous à l’Instance actuelle d’un objet (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c47e9-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
-<span data-ttu-id="c47e9-103">Le *instance actuelle* d’un objet est l’instance dans laquelle le code est en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="c47e9-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="ebbfb-102">Procédure : Reportez-vous à l’Instance actuelle d’un objet (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebbfb-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
+<span data-ttu-id="ebbfb-103">Le *instance actuelle* d’un objet est l’instance dans laquelle le code est en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="ebbfb-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
   
- <span data-ttu-id="c47e9-104">Vous utilisez le `Me` mot clé pour faire référence à l’instance actuelle.</span><span class="sxs-lookup"><span data-stu-id="c47e9-104">You use the `Me` keyword to refer to the current instance.</span></span>  
+ <span data-ttu-id="ebbfb-104">Vous utilisez le `Me` mot clé pour faire référence à l’instance actuelle.</span><span class="sxs-lookup"><span data-stu-id="ebbfb-104">You use the `Me` keyword to refer to the current instance.</span></span>  
   
-### <a name="to-refer-to-the-current-instance"></a><span data-ttu-id="c47e9-105">Pour faire référence à l’instance actuelle</span><span class="sxs-lookup"><span data-stu-id="c47e9-105">To refer to the current instance</span></span>  
+### <a name="to-refer-to-the-current-instance"></a><span data-ttu-id="ebbfb-105">Pour faire référence à l’instance actuelle</span><span class="sxs-lookup"><span data-stu-id="ebbfb-105">To refer to the current instance</span></span>  
   
--   <span data-ttu-id="c47e9-106">Utiliser le `Me` mot clé où vous utiliseriez normalement le nom d’une variable objet.</span><span class="sxs-lookup"><span data-stu-id="c47e9-106">Use the `Me` keyword where you would normally use the name of an object variable.</span></span>  
+-   <span data-ttu-id="ebbfb-106">Utiliser le `Me` mot clé où vous utiliseriez normalement le nom d’une variable objet.</span><span class="sxs-lookup"><span data-stu-id="ebbfb-106">Use the `Me` keyword where you would normally use the name of an object variable.</span></span>  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     <span data-ttu-id="c47e9-107">Bien que `Me` se comporte comme un objet variable, vous ne pouvez pas déclarez-le ou quoi que ce soit à lui affecter.</span><span class="sxs-lookup"><span data-stu-id="c47e9-107">Although `Me` behaves like an object variable, you cannot declare it or assign anything to it.</span></span> <span data-ttu-id="c47e9-108">`Me` fait toujours référence à l’instance actuelle.</span><span class="sxs-lookup"><span data-stu-id="c47e9-108">`Me` always refers to the current instance.</span></span>  
+     <span data-ttu-id="ebbfb-107">Bien que `Me` se comporte comme un objet variable, vous ne pouvez pas déclarez-le ou quoi que ce soit à lui affecter.</span><span class="sxs-lookup"><span data-stu-id="ebbfb-107">Although `Me` behaves like an object variable, you cannot declare it or assign anything to it.</span></span> <span data-ttu-id="ebbfb-108">`Me` fait toujours référence à l’instance actuelle.</span><span class="sxs-lookup"><span data-stu-id="ebbfb-108">`Me` always refers to the current instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c47e9-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c47e9-109">See also</span></span>
-- [<span data-ttu-id="c47e9-110">Variables objets</span><span class="sxs-lookup"><span data-stu-id="c47e9-110">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="c47e9-111">Assignation des variables objets</span><span class="sxs-lookup"><span data-stu-id="c47e9-111">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="c47e9-112">Me, My, MyBase et MyClass</span><span class="sxs-lookup"><span data-stu-id="c47e9-112">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a><span data-ttu-id="ebbfb-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ebbfb-109">See also</span></span>
+
+- [<span data-ttu-id="ebbfb-110">Variables objets</span><span class="sxs-lookup"><span data-stu-id="ebbfb-110">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="ebbfb-111">Assignation des variables objets</span><span class="sxs-lookup"><span data-stu-id="ebbfb-111">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="ebbfb-112">Me, My, MyBase et MyClass</span><span class="sxs-lookup"><span data-stu-id="ebbfb-112">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
