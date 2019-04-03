@@ -2,12 +2,12 @@
 title: Programmation avec des nœuds (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 1cd9792905c1816094d9bbd12e0648c5a4d7c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527404"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817108"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programmation avec des nœuds (Visual Basic)
 Les développeurs [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] qui doivent écrire des programmes tels qu'un éditeur XML, un système de transformation ou un générateur de rapports doivent souvent écrire des programmes qui fonctionnent à un niveau de granularité plus élevé que les éléments et attributs. Ils doivent souvent travailler au niveau des nœuds, manipuler des nœuds de texte et traiter des instructions et des commentaires. Cette rubrique fournit quelques détails sur la programmation au niveau nœud.  
@@ -124,7 +124,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Les méthodes d'axe XPath ne retournent pas les espaces blancs enfants de XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] autorise l'existence des nœuds de texte enfants d'un objet <xref:System.Xml.Linq.XDocument>, à condition que les nœuds de texte contiennent uniquement des espaces blancs. Toutefois, le modèle objet XPath n'inclut pas d'espace blanc comme nœuds enfants d'un document ; par conséquent, lorsque vous itérez au sein des enfants d'un objet <xref:System.Xml.Linq.XDocument> à l'aide de l'axe <xref:System.Xml.Linq.XContainer.Nodes%2A>, des nœuds de texte avec espaces blancs sont retournés. Toutefois, lorsque vous itérez au sein des enfants d'un objet <xref:System.Xml.Linq.XDocument> à l'aide des méthodes d'axe XPath, aucun nœud de texte avec espaces blancs n'est retourné.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] autorise l'existence des nœuds de texte enfants d'un objet <xref:System.Xml.Linq.XDocument>, à condition que les nœuds de texte contiennent uniquement des espaces blancs. Toutefois, le modèle objet XPath n’inclut pas d’espace blanc comme nœuds enfants d’un document ; par conséquent, lorsque vous itérez au sein des enfants d’un objet <xref:System.Xml.Linq.XDocument> à l’aide de l’axe <xref:System.Xml.Linq.XContainer.Nodes%2A>, des nœuds de texte avec espaces blancs sont retournés. Toutefois, lorsque vous itérez au sein des enfants d'un objet <xref:System.Xml.Linq.XDocument> à l'aide des méthodes d'axe XPath, aucun nœud de texte avec espaces blancs n'est retourné.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -172,4 +172,5 @@ Console.WriteLine(doc.Nodes().Count())
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Avancées programmation LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

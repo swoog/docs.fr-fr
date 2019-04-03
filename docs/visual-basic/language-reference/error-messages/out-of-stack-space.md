@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655489"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814599"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espace de pile insuffisant (Visual Basic)
 La pile est une zone de mémoire qui augmente ou diminue dynamiquement aux besoins de votre programme en cours d’exécution. Ses limites ont été dépassées.  
@@ -29,4 +29,5 @@ La pile est une zone de mémoire qui augmente ou diminue dynamiquement aux besoi
 6.  Assurez-vous que vous n’avez pas entraîné une cascade d’événements » » en déclenchant un événement qui appelle une procédure événementielle déjà sur la pile. Une cascade d’événements est similaire à un appel de procédure récursive non terminé, mais il est moins évident, puisque l’appel est effectué en Visual Basic, plutôt qu’un appel explicite dans le code. Utilisez le `Calls` boîte de dialogue pour afficher les procédures actives sur la pile.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fenêtres Mémoire](/visualstudio/debugger/memory-windows)

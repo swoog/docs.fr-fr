@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 6a7c55433001af5c5695044f41f866c1df8c3651
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b85239f80b4bfa87d1dbb1e3207e63d0cef7eeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977849"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827209"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Procédure : Appeler une procédure de propriété (Visual Basic)
 Vous appelez une procédure de propriété en stockant une valeur dans la propriété ou de récupérer sa valeur. Vous accéder à une propriété de la même façon que vous accédez à une variable.  
@@ -24,7 +24,7 @@ Vous appelez une procédure de propriété en stockant une valeur dans la propri
   
 1.  Utilisez le nom de propriété dans une expression de la même façon que vous utiliseriez un nom de variable. Vous pouvez utiliser une propriété partout où vous pouvez utiliser une variable ou une constante.  
   
-     ou  
+     - ou -  
   
      Utilisez le nom de propriété suivant égaux (`=`) connectez-vous à une instruction d’assignation.  
   
@@ -53,6 +53,7 @@ Vous appelez une procédure de propriété en stockant une valeur dans la propri
  La valeur générée sur le côté droit de l’instruction d’assignation est stockée dans la propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)

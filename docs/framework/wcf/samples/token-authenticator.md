@@ -2,12 +2,12 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824208"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associée au jeton.
@@ -212,8 +212,7 @@ static void Main()
 
 3.  Écrivez un gestionnaire de jetons de sécurité personnalisé.
 
-     
-  <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> pour des objets <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifiques qui lui sont passés dans la méthode `CreateSecurityTokenAuthenticator`. Le gestionnaire de jetons de sécurité permet également de créer des fournisseurs et des sérialiseurs de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenAuthenticator` pour retourner l’authentificateur de jeton de nom d’utilisateur personnalisé lorsque les exigences de jeton passées indiquent que l’authentificateur de nom d’utilisateur est demandé.
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> pour des objets <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifiques qui lui sont passés dans la méthode `CreateSecurityTokenAuthenticator`. Le gestionnaire de jetons de sécurité permet également de créer des fournisseurs et des sérialiseurs de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenAuthenticator` pour retourner l’authentificateur de jeton de nom d’utilisateur personnalisé lorsque les exigences de jeton passées indiquent que l’authentificateur de nom d’utilisateur est demandé.
 
     ```
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
@@ -280,8 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Pour afficher les informations sur l'appelant, vous pouvez utiliser <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, tel qu'indiqué dans le code suivant. 
-  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
+ Pour afficher les informations sur l'appelant, vous pouvez utiliser <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, tel qu'indiqué dans le code suivant. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
 
 ```
 static void DisplayIdentityInformation()
@@ -369,4 +367,3 @@ static void DisplayIdentityInformation()
   
 1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
-## <a name="see-also"></a>Voir aussi

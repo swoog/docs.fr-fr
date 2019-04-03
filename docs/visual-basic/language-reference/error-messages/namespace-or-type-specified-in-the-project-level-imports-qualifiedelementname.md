@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 12d20a88179a3d0c93c18f0aed65ca46b001059a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816805"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace ou type spécifié dans les Imports' au niveau du projet\<nom_qualifié_élément >' ne contient aucun membre public ou est introuvable
 Namespace ou type spécifié dans les Imports' au niveau du projet\<nom_qualifié_élément >' ne contient aucun membre public ou est introuvable. Assurez-vous que l’espace de noms ou le type est défini et contient au moins un membre public. Assurez-vous que le nom d’alias ne contient pas d’autres alias.  
@@ -38,6 +38,7 @@ Namespace ou type spécifié dans les Imports' au niveau du projet\<nom_qualifi�
 3.  Vérifiez que l’élément conteneur expose au moins un `Public` membre.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Page Références, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

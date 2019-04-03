@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: f37f5b232b6b5e7bb56ec028c702d5fa9ec798d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2d05d43ae8f9b93fd3e5e405bb7ff0d59832e830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971375"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823348"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Procédure : Appeler une procédure stockée à l’aide de LINQ (Visual Basic)
 Language-Integrated Query (LINQ) rend plus facile d’accéder aux informations de base de données, y compris les procédures stockées comme des objets de base de données.  
@@ -69,6 +69,7 @@ Language-Integrated Query (LINQ) rend plus facile d’accéder aux informations 
 4.  Appuyez sur F5 pour exécuter votre projet et afficher les résultats.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

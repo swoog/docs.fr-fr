@@ -2,12 +2,12 @@
 title: 'Procédure : Comparer le contenu de deux dossiers (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 11bd7d7b4984a52ae807c5bce38d62cf4a9978d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600607"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820293"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procédure : Comparer le contenu de deux dossiers (LINQ) (Visual Basic)
 Cet exemple montre trois façons de comparer deux listes de fichiers :  
@@ -117,5 +117,6 @@ End Module
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

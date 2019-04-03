@@ -2,12 +2,12 @@
 title: Validateur de nom d'utilisateur et de mot de passe
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 33df3a7a8d463a9c2cd2d2586f0aa812e25a16ff
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: df2340393544b0eaac8f2c6d4eae55846a604e40
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814027"
 ---
 # <a name="user-name-password-validator"></a>Validateur de nom d'utilisateur et de mot de passe
 Cet exemple montre comment implémenter un validateur UserNamePassword personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation UserNamePassword intégrés ne convient aux exigences de l’application ; par exemple, lorsque les paires nom d’utilisateur/mot de passe sont stockées dans quelque magasin externe, tel qu’une base de données. Cet exemple illustre un service qui comprend un validateur personnalisé qui vérifie pour deux paires nom d'utilisateur/mot de passe particulières. Le client utilise une paire nom d'utilisateur/mot de passe pour s'authentifier auprès du service.
@@ -321,4 +321,3 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple. Cela supprime le certificat de serveur du magasin de certificats.  
   
-## <a name="see-also"></a>Voir aussi

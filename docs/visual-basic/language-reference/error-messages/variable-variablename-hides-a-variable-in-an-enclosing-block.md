@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827131"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable '\<nom_variable >' masque une variable dans un bloc englobant
 Une variable dans un bloc a le même nom qu’une autre variable locale.  
@@ -35,5 +35,6 @@ Une variable dans un bloc a le même nom qu’une autre variable locale.
 -   Une autre source courante de cette erreur est une tentative d’accès d’une variable locale déclarée dans un `Try` bloquer dans une fonction `Catch` bloc. Pour corriger ce problème, déclarez la variable en dehors de la `Try...Catch...Finally` structure.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Try...Catch...Finally (instruction)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Déclaration de variable](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

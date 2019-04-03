@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824986"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> a deux propriétés de contenu : <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> et <xref:System.Windows.Controls.Decorator.Child%2A>. Le <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> propriété définit le <xref:System.Windows.UIElement> à utiliser en tant que puce. Le <xref:System.Windows.Controls.Decorator.Child%2A> propriété définit un <xref:System.Windows.UIElement> qui s’aligne visuellement avec la puce.  
   
  L’illustration suivante montre des exemples de contrôles qui utilisent un <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
   
- ![3 BulletDecorators : CheckBox, RadioButton, TextBox](./media/bulletdecorator.png "BulletDecorator")  
+ ![Exemple d’une case à cocher, une case d’option et une zone de texte à puces decorator.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

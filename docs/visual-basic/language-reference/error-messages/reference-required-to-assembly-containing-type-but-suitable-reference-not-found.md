@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285192"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813403"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Référence à l’assembly requise '\<assemblyidentity >' contenant le type '\<nom_type >', mais une référence appropriée est introuvable en raison de l’ambiguïté entre les projets\<nom_projet1 >' et '\< nom_projet2 >'
 Une expression utilise un type, comme une classe, une structure, une interface, une énumération ou un délégué, qui est défini en dehors de votre projet. Cependant, des références de projet désignent plusieurs assemblys définissant ce type.  
@@ -30,6 +30,7 @@ Une expression utilise un type, comme une classe, une structure, une interface, 
 2.  Dans vos propriétés de projet, ajoutez une référence au fichier contenant l’assembly qui définit le type que vous utilisez.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
 - [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

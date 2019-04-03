@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Démonstration de l’héritage visuel'
+title: 'Procédure pas à pas : démonstration de l’héritage visuel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721448"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816315"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : Démonstration de l’héritage visuel
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : démonstration de l’héritage visuel
 L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de base et d'ajouter de nouveaux contrôles. Dans cette procédure pas à pas, vous allez créer un formulaire de base et le compiler dans une bibliothèque de classes. Vous importerez cette bibliothèque de classes dans un autre projet et créerez un formulaire qui hérite du formulaire de base. Pendant cette procédure pas à pas, vous allez apprendre à :  
   
 -   créer un projet de bibliothèque de classes contenant un formulaire de base ;  
@@ -140,7 +140,7 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 5.  Ouvrez le formulaire hérité (**Form2**) dans le concepteur en double-cliquant dessus, s’il n’est pas déjà ouvert.  
   
-     Dans le concepteur, les boutons hérités ont un symbole (![capture d’écran de VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) dans le coin supérieur, indiquant qu’ils sont hérités.  
+     Dans le concepteur, les boutons hérités possèdent un symbole)![Capture d’écran du symbole de l’héritage de Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) dans le coin supérieur, indiquant qu’ils sont hérités.  
   
 6.  Sélectionnez le **Say Hello** bouton et observez les poignées de redimensionnement. Ce bouton étant protégé, les héritiers peuvent le déplacer, le redimensionner, changer sa légende et apporter d'autres modifications.  
   

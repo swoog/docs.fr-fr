@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965954"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817225"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub, instruction (Visual Basic)
 Déclare le nom, paramètres et le code qui définissent une `Sub` procédure.  
@@ -54,15 +54,15 @@ End Sub
   
 -   `attributelist`  
   
-     Facultatif. Consultez [liste d’attributs](attribute-list.md).  
+     Optionnel. Consultez [liste d’attributs](attribute-list.md).  
   
 -   `Partial`  
   
-     Facultatif. Indique la définition d’une méthode partielle. Consultez [méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
+     Optionnel. Indique la définition d’une méthode partielle. Consultez [méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
   
 -   `accessmodifier`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Public](../modifiers/public.md)  
   
@@ -80,7 +80,7 @@ End Sub
   
 -   `proceduremodifiers`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Overloads](../modifiers/overloads.md)  
   
@@ -98,11 +98,11 @@ End Sub
   
 -   `Shared`  
   
-     Facultatif. Consultez [partagé](../modifiers/shared.md).  
+     Optionnel. Consultez [partagé](../modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Facultatif. Consultez [Shadows](../modifiers/shadows.md).  
+     Optionnel. Consultez [Shadows](../modifiers/shadows.md).  
   
 -   `Async`  
   
@@ -114,7 +114,7 @@ End Sub
   
 -   `typeparamlist`  
   
-     Facultatif. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).  
+     Optionnel. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).  
   
 -   `parameterlist`  
   
@@ -122,7 +122,7 @@ End Sub
   
 -   `Implements`  
   
-     Facultatif. Indique que cette procédure implémente un ou plusieurs `Sub` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).  
+     Optionnel. Indique que cette procédure implémente un ou plusieurs `Sub` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -160,7 +160,7 @@ End Sub
   
 -   `statements`  
   
-     Facultatif. Bloc d’instructions à exécuter dans cette procédure.  
+     Optionnel. Bloc d’instructions à exécuter dans cette procédure.  
   
 -   `End Sub`  
   
@@ -227,6 +227,7 @@ End Sub
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Implements (instruction)](implements-statement.md)
 - [Function (instruction)](function-statement.md)
 - [Liste de paramètres](parameter-list.md)

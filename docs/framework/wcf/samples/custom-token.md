@@ -2,15 +2,15 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: d00ae6eceb00ce53ad2b0bba2c14d9c4816b12e7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f056e54197a98a0218ef94e4df2fc46745a08985
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817316"
 ---
 # <a name="custom-token"></a>Custom Token
-Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
+Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l’en-tête de message WS-Security. Il est signé et chiffré à l’aide de l’élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
 
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.
@@ -47,7 +47,7 @@ public static class BindingHelper
 }
 ```
 
- Pour consommer le jeton de carte de crédit figurant dans le message, l'exemple utilise les informations d'identification personnalisées du service. La classe d'informations d'identification du service se trouve dans la classe `CreditCardServiceCredentials`. Elle est ajoutée aux collections de comportements de l'hôte de service dans la méthode `EchoServiceHost.InitializeRuntime`.
+ Pour consommer le jeton de carte de crédit figurant dans le message, l'exemple utilise les informations d'identification personnalisées du service. La classe d’informations d’identification du service se trouve dans la classe `CreditCardServiceCredentials`. Elle est ajoutée aux collections de comportements de l’hôte de service dans la méthode `EchoServiceHost.InitializeRuntime`.
 
 ```csharp
 class EchoServiceHost : ServiceHost
@@ -83,7 +83,7 @@ class EchoServiceHost : ServiceHost
 }
 ```
 
- Le point de terminaison du client est configuré de la même manière que le point de terminaison du service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans la classe `Client`. Le client définit également les informations qui figureront dans `CreditCardToken` ainsi que les informations relatives au certificat X.509 du service dans le code d'installation en ajoutant une instance `CreditCardClientCredentials` à l'aide des données appropriées à la collection des comportements du point de terminaison du client. Dans cet exemple, le nom du sujet du certificat X.509 utilisé correspond à `CN=localhost` pour le certificat de service.
+ Le point de terminaison du client est configuré de la même manière que le point de terminaison du service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans la classe `Client`. Le client définit également les informations qui figureront dans `CreditCardToken` ainsi que les informations relatives au certificat X.509 du service dans le code d’installation en ajoutant une instance `CreditCardClientCredentials` à l’aide des données appropriées à la collection des comportements du point de terminaison du client. Dans cet exemple, le nom du sujet du certificat X.509 utilisé correspond à `CN=localhost` pour le certificat de service.
 
 ```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
@@ -245,7 +245,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  Le fournisseur de jetons crée une représentation d'objet du jeton en fonction des données contenues dans les informations d'identification du client ou du service. Cette représentation est ensuite inscrite dans le message à l'aide du sérialiseur de jetons (thème abordé à la section précédente).
 
- L'authentificateur de jetons valide les jetons qui arrivent dans les messages. La représentation entrante d'objet du jeton est créée par le sérialiseur de jetons. Cette représentation est ensuite transmise à l'authentificateur de jetons pour validation. Le jeton validé, l'authentificateur de jetons retourne une collection d'objets `IAuthorizationPolicy` qui représentent les informations contenues dans ce jeton. Ces informations sont utilisées ultérieurement pendant le traitement des messages pour prendre les décisions d'autorisation et définir des revendications pour les applications concernées. Dans cet exemple, l'authentificateur du jeton de carte de crédit utilise `CreditCardTokenAuthorizationPolicy` à cette fin.
+ L'authentificateur de jetons valide les jetons qui arrivent dans les messages. La représentation entrante d'objet du jeton est créée par le sérialiseur de jetons. Cette représentation est ensuite transmise à l’authentificateur de jetons pour validation. Le jeton validé, l’authentificateur de jetons retourne une collection d’objets `IAuthorizationPolicy` qui représentent les informations contenues dans ce jeton. Ces informations sont utilisées ultérieurement pendant le traitement des messages pour prendre les décisions d'autorisation et définir des revendications pour les applications concernées. Dans cet exemple, l'authentificateur du jeton de carte de crédit utilise `CreditCardTokenAuthorizationPolicy` à cette fin.
 
  Le sérialiseur de jetons est chargé d'obtenir la représentation d'objet du jeton depuis le câble et de la générer à ce même niveau. Ce thème est abordé à la section précédente.
 
@@ -615,7 +615,7 @@ string GetCallerCreditCardNumber()
   
 5.  Dans le fichier EchoServiceHost.cs, remplacez la valeur localhost du nom du sujet du certificat par le nom complet de l'ordinateur.  
   
-6.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.  
+6.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
   
 7.  Dans le fichier Client.cs, modifiez l'adresse du point de terminaison en fonction de la nouvelle adresse de votre service.  
   
@@ -629,4 +629,3 @@ string GetCallerCreditCardNumber()
   
 1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
-## <a name="see-also"></a>Voir aussi

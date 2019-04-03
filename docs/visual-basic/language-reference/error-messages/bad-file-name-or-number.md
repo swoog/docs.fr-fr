@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: c57f431350d4f63507ee7374616b62ca32151c86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6da1031b60a4cd73c53588cf18992797c3fddab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639404"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839065"
 ---
 # <a name="bad-file-name-or-number"></a>Nom ou numéro de fichier incorrect
 Une erreur s’est produite lors de la tentative d’accès au fichier spécifié. Parmi les causes possibles de cette erreur sont :  
@@ -29,5 +29,6 @@ Une erreur s’est produite lors de la tentative d’accès au fichier spécifi�
 3.  Vérifiez les noms de fichier pour vous assurer qu’elles sont conformes aux conventions du système d’exploitation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
 - [Conventions d’affectation de noms de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

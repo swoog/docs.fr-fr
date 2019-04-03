@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: 3bd58a09d016d818c4cc88c1d2527e81a95411e6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967124"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826624"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procédure : Déclarer des événements personnalisés pour économiser la mémoire (Visual Basic)
 Il existe plusieurs circonstances quand il est important qu’une application limiter son utilisation de la mémoire. Événements personnalisés permettent à l’application pour utiliser la mémoire uniquement pour les événements qu’il gère.  
@@ -28,6 +28,7 @@ Il existe plusieurs circonstances quand il est important qu’une application li
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.EventHandlerList>
 - [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Guide pratique pour Déclarer des événements personnalisés pour éviter les blocages](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)

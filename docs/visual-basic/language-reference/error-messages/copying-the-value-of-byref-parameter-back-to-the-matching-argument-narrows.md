@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276612"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817152"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Copie de la valeur du paramètre 'ByRef' '\<nom_paramètre >' dans l’argument correspondant passe du type '\<NomType1 >' en type '\<nom_type2 >'
 Une procédure est appelée avec un argument qui s’étend au type de paramètre correspondant, et la conversion à partir du paramètre à l’argument est restrictive.  
@@ -34,6 +34,7 @@ Une procédure est appelée avec un argument qui s’étend au type de paramètr
 -   Si vous avez besoin de retourner une valeur dans l’argument d’appel, définissez l’opérateur de conversion inverse comme [Widening](../../../visual-basic/language-reference/modifiers/widening.md), si possible.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Paramètres et arguments d’une procédure](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Passage d’un argument par valeur et par référence](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

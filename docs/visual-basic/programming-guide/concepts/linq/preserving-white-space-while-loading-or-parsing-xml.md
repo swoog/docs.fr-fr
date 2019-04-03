@@ -2,12 +2,12 @@
 title: Conservation des espaces lors du chargement ou de l’analyse XML2
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
-ms.openlocfilehash: b4f4f59e1cd4423d2ec7418c09a9abd1273ce3b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa000d9299515101bc01923db43d442577be828
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818967"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Conservation des espaces blancs lors du chargement ou de l’analyse de code XML
 Cette rubrique décrit comment contrôler le comportement d'espace blanc de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -29,13 +29,14 @@ Cette rubrique décrit comment contrôler le comportement d'espace blanc de [!IN
   
 -   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
- Si la méthode ne prend pas l'objet <xref:System.Xml.Linq.LoadOptions> comme argument, elle ne conservera pas les espaces non significatifs.  
+ Si la méthode ne prend pas l’objet <xref:System.Xml.Linq.LoadOptions> comme argument, elle ne conservera pas les espaces non significatifs.  
   
  Dans la plupart des cas, si la méthode prend l'objet <xref:System.Xml.Linq.LoadOptions> comme argument, vous pouvez, si vous le souhaitez, conserver les espaces non significatifs en tant que nœuds de texte dans l'arborescence XML. Toutefois, si la méthode charge le code XML à partir d'un objet <xref:System.Xml.XmlReader>, l'objet <xref:System.Xml.XmlReader> détermine si les espaces seront conservés. La définition de <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> n'aura aucun effet.  
   
- Avec ces méthodes, si les espaces sont conservés, des espaces non significatifs sont insérés dans l'arborescence XML en tant que nœuds <xref:System.Xml.Linq.XText>. Si les espaces ne sont pas conservés, aucun nœud de texte n'est inséré.  
+ Avec ces méthodes, si les espaces sont conservés, des espaces non significatifs sont insérés dans l’arborescence XML en tant que nœuds <xref:System.Xml.Linq.XText>. Si les espaces ne sont pas conservés, aucun nœud de texte n'est inséré.  
   
- Vous pouvez créer une arborescence XML à l'aide d'un objet <xref:System.Xml.XmlWriter>. Les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter> sont remplis dans l'arborescence. Toutefois, lorsque vous générez une arborescence XML à l’aide de cette méthode, tous les nœuds sont conservés, qu’ils soient constitués d’espaces ou non et que ces espaces soient significatifs ou non.  
+ Vous pouvez créer une arborescence XML à l’aide d’un objet <xref:System.Xml.XmlWriter>. Les nœuds écrits dans l’objet <xref:System.Xml.XmlWriter> sont remplis dans l’arborescence. Toutefois, lorsque vous générez une arborescence XML à l’aide de cette méthode, tous les nœuds sont conservés, qu’ils soient constitués d’espaces ou non et que ces espaces soient significatifs ou non.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [L’analyse XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

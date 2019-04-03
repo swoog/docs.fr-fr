@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 733013c8eca75bad0dc0bdf1d76f1468b1d903a8
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 0550e4ad700494c8773a5d9b5b282dfa116adfed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759390"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813364"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Spécifie une adresse de base par défaut lors de la création d’une DLL.  
@@ -45,6 +45,7 @@ Spécifie une adresse de base par défaut lors de la création d’une DLL.
 |1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Avancé**.<br />4.  Modifiez la valeur dans le **adresse de base de DLL :** boîte. **Remarque :**      Le **adresse de base de DLL :** zone est en lecture seule, sauf si la cible est une DLL.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 9e15aefd4a66eac98b679e60c628f90149fe908a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6efa726b9a7eaf8106ff8752cdc4ecdfb0112f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520852"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816718"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Cet exemple montre comment générer un canal de protocole personnalisé pour utiliser des cookies HTTP pour la gestion des sessions. Ce canal permet la communication entre les services Windows Communication Foundation (WCF) et les clients ASMX ou entre les clients WCF et les services ASMX.  
@@ -33,7 +33,7 @@ Cet exemple montre comment générer un canal de protocole personnalisé pour ut
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
-## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Modèle d’échange de messages de canal HttpCookieSession  
+## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Modèle d'échange de messages de canal HttpCookieSession   
  Cet exemple active des sessions pour les scénarios de type ASMX. En bas de notre pile de canaux, nous avons le transport HTTP qui prend en charge <xref:System.ServiceModel.Channels.IRequestChannel> et <xref:System.ServiceModel.Channels.IReplyChannel>. C'est le travail du canal de fournir des sessions aux niveaux supérieurs de la pile de canaux. L'exemple implémente deux canaux, (<xref:System.ServiceModel.Channels.IRequestSessionChannel> et <xref:System.ServiceModel.Channels.IReplySessionChannel>) qui prennent en charge les sessions.  
   
 ## <a name="service-channel"></a>Canal de service  
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  Le canal client correspondant est dans la classe `HttpCookieSessionChannelFactory`. Lors de la création du canal, la fabrication de canal encapsule le canal de demande interne dans un `HttpCookieRequestSessionChannel`. La classe `HttpCookieRequestSessionChannel` transfère les appels au canal de demande sous-jacent. Lorsque le client ferme le proxy, `HttpCookieRequestSessionChannel` envoie un message au service qui indique que le canal est fermé. Donc, la pile de canaux de service peut fermer doucement le canal de session en cours d'utilisation.  
   
 ## <a name="binding-and-binding-element"></a>Liaison et élément de liaison  
- Après avoir créé les canaux de service et le client, l’étape suivante consiste à les intégrer dans le runtime WCF. Les canaux sont exposés à WCF via les liaisons et éléments de liaison. Une liaison se compose d’un ou de plusieurs éléments de liaison. WCF offre plusieurs liaisons définies par le système ; par exemple, BasicHttpBinding ou WSHttpBinding. La classe `HttpCookieSessionBindingElement` contient l’implémentation pour l’élément de liaison. Elle substitue l'écouteur de canal et les méthodes de création des fabrications de canaux pour procéder aux instanciations requises de l'écouteur de canal ou de la fabrication de canal.  
+ Après avoir créé les canaux de service et le client, l’étape suivante consiste à les intégrer dans le runtime WCF. Les canaux sont exposés à WCF via les liaisons et éléments de liaison. Une liaison se compose d'un ou de plusieurs éléments de liaison. WCF offre plusieurs liaisons définies par le système ; par exemple, BasicHttpBinding ou WSHttpBinding. La classe `HttpCookieSessionBindingElement` contient l'implémentation pour l'élément de liaison. Elle substitue l'écouteur de canal et les méthodes de création des fabrications de canaux pour procéder aux instanciations requises de l'écouteur de canal ou de la fabrication de canal.  
   
  L'exemple utilise des assertions de stratégie pour décrire le service. Cela permet à l'exemple de publier ses spécifications de canal sur d'autres clients qui peuvent consommer le service. Par exemple, cet élément de liaison publie des assertions de stratégie pour permettre à des clients potentiels de savoir qu’il prend en charge des sessions. Vu que l’exemple active la propriété `ExchangeTerminateMessage` dans la configuration de l’élément de liaison, il ajoute les assertions nécessaires pour montrer que le service prend en charge une action d’échange de messages supplémentaire pour mettre fin à la conversation de la session. Les clients peuvent ensuite utiliser cette action. Le code WSDL suivant illustre les assertions de stratégie créées à partir de l'`HttpCookieSessionBindingElement`.  
   
@@ -98,13 +98,13 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- La classe `HttpCookieSessionBinding` est une liaison fournie par le système qui utilise l’élément de liaison décrit précédemment.  
+ La classe `HttpCookieSessionBinding` est une liaison fournie par le système qui utilise l'élément de liaison décrit précédemment.  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>Ajout du canal au système de configuration  
  L'exemple fournit deux classes qui exposent l'exemple de canal à travers la configuration. La première est un <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> pour l'`HttpCookieSessionBindingElement`. Le bloc de l'implémentation est délégué à `HttpCookieSessionBindingConfigurationElement`, qui dérive de <xref:System.ServiceModel.Configuration.StandardBindingElement>. L'`HttpCookieSessionBindingConfigurationElement` a des propriétés qui correspondent aux propriétés de l'`HttpCookieSessionBindingElement`.  
   
-### <a name="binding-element-extension-section"></a>Section d'extension de l'élément de liaison  
- La section `HttpCookieSessionBindingElementSection` est un <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> qui expose `HttpCookieSessionBindingElement` au système de configuration. Avec quelques substitutions, l’exemple définit le nom de section de configuration, le type de l’élément de liaison et la méthode utilisée pour le créer. Nous pouvons ensuite enregistrer la section d’extension dans un fichier de configuration comme suit :  
+### <a name="binding-element-extension-section"></a>Section d’extension de l’élément de liaison  
+ La section `HttpCookieSessionBindingElementSection` est un <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> qui expose `HttpCookieSessionBindingElement` au système de configuration. Avec quelques substitutions, l’exemple définit le nom de section de configuration, le type de l’élément de liaison et la méthode utilisée pour le créer. Nous pouvons ensuite enregistrer la section d'extension dans un fichier de configuration comme suit :  
   
 ```xml  
 <configuration>        
@@ -170,4 +170,3 @@ Press <ENTER> to terminate client.
   
 4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Voir aussi

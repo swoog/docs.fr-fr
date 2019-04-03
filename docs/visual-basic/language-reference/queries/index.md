@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 79ae5f1c2184f99390b1ef36a91f556cc617e51f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746735"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836894"
 ---
 # <a name="queries-visual-basic"></a>Requêtes (Visual Basic)
 Visual Basic vous permet de créer [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions dans votre code.  
@@ -59,5 +59,6 @@ Visual Basic vous permet de créer [!INCLUDE[vbteclinqext](~/includes/vbteclinqe
  Décrit le `Where` clause qui spécifie une condition de filtrage pour une requête.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

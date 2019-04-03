@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981463"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822906"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procédure pas à pas : Appel d’API Windows (Visual Basic)
 Les API Windows sont des bibliothèques de liens dynamiques (DLL) qui font partie du système d’exploitation Windows. Elles permettent d’effectuer des tâches lorsqu’il est difficile d’écrire des procédures équivalentes de votre choix. Par exemple, Windows fournit une fonction nommée `FlashWindowEx` qui permet d’effectuer la barre de titre pour une application alternez entre clairs et foncés.  
@@ -148,6 +148,7 @@ Les API Windows sont des bibliothèques de liens dynamiques (DLL) qui font parti
 12. Cliquez sur **Button2**. Le message « le fichier a été déplacé avec succès » s’affiche si le fichier peut être déplacé.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)

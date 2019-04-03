@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 7a5dd305d1cc40e57d0f07f383151dc1a965bdda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d896fb0d41a8fa3ed613d29bc3fca2bd14cc5e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513917"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832788"
 ---
 # <a name="-verbose"></a>-verbose
 Indique au compilateur de générer des messages d’état et d’erreur détaillés.  
@@ -24,7 +24,7 @@ Indique au compilateur de générer des messages d’état et d’erreur détail
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Facultatif. Spécification `-verbose` est identique à la spécification `-verbose+`, ce qui entraîne le compilateur à émettre des messages détaillés. La valeur par défaut pour cette option est `-verbose-`.  
+ Optionnel. Spécification `-verbose` est identique à la spécification `-verbose+`, ce qui entraîne le compilateur à émettre des messages détaillés. La valeur par défaut pour cette option est `-verbose-`.  
   
 ## <a name="remarks"></a>Notes  
  Le `-verbose` option affiche des informations sur le nombre total d’erreurs émis par le compilateur, signale les assemblys sont chargés par un module et affiche les fichiers qui sont en cours de compilation.  
@@ -40,5 +40,6 @@ vbc -verbose in.vb
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

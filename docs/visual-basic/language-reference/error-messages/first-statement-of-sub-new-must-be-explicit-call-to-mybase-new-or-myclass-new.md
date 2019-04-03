@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268793"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814092"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>La première instruction de ce 'Sub New' doit être un appel explicite à 'MyBase.New' ou 'MyClass.New', car le '\<Nom_Constructeur >' dans la classe de base\<nom_classe_de_base >' de '\<nom_classe_dérivée >' est marqué comme obsolète : '\< message d’erreur >'
 Un constructeur de classe n’appelle pas explicitement un constructeur de classe de base et le constructeur de classe de base implicite est marqué avec l’attribut <xref:System.ObsoleteAttribute> et la directive pour le traiter comme une erreur.  
@@ -30,5 +30,5 @@ Un constructeur de classe n’appelle pas explicitement un constructeur de class
 2.  Incluez un appel à `MyBase.New()` ou `MyClass.New()` en tant que première instruction de `Sub New` dans la classe dérivée.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des attributs](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 
+- [Vue d’ensemble des attributs](../../../visual-basic/programming-guide/concepts/attributes/index.md)

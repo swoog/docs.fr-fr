@@ -2,12 +2,12 @@
 title: Unions discriminées
 description: Découvrez comment utiliser F# unions discriminées.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821424"
 ---
 # <a name="discriminated-unions"></a>Unions discriminées
 
@@ -156,7 +156,7 @@ Les unions discriminées peuvent être récursives, ce qui signifie que l’unio
 
 Dans le code précédent, `resultSumTree` a la valeur 10. L’illustration suivante montre la structure d’arborescence de `myTree`.
 
-![Arborescence pour myTree](../media/TreeStructureDiagram.png)
+![Diagramme qui montre l’arborescence pour myTree.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Les unions discriminées fonctionnent bien si les nœuds dans l’arborescence sont hétérogènes. Dans le code suivant, le type `Expression` représente l’arborescence de syntaxe abstraite d’une expression dans un langage de programmation simple qui prend en charge l’addition et multiplication de nombres et de variables. Certains cas d’union ne sont pas récursifs et représentent des nombres (`Number`) ou des variables (`Variable`). Autres cas sont récursifs et représentent des opérations (`Add` et `Multiply`), où les opérandes sont également des expressions. Le `Evaluate` fonction utilise une expression de correspondance pour traiter de manière récursive l’arborescence de syntaxe.
 

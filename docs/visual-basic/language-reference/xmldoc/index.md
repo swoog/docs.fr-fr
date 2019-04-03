@@ -1,15 +1,21 @@
 ---
-title: Étiquettes XML recommandées pour les commentaires de documentation (Visual Basic)
+title: Balises XML recommandées pour les commentaires de documentation (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.XmlDocComment
+- vb.XmlDocComment
 helpviewer_keywords:
-  - 'tags, XML'
-  - 'XML comments, recommended tags [Visual Basic]'
-  - 'comments, recommended XML tags'
+- tags, XML
+- XML comments, recommended tags [Visual Basic]
+- comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814938"
 ---
-# <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Étiquettes XML recommandées pour les commentaires de documentation (Visual Basic)
+# <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Balises XML recommandées pour les commentaires de documentation (Visual Basic)
 Le compilateur Visual Basic peut traiter les commentaires de documentation dans votre code dans un fichier XML. Vous pouvez utiliser des outils supplémentaires pour traiter le fichier XML dans la documentation.  
   
  Les commentaires XML sont autorisés sur les constructions de code telles que les types et membres de type. Pour les types partiels, qu’une partie du type peut avoir des commentaires XML, bien qu’il n’existe aucune restriction sur le commentaire de ses membres.  
@@ -34,6 +40,7 @@ Le compilateur Visual Basic peut traiter les commentaires de documentation dans 
 >  Si vous souhaitez des crochets pointus apparaissent dans le texte d’un commentaire de documentation, utilisez `&lt;` et `&gt;`. Par exemple, la chaîne `"&lt;text in angle brackets&gt;"` apparaît sous la forme `<text in angle brackets>`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Documentation de votre code avec le langage XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [Guide pratique pour Créer une Documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

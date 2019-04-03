@@ -2,12 +2,12 @@
 title: Émission de suivis dans du code utilisateur
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831772"
 ---
 # <a name="emitting-user-code-traces"></a>Émission de suivis dans du code utilisateur
 Outre l’activation du suivi dans une configuration pour collecter des données d’instrumentation générées par Windows Communication Foundation (WCF), vous pouvez également émettre des suivis par programmation dans le code utilisateur. Ainsi, vous pouvez créer de manière proactive des données d'instrumentation que vous pouvez consulter ultérieurement à des fins de diagnostic. Cette rubrique explique comment procéder.  
@@ -126,19 +126,21 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Visionneuse de trace : Émission d’utilisateur&#45;code traces](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Liste des activités par heure de création (volet gauche) et leurs activités imbriquées (volet supérieur droit)  
   
- Si le code de service lève une exception qui entraîne la levée d'une exception aussi chez le client (par exemple, lorsque le client n'a pas reçu de réponse à sa demande), l'avertissement ou les messages d'erreur du client et du service se produisent dans la même activité par corrélation directe. Dans le diagramme suivant, le service lève une exception indiquant « le service refuse de traiter cette demande dans le code utilisateur. » Le client lève également une exception indiquant « le serveur n’a pas pu traiter la demande en raison d’une erreur interne. »  
+ Si le code de service lève une exception qui entraîne la levée d'une exception aussi chez le client (par exemple, lorsque le client n'a pas reçu de réponse à sa demande), l'avertissement ou les messages d'erreur du client et du service se produisent dans la même activité par corrélation directe. Dans l’image suivante, le service lève une exception indiquant « le service refuse de traiter cette demande dans le code utilisateur. » Le client lève également une exception indiquant « le serveur n’a pas pu traiter la demande en raison d’une erreur interne. »
+ 
+ Les images suivantes indiquent que les erreurs sur les points de terminaison pour une demande donnée apparaissent dans la même activité si l’id d’activité de demande a été propagée :       
   
- ![À l’aide de la visionneuse de Trace à émettre utilisateur&#45;code traces](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-Les erreurs sur les points de terminaison pour une demande donnée apparaissent dans la même activité si l'ID d'activité de la demande a été propagé.  
+ ![Capture d’écran qui affiche des erreurs de plusieurs points de terminaison pour une demande donnée.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Un double-clic sur l'activité de multiplication sur le volet gauche affiche le graphique suivant, avec les suivis pour l'activité de multiplication pour chaque processus concerné. Le graphique affiche un avertissement survenu en premier au service (exception levée) et qui est suivi par des avertissements et des erreurs sur le client en raison de l'impossibilité de traiter la demande. Par conséquent, nous pouvons déduire la relation causale d’erreur entre des points de terminaison et en déduire la cause racine de l’erreur.  
+ Un double-clic sur l'activité de multiplication sur le volet gauche affiche le graphique suivant, avec les suivis pour l'activité de multiplication pour chaque processus concerné. Le graphique affiche un avertissement survenu en premier au service (exception levée) et qui est suivi par des avertissements et des erreurs sur le client en raison de l'impossibilité de traiter la demande. Par conséquent, nous pouvons déduire la relation causale d'erreur entre des points de terminaison et en déduire l'origine de l'erreur. 
+
+ L’illustration suivante montre une vue du graphique de corrélation d’erreur :    
   
- ![À l’aide de la visionneuse de Trace à émettre utilisateur&#45;code traces](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Vue Graphique de corrélation d'erreur  
+ ![Capture d’écran montrant la vue du graphique de corrélation d’erreur.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Pour obtenir les suivis précédents, nous définissons `ActivityTracing` pour les sources de suivi de l'utilisateur et `propagateActivity=true` pour la source de suivi `System.ServiceModel`. Nous n'avons pas défini `ActivityTracing` pour la source de suivi `System.ServiceModel` pour permettre la propagation d'activité du code utilisateur au code utilisateur. (Lorsque le suivi d’activité ServiceModel est activé, l’ID d’activité défini dans le client n’est pas propagée jusqu’au code utilisateur de service ; Transferts, toutefois, mettre en corrélation les activités de code utilisateur client et le service aux activités WCF intermédiaires.)  
   
- La définition d'activités et la propagation de l'ID d'activité nous permettent d'effectuer une corrélation directe d'erreur sur des points de terminaison. De cette manière, il est possible de localiser plus rapidement la cause racine d’une erreur.  
+ La définition d'activités et la propagation de l'ID d'activité nous permettent d'effectuer une corrélation directe d'erreur sur des points de terminaison. De cette manière, il est possible de localiser plus rapidement l'origine d'une erreur.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Extension du suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md)

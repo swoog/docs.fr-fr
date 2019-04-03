@@ -2,12 +2,12 @@
 title: Dispatch by Body Element
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 43f429a0111198bce17f750b855d8e5588b947b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547905"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817056"
 ---
 # <a name="dispatch-by-body-element"></a>Dispatch by Body Element
 Cet exemple montre comment implémenter un autre algorithme pour l'assignation des messages entrants aux opérations.  
@@ -74,7 +74,7 @@ private Message CreateMessageCopy(Message message,
   
  Comme la plupart des extensions de modèle de service, les sélecteurs d’opération de distribution sont ajoutés au répartiteur à l’aide de comportements. Un *comportement* est un objet de configuration, ce qui ajoute une ou plusieurs extensions à l’exécution du répartiteur (ou à l’exécution du client) ou bien modifie ses paramètres.  
   
- Parce que les sélecteurs d'opération disposent d'une étendue de contrat, <xref:System.ServiceModel.Description.IContractBehavior> est le comportement approprié à implémenter ici. Étant donné que l'interface est implémentée sur une classe dérivée <xref:System.Attribute> comme indiqué dans le code suivant, le comportement peut être ajouté de façon déclarative à tout contrat de service. Chaque fois qu'une classe <xref:System.ServiceModel.ServiceHost> est ouverte et que l'exécution du répartiteur est générée, tous les comportements recherchés, soit en tant qu'attributs sur les contrats, opérations et implémentations de service, soit en tant qu'élément dans la configuration du service, sont automatiquement ajoutés et doivent ensuite fournir des extensions ou modifier la configuration par défaut.  
+ Parce que les sélecteurs d'opération disposent d'une étendue de contrat, <xref:System.ServiceModel.Description.IContractBehavior> est le comportement approprié à implémenter ici. Étant donné que l'interface est implémentée sur une classe dérivée <xref:System.Attribute> comme indiqué dans le code suivant, le comportement peut être ajouté de façon déclarative à tout contrat de service. Chaque fois qu’une classe <xref:System.ServiceModel.ServiceHost> est ouverte et que l’exécution du répartiteur est générée, tous les comportements recherchés, soit en tant qu’attributs sur les contrats, opérations et implémentations de service, soit en tant qu’élément dans la configuration du service, sont automatiquement ajoutés et doivent ensuite fournir des extensions ou modifier la configuration par défaut.  
   
  Pour des raisons de concision, l'extrait de code suivant affiche seulement l'implémentation de la méthode <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> qui effectue les modifications de configuration du répartiteur dans cet exemple. Les autres méthodes ne sont pas indiquées car elles sont retournées à l'appelant sans effectuer aucun travail.  
   
@@ -179,4 +179,3 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## <a name="see-also"></a>Voir aussi

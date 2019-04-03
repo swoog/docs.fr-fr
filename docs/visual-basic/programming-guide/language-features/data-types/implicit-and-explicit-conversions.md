@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596005"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833995"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversions implicites et explicites (Visual Basic)
 Un *conversion implicite* ne nécessite pas une syntaxe spéciale dans le code source. Dans l’exemple suivant, Visual Basic convertit implicitement la valeur de `k` à une valeur à virgule flottante simple précision avant de l’assigner à `q`.  
@@ -130,6 +130,7 @@ End If
  Effectuez une conversion explicite est également appelé *cast* une expression à une classe de type ou l’objet de données donné.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [Guide pratique pour Convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

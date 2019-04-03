@@ -2,15 +2,15 @@
 title: Custom Binding Reliable Session
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d8f58a425fd2cef078954f9805f47fc1376889d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623978"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824765"
 ---
 # <a name="custom-binding-reliable-session"></a>Custom Binding Reliable Session
-Une liaison personnalisée est définie par une liste ordonnée d’éléments de liaison discrets. Cet exemple indique comment configurer une liaison personnalisée avec plusieurs éléments d'encodage de transport et de message, notamment en activant des sessions fiables.  
+Une liaison personnalisée est définie par une liste ordonnée d’éléments de liaison discrets. Cet exemple indique comment configurer une liaison personnalisée avec plusieurs éléments d’encodage de transport et de message, notamment en activant des sessions fiables.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
@@ -22,7 +22,7 @@ Une liaison personnalisée est définie par une liste ordonnée d’éléments d
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Les sessions fiables fournissent des fonctionnalités pour une messagerie et des sessions fiables. La messagerie fiable réessaie d'établir la communication en cas d'échec et permet de spécifier des assurances de remise telles que l'ordre d'arrivée des messages. Les sessions conservent l'état pour les clients entre les appels. Cet exemple implémente des sessions permettant de conserver l'état du client et spécifie des assurances de remise par ordre d'arrivée. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Les fonctionnalités de sessions fiables sont activées et configurées dans les fichiers de configuration d’application respectifs du client et du service.  
+ Les sessions fiables fournissent des fonctionnalités pour une messagerie et des sessions fiables. La messagerie fiable réessaie d'établir la communication en cas d'échec et permet de spécifier des assurances de remise telles que l'ordre d'arrivée des messages. Les sessions conservent l'état pour les clients entre les appels. Cet exemple implémente des sessions permettant de conserver l'état du client et spécifie des assurances de remise par ordre d'arrivée. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Les fonctionnalités de sessions fiables sont activées et configurées dans les fichiers de configuration d'application respectifs du client et du service.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération correspondant à cet exemple figurent en fin de rubrique.  
@@ -123,4 +123,3 @@ Press <ENTER> to terminate client.
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
   
-## <a name="see-also"></a>Voir aussi

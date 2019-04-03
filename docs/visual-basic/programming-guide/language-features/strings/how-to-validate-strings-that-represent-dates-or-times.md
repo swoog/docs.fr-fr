@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: c1a3f14354e36dec91aca3afbe8470eff7146318
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970402"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815228"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Procédure : Valider des chaînes qui représentent des Dates ou des heures (Visual Basic)
 Le code suivant exemple définit un `Boolean` valeur qui indique si une chaîne représente une date ou heure valide.  
@@ -25,6 +25,7 @@ Le code suivant exemple définit un `Boolean` valeur qui indique si une chaîne 
  Utilisez cette méthode pour valider la chaîne avant d’essayer de convertir le `String` à un `DateTime` variable. En vérifiant la date ou heure tout d’abord, vous pouvez éviter de générer une exception au moment de l’exécution.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Information.IsDate%2A>
 - <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>
 - [Validation de chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

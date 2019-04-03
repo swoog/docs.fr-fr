@@ -2,12 +2,12 @@
 title: 'Exemple de fichier XML : Achat consolidées Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-ms.openlocfilehash: 2cfd996c088f29766b3878c3c5ad1fc48c69e2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503681"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824739"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Exemple de fichier XML : Commandes fournisseur consolidées
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Ce fichier est un ensemble de commandes fournisseur avec différentes formes provenant de plusieurs sociétés. Les commandes fournisseur de chaque société sont dans des espaces de noms distincts.  
@@ -145,4 +145,5 @@ Le fichier XML suivant est utilisé dans différents exemples dans la documentat
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exemples de documents XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

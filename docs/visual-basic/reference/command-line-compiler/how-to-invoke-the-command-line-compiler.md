@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817183"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procédure : Appeler le compilateur de ligne de commande (Visual Basic)
 Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son fichier exécutable dans la ligne de commande, également appelée invite de commande MS-DOS. Si vous compilez à partir de l’invite de commandes de Windows par défaut, vous devez taper le chemin d’accès complet au fichier exécutable. Pour remplacer ce comportement par défaut, vous pouvez utiliser l’invite de commandes développeur pour Visual Studio, ou modifier la variable d’environnement PATH. Les deux permettent de compiler à partir de n’importe quel répertoire il suffit de taper le nom du compilateur.  
@@ -58,5 +58,6 @@ Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son 
      Par exemple, si vous avez stocké votre code source dans un répertoire appelé `SourceFiles`, vous ouvririez l’invite de commandes et le type `cd SourceFiles` pour accéder à ce répertoire. Si le répertoire contenait un fichier source nommé `Source.vb`, vous pouvez le compiler en tapant `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

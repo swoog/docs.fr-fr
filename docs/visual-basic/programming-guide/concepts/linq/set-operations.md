@@ -2,12 +2,12 @@
 title: Opérations ensemblistes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825779"
 ---
 # <a name="set-operations-visual-basic"></a>Opérations ensemblistes (Visual Basic)
 Les opérations ensemblistes dans LINQ font référence à des opérations de requête qui génèrent un jeu de résultats basé sur la présence ou l’absence d’éléments équivalents dans la même collection (ou le même ensemble) ou dans une collection distincte (ou un ensemble distinct).  
@@ -49,6 +49,7 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
  [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct (clause)](../../../../visual-basic/language-reference/queries/distinct-clause.md)

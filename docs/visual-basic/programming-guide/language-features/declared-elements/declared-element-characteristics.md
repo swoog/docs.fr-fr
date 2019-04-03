@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582253"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821294"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caractéristiques d'éléments déclarés (Visual Basic)
 Un *caractéristique* d’un élément déclaré est un aspect de l’élément qui affecte la façon dont le code peut interagir avec elle. Chaque élément déclaré a un ou plusieurs des caractéristiques suivantes, il est associés :  
@@ -39,21 +39,22 @@ Un *caractéristique* d’un élément déclaré est un aspect de l’élément 
 |Variable|Oui|Oui|Oui|Oui|  
 |Constante|Oui|Non|Oui|Oui|  
 |Énumération|Oui|Non|Oui|Oui|  
-|Structure|Aucune|Non|Oui|Oui|  
+|Structure|Non|Non|Oui|Oui|  
 |Propriété|Oui|Oui|Oui|Oui|  
-|Méthode|Aucune|Oui|Oui|Oui|  
-|Procédure (`Sub` ou `Function`)|Aucune|Oui|Oui|Oui|  
-|Paramètre de procédure|Oui|Oui|Oui|Aucune|  
-|Retour de fonction|Oui|Oui|Oui|Aucune|  
+|Méthode|Non|Oui|Oui|Oui|  
+|Procédure (`Sub` ou `Function`)|Non|Oui|Oui|Oui|  
+|Paramètre de procédure|Oui|Oui|Oui|Non|  
+|Retour de fonction|Oui|Oui|Oui|Non|  
 |Opérateur|Oui|Non|Oui|Oui|  
-|Interface|Aucune|Non|Oui|Oui|  
-|Classe|Aucune|Non|Oui|Oui|  
-|Événement|Aucune|Non|Oui|Oui|  
-|délégué|Aucune|Non|Oui|Oui|  
+|Interface|Non|Non|Oui|Oui|  
+|Classe|Non|Non|Oui|Oui|  
+|Événement|Non|Non|Oui|Oui|  
+|délégué|Non|Non|Oui|Oui|  
   
  <sup>1</sup> étendue est parfois appelée *visibilité*.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
