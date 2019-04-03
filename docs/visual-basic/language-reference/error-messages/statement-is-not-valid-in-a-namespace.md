@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 98a450fd92993506005268b54798bbc8547a60fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841756"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="4f3e5-102">Instruction non valide dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="4f3e5-102">Statement is not valid in a namespace</span></span>
-<span data-ttu-id="4f3e5-103">L’instruction ne peut pas apparaître au niveau d’un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="4f3e5-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="4f3e5-104">Les seules déclarations autorisées au niveau de l’espace de noms sont module, interface, classe, délégué, énumération et déclarations de structure.</span><span class="sxs-lookup"><span data-stu-id="4f3e5-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="02c94-102">Instruction non valide dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="02c94-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="02c94-103">L’instruction ne peut pas apparaître au niveau d’un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="02c94-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="02c94-104">Les seules déclarations autorisées au niveau de l’espace de noms sont module, interface, classe, délégué, énumération et déclarations de structure.</span><span class="sxs-lookup"><span data-stu-id="02c94-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- <span data-ttu-id="4f3e5-105">**ID d’erreur :** BC30001</span><span class="sxs-lookup"><span data-stu-id="4f3e5-105">**Error ID:** BC30001</span></span>  
+ <span data-ttu-id="02c94-105">**ID d’erreur :** BC30001</span><span class="sxs-lookup"><span data-stu-id="02c94-105">**Error ID:** BC30001</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4f3e5-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="4f3e5-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="02c94-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="02c94-106">To correct this error</span></span>  
   
--   <span data-ttu-id="4f3e5-107">Déplacez l’instruction à un emplacement au sein d’un module, classe, interface, de structure, énumération ou définition du délégué.</span><span class="sxs-lookup"><span data-stu-id="4f3e5-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
+-   <span data-ttu-id="02c94-107">Déplacez l’instruction à un emplacement au sein d’un module, classe, interface, de structure, énumération ou définition du délégué.</span><span class="sxs-lookup"><span data-stu-id="02c94-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f3e5-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4f3e5-108">See also</span></span>
-- [<span data-ttu-id="4f3e5-109">Portée dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4f3e5-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [<span data-ttu-id="4f3e5-110">Espaces de noms dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4f3e5-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="02c94-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="02c94-108">See also</span></span>
+
+- [<span data-ttu-id="02c94-109">Portée dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02c94-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="02c94-110">Espaces de noms dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02c94-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)

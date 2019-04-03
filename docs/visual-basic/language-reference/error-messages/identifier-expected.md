@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 56d405bfe1079e9862d47bc64566fee62a573be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843550"
 ---
-# <a name="identifier-expected"></a><span data-ttu-id="32dc5-102">Identificateur attendu</span><span class="sxs-lookup"><span data-stu-id="32dc5-102">Identifier expected</span></span>
-<span data-ttu-id="32dc5-103">Un élément de programmation qui n’est pas un nom d’élément déclaré reconnaissable se produit lorsque le contexte nécessite un nom d’élément.</span><span class="sxs-lookup"><span data-stu-id="32dc5-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="32dc5-104">Il se peut qu’un attribut a été spécifié à un endroit différent au début de l’instruction.</span><span class="sxs-lookup"><span data-stu-id="32dc5-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
+# <a name="identifier-expected"></a><span data-ttu-id="be5a6-102">Identificateur attendu</span><span class="sxs-lookup"><span data-stu-id="be5a6-102">Identifier expected</span></span>
+<span data-ttu-id="be5a6-103">Un élément de programmation qui n’est pas un nom d’élément déclaré reconnaissable se produit lorsque le contexte nécessite un nom d’élément.</span><span class="sxs-lookup"><span data-stu-id="be5a6-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="be5a6-104">Il se peut qu’un attribut a été spécifié à un endroit différent au début de l’instruction.</span><span class="sxs-lookup"><span data-stu-id="be5a6-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- <span data-ttu-id="32dc5-105">**ID d’erreur :** BC30203</span><span class="sxs-lookup"><span data-stu-id="32dc5-105">**Error ID:** BC30203</span></span>  
+ <span data-ttu-id="be5a6-105">**ID d’erreur :** BC30203</span><span class="sxs-lookup"><span data-stu-id="be5a6-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="32dc5-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="32dc5-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="be5a6-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="be5a6-106">To correct this error</span></span>  
   
--   <span data-ttu-id="32dc5-107">Vérifiez que tous les attributs dans l’instruction sont placés au début.</span><span class="sxs-lookup"><span data-stu-id="32dc5-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
+-   <span data-ttu-id="be5a6-107">Vérifiez que tous les attributs dans l’instruction sont placés au début.</span><span class="sxs-lookup"><span data-stu-id="be5a6-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   <span data-ttu-id="32dc5-108">Vérifiez que tous les noms d’éléments dans l’instruction sont correctement orthographiés.</span><span class="sxs-lookup"><span data-stu-id="32dc5-108">Verify that all element names in the statement are spelled correctly.</span></span>  
+-   <span data-ttu-id="be5a6-108">Vérifiez que tous les noms d’éléments dans l’instruction sont correctement orthographiés.</span><span class="sxs-lookup"><span data-stu-id="be5a6-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32dc5-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="32dc5-109">See also</span></span>
-- [<span data-ttu-id="32dc5-110">Noms d’éléments déclarés</span><span class="sxs-lookup"><span data-stu-id="32dc5-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [<span data-ttu-id="32dc5-111">Vue d’ensemble des attributs</span><span class="sxs-lookup"><span data-stu-id="32dc5-111">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="be5a6-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="be5a6-109">See also</span></span>
 
+- [<span data-ttu-id="be5a6-110">Noms d’éléments déclarés</span><span class="sxs-lookup"><span data-stu-id="be5a6-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [<span data-ttu-id="be5a6-111">Vue d’ensemble des attributs</span><span class="sxs-lookup"><span data-stu-id="be5a6-111">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
