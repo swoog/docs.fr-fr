@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843537"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890369"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personnalisation de la disponibilité ou non des objets dans My (Visual Basic)
+
 Cette rubrique décrit comment vous pouvez contrôler qui `My` objets sont activés par configuration de votre projet `_MYTYPE` constante de compilation conditionnelle. L’environnement de développement intégré de Visual Studio (IDE) conserve la `_MYTYPE` constante de compilation conditionnelle pour un projet synchronisé avec le type du projet.  
   
-## <a name="predefined-mytype-values"></a>Valeurs _MYTYPE prédéfinies  
- Vous devez utiliser le `/define` option du compilateur pour définir le `_MYTYPE` constante de compilation conditionnelle. Lorsque vous spécifiez votre propre valeur pour le `_MYTYPE` constante, vous devez placer la valeur de chaîne dans la barre oblique inverse/guillemets (\\») séquences. Par exemple, vous pouvez utiliser :  
+## <a name="predefined-mytype-values"></a>Prédéfinies \_MYTYPE valeurs  
+
+Vous devez utiliser le `/define` option du compilateur pour définir le `_MYTYPE` constante de compilation conditionnelle. Lorsque vous spécifiez votre propre valeur pour le `_MYTYPE` constante, vous devez placer la valeur de chaîne dans la barre oblique inverse/guillemets (\\») séquences. Par exemple, vous pouvez utiliser :  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` objets sont activ
   
  Ce tableau montre à quoi le `_MYTYPE` constante de compilation conditionnelle a la valeur pour plusieurs types de projet.  
   
-|Type de projet|Valeur _MYTYPE|  
+|Type de projet|\_Valeur MYTYPE|  
 |------------------|--------------------|  
 |Bibliothèque de classes|« Windows »|  
 |Application console|« Console »|  
@@ -37,12 +39,13 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` objets sont activ
 |Empty|« Vide »|  
   
 > [!NOTE]
->  Toutes les comparaisons de chaînes de la compilation conditionnelle respectent la casse, quel que soit la façon dont le `Option Compare` instruction est définie.  
+> Toutes les comparaisons de chaînes de la compilation conditionnelle respectent la casse, quel que soit la façon dont le `Option Compare` instruction est définie.  
   
-## <a name="dependent-my-compilation-constants"></a>Constantes de Compilation _MY dépendantes  
- Le `_MYTYPE` constante de compilation conditionnelle, contrôle à son tour, les valeurs de plusieurs autres `_MY` constantes de compilation :  
+## <a name="dependent-my-compilation-constants"></a>Dépendants \_mon constantes de Compilation  
+
+Le `_MYTYPE` constante de compilation conditionnelle, contrôle à son tour, les valeurs de plusieurs autres `_MY` constantes de compilation :  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |« Console »|« Console »|« Windows »|Undefined|« Windows »|true|  
 |« Custom »|Undefined|Undefined|Undefined|Undefined|Undefined|  
@@ -56,7 +59,7 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` objets sont activ
  Par défaut, les constantes de compilation conditionnelle non définis se résolvent en `FALSE`. Vous pouvez spécifier des valeurs pour les constantes non définis lors de la compilation de votre projet pour remplacer le comportement par défaut.  
   
 > [!NOTE]
->  Lorsque `_MYTYPE` a la valeur « Personnalisé », le projet contient le `My` espace de noms, mais il ne contient aucun objet. Toutefois, l’affectation `_MYTYPE` à « Vide » empêche le compilateur d’ajouter le `My` espace de noms et ses objets.  
+> Lorsque `_MYTYPE` a la valeur « Personnalisé », le projet contient le `My` espace de noms, mais il ne contient aucun objet. Toutefois, l’affectation `_MYTYPE` à « Vide » empêche le compilateur d’ajouter le `My` espace de noms et ses objets.  
   
  Ce tableau décrit les effets des valeurs prédéfinies de le `_MY` constantes de compilation.  
   
@@ -78,7 +81,7 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` objets sont activ
 - [Comment My dépend du type de projet](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [My.Forms (objet)](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.Request (objet)](../../../visual-basic/language-reference/objects/my-request-object.md)
-- [My.Response (objet)](../../../visual-basic/language-reference/objects/my-response-object.md)
-- [My.WebServices (objet)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My.Forms, objet](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Request, objet](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [My.Response, objet](../../../visual-basic/language-reference/objects/my-response-object.md)
+- [My.WebServices, objet](../../../visual-basic/language-reference/objects/my-webservices-object.md)
