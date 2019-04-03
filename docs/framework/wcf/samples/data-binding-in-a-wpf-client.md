@@ -2,12 +2,12 @@
 title: Data Binding in a Windows Presentation Foundation Client
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 467a81c3f574137bc95390f70d6913a532da6ffe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626899"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839003"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Data Binding in a Windows Presentation Foundation Client
 Cet exemple illustre l’utilisation de la liaison de données dans un client Windows Presentation Foundation (WPF). L’exemple utilise un service Windows Communication Foundation (WCF) qui génère de manière aléatoire un tableau d’albums à retourner au client. Pour chaque album, un nom, un prix et une liste des pistes y figurant sont définis. Un nom et une durée sont indiqués pour chaque piste. Les informations retournées par le service sont automatiquement liées à l’interface utilisateur (IU) fourni par le client Windows Presentation Foundation (WPF).  
@@ -15,7 +15,7 @@ Cet exemple illustre l’utilisation de la liaison de données dans un client Wi
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- La liaison de données permet à une source de données d'être automatiquement liée à une interface utilisateur. Cela simplifie le modèle de programmation car vous n'êtes pas obligé ainsi de mettre à jour par programme chaque élément de l'interface utilisateur avec les données provenant d'un objet de données ou d'un tableau d'objets de données. Vous pouvez lier un objet à un seul élément d'interface utilisateur ou un tableau à une commande acceptant plusieurs entrées, comme `ListBox`. Le code suivant indique comment lier des données au `DataContext` d'un élément d'interface utilisateur.  
+ La liaison de données permet à une source de données d’être automatiquement liée à une interface utilisateur. Cela simplifie le modèle de programmation car vous n'êtes pas obligé ainsi de mettre à jour par programme chaque élément de l'interface utilisateur avec les données provenant d'un objet de données ou d'un tableau d'objets de données. Vous pouvez lier un objet à un seul élément d'interface utilisateur ou un tableau à une commande acceptant plusieurs entrées, comme `ListBox`. Le code suivant indique comment lier des données au `DataContext` d'un élément d'interface utilisateur.  
   
 ```  
 // Event handler executed when call is complete  
@@ -63,7 +63,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
             ItemsSource="{Binding Path=Tracks}" />  
 ```  
   
- Le code spécifie le chemin d'accès à `ItemsSource`. Cela signifie que les données liées à cette commande ne correspondent pas aux données de niveau supérieur mais à une propriété de ces données nommées `Tracks`. Cette propriété représente le tableau de pistes contenues dans l'album. Un modèle `DataTemplate` nommé `TrackStyle` est également spécifié. La mise en page du modèle `TrackStyle` est semblable à celle du modèle `AlbumStyle`, mais les `TextBlock` sont liés à des propriétés différentes. Cela est dû au fait que ces deux modèles sont utilisés avec des objets de données différents.  
+ Le code spécifie le chemin d’accès à `ItemsSource`. Cela signifie que les données liées à cette commande ne correspondent pas aux données de niveau supérieur mais à une propriété de ces données nommées `Tracks`. Cette propriété représente le tableau de pistes contenues dans l'album. Un modèle `DataTemplate` nommé `TrackStyle` est également spécifié. La mise en page du modèle `TrackStyle` est semblable à celle du modèle `AlbumStyle`, mais les `TextBlock` sont liés à des propriétés différentes. Cela est dû au fait que ces deux modèles sont utilisés avec des objets de données différents.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -82,4 +82,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   
-## <a name="see-also"></a>Voir aussi

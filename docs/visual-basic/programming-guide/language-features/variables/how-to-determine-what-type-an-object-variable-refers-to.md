@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571176"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816406"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Procédure : Déterminer le Type désigné par une Variable d’objet (Visual Basic)
 Une variable objet contient un pointeur vers les données stockées ailleurs. Le type de ces données peut changer pendant l’exécution. À tout moment, vous pouvez utiliser la <xref:System.Type.GetTypeCode%2A> méthode pour déterminer le type d’exécution actuel, ou le [TypeOf, opérateur](../../../../visual-basic/language-reference/operators/typeof-operator.md) pour déterminer si l’actuel type au moment de l’exécution est compatible avec un type spécifié.  
@@ -53,6 +53,7 @@ Une variable objet contient un pointeur vers les données stockées ailleurs. Le
  Notez que le type spécifié ne peut pas être une variable ou une expression. Il doit être le nom d’un type défini, comme une classe, une structure ou une interface. Cela inclut les types intrinsèques tels que `Integer` et `String`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

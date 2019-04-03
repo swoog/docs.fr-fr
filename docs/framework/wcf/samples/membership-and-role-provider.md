@@ -2,12 +2,12 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 3fd3d199a529c96299350aba7f43b0393e1178f5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332895"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839754"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 L'exemple Membership and Role Provider montre comment un service peut utiliser les fournisseurs d'appartenances et de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour authentifier et autoriser des clients.  
@@ -198,4 +198,3 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## <a name="see-also"></a>Voir aussi

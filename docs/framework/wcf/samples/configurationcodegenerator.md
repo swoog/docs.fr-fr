@@ -2,15 +2,15 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: eb547c89dc5d4af9330a6881d64f433de9bdad94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669079"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821931"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
-Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer vos implémentations de canal personnalisées au système de configuration. Cela permet aux utilisateurs de votre canal personnalisé de configurer votre canal en utilisant un fichier .config comme ils configureraient une liaison fournie par le système telle que `NetTcpBinding` ou une liaison personnalisée à l’aide de `TcpTransportBindingElement`.  
+Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer vos implémentations de canal personnalisées au système de configuration. Cela permet aux utilisateurs de votre canal personnalisé de configurer votre canal en utilisant un fichier .config comme ils configureraient une liaison fournie par le système telle que `NetTcpBinding` ou une liaison personnalisée à l'aide de `TcpTransportBindingElement`.  
   
  Lorsque vous écrivez un canal personnalisé et l'exposez au modèle de programmation en utilisant un nouveau `BindingElement` ou une `Binding`, vous devez créer un ensemble de classes pour rendre le `BindingElement` ou la `Binding` configurable à l'aide d'un fichier .config. Vous pouvez utiliser l'outil ConfigurationCodeGenerator pour générer ces classes et améliorer l'expérience de votre client.  
   
@@ -42,7 +42,7 @@ Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer
   
      La commande génère trois fichiers .cs pour le `BindingElement` (si vous avez spécifié l'option /be:), cinq fichiers .cs pour la `Binding` standard (si vous avez spécifié l'option /sb:), et un fichier .xml.  
   
-    1.  Si vous avez utilisé l'option /be, l'un des fichiers .cs implémente `BindingElementExtensionSection` pour votre élément de liaison. Ce code expose votre `BindingElement` au système de configuration, afin que d'autres liaisons personnalisées puissent utiliser votre élément de liaison. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
+    1.  Si vous avez utilisé l’option /be, l’un des fichiers .cs implémente `BindingElementExtensionSection` pour votre élément de liaison. Ce code expose votre `BindingElement` au système de configuration, afin que d'autres liaisons personnalisées puissent utiliser votre élément de liaison. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
   
     2.  Si vous avez spécifié l'option /sb, deux des fichiers .cs implémentent respectivement un `StandardBindingElement` et un `StandardBindingCollectionElement`, qui expose votre liaison standard au système de configuration. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
   
@@ -50,4 +50,3 @@ Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer
   
      Le fichier SampleConfig.xml contient le code de configuration que vous devez ajouter au fichier de configuration qui enregistre les gestionnaires définis à l'étape 1 ou 2 précédente.  
   
-## <a name="see-also"></a>Voir aussi

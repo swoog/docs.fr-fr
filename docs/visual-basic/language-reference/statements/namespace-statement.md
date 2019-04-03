@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 1268982eb841327d72ce195992f8c4dcad4440a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966175"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820930"
 ---
 # <a name="namespace-statement"></a>Namespace, instruction
 Déclare le nom d’un espace de noms et oblige le code source qui suit la déclaration à être compilé dans cet espace de noms.  
@@ -32,13 +32,13 @@ End Namespace
   
 ## <a name="parts"></a>Composants  
  Global  
- Facultatif. Vous permet de définir un espace de noms en dehors de l’espace de noms racine de votre projet. Consultez [espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Optionnel. Vous permet de définir un espace de noms en dehors de l’espace de noms racine de votre projet. Consultez [espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
  Obligatoire. Un nom unique qui identifie l’espace de noms. Doit être un identificateur Visual Basic valide. Pour plus d’informations, consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Facultatif. Éléments qui composent l’espace de noms. Cela inclut, mais ne sont pas limités à, énumérations, structures, interfaces, classes, modules, délégués et autres espaces de noms.  
+ Optionnel. Éléments qui composent l’espace de noms. Cela inclut, mais ne sont pas limités à, énumérations, structures, interfaces, classes, modules, délégués et autres espaces de noms.  
   
  `End Namespace`  
  Met fin à une `Namespace` bloc.  
@@ -103,6 +103,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Imports (instruction) (espace de noms et type .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

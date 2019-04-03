@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 5e90d1dc5eb0beb3afd8fc69da32f89943e94c48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741910"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841215"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Booléen, type de données (Visual Basic)
 Contient les valeurs qui peuvent être uniquement `True` ou `False`. Les mots clés `True` et `False` correspondent aux deux États de `Boolean` variables.  
@@ -54,6 +54,7 @@ End If
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Boolean?displayProperty=nameWithType>
 - [Types de données](../../../visual-basic/language-reference/data-types/index.md)
 - [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

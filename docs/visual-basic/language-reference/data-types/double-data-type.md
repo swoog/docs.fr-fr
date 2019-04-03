@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626483"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824661"
 ---
 # <a name="double-data-type-visual-basic"></a>Double, type de données (Visual Basic)
 Contient IEEE 64 bits (8 octets) double précision à virgule flottante des nombres signés dont la valeur de - 1, 79769313486231570E + 308 à - 4, 94065645841246544E-324 pour les valeurs négatives et entre 4, 94065645841246544E-324 à 1, 79769313486231570E + 308 pour valeurs positives. Les nombres en double précision stockent une approximation d’un nombre réel.  
@@ -56,6 +56,7 @@ Contient IEEE 64 bits (8 octets) double précision à virgule flottante des nomb
 -   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [Types de données](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal (type de données)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

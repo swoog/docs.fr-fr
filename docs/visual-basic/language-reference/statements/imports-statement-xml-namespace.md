@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973273"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841405"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports, instruction (espace de noms XML)
 Importe des préfixes d’espace de noms XML pour une utilisation dans les littéraux XML et les propriétés d’axe XML.  
@@ -27,7 +27,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>Composants  
  `xmlNamespacePrefix`  
- Facultatif. La chaîne par laquelle le langage XML éléments et attributs peuvent faire référence à `xmlNamespaceName`. Si aucun `xmlNamespacePrefix` est fourni, l’espace de noms XML importé est l’espace de noms XML par défaut. Doit être un identificateur XML valide. Pour plus d’informations, consultez [les attributs et les noms d’éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Optionnel. La chaîne par laquelle le langage XML éléments et attributs peuvent faire référence à `xmlNamespaceName`. Si aucun `xmlNamespacePrefix` est fourni, l’espace de noms XML importé est l’espace de noms XML par défaut. Doit être un identificateur XML valide. Pour plus d’informations, consultez [les attributs et les noms d’éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
  Obligatoire. La chaîne qui identifie l’espace de noms XML importé.  
@@ -89,6 +89,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  `Patrick Hines`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Littéral d’élément XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Nom des attributs et des éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

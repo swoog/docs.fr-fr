@@ -2,12 +2,12 @@
 title: Introduction aux Transformations fonctionnelles pures (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-ms.openlocfilehash: a4e9cdf98dfe3a54ecb9ff4316742d76b51ba782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824882"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduction aux Transformations fonctionnelles pures (Visual Basic)
 Cette section présente les transformations fonctionnelles, y compris les concepts sous-jacents et les constructions de prise en charge. Elle décrit le contraste qu'il existe entre la programmation orientée objet et la programmation avec transformation fonctionnelle, et fournit des conseils pour aider les programmeurs à passer de l'une à l'autre. Bien que les transformations fonctionnelles puissent être utilisées dans de nombreux scénarios de programmation, la transformation XML est utilisée ici comme exemple concret.  
@@ -23,4 +23,5 @@ Cette section présente les transformations fonctionnelles, y compris les concep
 |[Transformation fonctionnelle de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Décrit les transformations fonctionnelles dans le contexte de la transformation d’arborescences XML.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Transformations fonctionnelles pures de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

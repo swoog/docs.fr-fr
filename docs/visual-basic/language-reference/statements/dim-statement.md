@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836556"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
 Déclare et alloue de l’espace de stockage pour une ou plusieurs variables.  
@@ -54,7 +54,7 @@ Dim [ WithEvents ] variablelist
   
 -   `accessmodifier`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -72,11 +72,11 @@ Dim [ WithEvents ] variablelist
   
 -   `Shared`  
   
-     Facultatif. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Optionnel. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Static`  
   
@@ -84,11 +84,11 @@ Dim [ WithEvents ] variablelist
   
 -   `ReadOnly`  
   
-     Facultatif. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Optionnel. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WithEvents`  
   
-     Facultatif. Spécifie qu’il s’agit de variables objets qui font référence aux instances d’une classe qui peut déclencher des événements. Consultez [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
+     Optionnel. Spécifie qu’il s’agit de variables objets qui font référence aux instances d’une classe qui peut déclencher des événements. Consultez [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
   
 -   `variablelist`  
   
@@ -105,9 +105,9 @@ Dim [ WithEvents ] variablelist
     |`variablename`|Obligatoire. Nom de la variable. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
     |`boundslist`|Facultatif. Liste des limites de chaque dimension d’une variable tableau.|  
     |`New`|Facultatif. Crée une nouvelle instance de la classe lors de la `Dim` instruction s’exécute.|  
-    |`datatype`|Facultatif. Type de données de la variable.|  
+    |`datatype`|Optionnel. Type de données de la variable.|  
     |`With`|Facultatif. Présente la liste d’initialiseurs objet.|  
-    |`propertyname`|Facultatif. Le nom d’une propriété dans la classe, vous effectuez une instance de.|  
+    |`propertyname`|Optionnel. Le nom d’une propriété dans la classe, vous effectuez une instance de.|  
     |`propinitializer`|Requis après `propertyname` =. L’expression qui est évaluée et assignée au nom de propriété.|  
     |`initializer`|Facultatif si `New` n’est pas spécifié. Expression qui est évaluée et assignée à la variable lors de sa création.|  
   
@@ -251,7 +251,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
 |Type de données spécifié ?|Initialiseur spécifié ?|Exemple|Résultat|  
 |---|---|---|---|  
-|Non|Aucune|`Dim qty`|Si [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) est désactivé (par défaut), la variable est définie sur `Nothing`.<br /><br /> Si `Option Strict` est activé, une erreur se produit au moment de la compilation.|  
+|Non|Non|`Dim qty`|Si [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) est désactivé (par défaut), la variable est définie sur `Nothing`.<br /><br /> Si `Option Strict` est activé, une erreur se produit au moment de la compilation.|  
 |Non|Oui|`Dim qty = 5`|Si [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) est activée (valeur par défaut), type de la variable prend les données de l’initialiseur. Consultez [inférence de Type Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Si `Option Infer` est désactivé et que `Option Strict` est désactivé, la variable prend le type de données de `Object`.<br /><br /> Si `Option Infer` est désactivé et que `Option Strict` est activé, une erreur se produit au moment de la compilation.|  
 |Oui|Non|`Dim qty As Integer`|La variable est initialisée avec la valeur par défaut du type de données. Consultez le tableau plus loin dans cette section.|  
 |Oui|Oui|`Dim qty  As Integer = 5`|Si le type de données de l’initialiseur ne peut pas être converti dans le type de données spécifié, une erreur se produit au moment de la compilation.|  
@@ -314,6 +314,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)
 - [ReDim (instruction)](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Explicit (instruction)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

@@ -2,12 +2,12 @@
 title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: f4162eb454a0cdeb0db68c1e469da289b8e7ba78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720965"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827911"
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
 Cet exemple étend la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet par l’activation et à le désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  
@@ -72,7 +72,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
 }  
 ```  
   
- L’implémentation `ReleaseInstance` personnalisée ajoute de nouveau l’instance libérée au pool et décrémente la valeur `ActiveObjectsCount`. L’EndpointDispatcher peut appeler ces méthodes à partir de différents threads et, par conséquent, l’accès synchronisé aux membres au niveau de la classe dans la classe `ObjectPoolInstanceProvider` est requis.  
+ L'implémentation `ReleaseInstance` personnalisée ajoute de nouveau l'instance libérée au pool et décrémente la valeur `ActiveObjectsCount`. L’EndpointDispatcher peut appeler ces méthodes à partir de différents threads et, par conséquent, l’accès synchronisé aux membres au niveau de la classe dans la classe `ObjectPoolInstanceProvider` est requis.  
   
 ```  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
@@ -148,7 +148,7 @@ if (activeObjectsCount == 0)
   
 -   Utilisation d'un attribut personnalisé.  
   
--   L’ajouter de façon impérative à la collection de comportements de la description de service.  
+-   L'ajouter de façon impérative à la collection de comportements de la description de service.  
   
 -   Extension du fichier de configuration  
   
@@ -156,7 +156,7 @@ if (activeObjectsCount == 0)
   
  Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. l'<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; elle autorise l'inspection du service pour retrouver les éventuelles incohérences. l'<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; cette méthode est requise uniquement dans les scénarios très avancés. l'<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier ; elle est responsable de la configuration de l'exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
   
--   `Description`: Ce paramètre fournit la description de service pour l’ensemble du service. Il permet d'inspecter les données de description des points de terminaison, des contrats et des liaisons, et les autres données associées au service.  
+-   `Description`: Ce paramètre fournit la description de service pour l’ensemble du service. Il permet d’inspecter les données de description des points de terminaison, des contrats et des liaisons, et les autres données associées au service.  
   
 -   `ServiceHostBase`: Ce paramètre fournit le <xref:System.ServiceModel.ServiceHostBase> qui est en cours d’initialisation.  
   
@@ -265,4 +265,3 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   
-## <a name="see-also"></a>Voir aussi

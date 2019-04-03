@@ -2,12 +2,12 @@
 title: 'Procédure : Écrire des données de l’objet dans un fichier XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843732"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procédure : Écrire des données de l’objet dans un fichier XML (Visual Basic)
 Cet exemple écrit l’objet d’une classe dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -55,6 +55,7 @@ End Module
  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application doit créer un fichier, elle doit disposer de l’autorisation `Create` pour accéder au dossier. Si le fichier existe déjà, l’application a uniquement besoin de l’autorisation `Write`, qui est une autorisation de niveau inférieur. Quand cela est possible, il est plus sûr de créer le fichier au cours du déploiement et de n’accorder l’autorisation `Read` que sur un seul fichier, plutôt que l’autorisation `Create` sur un dossier.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IO.StreamWriter>
 - [Guide pratique pour Lire les données d’objet à partir d’un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

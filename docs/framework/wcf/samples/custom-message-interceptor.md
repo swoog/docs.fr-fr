@@ -2,17 +2,17 @@
 title: Custom Message Interceptor
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733270"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824778"
 ---
 # <a name="custom-message-interceptor"></a>Custom Message Interceptor
 Cet exemple montre l'utilisation du modèle d'extensibilité des canaux. Indique en particulier comment implémenter un élément de liaison personnalisé qui crée des fabrications de canaux et des écouteurs de canal pour intercepter tous les messages entrants et sortants à un point particulier dans la pile d’exécution. L'exemple inclut également un client et serveur qui montrent l'utilisation de ces fabrications personnalisées.  
   
- Dans cet exemple, le client et le service sont tous deux des programmes de console (.exe). Le client et le service utilisent une bibliothèque commune (.dll) qui contient l'élément de liaison personnalisé et ses objets d'exécution associés.  
+ Dans cet exemple, le client et le service sont tous deux des programmes de console (.exe). Le client et le service utilisent une bibliothèque commune (.dll) qui contient l’élément de liaison personnalisé et ses objets d’exécution associés.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -51,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 { ... }  
 ```  
   
-## <a name="adding-a-binding-element"></a>Ajout d’un élément de liaison  
+## <a name="adding-a-binding-element"></a>Ajout d'un élément de liaison  
  l’exemple définit un élément de liaison personnalisé : `InterceptingBindingElement`. `InterceptingBindingElement` prend un `ChannelMessageInterceptor` en tant qu’entrée et utilise ce `ChannelMessageInterceptor` pour manipuler les messages qui transitent par elle. C'est la seule classe qui doit être publique. La fabrication, l'écouteur et les canaux peuvent tous être des implémentations internes des interfaces d'exécution publiques.  
   
 ```  
@@ -59,7 +59,7 @@ public class InterceptingBindingElement : BindingElement
 ```  
   
 ## <a name="adding-configuration-support"></a>Ajout de la prise en charge de la configuration  
- Pour s’intégrer avec la configuration de liaison, la bibliothèque définit un gestionnaire de section de configuration comme section d’extension d’élément de liaison. Les fichiers de configuration du client et du serveur doivent enregistrer l'extension d'élément de liaison avec le système de configuration. Les implémenteurs qui souhaitent exposer leur élément de liaison au système de configuration peuvent dériver de cette classe.  
+ Pour s'intégrer avec la configuration de liaison, la bibliothèque définit un gestionnaire de section de configuration comme section d'extension d'élément de liaison. Les fichiers de configuration du client et du serveur doivent enregistrer l'extension d'élément de liaison avec le système de configuration. Les implémenteurs qui souhaitent exposer leur élément de liaison au système de configuration peuvent dériver de cette classe.  
   
 ```  
 public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
@@ -69,7 +69,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
  Pour s'intégrer avec notre système de stratégie, `InterceptingBindingElement` implémente IPolicyExportExtension pour signaler que nous devons participer à la génération de la stratégie. Pour prendre en charge l'importation de la stratégie sur un client généré, l'utilisateur peut enregistrer une classe dérivée de `InterceptingBindingElementImporter` et substituer `CreateMessageInterceptor`() pour générer leur classe `ChannelMessageInterceptor` activée par stratégie.  
   
 ## <a name="example-droppable-message-inspector"></a>Exemple : Inspecteur de message  
- L’exemple comporte un exemple d’implémentation de `ChannelMessageInspector` qui supprime des messages.  
+ L'exemple comporte un exemple d'implémentation de `ChannelMessageInspector` qui supprime des messages.  
   
 ```  
 class DroppingServerElement : InterceptingElement  
@@ -161,4 +161,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  Exécutez d'abord Service.exe, puis Client.exe. Examinez ensuite la sortie dans les deux fenêtres de console.  
   
-## <a name="see-also"></a>Voir aussi

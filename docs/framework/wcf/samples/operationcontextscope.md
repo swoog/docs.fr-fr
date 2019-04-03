@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 46180c47512fd4bdb5955ed0febb63892fc27b19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24c4478ac53ab5f1a38476d00d47152cafb7db0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656789"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838233"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 L’exemple OperationContextScope montre comment envoyer des informations supplémentaires sur un appel de Windows Communication Foundation (WCF) à l’aide d’en-têtes. Dans cet exemple, le serveur et le client sont tous deux des applications consoles.  
@@ -18,7 +18,7 @@ L’exemple OperationContextScope montre comment envoyer des informations suppl�
  L'exemple montre comment un client peut envoyer des informations supplémentaires en tant qu'<xref:System.ServiceModel.Channels.MessageHeader> à l'aide de <xref:System.ServiceModel.OperationContextScope>. Un objet <xref:System.ServiceModel.OperationContextScope> est créé en étendant sa portée à un canal. Les en-têtes qui doivent être translatés au service distant peuvent être ajoutés à la collection <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>. Les en-têtes ajoutés à cette collection peuvent être récupérés sur le service en accédant aux <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Ses appels sont passés sur plusieurs canaux et les en-têtes ajoutés au client s'appliquent uniquement au canal utilisé pour créer la <xref:System.ServiceModel.OperationContextScope>.  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- Il s’agit de l’exemple de service qui reçoit un message du client et essaie de chercher l’en-tête dans la collection <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Le client passe le GUID qu’il a envoyé dans l’en-tête et le service récupère l’en-tête personnalisé et, la cas échéant, le compare avec le GUID passé comme argument par le client.  
+ Il s'agit de l'exemple de service qui reçoit un message du client et essaie de chercher l'en-tête dans la collection <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Le client passe le GUID qu'il a envoyé dans l'en-tête et le service récupère l'en-tête personnalisé et, la cas échéant, le compare avec le GUID passé comme argument par le client.  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
@@ -130,4 +130,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   
-## <a name="see-also"></a>Voir aussi

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: f13fdae9617fa2af21978979cad6f90a15140a4a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9dda0fbc0cffe8904ab97c46cea40d5cf00c91e9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843784"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procédure : Appeler une procédure surchargée (Visual Basic)
 L’avantage de la surcharge d’une procédure est la flexibilité de l’appel. Le code appelant peut obtenir les informations que nécessaires pour passer à la procédure, puis appelez un seul nom de procédure, quel que soit les arguments, il a réussi.  
@@ -33,6 +33,7 @@ L’avantage de la surcharge d’une procédure est la flexibilité de l’appel
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Surcharge de procédure](./procedure-overloading.md)

@@ -2,12 +2,12 @@
 title: 'Procédure : Interroger des fichiers dupliqués dans une arborescence de répertoires (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 5663c368c319c8c667171f65292667029951dae9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 81955b18755f41a582aed7768c709c8e77cffba6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819071"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Procédure : Interroger des fichiers dupliqués dans une arborescence de répertoires (LINQ) (Visual Basic)
 Parfois, plusieurs dossiers peuvent contenir des fichiers ayant le même nom. Par exemple, sous le dossier d’installation de Visual Studio, plusieurs dossiers ont un fichier readme.htm. Cet exemple montre comment rechercher ces noms de fichiers dupliqués sous un dossier racine spécifié. Le deuxième exemple montre comment rechercher des fichiers dont la taille et l’heure de création correspondent également.  
@@ -104,5 +104,6 @@ End Module
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

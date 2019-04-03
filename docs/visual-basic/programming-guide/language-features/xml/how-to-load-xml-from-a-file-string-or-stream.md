@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 36a7f23eed7f47e8c33958f96e8e3694fb958d11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977693"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832136"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procédure : Charger XML à partir d’un fichier, une chaîne ou un Stream (Visual Basic)
 Vous pouvez créer [littéraux XML](../../../../visual-basic/language-reference/xml-literals/index.md) et les remplir avec le contenu d’une source externe, comme un fichier, une chaîne ou un flux de données à l’aide de plusieurs méthodes. Ces méthodes sont illustrées dans les exemples suivants.  
@@ -42,6 +42,7 @@ Vous pouvez créer [littéraux XML](../../../../visual-basic/language-reference/
  [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>

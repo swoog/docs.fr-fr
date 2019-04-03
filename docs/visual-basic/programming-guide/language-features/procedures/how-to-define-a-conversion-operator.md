@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974638"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829224"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procédure : Définir un opérateur de Conversion (Visual Basic)
 Si vous avez défini une classe ou structure, vous pouvez définir un opérateur de conversion de type entre le type de votre classe ou une structure et un autre type de données (tel que `Integer`, `Double`, ou `String`).  
@@ -33,6 +33,7 @@ Si vous avez défini une classe ou structure, vous pouvez définir un opérateur
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures d’opérateur](./operator-procedures.md)
 - [Guide pratique pour Définir un opérateur](./how-to-define-an-operator.md)
 - [Guide pratique pour Appeler une procédure d’opérateur](./how-to-call-an-operator-procedure.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634165"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836933"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensions du tableau dans Visual Basic
 Un *dimension* est une direction dans laquelle vous pouvez modifier la spécification d’éléments d’un tableau. Un tableau qui contient les ventes total pour chaque jour du mois possède une dimension (le jour du mois). Un tableau qui concerne les ventes total par service pour chaque jour du mois possède deux dimensions (le numéro de service et le jour du mois). Le nombre de dimensions que possède un tableau est appelé son *rang*.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  Vous pouvez créer un tableau sans utiliser le `Dim` instruction ou le `New` clause. Par exemple, vous pouvez appeler la <xref:System.Array.CreateInstance%2A> (méthode), ou un autre composant peut passer à votre code un tableau créé de cette manière. Un tel tableau peut avoir une limite inférieure différente de 0. Vous pouvez toujours tester la limite inférieure d’une dimension à l’aide de la <xref:System.Array.GetLowerBound%2A> méthode ou le `LBound` (fonction).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287506"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827144"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Une valeur de type 'type1' ne peut pas être convertie en 'type2'
 Valeur de type 'type1' ne peut pas être convertie en 'type2'. Vous pouvez utiliser la propriété 'Value' pour obtenir la valeur de chaîne du premier élément de '\<parentElement >'.  
@@ -26,6 +26,7 @@ Valeur de type 'type1' ne peut pas être convertie en 'type2'. Vous pouvez utili
 -   Utilisez la propriété `Value` du littéral XML pour faire référence à sa valeur comme une `String`. Utilisez la fonction `CType` , une autre fonction de conversion de type, ou la classe <xref:System.Convert> pour effectuer un cast de la valeur vers le type spécifié.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Convert>
 - [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)

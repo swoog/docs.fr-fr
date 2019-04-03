@@ -2,12 +2,12 @@
 title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 8b884c416960b15da988bde2cc770895857cb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9f0c47a1bafe715a40d150a77543ca71a249920
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625573"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816601"
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  
@@ -86,12 +86,12 @@ Cet exemple présente la sécurité fédérée :
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Ouvrez la fenêtre de commande de Kit de développement SDK. Dans le chemin d'accès de l'exemple, exécutez Setup.bat. Cette opération crée les répertoires virtuels requis pour l'exemple et installe les certificats requis avec les autorisations appropriées.  
+1.  Ouvrez la fenêtre de commande de Kit de développement SDK. Dans le chemin d’accès de l’exemple, exécutez Setup.bat. Cette opération crée les répertoires virtuels requis pour l'exemple et installe les certificats requis avec les autorisations appropriées.  
   
     > [!NOTE]
     >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes du Kit de développement Windows SDK. La variable d'environnement du Kit de développement MS SDK doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes du Kit de développement logiciel Windows. Sur [!INCLUDE[wv](../../../../includes/wv-md.md)], vous devez vous assurer que la compatibilité avec la gestion IIS 6 est installée, car le programme d'installation utilise des scripts d'administrateur IIS. L'exécution du script installation sur [!INCLUDE[wv](../../../../includes/wv-md.md)] requiert des privilèges d'administrateur.  
   
-2.  Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **Build** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l'application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
+2.  Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **Build** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l’application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
   
 3.  Double-cliquez sur BookStoreClient.exe. La fenêtre BookStoreClient s'affiche.  
   
@@ -117,4 +117,3 @@ Cet exemple présente la sécurité fédérée :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## <a name="see-also"></a>Voir aussi

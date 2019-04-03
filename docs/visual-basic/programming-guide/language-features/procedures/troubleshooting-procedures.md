@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971999"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830134"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procédures de dépannage (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des procédures.  
@@ -124,6 +124,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Si deux surcharges d’une procédure ont des signatures identiques, mais que le dernier paramètre est déclaré [facultatif](../../../../visual-basic/language-reference/modifiers/optional.md) dans un et [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) dans l’autre, le compilateur résout un appel à cette procédure. en fonction de la correspondance la plus proche. Pour plus d'informations, consultez [Overload Resolution](./overload-resolution.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures Function](./function-procedures.md)

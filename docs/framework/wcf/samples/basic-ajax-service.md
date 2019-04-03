@@ -2,12 +2,12 @@
 title: Basic AJAX Service
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 2f488ea1784e41c0c8e4bb815397ab81de95e53b
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 5efee4f65cc223d357d1ce1cd01a78292c7d6ea9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819721"
 ---
 # <a name="basic-ajax-service"></a>Basic AJAX Service
 Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour créer un service ASP.NET Asynchronous JavaScript and XML (AJAX) base (service que vous pouvez accéder à l’aide de code JavaScript à partir d’un client de navigateur Web). L'attribut <xref:System.ServiceModel.Web.WebGetAttribute> est utilisé afin de garantir que le service répond aux requêtes HTTP GET et que ce service utilise le format de données JSON (JavaScript Object Notation) pour les réponses.  
@@ -50,7 +50,7 @@ public interface ICalculator
   
  Le <xref:System.ServiceModel.Description.WebScriptEndpoint> affecte au format de données par défaut du service la valeur JSON au lieu de XML. Pour appeler le service, accédez à `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` après la fin de l’ensemble des étapes et de génération indiqués plus loin dans cette rubrique. L'utilisation d'une requête HTTP GET active cette fonctionnalité de test.  
   
- La page Web PostAjaxClientPage.aspx du client contient le code ASP.NET permettant d'appeler le service à chaque fois que l'utilisateur clique sur l'un des boutons d'opération de cette page. Le contrôle `ScriptManager` est utilisé pour permettre l'accès à un proxy du service via JavaScript.  
+ La page web PostAjaxClientPage.aspx du client contient le code ASP.NET permettant d’appeler le service à chaque fois que l’utilisateur clique sur l’un des boutons d’opération de cette page. Le contrôle `ScriptManager` est utilisé pour permettre l'accès à un proxy du service via JavaScript.  
 
 ```aspx-csharp
 <asp:ScriptManager ID="ScriptManager" runat="server">  
@@ -87,4 +87,3 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`  
   
-## <a name="see-also"></a>Voir aussi

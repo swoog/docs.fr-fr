@@ -2,17 +2,23 @@
 title: Liaison anticipée et liaison tardive (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'early binding [Visual Basic]'
-  - 'objects [Visual Basic], late-bound'
-  - 'objects [Visual Basic], early-bound'
-  - 'objects [Visual Basic], late bound'
-  - 'early binding [Visual Basic], Visual Basic compiler'
-  - 'binding [Visual Basic], late and early'
-  - 'objects [Visual Basic], early bound'
-  - 'Visual Basic compiler, early and late binding'
-  - 'late binding [Visual Basic]'
-  - 'late binding [Visual Basic], Visual Basic compiler'
+- early binding [Visual Basic]
+- objects [Visual Basic], late-bound
+- objects [Visual Basic], early-bound
+- objects [Visual Basic], late bound
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
+- objects [Visual Basic], early bound
+- Visual Basic compiler, early and late binding
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
+ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824791"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Liaison anticipée et liaison tardive (Visual Basic)
 Le compilateur Visual Basic exécute un processus appelé `binding` quand un objet est assigné à une variable objet. Un objet est dit *à liaison anticipée* lorsqu’il est affecté à une variable déclarée comme étant d’un type d’objet spécifique. Les objets à liaison anticipée permettent au compilateur d’allouer de la mémoire et d’effectuer d’autres optimisations avant l’exécution d’une application. Par exemple, le fragment de code suivant déclare une variable de type <xref:System.IO.FileStream> :  
@@ -32,6 +38,7 @@ Le compilateur Visual Basic exécute un processus appelé `binding` quand un obj
 >  La liaison tardive ne peut être utilisée que pour accéder aux membres de type déclarés comme `Public`. L’accès aux membres déclarés comme `Friend` ou `Protected Friend` provoque une erreur d’exécution.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
 - [Durée de vie d’objet : Comment les objets sont créés et détruits](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)

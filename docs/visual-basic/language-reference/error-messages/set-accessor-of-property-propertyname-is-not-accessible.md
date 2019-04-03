@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 1539eb1652d93402c349c65f77a3edc65b3beb57
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277561"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834463"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>Accesseur de propriété ' set' '\<nom_propriété >' n’est pas accessible
 Une instruction essaie de stocker la valeur d’une propriété lorsqu’elle n’a pas accès à la propriété `Set` procédure.  
@@ -34,5 +34,6 @@ Une instruction essaie de stocker la valeur d’une propriété lorsqu’elle n�
 -   Si vous n’avez pas de contrôle de code source qui définit la propriété, ou vous devez limiter la `Set` procédure niveau d’accès plus que la propriété proprement dite, essayez de déplacer l’instruction qui définit la valeur de propriété à une région de code qui offre un meilleur accès à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures de propriété](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Guide pratique pour Déclarer une propriété avec des niveaux d’accès mixtes](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

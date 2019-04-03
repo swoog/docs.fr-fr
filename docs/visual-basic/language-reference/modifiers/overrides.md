@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582097"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826585"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 Spécifie qu'une propriété ou procédure substitue une propriété ou procédure ayant un nom identique et ayant été héritée d'une classe de base.  
@@ -47,7 +47,7 @@ Spécifie qu'une propriété ou procédure substitue une propriété ou procédu
   
     -   Mécanisme de passage de chaque paramètre ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
-    -   Listes de contraintes pour chaque paramètre de type d’une procédure générique  
+    -   Listes de contraintes pour chaque paramètre de type d'une procédure générique  
   
 -   **Occultation et substitution.** L'occultation et la substitution redéfinissent toutes les deux un élément hérité, mais il existe des différences importantes entre ces deux approches. Pour plus d’informations, consultez [occultation dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
@@ -62,6 +62,7 @@ Spécifie qu'une propriété ou procédure substitue une propriété ou procédu
  [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)

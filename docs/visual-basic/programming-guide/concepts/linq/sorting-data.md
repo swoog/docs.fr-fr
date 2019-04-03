@@ -2,12 +2,12 @@
 title: Tri des données (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126251"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819084"
 ---
 # <a name="sorting-data-visual-basic"></a>Tri des données (Visual Basic)
 Une opération de tri ordonne les éléments d’une séquence en fonction d’un ou de plusieurs attributs. Le premier critère de tri effectue un tri principal sur les éléments. En spécifiant un deuxième critère de tri, vous pouvez trier les éléments dans chaque groupe de tri principal.  
@@ -143,6 +143,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By (clause)](../../../../visual-basic/language-reference/queries/order-by-clause.md)

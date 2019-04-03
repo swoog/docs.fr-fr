@@ -2,12 +2,12 @@
 title: 'Procédure : Trier les éléments (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746219"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841214"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Procédure : Trier les éléments (Visual Basic)
 Cet exemple montre comment écrire une requête qui trie ses résultats.  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la même requête pour du code XML qui est dans un espace de noms. Pour plus d’informations, consultez [utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -75,5 +75,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tri des données](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 - [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 'Procédure : Charger et décharger des assemblys (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: 77dc773c9e32c293ab5155b15e45f5255e31ab9a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 07c8370d7aeb5171f991ddf24bf473f787408f2d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745209"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838766"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procédure : Charger et décharger des assemblys (Visual Basic)
 Les assemblys référencés par votre programme sont chargés automatiquement au moment de la génération, mais il est également possible de charger des assemblys spécifiques dans le domaine d’application actif au moment de l’exécution. Pour plus d'informations, voir [Procédure : Charger des assemblys dans un domaine d’application](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -25,6 +25,7 @@ Les assemblys référencés par votre programme sont chargés automatiquement au
 1.  Il n’existe aucun moyen de décharger un assembly spécifique sans décharger tous les domaines d’application qui le contiennent. Utilisez la méthode `Unload` de <xref:System.AppDomain> pour décharger les domaines d’application. Pour plus d'informations, voir [Procédure : Décharger un domaine d’application](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assemblys dans .NET](../../../../standard/assembly/index.md)
 - [Guide pratique pour charger des assemblys dans un domaine d’application](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

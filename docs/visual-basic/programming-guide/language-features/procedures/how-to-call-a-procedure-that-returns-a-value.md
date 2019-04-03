@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee80ae48a9b9bfae0afe8f0a2c6e7ebf047d9d36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974456"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820384"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procédure : Appeler une procédure qui retourne une valeur (Visual Basic)
 Un `Function` procédure retourne une valeur au code appelant. Vous appelez en incluant son nom et ses arguments soit situé à droite d’une instruction d’assignation ou dans une expression.  
@@ -45,6 +45,7 @@ Un `Function` procédure retourne une valeur au code appelant. Vous appelez en i
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures Function](./function-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)

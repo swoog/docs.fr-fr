@@ -2,12 +2,12 @@
 title: Comparaison de l'interrogation d'un XDocument et d'un Un XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 8d13276b6d66d0ec3768182df7b4324678174fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 500b1e58663ef6aca052850ad7994687e2cc36f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579843"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817719"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Comparaison de l'interrogation d'un XDocument et d'un Un XElement (Visual Basic)
 Lorsque vous chargez un document par le biais de <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, vous remarquerez que vous devez écrire des requêtes de manière légèrement différente comparé au chargement par le biais de <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -113,4 +113,5 @@ Querying tree loaded with XDocument.Load
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

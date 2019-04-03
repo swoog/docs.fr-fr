@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: d4f82cab8bcdeb3e0553649f8a569ae24bafc707
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821352"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Initialiseurs d’objets : Types nommés et anonymes (Visual Basic)
 Initialiseurs d’objets permettent de spécifier les propriétés d’un objet complexe à l’aide d’une expression unique. Ils peuvent être utilisés pour créer des instances de types nommés et de types anonymes.  
@@ -128,6 +128,7 @@ Initialiseurs d’objets permettent de spécifier les propriétés d’un objet 
      Pour plus d’informations sur les options permettant de définir des propriétés dans les types anonymes, consultez [Comment : Déduire les Types dans les déclarations de types anonymes et les noms de propriété](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

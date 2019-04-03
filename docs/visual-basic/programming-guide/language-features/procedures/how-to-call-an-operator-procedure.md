@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978967"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837089"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procédure : Appeler une procédure d’opérateur (Visual Basic)
 Vous appelez une procédure d’opérateur en utilisant le symbole d’opérateur dans une expression. Dans le cas d’un opérateur de conversion, vous appelez le [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) pour convertir une valeur à partir d’un type de données à un autre.  
@@ -54,6 +54,7 @@ Vous appelez une procédure d’opérateur en utilisant le symbole d’opérateu
  N’oubliez pas de la classe ou structure que vous utilisez définit l’opérateur que vous souhaitez utiliser.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures d’opérateur](./operator-procedures.md)
 - [Guide pratique pour Définir un opérateur](./how-to-define-an-operator.md)
 - [Guide pratique pour Définir un opérateur de Conversion](./how-to-define-a-conversion-operator.md)

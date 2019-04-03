@@ -2,12 +2,12 @@
 title: Préatomisation des objets XName (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-ms.openlocfilehash: 51670a23bf3e8b2896b866b0dd62346d8893aff7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520094"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819292"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Préatomisation des objets XName (LINQ to XML) (Visual Basic)
 L'un des moyens d'améliorer les performances dans LINQ to XML est de préatomiser les objets <xref:System.Xml.Linq.XName>. La préatomisation signifie que vous attribuez une chaîne à un objet <xref:System.Xml.Linq.XName> avant de créer l'arborescence XML à l'aide des constructeurs des classes <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XAttribute>. Ensuite, au lieu de passer une chaîne au constructeur, ce qui utiliserait la conversion implicite de la chaîne en <xref:System.Xml.Linq.XName>, vous passez l'objet <xref:System.Xml.Linq.XName> initialisé.  
@@ -87,5 +87,6 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Performances (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
 - [Objets XName et XNamespace atomisés (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

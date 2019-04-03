@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cd334dab8574845e10332e90b50fef833447a1d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303957"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836205"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 Cet exemple montre comment utiliser le moniker de service Windows Communication Foundation (WCF) pour intégrer des services Web dans des environnements de développement COM, tels que Microsoft Office Visual Basic pour Applications (Office VBA) ou Visual Basic 6.0. Il se compose d'un client Windows Script Host (.vbs), d'une bibliothèque de client assurant la prise en charge (.dll) et d'une bibliothèque de service (.dll) hébergée par les services IIS (Internet Information Services). Le service correspond à un service de calculatrice et le client COM appelle les opérations mathématiques suivantes sur le service : addition, soustraction, multiplication et division. L'activité du client s'affiche dans les fenêtres de message.  
@@ -77,7 +77,7 @@ gacutil.exe /i client.dll
 > [!NOTE]
 >  Le moniker de service requiert uniquement l'inscription de type et n'utilise pas le proxy pour communiquer avec le service.  
   
- L'application cliente ComCalcClient.vbs utilise la fonction `GetObject` et la syntaxe du moniker de service pour construire un proxy pour le service, notamment pour spécifier ses adresse, liaison et contrat.  
+ L’application cliente ComCalcClient.vbs utilise la fonction `GetObject` et la syntaxe du moniker de service pour construire un proxy pour le service, notamment pour spécifier ses adresse, liaison et contrat.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -219,7 +219,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 5.  Copiez le fichier WSDL sur l'ordinateur client. Dans le fichier WSDL nommé serviceWsdl.xml, remplacez toutes les occurrences de localhost par le nom de domaine complet de votre serveur.  
   
-6.  Copiez la bibliothèque Client.dll depuis le dossier \client\bin figurant dans le dossier correspondant à votre langue dans un répertoire de l'ordinateur client.  
+6.  Copiez la bibliothèque Client.dll depuis le dossier \client\bin figurant dans le dossier correspondant à votre langue dans un répertoire de l’ordinateur client.  
   
 7.  À partir d'une invite de commandes, naviguez jusqu'à ce répertoire de destination. Si vous utilisez [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], assurez-vous d'exécuter l'invite de commandes en tant qu'administrateur.  
   
@@ -237,4 +237,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   Pour des raisons de sécurité, supprimez la définition du répertoire virtuel et les autorisations accordées pendant les étapes de l'installation, une fois l'exécution des exemples terminée.  
   
-## <a name="see-also"></a>Voir aussi

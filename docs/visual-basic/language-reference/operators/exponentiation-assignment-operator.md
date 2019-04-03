@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: efea38d7da13b67490f498658e7739929517dba2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819648"
 ---
 # <a name="-operator-visual-basic"></a>^=, opérateur (Visual Basic)
 Élève la valeur d’une variable ou une propriété à la puissance d’une expression et assigne le résultat à la variable ou propriété.  
@@ -50,6 +50,7 @@ variableorproperty ^= expression
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [^ (opérateur)](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [Opérateurs d’assignation](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738746"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819531"
 ---
 # <a name="value-types-and-reference-types"></a>Types valeur et types référence
 En Visual Basic, les types de données sont implémentés en fonction de leur classification. Les types de données Visual Basic peuvent être classées selon qu’une variable d’un type particulier stocke ses propres données ou un pointeur vers les données. Il stocke ses propres données de cas d’un *type valeur*; si elle contient un pointeur vers les données ailleurs dans la mémoire, il est un *type référence*.  
@@ -73,6 +73,7 @@ Dim totals() As Single = New Single(8) {}
  Vous pouvez déterminer si un `Object` variable agit comme un type référence ou un type valeur en la passant à la <xref:Microsoft.VisualBasic.Information.IsReference%2A> méthode dans le <xref:Microsoft.VisualBasic.Information> classe de la <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espace de noms. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Retourne `True` si le contenu de la `Object` variable représente un type référence.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types valeur Nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)

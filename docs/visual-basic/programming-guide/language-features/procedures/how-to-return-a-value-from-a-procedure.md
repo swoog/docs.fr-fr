@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 293234346053034b544866b6a2eff84974d8a02b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976731"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824557"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procédure : Retourner une valeur à partir d’une procédure (Visual Basic)
 Un `Function` procédure retourne une valeur au code appelant soit en exécutant un `Return` instruction ou en rencontrant une `Exit Function` ou `End Function` instruction.  
@@ -45,6 +45,7 @@ Un `Function` procédure retourne une valeur au code appelant soit en exécutant
      Pour plus d’informations et un exemple, consultez « Valeur de retour » dans [Function, instruction](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures de propriété](./property-procedures.md)

@@ -2,12 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333441"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814417"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -185,5 +185,3 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple
 
 -   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.
-
-## <a name="see-also"></a>Voir aussi

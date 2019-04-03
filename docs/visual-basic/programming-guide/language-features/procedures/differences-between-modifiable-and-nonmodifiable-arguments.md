@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498681"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826663"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Différences entre les arguments modifiables et non modifiables (Visual Basic)
 Lorsque vous appelez une procédure, vous transmettez généralement un ou plusieurs arguments à celui-ci. Chaque argument correspond à un élément de programmation sous-jacent. Les éléments sous-jacents et les arguments peuvent être modifiables ou non.  
@@ -38,6 +38,7 @@ Lorsque vous appelez une procédure, vous transmettez généralement un ou plusi
  La procédure appelée peut modifier sa copie locale d’un argument non modifiable, mais cette modification n’affecte pas l’élément sous-jacent dans le code appelant.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)

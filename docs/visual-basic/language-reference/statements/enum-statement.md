@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830069"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum, instruction (Visual Basic)
 Déclare une énumération et définit les valeurs de ses membres.  
@@ -40,7 +40,7 @@ End Enum
   
 -   `accessmodifier`  
   
-     Facultatif. Spécifie le code peut accéder à cette énumération. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Spécifie le code peut accéder à cette énumération. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -56,7 +56,7 @@ End Enum
 
 -   `Shadows`  
   
-     Facultatif. Spécifie que cette énumération redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez spécifier [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) uniquement sur l’énumération elle-même, et non sur un de ses membres.  
+     Optionnel. Spécifie que cette énumération redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez spécifier [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) uniquement sur l’énumération elle-même, et non sur un de ses membres.  
   
 -   `enumerationname`  
   
@@ -172,6 +172,7 @@ End Enum
  [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)

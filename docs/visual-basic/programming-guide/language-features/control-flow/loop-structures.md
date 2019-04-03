@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654365"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833304"
 ---
 # <a name="loop-structures-visual-basic"></a>Structures de boucle (Visual Basic)
 Structures de boucle de Visual Basic vous permettent de vous permettent d’exécuter une ou plusieurs lignes de code de façon répétée. Vous pouvez répéter les instructions dans une structure de boucle jusqu'à ce qu’une condition est `True`, jusqu'à ce qu’une condition est `False`, un nombre de fois, ou qu’une seule fois pour chaque élément spécifié dans une collection.  
@@ -37,6 +37,7 @@ Structures de boucle de Visual Basic vous permettent de vous permettent d’exé
  Le `For Each`... `Next` construction exécute un ensemble d’instructions une fois pour chaque élément d’une collection. Vous spécifiez la variable de contrôle de boucle, mais vous n’êtes pas obligé de déterminer le début ou de fin des valeurs pour qu’il. Pour plus d’informations, consultez [For Each... L’instruction suivante](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Structures de décision](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Autres structures de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 2cb1834414b402f8840a9dfa1ee9e2497cea7af5
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 534061e203c2efb0b81e5a1d1c720097a08ce15a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304243"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843667"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
 L’exemple Message Security Anonymous montre comment implémenter une application Windows Communication Foundation (WCF) qui utilise la sécurité d’au niveau du message sans authentifier le client, mais qui nécessite une authentification de serveur à l’aide X.509 du serveur certificat. Tous les messages d'application échangés entre le client et le serveur sont signés et chiffrés. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) exemple. Cet exemple se compose d'un programme de console client (.exe) et d'une bibliothèque de service (.dll) hébergés par les services IIS (Internet Information Services). Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -31,7 +31,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
- Le service expose un point de terminaison unique de communication avec le service, lequel est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée à l'aide de la liaison `wsHttpBinding`. Le mode de sécurité par défaut pour la liaison `wsHttpBinding` correspond à `Message`. La valeur de l'attribut `clientCredentialType` est `None`.
+ Le service expose un point de terminaison unique de communication avec le service, lequel est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée à l’aide de la liaison `wsHttpBinding`. Le mode de sécurité par défaut pour la liaison `wsHttpBinding` correspond à `Message`. La valeur de l'attribut `clientCredentialType` est `None`.
 
 ```xml
 <system.serviceModel>
@@ -78,7 +78,7 @@ public class CalculatorService : ICalculator
 </behaviors>
 ```
 
- La configuration du point de terminaison du client se compose d'une adresse absolue pour le point de terminaison du service, de la liaison et du contrat. Le mode de sécurité du client pour la liaison `wsHttpBinding` correspond à `Message`. La valeur de l'attribut `clientCredentialType` est `None`.
+ La configuration du point de terminaison du client se compose d’une adresse absolue pour le point de terminaison du service, de la liaison et du contrat. Le mode de sécurité du client pour la liaison `wsHttpBinding` correspond à `Message`. La valeur de l'attribut `clientCredentialType` est `None`.
 
 ```xml
 <system.serviceModel>
@@ -106,7 +106,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- L'exemple affecte au <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> pour authentifier le certificat du service. Cette opération s'effectue dans le fichier App.config du client à la section `behaviors`. Cela signifie que si le certificat se trouve dans le magasin de personnes de confiance de l'utilisateur, il est approuvé sans validation de sa chaîne d'émetteur. Ce paramètre est utilisé ici pour des raisons pratiques afin que l'exemple puisse s'exécuter sans nécessiter que les certificats soient publiés par une autorité de certification. Ce paramètre n'offre pas le même niveau de sécurité que la valeur par défaut, ChainTrust. C'est pourquoi, ses conséquences en termes de sécurité doivent être mûrement réfléchies avant d'utiliser `PeerOrChainTrust` dans le code de production.
+ L'exemple affecte au <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> pour authentifier le certificat du service. Cette opération s'effectue dans le fichier App.config du client à la section `behaviors`. Cela signifie que si le certificat se trouve dans le magasin de personnes de confiance de l’utilisateur, il est approuvé sans validation de sa chaîne d’émetteur. Ce paramètre est utilisé ici pour des raisons pratiques afin que l'exemple puisse s'exécuter sans nécessiter que les certificats soient publiés par une autorité de certification. Ce paramètre n'offre pas le même niveau de sécurité que la valeur par défaut, ChainTrust. C'est pourquoi, ses conséquences en termes de sécurité doivent être mûrement réfléchies avant d'utiliser `PeerOrChainTrust` dans le code de production.
 
  L’implémentation cliente ajoute un appel à la `IsCallerAnonymous` (méthode) et sinon ne diffère pas le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.
 
@@ -162,7 +162,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     La variable %SERVER_NAME% spécifie le nom du serveur. Le certificat est stocké dans le magasin LocalMachine. Si le fichier de commandes d'installation est exécuté à l'aide d'un argument de service (tel que `setup.bat service`), la variable %SERVER_NAME% contient le nom de domaine complet de l'ordinateur. Dans le cas contraire, elle contient la valeur par défaut localhost.
+     La variable %SERVER_NAME% spécifie le nom du serveur. Le certificat est stocké dans le magasin LocalMachine. Si le fichier de commandes d’installation est exécuté à l’aide d’un argument de service (tel que `setup.bat service`), la variable %SERVER_NAME% contient le nom de domaine complet de l’ordinateur. Dans le cas contraire, elle contient la valeur par défaut localhost.
 
 -   Installation du certificat de serveur dans le magasin de certificats approuvés du client.
 
@@ -238,5 +238,3 @@ Press <ENTER> to terminate client.
   
 > [!NOTE]
 >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
-
-## <a name="see-also"></a>Voir aussi

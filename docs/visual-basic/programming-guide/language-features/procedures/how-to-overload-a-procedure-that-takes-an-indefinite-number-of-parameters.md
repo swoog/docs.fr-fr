@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979474"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838987"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procédure : Surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)
 Si une procédure possède un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, vous ne pouvez pas définir une version surchargée acceptant un tableau unidimensionnel pour le tableau de paramètres. Pour plus d’informations, consultez « Implicite des surcharges pour un paramètre ParamArray » dans [considérations dans les procédures de surcharge](./considerations-in-overloading-procedures.md).  
@@ -54,6 +54,7 @@ Si une procédure possède un [ParamArray](../../../../visual-basic/language-ref
  Chaque fois que vous avez affaire à un tableau qui peut s’avérer indéfiniment volumineux, il existe un risque de saturer la capacité interne de votre application. Si vous acceptez un tableau de paramètres, vous devez tester la longueur du tableau passé par le code appelant à celui-ci et prendre les mesures appropriées si elle est trop grande pour votre application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Paramètres facultatifs](./optional-parameters.md)

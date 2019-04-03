@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ee0f2e771a938619bf988263b176464080e60e7a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: df83fd527612af1a6a4b8131ffa2643ef0d1d7dd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818564"
 ---
 # <a name="mid-statement"></a>Mid, instruction
 Remplace un nombre spécifié de caractères dans un `String` variable avec des caractères à partir d’une autre chaîne.  
@@ -62,7 +62,7 @@ Mid( _
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Module :** `Strings`  
@@ -70,6 +70,7 @@ Mid( _
  **Assembly :** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [Chaînes](../../../visual-basic/programming-guide/language-features/strings/index.md)
 - [Introduction aux chaînes en Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

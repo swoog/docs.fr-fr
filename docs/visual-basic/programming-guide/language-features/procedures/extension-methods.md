@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822074"
 ---
 # <a name="extension-methods-visual-basic"></a>Méthodes d'extension (Visual Basic)
 Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnalités personnalisées aux types de données qui sont déjà définis sans créer un nouveau type dérivé. Méthodes d’extension permettent d’écrire une méthode qui peut être appelée comme s’il s’agissait d’une méthode d’instance du type existant.  
@@ -175,6 +175,7 @@ End Module
  Si la priorité ne résout pas l’ambiguïté, vous pouvez utiliser le nom qualifié complet pour spécifier la méthode que vous appelez. Si le `Print` méthode dans l’exemple précédent est définie dans un module nommé `StringExtensions`, le nom qualifié complet est `StringExtensions.Print(example)` au lieu de `example.Print()`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

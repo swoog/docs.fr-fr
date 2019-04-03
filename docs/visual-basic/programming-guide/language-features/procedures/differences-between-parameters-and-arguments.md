@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694033"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838974"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Différences entre les paramètres et les arguments (Visual Basic)
 Dans la plupart des cas, une procédure doit avoir des informations sur les circonstances dans lesquelles elle a été appelée. Une procédure qui effectue les tâches répétitives ou partagées utilise des informations différentes pour chaque appel. Ces informations se composent des variables, constantes et expressions que vous passez à la procédure lorsque vous l’appelez.  
@@ -38,6 +38,7 @@ Dans la plupart des cas, une procédure doit avoir des informations sur les circ
  Contrairement à la définition de paramètre, les arguments n’ont pas de noms. Chaque argument est une expression qui peut contenir zéro ou plusieurs variables, constantes et des littéraux. Le type de données de l’expression évaluée doit correspondre généralement le type de données défini pour le paramètre correspondant, et dans tous les cas, il doit être convertible au type de paramètre.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures Function](./function-procedures.md)

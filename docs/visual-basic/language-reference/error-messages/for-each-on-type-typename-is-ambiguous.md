@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 4a9032a00079b39851a3e8a80bc8f9bbdea1817c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c34ca43decc3c5d8c72b529d8f51d7cc3b0c6b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281227"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833384"
 ---
 # <a name="for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>'For Each' pour le type '\<nom_type >' est ambigu, car le type implémente plusieurs instanciations de 'System.Collections.Generic.IEnumerable (Of T)'
 Un `For Each` instruction spécifie une variable d’itérateur qui a plusieurs <xref:System.Collections.IEnumerable.GetEnumerator%2A> (méthode).  
@@ -26,5 +26,6 @@ Un `For Each` instruction spécifie une variable d’itérateur qui a plusieurs 
 -   Utilisez [opérateur DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) ou [opérateur TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md) un cast du type de variable itérateur vers l’interface définissant le <xref:System.Collections.IEnumerable.GetEnumerator%2A> méthode que vous souhaitez utiliser.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [For Each...Next (instruction)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

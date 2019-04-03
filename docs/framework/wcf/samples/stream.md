@@ -1,15 +1,15 @@
 ---
-title: Flux
+title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: c16f12e6fb122fbba7dc46abb26859be49c08f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662593"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828093"
 ---
-# <a name="stream"></a>Flux
+# <a name="stream"></a>Stream
 Cet exemple de flux montre l'utilisation de la communication en mode de transfert par diffusion en continu. Le service expose plusieurs opérations qui envoient et reçoivent des flux. Cet exemple est auto-hébergé. Le client et le service sont tous deux des programmes de console.  
   
 > [!NOTE]
@@ -39,7 +39,7 @@ public interface IStreamingSample
  L'opération `GetStream` reçoit des données d'entrée sous forme d'une chaîne, qui est mise en mémoire tampon, et retourne `Stream` qui est diffusé en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` prend et retourne `Stream` et constitue un exemple d'opération dont les messages d'entrée et de sortie sont tous deux diffusés en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
   
 ## <a name="enabling-streamed-transfers"></a>Activation des transferts avec diffusion en continu  
- La définition de contrats d'opération telle qu'elle est décrite précédemment fournit la diffusion en continu au niveau du modèle de programmation. Si vous vous arrêtez là, le transport met toujours en mémoire tampon l'ensemble du contenu du message. Pour activer la diffusion en continu du transport, sélectionnez un mode de transfert sur l'élément de liaison du transport. La propriété `TransferMode` de l’élément de liaison peut avoir la valeur `Buffered`, `Streamed`, `StreamedRequest` ou `StreamedResponse`. L'affectation de `Streamed` au mode de transfert permet d'assurer la communication en mode de diffusion en continu dans les deux sens. Si vous affectez `StreamedRequest` ou `StreamedResponse` au mode de transfert, la communication en mode de diffusion en continu s'active uniquement dans la demande ou la réponse, respectivement.  
+ La définition de contrats d'opération telle qu'elle est décrite précédemment fournit la diffusion en continu au niveau du modèle de programmation. Si vous vous arrêtez là, le transport met toujours en mémoire tampon l'ensemble du contenu du message. Pour activer la diffusion en continu du transport, sélectionnez un mode de transfert sur l'élément de liaison du transport. La propriété `TransferMode` de l'élément de liaison peut avoir la valeur `Buffered`, `Streamed`, `StreamedRequest` ou `StreamedResponse`. L'affectation de `Streamed` au mode de transfert permet d'assurer la communication en mode de diffusion en continu dans les deux sens. Si vous affectez `StreamedRequest` ou `StreamedResponse` au mode de transfert, la communication en mode de diffusion en continu s'active uniquement dans la demande ou la réponse, respectivement.  
   
  À l’instar de `basicHttpBinding` et `TransferMode`, `NetTcpBinding` expose la propriété `NetNamedPipeBinding` sur la liaison. Pour les autres transports, vous devez créer une liaison personnalisée pour pouvoir définir le mode de transfert.  
   
@@ -64,7 +64,7 @@ public interface IStreamingSample
  En plus d'affecter au `transferMode` la valeur `Streamed`, le code de configuration précédent définit `maxReceivedMessageSize` à 64 Mo. En tant que mécanisme de défense, `maxReceivedMessageSize` place une limite concernant la taille maximale autorisée des messages en réception. La valeur par défaut de `maxReceivedMessageSize` est 64 Ko, ce qui est habituellement trop bas pour les scénarios de diffusion en continu.  
   
 ## <a name="processing-data-as-it-is-streamed"></a>Traitement des données lorsqu'elles sont diffusées en continu  
- Les opérations `GetStream`, `UploadStream` et `EchoStream` concernent toutes l'envoi de données directement à partir d'un fichier ou l'enregistrement des données reçues directement dans un fichier. Dans certains cas cependant, il peut s’avérer nécessaire d’envoyer ou de recevoir de grandes quantités de données et d’effectuer des traitements sur des segments de celles-ci lors de leur envoi ou de leur réception. L'une des méthodes utilisées résoudre les scénarios de ce type consiste à écrire un flux personnalisé (une classe dérivant de <xref:System.IO.Stream>) qui traite les données lors de leur lecture ou de leur écriture. L'opération `GetReversedStream` et la classe `ReverseStream` en sont un exemple.  
+ Les opérations `GetStream`, `UploadStream` et `EchoStream` concernent toutes l'envoi de données directement à partir d'un fichier ou l'enregistrement des données reçues directement dans un fichier. Dans certains cas cependant, il peut s'avérer nécessaire d'envoyer ou de recevoir de grandes quantités de données et d'effectuer des traitements sur des segments de celles-ci lors de leur envoi ou de leur réception. L'une des méthodes utilisées résoudre les scénarios de ce type consiste à écrire un flux personnalisé (une classe dérivant de <xref:System.IO.Stream>) qui traite les données lors de leur lecture ou de leur écriture. L'opération `GetReversedStream` et la classe `ReverseStream` en sont un exemple.  
   
  `GetReversedStream` crée et retourne une nouvelle instance de `ReverseStream`. Le traitement se produit lorsque le système lit l'objet `ReverseStream`. L'implémentation `ReverseStream.Read` lit un segment d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette opération n'inverse pas l'ensemble du contenu du fichier, mais uniquement un segment d'octets à la fois. Cet exemple vous montre comment procéder au traitement du flux lors sa lecture ou de son écriture.  
   
@@ -185,4 +185,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>Voir aussi

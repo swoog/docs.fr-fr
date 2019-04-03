@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 634e39e3e274b919f63ff1b4f3c7b0cd311beaf1
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814560"
 ---
 # <a name="visual-basic-coding-conventions"></a>Conventions de codage Visual Basic
 Microsoft développe des exemples et la documentation qui suivent les instructions de cette rubrique. Si vous suivez les mêmes conventions de codage, vous pouvez profiter des avantages suivants :  
@@ -206,4 +206,5 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Instructions de codage sécurisé](../../../standard/security/secure-coding-guidelines.md)

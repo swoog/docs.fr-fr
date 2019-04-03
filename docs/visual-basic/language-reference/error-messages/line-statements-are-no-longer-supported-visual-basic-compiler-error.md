@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-ms.openlocfilehash: 17025e9a3c87d84a10ddaa7aeef616d985143879
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7616bcdc39ab479049586534fac22f1e2d96a700
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283209"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831837"
 ---
 # <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>Les instructions 'Line' ne sont plus prises en charge (erreur du compilateur Visual Basic)
 Instructions de ligne ne sont plus prises en charge. Fonctionnalité d’e/s de fichier est disponible en tant que `Microsoft.VisualBasic.FileSystem.LineInput` et fonctionnalités graphiques sont disponible en tant que `System.Drawing.Graphics.DrawLine`.  
@@ -26,6 +26,7 @@ Instructions de ligne ne sont plus prises en charge. Fonctionnalité d’e/s de 
 2.  Pour des graphiques, utilisez `System.Drawing.Graphics.Drawline`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IO>
 - <xref:System.Drawing>
 - [Accès au fichier avec Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

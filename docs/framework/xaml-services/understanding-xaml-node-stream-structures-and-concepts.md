@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034747"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824427"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 
@@ -70,7 +70,7 @@ while (xxr.Read()) {
 }
 ```
 
-Cet exemple de base d'une boucle de nœud XAML de chemin de chargement connecte le lecteur et le writer XAML de façon transparente, comme si vous aviez utilisé <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Mais cette structure de base est ensuite développée pour s'appliquer à votre scénario d'écriture ou de lecture. Voici quelques scénarios possibles :
+Cet exemple de base d'une boucle de nœud XAML de chemin de chargement connecte le lecteur et le writer XAML de façon transparente, comme si vous aviez utilisé <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Mais cette structure de base est ensuite développée pour s'appliquer à votre scénario d'écriture ou de lecture. Voici quelques scénarios possibles :
 
 - Activez <xref:System.Xaml.XamlXmlReader.NodeType%2A>. Effectuez différentes actions en fonction du type de nœud en cours de lecture.
 
@@ -218,7 +218,7 @@ La liste suivante répertorie tous les cas où un lecteur XAML doit présenter u
 
 - **Contenu inconnu :** Le nom de ce nœud membre est `_UnknownContent`. Proprement dit, il s'agit d'une directive <xref:System.Xaml.XamlDirective>définie dans l'espace de noms XAML du langage XAML. Cette directive est utilisée comme sentinelle au cas où  un élément objet XAML contient le contenu de la source XAML, mais qu'aucune propriété de contenu ne peut être déterminée dans le contexte de schéma XAML actuellement disponible. Vous pouvez détecter ce cas dans un flux de nœud XAML en recherchant les membres nommés `_UnknownContent`. Si aucune autre action n'est effectuée dans un flux de nœud XAML de chemin de chargement, le nœud <xref:System.Xaml.XamlObjectWriter> par défaut lève une exception sur une tentative de `WriteEndObject` quand il rencontre le membre `_UnknownContent` sur un objet. Le writer <xref:System.Xaml.XamlXmlWriter> par défaut ne lève pas d'exception et traite le membre comme s'il était implicite. Vous pouvez obtenir une entité statique pour `_UnknownContent` à partir de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Propriété Collection d'une collection :** bien que le type CLR de stockage d'une classe collection utilisée pour XAML possède habituellement une propriété nommée dédiée qui détient les éléments de la collection, cette propriété n'est pas connue du système de type XAML avant la résolution de type de stockage. Au lieu de cela, le flux de nœud XAML présente un espace réservé `Items` en tant que membre du type XAML de la collection. Dans l'implémentation des services XAML .NET Framework, le nom de cette directive/ce membre dans le flux de nœud est `_Items`. Une constante pour cette directive peut être obtenue à partir de <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Propriété de collection d’une collection :** Bien que le type CLR de sauvegarde d’une classe de collection qui est utilisée habituellement pour XAML possède une propriété nommée dédiée qui détient les éléments de collection, cette propriété n’est pas connue pour un système de type XAML avant la résolution de type de stockage. Au lieu de cela, le flux de nœud XAML présente un espace réservé `Items` en tant que membre du type XAML de la collection. Dans l'implémentation des services XAML .NET Framework, le nom de cette directive/ce membre dans le flux de nœud est `_Items`. Une constante pour cette directive peut être obtenue à partir de <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     Notez qu’un flux de nœud XAML peut contenir une propriété Items avec des éléments qui s’avèrent pour être ne pas analysable basée sur la résolution de type de stockage et le contexte de schéma XAML. Par exemple :
 

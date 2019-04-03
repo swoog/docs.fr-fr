@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-ms.openlocfilehash: 89404cf63a320f3343025120cee45bde08a6387d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50174f2af5e52b0fd71a590e7daf0285b5e043ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711692"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815847"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Liste des objets Collection (Visual Basic)
 Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime sont organisés selon leur fonction et utilisent.  
@@ -23,5 +23,6 @@ Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime so
 |Retourner une référence à un <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
 - [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

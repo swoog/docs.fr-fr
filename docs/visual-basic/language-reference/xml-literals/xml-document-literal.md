@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: 86780d53c2261b6440f515fc09512fba313667dc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814625"
 ---
 # <a name="xml-document-literal-visual-basic"></a>Littéral de document XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XDocument> objet.  
@@ -32,8 +32,8 @@ rootElement
   
 |Terme|Définition|  
 |---|---|  
-|`encoding`|Facultatif. Utilise du texte littéral qui déclare l’encodage du document.|  
-|`standalone`|Facultatif. Texte littéral. Doit être « yes » ou « non ».|  
+|`encoding`|Optionnel. Utilise du texte littéral qui déclare l’encodage du document.|  
+|`standalone`|Optionnel. Texte littéral. Doit être « yes » ou « non ».|  
 |`piCommentList`|Facultatif. Liste des instructions de traitement XML et les commentaires XML. Prend le format suivant :<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Chaque `piComment` peut prendre l’une des opérations suivantes :<br /><br /> -   [Littéral d’Instruction de traitement XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [Littéral de commentaire XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
 |`rootElement`|Obligatoire. Élément racine du document. Le format est une des opérations suivantes :<br /><br /> <ul><li>[Littéral d’élément XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Expression sous la forme incorporée `<%=` `elementExp` `%>`. Le `elementExp` retourne une des opérations suivantes :<br /><br /> <ul><li>Objet <xref:System.Xml.Linq.XElement>.</li><li>Une collection qui contient un <xref:System.Xml.Linq.XElement> objet et un nombre quelconque de <xref:System.Xml.Linq.XProcessingInstruction> et <xref:System.Xml.Linq.XComment> objets.</li></ul></li></ul><br /> Pour plus d’informations, consultez [Expressions incorporées en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
@@ -56,6 +56,7 @@ rootElement
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - <xref:System.Xml.Linq.XComment>

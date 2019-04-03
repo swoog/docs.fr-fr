@@ -1,17 +1,17 @@
 ---
-title: Vs de base zéro. Accès d’une chaîne de base dans Visual Basic
+title: Accès à une chaîne de base zéro et Accès d’une chaîne de base dans Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535530"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830329"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs de base zéro. Accès d’une chaîne de base dans Visual Basic
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Accès à une chaîne de base zéro et Accès d’une chaîne de base dans Visual Basic
 Cette rubrique compare la façon dont Visual Basic et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fournir un accès aux caractères dans une chaîne. Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fournit toujours un accès de base zéro pour les caractères dans une chaîne, tandis que Visual Basic fournit l’accès de base zéro et un, en fonction de la fonction.  
   
 ## <a name="one-based"></a>Basé sur un  
@@ -21,6 +21,7 @@ Cette rubrique compare la façon dont Visual Basic et le [!INCLUDE[dnprdnshort](
  Pour obtenir un exemple d’une fonction Visual Basic de base zéro, envisagez le `Split` (fonction). Il fractionne une chaîne et retourne un tableau contenant les sous-chaînes. Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> méthode également fractionne une chaîne et retourne un tableau contenant les sous-chaînes. Étant donné que le `Split` (fonction) et <xref:System.String.Split%2A> retour de la méthode [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tableaux, ils doivent être de base zéro.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>

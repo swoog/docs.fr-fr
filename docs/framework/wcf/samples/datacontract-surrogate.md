@@ -2,12 +2,12 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828054"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 Cet exemple illustre comment personnaliser des processus tels que la sérialisation, la désérialisation, l’exportation et l’importation de schémas à l’aide d’une classe de substitution d’un contrat de données. Cet exemple montre comment utiliser un substitut dans un scénario client et le serveur où les données sont sérialisées et transmises entre un client Windows Communication Foundation (WCF) et le service.  
@@ -269,4 +269,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## <a name="see-also"></a>Voir aussi

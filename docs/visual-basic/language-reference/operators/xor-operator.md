@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980436"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827066"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor, opérateur (Visual Basic)
 Effectue une exclusion logique sur deux `Boolean` expressions ou une exclusion au niveau du bit sur deux expressions numériques.  
@@ -90,6 +90,7 @@ result = expression1 Xor expression2
  L’exemple précédent produit les résultats de 2, 12 et 14, respectivement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs logiques/de bits (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

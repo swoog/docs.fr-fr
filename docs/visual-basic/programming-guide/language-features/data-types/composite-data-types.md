@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: c7243108d0b7c06f48a21f343321322bb2cc2946
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560280"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833813"
 ---
 # <a name="composite-data-types-visual-basic"></a>Types de données composites (Visual Basic)
 Outre les blocs de Visual Basic de types de données élémentaires, vous pouvez assembler des éléments de différents types pour créer *types de données composites* tels que des structures, des tableaux et des classes. Vous pouvez créer des types de données composites à partir des types élémentaires et d’autres types composites. Par exemple, vous pouvez définir un tableau d’éléments de structure ou une structure avec des membres de tableau.  
@@ -62,6 +62,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  Pour plus d’informations sur les classes, consultez [objets et Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

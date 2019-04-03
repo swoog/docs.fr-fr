@@ -2,12 +2,12 @@
 title: 'Procédure : Filtrer sur un attribut (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ac494b2e453d48a40c2a9be6505d5deebc4a1235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535864"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822737"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Procédure : Filtrer sur un attribut (XPath-LINQ to XML) (Visual Basic)
 Cette rubrique montre comment obtenir les éléments descendants avec un nom spécifié et avec un attribut avec une valeur spécifiée.  
@@ -76,4 +76,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to XML pour les utilisateurs de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

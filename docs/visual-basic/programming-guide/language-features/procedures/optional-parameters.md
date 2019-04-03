@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965759"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824674"
 ---
 # <a name="optional-parameters-visual-basic"></a>Paramètres facultatifs (Visual Basic)
 Vous pouvez spécifier qu’un paramètre de procédure est facultatif et qu’il n’est pas nécessaire de fournir un argument lorsque la procédure est appelée. *Paramètres facultatifs* sont indiquées par le `Optional` mot clé dans la définition de procédure. Les règles suivantes s'appliquent :  
@@ -60,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  La surcharge est une autre méthode permettant de définir une procédure à l'aide de paramètres facultatifs. Si vous disposez d'un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, l'une avec le paramètre et l'autre sans. Cette approche se complique au fur et à mesure que le nombre de paramètres facultatifs augmente. Cependant, vous avez l’avantage de savoir avec certitude si le programme appelant a fourni chaque argument facultatif.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)

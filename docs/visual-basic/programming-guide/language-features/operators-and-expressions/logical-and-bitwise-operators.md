@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819305"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Opérateurs de bits et opérateurs logiques en Visual Basic
 Comparent des opérateurs logiques `Boolean` expressions et retournent un `Boolean` résultat. Le `And`, `Or`, `AndAlso`, `OrElse`, et `Xor` opérateurs sont *binaire* parce qu’ils prennent deux opérandes, tandis que le `Not` opérateur est *unaire* , car il accepte un opérande unique. Certains de ces opérateurs peuvent également effectuer des opérations logiques au niveau du bit sur des valeurs intégrales.  
@@ -96,6 +96,7 @@ Comparent des opérateurs logiques `Boolean` expressions et retournent un `Boole
 >  Les opérations au niveau du bit peuvent être effectuées sur les types intégraux uniquement. Valeurs à virgule flottante doivent être converties en types intégraux avant de poursuivre l’opération au niveau du bit.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs logiques/de bits (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Expressions booléennes](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Opérateurs arithmétiques en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

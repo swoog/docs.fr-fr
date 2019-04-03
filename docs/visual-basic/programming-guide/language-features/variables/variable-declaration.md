@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973546"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833280"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Déclaration de variable en Visual Basic
 Vous déclarez une variable pour spécifier son nom et les caractéristiques. L’instruction de déclaration de variables est la [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Son emplacement et son contenu déterminent les caractéristiques de la variable.  
@@ -78,6 +78,7 @@ Dim l, m As Long, x, y As Single
  D’une variable *niveau d’accès* est l’étendue de code qui a l’autorisation d’y accéder. Cela est déterminé par le modificateur d’accès (tel que [Public](../../../../visual-basic/language-reference/modifiers/public.md) ou [privé](../../../../visual-basic/language-reference/modifiers/private.md)) que vous utilisez dans le `Dim` instruction. Pour plus d’informations, consultez [niveaux en Visual Basic d’accès](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide pratique pour Créer une Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Guide pratique pour Déplacer des données dans et hors d’une Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
 - [Types de données](../../../../visual-basic/language-reference/data-types/index.md)

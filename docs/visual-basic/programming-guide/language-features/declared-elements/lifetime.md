@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976042"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824921"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durée de vie dans Visual Basic
 Le *durée de vie* d’un élément déclaré est la période de temps pendant laquelle il est disponible pour utilisation. Les variables sont les seuls éléments qui ont la durée de vie. À cet effet, le compilateur traite les paramètres de procédure et retours de fonction comme des cas spéciaux de variables. La durée de vie d’une variable représente la période de temps pendant lequel il peut contenir une valeur. Sa valeur peut évoluer au fil de sa durée de vie, mais elle contient toujours une valeur.  
@@ -72,6 +72,7 @@ Le *durée de vie* d’un élément déclaré est la période de temps pendant l
  Dans l’exemple précédent, vous pouvez obtenir la même durée de vie en déclarant `applesSold` au niveau du module. Si vous avez modifié la portée d’une variable de cette façon, toutefois, la procédure n’aient plus un accès exclusif à celui-ci. Étant donné que les autres procédures peuvent accéder `applesSold` et changer sa valeur, le total cumulé n’est plus fiable et le code peut être plus difficile à gérer.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

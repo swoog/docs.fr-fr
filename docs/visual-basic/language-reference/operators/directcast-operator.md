@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979825"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821502"
 ---
 # <a name="directcast-operator-visual-basic"></a>Opérateur DirectCast (Visual Basic)
 Introduit une opération de conversion de type en fonction d’héritage ou d’implémentation.  
@@ -42,6 +42,7 @@ Introduit une opération de conversion de type en fonction d’héritage ou d’
  Dans l’exemple précédent, type de la durée d’exécution de `q` est `Double`. `CType` réussit car `Double` peut être converti en `Integer`. Toutefois, la première `DirectCast` échoue au moment de l’exécution, car le type de la durée d’exécution de `Double` n’a aucune relation d’héritage avec `Integer`, même s’il existe une conversion. La seconde `DirectCast` réussit car elle convertit du type <xref:System.Windows.Forms.Form> à taper <xref:System.Windows.Forms.Control>, à partir de laquelle <xref:System.Windows.Forms.Form> hérite.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversions implicites et explicites](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

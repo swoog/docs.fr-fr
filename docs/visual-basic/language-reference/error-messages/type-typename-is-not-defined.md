@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825038"
 ---
 # <a name="type-typename-is-not-defined"></a>Type '\<nom_type >' n’est pas défini
 L’instruction a fait référence à un type qui n’a pas été défini. Vous pouvez définir un type dans une instruction de déclaration, tel que `Enum`, `Structure`, `Class`, ou `Interface`.  
@@ -32,6 +32,7 @@ L’instruction a fait référence à un type qui n’a pas été défini. Vous 
 -   Assurez-vous que le type est dans un assembly qui fait partie du profil .NET Framework ciblé. Pour plus d’informations, consultez [Dépannage des erreurs de ciblage du .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)

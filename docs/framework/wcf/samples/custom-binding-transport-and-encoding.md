@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 98d264cb081af0c0ed96b7e439f93224608467d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09941ce5fcf33380cbf3455866e63918edd2ea20
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717413"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842198"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Custom Binding Transport and Encoding
-Une liaison personnalisée est définie par une liste ordonnée d’éléments de liaison discrets. Cet exemple montre comment configurer une liaison personnalisée avec plusieurs éléments de transport et d’encodage de message.  
+Une liaison personnalisée est définie par une liste ordonnée d’éléments de liaison discrets. Cet exemple montre comment configurer une liaison personnalisée avec plusieurs éléments de transport et d'encodage de message.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -46,7 +46,7 @@ Une liaison personnalisée est définie par une liste ordonnée d’éléments d
   
  Lorsque vous exécutez l'exemple, les demandes et réponses de l'opération s'affichent dans les fenêtres de console du service et du client. Le client communique avec chacun des trois points de terminaison, en accédant d'abord à HTTP, puis à TCP et enfin à NamedPipe. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client.  
   
- La liaison `namedPipeTransport` ne prend pas en charge les opérations d'un ordinateur à un autre. Elle est uniquement utilisée pour la communication sur le même ordinateur. Par conséquent, lorsque vous exécutez l'exemple sur plusieurs ordinateurs, mettez en commentaire les lignes suivantes dans le fichier de code client :  
+ La liaison `namedPipeTransport` ne prend pas en charge les opérations d’un ordinateur à un autre. Elle est uniquement utilisée pour la communication sur le même ordinateur. Par conséquent, lorsque vous exécutez l'exemple sur plusieurs ordinateurs, mettez en commentaire les lignes suivantes dans le fichier de code client :  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -86,4 +86,3 @@ client.Close()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
   
-## <a name="see-also"></a>Voir aussi

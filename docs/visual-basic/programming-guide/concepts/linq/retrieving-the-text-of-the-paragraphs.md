@@ -2,12 +2,12 @@
 title: Récupération du texte des paragraphes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 6d6f3e705e3a776f772a3507ef932d0715d2fb90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706610"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830004"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Récupération du texte des paragraphes (Visual Basic)
 Cet exemple s’appuie sur l’exemple précédent, [récupération des paragraphes et leurs Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Ce nouvel exemple récupère le texte de chaque paragraphe en tant que chaîne.  
@@ -18,7 +18,7 @@ Cet exemple s’appuie sur l’exemple précédent, [récupération des paragrap
   
  Bien entendu, il serait possible d'écrire une requête unique contenant la fonctionnalité de récupération des paragraphes, du style de chaque paragraphe et du texte de chaque paragraphe. Toutefois, il est souvent utile de découper une requête compliquée en plusieurs requêtes car le code obtenu sera plus modulable et plus facile à maintenir. En outre, si vous avez besoin de réutiliser une partie de la requête, il est plus facile de refactoriser si les requêtes sont écrites de cette manière.  
   
- Ces requêtes, qui sont chaînées ensemble, utilisent le modèle de traitement examiné en détail dans la rubrique [didacticiel : (Visual Basic) d’exécution différée](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ Ces requêtes, qui sont chaînées, utilisent le modèle de traitement détaillé dans la rubrique [Tutoriel : (Visual Basic) d’exécution différée](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
   
 ## <a name="example"></a>Exemple  
  Cet exemple traite un document WordprocessingML et détermine le nœud d'élément, le nom de style et le texte de chaque paragraphe. Cet exemple se base sur les exemples précédents de ce didacticiel. Dans le code ci-dessous, la nouvelle requête figure dans des commentaires.  
@@ -142,5 +142,6 @@ StyleName:Code >Hello World<
 -   [Refactorisation à l’aide d’une méthode d’Extension (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tutoriel : Manipulation de contenu dans un Document WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [L’exécution différée et évaluation différées dans LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

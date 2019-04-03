@@ -2,12 +2,12 @@
 title: Classification des opérateurs de requête Standard en mode d’exécution (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 5e4204c3fa80acced42649e76abfa2be05f35d82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595173"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823219"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classification des opérateurs de requête Standard en mode d’exécution (Visual Basic)
 Les implémentations LINQ to Objects des méthodes d’opérateur de requête standard s’exécutent de deux manières principales : immédiate ou différée. En outre, les opérateurs de requête qui utilisent l’exécution différée peuvent être divisés en deux catégories : ceux prenant en charge la diffusion en continu et ceux ne la prenant pas en charge. Le fait de connaître le mode d’exécution des différents opérateurs de requête peut vous aider à comprendre les résultats obtenus à partir d’une requête donnée. Ceci est particulièrement vrai si la source de données change ou si vous générez une requête sur une autre requête. Cette rubrique classe les opérateurs de requête standard selon leur mode d’exécution.  
@@ -88,6 +88,7 @@ Les implémentations LINQ to Objects des méthodes d’opérateur de requête st
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq.Enumerable>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)

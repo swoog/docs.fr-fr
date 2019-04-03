@@ -2,12 +2,12 @@
 title: 'Procédure : Écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609927"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833436"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procédure : Écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)
 Pour écrire des requêtes sur du code XML qui est dans un espace de noms, vous devez utiliser des objets <xref:System.Xml.Linq.XName> qui ont l'espace de noms correct.  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Exemple  
- En Visual Basic, toutefois, l’écriture de requêtes sur sur arborescence XML qui utilise un espace de noms avec un préfixe diffère de l’écriture sur une arborescence XML dans un espace de noms par défaut. En général, vous devez utiliser l'instruction `Imports` pour importer l'espace de noms avec un préfixe. Vous utilisez ensuite le préfixe dans les noms d'éléments et d'attributs, lors de la construction de l'arborescence XML. Vous utilisez également le préfixe lors de l'interrogation d'une arborescence XML avec des propriétés XML.  
+ En Visual Basic, toutefois, l'écriture de requêtes sur sur arborescence XML qui utilise un espace de noms avec un préfixe diffère de l'écriture sur une arborescence XML dans un espace de noms par défaut. En général, vous devez utiliser l'instruction `Imports` pour importer l'espace de noms avec un préfixe. Vous utilisez ensuite le préfixe dans les noms d’éléments et d’attributs, lors de la construction de l’arborescence XML. Vous utilisez également le préfixe lors de l’interrogation d’une arborescence XML avec des propriétés XML.  
   
- L'exemple suivant crée une arborescence XML qui est dans un espace de noms avec un préfixe. Il récupère ensuite une collection d'éléments.  
+ L’exemple suivant crée une arborescence XML qui est dans un espace de noms avec un préfixe. Il récupère ensuite une collection d'éléments.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -89,4 +89,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

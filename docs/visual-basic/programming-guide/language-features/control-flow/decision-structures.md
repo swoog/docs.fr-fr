@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735245"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825376"
 ---
 # <a name="decision-structures-visual-basic"></a>Structures de décision (Visual Basic)
 Visual Basic vous permet de tester des conditions et d’effectuer des opérations différentes en fonction des résultats de ce test. Vous pouvez tester une condition vraie ou fausse, pour différentes valeurs d’une expression ou plusieurs exceptions générées lorsque vous exécutez une série d’instructions.  
@@ -47,6 +47,7 @@ En prenant des mesures différentes lorsqu’une condition est true et false
 >  Pour de nombreuses structures de contrôle, lorsque vous cliquez sur un mot clé, tous les mots clés dans la structure sont mis en surbrillance. Par exemple, lorsque vous cliquez sur `If` dans un `If...Then...Else` construction, toutes les instances de `If`, `Then`, `ElseIf`, `Else`, et `End If` dans la construction sont mises en surbrillance. Pour déplacer vers le mot clé en surbrillance suivant ou précédent, appuyez sur CTRL + MAJ + flèche bas ou CTRL + MAJ + flèche haut.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Autres structures de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

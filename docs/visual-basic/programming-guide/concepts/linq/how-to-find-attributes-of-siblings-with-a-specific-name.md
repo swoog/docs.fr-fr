@@ -2,12 +2,12 @@
 title: 'Procédure : Rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: ce97cbc4b8b1105e8431016a9c296c158cf0091c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839052"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Procédure : Rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)
 Cette rubrique montre comment rechercher tous les attributs des frères du nœud de contexte. Seuls les attributs avec un nom spécifique sont retournés dans la collection.  
@@ -55,4 +55,5 @@ id="bk102"
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to XML pour les utilisateurs de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

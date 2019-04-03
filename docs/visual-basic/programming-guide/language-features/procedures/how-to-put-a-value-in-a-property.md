@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965461"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824302"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Procédure : Placer une valeur dans une propriété (Visual Basic)
 Vous stockez une valeur dans une propriété en plaçant le nom de propriété sur le côté gauche d’une instruction d’assignation.  
@@ -35,6 +35,7 @@ Vous stockez une valeur dans une propriété en plaçant le nom de propriété s
 4.  La valeur générée sur le côté droit de l’instruction d’assignation est stockée dans la propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)

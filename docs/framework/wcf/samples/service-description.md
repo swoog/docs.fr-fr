@@ -2,12 +2,12 @@
 title: Service Description
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: a3fa98d8dc80c5ee0d745d2de4364636fd78e631
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f6595bae8b27bb6dfb43474be0d9ebc249e88e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677355"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814131"
 ---
 # <a name="service-description"></a>Service Description
 Cet exemple montre comment un service peut récupérer ses informations de description de service pendant l'exécution. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), avec une opération de service supplémentaire définie pour retourner des informations descriptives sur le service. Les informations retournées répertorient les points de terminaison et les adresses de base du service. Le service fournit ces informations à l'aide des classes <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.Description.ServiceDescription>.  
@@ -36,7 +36,7 @@ public interface IServiceDescriptionCalculator
 }  
 ```  
   
- Le code d'implémentation pour `GetServiceDescriptionInfo` utilise <xref:System.ServiceModel.Description.ServiceDescription> pour répertorier les points de terminaison de service. Les points de terminaison de service pouvant avoir des adresses relatives, il répertorie d'abord les adresses de base du service. Pour obtenir l'ensemble de ces informations, le code obtient son contexte d'opération à l'aide de <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> et son objet <xref:System.ServiceModel.Description.ServiceDescription> sont récupérés du contexte d'opération. Pour répertorier les points de terminaison de base du service, le code parcourt la collection <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> de l'hôte de service. Pour répertorier les points de terminaison de service du service, le code parcourt la collection de points de terminaison de la description de service.  
+ Le code d'implémentation pour `GetServiceDescriptionInfo` utilise <xref:System.ServiceModel.Description.ServiceDescription> pour répertorier les points de terminaison de service. Les points de terminaison de service pouvant avoir des adresses relatives, il répertorie d'abord les adresses de base du service. Pour obtenir l'ensemble de ces informations, le code obtient son contexte d'opération à l'aide de <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> et son objet <xref:System.ServiceModel.Description.ServiceDescription> sont récupérés du contexte d'opération. Pour répertorier les points de terminaison de base du service, le code parcourt la collection <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> de l’hôte de service. Pour répertorier les points de terminaison de service du service, le code parcourt la collection de points de terminaison de la description de service.  
   
 ```csharp
 public string GetServiceDescriptionInfo()  
@@ -102,4 +102,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   
-## <a name="see-also"></a>Voir aussi

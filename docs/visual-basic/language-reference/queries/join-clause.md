@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971297"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825844"
 ---
 # <a name="join-clause-visual-basic"></a>Join, clause (Visual Basic)
 Combine deux collections en une collection unique. L’opération de jointure est basée sur les clés correspondantes et utilise le `Equals` opérateur.  
@@ -37,10 +37,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Obligatoire. La collection à combiner avec la collection identifiée sur le côté gauche de la `Join` opérateur. Un `Join` clause peut être imbriquée dans une autre `Join` clause, ou dans un `Group Join` clause.  
   
  `joinClause`  
- Facultatif. Un ou plus supplémentaires `Join` clauses pour en savoir plus affiner la requête.  
+ Optionnel. Un ou plus supplémentaires `Join` clauses pour en savoir plus affiner la requête.  
   
  `groupJoinClause`  
- Facultatif. Un ou plus supplémentaires `Group Join` clauses pour en savoir plus affiner la requête.  
+ Optionnel. Un ou plus supplémentaires `Group Join` clauses pour en savoir plus affiner la requête.  
   
  `key1` `Equals` `key2`  
  Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` opérateur pour comparer les clés à partir des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1` doit être de la collection sur le côté gauche de la `Join` opérateur. `key2` doit être de la collection sur le côté droit de la `Join` opérateur.  
@@ -88,6 +88,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `explorer (2424), File Explorer, Priority = 8`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Requêtes](../../../visual-basic/language-reference/queries/index.md)
 - [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)

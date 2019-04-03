@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: a5663fff6f7351272a78947d364458c83e5b8af1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687594"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819431"
 ---
 # <a name="-noconfig"></a>-noconfig
 Spécifie que le compilateur ne doit pas référencer automatiquement les couramment utilisés [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblys ou importer la `System` et `Microsoft.VisualBasic` espaces de noms.  
@@ -36,6 +36,7 @@ Spécifie que le compilateur ne doit pas référencer automatiquement les couram
 >  Le `-noconfig` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [@ (spécifier un fichier réponse)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)

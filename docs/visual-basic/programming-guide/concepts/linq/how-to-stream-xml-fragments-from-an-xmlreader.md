@@ -2,12 +2,12 @@
 title: 'Procédure : Stream des fragments XML en continu à partir d’un XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: dfc5dfd6d861992861cd9a5b4bd7266d7d24af75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c5aa1afff983f3763bbf7c74268eba622df7751
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564641"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833592"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Procédure : Stream des fragments XML en continu à partir d’un XmlReader (Visual Basic)
 Lorsque vous devez traiter de grands fichiers XML, il peut être impossible de charger l’intégralité de l’arborescence XML en mémoire. Cette rubrique montre comment diffuser des fragments en continu à l'aide d'un objet <xref:System.Xml.XmlReader>.  
@@ -18,9 +18,9 @@ Lorsque vous devez traiter de grands fichiers XML, il peut être impossible de c
   
  Si vous souhaitez créer une arborescence partielle, vous pouvez instancier un objet <xref:System.Xml.XmlReader>, positionner le lecteur sur le nœud que vous souhaitez convertir en une arborescence <xref:System.Xml.Linq.XElement>, puis créer l'objet <xref:System.Xml.Linq.XElement>.  
   
- La rubrique [Comment : Stream des fragments XML en continu avec accès aux informations d’en-tête (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contient des informations et un exemple sur la façon de diffuser en continu un document plus complexe.  
+ La rubrique [Guide pratique pour Stream des fragments XML en continu avec accès aux informations d’en-tête (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contient des informations et un exemple sur la façon de diffuser en continu un document plus complexe.  
   
- La rubrique [Comment : Effectuer la diffusion en continu transformer des Documents XML volumineux (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contient un exemple d’utilisation de LINQ to XML pour transformer des documents XML extrêmement volumineux tout en maintenant un faible encombrement mémoire.  
+ La rubrique [Guide pratique pour Effectuer la diffusion en continu transformer des Documents XML volumineux (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contient un exemple d’utilisation de LINQ to XML pour transformer des documents XML extrêmement volumineux tout en maintenant un faible encombrement mémoire.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple crée une méthode d'axe personnalisée. Vous pouvez l'interroger à l'aide d'une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La méthode d'axe personnalisée, `StreamRootChildDoc`, est une méthode conçue spécifiquement pour lire un document qui possède un élément `Child` à répétition.  
@@ -146,5 +146,6 @@ ccc
  Dans cet exemple, le document source est très petit. Toutefois, cet exemple aurait un faible encombrement mémoire même s'il y avait des millions d'éléments `Child`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédure pas à pas : Implémentation IEnumerable(Of T) en Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
 - [L’analyse XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

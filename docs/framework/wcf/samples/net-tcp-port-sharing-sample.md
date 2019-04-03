@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing, exemple
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735488"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830173"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing, exemple
 Le protocole TCP/IP utilise un numéro à 16 bits, appelé un port, pour différencier des connexions vers des applications réseau multiples qui s'exécutent sur le même ordinateur. Si une application écoute un port, tout le trafic TCP de ce port va à cette application. Les autres applications ne peuvent pas écouter en même temps ce port.  
@@ -31,10 +31,10 @@ Le protocole TCP/IP utilise un numéro à 16 bits, appelé un port, pour différ
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Le partage de ports est activé sur le serveur en définissant la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> de la liaison <xref:System.ServiceModel.NetTcpBinding> ou de l’élément de liaison <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Le client n'a pas besoin de savoir comment le partage de ports a été configuré pour l'utiliser sur le serveur.  
+ Le partage de ports est activé sur le serveur en définissant la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> de la liaison <xref:System.ServiceModel.NetTcpBinding> ou de l'élément de liaison <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Le client n'a pas besoin de savoir comment le partage de ports a été configuré pour l'utiliser sur le serveur.  
   
 ## <a name="enabling-port-sharing"></a>Activation du partage de ports  
- Le code suivant illustre l'activation du partage de ports sur le serveur. Il démarre une instance du service `ICalculator` sur un port fixe avec un chemin d'accès URI aléatoire. Bien que deux services puissent partager le même port, leurs adresses de point de terminaison globales doivent demeurer uniques afin que le service de partage de ports NetTcp puisse router les messages vers l'application qui convient.  
+ Le code suivant illustre l'activation du partage de ports sur le serveur. Il démarre une instance du service `ICalculator` sur un port fixe avec un chemin d’accès URI aléatoire. Bien que deux services puissent partager le même port, leurs adresses de point de terminaison globales doivent demeurer uniques afin que le service de partage de ports NetTcp puisse router les messages vers l'application qui convient.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -139,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Les détails d'exécution spécifiques de cet exemple sont inclus dans la section Exécution de l'exemple ci-dessus.  
   
-## <a name="see-also"></a>Voir aussi

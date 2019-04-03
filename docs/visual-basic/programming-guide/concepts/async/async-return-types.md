@@ -2,12 +2,12 @@
 title: Types de retour Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352579"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838350"
 ---
 # <a name="async-return-types-visual-basic"></a>Types de retour Async (Visual Basic)
 Les méthodes async ont trois types de retour possibles : <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> et void. En Visual Basic, le type de retour void est écrit sous forme de procédure [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Pour plus d’informations sur les méthodes async, consultez [programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -293,6 +293,7 @@ End Sub
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Flux de contrôle dans les programmes Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

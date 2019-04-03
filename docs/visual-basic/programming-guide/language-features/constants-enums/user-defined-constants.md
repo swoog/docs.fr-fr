@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813910"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes définies par l'utilisateur (Visual Basic)
 Une constante est un nom significatif qui prend la place d’un nombre ou une chaîne qui ne change pas. Les constantes stockent des valeurs qui, comme leur nom l’indique, demeurent constantes tout au long de l’exécution d’une application. Vous pouvez utiliser des constantes qui sont définies par les contrôles ou les composants que vous utilisez, ou vous pouvez créer vos propres. Les constantes que vous créez vous-même sont décrites en tant que *défini par l’utilisateur*.  
@@ -56,6 +56,7 @@ Une constante est un nom significatif qui prend la place d’un nombre ou une ch
  Si un cycle se produit, Visual Basic génère une erreur du compilateur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Const (instruction)](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Constantes et types de données littérales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Constantes et énumérations](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

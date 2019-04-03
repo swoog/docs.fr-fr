@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4e54fdca9123ad5595eb9a8c5e2ac5bc303a8f6a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981216"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824199"
 ---
 # <a name="not-operator-visual-basic"></a>Not, opérateur (Visual Basic)
 Effectue une négation logique sur une `Boolean` expression, ou une négation au niveau du bit sur une expression numérique.  
@@ -76,6 +76,7 @@ result = Not expression
  L’exemple précédent produit les résultats de – 11, -9 et -7, respectivement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs logiques/de bits (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

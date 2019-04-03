@@ -1,5 +1,5 @@
 ---
-title: L’opérande 'AddressOf' doit être le nom d’une méthode (sans parenthèses)
+title: L'opérande 'AddressOf' doit être le nom d'une méthode (sans parenthèses)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30577
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: 37b02ab76730458b757835fda37b8cb145ed93ad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813962"
 ---
-# <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>L’opérande 'AddressOf' doit être le nom d’une méthode (sans parenthèses)
+# <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>L'opérande 'AddressOf' doit être le nom d'une méthode (sans parenthèses)
 L’opérateur `AddressOf` crée une instance de délégué de procédure qui fait référence à une procédure spécifique. La syntaxe est la suivante.  
   
  `AddressOf` `procedurename`  
@@ -30,5 +30,6 @@ L’opérateur `AddressOf` crée une instance de délégué de procédure qui fa
 2.  Assurez-vous que l’argument est un nom de méthode.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640600"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816328"
 ---
 # <a name="structure-variables-visual-basic"></a>Variables de structure (Visual Basic)
 Une fois que vous avez créé une structure, vous pouvez déclarer des variables de niveau de la procédure et au niveau du module en tant que type. Par exemple, vous pouvez créer une structure qui enregistre les informations concernant un système informatique. Cela est illustré par l'exemple suivant.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Si un élément de structure est un type référence, comme un `String`, `Object`, ou tableau, le pointeur vers les données est copié. Dans l’exemple précédent, si `systemInfo` avait inclus une variable objet, puis l’exemple précédent aurait copié le pointeur à partir de `mySystem` à `yourSystem`, et une modification apportée aux données de l’objet via une structure serait en vigueur lors de l’accès par l’autre structure.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

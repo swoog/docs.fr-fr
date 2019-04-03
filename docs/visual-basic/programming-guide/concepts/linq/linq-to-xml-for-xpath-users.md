@@ -2,12 +2,12 @@
 title: LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066260"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824245"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 
@@ -38,6 +38,7 @@ Cet ensemble de rubriques illustre un certain nombre d'expressions XPath et leur
 |[Guide pratique pour Rechercher le frère précédent (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Compare comment faire rechercher le frère précédent d'un nœud à l'aide de XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
 - [Interrogation d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [Traitement des données XML à l’aide du modèle de données XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

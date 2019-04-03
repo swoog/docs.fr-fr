@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 1906c9101f9a53bde13698d0ed17b7b8d0988c1d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981372"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820150"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Littéral d'instruction de traitement XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.  
@@ -32,7 +32,7 @@ Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.
  Obligatoire. Nom indiquant l’application les cibles d’instruction de traitement. Ne peut pas commencer par « xml » ou « XML ».  
   
  `piData`  
- Facultatif. Chaîne indiquant la façon dont l’application ciblée par `piName` doit traiter le document XML.  
+ Optionnel. Chaîne indiquant la façon dont l’application ciblée par `piName` doit traiter le document XML.  
   
  `?>`  
  Obligatoire. Indique la fin de l’instruction de traitement.  
@@ -61,6 +61,7 @@ Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [Littéral de document XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 3aa2b7d1d7750de255121b4ddb81c6f9d3cef346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816224"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Opérateurs répertoriés par fonctionnalité (Visual Basic)
 Consultez une des catégories répertoriées ci-dessous ou ouvrez cette partie de la table de l’aide du contenu pour afficher une liste alphabétique des opérateurs en Visual Basic.  
@@ -27,5 +27,6 @@ Consultez une des catégories répertoriées ci-dessous ou ouvrez cette partie d
 |[Opérateurs divers](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|Ces opérateurs effectuent des opérations diverses.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs et expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

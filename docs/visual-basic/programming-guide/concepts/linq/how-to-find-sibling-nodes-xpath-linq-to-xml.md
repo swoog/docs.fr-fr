@@ -2,12 +2,12 @@
 title: 'Procédure : Rechercher des nœuds frères (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 740123077c24dd27fe1a4810d0cb45c4775894aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622635"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842107"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procédure : Rechercher des nœuds frères (XPath-LINQ to XML) (Visual Basic)
 Vous souhaiterez peut-être rechercher tous les frères d'un nœud qui ont un nom spécifique. La collection résultante peut inclure le nœud de contexte si celui-ci a également le nom spécifique.  
@@ -68,4 +68,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to XML pour les utilisateurs de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

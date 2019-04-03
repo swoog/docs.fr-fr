@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622843"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832175"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procédure : Accéder à une Variable masquée par une classe dérivée (Visual Basic)
 Lorsque le code dans une classe dérivée accède à une variable, le compilateur résout normalement la référence vers la version accessible le plus proche, autrement dit, la version accessible le moins qui d’étapes vers l’arrière de la classe. Si la variable est définie dans la classe dérivée, le code accède normalement à cette définition.  
@@ -50,6 +50,7 @@ Lorsque le code dans une classe dérivée accède à une variable, le compilateu
  Pour réduire le risque de faire référence à une version non souhaitée d’une variable occultée, vous pouvez qualifier complètement toutes les références à une variable occultée. L’occultation introduit plusieurs versions d’une variable portant le même nom. Lorsqu’une instruction de code fait référence au nom de variable, la version à laquelle le compilateur résout la référence dépend de facteurs tels que l’emplacement de l’instruction de code et la présence d’une chaîne qualifiante. Cela peut augmenter le risque de faire référence à une version incorrecte de la variable.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Différences entre l'occultation et la substitution](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

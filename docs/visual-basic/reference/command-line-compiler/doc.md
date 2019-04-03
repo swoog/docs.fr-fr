@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: eccd68d77eb9afabdc3bd4301f6258b80b7d7e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736651"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824583"
 ---
 # <a name="-doc"></a>-doc
 Traite les commentaires de documentation pour les diriger vers un fichier XML.  
@@ -28,7 +28,7 @@ Traite les commentaires de documentation pour les diriger vers un fichier XML.
   
 |Terme|Définition|  
 |---|---|  
-|`+` &#124; `-`|Facultatif. Si vous spécifiez +, ou simplement `-doc`, le compilateur génère des informations de documentation et les place dans un fichier XML. Si vous spécifiez `-`, ce qui équivaut à ne pas spécifier `-doc`, aucune information de documentation n’est créée.|  
+|`+` &#124; `-`|Optionnel. Si vous spécifiez +, ou simplement `-doc`, le compilateur génère des informations de documentation et les place dans un fichier XML. Si vous spécifiez `-`, ce qui équivaut à ne pas spécifier `-doc`, aucune information de documentation n’est créée.|  
 |`file`|Obligatoire si l'option `-doc:` est utilisée. Spécifie le fichier XML de sortie, qui est renseigné avec les commentaires des fichiers de code source de la compilation. Si le nom de fichier contient un espace, placez-le entre des guillemets (" ").|  
   
 ## <a name="remarks"></a>Notes  
@@ -54,5 +54,6 @@ Traite les commentaires de documentation pour les diriger vers un fichier XML.
  Pour obtenir un exemple, consultez [Documentation de votre code avec le langage XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Documentation de votre code avec le langage XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

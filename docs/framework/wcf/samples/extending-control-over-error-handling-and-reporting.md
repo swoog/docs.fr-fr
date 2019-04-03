@@ -2,12 +2,12 @@
 title: Extending Control Over Error Handling and Reporting
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 30b36f5373563ec9faba8e655ab1e31d47b23c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814339"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Extending Control Over Error Handling and Reporting
 Cet exemple montre comment étendre le contrôle sur la gestion des erreurs et des rapports d’erreurs dans un service Windows Communication Foundation (WCF) en utilisant le <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) avec du code supplémentaire ajouté au service pour gérer les erreurs. Le client force plusieurs conditions d'erreur. Le service intercepte les erreurs et les enregistre dans un fichier.  
@@ -118,7 +118,7 @@ catch (Exception e)
 }  
 ```  
   
- Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Vous voyez la division par zéro et les conditions d'argument hors limites qui sont signalées comme des erreurs. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
+ Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Vous voyez la division par zéro et les conditions d’argument hors limites qui sont signalées comme des erreurs. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
 ```  
 Add(15,3) = 18  
@@ -158,4 +158,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   
-## <a name="see-also"></a>Voir aussi

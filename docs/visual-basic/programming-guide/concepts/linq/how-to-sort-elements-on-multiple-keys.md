@@ -2,12 +2,12 @@
 title: 'Procédure : Trier les éléments sur plusieurs clés (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828613"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Procédure : Trier les éléments sur plusieurs clés (Visual Basic)
 Cette rubrique montre comment effectuer un tri sur plusieurs clés.  
@@ -15,7 +15,7 @@ Cette rubrique montre comment effectuer un tri sur plusieurs clés.
 ## <a name="example"></a>Exemple  
  Dans cet exemple, les résultats sont ordonnés d'abord en fonction du code postal d'expédition, puis en fonction de la date de commande.  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Les clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la même requête pour du code XML qui est dans un espace de noms. Pour plus d’informations, consultez [utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Clients et commandes dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Clients et commandes dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -117,4 +117,5 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

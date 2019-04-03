@@ -2,12 +2,12 @@
 title: Opérations d’agrégation (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 5d8e5c589b19527062f7752b2f795c8396683bbd
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675638"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817238"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Opérations d’agrégation (Visual Basic)
 Une opération d’agrégation calcule une valeur unique à partir d’une collection de valeurs. Par exemple, une opération d'agrégation peut être le calcul de la température quotidienne moyenne à partir des valeurs de température quotidiennes relevées sur un mois.  
@@ -63,6 +63,7 @@ Une opération d’agrégation calcule une valeur unique à partir d’une colle
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Aggregate (clause)](../../../../visual-basic/language-reference/queries/aggregate-clause.md)

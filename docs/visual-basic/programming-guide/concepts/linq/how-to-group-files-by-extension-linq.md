@@ -2,12 +2,12 @@
 title: 'Procédure : Regrouper les fichiers par Extension (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 0e705e83f1aff6146347be5430fb446da2efd843
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829276"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procédure : Regrouper les fichiers par Extension (LINQ) (Visual Basic)
 Cet exemple montre comment utiliser LINQ pour effectuer des opérations de regroupement et de tri avancées sur des listes de fichiers ou de dossiers. Il montre également comment parcourir les résultats dans la fenêtre de console à l’aide des méthodes <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A>.  
@@ -97,5 +97,6 @@ End Module
  Créer un projet qui cible le .NET Framework version 3.5 ou ultérieure avec une référence à System.Core.dll et une `Imports` instruction pour l’espace de noms System.Linq.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

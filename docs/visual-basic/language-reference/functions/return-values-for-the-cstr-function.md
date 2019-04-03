@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 22fa31d862259c6dc8607ee44561bc8c18662d88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642816"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819513"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Valeurs de retour pour la fonction CStr (Visual Basic)
 Le tableau suivant décrit les valeurs de retour pour `CStr` pour différents types de données de `expression`.  
@@ -34,6 +34,7 @@ Le tableau suivant décrit les valeurs de retour pour `CStr` pour différents ty
 >  Le `CStr` fonction effectue sa conversion en fonction des paramètres de culture actuels de l’application. Pour obtenir la représentation sous forme de chaîne d’un nombre dans une culture particulière, utilisez le nombre `ToString(IFormatProvider)` (méthode). Par exemple, utilisez <xref:System.Double.ToString%2A?displayProperty=nameWithType> lors de la conversion d’une valeur de type `Double` à un `String`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Booléen (type de données)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)

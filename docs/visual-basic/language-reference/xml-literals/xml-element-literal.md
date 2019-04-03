@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842250"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Littéral d'élément XML (Visual Basic)
 
@@ -41,14 +41,14 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
   
         |Élément|Description|  
         |---|---|  
-        |`ePrefix`|Facultatif. Préfixe d’espace de noms XML pour l’élément. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction dans le fichier ou au niveau du projet, ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
+        |`ePrefix`|Optionnel. Préfixe d’espace de noms XML pour l’élément. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction dans le fichier ou au niveau du projet, ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
         |`eName`|Obligatoire. Nom de l'élément. Le format est une des opérations suivantes :<br /><br /> -Texte littéral. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Incorporé expression sous la forme `<%= eNameExp %>`. Le type de `eNameExp` doit être `String` ou un type qui est implicitement convertible en <xref:System.Xml.Linq.XName>.|  
   
     -   Expression sous la forme incorporée `<%= nameExp %>`. Le type de `nameExp` doit être `String` ou un type implicitement convertible en <xref:System.Xml.Linq.XName>. Une expression incorporée n’est pas autorisée dans une balise de fermeture d’un élément.  
   
 -   `attributeList`  
   
-     Facultatif. Liste des attributs déclarés dans le littéral.  
+     Optionnel. Liste des attributs déclarés dans le littéral.  
   
      `attribute [ attribute ... ]`  
   
@@ -58,7 +58,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
   
         |Élément|Description|  
         |---|---|  
-        |`aPrefix`|Facultatif. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
+        |`aPrefix`|Optionnel. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
         |`aName`|Obligatoire. Nom de l'attribut. Le format est une des opérations suivantes :<br /><br /> -Texte littéral. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Incorporé expression sous la forme `<%= aNameExp %>`. Le type de `aNameExp` doit être `String` ou un type qui est implicitement convertible en <xref:System.Xml.Linq.XName>.|  
         |`aValue`|Facultatif. Valeur de l’attribut. Le format est une des opérations suivantes :<br /><br /> -Texte littéral, entourée de guillemets.<br />-Incorporé expression sous la forme `<%= aValueExp %>`. N’importe quel type est autorisé.|  
   
@@ -74,7 +74,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
   
 -   `elementContents`  
   
-     Facultatif. Contenu de l’élément.  
+     Optionnel. Contenu de l’élément.  
   
      `content [ content ... ]`  
   
@@ -94,7 +94,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
   
 -   `</[name]>`  
   
-     Facultatif. Représente la balise de fermeture de l’élément. Le paramètre facultatif `name` paramètre n’est pas autorisé lorsqu’il est le résultat d’une expression incorporée.  
+     Optionnel. Représente la balise de fermeture de l’élément. Le paramètre facultatif `name` paramètre n’est pas autorisé lorsqu’il est le résultat d’une expression incorporée.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Objet <xref:System.Xml.Linq.XElement>.  
@@ -160,6 +160,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
  Notez que le compilateur a converti le préfixe d’espace de noms XML global dans une définition de préfixe pour l’espace de noms XML. Le \<ns:middle > élément redéfinit le préfixe d’espace de noms XML pour le \<ns:inner1 > élément. Toutefois, le \<ns:inner2 > élément utilise l’espace de noms défini par le `Imports` instruction.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XElement>
 - [Nom des attributs et des éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [Littéraux de commentaires XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

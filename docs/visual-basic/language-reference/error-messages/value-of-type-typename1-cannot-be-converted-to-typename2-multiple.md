@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261345"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833527"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >' (plusieurs références de fichier)
 Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. Incompatibilité de type peut être dû à la combinaison d’une référence de fichier pour '\<chemin_fichier1 >' dans le projet '\<nom_projet1 >' avec une référence de fichier à '\<chemin_fichier2 >' dans le projet '\<nom_projet2 >'. Si les deux assemblys sont identiques, essayez de remplacer ces deux références pour qu’elles se situent au même emplacement.  
@@ -32,6 +32,6 @@ Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. I
 -   Si les assemblys référencés n’ont pas la même identité d’assembly, puis modifiez votre code afin qu’il ne tente pas de convertir un type dans un à un type dans l’autre.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Conversions de type en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
-

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520020"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821356"
 ---
 # <a name="date-data-type-visual-basic"></a>Type de données date (Visual Basic)
-Contient des valeurs sous la forme IEEE 64 bits (8 octets) qui représentent des dates comprises entre le 1er janvier de l'année 0001 et le 31 décembre de l'année 9999 et des heures comprises entre de 0:00:00 (minuit) et 23:59:59,9999999. Chaque incrément représente 100 nanosecondes de durée calendaire depuis le début du 1er janvier de l'année 1 du calendrier grégorien. La valeur maximale représente 100 nanosecondes avant le début du 1er janvier de l'année 10 000.  
+Contient des valeurs sous la forme IEEE 64 bits (8 octets) qui représentent des dates comprises entre le 1er janvier de l'année 0001 et le 31 décembre de l'année 9999 et des heures comprises entre de 0:00:00 (minuit) et 23:59:59,9999999. Chaque incrément représente 100 nanosecondes de durée calendaire depuis le début du 1er janvier de l’année 1 du calendrier grégorien. La valeur maximale représente 100 nanosecondes avant le début du 1er janvier de l'année 10 000.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le type de données `Date` comme conteneur de valeurs de date, de valeurs d'heure ou de valeurs de date et d'heure.  
@@ -33,7 +33,7 @@ Contient des valeurs sous la forme IEEE 64 bits (8 octets) qui représentent d
  Vous pouvez obtenir les date et heure actuelles à partir de la classe <xref:Microsoft.VisualBasic.DateAndTime>.  
   
 ## <a name="format-requirements"></a>Exigences relatives au format  
- Vous devez placer un littéral `Date` entre des signes dièse (`# #`). Vous devez spécifier la valeur de date au format M/j/aaaa, par exemple `#5/31/1993#`, ou aaaa-MM-jj, par exemple `#1993-5-31#`. Vous pouvez utiliser des barres obliques quand vous spécifiez l'année en premier.  Cette exigence est indépendante de vos paramètres régionaux et des paramètres de format de date et d'heure de votre ordinateur.  
+ Vous devez placer un littéral `Date` entre des signes dièse (`# #`). Vous devez spécifier la valeur de date au format M/j/aaaa, par exemple `#5/31/1993#`, ou aaaa-MM-jj, par exemple `#1993-5-31#`. Vous pouvez utiliser des barres obliques quand vous spécifiez l'année en premier.  Cette exigence est indépendante de vos paramètres régionaux et des paramètres de format de date et d’heure de votre ordinateur.  
   
  Cette restriction tient au fait que la signification de votre code ne doit jamais changer en fonction des paramètres régionaux dans lesquels votre application s'exécute. Supposez que vous codez en dur un littéral `Date` égal à `#3/4/1998#` et qu'il doit correspondre au 4 mars 1998. Dans des paramètres régionaux qui utilisent le format mm/jj/aaaa, la date 3/4/1998 est compilée comme vous le souhaitez. Supposons toutefois que vous déployiez votre application dans de nombreux pays. Dans des paramètres régionaux qui utilisent le format jj/mm/aaaa, votre littéral codé en dur sera compilé en tant que 3 avril 1998. Dans des paramètres régionaux qui utilisent le format aaaa/mm/jj, le littéral sera non valide (avril 1998, 0003) et provoquera une erreur du compilateur.  
   
@@ -75,6 +75,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Types de données](../../../visual-basic/language-reference/data-types/index.md)
 - [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)

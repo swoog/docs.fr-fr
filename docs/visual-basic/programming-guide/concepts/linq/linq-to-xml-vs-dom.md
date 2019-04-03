@@ -2,12 +2,12 @@
 title: LINQ to XML, différences par rapport à DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 07c54c9e2097a328ba09b16dab5b6c8b71c90934
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494845"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831265"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML, différences par rapport à DOM (Visual Basic)
 Cette section décrit certaines des principales différences entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] et l’API de programmation XML actuellement prédominante, le modèle DOM (Document Object Model) W3C.  
@@ -15,7 +15,7 @@ Cette section décrit certaines des principales différences entre [!INCLUDE[sql
 ## <a name="new-ways-to-construct-xml-trees"></a>Nouvelles manières de construire des arborescences XML  
  Dans le modèle DOM W3C, vous construisez une arborescence XML de bas en haut ; autrement dit, vous créez un document, vous créez des éléments, puis vous ajoutez les éléments au document.  
   
- Voici un exemple typique de création d'une arborescence XML à l'aide de l'implémentation Microsoft du modèle DOM, <xref:System.Xml.XmlDocument> :  
+ Voici un exemple typique de création d’une arborescence XML à l’aide de l’implémentation Microsoft du modèle DOM, <xref:System.Xml.XmlDocument> :  
   
 ```vb  
 Dim doc As XmlDocument = New XmlDocument()  
@@ -131,4 +131,5 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fournit une prise en charge de la validation XSD via les méthodes d’extension de l’espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>. Vous pouvez valider la conformité d’une arborescence XML à un schéma XSD. Vous pouvez remplir l’arborescence XML avec le PSVI (Post-Schema-Validation Infoset). Pour plus d'informations, voir [Procédure : Valider à l’aide de XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) et <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Bien démarrer (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

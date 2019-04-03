@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: b1c4db312c04c4248f16a2ff7ee8b54222e66cbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c65004189c43e4838c9131f61aaa09a41191b702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620277"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817290"
 ---
 # <a name="default-message-contract"></a>Default Message Contract
 Cet exemple présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente une interface de calculatrice comme un service typé. Au lieu d’opérations de service individuelles pour l’addition, soustraction, multiplication et division utilisées dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), cet exemple transmet un message personnalisé qui contient les opérandes et l’opérateur et retourne le résultat du calcul arithmétique.  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- La classe d'implémentation contient le code pour l'opération de service `Calculate`. La classe `CalculateService` obtient les opérandes et l’opérateur à partir du message de demande et crée un message de réponse qui contient le résultat du calcul demandé, tel qu’indiqué dans l’exemple de code suivant.  
+ La classe d'implémentation contient le code pour l'opération de service `Calculate`. La classe `CalculateService` obtient les opérandes et l'opérateur à partir du message de demande et crée un message de réponse qui contient le résultat du calcul demandé, tel qu'indiqué dans l'exemple de code suivant.  
   
 ```csharp
 // Service class which implements the service contract.  
@@ -185,4 +185,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## <a name="see-also"></a>Voir aussi

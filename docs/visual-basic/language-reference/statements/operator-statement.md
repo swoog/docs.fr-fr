@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981697"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818590"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Déclare le symbole d’opérateur, opérandes et le code qui définissent une procédure d’opérateur sur une classe ou structure.  
@@ -41,19 +41,19 @@ End Operator
   
 ## <a name="parts"></a>Composants  
  `attrlist`  
- Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
  Obligatoire. Indique que cette procédure d’opérateur a [Public](../../../visual-basic/language-reference/modifiers/public.md) accès.  
   
  `Overloads`  
- Facultatif. Consultez [surcharges](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ Optionnel. Consultez [surcharges](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
  Obligatoire. Indique que cette procédure d’opérateur est un [partagé](../../../visual-basic/language-reference/modifiers/shared.md) procédure.  
   
  `Shadows`  
- Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Obligatoire pour un opérateur de conversion, sauf si vous spécifiez `Narrowing`. Indique que cette procédure d’opérateur définit un [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. Consultez « Conversions étendues et restrictives » sur cette page d’aide.  
@@ -84,7 +84,7 @@ End Operator
  Facultatif, sauf si `Option Strict` est `On`. Type de données de la valeur de la procédure d’opérateur retourne.  
   
  `statements`  
- Facultatif. Bloc d’instructions qui s’exécute la procédure d’opérateur.  
+ Optionnel. Bloc d’instructions qui s’exécute la procédure d’opérateur.  
   
  `returnvalue`  
  Obligatoire. La valeur que la procédure d’opérateur retourne au code appelant.  
@@ -139,7 +139,7 @@ End Operator
   
  Le type de retour ne doit pas forcément correspondre au type de des opérandes. Par exemple, un opérateur de comparaison tel que `=` ou `<>` peut retourner `Boolean` même si aucun des opérandes sont `Boolean`.  
   
-## <a name="logical-and-bitwise-operators"></a>Opérateurs logiques et au niveau du bit  
+## <a name="logical-and-bitwise-operators"></a>Opérateurs de bits et opérateurs logiques  
  Le `And`, `Or`, `Not`, et `Xor` opérateurs peuvent effectuer des opérations logiques ou au niveau du bit en Visual Basic. Toutefois, si vous définissez un de ces opérateurs sur une classe ou structure, vous pouvez définir uniquement son opération au niveau du bit.  
   
  Vous ne pouvez pas définir le `AndAlso` opérateur directement avec un `Operator` instruction. Toutefois, vous pouvez utiliser `AndAlso` si vous avez rempli les conditions suivantes :  
@@ -171,6 +171,7 @@ End Operator
  [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IsFalse (opérateur)](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue (opérateur)](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

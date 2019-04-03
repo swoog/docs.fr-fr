@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: f641f3dbcba32c77bcf73b14a9ac890d1ade5a2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611915"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832084"
 ---
 # <a name="char-data-type-visual-basic"></a>Char, type de données (Visual Basic)
 Contient les points de code de (2 octets) de 16 bits non signé compris entre 0 et 65 535. Chaque *point de code*, ou code de caractère, représente un caractère Unicode.  
@@ -58,6 +58,7 @@ charVar = "Z"C
 -   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Char?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Char?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

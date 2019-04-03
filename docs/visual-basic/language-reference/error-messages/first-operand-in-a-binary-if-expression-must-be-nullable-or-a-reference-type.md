@@ -1,5 +1,5 @@
 ---
-title: Le premier opérande d’une expression binaire 'If' doit être de type nullable ou référence
+title: Le premier opérande d'une expression binaire 'If' doit être de type nullable ou référence
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284633"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838622"
 ---
-# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Le premier opérande d’une expression binaire 'If' doit être de type nullable ou référence
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Le premier opérande d'une expression binaire 'If' doit être de type nullable ou référence
 Un `If` expression peut prendre deux ou trois arguments. Lorsque vous envoyez uniquement deux arguments, le premier argument doit être un type référence ou un type nullable. Si le premier argument prend la valeur sur n’importe quelle autre que `Nothing`, sa valeur est retournée. Si le premier argument prend la valeur `Nothing`, le deuxième argument est évalué et retourné.  
   
  Par exemple, le code suivant contient deux `If` expressions, une avec trois arguments et l’autre avec deux arguments. Les expressions calculer et retournent la même valeur.  
@@ -54,6 +54,7 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [If (opérateur)](../../../visual-basic/language-reference/operators/if-operator.md)
 - [If...Then...Else (instruction)](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Types valeur Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

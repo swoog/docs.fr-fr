@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 84f0cc34e5de0634eff2edecead08aae3a143068
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32a81ba462eccfc6f4ba2a694793895810074b7e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817030"
 ---
 # <a name="session"></a>Session
 L'exemple Session montre comment implémenter un contrat qui requiert une session. Une session fournit le contexte pour effectuer plusieurs opérations. Cela permet à un service d'associer l'état à une session donnée ; ainsi les opérations suivantes peuvent utiliser l'état d'une opération précédente. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente un service de calculatrice. Le contrat `ICalculator` a été modifié afin de permettre l'exécution d'un ensemble d'opérations arithmétiques, tout en conservant un résultat en cours. Cette fonctionnalité est définie par le contrat `ICalculatorSession`. Le service maintient l'état pou un client tandis que plusieurs opérations de service sont appelées pour effectuer un calcul. Le client peut récupérer le résultat actuel en appelant `Result()` et remettre le résultat à zéro en appelant `Clear()`.  
@@ -40,7 +40,7 @@ public interface ICalculatorSession
 }  
 ```  
   
- Le service utilise le <xref:System.ServiceModel.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.PerSession> pour lier un contexte d'instance de service donné à chaque session entrante. Cela permet au service de maintenir le résultat en cours pour chaque session dans une variable membre locale.  
+ Le service utilise le <xref:System.ServiceModel.InstanceContextMode><xref:System.ServiceModel.InstanceContextMode.PerSession> pour lier un contexte d'instance de service donné à chaque session entrante. Cela permet au service de maintenir le résultat en cours pour chaque session dans une variable membre locale.  
   
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -92,4 +92,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
   
-## <a name="see-also"></a>Voir aussi

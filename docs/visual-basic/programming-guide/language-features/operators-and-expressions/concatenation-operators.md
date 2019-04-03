@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 5151265235868c2a7991bee61b26a4a0da09f901
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978096"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835724"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Opérateurs de concaténation (Visual Basic)
 Les opérateurs de concaténation joignent plusieurs chaînes en une seule. Il existe deux opérateurs de concaténation, `+` et `&`. Les deux effectuent l'opération de concaténation de base, comme le montre l'exemple suivant.  
@@ -38,6 +38,7 @@ Dim y As String = "Mic" + "ro" + "soft"
  Si vous effectuez un nombre important de manipulations sur une chaîne, telles que des concaténations, suppressions et remplacements, vos performances peuvent s'améliorer avec la classe <xref:System.Text.StringBuilder> de l'espace de noms <xref:System.Text>. Elle prend une instruction supplémentaire pour créer et initialiser un objet <xref:System.Text.StringBuilder>, et une autre instruction pour convertir sa valeur finale en une `String`, mais vous pouvez rattraper le retard induit car <xref:System.Text.StringBuilder> peut s'exécuter plus rapidement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Option Strict (instruction)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Types de méthodes de Manipulation de chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
 - [Opérateurs arithmétiques en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

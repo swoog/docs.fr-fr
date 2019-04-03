@@ -2,12 +2,12 @@
 title: Opérations d’élément (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: bbc16599a2688d5e0fe8b1e510946580fa2ca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836920"
 ---
 # <a name="element-operations-visual-basic"></a>Opérations d’élément (Visual Basic)
 Les opérations d’éléments retournent un élément unique et spécifique à partir d’une séquence.  
@@ -28,6 +28,7 @@ Les opérations d’éléments retournent un élément unique et spécifique à 
 |SingleOrDefault|Retourne le seul élément d’une collection ou le seul élément qui remplit une condition. Retourne une valeur par défaut s’il n’existe aucun élément remplissant les critères ou si la collection ne contient pas exactement un élément.|Non applicable.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Guide pratique pour Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

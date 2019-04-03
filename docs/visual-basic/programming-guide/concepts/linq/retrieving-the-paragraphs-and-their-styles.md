@@ -2,12 +2,12 @@
 title: Récupération des paragraphes et leurs Styles (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: a726c3b609d778d8d91be61091a3627ec1358dfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716024"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816939"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Récupération des paragraphes et leurs Styles (Visual Basic)
 Dans cet exemple, nous écrivons une requête qui récupère les nœuds de paragraphe à partir d'un document WordprocessingML. Il identifie également le style de chaque paragraphe.  
@@ -135,4 +135,5 @@ StyleName:Code
  Dans la rubrique suivante, [récupère le texte des paragraphes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), vous allez créer une requête pour récupérer le texte des paragraphes.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tutoriel : Manipulation de contenu dans un Document WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

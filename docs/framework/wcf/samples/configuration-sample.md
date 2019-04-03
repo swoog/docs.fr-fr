@@ -2,12 +2,12 @@
 title: Exemple Configuration
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6273b6b0f84887f031539581fbf664b9dbf50300
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814391"
 ---
 # <a name="configuration-sample"></a>Exemple Configuration
 Cet exemple illustre l'utilisation d'un fichier de configuration pour rendre un service détectable.  
@@ -269,4 +269,3 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 4.  Exécutez le fichier exécutable du client. Notez que le client est en mesure de trouver le service.  
   
-## <a name="see-also"></a>Voir aussi

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972583"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832123"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procédure : Déclarer une propriété avec des niveaux d’accès mixtes (Visual Basic)
 Si vous souhaitez que le `Get` et `Set` procédures sur une propriété d’avoir différents niveaux d’accès, vous pouvez utiliser le niveau le plus permissif dans le `Property` instruction et le niveau le plus restrictif dans un le `Get` ou `Set` instruction. Vous utilisez des niveaux d’accès mixtes sur une propriété lorsque vous souhaitez que certaines parties du code pour être en mesure d’obtenir la valeur de propriété et que d’autres parties du code pour être en mesure de modifier la valeur.  
@@ -35,6 +35,7 @@ Si vous souhaitez que le `Get` et `Set` procédures sur une propriété d’avoi
      Dans l’exemple précédent, le `Get` procédure a les mêmes `Protected` accès en tant que la propriété proprement dite, tandis que le `Set` procédure a `Private` accès. Une classe dérivée de `employee` peut lire le `salary` valeur, mais uniquement la `employee` classe peut la définir.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)

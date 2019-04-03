@@ -2,12 +2,12 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d1ff5150db4406ceaf95459f76d9a8563da76b7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332154"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827703"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 Cet exemple montre comment configurer la liaison `WSDualHttpBinding`. Cet exemple se compose d'un programme de console client (.exe) et d'une bibliothèque de service (.dll) hébergés par les services IIS (Internet Information Services). Le service implémente un contrat duplex. Le contrat est défini par l'interface `ICalculatorDuplex`, laquelle expose les opérations mathématiques suivantes : addition, soustraction, multiplication et division. Dans cet exemple, l'interface `ICalculatorDuplex` permet au client d'effectuer des opérations mathématiques, et notamment de calculer le résultat sur la session. Le service retourne indépendamment les résultats sur l'interface `ICalculatorDuplexCallback`. Un contrat duplex requiert une session, car un contexte doit être établi pour mettre en correspondance l'ensemble des messages échangés entre le client et le service. La liaison `WSDualHttpBinding` prend en charge la communication duplex.  
@@ -104,4 +104,3 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     </wsDualHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Voir aussi

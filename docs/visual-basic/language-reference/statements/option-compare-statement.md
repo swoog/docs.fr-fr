@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: c90e07afb1515b50ad6e2fd2a1bbe42f6da5fa95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968138"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834073"
 ---
 # <a name="option-compare-statement"></a>Option Compare, instruction
 Déclare la méthode de comparaison par défaut à utiliser lors de la comparaison de données de type chaîne.  
@@ -38,7 +38,7 @@ Option Compare { Binary | Text }
   
 |Terme|Définition|  
 |---|---|  
-|`Binary`|Facultatif. Se traduit par des comparaisons de chaînes basées sur un ordre de tri dérivé des représentations binaires internes des caractères.<br /><br /> Ce type de comparaison est utile surtout si les chaînes peuvent contenir des caractères qui ne doivent ne pas être interprétées comme du texte. Dans ce cas, il convient de ne pas fausser les comparaisons avec des équivalences alphabétiques comme, par exemple, quand la casse n'est pas respectée.|  
+|`Binary`|Optionnel. Se traduit par des comparaisons de chaînes basées sur un ordre de tri dérivé des représentations binaires internes des caractères.<br /><br /> Ce type de comparaison est utile surtout si les chaînes peuvent contenir des caractères qui ne doivent ne pas être interprétées comme du texte. Dans ce cas, il convient de ne pas fausser les comparaisons avec des équivalences alphabétiques comme, par exemple, quand la casse n'est pas respectée.|  
 |`Text`|Facultatif. Se traduit par des comparaisons de chaînes basées sur un ordre de tri de texte sans respect de la casse déterminé par les paramètres régionaux de votre système.<br /><br /> Ce type de comparaison est utile si vos chaînes contiennent toutes des caractères de texte et si vous voulez les comparer en prenant en compte les équivalences alphabétiques, c'est-à-dire des lettres très proches ou de casse différente. Par exemple, vous pouvez faire en sorte que les caractères `A` et `a` soient considérés comme identiques et que les caractères `Ä` et `ä` précèdent `B` et `b`.|  
   
 ## <a name="remarks"></a>Notes  
@@ -88,6 +88,7 @@ Option Compare { Binary | Text }
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596356"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824908"
 ---
 # <a name="visual-basic-limitations"></a>Restrictions liées à Visual Basic
 Les versions antérieures de Visual Basic imposaient des limites dans le code, tel que la longueur des noms de variables, le nombre de variables autorisé dans les modules et la taille du module. Dans Visual Basic .NET, ces restrictions ont été moins stricte, ce qui vous donne une plus grande liberté d’écriture et d’organisation de votre code.  
@@ -33,5 +33,6 @@ Les versions antérieures de Visual Basic imposaient des limites dans le code, t
 -   **Longueur de chaîne d’environnement.** Il existe un maximum de 32 768 caractères pour n’importe quelle chaîne d’environnement utilisée comme un argument de ligne de commande. Il s’agit d’une limitation sur toutes les plateformes.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Structure de programme et conventions de codage](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Conventions d’affectation de noms de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

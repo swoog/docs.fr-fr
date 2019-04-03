@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: bd44b6332ae9971eca60677f6bceba9645f2b7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829965"
 ---
 # <a name="mycomputer-object"></a>My.Computer, objet
 Fournit des propriétés permettant de manipuler des composants informatiques tels que le son, l’horloge, le clavier, le système de fichiers, etc.  
@@ -17,7 +17,7 @@ Fournit des propriétés permettant de manipuler des composants informatiques te
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les méthodes et les propriétés de l’objet `My.Computer` , consultez <xref:Microsoft.VisualBasic.Devices.Computer>. La classe de base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fournit les membres qui sont disponibles dans tous les projets.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** <xref:Microsoft.VisualBasic.Devices>  
   
  **Classe :** <xref:Microsoft.VisualBasic.Devices.Computer> (la classe de base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fournit les membres qui sont disponibles dans tous les projets).  
@@ -25,6 +25,7 @@ Fournit des propriétés permettant de manipuler des composants informatiques te
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [My.Computer.Audio (objet)](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [My.Computer.Clipboard (objet)](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)
 - [My.Computer.Clock (objet)](../../../visual-basic/language-reference/objects/my-computer-clock-object.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967202"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841253"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriétés implémentées automatiquement (Visual Basic)
 *Propriétés implémentées automatiquement* vous permettent de spécifier rapidement une propriété d’une classe sans avoir à écrire du code pour `Get` et `Set` la propriété. Quand vous écrivez du code pour une propriété implémentée automatiquement, le compilateur Visual Basic crée automatiquement un champ privé pour stocker la variable de propriété en plus de créer les procédures `Get` et `Set` associées.  
@@ -94,6 +94,7 @@ End Class
  Si vous devez convertir une propriété implémentée automatiquement en une propriété développée qui contient une procédure `Get` ou `Set`, l’éditeur de code de Visual Basic peut générer automatiquement les procédures `Get` et `Set`, et l’instruction `End Property` pour la propriété. Le code est généré si vous placez le curseur sur une ligne vierge suivant le `Property` instruction, tapez un `G` (pour `Get`) ou un `S` (pour `Set`) et appuyez sur ENTRÉE. L'éditeur de code de Visual Basic génère automatiquement la procédure `Get` ou `Set` pour les propriétés en lecture seule et en écriture seule quand vous appuyez sur Entrée à la fin d'une instruction `Property`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide pratique pour Déclarer et appeler une propriété par défaut en Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Guide pratique pour Déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)

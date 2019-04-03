@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage'
+title: 'Procédure : hériter de formulaires à l’aide de la boîte de dialogue Sélecteur d’héritage'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841159"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : hériter de formulaires à l’aide de la boîte de dialogue Sélecteur d’héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
   
 > [!NOTE]
@@ -41,7 +41,7 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
   
 6.  Sélectionnez le composant.  
   
-     Dans l’**Explorateur de solutions**, le composant est ajouté à votre projet. S’il possède une interface utilisateur, les contrôles qui font partie du formulaire hérité sont marqués d’un glyphe (![capture d’écran VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) et, quand ils sont sélectionnés, ils sont encadrés d’une bordure indiquant le niveau de sécurité dont dispose le contrôle sur le formulaire de superclasse. Les comportements qui correspondent aux différents niveaux de sécurité sont répertoriés dans le tableau ci-dessous.  
+     Dans l’**Explorateur de solutions**, le composant est ajouté à votre projet. S’il possède une interface utilisateur, les contrôles qui font partie du formulaire hérité sont marqués d’un glyphe (![capture d’écran du symbole de l’héritage Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) et, lorsque sélectionné, d’une bordure indiquant le niveau de sécurité dont dispose le contrôle sur le formulaire de superclasse. Les comportements qui correspondent aux différents niveaux de sécurité sont répertoriés dans le tableau ci-dessous.  
   
     |Niveau de sécurité du contrôle|Interaction disponible via le Concepteur et l'Éditeur de code avec le formulaire hérité|  
     |-------------------------------|--------------------------------------------------------------------------------|  

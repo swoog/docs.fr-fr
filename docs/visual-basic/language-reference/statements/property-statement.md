@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 0b8bec965e5a149466863cde7a2646128469cbd0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972168"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814180"
 ---
 # <a name="property-statement"></a>Property Statement
 Déclare le nom d’une propriété et les procédures de propriété utilisées pour stocker et récupérer la valeur de la propriété.  
@@ -44,11 +44,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Facultatif. Liste des attributs qui s’appliquent à cette propriété ou `Get` ou `Set` procédure. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Optionnel. Liste des attributs qui s’appliquent à cette propriété ou `Get` ou `Set` procédure. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Facultatif. Spécifie que cette propriété est la propriété par défaut pour la classe ou structure sur lesquels il est défini. Propriétés par défaut doivent accepter des paramètres et peuvent être définies et récupérées sans spécifier le nom de propriété. Si vous déclarez la propriété comme `Default`, vous ne pouvez pas utiliser `Private` sur la propriété ou sur un de ses procédures de propriété.  
+     Optionnel. Spécifie que cette propriété est la propriété par défaut pour la classe ou structure sur lesquels il est défini. Propriétés par défaut doivent accepter des paramètres et peuvent être définies et récupérées sans spécifier le nom de propriété. Si vous déclarez la propriété comme `Default`, vous ne pouvez pas utiliser `Private` sur la propriété ou sur un de ses procédures de propriété.  
   
 -   `accessmodifier`  
   
@@ -70,7 +70,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -92,11 +92,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shadows`  
   
-     Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Facultatif. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Optionnel. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
@@ -104,7 +104,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Iterator`  
   
-     Facultatif. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Optionnel. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
@@ -112,7 +112,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `parameterlist`  
   
-     Facultatif. Liste des noms de variables locales représentant les paramètres de cette propriété et les éventuels paramètres supplémentaires de la `Set` procédure. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Optionnel. Liste des noms de variables locales représentant les paramètres de cette propriété et les éventuels paramètres supplémentaires de la `Set` procédure. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
@@ -120,7 +120,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     Facultatif. Indique que cette propriété implémente une ou plusieurs propriétés, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette propriété. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Optionnel. Indique que cette propriété implémente une ou plusieurs propriétés, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette propriété. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
@@ -139,7 +139,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Get`  
   
-     Facultatif. Obligatoire si la propriété est marquée `WriteOnly`. Démarre un `Get` procédure de propriété qui est utilisée pour retourner la valeur de la propriété.  
+     Optionnel. Obligatoire si la propriété est marquée `WriteOnly`. Démarre un `Get` procédure de propriété qui est utilisée pour retourner la valeur de la propriété.  
   
 -   `statements`  
   
@@ -151,7 +151,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     Facultatif. Obligatoire si la propriété est marquée `ReadOnly`. Démarre un `Set` procédure de propriété qui est utilisé pour stocker la valeur de la propriété.  
+     Optionnel. Obligatoire si la propriété est marquée `ReadOnly`. Démarre un `Set` procédure de propriété qui est utilisé pour stocker la valeur de la propriété.  
   
 -   `End Set`  
   
@@ -208,6 +208,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
  [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Propriétés implémentées automatiquement](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Objets et classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Get (instruction)](../../../visual-basic/language-reference/statements/get-statement.md)

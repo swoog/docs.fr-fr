@@ -2,12 +2,12 @@
 title: Message Security over Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 67cd3fa90f0c5686b40fa3569ba33b842f10609e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec79309b9959faa131ee13ff589a10ee1054f27d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304360"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835880"
 ---
 # <a name="message-security-over-message-queuing"></a>Message Security over Message Queuing
 Cet exemple montre comment implémenter une application qui utilise WS-Security avec l'authentification de certificat X.509v3 pour le client et requiert l'authentification de serveur à l'aide du certificat X.509v3 du serveur via MSMQ. La sécurité de message est parfois plus souhaitable pour garantir que les messages du magasin MSMQ demeurent chiffrés et que l'application peut effectuer sa propre authentification du message.
@@ -82,7 +82,7 @@ Cet exemple montre comment implémenter une application qui utilise WS-Security 
     > [!NOTE]
     >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
  Cet exemple requiert l'installation et l'exécution de MSMQ.
 
 ## <a name="demonstrates"></a>Démonstrations
@@ -345,4 +345,3 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   
-## <a name="see-also"></a>Voir aussi

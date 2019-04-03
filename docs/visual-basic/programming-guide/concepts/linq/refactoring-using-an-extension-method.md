@@ -2,12 +2,12 @@
 title: Refactorisation à l’aide d’une méthode d’Extension (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 429f1fb106eca6b6a9ce0f64ea81c260c10a088a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671575"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829991"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactorisation à l’aide d’une méthode d’Extension (Visual Basic)
 Cet exemple s’appuie sur l’exemple précédent, [récupère le texte des paragraphes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), en refactorisant la concaténation de chaînes à l’aide d’une fonction pure est implémentée comme une méthode d’extension.  
@@ -244,5 +244,6 @@ StyleName:Code >Hello World<
 -   [Refactorisation à l’aide d’une fonction pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tutoriel : Manipulation de contenu dans un Document WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refactorisation dans des fonctions pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

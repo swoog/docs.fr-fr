@@ -2,12 +2,12 @@
 title: Construction fonctionnelle (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: 03a5d7468944cfa6d6ad01dfe0e174b1e3d6ac79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f677c0d0e204b5d12718701ab70b8a3c1bd3530c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717387"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816549"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Construction fonctionnelle (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offre un moyen puissant de créer des éléments XML appelé *construction fonctionnelle*. La construction fonctionnelle est la capacité à créer une arborescence XML en une seule instruction.  
@@ -57,4 +57,5 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

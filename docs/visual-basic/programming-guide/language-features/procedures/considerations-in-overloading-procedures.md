@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979531"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815591"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considérations sur les surcharges de procédures (Visual Basic)
 Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature* pour chaque version surchargée. Cela signifie généralement que chaque version doit spécifier une liste de paramètres différente. Pour plus d’informations, consultez « Signature différente » dans [surcharge de procédure](./procedure-overloading.md).  
@@ -122,6 +122,7 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
 -   Le compilateur ne peut pas signaler une erreur si le code appelant passe un type de données par la procédure ne prend pas en charge.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)

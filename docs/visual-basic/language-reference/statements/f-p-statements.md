@@ -2,12 +2,12 @@
 title: Instructions F-P (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: 478ee051b3f8ac668d3115b69fa579c474cce85c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5f1ed4f9d16bb9687e874c97364777494ca6052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842315"
 ---
 # <a name="f-p-statements"></a>Instructions F-P
 Le tableau suivant contient une liste d’instructions de langage Visual Basic.  
@@ -22,6 +22,7 @@ Le tableau suivant contient une liste d’instructions de langage Visual Basic.
 |[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Instructions A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
 - [Instructions Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
 - [Informations de référence sur le langage Visual Basic](../../../visual-basic/language-reference/index.md)

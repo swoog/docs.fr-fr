@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 3ee93814a4f06c39099c50617a10b8974c6f1555
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832552"
 ---
 # <a name="myforms-object"></a>My.Forms, objet
 Fournit des propriétés pour accéder à une instance de chaque formulaire Windows déclaré dans le projet actuel.  
@@ -52,21 +52,22 @@ Fournit des propriétés pour accéder à une instance de chaque formulaire Wind
   
  Ce code fonctionne uniquement dans un projet d’Application de Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="availability-by-project-type"></a>Disponibilité par Type de projet  
   
 |Type de projet|Disponible|  
 |---|---|  
 |Application Windows|**Oui**|  
-|Bibliothèque de classes|Aucune|  
-|Application console|Aucune|  
-|Bibliothèque de contrôles Windows|Aucune|  
-|Bibliothèque de contrôles Web|Aucune|  
-|Service Windows|Aucune|  
-|Site web|Aucune|  
+|Bibliothèque de classes|Non|  
+|Application console|Non|  
+|Bibliothèque de contrôles Windows|Non|  
+|Bibliothèque de contrôles Web|Non|  
+|Service Windows|Non|  
+|Site web|Non|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Form.Close%2A>

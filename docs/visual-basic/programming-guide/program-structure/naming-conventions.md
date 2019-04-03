@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672134"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837076"
 ---
 # <a name="visual-basic-naming-conventions"></a>Conventions d'affectation de noms Visual Basic
 Lorsque vous nommez un élément dans votre application Visual Basic, le premier caractère de ce nom doit être un caractère alphabétique ou un trait de soulignement. Notez, cependant, que les noms commençant par un trait de soulignement ne sont pas compatibles avec le [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Lorsque vous nommez un élément dans votre application Visual Basic, le premier
 -   Évitez d’utiliser des noms dans une portée interne sont les mêmes que les noms dans une portée externe. Erreurs peuvent entraîner si la variable incorrecte est accessible. En cas de conflit entre une variable et le mot clé du même nom, vous devez identifier le mot clé en le faisant précéder avec la bibliothèque de types appropriés. Par exemple, si vous disposez d’une variable appelée `Date`, vous pouvez utiliser la fonction intrinsèque `Date` fonction uniquement en appelant <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des mots clés comme noms d’éléments dans le code](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase et MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 93b299ffd8d2be1b1fabfd752e75d18ef87714b2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974378"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826520"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports, instruction (espace de noms et type .NET)
 Active les noms d’être référencés sans qualification d’espace de noms de type.  
@@ -38,7 +38,7 @@ Imports [ aliasname = ] namespace.element
   
 |Terme|Définition|  
 |---|---|  
-|`aliasname`|Facultatif. Un *alias d’importation* ou le nom par lequel le code peut faire référence à `namespace` au lieu de la chaîne de qualification complète. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`aliasname`|Optionnel. Un *alias d’importation* ou le nom par lequel le code peut faire référence à `namespace` au lieu de la chaîne de qualification complète. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`namespace`|Obligatoire. Le nom qualifié complet de l’espace de noms importé. Une chaîne d’espaces de noms imbriquée à n’importe quel niveau.|  
 |`element`|Facultatif. Le nom d’un élément de programmation déclaré dans l’espace de noms. Peut être n’importe quel élément de conteneur.|  
   
@@ -99,6 +99,7 @@ Imports [ aliasname = ] namespace.element
  [!code-vb[VbVbalrStatements#158](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#158)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Namespace (instruction)](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Références et l’instruction Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

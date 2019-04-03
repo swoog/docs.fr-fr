@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965837"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839669"
 ---
 # <a name="function-expression-visual-basic"></a>Expression de fonction (Visual Basic)
 Déclare les paramètres et le code qui définissent une expression lambda de fonction.  
@@ -30,7 +30,7 @@ End Function
   
 |Terme|Définition|  
 |---|---|  
-|`parameterlist`|Facultatif. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Les parenthèses doivent être présents même lorsque la liste est vide. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Optionnel. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Les parenthèses doivent être présents même lorsque la liste est vide. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`expression`|Obligatoire. Une expression unique. Le type de l’expression est le type de retour de la fonction.|  
 |`statements`|Obligatoire. Une liste d’instructions qui retourne une valeur à l’aide de la `Return` instruction. (Consultez [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).) Le type de la valeur retournée est le type de retour de la fonction.|  
   
@@ -88,6 +88,7 @@ Dim londonCusts = db.Customers.
  Pour plus d’informations sur les méthodes de requête, consultez [requêtes](../../../visual-basic/language-reference/queries/index.md). Pour plus d’informations sur les opérateurs de requête standard, consultez [vue d’ensemble des opérateurs de requête Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Expressions lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Opérateurs et expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

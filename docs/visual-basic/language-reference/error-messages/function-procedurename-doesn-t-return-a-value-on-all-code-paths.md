@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281058"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824830"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code
 Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code. Une instruction 'Return' est-elle manquante ?  
@@ -40,6 +40,7 @@ Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins d
      Il est plus facile de garantir que chaque retour de la procédure retourne une valeur si vous utilisez toujours la `Return` instruction. Si vous le faites, la dernière instruction avant `End Function` doit être un `Return` instruction.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Page Compiler, Concepteur de projet (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

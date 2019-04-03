@@ -2,12 +2,12 @@
 title: Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579808"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827330"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)
 Cette rubrique compare et contraste la programmation fonctionnelle avec la programmation impérative (procédurale) plus traditionnelle.  
@@ -51,6 +51,7 @@ Cette rubrique compare et contraste la programmation fonctionnelle avec la progr
  Heureusement, Visual Basic ne nécessite pas la transition totale vers la programmation fonctionnelle, car il prend en charge les approches de programmation impératives et fonctionnelles. Un développeur peut choisir quelle approche convient le mieux à un scénario particulier. En fait, les programmes combinent souvent les deux approches.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux Transformations fonctionnelles pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Transformations XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Refactorisation dans des fonctions pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

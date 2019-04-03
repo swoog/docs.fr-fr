@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 636fcc36e7bac52467998dc9c59f14ba1bedead3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258620"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831486"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Type sous-jacent \<typename > d’Enum n’est pas conforme CLS
 Le type de données spécifié pour cette énumération n’est pas dans le cadre de la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS). Ce n’est pas une erreur dans votre composant, parce que le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] et Visual Basic prennent en charge ce type de données. Toutefois, un autre composant écrit dans un code strictement conforme CLS ne prenne pas en charge ce type de données. Un tel composant n’est peut-être pas en mesure d’interagir correctement avec votre composant.  
@@ -42,6 +42,6 @@ Le type de données spécifié pour cette énumération n’est pas dans le cadr
 -   Si vous interfacez avec des objets Automation ou COM, n’oubliez pas que certains types ont des largeurs de données différentes de celles du [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Par exemple, `uint` correspond souvent à 16 bits dans d’autres environnements. Si vous passez un argument de 16 bits à un tel composant, déclarez-le en tant que `UShort` au lieu de `UInteger` dans votre code managé de Visual Basic.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Réflexion (Visual Basic)](../../programming-guide/concepts/reflection.md)
 - [Réflexion](../../../framework/reflection-and-codedom/reflection.md)
-

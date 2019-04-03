@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980774"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841163"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procédure : Définir plusieurs Versions d’une procédure (Visual Basic)
 Vous pouvez définir une procédure dans plusieurs versions par *surcharge* il, à l’aide du même nom mais une liste de paramètres différente pour chaque version. L’objectif de la surcharge consiste à définir plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom.  
@@ -43,6 +43,7 @@ Vous pouvez définir une procédure dans plusieurs versions par *surcharge* il, 
  Assurez-vous que chacune de vos versions surchargées a le même nom de procédure mais une autre liste de paramètres.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)

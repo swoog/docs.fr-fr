@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 59e89b24eca6a034dc1df2216f6f0d68e8191a18
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278558"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817264"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Les méthodes de 'System.Nullable(Of T)' ne peuvent pas être utilisées en tant qu’opérandes de l’opérateur 'AddressOf'
 Une instruction utilise le `AddressOf` opérateur avec un opérande qui représente une procédure de la <xref:System.Nullable%601> structure.  
@@ -62,6 +62,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Nullable%601>
 - [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Types valeur Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

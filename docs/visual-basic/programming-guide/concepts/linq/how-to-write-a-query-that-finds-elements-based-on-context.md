@@ -2,12 +2,12 @@
 title: 'Procédure : Écrire une requête qui recherche des éléments en fonction du contexte (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 4921652b5b9c59f767e0477e26987edaf4655897
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708140"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814261"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Procédure : Écrire une requête qui recherche des éléments en fonction du contexte (Visual Basic)
 Parfois, vous devez écrire une requête qui sélectionne des éléments en fonction de leur contexte. Vous souhaiterez peut-être filtrer en fonction des éléments frères qui précèdent ou qui suivent. Vous souhaiterez peut-être filtrer en fonction des éléments enfants ou ancêtres.  
@@ -107,6 +107,7 @@ id = 6
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>

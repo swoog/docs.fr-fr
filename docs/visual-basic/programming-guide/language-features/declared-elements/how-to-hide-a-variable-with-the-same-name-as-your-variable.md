@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602414"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826676"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procédure : Masquer une Variable portant le même nom que votre Variable (Visual Basic)
 Vous pouvez masquer une variable par *occultation* il, autrement dit, en le redéfinissant avec une variable du même nom. Vous pouvez occulter la variable que vous souhaitez masquer de deux manières :  
@@ -104,6 +104,7 @@ Vous pouvez masquer une variable par *occultation* il, autrement dit, en le red�
  L’occultation introduit plusieurs versions d’une variable portant le même nom. Lorsqu’une instruction de code fait référence au nom de variable, la version à laquelle le compilateur résout la référence dépend de facteurs tels que l’emplacement de l’instruction de code et la présence d’une chaîne qualifiante. Cela peut augmenter le risque de faire référence à une version non souhaitée d’une variable occultée. Vous pouvez réduire ce risque en qualifiant complètement toutes les références à une variable occultée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Différences entre l'occultation et la substitution](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

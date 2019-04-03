@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 699bb05fd0c1c38cc0919fbf881e6bd628f01393
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965733"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818657"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Procédure : Déclarer et utiliser des préfixes XML Namespace (Visual Basic)
 Cet exemple montre comment importer le préfixe d’espace de noms XML `ns` et l’utiliser dans un littéral XML et les propriétés d’axe XML.  
@@ -24,6 +24,7 @@ Cet exemple montre comment importer le préfixe d’espace de noms XML `ns` et l
 -   une référence à l'espace de noms <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Imports (instruction) (espace de noms XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [Propriété d’axe d’attribut XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

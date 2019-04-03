@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544586"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819201"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Procédure : Déterminer si deux objets sont liés (Visual Basic)
 Vous pouvez comparer deux objets pour déterminer la relation, le cas échéant, entre les classes à partir de laquelle ils sont créés. Le <xref:System.Type.IsInstanceOfType%2A> méthode de la <xref:System.Type?displayProperty=nameWithType> classe retourne `True` si la classe spécifiée hérite de la classe en cours, ou si le type actuel est une interface prise en charge par la classe spécifiée.  
@@ -48,6 +48,7 @@ End Class
  Notez l’emplacement inattendu des deux variables objets dans l’appel à <xref:System.Type.IsInstanceOfType%2A>. Le type de base supposé est utilisé pour générer le <xref:System.Type?displayProperty=nameWithType> classe et le type dérivé supposé est passée en tant qu’argument à la <xref:System.Type.IsInstanceOfType%2A> (méthode).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>

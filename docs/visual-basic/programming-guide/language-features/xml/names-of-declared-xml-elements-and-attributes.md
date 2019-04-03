@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: e33d396dac8ae5f9afd057a27f27bee700092f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634348"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819682"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nom des attributs et des éléments XML déclarés (Visual Basic)
 Cette rubrique fournit des instructions de Visual Basic pour nommer les éléments XML et les attributs dans les littéraux XML.  Dans un littéral XML, vous pouvez spécifier un nom local ou un nom qualifié. Un nom qualifié se compose d’un préfixe d’espace de noms XML, un signe deux-points et un nom local. Pour plus d’informations sur les préfixes d’espace de noms XML, consultez [XML élément littéral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -45,5 +45,6 @@ Cette rubrique fournit des instructions de Visual Basic pour nommer les élémen
  Lorsque vous créez un élément XML littérale, vous pouvez spécifier le préfixe d’espace de noms XML pour le nom d’élément. Pour plus d’informations, consultez [XML élément littéral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

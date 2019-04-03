@@ -1,5 +1,5 @@
 ---
-title: <message> Cette erreur peut résulter de la combinaison d'une référence de fichier et d'une référence de projet pour l'assembly '<assemblyname>'
+title: <message> Cette erreur peut également être en raison d’une combinaison d’une référence de fichier avec une référence de projet à l’assembly '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f2e7040de5ea74f3793129d23d4ae8c80b71f25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272550"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841548"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<message > Cette erreur peut également être en raison d’une combinaison d’une référence de fichier avec une référence de projet à l’assembly '\<nom_assembly >'
 \<message > Cette erreur peut également être en raison d’une combinaison d’une référence de fichier avec une référence de projet à l’assembly '\<nom_assembly >. Dans ce cas, essayez de remplacer la référence de fichier à '\<nom_fichier_assembly >' dans le projet '\<nom_projet1 >' avec une référence de projet à '\<nom_projet2 >'.  
@@ -30,6 +30,7 @@ ms.locfileid: "55272550"
 2.  Dans les propriétés de votre projet, ajoutez une référence au projet contenant l’assembly qui définit le type que vous utilisez.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
 - [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201675"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814638"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commentaires dans le code (Visual Basic)
 Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de commentaire (`'`). Ce symbole indique au compilateur de Visual Basic d’ignorer le texte suivant, ou le *commentaire*. Les commentaires sont de courtes explications destinées à éclairer ceux qui lisent le code.  
@@ -60,6 +60,7 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
 >  Vous pouvez également ajouter des commentaires à votre code en faisant précéder le texte du mot clé `REM`. Toutefois, le `'` symbole et le **commentaire**/**Uncomment** boutons sont plus faciles à utiliser et nécessitent moins de mémoire et espace.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Instincts primaires : documentation de votre Code avec des commentaires XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [Guide pratique pour Créer une Documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)

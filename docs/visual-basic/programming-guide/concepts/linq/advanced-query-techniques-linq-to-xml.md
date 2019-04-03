@@ -2,12 +2,12 @@
 title: Requête Techniques avancées (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-ms.openlocfilehash: 140c8dcf5098a474dc2be48d9debc16e92886bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610030"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833688"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Requête Techniques avancées (LINQ to XML) (Visual Basic)
 Cette section fournit des exemples de techniques de requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] plus avancées.  
@@ -26,4 +26,5 @@ Cette section fournit des exemples de techniques de requêtes [!INCLUDE[sqltecxl
 |[Guide pratique pour Remplir une arborescence XML à partir du système de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Présente du code qui crée une arborescence XML à partir du système de fichiers.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

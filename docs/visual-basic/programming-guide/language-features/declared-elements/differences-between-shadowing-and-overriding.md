@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640674"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827924"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Différences entre l'occultation et la substitution (Visual Basic)
 Lorsque vous définissez une classe qui hérite d’une classe de base, il est parfois utile de redéfinir une ou plusieurs des éléments de classe de base dans la classe dérivée. Occultation et substitution sont disponibles à cet effet.  
@@ -22,7 +22,7 @@ Lorsque vous définissez une classe qui hérite d’une classe de base, il est p
   
 ||||  
 |---|---|---|  
-|Point de comparaison|Occultation|Substitution de|  
+|Point de comparaison|Copie shadow|Substitution de|  
 |Objectif|Protège contre une modification de classe de base suivante qui introduit un membre que vous avez déjà défini dans votre classe dérivée|Atteint le polymorphisme en définissant une implémentation différente d’une procédure ou une propriété avec la même séquence d’appel<sup>1</sup>|  
 |Élément redéfini|Un type d’élément déclaré|Seule une procédure (`Function`, `Sub`, ou `Operator`) ou une propriété|  
 |Élément redéfinissant|Un type d’élément déclaré|Seulement une procédure ou une propriété avec la séquence d’appel identiques<sup>1</sup>|  
@@ -52,6 +52,7 @@ Lorsque vous définissez une classe qui hérite d’une classe de base, il est p
 -   Vous souhaitez que la liberté de modifier le type d’élément ou la séquence d’appel.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Guide pratique pour Masquer une Variable portant le même nom que votre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

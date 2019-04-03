@@ -2,12 +2,12 @@
 title: WS 2007 Federation HTTP Binding
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ccdeba2c187a255913dc6432afe5088889d32c5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d31de62420a8de8e1ac865918b600e7864a5d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523296"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834450"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation HTTP Binding
 Cet exemple montre l’utilisation de <xref:System.ServiceModel.WS2007FederationHttpBinding>, une liaison standard vous permettant de générer des scénarios fédérés qui prennent en charge la version 1.3 de la spécification WS-Trust.  
@@ -15,7 +15,7 @@ Cet exemple montre l’utilisation de <xref:System.ServiceModel.WS2007Federation
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- L'exemple se compose d'un programme client basé sur des console (Client.exe), d'un programme de service d'émission de jeton de sécurité basé sur des consoles (Securitytokenservice.exe) et d'un programme de service basé sur des consoles (Service.exe). Le service implémente un contrat qui définit un modèle de communication demande/réponse. Le contrat est défini par l'interface `ICalculator`, qui expose des opérations mathématiques (`Add`, `Subtract`, `Multiply` et `Divide`). Le client obtient un jeton de sécurité du service d'émission de jeton de sécurité (STS, Security Token Service) et adresse des demandes synchrones au service pour une opération mathématique donnée. Le service répond ensuite avec le résultat. L'activité du client est affichée dans la fenêtre de console.  
+ L'exemple se compose d'un programme client basé sur des console (Client.exe), d'un programme de service d'émission de jeton de sécurité basé sur des consoles (Securitytokenservice.exe) et d'un programme de service basé sur des consoles (Service.exe). Le service implémente un contrat qui définit un modèle de communication demande/réponse. Le contrat est défini par l'interface `ICalculator`, qui expose des opérations mathématiques (`Add`, `Subtract`, `Multiply` et `Divide`). Le client obtient un jeton de sécurité du service d’émission de jeton de sécurité (STS, Security Token Service) et adresse des demandes synchrones au service pour une opération mathématique donnée. Le service répond ensuite avec le résultat. L'activité du client est affichée dans la fenêtre de console.  
   
  L'exemple rend le contrat `ICalculator` disponible à l'aide de l'élément `ws2007FederationHttpBinding`. La configuration de cette liaison sur le client est présentée dans le code suivant.  
   
@@ -129,4 +129,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`  
   
-## <a name="see-also"></a>Voir aussi

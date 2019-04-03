@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970075"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819500"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Procédure pas à pas : Implémentation IEnumerable(Of T) en Visual Basic
 Le <xref:System.Collections.Generic.IEnumerable%601> interface est implémentée par les classes qui peuvent retourner une séquence de valeurs élément par élément à la fois. L’avantage de retourner des données d’un élément à la fois est que vous n’êtes pas obligé de charger l’ensemble complet des données en mémoire pour l’utiliser. Vous devez uniquement utiliser une mémoire suffisante pour charger un élément unique à partir des données. Classes qui implémentent le `IEnumerable(T)` interface peut être utilisée avec `For Each` boucles ou des requêtes LINQ.  
@@ -94,6 +94,7 @@ Le <xref:System.Collections.Generic.IEnumerable%601> interface est implémentée
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

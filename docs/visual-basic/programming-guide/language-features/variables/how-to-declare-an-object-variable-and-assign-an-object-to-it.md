@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: 86037499b44d17f2ba83fd6cd0dad83ceb14e6b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730085"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819669"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procédure : Déclarer une Variable objet et lui assigner un objet en Visual Basic
 Vous déclarez une variable de la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) en spécifiant `As Object` dans un [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Vous assignez un objet à cette variable en plaçant l’objet après le signe égal (`=`) dans une clause d’instruction ou de l’initialisation de l’attribution.  
@@ -39,6 +39,7 @@ Dim thisObject As Object= "This is an Object"
 -   Une procédure dans laquelle placer l’instruction d’assignation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Déclaration de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Déclaration des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

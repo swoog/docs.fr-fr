@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: b108a99c799523f3eb50c075a5dc67f0648403fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fe1834c3e92c3eff016ffd7857a0473eb2e8b3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552331"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816419"
 ---
 # <a name="-recurse"></a>-recurse
 Compile les fichiers de code source dans tous les répertoires enfants du répertoire spécifié ou le répertoire du projet.  
@@ -24,7 +24,7 @@ Compile les fichiers de code source dans tous les répertoires enfants du réper
   
 ## <a name="arguments"></a>Arguments  
  `dir`  
- Facultatif. Répertoire dans lequel vous voulez commencer la recherche. Si non spécifié, la recherche commence dans le répertoire du projet.  
+ Optionnel. Répertoire dans lequel vous voulez commencer la recherche. Si non spécifié, la recherche commence dans le répertoire du projet.  
   
  `file`  
  Obligatoire. Le ou les fichiers à rechercher. Les caractères génériques sont autorisés.  
@@ -49,6 +49,7 @@ vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
 - [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

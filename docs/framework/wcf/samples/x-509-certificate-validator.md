@@ -2,12 +2,12 @@
 title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: a94653c02b642138e5e20a0452c42f0926e25ea7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: c1572e874b2575bb777accb15ac5e6182c598253
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305985"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838207"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 Cet exemple montre comment implémenter un validateur de certificat X.509 personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation de certificat X.509 intégrés ne convient aux spécifications de l’application. Cet exemple illustre un service qui possède un validateur personnalisé qui accepte les certificats auto-émis. Le client utilise un certificat X.509 pour s'authentifier auprès du service.
@@ -355,5 +355,3 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 > [!NOTE]
 >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
-
-## <a name="see-also"></a>Voir aussi

@@ -2,12 +2,12 @@
 title: Unwrapped Messages
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: a3f3548e8dc8a85127eae3d080888c304bfa4b90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa3e9e02d2cb7bfb815eb107d29a0c84204ddcdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623129"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841197"
 ---
 # <a name="unwrapped-messages"></a>Unwrapped Messages
 Cet exemple montre des messages non encapsulés. Par défaut, le corps du message est mis en forme de manière à ce que les paramètres d'une opération de service soient encapsulés. L'exemple suivant montre un message de demande `Add` au service `ICalculator` en mode encapsulé.  
@@ -91,7 +91,7 @@ public class ResponseMessage
   
  Pour vous permettre de voir les messages qui sont envoyés et reçus, cet exemple utilise le suivi. De plus, la <xref:System.ServiceModel.WSHttpBinding> a été configurée sans sécurité, pour réduire le nombre de messages qu'elle enregistre.  
   
- Le journal des traces qui en résulte (c:\logs\Message.log) peut être affiché à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Pour afficher le contenu du message, sélectionnez **Messages** dans gauche et volets de droite de l’outil Service Trace Viewer. Les journaux de suivi dans cet exemple sont configurés pour être générés dans le dossier C:\LOGS. Créez ce dossier avant d’exécuter l’exemple et accordez à l’utilisateur l’accès en écriture au service réseau pour ce répertoire.  
+ Le journal des traces qui en résulte (c:\logs\Message.log) peut être affiché à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Pour afficher le contenu du message, sélectionnez **Messages** dans gauche et volets de droite de l’outil Service Trace Viewer. Les journaux de suivi dans cet exemple sont configurés pour être générés dans le dossier C:\LOGS. Créez ce dossier avant d'exécuter l'exemple et accordez à l'utilisateur l'accès en écriture au service réseau pour ce répertoire.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -112,4 +112,3 @@ public class ResponseMessage
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## <a name="see-also"></a>Voir aussi

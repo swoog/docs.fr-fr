@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 1a784dc57331ed4cbaeb8524dbb3b6ea9a06eca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605589"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830368"
 ---
 # <a name="-delaysign"></a>-delaysign
 Spécifie si l'assembly sera complètement ou partiellement signé.  
@@ -24,7 +24,7 @@ Spécifie si l'assembly sera complètement ou partiellement signé.
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Facultatif. Utilisez `-delaysign-` si vous souhaitez obtenir un assembly complètement signé. Utilisez `-delaysign+` si vous souhaitez placer la clé publique dans l’espace d’assembly et réserve pour le hachage signé. La valeur par défaut est `-delaysign-`.  
+ Optionnel. Utilisez `-delaysign-` si vous souhaitez obtenir un assembly complètement signé. Utilisez `-delaysign+` si vous souhaitez placer la clé publique dans l’espace d’assembly et réserve pour le hachage signé. La valeur par défaut est `-delaysign-`.  
   
 ## <a name="remarks"></a>Notes  
  Le `-delaysign` option est sans effet sauf si utilisée avec [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) ou [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
@@ -44,6 +44,7 @@ Spécifie si l'assembly sera complètement ou partiellement signé.
 3.  Définissez la valeur dans le **différer la signature uniquement** boîte.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)

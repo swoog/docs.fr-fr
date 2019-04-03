@@ -14,12 +14,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: c17adc6df0f8cf94f06547b48a32b2ffb8f303ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973481"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821373"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw, instruction (Visual Basic)
 Lève une exception dans une procédure.  
@@ -46,7 +46,7 @@ Throw [ expression ]
   
  [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Module :** `Interaction`  
@@ -54,5 +54,6 @@ Throw [ expression ]
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Try...Catch...Finally (instruction)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error (instruction)](../../../visual-basic/language-reference/statements/on-error-statement.md)

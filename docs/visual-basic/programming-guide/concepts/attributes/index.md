@@ -2,12 +2,12 @@
 title: Vue d’ensemble des attributs (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 282788f9aa5a1ac8c4ede95f04b45c26b9f56588
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559295"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827690"
 ---
 # <a name="attributes-overview-visual-basic"></a>Vue d’ensemble des attributs (Visual Basic)
 Les attributs fournissent une méthode puissante permettant d’associer des métadonnées ou des informations déclaratives avec du code (assemblys, types, méthodes, propriétés, etc.). Une fois associé à une entité de programme, l’attribut peut être interrogé à l’exécution à l’aide d’une technique appelée *réflexion*. Pour plus d’informations, consultez la page [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -143,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Informations relatives à l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Attributs](../../../../standard/attributes/index.md)

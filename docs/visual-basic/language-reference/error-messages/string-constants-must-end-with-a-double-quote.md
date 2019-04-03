@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: 499190a711e4092122dbee8c7edfc315daea5432
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79133660adab6f8372e355509dc63fbc85ff30ac
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700261"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816237"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Les constantes de chaîne doivent se terminer par un guillemet
 Constantes de chaîne doivent commencer et se terminer par des guillemets.  
@@ -24,4 +24,5 @@ Constantes de chaîne doivent commencer et se terminer par des guillemets.
 -   Assurez-vous que le littéral de chaîne se termine par un guillemet («). Si vous collez des valeurs à partir d’autres éditeurs de texte, assurez-vous que le caractère collé est un guillemet valid et pas un des caractères semblables, tels que « intelligent » ou « des » entre guillemets (« ou ») ou deux guillemets («).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Chaînes](../../../visual-basic/programming-guide/language-features/strings/index.md)

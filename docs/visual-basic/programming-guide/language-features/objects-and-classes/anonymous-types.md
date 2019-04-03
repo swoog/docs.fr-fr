@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203439"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829133"
 ---
 # <a name="anonymous-types-visual-basic"></a>Types anonymes (Visual Basic)
 Visual Basic prend en charge les types anonymes, qui vous permettent de créer des objets sans écrire de définition de classe pour le type de données. À la place, le compilateur se charge de générer une classe. La classe n’a aucun nom utilisable, hérite directement de <xref:System.Object>et contient les propriétés que vous spécifiez dans la déclaration de l’objet. Étant donné que le nom du type de données n’est pas spécifié, il est appelé un *type anonyme*.  
@@ -127,6 +127,7 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
  Pour plus d’informations sur le code créé par le compilateur et les fonctionnalités des méthodes substituées, consultez [définition de Type anonyme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Initialiseurs d’objets : Types nommés et anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

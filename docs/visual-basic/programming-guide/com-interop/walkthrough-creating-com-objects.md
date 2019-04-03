@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973936"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838155"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Procédure pas à pas : Création d’objets COM avec Visual Basic
 Lorsque vous créez de nouvelles applications ou composants, il est préférable de créer des assemblys .NET Framework. Toutefois, Visual Basic facilite également l’exposition d’un composant .NET Framework à COM. Cela vous permet de fournir de nouveaux composants pour des suites d’applications antérieures qui requièrent des composants COM. Cette procédure pas à pas montre comment utiliser Visual Basic pour exposer [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] objets en tant qu’objets COM, avec et sans le modèle de classe COM.  
@@ -91,6 +91,7 @@ Lorsque vous créez de nouvelles applications ou composants, il est préférable
     >  Les objets COM que vous générez avec Visual Basic ne peut pas être utilisés par d’autres applications Visual Basic, car ils ne sont pas des objets COM trues. Tente d’ajouter des références à ces objets COM déclenchera une erreur. Pour plus d’informations, consultez [interopérabilité COM dans les Applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Procédure pas à pas : Implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655047"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821763"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Types de données divers (Visual Basic)
 Visual Basic fournit plusieurs types de données qui ne sont pas adaptés pour les nombres ou de caractères. Au lieu de cela, ils traitent des données particulières telles qu’Oui/non valeurs, les valeurs de date/heure et les adresses de l’objet.  
@@ -31,6 +31,7 @@ Visual Basic fournit plusieurs types de données qui ne sont pas adaptés pour l
  L’avantage de le `Object` est de type de données que vous pouvez l’utiliser pour stocker les données de n’importe quel type de données. L’inconvénient est que vous subissez des opérations supplémentaires qui prennent plus de temps d’exécution et de rendre votre application plus lentes. Si vous utilisez un `Object` variable pour les types valeur, vous encourez *boxing* et *unboxing*. Si vous l’utilisez pour les types référence, vous encourez *liaison tardive*.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Types de données numériques](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

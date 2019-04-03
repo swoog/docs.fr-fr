@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201220"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830667"
 ---
 # <a name="--operator-visual-basic"></a>-, opérateur (Visual Basic)
 Retourne la différence entre deux expressions numériques ou la valeur négative d’une expression numérique.  
@@ -68,6 +68,7 @@ Retourne la différence entre deux expressions numériques ou la valeur négativ
  Après l’exécution de ces instructions, `binaryResult` contient 124,45 et `unaryResult` contient -334,90.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [-=, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

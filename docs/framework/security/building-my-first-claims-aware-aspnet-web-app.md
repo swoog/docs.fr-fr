@@ -3,12 +3,12 @@ title: Création de ma première application web ASP.NET prenant en charge les r
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588962"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838129"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Création de ma première application web ASP.NET prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -19,7 +19,7 @@ ms.locfileid: "54588962"
   
  Cette rubrique décrit le scénario de création des applications Web qui prennent en charge les revendications ASP.NET à l'aide de WIF. Il y a généralement trois participants dans un scénario d'application qui prend en charge les revendications : l'application elle-même, l'utilisateur final et le service d'émission de jeton de sécurité (STS). L'illustration suivante décrit ce scénario :  
   
- ![Application web basique WIF](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![Diagramme montrant un composants WIF base Web App.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  L'application prenant en charge les revendications utilise WIF pour identifier des demandes non authentifiées et pour les rediriger vers STS.  
   

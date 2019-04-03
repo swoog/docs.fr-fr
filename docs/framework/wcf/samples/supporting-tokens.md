@@ -2,15 +2,15 @@
 title: Supporting Tokens
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 899c6ecabafb1bd0487b989c6da8963dd07945cf
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: aa2981d7b9c34061c3ffaed770d1521f5922d9d6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304152"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824702"
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
-Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s'avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l'expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
+Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s’avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l’expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
 
 ## <a name="demonstrates"></a>Démonstrations
  L'exemple montre :
@@ -171,7 +171,7 @@ public class EchoService : IEchoService
 }
 ```
 
- Le point de terminaison client est configuré de la même manière que le point de terminaison de service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans classe `Client`. Le client définit les formations sur le jeton de sécurité de nom d'utilisateur, le jeton de sécurité X.509 de prise en charge et les informations sur le certificat X.509 du service dans le code d'installation vers la collection de comportements de point de terminaison client.
+ Le point de terminaison client est configuré de la même manière que le point de terminaison de service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans classe `Client`. Le client définit les formations sur le jeton de sécurité de nom d’utilisateur, le jeton de sécurité X.509 de prise en charge et les informations sur le certificat X.509 du service dans le code d’installation vers la collection de comportements de point de terminaison client.
 
 ```csharp
  static void Main()
@@ -282,8 +282,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Affichage des informations sur les appelants
- Pour afficher les informations sur l'appelant, vous pouvez utiliser `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans le code suivant. 
-  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont fournies automatiquement par Windows Communication Foundation (WCF) pour chaque jeton reçu dans le message.
+ Pour afficher les informations sur l'appelant, vous pouvez utiliser `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans le code suivant. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont fournies automatiquement par Windows Communication Foundation (WCF) pour chaque jeton reçu dans le message.
 
 ```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
@@ -466,5 +465,3 @@ iisreset
   
 > [!NOTE]
 >  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
-
-## <a name="see-also"></a>Voir aussi

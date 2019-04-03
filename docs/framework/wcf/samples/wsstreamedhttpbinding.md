@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 2cee327e91eea986e78586f5ed05f7ade5205c5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96dccbc971c9ef5a59557100adb6df24a745ea5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542325"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828016"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Cet exemple montre comment créer une liaison conçue pour prendre en charge des scénarios de diffusion en continu lorsque le transport HTTP est utilisé.  
@@ -28,7 +28,7 @@ Cet exemple montre comment créer une liaison conçue pour prendre en charge des
   
 1.  Créez une liaison standard  
   
-     Les liaisons standards dans Windows Communication Foundation (WCF) telles que basicHttpBinding et netTcpBinding configurer les transports sous-jacents et la pile de canal pour des besoins spécifiques. Dans cet exemple, `WSStreamedHttpBinding` configure la pile de canaux pour prendre en charge la diffusion en continu. Par défaut, WS-Security et messagerie fiable ne sont pas ajoutés à la pile de canaux car ces deux fonctionnalités ne sont pas prises en charge par la diffusion en continu. La nouvelle liaison est implémentée dans la classe `WSStreamedHttpBinding` qui dérive de <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` contient les éléments de liaison suivants : <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. La classe fournit une méthode `CreateBindingElements()` permettant de configurer la pile de liaison résultante, tel qu'indiqué dans l'exemple de code suivant.  
+     Les liaisons standards dans Windows Communication Foundation (WCF) telles que basicHttpBinding et netTcpBinding configurer les transports sous-jacents et la pile de canal pour des besoins spécifiques. Dans cet exemple, `WSStreamedHttpBinding` configure la pile de canaux pour prendre en charge la diffusion en continu. Par défaut, WS-Security et messagerie fiable ne sont pas ajoutés à la pile de canaux car ces deux fonctionnalités ne sont pas prises en charge par la diffusion en continu. La nouvelle liaison est implémentée dans la classe `WSStreamedHttpBinding` qui dérive de <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` contient les éléments de liaison suivants : <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. La classe fournit une méthode `CreateBindingElements()` permettant de configurer la pile de liaison résultante, tel qu’indiqué dans l’exemple de code suivant.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -142,4 +142,3 @@ public class StreamedEchoService : IStreamedEchoService
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
-## <a name="see-also"></a>Voir aussi

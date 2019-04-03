@@ -2,12 +2,12 @@
 title: Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: ae391bfe0c8e16a8cb967ed6df7c548109a7bc09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559314"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816926"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)
 En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, vous pouvez démarrer plusieurs tâches en même temps et les traiter une par une, une fois qu’elles sont terminées, au lieu de les traiter dans l’ordre dans lequel elles ont démarré.  
@@ -18,7 +18,7 @@ En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWi
 >  Pour exécuter les exemples, Visual Studio 2012 ou version ultérieure et .NET Framework 4.5 ou version ultérieure doivent être installés sur votre ordinateur.  
   
 ## <a name="downloading-the-example"></a>Téléchargement de l'exemple  
- Vous pouvez télécharger le projet Windows Presentation Foundation (WPF) complète à partir de [exemple Async : Affiner le réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , puis suivez ces étapes.  
+ Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
 1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
@@ -87,7 +87,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  Notez que vous devez ajouter une référence pour <xref:System.Net.Http>.  
   
- Vous pouvez télécharger le projet à partir de [exemple Async : Affiner votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Vous pouvez télécharger le projet à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async : Réglage précis de votre application).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -206,6 +206,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

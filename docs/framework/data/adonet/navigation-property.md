@@ -2,12 +2,12 @@
 title: Propriété de navigation - ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857942"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836595"
 ---
 # <a name="navigation-property"></a>Propriété de navigation
 
@@ -29,7 +29,7 @@ Le type de données d’une propriété de navigation est déterminé par le [mu
 
 Le diagramme suivant montre un modèle conceptuel avec trois types d'entités : `Book`, `Publisher` et `Author`. Les propriétés de navigation, `Publisher` et `Authors`, sont définies sur le type d'entité Book. La propriété de navigation `Books` est définie sur le type d'entité Publisher et le type d'entité `Author`.
 
-![Modèle avec les propriétés de Navigation](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Diagramme montrant un modèle conceptuel avec trois types d’entité.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 Le [ADO.NET Entity Framework](./ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé langage de définition de schéma conceptuel ([CSDL](./ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit le type d'entité `Book` présenté dans le diagramme ci-dessus :
 

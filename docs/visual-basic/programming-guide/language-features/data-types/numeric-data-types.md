@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636410"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841639"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Types de données numériques (Visual Basic)
 Visual Basic fournit plusieurs *types de données numériques* pour la gestion des nombres dans diverses représentations. *Intégraux* types représentent uniquement les nombres entiers (positifs, négatifs et zéro), et *intégraux* types représentent les nombres entiers et parties fractionnaires.  
@@ -79,6 +79,7 @@ Visual Basic fournit plusieurs *types de données numériques* pour la gestion d
  Si vous ne devez pas la gamme complète de la `Double` type de données, vous pouvez utiliser la `Single` type de données, qui peut contenir des nombres à virgule flottante compris entre - 3,4028235E + 38 et 3,4028235E + 38. Les plus petites amplitudes pour `Single` variables sont - 1, 401298E-45 pour les valeurs négatives et 1, 401298E-45 pour les valeurs positives. Si vous avez un très grand nombre de variables qui contiennent de petits nombres à virgule flottante, le common language runtime peut quelquefois stocker votre `Single` variables plus efficacement et de réduire la consommation de mémoire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Types de données caractère](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
 - [Types de données divers](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)

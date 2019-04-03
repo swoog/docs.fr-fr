@@ -2,12 +2,12 @@
 title: 'Procédure : Combiner des requêtes LINQ avec des Expressions régulières (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 35d82b562211a9dd7fa035fe878bcdee769b8a85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652473"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820371"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procédure : Combiner des requêtes LINQ avec des Expressions régulières (Visual Basic)
 Cet exemple montre comment utiliser la classe <xref:System.Text.RegularExpressions.Regex> afin de créer une expression régulière pour les correspondances plus complexes des chaînes de texte. La requête LINQ facilite le filtrage des fichiers à parcourir à l’aide de l’expression régulière, et facilite également la personnalisation des résultats.  
@@ -85,5 +85,6 @@ End Class
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

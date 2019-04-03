@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738901"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827365"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Options du compilateur Visual Basic par catégorie
 Le compilateur de ligne de commande Visual Basic est fourni comme alternative aux programmes de compilation dans l’environnement de développement intégré (IDE) Visual Studio. Voici une liste des options du compilateur de ligne de commande Visual Basic triées par catégorie fonctionnelle.  
@@ -24,7 +24,7 @@ Le compilateur de ligne de commande Visual Basic est fourni comme alternative au
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Affiche les résultats de la compilation au format d'encodage UTF-8.|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Génère des informations supplémentaires lors de la compilation.|  
 |`-modulename:<string>`|Spécifiez le nom du module source.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Spécifiez un langage pour les résultats de la compilation.|
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Spécifie un langage pour les résultats de la compilation.|
   
 ## <a name="optimization"></a>Optimisation  
   
@@ -127,5 +127,6 @@ Le compilateur de ligne de commande Visual Basic est fourni comme alternative au
 |`-checksumalgorithm:<alg>`|Spécifiez l'algorithme de calcul de la somme de contrôle du fichier source stockée dans le fichier PDB.  Les valeurs prises en charge sont : SHA1 (par défaut) ou SHA256.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Options du compilateur Visual Basic par ordre alphabétique](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Gérer les propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
