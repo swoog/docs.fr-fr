@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837976"
 ---
 # <a name="type-typename-has-no-constructors"></a>Type '\<nom_type >' n’a aucun constructeur
 Un type ne prend pas en charge un appel à `Sub New()`. L'une des causes probables est un fichier compilateur ou binaire endommagé.  
@@ -30,5 +30,6 @@ Un type ne prend pas en charge un appel à `Sub New()`. L'une des causes probabl
 4.  Si l'erreur persiste, rassemblez des informations sur ses circonstances et avertissez les services de support technique Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Objets et classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Nous contacter](/visualstudio/ide/talk-to-us)

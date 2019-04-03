@@ -2,12 +2,12 @@
 title: Exemple d’exécution différée (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e9247c89d46cc7705ef4297868739ba85d993eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614170"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838924"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Exemple d’exécution différée (Visual Basic)
 Cette rubrique montre comment l'exécution et l'évaluation différées affectent l'exécution de vos requêtes LINQ to XML.  
@@ -60,4 +60,5 @@ Main: str GHI
  Vous pouvez constater que l'intégralité du tableau de chaînes n'est pas convertie en majuscules avant que chaque élément de la collection retournée n'ait été traité dans la boucle `foreach` dans `Main`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tutoriel : Exécution différée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

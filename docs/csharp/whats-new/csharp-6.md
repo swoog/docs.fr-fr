@@ -2,18 +2,18 @@
 title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084678"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654573"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
 La version Release 6.0 de C# comprenait de nombreuses fonctionnalités qui améliorent la productivité des développeurs. Globalement, ces fonctionnalités vous permettent d’écrire du code plus concis et également plus lisible. La syntaxe est moins formelle concernant de nombreuses pratiques courantes. Moins de formalisme permet de voir plus facilement l’intention de conception. En apprenant bien ces fonctionnalités, vous gagnez en productivité et écrivez du code plus lisible. Vous pouvez également vous concentrer davantage sur vos fonctionnalités que sur les constructions du langage.
 
-La suite de cet article fournit une vue d’ensemble de ces fonctionnalités, avec des liens pour explorer chacune d’entre elles. Vous pouvez également explorer les fonctionnalités dans un [tutoriel interactif sur C# 6](../tutorials/exploration/csharp-6.yml) dans la section des tutoriels.
+La suite de cet article fournit une vue d’ensemble de ces fonctionnalités, avec des liens pour explorer chacune d’entre elles. Vous pouvez également explorer les fonctionnalités dans une [exploration interactive sur C# 6](../tutorials/exploration/csharp-6.yml) dans la section des tutoriels.
 
 ## <a name="read-only-auto-properties"></a>Auto-properties en lecture seule
 

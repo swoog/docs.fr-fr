@@ -2,12 +2,12 @@
 title: Opérations de jointure (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537944"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411458"
 ---
 # <a name="join-operations-c"></a>Opérations de jointure (C#)
 Une *jointure* de deux sources de données est l’association des objets d’une source de données aux objets qui partagent un attribut commun dans une autre source de données.  
@@ -18,7 +18,7 @@ Une *jointure* de deux sources de données est l’association des objets d’un
   
  L'illustration suivante présente une vue conceptuelle de deux ensembles, ainsi que leurs éléments inclus dans une jointure interne ou une jointure externe gauche.  
   
- ![Deux cercles se chevauchant montrant l’interne/externe.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Deux cercles se chevauchant montrant l’interne&#47;externe.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Méthodes  
   

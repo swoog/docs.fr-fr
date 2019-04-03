@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971635"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818460"
 ---
 # <a name="function-statement-visual-basic"></a>Function, instruction (Visual Basic)
 Déclare le nom, paramètres et le code qui définissent une `Function` procédure.  
@@ -53,11 +53,11 @@ End Function
   
 -   `attributelist`  
   
-     Facultatif. Consultez [liste d’attributs](attribute-list.md).  
+     Optionnel. Consultez [liste d’attributs](attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -125,7 +125,7 @@ End Function
   
 -   `Implements`  
   
-     Facultatif. Indique que cette procédure implémente un ou plusieurs `Function` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).  
+     Optionnel. Indique que cette procédure implémente un ou plusieurs `Function` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -255,6 +255,7 @@ End Function
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sub (instruction)](sub-statement.md)
 - [Procédures Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Liste de paramètres](parameter-list.md)

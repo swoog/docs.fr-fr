@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840365"
 ---
 # <a name="mysettings-object"></a>My.Settings, objet
 Fournit des propriétés et méthodes permettant d’accéder aux paramètres de l’application.  
@@ -60,6 +60,7 @@ Fournit des propriétés et méthodes permettant d’accéder aux paramètres de
  Pour que cet exemple fonctionne, votre application doit avoir un paramètre `Nickname` de type `String`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Guide pratique pour lire des paramètres d’application en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Guide pratique pour modifier les paramètres utilisateur en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

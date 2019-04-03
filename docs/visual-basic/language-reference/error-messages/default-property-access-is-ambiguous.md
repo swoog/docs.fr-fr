@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836348"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée\<defaultpropertyname >' de l’interface '\<nom_interface1 >' et '\<defaultpropertyname >' de l’interface '\< nom_interface2 >'
 Une interface hérite de deux interfaces, chacun d’eux déclare une propriété par défaut avec le même nom. Le compilateur ne peut pas résoudre un accès à cette propriété par défaut sans qualification. L'exemple suivant illustre ce comportement.  
@@ -47,7 +47,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     ou  
+     - ou -  
   
 -   Implémentez l’interface qui hérite dans une classe. Vous pouvez implémenter chacune des propriétés héritées avec des noms différents. Toutefois, seule une d'entre elles peut être la propriété par défaut de la classe d’implémentation. L'exemple suivant illustre ce comportement.  
   
@@ -64,4 +64,5 @@ End Class
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

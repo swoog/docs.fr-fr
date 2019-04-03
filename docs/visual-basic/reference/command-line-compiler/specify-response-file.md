@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: d790e66e04cc62011550e894eec4000a43783765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838116"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (spécifier un fichier réponse) (Visual Basic)
 Spécifie un fichier qui contient les options du compilateur et les fichiers de code source à compiler.  
@@ -61,6 +61,7 @@ vbc @file1.rsp
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

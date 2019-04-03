@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Faire pivoter, refléter et incliner des Images'
+title: 'Procédure : faire pivoter, refléter et incliner des images'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839910"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Procédure : Faire pivoter, refléter et incliner des Images
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Procédure : faire pivoter, refléter et incliner des images
 Vous pouvez faire pivoter, refléter et incliner une image en spécifiant des points de destination pour les angles supérieur gauche, supérieur droit et inférieur gauche de l’image d’origine. Les trois points de destination déterminent une transformation affine qui mappe l’image rectangulaire d’origine à un parallélogramme.  
   
 ## <a name="example"></a>Exemple  
@@ -30,15 +30,15 @@ Vous pouvez faire pivoter, refléter et incliner une image en spécifiant des po
   
  L’illustration suivante montre l’image d’origine et l’image mappée au parallélogramme. L’image d’origine a été faussée, reflétée, rotation et traduite. L’axe des abscisses le long du bord supérieur de l’image d’origine sont mappé à la ligne qui s’exécute via (200, 20) et (110, 100). L’axe des y le long du bord gauche de l’image d’origine sont mappé à la ligne qui s’exécute via (200, 20) et (250, 30).  
   
- ![Stripes](./media/stripes1.gif "Stripes1")  
+ ![L’image d’origine et l’image mappée au parallélogramme.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- L’illustration suivante montre une transformation similaire appliquée à une image photographique.  
+ L’illustration suivante montre une transformation similaire appliquée à une image photographique :  
   
- ![Transformé Climber](./media/transformedclimber.png "TransformedClimber")  
+ ![L’image d’un climber et l’image mappée au parallélogramme.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- L’illustration suivante montre une transformation similaire appliquée à un métafichier.  
+ L’illustration suivante montre une transformation similaire appliquée à un métafichier :  
   
- ![Transformé métafichier](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Illustration de formes et de texte et qui mappé à un parallélogramme.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  L’exemple suivant produit les images présentées dans la première illustration.  
   

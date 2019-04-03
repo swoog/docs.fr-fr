@@ -2,12 +2,12 @@
 title: 'Procédure : Lire les données d’objet à partir d’un fichier XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: cd546e167afe45e2d324a784679f5a05cc1473c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834892"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procédure : Lire les données d’objet à partir d’un fichier XML (Visual Basic)
 Cet exemple lit des données d’objet écrites précédemment dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -30,7 +30,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Remplacez le nom du fichier « c:\temp\SerializationOverview.xml » par le nom du fichier qui contient les données sérialisées. Pour plus d’informations sur la sérialisation des données, consultez [Comment : Écrire des données de l’objet dans un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Remplacez le nom du fichier « c:\temp\SerializationOverview.xml » par le nom du fichier qui contient les données sérialisées. Pour plus d’informations sur la sérialisation des données, consultez [Guide pratique pour Écrire des données de l’objet dans un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  La classe doit disposer d’un constructeur public sans paramètres.  
   
@@ -49,6 +49,7 @@ End Sub
  Vérifiez toujours les entrées et ne désérialisez jamais les données provenant d’une source non fiable. L’objet recréé s’exécute sur un ordinateur local avec les autorisations du code qui l’a désérialisé. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IO.StreamWriter>
 - [Guide pratique pour Écrire des données de l’objet dans un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

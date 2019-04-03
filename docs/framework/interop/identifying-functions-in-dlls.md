@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb1aba9e794928b0eb905722e2a5d7df84100ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729208"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409326"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identification des fonctions des DLL
 L’identité d’une fonction DLL est composée des éléments suivants :  
@@ -27,15 +27,15 @@ L’identité d’une fonction DLL est composée des éléments suivants :
   
 -   nom du fichier DLL dans lequel l’implémentation figure.  
   
- Par exemple, la spécification de la fonction **MessageBox** dans User32.dll identifie la fonction (**MessageBox**) et son emplacement (User32.dll, User32 ou user32). L’interface de programmation d’applications Microsoft Windows (API Win32) peut comporter deux versions de chaque fonction qui gère les caractères et les chaînes : une version ANSI pour les caractères à 1 octet et une version Unicode pour les caractères à 2 octets. Quand le jeu de caractères représenté par le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> n’est pas spécifié, sa valeur par défaut est ANSI. Certaines fonctions peuvent posséder plus de deux versions.  
+ Par exemple, la spécification de la fonction **MessageBox** dans User32.dll identifie la fonction (**MessageBox**) et son emplacement (User32.dll, User32 ou user32). L’interface de programmation d’applications Microsoft Windows (API Windows) peut comporter deux versions de chaque fonction qui gère les caractères et les chaînes : une version ANSI pour les caractères à 1 octet et une version Unicode pour les caractères à 2 octets. Quand le jeu de caractères représenté par le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> n’est pas spécifié, sa valeur par défaut est ANSI. Certaines fonctions peuvent posséder plus de deux versions.  
   
  **MessageBoxA** est le point d’entrée ANSI de la fonction **MessageBox** ; **MessageBoxW** correspond à la version Unicode. Vous pouvez obtenir une liste de noms de fonctions pour une DLL spécifique, telle que user32.dll, en exécutant une variété d’outils en ligne de commande. Par exemple, vous pouvez utiliser `dumpbin /exports user32.dll` ou `link /dump /exports user32.dll` pour obtenir des noms de fonctions.  
   
  Vous pouvez renommer une fonction non managée à votre convenance dans votre code à partir du moment où vous mappez le nouveau nom au point d’entrée d’origine dans la DLL. Pour obtenir des instructions sur l’attribution d’un nouveau nom à une fonction DLL non managée dans du code source managé, consultez [Spécification d’un point d’entrée](../../../docs/framework/interop/specifying-an-entry-point.md).  
   
- L’appel de code non managé vous permet de contrôler une partie importante du système d’exploitation en appelant des fonctions dans l’interface API Win32 et dans d’autres DLL. Outre l’interface API Win32, de nombreuses autres interfaces API et DLL sont à votre disposition via l’appel de code non managé.  
+ L’appel de code non managé vous permet de contrôler une partie importante du système d’exploitation en appelant des fonctions dans l’interface API Windows et dans d’autres DLL. Outre l’interface API Windows, de nombreuses autres interfaces API et DLL sont à votre disposition via l’appel de code non managé.  
   
- Le tableau suivant décrit plusieurs DLL fréquemment utilisées dans l’interface API Win32.  
+ Le tableau suivant décrit plusieurs DLL fréquemment utilisées dans l’interface API Windows.  
   
 |DLL|Description du contenu|  
 |---------|-----------------------------|  
@@ -43,7 +43,7 @@ L’identité d’une fonction DLL est composée des éléments suivants :
 |Kernel32.dll|Fonctions du système d’exploitation de bas niveau pour la gestion de la mémoire et des ressources.|  
 |User32.dll|Fonctions de gestion Windows pour les messages, les minuteries, les menus et les communications.|  
   
- Pour obtenir une documentation complète sur l’interface API Win32, consultez le Kit Platform SDK. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Pour obtenir une documentation complète sur l’interface API Windows, consultez le Kit Platform SDK. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529760"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58676067"
 ---
 # <a name="assembly-manifest"></a>Manifeste d'assembly
 Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de données qui décrit comment les éléments de l'assembly sont reliés les uns aux autres. Le manifeste d'assembly contient les métadonnées de l'assembly. Un manifeste d'assembly comprend toutes les métadonnées nécessaires pour spécifier la version requise et l'identité de sécurité de l'assembly, ainsi que toutes les métadonnées nécessaires pour définir la portée de l'assembly et résoudre les références aux ressources et aux classes. Le manifeste d'assembly peut être stocké soit dans un fichier exécutable portable (PE, portable executable) (.exe ou .dll) avec le code MILS (Microsoft Intermediate Language), soit dans un fichier PE autonome qui ne contient que des informations sur le manifeste de l'assembly.  
   
  L'illustration ci-dessous indique les différents modes de stockage du manifeste.  
   
- ![Assembly monofichier](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-Types d'assemblys  
+ ![Diagramme qui montre le manifeste dans un assembly à fichier unique et la configuration de l’assembly multifichier.](./media/assembly-manifest/assembly-types-diagram.gif)  
   
  Pour un assembly avec un fichier associé, le manifeste est incorporé au fichier PE pour former un assembly monofichier. Vous pouvez créer un assembly multifichier avec un fichier manifeste autonome ou avec le manifeste incorporé à l'un des fichiers PE de l'assembly.  
   

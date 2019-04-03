@@ -2,12 +2,12 @@
 title: Contenu valide des XElement et objets du Répertoire2 XDocument
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 168c87f23d4545afe7b80579673c050068ee697b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828799"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenu valide des objets XElement et XDocument
 Cette rubrique décrit les arguments valides qui peuvent être passés aux constructeurs et méthodes utilisés pour ajouter du contenu aux éléments et aux documents.  
@@ -53,7 +53,7 @@ Cette rubrique décrit les arguments valides qui peuvent être passés aux const
   
  Un attribut ajouté doit avoir un nom unique dans son élément conteneur.  
   
- Lors de l'ajout d'objets <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, si le contenu n'a pas de parent, les objets sont simplement attachés à l'arborescence XML. Si le nouveau contenu a déjà un parent et fait partie d'une autre arborescence XML, il est cloné et le nouveau contenu cloné est attaché à l'arborescence XML.  
+ Lors de l’ajout d’objets <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, si le contenu n’a pas de parent, les objets sont simplement attachés à l’arborescence XML. Si le nouveau contenu a déjà un parent et fait partie d'une autre arborescence XML, il est cloné et le nouveau contenu cloné est attaché à l'arborescence XML.  
   
 ## <a name="valid-content-for-documents"></a>Contenu valide pour les documents  
  Les attributs et le contenu simple ne peuvent pas être ajoutés à un document.  
@@ -89,4 +89,5 @@ Cette rubrique décrit les arguments valides qui peuvent être passés aux const
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Remplace un nœud par du nouveau contenu.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

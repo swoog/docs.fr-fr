@@ -2,12 +2,12 @@
 title: 'Procédure : Créer une hiérarchie à l’aide de regroupement (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822893"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Procédure : Créer une hiérarchie à l’aide de regroupement (Visual Basic)
 Cet exemple montre comment grouper des données, puis générer du code XML basé sur le regroupement.  
@@ -80,4 +80,5 @@ Console.WriteLine(newData)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requête Techniques avancées (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

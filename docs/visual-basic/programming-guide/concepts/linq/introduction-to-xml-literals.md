@@ -2,12 +2,12 @@
 title: Introduction aux littéraux XML dans Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624026"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841283"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introduction aux littéraux XML en Visual Basic
 Cette section fournit des informations sur la création d’arborescences XML en Visual Basic.  
@@ -64,13 +64,13 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Utilisation d'expressions incorporées  
- L'une des caractéristiques importantes des littéraux XML est qu'ils autorisent la présence d'expressions incorporées. Les expressions incorporées vous permettent d'évaluer une expression et d'insérer les résultats de l'expression dans l'arborescence XML. Si l'expression est évaluée à un type de <xref:System.Xml.Linq.XElement>, un élément est inséré dans l'arborescence. Si l'expression est évaluée à un type de <xref:System.Xml.Linq.XAttribute>, un attribut est inséré dans l'arborescence. Vous pouvez insérer des éléments et des attributs dans l'arborescence uniquement où ils sont valides.  
+ L’une des fonctionnalités importantes des littéraux XML est qu’ils autorisent la présence d’expressions incorporées. Les expressions incorporées vous permettent d’évaluer une expression et d’insérer les résultats de l’expression dans l’arborescence XML. Si l'expression est évaluée à un type de <xref:System.Xml.Linq.XElement>, un élément est inséré dans l'arborescence. Si l’expression est évaluée à un type de <xref:System.Xml.Linq.XAttribute>, un attribut est inséré dans l’arborescence. Vous pouvez insérer des éléments et des attributs dans l'arborescence uniquement où ils sont valides.  
   
  Il est important de noter que seule une expression unique peut aller dans une expression incorporée. Vous ne pouvez pas incorporer plusieurs instructions. Si une expression s'étend au-delà d'une seule ligne, vous devez utiliser le caractère de continuation de ligne.  
   
  Si vous utilisez une expression incorporée pour ajouter des nœuds (y compris des éléments) et des attributs existants à une nouvelle arborescence XML et si les nœuds existants sont déjà apparentés, les nœuds sont clonés. Les nœuds nouvellement clonés sont attachés à la nouvelle arborescence XML. Si les nœuds existants ne sont pas apparentés, ils sont simplement attachés à la nouvelle arborescence XML. Ceci est illustré dans le dernier exemple de cette rubrique.  
   
- L'exemple suivant utilise une expression incorporée pour insérer un élément dans l'arborescence :  
+ L’exemple suivant utilise une expression incorporée pour insérer un élément dans l’arborescence :  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

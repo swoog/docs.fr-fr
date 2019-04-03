@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973299"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821008"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent, instruction
 Déclenche un événement déclaré au niveau du module dans une classe, un formulaire ou un document.  
@@ -31,7 +31,7 @@ RaiseEvent eventname[( argumentlist )]
  Obligatoire. Nom de l’événement à déclencher.  
   
  `argumentlist`  
- Facultatif. Liste délimitée par des virgules de variables, des tableaux ou des expressions. Le `argumentlist` argument doit être mis entre parenthèses. S’il n’y a pas d’arguments, les parenthèses doivent être omis.  
+ Optionnel. Liste délimitée par des virgules de variables, des tableaux ou des expressions. Le `argumentlist` argument doit être mis entre parenthèses. S’il n’y a pas d’arguments, les parenthèses doivent être omis.  
   
 ## <a name="remarks"></a>Notes  
  Requis `eventname` est le nom d’un événement déclaré dans le module. Il suit les conventions d’affectation de noms variable Visual Basic.  
@@ -76,6 +76,7 @@ RaiseEvent eventname[( argumentlist )]
 >  Le `My.Application.DoEvents` méthode ne traite pas les événements de la même façon que le formulaire. Pour permettre au formulaire gérer les événements directement, vous pouvez utiliser le multithreading. Pour plus d’informations, consultez [Managed Threading](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)
 - [AddHandler (instruction)](../../../visual-basic/language-reference/statements/addhandler-statement.md)

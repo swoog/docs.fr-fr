@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7984d684987ef8acb172e8339f120c410f4885f3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362082"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462888"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduction aux requêtes LINQ (C#)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont généralement exprimées dans un langage de requête spécialisé. Les différents langages ont été développés au fil du temps pour les différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Les développeurs devaient donc apprendre un nouveau langage de requête pour chaque nouveau type de source de données ou format de données qu’ils devaient prendre en charge. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifie cette situation en proposant un même modèle pour les différents types de sources données et les différents formats de données. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous travaillez toujours avec des objets. Vous utilisez les mêmes modèles d’encodage de base pour interroger et transformer les données en documents XML, bases de données SQL, datasets [!INCLUDE[vstecado](~/includes/vstecado-md.md)], collections .NET, et tout autre format pour lequel un fournisseur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est disponible.  
@@ -32,7 +32,7 @@ Une *requête* est une expression qui récupère des données d’une source de 
   
  L’illustration suivante montre l’intégralité de l’opération de requête. Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], l’exécution de la requête est distincte de la requête elle-même. En d’autres termes, le fait de créer une variable de requête ne permet pas d’extraire de données.  
   
- ![Opération de requête LINQ complète](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
+ ![Diagramme de l’opération de requête LINQ complète.](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>Source de données  
  Dans l’exemple précédent, comme la source de données est un tableau, elle prend en charge implicitement l’interface générique <xref:System.Collections.Generic.IEnumerable%601>. Cela signifie qu’elle peut être interrogée avec [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Une requête est exécutée dans une instruction `foreach`, et `foreach` nécessite <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Les types qui prennent en charge <xref:System.Collections.Generic.IEnumerable%601> ou une interface dérivée, comme l’interface générique <xref:System.Linq.IQueryable%601>, sont appelés des *types requêtables*.  
@@ -91,7 +91,6 @@ IQueryable<Customer> custQuery =
 ## <a name="see-also"></a>Voir aussi
 
 - [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Procédure pas à pas : Écriture de requêtes en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Procédure pas à pas : Écriture de requêtes en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Expressions de requête LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)

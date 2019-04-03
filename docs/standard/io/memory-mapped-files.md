@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835354"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654352"
 ---
 # <a name="memory-mapped-files"></a>Fichiers mappés en mémoire
 Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtuelle. Ce mappage entre un fichier et un espace mémoire permet à une application incluant plusieurs processus de modifier le fichier en lisant et en écrivant directement dans la mémoire. En commençant par [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser du code managé pour accéder aux fichiers mappés en mémoire de la même façon que les fonctions Windows natives accèdent à des fichiers mappés en mémoire, comme décrit dans [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -42,10 +42,11 @@ Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtu
   
  Les fichiers mappés en mémoire sont accessibles via le gestionnaire de mémoire du système d’exploitation. Le fichier est alors automatiquement partitionné en un nombre de pages et consulté en fonction des besoins. Vous n’avez pas à gérer vous-même la mémoire.  
   
- L’illustration suivante montre comment plusieurs processus peuvent avoir simultanément plusieurs vues qui se chevauchent dans le même fichier mappé en mémoire.  
+ L’illustration suivante montre comment plusieurs processus peuvent avoir simultanément plusieurs vues qui se chevauchent dans le même fichier mappé en mémoire.
+
+ L’image suivante montre plusieurs vues qui se chevauchent dans un fichier mappé en mémoire :  
   
- ![Affiche des vues d’un fichier memory&#45;mapped.](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Vues multiples et se chevauchant dans un fichier mappé en mémoire  
+ ![Capture d’écran qui montre des vues dans un fichier mappé en mémoire.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programmation avec des fichiers mappés en mémoire  
  Le tableau suivant fournit un guide pour l’utilisation d’objets de fichier mappé en mémoire et de leurs membres.  

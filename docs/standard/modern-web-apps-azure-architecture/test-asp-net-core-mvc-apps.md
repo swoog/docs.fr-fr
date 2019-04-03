@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827550"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463707"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Tester des applications ASP.NET Core MVC
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Souvent, vous souhaiterez peaufiner la configuration de votre site avant l’exécution de chaque test, qu’il s’agisse par exemple de configurer l’application pour qu’elle utilise un magasin de données en mémoire et d’amorcer l’application avec les données de test. Pour ce faire, vous devez créer votre propre sous-classe de WebApplicationFactory<TEntry> et remplacer sa méthode ConfigureWebHost. L’exemple ci-dessous est tiré du projet eShopOnWeb FunctionalTests et est utilisé dans le cadre des tests effectués sur l’application web principale.
+Souvent, vous souhaiterez peaufiner la configuration de votre site avant l’exécution de chaque test, qu’il s’agisse par exemple de configurer l’application pour qu’elle utilise un magasin de données en mémoire et d’amorcer l’application avec les données de test. Pour ce faire, vous devez créer votre propre sous-classe de WebApplicationFactory\<TEntry> et remplacer sa méthode ConfigureWebHost. L’exemple ci-dessous est tiré du projet eShopOnWeb FunctionalTests et est utilisé dans le cadre des tests effectués sur l’application web principale.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

@@ -1,15 +1,15 @@
 ---
-title: 'Encodeur de Message personnalisé : Encodeur de texte personnalisé'
+title: 'Encodeur de message personnalisé : Encodeur de texte personnalisé'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: c5b45ed10475bdfd88998db0ead9afff1f0a0f2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 54cba7eb5ff743d4fddc37a824e05a376880d6d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725504"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832318"
 ---
-# <a name="custom-message-encoder-custom-text-encoder"></a>Encodeur de Message personnalisé : Encodeur de texte personnalisé
+# <a name="custom-message-encoder-custom-text-encoder"></a>Encodeur de message personnalisé : Encodeur de texte personnalisé
 Cet exemple montre comment implémenter un encodeur de message texte personnalisé à l’aide de Windows Communication Foundation (WCF).  
   
 > [!WARNING]
@@ -27,7 +27,7 @@ Cet exemple montre comment implémenter un encodeur de message texte personnalis
   
 -   Création d'un encodeur personnalisé et d'une fabrique d'encodeur.  
   
--   Création d'un élément de liaison pour un encodeur personnalisé.  
+-   Création d’un élément de liaison pour un encodeur personnalisé.  
   
 -   Utilisation de la configuration de liaison personnalisée permettant d’intégrer des éléments de liaison personnalisés.  
   
@@ -189,14 +189,14 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 }  
 ```  
   
-## <a name="message-encoding-binding-element"></a>Élément de liaison d’encodage de message  
+## <a name="message-encoding-binding-element"></a>Élément de liaison d'encodage de message  
  Les éléments de liaison permettent la configuration de la pile d’exécution WCF. Pour utiliser l’encodeur de message personnalisé dans une application WCF, un élément de liaison est requis qui crée la fabrique d’encodeur de message avec les paramètres appropriés au niveau approprié dans la pile d’exécution.  
   
  `CustomTextMessageBindingElement` dérive de la classe de base <xref:System.ServiceModel.Channels.BindingElement> et hérite de la classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Cela permet aux autres composants WCF de reconnaître cet élément de liaison comme étant un élément de liaison encodage de message. L'implémentation de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> retourne une instance de la fabrique d'encodeur de message correspondante avec les paramètres appropriés.  
   
  `CustomTextMessageBindingElement` expose des paramètres pour `MessageVersion`, `ContentType` et `Encoding` via des propriétés. L'encodeur prend en charge les versions Soap11Addressing et Soap12Addressing1. La valeur par défaut est Soap11Addressing1. La valeur par défaut de `ContentType` est "text/xml". La propriété `Encoding` vous permet de définir la valeur de l'encodage de caractères souhaité. L’exemple de client et le service utilise l’encodage de caractères ISO-8859-1 (Latin1), qui n’est pas pris en charge par le <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> de WCF.  
   
- Le code suivant montre comment créer la liaison par programme à l’aide de l’encodeur de message texte personnalisé.  
+ Le code suivant montre comment créer la liaison par programme à l'aide de l'encodeur de message texte personnalisé.  
   
 ```  
 ICollection<BindingElement> bindingElements = new List<BindingElement>();  
@@ -237,4 +237,3 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>Voir aussi

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145606"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464903"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Concevoir un microservice orienté DDD
 
@@ -39,7 +39,7 @@ Quand le problème de la complexité est abordé, il est important de disposer d
 
 La figure 7-5 montre l’implémentation d’une conception par couches dans l’application eShopOnContainers.
 
-![Les trois couches dans un microservice DDD comme Ordering. Chaque couche est un projet Visual Studio : la couche Application est Ordering.API, la couche Domaine est Ordering.Domain et la couche Infrastructure est Ordering.Infrastructure.](./media/image6.png)
+![Les trois couches dans un microservice DDD comme Ordering. Chaque couche est un projet VS : la couche Application est Ordering.API, la couche Domaine est Ordering.Domain et la couche Infrastructure est Ordering.Infrastructure.](./media/image6.png)
 
 **Figure 7-5**. Couches DDD dans le microservice de commandes dans eShopOnContainers
 
@@ -53,7 +53,7 @@ Vous souhaitez concevoir le système afin que chaque couche communique uniquemen
 
 L’excellent livre d’Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) affirme ce qui suit à propos de la couche de modèle de domaine et de la couche d’application.
 
-**Couche de modèle de domaine** : chargée de représenter les concepts de l’entreprise, des informations sur sa situation ainsi que ses règles. L’état qui reflète la situation de l’entreprise est contrôlé et utilisé ici, même si les détails techniques du stockage sont délégués à l’infrastructure. Cette couche est au cœur des logiciels d’entreprise.
+**Couche Modèle de domaine** : chargée de représenter les concepts de l’entreprise, des informations sur sa situation ainsi que ses règles. L’état qui reflète la situation de l’entreprise est contrôlé et utilisé ici, même si les détails techniques du stockage sont délégués à l’infrastructure. Cette couche est au cœur des logiciels d’entreprise.
 
 La couche de modèle de domaine est l’endroit où l’entreprise s’exprime. Quand vous implémentez une couche de modèle de domaine de microservice dans .NET, cette couche est codée comme une bibliothèque de classes avec les entités de domaine qui capturent les données ainsi que le comportement (méthodes avec logique).
 
@@ -71,7 +71,7 @@ En outre, cela ne signifie pas que vous pouvez prendre un modèle conçu pour un
 
 En passant à la couche d’application, nous pouvons à nouveau citer le livre d’Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) :
 
-**Couche d’application :** définit les travaux que le logiciel est supposé effectuer et dirige les objets de domaine expressifs pour résoudre les problèmes. Les tâches dont cette couche est responsable sont significatives pour l’entreprise ou nécessaires pour l’interaction avec les couches d’application d’autres systèmes. Cette couche reste mince. Elle ne contient pas de règles métier ni de connaissances métier, mais coordonne uniquement les tâches et le travail des délégués pour les collaborations des objets de domaine dans la couche suivante. Elle ne présente pas d’état reflétant la situation de l’entreprise, mais peut avoir un état qui reflète la progression d’une tâche pour l’utilisateur ou le programme.
+**Couche Application** : définit les travaux que le logiciel est supposé effectuer et dirige les objets de domaine expressifs pour résoudre les problèmes. Les tâches dont cette couche est responsable sont significatives pour l’entreprise ou nécessaires pour l’interaction avec les couches d’application d’autres systèmes. Cette couche reste mince. Elle ne contient pas de règles métier ni de connaissances métier, mais coordonne uniquement les tâches et le travail des délégués pour les collaborations des objets de domaine dans la couche suivante. Elle ne présente pas d’état reflétant la situation de l’entreprise, mais peut avoir un état qui reflète la progression d’une tâche pour l’utilisateur ou le programme.
 
 La couche d’application d’un microservice dans .NET est généralement codée comme un projet d’API web ASP.NET Core. Le projet implémente l’interaction du microservice, l’accès réseau à distance et les API web externes utilisées dans les applications clientes ou l’interface utilisateur. Il inclut des requêtes dans le cadre d’une approche CQRS, des commandes acceptées par le microservice et même la communication pilotée par événements entre les microservices (événements d’intégration). L’API web ASP.NET Core qui représente la couche d’application ne doit pas contenir de règles métier ni de connaissances de domaine (notamment des règles de domaine pour les transactions ou les mises à jour) : celles-ci doivent appartenir à la bibliothèque de classes de modèle de domaine. La couche d’application doit uniquement coordonner les tâches et ne doit pas contenir ni définir d’état de domaine (modèle de domaine). Elle délègue l’exécution des règles métier aux classes de modèle de domaine (racines d’agrégat et entités de domaine) qui vont finalement mettre à jour les données au sein de ces entités de domaine.
 
@@ -96,13 +96,13 @@ Cette conception de couche doit être indépendante pour chaque microservice. Co
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **DevIQ. Persistence Ignorance principle** \
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 - **Oren Eini. Infrastructure Ignorance** \
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
 - **Angel Lopez. Layered Architecture In Domain-Driven Design** \
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
 >[Précédent](cqrs-microservice-reads.md)

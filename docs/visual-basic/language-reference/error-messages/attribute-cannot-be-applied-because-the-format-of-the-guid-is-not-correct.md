@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: 1e92c77e6138bbd546d9b837e095e41d5dfaf30c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279862"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832266"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>«\<attribut >' ne peut pas être appliqué, car le format du GUID '\<nombre >' n’est pas correct
 Un `COMClassAttribute` bloc d’attributs Spécifie un identificateur global unique (GUID) qui n’est pas conforme au format approprié. `COMClassAttribute` utilise les GUID pour identifier de manière unique la classe, l’interface et l’événement de création.  
@@ -28,6 +28,6 @@ Un `COMClassAttribute` bloc d’attributs Spécifie un identificateur global uni
 2.  Vérifiez que les chaînes de GUID présentées au bloc d’attributs `COMClassAttribute` sont copiées correctement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Guid>
 - [Vue d’ensemble des attributs](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Cisaillement des couleurs'
+title: 'Procédure : incliner des couleurs'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720223"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826390"
 ---
-# <a name="how-to-shear-colors"></a>Procédure : Cisaillement des couleurs
+# <a name="how-to-shear-colors"></a>Procédure : incliner des couleurs
 L’inclinaison augmente ou diminue d’un composant de couleur d’un montant proportionnel à un autre composant de couleur. Par exemple, considérez la transformation où le composant rouge est augmenté par la moitié de la valeur du composant bleu. Sous une transformation de ce type, la couleur (0,2, 0,5, 1) deviendrait (0,7, 0,5, 1). Le nouveau composant rouge est 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir du fichier ColorBars4.bmp. Le code applique ensuite la transformation d’inclinaison décrite dans le paragraphe précédent à chaque pixel de l’image.  
   
- L’illustration suivante montre l’image d’origine sur la gauche et l’image inclinée sur la droite.  
+ L’illustration suivante montre l’image d’origine sur la gauche et l’image inclinée sur la droite : 
   
- ![Altérer des couleurs](./media/colortrans6.png "colortrans6")  
+ ![Deux des carrés avec rayures colorée côté à côte illustrant l’image d’origine et l’image inclinée.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la transformation d’inclinaison.  
   

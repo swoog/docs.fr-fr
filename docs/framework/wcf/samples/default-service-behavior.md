@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 7d58154858cd5f2aef21cc6ceeb93d1ee2f2d1a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18ef0758dad9abc0c30651806957c9bb2c852abc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619582"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843056"
 ---
 # <a name="default-service-behavior"></a>Default Service Behavior
 Cet exemple montre comment les paramètres de comportement du service peuvent être configurés. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit explicitement des comportements de service et des comportements d'opération à l'aide des attributs <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute>. Vous pouvez configurer les comportements dans les fichiers de configuration ou impérativement dans le code (comme le montre cet exemple).  
@@ -54,7 +54,7 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Spécifie le mode de contexte d'instance.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Détermine s’il faut utiliser le contexte de synchronisation fourni, s’il est défini. Utilisez-le pour contrôler s’il faut utiliser un `WindowsFormsSynchronizationContext` dans les applications Windows Forms.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Détermine si les exceptions d'exécution non prise en charge générales doivent être converties en `Fault<string>` et envoyées comme un message d'erreur.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Spécifie le niveau d’isolation des transactions.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Spécifie le niveau d'isolation des transactions.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Détermine si les en-têtes de message inattendus provoquent une condition d'erreur.|  
   
  Les comportements d'opération sont spécifiés à l'aide de l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute>. Le tableau suivant décrit quelques-uns de ces comportements.  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## <a name="see-also"></a>Voir aussi

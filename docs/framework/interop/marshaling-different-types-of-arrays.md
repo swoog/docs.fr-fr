@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219462"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654612"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de différents types de tableaux
 Un tableau est un type référence compris dans du code managé qui contient un ou plusieurs éléments du même type. Même si les tableaux sont des types référence, ils sont passés comme des paramètres In aux fonctions non managées. Ce comportement est incohérent avec la manière dont les tableaux managés sont passés aux objets managés, c'est-à-dire en tant que paramètres In/Out. Pour plus d'informations, voir [Copie et épinglage](copying-and-pinning.md).  
@@ -29,7 +29,7 @@ Un tableau est un type référence compris dans du code managé qui contient un 
 |D'entiers par valeur (à deux dimensions).|Passe une matrice d'entiers en tant que paramètre In.|  
 |De chaînes par valeur.|Passe un tableau de chaînes en tant que paramètre In.|  
 |De structures avec des entiers.|Passe un tableau de structures contenant uniquement des entiers en tant que paramètre In.|  
-|De structures avec des chaînes.|Passe un tableau de structures contenant uniquement des entiers en tant que paramètre In/Out. Les membres du tableau peuvent être modifiés.|  
+|De structures avec des chaînes.|Passe un tableau de structures contenant uniquement des chaînes en tant que paramètre In/Out. Les membres du tableau peuvent être modifiés.|  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment passer les types de tableaux suivants :  

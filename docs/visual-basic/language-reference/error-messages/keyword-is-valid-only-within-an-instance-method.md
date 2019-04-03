@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: af3bc95e2db88577c7c53e4b58fb60aed8a83453
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267640"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820713"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<mot clé >' est valide uniquement dans une méthode d’instance
 Le `Me`, `MyClass`, et `MyBase` mots clés font référence aux instances de classe spécifique. Vous ne pouvez pas les utiliser à l’intérieur d’un partage `Function` ou `Sub` procédure.  
@@ -24,6 +24,7 @@ Le `Me`, `MyClass`, et `MyBase` mots clés font référence aux instances de cla
 -   Supprimez le mot clé à partir de la procédure ou supprimez le `Shared` mot clé à partir de la déclaration de procédure.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Assignation des variables objets](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Me, My, MyBase et MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Éléments fondamentaux de l’héritage](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

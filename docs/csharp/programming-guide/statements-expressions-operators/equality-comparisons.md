@@ -5,17 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972922"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545453"
 ---
-# <a name="equality-comparisons-c-programming-guide"></a>Comparaisons d'égalité (Guide de programmation C#)
+# <a name="equality-comparisons-c-programming-guide"></a>Comparaisons d’égalité (Guide de programmation C#)
+
 Il est parfois nécessaire de comparer l’égalité de deux valeurs. Dans certains cas, vous testez *l’égalité de valeur*, également appelée *équivalence*, qui signifie que les valeurs contenues dans les deux variables sont égales. Dans d’autres cas, vous devez déterminer si deux variables référencent le même objet sous-jacent en mémoire. Ce type d’égalité est appelée *l’égalité de référence* ou *identité*. Cette rubrique décrit ces deux genres d’égalité et fournit des liens vers d’autres rubriques pour obtenir plus d’informations.  
   
-## <a name="reference-equality"></a>Égalité de référence  
+## <a name="reference-equality"></a>Égalité des références
+
  L’égalité de références signifie que deux références d’objets référencent le même objet sous-jacent. Cela peut se produire par simple assignation, comme illustré dans l’exemple suivant.  
   
  [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
@@ -23,9 +25,10 @@ Il est parfois nécessaire de comparer l’égalité de deux valeurs. Dans certa
  Dans ce code, deux objets sont créés, mais après l’instruction d’assignation, les deux références référencent le même objet. Elles présentent donc une égalité de référence. Utilisez la méthode <xref:System.Object.ReferenceEquals%2A> pour déterminer si deux références référencent le même objet.  
   
  Le concept d’égalité de référence s’applique uniquement aux types référence. Les objets de type valeur ne peuvent pas avoir une égalité de référence, car quand une instance d’un type valeur est assignée à une variable, une copie de la valeur est effectuée. Ainsi, vous ne pouvez jamais avoir deux structs unboxed qui référencent le même emplacement en mémoire. De plus, si vous utilisez <xref:System.Object.ReferenceEquals%2A> pour comparer deux types valeur, le résultat est toujours `false`, même si les valeurs contenues dans les objets sont toutes identiques. Cela est dû au fait que chaque variable est convertie en une instance d’objet distincte. Pour plus d'informations, voir [Procédure : Tester l’égalité des références (Identité)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
-  
-## <a name="value-equality"></a>des valeurs des objets  
- L’égalité de valeur signifie que deux objets contiennent les mêmes valeurs. Pour les types valeur primitifs tels que [int](../../../csharp/language-reference/keywords/int.md) ou [bool](../../../csharp/language-reference/keywords/bool.md), les tests d’égalité de valeur sont simples. Vous pouvez utiliser l’opérateur [==](../../../csharp/language-reference/operators/equality-comparison-operator.md), comme indiqué dans l’exemple suivant.  
+
+## <a name="value-equality"></a>Égalité des valeurs
+
+ L’égalité de valeur signifie que deux objets contiennent les mêmes valeurs. Pour les types valeur primitifs tels que [int](../../../csharp/language-reference/keywords/int.md) ou [bool](../../../csharp/language-reference/keywords/bool.md), les tests d’égalité de valeur sont simples. Vous pouvez utiliser l’opérateur [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-), comme indiqué dans l’exemple suivant.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -42,7 +45,8 @@ if( b == a)
   
  Toutefois, il n’est pas obligatoire que l’équivalence soit basée sur tous les champs dans un type. Elle peut être basée sur une partie. Quand vous comparez des types dont vous n’êtes pas propriétaire, vous devez bien comprendre comment l’équivalence est définie pour ce type. Pour plus d’informations sur la façon de définir l’égalité de valeur dans vos propres classes et structs, consultez [Guide pratique pour définir l’égalité de valeurs pour un type](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
-### <a name="value-equality-for-floating-point-values"></a>Égalité de valeur pour les valeurs à virgule flottante  
+### <a name="value-equality-for-floating-point-values"></a>Égalité des valeurs à virgule flottante
+
  Les comparaisons d’égalité des valeurs à virgule flottante ([double](../../../csharp/language-reference/keywords/double.md) et [float](../../../csharp/language-reference/keywords/float.md)) sont problématiques en raison de l’imprécision de l’arithmétique à virgule flottante sur les ordinateurs binaires. Pour plus d’informations, consultez les notes dans la rubrique <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Rubriques connexes  

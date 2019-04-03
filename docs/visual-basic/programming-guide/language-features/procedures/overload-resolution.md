@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678822"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832279"
 ---
 # <a name="overload-resolution-visual-basic"></a>Résolution de surcharge (Visual Basic)
 Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est défini dans plusieurs versions surchargées, le compilateur doit décider de la surcharge à appeler. Il effectue cela en effectuant les étapes suivantes :  
@@ -59,6 +59,7 @@ Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est
 |Un tableau d’une longueur quelconque (y compris un tableau vide)|`ParamArray`|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Paramètres facultatifs](./optional-parameters.md)
 - [tableaux de paramètres](./parameter-arrays.md)
 - [Surcharge de procédure](./procedure-overloading.md)

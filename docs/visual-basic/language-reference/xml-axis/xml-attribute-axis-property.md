@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 081359f32438c6474fe5c229634b60969e25a24e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965382"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828800"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propriété d'axe d'attribut XML (Visual Basic)
 Fournit l’accès à la valeur d’un attribut pour un <xref:System.Xml.Linq.XElement> objet ou vers le premier élément dans une collection de <xref:System.Xml.Linq.XElement> objets.  
@@ -36,7 +36,7 @@ object.@<attribute>
  Obligatoire. Indique le début de la propriété d’axe d’attribut.  
   
  <  
- Facultatif. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
+ Optionnel. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
   
  `attribute`  
  Obligatoire. Nom de l’attribut d’accès, sous la forme [`prefix`:]`name`.  
@@ -47,7 +47,7 @@ object.@<attribute>
 |`name`|Obligatoire. Nom de l’attribut local. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Facultatif. Indique la fin du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
+ Optionnel. Indique la fin du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Chaîne qui contient la valeur de `attribute`. Si le nom d’attribut n’existe pas, `Nothing` est retournée.  
@@ -107,6 +107,7 @@ object.@<attribute>
  `Phone type: home`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XElement>
 - [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)

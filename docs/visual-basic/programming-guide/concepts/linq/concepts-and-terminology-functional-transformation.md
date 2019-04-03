@@ -2,12 +2,12 @@
 title: Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651862"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820800"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 Cette rubrique présente les concepts et la terminologie des transformations fonctionnelles pures. L'approche de transformation fonctionnelle pour la transformation des données génère du code qui est souvent plus rapide à programmer, plus expressif et plus facile à déboguer et à maintenir que le code de programmation impératif plus traditionnel.  
@@ -72,5 +72,6 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
  Ces fonctionnalités de langage seront utilisées dans les exemples de code tout au long de cette section.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux Transformations fonctionnelles pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

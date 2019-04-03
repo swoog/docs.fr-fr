@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409794"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835191"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Structures de contrôle imbriquées (Visual Basic)
 Vous pouvez placer des instructions de contrôle à l’intérieur d’autres instructions de contrôle, par exemple un `If...Then...Else` bloquer dans un `For...Next` boucle. Une instruction de contrôle à l’intérieur d’une autre instruction de contrôle est dite *imbriquée*.  
@@ -72,6 +72,7 @@ Next ctl
  Le compilateur Visual Basic détecte ces structures de contrôle qui se chevauchent et signale une erreur de compilation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Structures de décision](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

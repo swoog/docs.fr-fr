@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 17886ececbd418ae60d6321c7a6278a1e982b9af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842523"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Des erreurs se sont produites lors de la compilation des schémas Xml du projet
 Erreurs se sont produites lors de la compilation des schémas XML dans le projet. Pour cette raison, XML IntelliSense n’est pas disponible.  
@@ -32,5 +32,6 @@ Erreurs se sont produites lors de la compilation des schémas XML dans le projet
 -   Si aucune erreur n’est identifiée dans votre schéma XSD, le compilateur XML peut-être pas suffisamment d’informations pour fournir un message d’erreur détaillé. Vous serez peut-être en mesure d’obtenir des informations d’erreur plus détaillées Si vous vous assurez que les espaces de noms XML pour les fichiers .xsd inclus dans votre projet correspondent aux espaces de noms XML identifiés pour le schéma XML défini dans Visual Studio.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Liste d’erreurs, fenêtre](/visualstudio/ide/reference/error-list-window)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

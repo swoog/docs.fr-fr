@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842640"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Appel d'une propriété ou méthode à l'aide d'un nom de chaîne (Visual Basic)
 Dans la plupart des cas, vous pouvez découvrir les propriétés et méthodes d’un objet au moment du design et écrire du code pour les gérer. Toutefois, dans certains cas vous ne pouvez pas savoir sur les propriétés et les méthodes d’un objet à l’avance, ou vous pouvez également la flexibilité de l’utilisateur spécifier les propriétés ou méthodes d’exécution en cours d’exécution.  
@@ -47,5 +47,6 @@ Dans la plupart des cas, vous pouvez découvrir les propriétés et méthodes d�
 >  Bien que le `CallByName` fonction peut être utile dans certains cas, vous devez également considérer son utilité contre les implications en matière de performances, à l’aide de `CallByName` pour appeler une procédure est légèrement plus lent qu’un appel à liaison tardive. Si vous appelez une fonction qui est appelée à plusieurs reprises, par exemple comme dans une boucle, `CallByName` peut avoir un impact négatif sur les performances.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [Détermination du type Object](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

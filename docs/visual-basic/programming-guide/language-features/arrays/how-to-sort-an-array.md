@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558434"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838077"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Procédure : Trier un tableau en Visual Basic
 Cet exemple déclare un tableau de `String` objets nommés `zooAnimals`, il remplit, puis le tri par ordre alphabétique.  
@@ -44,6 +44,7 @@ End Sub
 -   Un ou plusieurs éléments du tableau n’implémentent pas le <xref:System.IComparable> interface (<xref:System.InvalidOperationException> classe)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

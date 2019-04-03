@@ -2,12 +2,12 @@
 title: Two-Way Communication
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 2160a1c190a23c9fbc3ec835d32121008c63e2a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aa01140ef62bd3658696e889038e099ed76da20
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522009"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815429"
 ---
 # <a name="two-way-communication"></a>Two-Way Communication
 Cet exemple montre comment effectuer une communication en file d'attente bidirectionnelle sur MSMQ. Cet exemple utilise la liaison `netMsmqBinding`. Dans le cas présent, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -103,7 +103,7 @@ public static void Main()
 }  
 ```
 
- Le client crée une transaction. La communication avec la file d'attente s'effectue dans les limites d'étendue de la transaction. Elle est donc considérée comme une unité atomique dans laquelle l'intégralité des messages réussissent ou échouent.  
+ Le client crée une transaction. La communication avec la file d’attente s’effectue dans les limites d’étendue de la transaction. Elle est donc considérée comme une unité atomique dans laquelle l’intégralité des messages réussissent ou échouent.  
 
 ```csharp
 // Create a ServiceHost for the OrderStatus service type.  
@@ -331,4 +331,3 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## <a name="see-also"></a>Voir aussi

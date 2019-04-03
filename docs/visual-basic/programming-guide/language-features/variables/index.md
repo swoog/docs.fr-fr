@@ -2,9 +2,15 @@
 title: Variables en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840378"
 ---
 # <a name="variables-in-visual-basic"></a>Variables en Visual Basic
 Souvent, vous devez stocker des valeurs lors de l’exécution de calculs avec Visual Basic. Par exemple, vous pouvez être amené à calculer plusieurs valeurs, à les comparer et à effectuer différentes opérations sur ces valeurs, en fonction du résultat de la comparaison. Vous devez conserver les valeurs si vous souhaitez les comparer.  
@@ -28,6 +34,7 @@ Souvent, vous devez stocker des valeurs lors de l’exécution de calculs avec V
  À l’instar d’une variable, une *propriété* représente une valeur à laquelle vous pouvez accéder. Toutefois, elle est plus complexe qu’une variable. Une propriété utilise des blocs de code qui contrôlent la définition et la récupération de sa valeur. Pour plus d’informations, consultez [Différences entre les propriétés et les variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Déclaration de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Dépannage des variables](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

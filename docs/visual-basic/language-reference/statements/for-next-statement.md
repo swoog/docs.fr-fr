@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370304"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826325"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
 Répète un groupe d’instructions un nombre spécifié de fois.  
@@ -50,13 +50,13 @@ Next [ counter ]
 |Élément|Description|  
 |----------|-----------------|  
 |`counter`|Requis dans le `For` instruction. Variable numérique. La variable de contrôle de la boucle. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
-|`datatype`|Facultatif. Type de données de `counter`. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
+|`datatype`|Optionnel. Type de données de `counter`. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
 |`start`|Obligatoire. Expression numérique. Valeur initiale de `counter`.|  
 |`end`|Obligatoire. Expression numérique. La valeur finale de `counter`.|  
 |`step`|Facultatif. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
-|`statements`|Facultatif. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
+|`statements`|Optionnel. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
 |`Continue For`|Facultatif. Transfère le contrôle à la prochaine itération de boucle.|  
-|`Exit For`|Facultatif. Transfère le contrôle de la `For` boucle.|  
+|`Exit For`|Optionnel. Transfère le contrôle de la `For` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For` boucle.|  
   
 > [!NOTE]
@@ -130,10 +130,10 @@ Next [ counter ]
   
 |Est `datatype` présent ?|Est `counter` déjà défini ?|Résultat (si `counter` définit une nouvelle variable locale dont l’étendue correspond à l’intégralité de `For...Next` boucle)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|Aucune|Oui|Non, étant donné que `counter` est déjà défini. Si l’étendue de `counter` n’est pas local à la procédure, un avertissement de compilation se produit.|  
-|Aucune|Aucune|Oui. Le type de données est déduit à partir de la `start`, `end`, et `step` expressions. Pour plus d’informations sur l’inférence de type, consultez [Option Infer, instruction](../../../visual-basic/language-reference/statements/option-infer-statement.md) et [l’inférence de Type Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
+|Non|Oui|Non, étant donné que `counter` est déjà défini. Si l’étendue de `counter` n’est pas local à la procédure, un avertissement de compilation se produit.|  
+|Non|Non|Oui. Le type de données est déduit à partir de la `start`, `end`, et `step` expressions. Pour plus d’informations sur l’inférence de type, consultez [Option Infer, instruction](../../../visual-basic/language-reference/statements/option-infer-statement.md) et [l’inférence de Type Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
 |Oui|Oui|Oui, mais uniquement si existant `counter` variable est définie en dehors de la procédure. Cette variable reste distincte. Si l’étendue existants `counter` variable est locale à la procédure, une erreur de compilation se produit.|  
-|Oui|Aucune|Oui.|  
+|Oui|Non|Oui.|  
   
  Le type de données de `counter` détermine le type de l’itération, qui doit être un des types suivants :  
   
@@ -173,6 +173,7 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Collections.Generic.List%601>
 - [Structures de boucle](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [While...End While (instruction)](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

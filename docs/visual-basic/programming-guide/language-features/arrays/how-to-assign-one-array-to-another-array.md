@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572719"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835282"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procédure : Assigner un tableau à un autre tableau (Visual Basic)
 Étant donné que les tableaux sont des objets, vous pouvez les utiliser dans les instructions d’assignation, comme d’autres types d’objets. Une variable de tableau conserve un pointeur vers les données constituant les éléments du tableau et les informations de classement et de longueur et une attribution de copie uniquement ce pointeur.  
@@ -43,6 +43,7 @@ ms.locfileid: "54572719"
  Le compilateur signale une erreur si les règles ci-dessus sont violées, par exemple si les types de données ne sont pas compatibles ou les rangs sont inégaux. Vous pouvez ajouter à votre code pour vous assurer que les tableaux sont compatibles avant de tenter une affectation de gestion des erreurs. Vous pouvez également utiliser le [opérateur TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) mot clé si vous souhaitez éviter de lever une exception.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum (instruction)](../../../../visual-basic/language-reference/statements/enum-statement.md)

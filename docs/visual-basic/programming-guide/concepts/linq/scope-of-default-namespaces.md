@@ -2,12 +2,12 @@
 title: Portée des espaces de noms par défaut en Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527014"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836712"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Portée des espaces de noms par défaut en Visual Basic
 Les espaces de noms tels que représentés dans l'arborescence XML par défaut ne sont pas dans la portée pour les requêtes. Si vous avez du code XML qui est dans un espace de noms par défaut, vous devez déclarer une variable <xref:System.Xml.Linq.XNamespace> et la combiner avec le nom local afin de créer un nom complet utilisable dans la requête.  
@@ -100,4 +100,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

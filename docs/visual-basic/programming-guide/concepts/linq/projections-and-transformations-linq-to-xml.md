@@ -2,12 +2,12 @@
 title: Projections et Transformations (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-ms.openlocfilehash: 5fe02314d69fbce90231638efcc26175c351c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc53141a5fd9f3cd029c1694f489c683cc3ee271
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717586"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837484"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Projections et Transformations (LINQ to XML) (Visual Basic)
 Cette section fournit des exemples de projections et de transformations [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -26,4 +26,5 @@ Cette section fournit des exemples de projections et de transformations [!INCLUD
 |[Guide pratique pour Générer du code XML à partir de fichiers CSV (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Montre comment utiliser [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour analyser un fichier CSV et générer du code XML à partir de celui-ci.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

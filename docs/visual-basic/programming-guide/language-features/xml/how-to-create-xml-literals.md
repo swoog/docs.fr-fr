@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836859"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Procédure : Créer des littéraux XML (Visual Basic)
 Vous pouvez créer un document, un fragment ou un élément XML directement dans le code à l’aide d’un littéral XML. Les exemples de cette rubrique montrent comment créer un élément XML qui comporte trois éléments enfants et comment créer un document XML.  
@@ -53,6 +53,7 @@ Vous pouvez créer un document, un fragment ou un élément XML directement dans
      `</books>`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

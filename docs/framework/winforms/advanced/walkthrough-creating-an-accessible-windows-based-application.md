@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : Création d’une Application Windows Accessible'
+title: 'Procédure pas à pas : création d’une application Windows accessible'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708273"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823465"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : Création d’une Application Windows Accessible
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : création d’une application Windows accessible
 La création d'une application accessible implique de nombreuses contraintes pour l'entreprise. De nombreux gouvernements ont mis en place une réglementation relative à l'accessibilité pour l'achat des logiciels. Le logo Certifié pour Windows inclut des normes d’accessibilité. Rien qu’aux États-Unis, on estime à 30 millions le nombre de personnes affectées par l’accessibilité des logiciels, dont beaucoup sont des clients potentiels.  
   
  Cette procédure pas à pas traite des cinq critères d’accessibilité pour le logo Certifié pour Windows. Selon ces critères, une application accessible doit :  
@@ -55,9 +55,9 @@ La création d'une application accessible implique de nombreuses contraintes pou
   
 -   Assurez-vous que tous les contrôles Label qui décrivent un contrôle TextBox précèdent immédiatement le contrôle TextBox dans l'ordre de tabulation.  
   
--   Ajoutez une touche d'accès rapide, à l'aide du caractère « & », à la propriété <xref:System.Windows.Forms.Control.Text%2A> de tout contrôle auquel l'utilisateur pourrait souhaiter accéder.  
+-   Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de n’importe quel contrôle de l’utilisateur doit pouvoir accéder à.  
   
--   Ajoutez une touche d'accès rapide, à l'aide du caractère « & », à la propriété <xref:System.Windows.Forms.Control.Text%2A> de l'étiquette qui précède un contrôle auquel l'utilisateur pourrait souhaiter accéder. Affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Label.UseMnemonic%2A> des étiquettes pour que le focus soit défini sur le contrôle suivant dans l'ordre de tabulation quand l'utilisateur appuie sur la touche d'accès.  
+-   Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de l’étiquette qui précède un contrôle auquel l’utilisateur doit pouvoir accéder à. Affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Label.UseMnemonic%2A> des étiquettes pour que le focus soit défini sur le contrôle suivant dans l'ordre de tabulation quand l'utilisateur appuie sur la touche d'accès.  
   
 -   Ajoutez des touches d'accès rapide à tous les éléments de menu.  
   
@@ -65,7 +65,7 @@ La création d'une application accessible implique de nombreuses contraintes pou
   
 -   Ajoutez les contrôles au formulaire et définissez les propriétés comme décrit ci-dessous. Pour obtenir un modèle décrivant comment organiser les contrôles sur le formulaire, consultez l'image à la fin du tableau.  
   
-    |Objet|Propriété|Valeur|  
+    |Object|Propriété|Value|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Formulaire de commande|  
     ||AccessibleName|Formulaire de commande|  
@@ -75,7 +75,7 @@ La création d'une application accessible implique de nombreuses contraintes pou
     ||AccessibleDescription|Une tranche de pizza|  
     ||AccessibleName|Logo de la société|  
     ||Image|Une icône ou bitmap quelconque|  
-    |Label|Nom|companyLabel|  
+    |Etiquette|Nom|companyLabel|  
     ||Texte|Bonne Pizza|  
     ||TabIndex|1|  
     ||AccessibleDescription|Nom de la société|  
@@ -110,7 +110,7 @@ La création d'une application accessible implique de nombreuses contraintes pou
     ||TabIndex|1|  
     ||AccessibleDescription|Grande pizza|  
     ||AccessibleName|Grande pizza|  
-    |Label|Nom|toppingsLabel|  
+    |Etiquette|Nom|toppingsLabel|  
     ||Texte|&Garniture (€0,75 chacune)|  
     ||TabIndex|5|  
     ||AccessibleDescription|Étiquette de garniture|  
@@ -126,7 +126,7 @@ La création d'une application accessible implique de nombreuses contraintes pou
     ||TabIndex|7|  
     ||AccessibleDescription|Total de la commande|  
     ||AccessibleName|Total de la commande|  
-    |Button|Nom|cancel|  
+    |Bouton|Nom|cancel|  
     ||Texte|Annu&ler|  
     ||TabIndex|8|  
     ||AccessibleDescription|Annuler la commande|  
@@ -135,10 +135,12 @@ La création d'une application accessible implique de nombreuses contraintes pou
     |MenuItem|Nom|fileCommands|  
     ||Texte|&Fichier|  
     |MenuItem|Nom|exitApp|  
-    ||Texte|&Quitter|  
-  
-     ![Formulaire de commande de pizza](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-Votre écran ressemblera à ce qui suit :  
+    ||Texte|&Quitter|
+    
+      Votre écran ressemblera à l’image suivante :
+    
+      ![Le formulaire de commande de pizza avec une sélection de zone de texte, taille et garniture de nom.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Prise en charge du mode de contraste élevé  
  Le mode de contraste élevé est un paramètre système Windows qui améliore la lisibilité en utilisant des couleurs contrastées et des tailles de polices adaptées aux personnes malvoyantes. Le <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriété est fournie pour déterminer si le mode de contraste élevé est activé.  

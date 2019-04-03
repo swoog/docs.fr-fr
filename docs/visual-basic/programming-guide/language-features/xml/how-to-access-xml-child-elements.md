@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 874c7490e451d64bf50e25934ea43a9b928ddab9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980553"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836816"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Procédure : Accéder aux éléments d’enfant XML (Visual Basic)
 Cet exemple montre comment utiliser un enfant de propriété d’axe pour accéder à tous les éléments enfants XML qui ont un nom spécifié dans un élément XML. En particulier, il utilise le <xref:System.Xml.Linq.XElement.Value%2A> propriété à obtenir la valeur du premier élément dans la collection qui le `name` retourne de propriété d’axe enfant. Le `name` propriété d’axe enfant obtient tous les éléments enfants nommés `phone` dans le `contact` objet. Cet exemple utilise également le `phone` propriété d’axe enfant pour accéder à tous les éléments enfants nommés `phone` qui sont contenus dans le `contact` objet.  
@@ -26,6 +26,7 @@ Cet exemple montre comment utiliser un enfant de propriété d’axe pour accéd
 -   une référence à l'espace de noms <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - [Propriété d’axe enfant XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [Propriété de valeur XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

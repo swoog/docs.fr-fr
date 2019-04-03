@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127717"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463343"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
 
@@ -47,11 +47,11 @@ L’exécution de SQL Server en tant que conteneur n’est pas seulement utile �
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Exécuter l’image SQL Server Docker sur Linux, Mac ou Windows** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Exécuter l’image SQL Server Docker sur Linux, Mac ou Windows** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Se connecter à SQL Server et y effectuer des requêtes sur Linux avec sqlcmd** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **Se connecter à SQL Server et y effectuer des requêtes sur Linux avec sqlcmd** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Alimentation à l’aide de données de test au démarrage de l’application web
 

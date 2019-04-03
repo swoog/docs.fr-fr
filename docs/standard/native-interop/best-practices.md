@@ -4,12 +4,12 @@ description: Découvrez les meilleures pratiques pour interagir avec des composa
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411399"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412056"
 ---
 # <a name="native-interoperability-best-practices"></a>Meilleures pratiques pour l’interopérabilité native
 
@@ -160,7 +160,7 @@ N’oubliez pas que `GCHandle` doit être explicitement libéré pour éviter le
 
 ## <a name="common-windows-data-types"></a>Types de données Windows courants
 
-Voici la liste des types de données courants dans les API Win32 et des types C# à utiliser pour les appels dans le code Win32.
+Voici la liste des types de données courants dans les API Windows et des types C# à utiliser pour les appels dans le code Windows.
 
 Malgré leur nom, les types suivants ont la même taille sur Windows 32 bits et 64 bits.
 

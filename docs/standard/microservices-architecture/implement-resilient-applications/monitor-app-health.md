@@ -4,12 +4,12 @@ description: Explorez un moyen d’implémenter la supervision de l’intégrit�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4ad13fa4596cc852317a367852b76a9f769caf78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259356"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464006"
 ---
 # <a name="health-monitoring"></a>Surveillance de l’intégrité
 
@@ -276,16 +276,16 @@ Pour finir, si vous stockez tous les flux d’événements, vous pouvez utiliser
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **HealthChecks et interface utilisateur de HealthChecks pour ASP.NET Core**
-    [*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
 
--   **Présentation du contrôle d’intégrité de Service Fabric**
-    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
+-   **Présentation de la supervision de l’intégrité de Service Fabric**
+    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 -   **Azure Application Insights**
-    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
-    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 >[Précédent](implement-circuit-breaker-pattern.md)

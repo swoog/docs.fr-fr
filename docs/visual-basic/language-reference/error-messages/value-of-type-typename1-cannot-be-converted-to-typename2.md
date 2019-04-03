@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829019"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'
 Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. Incompatibilité de type peut être dû à la combinaison d’une référence de fichier avec une référence de projet à l’assembly '\<nom_assembly >'. Essayez de remplacer la référence de fichier à '\<filepath >' dans le projet '\<nom_projet1 >' avec une référence de projet à '\<nom_projet2 >'.  
@@ -60,6 +60,6 @@ Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. I
 -   Modifiez la référence de fichier à une référence de projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Conversions de type en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
-

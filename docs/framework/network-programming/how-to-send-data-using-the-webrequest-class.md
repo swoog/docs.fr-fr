@@ -1,6 +1,6 @@
 ---
 title: 'Procédure : envoyer des données à l’aide de la classe WebRequest'
-ms.date: 03/30/2017
+ms.date: 03/25/2019
 dev_langs:
 - csharp
 - vb
@@ -8,32 +8,33 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591a1129625a4ff08c9aa37ce651bbc0320ff25d
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562896"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634269"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a>Procédure : envoyer des données à l’aide de la classe WebRequest
-La procédure suivante décrit les étapes nécessaires pour envoyer des données à un serveur. Cette procédure est couramment utilisée pour publier des données sur une page web.  
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Procédure : envoyer des données à l’aide de la classe WebRequest
+La procédure suivante décrit les étapes nécessaires pour envoyer des données à un serveur. Cette procédure est couramment utilisée pour publier des données sur une page web. 
   
-### <a name="to-send-data-to-a-host-server"></a>Pour envoyer des données à un serveur hôte  
+## <a name="to-send-data-to-a-host-server"></a>Pour envoyer des données à un serveur hôte  
   
-1.  Créez une instance <xref:System.Net.WebRequest> en appelant <xref:System.Net.WebRequest.Create%2A> avec l’URI de la ressource qui accepte les données, par exemple, un script ou une page ASP.NET.  
+1.  Créez une instance <xref:System.Net.WebRequest> en appelant <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> avec l’URI d’une ressource, comme un script ou une page ASP.NET, qui accepte des données. Par exemple : 
   
     ```csharp  
-    WebRequest request = WebRequest.Create("http://www.contoso.com/");  
+    WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
     ```  
   
     ```vb  
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
+    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx")  
     ```  
   
     > [!NOTE]
-    >  .NET Framework fournit des classes spécifiques au protocole dérivées de **WebRequest** et de **WebResponse** pour les URI qui commencent par « http: », « https: », « ftp: » et « file: ». Pour accéder aux ressources à l’aide d’autres protocoles, vous devez implémenter des classes spécifiques au protocole qui sont dérivées de **WebRequest** et de **WebResponse**. Pour plus d’informations, consultez [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+    > Le .NET Framework fournit des classes spécifiques du protocole dérivées des classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> pour les URI qui commencent par *http:*, *https:*, *ftp:* et *file:*.
+    Si vous avez besoin de définir ou lire des propriétés spécifiques du protocole, vous devez caster votre objet <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> en type d’objet spécifique du protocole. Pour plus d’informations, consultez [Programmation de protocoles enfichables](programming-pluggable-protocols.md). 
   
-2.  Définissez les valeurs des propriétés dont vous avez besoin dans **WebRequest**. Par exemple, pour activer l’authentification, définissez la propriété **Credentials** sur une instance de la classe <xref:System.Net.NetworkCredential>.  
+2.  Définissez les valeurs des propriétés dont vous avez besoin dans votre objet `WebRequest`. Par exemple, pour activer l’authentification, définissez la propriété <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> sur une instance de la classe <xref:System.Net.NetworkCredential> :
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -43,17 +44,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     Dans la plupart des cas, l’instance **WebRequest** est suffisante pour envoyer des données. Toutefois, si vous devez définir des propriétés spécifiques au protocole, effectuez un cast de **WebRequest** en un type de protocole spécifique. Par exemple, pour accéder aux propriétés propres à HTTP de <xref:System.Net.HttpWebRequest>, effectuez un cast de **WebRequest** en une référence **HttpWebRequest**. L’exemple de code suivant montre comment définir la propriété <xref:System.Net.HttpWebRequest.UserAgent%2A> spécifique au protocole HTTP.  
-  
-    ```csharp  
-    ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
-    ```  
-  
-    ```vb  
-    Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
-    ```  
-  
-3.  Spécifiez une méthode de protocole qui autorise l’envoi de données à l’aide d’une demande, telle que la méthode **POST** HTTP.  
+3.  Spécifiez une méthode de protocole qui autorise l’envoi de données à l’aide d’une demande, comme la méthode `POST` HTTP :  
   
     ```csharp  
     request.Method = "POST";  
@@ -63,7 +54,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.Method = "POST"  
     ```  
   
-4.  Définissez la propriété **ContentLength**.  
+4.  Affectez à la propriété <xref:System.Web.HttpRequest.ContentLength> la valeur du nombre d’octets que vous insérez dans votre demande. Par exemple : 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -73,7 +64,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Définissez la propriété **ContentType** avec une valeur appropriée.  
+5.  Affectez à la propriété <xref:System.Web.HttpRequest.ContentType> une valeur appropriée. Par exemple :
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -83,37 +74,37 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Obtenez le flux qui contient les données de la demande en appelant la méthode <xref:System.Net.WebRequest.GetRequestStream%2A>.  
+6.  Obtenez le flux qui contient les données de la demande en appelant la méthode <xref:System.Net.WebRequest.GetRequestStream%2A>. Par exemple :
   
     ```csharp  
-    Stream dataStream = request.GetRequestStream ();  
+    Stream dataStream = request.GetRequestStream();  
     ```  
   
     ```vb  
-    Stream dataStream = request.GetRequestStream ()  
+    Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  Écrivez les données dans l’objet <xref:System.IO.Stream> retourné par cette méthode.  
+7.  Écrivez les données dans l’objet <xref:System.IO.Stream> retourné par la méthode `GetRequestStream`. Par exemple :
   
     ```csharp  
-    dataStream.Write (byteArray, 0, byteArray.Length);  
+    dataStream.Write(byteArray, 0, byteArray.Length);  
     ```  
   
     ```vb  
-    dataStream.Write (byteArray, 0, byteArray.Length)  
+    dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  Fermez le flux de la demande en appelant la méthode **Stream.Close**.  
+8.  Fermez le flux de la demande en appelant la méthode <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Par exemple :
   
     ```csharp  
-    dataStream.Close ();  
+    dataStream.Close();  
     ```  
   
     ```vb  
-    dataStream.Close ()  
+    dataStream.Close()  
     ```  
   
-9. Envoyez la demande au serveur en appelant <xref:System.Net.WebRequest.GetResponse%2A>. Cette méthode retourne un objet contenant la réponse du serveur. Le type de l’objet <xref:System.Net.WebResponse> retourné est déterminé par le schéma d’URI de la demande.  
+9. Envoyez la demande au serveur en appelant <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Cette méthode retourne un objet contenant la réponse du serveur. Le type de l’objet `WebResponse` retourné est déterminé par le schéma d’URI de la demande. Par exemple :
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -123,30 +114,29 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     Dim response As WebResponse = request.GetResponse()  
     ```  
   
-    > [!NOTE]
-    >  Quand vous n’avez plus besoin d’un objet <xref:System.Net.WebResponse>, vous devez le fermer en appelant la méthode <xref:System.Net.WebResponse.Close%2A>. Si vous avez obtenu le flux de la réponse à partir de l’objet réponse, vous pouvez également fermer le flux en appelant la méthode <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Si vous ne fermez pas la réponse ni le flux, votre application peut ne plus avoir suffisamment de connexions au serveur pour traiter des demandes supplémentaires.  
-  
-10. Vous pouvez accéder aux propriétés de **WebResponse** ou effectuer un cast de **WebResponse** en une instance spécifique au protocole pour lire les propriétés propres au protocole. Par exemple, pour accéder aux propriétés propres à HTTP de <xref:System.Net.HttpWebResponse>, effectuez un cast de **WebResponse** en une référence **HttpWebResponse**.  
+10. Vous pouvez accéder aux propriétés de votre objet `WebResponse` ou le caster en instance spécifique du protocole pour lire les propriétés propres au protocole. 
+
+    Par exemple, pour accéder aux propriétés propres à HTTP de <xref:System.Net.HttpWebResponse>, castez votre objet `WebResponse` en référence <xref:System.Net.HttpWebResponse>. L’exemple de code suivant montre comment afficher la propriété <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> propre à HTTP envoyée avec une réponse :
   
     ```csharp  
-    Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
+    Console.WriteLine(((HttpWebResponse)response).StatusDescription);    
     ```  
   
     ```vb  
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. Pour obtenir le flux contenant les données de réponse envoyées par le serveur, appelez la méthode <xref:System.Net.WebResponse.GetResponseStream%2A> de **WebResponse**.  
+11. Pour obtenir le flux contenant les données de réponse envoyées par le serveur, appelez la méthode <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> de votre objet `WebResponse`. Par exemple :
   
     ```csharp  
-    Stream data = response.GetResponseStream;  
+    Stream dataStream = response.GetResponseStream();  
     ```  
   
     ```vb  
-    Dim data As Stream = response.GetResponseStream  
+    Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-12. Après avoir lu les données de la réponse, vous devez fermer le flux de la réponse à l’aide de la méthode **Stream.Close** ou fermer la réponse en utilisant la méthode **WebResponse.Close**. Vous n’avez pas besoin d’appeler la méthode **Close** à la fois sur le flux de la réponse et sur **WebResponse**, mais si vous le faites, cela n’a pas d’incidence.  
+12. Une fois que vous avez lu les données à partir de l’objet de réponse, fermez-le avec la méthode <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> ou fermez le flux de réponse avec la méthode <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Si vous ne fermez pas la réponse ni le flux, votre application peut ne plus avoir suffisamment de connexions au serveur pour traiter des demandes supplémentaires. Étant donné que la méthode `WebResponse.Close` appelle `Stream.Close` quand elle ferme la réponse, il n’est pas nécessaire d’appeler `Close` sur les objets de réponse et de flux, même si cela ne porte pas à préjudice. Par exemple :
   
     ```csharp  
     response.Close();  
@@ -158,6 +148,8 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
   
 ## <a name="example"></a>Exemple  
   
+L’exemple de code suivant montre comment envoyer des données à un serveur web et lire les données dans sa réponse :  
+
 ```csharp  
 using System;  
 using System.IO;  
@@ -168,41 +160,47 @@ namespace Examples.System.Net
 {  
     public class WebRequestPostExample  
     {  
-        public static void Main ()  
+        public static void Main()  
         {  
-            // Create a request using a URL that can receive a post.   
-            WebRequest request = WebRequest.Create ("http://www.contoso.com/PostAccepter.aspx ");  
+            // Create a request by using a URL that can receive a post.   
+            WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ");  
             // Set the Method property of the request to POST.  
             request.Method = "POST";  
+
             // Create POST data and convert it to a byte array.  
             string postData = "This is a test that posts this string to a Web server.";  
-            byte[] byteArray = Encoding.UTF8.GetBytes (postData);  
-            // Set the ContentType property of the WebRequest.  
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);  
+
+            // Set the ContentType property of the request.  
             request.ContentType = "application/x-www-form-urlencoded";  
-            // Set the ContentLength property of the WebRequest.  
+            // Set the ContentLength property of the request.  
             request.ContentLength = byteArray.Length;  
+
             // Get the request stream.  
-            Stream dataStream = request.GetRequestStream ();  
+            Stream dataStream = request.GetRequestStream();  
             // Write the data to the request stream.  
-            dataStream.Write (byteArray, 0, byteArray.Length);  
-            // Close the Stream object.  
-            dataStream.Close ();  
+            dataStream.Write(byteArray, 0, byteArray.Length);  
+            // Close the stream.  
+            dataStream.Close();  
+
             // Get the response.  
-            WebResponse response = request.GetResponse ();  
+            WebResponse response = request.GetResponse();  
             // Display the status.  
-            Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);  
+
             // Get the stream containing content returned by the server.  
-            dataStream = response.GetResponseStream ();  
-            // Open the stream using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader (dataStream);  
+            dataStream = response.GetResponseStream();  
+            // Open the stream by using a StreamReader for easy access.  
+            StreamReader reader = new StreamReader(dataStream);  
+
             // Read the content.  
-            string responseFromServer = reader.ReadToEnd ();  
+            string responseFromServer = reader.ReadToEnd();  
             // Display the content.  
-            Console.WriteLine (responseFromServer);  
-            // Clean up the streams.  
-            reader.Close ();  
-            dataStream.Close ();  
-            response.Close ();  
+            Console.WriteLine(responseFromServer);  
+
+            // Clean up the response.  
+            reader.Close();  
+            response.Close();  
         }  
     }  
 }  
@@ -213,51 +211,63 @@ Imports System
 Imports System.IO  
 Imports System.Net  
 Imports System.Text  
+
 Namespace Examples.System.Net  
+
     Public Class WebRequestPostExample  
   
         Public Shared Sub Main()  
-            ' Create a request using a URL that can receive a post.   
+
+            ' Create a request by using a URL that can receive a post.   
             Dim request As WebRequest = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ")  
             ' Set the Method property of the request to POST.  
             request.Method = "POST"  
+
             ' Create POST data and convert it to a byte array.  
             Dim postData As String = "This is a test that posts this string to a Web server."  
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)  
+
             ' Set the ContentType property of the WebRequest.  
             request.ContentType = "application/x-www-form-urlencoded"  
             ' Set the ContentLength property of the WebRequest.  
             request.ContentLength = byteArray.Length  
+
             ' Get the request stream.  
             Dim dataStream As Stream = request.GetRequestStream()  
             ' Write the data to the request stream.  
             dataStream.Write(byteArray, 0, byteArray.Length)  
-            ' Close the Stream object.  
+            ' Close the stream.  
             dataStream.Close()  
+
             ' Get the response.  
             Dim response As WebResponse = request.GetResponse()  
             ' Display the status.  
             Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
+
             ' Get the stream containing content returned by the server.  
             dataStream = response.GetResponseStream()  
-            ' Open the stream using a StreamReader for easy access.  
+            ' Open the stream by using a StreamReader for easy access.  
             Dim reader As New StreamReader(dataStream)  
+
             ' Read the content.  
             Dim responseFromServer As String = reader.ReadToEnd()  
             ' Display the content.  
             Console.WriteLine(responseFromServer)  
-            ' Clean up the streams.  
+
+            ' Clean up the response.  
             reader.Close()  
-            dataStream.Close()  
             response.Close()  
+
         End Sub  
+
     End Class  
+
 End Namespace  
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de requêtes Internet](../../../docs/framework/network-programming/creating-internet-requests.md)
-- [Utilisation de flux sur le réseau](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Accès à Internet via un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Demande de données](../../../docs/framework/network-programming/requesting-data.md)
-- [Guide pratique pour demander des données à l’aide de la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+- [Création de requêtes Internet](creating-internet-requests.md)
+- [Utilisation de flux sur le réseau](using-streams-on-the-network.md)
+- [Accès à Internet via un proxy](accessing-the-internet-through-a-proxy.md)
+- [Demande de données](requesting-data.md)
+- [Guide pratique pour demander des données à l’aide de la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)

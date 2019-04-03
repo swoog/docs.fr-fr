@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153941"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409222"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduction au langage C# et au .NET Framework
 
@@ -58,7 +58,7 @@ C# est un langage élégant et de type sécurisé orienté objet qui permet aux 
   
  Lorsque le programme C# est exécuté, l’assembly est chargé dans CLR, qui peut prendre différentes mesures selon les informations contenues dans le manifeste. Ensuite, si les exigences de sécurité sont satisfaites, CLR effectue une compilation juste à temps (JIT) pour convertir le code de langage intermédiaire en instructions machine natives. CLR fournit également d’autres services connexes liés au nettoyage automatique de la mémoire (garbage collection), à la gestion des exceptions et à la gestion des ressources. Le code exécuté par CLR est parfois appelé « code managé », contrairement au « code non managé » qui est compilé dans le langage machine natif ciblant un système spécifique. Le diagramme suivant illustre les relations de compilation et d’exécution des fichiers de code source de C#, les bibliothèques de classes .NET Framework, les assemblys et CLR.  
   
- ![Du code source C&#35; à l'exécution machine](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![Du code source C&#35; à l’exécution machine](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  L’interopérabilité des langages est une fonctionnalité essentielle de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Étant donné que le code de langage intermédiaire produit par le compilateur C# est conforme à la spécification de type commun (CTS), le code de langage intermédiaire généré à partir de C# peut interagir avec du code qui a été généré à partir des versions .NET de Visual Basic, Visual C++ ou un des plus de 20 autres langages compatibles CTS. Un seul assembly peut contenir plusieurs modules écrits dans différents langages .NET, et les types peuvent se référencent mutuellement comme s’ils avaient été écrits dans la même langue.  
   

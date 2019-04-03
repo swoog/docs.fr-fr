@@ -2,12 +2,12 @@
 title: Durable Instance Context
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841441"
 ---
 # <a name="durable-instance-context"></a>Durable Instance Context
 Cet exemple montre comment personnaliser le runtime Windows Communication Foundation (WCF) pour activer des contextes d’instance fiables. Il utilise SQL Server 2005 comme magasin de sauvegarde (SQL Server 2005 Express dans ce cas précis). Toutefois, il permet également d'accéder aux mécanismes de stockage personnalisés.  
@@ -30,7 +30,7 @@ Cet exemple montre comment personnaliser le runtime Windows Communication Founda
  La première étape mentionnée affectant les messages sur le câble, elle doit être implémentée sous forme d'un canal personnalisé et être raccordée à la couche de canal. La dernière affecte uniquement le comportement local du service et peut par conséquent être implémentée en étendant plusieurs points d'extensibilité. Chacune des extensions suivantes est traitée dans les sections ci-après.  
   
 ## <a name="durable-instancecontext-channel"></a>Canal InstanceContext fiable  
- La première chose à examiner est une extension de la couche de canal. La première étape de l'écriture d'un canal personnalisé consiste à déterminer la structure de communication du canal. Un nouveau protocole de câble étant introduit, le canal doit fonctionner avec la quasi-totalité des autres canaux de la pile. Par conséquent, il doit prendre en charge l'ensemble des modèles d'échange de messages. Toutefois, la fonctionnalité principale du canal est la même, quelle que soit sa structure de communication. Plus précisément, du côté client il doit écrire l'ID de contexte dans les messages, et du côté service il doit lire cet ID de contexte à partir des messages et le passer aux niveaux supérieurs. De ce fait, une classe `DurableInstanceContextChannelBase` est créée et agit en tant que classe de base abstraite pour toutes les implémentations de canal de contexte d'instance fiable. Cette classe contient les fonctions de gestion de machine d'état courantes ainsi que deux membres protégés afin d'appliquer et de lire les informations de contexte vers et à partir des messages.  
+ La première chose à examiner est une extension de la couche de canal. La première étape de l'écriture d'un canal personnalisé consiste à déterminer la structure de communication du canal. Un nouveau protocole de câble étant introduit, le canal doit fonctionner avec la quasi-totalité des autres canaux de la pile. Par conséquent, il doit prendre en charge l’ensemble des modèles d’échange de messages. Toutefois, la fonctionnalité principale du canal est la même, quelle que soit sa structure de communication. Plus précisément, du côté client il doit écrire l'ID de contexte dans les messages, et du côté service il doit lire cet ID de contexte à partir des messages et le passer aux niveaux supérieurs. De ce fait, une classe `DurableInstanceContextChannelBase` est créée et agit en tant que classe de base abstraite pour toutes les implémentations de canal de contexte d'instance fiable. Cette classe contient les fonctions de gestion de machine d'état courantes ainsi que deux membres protégés afin d'appliquer et de lire les informations de contexte vers et à partir des messages.  
   
 ```  
 class DurableInstanceContextChannelBase  
@@ -79,15 +79,15 @@ IContextManager contextManager =
                 this.endpointAddress);  
 ```  
   
- La méthode `ApplyContext` est appelée par les canaux d'envoi. Elle injecte l'ID de contexte dans les messages sortants. La méthode `ReadContextId` est appelée par les canaux de réception. Cette méthode garantit que l'ID de contexte est disponible dans les messages entrants et l'ajoute à la collection `Properties` de la classe `Message`. Elle lève également une exception `CommunicationException` en cas d'échec de lecture de l'ID de contexte et provoque donc l'abandon du canal.  
+ La méthode `ApplyContext` est appelée par les canaux d'envoi. Elle injecte l'ID de contexte dans les messages sortants. La méthode `ReadContextId` est appelée par les canaux de réception. Cette méthode garantit que l’ID de contexte est disponible dans les messages entrants et l’ajoute à la collection `Properties` de la classe `Message`. Elle lève également une exception `CommunicationException` en cas d'échec de lecture de l'ID de contexte et provoque donc l'abandon du canal.  
   
 ```  
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);  
 ```  
   
- Avant de poursuivre, il est important de comprendre l'utilisation de la collection `Properties` dans la classe `Message`. En général, cette collection `Properties` est utilisée lors du passage des données des niveaux inférieurs aux niveaux supérieurs de la couche de canal. De cette manière, les données souhaitées peuvent être fournies aux niveaux supérieurs de façon cohérente, quels que soient les détails du protocole. En d'autres termes, la couche de canal peut envoyer et recevoir l'ID de contexte sous forme d'un en-tête SOAP ou d'un en-tête cookie HTTP. Mais il n'est pas nécessaire que les niveaux supérieurs connaissent ces détails car la couche de canal rend ces informations disponibles dans la collection `Properties`.  
+ Avant de poursuivre, il est important de comprendre l’utilisation de la collection `Properties` dans la classe `Message`. En général, cette collection `Properties` est utilisée lors du passage des données des niveaux inférieurs aux niveaux supérieurs de la couche de canal. De cette manière, les données souhaitées peuvent être fournies aux niveaux supérieurs de façon cohérente, quels que soient les détails du protocole. En d'autres termes, la couche de canal peut envoyer et recevoir l'ID de contexte sous forme d'un en-tête SOAP ou d'un en-tête cookie HTTP. Mais il n’est pas nécessaire que les niveaux supérieurs connaissent ces détails car la couche de canal rend ces informations disponibles dans la collection `Properties`.  
   
- La classe `DurableInstanceContextChannelBase` étant maintenant en place, l'ensemble des dix interfaces nécessaires (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) doivent être implémentées. Elles ressemblent à chaque modèle d'échange de messages disponible (datagramme, simplex, duplex et leurs variantes de session). Chacune de ces implémentations hérite de la classe de base précédemment décrite et appelle `ApplyContext` et `ReadContexId` de manière appropriée. Par exemple, `DurableInstanceContextOutputChannel`, qui implémente l'interface IOutputChannel, appelle la méthode `ApplyContext` de chaque méthode qui envoie les messages.  
+ La classe `DurableInstanceContextChannelBase` étant maintenant en place, l'ensemble des dix interfaces nécessaires (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) doivent être implémentées. Elles ressemblent à chaque modèle d’échange de messages disponible (datagramme, simplex, duplex et leurs variantes de session). Chacune de ces implémentations hérite de la classe de base précédemment décrite et appelle `ApplyContext` et `ReadContexId` de manière appropriée. Par exemple, `DurableInstanceContextOutputChannel`, qui implémente l'interface IOutputChannel, appelle la méthode `ApplyContext` de chaque méthode qui envoie les messages.  
   
 ```  
 public void Send(Message message, TimeSpan timeout)  
@@ -123,7 +123,7 @@ if (isFirstMessage)
  Ces implémentations de canal sont ensuite ajoutées à l’exécution de canal WCF par le `DurableInstanceContextBindingElement` classe et `DurableInstanceContextBindingElementSection` manière appropriée. Consultez le [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) exemple de documentation pour plus d’informations sur les éléments de liaison et de sections d’éléments de liaison de canal.  
   
 ## <a name="service-model-layer-extensions"></a>Extensions de la couche de modèle de service  
- Maintenant que l'ID de contexte a traversé la couche de canal, le comportement de service peut être implémenté afin de personnaliser l'instanciation. Dans cet exemple, un gestionnaire de stockage est utilisé pour charger et enregistrer l'état à partir de ou vers le magasin persistant. Comme expliqué précédemment, cet exemple fournit un gestionnaire de stockage qui utilise le SQL Server 2005 comme magasin de sauvegarde. Toutefois, il est également possible d'ajouter des mécanismes de stockage personnalisés à cette extension. Pour ce faire, une interface publique est déclarée et doit être implémentée par tous les gestionnaires de stockage.  
+ Maintenant que l'ID de contexte a traversé la couche de canal, le comportement de service peut être implémenté afin de personnaliser l'instanciation. Dans cet exemple, un gestionnaire de stockage est utilisé pour charger et enregistrer l'état à partir de ou vers le magasin persistant. Comme expliqué précédemment, cet exemple fournit un gestionnaire de stockage qui utilise le SQL Server 2005 comme magasin de sauvegarde. Toutefois, il est également possible d’ajouter des mécanismes de stockage personnalisés à cette extension. Pour ce faire, une interface publique est déclarée et doit être implémentée par tous les gestionnaires de stockage.  
   
 ```  
 public interface IStorageManager  
@@ -373,7 +373,7 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## <a name="using-the-extension"></a>Utilisation de l’extension  
+## <a name="using-the-extension"></a>Utilisation de l'extension  
  À la fois la couche de canal et les extensions de couche de modèle de service sont effectuées et ils peuvent désormais être utilisés dans les applications WCF. Les services doivent ajouter le canal dans la pile de canaux à l’aide d’une liaison personnalisée, puis marquer les classes d’implémentation de service avec les attributs appropriés.  
   
 ```  
@@ -391,7 +391,7 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- Les applications clientes doivent ajouter DurableInstanceContextChannel dans la pile de canaux à l'aide d'une liaison personnalisée. Pour configurer le canal de façon déclarative dans le fichier de configuration, la section d’élément de liaison doit être ajoutée à la collection d’extensions d’élément de liaison.  
+ Les applications clientes doivent ajouter DurableInstanceContextChannel dans la pile de canaux à l’aide d’une liaison personnalisée. Pour configurer le canal de façon déclarative dans le fichier de configuration, la section d'élément de liaison doit être ajoutée à la collection d'extensions d'élément de liaison.  
   
 ```xml  
 <system.serviceModel>  
@@ -403,7 +403,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
  </extensions>  
 ```  
   
- L'élément de liaison peut maintenant être utilisé avec une liaison personnalisée à l'instar des autres éléments de liaison standard :  
+ L’élément de liaison peut maintenant être utilisé avec une liaison personnalisée à l’instar des autres éléments de liaison standard :  
   
 ```xml  
 <bindings>  
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>Voir aussi

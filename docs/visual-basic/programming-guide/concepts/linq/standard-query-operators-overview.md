@@ -2,12 +2,12 @@
 title: Vue d’ensemble des opérateurs de requête standard (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526494"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841470"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Vue d’ensemble des opérateurs de requête standard (Visual Basic)
 Les *opérateurs de requête standard* sont les méthodes qui forment le modèle de requête LINQ. La plupart de ces méthodes fonctionnent sur des séquences, où une séquence est un objet dont le type implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> ou l’interface <xref:System.Linq.IQueryable%601>. Les opérateurs de requête standard fournissent des fonctionnalités de requête, dont notamment le filtrage, la projection, l’agrégation, le tri, etc.  
@@ -101,6 +101,7 @@ MsgBox(output.ToString())
  [Opérations d’agrégation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Introduction à LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)

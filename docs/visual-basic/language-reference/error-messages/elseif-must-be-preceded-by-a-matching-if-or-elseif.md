@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: d6fa76b2aba45e3455cef6ceafc0f737ef56225d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fbb8ce974a618349bd4b5e7a2a25a165d91787a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271549"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832253"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' doit être précédé d'un '#If' ou '#ElseIf' correspondant
 `#ElseIf` est une directive de compilation conditionnelle. Un `#ElseIf` clause doit être précédée d’une mise en correspondance `#If` ou `#ElseIf` clause.  
@@ -28,4 +28,5 @@ ms.locfileid: "55271549"
 3.  Si tout le reste est en ordre, ajoutez une directive `#If` au début du bloc de compilation conditionnelle.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [#If...Then...#Else, directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

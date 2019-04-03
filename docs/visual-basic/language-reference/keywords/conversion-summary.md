@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a2394af7fc01f00a60900ed705fd1189959a50e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94fa8c5f648211252b59d3f530f6b651566a7136
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703171"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836686"
 ---
 # <a name="conversion-summary-visual-basic"></a>Résumé de la conversion (Visual Basic)
 Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime sont organisés selon leur fonction et utilisent.  
@@ -32,5 +32,6 @@ Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime so
 |Convertit une heure en numéro de série.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
 - [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

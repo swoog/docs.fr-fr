@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066140"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843030"
 ---
 # <a name="service-transaction-behavior"></a>Service Transaction Behavior
-Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d’une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
+Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d'une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -39,7 +39,7 @@ public interface ICalculator
 }  
 ```  
   
- Pour activer le flux de transaction entrant, le service est configuré avec la wsHttpBinding fournie par le système, avec l'attribut transactionFlow ayant la valeur `true`. Cette liaison utilise le protocole WSAtomicTransactionOctober2004 interopérable :  
+ Pour activer le flux de transaction entrant, le service est configuré avec la wsHttpBinding fournie par le système, avec l’attribut transactionFlow ayant la valeur `true`. Cette liaison utilise le protocole WSAtomicTransactionOctober2004 interopérable :  
   
 ```xml  
 <bindings>  
@@ -49,7 +49,7 @@ public interface ICalculator
 </bindings>  
 ```  
   
- Après avoir initialisé à la fois une connexion au service et une transaction, le client accède à plusieurs opérations de service dans l'étendue de cette transaction, puis complète la transaction et ferme la connexion :  
+ Après avoir initialisé à la fois une connexion au service et une transaction, le client accède à plusieurs opérations de service dans l’étendue de cette transaction, puis complète la transaction et ferme la connexion :  
   
 ```csharp
 // Create a client  
@@ -94,7 +94,7 @@ client.Close();
   
 -   Sur le `ServiceBehaviorAttribute` :  
   
-    -   La propriété `TransactionTimeout` spécifie le délai dans lequel une nouvelle transaction doit s'exécuter. Dans cet exemple, elle a pour valeur 30 secondes.  
+    -   La propriété `TransactionTimeout` spécifie le délai dans lequel une nouvelle transaction doit s’exécuter. Dans cet exemple, elle a pour valeur 30 secondes.  
   
     -   La propriété `TransactionIsolationLevel` spécifie le niveau d'isolation que le service prend en charge. Il doit correspondre au niveau d'isolation du client.  
   
@@ -104,13 +104,13 @@ client.Close();
   
 -   Sur le `ServiceContractAttribute` :  
   
-    -   La propriété `SessionMode` spécifie si le service met en corrélation les demandes appropriées dans une session logique. Étant donné que ce service inclut des opérations où la propriété OperationBehaviorAttribute TransactionAutoComplete a la valeur `false` (multiplication et division), `SessionMode.Required` doit être spécifié. Par exemple, l'opération de multiplication n'exécute pas sa transaction et à la place compte sur un appel ultérieur à l'opération de division pour s'exécuter à l'aide de la méthode `SetTransactionComplete` ; le service doit être en mesure de déterminer que ces opérations se produisent dans la même session.  
+    -   La propriété `SessionMode` spécifie si le service met en corrélation les demandes appropriées dans une session logique. Étant donné que ce service inclut des opérations où la propriété OperationBehaviorAttribute TransactionAutoComplete a la valeur `false` (multiplication et division), `SessionMode.Required` doit être spécifié. Par exemple, l’opération de multiplication n’exécute pas sa transaction et à la place compte sur un appel ultérieur à l’opération de division pour s’exécuter à l’aide de la méthode `SetTransactionComplete` ; le service doit être en mesure de déterminer que ces opérations se produisent dans la même session.  
   
 -   Sur le `OperationBehaviorAttribute` :  
   
-    -   La propriété `TransactionScopeRequired` spécifie si les actions de l'opération doivent être exécutées dans une étendue de transaction. Elle a la valeur `true` pour toutes les opérations dans cet exemple et, vu que le client transmet sa transaction à toutes les opérations, les actions se produisent dans l’étendue de cette transaction cliente.  
+    -   La propriété `TransactionScopeRequired` spécifie si les actions de l'opération doivent être exécutées dans une étendue de transaction. Elle a la valeur `true` pour toutes les opérations dans cet exemple et, vu que le client transmet sa transaction à toutes les opérations, les actions se produisent dans l'étendue de cette transaction cliente.  
   
-    -   La propriété `TransactionAutoComplete` spécifie si la transaction dans laquelle la méthode s'exécute est automatiquement effectuée si aucune exception non prise en charge n'est levée. Comme décrit précédemment, cette propriété a la valeur `true` pour les opérations d'addition et de soustraction mais `false` pour les opérations de multiplication et de division. Les opérations d'addition et de soustraction s'exécutent automatiquement, l'opération de division s'exécute à travers un appel explicite à la méthode `SetTransactionComplete`, et l'opération de multiplication ne s'exécute mais à la place compte sur un appel ultérieur obligatoire, à l'opération de division par exemple, pour s'exécuter.  
+    -   La propriété `TransactionAutoComplete` spécifie si la transaction dans laquelle la méthode s’exécute est automatiquement effectuée si aucune exception non prise en charge n’est levée. Comme décrit précédemment, cette propriété a la valeur `true` pour les opérations d'addition et de soustraction mais `false` pour les opérations de multiplication et de division. Les opérations d'addition et de soustraction s'exécutent automatiquement, l'opération de division s'exécute à travers un appel explicite à la méthode `SetTransactionComplete`, et l'opération de multiplication ne s'exécute mais à la place compte sur un appel ultérieur obligatoire, à l'opération de division par exemple, pour s'exécuter.  
   
  L'implémentation du service doté d'attributs se déroule comme suit :  
   
@@ -191,15 +191,15 @@ Creating new service instance...
   Writing row 4 to database: Dividing 495 by 15  
 ```  
   
- Notez qu'en plus de conserver le total évolutif des calculs, le service signale la création d'instances (une instance pour cet exemple) et enregistre les demandes d'opération dans une base de données. Étant donné que toutes les demandes transmettent la transaction du client, tout échec d’exécution de cette transaction entraîne la restauration de toutes les opérations de la base de données. Cela peut être démontré de plusieurs manières :  
+ Notez qu'en plus de conserver le total évolutif des calculs, le service signale la création d'instances (une instance pour cet exemple) et enregistre les demandes d'opération dans une base de données. Étant donné que toutes les demandes transmettent la transaction du client, tout échec d'exécution de cette transaction entraîne la restauration de toutes les opérations de la base de données. Cela peut être démontré de plusieurs manières :  
   
 -   Supprimez l’appel du client à `tx.Complete` () et répétez la transaction : le client quitte l’étendue de la transaction sans l’exécuter.  
   
--   Supprimez l’appel à l’opération de division du service : cela empêche l’action initiée par l’opération de multiplication de s’effectuer. Par conséquent, la transaction du client échoue également.  
+-   Supprimez l'appel à l'opération de division du service : cela empêche l'action initiée par l'opération de multiplication de s'effectuer. Par conséquent, la transaction du client échoue également.  
   
--   Levez une exception non gérée n'importe où dans l'étendue de transaction du client : cela empêche également le client d'exécuter sa transaction.  
+-   Levez une exception non gérée n’importe où dans l’étendue de transaction du client : cela empêche également le client d’exécuter sa transaction.  
   
- Le résultat est toujours le même : aucune des opérations exécutées dans cette étendue n'est validée et le nombre de lignes rendues persistantes dans la base de données n'est pas incrémenté.  
+ Le résultat est toujours le même : aucune des opérations exécutées dans cette étendue n’est validée et le nombre de lignes rendues persistantes dans la base de données n’est pas incrémenté.  
   
 > [!NOTE]
 >  Dans le cadre du processus de génération, le fichier de la base de données est copié dans le dossier bin. Vous devez examiner cette copie du fichier de la base de données pour observer les lignes rendues persistantes dans le journal plutôt que dans le fichier inclus dans le projet Visual Studio.  
@@ -216,7 +216,7 @@ Creating new service instance...
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Pour configurer le Microsoft Distributed Transaction Coordinator (MSDTC) de manière à prendre en charge l’exécution de l’exemple sur plusieurs ordinateurs  
   
-1.  Sur l’ordinateur de service, configurez MSDTC pour autoriser des transactions réseau entrantes.  
+1.  Sur l'ordinateur de service, configurez MSDTC pour autoriser des transactions réseau entrantes.  
   
     1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
@@ -232,7 +232,7 @@ Creating new service instance...
   
 2.  Sur l’ordinateur du service et l’ordinateur du client, configurez le Pare-feu Windows pour inclure le Microsoft Distributed Transaction Coordinator (MSDTC) à la liste des exceptions :  
   
-    1.  Exécutez l’application de Pare-feu Windows à partir du Panneau de configuration.  
+    1.  Exécutez l'application de Pare-feu Windows à partir du Panneau de configuration.  
   
     2.  À partir de la **Exceptions** , cliquez sur **ajouter un programme**.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Cliquez sur **OK** pour fermer la **ajouter un programme** boîte de dialogue, puis cliquez sur **OK** à nouveau pour fermer l’applet de pare-feu de Windows.  
   
-3.  Sur l’ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
+3.  Sur l'ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
   
     1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
@@ -265,4 +265,3 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>Voir aussi

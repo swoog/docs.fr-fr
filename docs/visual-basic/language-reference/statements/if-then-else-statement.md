@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: aeffdc842730a1be8160cd8db8e4c2aa849e94cc
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842692"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else, instruction (Visual Basic)
 Exécute un groupe d'instructions soumises à une condition, en fonction de la valeur d'une expression.  
@@ -71,10 +71,10 @@ Cet article inclut plusieurs exemples qui illustrent des utilisations de la `If`
  Obligatoire si `ElseIf` est présent. expression. Doit correspondre à `True` ou `False`, ou à un type de données qui est implicitement convertible en `Boolean`.  
   
  `elseifstatements`  
- Facultatif. Une ou plusieurs instructions qui suivent `ElseIf`... `Then` qui sont exécutées si `elseifcondition` prend la valeur `True`.  
+ Optionnel. Une ou plusieurs instructions qui suivent `ElseIf`... `Then` qui sont exécutées si `elseifcondition` prend la valeur `True`.  
   
  `elsestatements`  
- Facultatif. Une ou plusieurs instructions sont exécutées si aucune `condition` ou `elseifcondition` expression prend la valeur `True`.  
+ Optionnel. Une ou plusieurs instructions sont exécutées si aucune `condition` ou `elseifcondition` expression prend la valeur `True`.  
   
  `End If`  
  Met fin à la version multiligne de `If`... `Then`... `Else` bloc.  
@@ -121,6 +121,7 @@ Cet article inclut plusieurs exemples qui illustrent des utilisations de la `If`
  [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
 - [#If...Then...#Else, directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

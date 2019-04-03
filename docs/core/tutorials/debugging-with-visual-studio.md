@@ -3,12 +3,12 @@ title: Déboguer une application .NET Core Hello World avec Visual Studio 2017
 description: Découvrez comment déboguer une application Hello World écrite en C# ou Visual Basic avec Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170663"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463421"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Déboguer une application Hello World .NET Core C# ou Visual Basic avec Visual Studio 2017
 
@@ -39,7 +39,7 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
 1. L’exécution du programme s’arrête lorsqu’il atteint le point d’arrêt et avant l’exécution de la méthode `Console.WriteLine`. La fenêtre **Automatique** affiche les valeurs des variables utilisées autour de la ligne actuelle. La fenêtre **Variables locales** (que vous pouvez afficher en cliquant sur l’onglet **Variables locales**) affiche les valeurs des variables définies dans la méthode en cours d’exécution.
 
-   ![Fenêtre Application de Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Capture d’écran d’un point d’arrêt dans Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Vous pouvez changer la valeur des variables pour voir comment cela affecte votre programme. Si la **fenêtre Exécution** n’est pas visible, affichez-la en choisissant l’élément de menu **Débogage** > **Fenêtres** > **Exécution**. La **fenêtre Exécution** vous permet d’interagir avec l’application que vous déboguez.
 

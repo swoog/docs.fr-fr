@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738875"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818685"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Procédure : Crée un objet de Variable ne fait pas référence à n’importe quelle Instance (Visual Basic)
 Vous pouvez dissocier une variable objet à partir de n’importe quelle instance d’objet en lui affectant [rien](../../../../visual-basic/language-reference/nothing.md).  
@@ -32,6 +32,7 @@ Vous pouvez dissocier une variable objet à partir de n’importe quelle instanc
  Si vous utilisez une variable d’objet pour les objets qui contiennent des données confidentielles ou sensibles, vous pouvez définir la variable `Nothing` lorsque vous N'utilisez pas activement un de ces objets. Cela réduit le risque de code malveillant accède aux données.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.NullReferenceException>
 - [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Assignation des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

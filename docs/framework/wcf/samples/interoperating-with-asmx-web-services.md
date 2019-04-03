@@ -2,12 +2,12 @@
 title: Interoperating with ASMX Web Services
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: bab97c405a3958a6c0d6502041648cecf038023e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bef5239a52787629986eada60341cc121b22ba34
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643414"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843524"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperating with ASMX Web Services
 Cet exemple montre comment intégrer une application cliente de Windows Communication Foundation (WCF) à un service Web ASMX existant.  
@@ -54,7 +54,7 @@ public class CalculatorService : System.Web.Services.WebService
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- Le client généré vous permet d'accéder à un point de terminaison de service. Il vous suffit de configurer l'adresse et la liaison appropriées. À l'instar du service, le client utilise un fichier de configuration (App.config) pour spécifier le point de terminaison avec lequel il communique. La configuration de point de terminaison client se compose d’une adresse absolue pour le point de terminaison de service, de la liaison et du contrat, tel qu’indiqué dans l’exemple de configuration suivant.  
+ Le client généré vous permet d’accéder à un point de terminaison de service. Il vous suffit de configurer l’adresse et la liaison appropriées. À l'instar du service, le client utilise un fichier de configuration (App.config) pour spécifier le point de terminaison avec lequel il communique. La configuration de point de terminaison client se compose d’une adresse absolue pour le point de terminaison de service, de la liaison et du contrat, tel qu’indiqué dans l’exemple de configuration suivant.  
   
 ```xml  
 <client>  
@@ -131,4 +131,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## <a name="see-also"></a>Voir aussi

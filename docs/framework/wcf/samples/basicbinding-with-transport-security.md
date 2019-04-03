@@ -2,12 +2,12 @@
 title: BasicBinding with Transport Security
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 40aa914bee858d7cfaad627f7276623b22c2a7e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f3e2305a4ae8da13a5241bef9c438a060234132
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826143"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding with Transport Security
 Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la liaison de base. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  
@@ -22,7 +22,7 @@ Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la l
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Par défaut, la liaison de base prend en charge la communication HTTP. L'exemple indique comment activer la sécurité de transport pour la liaison  de base. Vous devez créer un certificat et l'assigner en utilisant l'Assistant Certificat de serveur Web avant d'exécuter l'exemple.  
+ Par défaut, la liaison de base prend en charge la communication HTTP. L’exemple indique comment activer la sécurité de transport pour la liaison  de base. Vous devez créer un certificat et l’assigner en utilisant l’Assistant Certificat de serveur web avant d’exécuter l’exemple.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -89,4 +89,3 @@ Press <ENTER> to terminate client.
   
 5.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Voir aussi

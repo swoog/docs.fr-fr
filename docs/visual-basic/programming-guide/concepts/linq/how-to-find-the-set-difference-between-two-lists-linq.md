@@ -2,19 +2,19 @@
 title: 'Procédure : Rechercher la différence définie entre deux listes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: e1c012dbe252c494c5f77e61b56deccbb07490fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d87a2bd882adb6eca144288ace72b0e7c464907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829497"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Procédure : Rechercher la différence définie entre deux listes (LINQ) (Visual Basic)
 Cet exemple montre comment utiliser LINQ pour comparer deux listes de chaînes et sortir les lignes qui sont présentes dans names1.txt, mais pas dans names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Pour créer les fichiers de données  
   
-1.  Copiez names1.txt et names2.txt dans votre dossier de solution, comme indiqué dans [Comment : Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Copiez names1.txt et names2.txt dans votre dossier de solution comme indiqué dans le [Guide pratique pour Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -57,4 +57,5 @@ End Class
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

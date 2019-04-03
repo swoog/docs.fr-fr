@@ -4,16 +4,16 @@ description: Découvrez dans quelle mesure les génériques peuvent faire office
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835289"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465423"
 ---
 # <a name="generic-types-overview"></a>Vue d’ensemble des types génériques
 
-Les développeurs utilisent tout le temps des génériques dans .NET, implicitement ou explicitement. Quand vous utilisez LINQ dans .NET, avez-vous déjà remarqué que vous utilisez <xref:System.Collections.Generic.IEnumerable%601> ? Sinon, si vous avez déjà vu un exemple en ligne d’un « dépôt générique » pour communiquer avec les bases de données à l’aide d’Entity Framework, avez-vous remarqué que la plupart des méthodes retournent IQueryable<T> ? Vous vous êtes peut-être demandé ce que signifie le **T** dans ces exemples et pourquoi il s’y trouve.
+Les développeurs utilisent tout le temps des génériques dans .NET, implicitement ou explicitement. Quand vous utilisez LINQ dans .NET, avez-vous déjà remarqué que vous utilisez <xref:System.Collections.Generic.IEnumerable%601> ? Sinon, si vous avez déjà vu un exemple en ligne d’un « dépôt générique » pour communiquer avec les bases de données à l’aide d’Entity Framework, avez-vous remarqué que la plupart des méthodes retournent IQueryable\<T> ? Vous vous êtes peut-être demandé ce que signifie le **T** dans ces exemples et pourquoi il s’y trouve.
 
 Les **génériques** introduits dans .NET Framework 2.0 sont essentiellement un « modèle de code » qui permet aux développeurs de définir des structures de données [de type sécurisé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) sans se limiter à un type de données réel. Par exemple, <xref:System.Collections.Generic.List%601> est une [collection générique](xref:System.Collections.Generic) qui peut être déclarée et utilisée avec n’importe quel type, par ex., `List<int>`, `List<string>` ou `List<Person>`.
 

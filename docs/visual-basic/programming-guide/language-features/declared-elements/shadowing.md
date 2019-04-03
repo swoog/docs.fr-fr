@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839390"
 ---
 # <a name="shadowing-in-visual-basic"></a>Occultation dans Visual Basic
 Lorsque deux éléments de programmation partagent le même nom, un d’eux peut masquer, ou *ombre*, autre. Dans ce cas, l’élément occulté n’est pas disponible pour référence ; au lieu de cela, lorsque votre code utilise le nom d’élément, le compilateur Visual Basic les résout à l’élément d’occultation.  
@@ -138,6 +138,7 @@ End Class
  Dans l’exemple précédent, la variable `basObj` est déclaré comme classe de base. Affectation d’un `dervCls` objet constitue une conversion étendue et est donc valide. Toutefois, la classe de base ne peut pas accéder à la version de masquage de la variable `z` dans la classe dérivée, le compilateur résout `basObj.z` à la valeur d’origine de la classe de base.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Conversions étendues et restrictives](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

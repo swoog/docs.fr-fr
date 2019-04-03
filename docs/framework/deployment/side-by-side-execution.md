@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395159"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654599"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Exécution côte à côte dans .NET Framework
 L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versions d'une application ou d'un composant sur le même ordinateur. Vous pouvez avoir plusieurs versions du Common Language Runtime et plusieurs versions d'applications et de composants qui utilisent une version du runtime sur le même ordinateur simultanément.  
   
  L'illustration suivante montre l'utilisation par plusieurs applications de deux versions différentes du runtime sur le même ordinateur. Les applications A, B et C utilisent la version 1.0 du runtime, l'application D utilise la version 1.1 du runtime.  
   
- ![Exécution côte à côte](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-Exécution côte à côte de deux versions du runtime  
+ ![Exécution côte à côte de différentes versions du runtime](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  Le .NET Framework se compose du Common Language Runtime et d’une collection d’assemblys qui contiennent les types d’API. Le runtime et les assemblys .NET Framework sont gérés séparément. Par exemple, la version 4.0 du runtime correspond en fait à la version 4.0.319, tandis que la version 1.0 des assemblys .NET Framework correspond à la version 1.0.3300.0.  
   
  L'illustration suivante montre l'utilisation par plusieurs applications de deux versions différentes d'un composant sur le même ordinateur. Les applications A et B utilisent la version 1.0 du composant, l'application C utilise la version 2.0 du même composant.  
   
- ![Exécution côte à côte](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-Exécution côte à côte de deux versions d'un composant  
+ ![Diagramme qui montre l’exécution côte à côte d’un composant.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  L'exécution côte à côte vous donne davantage de contrôle sur les versions d'un composant auxquelles se lie une application ainsi que sur la version du runtime utilisée par une application.  
   
@@ -115,7 +113,7 @@ publicKeyToken=...,
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Comment : activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Explique comment lier une application à une version spécifique d'un assembly.|  
+|[Guide pratique pour Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Explique comment lier une application à une version spécifique d'un assembly.|  
 |[Configuration de la redirection de liaison d’assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explique comment rediriger les références de liaison d’assembly vers une version spécifique des assemblys du .NET Framework.|  
 |[Exécution côte à côte in-process](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Explique comment utiliser l'activation d'hôte du runtime côte à côte in-process pour exécuter plusieurs versions du CLR dans un même processus.|  
 |[Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fournit une vue d'ensemble conceptuelle des assemblys.|  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843447"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Les expressions lambda ne sont pas valides dans la première expression d’une instruction ’Select Case’
 Vous ne pouvez pas utiliser une expression lambda pour l’expression de test dans un `Select Case` instruction. Définitions d’expression lambda retournent des fonctions et l’expression de test d’un `Select Case` instruction doit être un type de données élémentaire.  
@@ -41,6 +41,7 @@ End Select
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Expressions lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [If...Then...Else (instruction)](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Select...Case (instruction)](../../../visual-basic/language-reference/statements/select-case-statement.md)

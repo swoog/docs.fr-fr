@@ -2,12 +2,12 @@
 title: Dead Letter Queues
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721293"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837856"
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
@@ -20,9 +20,9 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
  Dans le cadre d'une communication en file d'attente, le client communique avec le service à l'aide d'une file d'attente. Cela signifie que le client envoie ses messages à cette file d'attente. Le service reçoit des messages de la file d'attente. Par conséquent, dans le cadre d'une communication en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément.
 
- Parce que la communication en file d'attente peut impliquer une certaine latence, vous pouvez associer une valeur de durée de vie au message afin de garantir que le message n'est pas remis à l'application une fois le délai passé. Il existe également des cas où une application doit être informée en cas d'échec de remise du message. Dans tous ces cas, comme lorsque la durée de vie du message a expiré ou que le message n'a pas été remis, il est mis dans une file d'attente de lettres mortes. L'application émettrice peut lire ensuite les messages dans la file d'attente de lettres mortes et effectuer des actions correctives qui varient d'aucune action à la correction des raisons pour remise non réussie et au renvoi du message.
+ Parce que la communication en file d'attente peut impliquer une certaine latence, vous pouvez associer une valeur de durée de vie au message afin de garantir que le message n'est pas remis à l'application une fois le délai passé. Il existe également des cas où une application doit être informée en cas d'échec de remise du message. Dans tous ces cas, comme lorsque la durée de vie du message a expiré ou que le message n'a pas été remis, il est mis dans une file d'attente de lettres mortes. L’application émettrice peut lire ensuite les messages dans la file d’attente de lettres mortes et effectuer des actions correctives qui varient d’aucune action à la correction des raisons pour remise non réussie et au renvoi du message.
 
- La file d'attente de lettres mortes dans la liaison `NetMsmqBinding` est exprimée dans les propriétés suivantes :
+ La file d’attente de lettres mortes dans la liaison `NetMsmqBinding` est exprimée dans les propriétés suivantes :
 
 -   La propriété <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> permet d'exprimer le type de file d'attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
 
@@ -34,7 +34,7 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
 -   La propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> permet d'exprimer la file d'attente spécifique à utiliser comme file d'attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Dans cet exemple, le client envoie un lot de messages au service à partir de l'étendue d'une transaction et indique un valeur arbitraire faible de durée de vie pour ces messages (approximativement 2 secondes). Le client indique également la file d'attente de lettres mortes personnalisée à utiliser pour mettre les messages qui ont expiré en file d'attente.
+ Dans cet exemple, le client envoie un lot de messages au service à partir de l’étendue d’une transaction et indique un valeur arbitraire faible de durée de vie pour ces messages (approximativement 2 secondes). Le client indique également la file d'attente de lettres mortes personnalisée à utiliser pour mettre les messages qui ont expiré en file d'attente.
 
  L'application cliente peut lire les messages dans la file d'attente de lettres mortes. Elle tente ensuite de renvoyer le message ou de corriger l'erreur qui a provoqué la mise en file d'attente de lettres mortes du message et de renvoyer le message. Dans l'exemple, le client affiche un message d'erreur.
 
@@ -51,7 +51,7 @@ public interface IOrderProcessor
 
  Le code de service dans l’exemple est celui de la [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
- La communication avec le service a lieu dans l’étendue d’une transaction. Le service lit des messages à partir de la file d'attente, effectue l'opération puis affiche les résultats de cette dernière. L'application crée également une file d'attente de lettres mortes pour les messages de lettres mortes.
+ La communication avec le service a lieu dans l'étendue d'une transaction. Le service lit des messages à partir de la file d'attente, effectue l'opération puis affiche les résultats de cette dernière. L'application crée également une file d'attente de lettres mortes pour les messages de lettres mortes.
 
 ```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
@@ -113,7 +113,7 @@ class Client
 > [!NOTE]
 >  Le client a la possibilité de remettre le message à la file d'attente du service dans le délai spécifié. Pour être sûr de voir le service de lettres mortes en action, vous devez exécuter le client avant de démarrer le service. Le message expire et est remis au service de lettres mortes.
 
- L'application doit définir la file d'attente à utiliser comme file d'attente de lettres mortes. Si aucune file d'attente n'est spécifiée, la file d'attente de lettres mortes transactionnelle du système par défaut est utilisée pour mettre en file d'attente les messages morts. Dans cet exemple, l'application cliente spécifie sa propre file d'attente de lettres mortes.
+ L'application doit définir la file d'attente à utiliser comme file d'attente de lettres mortes. Si aucune file d’attente n’est spécifiée, la file d’attente de lettres mortes transactionnelle du système par défaut est utilisée pour mettre en file d’attente les messages morts. Dans cet exemple, l'application cliente spécifie sa propre file d'attente de lettres mortes.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -342,7 +342,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>
     ```
 
-     Assurez-vous que le point de terminaison est associé à la liaison en définissant l'attribut `bindingConfiguration` du point de terminaison.
+     Assurez-vous que le point de terminaison est associé à la liaison en définissant l’attribut `bindingConfiguration` du point de terminaison.
 
 2.  Assurez-vous de modifier la configuration sur DeadLetterService, le serveur et le client avant d'exécuter l'exemple.
 
@@ -361,4 +361,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>Voir aussi

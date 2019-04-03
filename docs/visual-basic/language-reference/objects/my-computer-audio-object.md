@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Audio object
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
-ms.openlocfilehash: 39994edacd7f863137f245698972b52c45f34ffe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ec6c71f8871ece2b0c1a2ec9bb47607f6a28871
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685709"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837678"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio, objet
 Fournit des méthodes permettant de lire des sons.  
@@ -20,7 +20,7 @@ Fournit des méthodes permettant de lire des sons.
   
  Pour plus d’informations, consultez [jouer des sons](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** <xref:Microsoft.VisualBasic.Devices>  
   
  **Classe :** <xref:Microsoft.VisualBasic.Devices.Audio>  
@@ -28,4 +28,5 @@ Fournit des méthodes permettant de lire des sons.
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [My.Computer (objet)](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359729"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410262"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publier des applications .NET Core avec l’interface CLI
 
@@ -50,7 +50,7 @@ Si vous utilisez le kit SDK .NET Core 2.1, le mode de publication par défaut p
 
 ### <a name="native-dependencies"></a>Dépendances natives
 
-Si votre application a des dépendances natives, elle risque de ne pas fonctionner sur un autre système d’exploitation. Par exemple, si votre application utilise l’API Win32 native, elle ne s’exécutera pas sur macOS ou Linux. Vous devrez fournir du code propre à la plateforme et compiler un exécutable pour chaque plateforme.
+Si votre application a des dépendances natives, elle risque de ne pas fonctionner sur un autre système d’exploitation. Par exemple, si votre application utilise l’API Windows native, elle ne s’exécutera pas sur macOS ou Linux. Vous devrez fournir du code propre à la plateforme et compiler un exécutable pour chaque plateforme.
 
 Sachez également que si une bibliothèque que vous avez référencée a une dépendance native, votre application risque de ne pas fonctionner sur toutes les plateformes. Toutefois, il est possible qu’un package NuGet que vous référencez ait inclus des versions propres à la plateforme afin de gérer pour vous les dépendances natives requises.
 

@@ -2,12 +2,12 @@
 title: 'Procédure : Interroger un ArrayList avec LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 5e1a7e84c8f8789edb3f0c867986d5a5e27674c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669027"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837154"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procédure : Interroger un ArrayList avec LINQ (Visual Basic)
 Quand vous utilisez LINQ pour interroger des collections <xref:System.Collections.IEnumerable> non génériques telles que <xref:System.Collections.ArrayList>, vous devez déclarer explicitement le type de la variable de portée pour qu’il reflète le type spécifique des objets de la collection. Par exemple, si vous avez un <xref:System.Collections.ArrayList> de `Student` objets, votre [Clause From](../../../../visual-basic/language-reference/queries/from-clause.md) doit ressembler à ceci :  
@@ -77,4 +77,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: bfedda6dba7f21efa8e808e85869e6f96710e11b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965876"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841451"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit, instruction (Visual Basic)
 Force la déclaration explicite de toutes les variables dans un fichier, ou permet les déclarations implicites de variables.  
@@ -29,10 +29,10 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Composants  
  `On`  
- Facultatif. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
+ Optionnel. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
   
  `Off`  
- Facultatif. Désactive `Option Explicit` la vérification.  
+ Optionnel. Désactive `Option Explicit` la vérification.  
   
 ## <a name="remarks"></a>Notes  
  Lorsque `Option Explicit On` ou `Option Explicit` apparaît dans un fichier, vous devez déclarer explicitement toutes les variables à l’aide de la `Dim` ou `ReDim` instructions. Si vous essayez d’utiliser un nom de variable non déclarée, une erreur se produit au moment de la compilation. La `Option Explicit Off` instruction permet une déclaration implicite de variables.  
@@ -67,6 +67,7 @@ Option Explicit { On | Off }
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim (instruction)](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md)

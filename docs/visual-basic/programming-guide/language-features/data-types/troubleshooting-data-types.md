@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818850"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Dépannage des types de données (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous effectuez des opérations sur les types de données intrinsèques.  
@@ -113,6 +113,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  En règle générale, `String` valeurs ne sont pas significatives dans d’autres types de données et la conversion est très artificielle et dangereuse. Si possible, vous devez limiter l’utilisation de `String` variables pour les séquences de caractères pour lequel elles sont conçues. Vous ne devez jamais écrire le code qui s’appuie sur des valeurs équivalentes dans d’autres types.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

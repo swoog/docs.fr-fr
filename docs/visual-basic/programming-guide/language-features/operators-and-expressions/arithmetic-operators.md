@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981268"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820773"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Opérateurs arithmétiques en Visual Basic
 Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérations arithmétiques familières qui impliquent le calcul de valeurs numériques représentées par des littéraux, des variables, autres expressions, fonction et les appels de propriété et constantes. Également classés avec des opérateurs arithmétiques sont les opérateurs de décalage de bits, qui agissent au niveau des bits individuels des opérandes- and -shift de leurs modèles binaires vers la gauche ou droite.  
@@ -95,6 +95,7 @@ Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérati
  Si vous définissez `Option Strict Off`, toutefois, Visual Basic permet les conversions restrictives implicites, même si elles peuvent entraîner une perte inattendue de données ou de précision. Pour cette raison, nous vous recommandons d’utiliser `Option Strict On` lors de l’écriture de code de production. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs arithmétiques](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Opérateurs de décalage de bits](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

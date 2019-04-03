@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837485"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procédure : Modifiez la valeur d’un Argument de procédure (Visual Basic)
 Lorsque vous appelez une procédure, chaque argument que vous fournissez correspond à un des paramètres définis dans la procédure. Dans certains cas, le code de procédure peut modifier la valeur sous-jacente d’un argument dans le code appelant. Dans d’autres cas, la procédure peut modifier uniquement sa copie locale d’un argument.  
@@ -48,7 +48,7 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
   
 1.  Dans la déclaration de procédure, spécifiez [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) pour le paramètre correspondant à l’argument.  
   
-     ou  
+     - ou -  
   
      Dans le code appelant, mettez l’argument entre parenthèses dans la liste d’arguments. Cela force Visual Basic pour passer l’argument par valeur, même si le paramètre correspondant spécifie `ByRef`.  
   
@@ -78,6 +78,7 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
  Il y a toujours un risque de permettre à une procédure modifier la valeur sous-jacente à un argument dans le code appelant. Assurez-vous que cette valeur pour être modifié et être prêt à vérifier la validité avant de l’utiliser.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)

@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités de .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679891"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464071"
 ---
 # <a name="whats-new-in-net-core-20"></a>Nouveautés de .NET Core 2.0
 
@@ -144,7 +144,7 @@ Pour plus d’informations, consultez [Live Unit Testing avec Visual Studio 2017
 
 Si vous créez un projet pour plusieurs infrastructures cibles, vous pouvez maintenant sélectionner la plateforme cible dans le menu de niveau supérieur. Dans l’illustration suivante, un projet nommé SCD1 cible macOS X 10.11 64 bits (`osx.10.11-x64`) et Windows 10/Windows Server 2016 64 bits (`win10-x64`). Vous pouvez sélectionner l’infrastructure cible avant de sélectionner le bouton du projet, dans ce cas pour exécuter une version de débogage.
 
-![Sélection de l’infrastructure cible lors de la génération d’un projet](media/multitarget.png)
+![Capture d’écran montrant la sélection du framework cible lors de la génération d’un projet.](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Prise en charge côte à côte pour les kits SDK .NET Core
 

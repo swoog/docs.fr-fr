@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563988"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634230"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Comment comparer des chaînes en C\#
 
@@ -55,7 +55,7 @@ Lorsque vous effectuez une comparaison ordinale ne respectant pas la casse, ces 
 ## <a name="linguistic-comparisons"></a>Comparaisons linguistiques
 
 Les chaînes peuvent aussi être triées à l’aide de règles linguistiques pour la culture actuelle.
-C'est ce qu’on appelle parfois « Ordre de tri par mot ». Quand vous effectuez une comparaison linguistique, certains caractères Unicode non alphanumériques peuvent avoir une pondération spéciale. Par exemple, le trait d’union « - » peut avoir une très petite pondération pour que « co-op » et « coop » apparaissent à côté dans l’ordre de tri. Par ailleurs, certains caractères Unicode peuvent être équivalents à une séquence d’instances <xref:System.Char>. L’exemple suivant utilise la phrase « Ils dansent dans la rue » en allemand avec « ss » (U+0073 U+0073) dans une chaîne et « ß » (U+00DF) dans une autre. Du point de vue linguistique (dans Windows), « ss » équivaut à l’Essetz allemand : le caractère « ß » dans les cultures « en-US » et « de-DE ».
+C'est ce qu’on appelle parfois « Ordre de tri par mot ». Quand vous effectuez une comparaison linguistique, certains caractères Unicode non alphanumériques peuvent avoir une pondération spéciale. Par exemple, le trait d’union « - » peut avoir une très petite pondération pour que « co-op » et « coop » apparaissent à côté dans l’ordre de tri. Par ailleurs, certains caractères Unicode peuvent être équivalents à une séquence d’instances <xref:System.Char>. L’exemple suivant utilise la phrase « Ils dansent dans la rue » en allemand avec « ss » (U+0073 U+0073) dans une chaîne et « ß » (U+00DF) dans une autre. Du point de vue linguistique (dans Windows), « ss » équivaut à l’Esszet allemand : le caractère « ß » dans les cultures « en-US » et « de-DE ».
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

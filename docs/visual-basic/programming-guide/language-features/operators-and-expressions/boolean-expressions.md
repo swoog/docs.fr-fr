@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965538"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825532"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expressions booléennes (Visual Basic)
 Un *expression booléenne* est une expression qui prend une valeur de la [Type de données booléen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` ou `False`. `Boolean` expressions peuvent prendre plusieurs formes. La plus simple est la comparaison directe de la valeur d’un `Boolean` variable à un `Boolean` littéral, comme indiqué dans l’exemple suivant.  
@@ -67,6 +67,7 @@ Un *expression booléenne* est une expression qui prend une valeur de la [Type d
  Vous pouvez utiliser des parenthèses pour contrôler l’ordre d’évaluation d’expressions booléennes. Tout d’abord évaluent les expressions entourées parenthèses. Pour plusieurs niveaux d’imbrication, la priorité est accordée aux expressions plus profondément imbriquées. Dans les parenthèses, l’évaluation se poursuit selon les règles de priorité des opérateurs. Pour plus d’informations, consultez [priorité des opérateurs en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérateurs logiques et au niveau du bit en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Comparaisons de valeurs](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Instructions](../../../../visual-basic/programming-guide/language-features/statements.md)

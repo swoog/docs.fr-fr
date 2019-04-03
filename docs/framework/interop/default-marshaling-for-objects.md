@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219605"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409274"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling par défaut pour les objets
 Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWithType> peuvent être exposés à un code non managé sous la forme de l’un des types suivants :  
@@ -26,19 +26,6 @@ Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWi
   
  Seul COM interop prend en charge le marshaling des types d’objets. Le comportement par défaut est de marshaler des objets vers des variants COM. Ces règles s’appliquent uniquement au type **Object** et ne s’appliquent pas aux objets fortement typés issus de la classe **Object**.  
   
- Cette rubrique fournit les informations supplémentaires suivantes sur le marshaling des types d’objets :  
-  
--   [Options de marshaling](#cpcondefaultmarshalingforobjectsanchor7)  
-  
--   [Marshaling d’un objet vers une interface](#cpcondefaultmarshalingforobjectsanchor2)  
-  
--   [Marshaling d’un objet vers un variant](#cpcondefaultmarshalingforobjectsanchor3)  
-  
--   [Marshaling d’un variant vers un objet](#cpcondefaultmarshalingforobjectsanchor4)  
-  
--   [Marshaling des variants ByRef](#cpcondefaultmarshalingforobjectsanchor6)  
-  
-<a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
 ## <a name="marshaling-options"></a>Options de marshaling  
  Le tableau suivant montre les options de marshaling pour le type de données **Object**. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> fournit plusieurs valeurs d’énumération <xref:System.Runtime.InteropServices.UnmanagedType> pour marshaler des objets.  
   
@@ -127,11 +114,9 @@ struct ObjectHolder {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>Marshaling d’un objet vers une interface  
  Quand un objet est exposé à COM en tant qu’interface, cette interface est l’interface de classe pour le type managé <xref:System.Object> (l’interface **_Object**). Cette interface est de type **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) ou **IUnknown** (**UnmanagedType.IUnknown**) dans la bibliothèque de types résultante. Les clients COM peuvent appeler dynamiquement les membres de la classe managée ou tout membre implémenté par ses classes dérivées via l’interface **_Object**. Le client peut également appeler **QueryInterface** pour obtenir toute autre interface explicitement implémentée par le type managé.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>Marshaling d’un objet vers un variant  
  Quand un objet est marshalé en variant, le type variant interne est déterminé au moment de l’exécution en fonction des règles suivantes :  
   
@@ -255,7 +240,6 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  La valeur du variant COM est déterminée en appelant l’interface **IConvertible.To** *Type*, où **To** *Type* est la routine de conversion qui correspond au type retourné par **IConvertible.GetTypeCode**. Par exemple, un objet qui retourne **TypeCode.Double** depuis **IConvertible.GetTypeCode** est marshalé en tant que variant COM de type **VT_R8**. Vous pouvez obtenir la valeur du variant (stockée dans le champ **dblVal** du variant COM) en effectuant un cast en une interface **IConvertible** et en appelant la méthode <xref:System.IConvertible.ToDouble%2A>.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
 ## <a name="marshaling-variant-to-object"></a>Marshaling d’un variant vers un objet  
  Lors du marshaling d’un variant vers un objet, le type, et parfois la valeur, du variant marshalé détermine le type d’objet produit. Le tableau suivant identifie chaque type variant et le type d’objet correspondant que le marshaleur crée quand un variant est passé de COM au .NET Framework.  
   
@@ -289,18 +273,17 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  Les types variant passés à partir de COM vers le code managé, puis repassés à COM peuvent ne pas conserver le même type variant durant la durée de l’appel. Envisagez ce qui se passe quand un variant de type **VT_DISPATCH** est passé à partir de COM vers le .NET Framework. Lors du marshaling, le variant est converti en <xref:System.Object?displayProperty=nameWithType>. Si **Object** est ensuite repassé à COM, il est remarshalé vers un variant de type **VT_UNKNOWN**. Rien ne garantit que le variant produit quand un objet est marshalé à partir de code managé vers COM sera du même type que le variant utilisé à l’origine pour produire l’objet.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>Marshaling des variants ByRef  
- Bien que les variants puissent eux-mêmes être passés par valeur ou par référence, l’indicateur **VT_BYREF** peut être également utilisé avec n’importe quel type de variant pour indiquer que le contenu du variant est passé par référence plutôt que par valeur. La différence entre le marshaling de variants par référence et le marshaling d’un variant dont l’indicateur **VT_BYREF** est défini peut prêter à confusion. L’illustration suivante clarifie ces différences.  
+ Bien que les variants puissent eux-mêmes être passés par valeur ou par référence, l’indicateur **VT_BYREF** peut être également utilisé avec n’importe quel type de variant pour indiquer que le contenu du variant est passé par référence plutôt que par valeur. La différence entre le marshaling de variants par référence et le marshaling d’un variant dont l’indicateur **VT_BYREF** est défini peut prêter à confusion. L’illustration suivante clarifie ces différences :  
   
- ![Variant passé sur la pile](./media/interopvariant.gif "interopvariant")  
+ ![Diagramme qui montre un variant passé sur la pile.](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 Variants passés par valeur et par référence  
   
  **Comportement par défaut pour le marshaling d’objets et de variants par valeur**  
   
--   Lors du passage d’objets à partir de code managé vers COM, le contenu de l’objet est copié dans un nouveau variant créé par le marshaleur à l’aide des règles définies dans [Marshaling d’un objet vers un variant](#cpcondefaultmarshalingforobjectsanchor3). Les changements apportés au variant côté non managé ne sont pas retournés vers l’objet d’origine au retour de l’appel.  
+-   Lors du passage d’objets à partir de code managé vers COM, le contenu de l’objet est copié dans un nouveau variant créé par le marshaleur à l’aide des règles définies dans [Marshaling d’un objet vers un variant](#marshaling-object-to-variant). Les changements apportés au variant côté non managé ne sont pas retournés vers l’objet d’origine au retour de l’appel.  
   
--   Lors du passage de variants à partir de COM vers du code managé, le contenu du variant est copié dans un objet nouvellement créé à l’aide des règles définies dans [Marshaling d’un variant vers un objet](#cpcondefaultmarshalingforobjectsanchor4). Les changements apportés à l’objet côté managé ne sont pas retournés vers le variant d’origine au retour de l’appel.  
+-   Lors du passage de variants à partir de COM vers du code managé, le contenu du variant est copié dans un objet nouvellement créé à l’aide des règles définies dans [Marshaling d’un variant vers un objet](#marshaling-variant-to-object). Les changements apportés à l’objet côté managé ne sont pas retournés vers le variant d’origine au retour de l’appel.  
   
  **Comportement par défaut pour le marshaling d’objets et de variants par référence**  
   

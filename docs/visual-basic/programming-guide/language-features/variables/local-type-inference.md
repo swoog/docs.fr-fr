@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973403"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826819"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inférence de type local (Visual Basic)
 Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer les types de données des variables locales déclarées sans un `As` clause. Le compilateur déduit le type de la variable du type de l’expression d’initialisation. Cela vous permet de déclarer des variables sans déclarer explicitement un type, comme illustré dans l’exemple suivant. À la suite les déclarations, les deux `num1` et `num2` sont fortement typées en tant qu’entiers.  
@@ -72,6 +72,7 @@ Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer le
  Pour plus d’informations, consultez [Option Infer, instruction](../../../../visual-basic/language-reference/statements/option-infer-statement.md) et [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Liaison anticipée et liaison tardive](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [For Each...Next (instruction)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

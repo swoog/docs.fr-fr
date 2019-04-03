@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: e8d312bc14cf4df3825586de0eba5cba64856268
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977511"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828345"
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la structure.  
@@ -37,17 +37,17 @@ End Structure
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private protégé](../../language-reference/modifiers/private-protected.md) <br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Facultatif. Indique une définition partielle de la structure. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`Shadows`|Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|Optionnel. Indique une définition partielle de la structure. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette structure. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Facultatif. Spécifie qu’il s’agit d’une structure générique.|  
+|`Of`|Optionnel. Spécifie qu’il s’agit d’une structure générique.|  
 |`typelist`|Requis si vous utilisez le [de](../../../visual-basic/language-reference/statements/of-clause.md) mot clé. Liste de paramètres de type pour cette structure. Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Facultatif. Indique que cette structure implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Optionnel. Indique que cette structure implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Requis si vous utilisez la `Implements` instruction. Les noms des interfaces que cette structure implémente.|  
 |`datamemberdeclarations`|Obligatoire. Zéro ou plusieurs `Const`, `Dim`, `Enum`, ou `Event` instructions déclaration *membres de données* de la structure.|  
-|`methodmemberdeclarations`|Facultatif. Zéro ou plusieurs déclarations de `Function`, `Operator`, `Property`, ou `Sub` procédures, qui sont utilisées comme *membres de la méthode* de la structure.|  
+|`methodmemberdeclarations`|Optionnel. Zéro ou plusieurs déclarations de `Function`, `Operator`, `Property`, ou `Sub` procédures, qui sont utilisées comme *membres de la méthode* de la structure.|  
 |`End Structure`|Obligatoire. Met fin à la `Structure` définition.|  
   
 ## <a name="remarks"></a>Notes  
@@ -105,6 +105,7 @@ End Structure
  [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Module (instruction)](../../../visual-basic/language-reference/statements/module-statement.md)

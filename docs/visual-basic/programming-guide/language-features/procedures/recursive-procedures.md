@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969321"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832383"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procédures récursives (Visual Basic)
 Un *récursive* procédure est une qui s’appelle elle-même. En règle générale, cela n’est pas le moyen le plus efficace pour écrire du code Visual Basic.  
@@ -38,6 +38,7 @@ Un *récursive* procédure est une qui s’appelle elle-même. En règle génér
  **Test**. Si vous écrivez une procédure récursive, vous devez la tester soigneusement pour vous assurer qu’il répond toujours à certaines conditions de limitation. Vous devez également vous assurer que vous ne pouvez pas suffisamment de mémoire en raison d’un trop grand nombre d’appels récursifs.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.StackOverflowException>
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)

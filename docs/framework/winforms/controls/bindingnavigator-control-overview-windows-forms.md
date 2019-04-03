@@ -9,31 +9,32 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834229"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Vue d'ensemble du contrôle BindingNavigator (Windows Forms)
 Vous pouvez utiliser le contrôle <xref:System.Windows.Forms.BindingNavigator> pour créer un mécanisme normalisé permettant aux utilisateurs de rechercher et de modifier des données sur un Windows Form. Vous utilisez fréquemment <xref:System.Windows.Forms.BindingNavigator> avec le composant <xref:System.Windows.Forms.BindingSource> pour permettre aux utilisateurs de parcourir les enregistrements de données sur un formulaire et d'interagir avec eux.  
   
 ## <a name="how-the-bindingnavigator-works"></a>Fonctionnement de BindingNavigator  
- Le contrôle <xref:System.Windows.Forms.BindingNavigator> est composé d'un <xref:System.Windows.Forms.ToolStrip> avec une série d'objets <xref:System.Windows.Forms.ToolStripItem> pour la plupart des actions courantes liées aux données : ajout de données, suppression de données et navigation parmi les données. Par défaut, le contrôle <xref:System.Windows.Forms.BindingNavigator> contient ces boutons standard. La capture d'écran suivante illustre le contrôle <xref:System.Windows.Forms.BindingNavigator> sur un formulaire.  
+
+ Le contrôle <xref:System.Windows.Forms.BindingNavigator> est composé d'un <xref:System.Windows.Forms.ToolStrip> avec une série d'objets <xref:System.Windows.Forms.ToolStripItem> pour la plupart des actions courantes liées aux données : ajout de données, suppression de données et navigation parmi les données. Par défaut, le contrôle <xref:System.Windows.Forms.BindingNavigator> contient ces boutons standard. La capture d’écran suivante montre le <xref:System.Windows.Forms.BindingNavigator> contrôle sur un formulaire :
   
- ![BindingNavigator Control](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![Capture d’écran montrant le contrôle BindingNavigator.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  Le tableau suivant répertorie les contrôles et décrit leurs fonctions.  
   
 |Contrôle|Fonction|  
 |-------------|--------------|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Insère une nouvelle ligne dans la source de données sous-jacente.|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Supprime la ligne actuelle de la source de données sous-jacente.|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|Accède au premier élément dans la source de données sous-jacente.|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>|Accède au dernier élément dans la source de données sous-jacente.|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|Accède à l'élément suivant dans la source de données sous-jacente.|  
-|Bouton <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|Accède à l'élément précédent dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Bouton|Insère une nouvelle ligne dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Bouton|Supprime la ligne actuelle de la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Bouton|Accède au premier élément dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Bouton|Accède au dernier élément dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Bouton|Accède à l'élément suivant dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Bouton|Accède à l'élément précédent dans la source de données sous-jacente.|  
 |Zone de texte <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Retourne la position actuelle dans la source de données sous-jacente.|  
 |Zone de texte <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Retourne le nombre total d'éléments dans la source de données sous-jacente.|  
   

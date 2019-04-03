@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: ad76a06815be61c883d083d1f794831725665c03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333350"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840963"
 ---
 # <a name="default-nettcpbinding"></a>Default NetTcpBinding
 Cet exemple illustre l’utilisation de la liaison <xref:System.ServiceModel.NetTcpBinding>. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console.  
@@ -34,7 +34,7 @@ Cet exemple illustre l’utilisation de la liaison <xref:System.ServiceModel.Net
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'exemple précédent indique comment configurer un point de terminaison pour utiliser la liaison `netTcpBinding` avec les paramètres par défaut. Pour configurer la liaison `netTcpBinding` et modifier quelques-uns de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom avec un attribut `bindingConfiguration`. Dans cet exemple, la configuration de la liaison est nommée `Binding1` et est définie comme indiqué dans l'exemple de configuration suivant.  
+ L'exemple précédent indique comment configurer un point de terminaison pour utiliser la liaison `netTcpBinding` avec les paramètres par défaut. Pour configurer la liaison `netTcpBinding` et modifier quelques-uns de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom avec un attribut `bindingConfiguration`. Dans cet exemple, la configuration de la liaison est nommée `Binding1` et est définie comme indiqué dans l’exemple de configuration suivant.  
   
 ```xml  
 <services>  
@@ -122,4 +122,3 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>Voir aussi

@@ -3,12 +3,12 @@ title: Classes et objets dans C# - Visite guidée du langage C#
 description: Novice en matière de langage C# ? Lisez cette présentation des classes, des objets et de l’héritage
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846140"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466256"
 ---
 # <a name="classes-and-objects"></a>Classes et objets
 
@@ -217,7 +217,7 @@ Comme le montre l’exemple, une méthode particulière peut toujours être sél
 
 Les membres qui contiennent du code exécutable sont collectivement regroupés sous les *membres de fonction* d’une classe. La section précédente décrit les méthodes qui sont du type principal des fonctions membres. Cette section décrit les autres types de fonctions membres pris en charge par C# : constructeurs, propriétés, indexeurs, événements, opérateurs et finaliseurs.
 
-L’exemple suivant montre une classe générique appelée List<T>, qui implémente une liste d’objets évolutive. La classe contient plusieurs exemples des types les plus courants de membres de fonction.
+L’exemple suivant montre une classe générique appelée List\<T>, qui implémente une liste d’objets évolutive. La classe contient plusieurs exemples des types les plus courants de membres de fonction.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

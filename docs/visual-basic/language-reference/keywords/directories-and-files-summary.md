@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507302"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832474"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Liste des répertoires et des fichiers (Visual Basic)
 Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime sont organisés selon leur fonction et utilisent.  
@@ -34,6 +34,7 @@ Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime so
 |Définir les informations d’attribut pour un fichier.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
 - [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Lecture à partir de fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

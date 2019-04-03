@@ -2,17 +2,17 @@
 title: Transformations fonctionnelles pures de données XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584738"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843420"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Transformations fonctionnelles pures de données XML (Visual Basic)
 Cette section fournit un didacticiel sur les transformations fonctionnelles de données XML. Elle contient des explications des principaux concepts et constructions que vous devez comprendre pour utiliser des transformations fonctionnelles, ainsi que des exemples d'utilisation de transformations fonctionnelles pour manipuler un document XML. Bien que ce didacticiel contienne des exemples de code LINQ to XML, tous les concepts sous-jacents s'appliquent également à d'autres technologies LINQ.  
   
- Le [didacticiel : Manipulation de contenu dans un WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) fournit une série d’exemples, chacun basé sur le précédent. Ces exemples illustrent l'approche transformationnelle fonctionnelle pure de la manipulation de données XML.  
+ Le [Tutoriel : Manipulation de contenu dans un WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) fournit une série d’exemples, chacun basé sur le précédent. Ces exemples illustrent l'approche transformationnelle fonctionnelle pure de la manipulation de données XML.  
   
  Ce didacticiel suppose une connaissance pratique de Visual Basic. Aucune sémantique détaillée des constructions propres au langage n'est fournie dans ce didacticiel, mais des liens sont fournis vers la documentation de langage appropriée.  
   
@@ -27,4 +27,5 @@ Cette section fournit un didacticiel sur les transformations fonctionnelles de d
 |[Tutoriel : Manipulation de contenu dans un Document WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Didacticiel qui illustre une transformation fonctionnelle.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

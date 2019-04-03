@@ -4,12 +4,12 @@ description: Découvrez comment appeler des fonctions natives via P/Invoke dans 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981255"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409235"
 ---
 # <a name="platform-invoke-pinvoke"></a>Appel de code non managé (P/Invoke)
 
@@ -241,6 +241,6 @@ Les deux exemples précédents dépendent de paramètres et dans les deux cas, l
 
 ## <a name="more-resources"></a>Autres ressources
 
-*   [Wiki PInvoke.net](https://www.pinvoke.net/), un excellent Wiki avec des informations sur les API Win32 courantes et comment les appeler.
+*   [Wiki PInvoke.net](https://www.pinvoke.net/), un excellent Wiki avec des informations sur les API Windows courantes et comment les appeler.
 *   [P/Invoke sur MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [Documentation Mono sur P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

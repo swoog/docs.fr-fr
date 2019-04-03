@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: d3a736cb4ff274382a4ce881928e284a8e632e02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d388d349755e0847b9b1374c043c3de45e0de800
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840872"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry, objet
 Fournit des propriétés et des méthodes permettant de manipuler le Registre.  
@@ -23,7 +23,7 @@ Fournit des propriétés et des méthodes permettant de manipuler le Registre.
 > [!NOTE]
 >  Vous pouvez également manipuler le Registre à l’aide des méthodes de la <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> classe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** <xref:Microsoft.VisualBasic.MyServices>  
   
  **Classe :** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (fournit l’accès à <xref:Microsoft.Win32.Registry>)  
@@ -31,4 +31,5 @@ Fournit des propriétés et des méthodes permettant de manipuler le Registre.
  **Assembly :** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [My.Computer (objet)](../../../visual-basic/language-reference/objects/my-computer-object.md)

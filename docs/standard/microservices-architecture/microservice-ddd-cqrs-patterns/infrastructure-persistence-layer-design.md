@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147734"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463057"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Concevoir la couche de persistance de l’infrastructure
 
@@ -35,7 +35,7 @@ Si l’utilisateur apporte des modifications, les données à mettre à jour pas
 
 Il est important de souligner à nouveau que vous devez définir seulement un référentiel pour chaque racine d’agrégat, comme illustré dans la figure 7-17. Pour atteindre l’objectif de la racine d’agrégat visant à maintenir la cohérence transactionnelle entre tous les objets au sein de l’agrégat, vous ne devez jamais créer un dépôt pour chaque table dans la base de données.
 
-![Relations entre les couches Infrastructure et Domaine : l’agrégat Buyer dépend de IBuyerRepository et l’agrégat Order dépend des interfaces IOrderRepository ; ces interfaces sont implémentées dans la couche Infrastructure par les référentiels correspondants qui dépendent de UnitOfWork également implémentée ici, qui accède aux tables dans la couche Données.](./media/image18.png)
+![Relations entre les couches Domaine et Infrastructure : L’agrégat Buyer dépend de IBuyerRepository et l’agrégat Order dépend des interfaces IOrderRepository ; ces interfaces sont implémentées dans la couche Infrastructure par les référentiels correspondants qui dépendent de UnitOfWork également implémentée ici, qui accède aux tables dans la couche Données.](./media/image18.png)
 
 **Figure 7-17**. Relation entre les dépôts, les agrégats et les tables de base de données
 
@@ -111,24 +111,24 @@ Les référentiels peuvent être utiles, mais ils ne sont pas critiques pour vot
 ### <a name="repository-pattern"></a>Modèle de référentiel
 
 - **The Repository pattern** \
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
 
 - **Edward Hieatt et Rob Mee. Repository pattern.** \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
 
 - **The Repository pattern** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Un livre, qui inclut une présentation du modèle de référentiel) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design : Tackling Complexity in the Heart of Software.** (Un livre, qui inclut une présentation du modèle de référentiel) \
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Modèle Unité de travail
 
 - **Martin Fowler. Modèle d’unité de travail.** \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 - **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 >[!div class="step-by-step"]
 >[Précédent](domain-events-design-implementation.md)

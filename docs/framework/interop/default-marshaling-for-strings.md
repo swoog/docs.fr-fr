@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221067"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409313"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling par défaut pour les chaînes
 Les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> ont un comportement de marshaling semblable.  
@@ -39,8 +39,7 @@ Les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Te
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (valeur par défaut)|
-  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.BStr` (valeur par défaut)|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
   
@@ -86,15 +85,12 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|
-  `BSTR` de style COM avec une longueur prédéfinie et des caractères ANSI.|  
-|`UnmanagedType.BStr`|
-  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.AnsiBStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères ANSI.|  
+|`UnmanagedType.BStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPTStr`|Pointeur vers un tableau de caractères dépendant de la plateforme se terminant par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
-|`UnmanagedType.TBStr`|
-  `BSTR` de style COM de longueur fixe avec des caractères dépendant de la plateforme.|  
+|`UnmanagedType.TBStr`|`BSTR` de style COM de longueur fixe avec des caractères dépendant de la plateforme.|  
 |`VBByRefStr`|Valeur qui permet à Visual Basic .NET de changer une chaîne dans du code non managé et de répercuter les résultats dans du code managé. Cette valeur est prise en charge uniquement pour l'appel de code non managé. Il s’agit de la valeur par défaut dans Visual Basic pour les chaînes `ByVal`.|  
   
  Ce tableau s'applique aux chaînes. Toutefois, pour <xref:System.Text.StringBuilder>, les seules options autorisées sont `LPStr`, `LPTStr` et `LPWStr`.  
@@ -147,8 +143,7 @@ String s);
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|
-  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.BStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPTStr`|Pointeur vers un tableau de caractères dépendant de la plateforme se terminant par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
@@ -225,7 +220,7 @@ struct StringInfoT {
   
  La solution consiste à passer une mémoire tampon <xref:System.Text.StringBuilder> comme un argument plutôt que comme une chaîne. Un `StringBuilder` peut être déréférencé et modifié par l'appelé à condition qu'il ne dépasse pas la capacité de `StringBuilder`. Il peut également être initialisé à une longueur fixe. Par exemple, si vous initialisez une mémoire tampon `StringBuilder` avec une capacité de `N`, le marshaleur fournira une mémoire tampon de (`N`+ 1) caractères. Le +1 tient compte du fait que la chaîne non managée possède un terminateur Null, contrairement à `StringBuilder`.  
   
- Par exemple, la fonction `GetWindowText` de l'API Win32 de Microsoft (définie dans Windows.h) est une mémoire tampon de caractères de longueur fixe qui doit être passée dans du code non managé pour être manipulée. `LpString` pointe vers une mémoire tampon allouée par l'appelant de taille `nMaxCount`. L'appelant est censé allouer la mémoire tampon et définir l'argument `nMaxCount` sur la taille de la mémoire tampon allouée. Le code suivant illustre la déclaration de fonction `GetWindowText` définie dans Windows.h.  
+ Par exemple, la fonction `GetWindowText` de l’API Windows de Microsoft (définie dans Windows.h) est une mémoire tampon de caractères de longueur fixe qui doit être passée dans du code non managé pour être manipulée. `LpString` pointe vers une mémoire tampon allouée par l'appelant de taille `nMaxCount`. L'appelant est censé allouer la mémoire tampon et définir l'argument `nMaxCount` sur la taille de la mémoire tampon allouée. Le code suivant illustre la déclaration de fonction `GetWindowText` définie dans Windows.h.  
   
 ```  
 int GetWindowText(  

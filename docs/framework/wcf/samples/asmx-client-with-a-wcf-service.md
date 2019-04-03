@@ -2,12 +2,12 @@
 title: ASMX Client with a WCF Service
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63938f866083dac56d6ef43fdd8757c60b9a2f2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527509"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835152"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX Client with a WCF Service
 Cet exemple montre comment créer un service à l’aide de Windows Communication Foundation (WCF) et accéder ensuite au service à partir d’un client non-WCF, tel qu’un client ASMX.  
@@ -149,4 +149,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## <a name="see-also"></a>Voir aussi

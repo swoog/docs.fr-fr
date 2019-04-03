@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980449"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826169"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procédure pas à pas : Implémentation de l’héritage avec les objets COM (Visual Basic)
 Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être substituées ou surchargés. L’héritage d’objets COM est utile lorsque vous avez une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
@@ -130,6 +130,7 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
 -   Les propriétés qui utilisent `ByRef` paramètres ne peut pas être substituées.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interopérabilité COM dans les applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Inherits (instruction)](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short (type de données)](../../../visual-basic/language-reference/data-types/short-data-type.md)

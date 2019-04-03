@@ -2,12 +2,12 @@
 title: Annuler des tâches Asynch après une période spécifique (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: a01ab79a2895bd9c5a8ae4782db06eb9dd5664a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b5634165493ff1aa5e07f5240a3db15741d57a1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580549"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831551"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Annuler des tâches Asynch après une période spécifique (Visual Basic)
 Si vous ne souhaitez pas attendre la fin d’une opération asynchrone, vous pouvez l’annuler après une période spécifique à l’aide de la méthode <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType>. Cette méthode planifie l’annulation de toutes les tâches associées qui ne sont pas terminées au terme de la période indiquée par l’expression `CancelAfter`.  
@@ -18,7 +18,7 @@ Si vous ne souhaitez pas attendre la fin d’une opération asynchrone, vous pou
 >  Pour exécuter les exemples, Visual Studio 2012 ou ultérieur et .NET Framework 4.5 ou ultérieur doivent être installés sur votre ordinateur.  
   
 ## <a name="downloading-the-example"></a>Téléchargement de l'exemple  
- Vous pouvez télécharger le projet Windows Presentation Foundation (WPF) complète à partir de [exemple Async : Affiner le réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , puis suivez ces étapes.  
+ Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
 1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
@@ -88,7 +88,7 @@ Downloads canceled.
   
  Notez que vous devez ajouter une référence pour <xref:System.Net.Http>.  
   
- Vous pouvez télécharger le projet à partir de [exemple Async : Affiner votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Vous pouvez télécharger le projet à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async : Réglage précis de votre application).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -190,6 +190,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Annuler une tâche Asynch ou une liste de tâches (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)

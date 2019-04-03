@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 4ecb0b4a8fc154a179bc5d9d74ce9821cf4fea75
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982165"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836283"
 ---
 # <a name="parameter-list-visual-basic"></a>Liste de paramètres (Visual Basic)
 Spécifie les paramètres de qu'une procédure attend lorsqu’elle est appelée. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre.  
@@ -32,16 +32,16 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  Facultatif. Liste des attributs qui s’appliquent à ce paramètre. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).  
   
  `Optional`  
- Facultatif. Spécifie que ce paramètre n’est pas obligatoire lorsque la procédure est appelée.  
+ Optionnel. Spécifie que ce paramètre n’est pas obligatoire lorsque la procédure est appelée.  
   
  `ByVal`  
- Facultatif. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
+ Optionnel. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
   
  `ByRef`  
- Facultatif. Spécifie que la procédure peut modifier l’élément de variable sous-jacent dans le code appelant la même façon que le code d’appel.  
+ Optionnel. Spécifie que la procédure peut modifier l’élément de variable sous-jacent dans le code appelant la même façon que le code d’appel.  
   
  `ParamArray`  
- Facultatif. Spécifie que le dernier paramètre dans la liste de paramètres est un tableau facultatif d’éléments du type de données spécifié. Cela permet au code appelant de passer un nombre arbitraire d’arguments à la procédure.  
+ Optionnel. Spécifie que le dernier paramètre dans la liste de paramètres est un tableau facultatif d’éléments du type de données spécifié. Cela permet au code appelant de passer un nombre arbitraire d’arguments à la procédure.  
   
  `parametername`  
  Obligatoire. Nom de la variable locale représentant le paramètre.  
@@ -87,6 +87,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)

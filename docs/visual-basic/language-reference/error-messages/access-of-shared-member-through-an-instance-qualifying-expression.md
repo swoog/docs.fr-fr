@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843563"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Accès d'un membre partagé via une instance ; l'expression qualifiante ne sera pas évaluée
 Une variable d’instance d’une classe ou une structure est utilisée pour accéder à un `Shared` variable, la propriété, la procédure ou événement défini dans cette classe ou structure. Cet avertissement peut également se produire si une variable d’instance est utilisée pour accéder à un membre implicitement partagé d’une classe ou une structure, comme une constante ou énumération, ou une classe imbriquée ou une structure.  
@@ -56,5 +56,6 @@ End Module
 >  Être alerte pour les effets de la portée lorsque deux éléments de programmation portent le même nom. Dans l’exemple précédent, si vous déclarez une instance à l’aide de `Dim testClass as testClass = Nothing`, le compilateur traite un appel à `testClass.sayHello()` comme un accès de la méthode via le nom de classe et aucun avertissement se produit.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Portée dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

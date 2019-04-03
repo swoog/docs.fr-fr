@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219566"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412329"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Création de prototypes dans du code managé
 Cette rubrique décrit comment accéder aux fonctions non managées et présente plusieurs champs d’attribut qui permettent d’annoter les définitions de méthode dans du code managé. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](marshaling-data-with-platform-invoke.md).  
@@ -32,47 +32,60 @@ Cette rubrique décrit comment accéder aux fonctions non managées et présente
  Avant de pouvoir accéder à une fonction DLL non managée depuis du code managé, vous devez connaître le nom de la fonction et le nom de la DLL qui l'exporte. Avec ces informations, vous pouvez commencer à écrire la définition managée d'une fonction non managée implémentée dans une DLL. En outre, vous pouvez ajuster la façon dont l'appel de code non managé crée la fonction et marshale les données vers et depuis la fonction.  
   
 > [!NOTE]
->  Les fonctions de l'API Win32 qui allouent une chaîne vous permettent de libérer la chaîne à l'aide d'une méthode telle que `LocalFree`. L'appel de code non managé gère ces paramètres différemment. Pour les appels de code non managé, affectez au paramètre un type `IntPtr` au lieu d'un type `String`. Utilisez les méthodes fournies par la classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> pour convertir manuellement le type en chaîne et le libérer manuellement.  
+>  Les fonctions de l’API Windows qui allouent une chaîne vous permettent de libérer la chaîne à l’aide d’une méthode telle que `LocalFree`. L'appel de code non managé gère ces paramètres différemment. Pour les appels de code non managé, affectez au paramètre un type `IntPtr` au lieu d'un type `String`. Utilisez les méthodes fournies par la classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> pour convertir manuellement le type en chaîne et le libérer manuellement.  
   
 ## <a name="declaration-basics"></a>Principes de base des déclarations  
  Les définitions managées des fonctions non managées dépendent du langage, comme nous allons le voir dans les exemples suivants. Pour obtenir des exemples de code plus complets, consultez [Exemples d’appel de code non managé](platform-invoke-examples.md).  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  Pour appliquer les champs <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> à une déclaration [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], vous devez utiliser l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute> au lieu de l'instruction `Declare`.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>Ajustement de la définition  
  Que vous les définissiez explicitement ou non, les champs d'attribut définissent le comportement du code managé. L'appel de code non managé agit selon les valeurs par défaut définies dans les différents champs qui existent sous la forme de métadonnées d'assembly. Vous pouvez modifier ce comportement par défaut en ajustant les valeurs d'un ou plusieurs champs. Dans de nombreux cas, vous utilisez <xref:System.Runtime.InteropServices.DllImportAttribute> pour définir une valeur.  

@@ -3,12 +3,12 @@ title: Génération de mon premier service WCF prenant en charge les revendicati
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825766"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Génération de mon premier service WCF prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -20,7 +20,7 @@ ms.locfileid: "54599203"
 ## <a name="overview"></a>Vue d'ensemble  
  Cette rubrique décrit le scénario de création des services WCF qui prennent en charge les revendications à l'aide de WIF. Il y a généralement trois participants dans un scénario de service Web qui prend en charge les revendications : le service Web lui-même, l'utilisateur final, et le service d'émission de jeton de sécurité (STS). L'illustration suivante décrit ce scénario :  
   
- ![Service WCF prenant en charge les revendications de base avec WIF](../../../docs/framework/security/media/wifbasicclaimsawarewcfservice.gif "WIFBasicClaimsAwareWCFService")  
+ ![Diagramme montrant les composants WIF revendications prenant en charge Service WCF de base.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1.  Le client du service WCF (parfois appelé agent) utilise WIF pour envoyer les informations d'identification à STS et une fois l'authentification réussie, un jeton est émis par STS pour l'agent.  
   

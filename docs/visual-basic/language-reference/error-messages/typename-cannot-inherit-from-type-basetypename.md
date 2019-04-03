@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838948"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>«\<nom_type >' ne peut pas hériter \<type > '\<nom_type_base >', car il étend l’accès de la base de \<type > en dehors de l’assembly
 Une classe ou interface hérite d’une classe de base ou interface a, mais un niveau d’accès moins restrictif.  
@@ -25,11 +25,12 @@ Une classe ou interface hérite d’une classe de base ou interface a, mais un n
   
 -   Modifier le niveau d’accès de la classe dérivée ou une interface soit au moins aussi restrictifs que celui de la classe de base ou l’interface.  
   
-     ou  
+     - ou -  
   
 -   Si le niveau d’accès moins restrictif, supprimez le `Inherits` instruction. Vous ne peut pas hériter d’une classe de base plus restreinte ou une interface.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Inherits (instruction)](../../../visual-basic/language-reference/statements/inherits-statement.md)

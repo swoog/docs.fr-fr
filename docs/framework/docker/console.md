@@ -4,12 +4,12 @@ description: Découvrez comment prendre une application console .NET Framework e
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126082"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633840"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Exécution d’applications console dans des conteneurs Windows
 
@@ -55,7 +55,9 @@ Vous devez disposer de Docker pour Windows, version 1.12 bêta 26 ou ultérieu
 ## <a name="building-the-application"></a>Génération de l’application
 En général, les applications console sont distribuées par le biais d’un programme d’installation, de FTP ou d’un déploiement avec partage de fichiers. Pendant le déploiement sur un conteneur, les ressources doivent être compilées et transférées vers un emplacement qui peut être utilisé au moment de la création de l’image Docker.
 
-Dans *build.ps1*, le script utilise [MSBuild](/visualstudio/msbuild/msbuild) pour compiler l’application afin de terminer la tâche de création des ressources. Quelques paramètres sont passés à MSBuild pour finaliser les ressources nécessaires : le nom de la solution ou du fichier de projet à compiler, l’emplacement de la sortie et enfin la configuration (débogage ou release).
+Voici l’exemple d’application : [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+Dans *build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>, le script utilise [MSBuild](/visualstudio/msbuild/msbuild) pour compiler l’application afin de terminer la tâche de création des ressources. Quelques paramètres sont passés à MSBuild pour finaliser les ressources nécessaires : le nom de la solution ou du fichier de projet à compiler, l’emplacement de la sortie et enfin la configuration (débogage ou release).
 
 Dans l’appel à `Invoke-MSBuild`, `OutputPath` est défini sur **publish** et `Configuration` sur **Release**. 
 

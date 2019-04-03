@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977550"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829328"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procédure : Déclarer et appeler une propriété par défaut en Visual Basic
 Un *propriété par défaut* est une propriété de classe ou structure auquel votre code peut accéder sans la spécifier. Lors de l’appel des noms de code, une classe ou structure, mais pas une propriété et le contexte autorise l’accès à une propriété, Visual Basic résout l’accès à cette classe ou propriété par défaut de la structure s’il en existe.  
@@ -82,6 +82,7 @@ Un *propriété par défaut* est une propriété de classe ou structure auquel v
  En raison de ces inconvénients, vous devez envisager de ne pas définir les propriétés par défaut. Pour la lisibilité du code, vous devez également envisager de toujours faire explicitement référence à toutes les propriétés, même les propriétés par défaut.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)

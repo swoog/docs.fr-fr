@@ -2,12 +2,12 @@
 title: 'Transport : Interopérabilité TCP WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653006"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842354"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport : Interopérabilité TCP WSE 3.0
 L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémenter une session duplex TCP comme transport personnalisé Windows Communication Foundation (WCF). Il décrit également comment utiliser l'extensibilité de la couche du canal pour assurer l'interface sur le câble avec les systèmes déployés existants. Les étapes suivantes montrent comment générer ce transport WCF personnalisé :  
@@ -29,7 +29,7 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  `WriteData(encodedBytes);`  
   
- En outre, un verrou est utilisé afin que les appels Send() conservent la garantie de l’ordre IDuplexSessionChannel et afin que les appels du socket sous-jacent soient correctement synchronisés.  
+ En outre, un verrou est utilisé afin que les appels Send() conservent la garantie de l'ordre IDuplexSessionChannel et afin que les appels du socket sous-jacent soient correctement synchronisés.  
   
  `WseTcpDuplexSessionChannel` utilise <xref:System.ServiceModel.Channels.MessageEncoder> pour traduire <xref:System.ServiceModel.Channels.Message> vers et à partir de byte[]. Dans la mesure où il s'agit d'un transport, `WseTcpDuplexSessionChannel` est également chargé d'appliquer l'adresse distante avec laquelle le canal a été configuré. `EncodeMessage` encapsule la logique de cette conversion.  
   
@@ -91,10 +91,10 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  Lorsqu'un nouveau socket est accepté, un canal serveur est initialisé avec celui-ci. Toutes les entrées et sorties étant déjà implémentées dans la classe de base, ce canal est donc chargé d'initialiser le socket.  
   
-## <a name="adding-a-binding-element"></a>Ajout d’un élément de liaison  
- Maintenant que les fabriques de canaux sont générées, elles doivent être exposées à l’exécution de ServiceModel via une liaison. Une liaison est une collection d’éléments de liaison qui représente la pile de communication associée à une adresse de service. Chaque élément de la pile est représenté par un élément de liaison.  
+## <a name="adding-a-binding-element"></a>Ajout d'un élément de liaison  
+ Maintenant que les fabriques de canaux sont générées, elles doivent être exposées à l'exécution de ServiceModel via une liaison. Une liaison est une collection d’éléments de liaison qui représente la pile de communication associée à une adresse de service. Chaque élément de la pile est représenté par un élément de liaison.  
   
- Dans notre exemple, l’élément de liaison est `WseTcpTransportBindingElement`, lequel dérive de <xref:System.ServiceModel.Channels.TransportBindingElement>. Il prend en charge <xref:System.ServiceModel.Channels.IDuplexSessionChannel> et substitue les méthodes suivantes pour générer les fabriques associées à notre liaison.  
+ Dans notre exemple, l'élément de liaison est `WseTcpTransportBindingElement`, lequel dérive de <xref:System.ServiceModel.Channels.TransportBindingElement>. Il prend en charge <xref:System.ServiceModel.Channels.IDuplexSessionChannel> et substitue les méthodes suivantes pour générer les fabriques associées à notre liaison.  
   
  `public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)`  
   
@@ -195,4 +195,3 @@ Symbols:
   
     8.  Le client test du transport TCP démarre dans une nouvelle console. Le client demande les cotations boursières au service, puis affiche les résultats dans sa fenêtre de console.  
   
-## <a name="see-also"></a>Voir aussi

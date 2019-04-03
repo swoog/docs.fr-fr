@@ -1,21 +1,21 @@
 ---
-title: 'Modèles de conception : Liste de publication / abonnement basé'
+title: 'Modèles de conception : Publication/Abonnement par liste'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333389"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815028"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Modèles de conception : Liste de publication / abonnement basé
+# <a name="design-patterns-list-based-publish-subscribe"></a>Modèles de conception : Publication/Abonnement par liste
 Cet exemple illustre le modèle basé sur une liste de publication / abonnement implémenté comme un programme Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- Le modèle de conception basée sur une liste de publication / abonnement est décrit dans la publication Microsoft Patterns & Practices, [modèles d’intégration](https://go.microsoft.com/fwlink/?LinkId=95894). Le modèle de publication/abonnement transmet des informations à une collection des destinataires qui se sont abonnés une rubrique d'informations. Ce modèle gère une liste d'abonnés. Lorsque des informations doivent être partagées, une copie est envoyée à chaque abonné de la liste. Cet exemple illustre un modèle de publication/abonnement basé sur liste dynamique, où les clients peuvent s'abonner ou annuler leur abonnement aussi souvent que nécessaire.  
+ Le modèle de conception basée sur une liste de publication / abonnement est décrit dans la publication Microsoft Patterns & Practices, [modèles d’intégration](https://go.microsoft.com/fwlink/?LinkId=95894). Le modèle de publication/abonnement transmet des informations à une collection des destinataires qui se sont abonnés une rubrique d'informations. Ce modèle gère une liste d'abonnés. Lorsque des informations doivent être partagées, une copie est envoyée à chaque abonné de la liste. Cet exemple illustre un modèle de publication/abonnement basé sur liste dynamique, où les clients peuvent s’abonner ou annuler leur abonnement aussi souvent que nécessaire.  
   
  Il se compose d'un client, d'un service et d'un programme de source de données. Il peut y avoir plusieurs clients et plusieurs programmes de source de données en cours d'exécution. Les clients s'abonnent au service, reçoivent des notifications et annulent leur abonnement. Les programmes de source de données envoient des informations au service à partager avec tous les abonnés actuels.  
   
@@ -144,7 +144,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Installez l'ordinateur de source de données:  
   
-    1.  Copiez les fichiers du programme de source de données du dossier \datasource\bin\ (dans le dossier correspondant à votre langue) sur l'ordinateur de source de données.  
+    1.  Copiez les fichiers du programme de source de données du dossier \datasource\bin\ (dans le dossier correspondant à votre langue) sur l’ordinateur de source de données.  
   
     2.  Dans le fichier de configuration de la source de données, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
   
@@ -161,4 +161,3 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>Voir aussi

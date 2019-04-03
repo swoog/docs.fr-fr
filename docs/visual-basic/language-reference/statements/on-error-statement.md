@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834262"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error, instruction (Visual Basic)
 Valide une routine de gestion des erreurs et spécifie l’emplacement de la routine au sein d’une procédure ; peut également être utilisé pour désactiver une routine de gestion des erreurs.  
@@ -113,12 +113,13 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Number%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Description%2A>

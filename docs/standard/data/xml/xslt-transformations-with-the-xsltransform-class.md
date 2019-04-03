@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691358"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463070"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Transformations XSLT avec la classe XslTransform
 
@@ -24,8 +24,7 @@ Le but des transformations XSLT est de transformer le contenu d’un document XM
 
 ## <a name="overview"></a>Vue d'ensemble
 
-![Architecture de transformation XSLT](media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
-Architecture de transformation
+![Diagramme qui montre l’architecture de transformation XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
 La recommandation XSLT utilise XML Path Language (XPath) pour sélectionner des parties d'un document XML, où XPath est un langage de requête utilisé pour accéder aux nœuds d'une arborescence de document. Comme illustré dans le diagramme, l’implémentation [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de XPath est utilisée pour sélectionner des parties de XML dans plusieurs classes, telles que <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> et <xref:System.Xml.XPath.XPathDocument>. Un objet <xref:System.Xml.XPath.XPathDocument> est un magasin de données XSLT optimisé qui fournit des transformations XSLT performantes lorsqu'il est utilisé avec l'objet <xref:System.Xml.Xsl.XslTransform>.
 
@@ -33,7 +32,7 @@ Le tableau suivant répertorie les classes généralement utilisées lors de l�
 
 |Classe ou interface|Fonction|
 |------------------------|--------------|
-|<xref:System.Xml.XPath.XPathNavigator>|API qui fournit un modèle de style curseur pour naviguer dans un magasin ainsi qu'une prise en charge de requête XPath. Elle ne permet pas de modifier le magasin sous-jacent. Pour le modifier, utilisez la classe <xref:System.Xml.XmlDocument>.|
+|<xref:System.Xml.XPath.XPathNavigator>|API qui fournit un modèle de style curseur pour naviguer dans un magasin ainsi qu’une prise en charge de requête XPath. Elle ne permet pas de modifier le magasin sous-jacent. Pour le modifier, utilisez la classe <xref:System.Xml.XmlDocument>.|
 |<xref:System.Xml.XPath.IXPathNavigable>|Interface qui fournit une méthode `CreateNavigator` à un objet <xref:System.Xml.XPath.XPathNavigator> pour le magasin.|
 |<xref:System.Xml.XmlDocument>|Permet la modification de ce document. Cette classe implémente l'objet <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios de modification de documents où des transformations XSLT sont ultérieurement requises. Pour plus d'informations, consultez [Entrée XmlDocument dans XslTransform](xmldocument-input-to-xsltransform.md).|
 |<xref:System.Xml.XmlDataDocument>|Classe dérivée de l'objet <xref:System.Xml.XmlDocument>. Elle établit une passerelle entre les mondes relationnels et XML en utilisant un objet <xref:System.Data.DataSet> pour optimiser le stockage de données structurées dans le document XML selon les mappages spécifiés sur l'objet <xref:System.Data.DataSet>. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios où des transformations XSLT peuvent être effectuées sur des données relationnelles extraites d'une base de données. Pour plus d'informations, voir [Intégration de XML aux données relationnelles et à ADO.NET](xml-integration-with-relational-data-and-adonet.md).|

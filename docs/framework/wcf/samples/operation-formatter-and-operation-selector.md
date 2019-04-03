@@ -2,12 +2,12 @@
 title: Operation Formatter and Operation Selector
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661254"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836231"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Operation Formatter and Operation Selector
 Cet exemple illustre l’utilisation des points d’extensibilité de Windows Communication Foundation (WCF) pour autoriser les données de message dans un format différent de ce qu’attend WCF. Par défaut, les formateurs WCF attendent des paramètres de méthode soient inclus sous le `soap:body` élément. L'exemple montre comment implémenter à la place un formateur d'opération personnalisé qui analyse les données de paramètre d'une chaîne de requête HTTP GET chaîne et appelle des méthodes à l'aide de ces données.  
@@ -65,7 +65,7 @@ Cet exemple illustre l’utilisation des points d’extensibilité de Windows Co
 ### <a name="installing-operation-formatters"></a>Installation des formateurs d'opération  
  Les comportements d'opération qui spécifient des formateurs sont uniques. Un tel comportement est toujours implémenté par défaut pour chaque opération pour créer le formateur d'opération nécessaire. Toutefois, ces comportements ressemblent à tous les autres comportements d'opération ; ils ne sont pas identifiables par tout autre attribut. Pour installer un comportement de remplacement, l’implémentation doit rechercher des comportements de formateur spécifiques qui sont installés par le chargeur de type WCF par défaut et soit remplacement ou ajouter un comportement compatible à exécuter après le comportement par défaut.  
   
- Ces comportements de formateur d'opération peuvent être installés par programme avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> ou en spécifiant un comportement d'opération exécuté après le comportement par défaut. Cependant, ils ne peuvent pas être installés facilement par un comportement de point de terminaison (et par conséquent par la configuration) parce que le modèle de comportement ne permet pas à un comportement de remplacer d'autres comportements ou modifier de toute autre manière l'arborescence de description.  
+ Ces comportements de formateur d'opération peuvent être installés par programme avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> ou en spécifiant un comportement d'opération exécuté après le comportement par défaut. Cependant, ils ne peuvent pas être installés facilement par un comportement de point de terminaison (et par conséquent par la configuration) parce que le modèle de comportement ne permet pas à un comportement de remplacer d’autres comportements ou modifier de toute autre manière l’arborescence de description.  
   
  Sur le client :  
   
@@ -103,7 +103,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 -   L'implémentation serveur `ICalculator` n'a pas besoin d'être modifiée.  
   
--   L'App.config pour le service doit utiliser une liaison POX personnalisée qui affecte à l'attribut `messageVersion` de l'élément `textMessageEncoding` la valeur `None`.  
+-   L’App.config pour le service doit utiliser une liaison POX personnalisée qui affecte à l’attribut `messageVersion` de l’élément `textMessageEncoding` la valeur `None`.  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   L'App.config pour le service doit également spécifier le `EnableHttpGetRequestsBehavior` personnalisé en l'ajoutant à la section d'extensions de comportement et en l'utilisant.  
+-   L’App.config pour le service doit également spécifier le `EnableHttpGetRequestsBehavior` personnalisé en l’ajoutant à la section d’extensions de comportement et en l’utilisant.  
   
     ```xml  
     <behaviors>  
@@ -178,4 +178,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Voir aussi

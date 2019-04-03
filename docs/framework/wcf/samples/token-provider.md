@@ -2,12 +2,12 @@
 title: Token Provider
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: dd27566886db62a6f06502749212ed4109c17a28
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 39a898286447168c68e2b91b03ba816b4b7aa8fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304984"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834476"
 ---
 # <a name="token-provider"></a>Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :
@@ -130,8 +130,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
 
 2.  Écrivez un gestionnaire de jetons de sécurité personnalisé.
 
-     
-  <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour le <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et un sérialiseur de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons de nom d'utilisateur personnalisé lorsque les spécifications du jeton passé indiquent qu'un fournisseur de noms d'utilisateur est demandé.
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour le <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et un sérialiseur de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons de nom d'utilisateur personnalisé lorsque les spécifications du jeton passé indiquent qu'un fournisseur de noms d'utilisateur est demandé.
 
     ```
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -203,8 +202,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
     }
     ```
 
- Sur le service, utilisez <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> tel qu'indiqué dans l'exemple de code suivant pour afficher les informations de l'appelant. 
-  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
+ Sur le service, utilisez <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> tel qu'indiqué dans l'exemple de code suivant pour afficher les informations de l'appelant. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
 
 ```
 static void DisplayIdentityInformation()
@@ -295,4 +293,3 @@ static void DisplayIdentityInformation()
   
 1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
-## <a name="see-also"></a>Voir aussi

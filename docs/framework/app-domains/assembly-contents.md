@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649165"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675651"
 ---
 # <a name="assembly-contents"></a>Contenu d'un assembly
 En général, un assembly statique peut comporter les quatre éléments suivants :  
@@ -31,15 +31,13 @@ En général, un assembly statique peut comporter les quatre éléments suivants
   
  Il existe plusieurs modes de regroupement de ces éléments dans un assembly. Vous pouvez regrouper tous les éléments dans un seul fichier physique, comme dans l'illustration ci-dessous.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-Assembly monofichier  
+ ![Diagramme qui montre un assembly à fichier unique appelé MyAssembly.dll.](./media/assembly-contents/single-file-assembly.gif)  
   
  Les éléments d'un assembly peuvent également figurer dans plusieurs fichiers. Ces fichiers peuvent être des modules de code compilé (.netmodule), des ressources (telles que des fichiers .bmp ou .jpg) ou d'autres fichiers requis par l'application. Créez un assembly multifichier lorsque vous souhaitez associer des modules écrits dans différents langages et optimiser le téléchargement d'une application en mettant les types rarement utilisés dans un module qui n'est téléchargé qu'en cas de nécessité.  
   
  Dans l'illustration ci-dessous, le développeur d'une application hypothétique a choisi de placer le code d'utilitaire dans un module distinct et de conserver un fichier de ressources volumineux (dans ce cas une image .bmp) dans son fichier d'origine. Le .NET Framework ne télécharge un fichier que lorsqu'il est référencé ; le maintien du code peu référencé dans un fichier distinct de l'application optimise le téléchargement du code.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-Assembly multifichier  
+ ![Diagramme qui montre un assembly multifichier.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  Les fichiers qui composent un assembly multifichier ne sont pas physiquement reliés par le système de fichiers. Ils sont à la place reliés par le manifeste d'assembly et le Common Language Runtime les manage en tant qu'unité.  

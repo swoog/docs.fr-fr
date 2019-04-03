@@ -2,12 +2,12 @@
 title: Réflexion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 59910edda8e2dfc4ec8e697b1d5b9a0f47ff9dbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690109"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834879"
 ---
 # <a name="reflection-visual-basic"></a>Réflexion (Visual Basic)
 La réflexion fournit des objets (de type <xref:System.Type>) qui décrivent des assemblys, des modules et des types. Vous pouvez utiliser la réflexion pour créer dynamiquement une instance d’un type, lier le type à un objet existant ou obtenir le type à partir d’un objet existant et invoquer ses méthodes ou accéder à ses champs et propriétés. Si vous utilisez des attributs dans votre code, la réflexion vous permet d’y accéder. Pour plus d’informations, consultez [Attributs](../../../standard/attributes/index.md).  
@@ -62,5 +62,6 @@ System.Console.WriteLine(info)
 -   [Récupération des informations stockées dans les attributs](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide de programmation Visual Basic](../../../visual-basic/programming-guide/index.md)
 - [Assemblys dans le Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

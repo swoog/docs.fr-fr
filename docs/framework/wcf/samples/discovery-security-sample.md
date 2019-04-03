@@ -2,22 +2,22 @@
 title: Exemple Discovery Security
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 5a3b3ec42086eb39bffb71df2a0d6d46270a8f1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680333"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815198"
 ---
 # <a name="discovery-security-sample"></a>Exemple Discovery Security
 La spécification Discovery n'exige pas que les points de terminaison participant au processus de découverte soient sécurisés. L'ajout de la sécurité aux messages de découverte atténue divers types d'attaques (altération de messages, déni de service, relecture, usurpation). Cet exemple implémente des canaux personnalisés qui calculent et vérifient des signatures de message utilisant le format de signature compact (décrit dans la section 8.2 de la spécification WS-Discovery). L’exemple prend en charge la [spécification Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) et [version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
   
- Le canal personnalisé est appliqué en plus de la pile de canaux existante pour les points de terminaison de découverte et d'annonce. De cette façon, un en-tête de signature est appliqué pour chaque message envoyé. La signature est vérifiée sur les messages reçus, qui sont supprimés s'ils ne comportent pas de signature ou si celle-ci ne correspond pas. Pour signer et vérifier des messages, l'exemple utilise des certificats.  
+ Le canal personnalisé est appliqué en plus de la pile de canaux existante pour les points de terminaison de découverte et d'annonce. De cette façon, un en-tête de signature est appliqué pour chaque message envoyé. La signature est vérifiée sur les messages reçus, qui sont supprimés s’ils ne comportent pas de signature ou si celle-ci ne correspond pas. Pour signer et vérifier des messages, l'exemple utilise des certificats.  
   
 ## <a name="discussion"></a>Discussion  
- WCF est très extensible et offre aux utilisateurs la possibilité de personnaliser des canaux à leur gré. L'exemple implémente un élément de liaison sécurisée de découverte qui génère des canaux sécurisés. Les canaux sécurisés appliquent et vérifient les signatures des messages et sont appliqués en plus de la pile actuelle.  
+ WCF est très extensible et offre aux utilisateurs la possibilité de personnaliser des canaux à leur gré. L’exemple implémente un élément de liaison sécurisée de découverte qui génère des canaux sécurisés. Les canaux sécurisés appliquent et vérifient les signatures des messages et sont appliqués en plus de la pile actuelle.  
   
- L'élément de liaison sécurisée génère des écouteurs et fabriques de canaux sécurisés.  
+ L’élément de liaison sécurisée génère des écouteurs et fabriques de canaux sécurisés.  
   
 ## <a name="secure-channel-factory"></a>Fabrique de canaux sécurisés  
  La fabrique de canaux sécurisés crée des canaux de sortie ou duplex qui ajoutent une signature compacte aux en-têtes de message. Pour garder les messages aussi petits que possible, le format de signature compact est utilisé. La structure d'une signature compacte est représentée dans l'exemple suivant.  
@@ -37,12 +37,12 @@ La spécification Discovery n'exige pas que les points de terminaison participan
 > [!NOTE]
 >  Le `PrefixList` a été ajouté dans le protocole Discovery version 2008.  
   
- Pour calculer la signature, l'exemple identifie les éléments de signature développés. Une signature XML (`SignedInfo`) est créée, à l'aide du préfixe d'espace de noms `ds`, comme requis par la spécification WS-Discovery. Le corps et tous les en-têtes des espaces de noms de découverte et d'adressage sont référencés dans la signature et ne peuvent donc pas être falsifiés. Chaque élément référencé est transformé à l’aide de la canonicalisation Exclusive (http://www.w3.org/2001/10/xml-exc-c14n# ), et ensuite une valeur de condensat SHA-1 est calculée (http://www.w3.org/2000/09/xmldsig#sha1 ). En fonction de tous les éléments référencés et leurs valeurs digest, la valeur de signature est calculée à l’aide de l’algorithme RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
+ Pour calculer la signature, l’exemple identifie les éléments de signature développés. Une signature XML (`SignedInfo`) est créée, à l'aide du préfixe d'espace de noms `ds`, comme requis par la spécification WS-Discovery. Le corps et tous les en-têtes des espaces de noms de découverte et d'adressage sont référencés dans la signature et ne peuvent donc pas être falsifiés. Chaque élément référencé est transformé à l’aide de la canonicalisation Exclusive (http://www.w3.org/2001/10/xml-exc-c14n# ), et ensuite une valeur de condensat SHA-1 est calculée (http://www.w3.org/2000/09/xmldsig#sha1 ). En fonction de tous les éléments référencés et leurs valeurs digest, la valeur de signature est calculée à l’aide de l’algorithme RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
- Les messages sont signés avec un certificat spécifié par le client. L'emplacement et le nom du magasin, ainsi que le nom de sujet du certificat doivent être spécifiés au moment de la création de l'élément de liaison. Le `KeyId` de la signature compacte représente l'identificateur de clé du jeton de signature et constitue l'identificateur de la clé du sujet (SKI, Subject Key Identifier) du jeton de signature ou, si le SKI n'existe pas, un hachage SHA-1 de la clé publique du jeton de signature.  
+ Les messages sont signés avec un certificat spécifié par le client. L’emplacement et le nom du magasin, ainsi que le nom de sujet du certificat doivent être spécifiés au moment de la création de l’élément de liaison. Le `KeyId` de la signature compacte représente l'identificateur de clé du jeton de signature et constitue l'identificateur de la clé du sujet (SKI, Subject Key Identifier) du jeton de signature ou, si le SKI n'existe pas, un hachage SHA-1 de la clé publique du jeton de signature.  
   
 ## <a name="secure-channel-listener"></a>Écouteur de canal sécurisé  
- L'écouteur de canal sécurisé crée des canaux d'entrée ou duplex qui vérifient la signature compacte dans les messages reçus. Pour vérifier la signature, le `KeyId` spécifié dans la signature compacte jointe au message est utilisé afin de sélectionner un certificat dans le magasin spécifié. Si le message n'a pas de signature ou si la vérification de la signature échoue, les messages sont supprimés. Pour utiliser la liaison sécurisée, l'exemple définit une fabrique qui crée les <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> et <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> personnalisés avec l'élément de liaison sécurisée de découverte ajouté. Ces points de terminaison sécurisés peuvent être utilisés dans des écouteurs d'annonces de découverte et des services détectables.  
+ L'écouteur de canal sécurisé crée des canaux d'entrée ou duplex qui vérifient la signature compacte dans les messages reçus. Pour vérifier la signature, le `KeyId` spécifié dans la signature compacte jointe au message est utilisé afin de sélectionner un certificat dans le magasin spécifié. Si le message n'a pas de signature ou si la vérification de la signature échoue, les messages sont supprimés. Pour utiliser la liaison sécurisée, l’exemple définit une fabrique qui crée les <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> et <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> personnalisés avec l’élément de liaison sécurisée de découverte ajouté. Ces points de terminaison sécurisés peuvent être utilisés dans des écouteurs d'annonces de découverte et des services détectables.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  L'exemple comporte une bibliothèque et 4 applications console :  
@@ -75,4 +75,3 @@ La spécification Discovery n'exige pas que les points de terminaison participan
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   
-## <a name="see-also"></a>Voir aussi

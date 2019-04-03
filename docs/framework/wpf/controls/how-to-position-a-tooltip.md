@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364531"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840495"
 ---
 # <a name="how-to-position-a-tooltip"></a>Procédure : Positionner une info-bulle
 Cet exemple montre comment spécifier la position d’une info-bulle sur l’écran.  
@@ -34,16 +34,19 @@ Cet exemple montre comment spécifier la position d’une info-bulle sur l’éc
  Si vous définissez le contenu d’une info-bulle à l’aide un <xref:System.Windows.Controls.ToolTip> de l’objet, vous pouvez utiliser les propriétés de classe ; Toutefois, le <xref:System.Windows.Controls.ToolTipService> propriétés sont prioritaires. Utilisez le <xref:System.Windows.Controls.ToolTipService> propriétés pour les info-bulles qui ne sont pas définies comme <xref:System.Windows.Controls.ToolTip> objets.  
   
  Les illustrations suivantes montrent comment positionner une info-bulle à l’aide de ces propriétés. Bien que, le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] exemples dans ces illustrations montrent comment définir les propriétés qui sont définies par le <xref:System.Windows.Controls.ToolTip> classe, les propriétés correspondantes de la <xref:System.Windows.Controls.ToolTipService> classe suivent les mêmes règles de mise en page. Pour plus d’informations sur les valeurs possibles pour la propriété de positionnement, consultez [comportement de positionnement de Popup](popup-placement-behavior.md).  
+ 
+ L’illustration suivante montre le placement de l’info-bulle à l’aide de la propriété de positionnement :  
   
- ![Positionnement de ToolTip](./media/tooltipplacement.png "ToolTipPlacement")  
-Positionnement de ToolTip à l’aide de la propriété de positionnement  
+ ![Diagramme montrant le placement de l’info-bulle à l’aide de la propriété de positionnement.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ L’illustration suivante montre le placement de l’info-bulle à l’aide des propriétés Placement et PlacementRectangle :   
+
+ ![Diagramme montrant le placement de l’info-bulle à l’aide d’une propriété PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ L’illustration suivante montre le placement de l’info-bulle à l’aide des propriétés Placement, PlacementRectangle et Offset :   
   
- ![Placer une info-bulle à l’aide d’un rectangle de sélection élective](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-Positionnement de ToolTip à l’aide des propriétés Placement et PlacementRectangle  
-  
- ![Diagramme de positionnement de ToolTip](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-Positionnement de ToolTip à l’aide des propriétés Placement, PlacementRectangle et Offset  
-  
+ ![Diagramme montrant le placement de l’info-bulle à l’aide de la propriété de décalage.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  L’exemple suivant montre comment utiliser le <xref:System.Windows.Controls.ToolTip> propriétés pour spécifier la position d’une info-bulle dont le contenu est un <xref:System.Windows.Controls.ToolTip> objet.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

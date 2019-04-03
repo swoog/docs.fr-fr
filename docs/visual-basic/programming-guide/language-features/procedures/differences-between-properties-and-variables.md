@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842900"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Différences entre les propriétés et les variables en Visual Basic
 Variables et propriétés représentent les valeurs auxquelles vous pouvez accéder. Toutefois, il existe des différences dans le stockage et l’implémentation.  
@@ -45,6 +45,7 @@ Variables et propriétés représentent les valeurs auxquelles vous pouvez accé
  <sup>1</sup> Contrairement à une variable, la valeur d’une propriété ne peut-être pas correspondre directement à un élément unique de stockage. Le stockage peut être fractionné par commodité ou sécurité, ou la valeur peut être stockée sous forme chiffrée. Dans ce cas le `Get` procédure serait assembler les éléments ou déchiffrer la valeur stockée et le `Set` procédure chiffrerait la nouvelle valeur ou scindez-le en le stockage qui le composent. Une valeur de propriété peut être éphémère, comme l’heure du jour, auquel cas la `Get` procédure calcule à la volée chaque fois que vous accédez à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)

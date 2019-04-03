@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537238"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823543"
 ---
 # <a name="scope-in-visual-basic"></a>Portée dans Visual Basic
 Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire référence à ce dernier sans qualifier son nom ou le rendre disponible via un [instruction Imports (.NET Namespace et Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un élément peut avoir la portée à un des niveaux suivants :  
@@ -135,6 +135,7 @@ Public strMsg As String
  En général, lorsque vous déclarez une variable ou une constante, il est conseillé de définir une portée aussi courtes que possible (la portée de bloc est la plus restreinte). Cela permet d’économiser la mémoire et réduit les risques de votre code fasse référence à la variable incorrecte. De même, vous devez déclarer une variable comme étant [statique](../../../../visual-basic/language-reference/modifiers/static.md) uniquement lorsqu’il est nécessaire de conserver sa valeur entre les appels de procédure.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Caractéristiques d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Guide pratique pour Contrôler la portée d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Durée de vie en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

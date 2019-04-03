@@ -2,12 +2,12 @@
 title: Exemple Basic
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 7a9a6134313ed75fd0f9b9f929a3a3715a0af133
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 015b3ccee939cb62411d5901c7e2e558da3cc237
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706824"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814573"
 ---
 # <a name="basic-sample"></a>Exemple Basic
 Cet exemple montre comment rendre un service détectable, et comment rechercher et appeler un service détectable. Cet exemple est composé de deux projets : service et client.
@@ -34,7 +34,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ```  
   
 ## <a name="client"></a>Client  
- Le client utilise un <xref:System.ServiceModel.Discovery.DynamicEndpoint> pour localiser le service. Le <xref:System.ServiceModel.Discovery.DynamicEndpoint>, un point de terminaison standard, résout le point de terminaison du service lorsque le client est ouvert. Dans ce cas, le <xref:System.ServiceModel.Discovery.DynamicEndpoint> recherche le service en se basant sur son contrat. Le <xref:System.ServiceModel.Discovery.DynamicEndpoint> effectue la recherche sur un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> par défaut. Lorsqu'il trouve un point de terminaison de service, le client se connecte à ce service sur la liaison spécifiée.  
+ Le client utilise un <xref:System.ServiceModel.Discovery.DynamicEndpoint> pour localiser le service. Le <xref:System.ServiceModel.Discovery.DynamicEndpoint>, un point de terminaison standard, résout le point de terminaison du service lorsque le client est ouvert. Dans ce cas, le <xref:System.ServiceModel.Discovery.DynamicEndpoint> recherche le service en se basant sur son contrat. Le <xref:System.ServiceModel.Discovery.DynamicEndpoint> effectue la recherche sur un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> par défaut. Lorsqu’il trouve un point de terminaison de service, le client se connecte à ce service sur la liaison spécifiée.  
   
 ```csharp  
 public static void Main()  
@@ -101,4 +101,3 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## <a name="see-also"></a>Voir aussi

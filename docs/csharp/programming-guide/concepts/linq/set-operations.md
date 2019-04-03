@@ -2,12 +2,12 @@
 title: Opérations ensemblistes (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675509"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408910"
 ---
 # <a name="set-operations-c"></a>Opérations ensemblistes (C#)
 Les opérations ensemblistes dans LINQ font référence à des opérations de requête qui génèrent un jeu de résultats basé sur la présence ou l’absence d’éléments équivalents dans la même collection (ou le même ensemble) ou dans une collection distincte (ou un ensemble distinct).  
@@ -28,7 +28,7 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
 ### <a name="distinct"></a>distinct  
  L’illustration suivante représente le comportement de la méthode <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> sur une séquence de caractères. La séquence retournée contient les éléments uniques de la séquence d’entrée.  
   
- ![Graphique illustrant le comportement de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![Graphique illustrant le comportement de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>À l'exception  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La séquence retournée contient uniquement les éléments de la première séquence d’entrée qui ne figurent pas dans la seconde séquence d’entrée.  
@@ -38,13 +38,12 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
 ### <a name="intersect"></a>Définir une intersection  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La séquence retournée contient les éléments qui sont communs aux deux séquences d’entrée.  
   
- ![Graphique illustrant l’intersection de deux séquences.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![Graphique illustrant l’intersection de deux séquences.](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>Union  
  L’illustration suivante représente une opération d’union sur deux séquences de caractères. La séquence retournée contient les éléments uniques des deux séquences d’entrée.  
   
- ![Graphique illustrant l’union de deux séquences.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![Graphique illustrant l’union de deux séquences.](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Linq>

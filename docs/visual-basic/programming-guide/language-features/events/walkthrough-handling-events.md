@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974144"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840924"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procédure pas à pas : Gestion des événements (Visual Basic)
 Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des événements. La première rubrique [procédure pas à pas : Déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), montre comment déclarer et déclencher des événements. Cette section utilise le formulaire et la classe à partir de cette procédure pas à pas pour montrer comment gérer des événements lorsqu’elles ont lieu.  
@@ -117,5 +117,6 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
 >  Vous pouvez déclarer autant `WithEvents` variables en tant que vous avez besoin, mais les tableaux de `WithEvents` variables ne sont pas prises en charge.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédure pas à pas : Déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521411"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818721"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procédure : Contrôler la portée d’une Variable (Visual Basic)
 Normalement, une variable est dans *étendue*, ou est visible par référence, tout au long de la région dans laquelle vous la déclarez. Dans de certains cas, la variable *niveau d’accès* peut influencer sa portée.  
@@ -87,6 +87,7 @@ Public strMsg As String
  La portée est limitée d’une variable, plus le risque qu’un code malveillant peut rendre incorrect l’utiliser.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Durée de vie en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Niveaux d’accès dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

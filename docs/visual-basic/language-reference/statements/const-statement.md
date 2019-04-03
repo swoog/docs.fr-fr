@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979071"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835308"
 ---
 # <a name="const-statement-visual-basic"></a>Const, instruction (Visual Basic)
 Déclare et définit une ou plusieurs constantes.  
@@ -28,10 +28,10 @@ Const constantlist
  Facultatif. Liste des attributs qui s’appliquent à toutes les constantes sont déclarées dans cette instruction. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).  
   
  `accessmodifier`  
- Facultatif. Utilisez-le pour spécifier le code peut accéder à ces constantes. Peut être [Public](../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privé](../../../visual-basic/language-reference/modifiers/private.md), ou [Private protégé](../../language-reference/modifiers/private-protected.md).
+ Optionnel. Utilisez-le pour spécifier le code peut accéder à ces constantes. Peut être [Public](../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privé](../../../visual-basic/language-reference/modifiers/private.md), ou [Private protégé](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
- Facultatif. Utilisez-le pour redéclarer et masquer un élément de programmation dans une classe de base. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Optionnel. Utilisez-le pour redéclarer et masquer un élément de programmation dans une classe de base. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
  Obligatoire. Liste des constantes qui sont déclarées dans cette instruction.  
@@ -100,6 +100,7 @@ Const constantlist
  L’exemple précédent utilise le <xref:System.Type.ToString%2A> méthode sur le <xref:System.Type> objet retourné par la [opérateur GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), car <xref:System.Type> ne peut pas être converti en `String` à l’aide de `CStr`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)

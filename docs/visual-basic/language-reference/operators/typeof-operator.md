@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965057"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829861"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf, opérateur (Visual Basic)
 Compare une variable de référence d'objet à un type de données.  
@@ -63,6 +63,7 @@ result = TypeOf objectexpression IsNot typename
  La variable `refInteger` a un type au moment de l'exécution de `Integer`. Il est compatible avec `Integer` mais pas avec `Double`. La variable `refForm` a un type au moment de l'exécution de <xref:System.Windows.Forms.Form>. Il est compatible avec <xref:System.Windows.Forms.Form> car il s'agit de son type, avec <xref:System.Windows.Forms.Control> car <xref:System.Windows.Forms.Form> hérite de <xref:System.Windows.Forms.Control>, et avec <xref:System.ComponentModel.IComponent> car <xref:System.Windows.Forms.Form> hérite de <xref:System.ComponentModel.Component>, qui implémente <xref:System.ComponentModel.IComponent>. Toutefois, `refForm` n'est pas compatible avec <xref:System.Windows.Forms.Label>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Is (opérateur)](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot (opérateur)](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [Opérateurs de comparaison en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

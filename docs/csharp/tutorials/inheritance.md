@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836641"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463811"
 ---
 # <a name="inheritance-in-c-and-net"></a>Héritage dans C# et .NET
 
@@ -61,7 +61,7 @@ Bien que tous les autres membres de classe de base sont hérités par les classe
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Les classes dérivées peuvent également *substituer* les membres hérités en fournissant une implémentation alternative. Pour être en mesure de substituer un membre, le membre de la classe de base doit être marqué avec le mot-clé [virtual](../language-reference/keywords/virtual.md). Par défaut, les membres de classe de base ne sont pas marqués comme `virtual` et ne peut pas être substitués. Une tentative de substituer un membre non virtuel, comme dans l’exemple suivant, génère l’erreur de compilateur CS0506 : « <member> : impossible de substituer le membre hérité <member>, car il n’est pas marqué comme virtual, abstract ou override.
+Les classes dérivées peuvent également *substituer* les membres hérités en fournissant une implémentation alternative. Pour être en mesure de substituer un membre, le membre de la classe de base doit être marqué avec le mot-clé [virtual](../language-reference/keywords/virtual.md). Par défaut, les membres de classe de base ne sont pas marqués comme `virtual` et ne peut pas être substitués. Une tentative de substituer un membre non virtuel, comme dans l’exemple suivant, génère l’erreur de compilateur CS0506 : « \<member> : impossible de substituer le membre hérité \<member>, car il n’est pas marqué comme virtual, abstract ou override.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ Lors de la conception de votre classe `Publication`, vous devez prendre plusieur
 
  La classe `Publication` n’a aucune méthode `abstract`, mais la classe elle-même est `abstract`.
 
-- Si une classe dérivée représente la classe finale dans la hiérarchie d’héritage et ne peut pas elle-même être utilisée comme classe de base pour les classes dérivées supplémentaires. Par défaut, toute classe peut servir de classe de base. Vous pouvez appliquer le mot clé [sealed](../language-reference/keywords/sealed.md) pour indiquer qu’une classe ne peut pas servir de classe de base pour des classes supplémentaires. La tentative de dériver à partir d’une classe sealed a généré l’erreur de compilateur CS0509, « impossible de dériver à partir du type sealed <typeName> ».
+- Si une classe dérivée représente la classe finale dans la hiérarchie d’héritage et ne peut pas elle-même être utilisée comme classe de base pour les classes dérivées supplémentaires. Par défaut, toute classe peut servir de classe de base. Vous pouvez appliquer le mot clé [sealed](../language-reference/keywords/sealed.md) pour indiquer qu’une classe ne peut pas servir de classe de base pour des classes supplémentaires. La tentative de dériver à partir d’une classe sealed a généré l’erreur de compilateur CS0509, « impossible de dériver à partir du type sealed \<typeName> ».
 
   Dans votre exemple, vous allez marquer votre classe dérivée en tant que `sealed`.
 

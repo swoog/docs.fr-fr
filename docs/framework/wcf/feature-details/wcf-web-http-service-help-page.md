@@ -2,21 +2,21 @@
 title: Page d'aide du service HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826832"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Page d'aide du service HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit une page d'aide automatique pour les services HTTP WEB WCF. Cette page d'aide contient une description de chaque opération, des formats de demande et de réponse, ainsi que des schémas. Ces fonctionnalités sont désactivées par défaut. Quand un utilisateur accède à un service HTTP WEB WCF et ajoute « /Help » à la fin de l’URL, par exemple `http://localhost:8000/Customers/Help`, une page d’aide comme ce qui suit s’affiche.  
   
- ![Page d’aide WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Ouvre un navigateur avec la page d’aide de WCF REST.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  L'utilisateur peut ensuite cliquer sur une méthode répertoriée dans la page d'aide pour afficher une page détaillée sur cette opération. Cette page comporte plus d'informations sur la méthode, ainsi que des formats de message et des exemples de réponse. L'image suivante est un exemple de page d'aide pour une méthode.  
   
- ![Détails de la Page d’aide WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Ouvre un navigateur avec les détails de la page aide REST WCF pour la méthode GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilisation de la page d'aide HTTP Web WCF  
  La page d'aide HTTP Web WCF affiche une brève description de chaque opération, à condition d'en spécifier une à l'aide de l'objet <xref:System.ComponentModel.DescriptionAttribute>. Cet attribut prend une chaîne contenant une courte description de l'opération à laquelle il est appliqué. Par exemple, le code suivant indique comment utiliser l'attribut <xref:System.ComponentModel.DescriptionAttribute> pour fournir une description courte.  

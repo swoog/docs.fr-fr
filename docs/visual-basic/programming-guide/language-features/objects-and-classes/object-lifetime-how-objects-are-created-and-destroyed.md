@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839819"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie des objets : Comment les objets sont créés et détruits (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d’initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  
@@ -147,6 +147,7 @@ End Sub
  Les systèmes de garbage collection se distinguent aussi en ce qui concerne l’utilisation de `Nothing`. Pour tirer parti du comptage de références dans Visual Basic 6.0 et les versions antérieures, les programmeurs attribuaient parfois aux variables objets la valeur `Nothing` pour libérer les références contenues dans ces variables. Si la variable contenait la dernière référence à l’objet, les ressources de l’objet étaient libérées immédiatement. Dans les versions ultérieures de Visual Basic, même si dans certains cas cette procédure est toujours utile, son exécution ne conduit jamais l’objet référencé à libérer immédiatement ses ressources. Pour libérer immédiatement des ressources, utilisez la méthode <xref:System.IDisposable.Dispose%2A> de l’objet, si elle est disponible. Le seul cas où vous devez affecter la valeur `Nothing` à une variable est quand sa durée de vie est plus longue que le temps dont a besoin le récupérateur de mémoire pour détecter les objets orphelins.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IDisposable.Dispose%2A>
 - [Initialisation et suppression des composants](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New (opérateur)](../../../../visual-basic/language-reference/operators/new-operator.md)

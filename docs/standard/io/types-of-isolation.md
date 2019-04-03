@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654657"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466151"
 ---
 # <a name="types-of-isolation"></a>Types d'isolation
 L’accès au stockage isolé est toujours limité à l’utilisateur qui l’a créé. Pour implémenter ce type d’isolation, le Common Language Runtime utilise la même notion d’identité de l’utilisateur reconnue par le système d’exploitation, c’est-à-dire l’identité associée au processus par lequel le code s’exécute lorsque le magasin est ouvert. Cette identité est l’identité d’un utilisateur, mais l’emprunt d’identité peut provoquer un changement dynamique de l’identité actuelle de l’utilisateur.  
@@ -46,10 +46,9 @@ L’accès au stockage isolé est toujours limité à l’utilisateur qui l’a 
   
  Chacune de ces isolations peut être combinée avec un profil utilisateur itinérant. Pour plus d’informations, consultez la section [Stockage et profil itinérant isolé](#Roaming).  
   
- L’illustration suivante montre comment les magasins sont isolés dans différentes portées.  
+ L’illustration suivante montre comment les magasins sont isolés dans différentes étendues :  
   
- ![Isolation par utilisateur et par assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Types de stockage isolé  
+ ![Diagramme qui montre l’isolation par utilisateur et par assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Notez que, à l’exception des magasins itinérants, le stockage isolé est toujours implicitement isolé par l’ordinateur car il utilise les installations de stockage locales d’un ordinateur donné.  
   

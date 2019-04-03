@@ -10,20 +10,22 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219520"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654131"
 ---
 # <a name="runtime-callable-wrapper"></a>Wrapper pouvant être appelé par le runtime
 Le common language runtime expose les objets COM via un proxy appelé wrapper RCW. Même si le wrapper RCW est un objet ordinaire pour les clients .NET, sa fonction principale est de marshaler les appels entre un client .NET et un objet COM.  
   
  Le runtime crée un wrapper RCW pour chaque objet COM, quel que soit le nombre de références qui existent sur cet objet. Le runtime gère un seul wrapper RCW par processus pour chaque objet.  Si vous créez un wrapper RCW dans un domaine d'application ou cloisonnement, puis passez une référence à un autre domaine d'application ou cloisonnement, un proxy du premier objet sera utilisé.  Comme le montre l'illustration suivante, il n'existe pas de limite au nombre de clients managés pouvant contenir une référence aux objets COM qui exposent les interfaces INew et INewer.  
-  
- ![Wrapper RCW](./media/rcw.gif "rcw")  
-Accès aux objets COM via le wrapper RCW  
+
+L’image suivante montre le processus d’accès aux objets COM par le biais du wrapper RCW :
+
+ ![Processus d’accès aux objets COM par le biais du wrapper RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+   
   
  À l'aide de métadonnées dérivées d'une bibliothèque de types, le runtime crée l'objet COM appelé, ainsi qu'un wrapper pour celui-ci. Chaque wrapper RCW gère un cache de pointeurs d'interface sur l'objet COM qu'il encapsule et libère sa référence à l'objet COM quand le wrapper RCW n'est plus utile. Le runtime exécute le garbage collection du wrapper RCW.  
   
@@ -32,10 +34,11 @@ Accès aux objets COM via le wrapper RCW
  Le wrapper standard applique les règles de marshaling intégrées. Par exemple, quand un client .NET passe un type String dans le cadre d’un argument à un objet non managé, le wrapper convertit la chaîne en un type BSTR. Si l'objet COM retourne un BSTR à son appelant managé, l'appelant reçoit une chaîne (String). Le client et le serveur envoient et reçoivent des données qui leur sont familières. Les autres types ne nécessitent pas de conversion. Par exemple, un wrapper standard passera toujours un entier de 4 octets d'un code managé à un code non managé sans convertir le type.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshaling d’interfaces sélectionnées  
- L’objectif principal du [wrapper RCW](runtime-callable-wrapper.md) est de masquer les différences entre les modèles de programmation managé et non managé. Pour créer une transition transparente, le wrapper RCW consomme les interfaces COM sélectionnées sans les exposer au client .NET, comme indiqué dans l'illustration suivante.  
+ L’objectif principal du [wrapper RCW](runtime-callable-wrapper.md) est de masquer les différences entre les modèles de programmation managé et non managé. Pour créer une transition transparente, le wrapper RCW consomme les interfaces COM sélectionnées sans les exposer au client .NET, comme indiqué dans l'illustration suivante. 
+
+ L’image suivante montre les interfaces COM et le wrapper RCW : 
   
- ![Wrapper RCW avec interfaces](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
-Les interfaces COM et le wrapper RCW  
+ ![Capture d’écran du wrapper RCW avec des interfaces.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
  Quand il est créé comme un objet à liaison anticipée, le wrapper RCW est un type spécifique. Il implémente les interfaces que l'objet COM implémente et expose les méthodes, les propriétés et les événements des interfaces de l'objet. Dans l’illustration, le wrapper RCW expose l’interface INew, mais consomme les interfaces **IUnknown** et **IDispatch**. De plus, le wrapper RCW expose tous les membres de l'interface INew au client .NET.  
   

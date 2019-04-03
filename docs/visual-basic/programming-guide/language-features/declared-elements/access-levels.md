@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203624"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843095"
 ---
 # <a name="access-levels-in-visual-basic"></a>Niveaux d'accès dans Visual Basic
 Le *niveau d’accès* d’un élément déclaré est l’étendue de la capacité à y accéder, autrement dit, ce que le code est autorisé à lire ou écrire dedans. Cela est déterminé par la façon dont vous déclarez l’élément lui-même, mais également le niveau d’accès du conteneur de l’élément. Code qui ne peut pas accéder à un élément conteneur ne peut pas accéder à un de ses éléments de relation contenant-contenus, y compris ceux déclarés comme `Public`. Par exemple, un `Public` variable dans un `Private` structure est accessible à partir de la classe qui contient la structure, mais pas de l’extérieur de celle-ci.  
@@ -115,6 +115,7 @@ Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs
 |`Private Protected`|Code de la classe qui déclare un élément protégé privé ou du code dans une classe dérivée, trouvée dans le même assembly que la classe des services bas.|Interfaces<br /><br /> Classes<br /><br /> Structures<br /><br /> Procédures<br /><br /> Properties<br /><br /> Variables membres<br /><br /> Constantes<br /><br /> Énumérations<br /><br /> Événements<br /><br /> Déclarations externes<br /><br /> Délégués|Classe|
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Dim (instruction)](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

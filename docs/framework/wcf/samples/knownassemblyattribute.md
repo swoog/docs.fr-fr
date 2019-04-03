@@ -2,15 +2,15 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: cbbb06089508538353465a35e24aa68573da7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02aa10f585cd4ad61e6a07d48a0c7e66e4c7523
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832058"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
-Cet exemple montre comment les processus de sérialisation et de désérialisation peuvent être personnalisés à l’aide de la classe <xref:System.Runtime.Serialization.DataContractResolver>. Cet exemple montre comment ajouter dynamiquement des types connus pendant la sérialisation et la désérialisation.  
+Cet exemple montre comment les processus de sérialisation et de désérialisation peuvent être personnalisés à l'aide de la classe <xref:System.Runtime.Serialization.DataContractResolver>. Cet exemple montre comment ajouter dynamiquement des types connus pendant la sérialisation et la désérialisation.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Cet exemple est composé de quatre projets. L'un d'eux correspond au service, qui sera hébergé par IIS et définit le contrat de service suivant.  
@@ -371,4 +371,3 @@ Lists combined:
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## <a name="see-also"></a>Voir aussi

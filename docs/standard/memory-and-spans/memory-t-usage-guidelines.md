@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c5f25d6dbffc26d30843dcd9ced36e9175e7c1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "56411403"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504338"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instructions d’utilisation de Memory\<T> et de Span\<T>
 
@@ -46,12 +46,14 @@ class Program
     static void Main()
     {
         var buffer = CreateBuffer();
-        try {
+        try
+        {
             int value = Int32.Parse(Console.ReadLine());
             WriteInt32ToBuffer(value, buffer);
             DisplayBufferToConsole(buffer);
         }
-        finally {
+        finally
+        {
             buffer.Destroy();
         }
     }
@@ -152,9 +154,11 @@ Mais imaginez plutôt que `Log` a cette implémentation.
 static void Log(ReadOnlyMemory<char> message)
 {
     // Run in background so that we don't block the main thread while performing IO.
-    Task.Run(() => {
+    Task.Run(() =>
+    {
         StreamWriter sw = File.AppendText(@".\input-numbers.dat");
-        sw.WriteLine(message);    });
+        sw.WriteLine(message);
+    });
 }
 ```
 
@@ -185,7 +189,8 @@ Ces conseils s’appliquent aux méthodes qui retournent <xref:System.Threading.
 Prenons l'exemple suivant :
 
 ```csharp
-class OddValueExtractor {
+class OddValueExtractor
+{
     public OddValueExtractor(ReadOnlyMemory<int> input);
     public bool TryReadNextOddValue(out int value);
 }
@@ -241,7 +246,7 @@ Tout composant qui transfère la propriété de l’instance <xref:System.Buffer
 
 **Règle 9 : si vous incluez une méthode p/invoke synchrone dans un wrapper, votre API doit accepter Span\<T> comme paramètre.**
 
-Conformément à la règle 1, <xref:System.Span%601> est généralement le type correct à utiliser pour les API synchrones. Vous pouvez épingler des instances <xref:System.Span%601><T> via le mot clé [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) mot clé, comme dans l’exemple suivant.
+Conformément à la règle 1, <xref:System.Span%601> est généralement le type correct à utiliser pour les API synchrones. Vous pouvez épingler des instances <xref:System.Span%601>\<T> par le biais du mot clé [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), comme dans l’exemple suivant.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -298,19 +303,23 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 {
     // setup
     var tcs = new TaskCompletionSource<int>();
-    var state = new MyCompletedCallbackState {
+    var state = new MyCompletedCallbackState
+    {
         Tcs = tcs
     };
-    var pState = (IntPtr)GCHandle.Alloc(state;
+    var pState = (IntPtr)GCHandle.Alloc(state);
 
     var memoryHandle = data.Pin();
     state.MemoryHandle = memoryHandle;
 
     // make the call
     int result;
-    try {
+    try
+    {
         result = ExportedAsyncMethod((byte*)memoryHandle.Pointer, data.Length, pState, _callbackPtr);
-    } catch {
+    }
+    catch
+    {
         ((GCHandle)pState).Free(); // cleanup since callback won't be invoked
         memoryHandle.Dispose();
         throw;
@@ -335,8 +344,14 @@ private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 
     /* error checking result goes here */
 
-    if (error) { actualState.Tcs.SetException(...); }
-    else { actualState.Tcs.SetResult(result); }
+    if (error)
+    {
+        actualState.Tcs.SetException(...);
+    }
+    else
+    {
+        actualState.Tcs.SetResult(result);
+    }
 }
 
 private static IntPtr GetCompletionCallbackPointer()

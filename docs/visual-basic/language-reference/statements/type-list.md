@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968268"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843628"
 ---
 # <a name="type-list-visual-basic"></a>Liste de types (Visual Basic)
 Spécifie le *paramètres de type* pour un *générique* élément de programmation. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre de type.  
@@ -46,7 +46,7 @@ Spécifie le *paramètres de type* pour un *générique* élément de programmat
 |---|---|  
 |`genericmodifier`|Facultatif. Peut être utilisé uniquement dans les délégués et interfaces génériques. Vous pouvez déclarer un type covariant à l’aide de la [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) mot clé ou contravariant à l’aide de la [dans](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) mot clé. Consultez [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).|  
 |`typename`|Obligatoire. Nom du paramètre de type. Il s’agit d’un espace réservé, à remplacer par un type défini fourni par l’argument de type correspondant.|  
-|`constraintlist`|Facultatif. Liste des conditions requises qui limitent le type de données qui peut être fourni pour `typename`. Si vous avez plusieurs contraintes, placez-les entre accolades (`{ }`) et séparez-les par des virgules. Vous devez introduire la liste des contraintes avec le [comme](../../../visual-basic/language-reference/statements/as-clause.md) mot clé. Vous utilisez `As` une seule fois, au début de la liste.|  
+|`constraintlist`|Optionnel. Liste des conditions requises qui limitent le type de données qui peut être fourni pour `typename`. Si vous avez plusieurs contraintes, placez-les entre accolades (`{ }`) et séparez-les par des virgules. Vous devez introduire la liste des contraintes avec le [comme](../../../visual-basic/language-reference/statements/as-clause.md) mot clé. Vous utilisez `As` une seule fois, au début de la liste.|  
   
 ## <a name="remarks"></a>Notes  
  Chaque élément de programmation générique doit prendre au moins un paramètre de type. Un paramètre de type est un espace réservé pour un type spécifique (un *élément construit*) que le code client spécifie lorsqu’il crée une instance du type générique. Vous pouvez définir une classe générique, structure, interface, une procédure ou délégué.  
@@ -93,6 +93,7 @@ Spécifie le *paramètres de type* pour un *générique* élément de programmat
  [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New (opérateur)](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Niveaux d’accès dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

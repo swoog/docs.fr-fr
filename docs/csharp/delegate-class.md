@@ -3,12 +3,12 @@ title: System.Delegate et le mot clé `delegate`
 description: En savoir plus sur les classes du .NET Framework qui prennent en charge les délégués et sur le mode de mappage de ces délégués au mot clé 'delegate'.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126173"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465774"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate et le mot clé `delegate`
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 Notez que le nom de la méthode est utilisé sans parenthèses. L’utilisation de la méthode comme argument indique au compilateur de convertir la référence de méthode en une référence pouvant être utilisée comme cible d’invocation de délégué, puis d’attacher cette méthode comme cible d’invocation.
 
-Vous pouvez également avoir déclaré explicitement une variable de type 'Comparison<string>' et effectué une assignation :
+Vous pouvez également avoir déclaré explicitement une variable de type `Comparison<string>` et effectué une assignation :
 
 ```csharp
 Comparison<string> comparer = CompareLength;

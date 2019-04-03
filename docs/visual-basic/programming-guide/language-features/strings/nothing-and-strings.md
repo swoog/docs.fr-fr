@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-ms.openlocfilehash: 873c4e40a0b12dd657d3294785e04dd9efc23956
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fbcf86261892e3eb8e43ee8eaa3728cd8e42ced
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967982"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841886"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing et les chaînes en Visual Basic
 Le runtime Visual Basic et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] évaluer `Nothing` différemment lorsqu’il s’agit de chaînes.  
@@ -22,4 +22,5 @@ Le runtime Visual Basic et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.m
  Le runtime Visual Basic prend généralement la valeur `Nothing` comme une chaîne vide ( » »). Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] est pas le cas, toutefois et lève une exception chaque fois qu’une tentative est effectuée pour effectuer une opération de chaîne sur `Nothing`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

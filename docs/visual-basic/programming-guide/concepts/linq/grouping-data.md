@@ -2,12 +2,12 @@
 title: Regroupement de données (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576962"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842055"
 ---
 # <a name="grouping-data-visual-basic"></a>Regroupement de données (Visual Basic)
 Le regroupement consiste à placer des données dans des groupes afin que les éléments de chaque groupe partagent un attribut commun.  
@@ -64,6 +64,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq>
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By (clause)](../../../../visual-basic/language-reference/queries/group-by-clause.md)

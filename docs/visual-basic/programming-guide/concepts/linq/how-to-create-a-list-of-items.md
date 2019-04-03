@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer une liste d’éléments'
+title: 'Procédure : créer une liste d’éléments'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 69c20ac07a1e21371edae333d6ccbd7364995767
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971804"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837843"
 ---
-# <a name="how-to-create-a-list-of-items"></a>Procédure : Créer une liste d’éléments
+# <a name="how-to-create-a-list-of-items"></a>Procédure : créer une liste d’éléments
 Le code fourni dans cette rubrique définit une classe `Student` et crée une liste d'instances de la classe. La liste est conçue pour prendre en charge de la rubrique [procédure pas à pas : Écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Elle peut également être utilisée pour toute application qui requiert une liste d'objets. Le code définit les éléments de la liste d'étudiants en utilisant des initialiseurs d'objets.  
   
 ## <a name="example"></a>Exemple  
@@ -21,6 +21,7 @@ Le code fourni dans cette rubrique définit une classe `Student` et crée une li
  [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédure pas à pas : Écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)
 - [Bien démarrer avec LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Initialiseurs d’objets : Types nommés et anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

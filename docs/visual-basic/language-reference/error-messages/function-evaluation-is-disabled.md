@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820735"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>L'évaluation de la fonction est désactivée, car une évaluation de fonction précédente a expiré
 Évaluation de la fonction est désactivée, car une évaluation de fonction précédente a expiré. Pour réactiver l’évaluation de fonction, pas à pas, ou redémarrer le débogage.  
@@ -32,5 +32,6 @@ ms.locfileid: "54718271"
 2.  Soit à nouveau, l’étape du débogueur ou arrêter et redémarrer le débogage.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Naviguer dans le code avec le débogueur](/visualstudio/debugger/navigating-through-code-with-the-debugger)

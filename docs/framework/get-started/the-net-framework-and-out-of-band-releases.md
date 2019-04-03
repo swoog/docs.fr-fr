@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708351"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654560"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Versions finales hors plage de .NET Framework
 
@@ -44,7 +44,7 @@ Les versions OOB des principaux composants du Common Langage Runtime (CLR) sont 
 
 4.  Dans le volet droit, utilisez la zone **Rechercher** pour localiser le package que vous souhaitez utiliser. Certains packages Microsoft sont identifiés par le logo Microsoft .NET Framework, et tous identifient Microsoft en tant qu'éditeur.
 
- ![Gestionnaire de package NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
+ ![Capture d’écran qui montre le gestionnaire de package NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
  Comme mentionné précédemment, lorsque vous déployez une application qui utilise un package OOB, les assemblys OOB sont fournis avec votre package d'application.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 35df64848c0506a1c0a97bd8cd34f158f9febcd7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970166"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841418"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Procédure : Créer une Expression Lambda (Visual Basic)
 Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom. Une expression lambda peut être utilisée partout où un type délégué est valide.  
@@ -105,6 +105,7 @@ Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Linq.Enumerable>
 - [Expressions lambda](./lambda-expressions.md)
 - [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)

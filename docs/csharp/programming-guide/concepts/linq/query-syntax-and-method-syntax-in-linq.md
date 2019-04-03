@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978647"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654040"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Syntaxe de requête et syntaxe de méthode dans LINQ (C#)
 La plupart des requêtes de la documentation de présentation de Langage Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sont écrites à l’aide de la syntaxe de requête déclarative de LINQ. Toutefois, la syntaxe de requête doit être traduite en appels de méthode pour le Common Langage Runtime (CLR) .NET lorsque le code est compilé. Ces appels de méthode appellent les opérateurs de requête standard, qui ont des noms tels que `Where`, `Select`, `GroupBy`, `Join`, `Max` et `Average`. Vous pouvez les appeler directement en utilisant la syntaxe de méthode à la place de la syntaxe de requête.  
@@ -26,7 +26,7 @@ La plupart des requêtes de la documentation de présentation de Langage Integra
   
  Pour comprendre la requête basée sur une méthode, examinons-la de plus près. Du côté droit de l’expression, remarquez que la clause `where` est maintenant exprimée comme une méthode d’instance sur l’objet `numbers`, qui, comme vous vous en rappelez, a un type `IEnumerable<int>`. Si vous êtes connaissez bien l’interface <xref:System.Collections.Generic.IEnumerable%601> générique, vous savez qu’elle n’a pas de méthode `Where`. Toutefois, si vous appelez la liste de saisie semi-automatique IntelliSense dans l’IDE de Visual Studio, vous ne verrez pas seulement une méthode `Where`, mais de nombreuses autres méthodes telles que `Select`, `SelectMany`, `Join` et `Orderby`. Il s’agit de tous les opérateurs de requête standard.  
   
- ![Opérateurs de requête standard dans Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Capture d’écran montrant tous les opérateurs de requête standard dans Intellisense.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Même s’il semble que <xref:System.Collections.Generic.IEnumerable%601> a été redéfini pour inclure ces méthodes supplémentaires, ce n’est pas le cas, en réalité. Les opérateurs de requête standard sont implémentés comme un nouveau type de méthode, appelé *méthodes d’extension*. Les méthodes d’extension « étendent » un type existant. Elles peuvent être appelées comme s’il s’agissait de méthodes d’instance sur le type. Les opérateurs de requête standard étendent <xref:System.Collections.Generic.IEnumerable%601>, si bien que vous pouvez écrire `numbers.Where(...)`.  
   
