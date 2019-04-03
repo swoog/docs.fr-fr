@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836303"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410522"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
-<a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
+ Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
- Chaque section dans cette référence rapide répertorie une catégorie particulière de caractères, d'opérateurs et de constructions que vous pouvez utiliser pour définir des expressions régulières :  
-  
- [Caractères d’échappement](#character_escapes)  
- [Classes de caractères](#character_classes)  
- [Ancres](#anchors)  
- [Constructions de regroupement](#grouping_constructs)  
- [Quantificateurs](#quantifiers)  
- [Constructions de référence arrière](#backreference_constructs)  
- [Constructions d'alternative](#alternation_constructs)  
- [Substitutions](#substitutions)  
- [Options des expressions régulières](#options)  
- [Constructions diverses](#miscellaneous_constructs)  
+ Chaque section dans cette référence rapide répertorie une catégorie particulière de caractères, d’opérateurs et de constructions que vous pouvez utiliser pour définir des expressions régulières.  
   
  Ces informations sont également disponibles dans deux documents de référence, que vous pouvez télécharger et imprimer :  
   
  [Télécharger au format Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Télécharger au format PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Caractères d'échappement  
  La barre oblique inverse (\\) dans une expression régulière indique que le caractère qui le suit est un caractère spécial (comme indiqué dans le tableau suivant), ou qu’il doit être interprété littéralement. Pour plus d’informations, consultez [Caractères d’échappement](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>Classes de caractères  
  Une classe de caractères fait correspondre tout caractère d'un jeu de caractères. Les classes de caractères incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Constructions de regroupement  
  Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent généralement les sous-chaînes d'une chaîne d'entrée. Les constructions de regroupement incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantificateurs  
  Un quantificateur indique combien d'instances de l'élément précédent (qui peut être un caractère, un groupe ou une classe de caractères) doivent être présentes dans la chaîne d'entrée pour qu'il y ait correspondance. Les quantificateurs incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Quantificateurs](quantifiers-in-regular-expressions.md).  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Constructions de référence arrière  
  Une backreference permet qu'une sous-expression précédemment mise en correspondance soit ensuite identifiée dans la même expression régulière. Le tableau suivant répertorie les constructions de backreference prises en charge par les expressions régulières dans .NET. Pour plus d'informations, consultez [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Constructions d’alternative  
  Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif. Ces constructions incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Constructions d’alternative](alternation-constructs-in-regular-expressions.md).  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>Substitutions  
  Les substitutions sont des éléments de langage d'expression régulière pris en charge dans les modèles de remplacement. Pour plus d'informations, consultez [Substitutions](substitutions-in-regular-expressions.md). Les métacaractères répertoriés dans le tableau suivant sont des assertions de largeur nulle atomiques.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>Options des expressions régulières  
  Vous pouvez définir des options qui contrôlent comment le moteur des expressions régulières interprète un modèle d'expression régulière. Bon nombre de ces options peuvent être spécifiées inline (dans le modèle d'expression régulière) ou sous la forme d'une ou de plusieurs constantes <xref:System.Text.RegularExpressions.RegexOptions> . Cette référence rapide répertorie uniquement les options inline. Pour plus d’informations sur les options inline et <xref:System.Text.RegularExpressions.RegexOptions> , consultez l’article [Options des expressions régulières](regular-expression-options.md).  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836303"
   
  [Retour au début](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Constructions diverses  
  Diverses constructions modifient un modèle d'expression régulière ou fournissent des informations le concernant. Le tableau suivant répertorie les diverses constructions prises en charge par .NET. Pour plus d'informations, consultez [Constructions diverses](miscellaneous-constructs-in-regular-expressions.md).  
   
