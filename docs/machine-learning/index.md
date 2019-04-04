@@ -3,12 +3,12 @@ title: Guide de contenu de ML.NET
 description: Découvrez comment créer des solutions IA personnalisées et les intégrer à vos applications .NET à l’aide de ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826262"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920764"
 ---
 # <a name="mlnet-content-guide"></a>Guide de contenu de ML.NET
 
@@ -27,25 +27,25 @@ Pour comprendre les principes de base, consultez [Concepts de base pour l’appr
 
 ## <a name="tutorials"></a>Didacticiels
 
-[Analyse d’un sentiment à l’aide d’un modèle de classification binaire](tutorials/sentiment-analysis.md) vous montre comment créer une application qui détermine si le sentiment est positif ou négatif.
+[Analyse d’un sentiment à l’aide d’un modèle de classification binaire](./tutorials/sentiment-analysis.md) vous montre comment créer une application qui détermine si le sentiment est positif ou négatif.
 
-[Classer les problèmes GitHub à l’aide d’un modèle de classification multiclasse](tutorials/github-issue-classification.md) vous montre comment créer une application qui détermine l’étiquette Domaine d’un problème GitHub.
+[Classer les problèmes GitHub à l’aide d’un modèle de classification multiclasse](./tutorials/github-issue-classification.md) vous montre comment créer une application qui détermine l’étiquette Domaine d’un problème GitHub.
 
-[Prédire les prix à l’aide d’un modèle de régression](tutorials/taxi-fare.md) vous montre comment créer une application prédictive qui utilise de nombreux facteurs à partir de données historiques pour déterminer la réponse.
+[Prédire les prix à l’aide d’un modèle de régression](./tutorials/taxi-fare.md) vous montre comment créer une application prédictive qui utilise de nombreux facteurs à partir de données historiques pour déterminer la réponse.
 
-[Classer les iris par caractéristiques](tutorials/iris-clustering.md) vous montre comment utiliser un modèle de clustering pour analyser un jeu de données d’iris. 
+[Classer les iris par caractéristiques](./tutorials/iris-clustering.md) vous montre comment utiliser un modèle de clustering pour analyser un jeu de données d’iris. 
 
 ## <a name="how-to-guide"></a>Guide
 
-[Créer une application qui génère une liste de duels avec Infer.NET et une programmation probabiliste](how-to-guides/matchup-app-infer-net.md) vous montre comment créer une version simplifiée d’une application qui génère des duels comme dans un jeu Xbox.
+[Créer une application qui génère une liste de duels avec Infer.NET et une programmation probabiliste](./how-to-guides/matchup-app-infer-net.md) vous montre comment créer une version simplifiée d’une application qui génère des duels comme dans un jeu Xbox.
 
 ## <a name="resources"></a>Ressources
 
-[Glossaire de l’apprentissage automatique](resources/glossary.md) définit la terminologie clé.
+[Glossaire de l’apprentissage automatique](./resources/glossary.md) définit la terminologie clé.
 
-[Tâches d’apprentissage automatique](resources/tasks.md) décrit des tâches comme la classification et la détection des anomalies. 
+[Tâches d’apprentissage automatique](./resources/tasks.md) décrit des tâches comme la classification et la détection des anomalies. 
 
-[Transformations de données](resources/transforms.md) décrit les fonctionnalités de préparation des données dans ML.NET.
+[Transformations de données](./resources/transforms.md) décrit les fonctionnalités de préparation des données dans ML.NET.
 
 
 ## <a name="api-reference"></a>Informations de référence sur les API
