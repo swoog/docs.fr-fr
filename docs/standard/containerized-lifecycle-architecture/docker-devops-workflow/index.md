@@ -4,8 +4,13 @@ description: En conteneur Docker Application Lifecycle with Microsoft Platform a
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663923"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Workflow DevOps pour les applications Docker avec les outils Microsoft
 
 *Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server et Application Insights fournissent un écosystème complet pour le développement et les opérations informatiques qui permettent à votre équipe les outils nécessaires pour gérer des projets rapidement générer, tester et déployer applications en conteneur.*

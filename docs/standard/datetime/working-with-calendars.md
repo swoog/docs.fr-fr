@@ -1,26 +1,26 @@
 ---
 title: Utilisation des calendriers
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845984"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921349"
 ---
 # <a name="working-with-calendars"></a>Utilisation des calendriers
 
@@ -138,13 +138,16 @@ Toutefois, il existe une exception importante. La valeur par défaut (non initia
 Les calendriers divisent en général les dates en ères. Toutefois, le <xref:System.Globalization.Calendar> classes dans .NET ne prennent pas en charge chaque ère définie par un calendrier et la plupart de la <xref:System.Globalization.Calendar> classes prennent en charge qu’une seule ère. Seules les classes <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> prennent en charge plusieurs ères.
 
 > [!IMPORTANT]
->  Dans les calendriers <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, une nouvelle ère commence le 1er mai 2019. Ce changement affecte toutes les applications qui utilisent ces calendriers. Pour plus d’informations et pour déterminer si vos applications sont affectées, consultez [Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/). Consultez [préparer votre application pour la modification de l’ère japonais](/windows/uwp/design/globalizing/japanese-era-change) pour plus d’informations sur le test de vos applications sur Windows pour garantir leur disponibilité pour la modification de l’ère.
+>  L’ère Reiwa, une nouvelle ère dans la <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, commence le 1 mai 2019. Ce changement affecte toutes les applications qui utilisent ces calendriers. Consultez les articles suivants pour plus d’informations :
+> - [Gestion d’une nouvelle ère dans le calendrier japonais dans .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), qui documente les fonctionnalités ajoutées à .NET pour prendre en charge plusieurs ères de calendriers et traite des meilleures pratiques à utiliser lors de la gestion des calendriers d’ère multi.
+> - [Préparer votre application pour la modification de l’ère japonais](/windows/uwp/design/globalizing/japanese-era-change), qui fournit des informations sur le test de vos applications sur Windows pour garantir leur disponibilité pour la modification de l’ère.
+> - [Résumé de la nouvelle ère japonais met à jour pour .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), qui répertorie les mises à jour de .NET Framework pour les différentes versions de Windows qui sont liées à la nouvelle ère de calendrier japonais, note des nouvelles fonctionnalités de .NET Framework pour la prise en charge de l’ère multi et inclut éléments à rechercher dans le test de vos applications.
 
-Une ère dans la plupart des calendriers désigne une période de temps extrêmement long. Dans le calendrier grégorien, par exemple, l’ère actuelle s’étend sur plus de deux millenia. Pour le <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, les deux calendriers qui prennent en charge plusieurs ères, cela n’est pas le cas. Une ère correspond à la période d’un calendrier d’impérial. Prise en charge de plusieurs ères, en particulier lorsque la limite supérieure de l’ère actuelle est inconnue, pose des défis particuliers. 
+Une ère dans la plupart des calendriers désigne une période de temps extrêmement long. Dans le calendrier grégorien, par exemple, l’ère actuelle s’étend sur plus de mille ans de deux. Pour le <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar>, les deux calendriers qui prennent en charge plusieurs ères, cela n’est pas le cas. Une ère correspond à la période d’un calendrier d’impérial. Prise en charge de plusieurs ères, en particulier lorsque la limite supérieure de l’ère actuelle est inconnue, pose des défis particuliers. 
 
 ### <a name="eras-and-era-names"></a>Ères et noms d’ères
 
-Dans .NET, les entiers qui représentent les ères prises en charge par une implémentation particulière de calendrier sont stockées dans l’ordre inverse dans le <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tableau. L'ère actuelle se trouve à l'index zéro et pour les classes <xref:System.Globalization.Calendar> qui prennent en charge plusieurs ères, chaque index successif reflète l'ère précédente. La propriété statique <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> définit l'index de l'ère actuelle dans le tableau <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; il s'agit d'une constante dont la valeur est toujours zéro. Les classes <xref:System.Globalization.Calendar> individuelles incluent également les champs static qui retournent la valeur de l’ère actuelle. Elles sont répertoriées dans le tableau suivant.
+Dans .NET, les entiers qui représentent les ères prises en charge par une implémentation particulière de calendrier sont stockées dans l’ordre inverse dans le <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tableau. L’ère actuelle (qui est l’ère avec l’intervalle de temps plus récente) est à l’index zéro et pour <xref:System.Globalization.Calendar> les classes qui prennent en charge plusieurs ères, chaque index successif reflète l’ère précédente. La propriété statique <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> définit l'index de l'ère actuelle dans le tableau <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; il s'agit d'une constante dont la valeur est toujours zéro. Les classes <xref:System.Globalization.Calendar> individuelles incluent également les champs static qui retournent la valeur de l’ère actuelle. Elles sont répertoriées dans le tableau suivant.
 
 | Classe de calendrier                                        | Champ d'ère actuelle                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,8 +165,8 @@ Dans .NET, les entiers qui représentent les ères prises en charge par une impl
 
 Le nom qui correspond à un numéro d'ère particulier peut être extrait en passant le numéro d'ère à la méthode <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> ou <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. L'exemple suivant appelle ces méthodes pour extraire des informations sur la prise en charge de l'ère dans la classe <xref:System.Globalization.GregorianCalendar>.
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 En outre, la chaîne de format de date et d'heure personnalisée « g » inclut un nom d'ère du calendrier dans la représentation sous forme de chaîne d'une date et d'une heure. Pour plus d’informations, consultez [chaînes de format de date personnalisée et heure](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
@@ -205,7 +208,7 @@ Lors de la spécification d’une ère à la <xref:System.Globalization.Calendar
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Calendriers, des ères et plages de dates : Vérifications de la plage souple
 
-Très bien comme des calendriers individuels ont pris en charge les plages de dates, les ères dans le <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> classes également ont pris en charge des plages. Auparavant, .NET utilisé ère strict range vérifie pour s’assurer qu’une date spécifique à l’ère a dans la plage de l’époque. Une date hors limites lèverait une le .NET Framework utilise la vérification par plage souple par défaut. Autrement dit, si une date est en dehors de la plage de l’ère spécifiée, la méthode lève un <xref:System.ArgumentOutOfRangeException>. Mises à jour pour toutes les versions du .NET Framework introduit assouplie ère plage vérifications ; la tentative d’instancier une date spécifique à l’ère qui est en dehors de la plage de l’ère spécifiée « dépassement » dans l’ère suivant et aucune exception n’est levée.
+Très bien comme des calendriers individuels ont pris en charge les plages de dates, les ères dans le <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> classes également ont pris en charge des plages. Auparavant, .NET utilisé ère strict range vérifie pour s’assurer qu’une date spécifique à l’ère a dans la plage de l’époque. Autrement dit, si une date est en dehors de la plage de l’ère spécifiée, la méthode lève un <xref:System.ArgumentOutOfRangeException>. Actuellement, .NET utilise la vérification par plage souple par défaut. Mises à jour pour toutes les versions de .NET a introduit une ère souple de plage vérifications ; la tentative d’instancier une date spécifique à l’ère qui est en dehors de la plage de l’ère spécifiée « dépassements de capacité » dans l’ère suivant, et aucune exception n’est levée.
 
 L’exemple suivant tente d’instancier une date dans l’année 65e de l’ère Showa, qui a commencé le 25 décembre 1926 et a pris fin le 7 janvier 1989. Cette date correspond à 9 janvier 1990, qui est en dehors de la plage de l’ère Showa dans le <xref:System.Globalization.JapaneseCalendar>. Comme l’illustre la sortie de l’exemple, la date affichée par l’exemple est le 9 janvier 1990, dans la deuxième année de l’ère Heisei.
 
@@ -240,7 +243,7 @@ Si les vérifications de la plage souple sont indésirables, vous pouvez restaur
    |  |  |
    |--|--|
    |Touche | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   |Nom | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
    |Type | REG_SZ |
    |Value | 1 |
 
@@ -315,7 +318,7 @@ Si ce comportement n’est pas souhaitable dans les opérations de mise en forme
    |  |  |
    |--|--|
    |Touche | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
+   |Nom | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
    |Type | REG_SZ |
    |Value | 1 |
 
@@ -353,11 +356,12 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |  |  |
    |--|--|  
    |Touche | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   |Nom | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |Type | REG_SZ |
    |Value | 1 | 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour Afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [Exemple : Utilitaire de plages de semaine de calendrier](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Procédure : Afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [Aperçu : Utilitaire de plages de semaine de calendrier](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Classe de calendrier](xref:System.Globalization.Calendar)

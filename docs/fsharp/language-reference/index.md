@@ -1,7 +1,13 @@
 ---
-title: 'Informations de référence sur le langage F#'
-description: 'Rechercher F# informations sur les fonctionnalités de langage à partir de cette référence pour les jetons de langue, concepts, types, expressions et les rubriques de construction prise en charge du compilateur.'
+title: Informations de référence sur le langage F#
+description: Rechercher F# informations sur les fonctionnalités de langage à partir de cette référence pour les jetons de langue, concepts, types, expressions et les rubriques de construction prise en charge du compilateur.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846634"
 ---
 # <a name="f-language-reference"></a>Informations de référence sur le langage F#
 

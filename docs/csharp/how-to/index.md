@@ -1,9 +1,14 @@
 ---
-title: 'Articles de guide pratique (Guide C#)'
+title: Articles de guide pratique (Guide C#)
 description: Série de petits conseils et d’exemples de code spécifiques courts
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202338"
 ---
-
 # <a name="how-to-c"></a>Guides pratiques (C#)
 
 Dans la section Guides pratiques du guide C#, vous trouverez rapidement des réponses à des questions courantes. Dans certains cas, les articles peuvent figurer dans plusieurs sections. Nous avons souhaité les rendre plus faciles à trouver via plusieurs voies de recherche. 

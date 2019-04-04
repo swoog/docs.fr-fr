@@ -1,13 +1,19 @@
 ---
-title: 'Interopérabilité - Guide de programmation C#'
+title: Interopérabilité - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - COM interop
-  - interoperability
-  - 'platform invoke, accessing APIs with C#'
-  - 'C# language, interoperability'
+- COM interop
+- interoperability
+- platform invoke, accessing APIs with C#
+- C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
+ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411341"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interopérabilité (Guide de programmation C#)
 L’interopérabilité vous permet de préserver et de tirer parti d’investissements existants en code non managé. Le code qui s’exécute sous le contrôle du common language runtime (CLR) est appelé *code managé*, et le code qui s’exécute en dehors du CLR est appelé *code non managé*. COM, COM+, les composants C++, les composants ActiveX et l’API Microsoft Windows sont des exemples de code non managé.  

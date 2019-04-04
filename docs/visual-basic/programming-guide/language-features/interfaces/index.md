@@ -2,11 +2,17 @@
 title: Interfaces (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972380"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Les *interfaces* définissent les propriétés, méthodes et événements qui peuvent être implémentés par les classes. Les interfaces vous permettent de définir des fonctionnalités sous forme de petits groupes de propriétés, méthodes et événements étroitement liés. Les risques d’incompatibilité sont ainsi limités, car vous pouvez développer des implémentations avancées pour vos interfaces sans mettre en danger le code existant. Vous pouvez ajouter de nouvelles fonctionnalités à tout moment en développant des interfaces et implémentations supplémentaires.  

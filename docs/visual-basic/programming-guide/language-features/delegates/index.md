@@ -2,11 +2,16 @@
 title: Délégués (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674027"
 ---
-
 # <a name="delegates-visual-basic"></a>Délégués (Visual Basic)
 
 Les délégués sont des objets qui font référence à des méthodes. Ils sont parfois décrits comme des *pointeurs de fonction de type sécurisé*, car ils sont comparables aux pointeurs de fonction utilisés dans d’autres langages de programmation. Mais contrairement aux pointeurs de fonction, les délégués de Visual Basic sont un type de référence basé sur la classe <xref:System.Delegate?displayProperty=nameWithType>. Les délégués peuvent faire référence à des méthodes partagées (méthodes qui peuvent être appelées sans une instance spécifique de classe) et des méthodes d’instance.

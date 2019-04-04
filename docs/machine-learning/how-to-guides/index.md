@@ -3,8 +3,13 @@ title: Guides pratiques pour l’utilisation de Machine Learning avec .NET - ML.
 description: Découvrez comment effectuer des tâches spécifiques pour faciliter la création de solutions IA personnalisées et l’intégration de Machine Learning dans vos applications .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673050"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guides pratiques pour l’utilisation de Machine Learning avec .NET - ML.NET
 
 Dans la section Procédures du guide ML.NET, vous trouverez rapidement des réponses à des questions courantes. Dans certains cas, les articles peuvent figurer dans plusieurs sections pour les trouver facilement.

@@ -4,12 +4,12 @@ description: Découvrez la terminologie de base qui a utilisé tous les jours lo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677170"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920647"
 ---
 # <a name="docker-terminology"></a>Terminologie Docker
 
@@ -33,7 +33,7 @@ Cette section liste les termes et les définitions que vous devez connaître ava
 
 **Registre** : service qui fournit l’accès aux dépôts. Le registre par défaut utilisé pour la plupart des images publiques est [Docker Hub](https://hub.docker.com/) (propriété de l’organisation Docker). Un registre contient généralement des dépôts de plusieurs équipes. Les entreprises utilisent souvent des registres privés pour stocker et gérer les images qu’elles ont créées. Azure Container Registry est un autre exemple de registre.
 
-**Image multi-arch** : Architecture multi, est une fonctionnalité qui simplifie la sélection de l’image appropriée, en fonction de la plateforme où Docker est en cours d’exécution, par exemple, lorsqu’un fichier Dockerfile demande une image de base **`FROM microsoft/dotnet:2.1-sdk`** à partir du Registre Il obtient réellement **`2.1-sdk-nanoserver-1709`**, **`2.1-sdk-nanoserver-1803`** ou **`2.1-sdk-alpine`**, selon le système d’exploitation et la version où Docker est en cours d’exécution.
+**Image multi-arch** : Architecture multi, est une fonctionnalité qui simplifie la sélection de l’image appropriée, en fonction de la plateforme où Docker est en cours d’exécution, par exemple, lorsqu’un fichier Dockerfile demande une image de base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** à partir du Registre Il obtient réellement **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** ou **`2.1-stretch`**, selon le système d’exploitation et la version où Docker est en cours d’exécution.
 
 **Docker Hub** : registre public dans lequel vous pouvez charger et manipuler des images. Docker Hub fournit un hébergement d’images Docker, des registres publics ou privés, des déclencheurs de build et des webhooks, et l’intégration avec GitHub et Bitbucket.
 

@@ -1,11 +1,17 @@
 ---
-title: 'Délégués - Guide de programmation C#'
+title: Délégués - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203507"
 ---
 # <a name="delegates-c-programming-guide"></a>Délégués (Guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un type qui représente des références aux méthodes avec une liste de paramètres et un type de retour particuliers. Lorsque vous instanciez un délégué, vous pouvez associer son instance à toute méthode ayant une signature et un type de retour compatibles. Vous pouvez appeler la méthode par le biais l'instance de délégué.  

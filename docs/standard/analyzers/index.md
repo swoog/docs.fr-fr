@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634243"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Les analyseurs de Roslyn
 
 Les analyseurs de Roslyn utilisent le Kit de développement logiciel du compilateur .NET (API Roslyn) pour analyser le code source de votre projet pour détecter les problèmes et suggérer des corrections. Différents analyseurs recherchent différentes classes de problèmes, allant des pratiques susceptibles de provoquer des bogues à des problèmes de sécurité liés à la compatibilité avec les API.

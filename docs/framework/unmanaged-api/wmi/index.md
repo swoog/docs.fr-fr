@@ -4,8 +4,13 @@ description: Fournit une synthèse de l’API .NET Framework non managée pour l
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377454"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Windows Management Instrumentation) et compteurs de performances (référence des API non managées)
 
 L’API non managée .NET Framework WMI et compteurs de performances se compose d’un ensemble de fonctions qui wrappent les appels à l’[API Windows Management Instrumentation native](/windows/desktop/WmiSdk/com-api-for-wmi). Elle vous permet de développer des outils et des bibliothèques qui gèrent et analysent des systèmes informatiques distants.

@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer des certificats temporaires à utiliser pendant le développement'
+title: 'Procédure : créer des certificats temporaires à utiliser pendant le développement'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738628"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921323"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procédure : Créer des certificats temporaires à utiliser pendant le développement
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procédure : créer des certificats temporaires à utiliser pendant le développement
 
 Lorsque vous développez un service sécurisé ou un client à l’aide de Windows Communication Foundation (WCF), il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d’identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes pour créer ces deux certificats à l’aide de la commande Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) applet de commande.
 
@@ -78,7 +78,7 @@ Une fois que vous avez configuré les certificats temporaires, vous pouvez les u
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>Pour spécifier un certificat comme type d'informations d'identification du client
 
-- Dans le fichier de configuration d'un service, utilisez le XML suivant pour affecter au mode de sécurité la valeur Message, et au type d'informations d'identification du client la valeur Certificat.
+1. Dans le fichier de configuration d'un service, utilisez le XML suivant pour affecter au mode de sécurité la valeur Message, et au type d'informations d'identification du client la valeur Certificat.
 
     ```xml
     <bindings>
@@ -92,19 +92,19 @@ Une fois que vous avez configuré les certificats temporaires, vous pouvez les u
     </bindings>
     ```
 
-Dans le fichier de configuration pour un client, utilisez le code XML suivant pour spécifier que le certificat est trouvé dans le magasin de l’utilisateur et peut être trouvé en recherchant le champ SubjectName pour la valeur « CohoWinery ».
+2. Dans le fichier de configuration pour un client, utilisez le code XML suivant pour spécifier que le certificat est trouvé dans le magasin de l’utilisateur et peut être trouvé en recherchant le champ SubjectName pour la valeur « CohoWinery ».
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
 Pour plus d’informations sur l’utilisation des certificats dans WCF, consultez [Working with Certificates](working-with-certificates.md).
 
@@ -115,5 +115,5 @@ Veillez à supprimer tous les certificats d'autorité racines temporaires des do
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des certificats](working-with-certificates.md)
-- [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Procédure : voir les certificats avec le composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Sécurisation des services et des clients](securing-services-and-clients.md)

@@ -4,6 +4,12 @@ description: Découvrez les offres de Microsoft pour prendre en charge le cycle 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680190"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduction à la plate-forme Microsoft et les outils pour les applications en conteneur
 

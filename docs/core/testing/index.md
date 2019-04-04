@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185504"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Tests unitaires dans .NET Core et .NET Standard
 
 .NET Core permet de créer facilement des tests unitaires. Cet article présente les tests unitaires et explique ce qui les distingue des autres types de test. Les ressources connexes au bas de la page vous montrent comment ajouter un projet de test à votre solution. Après avoir configuré votre projet de test, vous pouvez exécuter vos tests unitaires à l’aide de la ligne de commande ou de Visual Studio.
