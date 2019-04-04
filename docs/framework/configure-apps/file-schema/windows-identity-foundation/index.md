@@ -3,6 +3,12 @@ title: Schéma de configuration de Windows Identity Foundation
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441188"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="38ee7-102">Schéma de configuration de Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="38ee7-102">Windows Identity Foundation Configuration Schema</span></span>
 <span data-ttu-id="38ee7-103">Les rubriques de cette section fournissent des informations sur le schéma de configuration de Windows Identity Foundation (WIF).</span><span class="sxs-lookup"><span data-stu-id="38ee7-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="38ee7-104">Vous pouvez également configurer une application pour utiliser WIF via les classes exposées par l’infrastructure.</span><span class="sxs-lookup"><span data-stu-id="38ee7-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="38ee7-105">Ces classes sont indiquées dans les sections qui traitent les éléments correspondants dans le schéma.</span><span class="sxs-lookup"><span data-stu-id="38ee7-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="38ee7-106">L’exemple suivant montre la structure de la balise XML de base exposée par le schéma de configuration WIF.</span><span class="sxs-lookup"><span data-stu-id="38ee7-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="38ee7-107">Les attributs sont omis.</span><span class="sxs-lookup"><span data-stu-id="38ee7-107">Attributes are omitted.</span></span> <span data-ttu-id="38ee7-108">Les commentaires surlignés indiquent les principaux composants du schéma.</span><span class="sxs-lookup"><span data-stu-id="38ee7-108">Highlighted comments indicate major components of the schema.</span></span>  

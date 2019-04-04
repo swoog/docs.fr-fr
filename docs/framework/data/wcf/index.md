@@ -1,12 +1,17 @@
 ---
-title: "WCF Data Services\_4.5"
+title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500237"
 ---
-
 # <a name="wcf-data-services-45"></a><span data-ttu-id="3d1bc-102">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="3d1bc-102">WCF Data Services 4.5</span></span>
 
 <span data-ttu-id="3d1bc-103">WCF Data Services (anciennement « ADO.NET Data Services ») est un composant du .NET Framework qui vous permet de créer des services qui utilisent le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer et consommer des données sur le Web ou l’intranet à l’aide de la sémantique de [ transfert d’état Representational (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span><span class="sxs-lookup"><span data-stu-id="3d1bc-103">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span></span> <span data-ttu-id="3d1bc-104">OData expose les données sous forme de ressources adressables par des URI.</span><span class="sxs-lookup"><span data-stu-id="3d1bc-104">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="3d1bc-105">Les données sont accessibles et modifiables à l'aide des verbes HTTP standard GET, PUT, POST et DELETE.</span><span class="sxs-lookup"><span data-stu-id="3d1bc-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="3d1bc-106">OData utilise les conventions relation-entité de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) pour exposer des ressources sous forme de jeux d’entités qui sont reliées par des associations.</span><span class="sxs-lookup"><span data-stu-id="3d1bc-106">OData uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>

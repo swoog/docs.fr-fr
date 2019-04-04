@@ -4,8 +4,13 @@ description: Un guide qui fournit une aide de bout en bout sur la création d’
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675833"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="d4487-103">Architecturer des applications web modernes avec ASP.NET Core et Azure</span><span class="sxs-lookup"><span data-stu-id="d4487-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
 ![Image de la couverture du guide Architecturer des applications web modernes.](./media/index/web-application-guide-cover-image.png)

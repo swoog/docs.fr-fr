@@ -4,8 +4,13 @@ description: Fournit une synthèse de l’API .NET Framework non managée pour l
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377454"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="227f1-103">WMI (Windows Management Instrumentation) et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="227f1-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="227f1-104">L’API non managée .NET Framework WMI et compteurs de performances se compose d’un ensemble de fonctions qui wrappent les appels à l’[API Windows Management Instrumentation native](/windows/desktop/WmiSdk/com-api-for-wmi).</span><span class="sxs-lookup"><span data-stu-id="227f1-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="227f1-105">Elle vous permet de développer des outils et des bibliothèques qui gèrent et analysent des systèmes informatiques distants.</span><span class="sxs-lookup"><span data-stu-id="227f1-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

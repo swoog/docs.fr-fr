@@ -1,13 +1,19 @@
 ---
-title: "Règles de conception de .NET\_Framework"
+title: Règles de conception de .NET Framework
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - 'libraries, .NET Framework class library'
-  - 'class library design guidelines [.NET Framework], about'
-  - 'class library design guidelines [.NET Framework]'
+- libraries, .NET Framework class library
+- class library design guidelines [.NET Framework], about
+- class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
+ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834896"
 ---
 # <a name="framework-design-guidelines"></a><span data-ttu-id="0c865-102">Règles de conception de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0c865-102">Framework Design Guidelines</span></span>
 <span data-ttu-id="0c865-103">Cette section fournit des instructions pour la conception de bibliothèques qui étendent et interagissent avec le .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0c865-103">This section provides guidelines for designing libraries that extend and interact with the .NET Framework.</span></span> <span data-ttu-id="0c865-104">L’objectif est d’aider les concepteurs de bibliothèques à garantir la cohérence d’API et la facilité d’utilisation en fournissant un modèle de programmation unifié qui est indépendant du langage de programmation utilisé pour le développement.</span><span class="sxs-lookup"><span data-stu-id="0c865-104">The goal is to help library designers ensure API consistency and ease of use by providing a unified programming model that is independent of the programming language used for development.</span></span> <span data-ttu-id="0c865-105">Nous vous recommandons de suivre ces instructions de conception lors du développement de classes et composants qui étendent .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0c865-105">We recommend that you follow these design guidelines when developing classes and components that extend the .NET Framework.</span></span> <span data-ttu-id="0c865-106">Conception de la bibliothèque incohérent avoir un impact négatif la productivité des développeurs et décourage adoption.</span><span class="sxs-lookup"><span data-stu-id="0c865-106">Inconsistent library design adversely affects developer productivity and discourages adoption.</span></span>  

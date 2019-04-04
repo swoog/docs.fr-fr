@@ -1,10 +1,15 @@
 ---
-title: 'Visite guidée du langage C# - Guide du langage C#'
-description: "Novice en matière de langage C#\_? Découvrez les principes de base du langage."
+title: Visite guidée du langage C# - Guide du langage C#
+description: Novice en matière de langage C# ? Découvrez les principes de base du langage.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843427"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="77243-104">Présentation rapide du langage C#</span><span class="sxs-lookup"><span data-stu-id="77243-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="77243-105">C# (prononcé « C Sharp ») est un langage de programmation simple, moderne, orienté objet et de type sécurisé.</span><span class="sxs-lookup"><span data-stu-id="77243-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="77243-106">C# prend sa source dans la famille de langages C et sera immédiatement reconnaissable aux programmeurs en C, C++, Java et JavaScript.</span><span class="sxs-lookup"><span data-stu-id="77243-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

@@ -2,9 +2,15 @@
 title: Développement d’applications avec Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic, developing applications'
-  - 'applications [Visual Basic]'
+- Visual Basic, developing applications
+- applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
+ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354477"
 ---
 # <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="4f17e-102">Développement d’applications avec Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4f17e-102">Developing Applications with Visual Basic</span></span>
 <span data-ttu-id="4f17e-103">Cette section décrit la documentation conceptuelle du langage Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4f17e-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  

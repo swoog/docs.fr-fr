@@ -1,17 +1,23 @@
 ---
-title: 'Types - Guide de programmation C#'
+title: Types - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465499"
 ---
 # <a name="types-c-programming-guide"></a><span data-ttu-id="a778d-102">Types (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="a778d-102">Types (C# Programming Guide)</span></span>
 ## <a name="types-variables-and-values"></a><span data-ttu-id="a778d-103">Types, variables et valeurs</span><span class="sxs-lookup"><span data-stu-id="a778d-103">Types, Variables, and Values</span></span>  

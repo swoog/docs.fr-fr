@@ -1,9 +1,14 @@
 ---
-title: 'Articles de guide pratique (Guide C#)'
+title: Articles de guide pratique (Guide C#)
 description: Série de petits conseils et d’exemples de code spécifiques courts
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202338"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="d6dfa-103">Guides pratiques (C#)</span><span class="sxs-lookup"><span data-stu-id="d6dfa-103">How to (C#)</span></span>
 
 <span data-ttu-id="d6dfa-104">Dans la section Guides pratiques du guide C#, vous trouverez rapidement des réponses à des questions courantes.</span><span class="sxs-lookup"><span data-stu-id="d6dfa-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="d6dfa-105">Dans certains cas, les articles peuvent figurer dans plusieurs sections.</span><span class="sxs-lookup"><span data-stu-id="d6dfa-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="d6dfa-106">Nous avons souhaité les rendre plus faciles à trouver via plusieurs voies de recherche.</span><span class="sxs-lookup"><span data-stu-id="d6dfa-106">We wanted to make them easy to find for multiple search paths.</span></span> 

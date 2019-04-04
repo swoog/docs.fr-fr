@@ -2,6 +2,12 @@
 title: Programmation asynchrone avec Async et Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125523"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a><span data-ttu-id="04f4f-102">Programmation asynchrone avec Async et Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04f4f-102">Asynchronous Programming with Async and Await (Visual Basic)</span></span>
 <span data-ttu-id="04f4f-103">Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone.</span><span class="sxs-lookup"><span data-stu-id="04f4f-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="04f4f-104">Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="04f4f-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  

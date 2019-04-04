@@ -2,17 +2,23 @@
 title: Ressources dans les applications .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203361"
 ---
 # <a name="resources-in-net-apps"></a><span data-ttu-id="1d4a5-102">Ressources dans les applications .NET</span><span class="sxs-lookup"><span data-stu-id="1d4a5-102">Resources in .NET Apps</span></span>
 <span data-ttu-id="1d4a5-103">Presque toutes les applications d'une qualité de niveau "production" doivent utiliser des ressources.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="1d4a5-104">Une ressource est une donnée non exécutable qui est déployée logiquement avec une application.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="1d4a5-105">Une ressource peut être affichée dans une application sous la forme de messages d'erreur ou comme faisant partie de l'interface utilisateur.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="1d4a5-106">Les ressources peuvent contenir des données sous plusieurs formes, telles que des chaînes, des images et des objets rendus persistants.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="1d4a5-107">(Pour écrire des objets persistants dans un fichier de ressources, les objets doivent être sérialisables.) Le stockage de vos données dans un fichier de ressources vous permet de changer les données sans avoir à recompiler l'intégralité de votre application.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="1d4a5-108">Il vous permet également de stocker des données dans un emplacement unique, et élimine la nécessité d'avoir recours à des données codées en dur stockées dans plusieurs emplacements.</span><span class="sxs-lookup"><span data-stu-id="1d4a5-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  

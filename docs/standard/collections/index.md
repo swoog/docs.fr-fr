@@ -3,15 +3,21 @@ title: Collections et structures de données
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - grouping data in collections
-  - 'objects [.NET Framework], grouping in collections'
-  - 'Array class, grouping data in collections'
-  - 'threading [.NET Framework], safety'
-  - Collections classes
-  - 'collections [.NET Framework]'
+- grouping data in collections
+- objects [.NET Framework], grouping in collections
+- Array class, grouping data in collections
+- threading [.NET Framework], safety
+- Collections classes
+- collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836147"
 ---
 # <a name="collections-and-data-structures"></a><span data-ttu-id="a6e26-102">Collections et structures de données</span><span class="sxs-lookup"><span data-stu-id="a6e26-102">Collections and Data Structures</span></span>
 <span data-ttu-id="a6e26-103">Des données similaires peuvent souvent être gérées plus efficacement quand elles sont stockées et manipulées en tant que collection.</span><span class="sxs-lookup"><span data-stu-id="a6e26-103">Similar data can often be handled more efficiently when stored and manipulated as a collection.</span></span> <span data-ttu-id="a6e26-104">Vous pouvez utiliser la classe <xref:System.Array?displayProperty=nameWithType>, ou les classes qui se trouvent dans les espaces de noms <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> et System.Collections.Immutable, pour ajouter, supprimer et modifier des éléments individuels ou une série d’éléments dans une collection.</span><span class="sxs-lookup"><span data-stu-id="a6e26-104">You can use the <xref:System.Array?displayProperty=nameWithType> class or the classes in the <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable namespaces to add, remove, and modify either individual elements or a range of elements in a collection.</span></span>  

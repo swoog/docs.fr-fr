@@ -2,10 +2,16 @@
 title: Services XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'XAML [XAML Services], System.Xaml concepts'
-  - 'XAML Services in WPF [XAML Services]'
-  - 'System.Xaml [XAML Services], conceptual documentation'
+- XAML [XAML Services], System.Xaml concepts
+- XAML Services in WPF [XAML Services]
+- System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
+ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048162"
 ---
 # <a name="xaml-services"></a><span data-ttu-id="5c49e-102">Services XAML</span><span class="sxs-lookup"><span data-stu-id="5c49e-102">XAML Services</span></span>
 <span data-ttu-id="5c49e-103">Cette rubrique décrit les fonctionnalités d’un ensemble de la technologie .NET Framework XAML appelé des Services.</span><span class="sxs-lookup"><span data-stu-id="5c49e-103">This topic describes the capabilities of a technology set known as .NET Framework XAML Services.</span></span> <span data-ttu-id="5c49e-104">La plupart des services et API décrits se trouvent dans l’assembly System.Xaml, qui est un assembly introduite avec la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ensemble des assemblys principaux .NET.</span><span class="sxs-lookup"><span data-stu-id="5c49e-104">The majority of the services and APIs described are located in the assembly System.Xaml, which is an assembly introduced with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set of .NET core assemblies.</span></span> <span data-ttu-id="5c49e-105">Les services incluent des fabriques de lecteurs et writers, classes de schéma et de prise en charge du schéma, attribution de classes, de support intrinsèque du langage XAML et d’autres fonctionnalités de langage XAML.</span><span class="sxs-lookup"><span data-stu-id="5c49e-105">Services include readers and writers, schema classes and schema support, factories, attributing of classes, XAML language intrinsic support, and other XAML language features.</span></span>  

@@ -2,6 +2,12 @@
 title: Schéma de configuration WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463330"
 ---
 # <a name="wcf-configuration-schema"></a><span data-ttu-id="a7e4f-102">Schéma de configuration WCF</span><span class="sxs-lookup"><span data-stu-id="a7e4f-102">WCF Configuration Schema</span></span>
 <span data-ttu-id="a7e4f-103">Les éléments de configuration de Windows Communication Foundation (WCF) permettent de configurer les applications clientes et de service WCF.</span><span class="sxs-lookup"><span data-stu-id="a7e4f-103">Windows Communication Foundation (WCF) configuration elements enable you to configure WCF service and client applications.</span></span> <span data-ttu-id="a7e4f-104">Vous pouvez utiliser l’[outil Éditeur de configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) pour créer et modifier des fichiers de configuration pour les clients et les services.</span><span class="sxs-lookup"><span data-stu-id="a7e4f-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="a7e4f-105">Les fichiers de configuration étant au format XML, il est nécessaire de maîtriser ce format pour pouvoir modifier ces fichiers à l'aide d'un éditeur de texte,</span><span class="sxs-lookup"><span data-stu-id="a7e4f-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="a7e4f-106">sans quoi vous risquez de rencontrer des problèmes tels qu'une balise ou un attribut d'élément XML manquant.</span><span class="sxs-lookup"><span data-stu-id="a7e4f-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="a7e4f-107">Ce problème a lieu car les étiquettes et les attributs d’éléments XML respectent la casse.</span><span class="sxs-lookup"><span data-stu-id="a7e4f-107">This is because XML element tags and attributes are case-sensitive.</span></span>  

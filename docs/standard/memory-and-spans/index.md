@@ -3,14 +3,19 @@ title: Mémoire et étendues
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680139"
 ---
-
 # <a name="memory--and-span-related-types"></a><span data-ttu-id="61f43-102">Types liés à la mémoire et l’étendue</span><span class="sxs-lookup"><span data-stu-id="61f43-102">Memory- and span-related types</span></span>
 
 <span data-ttu-id="61f43-103">À partir de .NET Core 2.1, .NET inclut plusieurs types reliés entre eux qui représentent une région contiguë et fortement typée de mémoire arbitraire.</span><span class="sxs-lookup"><span data-stu-id="61f43-103">Starting with .NET Core 2.1, .NET includes a number of interrelated types that represent a contiguous, strongly-typed region of arbitrary memory.</span></span> <span data-ttu-id="61f43-104">Elles incluent notamment :</span><span class="sxs-lookup"><span data-stu-id="61f43-104">These include:</span></span>
