@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376102"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055337"
 ---
 # <a name="data-templating-overview"></a>Vue d'ensemble des modèles de données
 Le modèle de création de modèles de données WPF offre une grande souplesse pour définir la présentation des données. Les contrôles WPF possèdent des fonctionnalités intégrées permettant de prendre en charge la personnalisation de la présentation des données. Cette rubrique illustre tout d’abord comment définir un <xref:System.Windows.DataTemplate> , puis présente d’autres fonctionnalités de création de modèles de données, telles que la sélection des modèles selon une logique personnalisée et la prise en charge pour l’affichage de données hiérarchiques.  
@@ -41,7 +41,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
 ### <a name="without-a-datatemplate"></a>Sans DataTemplate  
  Sans un <xref:System.Windows.DataTemplate>, notre <xref:System.Windows.Controls.ListBox> actuellement ressemble à ceci :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Ce qui se passe qui est sans instruction spécifique, le <xref:System.Windows.Controls.ListBox> appelle par défaut `ToString` lorsque vous tentez d’afficher les objets dans la collection. Par conséquent, si le `Task` remplacements de l’objet le `ToString` (méthode), puis le <xref:System.Windows.Controls.ListBox> affiche la représentation sous forme de chaîne de chaque objet de source dans la collection sous-jacente.  
   
@@ -52,7 +52,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  Le <xref:System.Windows.Controls.ListBox> ressemble à ceci :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Toutefois, cet affichage est restrictif et rigide. En outre, si la liaison porte sur des données [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], vous ne pourrez pas remplacer `ToString`.  
   
@@ -66,7 +66,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  Maintenant notre <xref:System.Windows.Controls.ListBox> ressemble à ceci :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Créer un DataTemplate comme ressource  
@@ -103,7 +103,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  La capture d’écran suivante montre le <xref:System.Windows.Controls.ListBox> avec cette modification <xref:System.Windows.DataTemplate>:  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Nous pouvons définir <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> à <xref:System.Windows.HorizontalAlignment.Stretch> sur la <xref:System.Windows.Controls.ListBox> pour vous assurer de la largeur des éléments occupe tout l’espace disponible :  
   
@@ -111,7 +111,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  Avec le <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> propriété définie sur <xref:System.Windows.HorizontalAlignment.Stretch>, le <xref:System.Windows.Controls.ListBox> se présente comme suit :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Utiliser DataTrigger pour appliquer des valeurs de propriété  
@@ -125,7 +125,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  Notre application se présente maintenant ainsi. Les tâches privées apparaissent avec une bordure jaune et les tâches professionnelles avec une bordure cyan :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  Dans cet exemple le <xref:System.Windows.DataTrigger> utilise un <xref:System.Windows.Setter> pour définir une valeur de propriété. Les classes de déclencheur comportent également le <xref:System.Windows.TriggerBase.EnterActions%2A> et <xref:System.Windows.TriggerBase.ExitActions%2A> propriétés qui vous permettent de démarrer un jeu d’actions telles que des animations. En outre, il existe également un <xref:System.Windows.MultiDataTrigger> classe qui vous permet d’appliquer les modifications en fonction de plusieurs valeurs de propriété liée aux données.  
   
@@ -165,7 +165,7 @@ Dans l’exemple précédent, nous avons placé le déclencheur dans le <xref:Sy
   
  Avec le sélecteur de modèle en place, le <xref:System.Windows.Controls.ListBox> apparaît maintenant comme suit :  
   
- ![Capture d’écran de l’exemple de création de modèles de données](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Capture d’écran des exemples de création de modèles données](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Ainsi se conclut notre étude de cet exemple. Vous trouverez l’exemple complet sur la page [Présentation d’un exemple de création de modèles de données](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,11 +191,11 @@ Ainsi se conclut notre étude de cet exemple. Vous trouverez l’exemple complet
   
  L’exemple montre qu’avec l’utilisation de <xref:System.Windows.HierarchicalDataTemplate>, vous pouvez facilement afficher des données de liste qui contient d’autres listes. Voici une capture d’écran de l’exemple.  
   
- ![Capture d’écran de l’exemple HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Capture d’écran exemple de HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Voir aussi
 - [Liaison de données](../advanced/optimizing-performance-data-binding.md)
 - [Rechercher des éléments générés par DataTemplate](how-to-find-datatemplate-generated-elements.md)
-- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d’ensemble des modèles et styles d’en-tête de colonne GridView](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [Vue d'ensemble des modèles et styles d'en-tête de colonne GridView](../controls/gridview-column-header-styles-and-templates-overview.md)

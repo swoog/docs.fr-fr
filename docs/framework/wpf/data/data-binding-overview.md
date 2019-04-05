@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634555"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055350"
 ---
 # <a name="data-binding-overview"></a>Vue d’ensemble de la liaison de données
-La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] liaison de données fournit un moyen simple et cohérent pour les applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  
   
  La fonctionnalité de liaison de données dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] présente plusieurs avantages par rapport aux modèles traditionnels, notamment une large gamme de propriétés qui prennent en charge par nature la liaison de données, une représentation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flexible des données et une séparation nette de la logique métier de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -33,7 +33,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Pour obtenir un exemple de liaison de données, examinons l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] suivante de la [Démonstration de la liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703) :  
   
- ![Capture d’écran : exemple de liaison de données](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![Capture d’écran de données liaison exemple](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  Ce qui précède est le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] d’une application qui affiche une liste d’éléments de vente aux enchères. L’application illustre les fonctionnalités suivantes de la liaison de données :  
   
@@ -69,7 +69,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 -   La propriété cible doit être une propriété de dépendance. La plupart des <xref:System.Windows.UIElement> propriétés sont des propriétés de dépendance et la plupart des propriétés de dépendance, sauf celles qui sont en lecture seule, prennent en charge la liaison de données par défaut. (Uniquement <xref:System.Windows.DependencyObject> les types peuvent définir des propriétés de dépendance et tous les <xref:System.Windows.UIElement>s dérivent <xref:System.Windows.DependencyObject>.)  
   
--   Bien que cela n’est pas spécifié sur l’illustration, il convient de noter que l’objet de source de liaison n’est pas limité à un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personnalisé. La liaison de données [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge les données sous forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Pour fournir des exemples, votre source de liaison peut être un <xref:System.Windows.UIElement>, n’importe quel objet de liste, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet auquel est associé [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] données ou Services Web ou un XmlNode qui contient votre [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](binding-sources-overview.md).  
+-   Bien que cela n’est pas spécifié sur l’illustration, il convient de noter que l’objet de source de liaison n’est pas limité à un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personnalisé. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] liaison de données prend en charge les données sous la forme de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objets et [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Pour fournir des exemples, votre source de liaison peut être un <xref:System.Windows.UIElement>, n’importe quel objet de liste, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet auquel est associé [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] données ou Services Web ou un XmlNode qui contient votre [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](binding-sources-overview.md).  
   
  Lorsque vous lisez les autres rubriques [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], il est important de vous rappeler que lorsque vous établissez une liaison, vous liez une cible de liaison *à* une source de liaison. Par exemple, si vous affichez des sous-jacent [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] les données dans un <xref:System.Windows.Controls.ListBox> à l’aide de la liaison de données, vous liez votre <xref:System.Windows.Controls.ListBox> à la [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données.  
   
@@ -175,7 +175,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Un <xref:System.Windows.Data.BindingExpression> objet peut être obtenu via la valeur de retour de l’appel <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> sur un objet lié aux données. Les rubriques suivantes montrent quelques-unes des utilisations de la <xref:System.Windows.Data.BindingExpression> classe :  
   
--   [Obtenir l'objet de liaison d'une propriété cible liée aux données](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Obtenir l’objet de liaison d’une propriété cible liée aux données](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
 -   [Contrôler quand le texte TextBox met à jour la source](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
@@ -432,8 +432,8 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Nouveautés de WPF version 4.5](../getting-started/whats-new.md)
-- [Effectuer une liaison avec les résultats d'une requête LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Effectuer une liaison avec les résultats d’une requête LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Liaison de données](../advanced/optimizing-performance-data-binding.md)
 - [Démonstration de liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)
 - [Effectuer une liaison à une source de données ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

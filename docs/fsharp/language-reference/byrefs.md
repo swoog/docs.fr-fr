@@ -2,12 +2,12 @@
 title: ByRef
 description: En savoir plus sur byref et les types byref dans F#, qui sont utilisés pour la programmation de bas niveau.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976549"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055363"
 ---
 # <a name="byrefs"></a>ByRef
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Pour écrire dans le pointeur en utilisant un `outref<'T>` ou `byref<'T>`, vous devez également rendre la valeur que vous saisissez un pointeur vers `mutable`.
@@ -84,7 +85,7 @@ Si vous écrivez uniquement le pointeur au lieu de lire, envisagez d’utiliser 
 Examinons le code ci-dessous.
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Sémantiquement, cela signifie que les éléments suivants :
@@ -111,17 +112,17 @@ C# prend en charge la `in ref` et `out ref` mots clés, en plus de `ref` retourn
 
 |Construction de c#|F#déduit|
 |------------|---------|
-|`ref` Valeur de retour|`outref<'T>`|
-|`ref readonly` Valeur de retour|`inref<'T>`|
-|`in ref` Paramètre|`inref<'T>`|
-|`out ref` Paramètre|`outref<'T>`|
+|`ref` valeur de retour|`outref<'T>`|
+|`ref readonly` valeur de retour|`inref<'T>`|
+|`in ref` paramètre|`inref<'T>`|
+|`out ref` paramètre|`outref<'T>`|
 
 Le tableau suivant montre à quoi F# émet :
 
 |F#construction|Construction émise|
 |------------|-----------------|
 |`inref<'T>` argument|`[In]` attribut de l’argument|
-|`inref<'T>` retour|`modreq` attribut de valeur|
+|`inref<'T>` return|`modreq` attribut de valeur|
 |`inref<'T>` dans emplacement abstrait ou implémentation|`modreq` sur l’argument ou de retour|
 |`outref<'T>` argument|`[Out]` attribut de l’argument|
 

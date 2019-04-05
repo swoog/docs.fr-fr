@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370720"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055324"
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
-L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et aux concepteurs de créer des effets visuellement attrayants et un aspect cohérent pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] styles et modèles font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et concepteurs pour créer des effets visuellement attrayants et une apparence cohérente pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
   
  La séparation de la présentation et de la logique est une autre fonctionnalité du modèle d’application de style [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les concepteurs peuvent ainsi travailler sur l’apparence d’une application en utilisant uniquement [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], tout en laissant les développeurs travailler sur la logique de programmation à l’aide de C# ou de Visual Basic.  
   
@@ -45,7 +45,7 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Capture d’écran : exemple de styles](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Capture d’écran exemple de style](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Vous pouvez modifier l’apparence par défaut en définissant des propriétés, telles que <xref:System.Windows.Controls.Control.FontSize%2A> et <xref:System.Windows.Controls.Control.FontFamily%2A>, sur chaque <xref:System.Windows.Controls.TextBlock> élément directement. Toutefois, si vous souhaitez que votre <xref:System.Windows.Controls.TextBlock> éléments partagent certaines propriétés, vous pouvez créer un <xref:System.Windows.Style> dans le `Resources` section de votre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de fichiers, comme illustré ici :  
   
@@ -57,7 +57,7 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  Maintenant le <xref:System.Windows.Controls.TextBlock> éléments apparaissent comme suit :  
   
- ![Capture d’écran : exemple de styles](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Capture d’écran exemple de style](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Extension des styles  
  Vous pouvez choisir de vos deux <xref:System.Windows.Controls.TextBlock> éléments partagent certaines valeurs de propriété, comme le <xref:System.Windows.Controls.Control.FontFamily%2A> et le texte centré <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, mais vous souhaitez également le texte « My Pictures » comporte quelques propriétés supplémentaires. Vous pouvez procéder en créant un nouveau style dérivé du premier style, comme illustré ici :  
@@ -165,7 +165,7 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  Dans l’illustration suivante, la souris pointe sur le troisième élément :  
   
- ![Capture d’écran : exemple de styles](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Capture d’écran exemple de style](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers et MultiDataTriggers  
  En plus de <xref:System.Windows.Trigger> et <xref:System.Windows.EventTrigger>, il existe d’autres types de déclencheurs. <xref:System.Windows.MultiTrigger> vous permet de définir des valeurs de propriété selon plusieurs conditions. Vous utilisez <xref:System.Windows.DataTrigger> et <xref:System.Windows.MultiDataTrigger> lorsque la propriété de votre condition est liée aux données.  
@@ -198,5 +198,5 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
 ## <a name="see-also"></a>Voir aussi
 - [URI à en-tête pack dans WPF](../app-development/pack-uris-in-wpf.md)
-- [Guide pratique pour Rechercher des éléments générés par ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Procédure : rechercher des éléments générés par ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Rechercher des éléments générés par DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

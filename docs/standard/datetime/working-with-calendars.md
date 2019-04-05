@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921349"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055311"
 ---
 # <a name="working-with-calendars"></a>Utilisation des calendriers
 
@@ -163,7 +163,7 @@ Dans .NET, les entiers qui représentent les ères prises en charge par une impl
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Le nom qui correspond à un numéro d'ère particulier peut être extrait en passant le numéro d'ère à la méthode <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> ou <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. L'exemple suivant appelle ces méthodes pour extraire des informations sur la prise en charge de l'ère dans la classe <xref:System.Globalization.GregorianCalendar>.
+Le nom qui correspond à un numéro d'ère particulier peut être extrait en passant le numéro d'ère à la méthode <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> ou <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. L'exemple suivant appelle ces méthodes pour extraire des informations sur la prise en charge de l'ère dans la classe <xref:System.Globalization.GregorianCalendar>. Il affiche la date du calendrier grégorien qui correspond au 1er janvier de la deuxième année de l’ère actuelle, ainsi que la date du calendrier grégorien qui correspond au 1er janvier de la deuxième année de chaque ère prise en charge de calendrier japonais.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ En outre, la chaîne de format de date et d'heure personnalisée « g » inclu
 
 ### <a name="instantiating-a-date-with-an-era"></a>Instanciation d’une date avec une ère
 
-Pour les deux <xref:System.Globalization.Calendar> des classes qui prennent en charge plusieurs ères, une date qui se compose d’une année donnée, le mois et le jour de la valeur de mois peut être ambiguë. Par exemple, tous les ères prises en charge par le <xref:System.Globalization.JapaneseCalendar> comporter des années dont le numéro est 1. En règle générale, si une ère n'est pas spécifiée, les méthodes de date et d'heure et de calendrier supposent que les valeurs appartiennent à l'ère actuelle. Cela est vrai pour les <xref:System.DateTime.%23ctor%2A> et <xref:System.DateTimeOffset.%23ctor%2A> constructeurs qui incluent des paramètres de type <xref:System.Globalization.Calendar>, ainsi que le [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) et [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) méthodes. L’exemple suivant instancie une date qui représente le 1er janvier de la deuxième année d’une ère non spécifiée. Comme le montre le résultat de l’exemple, la date est interprétée comme la deuxième année de l’ère Heisei, l’ère actuelle au moment de que cet exemple a été exécuté. L’ère, 平成, précède l’année dans la chaîne retournée par la <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> (méthode) et correspond au 1er janvier 1990, dans le calendrier grégorien. (La plage de l’ère Heisei provient 1989 à 2019 dans le calendrier grégorien.)
+Pour les deux <xref:System.Globalization.Calendar> des classes qui prennent en charge plusieurs ères, une date qui se compose d’une année donnée, le mois et le jour de la valeur de mois peut être ambiguë. Par exemple, tous les ères prises en charge par le <xref:System.Globalization.JapaneseCalendar> comporter des années dont le numéro est 1. En règle générale, si une ère n'est pas spécifiée, les méthodes de date et d'heure et de calendrier supposent que les valeurs appartiennent à l'ère actuelle. Cela est vrai pour les <xref:System.DateTime.%23ctor%2A> et <xref:System.DateTimeOffset.%23ctor%2A> constructeurs qui incluent des paramètres de type <xref:System.Globalization.Calendar>, ainsi que le [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) et [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) méthodes. L’exemple suivant instancie une date qui représente le 1er janvier de la deuxième année d’une ère non spécifiée. Si vous exécutez l’exemple lors de l’ère Reiwa est l’ère actuelle, la date est interprétée comme la deuxième année de l’ère Reiwa. L’ère, 令和, précède l’année dans la chaîne retournée par la <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> (méthode) et correspond à 1 janvier 2020, dans le calendrier grégorien. (L’ère Reiwa commence dans l’exercice 2019 du calendrier grégorien).
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

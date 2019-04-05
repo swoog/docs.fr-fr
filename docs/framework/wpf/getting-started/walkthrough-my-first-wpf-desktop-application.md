@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358184"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055246"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : Ma première application de bureau WPF
 
@@ -215,7 +215,7 @@ Dans cette section, vous allez ajouter deux pages et une image à l’applicatio
 
     L’illustration suivante montre l’application avec le <xref:System.Windows.Navigation.NavigationWindow> boutons :
 
-    ![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure1.png)
+    ![Capture d’écran exemple ExpenseIt](./media/gettingstartedfigure1.png)
 
 2. Fermez l’application pour revenir à Visual Studio.
 
@@ -285,7 +285,7 @@ Chaque contrôle est placé dans une ligne de la <xref:System.Windows.Controls.G
 
 L’illustration suivante montre les contrôles que vous venez de créer :
 
-![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure2.png)
+![Capture d’écran exemple ExpenseIt](./media/gettingstartedfigure2.png)
 
 ## <a name="add-an-image-and-a-title"></a>Ajouter une image et un titre
 
@@ -321,7 +321,7 @@ Dans cette section, vous allez mettre à jour l’interface utilisateur de la pa
 
 L’illustration suivante montre les résultats de ce que vous venez d’ajouter :
 
-![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure3.png)
+![Capture d’écran exemple ExpenseIt](./media/gettingstartedfigure3.png)
 
 ## <a name="add-code-to-handle-events"></a>Ajoutez du code pour gérer les événements
 
@@ -361,7 +361,7 @@ L’illustration suivante montre les résultats de ce que vous venez d’ajouter
 
 L’illustration suivante montre les éléments d’interface utilisateur ajoutés à *ExpenseReportPage.xaml*.
 
-![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure4.png)
+![Capture d’écran exemple ExpenseIt](./media/gettingstartedfigure4.png)
 
 ## <a name="style-controls"></a>Style aux contrôles
 
@@ -475,7 +475,7 @@ Dans cette section, vous allez mettre à jour l’interface utilisateur pour cha
 
 L’illustration suivante montre les deux pages de le `ExpenseIt` application avec des contrôles, styles, la disposition, liaison de données et modèles de données appliqués :
 
-![Captures d'écran : exemple ExpenseIt](./media/gettingstartedfigure5.png)
+![Captures d’écran d’exemple ExpenseIt](./media/gettingstartedfigure5.png)
 
 > [!NOTE]
 > Cet exemple montre une fonctionnalité spécifique de WPF et ne respecte pas toutes les meilleures pratiques pour les éléments tels que la sécurité, la localisation et d’accessibilité. Pour une couverture complète de WPF et les .NET Framework application meilleures pratiques de développement, consultez les rubriques suivantes :
@@ -484,7 +484,7 @@ L’illustration suivante montre les deux pages de le `ExpenseIt` application av
 >
 > - [Sécurité](../security-wpf.md)
 >
-> - [Globalisation et localisation pour WPF](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Localisation et globalisation des applications WPF](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Performances WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,15 +493,15 @@ L’illustration suivante montre les deux pages de le `ExpenseIt` application av
 Dans cette procédure pas à pas, vous avez appris un certain nombre de techniques pour la création d’une interface utilisateur à l’aide de Windows Presentation Foundation (WPF). Vous devez maintenant avoir une compréhension élémentaire des blocs de construction d’une application .NET Framework de liaison de données. Pour plus d’informations sur les modèles d’architecture et de programmation WPF, consultez les rubriques suivantes :
 
 - [Architecture de WPF](../advanced/wpf-architecture.md)
-- [Vue d’ensemble du langage XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Vue d’ensemble XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Vue d’ensemble des propriétés de dépendance](../advanced/dependency-properties-overview.md)
-- [Disposition](../advanced/layout.md)
+- [Mise en page](../advanced/layout.md)
 
 Pour plus d’informations sur la création d’applications, consultez les rubriques suivantes :
 
 - [Développement d’applications](../app-development/index.md)
 - [Contrôles](../controls/index.md)
-- [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
+- [Vue d’ensemble de liaison de données](../data/data-binding-overview.md)
 - [Graphiques et multimédia](../graphics-multimedia/index.md)
 - [Documents dans WPF](../advanced/documents-in-wpf.md)
 
