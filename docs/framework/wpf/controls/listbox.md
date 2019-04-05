@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362225"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055051"
 ---
-# <a name="listbox"></a><span data-ttu-id="60a94-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="60a94-102">ListBox</span></span>
-<span data-ttu-id="60a94-103">Un <xref:System.Windows.Controls.ListBox> contrôle fournit aux utilisateurs une liste d’éléments sélectionnables.</span><span class="sxs-lookup"><span data-stu-id="60a94-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="1fa5d-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="1fa5d-102">ListBox</span></span>
+<span data-ttu-id="1fa5d-103">Un <xref:System.Windows.Controls.ListBox> contrôle fournit aux utilisateurs une liste d’éléments sélectionnables.</span><span class="sxs-lookup"><span data-stu-id="1fa5d-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="60a94-104">L’exemple suivant illustre un type <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="60a94-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="1fa5d-104">L’exemple suivant illustre un type <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="1fa5d-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="60a94-105">![Capture d’écran de ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="60a94-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="60a94-106">ListBox classique</span><span class="sxs-lookup"><span data-stu-id="60a94-106">Typical ListBox</span></span>  
+ <span data-ttu-id="1fa5d-105">![Capture d’écran de la zone de liste](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="1fa5d-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="1fa5d-106">ListBox classique</span><span class="sxs-lookup"><span data-stu-id="1fa5d-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="60a94-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="60a94-107">In This Section</span></span>  
- [<span data-ttu-id="60a94-108">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="60a94-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1fa5d-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="1fa5d-107">In This Section</span></span>  
+ [<span data-ttu-id="1fa5d-108">Rubriques Comment</span><span class="sxs-lookup"><span data-stu-id="1fa5d-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="60a94-109">Référence</span><span class="sxs-lookup"><span data-stu-id="60a94-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1fa5d-109">Référence</span><span class="sxs-lookup"><span data-stu-id="1fa5d-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="60a94-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="60a94-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="1fa5d-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="1fa5d-110">Related Sections</span></span>
