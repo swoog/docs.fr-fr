@@ -1,11 +1,17 @@
 ---
-title: 'Chaînes - Guide de programmation C#'
+title: Chaînes - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920686"
 ---
 # <a name="strings-c-programming-guide"></a>Chaînes (Guide de programmation C#)
 Une chaîne est un objet de type <xref:System.String> dont la valeur est du texte. En interne, le texte est stocké sous la forme d’une collection séquentielle en lecture seule d’objets <xref:System.Char>. Il n’existe aucun caractère de fin Null à la fin d’une chaîne C# ; par conséquent, une chaîne C# peut contenir n’importe quel nombre de caractères Null incorporés ('\0'). La propriété <xref:System.String.Length%2A> d’une chaîne représente le nombre d’objets `Char` qu’elle contient, et non pas le nombre de caractères Unicode. Pour accéder à des points de code Unicode individuels dans une chaîne, utilisez l’objet <xref:System.Globalization.StringInfo>.  
@@ -68,7 +74,7 @@ Une chaîne est un objet de type <xref:System.String> dont la valeur est du text
  Une chaîne de format est une chaîne dont le contenu est déterminé de façon dynamique lors de l’exécution. Les chaînes de format sont créées en incorporant des *expressions interpolées* ou des espaces réservés à l’intérieur d’accolades dans une chaîne. Tous les éléments à l’intérieur des accolades (`{...}`) seront convertis en une valeur et affichés sous forme d’une chaîne mise en forme lors de l’exécution. Il existe deux méthodes pour créer des chaînes de format : l’interpolation de chaîne et la mise en forme composite.
 
 ### <a name="string-interpolation"></a>Interpolation de chaîne
-Disponible dans C# 6.0 et versions ultérieures, les [*chaînes interpolées*](../../language-reference/tokens/interpolated.md) sont identifiées par le caractère spéciale `$` et incluent des expressions interpolées entre accolades. Si vous ne connaissez pas l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/intro-to-csharp/interpolated-strings.yml) pour obtenir un aperçu.
+Disponible dans C# 6.0 et versions ultérieures, les [*chaînes interpolées*](../../language-reference/tokens/interpolated.md) sont identifiées par le caractère spéciale `$` et incluent des expressions interpolées entre accolades. Si vous ne connaissez pas l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/exploration/interpolated-strings.yml) pour obtenir un aperçu.
 
 Utilisez l’interpolation de chaîne pour améliorer la lisibilité et la maintenance de votre code. L’interpolation de chaîne permet d’obtenir les mêmes résultats que la méthode `String.Format`, mais avec plus de facilité d’utilisation et de clarté.
 
@@ -122,15 +128,15 @@ string s = String.Empty;
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Guide pratique pour modifier le contenu des chaînes](../../how-to/modify-string-contents.md)|Illustre les techniques permettant de transformer des chaînes et de modifier le contenu de chaînes.|  
-|[Guide pratique pour comparer des chaînes](../../how-to/compare-strings.md)|Montre comment effectuer des comparaisons de chaînes ordinales et spécifiques à la culture.|  
-|[Guide pratique pour concaténer plusieurs chaînes](../../how-to/concatenate-multiple-strings.md)|Illustre différentes manières de joindre plusieurs chaînes pour en former une.|
-|[Guide pratique pour analyser des chaînes à l’aide de String.Split](../../how-to/parse-strings-using-split.md)|Contient un exemple de code qui illustre l’utilisation de la méthode `String.Split` pour analyser des chaînes.|  
-|[Guide pratique pour rechercher des chaînes](../../how-to/search-strings.md)|Explique comment rechercher du texte ou des modèles spécifiques dans des chaînes.|  
-|[Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Montre comment analyser une chaîne en toute sécurité pour déterminer si elle possède une valeur numérique valide.|  
+|[Procédure : Modifier le contenu des chaînes](../../how-to/modify-string-contents.md)|Illustre les techniques permettant de transformer des chaînes et de modifier le contenu de chaînes.|  
+|[Procédure : Comparer des chaînes](../../how-to/compare-strings.md)|Montre comment effectuer des comparaisons de chaînes ordinales et spécifiques à la culture.|  
+|[Procédure : Concaténer plusieurs chaînes](../../how-to/concatenate-multiple-strings.md)|Illustre différentes manières de joindre plusieurs chaînes pour en former une.|
+|[Procédure : Analyser des chaînes à l’aide de String.Split](../../how-to/parse-strings-using-split.md)|Contient un exemple de code qui illustre l’utilisation de la méthode `String.Split` pour analyser des chaînes.|  
+|[Procédure : Rechercher des chaînes](../../how-to/search-strings.md)|Explique comment rechercher du texte ou des modèles spécifiques dans des chaînes.|  
+|[Procédure : Déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Montre comment analyser une chaîne en toute sécurité pour déterminer si elle possède une valeur numérique valide.|  
 |[Interpolation de chaîne](../../language-reference/tokens/interpolated.md)|Décrit la fonctionnalité d’interpolation de chaîne qui fournit une syntaxe pratique pour les chaînes de format.|
 |[Opérations de chaînes de base](../../../../docs/standard/base-types/basic-string-operations.md)|Fournit des liens vers des rubriques utilisant les méthodes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> pour effectuer des opérations de chaînes de base.|  
-|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Décrit comment convertir des représentations sous forme de chaîne de types de base .NET en instances de types correspondants.|  
+|[Analyse de chaînes](../../../standard/base-types/parsing-strings.md)|Décrit comment convertir des représentations sous forme de chaîne de types de base .NET en instances de types correspondants.|  
 |[Analyse des chaînes de date et d’heure dans .NET](../../../standard/base-types/parsing-datetime.md)|Montre comment convertir une chaîne telle que « 24/01/2008 » en objet <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Comparaison de chaînes](../../../../docs/standard/base-types/comparing.md)|Inclut des informations sur la façon de comparer des chaînes et fournit des exemples en C# et Visual Basic.|  
 |[Utilisation de la classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Explique comment créer et modifier des objets string dynamiques avec la classe <xref:System.Text.StringBuilder>.|  
