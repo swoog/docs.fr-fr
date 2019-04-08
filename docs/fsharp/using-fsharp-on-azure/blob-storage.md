@@ -242,7 +242,7 @@ Une application autonome et gratuite de Microsoft qui vous permet d’exploiter 
 
 ### <a name="related-guides"></a>Guides connexes
 
-- [Prise en main stockage Blob Azure en c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Prise en main stockage Blob Azure en C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Transférer des données avec l’utilitaire de ligne de commande AzCopy sur Windows](/azure/storage/common/storage-use-azcopy)
 - [Transfert de données avec l’utilitaire de ligne de commande AzCopy sur Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurer les chaînes de connexion de stockage Azure](/azure/storage/common/storage-configure-connection-string)

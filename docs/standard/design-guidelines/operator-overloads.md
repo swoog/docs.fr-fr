@@ -45,7 +45,7 @@ Surcharges d’opérateur autorisent les types de framework apparaisse comme si 
   
  Le tableau suivant contient une liste d’opérateurs et les noms de méthode convivial correspondants.  
   
-|Symbole d’opérateur c#|Nom des métadonnées|Nom convivial|  
+|Symbole d’opérateur C#|Nom des métadonnées|Nom convivial|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  

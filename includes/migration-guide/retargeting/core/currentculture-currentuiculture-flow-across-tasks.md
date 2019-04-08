@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761011"
+---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>CurrentCulture et CurrentUICulture se propagent d’une tâche à l’autre
 
 |   |   |

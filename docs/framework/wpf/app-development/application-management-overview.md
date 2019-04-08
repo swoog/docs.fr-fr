@@ -106,7 +106,7 @@ Toutes les applications tendent à partager un jeu de fonctionnalités commun qu
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtention de l’application actuelle  
- Étant donné que les fonctionnalités de la <xref:System.Windows.Application> classe sont partagés dans une application, il peut y avoir qu’une seule instance de la <xref:System.Windows.Application> classe par <xref:System.AppDomain>. Pour cela, appliquer la <xref:System.Windows.Application> classe est implémentée comme une classe singleton (consultez [implémentation de Singleton en c#](https://go.microsoft.com/fwlink/?LinkId=100567)), qui crée une seule instance d’elle-même et fournit un accès partagé à avec le `static` <xref:System.Windows.Application.Current%2A> propriété.  
+ Étant donné que les fonctionnalités de la <xref:System.Windows.Application> classe sont partagés dans une application, il peut y avoir qu’une seule instance de la <xref:System.Windows.Application> classe par <xref:System.AppDomain>. Pour cela, appliquer la <xref:System.Windows.Application> classe est implémentée comme une classe singleton (consultez [implémentation de Singleton en C#](https://go.microsoft.com/fwlink/?LinkId=100567)), qui crée une seule instance d’elle-même et fournit un accès partagé à avec le `static` <xref:System.Windows.Application.Current%2A> propriété.  
   
  Le code suivant montre comment acquérir une référence à la <xref:System.Windows.Application> objet actif <xref:System.AppDomain>.  
   
