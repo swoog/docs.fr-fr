@@ -110,7 +110,7 @@ L’objectif de `outref<'T>` consiste à indiquer que le pointeur doit uniquemen
 
 C# prend en charge la `in ref` et `out ref` mots clés, en plus de `ref` retourne. Le tableau suivant montre comment F# interprète ce que C# émet :
 
-|Construction de c#|F#déduit|
+|Construction de C#|F#déduit|
 |------------|---------|
 |`ref` valeur de retour|`outref<'T>`|
 |`ref readonly` valeur de retour|`inref<'T>`|

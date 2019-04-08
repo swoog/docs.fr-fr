@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 6bd950b1648bdf0b0c4673f2a90d67086b338ecd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831920"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procédure pas à pas : Création d’écouteurs de journalisation personnalisés (Visual Basic)
 Cette procédure pas à pas illustre comment créer un écouteur de journalisation personnalisé et le configurer pour écouter la sortie de l’objet `My.Application.Log`.  
@@ -105,6 +105,7 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
      Modifiez la valeur de `SimpleLogStrongName` pour qu’elle soit le nom fort de l’écouteur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Utilisation des journaux des applications](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Guide pratique pour journaliser des exception](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

@@ -118,7 +118,7 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Pour générer l’édition c# ou Visual Basic .NET de la solution, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1.  Pour générer l’édition C# ou Visual Basic .NET de la solution, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 2.  Vérifiez que vous avez configuré le [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   

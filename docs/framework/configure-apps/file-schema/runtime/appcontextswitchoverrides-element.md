@@ -134,7 +134,7 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Contrôle si les séquences de touches vides dans les clés composées sont ignorés par la validation de schéma XSD. Pour plus d’informations, consultez [Atténuation : Validation de schéma XML](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Au lieu d’ajouter un `AppContextSwitchOverrides` élément à un fichier de configuration d’application, vous pouvez également définir les commutateurs par programmation en appelant le `static` (en c#) ou `Shared` (en Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (méthode).  
+>  Au lieu d’ajouter un `AppContextSwitchOverrides` élément à un fichier de configuration d’application, vous pouvez également définir les commutateurs par programmation en appelant le `static` (en C#) ou `Shared` (en Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (méthode).  
   
  Les développeurs de bibliothèque peuvent également définir des commutateurs pour autoriser les appelants à refuser la fonctionnalité modifiée introduite dans les versions ultérieures de leurs bibliothèques. Pour plus d'informations, consultez la classe <xref:System.AppContext>.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307173"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920894"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolation de chaîne (Référence C#)
 
@@ -87,7 +87,7 @@ L’exemple suivant utilise la conversion implicite en <xref:System.FormattableS
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). Vous pouvez également essayer le tutoriel [Interpolation de chaînes en C#](../../tutorials/string-interpolation.md) localement sur votre ordinateur.
+Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/exploration/interpolated-strings.yml). Vous pouvez également essayer le tutoriel [Interpolation de chaînes en C#](../../tutorials/string-interpolation.md) localement sur votre ordinateur.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -95,7 +95,7 @@ Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel i
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Mise en forme composite](../../../standard/base-types/composite-formatting.md)
-- [Tableau des formats des résultats numériques](../keywords/formatting-numeric-results-table.md)
+- [Table des formats des résultats numériques](../keywords/formatting-numeric-results-table.md)
 - [Chaînes](../../programming-guide/strings/index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Caractères spéciaux C#](index.md)

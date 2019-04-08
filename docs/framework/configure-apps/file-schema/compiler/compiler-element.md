@@ -45,7 +45,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 |---------------|-----------------|
 |`compilerOptions`|Attribut facultatif.<br /><br /> Spécifie des arguments supplémentaires spécifiques au compilateur pour la compilation. Les valeurs pour le `compilerOptions` attribut sont généralement répertoriées dans une rubrique d’options du compilateur pour le compilateur.|
 |`extension`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules des extensions de nom de fichier utilisé par les fichiers de code source pour le fournisseur de langages. Par exemple, « .cs ».|
-|`language`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules de noms de langages pris en charge par le fournisseur de langages. Par exemple, « c# ; cs ; csharp ».|
+|`language`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules de noms de langages pris en charge par le fournisseur de langages. Par exemple, « C# ; cs ; csharp ».|
 |`type`|Attribut requis.<br /><br /> Spécifie le nom de type fournisseur de langages, y compris le nom de l’assembly contenant l’implémentation du fournisseur. Le nom de type doit respecter les exigences définies dans [spécifiant des noms de types qualifiés complets](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Attribut facultatif.<br /><br /> Spécifie le niveau d’avertissement du compilateur par défaut ; Détermine le niveau auquel le fournisseur de langages traite les avertissements de compilation comme des erreurs.|
 

@@ -96,7 +96,7 @@ F# a également une prise en charge complète pour l’optimisation d’appel Ta
 
 Enregistrement et types Union sont deux types de données fondamentaux utilisés dans le code F# et sont généralement la meilleure façon de représenter les données dans un programme F#.  Bien que cela les rend semblables aux classes dans d’autres langues, une de leurs principales différences est qu’ils ont une sémantique d’égalité structurelle.  Cela signifie qu’ils sont comparables « en mode natif » et l’égalité est simple : simplement vérifier si un est égal à l’autre.
 
-[Enregistrements](language-reference/records.md) sont un agrégat de valeurs nommées, avec des membres facultatifs (par exemple, les méthodes).  Si vous êtes familiarisé avec c# ou Java, puis ces devraient sembler similaires à oct ou POJO - tout avec l’égalité structurelle et moins de cérémonie.
+[Enregistrements](language-reference/records.md) sont un agrégat de valeurs nommées, avec des membres facultatifs (par exemple, les méthodes).  Si vous êtes familiarisé avec C# ou Java, puis ces devraient sembler similaires à oct ou POJO - tout avec l’égalité structurelle et moins de cérémonie.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
@@ -187,7 +187,7 @@ Les enregistrements sont un « step up » à partir de Tuples, avoir nommé é
 
 Les Unions discriminées ont de nombreuses utilisations, mais les principaux avantages sont de pouvoir les utiliser conjointement avec les critères spéciaux pour prendre en compte pour toutes les possibles « formes » disposant de données.  
 
-Les classes sont idéales pour un très grand nombre de raisons, par exemple lorsque vous devez représentent des informations et également comment lier ces informations à la fonctionnalité.  En règle générale, lorsque vous disposez de fonctionnalités sur le plan conceptuel lié à des données, à l’aide des Classes et les principes de programmation orientée objet est un grand avantage.  Les classes sont également le type de données par défaut lors de l’interaction avec c# et Visual Basic, comme ces langues utilisent des classes pour quasiment tous les éléments.
+Les classes sont idéales pour un très grand nombre de raisons, par exemple lorsque vous devez représentent des informations et également comment lier ces informations à la fonctionnalité.  En règle générale, lorsque vous disposez de fonctionnalités sur le plan conceptuel lié à des données, à l’aide des Classes et les principes de programmation orientée objet est un grand avantage.  Les classes sont également le type de données par défaut lors de l’interaction avec C# et Visual Basic, comme ces langues utilisent des classes pour quasiment tous les éléments.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

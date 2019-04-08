@@ -10,7 +10,7 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56093760"
 ---
 # <a name="query-examples"></a>Exemples de requêtes
-Cette section fournit des exemples Visual Basic et c# de type [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes. Les développeurs qui utilisent Visual Studio peuvent trouver des nombreux autres exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Cette section fournit des exemples Visual Basic et C# de type [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes. Les développeurs qui utilisent Visual Studio peuvent trouver des nombreux autres exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *DB* est souvent utilisé dans les exemples de code dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *DB* est supposé pour être une instance d’un *Northwind* (classe), qui hérite de <xref:System.Data.Linq.DataContext>.  

@@ -64,7 +64,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 ## <a name="to-add-the-workflow-activities"></a>Pour ajouter les activités de flux de travail  
   
-1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et déposez-le sur le **séquence** activité. Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une expression c#** ou **entrer une expression VB** boîte.  
+1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et déposez-le sur le **séquence** activité. Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une expression C#** ou **entrer une expression VB** boîte.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
     > [!NOTE]
     >  Lorsque vous déposez le **affecter** activité, notez comment le Concepteur de workflow ajoute automatiquement un **séquence** activité qui permet de contenir à la fois le **invite** activité et récemment ajouté **Affecter** activité.  
   
-7.  Type `Turns` dans le **à** boîte et `Turns + 1` dans le **entrer une expression c#** ou **entrer une expression VB** boîte.  
+7.  Type `Turns` dans le **à** boîte et `Turns + 1` dans le **entrer une expression C#** ou **entrer une expression VB** boîte.  
   
 8.  Faites glisser un **si** activité à partir de la **flux de contrôle** section de la **boîte à outils** et déposez-le dans la **séquence** activité afin qu’elle suive le qui vient d’être ajouté **affecter** activité.  
   

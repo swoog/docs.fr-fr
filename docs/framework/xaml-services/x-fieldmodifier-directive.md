@@ -36,7 +36,7 @@ Modifie le comportement de compilation XAML afin que les champs pour les référ
   
  La valeur de la `x:FieldModifier` attribut varie selon le langage de programmation et son objectif peut varier dans les infrastructures spécifiques. La chaîne à utiliser dépend de la façon dont chaque langage implémente son <xref:System.CodeDom.Compiler.CodeDomProvider> et les convertisseurs de type qu’il retourne pour définir les significations de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> et <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, et si cette langue est sensible à la casse.  
   
--   Pour c#, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `public`.  
+-   Pour C#, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `public`.  
   
 -   Pour Microsoft Visual Basic .NET, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `Public`.  
   

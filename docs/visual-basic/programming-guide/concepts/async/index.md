@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- Pour plus d’informations et un exemple, consultez [appeler les API asynchrones en c# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
+ Pour plus d’informations et un exemple, consultez [appeler les API asynchrones en C# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
   
 ## <a name="BKMK_NamingConvention"></a> Convention d’affectation de noms  
  Par convention, on ajoute « Async » aux noms des méthodes qui possèdent un modificateur `Async`.  

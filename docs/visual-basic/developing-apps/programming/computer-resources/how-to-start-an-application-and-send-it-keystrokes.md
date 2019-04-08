@@ -7,12 +7,12 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: f130429e5b0964dc8680441fb83cb06d45904a69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966201"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815964"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Procédure : démarrer une application et lui envoyer des séquences de touches (Visual Basic)
 Cet exemple utilise la fonction `Shell` pour démarrer l’application Calculatrice, puis multiplie deux nombres en envoyant des séquences de touches à l’aide de la méthode `My.Computer.Keyboard.SendKeys`.  
@@ -27,6 +27,7 @@ Cet exemple utilise la fonction `Shell` pour démarrer l’application Calculatr
  L’appel à la fonction `Shell` nécessite une confiance totale (classe <xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

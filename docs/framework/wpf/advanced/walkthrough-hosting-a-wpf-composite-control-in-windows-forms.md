@@ -43,7 +43,7 @@ Cette procédure pas à pas nécessite Visual Studio.
   
 1.  Lancez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
   
-2.  Dans Visual c# et la catégorie Windows, sélectionnez le **bibliothèque de contrôles utilisateur WPF** modèle.  
+2.  Dans Visual C# et la catégorie Windows, sélectionnez le **bibliothèque de contrôles utilisateur WPF** modèle.  
   
 3.  Nommez le nouveau projet `MyControls`.  
   
@@ -192,7 +192,7 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
   
 1.  Lancez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
   
-2.  Dans Visual c# et la catégorie Windows, sélectionnez le **Windows Forms Application** modèle.  
+2.  Dans Visual C# et la catégorie Windows, sélectionnez le **Windows Forms Application** modèle.  
   
 3.  Nommez le nouveau projet `WFHost`.  
   

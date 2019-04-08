@@ -5,12 +5,12 @@ helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: df5376155d20ec4809962a26c92167eee6568dc1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 705fa6e40d0e6d18826966e3f10cfd31d9e7a6ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972844"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823400"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procédure : rechercher des sous-répertoires avec un modèle spécifique en Visual Basic
 La méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retourne une collection en lecture seule de chaînes représentant les noms de chemin des sous-répertoires d’un répertoire. Vous pouvez utiliser le paramètre `wildCards` pour indiquer un modèle spécifique. Si vous souhaitez inclure le contenu des sous-répertoires dans la recherche, affectez la valeur `SearchOption.SearchAllSubDirectories` au paramètre `searchType`.  
@@ -45,5 +45,6 @@ La méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> ret
 -   L'utilisateur ne dispose pas des autorisations nécessaires (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
 - [Guide pratique pour rechercher des fichiers avec un modèle spécifique](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

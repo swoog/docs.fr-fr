@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9410d166a3f91770cb0c64b9971dc58ad9cd07cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843693"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procédure pas à pas : Manipulation de fichiers et de répertoires en Visual Basic
 Cette procédure pas à pas présente les notions de base d’E/S de fichier dans Visual Basic. Elle décrit comment créer une petite application qui répertorie et examine des fichiers texte dans un répertoire. Pour chaque fichier texte sélectionné, l’application fournit des attributs de fichier et la première ligne de contenu. Elle comprend une option pour écrire des informations dans un fichier journal.  
@@ -160,6 +160,7 @@ Cette procédure pas à pas présente les notions de base d’E/S de fichier dan
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>

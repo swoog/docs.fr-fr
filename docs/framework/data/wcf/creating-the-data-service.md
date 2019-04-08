@@ -28,7 +28,7 @@ Dans cette rubrique, vous créez un exemple de service de données qui utilise W
 
 1. Dans Visual Studio, sur le **fichier** menu, sélectionnez **New** > **projet**.
 
-1. Dans le **nouveau projet** boîte de dialogue, sous Visual Basic ou Visual c#, sélectionnez le **Web** catégorie, puis sélectionnez **Application Web ASP.NET**.
+1. Dans le **nouveau projet** boîte de dialogue, sous Visual Basic ou Visual C#, sélectionnez le **Web** catégorie, puis sélectionnez **Application Web ASP.NET**.
 
 1. Entrez `NorthwindService` en tant que le nom du projet et sélectionnez **OK**.
 

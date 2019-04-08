@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705321"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832526"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes utilisées dans les E/S de fichier du .NET Framework et le système de fichiers (Visual Basic)
 Les tableaux suivants répertorient les classes couramment utilisées pour les E/S de fichier du .NET Framework. Ces classes sont réparties dans les catégories suivantes : classes d’E/S de fichier, classes utilisées pour créer des flux et classes utilisées pour lire et écrire dans les flux.  
@@ -57,6 +57,7 @@ Les tableaux suivants répertorient les classes couramment utilisées pour les E
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Écrit des caractères dans un `String`. La sortie peut être un flux de n’importe quel encodage ou un `String`.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Composition de flux](../../../../standard/io/composing-streams.md)
 - [Fichier et flux de données E/S](../../../../standard/io/index.md)
 - [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)

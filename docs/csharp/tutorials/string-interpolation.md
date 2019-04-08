@@ -3,16 +3,16 @@ title: Interpolation de chaîne en C#
 description: Découvrez comment inclure des résultats d’expressions mises en forme dans une chaîne de résultat en C# avec une interpolation de chaîne.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976055"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920712"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolation de chaîne en C\#
 
-Ce tutoriel vous montre comment utiliser une [interpolation de chaîne](../language-reference/tokens/interpolated.md) pour mettre en forme et inclure des résultats d’expressions dans une chaîne de résultat. Les exemples supposent que vous êtes familiarisé avec les concepts de base de C# et la mise en forme des types .NET. Si vous ne connaissez pas l’interpolation de chaînes ou la mise en forme de types .NET, consultez d’abord le [tutoriel interactif sur l’interpolation de chaînes](../tutorials/intro-to-csharp/interpolated-strings.yml). Pour plus d’informations sur la mise en forme des types dans .NET, consultez la rubrique [Mise en forme des types dans .NET](../../standard/base-types/formatting-types.md).
+Ce tutoriel vous montre comment utiliser une [interpolation de chaîne](../language-reference/tokens/interpolated.md) pour mettre en forme et inclure des résultats d’expressions dans une chaîne de résultat. Les exemples supposent que vous êtes familiarisé avec les concepts de base de C# et la mise en forme des types .NET. Si vous ne connaissez pas l’interpolation de chaînes ou la mise en forme de types .NET, consultez d’abord le [tutoriel interactif sur l’interpolation de chaînes](exploration/interpolated-strings.yml). Pour plus d’informations sur la mise en forme des types dans .NET, consultez la rubrique [Mise en forme des types dans .NET](../../standard/base-types/formatting-types.md).
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

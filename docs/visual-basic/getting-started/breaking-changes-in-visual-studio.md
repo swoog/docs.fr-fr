@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: 630715927d2a3d9f124d321021ddb9dbea143182
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 847034503f2797cf16a944478ebf9587a6985e82
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596746"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834008"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Modifications avec rupture de Visual Basic dans Visual Studio
 Pour obtenir la dernière documentation sur Visual Studio 2017, consultez [Documentation Visual Studio 2017](https://docs.microsoft.com/visualstudio/).
@@ -17,6 +17,7 @@ Pour obtenir la dernière documentation sur Visual Studio 2017, consultez [Docu
 Aucune modification au niveau de Visual Basic dans Visual Studio 2015 n’empêche une application créée en Visual Basic dans Visual Studio 2013 d’être compilée ni ne modifie le comportement à l’exécution de cette application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Tableaux](../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Expressions lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

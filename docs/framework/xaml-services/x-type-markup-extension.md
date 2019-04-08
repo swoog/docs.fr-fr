@@ -44,7 +44,7 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
 |`typeNameValue`|Obligatoire. Un nom de type peut être résolu à l’espace de noms XAML par défaut actuel ; ou spécifié préfixe mappé si `prefix` est fourni.|  
   
 ## <a name="remarks"></a>Notes  
- Le `x:Type` extension de balisage possède une fonction similaire à la `typeof()` opérateur en c# ou le `GetType` opérateur dans Microsoft Visual Basic.  
+ Le `x:Type` extension de balisage possède une fonction similaire à la `typeof()` opérateur en C# ou le `GetType` opérateur dans Microsoft Visual Basic.  
   
  Le `x:Type` extension de balisage fournisse un comportement de conversion de chaîne pour les propriétés qui prennent le type <xref:System.Type>. L’entrée est un type XAML. La relation entre le type XAML d’entrée et la sortie CLR <xref:System.Type> est que la sortie <xref:System.Type> est la <xref:System.Xaml.XamlType.UnderlyingType%2A> de l’entrée <xref:System.Xaml.XamlType>, après avoir recherché le nécessaire <xref:System.Xaml.XamlType> selon le contexte de schéma XAML et le <xref:System.Windows.Markup.IXamlTypeResolver>fournit le contexte de service.  
   

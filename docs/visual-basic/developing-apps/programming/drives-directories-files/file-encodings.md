@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731918"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814001"
 ---
 # <a name="file-encodings-visual-basic"></a>Encodages de fichiers (Visual Basic)
 Les encodages de fichiers, également appelés codages de caractères, spécifient comment représenter les caractères lors du traitement du texte. Un encodage peut être préférable à un autre en fonction des caractères de langue qu’il peut ou non gérer, bien qu’Unicode soit généralement privilégié.  
@@ -36,5 +36,6 @@ Les encodages de fichiers, également appelés codages de caractères, spécifie
 |<xref:System.Text.UTF8Encoding>|Représente un encodage UTF-8 de caractères Unicode.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Lecture à partir de fichiers](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [Écriture dans des fichiers](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Examinons comment faire cela F# type s’affiche pour un programmeur à l’aide d’un autre langage .NET. Par exemple, approximatif c# « signature » est la suivante :
+Examinons comment faire cela F# type s’affiche pour un programmeur à l’aide d’un autre langage .NET. Par exemple, approximatif C# « signature » est la suivante :
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -822,7 +822,7 @@ type RadialPoint =
     member Radius : double
 ```
 
-La signature c# est désormais comme suit :
+La signature C# est désormais comme suit :
 
 ```csharp
 public class RadialPoint
@@ -851,4 +851,4 @@ Les corrections apportées à préparer ce type à utiliser dans le cadre d’un
 
 * Utilisé le type de délégué .NET `System.Func` au lieu d’un F# type de fonction.
 
-Cela facilite beaucoup mieux à consommer en code c#.
+Cela facilite beaucoup mieux à consommer en code C#.

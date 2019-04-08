@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 63a38f33fef09577c5ed621727b8c38e4c7e1bdf
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760850"
+---
 ### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>L’algorithme de hachage par défaut pour le compilateur de balisage de WPF est désormais SHA256
 
 |   |   |

@@ -31,7 +31,7 @@ Pour interpréter une valeur null est obtenue à partir d’une méthode .NET, u
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-Valeurs null F# types peuvent également être générés dans d’autres méthodes, comme lorsque vous utilisez `Array.zeroCreate`, qui appelle `Unchecked.defaultof`. Vous devez être prudent avec ce code pour conserver les valeurs null encapsulées. Dans une bibliothèque destinée uniquement au F#, vous n’êtes pas obligé de vérifier les valeurs null dans chaque fonction. Si vous écrivez une bibliothèque pour l’interopérabilité avec d’autres langages .NET, vous devrez peut-être ajouter des paramètres d’entrée de vérifications pour la valeur null et levant une `ArgumentNullException`, tout comme vous le feriez dans le code c# ou Visual Basic.
+Valeurs null F# types peuvent également être générés dans d’autres méthodes, comme lorsque vous utilisez `Array.zeroCreate`, qui appelle `Unchecked.defaultof`. Vous devez être prudent avec ce code pour conserver les valeurs null encapsulées. Dans une bibliothèque destinée uniquement au F#, vous n’êtes pas obligé de vérifier les valeurs null dans chaque fonction. Si vous écrivez une bibliothèque pour l’interopérabilité avec d’autres langages .NET, vous devrez peut-être ajouter des paramètres d’entrée de vérifications pour la valeur null et levant une `ArgumentNullException`, tout comme vous le feriez dans le code C# ou Visual Basic.
 
 Vous pouvez utiliser le code suivant pour vérifier si une valeur arbitraire est null.
 

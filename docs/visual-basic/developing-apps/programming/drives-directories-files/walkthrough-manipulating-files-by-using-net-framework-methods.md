@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821060"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procédure pas à pas : Manipulation de fichiers à l’aide de méthodes du .NET Framework (Visual Basic)
 Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’aide de la classe <xref:System.IO.StreamReader>, vérifier si une tentative d’accès à un fichier est en cours, rechercher une chaîne dans un fichier lu avec une instance de la classe <xref:System.IO.StreamReader> et écrire dans un fichier à l’aide de la classe <xref:System.IO.StreamWriter>.  
@@ -148,6 +148,7 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
  Pour tester votre code, appuyez sur F5 pour compiler l’application. Cliquez sur **Obtenir des entrées**, sélectionnez une entrée, puis cliquez sur **Afficher**. L’entrée s’affiche dans le `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Cliquez sur **Modifier l’entrée**. L’entrée s’affiche dans le `Entry`<xref:System.Windows.Forms.TextBox>. Modifiez l’entrée dans le `Entry`<xref:System.Windows.Forms.TextBox> et cliquez sur **Envoyer la modification**. Ouvrez le fichier `MyDiary.txt` pour confirmer vos corrections. À présent, sélectionnez une entrée et cliquez sur **Supprimer l’entrée**. Quand le <xref:System.Windows.Forms.MessageBox> demande confirmation, cliquez sur **OK**. Fermez l’application et ouvrez `MyDiary.txt` pour confirmer la suppression.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [Procédures pas à pas](../../../../visual-basic/walkthroughs.md)

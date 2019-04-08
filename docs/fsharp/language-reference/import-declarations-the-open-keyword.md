@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Notes
 
-Faisant référence à code en utilisant le chemin qualifié complet de l’espace de noms ou module chaque fois pouvez créer le code qui est difficile à écrire, lire et mettre à jour. Au lieu de cela, vous pouvez utiliser le `open` mot clé pour utilisé fréquemment des modules et les espaces de noms afin que lorsque vous référencez un membre de ce module ou un espace de noms, vous pouvez utiliser la forme abrégée du nom au lieu du nom qualifié complet. Ce mot clé est similaire à la `using` mot clé en c#, `using namespace` dans Visual C++, et `Imports` en Visual Basic.
+Faisant référence à code en utilisant le chemin qualifié complet de l’espace de noms ou module chaque fois pouvez créer le code qui est difficile à écrire, lire et mettre à jour. Au lieu de cela, vous pouvez utiliser le `open` mot clé pour utilisé fréquemment des modules et les espaces de noms afin que lorsque vous référencez un membre de ce module ou un espace de noms, vous pouvez utiliser la forme abrégée du nom au lieu du nom qualifié complet. Ce mot clé est similaire à la `using` mot clé en C#, `using namespace` dans Visual C++, et `Imports` en Visual Basic.
 
 Le module ou un espace de noms fourni doit être dans le même projet ou dans un projet ou assembly référencé. Si elle n’est pas le cas, vous pouvez ajouter une référence au projet, ou utiliser le `-reference` commande`-`option de ligne (ou son abréviation, `-r`). Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
 

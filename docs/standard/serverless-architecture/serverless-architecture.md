@@ -19,7 +19,7 @@ Les hôtes sans serveur utilisent souvent une existante basée sur le conteneur 
 
 ![Architecture de fonctions Azure](./media/azure-functions-architecture.png)
 
-Les principales tâches Web fournit un contexte d’exécution de la fonction. Le Runtime de langage exécute des scripts, exécute des bibliothèques et héberge l’infrastructure pour le langage cible. Par exemple, Node.js est utilisé pour exécuter des fonctions JavaScript et .NET Framework est utilisé pour exécuter des fonctions c#. Vous en apprendrez davantage sur les options de langage et plateforme plus loin dans ce chapitre.
+Les principales tâches Web fournit un contexte d’exécution de la fonction. Le Runtime de langage exécute des scripts, exécute des bibliothèques et héberge l’infrastructure pour le langage cible. Par exemple, Node.js est utilisé pour exécuter des fonctions JavaScript et .NET Framework est utilisé pour exécuter des fonctions C#. Vous en apprendrez davantage sur les options de langage et plateforme plus loin dans ce chapitre.
 
 Certains projets peuvent tirer parti d’une approche plus « complète » pour sans serveur. Les applications qui s’appuient sur des microservices peuvent implémenter tous les microservices à l’aide de la technologie sans serveur. La majorité des applications sont hybride, suivant une conception multicouche et de l’utilisation sans serveur pour les composants qui judicieux, car les composants sont modulaire et évolutif de façon indépendante. Pour aider à bien comprendre ces scénarios, cette section décrit quelques exemples d’architecture courants qui utilisent sans serveur.
 

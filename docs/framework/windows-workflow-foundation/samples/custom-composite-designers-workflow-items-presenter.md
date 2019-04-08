@@ -25,7 +25,7 @@ ms.locfileid: "54705941"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
-1.  Ouvrez le **UsingWorkflowItemsPresenter.sln** exemple de solution pour c# ou Visual Basic dans Visual Studio 2010.
+1.  Ouvrez le **UsingWorkflowItemsPresenter.sln** exemple de solution pour C# ou Visual Basic dans Visual Studio 2010.
 
 2.  Générez et exécutez la solution. Une application de concepteur de workflow réhébergée doit s'ouvrir, et vous pouvez faire glisser des activités sur la zone de dessin.
 
