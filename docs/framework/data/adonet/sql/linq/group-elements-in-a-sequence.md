@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089912"
 ---
 # <a name="group-elements-in-a-sequence"></a>Comment : regrouper des éléments dans une séquence
 L'opérateur <xref:System.Linq.Enumerable.GroupBy%2A> regroupe les éléments d'une séquence. Les exemples suivants utilisent la base de données Northwind.  
@@ -67,11 +67,12 @@ L'opérateur <xref:System.Linq.Enumerable.GroupBy%2A> regroupe les éléments d'
  [!code-vb[DLinqQueryExamples#34](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#34)]  
   
 ## <a name="example"></a>Exemple  
- L’opérateur <xref:System.Linq.Queryable.GroupBy%2A> ne peut prendre qu’un argument Key. Pour effectuer un regroupement sur plusieurs clés, vous devez créer un type anonyme, comme dans l'exemple suivant :  
+ L'opérateur <xref:System.Linq.Queryable.GroupBy%2A> ne peut prendre qu'un argument Key. Pour effectuer un regroupement sur plusieurs clés, vous devez créer un type anonyme, comme dans l'exemple suivant :  
   
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

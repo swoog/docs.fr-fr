@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Charger des fichiers dans le contrôle RichTextBox Windows Forms'
+title: 'Procédure : charger des fichiers dans le contrôle RichTextBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: b550362571c5a4ea1fa8e6f9700ebee4ff04ddbd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0456190f160c555dcc8ce5553674eee2cb73db8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086778"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Procédure : Charger des fichiers dans le contrôle RichTextBox Windows Forms
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Procédure : charger des fichiers dans le contrôle RichTextBox Windows Forms
 Le contrôle <xref:System.Windows.Forms.RichTextBox> Windows Forms peut afficher du texte brut, du texte brut Unicode ou un fichier au format RTF( Rich-Text Format). Pour cela, appelez la méthode <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . Vous pouvez également utiliser la méthode <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> pour charger des données à partir d’un flux de données. Pour plus d'informations, consultez <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Pour charger un fichier dans le contrôle RichTextBox  
@@ -81,6 +81,7 @@ Le contrôle <xref:System.Windows.Forms.RichTextBox> Windows Forms peut afficher
     >  Pour exécuter ce processus, votre assembly peut nécessiter un niveau de privilège accordé par la classe <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> . Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, contrôle](richtextbox-control-windows-forms.md)

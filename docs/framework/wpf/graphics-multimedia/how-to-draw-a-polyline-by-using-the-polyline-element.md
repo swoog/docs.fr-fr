@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Dessiner une polyligne à l'aide de l'élément Polyline"
+title: 'Procédure : Dessiner une polyligne à l’aide de l’élément Polyline'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114844"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procédure : Dessiner une polyligne à l'aide de l'élément Polyline
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procédure : Dessiner une polyligne à l’aide de l’élément Polyline
 Cet exemple montre comment dessiner une polyligne, c'est-à-dire une série de lignes connectées, à l’aide de la <xref:System.Windows.Shapes.Polyline> élément.  
   
  Pour dessiner une polyligne, créez un <xref:System.Windows.Shapes.Polyline> élément et utiliser ses <xref:System.Windows.Shapes.Polyline.Points%2A> propriété pour spécifier les sommets de la forme. Enfin, utilisez la <xref:System.Windows.Shapes.Shape.Stroke%2A> et <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> hiérarchique de propriétés pour décrire la polyligne car une ligne sans trait est invisible.  
@@ -35,8 +35,9 @@ Cet exemple montre comment dessiner une polyligne, c'est-à-dire une série de l
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>
 - [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)

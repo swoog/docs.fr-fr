@@ -2,12 +2,12 @@
 title: Construction de types (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073778"
 ---
 # <a name="constructing-types-entity-sql"></a>Construction de types (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] propose trois types de constructeurs : constructeurs de ligne, constructeurs de type nommé et constructeurs de collection.  
@@ -28,7 +28,7 @@ ms.locfileid: "54718583"
  Pour plus d’informations sur les constructeurs de ligne, consultez [ligne](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Constructeurs de collection  
- Les constructeurs de collection d'[!INCLUDE[esql](../../../../../../includes/esql-md.md)] permettent de créer une instance d'un multiensemble à partir d'une liste de valeurs. Toutes les valeurs du constructeur doivent être de type `T` mutuellement compatible et le constructeur produit une collection de type `Multiset<T>`. Par exemple, l'expression suivante crée une collection d'entiers :  
+ Les constructeurs de collection dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permettent de créer une instance d’un multiensemble à partir d’une liste de valeurs. Toutes les valeurs du constructeur doivent être de type `T` mutuellement compatible et le constructeur produit une collection de type `Multiset<T>`. Par exemple, l'expression suivante crée une collection d'entiers :  
   
  `Multiset(1, 2, 3)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54718583"
  Pour plus d’informations, consultez [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>Constructeurs de type nommé (initialiseurs NamedType)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permet aux constructeurs de type (initialiseurs) de créer des instances de types complexes nommés et de types d'entités. Par exemple, l'expression suivante crée une instance d'un type `Person`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permet de constructeurs de type (initialiseurs) de créer des instances de types complexes nommés et les types d’entité. Par exemple, l'expression suivante crée une instance d'un type `Person`.  
   
  `Person("abc", 12)`  
   
@@ -64,6 +64,7 @@ ms.locfileid: "54718583"
  Pour plus d’informations, consultez [constructeur de Type nommé](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Système de type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

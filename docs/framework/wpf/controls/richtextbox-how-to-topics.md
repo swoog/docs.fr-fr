@@ -7,23 +7,24 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: fbf40aa8dded4e676828c600ecb634732803dbdb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092186"
 ---
 # <a name="richtextbox-how-to-topics"></a>Rubriques "Comment utiliser le RichTextBox"
 Cette section fournit des exemples qui montrent comment accomplir des tâches courantes à l’aide de la <xref:System.Windows.Controls.RichTextBox> contrôle.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Extraire le texte d'un RichTextBox](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [Extraire le texte d’un RichTextBox](how-to-extract-the-text-content-from-a-richtextbox.md)  
  [Modification par programmation de la sélection dans un RichTextBox](change-selection-in-a-richtextbox-programmatically.md)  
  [Enregistrer, charger et imprimer le contenu d'un RichTextBox](how-to-save-load-and-print-richtextbox-content.md)  
  [Positionner un menu contextuel personnalisé dans un RichTextBox](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.TextBox>
 - [Documents dans WPF](../advanced/documents-in-wpf.md)
-- [Vue d’ensemble des documents dynamiques](../advanced/flow-document-overview.md)
+- [Vue d'ensemble des documents dynamiques](../advanced/flow-document-overview.md)

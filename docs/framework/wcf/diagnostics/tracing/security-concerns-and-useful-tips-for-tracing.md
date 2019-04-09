@@ -2,12 +2,12 @@
 title: Problèmes de sécurité et conseils utiles pour le suivi
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130792"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problèmes de sécurité et conseils utiles pour le suivi
 Cette rubrique décrit comment empêcher l'exposition des informations sensibles et fournit également des conseils utiles en cas d'utilisation de WebHost.  
@@ -26,7 +26,7 @@ Cette rubrique décrit comment empêcher l'exposition des informations sensibles
   
 -   Choisissez une extension de fichier qui ne peut pas être facilement fournie à l’aide d’une demande Web. Par exemple, l’extension de fichier .xml n’est pas un choix sûr. Vous pouvez vérifier le guide d’administration des services Internet (IIS) pour obtenir une liste des extensions qui peuvent être servies.  
   
--   Spécifiez un chemin d'accès absolu pour l'emplacement de fichier journal, qui doit être en dehors du répertoire public vroot WebHost afin d'empêcher qu'il soit accessible par un correspondant externe à l'aide d'un navigateur Web.  
+-   Spécifiez un chemin d’accès absolu pour l’emplacement de fichier journal, qui doit être en dehors du répertoire public vroot WebHost afin d’empêcher qu’il soit accessible par un correspondant externe à l’aide d’un navigateur Web.  
   
  Par défaut, les clés et informations personnelles, telles que le nom d'utilisateur et le mot de passe, ne sont pas enregistrées dans les traces et les messages consignés. Toutefois, un administrateur d'ordinateur peut utiliser l'attribut `enableLoggingKnownPII` dans l'élément `machineSettings` du fichier Machine.config pour autoriser des applications qui s'exécutent sur l'ordinateur à enregistrer des informations d'identification personnelle PII (Personally Identifiable Information) connues comme suit :  
   
@@ -91,4 +91,5 @@ Cette rubrique décrit comment empêcher l'exposition des informations sensibles
  De plus, l'adresse IP de l'expéditeur du message est enregistrée une fois par connexion pour les transports orientés connexion, et une fois par message envoyé par d'autres transports. Cette opération est effectuée sans le consentement de l'expéditeur. Toutefois, cet enregistrement se produit uniquement aux niveaux de suivi Information ou Verbose, qui ne sont pas les niveaux de suivi par défaut ou recommandés dans les environnements de production, hormis pour le débogage en direct.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+
+- [Traçage](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

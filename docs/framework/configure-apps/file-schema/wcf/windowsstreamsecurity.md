@@ -2,12 +2,12 @@
 title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: aff415bb75cf719ce19fb2189cc69c2c159af6cf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32e8ed6b70a23462fac3c53d1bc353167ff67560
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113631"
 ---
 # <a name="windowsstreamsecurity"></a>\<windowsStreamSecurity>
 Spécifiez les paramètres de sécurité de flux de données Windows pour la liaison personnalisée.  
@@ -46,6 +46,7 @@ Spécifiez les paramètres de sécurité de flux de données Windows pour la lia
  Les transports qui utilisent un protocole orienté flux de données, tel que TCP, et des canaux nommés prennent en charge les mises à niveau de transport basées sur le flux de données. Plus spécifiquement, WCF fournit les mises à niveau de la sécurité. La configuration de cette sécurité de transport est encapsulée par cet élément de configuration, ainsi que par [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), ce qui peut être configuré et ajouté à une liaison personnalisée  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

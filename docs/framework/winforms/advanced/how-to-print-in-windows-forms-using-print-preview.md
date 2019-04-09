@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Imprimer dans les formulaires de Windows à l’aide de l’aperçu avant impression'
+title: 'Procédure : imprimer dans Windows Forms à l’aide de l’aperçu avant impression'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 11f5583cc181904b17c378ac7ead4f35c539aeed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 48391465bf199f8a212a575c64227958385eeae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073609"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procédure : Imprimer dans les formulaires de Windows à l’aide de l’aperçu avant impression
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procédure : imprimer dans Windows Forms à l’aide de l’aperçu avant impression
 Il est très courant, dans la programmation Windows Forms, d'offrir un aperçu avant impression en plus des services d'impression. L'un des moyens les plus simples pour ajouter des services d'aperçu avant impression à votre application consiste à utiliser un contrôle <xref:System.Windows.Forms.PrintPreviewDialog> avec la logique de gestion d'événements <xref:System.Drawing.Printing.PrintDocument.PrintPage> pour l'impression d'un fichier.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Pour afficher un aperçu d'un document texte avec un contrôle PrintPreviewDialog  
@@ -65,6 +65,7 @@ Il est très courant, dans la programmation Windows Forms, d'offrir un aperçu a
 -   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Imprimer un fichier texte de plusieurs pages dans les Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
+
+- [Procédure : imprimer un fichier texte de plusieurs pages dans Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)
 - [Impression plus sécurisée dans les Windows Forms](../more-secure-printing-in-windows-forms.md)

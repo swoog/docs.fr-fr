@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Associer un Menu contextuel à du composant NotifyIcon Windows Forms'
+title: 'Procédure : associer un menu contextuel à un composant NotifyIcon Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097988"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procédure : Associer un Menu contextuel à du composant NotifyIcon Windows Forms
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procédure : associer un menu contextuel à un composant NotifyIcon Windows Forms
 > [!NOTE]
 >  Bien que <xref:System.Windows.Forms.MenuStrip> et <xref:System.Windows.Forms.ContextMenuStrip> remplacent et ajoutent des fonctionnalités à la <xref:System.Windows.Forms.MainMenu> et <xref:System.Windows.Forms.ContextMenu> contrôles des versions antérieures, <xref:System.Windows.Forms.MainMenu> et <xref:System.Windows.Forms.ContextMenu> sont conservés pour la compatibilité descendante et l’utilisation future si vous choisissez.  
   
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Guide pratique pour Ajouter des icônes d’Application à la barre des tâches avec le composant NotifyIcon Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Procédure : ajouter des icônes d’application à la barre des tâches avec le composant NotifyIcon Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon, composant](notifyicon-component-windows-forms.md)
 - [Vue d’ensemble du composant NotifyIcon](notifyicon-component-overview-windows-forms.md)

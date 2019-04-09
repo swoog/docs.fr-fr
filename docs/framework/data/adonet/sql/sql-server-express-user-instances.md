@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111148"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances utilisateur SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l’instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Le protocole réseau pour les instances utilisateur doit être canaux nommés locaux. Une instance utilisateur ne peut pas être démarrée sur une instance distante de SQL Server et les connexions SQL Server ne sont pas autorisées.  
   
 ## <a name="connecting-to-a-user-instance"></a>Connexion à une instance utilisateur  
- Le `User Instance` et `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> mots clés autorisent une <xref:System.Data.SqlClient.SqlConnection> pour vous connecter à une instance utilisateur. Les instances utilisateur sont également prises en charge par les propriétés <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` et `AttachDBFilename`.  
+ Le `User Instance` et `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> mots clés autorisent une <xref:System.Data.SqlClient.SqlConnection> pour vous connecter à une instance utilisateur. Les instances utilisateur sont également pris en charge par le <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` et `AttachDBFilename` propriétés.  
   
  Notez les éléments suivants sur l'exemple de chaîne de connexion ci-dessous :  
   
@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
   
 -   `User Instance` a la valeur `true` qui appelle une instance utilisateur. (La valeur par défaut est `false`).  
   
--   Le mot clé de la chaîne de connexion `AttachDbFileName` est utilisé pour joindre le fichier (.mdf) de base de données primaire, qui doit inclure le chemin d'accès complet. `AttachDbFileName` correspond aussi aux clés « extended properties » et « initial file name » dans une chaîne de connexion <xref:System.Data.SqlClient.SqlConnection>.  
+-   Le mot clé de la chaîne de connexion `AttachDbFileName` est utilisé pour joindre le fichier (.mdf) de base de données primaire, qui doit inclure le chemin d’accès complet. `AttachDbFileName` correspond aussi aux « extended properties » et aux clés « initial file name » au sein d’un <xref:System.Data.SqlClient.SqlConnection> chaîne de connexion.  
   
 -   La chaîne de substitution `|DataDirectory|` placée entre deux barres verticales fait référence au répertoire des données de l'application qui ouvre la connexion et fournit un chemin d'accès relatif à l'emplacement des fichiers journaux et de base de données .mdf et .ldf. Si vous souhaitez placer ces fichiers ailleurs, vous devez indiquer le chemin d’accès complet des fichiers.  
   
@@ -58,12 +58,12 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Vous pouvez également utiliser les propriétés <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> et <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> pour créer une chaîne de connexion au moment de l'exécution.  
+>  Vous pouvez également utiliser le <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> et <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propriétés pour générer une chaîne de connexion au moment de l’exécution.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>À l’aide de la &#124;DataDirectory&#124; chaîne de Substitution  
- `AttachDbFileName` a été étendu dans ADO.NET 2.0 avec l'introduction de la chaîne de substitution `|DataDirectory|` (dans les symboles de barre verticale). `DataDirectory` est utilisé conjointement à `AttachDbFileName` pour indiquer un chemin d'accès relatif à un fichier de données, ce qui permet aux développeurs de créer des chaînes de connexion basées sur un chemin d'accès relatif à la source de données au lieu de devoir spécifier un chemin d'accès complet.  
+ `AttachDbFileName` a été étendu dans ADO.NET 2.0 avec l’introduction de la `|DataDirectory|` (placée entre barres verticales) chaîne de substitution. `DataDirectory` est utilisé conjointement avec `AttachDbFileName` pour indiquer un chemin relatif vers un fichier de données, ce qui permet aux développeurs de créer des chaînes de connexion qui sont basées sur un chemin d’accès relatif à la source de données au lieu d’être requis pour spécifier un chemin d’accès complet.  
   
- L'emplacement physique que désigne `DataDirectory` varie en fonction du type d'application. Dans cet exemple, le fichier Northwind.mdf à joindre se trouve dans le dossier \app_data de l'application.  
+ L'emplacement physique que désigne `DataDirectory` varie en fonction du type d'application. Dans cet exemple, le fichier Northwind.mdf à joindre se trouve dans le dossier \app_data de l’application.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -72,12 +72,12 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
- Lorsque `DataDirectory` est utilisé, le chemin d'accès du fichier résultant ne peut pas se trouver plus haut dans la structure des répertoires que le répertoire vers lequel pointe la chaîne de substitution. Par exemple, si le `DataDirectory` complètement étendu est C:\AppDirectory\app_data, la chaîne de connexion dans l'exemple ci-dessus fonctionne car elle est située sous c:\AppDirectory. Cependant, si vous tentez de spécifier `DataDirectory` sous la forme de `|DataDirectory|\..\data`, il en résulte une erreur car \data n'est pas un sous-répertoire de \AppDirectory.  
+ Lorsque `DataDirectory` est utilisé, le chemin d’accès du fichier résultant ne peut pas se trouver plus haut dans la structure des répertoires que le répertoire vers lequel pointe la chaîne de substitution. Par exemple, si le `DataDirectory` complètement étendu est C:\AppDirectory\app_data, la chaîne de connexion dans l'exemple ci-dessus fonctionne car elle est située sous c:\AppDirectory. Cependant, si vous tentez de spécifier `DataDirectory` sous la forme de `|DataDirectory|\..\data`, il en résulte une erreur car \data n'est pas un sous-répertoire de \AppDirectory.  
   
  Si la chaîne de connexion a une chaîne de substitution dont la mise en forme est incorrecte, une exception <xref:System.ArgumentException> sera levée.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> résout les chaînes de substitution en chemins d'accès complets sur le système de fichiers de l'ordinateur local. Par conséquent, les noms de chemin d'accès de serveur distant, HTTP et UNC ne sont pas pris en charge. Une exception est levée si la connexion est ouverte lorsque le serveur n'est pas situé sur l'ordinateur local.  
+>  <xref:System.Data.SqlClient> résout les chaînes de substitution en chemins d’accès complets sur le système de fichiers d’ordinateur local. Par conséquent, les noms de chemin d’accès de serveur distant, HTTP et UNC ne sont pas pris en charge. Une exception est levée si la connexion est ouverte lorsque le serveur n'est pas situé sur l'ordinateur local.  
   
  Lorsque <xref:System.Data.SqlClient.SqlConnection> est ouvert, il est redirigé depuis l'instance SQL Server Express par défaut vers une instance initiée au moment de l'exécution et qui s'exécute sous le compte de l'appelant.  
   
@@ -146,11 +146,12 @@ private static void OpenSqlConnection()
   
 -   Toute application mono-utilisateur où le partage des données n'est pas requis.  
   
--   Déploiement ClickOnce. Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement de ClickOnce pour les Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+-   Déploiement ClickOnce Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement de ClickOnce pour les Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 -   Hébergement ASP.NET dédié à l'aide de l'authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L'application se connecte à l'aide du compte Windows ASPNET, et non à l'aide de l'emprunt d'identité. Les instances utilisateur ne doivent pas être utilisées dans les scénarios d'hébergement partagés ou tiers dans lesquels toutes les applications doivent partager la même instance utilisateur et ne plus être indépendantes les unes des autres.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Connexion à une source de données](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
