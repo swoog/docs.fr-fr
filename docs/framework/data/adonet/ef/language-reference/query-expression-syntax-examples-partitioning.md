@@ -1,40 +1,41 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Partitionnement'
+title: 'Exemples de syntaxe d’expression de requête : Partitionnement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: c8bfe57e6f49f382885507f7aa7093eff7720c2c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e205a50b70a29d056af23ba64eb630b50e304ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165280"
 ---
-# <a name="query-expression-syntax-examples-partitioning"></a><span data-ttu-id="eea12-102">Exemples de syntaxe d’Expression de requête : Partitionnement</span><span class="sxs-lookup"><span data-stu-id="eea12-102">Query Expression Syntax Examples: Partitioning</span></span>
-<span data-ttu-id="eea12-103">Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête.</span><span class="sxs-lookup"><span data-stu-id="eea12-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="eea12-104">Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="eea12-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-partitioning"></a><span data-ttu-id="9c029-102">Exemples de syntaxe d’expression de requête : Partitionnement</span><span class="sxs-lookup"><span data-stu-id="9c029-102">Query Expression Syntax Examples: Partitioning</span></span>
+<span data-ttu-id="9c029-103">Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête.</span><span class="sxs-lookup"><span data-stu-id="9c029-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="9c029-104">Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="9c029-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="eea12-105">Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :</span><span class="sxs-lookup"><span data-stu-id="eea12-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="9c029-105">Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :</span><span class="sxs-lookup"><span data-stu-id="9c029-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="skip"></a><span data-ttu-id="eea12-106">Ignorer</span><span class="sxs-lookup"><span data-stu-id="eea12-106">Skip</span></span>  
+## <a name="skip"></a><span data-ttu-id="9c029-106">Ignorer</span><span class="sxs-lookup"><span data-stu-id="9c029-106">Skip</span></span>  
   
-### <a name="example"></a><span data-ttu-id="eea12-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="eea12-107">Example</span></span>  
- <span data-ttu-id="eea12-108">L'exemple suivant utilise la méthode <xref:System.Linq.Enumerable.Skip%2A> pour obtenir toutes les adresses de Seattle, à l'exception des deux premières.</span><span class="sxs-lookup"><span data-stu-id="eea12-108">The following example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="9c029-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="9c029-107">Example</span></span>  
+ <span data-ttu-id="9c029-108">L'exemple suivant utilise la méthode <xref:System.Linq.Enumerable.Skip%2A> pour obtenir toutes les adresses de Seattle, à l'exception des deux premières.</span><span class="sxs-lookup"><span data-stu-id="9c029-108">The following example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
   
  [!code-csharp[DP L2E Examples#SkipNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#skipnested)]
  [!code-vb[DP L2E Examples#SkipNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#skipnested)]  
   
-## <a name="take"></a><span data-ttu-id="eea12-109">Take</span><span class="sxs-lookup"><span data-stu-id="eea12-109">Take</span></span>  
+## <a name="take"></a><span data-ttu-id="9c029-109">Take</span><span class="sxs-lookup"><span data-stu-id="9c029-109">Take</span></span>  
   
-### <a name="example"></a><span data-ttu-id="eea12-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="eea12-110">Example</span></span>  
- <span data-ttu-id="eea12-111">L'exemple suivant utilise la méthode <xref:System.Linq.Enumerable.Take%2A> pour obtenir les trois premières adresses de Seattle.</span><span class="sxs-lookup"><span data-stu-id="eea12-111">The following example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="9c029-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="9c029-110">Example</span></span>  
+ <span data-ttu-id="9c029-111">L'exemple suivant utilise la méthode <xref:System.Linq.Enumerable.Take%2A> pour obtenir les trois premières adresses de Seattle.</span><span class="sxs-lookup"><span data-stu-id="9c029-111">The following example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
   
  [!code-csharp[DP L2E Examples#TakeNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#takenested)]
  [!code-vb[DP L2E Examples#TakeNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#takenested)]  
   
-## <a name="see-also"></a><span data-ttu-id="eea12-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="eea12-112">See also</span></span>
-- [<span data-ttu-id="eea12-113">Requêtes dans LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="eea12-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="9c029-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9c029-112">See also</span></span>
+
+- [<span data-ttu-id="9c029-113">Requêtes dans LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="9c029-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

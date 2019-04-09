@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135575"
 ---
-# <a name="icordebugremote-interface"></a><span data-ttu-id="2ca5b-102">ICorDebugRemote, interface</span><span class="sxs-lookup"><span data-stu-id="2ca5b-102">ICorDebugRemote Interface</span></span>
-<span data-ttu-id="2ca5b-103">Fournit la possibilité de lancer ou de joindre un débogueur managé à un processus distant cible.</span><span class="sxs-lookup"><span data-stu-id="2ca5b-103">Provides the ability to launch or attach a managed debugger to a remote target process.</span></span>  
+# <a name="icordebugremote-interface"></a><span data-ttu-id="928b9-102">ICorDebugRemote, interface</span><span class="sxs-lookup"><span data-stu-id="928b9-102">ICorDebugRemote Interface</span></span>
+<span data-ttu-id="928b9-103">Fournit la possibilité de lancer ou de joindre un débogueur managé à un processus distant cible.</span><span class="sxs-lookup"><span data-stu-id="928b9-103">Provides the ability to launch or attach a managed debugger to a remote target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ca5b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2ca5b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="928b9-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="928b9-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugRemote : IUnknown  
@@ -58,27 +58,28 @@ interface ICorDebugRemote : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="2ca5b-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="2ca5b-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="928b9-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="928b9-105">Methods</span></span>  
   
-|<span data-ttu-id="2ca5b-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="2ca5b-106">Method</span></span>|<span data-ttu-id="2ca5b-107">Description</span><span class="sxs-lookup"><span data-stu-id="2ca5b-107">Description</span></span>|  
+|<span data-ttu-id="928b9-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="928b9-106">Method</span></span>|<span data-ttu-id="928b9-107">Description</span><span class="sxs-lookup"><span data-stu-id="928b9-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2ca5b-108">ICorDebugRemote::CreateProcessEx, méthode</span><span class="sxs-lookup"><span data-stu-id="2ca5b-108">ICorDebugRemote::CreateProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|<span data-ttu-id="2ca5b-109">Crée un processus sur un ordinateur distant pour le débogage managé.</span><span class="sxs-lookup"><span data-stu-id="2ca5b-109">Creates a process on a remote machine for managed debugging.</span></span>|  
-|[<span data-ttu-id="2ca5b-110">ICorDebugRemote::DebugActiveProcessEx, méthode</span><span class="sxs-lookup"><span data-stu-id="2ca5b-110">ICorDebugRemote::DebugActiveProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|<span data-ttu-id="2ca5b-111">Lance un processus sur un ordinateur distant sous le débogueur.</span><span class="sxs-lookup"><span data-stu-id="2ca5b-111">Launches a process on a remote machine under the debugger.</span></span>|  
+|[<span data-ttu-id="928b9-108">ICorDebugRemote::CreateProcessEx, méthode</span><span class="sxs-lookup"><span data-stu-id="928b9-108">ICorDebugRemote::CreateProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|<span data-ttu-id="928b9-109">Crée un processus sur un ordinateur distant pour le débogage managé.</span><span class="sxs-lookup"><span data-stu-id="928b9-109">Creates a process on a remote machine for managed debugging.</span></span>|  
+|[<span data-ttu-id="928b9-110">ICorDebugRemote::DebugActiveProcessEx, méthode</span><span class="sxs-lookup"><span data-stu-id="928b9-110">ICorDebugRemote::DebugActiveProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|<span data-ttu-id="928b9-111">Lance un processus sur un ordinateur distant sous le débogueur.</span><span class="sxs-lookup"><span data-stu-id="928b9-111">Launches a process on a remote machine under the debugger.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2ca5b-112">Notes</span><span class="sxs-lookup"><span data-stu-id="2ca5b-112">Remarks</span></span>  
- <span data-ttu-id="2ca5b-113">Actuellement, cette fonctionnalité est prise en charge uniquement pour le débogage d’une cible de l’application basée sur Silverlight qui s’exécute sur un ordinateur Macintosh distant.</span><span class="sxs-lookup"><span data-stu-id="2ca5b-113">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh machine.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="928b9-112">Notes</span><span class="sxs-lookup"><span data-stu-id="928b9-112">Remarks</span></span>  
+ <span data-ttu-id="928b9-113">Actuellement, cette fonctionnalité est prise en charge uniquement pour le débogage d’une cible de l’application basée sur Silverlight qui s’exécute sur un ordinateur Macintosh distant.</span><span class="sxs-lookup"><span data-stu-id="928b9-113">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh machine.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2ca5b-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="2ca5b-114">Requirements</span></span>  
- <span data-ttu-id="2ca5b-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ca5b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="928b9-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="928b9-114">Requirements</span></span>  
+ <span data-ttu-id="928b9-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="928b9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ca5b-116">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ca5b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="928b9-116">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="928b9-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2ca5b-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ca5b-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="928b9-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="928b9-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2ca5b-118">**Versions du .NET framework :** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="2ca5b-118">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="928b9-118">**Versions du .NET framework :** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="928b9-118">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ca5b-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2ca5b-119">See also</span></span>
-- [<span data-ttu-id="2ca5b-120">ICorDebugRemoteTarget, interface</span><span class="sxs-lookup"><span data-stu-id="2ca5b-120">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [<span data-ttu-id="2ca5b-121">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="2ca5b-121">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="928b9-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="928b9-119">See also</span></span>
 
-- [<span data-ttu-id="2ca5b-122">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="2ca5b-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="928b9-120">ICorDebugRemoteTarget, interface</span><span class="sxs-lookup"><span data-stu-id="928b9-120">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="928b9-121">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="928b9-121">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="928b9-122">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="928b9-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

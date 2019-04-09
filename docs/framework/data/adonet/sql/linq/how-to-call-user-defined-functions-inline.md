@@ -1,33 +1,33 @@
 ---
-title: 'Procédure : Appeler des fonctions définies par l’utilisateur Inline'
+title: 'Procédure : Appeler des fonctions inline définies par l’utilisateur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163707"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="9eadf-102">Procédure : Appeler des fonctions définies par l’utilisateur Inline</span><span class="sxs-lookup"><span data-stu-id="9eadf-102">How to: Call User-Defined Functions Inline</span></span>
-<span data-ttu-id="9eadf-103">Bien que vous puissiez appeler des fonctions inline définies par l'utilisateur, les fonctions incluses dans une requête dont l'exécution est différée ne sont pas exécutées tant que la requête n'est pas exécutée.</span><span class="sxs-lookup"><span data-stu-id="9eadf-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="9eadf-104">Pour plus d’informations, consultez [Introduction aux requêtes LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="9eadf-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
+# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="0f0d7-102">Procédure : Appeler des fonctions inline définies par l’utilisateur</span><span class="sxs-lookup"><span data-stu-id="0f0d7-102">How to: Call User-Defined Functions Inline</span></span>
+<span data-ttu-id="0f0d7-103">Bien que vous puissiez appeler des fonctions inline définies par l'utilisateur, les fonctions incluses dans une requête dont l'exécution est différée ne sont pas exécutées tant que la requête n'est pas exécutée.</span><span class="sxs-lookup"><span data-stu-id="0f0d7-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="0f0d7-104">Pour plus d’informations, consultez [Introduction aux requêtes LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="0f0d7-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- <span data-ttu-id="9eadf-105">Lorsque vous appelez la même fonction à l'extérieur d'une requête, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crée une requête simple à partir de l'expression d'appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="9eadf-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="9eadf-106">La syntaxe SQL (le paramètre `@p0` est lié à la constante passée) se présente comme suit :</span><span class="sxs-lookup"><span data-stu-id="9eadf-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
+ <span data-ttu-id="0f0d7-105">Lorsque vous appelez la même fonction à l'extérieur d'une requête, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crée une requête simple à partir de l'expression d'appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="0f0d7-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="0f0d7-106">La syntaxe SQL (le paramètre `@p0` est lié à la constante passée) se présente comme suit :</span><span class="sxs-lookup"><span data-stu-id="0f0d7-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
   
 ```  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="9eadf-107">crée les éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="9eadf-107">creates the following:</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="0f0d7-107">crée les éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="0f0d7-107">creates the following:</span></span>  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="9eadf-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="9eadf-108">Example</span></span>  
- <span data-ttu-id="9eadf-109">Dans l’exemple suivant [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requête, vous pouvez consulter un appel inline à la méthode de fonction définie par l’utilisateur généré `ReverseCustName`.</span><span class="sxs-lookup"><span data-stu-id="9eadf-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="9eadf-110">La fonction n'est pas exécutée immédiatement, car l'exécution de la requête est différée.</span><span class="sxs-lookup"><span data-stu-id="9eadf-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="9eadf-111">Le SQL généré pour cette requête se traduit en un appel à la fonction définie par l'utilisateur dans la base de données (consultez le code SQL suivant la requête).</span><span class="sxs-lookup"><span data-stu-id="9eadf-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
+## <a name="example"></a><span data-ttu-id="0f0d7-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="0f0d7-108">Example</span></span>  
+ <span data-ttu-id="0f0d7-109">Dans l’exemple suivant [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requête, vous pouvez consulter un appel inline à la méthode de fonction définie par l’utilisateur généré `ReverseCustName`.</span><span class="sxs-lookup"><span data-stu-id="0f0d7-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="0f0d7-110">La fonction n'est pas exécutée immédiatement, car l'exécution de la requête est différée.</span><span class="sxs-lookup"><span data-stu-id="0f0d7-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="0f0d7-111">Le SQL généré pour cette requête se traduit en un appel à la fonction définie par l'utilisateur dans la base de données (consultez le code SQL suivant la requête).</span><span class="sxs-lookup"><span data-stu-id="0f0d7-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -38,5 +38,6 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9eadf-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9eadf-112">See also</span></span>
-- [<span data-ttu-id="9eadf-113">Fonctions définies par l’utilisateur</span><span class="sxs-lookup"><span data-stu-id="9eadf-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="0f0d7-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0f0d7-112">See also</span></span>
+
+- [<span data-ttu-id="0f0d7-113">Fonctions définies par l'utilisateur</span><span class="sxs-lookup"><span data-stu-id="0f0d7-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

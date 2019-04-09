@@ -16,30 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134184"
 ---
-# <a name="iappdomainbinding-interface"></a><span data-ttu-id="6d388-102">IAppDomainBinding, interface</span><span class="sxs-lookup"><span data-stu-id="6d388-102">IAppDomainBinding Interface</span></span>
-<span data-ttu-id="6d388-103">Fournit une méthode qui est appelée par le common language runtime (CLR) pour notifier l’application hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="6d388-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
+# <a name="iappdomainbinding-interface"></a><span data-ttu-id="cf85a-102">IAppDomainBinding, interface</span><span class="sxs-lookup"><span data-stu-id="cf85a-102">IAppDomainBinding Interface</span></span>
+<span data-ttu-id="cf85a-103">Fournit une méthode qui est appelée par le common language runtime (CLR) pour notifier l’application hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="cf85a-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6d388-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="6d388-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="cf85a-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="cf85a-104">Methods</span></span>  
   
-|<span data-ttu-id="6d388-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="6d388-105">Method</span></span>|<span data-ttu-id="6d388-106">Description</span><span class="sxs-lookup"><span data-stu-id="6d388-106">Description</span></span>|  
+|<span data-ttu-id="cf85a-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="cf85a-105">Method</span></span>|<span data-ttu-id="cf85a-106">Description</span><span class="sxs-lookup"><span data-stu-id="cf85a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6d388-107">OnAppDomain, méthode</span><span class="sxs-lookup"><span data-stu-id="6d388-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="6d388-108">Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="6d388-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
+|[<span data-ttu-id="cf85a-107">OnAppDomain, méthode</span><span class="sxs-lookup"><span data-stu-id="cf85a-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="cf85a-108">Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="cf85a-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6d388-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6d388-109">Requirements</span></span>  
- <span data-ttu-id="6d388-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d388-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf85a-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="cf85a-109">Requirements</span></span>  
+ <span data-ttu-id="cf85a-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf85a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d388-111">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6d388-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="cf85a-111">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cf85a-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6d388-112">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6d388-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="cf85a-112">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cf85a-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6d388-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d388-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="cf85a-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="cf85a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6d388-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6d388-114">See also</span></span>
-- [<span data-ttu-id="6d388-115">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="6d388-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="cf85a-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cf85a-114">See also</span></span>
+
+- [<span data-ttu-id="cf85a-115">Interfaces d'hébergement</span><span class="sxs-lookup"><span data-stu-id="cf85a-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

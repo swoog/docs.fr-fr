@@ -1,53 +1,54 @@
 ---
-title: 'Procédure : Spécifier une liaison de Service dans le Code'
+title: 'Procédure : spécifier une liaison de service dans le code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162356"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a><span data-ttu-id="c6fb7-102">Procédure : Spécifier une liaison de Service dans le Code</span><span class="sxs-lookup"><span data-stu-id="c6fb7-102">How to: Specify a Service Binding in Code</span></span>
-<span data-ttu-id="c6fb7-103">Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est défini dans du code, où il est spécifié que le service doit utiliser la classe <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-103">In this example, an `ICalculator` contract is defined for a calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is defined in code, where it is specified that the service must use the <xref:System.ServiceModel.BasicHttpBinding> class.</span></span>  
+# <a name="how-to-specify-a-service-binding-in-code"></a><span data-ttu-id="9c6f2-102">Procédure : spécifier une liaison de service dans le code</span><span class="sxs-lookup"><span data-stu-id="9c6f2-102">How to: Specify a Service Binding in Code</span></span>
+<span data-ttu-id="9c6f2-103">Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est défini dans du code, où il est spécifié que le service doit utiliser la classe <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-103">In this example, an `ICalculator` contract is defined for a calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is defined in code, where it is specified that the service must use the <xref:System.ServiceModel.BasicHttpBinding> class.</span></span>  
   
- <span data-ttu-id="c6fb7-104">Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d'adresse dans la configuration plutôt que de manière impérative dans le code.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-104">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="c6fb7-105">La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-105">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="c6fb7-106">Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-106">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
+ <span data-ttu-id="9c6f2-104">Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d'adresse dans la configuration plutôt que de manière impérative dans le code.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-104">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="9c6f2-105">La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-105">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="9c6f2-106">Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-106">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
- <span data-ttu-id="c6fb7-107">Pour obtenir une description de la configuration de ce service à l’aide des éléments de configuration au lieu de code, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="c6fb7-107">For a description of how to configure this service using configuration elements instead of code, see [How to: Specify a Service Binding in Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span></span>  
+ <span data-ttu-id="9c6f2-107">Pour obtenir une description de la configuration de ce service à l’aide des éléments de configuration au lieu de code, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="9c6f2-107">For a description of how to configure this service using configuration elements instead of code, see [How to: Specify a Service Binding in Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span></span>  
   
-### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a><span data-ttu-id="c6fb7-108">Pour spécifier l'utilisation de BasicHttpBinding dans du code pour le service</span><span class="sxs-lookup"><span data-stu-id="c6fb7-108">To specify in code to use the BasicHttpBinding for the service</span></span>  
+### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a><span data-ttu-id="9c6f2-108">Pour spécifier l'utilisation de BasicHttpBinding dans du code pour le service</span><span class="sxs-lookup"><span data-stu-id="9c6f2-108">To specify in code to use the BasicHttpBinding for the service</span></span>  
   
-1.  <span data-ttu-id="c6fb7-109">Définissez un contrat de service pour le type de service.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-109">Define a service contract for the type of service.</span></span>  
+1.  <span data-ttu-id="9c6f2-109">Définissez un contrat de service pour le type de service.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-109">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  <span data-ttu-id="c6fb7-110">Implémentez le contrat de service dans une classe de service.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-110">Implement the service contract in a service class.</span></span>  
+2.  <span data-ttu-id="9c6f2-110">Implémentez le contrat de service dans une classe de service.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-110">Implement the service contract in a service class.</span></span>  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  <span data-ttu-id="c6fb7-111">Dans l’application d’hébergement, créez l’adresse de base pour le service et la liaison à utiliser avec le service.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-111">In the hosting application, create the base address for the service and the binding to use with the service.</span></span>  
+3.  <span data-ttu-id="9c6f2-111">Dans l’application d’hébergement, créez l’adresse de base pour le service et la liaison à utiliser avec le service.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-111">In the hosting application, create the base address for the service and the binding to use with the service.</span></span>  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  <span data-ttu-id="c6fb7-112">Créez l'hôte pour le service, ajoutez le point de terminaison, puis ouvrez l'hôte.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-112">Create the host for the service, add the endpoint, and then open the host.</span></span>  
+4.  <span data-ttu-id="9c6f2-112">Créez l'hôte pour le service, ajoutez le point de terminaison, puis ouvrez l'hôte.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-112">Create the host for the service, add the endpoint, and then open the host.</span></span>  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a><span data-ttu-id="c6fb7-113">Pour modifier les valeurs par défaut des propriétés de liaison</span><span class="sxs-lookup"><span data-stu-id="c6fb7-113">To modify the default values of the binding properties</span></span>  
+### <a name="to-modify-the-default-values-of-the-binding-properties"></a><span data-ttu-id="9c6f2-113">Pour modifier les valeurs par défaut des propriétés de liaison</span><span class="sxs-lookup"><span data-stu-id="9c6f2-113">To modify the default values of the binding properties</span></span>  
   
-1.  <span data-ttu-id="c6fb7-114">Pour modifier l’une des valeurs de propriété par défaut de la classe <xref:System.ServiceModel.BasicHttpBinding>, affectez la nouvelle valeur de propriété sur la liaison avant de créer l’hôte.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-114">To modify one of the default property values of the <xref:System.ServiceModel.BasicHttpBinding> class, set the property value on the binding to the new value before creating the host.</span></span> <span data-ttu-id="c6fb7-115">Par exemple, pour modifier les valeurs par défaut de délai d'attente d'ouverture et de fermeture de 1 minute à 2 minutes, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="c6fb7-115">For example, to change the default open and close timeout values of 1 minute to 2 minutes, use the following.</span></span>  
+1.  <span data-ttu-id="9c6f2-114">Pour modifier l’une des valeurs de propriété par défaut de la classe <xref:System.ServiceModel.BasicHttpBinding>, affectez la nouvelle valeur de propriété sur la liaison avant de créer l’hôte.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-114">To modify one of the default property values of the <xref:System.ServiceModel.BasicHttpBinding> class, set the property value on the binding to the new value before creating the host.</span></span> <span data-ttu-id="9c6f2-115">Par exemple, pour modifier les valeurs par défaut de délai d'attente d'ouverture et de fermeture de 1 minute à 2 minutes, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="9c6f2-115">For example, to change the default open and close timeout values of 1 minute to 2 minutes, use the following.</span></span>  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="c6fb7-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c6fb7-116">See also</span></span>
-- [<span data-ttu-id="c6fb7-117">Utilisation de liaisons pour configurer des services et des clients</span><span class="sxs-lookup"><span data-stu-id="c6fb7-117">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="c6fb7-118">Spécification d’une adresse de point de terminaison</span><span class="sxs-lookup"><span data-stu-id="c6fb7-118">Specifying an Endpoint Address</span></span>](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a><span data-ttu-id="9c6f2-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9c6f2-116">See also</span></span>
+
+- [<span data-ttu-id="9c6f2-117">Utilisation de liaisons pour configurer des services et des clients</span><span class="sxs-lookup"><span data-stu-id="9c6f2-117">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="9c6f2-118">Spécification d'une adresse de point de terminaison</span><span class="sxs-lookup"><span data-stu-id="9c6f2-118">Specifying an Endpoint Address</span></span>](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

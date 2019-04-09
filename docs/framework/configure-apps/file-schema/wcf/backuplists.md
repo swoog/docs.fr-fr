@@ -2,21 +2,21 @@
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: 6ac7ff19c76097cb54e7b77db21cad50b49513c0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6e44dbe3c0966c6d243db343b9f9b0dec2480cb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134444"
 ---
-# <a name="backuplists"></a><span data-ttu-id="c05c5-101">\<backupLists></span><span class="sxs-lookup"><span data-stu-id="c05c5-101">\<backupLists></span></span>
-<span data-ttu-id="c05c5-102">Représente une section de configuration pour la définition d'un ensemble de services de sauvegarde utilisés dans la gestion des erreurs.</span><span class="sxs-lookup"><span data-stu-id="c05c5-102">Represents a configuration section for defining a set of backup services used in error handling.</span></span> <span data-ttu-id="c05c5-103">Chaque élément enfant est une liste de sauvegarde qui énumère un ensemble de points de terminaison que vous souhaitez que le Service de routage à utiliser au cas où le point de terminaison principal n’est pas accessible.</span><span class="sxs-lookup"><span data-stu-id="c05c5-103">Each child element is a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="c05c5-104">Si le premier point de terminaison de la liste est inactif, le service de routage bascule automatiquement sur le suivant dans la liste.</span><span class="sxs-lookup"><span data-stu-id="c05c5-104">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="c05c5-105">Vous disposez ainsi d’une méthode rapide pour renforcer la fiabilité de votre application sans avoir à apprendre à votre application cliente à gérer des modèles complexes ou à rechercher l’emplacement de tous vos services déployés.</span><span class="sxs-lookup"><span data-stu-id="c05c5-105">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
+# <a name="backuplists"></a><span data-ttu-id="e7373-101">\<backupLists></span><span class="sxs-lookup"><span data-stu-id="e7373-101">\<backupLists></span></span>
+<span data-ttu-id="e7373-102">Représente une section de configuration pour la définition d'un ensemble de services de sauvegarde utilisés dans la gestion des erreurs.</span><span class="sxs-lookup"><span data-stu-id="e7373-102">Represents a configuration section for defining a set of backup services used in error handling.</span></span> <span data-ttu-id="e7373-103">Chaque élément enfant est une liste de sauvegarde qui énumère un ensemble de points de terminaison que vous souhaitez que le Service de routage à utiliser au cas où le point de terminaison principal n’est pas accessible.</span><span class="sxs-lookup"><span data-stu-id="e7373-103">Each child element is a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="e7373-104">Si le premier point de terminaison de la liste est inactif, le service de routage bascule automatiquement sur le suivant dans la liste.</span><span class="sxs-lookup"><span data-stu-id="e7373-104">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="e7373-105">Vous disposez ainsi d’une méthode rapide pour renforcer la fiabilité de votre application sans avoir à apprendre à votre application cliente à gérer des modèles complexes ou à rechercher l’emplacement de tous vos services déployés.</span><span class="sxs-lookup"><span data-stu-id="e7373-105">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
   
- <span data-ttu-id="c05c5-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="c05c5-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="c05c5-107">\<routing></span><span class="sxs-lookup"><span data-stu-id="c05c5-107">\<routing></span></span>  
-<span data-ttu-id="c05c5-108">\<backupLists></span><span class="sxs-lookup"><span data-stu-id="c05c5-108">\<backupLists></span></span>  
+ <span data-ttu-id="e7373-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e7373-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="e7373-107">\<routing></span><span class="sxs-lookup"><span data-stu-id="e7373-107">\<routing></span></span>  
+<span data-ttu-id="e7373-108">\<backupLists></span><span class="sxs-lookup"><span data-stu-id="e7373-108">\<backupLists></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c05c5-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c05c5-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7373-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e7373-109">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -28,23 +28,24 @@ ms.locfileid: "55280746"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c05c5-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="c05c5-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c05c5-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="c05c5-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e7373-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="e7373-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="e7373-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="e7373-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c05c5-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="c05c5-112">Attributes</span></span>  
- <span data-ttu-id="c05c5-113">Aucun.</span><span class="sxs-lookup"><span data-stu-id="c05c5-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e7373-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="e7373-112">Attributes</span></span>  
+ <span data-ttu-id="e7373-113">Aucun.</span><span class="sxs-lookup"><span data-stu-id="e7373-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="c05c5-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="c05c5-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e7373-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="e7373-114">Child Elements</span></span>  
   
-|<span data-ttu-id="c05c5-115">Élément</span><span class="sxs-lookup"><span data-stu-id="c05c5-115">Element</span></span>|<span data-ttu-id="c05c5-116">Description</span><span class="sxs-lookup"><span data-stu-id="c05c5-116">Description</span></span>|  
+|<span data-ttu-id="e7373-115">Élément</span><span class="sxs-lookup"><span data-stu-id="e7373-115">Element</span></span>|<span data-ttu-id="e7373-116">Description</span><span class="sxs-lookup"><span data-stu-id="e7373-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c05c5-117">\<filter></span><span class="sxs-lookup"><span data-stu-id="c05c5-117">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|<span data-ttu-id="c05c5-118">Contient une liste de points de terminaison que vous souhaitez que le Service de routage à utiliser au cas où le point de terminaison principal n’est pas accessible.</span><span class="sxs-lookup"><span data-stu-id="c05c5-118">Contains a list of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="c05c5-119">.</span><span class="sxs-lookup"><span data-stu-id="c05c5-119">.</span></span>|  
+|[<span data-ttu-id="e7373-117">\<filter></span><span class="sxs-lookup"><span data-stu-id="e7373-117">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|<span data-ttu-id="e7373-118">Contient une liste de points de terminaison que vous souhaitez que le Service de routage à utiliser au cas où le point de terminaison principal n’est pas accessible.</span><span class="sxs-lookup"><span data-stu-id="e7373-118">Contains a list of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="e7373-119">.</span><span class="sxs-lookup"><span data-stu-id="e7373-119">.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="c05c5-120">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="c05c5-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e7373-120">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="e7373-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="c05c5-121">Élément</span><span class="sxs-lookup"><span data-stu-id="c05c5-121">Element</span></span>|<span data-ttu-id="c05c5-122">Description</span><span class="sxs-lookup"><span data-stu-id="c05c5-122">Description</span></span>|  
+|<span data-ttu-id="e7373-121">Élément</span><span class="sxs-lookup"><span data-stu-id="e7373-121">Element</span></span>|<span data-ttu-id="e7373-122">Description</span><span class="sxs-lookup"><span data-stu-id="e7373-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c05c5-123">\<routing></span><span class="sxs-lookup"><span data-stu-id="c05c5-123">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="c05c5-124">Représente une section de configuration pour définir un ensemble de filtres de routage, déterminant le type de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> à utiliser lors de l’évaluation des messages entrants, ainsi que le routage des tables qui définissent les points de terminaison cible à envoyer des messages lorsqu’un filtre correspond.</span><span class="sxs-lookup"><span data-stu-id="c05c5-124">Represents a configuration section for defining a set of routing filters, which determine the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span>|  
+|[<span data-ttu-id="e7373-123">\<routing></span><span class="sxs-lookup"><span data-stu-id="e7373-123">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="e7373-124">Représente une section de configuration pour définir un ensemble de filtres de routage, déterminant le type de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> à utiliser lors de l’évaluation des messages entrants, ainsi que le routage des tables qui définissent les points de terminaison cible à envoyer des messages lorsqu’un filtre correspond.</span><span class="sxs-lookup"><span data-stu-id="e7373-124">Represents a configuration section for defining a set of routing filters, which determine the type of Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c05c5-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c05c5-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7373-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e7373-125">See also</span></span>
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

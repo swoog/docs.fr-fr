@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139072"
 ---
-# <a name="imetadataemitsave-method"></a><span data-ttu-id="a097d-102">IMetaDataEmit::Save, méthode</span><span class="sxs-lookup"><span data-stu-id="a097d-102">IMetaDataEmit::Save Method</span></span>
-<span data-ttu-id="a097d-103">Enregistre toutes les métadonnées dans la portée actuelle dans le fichier à l’adresse spécifiée.</span><span class="sxs-lookup"><span data-stu-id="a097d-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
+# <a name="imetadataemitsave-method"></a><span data-ttu-id="245a5-102">IMetaDataEmit::Save, méthode</span><span class="sxs-lookup"><span data-stu-id="245a5-102">IMetaDataEmit::Save Method</span></span>
+<span data-ttu-id="245a5-103">Enregistre toutes les métadonnées dans la portée actuelle dans le fichier à l’adresse spécifiée.</span><span class="sxs-lookup"><span data-stu-id="245a5-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a097d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a097d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="245a5-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="245a5-104">Syntax</span></span>  
   
 ```  
 HRESULT Save (   
@@ -36,22 +36,23 @@ HRESULT Save (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a097d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a097d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="245a5-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="245a5-105">Parameters</span></span>  
  `wzFile`  
- <span data-ttu-id="a097d-106">[in] Le nom du fichier à enregistrer dans.</span><span class="sxs-lookup"><span data-stu-id="a097d-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="a097d-107">Si cette valeur est null, la copie en mémoire sera enregistrée dans le dernier emplacement qui a été utilisé.</span><span class="sxs-lookup"><span data-stu-id="a097d-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
+ <span data-ttu-id="245a5-106">[in] Le nom du fichier à enregistrer dans.</span><span class="sxs-lookup"><span data-stu-id="245a5-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="245a5-107">Si cette valeur est null, la copie en mémoire sera enregistrée dans le dernier emplacement qui a été utilisé.</span><span class="sxs-lookup"><span data-stu-id="245a5-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="a097d-108">[in] Réservée.</span><span class="sxs-lookup"><span data-stu-id="a097d-108">[in] Reserved.</span></span> <span data-ttu-id="a097d-109">Doit être égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="a097d-109">Must be zero.</span></span>  
+ <span data-ttu-id="245a5-108">[in] Réservée.</span><span class="sxs-lookup"><span data-stu-id="245a5-108">[in] Reserved.</span></span> <span data-ttu-id="245a5-109">Doit être égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="245a5-109">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a097d-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a097d-110">Requirements</span></span>  
- <span data-ttu-id="a097d-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a097d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="245a5-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="245a5-110">Requirements</span></span>  
+ <span data-ttu-id="245a5-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="245a5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a097d-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a097d-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="245a5-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="245a5-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a097d-113">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a097d-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="245a5-113">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="245a5-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a097d-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a097d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="245a5-114">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="245a5-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a097d-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a097d-115">See also</span></span>
-- [<span data-ttu-id="a097d-116">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="a097d-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a097d-117">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="a097d-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="245a5-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="245a5-115">See also</span></span>
+
+- [<span data-ttu-id="245a5-116">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="245a5-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="245a5-117">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="245a5-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
