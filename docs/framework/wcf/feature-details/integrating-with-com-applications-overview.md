@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087623"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM
 Windows Communication Foundation (WCF) fournit au développeur de code managé avec un environnement riche pour la création d’applications connectées. Toutefois, si vous avez beaucoup investi dans le code COM non managé et que vous ne souhaitez pas migrer, vous pouvez toujours intégrer les services Web WCF directement dans votre code existant à l’aide du moniker de service WCF. Le moniker de service peut être utilisé à partir d'une large gamme d'environnements de développement COM, tels qu'Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`address`|Adresse URL du service.|  
-|`binding`|Nom de la section de liaison à partir de la configuration d’application.|  
+|`binding`|Nom de la section de liaison à partir de la configuration d'application.|  
 |`bindingConfiguration`|Instance de liaison nommée à partir de la section de liaison nommée.|  
 |`contract`|Identificateur d'interface (IID) qui représente le contrat de service ou le nom de contrat (obtenu à partir de l'échange MEX).|  
 |`wsdl`|Document WSDL qui offre une autre définition pour le contrat.|  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 |`upnIdentity`|Identité de nom principal d'utilisateur (User Principal Name, UPN) à utiliser pour communiquer avec le service.|  
 |`dnsIdentity`|Identité DNS à utiliser pour communiquer avec le service.|  
 |`mexAddress`|Adresse URL du point de terminaison MEX du service.|  
-|`mexBinding`|Nom de section de liaison depuis la configuration d’application avec laquelle se connecter au point de terminaison MEX.|  
+|`mexBinding`|Nom de section de liaison depuis la configuration d'application avec laquelle se connecter au point de terminaison MEX.|  
 |`mexBindingConfiguration`|Instance de liaison nommée à partir de la section de liaison nommée avec laquelle se connecter au point de terminaison MEX.|  
 |`bindingNamespace`|Espace de noms du nom de section de liaison obtenu à partir de l’échange MEX récupéré.|  
 |`contractNamespace`|Espace de noms du contrat obtenu à partir de l'échange MEX récupéré.|  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Inscrire et configurer un Moniker de Service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Procédure : inscrire et configurer un moniker de service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

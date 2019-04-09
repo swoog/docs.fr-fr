@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087961"
 ---
 # <a name="vector-graphics-overview"></a>Vue d'ensemble des graphismes vectoriels
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dessine des lignes, rectangles et autres formes sur un système de coordonnées. Vous pouvez choisir parmi un éventail de systèmes de coordonnées, mais le système de coordonnées par défaut a l’origine dans le coin supérieur gauche avec l’axe des x pointant vers la droite et l’axe des y pointant vers le bas. L’unité de mesure dans le système de coordonnées par défaut est le pixel.  
@@ -57,7 +57,8 @@ ms.locfileid: "57720408"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir les Styles de ligne en alternance pour le contrôle de DataGridView Windows Forms à l’aide du Concepteur'
+title: 'Procédure : définir des styles de ligne alternée pour le contrôle DataGridView Windows Forms à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ledger-like formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 860028fc0c2ea7fd0e985ad97f6e38b32c45e6f8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072934"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : Définir les Styles de ligne en alternance pour le contrôle de DataGridView Windows Forms à l’aide du Concepteur
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : définir des styles de ligne alternée pour le contrôle DataGridView Windows Forms à l’aide du concepteur
 Données tabulaires sont souvent présentées dans un format de type livre comptable où les lignes en alternance ont différentes couleurs d’arrière-plan. Avec ce format, il est facile pour les utilisateurs de déterminer quelle cellule appartient à quelle ligne, en particulier dans les tableaux larges qui ont beaucoup de colonnes.  
   
  Avec le contrôle <xref:System.Windows.Forms.DataGridView>, vous pouvez spécifier des informations de style complètes pour les lignes en alternance. Vous pouvez utiliser des caractéristiques de style comme la couleur de premier plan et la police, en plus de la couleur d’arrière-plan, pour différencier les lignes en alternance. Pour plus d’informations, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
@@ -39,9 +39,10 @@ Données tabulaires sont souvent présentées dans un format de type livre compt
     >  Les cellules sont affichés à l’aide de styles hérités de plusieurs propriétés. Pour plus d’informations sur l’héritage de style, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Mises en forme et styles de base dans le contrôle DataGridView Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Utilisation du concepteur avec le contrôle DataGridView Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Créer un projet Application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procédure : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procédure : ajouter des contrôles à des Windows Forms](how-to-add-controls-to-windows-forms.md)

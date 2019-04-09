@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087896"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et de sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
@@ -55,7 +55,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
  **Fournisseur de réflexion**  
  Pour indiquer qu'une entité est une entrée de lien média, ajoutez l'objet <xref:System.Data.Services.Common.HasStreamAttribute> à la classe qui définit le type d'entité dans le fournisseur de réflexion.  
   
- **Fournisseur de services de données personnalisées**  
+ **Fournisseur de services de données personnalisé**  
  Lorsque vous utilisez des fournisseurs de services personnalisés, vous implémentez l'interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> pour définir les métadonnées pour votre service de données. Pour plus d’informations, consultez [fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Vous indiquez qu'un flux de ressources binaires appartient à <xref:System.Data.Services.Providers.ResourceType> en définissant la propriété <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> sur `true` sur le <xref:System.Data.Services.Providers.ResourceType> qui représente le type d'entité, qui est une entrée de lien média.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implémentation de l'interface IDataServiceStreamProvider  
@@ -81,18 +81,14 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Activation de flux binaires volumineux dans l'environnement d'hébergement  
  Lorsque vous créez un service de données dans une application Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) est utilisé pour fournir l'implémentation du protocole HTTP. Par défaut, WCF limite la taille des messages HTTP à 65 kilo-octets. Pour pouvoir transmettre en continu des données binaires volumineuses depuis et vers le service de données, vous devez également configurer l'application Web pour autoriser les fichiers binaires volumineux et utiliser des flux de données pour le transfert. Pour cela, ajoutez les éléments suivants dans l'élément `<configuration />` du fichier Web.config de l'application :  
-  
-  
-  
+
 > [!NOTE]
 >  Vous devez utiliser un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> mode de transfert pour vous assurer que les données binaires dans les messages de demande et de réponse sont transmis en continu et non mis en mémoire tampon par WCF.  
   
  Pour plus d’informations, consultez [de transfert des messages de diffusion en continu](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) et [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Par défaut, Internet Information Services (IIS) limite également la taille des demandes à 4 Mo. Pour activer votre service de données pour recevoir des flux supérieurs à 4 Mo lors de l’exécution sur IIS, vous devez également définir le `maxRequestLength` attribut de la [httpRuntime, élément (schéma des paramètres ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) dans la `<system.web />` section de configuration, en tant que indiqué dans l’exemple suivant :  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Utilisation de flux de données en continu dans une application cliente  
  La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de récupérer et de mettre à jour ces ressources exposées sous la forme de flux binaires sur le client. Pour plus d’informations, consultez [utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
  Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
 - [Utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

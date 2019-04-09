@@ -5,20 +5,18 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079823"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Vue d'ensemble des fonctionnalités bidirectionnelles dans WPF
 Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possède de nombreuses fonctionnalités qui prennent en charge le développement rapide de contenu bidirectionnel, par exemple, mixte de gauche à droite et de droite à gauche des données dans le même document. En même temps, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crée une excellente expérience pour les utilisateurs qui ont besoin de fonctionnalités bidirectionnelles tels que les utilisateurs de langue arabe et hébreu.  
   
  Les sections suivantes expliquent de nombreuses fonctionnalités bidirectionnelles, accompagnées d’exemples qui illustrent comment réaliser le meilleur affichage de contenu bidirectionnel. La plupart des exemples utilisent [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], bien que vous pouvez facilement appliquer ces concepts à C# ou du code Microsoft Visual Basic.  
-  
 
-  
 <a name="FlowDirection"></a>   
 ## <a name="flowdirection"></a>FlowDirection  
  La propriété de base qui définit le sens de déroulement du contenu dans un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application est <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Cette propriété peut être définie à une des deux valeurs d’énumération, <xref:System.Windows.FlowDirection.LeftToRight> ou <xref:System.Windows.FlowDirection.RightToLeft>. La propriété est disponible pour tous les [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] éléments qui héritent <xref:System.Windows.FrameworkElement>.  
@@ -43,7 +41,7 @@ Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_wi
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- Le niveau supérieur <xref:System.Windows.Window> a un <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, de sorte que tous les éléments contenus dans celui-ci héritent également de la même <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Pour un élément à remplacer spécifié <xref:System.Windows.FrameworkElement.FlowDirection%2A> il doit ajouter une modification de sens explicite, comme le deuxième <xref:System.Windows.Controls.TextBlock> dans l’exemple précédent qui le modifie en <xref:System.Windows.FlowDirection.LeftToRight>. En cas de non <xref:System.Windows.FrameworkElement.FlowDirection%2A> est défini, la valeur par défaut <xref:System.Windows.FlowDirection.LeftToRight> s’applique.  
+ Le niveau supérieur <xref:System.Windows.Window> a un <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, de sorte que tous les éléments contenus dans celui-ci héritent également de la même <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Pour un élément à remplacer spécifié <xref:System.Windows.FrameworkElement.FlowDirection%2A> il doit ajouter une modification de sens explicite, comme le deuxième <xref:System.Windows.Controls.TextBlock> dans l’exemple précédent qui le modifie en <xref:System.Windows.FlowDirection.LeftToRight>. En cas de non <xref:System.Windows.FrameworkElement.FlowDirection%2A> est défini, la valeur par défaut <xref:System.Windows.FlowDirection.LeftToRight> s’applique.  
   
  Le graphique suivant illustre la sortie de l’exemple précédent :
 
@@ -116,7 +114,7 @@ Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_wi
     
  ![Graphique montrant une barre d’outils avec le bouton droit pour le dégradé de gauche.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- L’exemple suivant dessine une <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Pour le dessiner de gauche à droite, supprimez le <xref:System.Windows.FlowDirection> d’attribut sur le <xref:System.Windows.Controls.ToolBar>.  
+ L’exemple suivant dessine une <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Pour le dessiner de gauche à droite, supprimez le <xref:System.Windows.FlowDirection> d’attribut sur le <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -140,11 +138,11 @@ Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_wi
   
  **Remarque** est inclus dans les fichiers à télécharger un **ms_logo.jpg** fichier. Le code suppose que le fichier .jpg n’est pas à l’intérieur de votre projet mais quelque part sur le lecteur C:\. Vous devez copier le fichier .jpg depuis les fichiers de projet vers votre lecteur C:\ ou modifier le code pour qu’il recherche le fichier à l’intérieur du projet. Pour ce faire, modifiez `Source="file://c:/ms_logo.jpg"` à `Source="ms_logo.jpg"`.  
   
- **Tracés**  
+ **Chemins d'accès**  
   
- Outre un <xref:System.Windows.Controls.Image>, un autre élément intéressant est <xref:System.Windows.Shapes.Path>. Un tracé est un objet qui peut dessiner une série de lignes et de courbes reliées. Il se comporte de manière similaire à un <xref:System.Windows.Controls.Image> concernant son <xref:System.Windows.FlowDirection>; par exemple son <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> est un miroir horizontal de son <xref:System.Windows.FlowDirection.LeftToRight> une. Cependant, contrairement à un <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> hérite son <xref:System.Windows.FlowDirection> à partir du conteneur et il est inutile de spécifier explicitement.  
+ Outre un <xref:System.Windows.Controls.Image>, un autre élément intéressant est <xref:System.Windows.Shapes.Path>. Un tracé est un objet qui peut dessiner une série de lignes et de courbes reliées. Il se comporte de manière similaire à un <xref:System.Windows.Controls.Image> concernant son <xref:System.Windows.FlowDirection>; par exemple son <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> est un miroir horizontal de son <xref:System.Windows.FlowDirection.LeftToRight> une. Cependant, contrairement à un <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> hérite son <xref:System.Windows.FlowDirection> à partir du conteneur et il est inutile de spécifier explicitement.  
   
- L’exemple suivant dessine une flèche simple à l’aide de 3 lignes. La première flèche hérite le <xref:System.Windows.FlowDirection.RightToLeft> direction de flux le <xref:System.Windows.Controls.StackPanel> afin que ses points d’entrée et sont mesurées à partir d’une racine sur le côté droit. La deuxième flèche qui a explicite <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> démarre également sur le côté droit. Cependant, la troisième flèche a sa racine de début située sur le côté gauche. Pour plus d’informations sur le dessin, consultez <xref:System.Windows.Media.LineGeometry> et <xref:System.Windows.Media.GeometryGroup>.  
+ L’exemple suivant dessine une flèche simple à l’aide de 3 lignes. La première flèche hérite le <xref:System.Windows.FlowDirection.RightToLeft> direction de flux le <xref:System.Windows.Controls.StackPanel> afin que ses points d’entrée et sont mesurées à partir d’une racine sur le côté droit. La deuxième flèche qui a explicite <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> démarre également sur le côté droit. Cependant, la troisième flèche a sa racine de début située sur le côté gauche. Pour plus d’informations sur le dessin, consultez <xref:System.Windows.Media.LineGeometry> et <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -160,7 +158,7 @@ Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_wi
   
  Ceci a permis aux applications de traiter des valeurs numériques sans avoir à les convertir d’une langue à l’autre, par exemple un utilisateur peut ouvrir une [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] feuille de calcul dans une version localisée en arabe [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et voir les numéros de forme arabe, mais l’ouvrir dans une version européenne de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et voir les mêmes numéros de représentation européenne. Ceci est également nécessaire pour les autres symboles tels que les virgules et le symbole du pourcentage, car ils accompagnent habituellement des nombres dans le même document.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] continue dans la même tradition et ajoute une prise en charge supplémentaire de cette fonctionnalité qui permet un meilleur contrôle de l’utilisateur sur quand et comment la substitution est utilisée. Bien que cette fonctionnalité soit conçue pour n’importe quelle langue, elle est particulièrement utile pour du contenu bidirectionnel, où la mise en forme des chiffres pour une langue spécifique est habituellement un défi pour les développeurs d’application du fait des différentes cultures dans lesquelles peut s’exécuter l’application.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] la même tradition et ajoute davantage prise en charge pour cette fonctionnalité qui permet de mieux contrôler utilisateur sur quand et comment la substitution est utilisée. Bien que cette fonctionnalité soit conçue pour n’importe quelle langue, elle est particulièrement utile pour du contenu bidirectionnel, où la mise en forme des chiffres pour une langue spécifique est habituellement un défi pour les développeurs d’application du fait des différentes cultures dans lesquelles peut s’exécuter l’application.  
   
  La principale propriété qui contrôle la substitution de nombres comment fonctionne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est le <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> propriété de dépendance. Le <xref:System.Windows.Media.NumberSubstitution> classe spécifie comment les nombres d’un texte doivent être affichées. Elle a trois propriétés publiques qui définissent son comportement. Voici un résumé de chacune des propriétés.  
   
@@ -202,7 +200,7 @@ Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_wi
   
  Le <xref:System.Windows.FlowDirection> était important dans ce cas, car l’affectation du <xref:System.Windows.FlowDirection> à <xref:System.Windows.FlowDirection.LeftToRight> à la place aurait produit des chiffres européens. Les sections suivantes expliquent comment obtenir un affichage unifié des chiffres dans l’ensemble de votre document. Si cet exemple ne s’exécute pas sur une version arabe de Windows, tous les chiffres sont affichés en tant que chiffres européens.  
   
- **Définition des règles de substitution**  
+ **Définition des règles de Substitution**  
   
  Dans une application réelle, il est possible que vous ayez besoin de définir la langue par programmation. Par exemple, vous souhaitez définir le `xml:lang` attribut est le même que celui utilisé par le système [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ou peut-être modifier la langue en fonction de l’état de l’application.  
   
@@ -245,7 +243,7 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
      
  ![Graphique affichant des nombres arabes.](./media/bidirectional-features-in-wpf-overview/displays-arabic-numbers.png)  
   
- **Utilisation de la propriété Substitution**  
+ **À l’aide de la propriété de Substitution**  
   
  La substitution de nombres de façon fonctionne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dépend de la langue de l’élément de texte et son <xref:System.Windows.FlowDirection>. Si le <xref:System.Windows.FlowDirection> de gauche à droite, puis les chiffres européens qui sont restituées. Toutefois si elle est précédée par du texte arabe, ou a la langue définie à « ar » et le <xref:System.Windows.FlowDirection> est <xref:System.Windows.FlowDirection.RightToLeft>, chiffres arabes sont restitués à la place.  
   

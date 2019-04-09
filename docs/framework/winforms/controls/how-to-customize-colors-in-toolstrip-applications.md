@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Personnaliser les couleurs dans les Applications ToolStrip'
+title: 'Procédure : personnaliser les couleurs dans des applications ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: db64ee353cc71cf39516e5ee0a08cf4b9627548c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d051085bdba41b9784d3dd7f921189c1300daf0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074903"
 ---
-# <a name="how-to-customize-colors-in-toolstrip-applications"></a>Procédure : Personnaliser les couleurs dans les Applications ToolStrip
+# <a name="how-to-customize-colors-in-toolstrip-applications"></a>Procédure : personnaliser les couleurs dans des applications ToolStrip
 Vous pouvez personnaliser l'apparence de votre <xref:System.Windows.Forms.ToolStrip> en utilisant la classe <xref:System.Windows.Forms.ToolStripProfessionalRenderer> pour appliquer des couleurs personnalisées.  
   
 ## <a name="example"></a>Exemple  
@@ -33,6 +33,7 @@ Vous pouvez personnaliser l'apparence de votre <xref:System.Windows.Forms.ToolSt
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>

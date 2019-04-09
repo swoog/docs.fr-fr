@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074025"
 ---
 # <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework
-Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont légers et créent une couche minimale entre la source des données et le code, ce qui augmente les performances sans nuire aux fonctionnalités.  
+Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseurs de données sont légers et création d’une couche minimale entre la source de données et le code, augmentent les performances sans nuire aux fonctionnalités.  
   
  Le tableau suivant répertorie les fournisseurs de données inclus dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-|Fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Description|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données|Description|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server|Fournit l'accès aux données pour Microsoft SQL Server. Utilise l'espace de noms <xref:System.Data.SqlClient> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour les sources de données exposées à l'aide de OLE DB. Utilise l'espace de noms <xref:System.Data.OleDb> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Fournisseur de données pour ODBC|Pour les sources de données exposées à l'aide de ODBC. Utilise l'espace de noms <xref:System.Data.Odbc> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour ODBC|Pour les sources de données exposées à l'aide de ODBC. Utilise l'espace de noms <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour Oracle|Pour les sources de données Oracle. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle prend en charge le logiciel client Oracle version 8.1.7 et ultérieure, et utilise l'espace de noms <xref:System.Data.OracleClient> .|  
 |fournisseur EntityClient|Fournit un accès aux données pour les applications EDM (Entity Data Model). Utilise l'espace de noms <xref:System.Data.EntityClient> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server Compact 4.0.|Fournit l’accès aux données pour Microsoft SQL Server Compact 4.0. Utilise l’espace de noms [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
@@ -29,22 +29,22 @@ Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objets principaux des fournisseurs de données .NET Framework  
  Le tableau suivant présente les quatre principaux objets qui composent un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
-|Objet|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |`Connection`|Établit une connexion à une source de données spécifique. La classe de base pour tous les objets `Connection` est la classe <xref:System.Data.Common.DbConnection> .|  
 |`Command`|Exécute une commande sur une source de données. Expose `Parameters` et peut exécuter dans la portée d'une `Transaction` à partir d'un `Connection`. La classe de base pour tous les objets `Command` est la classe <xref:System.Data.Common.DbCommand> .|  
 |`DataReader`|Lit un flux de données avant uniquement (forward only) et en lecture seule à partir d'une source de données. La classe de base pour tous les objets `DataReader` est la classe <xref:System.Data.Common.DbDataReader> .|  
 |`DataAdapter`|Remplit un `DataSet` et répercute les mises à jour dans la source de données. La classe de base pour tous les objets `DataAdapter` est la classe <xref:System.Data.Common.DbDataAdapter> .|  
   
- En plus des principales classes répertoriées dans le tableau précédemment dans ce document, un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] contient également les classes répertoriées dans le tableau suivant.  
+ En plus des principales classes répertoriées dans le tableau précédemment dans ce document, un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] contient également les classes répertoriées dans le tableau suivant.  
   
-|Objet|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |`Transaction`|Inscrit des commandes dans des transactions au niveau de la source de données. La classe de base pour tous les objets `Transaction` est la classe <xref:System.Data.Common.DbTransaction> . ADO.NET fournit aussi la prise en charge pour les transactions à l'aide des classes dans l'espace de noms <xref:System.Transactions> .|  
-|`CommandBuilder`|Objet d'assistance qui génère automatiquement les propriétés de commande d'un `DataAdapter` ou dérive les informations sur les paramètres à partir d'une procédure stockée et remplit la collection `Parameters` d'un objet `Command`. La classe de base pour tous les objets `CommandBuilder` est la classe <xref:System.Data.Common.DbCommandBuilder> .|  
+|`CommandBuilder`|Objet d'assistance qui génère automatiquement les propriétés de commande d'un `DataAdapter` ou dérive les informations sur les paramètres à partir d'une procédure stockée et remplit la collection `Parameters` d'un objet `Command` . La classe de base pour tous les objets `CommandBuilder` est la classe <xref:System.Data.Common.DbCommandBuilder> .|  
 |`ConnectionStringBuilder`|Objet d'assistance qui offre une manière simple de créer et de gérer le contenu de chaînes de connexion utilisées par les objets `Connection` . La classe de base pour tous les objets `ConnectionStringBuilder` est la classe <xref:System.Data.Common.DbConnectionStringBuilder> .|  
 |`Parameter`|Définit les paramètres des valeurs d'entrée, de sortie et de retour pour les commandes et les procédures stockées. La classe de base pour tous les objets `Parameter` est la classe <xref:System.Data.Common.DbParameter> .|  
-|`Exception`|Retourné en cas d'erreur au niveau de la source de données. En cas d'erreur côté client, les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] lèvent une exception [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La classe de base pour tous les objets `Exception` est la classe <xref:System.Data.Common.DbException> .|  
+|`Exception`|Retourné en cas d'erreur au niveau de la source de données. En cas d'erreur côté client, les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] lèvent une exception [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La classe de base pour tous les objets `Exception` est la classe <xref:System.Data.Common.DbException> .|  
 |`Error`|Expose les informations provenant d'un avertissement ou d'une erreur retournée par une source de données.|  
 |`ClientPermission`|Fourni pour les attributs de sécurité d'accès du code du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La classe de base pour tous les objets `ClientPermission` est la classe <xref:System.Data.Common.DBDataPermission> .|  
   
@@ -87,9 +87,9 @@ using System.Data.SqlClient;
   
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB ne prend pas en charge les interfaces OLE DB version 2.5. Les fournisseurs OLE DB qui requièrent la prise en charge des interfaces OLE DB 2.5 ne fonctionneront pas correctement avec le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB. C'est le cas du fournisseur Microsoft OLE DB pour Exchange et du fournisseur Microsoft OLE DB pour Internet Publishing.  
   
- Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB ne fonctionne pas avec le fournisseur OLE DB pour ODBC (MSDASQL). Pour accéder à une source de données ODBC à l'aide de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], utilisez le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC.  
+ Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB ne fonctionne pas avec le fournisseur OLE DB pour ODBC (MSDASQL). Pour accéder à une source de données ODBC à l'aide de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], utilisez le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC.  
   
- Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB sont situées dans l'espace de noms <xref:System.Data.OleDb> . L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OleDb` dans vos applications.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes OLE DB sont situées dans le <xref:System.Data.OleDb> espace de noms. L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OleDb` dans vos applications.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC pour Oracle|  
 |Pilote Microsoft Access (*.mdb)|  
   
- Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC sont situées dans l'espace de noms <xref:System.Data.Odbc> .  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes ODBC sont situées dans le <xref:System.Data.Odbc> espace de noms.  
   
  L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.Odbc` dans vos applications.  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle requiert que le logiciel client Oracle (version 8.1.7 ou ultérieure) soit installé sur le système avant que vous puissiez vous connecter à une source de données Oracle.  
   
- Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle sont situées dans l'espace de noms <xref:System.Data.OracleClient> et sont contenues dans l'assembly `System.Data.OracleClient.dll` . Vous devez référencer `System.Data.dll` ainsi que `System.Data.OracleClient.dll` lorsque vous compilez une application qui utilise le fournisseur de données.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes d’Oracle sont situées dans le <xref:System.Data.OracleClient> espace de noms et sont contenues dans le `System.Data.OracleClient.dll` assembly. Vous devez référencer `System.Data.dll` ainsi que `System.Data.OracleClient.dll` lorsque vous compilez une application qui utilise le fournisseur de données.  
   
  L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OracleClient` dans vos applications.  
   
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  Le fournisseur EntityClient permet d'accéder aux données basées sur un modèle de données d'entité EDM (Entity Data Model). Contrairement aux autres fournisseurs de données .NET Framework, il n'interagit pas directement avec une source de données. Au lieu de cela, il utilise Entity SQL pour communiquer avec le fournisseur de données sous-jacent. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

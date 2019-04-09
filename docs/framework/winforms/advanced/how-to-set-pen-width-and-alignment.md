@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074974"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Procédure : définir la largeur et l’alignement du stylet
 Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur du stylet comme l’un des arguments au constructeur. Vous pouvez également modifier la largeur du stylet avec le <xref:System.Drawing.Pen.Width%2A> propriété de la <xref:System.Drawing.Pen> classe.  
@@ -58,5 +58,6 @@ Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur
      ![Un rectangle est dessiné avec des lignes noires avec la ligne verte large à l’intérieur.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)

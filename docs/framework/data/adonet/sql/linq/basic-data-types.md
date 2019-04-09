@@ -2,12 +2,12 @@
 title: Types de données de base
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072881"
 ---
 # <a name="basic-data-types"></a>Types de données de base
 Les requêtes LINQ to SQL sont traduites en données Transact-SQL avant d'être exécutées sur Microsoft SQL Server. LINQ to SQL prend en charge une grande partie des fonctionnalités intégrées que SQL Server prend en charge pour les types de données de base.  
@@ -23,5 +23,6 @@ Les requêtes LINQ to SQL sont traduites en données Transact-SQL avant d'êtr
 -   Est un opérateur : Le `IS` opérateur a une traduction prise en charge lorsque le mappage d’héritage est utilisé. Il peut être utilisé à la place du test direct de la colonne de discriminateur afin de déterminer si un objet correspond à un type d'entité spécifique et se traduit en un contrôle sur la colonne de discriminateur. Pour plus d’informations sur Visual Basic et C# est opérateurs, consultez [opérateur Is](~/docs/visual-basic/language-reference/operators/is-operator.md) et [est](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mappage de type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Fonctions et types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -1,13 +1,13 @@
 ---
-title: <clear>, élément de schemeSettings (paramètres d'URI)
+title: <clear> Élément de schemeSettings (paramètres d’Uri)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 5bb97fbe04cbd3bba85113200abe6495639bab87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082683"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<Désactivez >, élément de schemeSettings (paramètres d’Uri)
 Efface tous les paramètres existants de schéma.  
@@ -36,7 +36,7 @@ Efface tous les paramètres existants de schéma.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<schemeSettings, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.|  
+|[\<schemeSettings >, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.|  
   
 ## <a name="remarks"></a>Notes  
  Par défaut, le <xref:System.Uri?displayProperty=nameWithType> % n’échappe pas de classe encodé délimiteurs de chemin d’accès avant d’exécuter la compression de chemin d’accès. Ceci était implémenté comme un mécanisme de sécurité contre les attaques comme suit :  
@@ -71,6 +71,7 @@ Efface tous les paramètres existants de schéma.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

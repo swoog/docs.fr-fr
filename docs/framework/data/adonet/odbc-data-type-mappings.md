@@ -2,25 +2,25 @@
 title: Mappages de types de données ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: f57ba69a03837805f168cf33a9b8060633a6330f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074064"
 ---
 # <a name="odbc-data-type-mappings"></a>Mappages de types de données ODBC
 Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] déduit pour les types de données du fournisseur de données .NET Framework pour ODBC (<xref:System.Data.Odbc>). Les méthodes d’accesseur typées pour les <xref:System.Data.Odbc.OdbcDataReader> sont également répertoriés.  
   
-|Type ODBC|Type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Accesseur typé [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Type ODBC|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] accesseur typé|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  
-|SQL_BIT|Boolean|GetBoolean()|  
+|SQL_BIT|Booléen|GetBoolean()|  
 |SQL_CHAR|Chaîne<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_DECIMAL|Decimal|GetDecimal()|  
 |SQL_DOUBLE|Double|GetDouble()|  
-|SQL_GUID|Guid|GetGuid()|  
+|SQL_GUID|GUID|GetGuid()|  
 |SQL_INTEGER|Int32|GetInt32()|  
 |SQL_LONG_VARCHAR|Chaîne<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_LONGVARBINARY|Byte[]|GetBytes()|  
@@ -36,5 +36,6 @@ Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../include
 |SQL_WVARCHAR|Chaîne<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

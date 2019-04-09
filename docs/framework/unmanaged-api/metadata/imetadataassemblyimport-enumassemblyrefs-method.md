@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba85ec920777189940a05864d19e4c24a65b4564
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 91e253669b9f51e7c1d600ba11f13a9ce67fb58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072478"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs, méthode
 Énumère les `mdAssemblyRef` instances qui sont définis dans le manifeste d’assembly.  
@@ -58,14 +58,15 @@ HRESULT EnumAssemblyRefs (
 |`S_OK`|`EnumAssemblyRefs` retourné avec succès.|  
 |`S_FALSE`|Il n’existe pas de jetons à énumérer. Dans ce cas, `pcTokens` est défini à zéro.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

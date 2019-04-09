@@ -2,12 +2,12 @@
 title: Message Queuing to Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: fa8bb6036b38456066922c0c2991a4893a22c117
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80981cc6c0bcbbcbc3ff702ba712a25041e42993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075149"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing to Windows Communication Foundation
 Cet exemple montre comment une application Message Queuing (MSMQ) peut envoyer un message MSMQ à un service Windows Communication Foundation (WCF). Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -60,7 +60,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fichier de configuration, tel qu'indiqué dans l'exemple de configuration suivant.
 
 > [!NOTE]
->  Le nom de la file d’attente utilise un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès. L’adresse de point de terminaison WCF spécifie un schéma msmq.formatname et utilise « localhost » pour l’ordinateur local. L'adresse de la file d'attente pour les règles d'adressage de chaque nom de format MSMQ suit le schéma msmq.formatname.
+>  Le nom de la file d'attente utilise un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès. L’adresse de point de terminaison WCF spécifie un schéma msmq.formatname et utilise « localhost » pour l’ordinateur local. L'adresse de la file d'attente pour les règles d'adressage de chaque nom de format MSMQ suit le schéma msmq.formatname.
 
 ```xml
 <appSettings>
@@ -68,7 +68,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 </appSettings>
 ```
 
- L’application cliente est une application MSMQ qui utilise la méthode <xref:System.Messaging.MessageQueue.Send%2A> pour envoyer un message fiable et transactionnel à la file d’attente, tel qu’indiqué dans l’exemple de code suivant.
+ L'application cliente est une application MSMQ qui utilise la méthode <xref:System.Messaging.MessageQueue.Send%2A> pour envoyer un message fiable et transactionnel à la file d'attente, tel qu'indiqué dans l'exemple de code suivant.
 
 ```csharp
 //Connect to the queue.
@@ -134,9 +134,9 @@ Console.ReadLine();
 
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs
 
-1.  Copiez les fichiers programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur de service.
+1.  Copiez les fichiers programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur de service.
 
-2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.
+2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.
 
 3.  Dans le fichier Client.exe.config, dans orderQueueName, remplacez « . » par le nom de l'ordinateur de service.
 
@@ -154,6 +154,7 @@ Console.ReadLine();
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [Procédure : échanger des messages avec des points de terminaison WCF et des applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Message Queuing (page pouvant être en anglais)](https://go.microsoft.com/fwlink/?LinkId=94968)

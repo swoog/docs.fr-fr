@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076677"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validation des entrées d’utilisateur dans les Windows Forms
 Quand les utilisateurs entrent des données dans votre application, il pourrez que vous souhaitez vérifier que les données sont valides avant que votre application utilise. Vous pouvez avoir besoin que certains champs de texte ne pas être de longueur nulle, qu’un champ soit au format d’un numéro de téléphone ou un autre type de données bien formées ou qu’une chaîne contienne des caractères non sécurisés qui peut servir à compromettre la sécurité d’une base de données. Windows Forms fournit plusieurs méthodes pour valider l’entrée dans votre application.  
@@ -91,6 +91,7 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
 >  Si vous forcez le formulaire pour fermer de cette manière, toutes les données dans les contrôles du formulaire qui n’a pas déjà été enregistrées sont perdues. En outre, les formulaires modaux ne valident pas le contenu des contrôles lors de leur fermeture. Vous pouvez utiliser la validation de contrôle pour verrouiller le focus à un contrôle, mais vous n’avez pas à vous préoccuper le comportement associé à la fermeture du formulaire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>

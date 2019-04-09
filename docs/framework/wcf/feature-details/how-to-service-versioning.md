@@ -2,12 +2,12 @@
 title: 'Procédure : Contrôle des versions du service'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085374"
 ---
 # <a name="how-to-service-versioning"></a>Procédure : Contrôle des versions du service
 Cette rubrique présente les étapes de base nécessaires pour créer une configuration de routage qui route les messages vers des versions différentes du même service. Dans cet exemple, les messages sont routés vers deux versions différentes d'un service de calculatrice, `roundingCalc` (v1) et `regularCalc` (v2). Les deux implémentations prennent en charge les mêmes opérations ; toutefois, le service le plus ancien, `roundingCalc`, arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser le service `regularCalc` plus récent.  
@@ -19,7 +19,7 @@ Cette rubrique présente les étapes de base nécessaires pour créer une config
   
 -   Ajouter  
   
--   Soustraction  
+-   Soustraire  
   
 -   Multiplication  
   
@@ -325,4 +325,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Services de routage](../../../../docs/framework/wcf/samples/routing-services.md)

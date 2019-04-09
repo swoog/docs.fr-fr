@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087857"
 ---
 # <a name="wcf-performance-counters"></a>Compteurs de performance WCF
 Windows Communication Foundation (WCF) inclut un grand ensemble de compteurs de performances pour vous aider à mesurer les performances de votre application.  
@@ -104,13 +104,13 @@ ServiceName@ServiceBaseAddress
   
  Les données sont semblables à celles recueillies pour des opérations individuelles, mais sont regroupées uniquement sur le point de terminaison.  
   
- Un compteur dans une portée de point de terminaison est issu des compteurs dans une collection d'opérations.  
+ Un compteur dans une portée de point de terminaison est issu des compteurs dans une collection d’opérations.  
   
 > [!NOTE]
 >  Si deux points de terminaison ont des noms de contrat et des adresses identiques, ils sont mappés à la même instance de compteur.  
   
 ### <a name="operation-performance-counters"></a>Compteurs de performance d'opération  
- Les compteurs de performance d'opération se trouvent sous l'objet de performance `ServiceModelOperation 4.0.0.0` dans l'affichage de l'analyseur de performances. Chaque opération a une instance individuelle. Autrement dit, si un contrat donné a 10 opérations, 10 instances de compteur d'opération sont associées à ce contrat. Les instances d'objet sont nommées à l'aide du modèle suivant :  
+ Les compteurs de performance d'opération se trouvent sous l'objet de performance `ServiceModelOperation 4.0.0.0` dans l'affichage de l'analyseur de performances. Chaque opération a une instance individuelle. Autrement dit, si un contrat donné a 10 opérations, 10 instances de compteur d'opération sont associées à ce contrat. Les instances d’objet sont nommées à l’aide du modèle suivant :  
   
 ```  
 (ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
@@ -139,4 +139,5 @@ ServiceName@ServiceBaseAddress
  Pour plus d’informations sur la façon d’accéder par programme aux compteurs, consultez [Architecture de programmation de compteur de performances](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)

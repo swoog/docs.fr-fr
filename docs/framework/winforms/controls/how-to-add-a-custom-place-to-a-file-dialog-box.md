@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter un emplacement personnalisé à une boîte de dialogue fichier'
+title: 'Procédure : ajouter un emplacement personnalisé à une boîte de dialogue fichier'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087682"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Procédure : Ajouter un emplacement personnalisé à une boîte de dialogue fichier
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Procédure : ajouter un emplacement personnalisé à une boîte de dialogue fichier
 Les boîtes de dialogue d’ouverture et d’enregistrement par défaut sur [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ont une zone sur le côté gauche intitulée **Liens favoris**. Cette zone est appelée Emplacements personnalisés. Le <xref:System.Windows.Forms.OpenFileDialog> et <xref:System.Windows.Forms.SaveFileDialog> classes permettent d’ajouter des dossiers à la <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ Les boîtes de dialogue d’ouverture et d’enregistrement par défaut sur [!IN
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
 - [GUID de dossier connus pour des emplacements personnalisés de boîtes de dialogue Fichier](known-folder-guids-for-file-dialog-custom-places.md)

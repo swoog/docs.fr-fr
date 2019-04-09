@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 505b75d362cea0eddec2b51dc398e2cd8c8d4db8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076547"
 ---
 # <a name="button-control-overview-windows-forms"></a>Vue d'ensemble du contrôle Button (Windows Forms)
 Le contrôle Windows Forms <xref:System.Windows.Forms.Button> permet à l'utilisateur d'effectuer une action en cliquant dessus. Quand le bouton est activé, il donne l'impression d'être enfoncé puis relâché. Chaque fois que l’utilisateur clique sur un bouton, le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements est appelé. Vous placez le code dans le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour exécuter toute action que vous choisissez.  
@@ -22,9 +22,10 @@ Le contrôle Windows Forms <xref:System.Windows.Forms.Button> permet à l'utilis
  Le <xref:System.Windows.Forms.Button> contrôle peut également afficher des images à l’aide de la <xref:System.Windows.Forms.ButtonBase.Image%2A> et <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriétés. Pour plus d'informations, voir [Procédure : Définir l’Image affichée par un Windows Forms contrôle](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Button>
-- [Guide pratique pour Répondre aux clics de bouton Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procédure : répondre aux clics de bouton Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Méthodes de sélection du contrôle Button Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Guide pratique pour Désigner un contrôle Button Windows Forms comme bouton accepter à l’aide du Concepteur](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Guide pratique pour Désigner un contrôle Button Windows Forms comme bouton Annuler à l’aide du Concepteur](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Procédure : désigner un bouton Windows Forms comme bouton Accepter à l’aide du concepteur](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Procédure : désigner un bouton Windows Forms comme bouton Annuler à l’aide du concepteur](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button, contrôle](button-control-windows-forms.md)

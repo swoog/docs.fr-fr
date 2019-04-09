@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a1129e3778763a4e2cd06759c5a5ad7656244934
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074948"
 ---
 # <a name="handling-user-input"></a>Gestion des entrées utilisateur
 Cette rubrique décrit les principaux événements de clavier et souris fournis par <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Lors de la gestion d’un événement, les auteurs de contrôle doivent substituer la méthode protégée `On`*EventName* au lieu d’attacher un délégué à l’événement. Pour un examen des événements, consultez [Déclenchement d’événements à partir d’un composant](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
@@ -64,7 +64,8 @@ Cette rubrique décrit les principaux événements de clavier et souris fournis 
  Pour le code source complet pour le `FlashTrackBar` exemples, consultez [Comment : Créer un contrôle Windows Forms affiche la progression](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements dans les contrôles Windows Forms](events-in-windows-forms-controls.md)
 - [Définition d’un événement](defining-an-event-in-windows-forms-controls.md)
 - [Événements](../../../standard/events/index.md)
-- [Entrées d’utilisateur dans les Windows Forms](../user-input-in-windows-forms.md)
+- [Entrées d'utilisateur dans les Windows Forms](../user-input-in-windows-forms.md)

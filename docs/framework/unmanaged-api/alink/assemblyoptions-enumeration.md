@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 293787d7798768ff2b4e2fb8fec9ed201fdb85ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085413"
 ---
 # <a name="assemblyoptions-enumeration"></a>Énumération AssemblyOptions
 Énumère les options de l’assembly.  
@@ -79,10 +79,11 @@ typedef enum _AssemblyOptions {
 |optAssemSatelliteVer|Chaîne - encodée sous la forme « Major.Minor.Build.Revision ».|  
 |optLastAssemOption|Un compteur du nombre d’éléments.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** alink.h  
   
  **Bibliothèque**: alink.dll  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

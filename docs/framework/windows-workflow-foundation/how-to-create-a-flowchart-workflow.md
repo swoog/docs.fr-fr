@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer un Workflow d’organigramme'
+title: 'Procédure : créer un workflow d’organigramme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e4a4714c1d93280cb86e2887505fc2b0b79484d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1da81ae47fa9f74b6037b6fcec4dbac5350c4481
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080239"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Procédure : Créer un Workflow d’organigramme
+# <a name="how-to-create-a-flowchart-workflow"></a>Procédure : créer un workflow d’organigramme
 Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Flowchart> activité et les activités personnalisées de la précédente [Comment : Créer une activité](how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
   
 > [!NOTE]
@@ -151,10 +151,11 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
      Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow d’organigramme à partir de cette étape, passez directement à la [pour générer et exécuter l’application](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programmation Windows Workflow Foundation](programming.md)
-- [Conception des workflows](designing-workflows.md)
-- [Didacticiel Bien démarrer](getting-started-tutorial.md)
-- [Guide pratique pour Créer une activité](how-to-create-an-activity.md)
-- [Guide pratique pour Exécuter un Workflow](how-to-run-a-workflow.md)
+- [Conception des flux de travaux](designing-workflows.md)
+- [Didacticiel de mise en route](getting-started-tutorial.md)
+- [Procédure : créer une activité](how-to-create-an-activity.md)
+- [Procédure : exécuter un workflow](how-to-run-a-workflow.md)

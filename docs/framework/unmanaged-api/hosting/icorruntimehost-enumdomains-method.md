@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27587c391b1d5cf5f5edb87cf5aa81d227869315
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 69fcc862e98e305105a6f17ca49940bd10cef39c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072556"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains, méthode
 Obtient un énumérateur pour les domaines dans le processus actuel.  
@@ -48,7 +48,7 @@ HRESULT EnumDomains (
 |E_FAIL|Une défaillance grave et inconnue s’est produite. Si une méthode retourne E_FAIL, le common language runtime (CLR) n’est plus utilisable dans le processus. Les appels suivants à toute API d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
@@ -58,4 +58,5 @@ HRESULT EnumDomains (
  **Version du .NET framework :** 1.0, 1.1  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

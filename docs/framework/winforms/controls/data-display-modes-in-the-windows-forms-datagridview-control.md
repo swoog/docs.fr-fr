@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079693"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Modes d'affichage des données dans le contrôle DataGridView Windows Forms
 Le <xref:System.Windows.Forms.DataGridView> contrôle peut afficher des données en trois modes distincts : dépendant, indépendant et virtuel. Choisissez le mode plus approprié selon vos besoins.  
@@ -42,6 +42,7 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle peut afficher des données
  Pour plus d’informations sur le mode virtuel, consultez [Mode virtuel dans le contrôle DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Pour obtenir un exemple qui montre comment utiliser les événements du mode virtuel, consultez [procédure pas à pas : Implémentation du Mode virtuel dans les Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle peut afficher des données
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Types de colonnes dans le contrôle DataGridView Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Procédure pas à pas : Création d’un indépendant Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Guide pratique pour Lier des données au contrôle DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Procédure : lier des données au contrôle DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Mode virtuel dans le contrôle DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Procédure pas à pas : Implémentation du Mode virtuel dans le contrôle de DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Procédure pas à pas : implémentation du mode virtuel dans le contrôle DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)

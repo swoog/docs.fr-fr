@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572c4427ada06701c5982770ae476bd1c6c2b13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082540"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Procédure : Soumettre des modifications à la base de données
 Indépendamment du nombre de modifications apportées aux objets, celles-ci sont apportées uniquement aux réplicas en mémoire. Vous n'avez pas apporté de modifications aux données effectives dans la base de données. Vos modifications ne sont pas transmises au serveur tant que vous n'appelez pas explicitement <xref:System.Data.Linq.DataContext.SubmitChanges%2A> sur le <xref:System.Data.Linq.DataContext>.  
@@ -34,7 +34,8 @@ Indépendamment du nombre de modifications apportées aux objets, celles-ci sont
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Détecter et résoudre des soumissions en conflit](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Procédure : Détecter et résoudre des soumissions en conflit](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Apport et soumission de modifications de données](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

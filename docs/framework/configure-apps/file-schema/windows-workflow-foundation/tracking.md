@@ -3,12 +3,12 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: fa96cb374204ffbdb4c0fcd353c70b6e27ef7481
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 31490c7425572909cc30fe4237af9309754b68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072243"
 ---
 # <a name="tracking"></a>\<tracking>
 Représente une section de configuration permettant de définir les paramètres de suivi d'un service de flux de travail.  
@@ -99,5 +99,6 @@ Représente une section de configuration permettant de définir les paramètres 
  Le suivi vous fournit la capacité d'examiner l'exécution d'un flux de travail. L'infrastructure de suivi de flux de travail instrumente un flux de travail pour émettre des enregistrements qui reflètent les principaux événements pendant l'exécution. Par exemple, lorsqu'une instance de flux de travail démarre ou se termine, des enregistrements de suivi sont émis. Le suivi peut également extraire des données métier pertinentes associées aux variables de flux de travail. Par exemple, si le flux de travail représente un système de traitement des commandes, l'ID de commande peut être extrait avec l'enregistrement de suivi. En général, l'activation du suivi WF facilite les diagnostics ou les analyses d'entreprise à partir d'une exécution de flux de travail.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

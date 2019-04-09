@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-ms.openlocfilehash: da12ece815d8ae9d1f974b02198498b250885843
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074958"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Restriction de la surface de dessin dans GDI+
 Le découpage consiste à restreindre le dessin à un rectangle ou une région. L’illustration suivante montre la chaîne « Hello » attachée à une région en forme de cœur.  
@@ -32,6 +32,7 @@ Le découpage consiste à restreindre le dessin à un rectangle ou une région. 
  [!code-vb[LinesCurvesAndShapes#91](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)

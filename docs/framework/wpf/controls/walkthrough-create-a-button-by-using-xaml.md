@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076560"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : Créer un bouton avec XAML
 L’objectif de cette procédure pas à pas est d’apprendre à créer un bouton animé pour une utilisation dans une application Windows Presentation Foundation (WPF). Cette procédure pas à pas utilise des styles et un modèle pour créer une ressource de bouton personnalisé qui permet la réutilisation du code et la séparation de la logique de bouton de la déclaration de bouton. Cette procédure pas à pas est écrite entièrement en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -432,8 +432,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
 -   Personnaliser le comportement pour les boutons en réponse aux actions de l’utilisateur (tel que <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, et <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) incluant des effets d’animation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Créer un bouton à l'aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md)
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d’ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+
+- [Créer un bouton à l’aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Vue d'ensemble de l'animation](../graphics-multimedia/animation-overview.md)
+- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d'ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)

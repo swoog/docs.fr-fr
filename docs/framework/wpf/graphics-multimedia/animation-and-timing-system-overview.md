@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079316"
 ---
 # <a name="animation-and-timing-system-overview"></a>Vue d'ensemble de l'animation et du système de minutage
 Cette rubrique décrit comment le système de minutage utilise l’animation, <xref:System.Windows.Media.Animation.Timeline>, et <xref:System.Windows.Media.Animation.Clock> classes pour animer des propriétés.  
@@ -83,6 +83,7 @@ Une chaîne de composition
  Lorsque vous animez une propriété, le <xref:System.Windows.Media.Animation.AnimationClock> définit la propriété *actuel* valeur. Récupération de la valeur de propriété via son accesseur CLR ou la <xref:System.Windows.DependencyObject.GetValue%2A> méthode retourne la sortie de la <xref:System.Windows.Media.Animation.AnimationClock> lorsque le <xref:System.Windows.Media.Animation.AnimationClock> est <xref:System.Windows.Media.Animation.ClockState.Active> ou <xref:System.Windows.Media.Animation.ClockState.Filling>. Vous pouvez récupérer la valeur de base de la propriété à l’aide de la <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> (méthode).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d'ensemble des événements de minuterie](timing-events-overview.md)
-- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)
+
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des événements de minutage](timing-events-overview.md)
+- [Vue d'ensemble des comportements de minutage](timing-behaviors-overview.md)

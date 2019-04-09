@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Autoriser les demandes de métadonnées lors de l’autorisation'
+title: 'Procédure : autoriser les requêtes de métadonnées pendant l’autorisation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082670"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Procédure : Autoriser les demandes de métadonnées lors de l’autorisation
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Procédure : autoriser les requêtes de métadonnées pendant l’autorisation
 Pendant l'autorisation personnalisée, il peut être nécessaire d'autoriser le traitement d'une demande de métadonnées. La rubrique suivante présente les étapes de validation d'une telle demande.  
   
  Pour plus d’informations sur l’autorisation de Windows Communication Foundation (WCF), consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -25,7 +25,7 @@ Pendant l'autorisation personnalisée, il peut être nécessaire d'autoriser le 
   
 2.  Remplacez la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . La méthode retourne la valeur `true` ou `false` selon que l'autorisation est accordée ou non. Les informations relatives à la procédure en cours se trouvent dans le <xref:System.ServiceModel.OperationContext> passé comme paramètre à la méthode.  
   
-3.  Dans la substitution, vérifiez le nom de contrat, l'espace de noms et l'action comme illustré dans l'exemple suivant. Si les conditions sont valides, retournez `true.`  
+3.  Dans la substitution, vérifiez le nom de contrat, l'espace de noms et l'action comme illustré dans l'exemple suivant. Si les conditions sont valides, puis retourner `true.`  
   
 4.  Utilisez le point d'extensibilité pour employer la classe. Pour plus d'informations, voir [Procédure : Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
@@ -36,6 +36,7 @@ Pendant l'autorisation personnalisée, il peut être nécessaire d'autoriser le 
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestion des revendications et autorisation avec le modèle d'identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

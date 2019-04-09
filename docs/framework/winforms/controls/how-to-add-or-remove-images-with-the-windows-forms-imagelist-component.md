@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter ou supprimer des Images avec le composant ImageList Windows Forms'
+title: 'Procédure : ajouter ou supprimer des images avec le composant ImageList Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 81c85186d2f15917a6aa1067814a0119edf3f460
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072972"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procédure : Ajouter ou supprimer des Images avec le composant ImageList Windows Forms
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procédure : ajouter ou supprimer des images avec le composant ImageList Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.ImageList> composant est généralement rempli d’images avant qu’il soit associé à un contrôle. Toutefois, vous pouvez ajouter et supprimer des images après l’association de la liste d’images avec un contrôle.  
   
 > [!NOTE]
@@ -142,6 +142,7 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ImageList, composant](imagelist-component-windows-forms.md)
-- [Vue d'ensemble du composant ImageList](imagelist-component-overview-windows-forms.md)
+- [Vue d’ensemble du composant ImageList](imagelist-component-overview-windows-forms.md)
 - [Images, bitmaps et métafichiers](../advanced/images-bitmaps-and-metafiles.md)

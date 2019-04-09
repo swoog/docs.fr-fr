@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072595"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Application d'une transformation XSLT à un DataSet
-Le **WriteXml** méthode de la <xref:System.Data.DataSet> vous permet d’écrire le contenu d’un **DataSet** en tant que données XML. La tâche qui suit généralement consiste à transformer ce XML en un autre format à l’aide de transformations XSL (XSLT). Toutefois, la synchronisation un **DataSet** avec un <xref:System.Xml.XmlDataDocument> vous permet d’appliquer une feuille de style XSLT au contenu d’un **DataSet** sans devoir d’abord écrire le contenu de la  **Jeu de données** en tant que données XML à l’aide **WriteXml**.  
+Le **WriteXml** méthode de la <xref:System.Data.DataSet> vous permet d’écrire le contenu d’un **DataSet** en tant que données XML. La tâche qui suit généralement consiste à transformer ce XML en un autre format à l'aide de transformations XSL (XSLT). Toutefois, la synchronisation un **DataSet** avec un <xref:System.Xml.XmlDataDocument> vous permet d’appliquer une feuille de style XSLT au contenu d’un **DataSet** sans devoir d’abord écrire le contenu de la  **Jeu de données** en tant que données XML à l’aide **WriteXml**.  
   
  L’exemple suivant remplit un **DataSet** avec des tables et des relations, synchronise le **DataSet** avec un **XmlDataDocument**, puis écrit une partie de la  **Jeu de données** sous la forme d’un élément HTML fichier à l’aide d’une feuille de style XSLT. Le contenu de la feuille de style XSLT vous est présenté ci-après.  
   
@@ -59,7 +59,7 @@ Le **WriteXml** méthode de la <xref:System.Data.DataSet> vous permet d’écrir
  Le code suivant remplit la **DataSet** et applique la feuille de style XSLT.  
   
 > [!NOTE]
->  Si vous appliquez une feuille de style XSLT à un **DataSet** qui contient des relations, vous obtiendrez de meilleures performances si vous définissez la **Nested** propriété de la <xref:System.Data.DataRelation> à **true**pour chaque relation imbriquée. Cela vous permet d’utiliser les feuilles de style XSLT qui implémentent un traitement naturel vertical pour naviguer dans la hiérarchie et transformer les données, au lieu de recourir aux axes de localisation XPath exigeants en performances (par exemple, frère précédent et frère suivant dans les expressions de test de nœud de feuille de style) pour y naviguer. Pour plus d’informations sur les relations imbriquées, consultez [d’imbrication de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  Si vous appliquez une feuille de style XSLT à un **DataSet** qui contient des relations, vous obtiendrez de meilleures performances si vous définissez la **Nested** propriété de la <xref:System.Data.DataRelation> à **true**pour chaque relation imbriquée. Cela vous permet d'utiliser les feuilles de style XSLT qui implémentent un traitement naturel vertical pour naviguer dans la hiérarchie et transformer les données, au lieu de recourir aux axes de localisation XPath exigeants en performances (par exemple, frère précédent et frère suivant dans les expressions de test de nœud de feuille de style) pour y naviguer. Pour plus d’informations sur les relations imbriquées, consultez [d’imbrication de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -124,5 +124,6 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Synchronisation DataSet et XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

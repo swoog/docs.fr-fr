@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 255e2ced8cf7ed06234f8eb8e5423c0bd6541e9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6fdd50f0de014aa68b14303e9e22924b0790fa55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085114"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken, méthode
 Définit une valeur qui indique que le jeton de métadonnées spécifié a été traité.  
@@ -39,14 +39,15 @@ HRESULT MarkToken (
  `tk`  
  [in] Le jeton à marquer comme traité.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IMetaDataFilter, interface](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

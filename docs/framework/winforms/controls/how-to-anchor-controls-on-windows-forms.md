@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ancrer les contrôles aux Windows Forms'
+title: 'Procédure : ancrer des contrôles dans des Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: d3dd413793c8a6da900acbf60cc5a20edf908906
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072990"
 ---
-# <a name="how-to-anchor-controls-on-windows-forms"></a>Procédure : Ancrer les contrôles aux Windows Forms
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Procédure : ancrer des contrôles dans des Windows Forms
 Si vous concevez un formulaire que l’utilisateur peut redimensionner en cours d’exécution, les contrôles sur votre formulaire doivent redimensionner et repositionner correctement. Pour redimensionner dynamiquement les contrôles dans le formulaire, vous pouvez utiliser le <xref:System.Windows.Forms.Control.Anchor%2A> propriété des contrôles Windows Forms. Le <xref:System.Windows.Forms.Control.Anchor%2A> propriété définit une position d’ancrage pour le contrôle. Lorsqu’un contrôle est ancré à un formulaire et le formulaire est redimensionné, le contrôle conserve la distance entre le contrôle et les positions d’ancrage. Par exemple, si vous avez un <xref:System.Windows.Forms.TextBox> contrôle est ancré à la gauche, droite et le bas du formulaire, comme le formulaire est redimensionné, le <xref:System.Windows.Forms.TextBox> contrôle est redimensionné horizontalement pour qu’il conserve la même distance entre les côtés gauche et droite du formulaire. En outre, le contrôle se positionne verticalement afin que son emplacement est toujours la même distance entre le bord inférieur du formulaire. Si un contrôle n’est pas ancré et le formulaire est redimensionné, la position du contrôle par rapport aux bords du formulaire est modifiée.  
   
  Le <xref:System.Windows.Forms.Control.Anchor%2A> propriété interagit avec le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété. Pour plus d’informations, consultez [vue d’ensemble de la propriété AutoSize](autosize-property-overview.md).  
@@ -54,10 +54,11 @@ Si vous concevez un formulaire que l’utilisateur peut redimensionner en cours 
  Les contrôles hérités doivent être `Protected` pour pouvoir être ancrée. Pour modifier le niveau d’accès d’un contrôle, définissez son `Modifiers` propriété dans le **propriétés** fenêtre.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles Windows Forms](index.md)
+
+- [contrôles Windows Forms](index.md)
 - [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
-- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)
-- [Guide pratique pour Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : Disposition des Windows Forms contrôles avec la propriété AutoSize, des marges et remplissage](windows-forms-controls-padding-autosize.md)
+- [Vue d'ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Procédure : arrimer des contrôles dans des Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : disposition des contrôles Windows Forms avec le remplissage, les marges et la propriété AutoSize](windows-forms-controls-padding-autosize.md)

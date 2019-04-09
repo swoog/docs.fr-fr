@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Windows existant hériter de contrôles de formulaires'
+title: 'Procédure : hériter de contrôles Windows Forms existants'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9b3b5b2420a1121be81bc299dea645051f941cd8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087870"
 ---
-# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procédure : Windows existant hériter de contrôles de formulaires
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procédure : hériter de contrôles Windows Forms existants
 Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous pouvez créer un contrôle dérivé d’un contrôle existant par héritage. Lorsque vous héritez d’un contrôle existant, vous héritez de toutes les fonctionnalités et propriétés visuelles de ce contrôle. Par exemple, si vous avez créé un contrôle hérité de <xref:System.Windows.Forms.Button>, votre aura l’aspect et le comportement standard <xref:System.Windows.Forms.Button> contrôle. Vous pourrez ensuite étendre ou modifier les fonctionnalités de votre nouveau contrôle en implémentant des méthodes et des propriétés personnalisées. Dans certains cas, vous pouvez également modifier l’apparence visuelle du contrôle hérité en substituant ses <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).  
   
 > [!NOTE]
@@ -84,10 +84,11 @@ Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous 
 11. Enregistrez et testez votre contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)
-- [Guide pratique pour Héritez de la classe de contrôle](how-to-inherit-from-the-control-class.md)
-- [Guide pratique pour Hériter de la classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Guide pratique pour Créer des contrôles pour les Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Dépannage des gestionnaires d’événements hérités en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Procédure : hériter de la classe Control](how-to-inherit-from-the-control-class.md)
+- [Procédure : hériter de la classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Procédure : créer des contrôles pour Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Dépannage des gestionnaires d'événements hérités dans Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Procédure pas à pas : héritage d’un contrôle Windows Forms avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procédure pas à pas : Héritage d'un contrôle Windows Forms à l'aide de Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077288"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implémentation de fournisseur UI Automation côté serveur
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "57679409"
   
  Cette section explique comment implémenter un fournisseur UI Automation côté serveur pour un contrôle personnalisé.  
   
- L’implémentation pour les éléments Windows Presentation Foundation (WPF) et non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] éléments (tels que ceux conçus pour [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) est fondamentalement différente. Les éléments[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] prennent en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] via une classe dérivée d' <xref:System.Windows.Automation.Peers.AutomationPeer>. Les éléments non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fournissent une prise en charge via l'implémentation d'interfaces de fournisseurs.  
+ L’implémentation pour les éléments Windows Presentation Foundation (WPF) et non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] éléments (tels que ceux conçus pour [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) est fondamentalement différente. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] éléments fournissent la prise en charge de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] via une classe dérivée de <xref:System.Windows.Automation.Peers.AutomationPeer>. Les éléments non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fournissent une prise en charge via l'implémentation d'interfaces de fournisseurs.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
@@ -42,8 +42,7 @@ ms.locfileid: "57679409"
 -   UIAutomationTypes.dll  
   
 -   WindowsBase.dll  
-  
-  
+
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>Interfaces de fournisseur  
  Chaque fournisseur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] doit implémenter l'une des interfaces suivantes.  
@@ -78,7 +77,7 @@ ms.locfileid: "57679409"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Valeurs de la propriété dans les fournisseurs non-WPF  
- Les fournisseurs[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour les contrôles personnalisés doivent prendre en charge certaines propriétés qui peuvent être utilisées aussi bien par le système d'automatisation que par les applications clientes. Pour les éléments hébergés dans des fenêtres (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peut récupérer certaines propriétés depuis un fournisseur de fenêtre par défaut, mais doit en obtenir d'autres du fournisseur personnalisé.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fournisseurs pour les contrôles personnalisés doivent prendre en charge certaines propriétés qui peuvent être utilisées par le système d’automatisation ainsi que par les applications clientes. Pour les éléments hébergés dans des fenêtres (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peut récupérer certaines propriétés depuis un fournisseur de fenêtre par défaut, mais doit en obtenir d'autres du fournisseur personnalisé.  
   
  Habituellement, les fournisseurs de contrôles basés sur HWND n'ont pas besoin de fournir les propriétés suivantes (identifiées par des valeurs de champ) :  
   
@@ -113,7 +112,7 @@ ms.locfileid: "57679409"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>Événements dans les fournisseurs non-WPF  
- Les fournisseurs[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] doivent déclencher des événements pour informer les applications clientes des modifications de l'état de l'interface utilisateur. Les méthodes suivantes sont utilisées pour déclencher des événements.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] les fournisseurs doivent déclencher des événements pour avertir les applications clientes des modifications de l’état de l’interface utilisateur. Les méthodes suivantes sont utilisées pour déclencher des événements.  
   
 |Méthode|Description|  
 |------------|-----------------|  
@@ -145,7 +144,7 @@ ms.locfileid: "57679409"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>Définition de l'état de parent d'un fournisseur non-WPF  
- Les fenêtres indépendantes sont en fait des fenêtres de niveau supérieur ; elles apparaissent donc par défaut dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en tant qu'enfants du bureau. Dans de nombreux cas, toutefois, les fenêtres indépendantes sont logiquement des enfants d'autres contrôles. Par exemple, la liste déroulante d'une zone de liste modifiable est logiquement un enfant de la zone de liste modifiable. De la même façon, une fenêtre indépendante de menu est logiquement un enfant du menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] assure la prise en charge permettant de définir un nouveau parent pour les fenêtres indépendantes afin qu'elles apparaissent en tant qu'enfants du contrôle associé.  
+ Les fenêtres indépendantes sont en fait des fenêtres de niveau supérieur ; elles apparaissent donc par défaut dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en tant qu'enfants du bureau. Dans de nombreux cas, toutefois, les fenêtres indépendantes sont logiquement des enfants d'autres contrôles. Par exemple, la liste déroulante d'une zone de liste modifiable est logiquement un enfant de la zone de liste modifiable. De la même façon, une fenêtre indépendante de menu est logiquement un enfant du menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] prend en charge pour redéfinir la parenté fenêtres publicitaires afin qu’ils apparaissent en tant qu’enfants du contrôle associé.  
   
  Pour définir l'état de changement de parent d'une fenêtre indépendante :  
   
@@ -163,16 +162,17 @@ ms.locfileid: "57679409"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>Repositionnement d'un fournisseur non-WPF  
- Les fragments[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peuvent contenir deux éléments ou plus, tous contenus dans une fenêtre (HWND). Comme chaque HWND possède son propre fournisseur par défaut qui considère le HWND comme un enfant d’un HWND contenant, l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] affiche, par défaut, les HWND dans le fragment en tant qu’enfants de la fenêtre parente. Dans la plupart des cas, ce comportement est conseillé, mais il peut parfois porter à confusion, car il ne correspond pas à la structure logique de l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fragments peuvent contenir deux ou plusieurs éléments qui sont contenus dans une fenêtre (HWND). Comme chaque HWND possède son propre fournisseur par défaut qui considère le HWND comme un enfant d’un HWND contenant, l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] affiche, par défaut, les HWND dans le fragment en tant qu’enfants de la fenêtre parente. Dans la plupart des cas, ce comportement est conseillé, mais il peut parfois porter à confusion, car il ne correspond pas à la structure logique de l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Le contrôle rebar en est un bon exemple. Un rebar contient des bandes, qui peuvent, elles aussi, contenir un contrôle basé sur HWND, tel qu'une barre d'outils, une zone d'édition ou une zone de liste modifiable. Le fournisseur de fenêtre par défaut du HWND rebar considère les HWND du contrôle de bandes comme des enfants, tandis que le fournisseur rebar considère les bandes comme des enfants. Étant donné que le fournisseur HWND et le fournisseur rebar travaillent en tandem et qu'ils combinent leurs enfants, les bandes et les contrôles basés sur HWND apparaissent comme les enfants du rebar. Toutefois, seules les bandes devraient logiquement apparaître comme les enfants du rebar et chaque fournisseur de bandes devrait être associé au fournisseur HWND par défaut pour le contrôle qu'il contient.  
   
  Pour cela, le fournisseur de la racine du fragment pour le rebar expose un jeu d'enfants représentant les bandes. Chaque bande possède un seul fournisseur qui peut exposer des propriétés et des modèles. Dans son implémentation de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, le fournisseur de bandes retourne le fournisseur de fenêtre par défaut pour le HWND de contrôle qu'il obtient en appelant <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, en passant le handle de fenêtre du contrôle. Enfin, le fournisseur de la racine du fragment pour le rebar implémente l'interface <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> et, dans son implémentation de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> , il retourne le fournisseur de bandes approprié pour le contrôle contenu dans le HWND spécifié.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des fournisseurs UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+
+- [Vue d'ensemble des fournisseurs UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [Exposer un fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Retourner les propriétés d’un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Déclencher des événements à partir d’un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Retourner les propriétés d'un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Déclencher des événements à partir d'un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
 - [Activer la navigation dans un fournisseur de fragment UI Automation](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

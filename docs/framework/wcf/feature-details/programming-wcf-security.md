@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087805"
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
 Cette rubrique décrit les tâches de programmation fondamentales utilisées pour créer une application Windows Communication Foundation (WCF) sécurisé. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, collectivement appelées *sécurité de transfert*. Cette rubrique ne couvre pas l’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -29,7 +29,7 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
   
      Le transport dépend de la liaison sélectionnée. Par exemple, <xref:System.ServiceModel.WSHttpBinding> utilise le transport HTTP tandis que <xref:System.ServiceModel.NetTcpBinding> utilise le transport TCP.  
   
-2.  Sélectionnez l’un des modes de sécurité disponibles pour la liaison. Remarque : les modes de sécurité disponibles dépendent de la liaison sélectionnée. Par exemple, la liaison <xref:System.ServiceModel.WSDualHttpBinding> ne permet pas de définir le niveau transport comme mode de sécurité (ce mode n'est pas disponible pour cette liaison). De la même façon, les liaisons <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> et <xref:System.ServiceModel.NetNamedPipeBinding> ne permettent pas de définir le niveau message comme mode de sécurité.  
+2.  Sélectionnez l'un des modes de sécurité disponibles pour la liaison. Remarque : les modes de sécurité disponibles dépendent de la liaison sélectionnée. Par exemple, la liaison <xref:System.ServiceModel.WSDualHttpBinding> ne permet pas de définir le niveau transport comme mode de sécurité (ce mode n'est pas disponible pour cette liaison). De la même façon, les liaisons <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> et <xref:System.ServiceModel.NetNamedPipeBinding> ne permettent pas de définir le niveau message comme mode de sécurité.  
   
      Trois choix sont possibles :  
   
@@ -90,7 +90,7 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>Définition des valeurs d'informations d'identification service  
- Après avoir sélectionné un type d'informations d'identification client, vous devez définir les informations d'identification que le client et le service devront effectivement utiliser. Du côté service, les informations d'identification sont définies à l'aide de la classe <xref:System.ServiceModel.Description.ServiceCredentials> et sont retournées par la propriété <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> de la classe <xref:System.ServiceModel.ServiceHostBase>. Les types d’informations d’identification service et client ainsi que le mode de sécurité dépendent de la liaison utilisée. L'exemple de code suivant définit un certificat pour les informations d'identification service.  
+ Après avoir sélectionné un type d'informations d'identification client, vous devez définir les informations d'identification que le client et le service devront effectivement utiliser. Du côté service, les informations d'identification sont définies à l'aide de la classe <xref:System.ServiceModel.Description.ServiceCredentials> et sont retournées par la propriété <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> de la classe <xref:System.ServiceModel.ServiceHostBase>. Les types d'informations d'identification service et client ainsi que le mode de sécurité dépendent de la liaison utilisée. L'exemple de code suivant définit un certificat pour les informations d'identification service.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
@@ -102,5 +102,6 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072426"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile, méthode
 Vous permet de spécifier ou de réinitialiser le fichier manifest que l’éditeur de liens utilise lorsqu’il crée l’assembly.  
@@ -45,10 +45,11 @@ HRESULT SetManifestFile(
 ## <a name="remarks"></a>Notes  
  Appelé avant de demander pour le Win32ResBlob. La valeur de la `pszFile` paramètre est le nom du fichier manifeste dont le contenu est lu et mis dans les ressources Win32 avec l’ID de RT_MANIFEST. Lorsqu’elle est appelée à l’aide d’un paramètre de valeur NULL, tout manifeste lu précédemment est effacé. Cela permet de réinitialiser l’état de l’éditeur de liens à celle du moment de l’initialisation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite aLink.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink3, interface](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

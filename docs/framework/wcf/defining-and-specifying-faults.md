@@ -8,18 +8,18 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079329"
 ---
 # <a name="defining-and-specifying-faults"></a>Définition et spécification des erreurs
 Les erreurs SOAP acheminent des informations de condition d'erreur d'un service à un client et, dans le cas duplex, d'un client à un service d'une manière interopérable. Cette rubrique explique quand et comment définir le contenu d'erreur personnalisé et spécifier quelles opérations peuvent les retourner. Pour plus d’informations sur la façon dont un service, ou un client duplex peut envoyer ces erreurs et comment une application cliente ou le service gère ces erreurs, consultez [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Pour une vue d’ensemble de la gestion des erreurs dans les applications Windows Communication Foundation (WCF), consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Les erreurs SOAP déclarées sont celles dans lesquelles une opération contient un <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> qui spécifie un type d'erreur SOAP personnalisé. Les erreurs SOAP non déclarées sont celles qui ne sont pas spécifiées dans le contrat d'une opération. Cette rubrique vous permet d'identifier ces conditions d'erreur et crée un contrat d'erreur pour votre service que les clients peuvent utiliser pour traiter correctement ces conditions d'erreur lorsqu'elles sont notifiées par des erreurs SOAP personnalisées. Les tâches de base sont, dans l'ordre :  
+ Les erreurs SOAP déclarées sont celles dans lesquelles une opération contient un <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> qui spécifie un type d'erreur SOAP personnalisé. Les erreurs SOAP non déclarées sont celles qui ne sont pas spécifiées dans le contrat d'une opération. Cette rubrique vous permet d'identifier ces conditions d'erreur et crée un contrat d'erreur pour votre service que les clients peuvent utiliser pour traiter correctement ces conditions d'erreur lorsqu'elles sont notifiées par des erreurs SOAP personnalisées. Les tâches de base sont, dans l’ordre :  
   
 1.  Définir les conditions d'erreur qu'un client de votre service doit connaître.  
   
@@ -88,12 +88,13 @@ End Class
  Lors de l'accès à des non-services sources d'erreurs, certaines limitations existent. WCF prend en charge uniquement les erreurs avec des types de détail que le schéma décrit et qui sont compatibles avec les contrats de données. Par exemple, comme indiqué plus haut, WCF ne prend pas en charge erreurs qui utilisent des attributs XML dans leur type de détail ou des erreurs avec plus d’un élément de niveau supérieur dans la section détail.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Envoi et réception des erreurs](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Guide pratique pour Déclarer des erreurs dans les contrats de Service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
-- [Présentation du niveau de protection](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Guide pratique pour Définissez la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Procédure : Déclarer des erreurs dans les contrats de service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Fonctionnement des niveaux de protection](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Procédure : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Spécification du transfert de données dans des contrats de service](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

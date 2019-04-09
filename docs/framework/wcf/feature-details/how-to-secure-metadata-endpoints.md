@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Sécuriser des points de terminaison de métadonnées'
+title: 'Procédure : sécuriser des points de terminaison de métadonnées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076573"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Procédure : Sécuriser des points de terminaison de métadonnées
+# <a name="how-to-secure-metadata-endpoints"></a>Procédure : sécuriser des points de terminaison de métadonnées
 Les métadonnées d'un service peuvent contenir des informations sensibles sur votre application dont un utilisateur malveillant peut tirer parti. Les consommateurs de votre service peuvent également avoir besoin d'un mécanisme sécurisé pour obtenir des métadonnées sur votre service. Par conséquent, il est parfois nécessaire de publier vos métadonnées à l'aide d'un point de terminaison sécurisé.  
   
  Points de terminaison de métadonnées sont en général sécurisés à l’aide de mécanismes de sécurité standard définis dans Windows Communication Foundation (WCF) pour la sécurisation des points de terminaison application. (Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -93,10 +93,11 @@ Les métadonnées d'un service peuvent contenir des informations sensibles sur v
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Guide pratique pour Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Procédure : configurer un port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

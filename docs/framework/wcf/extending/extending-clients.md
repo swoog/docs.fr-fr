@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074753"
 ---
 # <a name="extending-clients"></a>Extension de clients
 Dans une application appelante, la couche de modèle de service est chargée de traduire les appels de méthode du code d'application en messages sortants, de les envoyer vers les canaux sous-jacents, de retraduire les résultats en valeurs de retour et paramètres de sortie dans le code d'application, et de retourner de nouveau les résultats à l'appelant. Les extensions de modèle de service modifient ou implémentent le comportement et les fonctionnalités d’exécution ou de communication qui impliquent des fonctionnalités de répartiteur ou client, des comportements personnalisés, l’interception de messages et de paramètres, ainsi que d’autres fonctionnalités d’extensibilité.  
@@ -39,7 +39,7 @@ Dans une application appelante, la couche de modèle de service est chargée de 
 -   Validation personnalisée des paramètres. Un utilisateur souhaite que les paramètres typés soient valides (par opposition à XML). Cela peut être accompli à l'aide des interfaces de l'inspecteur de paramètres. Pour voir un exemple, consultez [Comment : Inspecter ou modifier les paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) ou [validation côté Client](../../../../docs/framework/wcf/samples/client-validation.md).  
   
 ### <a name="using-the-clientruntime-class"></a>Utilisation de la classe ClientRuntime  
- La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> est un point d'extensibilité auquel vous pouvez ajouter des objets d'extension qui interceptent des messages et étendent le comportement du client. Les objets d'interception peuvent traiter tous les messages d'un contrat spécifique, traiter uniquement les messages de certaines opérations, exécuter l'initialisation de canal personnalisée et implémenter un autre comportement d'application cliente personnalisé.  
+ La classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> est un point d’extensibilité auquel vous pouvez ajouter des objets d’extension qui interceptent des messages et étendent le comportement du client. Les objets d'interception peuvent traiter tous les messages d'un contrat spécifique, traiter uniquement les messages de certaines opérations, exécuter l'initialisation de canal personnalisée et implémenter un autre comportement d'application cliente personnalisé.  
   
 -   La propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> retourne l'objet d'exécution de répartition pour les clients de rappel initiés par le service.  
   
@@ -69,14 +69,14 @@ Dans une application appelante, la couche de modèle de service est chargée de 
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- Pour étendre l’exécution du client WCF sur un client WCF entière, passez en revue les propriétés disponibles sur la <xref:System.ServiceModel.Dispatcher.ClientRuntime> classe afin de déterminer si la modification d’une propriété ou en implémentant une interface et en l’ajoutant à une propriété crée les fonctionnalités que vous recherchez. Après avoir choisi l’extension spécifique à générer, insérez-la dans la propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime> appropriée en implémentant un comportement client permettant d’accéder à la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> en cas d’appel.  
+ Pour étendre l’exécution du client WCF sur un client WCF entière, passez en revue les propriétés disponibles sur la <xref:System.ServiceModel.Dispatcher.ClientRuntime> classe afin de déterminer si la modification d’une propriété ou en implémentant une interface et en l’ajoutant à une propriété crée les fonctionnalités que vous recherchez. Après avoir choisi l'extension spécifique à générer, insérez-la dans la propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime> appropriée en implémentant un comportement client permettant d'accéder à la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime> en cas d'appel.  
   
- Vous pouvez insérer des objets d’extension personnalisés dans une collection à l’aide d’un comportement d’opération (objet qui implémente <xref:System.ServiceModel.Description.IOperationBehavior>), d’un comportement de contrat (objet qui implémente <xref:System.ServiceModel.Description.IContractBehavior>) ou d’un comportement de point de terminaison (objet qui implémente <xref:System.ServiceModel.Description.IEndpointBehavior>). L’objet de comportement installé est ajouté à la collection appropriée de comportements par programme ou de façon déclarative (en implémentant un attribut personnalisé), ou en implémentant un objet <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé pour que le comportement soit inséré à l’aide d’un fichier de configuration d’application. Pour plus d’informations, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Vous pouvez insérer des objets d'extension personnalisés dans une collection à l'aide d'un comportement d'opération (objet qui implémente <xref:System.ServiceModel.Description.IOperationBehavior>), d'un comportement de contrat (objet qui implémente <xref:System.ServiceModel.Description.IContractBehavior>) ou d'un comportement de point de terminaison (objet qui implémente <xref:System.ServiceModel.Description.IEndpointBehavior>). L'objet de comportement installé est ajouté à la collection appropriée de comportements par programme ou de façon déclarative (en implémentant un attribut personnalisé), ou en implémentant un objet <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé pour que le comportement soit inséré à l'aide d'un fichier de configuration d'application. Pour plus d’informations, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
  Pour obtenir des exemples qui illustrent l’interception entre un client WCF, consultez [Comment : Inspecter ou modifier des Messages sur le Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
 ### <a name="using-the-clientoperation-class"></a>Utilisation de la classe ClientOperation  
- La classe <xref:System.ServiceModel.Dispatcher.ClientOperation> correspond à l'emplacement des modifications d'exécution du client et au point d'insertion des extensions personnalisées qui sont limitées à une seule opération de service. (Pour modifier le comportement d'exécution du client pour tous les messages d'un contrat, utilisez la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>.)  
+ La classe <xref:System.ServiceModel.Dispatcher.ClientOperation> correspond à l’emplacement des modifications d’exécution du client et au point d’insertion des extensions personnalisées qui sont limitées à une seule opération de service. (Pour modifier le comportement d'exécution du client pour tous les messages d'un contrat, utilisez la classe <xref:System.ServiceModel.Dispatcher.ClientRuntime>.)  
   
  Utilisez la propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> pour localiser l'objet <xref:System.ServiceModel.Dispatcher.ClientOperation> qui représente une opération de service particulière. Les propriétés suivantes permettent d’insérer des objets personnalisés dans le système de client WCF :  
   
@@ -106,7 +106,7 @@ Dans une application appelante, la couche de modèle de service est chargée de 
   
 -   La propriété <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> permet de contrôler la méthode mappée à l'opération.  
   
- Pour étendre l’exécution du client WCF sur l’opération de service qu’un seul, passez en revue les propriétés disponibles sur la <xref:System.ServiceModel.Dispatcher.ClientOperation> classe afin de déterminer si la modification d’une propriété ou en implémentant une interface et en l’ajoutant à une propriété crée les fonctionnalités que vous recherchez. Après avoir choisi l’extension spécifique à générer, insérez-la dans la propriété <xref:System.ServiceModel.Dispatcher.ClientOperation> appropriée en implémentant un comportement client permettant d’accéder à la classe <xref:System.ServiceModel.Dispatcher.ClientOperation> en cas d’appel. Dans ce comportement, vous pouvez ensuite modifier la propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime> en fonction de vos besoins.  
+ Pour étendre l’exécution du client WCF sur l’opération de service qu’un seul, passez en revue les propriétés disponibles sur la <xref:System.ServiceModel.Dispatcher.ClientOperation> classe afin de déterminer si la modification d’une propriété ou en implémentant une interface et en l’ajoutant à une propriété crée les fonctionnalités que vous recherchez. Après avoir choisi l'extension spécifique à générer, insérez-la dans la propriété <xref:System.ServiceModel.Dispatcher.ClientOperation> appropriée en implémentant un comportement client permettant d'accéder à la classe <xref:System.ServiceModel.Dispatcher.ClientOperation> en cas d'appel. Dans ce comportement, vous pouvez ensuite modifier la propriété <xref:System.ServiceModel.Dispatcher.ClientRuntime> en fonction de vos besoins.  
   
  En général, l'implémentation d'un comportement d'opération (objet qui implémente l'interface <xref:System.ServiceModel.Description.IOperationBehavior> ) suffit, mais vous pouvez également utiliser des comportements de point de terminaison et de contrat en localisant le <xref:System.ServiceModel.Description.OperationDescription> d'une opération spécifique et en joignant le comportement à cet emplacement. Pour plus d’informations, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
@@ -115,7 +115,8 @@ Dans une application appelante, la couche de modèle de service est chargée de 
  Pour obtenir des exemples qui illustrent l’interception entre un client WCF, consultez [Comment : Inspecter ou modifier les paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Guide pratique pour Inspecter ou modifier des Messages sur le Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Guide pratique pour Inspecter ou modifier les paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Procédure : inspecter ou modifier des messages sur le client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Procédure : inspecter ou modifier des paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

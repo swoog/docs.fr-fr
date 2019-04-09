@@ -2,12 +2,12 @@
 title: NamedPipeTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
-ms.openlocfilehash: 5cb5dbe50a5fec09f950a56ef12ac9b7fb7a8144
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 080c5e55fb2f92e9c9739b12fef371b14e8babae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074896"
 ---
 # <a name="namedpipetransportbindingelement"></a>NamedPipeTransportBindingElement
 NamedPipeTransportBindingElement  
@@ -24,7 +24,7 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 ## <a name="methods"></a>Méthodes  
  La classe NamedPipeTransportBindingElement ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe NamedPipeTransportBindingElement a la propriété suivante :  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
@@ -34,11 +34,12 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
   
  Paramètres de pool de connexions.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
