@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb23dce20883e2a2a894972cc7c397c04517a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103179"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="4962c-102">ICorDebugErrorInfoEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="4962c-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="4962c-103">`ICorDebugErrorInfoEnum::Next` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="4962c-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="4962c-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="4962c-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="b3d06-102">ICorDebugErrorInfoEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="b3d06-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+`ICorDebugErrorInfoEnum::Next` <span data-ttu-id="b3d06-103">est obsolète.</span><span class="sxs-lookup"><span data-stu-id="b3d06-103">is obsolete.</span></span> <span data-ttu-id="b3d06-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="b3d06-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4962c-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4962c-105">See also</span></span>
-- [<span data-ttu-id="4962c-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="4962c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b3d06-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b3d06-105">See also</span></span>
+
+- [<span data-ttu-id="b3d06-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b3d06-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

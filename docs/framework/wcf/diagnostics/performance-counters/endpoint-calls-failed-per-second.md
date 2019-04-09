@@ -2,24 +2,25 @@
 title: "Point de terminaison : Nombre d'appels ayant échoué par seconde"
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
-ms.openlocfilehash: 03fbdd83246fa811424f445823f705a3bef5697a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52419f45adde768d19d6b46642d52ad0a1844197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100019"
 ---
-# <a name="endpoint-calls-failed-per-second"></a><span data-ttu-id="d7f55-102">Point de terminaison : Nombre d'appels ayant échoué par seconde</span><span class="sxs-lookup"><span data-stu-id="d7f55-102">Endpoint: Calls Failed Per Second</span></span>
-<span data-ttu-id="d7f55-103">Nom du compteur : Appels ayant échoué par seconde.</span><span class="sxs-lookup"><span data-stu-id="d7f55-103">Counter Name: Calls Failed Per Second.</span></span>  
+# <a name="endpoint-calls-failed-per-second"></a><span data-ttu-id="814be-102">Point de terminaison : Nombre d'appels ayant échoué par seconde</span><span class="sxs-lookup"><span data-stu-id="814be-102">Endpoint: Calls Failed Per Second</span></span>
+<span data-ttu-id="814be-103">Nom du compteur : Appels ayant échoué par seconde.</span><span class="sxs-lookup"><span data-stu-id="814be-103">Counter Name: Calls Failed Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d7f55-104">Description</span><span class="sxs-lookup"><span data-stu-id="d7f55-104">Description</span></span>  
- <span data-ttu-id="d7f55-105">Nombre d'appels ayant des exceptions non traitées et reçus par ce point de terminaison en une seconde.</span><span class="sxs-lookup"><span data-stu-id="d7f55-105">Number of calls that have unhandled exceptions and are received by this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="814be-104">Description</span><span class="sxs-lookup"><span data-stu-id="814be-104">Description</span></span>  
+ <span data-ttu-id="814be-105">Nombre d'appels ayant des exceptions non traitées et reçus par ce point de terminaison en une seconde.</span><span class="sxs-lookup"><span data-stu-id="814be-105">Number of calls that have unhandled exceptions and are received by this endpoint in a second.</span></span>  
   
- <span data-ttu-id="d7f55-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="d7f55-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="814be-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="814be-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="d7f55-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="d7f55-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="814be-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="814be-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="d7f55-108">Ce compteur est incrémenté à chaque exception non traitée à ce point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="d7f55-108">This counter is incremented every time there is an unhandled exception at this endpoint.</span></span>  
+ <span data-ttu-id="814be-108">Ce compteur est incrémenté à chaque exception non traitée à ce point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="814be-108">This counter is incremented every time there is an unhandled exception at this endpoint.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7f55-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d7f55-109">See also</span></span>
-- [<span data-ttu-id="d7f55-110">Spécification et gestion des erreurs dans les contrats et les services</span><span class="sxs-lookup"><span data-stu-id="d7f55-110">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="814be-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="814be-109">See also</span></span>
+
+- [<span data-ttu-id="814be-110">Spécification et gestion des erreurs dans les contrats et les services</span><span class="sxs-lookup"><span data-stu-id="814be-110">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

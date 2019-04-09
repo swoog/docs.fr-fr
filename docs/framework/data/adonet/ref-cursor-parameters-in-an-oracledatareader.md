@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 95bfb544ea02a8a44d010d08c491234fffaf3689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121847"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="9c5e0-102">Paramètres REF CURSOR dans un OracleDataReader</span><span class="sxs-lookup"><span data-stu-id="9c5e0-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="9c5e0-103">Cet exemple Microsoft Visual Basic exécute une procédure stockée PL/SQL qui retourne un paramètre REF CURSOR et lit la valeur comme un <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="9c5e0-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="08f5a-102">Paramètres REF CURSOR dans un OracleDataReader</span><span class="sxs-lookup"><span data-stu-id="08f5a-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="08f5a-103">Cet exemple Microsoft Visual Basic exécute une procédure stockée PL/SQL qui retourne un paramètre REF CURSOR et lit la valeur comme un <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="08f5a-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,6 +43,7 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9c5e0-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9c5e0-104">See also</span></span>
-- [<span data-ttu-id="9c5e0-105">REF CURSOR Oracle</span><span class="sxs-lookup"><span data-stu-id="9c5e0-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [<span data-ttu-id="9c5e0-106">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="9c5e0-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="08f5a-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="08f5a-104">See also</span></span>
+
+- [<span data-ttu-id="08f5a-105">REF CURSOR Oracle</span><span class="sxs-lookup"><span data-stu-id="08f5a-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [<span data-ttu-id="08f5a-106">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="08f5a-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

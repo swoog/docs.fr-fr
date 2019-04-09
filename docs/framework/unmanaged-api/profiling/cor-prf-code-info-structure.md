@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103283"
 ---
-# <a name="corprfcodeinfo-structure"></a><span data-ttu-id="c23e3-102">COR_PRF_CODE_INFO, structure</span><span class="sxs-lookup"><span data-stu-id="c23e3-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="c23e3-103">Représente un bloc contigu de code natif stocké en mémoire.</span><span class="sxs-lookup"><span data-stu-id="c23e3-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="corprfcodeinfo-structure"></a><span data-ttu-id="f48ec-102">COR_PRF_CODE_INFO, structure</span><span class="sxs-lookup"><span data-stu-id="f48ec-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="f48ec-103">Représente un bloc contigu de code natif stocké en mémoire.</span><span class="sxs-lookup"><span data-stu-id="f48ec-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c23e3-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c23e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f48ec-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f48ec-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -35,21 +35,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c23e3-105">Membres</span><span class="sxs-lookup"><span data-stu-id="c23e3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f48ec-105">Membres</span><span class="sxs-lookup"><span data-stu-id="f48ec-105">Members</span></span>  
   
-|<span data-ttu-id="c23e3-106">Membre</span><span class="sxs-lookup"><span data-stu-id="c23e3-106">Member</span></span>|<span data-ttu-id="c23e3-107">Description</span><span class="sxs-lookup"><span data-stu-id="c23e3-107">Description</span></span>|  
+|<span data-ttu-id="f48ec-106">Membre</span><span class="sxs-lookup"><span data-stu-id="f48ec-106">Member</span></span>|<span data-ttu-id="f48ec-107">Description</span><span class="sxs-lookup"><span data-stu-id="f48ec-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="c23e3-108">Adresse de départ du bloc contigu de code.</span><span class="sxs-lookup"><span data-stu-id="c23e3-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="c23e3-109">La taille du bloc.</span><span class="sxs-lookup"><span data-stu-id="c23e3-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="f48ec-108">Adresse de départ du bloc contigu de code.</span><span class="sxs-lookup"><span data-stu-id="f48ec-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="f48ec-109">La taille du bloc.</span><span class="sxs-lookup"><span data-stu-id="f48ec-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c23e3-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="c23e3-110">Requirements</span></span>  
- <span data-ttu-id="c23e3-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c23e3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f48ec-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f48ec-110">Requirements</span></span>  
+ <span data-ttu-id="f48ec-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f48ec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c23e3-112">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="c23e3-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="f48ec-112">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="f48ec-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="c23e3-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c23e3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f48ec-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f48ec-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c23e3-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c23e3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f48ec-114">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="f48ec-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c23e3-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c23e3-115">See also</span></span>
-- [<span data-ttu-id="c23e3-116">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="c23e3-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="f48ec-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f48ec-115">See also</span></span>
+
+- [<span data-ttu-id="f48ec-116">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="f48ec-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
