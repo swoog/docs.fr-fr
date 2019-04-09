@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726ded615fb6d1bcd0a3a4b92e93f3675d9ce8fa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0a4a8e5f99a845d2befe55f5939b41224f2aa47b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077301"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken, méthode
 Obtient le jeton de clé publique de l'assembly.  
@@ -40,15 +40,16 @@ HRESULT GetPublicKeyToken(
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugMergedAssemblyRecord, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

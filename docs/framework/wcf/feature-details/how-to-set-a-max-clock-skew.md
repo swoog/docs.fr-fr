@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ensemble une variation d’horloge maximale'
+title: 'Procédure : définir une inclinaison de l’horloge maximale'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076626"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>Procédure : Ensemble une variation d’horloge maximale
+# <a name="how-to-set-a-max-clock-skew"></a>Procédure : définir une inclinaison de l’horloge maximale
 Les fonctions à durée critique peuvent dérailler si les paramètres de l'horloge sont différents sur deux ordinateurs. Pour limiter cette possibilité, vous pouvez affecter à la propriété `MaxClockSkew` un <xref:System.TimeSpan>. Cette propriété est disponible sur deux classes :  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
@@ -25,9 +25,9 @@ Les fonctions à durée critique peuvent dérailler si les paramètres de l'horl
 > [!IMPORTANT]
 >  Important pour une conversation sécurisée, des modifications à la `MaxClockSkew` propriété doit être effectuée lorsque le client ou le service est initialisé. Pour ce faire, vous devez définir la propriété sur le <xref:System.ServiceModel.Channels.SecurityBindingElement> retourné par le <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
   
- Pour modifier la propriété sur l’une des liaisons fournies par le système, vous devez rechercher l’élément de liaison de sécurité dans la collection de liaisons et affecter une nouvelle valeur à la propriété `MaxClockSkew`. Deux classes dérivent de <xref:System.ServiceModel.Channels.SecurityBindingElement> : <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> et <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Lorsque vous récupérez la liaison de sécurité de la collection, vous devez effectuer une conversion de type en l'un de ces types afin de définir correctement la propriété `MaxClockSkew`. L'exemple suivant utilise un <xref:System.ServiceModel.WSHttpBinding>, qui utilise <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Pour obtenir la liste qui spécifie le type de liaison de sécurité à utiliser dans chaque liaison fournie par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Pour modifier la propriété sur l'une des liaisons fournies par le système, vous devez rechercher l'élément de liaison de sécurité dans la collection de liaisons et affecter une nouvelle valeur à la propriété `MaxClockSkew`. Deux classes dérivent de <xref:System.ServiceModel.Channels.SecurityBindingElement> : <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> et <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Lorsque vous récupérez la liaison de sécurité de la collection, vous devez effectuer une conversion de type en l’un de ces types afin de définir correctement la propriété `MaxClockSkew`. L'exemple suivant utilise un <xref:System.ServiceModel.WSHttpBinding>, qui utilise <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Pour obtenir la liste qui spécifie le type de liaison de sécurité à utiliser dans chaque liaison fournie par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Pour créer une liaison personnalisée avec une nouvelle valeur d’inclinaison de l’horloge dans du code  
+### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Pour créer une liaison personnalisée avec une nouvelle valeur d'inclinaison de l'horloge dans du code  
   
 1.  > [!WARNING]
     >  Remarque Ajoutez des références aux espaces de noms suivants dans votre code : <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, et <xref:System.ServiceModel.Security.Tokens>.  
@@ -85,7 +85,8 @@ Les fonctions à durée critique peuvent dérailler si les paramètres de l'horl
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

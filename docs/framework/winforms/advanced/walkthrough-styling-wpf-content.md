@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : Contenu WPF de style'
+title: 'Procédure pas à pas : application d’un style au contenu WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079356"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>Procédure pas à pas : Contenu WPF de style
+# <a name="walkthrough-styling-wpf-content"></a>Procédure pas à pas : application d’un style au contenu WPF
 Cette procédure pas à pas montre comment appliquer des styles à un contrôle WPF (Windows Presentation Foundation) hébergé sur un Windows Form.
 
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
@@ -72,7 +72,7 @@ Cette procédure pas à pas montre comment appliquer des styles à un contrôle 
   
 3.  Dans le panneau des balises actives pour `elementHost1`, cliquez sur **modifier le contenu hébergé** dans la liste déroulante.  
   
-     `UserControl1` s'ouvre dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+     `UserControl1` s’ouvre dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4.  En mode XAML, insérez le code XAML suivant après la balise d'ouverture `<UserControl>`.  
   
@@ -150,10 +150,11 @@ Cette procédure pas à pas montre comment appliquer des styles à un contrôle 
 5.  Cliquez sur les boutons OK et Annuler et observez les différences.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migration et interopérabilité](../../wpf/advanced/migration-and-interoperability.md)
 - [Utilisation de contrôles WPF](using-wpf-controls.md)
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Vue d’ensemble du langage XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Application d’un style et création de modèles](../../wpf/controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../../wpf/controls/styling-and-templating.md)

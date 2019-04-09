@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087831"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimisation des performances : Liaison de données
-La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent pour les applications de présenter les données et d’interagir avec elles. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] liaison de données fournit un moyen simple et cohérent pour les applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Cette rubrique fournit des recommandations sur les performances de la liaison de données.  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>Comment les références de liaison de données sont résolues  
  Avant d’aborder les problèmes de performances de la liaison de données, il est utile d’explorer la façon dont le moteur de liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] résout les références d’objet pour la liaison.  
@@ -37,7 +35,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Le tableau ci-dessous compare la vitesse de liaison de données la <xref:System.Windows.Controls.TextBlock.Text%2A> propriété d’un millier <xref:System.Windows.Controls.TextBlock> éléments à l’aide de ces trois méthodes.  
   
-|**Liaison de la propriété Text d’un TextBlox**|**Temps de liaison (ms)**|**Temps de rendu -- liaison incluse (ms)**|  
+|**Liaison de la propriété Text de TextBlock**|**Temps de liaison (ms)**|**Temps de rendu--liaison incluse (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |À une propriété d’un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
 |Pour une propriété d’un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet qui implémente <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -47,7 +45,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="binding-to-large-clr-objects"></a>Liaison à des objets CLR volumineux  
  Le fait de lier des données à un même objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] possédant plusieurs milliers de propriétés a un impact important sur les performances. Vous pouvez limiter cet impact en divisant l’objet en plusieurs objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] englobant moins de propriétés. Le tableau indique les temps de liaison et de rendu dans les cas d’une liaison de données à un même objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] volumineux et à plusieurs objets plus petits.  
   
-|**Liaison de données de 1 000 objets TextBlock**|**Temps de liaison (ms)**|**Temps de rendu -- liaison incluse (ms)**|  
+|**Données liaison 1 000 objets TextBlock**|**Temps de liaison (ms)**|**Temps de rendu--liaison incluse (ms)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |À un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] doté de 1 000 propriétés|950|1200|  
 |À 1 000 objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dotés d’une propriété|115|314|  
@@ -60,7 +58,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Le tableau ci-dessous montre le temps nécessaire pour mettre à jour le <xref:System.Windows.Controls.ListBox> (avec la virtualisation de l’interface utilisateur désactivée) lorsqu’un élément est ajouté. Le nombre figurant dans la première ligne représente le temps écoulé lors de la [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objet est lié à <xref:System.Windows.Controls.ListBox> l’élément <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Le nombre figurant dans la deuxième ligne représente le temps écoulé quand un <xref:System.Collections.ObjectModel.ObservableCollection%601> est lié à la <xref:System.Windows.Controls.ListBox> l’élément <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Notez que les économies de beaucoup de temps à l’aide du <xref:System.Collections.ObjectModel.ObservableCollection%601> stratégie de liaison de données.  
   
-|**Liaison de données de la propriété ItemsSource**|**Temps de mise à jour pour 1 élément (ms)**|  
+|**L’ItemsSource de liaison de données**|**Mise à jour pour 1 élément (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Pour un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objet|1 656|  
 |Pour un <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -71,17 +69,18 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Ne convertissez pas des objets CLR en XML seulement à des fins de liaison de données.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous autorise à lier des données à du contenu [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ; or, lier des données à du contenu [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] s’avère plus lent que de lier des données à des objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Ne convertissez pas des données d’objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] en XML si l’unique but est la liaison de données.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet de vous aux données lier à [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] de contenu ; Toutefois, la liaison de données à [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenu est plus lent que la liaison de données à [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objets. Ne convertissez pas des données d’objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] en XML si l’unique but est la liaison de données.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d'application](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Ressources d’application](optimizing-performance-application-resources.md)
+- [Texte](optimizing-performance-text.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
-- [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procédure pas à pas : mise en cache des données d’application dans une application WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

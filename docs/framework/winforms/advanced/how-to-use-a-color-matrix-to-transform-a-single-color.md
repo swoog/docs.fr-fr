@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser une matrice de couleurs pour transformer une couleur unique'
+title: 'Procédure : utiliser une matrice de couleurs pour transformer une seule couleur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075161"
 ---
-# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Procédure : Utiliser une matrice de couleurs pour transformer une couleur unique
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Procédure : utiliser une matrice de couleurs pour transformer une seule couleur
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit le <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> classes pour stocker et manipuler des images. <xref:System.Drawing.Image> et <xref:System.Drawing.Bitmap> objets stockent la couleur de chaque pixel comme un nombre 32 bits : 8 bits pour chaque rouge, vert, bleu et alpha. Chacun des quatre composants est un nombre compris entre 0 et 255, 0 représentant aucune intensité et une intensité maximale de 255. Le composant alpha spécifie la transparence de la couleur : 0 est totalement transparent et 255 est entièrement opaque.  
   
  Un vecteur de couleur est un tuple de 4 du formulaire (rouge, vert, bleu, alpha). Par exemple, le vecteur de couleur (0, 255, 0, 255) représente une couleur opaque qui comporte aucune rouge ou bleu, mais a vert à intensité complète.  
@@ -61,8 +61,9 @@ ms.locfileid: "57705595"
  [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Recoloriage des images](recoloring-images.md)
 - [Systèmes de coordonnées et transformations](coordinate-systems-and-transformations.md)

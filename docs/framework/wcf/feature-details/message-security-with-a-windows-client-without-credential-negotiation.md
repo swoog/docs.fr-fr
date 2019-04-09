@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075152"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sécurité de message avec un client Windows sans négociation d'informations d'identification
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et le service sécurisé par le protocole Kerberos.  
@@ -31,7 +31,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 |Intégrité|Oui|  
 |Confidentialité|Oui|  
 |Transport|HTTP|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Liaison|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
@@ -97,7 +97,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
   
 -   Créez un client autonome à l'aide du code (et du code client).  
   
--   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Par exemple :  
+-   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -147,6 +147,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer du texte de taille Variable dans un contrôle ComboBox'
+title: 'Procédure : créer du texte de taille variable dans un contrôle ComboBox'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085608"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procédure : Créer du texte de taille Variable dans un contrôle ComboBox
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procédure : créer du texte de taille variable dans un contrôle ComboBox
 Cet exemple montre un dessin personnalisé du texte dans un <xref:System.Windows.Forms.ComboBox> contrôle. Lorsqu’un élément répond à certains critères, il est dessiné dans une plus grande police et mis en rouge.  
   
 ## <a name="example"></a>Exemple  
@@ -68,9 +68,10 @@ End Sub
 -   Références aux espaces de noms <xref:System.Windows.Forms?displayProperty=nameWithType> et <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [Contrôles avec prise en charge intégrée du dessin owner-drawn](controls-with-built-in-owner-drawing-support.md)
+- [Contrôles avec prise en charge intégrée des dessins owner-drawn](controls-with-built-in-owner-drawing-support.md)
 - [ListBox, contrôle](listbox-control-windows-forms.md)
 - [ComboBox, contrôle](combobox-control-windows-forms.md)

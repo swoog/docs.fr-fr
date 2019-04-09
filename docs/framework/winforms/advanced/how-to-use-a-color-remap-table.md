@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser une Table de remappage des couleurs'
+title: 'Procédure : utiliser une table de remappage des couleurs'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 619eee8e5c08d24f2c7c485dfdc43331f5d64e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080057"
 ---
-# <a name="how-to-use-a-color-remap-table"></a>Procédure : Utiliser une Table de remappage des couleurs
+# <a name="how-to-use-a-color-remap-table"></a>Procédure : utiliser une table de remappage des couleurs
 Remappage est le processus de conversion des couleurs dans une image en fonction d’une table de remappage des couleurs. La table de remappage des couleurs est un tableau de <xref:System.Drawing.Imaging.ColorMap> objets. Chaque <xref:System.Drawing.Imaging.ColorMap> objet dans le tableau a une <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> propriété et un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> propriété.  
   
  Lorsque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dessine une image, chaque pixel de l’image est comparé au tableau des anciennes couleurs. Si de la couleur d’un pixel correspond à une ancienne couleur, sa couleur est remplacée par la nouvelle couleur correspondante. Les couleurs sont modifiées uniquement pour le rendu, les valeurs de couleur de l’image elle-même (stockées dans un <xref:System.Drawing.Image> ou <xref:System.Drawing.Bitmap> objet) ne sont pas modifiés.  
@@ -34,8 +34,9 @@ Remappage est le processus de conversion des couleurs dans une image en fonction
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Recoloriage des images](recoloring-images.md)
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)

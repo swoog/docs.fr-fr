@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082657"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procédure : Utiliser le modèle maître/détail avec des données hiérarchiques
 Cet exemple montre comment implémenter le scénario maître / détail.  
@@ -34,8 +34,9 @@ Cet exemple montre comment implémenter le scénario maître / détail.
  La technique est légèrement différente lorsque vous utilisez [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données. Pour obtenir un exemple, consultez [utiliser le modèle maître / détail avec des données XML hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Effectuer une liaison à une collection et afficher des informations basées sur la sélection](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d’ensemble des modèles de données](data-templating-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Vue d'ensemble des modèles de données](data-templating-overview.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

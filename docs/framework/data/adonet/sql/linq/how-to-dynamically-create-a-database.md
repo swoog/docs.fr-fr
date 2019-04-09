@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072387"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procédure : Créer dynamiquement une base de données
 Dans LINQ to SQL, un modèle objet est mappé à une base de données relationnelle. Le mappage est activé à l'aide du mappage basé sur les attributs ou d'un fichier de mappage externe pour décrire la structure de la base de données relationnelle. Dans les deux scénarios, il existe suffisamment d'informations sur la base de données relationnelle pour pouvoir créer une nouvelle instance de la base de données à l'aide de la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -23,7 +23,7 @@ Dans LINQ to SQL, un modèle objet est mappé à une base de données relation
   
 -   Vous générez une application cliente qui a besoin d'une base de données locale pour enregistrer son état hors connexion.  
   
- Vous pouvez également utiliser la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> avec SQL Server en utilisant un fichier .mdf ou un nom de catalogue, en fonction de votre chaîne de connexion. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilise la chaîne de connexion pour définir la base de données à créer et sur quel serveur la base de données sera créée.  
+ Vous pouvez également utiliser la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> avec SQL Server en utilisant un fichier .mdf ou un nom de catalogue, en fonction de votre chaîne de connexion. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilise la chaîne de connexion pour définir la base de données doit être créé et sur quel serveur la base de données doit être créé.  
   
 > [!NOTE]
 >  Si possible, utilisez la sécurité intégrée Windows pour vous connecter à la base de données de façon à ce que les mots de passe ne soient pas requis dans la chaîne de connexion.  
@@ -49,6 +49,7 @@ Dans LINQ to SQL, un modèle objet est mappé à une base de données relation
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Mappage basé sur les attributs](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Mappage de type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

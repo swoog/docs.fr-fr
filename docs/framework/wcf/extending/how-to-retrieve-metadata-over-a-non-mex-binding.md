@@ -1,16 +1,16 @@
 ---
-title: 'Procédure : Récupérer des métadonnées sur une liaison non - MEX'
+title: 'Procédure : récupérer des métadonnées sur une liaison non-MEX'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074155"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procédure : Récupérer des métadonnées sur une liaison non - MEX
-Cette rubrique décrit comment récupérer les métadonnées d’un point de terminaison MEX sur une liaison non-MEX. Le code dans cet exemple est basé sur le [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemple.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procédure : récupérer des métadonnées sur une liaison non-MEX
+Cette rubrique décrit comment récupérer les métadonnées d'un point de terminaison MEX sur une liaison non-MEX. Le code dans cet exemple est basé sur le [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemple.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Pour récupérer des métadonnées sur une liaison non-MEX  
   
@@ -83,7 +83,7 @@ Cette rubrique décrit comment récupérer les métadonnées d’un point de ter
     </system.serviceModel>  
     ```  
   
-3.  Créez un `MetadataExchangeClient` et appelez `GetMetadata`. Cette opération peut s’effectuer de deux manières différentes : vous pouvez spécifier la liaison personnalisée dans la configuration ou dans le code, comme indiqué dans l’exemple suivant.  
+3.  Créez un `MetadataExchangeClient` et appelez `GetMetadata`. Cette opération peut s'effectuer de deux manières différentes : vous pouvez spécifier la liaison personnalisée dans la configuration ou dans le code, comme indiqué dans l'exemple suivant.  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -124,4 +124,5 @@ Cette rubrique décrit comment récupérer les métadonnées d’un point de ter
 5.  À ce stade, vous disposez d’une collection de points de terminaison de service. Pour plus d’informations sur l’importation de métadonnées, consultez [Comment : Importer des métadonnées dans les points de terminaison de Service](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)
