@@ -1,18 +1,18 @@
 ---
-title: "Procédure : Énumérer le contenu de dessin d'un Visual"
+title: 'Procédure : Énumérer le contenu de dessin d’un visuel'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 6414026090766544585c8e5e940ef9f0c62566d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108002"
 ---
-# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Procédure : Énumérer le contenu de dessin d'un Visual
+# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Procédure : Énumérer le contenu de dessin d’un visuel
 Le <xref:System.Windows.Media.Drawing> objet fournissent un modèle d’objet pour énumérer le contenu d’un <xref:System.Windows.Media.Visual>.  
   
 ## <a name="example"></a>Exemple  
@@ -24,8 +24,9 @@ Le <xref:System.Windows.Media.Drawing> objet fournissent un modèle d’objet po
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - <xref:System.Windows.Media.VisualTreeHelper>
-- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

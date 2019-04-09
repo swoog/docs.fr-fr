@@ -3,12 +3,12 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6f1a9474f3f12005df364a6fb84dc63aa1b68e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108163"
 ---
 # <a name="state"></a>\<state>
 Représente une collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.  
@@ -58,7 +58,7 @@ Représente une collection d’états faisant l’objet d’un abonnement dans l
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection d'états faisant l'objet d'un abonnement dans l'instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
   
 ## <a name="remarks"></a>Notes  
  Les enregistrements retournés sont filtrés par états dans cette collection.  
@@ -75,9 +75,9 @@ Représente une collection d’états faisant l’objet d’un abonnement dans l
 |Repris|L'instance de flux de travail est reprise.|  
 |Démarré|L'instance de flux de travail est démarrée.|  
 |UnhandledException|L'instance de flux de travail a rencontré une exception non gérée.|  
-|Unloaded|L'instance de flux de travail est déchargée.|  
+|Non chargé|L'instance de flux de travail est déchargée.|  
 |Canceled|L'instance de flux de travail est annulée.|  
-|Interrompu|L'instance de workflow est interrompue.|  
+|Suspendu|L'instance de workflow est interrompue.|  
 |Arrêté|L'instance de flux de travail est arrêtée.|  
 |Unsuspended|L'instance de flux de travail est non interrompue.|  
   
@@ -95,8 +95,9 @@ Représente une collection d’états faisant l’objet d’un abonnement dans l
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

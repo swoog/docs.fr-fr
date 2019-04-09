@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116132"
 ---
 # <a name="windows-forms-coordinates"></a>Coordonnées Windows Forms
 Le système de coordonnées d’un formulaire Windows est basé sur les coordonnées de périphérique, et l’unité de mesure lors du dessin dans les Windows Forms de base est l’unité de périphérique (en règle générale, le pixel). Points à l’écran sont décrits par des paires de coordonnées x et y, avec les coordonnées x qui augmentent vers la droite et les coordonnées y augmentant de haut en bas. L’emplacement de l’origine, par rapport à l’écran, varie selon que vous spécifiez les coordonnées d’écran ou client.  
@@ -29,5 +29,6 @@ Le système de coordonnées d’un formulaire Windows est basé sur les coordonn
  Parfois, vous devrez peut-être mapper à partir des coordonnées d’écran en coordonnées clientes. Vous pouvez le faire facilement en utilisant le <xref:System.Windows.Forms.Control.PointToClient%2A> et <xref:System.Windows.Forms.Control.PointToScreen%2A> méthodes disponibles dans le <xref:System.Windows.Forms.Control> classe. Par exemple, le <xref:System.Windows.Forms.Control.MousePosition%2A> propriété du <xref:System.Windows.Forms.Control> est signalée en coordonnées d’écran, mais vous pouvez convertir celles-ci en coordonnées clientes.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

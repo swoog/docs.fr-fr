@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir des icônes pour le contrôle TreeView Windows Forms'
+title: 'Procédure : définir des icônes pour le contrôle TreeView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 515ff2bd4ab0f4fa93eada61396bd45c587cded6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097619"
 ---
-# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procédure : Définir des icônes pour le contrôle TreeView Windows Forms
+# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procédure : définir des icônes pour le contrôle TreeView Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle peut afficher des icônes en regard de chaque nœud. Les icônes sont positionnées à gauche du texte de nœud. Pour afficher ces icônes, vous devez associer l’arborescence avec un <xref:System.Windows.Forms.ImageList> contrôle. Pour plus d’informations sur les listes d’images, consultez [composant ImageList](imagelist-component-windows-forms.md) et [Comment : Ajouter ou supprimer des Images avec les Windows Forms composant ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 > [!NOTE]
@@ -69,8 +69,9 @@ Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle peut affi
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du contrôle TreeView](treeview-control-overview-windows-forms.md)
-- [Guide pratique pour Ajouter et supprimer des nœuds avec le contrôle TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Guide pratique pour Effectuer une itération dans tous les nœuds d’un contrôle de TreeView Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Guide pratique pour Déterminer l’utilisateur a cliqué sur le nœud de TreeView](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procédure : ajouter et supprimer des nœuds avec le contrôle TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Procédure : itérer au sein de tous les nœuds d’un contrôle TreeView Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Procédure : déterminer sur quel TreeView l’utilisateur a cliqué](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Procédure : ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

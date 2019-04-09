@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-ms.openlocfilehash: 442fff7a36a48d5df7ba9e07426e50f602cb93e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090093"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Procédure : Créer un style pour un en-tête de colonne GridView déplacé
 Cet exemple montre comment modifier l’apparence d’un glissé <xref:System.Windows.Controls.GridViewColumnHeader> lorsque l’utilisateur modifie la position d’une colonne.  
@@ -31,10 +31,11 @@ Cet exemple montre comment modifier l’apparence d’un glissé <xref:System.Wi
 [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.GridViewColumnHeader>
 - <xref:System.Windows.Controls.GridViewColumnHeaderRole>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Rubriques de guide pratique](listview-how-to-topics.md)
-- [Vue d’ensemble de ListView](listview-overview.md)
-- [Vue d’ensemble de GridView](gridview-overview.md)
+- [Rubriques Comment](listview-how-to-topics.md)
+- [Vue d'ensemble de ListView](listview-overview.md)
+- [Vue d'ensemble de GridView](gridview-overview.md)

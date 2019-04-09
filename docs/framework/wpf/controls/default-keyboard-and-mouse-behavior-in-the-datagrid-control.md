@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083320"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportement par défaut du clavier et de la souris dans le contrôle DataGrid
 Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:System.Windows.Controls.DataGrid> contrôle à l’aide du clavier et la souris.  
@@ -30,8 +30,8 @@ Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:
 |DROITE|Déplace le focus vers la cellule suivante dans la ligne. Si le focus est dans la dernière cellule dans la ligne, en appuyant sur la flèche de droite ne fait rien.|  
 |ORIGINE|Déplace le focus vers la première cellule dans la ligne actuelle.|  
 |FIN|Déplace le focus vers la dernière cellule dans la ligne actuelle.|  
-|Page suivante|Si les lignes ne sont pas regroupées, fait défiler le contrôle vers le bas par le nombre de lignes qui sont entièrement affichés. Déplace le focus vers la dernière ligne entièrement affichée sans modifier les colonnes.<br /><br /> Si les lignes sont regroupées, déplace le focus vers la dernière ligne dans le <xref:System.Windows.Controls.DataGrid> sans modifier les colonnes.|  
-|Page précédente|Si les lignes ne sont pas regroupées, fait défiler le contrôle vers le haut par le nombre de lignes qui sont entièrement affichés. Déplace le focus sur la première ligne affichée sans modifier les colonnes.<br /><br /> Si les lignes sont regroupées, déplace le focus vers la première ligne dans le <xref:System.Windows.Controls.DataGrid> sans modifier les colonnes.|  
+|PG.SUIV|Si les lignes ne sont pas regroupées, fait défiler le contrôle vers le bas par le nombre de lignes qui sont entièrement affichés. Déplace le focus vers la dernière ligne entièrement affichée sans modifier les colonnes.<br /><br /> Si les lignes sont regroupées, déplace le focus vers la dernière ligne dans le <xref:System.Windows.Controls.DataGrid> sans modifier les colonnes.|  
+|PG.PRÉC|Si les lignes ne sont pas regroupées, fait défiler le contrôle vers le haut par le nombre de lignes qui sont entièrement affichés. Déplace le focus sur la première ligne affichée sans modifier les colonnes.<br /><br /> Si les lignes sont regroupées, déplace le focus vers la première ligne dans le <xref:System.Windows.Controls.DataGrid> sans modifier les colonnes.|  
 |TAB|Déplace le focus vers la cellule suivante dans la ligne actuelle. Si le focus est dans la dernière cellule de la ligne, déplace le focus vers la première cellule dans la ligne suivante. Si le focus est dans la dernière cellule dans le contrôle, déplace le focus au contrôle suivant dans l’ordre de tabulation du conteneur parent.<br /><br /> Si la cellule active est en mode édition et en appuyant sur tabulation, le focus à s’éloigner de la ligne actuelle, toutes les modifications qui ont été apportées à la ligne sont validées avant la modification de focus.|  
 |MAJ+TAB|Déplace le focus vers la cellule précédente dans la ligne actuelle. Si le focus se trouve déjà dans la première cellule de la ligne, déplace le focus vers la dernière cellule de la ligne précédente. Si le focus est dans la première cellule dans le contrôle, déplace le focus au contrôle précédent dans l’ordre de tabulation du conteneur parent.<br /><br /> Si la cellule active est en mode édition et en appuyant sur tabulation, le focus à s’éloigner de la ligne actuelle, toutes les modifications qui ont été apportées à la ligne sont validées avant la modification de focus.|  
 |CTRL+BAS|Déplace le focus vers la dernière cellule dans la colonne actuelle.|  
@@ -44,7 +44,7 @@ Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:
 |CTRL+PG.PRÉC|Identique à la PAGE précédente.|  
 |F2|Si le <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> propriété est `false` et <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> propriété est `false` pour la colonne actuelle, place la cellule active en mode de modification de cellule.|  
 |ENTRÉE|Valide toutes les modifications à la cellule active et la ligne et déplace le focus vers la cellule directement sous la cellule active. Si le focus est dans la dernière ligne, valide toutes les modifications sans déplacer le focus.|  
-|ÉCHAP|Si le contrôle est en mode édition, annule la modification et rétablit toutes les modifications qui ont été apportées dans le contrôle. Si la source de données sous-jacente implémente <xref:System.ComponentModel.IEditableObject>, en appuyant sur ÉCHAP une deuxième fois annule en mode édition pour la ligne entière.|  
+|Échap|Si le contrôle est en mode édition, annule la modification et rétablit toutes les modifications qui ont été apportées dans le contrôle. Si la source de données sous-jacente implémente <xref:System.ComponentModel.IEditableObject>, en appuyant sur ÉCHAP une deuxième fois annule en mode édition pour la ligne entière.|  
 |RETOUR ARRIÈRE|Supprime le caractère avant le curseur lors de la modification d’une cellule.|  
 |SUPPR|Supprime le caractère situé après le curseur lors de la modification d’une cellule.|  
 |CTRL+ENTRÉE|Valide toutes les modifications à la cellule active sans déplacer le focus.|  
@@ -97,5 +97,6 @@ Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:
  CTRL + MAJ peuvent être combiné pour sélectionner des plages non adjacentes de lignes adjacentes. Pour ce faire, sélectionnez la première plage à l’aide de MAJ + clic, comme décrit précédemment. Une fois que la première plage de lignes est sélectionnée, utilisez CTRL + cliquez pour sélectionner la première ligne dans la plage suivante, puis cliquez sur la dernière ligne dans la plage suivante tout en appuyant sur CTRL + MAJ.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

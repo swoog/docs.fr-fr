@@ -5,19 +5,19 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 6980e6cf90b584e96255293affc019ebca9ad561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088568"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind et XAML dans WPF
 <a name="introduction"></a> Code-behind est un terme utilisé pour décrire le code joint avec les objets définis par le balisage, quand un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page est compilé par balisage. Cette rubrique décrit la configuration requise pour le code-behind ainsi qu’un mécanisme alternatif incorporé code pour le code dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Composants requis](#Prerequisites)  
+-   [Prérequis](#Prerequisites)  
   
 -   [Code-Behind et le langage XAML](#codebehind_and_the_xaml_language)  
   
@@ -59,7 +59,8 @@ ms.locfileid: "57369316"
  Vous devez envisager d’éviter ou de limiter l’utilisation de code inline. En termes d’architecture et de philosophie du codage, la séparation entre le balisage et code-behind conserve les concepteurs et les développeurs rôles bien distincts. À un niveau plus technique, le code que vous écrivez pour le code inline peut être plus difficile à écrire, étant donné que vous écrivez toujours dans la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] classe partielle générée et pouvez utiliser uniquement les mappages d’espace de noms XML par défaut. Étant donné que vous ne pouvez pas ajouter `using` instructions, vous devez qualifier entièrement la plupart de la [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] appels que vous apportez. La valeur par défaut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mappages incluent la plupart mais pas tout [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espaces de noms qui sont présents dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblys ; vous devez qualifier complètement les appels aux types et membres contenus dans les autres espaces de noms CLR. Vous également ne peut pas définir n’importe quoi au-delà de la classe partielle dans le code inline, et toutes les entités de code utilisateur que vous référencez doivent exister en tant que membre ou variable dans la classe partielle générée. Autres langage spécifique fonctionnalités de programmation, tels que des macros ou `#ifdef` par rapport à des variables globales ou des variables de génération, ne sont pas disponibles. Pour plus d’informations, consultez [x : Code de Type XAML intrinsèque](../../xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [x:Code, type XAML intrinsèque](../../xaml-services/x-code-intrinsic-xaml-type.md)
-- [Génération d’une application WPF](../app-development/building-a-wpf-application-wpf.md)
+- [Génération d'une application WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Syntaxe XAML en détail](xaml-syntax-in-detail.md)

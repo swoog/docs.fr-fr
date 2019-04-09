@@ -1,19 +1,19 @@
 ---
-title: "Procédure pas à pas : Créer un bouton à l'aide de Microsoft Expression Blend"
+title: 'Procédure pas à pas : Créer un bouton à l’aide de Microsoft Expression Blend'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100117"
 ---
-# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procédure pas à pas : Créer un bouton à l'aide de Microsoft Expression Blend
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procédure pas à pas : Créer un bouton à l’aide de Microsoft Expression Blend
 Cette procédure pas à pas vous guide tout au long des processus de création d’un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bouton personnalisé à l’aide de Microsoft Expression Blend.  
   
 > [!IMPORTANT]
@@ -248,8 +248,9 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
 -   Divers : créer des dégradés, ajouter des effets bitmap, utiliser des transformations et définir les propriétés de base des objets.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Créer un bouton avec XAML](walkthrough-create-a-button-by-using-xaml.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md)
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d’ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Vue d'ensemble de l'animation](../graphics-multimedia/animation-overview.md)
+- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d'ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)

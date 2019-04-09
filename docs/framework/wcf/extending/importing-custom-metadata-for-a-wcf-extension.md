@@ -2,12 +2,12 @@
 title: Importation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090067"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), importation de métadonnées est le processus de génération d’une représentation abstraite d’un service ou ses composants à partir de ses métadonnées. Par exemple, WCF peut importer <xref:System.ServiceModel.Description.ServiceEndpoint> instances, <xref:System.ServiceModel.Channels.Binding> instances ou <xref:System.ServiceModel.Description.ContractDescription> document des instances à partir d’un fichier WSDL pour un service. Pour importer les métadonnées de service dans WCF, utilisez une implémentation de la <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstraite. Les types qui dérivent de la <xref:System.ServiceModel.Description.MetadataImporter> classe implémenter la prise en charge pour l’importation des formats de métadonnées qui tirent parti de la stratégie de WS-importer logique dans WCF.  
@@ -17,7 +17,7 @@ Dans Windows Communication Foundation (WCF), importation de métadonnées est le
  Cette section décrit comment importer des extensions WSDL et des assertions de stratégie personnalisées. Elle ne traite pas du processus d'importation lui-même. Pour plus d’informations sur la façon d’utiliser les types qui exportent et importent des métadonnées, que celles-ci soient personnalisées ou système pris en charge, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Le <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> type est l’implémentation de la <xref:System.ServiceModel.Description.MetadataImporter> inclus avec WCF de classe abstraite. Le type <xref:System.ServiceModel.Description.WsdlImporter> importe des métadonnées WSDL avec les stratégies attachées fournies dans un objet <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Les assertions de stratégie et les extensions WSDL que les importateurs par défaut ne reconnaissent pas sont passées aux stratégies personnalisées inscrites et aux importateurs WSDL à des fins d’importation. En général, les importateurs sont implémentés pour prendre en charge les éléments de liaison définis par l'utilisateur ou pour modifier le contrat importé.  
+ Le <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> type est l’implémentation de la <xref:System.ServiceModel.Description.MetadataImporter> inclus avec WCF de classe abstraite. Le type <xref:System.ServiceModel.Description.WsdlImporter> importe des métadonnées WSDL avec les stratégies attachées fournies dans un objet <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Les assertions de stratégie et les extensions WSDL que les importateurs par défaut ne reconnaissent pas sont passées aux stratégies personnalisées inscrites et aux importateurs WSDL à des fins d'importation. En général, les importateurs sont implémentés pour prendre en charge les éléments de liaison définis par l'utilisateur ou pour modifier le contrat importé.  
   
  Cette section décrit :  
   
@@ -28,7 +28,7 @@ Dans Windows Communication Foundation (WCF), importation de métadonnées est le
  Pour plus d’informations sur l’exportation WSDL personnalisée et les assertions de stratégie, consultez [exportation des métadonnées personnalisées pour une Extension WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="importing-custom-wsdl-extensions"></a>Importation d’extensions WSDL personnalisées  
- Pour ajouter la prise en charge de l'importation d'extensions WSDL, implémentez l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension>, puis ajoutez votre implémentation à la propriété <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A>. Le <xref:System.ServiceModel.Description.WsdlImporter> peut également charger des implémentations de l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension> inscrite dans votre fichier de configuration d'application. Notez que plusieurs importateurs WSDL sont inscrits par défaut et que l'ordre des importateurs WSDL inscrits est significatif.  
+ Pour ajouter la prise en charge de l’importation d’extensions WSDL, implémentez l’interface <xref:System.ServiceModel.Description.IWsdlImportExtension>, puis ajoutez votre implémentation à la propriété <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A>. Le <xref:System.ServiceModel.Description.WsdlImporter> peut également charger des implémentations de l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension> inscrite dans votre fichier de configuration d'application. Notez que plusieurs importateurs WSDL sont inscrits par défaut et que l'ordre des importateurs WSDL inscrits est significatif.  
   
  Lorsque l'importateur WSDL personnalisé est chargé et utilisé par le <xref:System.ServiceModel.Description.WsdlImporter>, la méthode <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> est d'abord appelée afin de permettre la modification des métadonnées avant l'importation. Les contrats sont ensuite importés, après quoi la méthode <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> est appelée afin de permettre la modification des contrats importés à partir des métadonnées. Pour finir, la méthode <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> est appelée afin de permettre la modification des points de terminaison importés.  
   
@@ -39,7 +39,7 @@ Dans Windows Communication Foundation (WCF), importation de métadonnées est le
   
  Pour ajouter la prise en charge de l'importation d'assertions de stratégie personnalisées, implémentez l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension>, puis ajoutez votre implémentation à la propriété <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A>. Le <xref:System.ServiceModel.Description.MetadataImporter> peut également charger des implémentations de l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension> inscrite dans votre fichier de configuration d'application. Notez que plusieurs importateurs de stratégies sont inscrits par défaut et que l'ordre des importateurs de stratégies inscrits est significatif.  
   
- Le système de métadonnées appelle à plusieurs reprises la méthode <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> sur toutes les extensions d'importation de stratégie inscrites pour chaque combinaison d'alternatives de stratégie jointe aux objets de stratégie de message, d'opération et de point de terminaison. Lors de l’importation d’un port WSDL, les stratégies jointes au port et à la liaison WSDL correspondante sont fusionnées avant l’appel des extensions d’importation de stratégie. Les alternatives de stratégie sont rendues accessibles par le biais d'un <xref:System.ServiceModel.Description.PolicyConversionContext> en tant qu'objets <xref:System.ServiceModel.Description.PolicyAssertionCollection>. Chaque <xref:System.ServiceModel.Description.PolicyAssertionCollection> est une collection d'assertions de stratégie représentés par des objets <xref:System.Xml.XmlElement>.  
+ Le système de métadonnées appelle à plusieurs reprises la méthode <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> sur toutes les extensions d’importation de stratégie inscrites pour chaque combinaison d’alternatives de stratégie jointe aux objets de stratégie de message, d’opération et de point de terminaison. Lors de l'importation d'un port WSDL, les stratégies jointes au port et à la liaison WSDL correspondante sont fusionnées avant l'appel des extensions d'importation de stratégie. Les alternatives de stratégie sont rendues accessibles par le biais d'un <xref:System.ServiceModel.Description.PolicyConversionContext> en tant qu'objets <xref:System.ServiceModel.Description.PolicyAssertionCollection>. Chaque <xref:System.ServiceModel.Description.PolicyAssertionCollection> est une collection d’assertions de stratégie représentés par des objets <xref:System.Xml.XmlElement>.  
   
  Les propriétés <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> et <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A> sur l'objet <xref:System.ServiceModel.Description.PolicyConversionContext> exposent les objets <xref:System.ServiceModel.Description.ContractDescription> et <xref:System.ServiceModel.Channels.BindingElement> importés à partir du WSDL. Les extensions d’importation de stratégie traitent les assertions de stratégie en recherchant les instances d’un type d’assertion de stratégie particulier, en apportant les modifications correspondantes aux objets <xref:System.ServiceModel.Description.ContractDescription> ou <xref:System.ServiceModel.Channels.BindingElement> et en supprimant ensuite les assertions de stratégie de l’instance <xref:System.ServiceModel.Description.PolicyAssertionCollection> correspondante.  
   
@@ -49,6 +49,7 @@ Dans Windows Communication Foundation (WCF), importation de métadonnées est le
 >  Des métadonnées non valides ou incorrectes peuvent être passées à l'importateur. Assurez-vous que les importateurs personnalisés sont fiables à toutes les formes de XML.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Importer le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Guide pratique pour Importer des Assertions de stratégie personnalisée](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [Guide pratique pour Écrire une Extension pour le ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+
+- [Procédure : importer un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Procédure : importer des assertions de stratégie personnalisées](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procédure : écrire une extension pour le ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

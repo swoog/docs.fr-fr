@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Personnaliser une liaison fournie par le système'
+title: 'Procédure : personnaliser une liaison fournie par le système'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095150"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Procédure : Personnaliser une liaison fournie par le système
+# <a name="how-to-customize-a-system-provided-binding"></a>Procédure : personnaliser une liaison fournie par le système
 Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui vous permettent de configurer certaines propriétés des éléments de liaison sous-jacente, mais pas toutes les propriétés. Cette rubrique explique comment attribuer des propriétés aux éléments de liaison afin de créer une liaison personnalisée.  
   
  Pour plus d’informations sur comment directement créer et configurer des éléments de liaison sans utiliser les liaisons fournies par le système, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le
   
  Dans WCF toutes les liaisons sont constituées de *éléments de liaison*. Chaque élément de liaison dérive de la classe <xref:System.ServiceModel.Channels.BindingElement>. Les liaisons fournies par le système telles que <xref:System.ServiceModel.BasicHttpBinding> créent et configurent leurs propres éléments de liaison. Cette rubrique vous indique comment accéder aux propriétés de ces éléments de liaison qui ne sont pas exposés directement sur la liaison et comment les modifier ; il s’agit, notamment, de la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Les éléments de liaison individuels sont contenus dans une collection représentée par la <xref:System.ServiceModel.Channels.BindingElementCollection> classe et sont ajoutés dans cet ordre : Flux de transaction, Session fiable, sécurité, Duplex Composite, unidirectionnel, sécurité de Stream, encodage de Message et Transport. Notez que les éléments de liaison répertoriés ne sont pas tous requis dans chaque liaison. Les éléments de liaison définis par l'utilisateur peuvent également apparaître dans cette collection et doivent figurer dans le même ordre que précédemment. Par exemple, un transport défini par l'utilisateur doit être le dernier élément de la collection d'éléments de liaison.  
+ Les éléments de liaison individuels sont contenus dans une collection représentée par la <xref:System.ServiceModel.Channels.BindingElementCollection> classe et sont ajoutés dans cet ordre : Flux de transaction, Session fiable, sécurité, Duplex Composite, unidirectionnel, sécurité de Stream, encodage de Message et Transport. Notez que les éléments de liaison répertoriés ne sont pas tous requis dans chaque liaison. Les éléments de liaison définis par l’utilisateur peuvent également apparaître dans cette collection et doivent figurer dans le même ordre que précédemment. Par exemple, un transport défini par l'utilisateur doit être le dernier élément de la collection d'éléments de liaison.  
   
  La classe <xref:System.ServiceModel.BasicHttpBinding> contient trois éléments de liaison :  
   
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le
      [!code-csharp[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#1)]
      [!code-vb[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#1)]  
   
-2.  Créez une liaison personnalisée à partir de la liaison et ensuite une classe <xref:System.ServiceModel.Channels.BindingElementCollection> à partir de l'une des propriétés de la liaison personnalisée.  
+2.  Créez une liaison personnalisée à partir de la liaison et ensuite une classe <xref:System.ServiceModel.Channels.BindingElementCollection> à partir de l’une des propriétés de la liaison personnalisée.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#2)]
      [!code-vb[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#2)]  
@@ -51,6 +51,7 @@ Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>

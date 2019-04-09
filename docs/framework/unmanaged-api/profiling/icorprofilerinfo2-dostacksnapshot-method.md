@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3a558ad6f87995d6c0a0d164cf96376fba12da4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108080"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot, méthode
 Parcourt les frames managés sur la pile pour le thread spécifié et envoie des informations au profileur via un rappel.  
@@ -99,15 +99,16 @@ HRESULT DoStackSnapshot(
   
  Il existe également un risque d’interblocage si vous appelez `DoStackSnapshot` à partir d’un thread que votre profileur a créé afin que vous pouvez parcourir la pile d’un thread cible séparé. La première fois que le thread que vous avez créé entre certaines `ICorProfilerInfo*` méthodes (y compris `DoStackSnapshot`), le CLR effectuera une initialisation par thread, spécifique au CLR sur ce thread. Si votre profileur a suspendu le thread cible dont vous essayez de parcourir la pile, et si ce thread cible est arrivé à possède un verrou nécessaires pour effectuer cette initialisation par thread, un interblocage se produit. Pour éviter ce blocage, faites un appel initial à `DoStackSnapshot` à partir de votre thread créé le profileur permettant de remonter thread cible distinct, mais n’interrompez pas le thread cible au préalable. Cet appel initial garantit que l’initialisation par thread peut s’effectuer sans blocage. Si `DoStackSnapshot` réussit et signale au moins une frame, après ce point, il sera sécurisé pour ce thread créé le profileur à interrompre n’importe quel thread cible et l’appel `DoStackSnapshot` pour remonter la pile du thread cible.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

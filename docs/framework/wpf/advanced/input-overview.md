@@ -24,16 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090021"
 ---
 # <a name="input-overview"></a>Vue d'ensemble des entrées
 <a name="introduction"></a> Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sous-système fournit un puissant [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] pour obtenir des entrées à partir d’une variété de périphériques, y compris la souris, clavier, tactile et stylet. Cette rubrique décrit les services fournis par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et explique l’architecture des systèmes d’entrée.
-
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>API d’entrée
@@ -59,7 +58,7 @@ ms.locfileid: "57376817"
  Le <xref:System.Windows.Input.Mouse> et <xref:System.Windows.Input.Keyboard> classes sont traités plus en détail dans cette vue d’ensemble.
 
 ### <a name="stylus-input"></a>Entrée du stylet
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a intégré la prise en charge pour le <xref:System.Windows.Input.Stylus>.  Le <xref:System.Windows.Input.Stylus> est une entrée de stylet rendue populaire par le [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peuvent traiter le stylet comme une souris à l’aide de l’[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] de souris, mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose également une abstraction du stylet qui utilise un modèle semblable au clavier et à la souris.  Toutes les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] liées au stylet contiennent le mot « Stylus ».
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a intégré la prise en charge pour le <xref:System.Windows.Input.Stylus>.  Le <xref:System.Windows.Input.Stylus> est une entrée de stylet rendue populaire par le [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les applications peuvent traiter le stylet comme une souris à l’aide de la souris [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose également une abstraction du stylet qui utilise un modèle semblable au clavier et souris.  Toutes les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] liées au stylet contiennent le mot « Stylus ».
 
  Étant donné que le stylet peut agir comme une souris, les applications qui prennent uniquement en charge l’entrée de la souris peuvent quand même bénéficier automatiquement d’un certain niveau de prise en charge du stylet. Quand le stylet est utilisé de cette manière, l’application a la possibilité de gérer l’événement de stylet approprié, et elle gère ensuite l’événement de souris correspondant. En outre, les services de niveau supérieur tels que l’entrée d’encre sont également disponibles grâce à l’abstraction du stylet.  Pour plus d’informations sur l’encre comme entrée, consultez [Débuter avec l’encre](getting-started-with-ink.md).
 
@@ -69,7 +68,7 @@ ms.locfileid: "57376817"
 
  Le routage d’événements est le processus qui consiste à transférer des événements à plusieurs éléments, afin qu’un objet ou un élément sur l’itinéraire puisse choisir de fournir une réponse significative (par l’intermédiaire de la gestion) à un événement ayant pu avoir comme source un autre élément.  Les événements routés utilisent l’un des trois mécanismes de routage suivants : direct, par propagation et par tunneling.  Avec le routage direct, l’élément source est le seul élément notifié, et l’événement n’est pas acheminé vers d’autres éléments. Toutefois, l’événement routé directement offre des fonctions supplémentaires qui sont uniquement présentes pour les événements routés, par opposition aux événements [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. La propagation remonte l’arborescence d’éléments en notifiant d’abord l’élément à l’origine de l’événement, puis l’élément parent, et ainsi de suite.  Le tunneling commence à la racine de l’arborescence d’éléments puis descend, en finissant à l’élément source d’origine.  Pour plus d’informations sur les événements routés, consultez [Vue d’ensemble des événements routés](routed-events-overview.md).
 
- Les événements d’entrée [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existent généralement par paires, constituées d’un événement de tunneling et d’un événement de propagation.  Les événements de tunneling se distinguent des événements de propagation par le préfixe « Preview ».  Par exemple, <xref:System.Windows.Input.Mouse.PreviewMouseMove> est la version de tunneling d’un événement de déplacement de la souris et <xref:System.Windows.Input.Mouse.MouseMove> est la version de propagation de cet événement. Cet appariement d’événements est une convention implémentée au niveau de l’élément. Ce n’est pas une fonctionnalité inhérente au système d’événements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pour plus d’informations, consultez la section Événements d’entrée WPF dans [Vue d’ensemble des événements routés](routed-events-overview.md).
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] événements d’entrée existent généralement par paires qui se compose d’un événement de tunneling et un événement de propagation.  Les événements de tunneling se distinguent des événements de propagation par le préfixe « Preview ».  Par exemple, <xref:System.Windows.Input.Mouse.PreviewMouseMove> est la version de tunneling d’un événement de déplacement de la souris et <xref:System.Windows.Input.Mouse.MouseMove> est la version de propagation de cet événement. Cet appariement d’événements est une convention implémentée au niveau de l’élément. Ce n’est pas une fonctionnalité inhérente au système d’événements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pour plus d’informations, consultez la section Événements d’entrée WPF dans [Vue d’ensemble des événements routés](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Gestion des événements d’entrée
@@ -138,9 +137,9 @@ ms.locfileid: "57376817"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Entrée tactile et manipulation
- Du nouveau matériel et une nouvelle API dans le système d’exploitation Windows 7 permettent aux applications de recevoir une entrée à partir de plusieurs entrées tactiles simultanément. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet aux applications de détecter et de répondre aux entrées tactiles d’une manière similaire à d’autres types d’entrée, tels que la souris ou le clavier, en déclenchant des événements quand les entrées tactiles se produisent.
+ Du nouveau matériel et une nouvelle API dans le système d’exploitation Windows 7 permettent aux applications de recevoir une entrée à partir de plusieurs entrées tactiles simultanément. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet aux applications détecter et répondre aux entrées tactiles d’une manière similaire à d’autres types d’entrée, tels que la souris ou le clavier, en déclenchant des événements lorsque les entrées tactiles se produisent.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose deux types d’événements quand des entrées tactiles se produisent : les événements tactiles et les événements de manipulation. Les événements tactiles fournissent des données brutes relatives à chaque doigt sur un écran tactile et à leur déplacement. Les événements de manipulation interprètent l’entrée comme des actions spécifiques. Les deux types d’événements sont présentés dans cette section.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose deux types d’événements lorsque les entrées tactiles se produisent : événements tactiles et les événements de manipulation. Les événements tactiles fournissent des données brutes relatives à chaque doigt sur un écran tactile et à leur déplacement. Les événements de manipulation interprètent l’entrée comme des actions spécifiques. Les deux types d’événements sont présentés dans cette section.
 
 ### <a name="prerequisites"></a>Prérequis
  Vous devez disposer des composants suivants pour développer une application qui répond aux entrées tactiles.
@@ -241,7 +240,7 @@ ms.locfileid: "57376817"
 
  Plusieurs types de manipulations peuvent se produire simultanément.
 
- Quand vous faites en sorte que des objets répondent à des manipulations, vous pouvez donner à l’objet une apparence d’inertie. Ainsi, vos objets peuvent simuler le monde physique. Par exemple, quand vous poussez un livre sur une table, si vous le poussez assez fort il continuera à se déplacer une fois que vous l’aurez relâché. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de simuler ce comportement en déclenchant des événements de manipulation après que les doigts de l’utilisateur ont relâché l’objet.
+ Quand vous faites en sorte que des objets répondent à des manipulations, vous pouvez donner à l’objet une apparence d’inertie. Ainsi, vos objets peuvent simuler le monde physique. Par exemple, quand vous poussez un livre sur une table, si vous le poussez assez fort il continuera à se déplacer une fois que vous l’aurez relâché. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de simuler ce comportement en déclenchant des événements de manipulation après que les doigts de l’utilisateur libère l’objet.
 
  Pour plus d’informations sur la création d’une application qui permet à l’utilisateur à déplacer, redimensionner et faire pivoter un objet, consultez [procédure pas à pas : Créer votre première Application Touch](walkthrough-creating-your-first-touch-application.md).
 
@@ -391,8 +390,9 @@ ms.locfileid: "57376817"
  Si vous souhaitez en savoir plus, il existe des ressources supplémentaires qui expliquent les éléments de framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et le routage d’événement plus en détail. Pour plus d’informations, consultez les vues d’ensemble suivantes : [Vue d’ensemble des commandes](commanding-overview.md), [Vue d’ensemble du focus](focus-overview.md), [Vue d’ensemble des éléments de base](base-elements-overview.md), [Arborescences dans WPF](trees-in-wpf.md) et [Vue d’ensemble des événements routés](routed-events-overview.md).
 
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du focus](focus-overview.md)
-- [Vue d’ensemble des commandes](commanding-overview.md)
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
-- [Vue d’ensemble des éléments de base](base-elements-overview.md)
-- [Propriétés](properties-wpf.md)
+
+- [Vue d'ensemble du focus](focus-overview.md)
+- [Vue d'ensemble des commandes](commanding-overview.md)
+- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Vue d'ensemble des éléments de base](base-elements-overview.md)
+- [Properties](properties-wpf.md)

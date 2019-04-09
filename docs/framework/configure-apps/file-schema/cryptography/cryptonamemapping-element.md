@@ -1,5 +1,5 @@
 ---
-title: Élément <cryptoNameMapping>
+title: <cryptoNameMapping> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: ff3300f57fd4681875e2791610cc5a0d0dcba31b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bcf7894dba66736fcc1a30af9b5557549ef25e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092463"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Element
 Contient des mappages de classes à des noms conviviaux.  
@@ -75,7 +75,8 @@ Contient des mappages de classes à des noms conviviaux.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [services de chiffrement](../../../../../docs/standard/security/cryptographic-services.md)
+- [Configuration de classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

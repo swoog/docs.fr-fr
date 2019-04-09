@@ -3,12 +3,12 @@ title: Vue d’ensemble du module d’authentification WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092464"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Vue d’ensemble du module d’authentification WSFederation
 Windows Identity Foundation (WIF) prend en charge l’authentification fédérée dans les applications ASP.NET par le biais du module WS-FAM (WS-Federated Authentication Module). Cette rubrique explique le fonctionnement et l’utilisation de l’authentification fédérée.  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
 6.  La partie de confiance extrait les revendications du client à partir du jeton de sécurité et rend une décision d’autorisation.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Utilisation du module d’authentification fédérée avec ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) est un module HTTP qui permet d’ajouter l’authentification fédérée à une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Grâce à l’authentification fédérée, la logique d’authentification est gérée par le STS. Vous pouvez ainsi vous concentrer sur le travail d’écriture de la logique métier.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) est un module HTTP qui vous permet d’ajouter l’authentification fédérée pour une [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] application. Grâce à l’authentification fédérée, la logique d’authentification est gérée par le STS. Vous pouvez ainsi vous concentrer sur le travail d’écriture de la logique métier.  
   
  Vous configurez le module WS-FAM pour spécifier le STS vers lequel les demandes non authentifiées doivent être redirigées. WIF vous permet d’authentifier un utilisateur selon deux méthodes :  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
  ![Diagramme de minutage SAM de la connexion avec des contrôles](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Événements  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> et leur classe parente <xref:System.IdentityModel.Services.HttpModuleBase> déclenchent des événements à différentes étapes du traitement d’une requête HTTP. Gérez ces événements dans le fichier `global.asax` de votre application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>et leur classe parente, <xref:System.IdentityModel.Services.HttpModuleBase>, déclenchent des événements à différentes étapes du traitement d’une requête HTTP. Gérez ces événements dans le fichier `global.asax` de votre application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
 -   L’infrastructure ASP.NET appelle la méthode <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> du module pour initialiser le module.  
   
@@ -140,6 +140,7 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
