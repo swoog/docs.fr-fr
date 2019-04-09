@@ -1,5 +1,5 @@
 ---
-title: <listeners>, élément de <source>
+title: <listeners> élément pour <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089651"
 ---
-# <a name="listeners-element-for-source"></a><span data-ttu-id="cb273-102">\<écouteurs >, élément pour \<source ></span><span class="sxs-lookup"><span data-stu-id="cb273-102">\<listeners> Element for \<source></span></span>
-<span data-ttu-id="cb273-103">Ajoute ou supprime des écouteurs dans le <xref:System.Diagnostics.TraceSource.Listeners%2A> collection pour un <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="cb273-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="cb273-104">Un écouteur dirige la sortie de traçage vers une cible appropriée, par exemple un journal, une fenêtre ou un fichier texte.</span><span class="sxs-lookup"><span data-stu-id="cb273-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
+# <a name="listeners-element-for-source"></a><span data-ttu-id="26814-102">\<écouteurs >, élément pour \<source ></span><span class="sxs-lookup"><span data-stu-id="26814-102">\<listeners> Element for \<source></span></span>
+<span data-ttu-id="26814-103">Ajoute ou supprime des écouteurs dans le <xref:System.Diagnostics.TraceSource.Listeners%2A> collection pour un <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="26814-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="26814-104">Un écouteur dirige la sortie de traçage vers une cible appropriée, par exemple un journal, une fenêtre ou un fichier texte.</span><span class="sxs-lookup"><span data-stu-id="26814-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
   
- <span data-ttu-id="cb273-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cb273-105">\<configuration></span></span>  
-<span data-ttu-id="cb273-106">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="cb273-106">\<system.diagnostics></span></span>  
-<span data-ttu-id="cb273-107">\<sources></span><span class="sxs-lookup"><span data-stu-id="cb273-107">\<sources></span></span>  
-<span data-ttu-id="cb273-108">\<source></span><span class="sxs-lookup"><span data-stu-id="cb273-108">\<source></span></span>  
-<span data-ttu-id="cb273-109">\<écouteurs > élément</span><span class="sxs-lookup"><span data-stu-id="cb273-109">\<listeners> Element</span></span>  
+ <span data-ttu-id="26814-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="26814-105">\<configuration></span></span>  
+<span data-ttu-id="26814-106">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="26814-106">\<system.diagnostics></span></span>  
+<span data-ttu-id="26814-107">\<sources></span><span class="sxs-lookup"><span data-stu-id="26814-107">\<sources></span></span>  
+<span data-ttu-id="26814-108">\<source></span><span class="sxs-lookup"><span data-stu-id="26814-108">\<source></span></span>  
+<span data-ttu-id="26814-109">\<écouteurs > élément</span><span class="sxs-lookup"><span data-stu-id="26814-109">\<listeners> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb273-110">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cb273-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26814-110">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="26814-110">Syntax</span></span>  
   
 ```xml  
 <listeners>   
@@ -33,36 +33,36 @@ ms.locfileid: "55266774"
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cb273-111">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="cb273-111">Attributes and Elements</span></span>  
- <span data-ttu-id="cb273-112">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="cb273-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="26814-111">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="26814-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="26814-112">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="26814-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cb273-113">Attributs</span><span class="sxs-lookup"><span data-stu-id="cb273-113">Attributes</span></span>  
- <span data-ttu-id="cb273-114">Aucun.</span><span class="sxs-lookup"><span data-stu-id="cb273-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="26814-113">Attributs</span><span class="sxs-lookup"><span data-stu-id="26814-113">Attributes</span></span>  
+ <span data-ttu-id="26814-114">Aucun.</span><span class="sxs-lookup"><span data-stu-id="26814-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="cb273-115">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="cb273-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="26814-115">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="26814-115">Child Elements</span></span>  
   
-|<span data-ttu-id="cb273-116">Élément</span><span class="sxs-lookup"><span data-stu-id="cb273-116">Element</span></span>|<span data-ttu-id="cb273-117">Description</span><span class="sxs-lookup"><span data-stu-id="cb273-117">Description</span></span>|  
+|<span data-ttu-id="26814-116">Élément</span><span class="sxs-lookup"><span data-stu-id="26814-116">Element</span></span>|<span data-ttu-id="26814-117">Description</span><span class="sxs-lookup"><span data-stu-id="26814-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cb273-118">\<add></span><span class="sxs-lookup"><span data-stu-id="cb273-118">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="cb273-119">Ajoute un écouteur à la collection `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="cb273-119">Adds a listener to the `Listeners` collection.</span></span>|  
-|[<span data-ttu-id="cb273-120">\<remove></span><span class="sxs-lookup"><span data-stu-id="cb273-120">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="cb273-121">Supprime un écouteur de la `Listeners` collection.</span><span class="sxs-lookup"><span data-stu-id="cb273-121">Removes a listener from the `Listeners` collection.</span></span>|  
-|[<span data-ttu-id="cb273-122">\<clear></span><span class="sxs-lookup"><span data-stu-id="cb273-122">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="cb273-123">Efface la collection `Listeners` pour une source de trace.</span><span class="sxs-lookup"><span data-stu-id="cb273-123">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="26814-118">\<add></span><span class="sxs-lookup"><span data-stu-id="26814-118">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="26814-119">Ajoute un écouteur à la collection `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="26814-119">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="26814-120">\<remove></span><span class="sxs-lookup"><span data-stu-id="26814-120">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="26814-121">Supprime un écouteur de la `Listeners` collection.</span><span class="sxs-lookup"><span data-stu-id="26814-121">Removes a listener from the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="26814-122">\<clear></span><span class="sxs-lookup"><span data-stu-id="26814-122">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="26814-123">Efface la collection `Listeners` pour une source de trace.</span><span class="sxs-lookup"><span data-stu-id="26814-123">Clears the `Listeners` collection for a trace source.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="cb273-124">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="cb273-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="26814-124">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="26814-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="cb273-125">Élément</span><span class="sxs-lookup"><span data-stu-id="cb273-125">Element</span></span>|<span data-ttu-id="cb273-126">Description</span><span class="sxs-lookup"><span data-stu-id="cb273-126">Description</span></span>|  
+|<span data-ttu-id="26814-125">Élément</span><span class="sxs-lookup"><span data-stu-id="26814-125">Element</span></span>|<span data-ttu-id="26814-126">Description</span><span class="sxs-lookup"><span data-stu-id="26814-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="cb273-127">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cb273-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="cb273-128">Spécifie les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.</span><span class="sxs-lookup"><span data-stu-id="cb273-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="cb273-129">Contient les sources de trace qui lancent des messages de traçage.</span><span class="sxs-lookup"><span data-stu-id="cb273-129">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="cb273-130">Spécifie une source de trace qui lance des messages de traçage.</span><span class="sxs-lookup"><span data-stu-id="cb273-130">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`configuration`|<span data-ttu-id="26814-127">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="26814-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="26814-128">Spécifie les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.</span><span class="sxs-lookup"><span data-stu-id="26814-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="26814-129">Contient les sources de trace qui lancent des messages de traçage.</span><span class="sxs-lookup"><span data-stu-id="26814-129">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="26814-130">Spécifie une source de trace qui lance des messages de traçage.</span><span class="sxs-lookup"><span data-stu-id="26814-130">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cb273-131">Notes</span><span class="sxs-lookup"><span data-stu-id="cb273-131">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="26814-131">Notes</span><span class="sxs-lookup"><span data-stu-id="26814-131">Remarks</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="cb273-132">Fichier de configuration</span><span class="sxs-lookup"><span data-stu-id="cb273-132">Configuration File</span></span>  
- <span data-ttu-id="cb273-133">Cet élément peut être utilisé dans le fichier de configuration machine (Machine.config) et le fichier de configuration d’application.</span><span class="sxs-lookup"><span data-stu-id="cb273-133">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="26814-132">Fichier de configuration</span><span class="sxs-lookup"><span data-stu-id="26814-132">Configuration File</span></span>  
+ <span data-ttu-id="26814-133">Cet élément peut être utilisé dans le fichier de configuration machine (Machine.config) et le fichier de configuration d’application.</span><span class="sxs-lookup"><span data-stu-id="26814-133">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb273-134">Exemple</span><span class="sxs-lookup"><span data-stu-id="cb273-134">Example</span></span>  
- <span data-ttu-id="cb273-135">L’exemple suivant montre comment utiliser le `<listeners>` élément à ajouter un écouteur de suivi de console à la `mySource` source et de supprimer l’écouteur de trace par défaut.</span><span class="sxs-lookup"><span data-stu-id="cb273-135">The following example shows how to use the `<listeners>` element to add a console trace listener to the `mySource` source and to remove the default trace listener.</span></span>  
+## <a name="example"></a><span data-ttu-id="26814-134">Exemple</span><span class="sxs-lookup"><span data-stu-id="26814-134">Example</span></span>  
+ <span data-ttu-id="26814-135">L’exemple suivant montre comment utiliser le `<listeners>` élément à ajouter un écouteur de suivi de console à la `mySource` source et de supprimer l’écouteur de trace par défaut.</span><span class="sxs-lookup"><span data-stu-id="26814-135">The following example shows how to use the `<listeners>` element to add a console trace listener to the `mySource` source and to remove the default trace listener.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,8 @@ ms.locfileid: "55266774"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb273-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cb273-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26814-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="26814-136">See also</span></span>
+
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="cb273-137">Schéma des paramètres de trace et de débogage</span><span class="sxs-lookup"><span data-stu-id="cb273-137">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="cb273-138">Écouteurs de suivi</span><span class="sxs-lookup"><span data-stu-id="cb273-138">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="26814-137">Schéma des paramètres de traçage et de débogage</span><span class="sxs-lookup"><span data-stu-id="26814-137">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="26814-138">Écouteurs de la trace</span><span class="sxs-lookup"><span data-stu-id="26814-138">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

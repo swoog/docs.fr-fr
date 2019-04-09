@@ -2,20 +2,21 @@
 title: System.ServiceModel.Channels.OpenedListener
 ms.date: 03/30/2017
 ms.assetid: 474830b3-b76c-4f3c-a363-20d9124fece5
-ms.openlocfilehash: 65b631a515cdea1a354c5de29da32c0c1ca91504
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48b47ad3a589b9d62550d6bb93f4339c7876f419
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083190"
 ---
-# <a name="systemservicemodelchannelsopenedlistener"></a><span data-ttu-id="db513-102">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="db513-102">System.ServiceModel.Channels.OpenedListener</span></span>
-<span data-ttu-id="db513-103">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="db513-103">System.ServiceModel.Channels.OpenedListener</span></span>  
+# <a name="systemservicemodelchannelsopenedlistener"></a><span data-ttu-id="f6acf-102">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="f6acf-102">System.ServiceModel.Channels.OpenedListener</span></span>
+<span data-ttu-id="f6acf-103">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="f6acf-103">System.ServiceModel.Channels.OpenedListener</span></span>  
   
-## <a name="description"></a><span data-ttu-id="db513-104">Description</span><span class="sxs-lookup"><span data-stu-id="db513-104">Description</span></span>  
- <span data-ttu-id="db513-105">Le transport écoute l'URI de base.</span><span class="sxs-lookup"><span data-stu-id="db513-105">Transport is listening at the base URI.</span></span>  
+## <a name="description"></a><span data-ttu-id="f6acf-104">Description</span><span class="sxs-lookup"><span data-stu-id="f6acf-104">Description</span></span>  
+ <span data-ttu-id="f6acf-105">Le transport écoute l'URI de base.</span><span class="sxs-lookup"><span data-stu-id="f6acf-105">Transport is listening at the base URI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db513-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="db513-106">See also</span></span>
-- [<span data-ttu-id="db513-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="db513-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="db513-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="db513-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="db513-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="db513-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f6acf-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f6acf-106">See also</span></span>
+
+- [<span data-ttu-id="f6acf-107">Traçage</span><span class="sxs-lookup"><span data-stu-id="f6acf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="f6acf-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="f6acf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f6acf-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="f6acf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

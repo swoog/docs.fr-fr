@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf3f781e23d0787d01a1ef04b41b2c38eaaa9e0d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 70d78942d4db2fea2cc1ccbcc5ddb20d743e9fdf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093668"
 ---
-# <a name="iceegengetstring-method"></a><span data-ttu-id="e0fe9-102">ICeeGen::GetString, méthode</span><span class="sxs-lookup"><span data-stu-id="e0fe9-102">ICeeGen::GetString Method</span></span>
-<span data-ttu-id="e0fe9-103">Obtient la chaîne stockée à l’adresse virtuelle relative spécifiée.</span><span class="sxs-lookup"><span data-stu-id="e0fe9-103">Gets the string stored at the specified relative virtual address.</span></span>  
+# <a name="iceegengetstring-method"></a><span data-ttu-id="01626-102">ICeeGen::GetString, méthode</span><span class="sxs-lookup"><span data-stu-id="01626-102">ICeeGen::GetString Method</span></span>
+<span data-ttu-id="01626-103">Obtient la chaîne stockée à l’adresse virtuelle relative spécifiée.</span><span class="sxs-lookup"><span data-stu-id="01626-103">Gets the string stored at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="e0fe9-104">Cette méthode est obsolète et ne doit pas être utilisée.</span><span class="sxs-lookup"><span data-stu-id="e0fe9-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="01626-104">Cette méthode est obsolète et ne doit pas être utilisée.</span><span class="sxs-lookup"><span data-stu-id="01626-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0fe9-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e0fe9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01626-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="01626-105">Syntax</span></span>  
   
 ```  
 HRESULT GetString (  
@@ -38,21 +38,22 @@ HRESULT GetString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0fe9-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e0fe9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01626-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="01626-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="e0fe9-107">[in] L’adresse virtuelle relative de la chaîne à retourner.</span><span class="sxs-lookup"><span data-stu-id="e0fe9-107">[in] The relative virtual address of the string to return.</span></span>  
+ <span data-ttu-id="01626-107">[in] L’adresse virtuelle relative de la chaîne à retourner.</span><span class="sxs-lookup"><span data-stu-id="01626-107">[in] The relative virtual address of the string to return.</span></span>  
   
  `lpString`  
- <span data-ttu-id="e0fe9-108">[out] La chaîne retournée.</span><span class="sxs-lookup"><span data-stu-id="e0fe9-108">[out] The returned string.</span></span>  
+ <span data-ttu-id="01626-108">[out] La chaîne retournée.</span><span class="sxs-lookup"><span data-stu-id="01626-108">[out] The returned string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0fe9-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e0fe9-109">Requirements</span></span>  
- <span data-ttu-id="e0fe9-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0fe9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01626-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="01626-109">Requirements</span></span>  
+ <span data-ttu-id="01626-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01626-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0fe9-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e0fe9-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="01626-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="01626-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e0fe9-112">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e0fe9-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="01626-112">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="01626-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e0fe9-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0fe9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="01626-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="01626-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e0fe9-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e0fe9-114">See also</span></span>
-- [<span data-ttu-id="e0fe9-115">ICeeGen, interface</span><span class="sxs-lookup"><span data-stu-id="e0fe9-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="01626-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="01626-114">See also</span></span>
+
+- [<span data-ttu-id="01626-115">ICeeGen, interface</span><span class="sxs-lookup"><span data-stu-id="01626-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

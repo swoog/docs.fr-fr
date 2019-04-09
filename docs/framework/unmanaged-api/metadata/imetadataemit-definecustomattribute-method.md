@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf3c74526bbf2b8e740f505ab6f4243cd799041
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 52190583338f1c1ee9183a98d5f4a6cd7236342d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075665"
 ---
-# <a name="imetadataemitdefinecustomattribute-method"></a><span data-ttu-id="33cee-102">IMetaDataEmit::DefineCustomAttribute, méthode</span><span class="sxs-lookup"><span data-stu-id="33cee-102">IMetaDataEmit::DefineCustomAttribute Method</span></span>
-<span data-ttu-id="33cee-103">Crée une définition pour un attribut personnalisé avec la signature de métadonnées spécifié, à joindre à l’objet spécifié et obtient un jeton pour cette définition d’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="33cee-103">Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.</span></span>  
+# <a name="imetadataemitdefinecustomattribute-method"></a><span data-ttu-id="a5d41-102">IMetaDataEmit::DefineCustomAttribute, méthode</span><span class="sxs-lookup"><span data-stu-id="a5d41-102">IMetaDataEmit::DefineCustomAttribute Method</span></span>
+<span data-ttu-id="a5d41-103">Crée une définition pour un attribut personnalisé avec la signature de métadonnées spécifié, à joindre à l’objet spécifié et obtient un jeton pour cette définition d’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="a5d41-103">Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33cee-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="33cee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5d41-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a5d41-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineCustomAttribute (   
@@ -39,31 +39,32 @@ HRESULT DefineCustomAttribute (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33cee-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="33cee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5d41-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a5d41-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="33cee-106">[in] Le jeton pour l’élément propriétaire.</span><span class="sxs-lookup"><span data-stu-id="33cee-106">[in] The token for the owner item.</span></span>  
+ <span data-ttu-id="a5d41-106">[in] Le jeton pour l’élément propriétaire.</span><span class="sxs-lookup"><span data-stu-id="a5d41-106">[in] The token for the owner item.</span></span>  
   
  `tkType`  
- <span data-ttu-id="33cee-107">[in] Le jeton qui identifie l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="33cee-107">[in] The token that identifies the custom attribute.</span></span>  
+ <span data-ttu-id="a5d41-107">[in] Le jeton qui identifie l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="a5d41-107">[in] The token that identifies the custom attribute.</span></span>  
   
  `pCustomAttribute`  
- <span data-ttu-id="33cee-108">[in] Pointeur vers l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="33cee-108">[in] A pointer to the custom attribute.</span></span>  
+ <span data-ttu-id="a5d41-108">[in] Pointeur vers l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="a5d41-108">[in] A pointer to the custom attribute.</span></span>  
   
  `cbCustomAttribute`  
- <span data-ttu-id="33cee-109">[in] Le nombre d’octets dans `pCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="33cee-109">[in] The count of bytes in `pCustomAttribute`.</span></span>  
+ <span data-ttu-id="a5d41-109">[in] Le nombre d’octets dans `pCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="a5d41-109">[in] The count of bytes in `pCustomAttribute`.</span></span>  
   
  `pcv`  
- <span data-ttu-id="33cee-110">[out] Le `mdCustomAttribute` jeton attribué.</span><span class="sxs-lookup"><span data-stu-id="33cee-110">[out] The `mdCustomAttribute` token assigned.</span></span>  
+ <span data-ttu-id="a5d41-110">[out] Le `mdCustomAttribute` jeton attribué.</span><span class="sxs-lookup"><span data-stu-id="a5d41-110">[out] The `mdCustomAttribute` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33cee-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="33cee-111">Requirements</span></span>  
- <span data-ttu-id="33cee-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33cee-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5d41-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="a5d41-111">Requirements</span></span>  
+ <span data-ttu-id="a5d41-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5d41-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33cee-113">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="33cee-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a5d41-113">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a5d41-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="33cee-114">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33cee-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a5d41-114">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a5d41-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="33cee-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33cee-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a5d41-115">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="a5d41-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="33cee-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="33cee-116">See also</span></span>
-- [<span data-ttu-id="33cee-117">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="33cee-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="33cee-118">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="33cee-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a5d41-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a5d41-116">See also</span></span>
+
+- [<span data-ttu-id="a5d41-117">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="a5d41-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="a5d41-118">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="a5d41-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,44 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c85888e9d29e7b3ae6ad76d1e534e08a4603ed2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647c87b6f42b01922a385d502d72410af3140cd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095345"
 ---
-# <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a><span data-ttu-id="cff67-102">ICLRRuntimeInfo::BindAsLegacyV2Runtime, méthode</span><span class="sxs-lookup"><span data-stu-id="cff67-102">ICLRRuntimeInfo::BindAsLegacyV2Runtime Method</span></span>
-<span data-ttu-id="cff67-103">Lie l’exécution actuelle pour tous les common language runtime (CLR) version 2 d’activation décisions de stratégie héritée.</span><span class="sxs-lookup"><span data-stu-id="cff67-103">Binds the current runtime for all legacy common language runtime (CLR) version 2 activation policy decisions.</span></span>  
+# <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a><span data-ttu-id="6b104-102">ICLRRuntimeInfo::BindAsLegacyV2Runtime, méthode</span><span class="sxs-lookup"><span data-stu-id="6b104-102">ICLRRuntimeInfo::BindAsLegacyV2Runtime Method</span></span>
+<span data-ttu-id="6b104-103">Lie l’exécution actuelle pour tous les common language runtime (CLR) version 2 d’activation décisions de stratégie héritée.</span><span class="sxs-lookup"><span data-stu-id="6b104-103">Binds the current runtime for all legacy common language runtime (CLR) version 2 activation policy decisions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cff67-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cff67-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b104-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6b104-104">Syntax</span></span>  
   
 ```  
 HRESULT BindAsLegacyV2Runtime ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="cff67-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="cff67-105">Return Value</span></span>  
- <span data-ttu-id="cff67-106">Cette méthode retourne les HRESULT spécifiques suivants :</span><span class="sxs-lookup"><span data-stu-id="cff67-106">This method returns the following specific HRESULTs:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b104-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="6b104-105">Return Value</span></span>  
+ <span data-ttu-id="6b104-106">Cette méthode retourne les HRESULT spécifiques suivants :</span><span class="sxs-lookup"><span data-stu-id="6b104-106">This method returns the following specific HRESULTs:</span></span>  
   
-|<span data-ttu-id="cff67-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cff67-107">HRESULT</span></span>|<span data-ttu-id="cff67-108">Description</span><span class="sxs-lookup"><span data-stu-id="cff67-108">Description</span></span>|  
+|<span data-ttu-id="6b104-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6b104-107">HRESULT</span></span>|<span data-ttu-id="6b104-108">Description</span><span class="sxs-lookup"><span data-stu-id="6b104-108">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cff67-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="cff67-109">S_OK</span></span>|<span data-ttu-id="cff67-110">Liaison a réussi, soit ce runtime était déjà lié en tant que le runtime de stratégie CLR version 2 d’activation hérité.</span><span class="sxs-lookup"><span data-stu-id="cff67-110">Either binding succeeded, or this runtime was already bound as the legacy CLR version 2 activation policy runtime.</span></span>|  
-|<span data-ttu-id="cff67-111">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span><span class="sxs-lookup"><span data-stu-id="cff67-111">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span></span>|<span data-ttu-id="cff67-112">Un runtime différent était déjà lié à la stratégie d’activation 2 de version CLR héritée.</span><span class="sxs-lookup"><span data-stu-id="cff67-112">A different runtime was already bound to the legacy CLR version 2 activation policy.</span></span>|  
+|<span data-ttu-id="6b104-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="6b104-109">S_OK</span></span>|<span data-ttu-id="6b104-110">Liaison a réussi, soit ce runtime était déjà lié en tant que le runtime de stratégie CLR version 2 d’activation hérité.</span><span class="sxs-lookup"><span data-stu-id="6b104-110">Either binding succeeded, or this runtime was already bound as the legacy CLR version 2 activation policy runtime.</span></span>|  
+|<span data-ttu-id="6b104-111">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span><span class="sxs-lookup"><span data-stu-id="6b104-111">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span></span>|<span data-ttu-id="6b104-112">Un runtime différent était déjà lié à la stratégie d’activation 2 de version CLR héritée.</span><span class="sxs-lookup"><span data-stu-id="6b104-112">A different runtime was already bound to the legacy CLR version 2 activation policy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cff67-113">Notes</span><span class="sxs-lookup"><span data-stu-id="cff67-113">Remarks</span></span>  
- <span data-ttu-id="cff67-114">Si le runtime actuel est déjà lié à toutes les décisions de stratégie CLR version 2 d’activation héritée (par exemple, en utilisant le `useLegacyV2RuntimeActivationPolicy` d’attribut sur le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) dans le fichier de configuration), cette méthode ne retourne pas un résultat d’erreur ; au lieu de cela, le résultat est S_OK, tout comme il le serait si la méthode avait été liée à une stratégie d’activation héritée.</span><span class="sxs-lookup"><span data-stu-id="cff67-114">If the current runtime is already bound for all legacy CLR version 2 activation policy decisions (for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in the configuration file), this method does not return an error result; instead, the result is S_OK, just as it would be if the method had successfully bound legacy activation policy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6b104-113">Notes</span><span class="sxs-lookup"><span data-stu-id="6b104-113">Remarks</span></span>  
+ <span data-ttu-id="6b104-114">Si le runtime actuel est déjà lié à toutes les décisions de stratégie CLR version 2 d’activation héritée (par exemple, en utilisant le `useLegacyV2RuntimeActivationPolicy` d’attribut sur le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) dans le fichier de configuration), cette méthode ne retourne pas un résultat d’erreur ; au lieu de cela, le résultat est S_OK, tout comme il le serait si la méthode avait été liée à une stratégie d’activation héritée.</span><span class="sxs-lookup"><span data-stu-id="6b104-114">If the current runtime is already bound for all legacy CLR version 2 activation policy decisions (for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in the configuration file), this method does not return an error result; instead, the result is S_OK, just as it would be if the method had successfully bound legacy activation policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cff67-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="cff67-115">Requirements</span></span>  
- <span data-ttu-id="cff67-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cff67-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b104-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="6b104-115">Requirements</span></span>  
+ <span data-ttu-id="6b104-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b104-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cff67-117">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="cff67-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="6b104-117">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6b104-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="cff67-118">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cff67-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6b104-118">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6b104-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cff67-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cff67-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="6b104-119">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="6b104-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="cff67-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cff67-120">See also</span></span>
-- [<span data-ttu-id="cff67-121">ICLRRuntimeInfo, interface</span><span class="sxs-lookup"><span data-stu-id="cff67-121">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="cff67-122">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="cff67-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="cff67-123">Hébergement</span><span class="sxs-lookup"><span data-stu-id="cff67-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [<span data-ttu-id="cff67-124">\<startup>, élément</span><span class="sxs-lookup"><span data-stu-id="cff67-124">\<startup> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+## <a name="see-also"></a><span data-ttu-id="6b104-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6b104-120">See also</span></span>
+
+- [<span data-ttu-id="6b104-121">ICLRRuntimeInfo, interface</span><span class="sxs-lookup"><span data-stu-id="6b104-121">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="6b104-122">Interfaces d'hébergement</span><span class="sxs-lookup"><span data-stu-id="6b104-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="6b104-123">Hébergement</span><span class="sxs-lookup"><span data-stu-id="6b104-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="6b104-124">\<démarrage > élément</span><span class="sxs-lookup"><span data-stu-id="6b104-124">\<startup> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077768"
 ---
-# <a name="imethodmalloc-interface"></a><span data-ttu-id="84fae-102">IMethodMalloc, interface</span><span class="sxs-lookup"><span data-stu-id="84fae-102">IMethodMalloc Interface</span></span>
-<span data-ttu-id="84fae-103">Fournit une méthode pour allouer de la mémoire pour un nouveau corps de fonction Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="84fae-103">Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  
+# <a name="imethodmalloc-interface"></a><span data-ttu-id="985e2-102">IMethodMalloc, interface</span><span class="sxs-lookup"><span data-stu-id="985e2-102">IMethodMalloc Interface</span></span>
+<span data-ttu-id="985e2-103">Fournit une méthode pour allouer de la mémoire pour un nouveau corps de fonction Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="985e2-103">Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="84fae-104">Le `IMethodMalloc` interface est un allocateur de mémoire simple.</span><span class="sxs-lookup"><span data-stu-id="84fae-104">The `IMethodMalloc` interface is a simple memory allocator.</span></span> <span data-ttu-id="84fae-105">Il vous permet d’allocation de mémoire, mais ne pas à libérer.</span><span class="sxs-lookup"><span data-stu-id="84fae-105">It allows you to allocate memory, but not to free it.</span></span>  
+>  <span data-ttu-id="985e2-104">Le `IMethodMalloc` interface est un allocateur de mémoire simple.</span><span class="sxs-lookup"><span data-stu-id="985e2-104">The `IMethodMalloc` interface is a simple memory allocator.</span></span> <span data-ttu-id="985e2-105">Il vous permet d’allocation de mémoire, mais ne pas à libérer.</span><span class="sxs-lookup"><span data-stu-id="985e2-105">It allows you to allocate memory, but not to free it.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="84fae-106">Méthodes</span><span class="sxs-lookup"><span data-stu-id="84fae-106">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="985e2-106">Méthodes</span><span class="sxs-lookup"><span data-stu-id="985e2-106">Methods</span></span>  
   
-|<span data-ttu-id="84fae-107">Méthode</span><span class="sxs-lookup"><span data-stu-id="84fae-107">Method</span></span>|<span data-ttu-id="84fae-108">Description</span><span class="sxs-lookup"><span data-stu-id="84fae-108">Description</span></span>|  
+|<span data-ttu-id="985e2-107">Méthode</span><span class="sxs-lookup"><span data-stu-id="985e2-107">Method</span></span>|<span data-ttu-id="985e2-108">Description</span><span class="sxs-lookup"><span data-stu-id="985e2-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="84fae-109">Alloc, méthode</span><span class="sxs-lookup"><span data-stu-id="84fae-109">Alloc Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|<span data-ttu-id="84fae-110">Tente d’allouer une quantité de mémoire spécifiée pour un nouveau corps de fonction MSIL.</span><span class="sxs-lookup"><span data-stu-id="84fae-110">Attempts to allocate a specified amount of memory for a new MSIL function body.</span></span>|  
+|[<span data-ttu-id="985e2-109">Alloc, méthode</span><span class="sxs-lookup"><span data-stu-id="985e2-109">Alloc Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|<span data-ttu-id="985e2-110">Tente d’allouer une quantité de mémoire spécifiée pour un nouveau corps de fonction MSIL.</span><span class="sxs-lookup"><span data-stu-id="985e2-110">Attempts to allocate a specified amount of memory for a new MSIL function body.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="84fae-111">Notes</span><span class="sxs-lookup"><span data-stu-id="84fae-111">Remarks</span></span>  
- <span data-ttu-id="84fae-112">Chaque allocateur est spécifique au module et vous permet de garantir que le corps de fonction à un décalage positif à partir de la base du module.</span><span class="sxs-lookup"><span data-stu-id="84fae-112">Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module.</span></span> <span data-ttu-id="84fae-113">Mémoire au-dessus de la base d’un module peut être précieuse, l’allocateur doit être utilisé pour allouer de la mémoire uniquement pour un corps de fonction.</span><span class="sxs-lookup"><span data-stu-id="84fae-113">Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="985e2-111">Notes</span><span class="sxs-lookup"><span data-stu-id="985e2-111">Remarks</span></span>  
+ <span data-ttu-id="985e2-112">Chaque allocateur est spécifique au module et vous permet de garantir que le corps de fonction à un décalage positif à partir de la base du module.</span><span class="sxs-lookup"><span data-stu-id="985e2-112">Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module.</span></span> <span data-ttu-id="985e2-113">Mémoire au-dessus de la base d’un module peut être précieuse, l’allocateur doit être utilisé pour allouer de la mémoire uniquement pour un corps de fonction.</span><span class="sxs-lookup"><span data-stu-id="985e2-113">Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84fae-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="84fae-114">Requirements</span></span>  
- <span data-ttu-id="84fae-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84fae-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="985e2-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="985e2-114">Requirements</span></span>  
+ <span data-ttu-id="985e2-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="985e2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84fae-116">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="84fae-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="985e2-116">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="985e2-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="84fae-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84fae-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="985e2-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="985e2-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="84fae-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84fae-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="985e2-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="985e2-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="84fae-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="84fae-119">See also</span></span>
-- [<span data-ttu-id="84fae-120">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="84fae-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="985e2-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="985e2-119">See also</span></span>
+
+- [<span data-ttu-id="985e2-120">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="985e2-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

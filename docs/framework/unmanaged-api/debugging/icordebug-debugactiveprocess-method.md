@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b3869c9f96eee6f0e3066a99a58a154a2f5f2ee
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b880358ed0d7bce4896217bc07c6ef6268d62962
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076274"
 ---
-# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="41d96-102">ICorDebug::DebugActiveProcess, méthode</span><span class="sxs-lookup"><span data-stu-id="41d96-102">ICorDebug::DebugActiveProcess Method</span></span>
-<span data-ttu-id="41d96-103">Attache le débogueur à un processus existant.</span><span class="sxs-lookup"><span data-stu-id="41d96-103">Attaches the debugger to an existing process.</span></span>  
+# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="1b90e-102">ICorDebug::DebugActiveProcess, méthode</span><span class="sxs-lookup"><span data-stu-id="1b90e-102">ICorDebug::DebugActiveProcess Method</span></span>
+<span data-ttu-id="1b90e-103">Attache le débogueur à un processus existant.</span><span class="sxs-lookup"><span data-stu-id="1b90e-103">Attaches the debugger to an existing process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41d96-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="41d96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b90e-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1b90e-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugActiveProcess (  
@@ -37,27 +37,28 @@ HRESULT DebugActiveProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="41d96-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="41d96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1b90e-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1b90e-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="41d96-106">[in] ID du processus auquel le débogueur doit être attaché.</span><span class="sxs-lookup"><span data-stu-id="41d96-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="1b90e-106">[in] ID du processus auquel le débogueur doit être attaché.</span><span class="sxs-lookup"><span data-stu-id="1b90e-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="41d96-107">[in] Valeur booléenne qui est défini sur `true` si le débogueur doit se comporter comme le débogueur Win32 pour le processus et distribuer les rappels non managés ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="41d96-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="1b90e-107">[in] Valeur booléenne qui est défini sur `true` si le débogueur doit se comporter comme le débogueur Win32 pour le processus et distribuer les rappels non managés ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="1b90e-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="41d96-108">[out] Pointeur vers l’adresse d’un objet « ICorDebugProcess » qui représente le processus auquel le débogueur est attaché.</span><span class="sxs-lookup"><span data-stu-id="41d96-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="1b90e-108">[out] Pointeur vers l’adresse d’un objet « ICorDebugProcess » qui représente le processus auquel le débogueur est attaché.</span><span class="sxs-lookup"><span data-stu-id="1b90e-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="41d96-109">Notes</span><span class="sxs-lookup"><span data-stu-id="41d96-109">Remarks</span></span>  
- <span data-ttu-id="41d96-110">Débogage d’interopérabilité n’est pas pris en charge sur les plateformes Win9x et non x86, telles que les plateformes basés sur IA-64 et AMD64.</span><span class="sxs-lookup"><span data-stu-id="41d96-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b90e-109">Notes</span><span class="sxs-lookup"><span data-stu-id="1b90e-109">Remarks</span></span>  
+ <span data-ttu-id="1b90e-110">Débogage d’interopérabilité n’est pas pris en charge sur les plateformes Win9x et non x86, telles que les plateformes basés sur IA-64 et AMD64.</span><span class="sxs-lookup"><span data-stu-id="1b90e-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41d96-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="41d96-111">Requirements</span></span>  
- <span data-ttu-id="41d96-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41d96-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b90e-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1b90e-111">Requirements</span></span>  
+ <span data-ttu-id="1b90e-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b90e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41d96-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41d96-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1b90e-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b90e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="41d96-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41d96-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b90e-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b90e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="41d96-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41d96-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="1b90e-115">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="1b90e-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="41d96-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="41d96-116">See also</span></span>
-- [<span data-ttu-id="41d96-117">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="41d96-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1b90e-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1b90e-116">See also</span></span>
+
+- [<span data-ttu-id="1b90e-117">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="1b90e-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
