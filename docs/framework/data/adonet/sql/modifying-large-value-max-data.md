@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119299"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modification de données de valeurs élevées (max) dans ADO.NET
 Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8 kilo-octets (Ko). SQL Server fournit un spécificateur `max` pour les types de données `varchar`, `nvarchar` et `varbinary` pour permettre le stockage de valeurs pouvant atteindre 2^32 octets. Les colonnes de table et les variables Transact-SQL peuvent spécifier des types de données `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. Dans ADO.NET, les types de données `max` peuvent être extraits par un `DataReader` et spécifiés comme valeurs de paramètre d'entrée ou de sortie sans que cela nécessite une manipulation particulière. Pour les types de données `varchar` volumineux, il est possible d'extraire et de mettre à jour les données de façon incrémentielle.  
@@ -21,7 +21,7 @@ Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8�
   
  **Documentation en ligne de SQL Server**  
   
-1.  [À l’aide des Types de données de valeur élevée](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [Utilisation de types de données de valeur élevée](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrictions relatives aux types de valeur élevée  
  Les restrictions suivantes s'appliquent aux types de données `max`, qui n'existent pas pour les types de données moins volumineux :  
@@ -33,7 +33,7 @@ Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8�
 -   Des colonnes `varchar` volumineuses ne peuvent pas être utilisées comme colonnes clés de partitionnement.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Utilisation de types de valeur élevée dans Transact-SQL  
- La fonction Transact-SQL `OPENROWSET` est une méthode permettant de se connecter et d'accéder à des données distantes en une seule opération. Elle inclut toutes les informations de connexion nécessaires pour accéder à des données distantes à partir d'une source de données OLE DB. `OPENROWSET` peut être référencé dans la clause FROM d'une requête comme s'il s'agissait du nom d'une table. Il peut également être référencé comme table cible d'une instruction INSERT, UPDATE ou DELETE, sujette aux capacités du fournisseur OLE DB.  
+ La fonction Transact-SQL `OPENROWSET` est une méthode permettant de se connecter et d'accéder à des données distantes en une seule opération. Elle inclut toutes les informations de connexion nécessaires pour accéder à des données distantes à partir d'une source de données OLE DB. `OPENROWSET` peut être référencée dans la clause FROM d’une requête comme s’il s’agissait d’un nom de table. Il peut également être référencé comme table cible d'une instruction INSERT, UPDATE ou DELETE, sujette aux capacités du fournisseur OLE DB.  
   
  La fonction `OPENROWSET` inclut le fournisseur de jeu de lignes `BULK`, qui permet de lire directement les données d'un fichier sans devoir les charger dans une table cible. Cela vous permet d'utiliser `OPENROWSET` dans une simple instruction INSERT SELECT.  
   
@@ -76,7 +76,7 @@ FROM OPENROWSET
 >  Ni `@Offset` ni `@Length` ne peuvent avoir pour valeur un nombre négatif.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple Transact-SQL met à jour une valeur partielle dans DocumentSummary, colonne `nvarchar(max)` dans la table Document de la base de données AdventureWorks. Le mot « components » est remplacé par le mot « features » en spécifiant le mot de remplacement, l'emplacement où commence (offset) le mot à remplacer dans les données existantes et le nombre de caractères à remplacer (length). L'exemple inclut des instructions SELECT devant et derrière l'instruction UPDATE afin de comparer les résultats.  
+ Cet exemple Transact-SQL met à jour une valeur partielle dans DocumentSummary, colonne `nvarchar(max)` dans la table Document de la base de données AdventureWorks. Le mot « components » est remplacé par le mot « features » en spécifiant le mot de remplacement, l’emplacement où commence (offset) le mot à remplacer dans les données existantes et le nombre de caractères à remplacer (length). L'exemple inclut des instructions SELECT devant et derrière l'instruction UPDATE afin de comparer les résultats.  
   
 ```  
 USE AdventureWorks;  
@@ -250,7 +250,8 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+
+- [Données binaires et à valeurs élevées SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Opérations de données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

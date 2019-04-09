@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: fdd9108417068204b6d7ec2e4cc9ae54a160d7fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124629"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Rappels de sérialisation avec tolérance de version
 Le modèle de programmation de contrat de données prend entièrement en charge les méthodes de rappel de sérialisation avec tolérance de version que les classes <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> prennent en charge.  
@@ -33,7 +33,7 @@ Le modèle de programmation de contrat de données prend entièrement en charge 
   
  Les méthodes doivent accepter un paramètre <xref:System.Runtime.Serialization.StreamingContext>.  
   
- Ces méthodes sont principalement destinées à une utilisation avec le versioning ou l'initialisation. Pendant la désérialisation, aucun constructeur n’est appelé. Par conséquent, des membres de données risquent de ne pas être initialisés correctement (avec les valeurs par défaut prévues) si les données de ces membres ne figurent pas dans le flux entrant, par exemple, si les données viennent d'une version antérieure d'un type auquel il manque certains membres de données. Pour corriger ce problème, utilisez la méthode de rappel marquée avec <xref:System.Runtime.Serialization.OnDeserializingAttribute>, comme indiqué dans l'exemple suivant.  
+ Ces méthodes sont principalement destinées à une utilisation avec le versioning ou l'initialisation. Pendant la désérialisation, aucun constructeur n'est appelé. Par conséquent, des membres de données risquent de ne pas être initialisés correctement (avec les valeurs par défaut prévues) si les données de ces membres ne figurent pas dans le flux entrant, par exemple, si les données viennent d'une version antérieure d'un type auquel il manque certains membres de données. Pour corriger ce problème, utilisez la méthode de rappel marquée avec <xref:System.Runtime.Serialization.OnDeserializingAttribute>, comme indiqué dans l'exemple suivant.  
   
  Vous pouvez marquer uniquement une méthode par type avec chacun des attributs de rappel précédents.  
   
@@ -42,6 +42,7 @@ Le modèle de programmation de contrat de données prend entièrement en charge 
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.OnSerializingAttribute>
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>

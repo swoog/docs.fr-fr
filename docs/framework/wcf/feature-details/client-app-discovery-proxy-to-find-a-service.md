@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service'
+title: 'Procédure : implémenter une application cliente qui utilise le proxy de détection pour rechercher un service'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 3f78ad8436ae1132eb48057f027d10ef191a6ad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115971"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procédure : Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procédure : implémenter une application cliente qui utilise le proxy de détection pour rechercher un service
 Cette rubrique est la troisième d'une série de trois qui expliquent comment implémenter un proxy de découverte. Dans la rubrique précédente, [Comment : Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), vous avez implémenté un service WCF qui s’inscrit lui-même auprès du proxy de découverte. Dans cette rubrique, vous créez un client WCF qui utilise le proxy de découverte pour trouver le service WCF.  
   
 ### <a name="implement-the-client"></a>Implémenter le client  
@@ -282,6 +282,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Guide pratique pour Implémenter un Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Guide pratique pour Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+
+- [Vue d'ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Procédure : implémenter un proxy de détection](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Procédure : implémenter un service détectable qui s’enregistre auprès du proxy de détection](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

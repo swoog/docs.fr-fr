@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: 4081558f9ea6a1bc258ab4cbebe6c2f72ee2c60c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c3ed424aff3cd485a78d26a7f27bc5b1eac66448
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119741"
 ---
 # <a name="executing-a-command"></a>Exécution d'une commande
 Chaque fournisseur de données .NET Framework inclus avec le .NET Framework possède son propre objet de commande qui hérite de <xref:System.Data.Common.DbCommand>. Le fournisseur de données .NET Framework pour OLE DB inclut un objet <xref:System.Data.OleDb.OleDbCommand>, le fournisseur de données .NET Framework pour SQL Server inclut un objet <xref:System.Data.SqlClient.SqlCommand>, le fournisseur de données .NET Framework pour ODBC inclut un objet <xref:System.Data.Odbc.OdbcCommand> et le fournisseur de données .NET Framework pour Oracle inclut un objet <xref:System.Data.OracleClient.OracleCommand>. Chacun de ces objets expose des méthodes pour exécuter les commandes en fonction du type de commande et de la valeur de retour souhaitée, comme cela est décrit dans le tableau ci-dessous.  
   
-|Commande|Valeur de retour|  
+|Command|Valeur de retour|  
 |-------------|------------------|  
 |`ExecuteReader`|Retourne un objet `DataReader`.|  
 |`ExecuteScalar`|Retourne une valeur scalaire unique.|  
@@ -40,6 +40,7 @@ Chaque fournisseur de données .NET Framework inclus avec le .NET Framework poss
  Le fournisseur de données .NET Framework pour SQL Server ajoute des compteurs de performance pour vous permettre de détecter des problèmes intermittents liés à des échecs lors de l'exécution des commandes. Pour plus d’informations, consultez [les compteurs de Performance](../../../../docs/framework/data/adonet/performance-counters.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Vue d’ensemble d’ADO.NET](ado-net-overview.md)
+- [Vue d'ensemble d'ADO.NET](ado-net-overview.md)

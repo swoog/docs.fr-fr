@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36792d01ebdad72271a8b0597a33d83cab34780e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114021"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS, énumération
 Contient des valeurs qui indiquent comment le common language runtime (CLR) doit résoudre un `CLSID`.  
@@ -42,12 +42,13 @@ typedef enum {
 |`CLSID_RESOLUTION_DEFAULT`|Indique le comportement par défaut.|  
 |`CLSID_RESOLUTION_REGISTERED`|Indique que le runtime recherche dans le Registre et applique la stratégie de shim.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+
+- [Énumérations d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
