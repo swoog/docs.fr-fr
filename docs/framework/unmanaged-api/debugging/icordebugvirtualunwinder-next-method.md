@@ -1,17 +1,17 @@
 ---
-title: ICorDebugVirtualUnwinder::Next, méthode
+title: Icordebugvirtualunwinder::Next, méthode
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c05fcc9a40c3d47949b547164dc56f6a2246838
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076885"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next, méthode
+# <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder::Next, méthode
 Avance jusqu'au contexte de l'appelant.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -24,7 +24,7 @@ HRESULT Next();
  Aucun.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` en cas de réussite du déroulement ou `CORDBG_S_AT_END_OF_STACK` si le déroulement ne peut pas être effectué étant donné qu'il ne reste plus de frames.  
+ `S_OK` Si le déroulement s’est produite avec succès, ou `CORDBG_S_AT_END_OF_STACK` si le déroulement ne peut pas être effectué, car il n’y a aucune image plus.  
   
  Si un HRESULT indiquant un échec est retourné, les API ICorDebug retournent `CORDBG_E_DATA_TARGET_ERROR`.  
   
@@ -34,15 +34,16 @@ HRESULT Next();
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugMemoryBuffer, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
