@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: b5e39541fdf031b19e9e74483c0de94295e788d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153372"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Procédure : Améliorer les performances de rendu en mettant en cache un élément
 Utilisez le <xref:System.Windows.Media.BitmapCache> classe afin d’améliorer les performances de rendu d’un type complexe <xref:System.Windows.UIElement>. Pour mettre en cache un élément, créez une nouvelle instance de la <xref:System.Windows.Media.BitmapCache> classe et l’affecter à l’élément <xref:System.Windows.UIElement.CacheMode%2A> propriété. Vous pouvez réutiliser un <xref:System.Windows.Media.BitmapCache> efficacement dans un <xref:System.Windows.Media.BitmapCacheBrush>.  
@@ -24,7 +24,8 @@ Utilisez le <xref:System.Windows.Media.BitmapCache> classe afin d’améliorer l
  [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Guide pratique pour Utiliser un élément mis en cache comme pinceau](how-to-use-a-cached-element-as-a-brush.md)
+- [Procédure : utiliser un élément mis en cache comme pinceau](how-to-use-a-cached-element-as-a-brush.md)

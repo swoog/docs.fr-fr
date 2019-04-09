@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176915"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espaces de noms XAML et mappage d'espace de noms pour XAML WPF
 Cette rubrique explique plus en détail la présence et la finalité des deux mappages d’espace de noms XAML qui figurent souvent dans la balise racine de chaque fichier XAML WPF. Elle décrit également comment produire des mappages similaires pour utiliser des éléments définis dans votre propre code et/ou dans des assemblys distincts.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>Qu’est-ce qu’un espace de noms XAML ?  
  Un espace de noms XAML est en réalité une extension du concept d’espace de noms XML. Les techniques de spécification d’un espace de noms XAML reposent sur la syntaxe d’espace de noms XML, la convention de l’utilisation d’URI comme identificateurs d’espaces de noms, à l’aide de préfixes permettant de fournir un moyen de référencer plusieurs espaces de noms à partir de la même source de balise, et ainsi de suite. Le concept principal de la définition XAML de l’espace de noms XML est qu’un espace de noms XAML implique une portée d’unicité pour les utilisations de balisage et qu’il influence également la façon dont les entités de balisage sont potentiellement associées aux espaces de noms CLR spécifiques et aux assemblys référencés. Cette dernière considération est également influencée par le concept d’un contexte de schéma XAML. Pour comprendre comment WPF fonctionne avec les espaces de noms XAML, imaginez les espaces de noms XAML en termes d’espaces de noms XAML par défaut, d’espace de noms de langage XAML et tout espace de noms XAML supplémentaire mappé directement par votre balisage XAML aux espaces de noms CLR de stockage spécifiques et assemblys référencés.  
   
@@ -48,9 +47,9 @@ Cette rubrique explique plus en détail la présence et la finalité des deux ma
   
  La syntaxe prend les valeurs et les jetons nommés possibles suivants :  
   
- `clr-namespace:` Espace de noms CLR déclaré dans l’assembly contenant les types publics à exposer comme éléments.  
+ `clr-namespace:` L’espace de noms CLR déclaré dans l’assembly qui contient les types publics à exposer comme éléments.  
   
- `assembly=` Assembly contenant une partie ou l’intégralité de l’espace de noms [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] référencé. En général, cette valeur est simplement le nom de l’assembly, pas le chemin, et n’inclut pas l’extension (comme .dll ou .exe). Le chemin à cet assembly doit être établi comme référence de projet dans le fichier projet qui contient le XAML que vous essayez de mapper. Pour incorporer le contrôle de version et la signature avec nom fort, le `assembly` valeur peut être une chaîne comme défini par <xref:System.Reflection.AssemblyName>, plutôt que le nom de chaîne simple.  
+ `assembly=` L’assembly qui contient tout ou partie des référencé [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espace de noms. En général, cette valeur est simplement le nom de l’assembly, pas le chemin, et n’inclut pas l’extension (comme .dll ou .exe). Le chemin à cet assembly doit être établi comme référence de projet dans le fichier projet qui contient le XAML que vous essayez de mapper. Pour incorporer le contrôle de version et la signature avec nom fort, le `assembly` valeur peut être une chaîne comme défini par <xref:System.Reflection.AssemblyName>, plutôt que le nom de chaîne simple.  
   
  Notez que le jeton `clr-namespace` est séparé de sa valeur par deux-points (:), alors que le caractère qui sépare le jeton `assembly` de sa valeur est le signe égal (=). Le caractère à utiliser entre ces deux jetons est un point-virgule. En outre, n’incluez pas les espaces blancs n’importe où dans la déclaration.  
   
@@ -113,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Espaces de noms concepteurs et autres préfixes de modèles XAML  
  Si vous travaillez avec les environnements de développement et/ou les outils de conception pour XAML WPF, vous remarquerez peut-être qu’il existe d’autres espaces de noms/préfixes XAML définis dans le balisage XAML.  
   
- Le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] utilise un espace de noms concepteur qui est généralement mappé au préfixe `d:`. Les modèles de projet plus récents pour WPF peuvent prémapper cet espace de noms XAML pour prendre en charge l’échange du XAML entre le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] et d’autres environnements de conception. Cet espace de noms de conception XAML permet de perpétuer l’état de conception pendant les allers-retours de l’interface utilisateur basée sur XAML dans le concepteur. Il est également utilisé pour les fonctionnalités telles que `d:IsDataSource`, qui activent des sources de données du runtime dans un concepteur.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] utilise un espace de noms concepteur qui est généralement mappé au préfixe `d:`. Les modèles de projet plus récents pour WPF peuvent prémapper cet espace de noms XAML pour prendre en charge l’échange du XAML entre le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] et d’autres environnements de conception. Cet espace de noms de conception XAML permet de perpétuer l’état de conception pendant les allers-retours de l’interface utilisateur basée sur XAML dans le concepteur. Il est également utilisé pour les fonctionnalités telles que `d:IsDataSource`, qui activent des sources de données du runtime dans un concepteur.  
   
- Un autre préfixe que vous pouvez voir mappé est `mc:`. `mc:` est destiné à la compatibilité du balisage et exploite un modèle de compatibilité du balisage qui n’est pas nécessairement spécifique au XAML. Dans une certaine mesure, les fonctionnalités de compatibilité du balisage peuvent être utilisées pour échanger XAML entre les frameworks ou sur d’autres limites d’implémentation de stockage pour travailler entre des contextes de schémas XAML, fournir la compatibilité pour des modes limités dans les concepteurs, etc. Pour plus d’informations sur les concepts de compatibilité du balisage et leurs relations avec WPF, consultez [compatibilité du balisage (mc :) Fonctionnalités de langage](markup-compatibility-mc-language-features.md).  
+ Un autre préfixe que vous pouvez voir mappé est `mc:`. `mc:` concerne la compatibilité du balisage et exploite un modèle de compatibilité du balisage qui n’est pas nécessairement spécifique au XAML. Dans une certaine mesure, les fonctionnalités de compatibilité du balisage peuvent être utilisées pour échanger XAML entre les frameworks ou sur d’autres limites d’implémentation de stockage pour travailler entre des contextes de schémas XAML, fournir la compatibilité pour des modes limités dans les concepteurs, etc. Pour plus d’informations sur les concepts de compatibilité du balisage et leurs relations avec WPF, consultez [compatibilité du balisage (mc :) Fonctionnalités de langage](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF et chargement des assemblys  
  Le contexte de schéma XAML pour WPF s’intègre avec le modèle d’application WPF, qui à son tour utilise le concept défini par le CLR de <xref:System.AppDomain>. La séquence suivante décrit comment le contexte de schéma XAML interprète comment charger les assemblys ou rechercher des types au moment de l’exécution ou au moment du design, en fonction de l’utilisation WPF de <xref:System.AppDomain> et d’autres facteurs.  
@@ -137,5 +136,6 @@ End Namespace
  Le BAML compilé (généré par l’intermédiaire de PresentationBuildTask) utilise toutes les étapes, bien que le BAML ne doit pas contenir de noms d’assembly non qualifiés.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Présentation des espaces de noms XML](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

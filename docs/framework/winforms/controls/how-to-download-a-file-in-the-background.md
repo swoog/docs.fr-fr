@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Télécharger un fichier en arrière-plan'
+title: 'Procédure : télécharger un fichier en arrière-plan'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128776"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>Procédure : Télécharger un fichier en arrière-plan
+# <a name="how-to-download-a-file-in-the-background"></a>Procédure : télécharger un fichier en arrière-plan
 Le téléchargement de fichier est une tâche courante et il est souvent utile d’exécuter cette opération potentiellement longue sur un thread séparé. Utilisez le composant <xref:System.ComponentModel.BackgroundWorker> pour accomplir cette tâche avec très peu de code.  
   
 ## <a name="example"></a>Exemple  
@@ -37,7 +37,7 @@ Le téléchargement de fichier est une tâche courante et il est souvent utile d
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
- **Attente de la fin d’un BackgroundWorker**  
+ **Attente de la fin d'un BackgroundWorker**  
   
  Le gestionnaire d’événements `downloadButton_Click` illustre comment attendre qu’un composant <xref:System.ComponentModel.BackgroundWorker> ait terminé sa tâche asynchrone.  
   
@@ -66,6 +66,7 @@ Le téléchargement de fichier est une tâche courante et il est souvent utile d
  Vérifiez toujours la propriété <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> dans votre gestionnaire d'événements <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> avant d'accéder à la propriété <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> ou à tout autre objet qui peut avoir été affecté par le gestionnaire d'événements <xref:System.ComponentModel.BackgroundWorker.DoWork>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Guide pratique pour exécuter une opération en arrière-plan](how-to-run-an-operation-in-the-background.md)
-- [Guide pratique pour implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Procédure : exécuter une opération en arrière-plan](how-to-run-an-operation-in-the-background.md)
+- [Procédure : implémenter un formulaire qui utilise une opération en arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)

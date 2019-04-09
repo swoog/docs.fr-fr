@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137889"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Exemple : Résolution des problèmes de programmation dynamique
 > [!NOTE]
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  Si l'application a utilisé `typeof(LayoutApplicationVM)` à la place de `Type.GetType("LayoutApplicationVM")`, la chaîne d'outils peut avoir conservé des métadonnées `browse`.  Toutefois, elle n’aurait pas créé de métadonnées `invoke`, ce qui aurait abouti à une exception [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) à l’occasion de l’instanciation du type. Pour empêcher cette exception, vous devriez quand même ajouter une directive runtime pour l'espace de noms ou le type qui spécifie la stratégie `dynamic`. Pour plus d’informations sur les directives runtime, consultez le [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Exemple : Gestion des Exceptions lors de la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Exemple : Gestion des exceptions pendant la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

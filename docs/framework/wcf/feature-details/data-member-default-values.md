@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185690"
 ---
 # <a name="data-member-default-values"></a>Valeurs par défaut des membres de données
 Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], types possèdent un concept de *valeurs par défaut*. Ainsi, la valeur par défaut d'un type référence est `null`, et celle d'un type entier est zéro. Il est parfois préférable d'omettre un membre de données des données sérialisées lorsqu'il est défini à sa valeur par défaut. Le membre ayant une valeur par défaut, il n'est pas nécessaire de sérialiser une valeur réelle ; cela présente un avantage en termes de performance.  
@@ -42,7 +42,7 @@ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], types p
 </Employee>  
 ```  
   
- L'attribut `xsi:nil` est un attribut spécial dans l'espace de noms de l'instance WC3 (World Wide Web Consortium ) XML Schema qui offre un moyen interopérable pour représenter explicitement une valeur null. Notez que le XML ne contient aucune information sur le poste, le salaire et les primes des membres de données. L'extrémité de réception peut les interpréter comme `null`, zéro et `null`, respectivement. Il n'y a aucune garantie qu'un désérialiseur tiers puisse effectuer correctement l'interprétation ; c'est pourquoi ce modèle n'est pas recommandé. La classe <xref:System.Runtime.Serialization.DataContractSerializer> sélectionne systématiquement l'interprétation correcte pour les valeurs manquantes.  
+ L’attribut `xsi:nil` est un attribut spécial dans l’espace de noms de l’instance WC3 (World Wide Web Consortium ) XML Schema qui offre un moyen interopérable pour représenter explicitement une valeur null. Notez que le XML ne contient aucune information sur le poste, le salaire et les primes des membres de données. L'extrémité de réception peut les interpréter comme `null`, zéro et `null`, respectivement. Il n'y a aucune garantie qu'un désérialiseur tiers puisse effectuer correctement l'interprétation ; c'est pourquoi ce modèle n'est pas recommandé. La classe <xref:System.Runtime.Serialization.DataContractSerializer> sélectionne systématiquement l'interprétation correcte pour les valeurs manquantes.  
   
 ### <a name="interaction-with-isrequired"></a>Interaction avec IsRequired  
  Comme indiqué dans [concernant les contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), le <xref:System.Runtime.Serialization.DataMemberAttribute> attribut a un <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriété (la valeur par défaut est `false`). La propriété indique si un membre de données spécifique doit ou non être présent dans les données sérialisées lorsqu'il est désérialisé. Si `IsRequired` a la valeur `true` (ce qui indique qu'une valeur doit être présente) et que <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> a la valeur `false` (ce qui indique que la valeur ne doit pas être présente si la valeur indiquée est celle par défaut), les valeurs par défaut de ce membre de données ne peuvent pas être sérialisées car les résultats seraient contradictoires. Si un membre de données de ce type à pour valeur sa valeur par défaut (généralement `null` ou zéro) et qu'une sérialisation est tentée, une exception <xref:System.Runtime.Serialization.SerializationException> est levée.  
@@ -57,5 +57,6 @@ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], types p
  Lors de l’importation de schéma, le <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriété est automatiquement définie sur `false` chaque fois que l’annotation spécifiques à WCF mentionnée précédemment est détectée. Elle a également la valeur `false` pour les types référence dont la propriété `nillable` a la valeur `false` afin de prendre en charge des scénarios d'interopérabilité spécifiques qui se produisent généralement lors de la consommation des services Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

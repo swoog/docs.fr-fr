@@ -9,24 +9,25 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140216"
 ---
 # <a name="geometries"></a>Géométries
 <xref:System.Windows.Media.Geometry> est une classe flexible, permettant de restituer [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphiques, les objets de test de positionnement et définir des régions de découpage  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Syntaxe XAML pour les tracés](path-markup-syntax.md)  
- [Vue d’ensemble de Geometry](geometry-overview.md)  
- [Rubriques de guide pratique](geometries-how-to-topics.md)  
+ [Vue d'ensemble de Geometry](geometry-overview.md)  
+ [Rubriques Comment](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Graphiques et multimédia](index.md)

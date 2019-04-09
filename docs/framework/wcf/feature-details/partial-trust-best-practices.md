@@ -2,12 +2,12 @@
 title: Meilleures pratiques dans un environnement de confiance partielle
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184078"
 ---
 # <a name="partial-trust-best-practices"></a>Meilleures pratiques dans un environnement de confiance partielle
 Cette rubrique décrit les meilleures pratiques lors de l’exécution de Windows Communication Foundation (WCF) dans un environnement de confiance partielle.  
@@ -29,13 +29,13 @@ Cette rubrique décrit les meilleures pratiques lors de l’exécution de Window
   
 -   Les méthodes qui gèrent des événements de sérialisation (telles que `OnSerializing`, `OnSerialized`, `OnDeserializing`et `OnDeserialized`) doivent être déclarées comme publiques. Toutefois, les implémentations explicites et implicites de <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> sont prises en charge.  
   
--   Les types `[DataContract]` implémentés dans les assemblys marqués avec <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ne doivent pas effectuer d'actions relatives à la sécurité dans le constructeur de type, étant donné que <xref:System.Runtime.Serialization.DataContractSerializer> n'appelle pas le constructeur de l'objet instancié récemment pendant la désérialisation. En particulier, les techniques de sécurité courantes suivantes doivent être évitées pour les types `[DataContract]` :  
+-   `[DataContract]` types implémentées dans des assemblys marqués avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ne doit exécuter les actions liées à la sécurité dans le constructeur de type, comme le <xref:System.Runtime.Serialization.DataContractSerializer> n’appelle pas le constructeur de l’objet instancié récemment pendant la désérialisation. En particulier, les techniques de sécurité courantes suivantes doivent être évitées pour les types `[DataContract]` :  
   
 -   Tenter de restreindre l'accès de confiance partielle en rendant le constructeur du type interne ou privé.  
   
 -   Restreindre l'accès au type en ajoutant un `[LinkDemand]` au constructeur du type.  
   
--   Supposer que du fait de l’instanciation correcte de l’objet, les contrôles de validation appliqués par le constructeur ont réussi.  
+-   Supposer que du fait de l'instanciation correcte de l'objet, les contrôles de validation appliqués par le constructeur ont réussi.  
   
 ### <a name="using-ixmlserializable"></a>Utilisation de IXmlSerializable  
  Les meilleures pratiques suivantes s'appliquent aux types qui implémentent <xref:System.Xml.Serialization.IXmlSerializable> et sont sérialisés à l'aide du <xref:System.Runtime.Serialization.DataContractSerializer> :  
@@ -66,5 +66,6 @@ Cette rubrique décrit les meilleures pratiques lors de l’exécution de Window
  La meilleure pratique consiste à éviter de créer le contexte d'autorisation spécifique au thread en appelant <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> ou <xref:System.Security.PermissionSet.Deny%2A>. Au lieu de cela, accordez ou refusez le privilège à l'application, afin qu'aucune méthode <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> ou <xref:System.Security.PermissionSet.PermitOnly%2A> ne soit requise.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

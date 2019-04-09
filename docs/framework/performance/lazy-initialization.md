@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182297"
 ---
 # <a name="lazy-initialization"></a>Initialisation tardive
 *L’initialisation tardive* d’un objet signifie que sa création est différée jusqu’à sa première utilisation. (Pour cette rubrique, les termes *initialisation tardive* et *instanciation tardive* sont synonymes.) L’initialisation tardive est principalement utilisée pour améliorer les performances, éviter les calculs inutiles et réduire les besoins en mémoire programme. Voici les scénarios les plus courants :  
@@ -23,7 +23,7 @@ ms.locfileid: "54492947"
   
 -   Si vous avez un objet qui est coûteux à créer, et si vous souhaitez différer sa création jusqu’à ce que d’autres opérations coûteuses soient terminées. Par exemple, supposons que votre programme charge plusieurs instances d’objet lorsqu’il démarre, mais que seules certaines d’entre elles soient immédiatement nécessaires. Vous pouvez améliorer les performances de démarrage du programme en différant l’initialisation des objets qui ne sont pas nécessaires tant que les objets nécessaires n’ont pas été créés.  
   
- Même si vous pouvez écrire votre propre code pour effectuer une initialisation tardive, nous vous recommandons d’utiliser <xref:System.Lazy%601>. <xref:System.Lazy%601> et ses types associés prennent également en charge la cohérence de thread et fournissent une stratégie cohérente de propagation des exceptions.  
+ Même si vous pouvez écrire votre propre code pour effectuer une initialisation tardive, nous vous recommandons d’utiliser <xref:System.Lazy%601>. <xref:System.Lazy%601> et ses types apparentés également prendre en charge de la sécurité des threads et fournissent une stratégie cohérente exceptions la propagation.  
   
  Le tableau suivant répertorie les types fournis par le .NET Framework version 4 pour permettre l’initialisation tardive dans différents scénarios.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54492947"
   
  Certains constructeurs <xref:System.Lazy%601> ont un paramètre <xref:System.Threading.LazyThreadSafetyMode> nommé `mode`. Ces constructeurs fournissent un mode de cohérence de thread supplémentaire. Le tableau suivant montre comment la cohérence de thread d’un objet <xref:System.Lazy%601> est affectée par les paramètres du constructeur qui spécifient la cohérence de thread. Chaque constructeur comprend un tel paramètre.  
   
-|Cohérence de thread de l’objet|Paramètre `LazyThreadSafetyMode` `mode`|Paramètre `isThreadSafe` booléen|Aucun paramètre de cohérence de thread|  
+|Cohérence de thread de l’objet|`LazyThreadSafetyMode` `mode` paramètre|Paramètre `isThreadSafe` booléen|Aucun paramètre de cohérence de thread|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Entièrement thread-safe. Seul un thread à la fois tente d’initialiser la valeur.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Oui.|  
 |Non thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Non applicable.|  
@@ -100,11 +100,11 @@ ms.locfileid: "54492947"
   
 |Constructeur|Mode de cohérence de thread|Utilise la méthode d’initialisation|Exceptions mises en cache|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
-|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Aucune|Aucune|  
+|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Non|Non|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Oui|Oui|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) ou `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Aucune|Aucune|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) ou `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Non|Non|  
 |Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) ou `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Oui|Oui|  
-|Lazy(T)(LazyThreadSafetyMode)|Spécifié par l’utilisateur|Aucune|Aucune|  
+|Lazy(T)(LazyThreadSafetyMode)|Spécifié par l’utilisateur|Non|Non|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|Spécifié par l’utilisateur|Oui|Non, si l’utilisateur spécifie <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> ; sinon, Oui.|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>Implémentation d’une propriété à initialisation tardive  
@@ -126,7 +126,7 @@ ms.locfileid: "54492947"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> encapsule son objet de la même façon que <xref:System.Lazy%601>, avec toutefois ces différences essentielles :  
+ <xref:System.Threading.ThreadLocal%601> encapsule son objet de la même façon que <xref:System.Lazy%601>, avec ces différences essentielles :  
   
 -   Chaque thread initialise la variable de thread local à l’aide de ses données privées, qui ne sont pas accessibles par d’autres threads.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54492947"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variables de thread local dans Parallel.For et ForEach  
- Lorsque vous utilisez la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pour parcourir des sources de données en parallèle, vous pouvez utiliser les surcharges qui ont une prise en charge intégrée pour les données de thread local. Dans ces méthodes, pour obtenir des données de thread local, vous devez utiliser des délégués locaux pour créer ces données, y accéder et les nettoyer. Pour plus d'informations, voir [Procédure : Écrire une boucle Parallel.For avec des Variables locales de Thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) et [Comment : Écrire une boucle Parallel.ForEach avec des Variables locales de la Partition](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Lorsque vous utilisez la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pour parcourir des sources de données en parallèle, vous pouvez utiliser les surcharges qui ont une prise en charge intégrée pour les données de thread local. Dans ces méthodes, pour obtenir des données de thread local, vous devez utiliser des délégués locaux pour créer ces données, y accéder et les nettoyer. Pour plus d'informations, voir [Procédure : écrire une boucle Parallel.For avec des variables locales de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) et [Guide pratique pour écrire une boucle Parallel.ForEach avec des variables locales de partition](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Utilisation de l’initialisation tardive pour les scénarios de faible charge  
  Dans les scénarios où vous devez initialiser tardivement un grand nombre d’objets, vous pouvez décider que l’encapsulation de chaque objet dans un <xref:System.Lazy%601> nécessite trop de mémoire ou trop de ressources informatiques. Vous pouvez aussi avoir des exigences strictes sur la façon dont l’initialisation tardive est exposée. Dans ce cas, vous pouvez utiliser les méthodes `static` (`Shared` en Visual Basic) de la classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> pour initialiser tardivement chaque objet sans l’encapsuler dans une instance de <xref:System.Lazy%601>.  
@@ -153,7 +153,8 @@ ms.locfileid: "54492947"
  Dans cet exemple, notez que la procédure d’initialisation est appelée sur chaque itération de la boucle. Dans les scénarios multithreads, le premier thread à appeler la procédure d’initialisation est celui dont la valeur est visible par tous les threads. Les threads suivants appellent également la procédure d’initialisation, mais leurs résultats ne sont pas utilisés. Si ce type de condition de concurrence potentielle n’est pas acceptable, utilisez la surcharge de <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> qui accepte un argument booléen et un objet de synchronisation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Éléments fondamentaux du threading managé](../../../docs/standard/threading/managed-threading-basics.md)
 - [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)
-- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Guide pratique pour Effectuer une initialisation tardive d’objets](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Procédure : Effectuer une initialisation tardive d’objets](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

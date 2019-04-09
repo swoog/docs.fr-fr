@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137876"
 ---
 # <a name="parameter-element-net-native"></a>\<Paramètre >, élément (.NET Native)
 Applique la stratégie de réflexion au type de l’argument passé à une méthode.  
@@ -51,13 +51,13 @@ Applique la stratégie de réflexion au type de l’argument passé à une méth
   
 ## <a name="name-attribute"></a>Name (attribut)  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*nom_paramètre*|Nom du paramètre de méthode auquel la stratégie est appliquée. Par exemple, pour la signature de méthode `String.CompareTo(Object value)`, la valeur de l'attribut `Name` est « value ».|  
+|*parameter_name*|Nom du paramètre de méthode auquel la stratégie est appliquée. Par exemple, pour la signature de méthode `String.CompareTo(Object value)`, la valeur de l'attribut `Name` est « value ».|  
   
 ## <a name="all-other-attributes"></a>Tous les autres attributs  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*paramètre_stratégie*|Paramètre à appliquer à ce type de stratégie. Les valeurs possibles sont `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` et `Required All`. Pour plus d’informations, consultez [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -68,13 +68,14 @@ Applique la stratégie de réflexion au type de l’argument passé à une méth
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
+|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
   
 ## <a name="remarks"></a>Notes  
  L’élément `<Parameter>` est un enfant de l’élément [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) et est utilisé pour appliquer la stratégie à un paramètre de méthode particulier. Le paramètre de méthode spécifique est défini par le nom plutôt que par le type. Au moins un attribut qui représente un type de stratégie, tel que `Activate` ou `Dynamic`, doit être présent.  
   
 ## <a name="see-also"></a>Voir aussi
-- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Méthode > élément](../../../docs/framework/net-native/method-element-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

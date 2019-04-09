@@ -1,13 +1,13 @@
 ---
-title: <add>, élément de schemeSettings (paramètres d'URI)
+title: <add> Élément de schemeSettings (paramètres d’Uri)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139930"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<Ajouter > élément de schemeSettings (paramètres d’Uri)
 Ajoute un paramètre de schéma pour un nom de schéma.  
@@ -48,7 +48,7 @@ Ajoute un paramètre de schéma pour un nom de schéma.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<schemeSettings, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.|  
+|[\<schemeSettings >, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.|  
   
 ## <a name="remarks"></a>Notes  
  Par défaut, le <xref:System.Uri?displayProperty=nameWithType> % n’échappe pas de classe encodé délimiteurs de chemin d’accès avant d’exécuter la compression de chemin d’accès. Ceci était implémenté comme un mécanisme de sécurité contre les attaques comme suit :  
@@ -82,6 +82,7 @@ Ajoute un paramètre de schéma pour un nom de schéma.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182466"
 ---
 # <a name="path-animations-overview"></a>Vue d'ensemble des animations de tracés
 <a name="introduction"></a> Cette rubrique présente les animations de tracés qui vous permettent d’utiliser un tracé géométrique pour générer des valeurs de sortie. Les animations de tracés sont utiles pour déplacer et faire pivoter des objets le long des tracés complexes.  
@@ -49,7 +49,7 @@ ms.locfileid: "57367854"
   
  Où  *\<Type >* est le type de valeur que la classe anime.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit les classes d’animation de tracés suivantes.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit le chemin d’accès suivant de classes d’animation.  
   
 |Type de propriété|Classe d’animation de tracés correspondante|Exemple|  
 |-------------------|----------------------------------------|-------------|  
@@ -90,8 +90,9 @@ ms.locfileid: "57367854"
  Pour plus d’informations sur la syntaxe de chemin d’accès qui est utilisée dans le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemple, consultez le [syntaxe de balisage de chemin d’accès](path-markup-syntax.md) vue d’ensemble.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Animation de tracés, exemple](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Syntaxe XAML pour les tracés](path-markup-syntax.md)
-- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
+- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)

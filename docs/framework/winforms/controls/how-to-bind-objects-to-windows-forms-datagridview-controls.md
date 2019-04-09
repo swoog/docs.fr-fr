@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lier des objets aux contrôles DataGridView de Windows Forms'
+title: 'Procédure : lier des objets à des contrôles DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], object binding
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
-ms.openlocfilehash: 9f3ce61b3692f0b83298bdf9a19cb98fb5d5ab7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180256"
 ---
-# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Procédure : Lier des objets aux contrôles DataGridView de Windows Forms
+# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Procédure : lier des objets à des contrôles DataGridView Windows Forms
 L'exemple de code suivant montre comment lier une collection d'objets à un contrôle <xref:System.Windows.Forms.DataGridView> pour que chaque objet soit affichée sur une ligne distincte. Cet exemple illustre également comment afficher une propriété avec un type énumération dans un <xref:System.Windows.Forms.DataGridViewComboBoxColumn> pour que la zone de liste déroulante modifiable contienne les valeurs d'énumération.  
   
 ## <a name="example"></a>Exemple  
@@ -31,6 +31,7 @@ L'exemple de code suivant montre comment lier une collection d'objets à un cont
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Accéder aux objets liés à des Windows Forms DataGridView lignes](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Procédure : accéder à des objets liés à des lignes DataGridView Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Afficher l’aperçu avant impression dans Windows Forms Applications'
+title: 'Procédure : afficher l’aperçu avant impression dans des applications Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154360"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Procédure : Afficher l’aperçu avant impression dans Windows Forms Applications
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Procédure : afficher l’aperçu avant impression dans des applications Windows Forms
 Vous pouvez utiliser la <xref:System.Windows.Forms.PrintPreviewDialog> contrôle pour permettre aux utilisateurs d’afficher un document, souvent avant qu’il soit à imprimer.  
   
  Pour ce faire, vous devez spécifier une instance de la <xref:System.Drawing.Printing.PrintDocument> classe ; il s’agit du document à imprimer. Pour plus d’informations sur l’utilisation de l’aperçu avant impression avec le <xref:System.Drawing.Printing.PrintDocument> composant, consultez [Comment : Impression dans les formulaires de Windows à l’aide de l’aperçu avant impression](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
@@ -82,7 +82,8 @@ Vous pouvez utiliser la <xref:System.Windows.Forms.PrintPreviewDialog> contrôle
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Composant PrintDocument](printdocument-component-windows-forms.md)
+
+- [PrintDocument, composant](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog, contrôle](printpreviewdialog-control-windows-forms.md)
-- [Prise en charge de l’impression dans les Windows Forms](../advanced/windows-forms-print-support.md)
+- [Prise en charge de l'impression dans les Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Forms](../index.md)

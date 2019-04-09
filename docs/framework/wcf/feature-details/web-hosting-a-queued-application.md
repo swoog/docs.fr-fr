@@ -2,12 +2,12 @@
 title: Hébergement sur le Web d'une application en file d'attente
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126020"
 ---
 # <a name="web-hosting-a-queued-application"></a>Hébergement sur le Web d'une application en file d'attente
 Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie du processus de travail qui contiennent des applications à héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser les protocoles HTTP et non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la possibilité d’héberger un grand nombre d’applications sur un ordinateur donné.  
@@ -19,7 +19,7 @@ Le Service de l’Activation des processus Windows (WAS) gère l’activation et
 ## <a name="queue-addressing-in-was"></a>Adressage de file d'attente dans le service WAS  
  Les applications WAS ont des adresses URI (Uniform Resource Identifier). Les adresses d'application ont deux parties : un préfixe URI de base et une adresse relative spécifique à l'application (chemin d'accès). Ces deux parties fournissent l'adresse externe d'une application lorsqu'elles sont jointes. Le préfixe URI de base est construit à partir de la liaison de site et est utilisé pour toutes les applications sous le site, par exemple, « NET.MSMQ://localhost », « MSMQ.FormatName://localhost » ou « NET.TCP://localhost ». Adresses d’application sont ensuite créées en prenant des fragments de chemin d’accès spécifique à l’application (tel que « / /applicationone ») et en les ajoutant à l’URI de base du préfixe pour arriver à l’application complète URI, par exemple, « NET.MSMQ://localhost/applicationone ».  
   
- Le service d'activation MSMQ utilise l'URI d'application pour mettre en correspondance la file d'attente dont le service d'activation MSMQ doit surveiller les messages. Lorsque le service d'activation MSMQ démarre, il énumère toutes les files d'attente publiques et privées sur l'ordinateur à partir duquel il est configuré pour recevoir et surveille leurs messages. Toutes les 10 minutes, le service d'activation MSMQ actualise la liste de files d'attente à surveiller. Lorsqu'un message est détecté dans une file d'attente, le service d'activation fait correspondre le nom de file d'attente à l'URI d'application la plus longue correspondante pour la liaison net.msmq et active l'application.  
+ Le service d'activation MSMQ utilise l'URI d'application pour mettre en correspondance la file d'attente dont le service d'activation MSMQ doit surveiller les messages. Lorsque le service d'activation MSMQ démarre, il énumère toutes les files d'attente publiques et privées sur l'ordinateur à partir duquel il est configuré pour recevoir et surveille leurs messages. Toutes les 10 minutes, le service d'activation MSMQ actualise la liste de files d'attente à surveiller. Lorsqu’un message est détecté dans une file d’attente, le service d’activation fait correspondre le nom de file d’attente à l’URI d’application la plus longue correspondante pour la liaison net.msmq et active l’application.  
   
 > [!NOTE]
 >  L'application qui est activée doit correspondre (correspondance la plus longue) au préfixe du nom de file d'attente.  
@@ -42,5 +42,6 @@ Le Service de l’Activation des processus Windows (WAS) gère l’activation et
  Une application hébergée par le service WAS ne peut pas être activée sur la base des messages présents dans une file d'attente système, telle que la file d'attente de lettres mortes à l'échelle du système, ou dans des sous-files d'attente, telles que les sous-files d'attente de poison. Il s'agit d'une limitation pour cette version du produit.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Points de terminaison de service et adressage de files d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Points de terminaison de service et adressage de files d'attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

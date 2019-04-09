@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Répondre aux modifications de schéma de polices dans une Application de formulaires Windows'
+title: 'Procédure : répondre aux modifications du jeu de polices dans une application Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182102"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procédure : Répondre aux modifications de schéma de polices dans une Application de formulaires Windows
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procédure : répondre aux modifications du jeu de polices dans une application Windows Forms
 Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les paramètres de police de l’échelle du système pour afficher la police par défaut supérieure ou inférieure. Modification de ces paramètres de police est essentiel pour les utilisateurs malvoyants et nécessitent un type plus grand lire le texte sur leurs écrans. Vous pouvez ajuster votre application Windows Forms de réagir à ces modifications en augmentant ou diminuant la taille du formulaire et tous ses texte chaque fois que le jeu de polices change. Si vous souhaitez que votre formulaire pour prendre en compte les modifications dans les tailles de police dynamiquement, vous pouvez ajouter le code à votre formulaire.  
   
  En règle générale, la police par défaut utilisée par les Windows Forms est la police retournée par la <xref:Microsoft.Win32> appel d’espace de noms à `GetStockObject(DEFAULT_GUI_FONT)`. La police retournée par cet appel change uniquement lorsque la résolution d’écran change. Comme indiqué dans la procédure suivante, votre code doit modifier la police par défaut à <xref:System.Drawing.SystemFonts.IconTitleFont%2A> pour répondre aux modifications de taille de police.  
@@ -65,5 +65,6 @@ Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les pa
  Dans cet exemple de code, le constructeur contienne un appel à `InitializeComponent`, qui est défini lorsque vous créez un nouveau projet Windows Forms dans Visual Studio. Supprimer cette ligne de code si vous générez votre application sur la ligne de commande.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Mise à l'échelle automatique dans les Windows Forms](automatic-scaling-in-windows-forms.md)

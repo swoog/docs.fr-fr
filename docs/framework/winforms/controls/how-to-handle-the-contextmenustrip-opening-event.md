@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Gérer l’événement d’ouverture ContextMenuStrip'
+title: 'Procédure : gérer l’événement d’ouverture ContextMenuStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-ms.openlocfilehash: 179411da96362fd9ba42e2b97682f335beb894c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170712"
 ---
-# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Procédure : Gérer l’événement d’ouverture ContextMenuStrip
+# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Procédure : gérer l’événement d’ouverture ContextMenuStrip
 Vous pouvez personnaliser le comportement de votre <xref:System.Windows.Forms.ContextMenuStrip> contrôle en gérant la <xref:System.Windows.Forms.ToolStripDropDown.Opening> événement.  
   
 ## <a name="example"></a>Exemple  
@@ -30,7 +30,8 @@ Vous pouvez personnaliser le comportement de votre <xref:System.Windows.Forms.Co
  Définir le <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> propriété `true` pour empêcher l’ouverture du menu.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179996"
 ---
 # <a name="geometry-overview"></a>Vue d'ensemble de Geometry
 Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes pour décrire les formes. Cette rubrique compare également les différences entre <xref:System.Windows.Media.Geometry> objets et <xref:System.Windows.Shapes.Shape> éléments.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>Qu’est-ce qu’une géométrie ?  
  Le <xref:System.Windows.Media.Geometry> classe et les classes dérivées de celle-ci, telles que <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, et <xref:System.Windows.Media.CombinedGeometry>, vous permettent de décrire la géométrie d’une forme 2D. Ces descriptions géométriques ont de nombreuses utilisations, telles que la définition d’une forme à peindre à l’écran ou la définition d’un test de positionnement et de zones de découpage. Vous pouvez également utiliser une géométrie pour définir un tracé d’animation.  
@@ -217,13 +216,14 @@ PathGeometry avec plusieurs figures
  Consultez la <xref:System.Windows.Media.Geometry> classe pour une liste complète de ses méthodes.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
-- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Syntaxe XAML pour les tracés](path-markup-syntax.md)
-- [Rubriques de guide pratique](geometries-how-to-topics.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
+- [Rubriques Comment](geometries-how-to-topics.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)

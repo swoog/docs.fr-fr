@@ -4,12 +4,12 @@ description: Apprenez à migrer et moderniser les applications existantes vers l
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156388"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Moderniser des applications .NET existantes avec le cloud Azure et les conteneurs Windows (2nd edition)
 
@@ -91,15 +91,15 @@ Le troisième niveau de maturité est l’objectif ultime dans le cloud, mais il
 
 Le tableau 1-1 décrit les principaux avantages et les raisons de choisir chaque approche de migration ou de modernisation.
 
-| **Prêt pour l’infrastructure cloud** <br /> *Lift-and-shift* | **Optimisé pour le cloud** <br /> *Moderniser* | **Cloud-Native** <br /> *Moderniser, réorganisez et réécrire* |
+| **Prêt pour l’Infrastructure cloud** <br /> *Lift- and -shift* | **Optimisé pour le cloud** <br /> *Moderniser* | **Cloud natives** <br /> *Moderniser, réorganisez et réécrire* |
 |---|---|---|
-| **Cible informatique de l’application** |
+| **Cible de calcul de l’application** |
 | Applications déployées sur des machines virtuelles dans Azure | Monolithique ou applications multiniveaux déployées sur Azure App Service, Azure Container Instance (ACI), les machines virtuelles avec les conteneurs, Azure Service Fabric ou AKS (Azure Kubernetes Service) | Microservices en conteneur sur Azure Kubernetes Service (AKS), Service Fabric et/ou des microservices sans serveur basées sur Azure Functions. |
 | **Cible de données** |
 | SQL ou n’importe quelle base de données relationnelle sur une machine virtuelle | Azure SQL Database Managed Instance ou une autre base de données managé dans le cloud. | Grain ciblées de bases de données par microservice, basé sur la base de données SQL Azure, Azure Cosmos DB ou une autre base de données managé dans le cloud |
 | **Avantages**|
 | <li>Aucun code remaniement, aucune nouvelle <li> Moins de travail pour une migration rapide <li> Plus petit dénominateur commun pris en charge dans Azure <li> Garanties de disponibilité de base <li> Après être passé au cloud, il est plus facile de moderniser encore plus | <li> Aucun remaniement <li> Modifications de code/configuration minimale <li> Déploiement amélioré et meilleure agilité de DevOps pour la production de nouvelles versions grâce aux conteneurs <li> Densité accrue et coûts de déploiement inférieurs <li> Portabilité des applications et des dépendances <li> Flexibilité des cibles d’hôte : Les approches PaaS ou IaaS | <li> Architecte pour le cloud, vous obtenez de meilleurs à partir du cloud mais le nouveau code est nécessaire. <li> Approches natives pour le cloud avec des microservices <li> Critiques des applications modernes, résilientes sur le cloud hyper évolutif <li> Services entièrement gérés <li> Optimisé pour la mise à l’échelle <li> Optimisé pour une agilité autonome par sous-système <li> S’appuyant sur le déploiement et sur DevOps |
-| **Difficultés éventuelles** |
+| **Défis** |
 | <li> Valeur cloud inférieure, autre que la variation des dépenses d’exploitation ou la fermeture de centres de données <li> Peu est géré : Aucun système d’exploitation ou la mise à jour corrective des intergiciels (middleware) ; peut utiliser des solutions d’infrastructure, comme Terraform, Spinnaker ou Puppet | <li> Mise en conteneur est une étape supplémentaire dans la courbe d’apprentissage pour les développeurs et les opérations informatiques <li> Pipelines de DevOps et CI/CD est généralement « » de cette approche. Si ce n’est pas actuellement présents dans la culture de l’organisation, il peut être un défi supplémentaire| <li> Nécessite de reconcevoir l’architecture pour les applications natives cloud et les architectures de microservice et nécessite généralement du code significatif refactorisation ou une réécriture de modernisation (temps et budget accrus) <li> Pipelines de DevOps et CI/CD est généralement « » de cette approche. Si ce n’est pas actuellement présents dans la culture de l’organisation, il peut être un défi supplémentaire|
 > **Tableau 1-1.** Avantages et difficultés éventuelles des parcours de modernisation pour les applications et les services .NET existants
 
@@ -155,7 +155,6 @@ Ensuite, comme le scénario idéal pour de nombreuses applications .NET Framewor
 
 Aller encore plus loin, vous pouvez étendre votre application existante optimisé pour le Cloud en ajoutant quelques microservices pour des scénarios spécifiques. Ceci déplacerait vous partiellement au niveau du modèle de Cloud natives, ce qui n’est pas le principal objectif du présent guide.
 
-
 ## <a name="what-this-guide-does-not-cover"></a>Sujets non abordés dans ce guide
 
 Ce guide couvre un sous-ensemble spécifique des exemples de scénarios, comme le montre la figure 1-7. Ce guide se concentre uniquement sur les scénarios de lift- and -shift et enfin, sur le modèle optimisé pour le Cloud. Dans le modèle optimisé pour le Cloud, une application .NET Framework est modernisée avec les conteneurs Windows, ainsi que des composants supplémentaires, notamment la surveillance et les pipelines CI/CD. Chaque composant est fondamental pour permettre un déploiement plus rapide et agile des applications dans le cloud.
@@ -202,4 +201,4 @@ Ces exemples d’applications ont une deuxième version, avec le code modernisé
 Ce guide a été écrit pour vous aider à comprendre vos options pour améliorer et moderniser des applications web .NET existantes. Le guide et les exemples d’applications associés sont en constante évolution. Vos commentaires sont les bienvenus. Si vous avez des commentaires à formuler sur la façon dont ce guide peut être amélioré, envoyez-les à l’adresse : [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Next](lift-and-shift-existing-apps-azure-iaas.md)
+>[Suivant](lift-and-shift-existing-apps-azure-iaas.md)

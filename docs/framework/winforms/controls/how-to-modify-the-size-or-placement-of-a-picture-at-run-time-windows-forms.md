@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178826"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procédure : Modifier la taille ou l’emplacement d’une image au moment de l’exécution (Windows Forms)
 Si vous utilisez les formulaires Windows <xref:System.Windows.Forms.PictureBox> contrôle sur un formulaire, vous pouvez définir le <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propriété dessus pour :  
@@ -83,8 +83,9 @@ Si vous utilisez les formulaires Windows <xref:System.Windows.Forms.PictureBox> 
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.PictureBox>
-- [Guide pratique pour Charger une image à l’aide du Concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procédure : charger une image à l’aide du concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Vue d’ensemble du contrôle PictureBox](picturebox-control-overview-windows-forms.md)
-- [Guide pratique pour Définir des images au moment de l’exécution](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Procédure : définir des images au moment de l’exécution](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox, contrôle](picturebox-control-windows-forms.md)

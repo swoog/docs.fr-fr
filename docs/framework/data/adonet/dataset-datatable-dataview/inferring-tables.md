@@ -2,12 +2,12 @@
 title: Déduction de tables
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: f777b225f9fbf4e8ce38778842d30a0a3054e22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181829"
 ---
 # <a name="inferring-tables"></a>Déduction de tables
 Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir d'un document XML, ADO.NET identifie d'abord les éléments XML qui représentent des tables. Les structures XML suivantes donneront une table pour le **DataSet** schéma :  
@@ -36,8 +36,8 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
-|value1||  
-|value2|Text1|  
+|valeur1||  
+|valeur2|Text1|  
   
 ## <a name="elements-with-child-elements"></a>Éléments avec éléments enfants  
  Les éléments possédant des éléments enfants donnent des tables déduites. Examinons, par exemple, le code XML suivant :  
@@ -95,7 +95,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
 |attr1|attr2|  
 |-----------|-----------|  
-|value1|value2|  
+|valeur1|valeur2|  
   
 ## <a name="repeating-elements"></a>Éléments qui se répètent  
  Les éléments qui se répètent donnent une seule table déduite. Examinons, par exemple, le code XML suivant :  
@@ -119,8 +119,9 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
 |Text2|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Inférence de la structure relationnelle d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+
+- [Déduction de la structure relationnelle des DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Chargement d'un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
 - [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

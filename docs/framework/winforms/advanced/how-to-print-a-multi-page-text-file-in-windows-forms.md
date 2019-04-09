@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Imprimer un fichier texte de plusieurs pages dans les Windows Forms'
+title: 'Procédure : imprimer un fichier texte de plusieurs pages dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192172"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procédure : Imprimer un fichier texte de plusieurs pages dans les Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procédure : imprimer un fichier texte de plusieurs pages dans Windows Forms
 Il est très courant que les applications Windows impriment du texte. La classe <xref:System.Drawing.Graphics> fournit des méthodes pour dessiner des objets (graphismes ou texte) sur un périphérique, tel qu'un écran ou une imprimante.  
   
 > [!NOTE]
@@ -61,6 +61,7 @@ Il est très courant que les applications Windows impriment du texte. La classe 
 -   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
+- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)

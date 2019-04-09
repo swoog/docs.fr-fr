@@ -2,12 +2,12 @@
 title: Gestion des erreurs HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152696"
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF
 Gestion d’erreurs HTTP Web Windows Communication Foundation (WCF) vous permet de retourner des erreurs à partir des services HTTP Web WCF qui spécifient un code d’état HTTP et de retournent les détails de l’erreur utilisent le même format que l’opération (par exemple, XML ou JSON).  
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- L'exemple suivant montre comment retourner un code d'état HTTP et une information supplémentaire dans un type défini par l'utilisateur. `MyErrorDetail` est un type défini par l'utilisateur qui contient des informations supplémentaires à propos de l'erreur qui s'est produite.  
+ L'exemple suivant montre comment retourner un code d'état HTTP et une information supplémentaire dans un type défini par l'utilisateur. `MyErrorDetail` est un type défini par l’utilisateur qui contient des informations supplémentaires sur l’erreur qui s’est produite.  
   
 ```  
 Public string Operation2()  
@@ -47,10 +47,11 @@ Public string Operation2()
   
  Pour plus d’informations sur la façon dont ces valeurs affectent la mise en forme de l’opération, consultez [mise en forme de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et par conséquent peut être utilisé comme le modèle de programmation d'exception d'erreur pour les services qui exposent des points de terminaison SOAP, ainsi que des points de terminaison HTTP Web.  
+ <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et peut par conséquent être utilisé en tant que le modèle de programmation d’exception d’erreur pour les services qui exposent des points de terminaison SOAP, ainsi que pour les points de terminaison HTTP web.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+
+- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Mise en forme HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [Définition et spécification des erreurs](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
 - [Gestion des exceptions et des erreurs](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)

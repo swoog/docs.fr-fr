@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner une ligne avec des embouts de ligne'
+title: 'Procédure : dessiner une ligne avec des extrémités de fin'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 7ebb49ad5e1262dcb71dcd31c9073dfe52c49789
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146209"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>Procédure : Dessiner une ligne avec des embouts de ligne
+# <a name="how-to-draw-a-line-with-line-caps"></a>Procédure : dessiner une ligne avec des extrémités de fin
 Vous pouvez dessiner le début ou la fin d’une ligne dans plusieurs formes appelé embouts de ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prend en charge plusieurs embouts de ligne, tels que round, carré, losange et pointe de flèche.  
   
 ## <a name="example"></a>Exemple  
@@ -35,7 +35,8 @@ Vous pouvez dessiner le début ou la fin d’une ligne dans plusieurs formes app
 -   Créer un formulaire Windows et de gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez l’exemple de code dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements en passant `e` comme <xref:System.Windows.Forms.PaintEventArgs>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)

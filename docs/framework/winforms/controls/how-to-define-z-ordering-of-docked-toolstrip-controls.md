@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir l’ordre Z de contrôles ToolStrip ancrés'
+title: 'Procédure : définir l’ordre de plan de contrôles ToolStrip ancrés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 1ae7e6f63488d2dbb6b408cdf255f111f929298f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129166"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procédure : Définir l’ordre Z de contrôles ToolStrip ancrés
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procédure : définir l’ordre de plan de contrôles ToolStrip ancrés
 Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement avec l'ancrage, vous devez positionner le contrôle correctement dans l'ordre de plan du formulaire.  
   
 ## <a name="example"></a>Exemple  
@@ -26,7 +26,7 @@ Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- L'ordre de plan est déterminé par l'ordre dans lequel les contrôles <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.MenuStrip>  
+ L’ordre de plan est déterminé par l’ordre dans lequel le <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.MenuStrip>  
   
  sont ajoutés à la collection <xref:System.Windows.Forms.Control.Controls%2A> du formulaire.  
   
@@ -43,9 +43,10 @@ Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>
 - <xref:System.Windows.Forms.Control.Controls%2A>
 - <xref:System.Windows.Forms.Control.Dock%2A>
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)

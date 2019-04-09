@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176577"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Vue d'ensemble du composant HelpProvider (Windows Forms)
 Les formulaires Windows [HelpProvider](helpprovider-component-windows-forms.md) composant est utilisé pour associer un fichier d’aide HTML Help 1.x (fichier .chm généré par HTML Help Workshop ou fichier .htm) à votre application Windows. Vous pouvez fournir une aide de plusieurs façons :  
@@ -37,4 +37,5 @@ Les formulaires Windows [HelpProvider](helpprovider-component-windows-forms.md) 
 >  Vous pouvez rencontrer des problèmes à l’aide du chemin d’accès relatif lorsque vous spécifiez le chemin d’accès au fichier d’aide dans le <xref:System.Windows.Forms.Help.ShowHelp%2A> méthode ou <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété de la <xref:System.Windows.Forms.HelpProvider> contrôle. Par conséquent, veillez à utiliser le chemin d’accès absolu pour spécifier le fichier d’aide.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Systèmes d’aide dans les applications Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

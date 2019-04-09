@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir des Styles de cellules par défaut pour le contrôle de DataGridView Windows Forms'
+title: 'Procédure : définir des styles de cellules par défaut pour le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: c7ece81e193f29960f29b749438280bbff0591f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 12951166f26780360821cb77e98cdc3633a34b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142608"
 ---
-# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Procédure : Définir des Styles de cellules par défaut pour le contrôle de DataGridView Windows Forms
+# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Procédure : définir des styles de cellules par défaut pour le contrôle DataGridView Windows Forms
 Avec le contrôle <xref:System.Windows.Forms.DataGridView>, vous pouvez spécifier des styles de cellules par défaut pour le contrôle entier et pour des colonnes et des lignes spécifiques. Ces valeurs par défaut sont propagées du niveau contrôle au niveau colonne, puis au niveau ligne, et enfin au niveau cellule. Si une propriété <xref:System.Windows.Forms.DataGridViewCellStyle> spécifique n'est pas définie au niveau de la cellule, le paramètre de propriété par défaut au niveau de la ligne est utilisé. Si la propriété n'est pas définie non plus au niveau de la ligne, le paramètre de colonne par défaut est utilisé. Pour finir, si la propriété n'est pas non plus définie au niveau de la colonne, le paramètre <xref:System.Windows.Forms.DataGridView> par défaut est utilisé. Avec ce paramètre, vous pouvez éviter de devoir dupliquer les paramètres de propriétés à plusieurs niveaux. À chaque niveau, il vous suffit de spécifier les styles qui diffèrent des niveaux au-dessus de lui. Pour plus d’informations, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  Cette tâche est très bien prise en charge dans Visual Studio.  Voir également [Guide pratique pour Définir des Styles de cellules par défaut et les Formats de données pour les Windows Forms DataGridView Control à l’aide du concepteur](default-cell-styles-datagridview.md).  
@@ -53,6 +53,7 @@ Avec le contrôle <xref:System.Windows.Forms.DataGridView>, vous pouvez spécifi
  Pour bénéficier d'une extensibilité maximale quand vous travaillez avec des jeux de données très volumineux, vous devez partager des objets <xref:System.Windows.Forms.DataGridViewCellStyle> sur plusieurs lignes, colonnes ou cellules qui utilisent les mêmes styles, plutôt que définir séparément les propriétés de style pour les différents éléments. En outre, vous devez créer des lignes partagées et y accéder à l'aide de la propriété <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [meilleures pratiques pour la mise à l’échelle le contrôle de DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
@@ -60,4 +61,4 @@ Avec le contrôle <xref:System.Windows.Forms.DataGridView>, vous pouvez spécifi
 - [Mises en forme et styles de base dans le contrôle DataGridView Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Styles de ligne en alternance pour le contrôle de DataGridView Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)
+- [Procédure : définir des styles de ligne alternée pour le contrôle DataGridView Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)

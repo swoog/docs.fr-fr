@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170311"
 ---
 # <a name="binding-markup-extension"></a>Binding, extension de balisage
 Diffère d’une valeur de propriété une valeur liée aux données, création d’un objet d’expression et l’interprétation de contexte de données qui s’applique à l’élément et sa liaison au moment de l’exécution.  
@@ -123,6 +123,7 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
  `Binding` est une extension de balisage atypique dans qui le <xref:System.Windows.Data.Binding> classe qui implémente la fonctionnalité d’extension pour l’implémentation de XAML de WPF implémente également plusieurs autres méthodes et propriétés qui ne sont pas liées au XAML. Les autres membres sont destinés à faire <xref:System.Windows.Data.Binding> une classe plus autonome et polyvalente qui permettre traiter de nombreux scénarios de liaison de données en plus de fonctionner comme une extension de balisage XAML.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Data.Binding>
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

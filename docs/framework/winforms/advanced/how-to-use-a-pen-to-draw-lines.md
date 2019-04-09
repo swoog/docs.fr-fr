@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser un stylet pour dessiner des lignes'
+title: 'Procédure : utiliser un stylet pour dessiner des lignes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
-ms.openlocfilehash: 3af91611eef4b97dc3461ad8cd7e36c7aa10a16f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156518"
 ---
-# <a name="how-to-use-a-pen-to-draw-lines"></a>Procédure : Utiliser un stylet pour dessiner des lignes
+# <a name="how-to-use-a-pen-to-draw-lines"></a>Procédure : utiliser un stylet pour dessiner des lignes
 Pour dessiner des lignes, vous devez un <xref:System.Drawing.Graphics> objet et un <xref:System.Drawing.Pen> objet. Le <xref:System.Drawing.Graphics> objet fournit les <xref:System.Drawing.Graphics.DrawLine%2A> (méthode) et le <xref:System.Drawing.Pen> objet stocke les fonctionnalités de la ligne, telles que la couleur et la largeur.  
   
 ## <a name="example"></a>Exemple  
@@ -25,9 +25,10 @@ Pour dessiner des lignes, vous devez un <xref:System.Drawing.Graphics> objet et 
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Pen>
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)
 - [Stylets, lignes et rectangles dans GDI+](pens-lines-and-rectangles-in-gdi.md)

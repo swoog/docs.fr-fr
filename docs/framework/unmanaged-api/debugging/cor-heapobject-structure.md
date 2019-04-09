@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34b02dfa3fb0f1e5f4cfadc297194dc4f3160c8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f179b58ff8eb51e2843780d3212cf38ed7d13216
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168829"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT, structure
 Fournit des informations à propos d’un objet sur le tas managé.  
@@ -55,15 +55,16 @@ typedef struct _COR_HEAPOBJECT {
   
  Le `COR_HEAPOBJECT` structure inclut une interface COM contenant des références. Si vous récupérez un `COR_HEAPOBJECT` instance à partir de l’énumérateur en appelant le [ICorDebugHeapEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) (méthode), vous devez libérer par la suite de la référence.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

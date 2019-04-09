@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : Interrogation de relations (C#)'
+title: 'Procédure pas à pas : Interrogation entre relations (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184884"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>Procédure pas à pas : Interrogation de relations (C#)
+# <a name="walkthrough-querying-across-relationships-c"></a>Procédure pas à pas : Interrogation entre relations (C#)
 Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* pour représenter les relations de clé étrangère dans la base de données.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -89,4 +89,5 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
  La procédure pas à pas suivante ([procédure pas à pas : Manipulation des données (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) montre comment manipuler des données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

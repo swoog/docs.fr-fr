@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sizing data in Grid controls [WPF]
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-ms.openlocfilehash: bd0f812ce9a15628bd0bddf3a88e898311f0a9d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190338"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>Procédure : Partager des propriétés de dimensionnement entre grilles
 Cet exemple montre comment partager les données de dimensionnement des colonnes et des lignes entre <xref:System.Windows.Controls.Grid> éléments afin de conserver une taille cohérente.  
@@ -36,6 +36,7 @@ Cet exemple montre comment partager les données de dimensionnement des colonnes
  [!code-vb[gridIssharedsizescopeProp#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>
-- [Vue d’ensemble de Panel](panels-overview.md)
+- [Vue d'ensemble de Panel](panels-overview.md)

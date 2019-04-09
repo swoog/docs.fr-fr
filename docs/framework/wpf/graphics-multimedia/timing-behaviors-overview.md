@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129588"
 ---
 # <a name="timing-behaviors-overview"></a>Vue d'ensemble des comportements de minutage
 Cette rubrique décrit les comportements de minutage des animations et d’autres <xref:System.Windows.Media.Animation.Timeline> objets.  
@@ -123,8 +123,9 @@ Cette rubrique décrit les comportements de minutage des animations et d’autre
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Spécifie le pourcentage de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie consacré à la décélération. Pour voir un exemple, consultez [Comment : Accélérer ou décélérer une Animation](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](animation-overview.md)
+
+- [Vue d'ensemble de l'animation](animation-overview.md)
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
-- [Vue d'ensemble des événements de minuterie](timing-events-overview.md)
-- [Rubriques de guide pratique](animation-and-timing-how-to-topics.md)
-- [Comportement de minuterie d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Vue d'ensemble des événements de minutage](timing-events-overview.md)
+- [Rubriques Comment](animation-and-timing-how-to-topics.md)
+- [Comportement de minutage d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)

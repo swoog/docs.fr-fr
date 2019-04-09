@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d09877d9ca8dde601d2b515bce63bfdca53b6ab0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201349"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2, méthode
 Importe des assemblys et modules indépendants. Cette méthode est comparable à [ImportFile, méthode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mais fonctionne même si le fichier importé n’existe pas sur le disque.  
@@ -69,10 +69,11 @@ HRESULT ImportFileEx2(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite alink.h.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

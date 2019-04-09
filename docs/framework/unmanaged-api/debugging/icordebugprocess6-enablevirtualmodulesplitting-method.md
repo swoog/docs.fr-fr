@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167686"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting, méthode
 Active ou désactive le fractionnement de module virtuel.  
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Paramètres  
  `enableSplitting`  
- `true` pour activer le fractionnement de module virtuel ; `false` pour le désactiver.  
+ `true` Pour activer le fractionnement de module virtuel ; `false` pour la désactiver.  
   
 ## <a name="remarks"></a>Notes  
  Les causes de fractionnement de module virtuel [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) pour reconnaître des modules qui ont été fusionnés lors de la génération, traitement et les présentent en tant que groupe de modules distincts plutôt qu’un seul module de grande taille. Cette opération modifie le comportement de divers [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) méthodes décrites ci-dessous.  
@@ -68,7 +68,7 @@ HRESULT EnableVirtualModuleSplitting(
   
  Les sous-modules présentent les comportements et caractéristiques suivants :  
   
--   Ils comportent un jeu réduit de métadonnées qui correspond uniquement à l'assembly d'origine ayant été fusionné.  
+-   Ils comportent un jeu réduit de métadonnées qui correspond uniquement à l’assembly d’origine ayant été fusionné.  
   
 -   Les noms des métadonnées ne sont pas altérés.  
   
@@ -103,15 +103,16 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugAppDomain::EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Retourne une liste des sous-assemblys et des assemblys standards. La liste n'inclut pas les assemblys conteneurs. **Remarque :**  Si un assembly conteneur ne contient pas tous les symboles nécessaires, aucun de ses sous-assemblys ne sera énuméré. S'il manque des symboles dans un assembly standard, celui-ci pourra ou non être énuméré, en fonction des cas.|Retourne une liste des assemblys conteneurs et des assemblys standards. La liste n'inclut pas les sous-assemblys. **Remarque :**  S'il manque des symboles dans un assembly standard, celui-ci pourra ou non être énuméré, en fonction des cas.|  
 |[ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (lors de la référence au code IL uniquement)|Retourne le code IL qui serait valide dans une image d’assembly avant la fusion. En particulier, les jetons de métadonnées inline doivent être des jetons TypeRef ou MemberRef quand les types référencés ne sont pas définis dans le module virtuel qui contient le code IL. Ces jetons TypeRef ou MemberRef peuvent être recherchés le [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) objet pour l’objet ICorDebugModule virtuel correspondant.|Retourne le code IL dans l’image d’assembly après la fusion.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugProcess6, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

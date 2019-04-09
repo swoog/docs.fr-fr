@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser avec une région de test de positionnement'
+title: 'Procédure : utiliser le test de positionnement avec une région'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150499"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Procédure : Utiliser avec une région de test de positionnement
+# <a name="how-to-use-hit-testing-with-a-region"></a>Procédure : utiliser le test de positionnement avec une région
 L’objectif du test de positionnement consiste à déterminer si le curseur se trouve sur un objet donné, tel qu’une icône ou un bouton.  
   
 ## <a name="example"></a>Exemple  
@@ -25,9 +25,10 @@ L’objectif du test de positionnement consiste à déterminer si le curseur se 
  [!code-vb[System.Drawing.MiscLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Region>
 - [Régions dans GDI+](regions-in-gdi.md)
-- [Guide pratique pour Utiliser le découpage avec une région](how-to-use-clipping-with-a-region.md)
+- [Procédure : utiliser le détourage avec une région](how-to-use-clipping-with-a-region.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181973"
 ---
 # <a name="disconnectedcontext-mda"></a>Assistant Débogage managé disconnectedContext
 L'Assistant Débogage managé `disconnectedContext` est activé quand le CLR essaie d'effectuer une transition vers un contexte ou un cloisonnement déconnecté pendant le traitement d'une demande concernant un objet COM.  
@@ -27,7 +27,7 @@ L'Assistant Débogage managé `disconnectedContext` est activé quand le CLR ess
 ## <a name="cause"></a>Cause  
  Le contexte ou cloisonnement OLE a été arrêté au moment où le CLR a essayé d'effectuer une transition vers ce contexte ou cloisonnement. En règle générale, cela se produit quand les threads cloisonnés sont arrêtés avant que tous les composants COM détenus par le cloisonnement ne soient complètement libérés. Cela peut être dû à un appel explicite à partir du code utilisateur sur un wrapper RCW ou à la manipulation du composant COM par le CLR lui-même, par exemple quand le CLR libère le composant COM alors que le wrapper RCW associé a été récupéré par le Garbage Collector.  
   
-## <a name="resolution"></a>Solution  
+## <a name="resolution"></a>Résolution  
  Pour éviter ce problème, assurez-vous que le thread qui détient le thread cloisonné ne prend pas fin tant que l'application n'a pas terminé de traiter tous les objets qui se trouvent dans le cloisonnement. Il en va de même pour les contextes ; assurez-vous qu'un contexte n'est pas arrêté tant que l'application n'a pas complètement terminé de traiter tous les composants COM qui appartiennent à ce contexte.  
   
 ## <a name="effect-on-the-runtime"></a>Effet sur le runtime  
@@ -47,6 +47,7 @@ L'Assistant Débogage managé `disconnectedContext` est activé quand le CLR ess
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

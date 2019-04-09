@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Rotation des couleurs'
+title: 'Procédure : faire pivoter des couleurs'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175537"
 ---
-# <a name="how-to-rotate-colors"></a>Procédure : Rotation des couleurs
+# <a name="how-to-rotate-colors"></a>Procédure : faire pivoter des couleurs
 Rotation dans un espace de couleurs à quatre dimensions est difficile à visualiser. Nous pouvons facilitent la visualisation, choisissez de conserver un seul des composants de couleur fixe. Supposons que nous mettre d’accord conserver le composant alpha fixé à 1 (totalement opaque). Vous pouvez ensuite visualiser un espace de couleurs à trois dimensions avec des axes rouges, vert et bleus, comme indiqué dans l’illustration suivante.  
   
  ![Illustration des rotation avec les axes de rouges, vert et bleus.](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
@@ -45,10 +45,11 @@ Rotation dans un espace de couleurs à quatre dimensions est difficile à visual
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Remplacez `RotationInput.bmp` avec un nom de fichier d’image et le chemin d’accès valide sur votre système.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez `RotationInput.bmp` avec un nom de fichier d’image et le chemin d’accès valide sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Recoloriage des images](recoloring-images.md)

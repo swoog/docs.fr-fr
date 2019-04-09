@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Effectuer une itération dans tous les nœuds d’un contrôle de TreeView Windows Forms'
+title: 'Procédure : itérer au sein de tous les nœuds d’un contrôle TreeView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199711"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procédure : Effectuer une itération dans tous les nœuds d’un contrôle de TreeView Windows Forms
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procédure : itérer au sein de tous les nœuds d’un contrôle TreeView Windows Forms
 Il est parfois utile d’examiner chaque nœud dans un formulaire Windows <xref:System.Windows.Forms.TreeView> contrôle afin d’effectuer des calculs sur les valeurs de nœud. Cette opération peut être effectuée à l’aide d’une procédure récursive (méthode récursive en C# et C++) qui procède à une itération au sein de chaque nœud dans chaque collection de l’arborescence.  
   
  Chaque <xref:System.Windows.Forms.TreeNode> objet dans une vue d’arborescence a des propriétés que vous pouvez utiliser pour naviguer l’arborescence : <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, et <xref:System.Windows.Forms.TreeNode.Parent%2A>. La valeur de la <xref:System.Windows.Forms.TreeNode.Parent%2A> propriété est le nœud parent du nœud actuel. Les nœuds enfants du nœud actuel, le cas échéant, sont répertoriés dans son <xref:System.Windows.Forms.TreeNode.Nodes%2A> propriété. Le <xref:System.Windows.Forms.TreeView> contrôle lui-même a le <xref:System.Windows.Forms.TreeView.TopNode%2A> propriété, qui est le nœud racine de la vue d’ensemble de l’arborescence.  
@@ -124,5 +124,6 @@ Il est parfois utile d’examiner chaque nœud dans un formulaire Windows <xref:
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [TreeView, contrôle](treeview-control-windows-forms.md)
 - [Procédures récursives](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

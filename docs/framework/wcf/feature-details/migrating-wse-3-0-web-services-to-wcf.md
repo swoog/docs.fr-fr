@@ -2,12 +2,12 @@
 title: Migration des services Web WSE 3.0 vers WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180607"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migration des services Web WSE 3.0 vers WCF
 Les avantages de la migration des services Web WSE 3.0 pour Windows Communication Foundation (WCF) incluent l’amélioration des performances et la prise en charge de transports supplémentaires, renforcer la sécurité des scénarios et WS-* spécifications. Un service Web qui est migré à partir de WSE 3.0 vers WCF peut être confrontés à une amélioration des performances de 200 % et 400 %. Pour plus d’informations sur les transports pris en charge par WCF, consultez [choix d’un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour obtenir la liste des scénarios pris en charge par WCF, consultez [scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Pour obtenir la liste des spécifications qui sont pris en charge par WCF, consultez [Guide de l’interopérabilité de protocoles de Services Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -27,7 +27,7 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>Services Web WSE 3.0 sécurisés à l'aide d'un fichier de stratégie  
  Les services WCF peuvent utiliser un fichier de configuration pour sécuriser un service et ce mécanisme s’apparente à un fichier de stratégie WSE 3.0. Dans WSE 3.0, lorsque vous sécurisez un service Web à l'aide d'un fichier de stratégie, vous utilisez une assertion de sécurité clé en main ou une assertion de stratégie personnalisée. Les assertions de sécurité clé en main correspondent étroitement au mode d’authentification d’un élément de liaison de sécurité WCF. Non seulement les modes d’authentification WCF et les assertions de sécurité clé en main de WSE 3.0 portent le même ou de la même façon, qu’elles sécurisent les messages en utilisant les mêmes types d’informations d’identification. Par exemple, le `usernameForCertificate` assertion de sécurité clé en main dans WSE 3.0 mappe à la `UsernameForCertificate` mode d’authentification dans WCF. Les exemples de code suivants montrent comment une stratégie minimale qui utilise le `usernameForCertificate` assertion de sécurité clé en main dans WSE 3.0 mappe à un `UsernameForCertificate` mode d’authentification dans WCF dans une liaison personnalisée.  
   
- **WSE 3.0**  
+ **WSE 3.0**  
   
 ```xml  
 <policies>  
@@ -66,7 +66,7 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
  Pour plus d’informations sur la création de liaisons personnalisées dans WCF, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>Services Web WSE 3.0 sécurisés à l'aide du code d'application  
- Si WSE 3.0 ou WCF est utilisé, les exigences de sécurité peuvent être spécifiés dans le code d’application au lieu de dans la configuration. Dans WSE 3.0, cette tâche est accomplie en créant une classe qui dérive de la classe `Policy`, puis en ajoutant les exigences en appelant la méthode `Add`. Pour plus d’informations sur la spécification des exigences de sécurité dans le code, consultez [Comment : Sécuriser un Service Web sans utiliser un fichier de stratégie](https://go.microsoft.com/fwlink/?LinkId=73747). Dans WCF, pour spécifier les exigences de sécurité dans le code, créez une instance de la <xref:System.ServiceModel.Channels.BindingElementCollection> classe et ajoutez une instance d’un <xref:System.ServiceModel.Channels.SecurityBindingElement> à la <xref:System.ServiceModel.Channels.BindingElementCollection>. Les exigences de l’assertion de sécurité sont définies à l’aide des méthodes d’assistance de mode d’authentification statiques de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>. Pour plus d’informations sur la spécification des exigences de sécurité dans le code à l’aide de WCF, consultez [Comment : Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) et [Comment : Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Si WSE 3.0 ou WCF est utilisé, les exigences de sécurité peuvent être spécifiés dans le code d’application au lieu de dans la configuration. Dans WSE 3.0, cette tâche est accomplie en créant une classe qui dérive de la classe `Policy`, puis en ajoutant les spécifications en appelant la méthode `Add`. Pour plus d’informations sur la spécification des exigences de sécurité dans le code, consultez [Comment : Sécuriser un Service Web sans utiliser un fichier de stratégie](https://go.microsoft.com/fwlink/?LinkId=73747). Dans WCF, pour spécifier les exigences de sécurité dans le code, créez une instance de la <xref:System.ServiceModel.Channels.BindingElementCollection> classe et ajoutez une instance d’un <xref:System.ServiceModel.Channels.SecurityBindingElement> à la <xref:System.ServiceModel.Channels.BindingElementCollection>. Les exigences de l’assertion de sécurité sont définies à l’aide des méthodes d’assistance de mode d’authentification statiques de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>. Pour plus d’informations sur la spécification des exigences de sécurité dans le code à l’aide de WCF, consultez [Comment : Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) et [Comment : Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ### <a name="wse-30-custom-policy-assertion"></a>Assertion de stratégie personnalisée WSE 3.0  
  Dans WSE 3.0, il existe deux types d'assertions de stratégie personnalisées : celles qui sécurisent un message SOAP et celles qui ne le font pas. Assertions de stratégie qui sécurisent les messages SOAP dérivent de WSE 3.0 `SecurityPolicyAssertion` classe et l’équivalent conceptuel dans WCF est le <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
@@ -89,7 +89,7 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
 ### <a name="wse-30-web-services-that-use-mtom-encoded-soap-messages"></a>Services Web WSE 3.0 qui utilisent des messages SOAP encodés MTOM  
  Comme une application WSE 3, une application WCF peut spécifier l’encodage dans la configuration de message MTOM. Pour migrer ce paramètre, ajoutez le [ \<mtomMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/mtommessageencoding.md) à la liaison pour le service. L’exemple de code suivant illustre l’encodage MTOM comment est spécifié dans WSE 3.0 pour un service qui est équivalent dans WCF.  
   
- **WSE 3.0**  
+ **WSE 3.0**  
   
 ```xml  
 <messaging>  
@@ -123,7 +123,8 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
  L’équivalent d’un transport personnalisé WSE 3.0 dans WCF est une extension de canal. Pour plus d’informations sur la création d’une extension de canal, consultez [extension de la couche de canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Cycle de vie de la programmation de base](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procédure : créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

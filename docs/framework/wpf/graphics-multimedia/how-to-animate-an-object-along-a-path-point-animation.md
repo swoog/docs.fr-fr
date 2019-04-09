@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 13cf583277b4e105da01c5ab56111123cf03038c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129583"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Procédure : Animer un objet sur un tracé (animation de point)
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> objet à animer un <xref:System.Windows.Point> sur un tracé courbé.  
@@ -31,6 +31,7 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Media.Animation.Poin
  La version du code de l’exemple précédent utilisé un <xref:System.Windows.Media.Animation.Storyboard> pour animer la <xref:System.Windows.Media.EllipseGeometry>, bien qu’une seule animation ait été appliquée. Un <xref:System.Windows.Media.Animation.Storyboard> est souvent le moyen le plus simple d’appliquer plusieurs animations, car ces animations peuvent être contrôlées par le même <xref:System.Windows.Media.Animation.Storyboard>. Toutefois, un moyen plus simple pour appliquer une seule animation à une propriété lors de l’utilisation de code consiste à utiliser le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> (méthode). Si vous voulez voir un exemple, consultez l’article [Comment : animer une propriété sans utiliser de storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Animation de tracés, exemple](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)

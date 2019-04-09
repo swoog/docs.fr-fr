@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150538"
 ---
 # <a name="how-to-repeat-an-animation"></a>Procédure : Répéter une animation
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété d’un <xref:System.Windows.Media.Animation.Timeline> afin de contrôler le comportement de répétition d’une animation.  
@@ -29,8 +29,9 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Time
  Pour obtenir un exemple complet, consultez [comportement de minutage d’Animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Accumuler des valeurs d'animation pendant des cycles de répétition](how-to-accumulate-animation-values-during-repeat-cycles.md)
+
+- [Accumuler des valeurs d’animation pendant des cycles de répétition](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Spécifier l’inversion automatique d’une chronologie](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Comportement de minuterie d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Rubriques "Comment" relatives à l'animation et au minutage](animation-and-timing-how-to-topics.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Comportement de minutage d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)

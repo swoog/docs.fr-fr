@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188641"
 ---
 # <a name="dependency-properties-overview"></a>Vue d’ensemble des propriétés de dépendance
 
@@ -36,7 +36,7 @@ Les propriétés de dépendance ont pour but de fournir un moyen de calculer la 
 Dans la référence du SDK, vous pouvez identifier quelle propriété est une propriété de dépendance par la présence de la section Informations sur les propriétés de dépendance dans la page de référence managée de cette propriété. La section des informations sur les propriétés de dépendance comprend un lien vers l’identificateur de champ <xref:System.Windows.DependencyProperty> pour cette propriété de dépendance, ainsi qu’une liste d’options de métadonnées définies pour cette propriété, des informations de substitution par classe et d’autres détails.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Les propriétés CLR reposent sur les propriétés de dépendance
-Les propriétés de dépendance et le système de propriétés WPF étendent la fonctionnalité des propriétés en fournissant un type qui prend en charge une propriété, en tant qu’implémentation alternative du modèle standard de stockage de la propriété avec un champ privé. Le nom de ce type est <xref:System.Windows.DependencyProperty>. L’autre type important qui définit le système de propriétés WPF est <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> définit la classe de base qui peut inscrire et détenir une propriété de dépendance.
+Les propriétés de dépendance et le système de propriétés WPF étendent la fonctionnalité des propriétés en fournissant un type qui prend en charge une propriété, en tant qu’implémentation alternative du modèle standard de stockage de la propriété avec un champ privé. Le nom de ce type est <xref:System.Windows.DependencyProperty>. L’autre type important qui définit le système de propriétés WPF est <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> définit la classe de base qui peut inscrire et posséder une propriété de dépendance.
 
 Voici une liste qui décrit la terminologie utilisée avec les propriétés de dépendance :
 
@@ -95,9 +95,9 @@ Une propriété de dépendance fournit une fonctionnalité qui étend la fonctio
 
 - [Substitutions de métadonnées](#metadata-overrides)
 
-- [Héritage de valeur de propriété](#property-value-inheritance)
+- [Héritage d’une valeur de propriété](#property-value-inheritance)
 
-- [Intégration du concepteur WPF](#wpf-designer-integration)
+- [Intégration du Concepteur WPF](#wpf-designer-integration)
 
 ### <a name="resources"></a>Ressources
 Une valeur de propriété de dépendance peut être définie en référençant une ressource. Les ressources sont généralement spécifiées en tant que valeur de propriété `Resources` d’un élément racine de page ou de l’application (ces emplacements autorisent l’accès le plus commode à la ressource). L’exemple suivant montre comment définir une ressource <xref:System.Windows.Media.SolidColorBrush>.
@@ -197,6 +197,7 @@ En règle générale, vous ne souhaitez pas que des styles s’appliquent en per
 - Les propriétés de dépendance doivent généralement être considérées comme des propriétés publiques, accessibles ou au moins détectables par tout appelant qui a accès à une instance. Pour plus d’informations, consultez [Sécurité des propriétés de dépendance](dependency-property-security.md).
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
 - [Propriétés de dépendance en lecture seule](read-only-dependency-properties.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

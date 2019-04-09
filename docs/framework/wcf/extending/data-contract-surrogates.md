@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: b9349291979e76650f07db5e433620554928eb4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158624"
 ---
 # <a name="data-contract-surrogates"></a>Substituts de contrats de données
 Le contrat de données *substitut* est une fonctionnalité avancée reposant sur le modèle de contrat de données. Cette fonctionnalité est destinée à la personnalisation et à la substitution de type dans les situations où les utilisateurs souhaitent changer la manière dont un type est sérialisé, désérialisé ou projeté dans des métadonnées. On peut par exemple utiliser un substitut lorsque aucun contrat de données n'a été spécifié pour le type, que les champs et propriétés ne sont pas marqués avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> ou que les utilisateurs souhaitent créer des variations de schéma de manière dynamique.  
   
- La sérialisation et la désérialisation sont accomplies avec le substitut de contrat de données lors de l'utilisation de <xref:System.Runtime.Serialization.DataContractSerializer> pour effectuer la conversion à partir du .NET Framework vers un format approprié, tel que XML. Le substitut de contrat de données peut également être utilisé pour modifier les métadonnées exportées pour les types, lors de la production de représentations de métadonnées telles que des documents XSD (XML Schema Documents). Lors de l'importation, le code est créé à partir des métadonnées et le substitut peut être utilisé dans ce cas pour personnaliser également le code généré.  
+ La sérialisation et la désérialisation sont accomplies avec le substitut de contrat de données lors de l’utilisation de <xref:System.Runtime.Serialization.DataContractSerializer> pour effectuer la conversion à partir du .NET Framework vers un format approprié, tel que XML. Le substitut de contrat de données peut également être utilisé pour modifier les métadonnées exportées pour les types, lors de la production de représentations de métadonnées telles que des documents XSD (XML Schema Documents). Lors de l'importation, le code est créé à partir des métadonnées et le substitut peut être utilisé dans ce cas pour personnaliser également le code généré.  
   
 ## <a name="how-the-surrogate-works"></a>Fonctionnement du substitut  
  Un substitut mappe un type (le type « d'origine ») à un autre type (le type « substitué »). L'exemple suivant illustre le type `Inventory` d'origine et un nouveau type `InventorySurrogated` de substitution. Le type `Inventory` n'est pas sérialisable, mais le type `InventorySurrogated` l'est :  
@@ -33,7 +33,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> établit une correspondance entre les types. Cette méthode est requise pour la sérialisation, la désérialisation, l'importation et l'exportation.  
   
- La première tâche consiste à définir les types qui seront mappés à d’autres types. Exemple :  
+ La première tâche consiste à définir les types qui seront mappés à d'autres types. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -75,7 +75,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
- Cette méthode est appelée uniquement pendant la désérialisation d’un objet. Elle fournit un mappage de données inverse pour la désérialisation du type de substitution à son type d'origine. Elle est semblable à la méthode `GetObjectToSerialize`, et on peut l'utiliser afin d'échanger directement des données de champs, effectuer des opérations sur les données et stocker des données XML. Lors de la désérialisation, vous risquez de ne pas toujours obtenir les valeurs de données exactes de l'original en raison des manipulations liées à la conversion des données.  
+ Cette méthode est appelée uniquement pendant la désérialisation d'un objet. Elle fournit un mappage de données inverse pour la désérialisation du type de substitution à son type d'origine. Elle est semblable à la méthode `GetObjectToSerialize`, et on peut l'utiliser afin d'échanger directement des données de champs, effectuer des opérations sur les données et stocker des données XML. Lors de la désérialisation, vous risquez de ne pas toujours obtenir les valeurs de données exactes de l'original en raison des manipulations liées à la conversion des données.  
   
  Le paramètre `targetType` fait référence au type déclaré du membre. Ce paramètre est le type substitué retourné par la méthode `GetDataContractType`. Le `obj` paramètre fait référence à l’objet qui a été désérialisé. L'objet peut être reconverti en son type d'origine s'il est substitué. Cette méthode retourne l'objet d'entrée si le substitue ne gère pas l'objet. Autrement, l'objet désérialisé sera retourné une fois sa conversion achevée. S'il existe plusieurs types de substitution, vous pouvez fournir la conversion de données du type de substitution au type principal pour chacun d'entre eux en indiquant chaque type et sa conversion.  
   
@@ -100,12 +100,12 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 #### <a name="getcustomdatatoexport-method-memberinfo-type"></a>Méthode GetCustomDataToExport (MemberInfo, Type)  
  Le <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Reflection.MemberInfo%2CSystem.Type%29?displayProperty=nameWithType> est appelé pendant l'exportation pour chaque membre dans les types exportés. Cette fonction vous permet de personnaliser tout commentaire pour les membres qui seront inclus dans le schéma lors de l'exportation. Les informations pour chaque membre dans la classe sont envoyées à cette méthode afin de vérifier si des données supplémentaires doivent être ajoutées dans le schéma.  
   
- L'exemple suivant recherche dans le `dataContractType` pour chaque membre du substitut. Il retourne ensuite le modificateur d'accès approprié pour chaque champ. Sans cette personnalisation, la valeur par défaut pour les modificateurs d’accès est publique. Par conséquent, tous les membres seraient définis comme publics dans le code généré à l'aide du schéma exporté, quelles que soient leurs restrictions d'accès réelles. Si cette implémentation n'était pas utilisée, le membre `numpens` serait public dans le schéma exporté bien qu'il ait été défini comme privé dans le substitut. Grâce à l’utilisation de cette méthode, dans le schéma exporté, le modificateur d’accès peut être généré comme privé.  
+ L'exemple suivant recherche dans le `dataContractType` pour chaque membre du substitut. Il retourne ensuite le modificateur d’accès approprié pour chaque champ. Sans cette personnalisation, la valeur par défaut pour les modificateurs d’accès est publique. Par conséquent, tous les membres seraient définis comme publics dans le code généré à l'aide du schéma exporté, quelles que soient leurs restrictions d'accès réelles. Si cette implémentation n'était pas utilisée, le membre `numpens` serait public dans le schéma exporté bien qu'il ait été défini comme privé dans le substitut. Grâce à l'utilisation de cette méthode, dans le schéma exporté, le modificateur d'accès peut être généré comme privé.  
   
 ### <a name="getreferencedtypeonimport-method"></a>Méthode GetReferencedTypeOnImport  
  Cette méthode mappe le <xref:System.Type> du substitut au type d'origine. Cette méthode est facultative pour l'importation de schéma.  
   
- Lors de la création d'un substitut qui importe un schéma et génère le code pour celui-ci, la tâche suivante consiste à définir le type d'une instance de substitution à son type d'origine.  
+ Lors de la création d’un substitut qui importe un schéma et génère le code pour celui-ci, la tâche suivante consiste à définir le type d’une instance de substitution à son type d’origine.  
   
  Si le code généré doit faire référence à un type utilisateur existant, cette opération est effectuée en implémentant la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A>.  
   
@@ -192,6 +192,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.IDataContractSurrogate>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>

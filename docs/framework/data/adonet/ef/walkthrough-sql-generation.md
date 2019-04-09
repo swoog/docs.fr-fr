@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Génération SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164578"
 ---
 # <a name="walkthrough-sql-generation"></a>Procédure pas à pas : Génération SQL
 Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- La valeur « false » suivante est ajoutée à la pile IsParentAJoin et la condition de jointure Var(Extent1).CategoryID == Var(Extent2).CategoryID est traitée. Var(Extent1) est résolue en <symbol_Extent1> après une recherche dans la table de symboles. L’instance étant résolue en un symbole simple, à la suite de traitement Var(Extent1). CategoryID, un SqlBuilder avec \<symbol1 >. » CategoryID » est retourné. De la même façon, l'autre partie de la comparaison est traitée et le résultat de la visite de la condition de jointure est ajouté à la clause FROM de SelectStatement1 et la valeur « false » est retirée de la pile IsParentAJoin.  
+ La valeur « false » suivante est ajoutée à la pile IsParentAJoin et la condition de jointure Var(Extent1).CategoryID == Var(Extent2).CategoryID est traitée. Var (extent1) est résolu en < symbol_Extent1 > après une recherche haut dans la table de symboles. L’instance étant résolue en un symbole simple, à la suite de traitement Var(Extent1). CategoryID, un SqlBuilder avec \<symbol1 >. » CategoryID » est retourné. De la même façon, l'autre partie de la comparaison est traitée et le résultat de la visite de la condition de jointure est ajouté à la clause FROM de SelectStatement1 et la valeur « false » est retirée de la pile IsParentAJoin.  
   
  Avec ceci, Join1 a été traité complètement et une étendue est dépilée de la table de symboles.  
   
- Le contrôle retourne au traitement de Join4, le parent de Join1. L'enfant ayant réutilisé l'instruction SELECT, les étendues Join1 sont remplacées par un symbole de jointure <joinSymbol_Join1> unique. De même, une nouvelle entrée est ajoutée à la table de symboles pour associer Join1 à <joinSymbol_Join1>.  
+ Le contrôle retourne au traitement de Join4, le parent de Join1. L’enfant réutilisé l’instruction Select, les étendues Join1 sont remplacées par un symbole de jointure < joinSymbol_Join1 >. Une nouvelle entrée est également ajoutée à la table de symboles pour associer Join1 à < joinSymbol_Join1 >.  
   
  Le nœud suivant à traiter est Join3, le deuxième enfant de Join4. En tant qu'enfant droit, la valeur « false » est ajoutée à la pile IsParentAJoin. L'état du visiteur à ce stade est illustré dans la figure suivante.  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  La figure suivante illustre l'état du visiteur juste avant que le DbPropertyExpression « Var(Join2).Extent4.OrderID » soit traité.  
   
- Considérez la façon dont « Var(Join2).Extent4.OrderID » est visité. Tout d'abord, la propriété d'instance « Var(Join2).Extent4 » qui est un autre DbPropertyExpression est visitée, et visite pour la première fois son instance « Var(Join2) ». Dans l'étendue supérieure de la table de symboles, « Join2 » correspond à <joinSymbol_join2>. Dans la méthode de visite utilisée par DbPropertyExpression pour traiter « Var(Join2).Extent4 », notez qu'un symbole de jointure a été retourné lors de la visite de l'instance et que l'aplanissement est obligatoire.  
+ Considérez la façon dont « Var(Join2).Extent4.OrderID » est visité. Tout d'abord, la propriété d'instance « Var(Join2).Extent4 » qui est un autre DbPropertyExpression est visitée, et visite pour la première fois son instance « Var(Join2) ». Dans l’étendue supérieure de la table de symboles, « Join2 » correspond à < joinSymbol_join2 >. Dans la méthode de visite utilisée par DbPropertyExpression pour traiter « Var(Join2).Extent4 », notez qu'un symbole de jointure a été retourné lors de la visite de l'instance et que l'aplanissement est obligatoire.  
   
- S'agissant d'une jointure imbriquée, nous recherchons la propriété « Extent4 » dans le dictionnaire NameToExtent du symbole de jointure, le résolvons en <symbol_Extent4> et retournons un nouveau SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Puisqu'une paire de symboles est retournée par le traitement de l'instance de « Var(Join2).Extent4.OrderID », la propriété « OrderID » est résolue à partir du ColumnPart de cette paire de symboles (<symbol_Extent4>), qui contient une liste des colonnes de l'étendue qu'il représente. Ainsi, « Var(Join2).Extent4.OrderID » est résolu en { <joinSymbol_Join2>, ".", <symbol_OrderID>}.  
+ Dans la mesure où il s’agit d’une jointure imbriquée, nous recherchons la propriété « Extent4 » dans le dictionnaire NameToExtent du symbole de jointure, résolvons en < symbol_Extent4 > et retournons un nouveau SymbolPair (< joinSymbol_join2 >, < symbol_Extent4 >). Puisqu’une paire de symboles est retournée par le traitement de l’instance de « join2. Extent4.OrderID », la propriété « OrderID » est résolue à partir du ColumnPart de cette paire de symboles (< symbol_Extent4 >), qui présente une liste des colonnes de l’étendue qu’il représente. Par conséquent, « join2. Extent4.OrderID » est résolu en {< joinSymbol_Join2 >, «. », < symbol_OrderID >}.  
   
  La condition de jointure de Join4 est traitée de la même façon. Le contrôle retourne à la méthode VisitInputExpression qui a traité le projet supérieur. En observant les FromExtents du SelectStatement0 retourné, l'entrée est identifiée en tant que jointure et supprime les étendues d'origine en les remplaçant par une nouvelle étendue avec seulement le symbole de jointure. La table de symboles est également mise à jour puis la partie de projection du projet est traitée. La résolution des propriétés et l'aplanissement des étendues de jointure s'effectuent comme décrit précédemment.  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Deuxième Phase de génération SQL : Génération de la chaîne de commande  
  La deuxième phase produit des noms réels pour les symboles et seuls sont considérés les symboles qui représentent des colonnes nommées « OrderID », puisque dans ce cas un conflit doit être résolu. Ceux-ci sont mis en surbrillance dans le SqlSelectStatement. Notez que les suffixes utilisés dans la figure permettent uniquement d'insister sur le fait que ce sont des instances différentes et non de représenter de nouveaux noms, puisque, à ce stade, leurs noms définitifs (pouvant être différents des noms d'origine) n'ont pas encore été assignés.  
   
- Le premier symbole trouvé qui doit être renommé est <symbol_OrderID>. Son nouveau nom est « OrderID1 », 1 est marqué en tant que dernier suffixe utilisé pour « OrderID » et le symbole est marqué comme ne devant pas être renommé. Ensuite, la première utilisation de <symbol_OrderID_2> est trouvée. Il est renommé pour utiliser le suffixe disponible suivant (« OrderID2 ») et est encore marqué comme ne devant pas être renommé afin qu'à sa prochaine utilisation il ne soit pas renommé. C'est également le cas pour <symbol_OrderID_3>.  
+ Le premier symbole trouvé qui doit être renommé est < symbol_OrderID >. Son nouveau nom est « OrderID1 », 1 est marqué en tant que dernier suffixe utilisé pour « OrderID » et le symbole est marqué comme ne devant pas être renommé. Ensuite, la première utilisation de < symbol_OrderID_2 > est trouvée. Il est renommé pour utiliser le suffixe disponible suivant (« OrderID2 ») et est encore marqué comme ne devant pas être renommé afin qu'à sa prochaine utilisation il ne soit pas renommé. Cela est fait pour < symbol_OrderID_3 > trop.  
   
  À la fin de la deuxième phase, la dernière instruction SQL est générée.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Génération SQL dans l’exemple de fournisseur](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+
+- [Génération SQL dans le Fournisseur d'exemples](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

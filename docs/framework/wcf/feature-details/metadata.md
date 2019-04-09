@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 515bb3cb074fde1fb4631f6e273dab11c55ae19a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174016"
 ---
 # <a name="metadata"></a>Métadonnées
 Windows Communication Foundation (WCF) fournit une infrastructure d’exportation, de publication, de récupération et de l’importation de métadonnées de service. Services WCF utilisent des métadonnées pour décrire comment interagir avec les points de terminaison du service afin que les outils, tels que Svcutil.exe puissent générer automatiquement le code client pour l’accès au service.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Vue d'ensemble de l'architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  Vue d'ensemble générale de l'architecture des métadonnées.  
   
  [Formats de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
@@ -37,4 +37,5 @@ Windows Communication Foundation (WCF) fournit une infrastructure d’exportatio
  Inclut des considérations de sécurité importantes pour la négociation avec les métadonnées d'un service.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

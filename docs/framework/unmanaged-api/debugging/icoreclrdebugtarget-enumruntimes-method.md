@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134674"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Méthode ICoreClrDebugTarget::EnumRuntimes
 Énumère les CLR (Common Language Runtime) dans le processus spécifié en cours d'exécution sur un ordinateur distant.  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  Opération réussie.  
   
  S_FALSE  
- `dwInternalProcessID` ne correspond à aucun processus qui s'exécute sur l'ordinateur, probablement parce que le processus a été arrêté. `pcRuntimes` et `ppRuntimes` sont null.  
+ `dwInternalProcessID` ne correspond pas à n’importe quel processus est en cours d’exécution sur l’ordinateur, probablement parce que le processus a été arrêté. `pcRuntimes` et `ppRuntimes` sera null.  
   
  E_OUTOFMEMORY  
  Impossible d'allouer suffisamment de mémoire pour `ppRuntimes`.  
@@ -65,7 +65,7 @@ HRESULT EnumRuntimes (
 ## <a name="remarks"></a>Notes  
  Pour libérer la mémoire allouée par cette méthode, appelez le [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) (méthode).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CoreClrRemoteDebuggingInterfaces.h  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **Versions du .NET framework :** 3.5 SP1  
   
 ## <a name="see-also"></a>Voir aussi
-- [ICoreClrDebugTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+
+- [Interface ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

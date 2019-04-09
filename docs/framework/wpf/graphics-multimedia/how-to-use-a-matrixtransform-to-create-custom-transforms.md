@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : Utiliser un MatrixTransform pour créer des transformations personnalisées'
+title: 'Procédure : Utiliser la classe MatrixTransform pour créer des transformations personnalisées'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
-ms.openlocfilehash: 179c7986b6a7021f4e1245aef01eb555108ebf4f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182310"
 ---
-# <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Procédure : Utiliser un MatrixTransform pour créer des transformations personnalisées
+# <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Procédure : Utiliser la classe MatrixTransform pour créer des transformations personnalisées
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.MatrixTransform> pour translater (déplacer) la position, étirer et incliner d’un <xref:System.Windows.Controls.Button>.  
   
 > [!NOTE]
@@ -21,8 +21,9 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Media.MatrixTransfor
  [!code-xaml[Transforms_snip#MatrixTransform](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MatrixTransformExample.xaml#matrixtransform)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.MatrixTransform>
 - <xref:System.Windows.Media.Transform>
-- [Vue d’ensemble des transformations](transforms-overview.md)
-- [Rubriques de guide pratique](transformations-how-to-topics.md)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble des transformations](transforms-overview.md)
+- [Rubriques Comment](transformations-how-to-topics.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)

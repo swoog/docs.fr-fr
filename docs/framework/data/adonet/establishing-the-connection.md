@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142338"
 ---
 # <a name="establishing-the-connection"></a>Établissement de la connexion
 Pour vous connecter à Microsoft SQL Server, utilisez l'objet <xref:System.Data.SqlClient.SqlConnection> du fournisseur de données .NET Framework pour SQL Server. Pour vous connecter à une source de données OLE DB, utilisez l'objet <xref:System.Data.OleDb.OleDbConnection> du fournisseur de données .NET Framework pour OLE DB. Pour vous connecter à une source de données ODBC, utilisez l'objet <xref:System.Data.Odbc.OdbcConnection> du fournisseur de données .NET Framework pour ODBC. Pour vous connecter à une source de données Oracle, utilisez l'objet <xref:System.Data.OracleClient.OracleConnection> du fournisseur de données .NET Framework pour Oracle. Pour stocker en toute sécurité et l’extraction des chaînes de connexion, consultez [protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -143,7 +143,8 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Regroupement de connexions OLE DB, ODBC et Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Regroupement de connexions OLE DB, ODBC et Oracle Connection](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

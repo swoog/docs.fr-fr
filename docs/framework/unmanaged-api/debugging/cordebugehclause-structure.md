@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157324"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause, structure
 [Pris en charge dans .NET Framework 4.5.2 et ultérieur]  
@@ -59,22 +59,23 @@ typedef struct _CorDebugEHClause {
   
  Le champ `flags` peut contenir les indicateurs suivants. Notez qu'ils ne sont pas définis dans CorDebug.idl ou CorDebug.h.  
   
-|Indicateur|Valeur|Description|  
+|Indicateur|Value|Description|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Une clause d'exception typée.|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Une clause de filtre et de gestionnaire d'exceptions.|  
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|Une clause `finally`.|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Une clause fault (une clause `finally` qui est appelée seulement quand une exception est levée).|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [GetEHClauses, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
 - [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

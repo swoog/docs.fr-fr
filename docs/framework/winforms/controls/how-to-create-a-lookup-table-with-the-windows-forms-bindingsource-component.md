@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une Table de correspondance avec le composant de BindingSource Windows Forms'
+title: 'Procédure : créer une table de choix avec le composant BindingSource de Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181478"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : Créer une Table de correspondance avec le composant de BindingSource Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : créer une table de choix avec le composant BindingSource de Windows Forms
 Une table de choix est une table de données ayant une colonne qui affiche les données des enregistrements situés dans une table liée. Dans les procédures suivantes, un contrôle <xref:System.Windows.Forms.ComboBox> permet d'afficher le champ avec la relation de clé étrangère entre la table parent et la table enfant.  
   
  Pour mieux visualiser ces deux tables et cette relation, voici un exemple de table parent et de table enfant :  
@@ -92,7 +92,8 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
 8.  Liez les contrôles autres que <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.BindingNavigator> aux champs de détails du <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`) à afficher.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, composant](bindingsource-component.md)
+- [Composant BindingSource](bindingsource-component.md)
 - [ComboBox, contrôle](combobox-control-windows-forms.md)
 - [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

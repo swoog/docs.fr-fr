@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188745"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procédure : Effectuer une liaison à une collection et afficher des informations basées sur la sélection
 Dans un scénario maître / détail simple, vous avez lié aux données <xref:System.Windows.Controls.ItemsControl> comme un <xref:System.Windows.Controls.ListBox>. En fonction de sélection de l’utilisateur, afficher plus d’informations sur l’élément sélectionné. Cet exemple montre comment implémenter ce scénario.  
@@ -46,8 +46,9 @@ Dans un scénario maître / détail simple, vous avez lié aux données <xref:Sy
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utiliser le modèle maître/détail avec des données hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Utiliser le modèle maître/détail avec des données XML hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d’ensemble des modèles de données](data-templating-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Vue d'ensemble des modèles de données](data-templating-overview.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

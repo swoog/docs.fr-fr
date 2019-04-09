@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer du texte Vertical'
+title: 'Procédure : créer du texte vertical'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 720e343f1b3b20fe3df96a03fbd67ee473ec13f6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190221"
 ---
-# <a name="how-to-create-vertical-text"></a>Procédure : Créer du texte Vertical
+# <a name="how-to-create-vertical-text"></a>Procédure : créer du texte vertical
 Vous pouvez utiliser un <xref:System.Drawing.StringFormat> objet pour spécifier que le texte doit être dessiné verticalement et non horizontalement.  
   
 ## <a name="example"></a>Exemple  
@@ -32,7 +32,8 @@ Vous pouvez utiliser un <xref:System.Drawing.StringFormat> objet pour spécifier
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e` , qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+-   L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e` , qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+
+- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : Installer et configurer les composants d’Activation WCF'
+title: 'Procédure : installer et configurer des composants d’activation WCF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199217"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procédure : Installer et configurer les composants d’Activation WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procédure : installer et configurer des composants d’activation WCF
 Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
   
 -   Installer (ou vérifiez l’installation) les composants d’activation de WCF.  
@@ -41,9 +41,9 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
     ```  
   
     > [!NOTE]
-    >  Cette commande est une ligne unique de texte. Cette commande ajoute une liaison de site net.tcp au site web par défaut qui écoute sur le port TCP 808, quel que soit le nom d’hôte.  
+    >  Cette commande est une ligne unique de texte. Cette commande ajoute une liaison de site net.tcp au site Web par défaut qui écoute sur le port TCP 808, quel que soit le nom d’hôte.  
   
-2.  Bien que toutes les applications d’un site partagent la même liaison net.tcp, chacune d’elle peut activer de manière individuelle la prise en charge net.pipe. Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.  
+2.  Bien que toutes les applications d'un site partagent la même liaison net.tcp, chacune d'elle peut activer de manière individuelle la prise en charge net.pipe. Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -90,7 +90,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
   
 ### <a name="to-remove-the-nettcp-site-binding"></a>Pour supprimer la liaison de site net.tcp  
   
-1.  Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d'invite de commandes au niveau de l'administrateur.  
+1.  Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d’invite de commandes au niveau de l’administrateur.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -101,7 +101,8 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
     >  Cette commande est une ligne unique de texte.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Activation TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Activation MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [Activation de NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+
+- [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [MSMQ Activation](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [NamedPipe Activation](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
 - [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

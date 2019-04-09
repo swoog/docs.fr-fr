@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Sécuriser un Service avec un certificat X.509'
+title: 'Procédure : sécuriser un service avec un certificat X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181504"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procédure : Sécuriser un Service avec un certificat X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procédure : sécuriser un service avec un certificat X.509
 Sécurisation d’un service avec un certificat X.509 est une technique de base qui utilisent la plupart des liaisons Windows Communication Foundation (WCF). Cette rubrique décrit les étapes de la configuration d'un service auto-hébergé avec un certificat X.509.  
   
  L'une des conditions préalables est de disposer d'un certificat valide pouvant être utilisé pour authentifier le serveur. Le certificat doit être envoyé au serveur par une autorité de certification approuvée. Si le certificat n'est pas valide, les clients qui essayeront d'utiliser le service ne lui feront pas confiance, et par conséquent aucune connexion ne sera établie. Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -41,12 +41,12 @@ Sécurisation d’un service avec un certificat X.509 est une technique de base 
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  Ajoutez <xref:System.ServiceModel.Description.ServiceEndpoint> au service à l'aide de la méthode <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Transmettez le contrat, la liaison et une adresse de point de terminaison au constructeur, tel qu’indiqué dans le code suivant.  
+6.  Ajoutez <xref:System.ServiceModel.Description.ServiceEndpoint> au service à l'aide de la méthode <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Transmettez le contrat, la liaison et une adresse de point de terminaison au constructeur, tel qu'indiqué dans le code suivant.  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  Facultatif. Pour récupérer les métadonnées du service, créez un objet <xref:System.ServiceModel.Description.ServiceMetadataBehavior> et affectez <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> à la propriété `true`.  
+7.  Optionnel. Pour récupérer les métadonnées du service, créez un objet <xref:System.ServiceModel.Description.ServiceMetadataBehavior> et affectez <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> à la propriété `true`.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
@@ -83,4 +83,5 @@ Sécurisation d’un service avec un certificat X.509 est une technique de base 
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

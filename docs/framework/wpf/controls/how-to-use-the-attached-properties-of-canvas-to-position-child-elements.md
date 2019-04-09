@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Utiliser les propriétés jointes d'une zone de dessin pour positionner des éléments enfants"
+title: 'Procédure : Utiliser les propriétés jointes d’un canevas pour positionner des éléments enfants'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: a34bac644bd0fa4c15d76d72d0502b311c49d018
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 347c8502bd4c5fafcde7a142327f85bfb75b9954
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159625"
 ---
-# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Procédure : Utiliser les propriétés jointes d'une zone de dessin pour positionner des éléments enfants
+# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Procédure : Utiliser les propriétés jointes d’un canevas pour positionner des éléments enfants
 Cet exemple montre comment utiliser les propriétés jointes de <xref:System.Windows.Controls.Canvas> pour positionner des éléments enfants.  
   
 ## <a name="example"></a>Exemple  
@@ -28,12 +28,13 @@ Chaque <xref:System.Windows.Controls.Button> est positionné par rapport au pare
  [!code-vb[CanvasAttachedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.Canvas.Bottom%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
 - <xref:System.Windows.Controls.Canvas.Right%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
-- [Vue d’ensemble de Panel](panels-overview.md)
-- [Rubriques de guide pratique](canvas-how-to-topics.md)
+- [Vue d'ensemble de Panel](panels-overview.md)
+- [Rubriques Comment](canvas-how-to-topics.md)
 - [Vue d'ensemble des propriétés jointes](../advanced/attached-properties-overview.md)

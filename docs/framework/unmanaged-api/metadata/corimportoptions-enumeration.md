@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156128"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions, énumération
 Contient des valeurs d'indicateur qui contrôlent le comportement lors de l'importation d'un assembly en dehors de la portée actuelle.  
@@ -58,12 +58,13 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllCustomAttributes`|Indique que tous les attributs personnalisés, y compris ceux qui sont supprimés, doivent être énumérés.|  
 |`MDImportOptionAllExportedTypes`|Indique que tous les types exportés, y compris ceux qui sont supprimés, doivent être énumérés.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

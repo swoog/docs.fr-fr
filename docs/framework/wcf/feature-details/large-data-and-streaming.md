@@ -2,12 +2,12 @@
 title: Données volumineuses et diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176330"
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 Windows Communication Foundation (WCF) est une infrastructure de communications basées sur XML. Étant donné que les données XML sont généralement codées au format texte standard défini dans le [spécification XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), connecté les architectes et développeurs de systèmes sont généralement concernées par l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte du XML pose des défis particuliers pour le transfert efficace de données binaires.  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -239,4 +239,5 @@ public class UploadStreamMessage
 >  La décision d'utiliser des transferts mis en mémoire tampon ou diffusés en continu est une décision locale du point de terminaison. Pour les transports HTTP, le mode de transfert ne se propage pas sur une connexion ou sur des serveurs proxy et d'autres intermédiaires. La description de l'interface de service ne reflète pas le mode de transfert défini. Après avoir généré un client WCF pour un service, vous devez modifier le fichier de configuration des services destinés à être utilisés avec des transferts en flux continu pour définir le mode. Pour les transports TCP et les transports de canal nommé, le mode de transfert est propagé sous forme d'assertion de stratégie.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Procédure : activer le streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

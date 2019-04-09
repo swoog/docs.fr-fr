@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158871"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modification des données avec un DbDataAdapter
 La méthode <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> d'un objet <xref:System.Data.Common.DbProviderFactory> produit un objet <xref:System.Data.Common.DbDataAdapter> fortement typé pour le fournisseur de données sous-jacent spécifié lors de la création de la fabrique. Vous pouvez ensuite utiliser un objet <xref:System.Data.Common.DbCommandBuilder> pour créer des commandes permettant d'insérer, de mettre à jour et de supprimer des données d'un <xref:System.Data.DataSet> dans une source de données.  
@@ -37,13 +37,14 @@ La méthode <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> d'u
 |`OleDb`|Utilise des marqueurs de paramètres positionnels indiqués par un point d'interrogation (`?`).|  
 |`Odbc`|Utilise des marqueurs de paramètres positionnels indiqués par un point d'interrogation (`?`).|  
   
- Le modèle Factory n'est pas utile pour créer des objets `DbCommand` et `DbDataAdapter` paramétrés. Vous devrez ajouter une branche dans votre code pour créer des paramètres qui sont adaptés à votre fournisseur de données.  
+ Le modèle Factory n'est pas utile pour créer des objets `DbCommand` et `DbDataAdapter` paramétrés. Vous devrez créer une branche dans votre code pour créer des paramètres qui sont adaptés à votre fournisseur de données.  
   
 > [!IMPORTANT]
 >  Le fait d'éviter tous les paramètres spécifiques au fournisseur en utilisant la concaténation de chaînes pour construire des instructions SQL directes n'est pas recommandé pour des raisons de sécurité. L'utilisation de la concaténation de chaînes au lieu de paramètres rend votre application vulnérable aux attaques par injection de code SQL.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Obtention d’un DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [Obtention d'un DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

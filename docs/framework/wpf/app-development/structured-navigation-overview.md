@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161510"
 ---
 # <a name="structured-navigation-overview"></a>Vue d'ensemble de la navigation structurée
 Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, ou un <xref:System.Windows.Navigation.NavigationWindow> est composé de pages qui peuvent être identifiés par le pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] et navigation en liens hypertexte. La structure des pages et comment elles sont accessibles, tel que défini par des liens hypertexte, porte le nom de topologie de navigation. Une telle topologie convient à différents types d’applications, notamment celles permettant de parcourir des documents. Pour de telles applications, l’utilisateur peut naviguer d’une page à une autre page sans qu’une page ait besoin de savoir quoi que ce soit sur l’autre page.  
@@ -20,9 +20,7 @@ Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../incl
  Toutefois, d’autres types d’applications ont des pages qui ont besoin de savoir quand une navigation parmi les pages a eu lieu. Par exemple, considérez une application de ressources humaines ayant une page pour répertorier tous les employés d’une organisation, la page « Liste des employés ». Cette page pourrait également permettre aux utilisateurs d’ajouter un nouvel employé en cliquant sur un lien hypertexte. En cas de clic sur ce lien, l’utilisateur accède à une page « Ajouter un employé » pour recueillir les détails du nouvel employé et les retourner à la page « Liste des employés » afin de créer le nouvel employé et de mettre à jour la liste. Ce style de navigation s’apparente à l’appel d’une méthode pour effectuer un traitement et retourner une valeur, ce qui porte le nom de programmation structurée. Ce style de navigation est appelé *navigation structurée*.  
   
  Le <xref:System.Windows.Controls.Page> classe n’implémente pas la prise en charge pour la navigation structurée. Au lieu de cela, le <xref:System.Windows.Navigation.PageFunction%601> dérive de la classe <xref:System.Windows.Controls.Page> et l’étend avec les constructions de base requises pour la navigation structurée. Cette rubrique montre comment établir à l’aide de la navigation structurée <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Navigation structurée  
  Quand une page en appelle une autre dans une navigation structurée, certains ou tous les comportements suivants sont nécessaires :  
@@ -170,6 +168,7 @@ Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../incl
  Dans d’autres cas, les applications peuvent avoir des topologies de navigation complexes qui dépendent de la navigation structurée pour fonctionner efficacement. Pour plus d’informations, consultez [Vue d’ensemble des topologies de navigation](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Vue d’ensemble des topologies de navigation](navigation-topologies-overview.md)
+- [Vue d'ensemble des topologies de navigation](navigation-topologies-overview.md)

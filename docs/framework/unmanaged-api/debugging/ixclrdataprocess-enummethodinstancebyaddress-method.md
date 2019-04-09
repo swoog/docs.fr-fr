@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 23b567e4119578fba2f8cd4ba47f66dcf56a3878
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a51c709b0b331127b74d98c4dc42e2772fd7f2db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166437"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress (méthode)
 
@@ -49,14 +49,15 @@ HRESULT EnumMethodInstanceByAddress(
 
 La méthode fournie fait partie de la `IXCLRDataProcess` interface et correspond à l’emplacement de la table de la méthode virtuelle de 28.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).   
 **En-tête :** Aucun.   
 **Bibliothèque :** Aucun.   
-**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
+**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
  
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumération de CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Débogage](index.md)
-- [Interface de IXCLRDataProcess](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess, interface](ixclrdataprocess-interface.md)

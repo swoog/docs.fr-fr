@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Personnaliser le dessin d’un contrôle ToolStrip'
+title: 'Procédure : personnaliser le dessin d’un contrôle ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172184"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Procédure : Personnaliser le dessin d’un contrôle ToolStrip
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Procédure : personnaliser le dessin d’un contrôle ToolStrip
 Les contrôles <xref:System.Windows.Forms.ToolStrip> disposent des classes de rendu (peinture) associées suivantes :  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> fournit l'apparence et le style de votre système d'exploitation.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> fournit l’apparence et le style de votre système d’exploitation.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> fournit l'apparence et le style de Microsoft Office.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> fournit l’apparence et le style de Microsoft Office.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> est la classe de base abstraite pour les deux autres classes de rendu.  
+-   <xref:System.Windows.Forms.ToolStripRenderer> est la classe de base abstraite pour les autres classes de rendu de deux.  
   
  Pour le dessin personnalisé (également appelé Owner Draw) d'un <xref:System.Windows.Forms.ToolStrip>, vous pouvez substituer l'une des classes du convertisseur et modifier un aspect de la logique de rendu.  
   
@@ -115,7 +115,7 @@ Les contrôles <xref:System.Windows.Forms.ToolStrip> disposent des classes de re
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Pour désactiver les couleurs Microsoft Office pour l'application entière  
   
--   Affectez la valeur `false` à <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType>.  
+-   Affectez la valeur <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> à `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Pour désactiver les couleurs Microsoft Office pour un contrôle ToolStrip  
   
@@ -134,9 +134,10 @@ Les contrôles <xref:System.Windows.Forms.ToolStrip> disposent des classes de re
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [Contrôles avec prise en charge intégrée du dessin owner-drawn](controls-with-built-in-owner-drawing-support.md)
-- [Guide pratique pour Créer et définir un convertisseur personnalisé pour le contrôle ToolStrip dans les Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Contrôles avec prise en charge intégrée des dessins owner-drawn](controls-with-built-in-owner-drawing-support.md)
+- [Procédure : créer et définir un renderer personnalisé pour le contrôle ToolStrip dans Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Vue d’ensemble du contrôle ToolStrip](toolstrip-control-overview-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173093"
 ---
 # <a name="use-the-automationid-property"></a>Utiliser la propriété AutomationID
 > [!NOTE]
@@ -22,16 +22,16 @@ ms.locfileid: "57674833"
   
  Cette rubrique contient des scénarios et des exemples de code qui montrent comment et quand <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> peut être utilisé pour localiser un élément dans l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifie de manière unique un élément UI Automation parmi ses frères. Pour plus d’informations sur les identificateurs de propriété associés à l’identification du contrôle, consultez [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifie de façon unique un élément UI Automation parmi ses frères. Pour plus d’informations sur les identificateurs de propriété associés à l’identification du contrôle, consultez [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  La propriété<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ne garantit pas une identité unique dans toute l’arborescence. Elle nécessite généralement un conteneur et des informations de portée pour être utile. Par exemple, une application peut contenir un contrôle de menu avec plusieurs éléments de menu de niveau supérieur qui, à leur tour, contiennent plusieurs éléments enfants. Ces éléments de menu secondaires peuvent être identifiés par un schéma générique tel que « Item1 », « Item2 » et ainsi de suite, qui autorise les identificateurs dupliqués pour les enfants dans l’ensemble des éléments de menu de niveau supérieur.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ne garantit pas une identité unique dans toute l’arborescence ; Il doit généralement conteneur et les informations de portée pour être utile. Par exemple, une application peut contenir un contrôle de menu avec plusieurs éléments de menu de niveau supérieur qui, à leur tour, contiennent plusieurs éléments enfants. Ces éléments de menu secondaires peuvent être identifiés par un schéma générique tel que « Item1 », « Item2 » et ainsi de suite, qui autorise les identificateurs dupliqués pour les enfants dans l’ensemble des éléments de menu de niveau supérieur.  
   
 ## <a name="scenarios"></a>Scénarios  
  Trois scénarios principaux d’application cliente UI Automation ont été identifiés et nécessitent l’utilisation de <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> pour obtenir des résultats exacts et cohérents lors de la recherche d’éléments.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> est pris en charge par tous les éléments UI Automation dans l’affichage de contrôle, à l’exception des fenêtres d’application de niveau supérieur, des éléments UI Automation dérivés des contrôles [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] n’ayant pas d’ID ou de x:Uid, et des éléments UI Automation dérivés des contrôles [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] n’ayant pas d’ID de contrôle.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> est pris en charge par tous les éléments UI Automation dans l’affichage de contrôle à l’exception de windows de l’application de niveau supérieur, les éléments UI Automation dérivés [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] contrôles qui n’ont pas un ID ou x : Uid et éléments UI Automation dérivés [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] qui contrôle n’ont pas un ID de contrôle.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Utiliser un AutomationID unique et détectable pour localiser un élément spécifique dans l’arborescence UI Automation  
   
@@ -57,6 +57,7 @@ ms.locfileid: "57674833"
 -   Dans certaines circonstances, l’unicité d’AutomationID n’étant garantie que parmi ses frères, plusieurs éléments dans l’arborescence UI Automation peuvent avoir des valeurs de propriété AutomationID identiques. Dans ce cas, les éléments peuvent être identifiés de manière unique en fonction d’un parent et, si nécessaire, d’un grand-parent. Par exemple, un développeur peut fournir une barre de menus avec plusieurs éléments de menu, chacun contenant plusieurs éléments de menu enfants dans lesquels les enfants sont identifiés avec des AutomationID séquentiels tels que « Item1 », « Item2 » et ainsi de suite. Chaque élément de menu peut ensuite être identifié de manière unique par son AutomationID accompagné de l’AutomationID de son parent et, si nécessaire, de son grand-parent.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

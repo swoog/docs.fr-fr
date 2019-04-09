@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: 6c2c33c8c03751e87d71e65523b82d92b18f31c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168478"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>Vue d'ensemble du composant MainMenu (Windows Forms)
 > [!IMPORTANT]
@@ -25,9 +25,10 @@ ms.locfileid: "57709868"
  Un élément de menu peut être désigné comme élément par défaut en définissant le <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> propriété `true`. L’élément par défaut s’affiche en gras lorsque l’utilisateur clique sur le menu. L’élément de menu <xref:System.Windows.Forms.MenuItem.Checked%2A> propriété est `true` ou `false`et indique si l’élément de menu est sélectionné. L’élément de menu <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> propriété personnalise l’apparence de l’élément sélectionné : si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> a la valeur `true`, une case d’option apparaît en regard de l’élément ; si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> a la valeur `false`, une coche apparaît en regard de l’élément.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.MenuItem>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

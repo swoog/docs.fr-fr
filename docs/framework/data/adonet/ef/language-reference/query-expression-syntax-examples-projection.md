@@ -1,19 +1,19 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Projection'
+title: 'Exemples de syntaxe d’expression de requête : Projection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 3e4b30c5d4d1cd5703ff6ec15a1c3fe32e41f42a
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178033"
 ---
-# <a name="query-expression-syntax-examples-projection"></a>Exemples de syntaxe d’Expression de requête : Projection
-Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. `From … From …` est l'équivalent basé sur une requête de la méthode `SelectMany`. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
+# <a name="query-expression-syntax-examples-projection"></a>Exemples de syntaxe d’expression de requête : Projection
+Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. `From … From …` équivaut à la requête en fonction du `SelectMany` (méthode). Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
   
@@ -61,4 +61,5 @@ Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) 
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

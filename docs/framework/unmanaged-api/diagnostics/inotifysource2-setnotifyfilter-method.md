@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e2d0ed5ba5411f637c8370d366a96f0e028838
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 37e4abeebce155a4c332e864b4dfb6cf5a1141ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151747"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter, méthode
 Assigne un filtre de notification pour une utilisation avec cette source.  
@@ -47,10 +47,11 @@ HRESULT SetNotifyFilter
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

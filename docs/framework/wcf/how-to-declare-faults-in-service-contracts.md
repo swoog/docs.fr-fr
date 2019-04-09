@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Déclarer des erreurs dans les contrats de Service'
+title: 'Procédure : Déclarer des erreurs dans les contrats de service'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129491"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Procédure : Déclarer des erreurs dans les contrats de Service
+# <a name="how-to-declare-faults-in-service-contracts"></a>Procédure : Déclarer des erreurs dans les contrats de service
 Dans le code managé, des exceptions sont levées en cas de conditions d'erreur. Dans les applications Windows Communication Foundation (WCF), toutefois, contrats de service spécifient les informations d’erreur sont retournées aux clients en déclarant des erreurs SOAP dans le contrat de service. Pour une vue d’ensemble de la relation entre les exceptions et erreurs, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Créer un contrat de service qui spécifie une erreur SOAP  
@@ -33,7 +33,7 @@ Dans le code managé, des exceptions sont levées en cas de conditions d'erreur.
   
 #### <a name="throw-the-specified-soap-fault-in-the-operation"></a>Générer l'erreur SOAP spécifiée dans l'opération  
   
-1.  Lorsqu'une condition d'erreur spécifique à <xref:System.ServiceModel.FaultContractAttribute> se produit dans une opération, levez une nouvelle <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> où l'erreur SOAP spécifiée est le paramètre de type. L'exemple suivant montre comment générer `GreetingFault` dans le `SampleMethod` présenté dans la procédure précédente et dans la section de code suivante.  
+1.  Lorsqu’une condition d’erreur spécifique à <xref:System.ServiceModel.FaultContractAttribute> se produit dans une opération, levez une nouvelle <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> où l’erreur SOAP spécifiée est le paramètre de type. L'exemple suivant montre comment générer `GreetingFault` dans le `SampleMethod` présenté dans la procédure précédente et dans la section de code suivante.  
   
      [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
      [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
@@ -45,5 +45,6 @@ Dans le code managé, des exceptions sont levées en cas de conditions d'erreur.
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

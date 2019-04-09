@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180399"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport, interface
 Fournit des méthodes pour importer et manipuler les métadonnées existantes à partir d'un fichier exécutable portable (PE) ou d'une autre source, comme une bibliothèque de types ou un fichier binaire de métadonnées autonome au moment de l'exécution.  
@@ -62,8 +62,8 @@ Fournit des méthodes pour importer et manipuler les métadonnées existantes à
 |[FindTypeRef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findtyperef-method.md)|Obtient un pointeur vers le jeton de métadonnées TypeRef qui référence le type dans l'étendue de recherche spécifiée avec le nom spécifié.|  
 |[GetClassLayout, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)|Obtient les informations de disposition pour la classe référencée par le jeton TypeDef spécifié.|  
 |[GetCustomAttributeByName, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributebyname-method.md)|Obtient la valeur de l'attribut personnalisé, en fonction de son nom.|  
-|[GetCustomAttributeProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Obtient la valeur de l'attribut personnalisé en fonction de son jeton de métadonnées.|  
-|[GetEventProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|Obtient les informations de métadonnées (notamment le type de déclaration, les méthodes d'ajout et de suppression pour les délégués et tous les indicateurs et autres données associés) pour l'événement représenté par le jeton d'événement spécifié.|  
+|[GetCustomAttributeProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Obtient la valeur de l'attribut personnalisé, en fonction de son jeton de métadonnées.|  
+|[GetEventProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|Obtient les informations de métadonnées (notamment le type déclarant, les méthodes d’ajout et de suppression pour les délégués et tous les indicateurs et autres données associés) pour l’événement représenté par le jeton d’événement spécifié.|  
 |[GetFieldMarshal, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldmarshal-method.md)|Obtient un pointeur vers le type natif non managé du champ représenté par le jeton de métadonnées Field spécifié.|  
 |[GetFieldProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldprops-method.md)|Obtient les métadonnées associées au champ référencé par le jeton FieldDef spécifié.|  
 |[GetInterfaceImplProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getinterfaceimplprops-method.md)|Obtient un pointeur vers les jetons de métadonnées du type qui implémente la méthode spécifiée et de l'interface qui déclare cette méthode.|  
@@ -94,7 +94,7 @@ Fournit des méthodes pour importer et manipuler les métadonnées existantes à
 |[ResolveTypeRef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|Obtient des informations de type pour le type référencé par le jeton TypeRef spécifié.|  
   
 ## <a name="remarks"></a>Notes  
- La vocation première de la conception de l’interface `IMetaDataImport` est d’être utilisée par les outils et services qui importent des informations de type (par exemple, les outils de développement) ou qui gèrent des composants déployés (par exemple, les services de résolution/d’activation). Les méthodes `IMetaDataImport` appartiennent aux catégories de tâches suivantes :  
+ La vocation première de la conception de l'interface `IMetaDataImport` est d'être utilisée par les outils et services qui importent des informations de type (par exemple, les outils de développement) ou qui gèrent des composants déployés (par exemple, les services de résolution/d'activation). Les méthodes `IMetaDataImport` appartiennent aux catégories de tâches suivantes :  
   
 -   Énumération des collections d'éléments dans la portée des métadonnées.  
   
@@ -102,17 +102,18 @@ Fournit des méthodes pour importer et manipuler les métadonnées existantes à
   
 -   Obtention des propriétés d'un élément spécifié.  
   
--   Les méthodes Get sont conçues spécifiquement pour retourner les propriétés à valeur unique d'un élément de métadonnées. Quand la propriété est une référence à un autre élément, un jeton est retourné pour cet élément. Tout type d'entrée de pointeur peut être NULL pour indiquer que la valeur particulière n'est pas demandée. Pour obtenir les propriétés qui sont essentiellement des objets de collection (par exemple, la collection des interfaces qu'une classe implémente), utilisez les méthodes d'énumération.  
+-   Les méthodes Get sont conçues spécifiquement pour retourner les propriétés à valeur unique d'un élément de métadonnées. Quand la propriété est une référence à un autre élément, un jeton est retourné pour cet élément. Tout type d'entrée de pointeur peut être NULL pour indiquer que la valeur particulière n'est pas demandée. Pour obtenir les propriétés qui sont essentiellement des objets de collection (par exemple, la collection des interfaces qu’une classe implémente), utilisez les méthodes d’énumération.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

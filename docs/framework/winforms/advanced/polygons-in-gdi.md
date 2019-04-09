@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132624"
 ---
 # <a name="polygons-in-gdi"></a>Polygones dans GDI+
 Un polygone est une forme fermée avec trois ou quatre côtés. Par exemple, un triangle est un polygone à trois côtés, un rectangle est un polygone avec les quatre côtés et un pentagone est un polygone à cinq côtés. L’illustration suivante montre plusieurs polygones.  
@@ -32,7 +32,8 @@ Un polygone est une forme fermée avec trois ou quatre côtés. Par exemple, un 
  ![Polygon](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Guide pratique pour Créer un stylet](how-to-create-a-pen.md)
+- [Procédure : créer un stylet](how-to-create-a-pen.md)

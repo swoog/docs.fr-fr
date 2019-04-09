@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser un Thread d’arrière-plan pour rechercher des fichiers'
+title: 'Procédure : utiliser un thread d’arrière-plan pour rechercher des fichiers'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157746"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procédure : Utiliser un Thread d’arrière-plan pour rechercher des fichiers
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procédure : utiliser un thread d’arrière-plan pour rechercher des fichiers
 Le <xref:System.ComponentModel.BackgroundWorker> composant remplace et ajoute des fonctionnalités à la <xref:System.Threading> espace de noms ; Toutefois, le <xref:System.Threading> espace de noms est conservé pour compatibilité descendante et une utilisation ultérieure, si vous choisissez. Pour plus d’informations, consultez [vue d’ensemble du composant BackgroundWorker](backgroundworker-component-overview.md).  
   
  Windows Forms utilise le modèle de thread unique cloisonné (STA), car Windows Forms repose sur des fenêtres Win32 natives qui sont par nature avec thread cloisonné. Le modèle STA implique une fenêtre peut être créée sur n’importe quel thread, mais elle ne peut pas basculer les threads créés une fois que tous les appels de fonction à ce dernier doivent se produire sur son thread de création. En dehors de Windows Forms, les classes dans le .NET Framework utilisent le modèle de thread libre. Pour plus d’informations à propos du threading dans le .NET Framework, consultez [Threading](../../../standard/threading/index.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
-- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Vue d’ensemble du modèle asynchrone basé sur des événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

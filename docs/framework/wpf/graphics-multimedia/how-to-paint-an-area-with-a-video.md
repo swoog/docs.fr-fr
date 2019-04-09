@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151175"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Procédure : Peindre une zone avec une vidéo
 Cet exemple montre comment peindre une zone avec le média. Pour peindre une zone avec un média consiste à utiliser un <xref:System.Windows.Controls.MediaElement> avec un <xref:System.Windows.Media.VisualBrush>. Utiliser le <xref:System.Windows.Controls.MediaElement> pour charger et lire le média, puis utilisez-le pour définir le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété de la <xref:System.Windows.Media.VisualBrush>. Vous pouvez ensuite utiliser le <xref:System.Windows.Media.VisualBrush> pour peindre une zone avec le média chargé.  
@@ -38,7 +38,8 @@ Cet exemple montre comment peindre une zone avec le média. Pour peindre une zon
  Pour plus d’informations sur l’ajout d’un fichier de contenu, tel qu’un fichier multimédia, à votre application, consultez [ressource d’Application WPF, de contenu et de fichiers de données](../app-development/wpf-application-resource-content-and-data-files.md). Lorsque vous ajoutez un fichier multimédia, vous devez l’ajouter en tant qu’un fichier de contenu, et non comme un fichier de ressources.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.VisualBrush>
-- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
-- [Vue d’ensemble de TileBrush](tilebrush-overview.md)
-- [Vue d’ensemble multimédia](multimedia-overview.md)
+- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
+- [Vue d'ensemble de TileBrush](tilebrush-overview.md)
+- [Vue d'ensemble du multimédia](multimedia-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198567"
 ---
 # <a name="data-member-order"></a>Classement des membres de données
 Dans certaines applications, il peut s'avérer utile de connaître l'ordre dans lequel les données émanant des divers membres de données sont envoyées ou l'ordre selon lequel leur réception est attendue (il peut, par exemple s'agir de l'ordre dans lequel les données apparaissent dans le langage XML sérialisé). Dans certains cas, la modification de cet ordre peut s'avérer nécessaire. Cette rubrique contient des explications sur les règles régissant ces types de classements.  
@@ -63,6 +63,7 @@ Dans certaines applications, il peut s'avérer utile de connaître l'ordre dans 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Équivalence de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

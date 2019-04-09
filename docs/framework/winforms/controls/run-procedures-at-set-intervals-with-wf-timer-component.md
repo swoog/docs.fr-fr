@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Exécuter des procédures à intervalles définis avec le composant Timer Windows Forms'
+title: 'Procédure : exécuter des procédures à des intervalles définis avec le composant Timer Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed433ee03bc82931e9b640f45ebd798e0ef73204
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127034"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Procédure : Exécuter des procédures à intervalles définis avec le composant Timer Windows Forms
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Procédure : exécuter des procédures à des intervalles définis avec le composant Timer Windows Forms
 Il peut arriver que vous souhaitiez créer une procédure qui s'exécute à intervalles réguliers jusqu'à ce qu'une boucle soit terminée ou qu'un intervalle de temps spécifique soit écoulé. Vous pouvez pour cela utiliser le composant <xref:System.Windows.Forms.Timer>.  
   
  Ce composant est conçu pour un environnement Windows Forms. Si vous avez besoin d’un minuteur adapté à un environnement de serveur, consultez l’article [Introduction aux minuteurs serveur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
@@ -243,6 +243,7 @@ private:
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Timer>
 - [Timer, composant](timer-component-windows-forms.md)
 - [Vue d’ensemble du composant Timer](timer-component-overview-windows-forms.md)

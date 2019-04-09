@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122302"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concepts fondamentaux concernant Windows Communication Foundation
 Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un service WCF et un client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour découvrir la programmation WCF, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -54,7 +54,7 @@ Ce document fournit une vue d’ensemble de l’architecture de Windows Communic
  service  
  Construction qui expose un ou plusieurs points de terminaison, chacun de ces derniers exposant une ou plusieurs opérations de service.  
   
- Point de terminaison (endpoint)  
+ point de terminaison  
  Construction à laquelle les messages sont envoyés ou de laquelle ils sont reçus (ou les deux). Il comprend un emplacement (une adresse) qui définit où les messages peuvent être envoyés, une spécification du mécanisme de communication (une liaison) qui décrit la façon dont les messages doivent être envoyés, et une définition pour un ensemble de messages qui peuvent être envoyés ou reçus (ou les deux) à ce emplacement (un contrat de service) qui décrit le message peut être envoyé.  
   
  Un service WCF est exposé au monde extérieur comme une collection de points de terminaison.  
@@ -119,11 +119,11 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  instancier  
  Un service dispose d'un modèle d'instanciation. Il existe trois modèles d'instanciation : « unique », dans lequel un objet CLR unique prend en charge tous les clients ; « par appel », dans lequel un nouvel objet CLR est créé pour gérer chaque appel du client ; et « par session », dans lequel un ensemble d'objets CLR est créé, un pour chaque session. Le choix d’un modèle d’instanciation dépend des spécifications de l’application et du modèle d’utilisation attendu du service.  
   
- Application cliente (client application)  
+ application cliente  
  Programme qui échange des messages avec un ou plusieurs points de terminaison. L'application cliente commence par créer l'instance d'un client WCF et appelle les méthodes de ce client. Il est important de noter qu'une même application peut être à la fois un client et un service.  
   
  Canal (channel)  
- Implémentation concrète d'un élément de liaison. La liaison représente la configuration, et le canal est l'implémentation associée à cette configuration. Par conséquent, un canal est associé à chaque élément de liaison. Les canaux s’empilent les uns sur les autres pour créer l’implémentation concrète de la liaison : la pile de canaux.  
+ Implémentation concrète d'un élément de liaison. La liaison représente la configuration, et le canal est l’implémentation associée à cette configuration. Par conséquent, un canal est associé à chaque élément de liaison. Les canaux s’empilent les uns sur les autres pour créer l’implémentation concrète de la liaison : la pile de canaux.  
   
  Client WCF (WCF client)  
  Construction d'application cliente qui expose les opérations de service en tant que méthodes (dans le langage de programmation [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de votre choix, tel que Visual Basic ou Visual C#). N'importe quelle application peut accueillir un client WCF, y compris une application hébergeant un service. Par conséquent, il est possible de créer un service qui inclut des clients WCF d'autres services.  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Abrégé pour l'ensemble croissant des spécifications de services Web (WS), telles que WS-Security, WS-ReliableMessaging et ainsi de suite, implémentées dans WCF.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Architecture Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

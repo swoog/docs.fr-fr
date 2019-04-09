@@ -2,12 +2,12 @@
 title: <security> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 8bc35b3bc8f0cbe1a51ceab63d876d5859d6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171507"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<sécurité > de \<wsDualHttpBinding >
 Définit les fonctionnalités de sécurité de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -39,9 +39,9 @@ Définit les fonctionnalités de sécurité de la [ \<wsDualHttpBinding >](../..
   
 ## <a name="mode-attribute"></a>Mode, attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|None|La sécurité est désactivée.|  
+|Aucun.|La sécurité est désactivée.|  
 |Message|La sécurité est fournie à l'aide de la sécurité des messages SOAP.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -57,9 +57,10 @@ Définit les fonctionnalités de sécurité de la [ \<wsDualHttpBinding >](../..
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
 ## <a name="remarks"></a>Notes  
- Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
+ Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

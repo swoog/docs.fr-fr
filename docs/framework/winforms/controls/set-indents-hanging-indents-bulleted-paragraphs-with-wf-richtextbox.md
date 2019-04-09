@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir les retraits, les retraits négatifs et des paragraphes à puces avec le contrôle RichTextBox Windows Forms'
+title: 'Procédure : définir des retraits, des retraits négatifs et des paragraphes à puces avec le contrôle RichTextBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140645"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procédure : Définir les retraits, les retraits négatifs et des paragraphes à puces avec le contrôle RichTextBox Windows Forms
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procédure : définir des retraits, des retraits négatifs et des paragraphes à puces avec le contrôle RichTextBox Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de nombreuses options pour mettre en forme le texte affiché. Vous pouvez mettre en forme des paragraphes sélectionnés sous forme de listes à puces en définissant le <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriété. Vous pouvez également utiliser le <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, et <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriétés à définir la mise en retrait des paragraphes par rapport à gauche et les bords droit du contrôle et le bord gauche des autres lignes de texte.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Pour mettre en forme un paragraphe sous forme de liste à puces  
@@ -69,6 +69,7 @@ Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de n
     >  Toutes ces propriétés affectent tous les paragraphes contenant du texte sélectionné et également le texte tapé après le point d’insertion actif. Par exemple, quand un utilisateur sélectionne un mot dans un paragraphe puis ajuste le retrait, les nouveaux paramètres s’appliquent à l’ensemble du paragraphe contenant ce mot et également à tous les paragraphes entrés ultérieurement après le paragraphe sélectionné. Pour plus d’informations sur la sélection de texte par programmation, consultez <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, contrôle](richtextbox-control-windows-forms.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

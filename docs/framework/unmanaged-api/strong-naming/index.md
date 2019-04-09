@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120755"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nom fort (Informations de référence sur les API non managées)
 L’API de nommage fort permet à un client d’administrer la signature avec noms forts pour les assemblys.  
@@ -107,5 +107,6 @@ L’API de nommage fort permet à un client d’administrer la signature avec no
  Représente la clé publique d’une paire de clés publique/privée au format binaire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
 - [Informations de référence sur les API non managées](../../../../docs/framework/unmanaged-api/index.md)

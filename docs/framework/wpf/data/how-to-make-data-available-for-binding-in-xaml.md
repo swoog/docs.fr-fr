@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145364"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procédure : Rendre des données disponibles pour la liaison en XAML
 Cette rubrique présente les différentes manières vous rendre les données disponibles pour la liaison dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], selon les besoins de votre application.  
@@ -43,5 +43,6 @@ Cette rubrique présente les différentes manières vous rendre les données dis
  Pour plus d’informations sur les nombreuses façons vous pouvez spécifier les données que vous liez à, consultez [spécifier la Source de liaison](how-to-specify-the-binding-source.md). Pour plus d’informations sur les types de données que vous pouvez lier à ou d’implémenter votre propre [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objets pour la liaison, consultez [vue d’ensemble des Sources de liaison](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

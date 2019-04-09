@@ -1,18 +1,18 @@
 ---
-title: "Procédure : Créer une forme à l'aide d'un PathGeometry"
+title: 'Procédure : Créer une forme à l’aide d’un PathGeometry'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], creating with PathGeometry class
 - graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
-ms.openlocfilehash: ce84f2509116207afa200ddf83dcdc1f8101da13
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0ab703596612524881ab892a1095b0f49cd1551
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159313"
 ---
-# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Procédure : Créer une forme à l'aide d'un PathGeometry
+# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Procédure : Créer une forme à l’aide d’un PathGeometry
 Cet exemple montre comment créer une forme à l’aide de la <xref:System.Windows.Media.PathGeometry> classe. <xref:System.Windows.Media.PathGeometry> les objets sont composés d’un ou plusieurs <xref:System.Windows.Media.PathFigure> objets ; chaque <xref:System.Windows.Media.PathFigure> représente un autre « figure » ou une forme. Chaque <xref:System.Windows.Media.PathFigure> est elle-même composée d’un ou plusieurs <xref:System.Windows.Media.PathSegment> d’objets, chacun représentant une partie connectée de l’illustration ou d’une forme. Types de segment sont <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, et <xref:System.Windows.Media.BezierSegment>.  
   
 ## <a name="example"></a>Exemple  
@@ -30,7 +30,8 @@ Un triangle créé avec un PathGeometry
  Cet exemple fait partie d’un exemple plus vaste ; pour l’exemple complet, consultez [Géométries, exemple](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
-- [Vue d’ensemble de Geometry](geometry-overview.md)
+- [Vue d'ensemble de Geometry](geometry-overview.md)
 - [Géométries, exemple](https://go.microsoft.com/fwlink/?LinkID=159989)

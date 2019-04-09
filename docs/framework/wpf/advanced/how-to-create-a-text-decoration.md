@@ -16,12 +16,12 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133833"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Procédure : Créer une décoration de texte
 Un <xref:System.Windows.TextDecoration> objet est un ornement visuel que vous pouvez ajouter au texte. Il existe quatre types de décorations de texte : souligné, ligne de base, barré et surligné. L’exemple suivant montre les emplacements des ornements de texte par rapport au texte.  
@@ -62,6 +62,7 @@ Un <xref:System.Windows.TextDecoration> objet est un ornement visuel que vous po
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>
 - [Spécifier si un lien hypertexte est souligné ou non](how-to-specify-whether-a-hyperlink-is-underlined.md)

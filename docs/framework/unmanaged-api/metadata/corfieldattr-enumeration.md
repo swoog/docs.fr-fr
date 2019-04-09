@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182375"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr, énumération
 Contient des valeurs qui décrivent les métadonnées concernant un champ.  
@@ -82,12 +82,13 @@ typedef enum CorFieldAttr {
 |`fdHasDefault`|Spécifie que le champ a une valeur par défaut.|  
 |`fdHasFieldRVA`|Spécifie que le champ a une adresse virtuelle relative.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

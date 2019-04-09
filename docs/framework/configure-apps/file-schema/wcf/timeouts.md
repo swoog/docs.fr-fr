@@ -2,12 +2,12 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: 8a8a352380fe6eedb41ead089405e7b79fad29fe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b6ae5faa2dd2ffef9669a0245a75227b0f669cf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118064"
 ---
 # <a name="timeouts"></a>\<timeOuts>
 Représente un élément de configuration qui spécifie l'intervalle de temps pendant lequel l'ouverture ou la fermeture de l'hôte de service est autorisée.  
@@ -45,6 +45,7 @@ Représente un élément de configuration qui spécifie l'intervalle de temps pe
 |[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Élément de configuration qui spécifie des paramètres pour un hôte de service.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - [Hébergement](../../../../../docs/framework/wcf/feature-details/hosting.md)

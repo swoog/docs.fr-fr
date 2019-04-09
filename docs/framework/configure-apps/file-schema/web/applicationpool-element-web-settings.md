@@ -1,16 +1,16 @@
 ---
-title: <applicationPool>, élément (Paramètres Web)
+title: <applicationPool> Élément (paramètres Web)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184728"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool >, élément (paramètres Web)
 Spécifie les paramètres de configuration qui sont utilisés par ASP.NET pour gérer le comportement au niveau du processus lorsqu’une application ASP.NET s’exécute en mode intégré [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou une version ultérieure.  
@@ -95,4 +95,5 @@ Spécifie les paramètres de configuration qui sont utilisés par ASP.NET pour g
 |Peut être vide||  
   
 ## <a name="see-also"></a>Voir aussi
-- [\<system.web>, élément (paramètres web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+
+- [\<System.Web >, élément (paramètres Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

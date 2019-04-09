@@ -2,12 +2,12 @@
 title: Exemples de requête fondée sur une méthode (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 1f2b319d313706fa78e52cfd9aff1361455a441e
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139800"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Exemples de requête fondée sur une méthode (LINQ to DataSet)
 Cette section fournit des LINQ to DataSet programmation des exemples de syntaxe de requête fondée sur une méthode qui utilisent des opérateurs de requête standard. Le <xref:System.Data.DataSet> utilisé dans ces exemples est rempli à l’aide de la `FillDataSet` (méthode), qui est spécifié dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [présentation des opérateurs de requête Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -22,10 +22,10 @@ Cette section fournit des LINQ to DataSet programmation des exemples de syntaxe 
  [Classement](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> et <xref:System.Linq.Enumerable.ThenByDescending%2A> pour interroger un <xref:System.Data.DataSet> et classer les résultats.  
   
- [Opérateurs d’ensembles](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+ [Opérateurs de jeu](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
  Les exemples de cette rubrique montrent comment utiliser les opérateurs <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A> et <xref:System.Linq.Enumerable.Union%2A> pour effectuer des opérations de comparaison basée sur les valeurs sur des ensembles de lignes de données.  
   
- [Opérateurs de conversion](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+ [Conversion, opérateurs](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> et <xref:System.Linq.Enumerable.ToList%2A> pour exécuter immédiatement une expression de requête.  
   
  [Opérateurs d’élément](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
@@ -38,6 +38,7 @@ Cette section fournit des LINQ to DataSet programmation des exemples de syntaxe 
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.GroupJoin%2A> et <xref:System.Linq.Enumerable.Join%2A> pour interroger un <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exemples d’expressions de requête](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)
 - [Exemples d’opérateurs spécifiques aux DataSets](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
-- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Exemples de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

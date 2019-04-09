@@ -2,12 +2,12 @@
 title: Hôte de service WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193016"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Hôte de service WCF (WcfSvcHost.exe)
 Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur de Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service en utilisant le Client Test WCF (WcfTestClient.exe) ou votre propre client, pour rechercher et corriger les erreurs potentielles.  
@@ -34,7 +34,7 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
 |Paramètre|Signification|  
 |---------------|-------------|  
 |`/client`|Paramètre facultatif qui spécifie le chemin d’accès à un fichier exécutable à utiliser une fois les services hébergés. Cette opération lance le Client Test WCF hébergement effectué.|  
-|`/clientArg`|Spécifie une chaîne en tant qu’argument passé à l’application cliente personnalisée.|  
+|`/clientArg`|Spécifie une chaîne en tant qu'argument passé à l'application cliente personnalisée.|  
 |`/?`|Affiche le texte de l'aide.|  
   
 #### <a name="using-wcf-test-client"></a>Utilisation du client test WCF  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Pour plus d’informations sur netsh.exe, consultez «[comment utiliser l’outil Netsh.exe et les commutateurs de ligne de commande](https://go.microsoft.com/fwlink/?LinkId=97877)».  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

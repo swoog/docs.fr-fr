@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ac550ee7b1d66612557b30d15c275c90cf09b8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187329"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress, méthode
 Obtient l’adresse de cet objet « ICorDebugValue », qui est en cours de débogage.  
@@ -42,14 +42,13 @@ HRESULT GetAddress (
 ## <a name="remarks"></a>Notes  
  Si la valeur n’est pas disponible, 0 (zéro) est retournée. Cela peut se produire si la valeur est au moins en partie dans les registres ou stockées dans un handle du RÉCUPÉRATEUR de mémoire (`GCHandle`).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-

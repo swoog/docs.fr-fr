@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158741"
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  
@@ -33,7 +33,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Hiérarchie d'autorités de certification  
  Une hiérarchie d'autorités de certification contient plusieurs CA. Elle est organisée afin que chaque autorité de certification soit certifiée par une autre autorité de certification dans un niveau supérieur de la hiérarchie jusqu'à ce que le sommet de la hiérarchie, également connu sous le *autorité racine*, est atteinte.  
   
- certificat  
+ certificate  
  Déclaration signée numériquement qui contient des informations à propos d'une entité et la clé publique de l'entité, et lie donc ces deux renseignements ensemble. Un certificat est publié par une organisation approuvée (ou entité), appelée autorité de certification, après que l'autorité a vérifié que l'entité est qui elle prétend être.  
   
  Les certificats peuvent contenir des types différents de données. Par exemple, un certificat X.509 inclut le format du certificat, le numéro de série du certificat, l'algorithme utilisé pour signer le certificat, le nom de l'autorité de certification qui a publié le certificat, le nom et la clé publique de l'entité qui demande le certificat, et la signature de l'autorité de certification.  
@@ -45,9 +45,9 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Informations passées d'une entité à une autre et utilisées pour établir l'identité de l'expéditeur. Par exemple, un nom d'utilisateur et un jeton de mot de passe, ou un certificat X.509.  
   
  certificat de client  
- Fait référence à un certificat utilisé pour l'authentification du client, telle que l'authentification d'un navigateur Web sur un serveur Web. Lorsqu’un client de navigateur Web essaie d’accéder à un serveur web sécurisé, le client envoie son certificat au serveur pour lui permettre de vérifier son identité.  
+ Fait référence à un certificat utilisé pour l’authentification du client, telle que l’authentification d’un navigateur Web sur un serveur web. Lorsqu'un client de navigateur Web essaie d'accéder à un serveur Web sécurisé, le client envoie son certificat au serveur pour lui permettre de vérifier son identité.  
   
- credentials  
+ informations d'identification  
  Données d'ouverture de session qu'un principal de sécurité utilise pour établir sa propre identité, telles qu'un mot de passe, ou un ticket de protocole Kerberos. Les informations d'identification sont utilisées pour contrôler l'accès aux ressources.  
   
  données condensées  
@@ -89,7 +89,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  PKCS #7  
  Norme de syntaxe de message de chiffrement. Syntaxe générale des données auxquelles le chiffrement peut être appliqué, telles que les signatures numériques et le chiffrement. Elle fournit également la syntaxe pour diffuser au message des certificats ou des listes de révocation de certificats et d'autres attributs de message, tels que les horodatages.  
   
- texte brut  
+ texte en clair  
  Message non chiffré. Messages en texte brut sont parfois appelés *en texte clair* messages.  
   
  privilège  
@@ -98,7 +98,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  clé privée  
  Moitié secrète d'une paire de clés utilisée dans un algorithme de clé publique. Les clés privées sont utilisées en général pour chiffrer une clé de session symétrique, signer numériquement un message ou déchiffrer un message qui a été chiffré avec la clé publique correspondante. Consultez également « clé publique ».  
   
- process  
+ processus  
  Contexte de sécurité dans lequel une application s'exécute. En général, le contexte de sécurité est associé à un utilisateur, donc toutes les applications qui s'exécutent dans un processus donné récupèrent les autorisations et les privilèges de l'utilisateur à qui elles appartiennent.  
   
  paire de clés publique/privée  
@@ -120,7 +120,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Autorité de certification en haut d'une hiérarchie d'autorités de certification. L'autorité racine certifie les autorités de certification dans le niveau suivant de la hiérarchie.  
   
  algorithme de hachage sécurisé (Secure Hash Algorithm ou SHA)  
- Algorithme de hachage qui génère un résumé du message. L'algorithme de hachage est utilisé avec l'algorithme de signature numérique (DSA) dans la norme de signature numérique (DSS), entre autres. Il y a quatre variétés d'algorithmes SHA : SHA-1, SHA-256-, SHA-384 et SHA-512. SHA-1, SHA-256, SHA-384 et SHA-512. SHA-1 génère un condensat de message en 160 bits. SHA-256, SHA-384 et SHA-512 génèrent respectivement des condensats du message en 256, 384 et 512 bits. L'algorithme SHA a été développé par le National Institute of Standards and Technology (NIST) et par la National Security Agency (NSA).  
+ Algorithme de hachage qui génère un condensat du message. L'algorithme de hachage est utilisé avec l'algorithme de signature numérique (DSA) dans la norme de signature numérique (DSS), entre autres. Il y a quatre variétés d'algorithmes SHA : SHA-1, SHA-256-, SHA-384 et SHA-512. SHA-1, SHA-256, SHA-384 et SHA-512. SHA-1 génère un condensat de message en 160 bits. SHA-256, SHA-384 et SHA-512 génèrent respectivement des condensats du message en 256, 384 et 512 bits. L'algorithme SHA a été développé par le National Institute of Standards and Technology (NIST) et par la National Security Agency (NSA).  
   
  SSL (Secure Sockets Layer)  
  Protocole pour les communications réseau sécurisées à l'aide d'une combinaison de technologies de clés publique et secrète.  
@@ -141,7 +141,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Services conçus pour publier et gérer des jetons de sécurité personnalisés (jetons émis) dans un scénario multiservices. Les jetons personnalisés sont en général des jetons SAML (Security Assertions Markup Language) qui incluent des informations d'identification personnalisées.  
   
  certificat de serveur  
- Fait référence à un certificat utilisé pour l’authentification du serveur, telle que l’authentification d’un serveur web sur un navigateur Web. Lorsqu’un client de navigateur Web essaie d’accéder à un serveur web sécurisé, le serveur envoie son certificat au navigateur pour lui permettre de vérifier son identité.  
+ Fait référence à un certificat utilisé pour l’authentification du serveur, telle que l’authentification d’un serveur web sur un navigateur Web. Lorsqu'un client de navigateur Web essaie d'accéder à un serveur Web sécurisé, le serveur envoie son certificat au navigateur pour lui permettre de vérifier son identité.  
   
  session  
  Échange de messages sous la protection d'un morceau unique d'élément de génération de clé. Par exemple, les sessions SSL utilisent une clé unique pour envoyer plusieurs messages sous cette clé.  
@@ -182,6 +182,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Norme reconnue internationalement pour les certificats qui définit leurs parties requises.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Concepts fondamentaux de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
+
+- [Concepts fondamentaux concernant Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

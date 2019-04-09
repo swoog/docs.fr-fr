@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124148"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Entrée d'utilisateur dans une application Windows Forms
 Dans les Windows Forms, l’entrée d’utilisateur est envoyée aux applications sous la forme de messages de Windows. Une série de méthodes substituables traiter ces messages au niveau de l’application, le formulaire et contrôler le niveau. Lorsque ces méthodes reçoivent des messages de clavier et de la souris, ils déclenchent des événements qui peuvent être gérés pour obtenir des informations sur la souris ou clavier d’entrée. Dans de nombreux cas, les applications Windows Forms seront en mesure de traiter toutes les entrées utilisateur simplement en gérant ces événements. Dans d’autres cas, une application devrez peut-être substituer l’une des méthodes qui traitent les messages afin d’intercepter un message particulier avant sa réception par l’application, un formulaire ou un contrôle.  
@@ -31,6 +31,7 @@ Dans les Windows Forms, l’entrée d’utilisateur est envoyée aux application
  Les messages de clavier et souris sont également traitées par un jeu supplémentaire de méthodes substituables qui sont spécifiques à ces types de messages. Pour plus d’informations, consultez [fonctionnement des entrées au clavier](how-keyboard-input-works.md) et [souris entrée fonctionnement dans les Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Entrées d’utilisateur dans les Windows Forms](user-input-in-windows-forms.md)
+
+- [Entrées d'utilisateur dans les Windows Forms](user-input-in-windows-forms.md)
 - [Entrée au clavier dans une application Windows Forms](keyboard-input-in-a-windows-forms-application.md)
 - [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)

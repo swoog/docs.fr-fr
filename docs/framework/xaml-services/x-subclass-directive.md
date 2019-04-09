@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140788"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass, directive
 Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est également fourni. Au lieu de créer une classe partielle qui est basée sur `x:Class`, fourni `x:Class` est créée comme une classe intermédiaire, et ensuite votre classe dérivée fournie est censée être basée sur `x:Class`.  
@@ -32,9 +32,9 @@ Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est é
   
 |||  
 |-|-|  
-|`namespace`|Facultatif. Spécifie un espace de noms CLR contenant `classname`. Si `namespace` est spécifié, un point (.) sépare `namespace` et `classname`.|  
+|`namespace`|Optionnel. Spécifie un espace de noms CLR contenant `classname`. Si `namespace` est spécifié, un point (.) sépare `namespace` et `classname`.|  
 |`classname`|Obligatoire. Spécifie le nom CLR de la classe partielle qui connecte le XAML chargé et votre code-behind pour ce XAML. Consultez la section Notes.|  
-|`subclassNamespace`|Facultatif. Peut être différent de `namespace` si chaque espace de noms peut résoudre l’autre. Spécifie un espace de noms CLR contenant `subclassName`. Si `subclassName` est spécifié, un point (.) sépare `subclassNamespace` et `subclassName`.|  
+|`subclassNamespace`|Optionnel. Peut être différent de `namespace` si chaque espace de noms peut résoudre l’autre. Spécifie un espace de noms CLR contenant `subclassName`. Si `subclassName` est spécifié, un point (.) sépare `subclassNamespace` et `subclassName`.|  
 |`subclassName`|Obligatoire. Spécifie le nom CLR de la sous-classe.|  
   
 ## <a name="dependencies"></a>Dépendances  
@@ -57,5 +57,6 @@ Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est é
  Lorsque vous définissez les deux `x:Class` et `x:Subclass`, vous n’avez pas besoin de fournir une implémentation de la classe qui est référencée par `x:Class`. Vous devez uniquement lui donner un nom via le `x:Class` attribut afin que le compilateur présente quelques conseils pour la classe qu’il crée dans les fichiers intermédiaires (dans ce cas, le compilateur ne sélectionne pas de nom par défaut). Vous pouvez donner le `x:Class` une implémentation de la classe ; Toutefois, ce n’est pas le scénario classique d’utilisation à la fois `x:Class` et `x:Subclass`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [x:Class, directive](x-class-directive.md)
 - [XAML et classes personnalisées pour WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

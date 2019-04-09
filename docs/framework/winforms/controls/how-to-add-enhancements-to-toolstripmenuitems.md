@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des améliorations aux ToolStripMenuItems'
+title: 'Procédure : ajouter des améliorations aux ToolStripMenuItems'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198554"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procédure : Ajouter des améliorations aux ToolStripMenuItems
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procédure : ajouter des améliorations aux ToolStripMenuItems
 Vous pouvez améliorer la facilité d’utilisation de <xref:System.Windows.Forms.MenuStrip> et <xref:System.Windows.Forms.ContextMenuStrip> contrôles comme suit :  
   
 -   Ajouter des coches pour désigner si une fonctionnalité est activée ou désactivée, telles que si une règle est affichée le long de la marge d’une application de traitement de texte, ou pour indiquer quel fichier dans une liste de fichiers est affichée, telle que dans un **fenêtre** menu.  
@@ -114,6 +114,7 @@ Vous pouvez améliorer la facilité d’utilisation de <xref:System.Windows.Form
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

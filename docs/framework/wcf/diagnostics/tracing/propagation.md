@@ -2,12 +2,12 @@
 title: Propagation
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154035"
 ---
 # <a name="propagation"></a>Propagation
 Cette rubrique décrit la propagation d’activité dans le modèle de suivi de Windows Communication Foundation (WCF).  
@@ -74,10 +74,11 @@ Cette rubrique décrit la propagation d’activité dans le modèle de suivi de 
  Lorsque l'ID d'activité est propagé sur des points de terminaison, le récepteur de message émet un suivi de démarrage et d'arrêt avec cet ID d'activité (propagé). Par conséquent, il y a un suivi de démarrage et d'arrêt avec ce gAId à partir de chaque source de suivi. Si les points de terminaison sont dans le même processus et utilisent le même nom de source de suivi, plusieurs suivis Démarrer et Arrêter ayant le même lAId (gAId identique, source de suivi et processus identiques) sont créés.  
   
 ## <a name="synchronization"></a>Synchronisation  
- Pour synchroniser des événements sur les points de terminaison qui s'exécutent sur des ordinateurs différents, CorrelationId est ajouté à l'en-tête ActivityId propagé dans les messages. Les outils peuvent utiliser cet ID pour synchroniser des événements sur des ordinateurs présentant des différences d'horloge. En particulier, l'outil Service Trace Viewer utilise cet ID pour afficher les flux de messages d'un point de terminaison à un autre.  
+ Pour synchroniser des événements sur les points de terminaison qui s’exécutent sur des ordinateurs différents, CorrelationId est ajouté à l’en-tête ActivityId propagé dans les messages. Les outils peuvent utiliser cet ID pour synchroniser des événements sur des ordinateurs présentant des différences d'horloge. En particulier, l'outil Service Trace Viewer utilise cet ID pour afficher les flux de messages d'un point de terminaison à un autre.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configuration du traçage](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

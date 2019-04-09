@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173671"
 ---
 # <a name="securing-exception-handling"></a>Sécurisation de la gestion des exceptions
 Dans Visual C++ et Visual Basic, une expression de filtre plus haut de la pile s’exécute avant tout **enfin** instruction. Le **catch** bloc associé à ce filtre s’exécute après le **enfin** instruction. Pour plus d’informations, consultez [utilisation d’Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Cette section examine les implications de sécurité de cet ordre. Prenons l’exemple de pseudo-code suivant qui illustre l’ordre dans les instructions de filtre et **enfin** instructions sont exécutées.  
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)

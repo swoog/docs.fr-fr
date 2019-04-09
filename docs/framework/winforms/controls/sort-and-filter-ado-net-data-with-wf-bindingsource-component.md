@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Trier et filtrer des données ADO.NET avec les Windows Forms composant BindingSource'
+title: 'Procédure : trier et filtrer des données ADO.NET avec le composant BindingSource de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 65be2367091144945e9540c848e6131deac9d725
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163252"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procédure : Trier et filtrer des données ADO.NET avec les Windows Forms composant BindingSource
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procédure : trier et filtrer des données ADO.NET avec le composant BindingSource de Windows Forms
 Vous pouvez exposer le tri et filtrage de <xref:System.Windows.Forms.BindingSource> contrôler via le <xref:System.Windows.Forms.BindingSource.Sort%2A> et <xref:System.Windows.Forms.BindingSource.Filter%2A> propriétés. Vous pouvez appliquer un tri simple lorsque la source de données sous-jacent est un <xref:System.ComponentModel.IBindingList>, et vous pouvez appliquer le filtrage et tri avancé lorsque la source de données est un <xref:System.ComponentModel.IBindingListView>. Le <xref:System.Windows.Forms.BindingSource.Sort%2A> propriété nécessite standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] syntaxe : suivie d’une chaîne représentant le nom d’une colonne de données dans la source de données `ASC` ou `DESC` pour indiquer si la liste doit être triée dans l’ordre croissant ou décroissant. Vous pouvez définir le tri avancé ou un tri sur plusieurs colonnes en séparant chaque colonne par une virgule de séparation. Le <xref:System.Windows.Forms.BindingSource.Filter%2A> propriété prend une expression de chaîne.  
   
 > [!NOTE]
@@ -54,7 +54,8 @@ Vous pouvez exposer le tri et filtrage de <xref:System.Windows.Forms.BindingSour
  Pour exécuter cet exemple, collez le code dans un formulaire qui contient un <xref:System.Windows.Forms.BindingSource> nommé `BindingSource1` et un <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1`. Gérer le <xref:System.Windows.Forms.Form.Load> événement pour le formulaire et appelez `InitializeSortedFilteredBindingSource` dans la méthode de gestionnaire d’événements load.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [Guide pratique pour Installer les bases de données exemple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
-- [BindingSource, composant](bindingsource-component.md)
+- [Procédure : Installer les bases de données exemple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
+- [Composant BindingSource](bindingsource-component.md)

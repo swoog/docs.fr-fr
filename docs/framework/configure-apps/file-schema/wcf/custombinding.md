@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159742"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -206,7 +206,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 
 ## <a name="remarks"></a>Notes
 
-Les liaisons personnalisées permettent d'exercer un contrôle total sur la pile de messagerie WCF. Les liaisons spécialement conçues peuvent être créées en ajoutant des éléments de configuration pour des entités spécifiques. Par exemple, l'utilisateur peut associer les sections `httpsTransport`, `reliableSession` et `security` pour créer une liaison fiable et sécurisée basée sur https.
+Les liaisons personnalisées permettent d'exercer un contrôle total sur la pile de messagerie WCF. Les liaisons spécialement conçues peuvent être créées en ajoutant des éléments de configuration pour des entités spécifiques. Par exemple, l’utilisateur peut associer les sections `httpsTransport`, `reliableSession` et `security` pour créer une liaison fiable et sécurisée basée sur https.
 
 Une liaison individuelle définit la pile de messages en spécifiant les éléments de configuration des éléments de la pile suivant leur l'ordre d'apparition dans cette pile. Chaque élément définit et configure l'élément de la pile. Il doit y avoir un seul élément de transport dans chaque liaison personnalisée. Sans cet élément, la pile de messagerie est incomplète.
 
@@ -222,7 +222,7 @@ L'ordre dans lequel les éléments apparaissent dans la pile est important car i
 
 5. Encodeur (facultatif)
 
-Utilisez une liaison personnalisée lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service. Une liaison personnalisée peut être utilisée, par exemple, pour activer l'utilisation d'un nouveau transport ou d'un nouvel encodeur à un point de terminaison de service.
+Utilisez une liaison personnalisée lorsque l’une des liaisons fournies par le système ne répond pas aux exigences de votre service. Une liaison personnalisée peut être utilisée, par exemple, pour activer l’utilisation d’un nouveau transport ou d’un nouvel encodeur à un point de terminaison de service.
 
 Une liaison personnalisée est construite à l'aide d'une collection <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> d'éléments de liaison « empilés » dans un ordre spécifique :
 
@@ -244,7 +244,7 @@ Une liaison personnalisée est construite à l'aide d'une collection <xref:Syste
 
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 
-- Les éléments de liaison d'assistance/de mises à niveau de transport facultatifs sont les suivants :
+- Les éléments de liaison d’assistance/de mises à niveau de transport facultatifs sont les suivants :
 
     - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
@@ -252,7 +252,7 @@ Une liaison personnalisée est construite à l'aide d'une collection <xref:Syste
 
     - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- L'élément suivant est un message obligatoire qui encode l'élément de liaison. Vous pouvez utiliser votre propre transport ou utiliser l'une des liaisons d'encodage des messages suivantes :
+- L’élément suivant est un message obligatoire qui encode l’élément de liaison. Vous pouvez utiliser votre propre transport ou utiliser l’une des liaisons d’encodage des messages suivantes :
 
     - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -291,7 +291,6 @@ Le tableau suivant récapitule les options de chaque couche.
 De plus, vous pouvez définir vos propres éléments de liaison et les insérer entre chacune des couches définies précédentes.
 
 Pour une discussion sur l’utilisation d’une liaison personnalisée afin de modifier une liaison fournie par le système, consultez [Comment : Personnaliser une liaison fournie par le système](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
-
 
 ## <a name="see-also"></a>Voir aussi
 

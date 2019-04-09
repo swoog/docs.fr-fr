@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Partitionner l'espace à l'aide de l'élément DockPanel"
+title: 'Procédure : Partitionner l’espace à l’aide de l’élément DockPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: f76e3d7f928faebedcaf199eb6dc1e8fdccde640
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158884"
 ---
-# <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Procédure : Partitionner l'espace à l'aide de l'élément DockPanel
+# <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Procédure : Partitionner l’espace à l’aide de l’élément DockPanel
 L’exemple suivant crée un simple [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework à l’aide un <xref:System.Windows.Controls.DockPanel> élément. Le <xref:System.Windows.Controls.DockPanel> partitionne l’espace disponible pour ses éléments enfants.  
   
 ## <a name="example"></a>Exemple  
@@ -36,5 +36,6 @@ L’exemple suivant crée un simple [!INCLUDE[TLA#tla_ui](../../../../includes/t
  ![Scénario classique d’utilisation de l’élément DockPanel.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DockPanel>
-- [Vue d’ensemble de Panel](panels-overview.md)
+- [Vue d'ensemble de Panel](panels-overview.md)

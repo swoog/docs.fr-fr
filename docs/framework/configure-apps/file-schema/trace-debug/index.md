@@ -11,12 +11,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 0ea53f0c9a209d9bcbcc1e758cdcf957cde095dc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177435"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schéma des paramètres de traçage et de débogage
 Les paramètres de traçage et débogage spécifient les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.  
@@ -48,6 +48,7 @@ Les paramètres de traçage et débogage spécifient les écouteurs de trace qui
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contient les écouteurs qui collectent, stockent et acheminent les messages de traçage.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>

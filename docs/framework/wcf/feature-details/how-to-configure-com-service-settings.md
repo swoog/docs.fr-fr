@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : Configurer les paramètres de Service COM +'
+title: 'Procédure : configurer des paramètres de service COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195837"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Procédure : Configurer les paramètres de Service COM +
+# <a name="how-to-configure-com-service-settings"></a>Procédure : configurer des paramètres de service COM+
 Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application. Dans le mode hébergé COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut). Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.  
   
 > [!NOTE]
@@ -47,7 +47,7 @@ public interface IFinancesContract : IDisposable
 > [!NOTE]
 >  IID fait partie intégrante de l'espace de noms initial pour le contrat.  
   
- Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l'application.  
+ Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l’application.  
   
  L'exemple de code suivant affiche un fichier de configuration par défaut. En étant un service Web de Windows Communication Foundation (WCF), cela est conforme au schéma de configuration de modèle de service standard et peut être modifiée dans la même façon que les autres fichiers de configuration de services WCF.  
   
@@ -97,4 +97,5 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

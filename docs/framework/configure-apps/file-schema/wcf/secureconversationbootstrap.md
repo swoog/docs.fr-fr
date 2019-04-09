@@ -2,12 +2,12 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: c4e9ad3845f8ceef51cd4474b5f3f61b85f12754
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166989"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 Spécifie les valeurs par défaut utilisées pour initialiser un service de conversation sécurisé.  
@@ -47,7 +47,7 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`allowSerializedSigningTokenOnReply`|Facultatif. Valeur booléenne qui spécifie si un jeton sérialisé peut être utilisé sur la réponse. La valeur par défaut est `false`. Si vous utilisez une liaison double, le paramètre a la valeur par défaut `true` et tout paramètre défini sera ignoré.|  
+|`allowSerializedSigningTokenOnReply`|Optionnel. Valeur booléenne qui spécifie si un jeton sérialisé peut être utilisé sur la réponse. La valeur par défaut est `false`. Si vous utilisez une liaison double, le paramètre a la valeur par défaut `true` et tout paramètre défini sera ignoré.|  
 |`authenticationMode`|Spécifie le mode d'authentification SOAP utilisé entre l'initiateur et le répondeur.<br /><br /> La valeur par défaut est sspiNegotiated.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
 |`defaultAlgorithmSuite`|La suite d'algorithmes de sécurité définit divers algorithmes, comme les algorithmes Canonicalization, Digest, KeyWrap, Signature, Encryption et KeyDerivation. Chacune de ces suites algorithmiques de sécurité définit des valeurs pour ces différents paramètres. La sécurité basée sur les messages est obtenue grâce à ces algorithmes.<br /><br /> Cet attribut est employé lors de l'utilisation d'une plate-forme différente qui opte pour un jeu d'algorithmes différent de la valeur par défaut. Vous devez connaître les forces et les faiblesses des algorithmes concernés lorsque vous modifiez ce paramètre. Cet attribut est de type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. La valeur par défaut est `Basic256`.|  
 |`includeTimestamp`|Valeur booléenne qui spécifie si les horodatages sont inclus dans chaque message. La valeur par défaut est `true`.|  
@@ -57,7 +57,7 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
 |`requireDerivedKeys`|Valeur booléenne qui spécifie si les clés peuvent être dérivées des clés de vérification d'origine. La valeur par défaut est `true`.|  
 |`requireSecurityContextCancellation`|Valeur booléenne qui spécifie si le contexte de sécurité doit être annulé et arrêté lorsqu'il n'est plus requis. La valeur par défaut est `true`.|  
 |`requireSignatureConfirmation`|Valeur booléenne qui spécifie si la confirmation de signature WS-Security est activée. En cas de définition à `true`, les signatures de message sont confirmées par le répondeur. La valeur par défaut est `false`.<br /><br /> La confirmation de signature est utilisée pour confirmer que le service répond en toute confiance à une demande.|  
-|`securityHeaderLayout`|Spécifie le classement des éléments dans l'en-tête de sécurité. Les valeurs valides sont les suivantes :<br /><br /> -   Strict. Les éléments sont ajoutés à l’en-tête de sécurité conformément au principe général « déclarer avant d’utiliser ».<br />-   Lax. Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : Sécurité des messages SOAP.<br />-   LaxWithTimestampFirst. Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, à ceci près que le premier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br />-   LaxWithTimestampLast. Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, sauf le dernier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br /><br /> La valeur par défaut est Strict.<br /><br /> Cet élément est de type <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|`securityHeaderLayout`|Spécifie le classement des éléments dans l'en-tête de sécurité. Les valeurs valides sont les suivantes :<br /><br /> -   Strict. Les éléments sont ajoutés à l’en-tête de sécurité conformément au principe général « déclarer avant d’utiliser ».<br />-   Lax. Les éléments sont ajoutés à l'en-tête de sécurité dans n'importe quel ordre qui confirme WSS: SOAP Message security.<br />-   LaxWithTimestampFirst. Les éléments sont ajoutés à l'en-tête de sécurité dans n'importe quel ordre qui confirme WSS: SOAP Message security, excepté que le premier élément de l'en-tête de sécurité doit être un élément wsse:Timestamp.<br />-   LaxWithTimestampLast. Les éléments sont ajoutés à l'en-tête de sécurité dans n'importe quel ordre qui confirme WSS: SOAP Message security, excepté que le dernier élément de l'en-tête de sécurité doit être un élément wsse:Timestamp.<br /><br /> La valeur par défaut est Strict.<br /><br /> Cet élément est de type <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -74,6 +74,7 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Spécifie les options de sécurité d’une liaison personnalisée.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
@@ -82,5 +83,5 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

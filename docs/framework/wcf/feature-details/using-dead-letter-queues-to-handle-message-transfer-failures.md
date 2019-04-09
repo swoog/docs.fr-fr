@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174614"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages
 La remise de messages en file d'attente peut échouer. Les messages qui ont échoué sont enregistrés dans une file d'attente de lettres mortes. L'échec de la remise peut être dû à des défaillances du réseau, une file d'attente supprimée, une file d'attente saturée, un échec d'authentification ou un retard de remise.  
@@ -39,7 +39,7 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
   
 -   Pour lire des messages à partir d’une file d’attente de lettres mortes transactionnelle système, l’URI (Uniform Resource Identifier) doit être de la forme : net.msmq://localhost/system$;DeadXact.  
   
--   Pour lire des messages à partir d’une file d’attente de lettres mortes non transactionnelle système, l’URI doit être de la forme : net.msmq://localhost/system$;DeadLetter.  
+-   Pour lire des messages à partir d'une file d'attente de lettres mortes non transactionnelle système, l'URI doit être de la forme : net.msmq://localhost/system$;DeadLetter.  
   
 -   Pour lire des messages à partir d’une file d’attente de lettres mortes personnalisée, l’URI doit être de la forme : NET.MSMQ://localhost/Private/\<*nom-falm-personnalisée*> où *nom-falm-personnalisée* est le nom de la personnalisation file d’attente de lettres mortes.  
   
@@ -50,7 +50,7 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Gestion des messages incohérents à partir de la file d'attente de lettres mortes  
  La gestion des messages incohérents est disponible sur les files d'attente de lettres mortes, mais présente certaines conditions. Comme vous ne pouvez pas créer de sous-files d'attente à partir des files d'attente système, lorsque vous lisez à partir de la file d'attente de lettres mortes système, il n'est pas possible d'affecter à `ReceiveErrorHandling` la valeur `Move`. Notez que si vous lisez à partir d'une file d'attente de lettres mortes personnalisée, vous pouvez avoir des sous-files d'attente et, par conséquent, `Move` est une disposition valide pour le message incohérent.  
   
- Lorsque `ReceiveErrorHandling` a la valeur `Reject`, lors de la lecture à partir de la file d'attente de lettres mortes personnalisée, le message incohérent est placé dans la file d'attente de lettres mortes système. Lors de la lecture à partir de la file d'attente de lettres mortes système, le message est déposé (purgé). Le rejet d'une file d'attente de lettres mortes système dans MSMQ dépose (purge) le message.  
+ Lorsque `ReceiveErrorHandling` a la valeur `Reject`, lors de la lecture à partir de la file d'attente de lettres mortes personnalisée, le message incohérent est placé dans la file d'attente de lettres mortes système. Lors de la lecture à partir de la file d'attente de lettres mortes système, le message est déposé (purgé). Le rejet d’une file d’attente de lettres mortes système dans MSMQ dépose (purge) le message.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous montre comment créer une file d'attente de lettres mortes et comment l'utiliser pour traiter les messages ayant expiré. L’exemple est basé sur l’exemple dans [Comment : Exchange en file d’attente de Messages avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). L'exemple ci-dessous montre comment écrire le code client pour le service de traitement des commandes qui utilise une file d'attente de lettres mortes pour chaque application. Cet exemple montre également comment traiter les messages stockés dans la file d'attente de lettres mortes.  
@@ -61,19 +61,16 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  Le code ci-dessous est destiné au fichier de configuration client.  
-  
-  
-  
+
  Le code ci-dessous est destiné à un service qui traite les messages stockés dans une file d'attente de lettres mortes.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  Le code ci-dessous est destiné au fichier de configuration du service de file d'attente de lettres mortes.  
-  
-  
-  
+
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+
+- [Vue d'ensemble des files d'attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Procédure : échanger des messages mis en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

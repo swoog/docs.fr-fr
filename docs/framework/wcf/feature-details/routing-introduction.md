@@ -2,12 +2,12 @@
 title: Introduction au routage
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158676"
 ---
 # <a name="routing-introduction"></a>Introduction au routage
 Le service de routage fournit un intermédiaire SOAP générique connectable, capable de router des messages en fonction du contenu. Le service de routage vous permet de créer une logique de routage complexe et d'implémenter des scénarios, tels que l'agrégation de service, le contrôle des versions de service, le routage par priorité et en mode multidiffusion. Le service de routage fournit également une gestion des erreurs qui vous permet de définir des listes de points de terminaison de sauvegarde auxquels sont envoyés les messages en cas d'échec de l'envoi au point de terminaison de destination primaire.  
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Par défaut, le service de routage évalue uniquement les en-têtes du message. Pour permettre aux filtres d'accéder au corps du message, vous devez attribuer à la propriété <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> la valeur `false`.  
   
- **Multicast**  
+ **Multidiffusion**  
   
  Alors que de nombreuses configurations de service de routage utilisent une logique de filtre exclusive qui route les messages vers un seul point de terminaison spécifique, vous aurez peut-être besoin de router un message donné vers plusieurs points de terminaison de destination. Pour envoyer un message en mode multidiffusion à des destinations multiples, les conditions suivantes doivent être remplies :  
   
@@ -193,7 +193,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  Les étapes effectuées pour créer un nouveau **MessageVersion** pour le message sortant sont les suivantes :  
   
- **Traitement des demandes**  
+ **Traitement de la demande**  
   
 -   Obtenir le **MessageVersion** de la liaison/canal sortant.  
   
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Pour utiliser l'emprunt d'identité des informations d'identification Windows avec le service de routage, vous devez configurer les informations d'identification et le service. L'objet d'informations d'identification du client (<xref:System.ServiceModel.Security.WindowsClientCredential>, accessible à partir de <xref:System.ServiceModel.ChannelFactory>) définit une propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> qui doit être définie pour permettre l'emprunt d'identité. Enfin, dans le service vous devez configurer le comportement <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> pour affecter la valeur `ImpersonateCallerForAllOperations` à `true`. Le service de routage utilise cet indicateur pour déterminer s'il faut créer les clients pour transférer des messages lorsque l'emprunt d'identité est activé.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Filtres de message](message-filters.md)
 - [Contrats de routage](routing-contracts.md)
-- [Choix d’un filtre](choosing-a-filter.md)
+- [Choix d'un filtre](choosing-a-filter.md)

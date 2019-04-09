@@ -2,17 +2,17 @@
 title: Sélection d’un modèle d’échange de messages
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157743"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Sélection d’un modèle d’échange de messages
 La première étape dans l’écriture d’un transport personnalisé consiste à décider quelle *modèles d’échange de messages* (ou MEP) sont requis pour le canal que vous développez. Cette rubrique contient des explications sur les options disponibles ainsi que sur les différentes exigences. Ceci est la première tâche dans la liste de tâches de développement de canal décrite dans [canaux de développement](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
-## <a name="six-message-exchange-patterns"></a>Modèles d’échange de messages  
+## <a name="six-message-exchange-patterns"></a>Modèles d'échange de messages  
  Trois MEP sont disponibles :  
   
 -   Datagramme (<xref:System.ServiceModel.Channels.IInputChannel> et <xref:System.ServiceModel.Channels.IOutputChannel>)  
@@ -93,4 +93,5 @@ Les trois modèles d’échange de messages de base. De haut en bas : datagramm
 -   Lorsque la méthode <xref:System.ServiceModel.ICommunicationObject.Abort%2A> est appelée sur votre canal, mettez sans plus attendre un terme à la session sans effectuer d'E/S. Encore une fois, cette fermeture peut être sans conséquence ou signifier l'annulation d'une connexion réseau ou d'une autre ressource.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+
+- [Vue d'ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)

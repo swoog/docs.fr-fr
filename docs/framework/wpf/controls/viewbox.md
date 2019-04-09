@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 67c9277ba4a7ae0ee802c536699a765669ddf508
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160717"
 ---
 # <a name="viewbox"></a>Viewbox
 Le <xref:System.Windows.Controls.Viewbox> contrôle est utilisé pour étendre ou mettre à l’échelle un élément enfant.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Appliquer des propriétés Stretch au contenu d'un Viewbox](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+ [Appliquer des propriétés Stretch au contenu d’un Viewbox](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Viewbox>  
@@ -28,4 +28,5 @@ Le <xref:System.Windows.Controls.Viewbox> contrôle est utilisé pour étendre o
  <xref:System.Windows.Controls.Image>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

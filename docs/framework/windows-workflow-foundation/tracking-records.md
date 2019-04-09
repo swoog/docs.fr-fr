@@ -2,12 +2,12 @@
 title: Enregistrements de suivi
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163915"
 ---
 # <a name="tracking-records"></a>Enregistrements de suivi
 L'exécution du flux de travail est instrumentée pour émettre des enregistrements de suivi pour suivre l'exécution d'une instance de workflow.  
@@ -40,7 +40,7 @@ L'exécution du flux de travail est instrumentée pour émettre des enregistreme
   
 -   **ActivityScheduledRecord** - ce <xref:System.Activities.Tracking.TrackingRecord> est émis lorsqu’une activité planifie une activité enfant. Cet enregistrement contient des détails pour à la fois l'activité parent (planification de l'activité) et l'activité enfant planifiée. Les détails de cet enregistrement se trouvent dans <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** - ce <xref:System.Activities.Tracking.TrackingRecord> est émis pour chaque gestionnaire qui examine l’enregistrement jusqu'à ce qu’elle est gérée. Il est utilisé pour dénoter le chemin d’accès qu’une erreur a pris dans l’instance de workflow. Les détails de cet enregistrement se trouvent dans <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+-   **FaultPropagationRecord** - ce <xref:System.Activities.Tracking.TrackingRecord> est émis pour chaque gestionnaire qui examine l’enregistrement jusqu'à ce qu’elle est gérée. Il est utilisé pour dénoter le chemin d'accès qu'une erreur a pris dans l'instance de workflow. Les détails de cet enregistrement se trouvent dans <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
 -   **CancelRequestedRecord** - ce <xref:System.Activities.Tracking.TrackingRecord> est émis chaque fois qu’une activité essaie d’annuler une activité enfant. Cet enregistrement contient des détails pour à la fois l'activité parent et l'activité enfant en cours d'annulation. Les détails de cet enregistrement se trouvent dans <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
@@ -50,16 +50,17 @@ L'exécution du flux de travail est instrumentée pour émettre des enregistreme
   
  Par exemple, il pourrait y avoir une activité <xref:System.Activities.Statements.Sequence> simple qui contient une opération <xref:System.Activities.Statements.WriteLine> avec les enregistrements de suivi émis dans l'ordre suivant :  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indique que le flux de travail démarre.  
+1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail démarre.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> indique qu'une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
+2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Indique qu’une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> représente l'activité <xref:System.Activities.Statements.WriteLine>.  
+3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> représente le <xref:System.Activities.Statements.WriteLine> activité.  
   
 4.  Il y a deux enregistrements <xref:System.Activities.Tracking.ActivityStateRecord> qui représentent les deux activités en cours.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indique que le flux de travail est terminé.  
+5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail se termine.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

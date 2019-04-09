@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser le découpage avec une région'
+title: 'Procédure : utiliser le détourage avec une région'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: 2ae9a99ef25c7ee5e52f5995a2d057e42e7d3127
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163733"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a>Procédure : Utiliser le découpage avec une région
+# <a name="how-to-use-clipping-with-a-region"></a>Procédure : utiliser le détourage avec une région
 Une des propriétés de la <xref:System.Drawing.Graphics> classe est la zone de découpage. Tout le dessin effectué une donnée <xref:System.Drawing.Graphics> objet est limité à la zone de découpage de ce <xref:System.Drawing.Graphics> objet. Vous pouvez définir la zone de découpage en appelant le <xref:System.Drawing.Graphics.SetClip%2A> (méthode).  
   
 ## <a name="example"></a>Exemple  
@@ -29,8 +29,9 @@ Une des propriétés de la <xref:System.Drawing.Graphics> classe est la zone de 
  [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Régions dans GDI+](regions-in-gdi.md)
 - [Utilisation de régions](using-regions.md)

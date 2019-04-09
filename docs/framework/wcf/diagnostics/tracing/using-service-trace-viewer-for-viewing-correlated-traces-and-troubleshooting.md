@@ -2,12 +2,12 @@
 title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160665"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 Cette rubrique décrit le format des données de suivi, leur mode de consultation, et les approches qui utilisent Service Trace Viewer pour résoudre les problèmes posés par votre application.  
@@ -169,8 +169,7 @@ L’illustration suivante montre des activités clientes WCF répertoriées par 
  L’illustration suivante montre une vue du graphique d’activités de service WCF :   
 
  ![Capture d’écran de visionneuse de Trace affichant une liste d’activités de service WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  La capture d'écran suivante affiche les activités pour le client et le service, et met en surbrillance l'activité Traiter l'action Add dans les processus (orange). Les flèches lient les messages de demande et de réponse envoyés et reçus par le client et le service. Les suivis de Traiter l'action sont séparés par processus dans le graphique, mais sont affichés dans le cadre de la même activité dans le volet supérieur droit. Dans ce volet, nous pouvons voir les suivis clients pour les messages envoyés qui précèdent les suivis de service pour les messages reçus et traités.  
   
  Les images suivantes indiquent une vue du graphique de ces deux activités de client et le service WCF  
@@ -189,8 +188,7 @@ Corrélation d'erreurs dans le service et le client
   
   L’image suivante montre comment sélectionner une activité rouge ou jaune pour localiser l’origine d’un problème.   
  ![Capture d’écran des activités rouges ou jaunes pour localiser la racine d’un problème.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  Dans le volet supérieur droit, vous pouvez examiner des suivis de l'activité que vous avez sélectionnée sur la gauche. Vous pouvez examiner ensuite des suivis rouges ou jaunes dans ce volet et observer la manière dont ils sont corrélés. Dans le graphique précédent, nous voyons des suivis d'avertissement à la fois pour le client et le service dans la même activité Traiter l'action.  
   
  Si ces suivis n’indiquent pas la cause racine de l’erreur, vous pouvez utiliser le graphique en double-cliquant sur l’activité sélectionnée dans le volet gauche (ici, Traiter l’action). Puis le graphique avec les activités connexes est affiché. Vous pouvez développer des activités connexes (en cliquant sur les signes « + ») pour rechercher le premier suivi émis en rouge ou jaune dans une activité connexe. Continuez à développer les activités qui se sont produites avant le suivi rouge ou jaune présentant un intérêt, les transferts aux flux d’activités ou de messages connexes sur des points de terminaison, jusqu’à ce que vous localisiez l’origine du problème.  
@@ -207,6 +205,7 @@ Développement des activités pour localiser l’origine d’un problème
 Pour commencer le dépannage, vous pouvez également choisir une trace de message rouge ou jaune et double-cliquer dessus pour effectuer le suivi de la cause racine.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Traçage](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

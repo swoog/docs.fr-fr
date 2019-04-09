@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203013"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Fonctionnement des entrées de la souris dans les Windows Forms
 Recevoir et de gérer l’entrée de la souris sont une partie importante de toutes les applications Windows. Vous pouvez gérer les événements de souris pour effectuer une action dans votre application, ou utiliser les informations d’emplacement de la souris pour effectuer le test de positionnement ou d’autres actions. En outre, vous pouvez modifier la manière dont les contrôles dans votre application gèrent les entrées de la souris. Cette rubrique décrit ces événements de souris en détail et comment obtenir et modifier les paramètres système pour la souris. Pour plus d’informations sur les données fournies avec la souris sont déclenchés les événements et l’ordre dans lequel les événements de clic de souris, consultez [des événements de souris dans les Windows Forms](mouse-events-in-windows-forms.md).  
@@ -53,6 +53,7 @@ Recevoir et de gérer l’entrée de la souris sont une partie importante de tou
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtient le nombre de lignes à faire défiler lors de la rotation de la roulette de la souris.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)
 - [Capture de la souris dans les Windows Forms](mouse-capture-in-windows-forms.md)
 - [Pointeurs de souris dans les Windows Forms](mouse-pointers-in-windows-forms.md)

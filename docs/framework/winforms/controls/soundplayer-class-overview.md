@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195005"
 ---
 # <a name="soundplayer-class-overview"></a>Vue d'ensemble de la classe SoundPlayer
 La classe <xref:System.Media.SoundPlayer> vous permet d'inclure facilement des sons dans vos applications.  
@@ -22,18 +22,19 @@ La classe <xref:System.Media.SoundPlayer> vous permet d'inclure facilement des s
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Propriétés, méthodes et événements couramment utilisés  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|Propriété <xref:System.Media.SoundPlayer.SoundLocation%2A>|Chemin du fichier ou adresse web du son. Les valeurs acceptables peuvent être UNC ou HTTP.|  
-|Propriété <xref:System.Media.SoundPlayer.LoadTimeout%2A>|Nombre de millisecondes que votre programme attend pour charger un son avant de lever une exception. La valeur par défaut est 10 secondes.|  
-|Propriété <xref:System.Media.SoundPlayer.IsLoadCompleted%2A>|Valeur booléenne indiquant si le chargement du son est terminé.|  
-|Méthode <xref:System.Media.SoundPlayer.Load%2A>|Charge un son de façon synchrone.|  
-|Méthode <xref:System.Media.SoundPlayer.LoadAsync%2A>|Commence à charger un son de façon asynchrone. Lorsque le chargement est terminé, il déclenche le <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> événement.|  
-|Méthode <xref:System.Media.SoundPlayer.Play%2A>|Lit le son spécifié dans le <xref:System.Media.SoundPlayer.SoundLocation%2A> ou <xref:System.Media.SoundPlayer.Stream%2A> propriété dans un nouveau thread.|  
-|Méthode <xref:System.Media.SoundPlayer.PlaySync%2A>|Lit le son spécifié dans le <xref:System.Media.SoundPlayer.SoundLocation%2A> ou <xref:System.Media.SoundPlayer.Stream%2A> propriété dans le thread actuel.|  
-|Méthode <xref:System.Media.SoundPlayer.Stop%2A>|Arrête le son actuellement émis.|  
-|Événement<xref:System.Media.SoundPlayer.LoadCompleted> |Déclenché après une tentative de chargement d’un son.|  
+|<xref:System.Media.SoundPlayer.SoundLocation%2A> propriété|Chemin du fichier ou adresse web du son. Les valeurs acceptables peuvent être UNC ou HTTP.|  
+|<xref:System.Media.SoundPlayer.LoadTimeout%2A> propriété|Nombre de millisecondes que votre programme attend pour charger un son avant de lever une exception. La valeur par défaut est 10 secondes.|  
+|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> propriété|Valeur booléenne indiquant si le chargement du son est terminé.|  
+|<xref:System.Media.SoundPlayer.Load%2A> méthode|Charge un son de façon synchrone.|  
+|<xref:System.Media.SoundPlayer.LoadAsync%2A> méthode|Commence à charger un son de façon asynchrone. Lorsque le chargement est terminé, il déclenche le <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> événement.|  
+|<xref:System.Media.SoundPlayer.Play%2A> méthode|Lit le son spécifié dans le <xref:System.Media.SoundPlayer.SoundLocation%2A> ou <xref:System.Media.SoundPlayer.Stream%2A> propriété dans un nouveau thread.|  
+|<xref:System.Media.SoundPlayer.PlaySync%2A> méthode|Lit le son spécifié dans le <xref:System.Media.SoundPlayer.SoundLocation%2A> ou <xref:System.Media.SoundPlayer.Stream%2A> propriété dans le thread actuel.|  
+|<xref:System.Media.SoundPlayer.Stop%2A> méthode|Arrête le son actuellement émis.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> événement|Déclenché après une tentative de chargement d’un son.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

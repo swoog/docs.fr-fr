@@ -2,12 +2,12 @@
 title: Sécurité de canal homologue
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129452"
 ---
 # <a name="peer-channel-security"></a>Sécurité de canal homologue
 Le canal homologue active divers types d'applications distribuées qui dépendent de la messagerie entre plusieurs parties. Certains exemples incluent la distribution de contenu Internet, où une source fiable distribue du contenu (tel que des supports ou mises à jour logicielles), un groupe d’amis échange de la musique et des photos, ou une équipe de collègues modifie de manière collaborative un document. Chacun de ces scénarios requiert un modèle de sécurité unique. Le modèle de sécurité du canal homologue est conçu pour gérer ces scénarios et fournit un modèle de sécurité complet adapté aux besoins spécifiques des divers modèles d'identité, d'authentification et d'autorisation.  
@@ -34,6 +34,7 @@ Le canal homologue active divers types d'applications distribuées qui dépenden
  Le canal homologue ne requiert pas de modèle d'identité spécifique tant que l'application choisit l'un des types de jetons pris en charge. Les applications gèrent entièrement le cycle de vie de ces identités et des décisions d'authentification.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications de canal homologue](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Concepts relatifs au canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Création d'une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

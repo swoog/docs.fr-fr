@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Manipuler des éléments de contenu de flux avec la propriété Blocks'
+title: 'Procédure : Manipuler des éléments de contenu dynamique avec la propriété Blocks'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: a988f47b6b147b0db285af1928a4260c5deba542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150135"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procédure : Manipuler des éléments de contenu de flux avec la propriété Blocks
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procédure : Manipuler des éléments de contenu dynamique avec la propriété Blocks
 Ces exemples illustrent certaines des opérations plus courantes qui peuvent être effectuées sur les éléments de contenu de flux avec le **blocs** propriété. Cette propriété est utilisée pour ajouter et supprimer des éléments à partir de <xref:System.Windows.Documents.BlockCollection>. Éléments de contenu flux cette fonctionnalité une **blocs** propriété incluent :  
   
 -   <xref:System.Windows.Documents.Figure>  
@@ -63,10 +63,11 @@ Ces exemples illustrent certaines des opérations plus courantes qui peuvent êt
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>
-- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
+- [Vue d'ensemble des documents dynamiques](flow-document-overview.md)
 - [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Manipuler les colonnes d’un tableau avec la propriété Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

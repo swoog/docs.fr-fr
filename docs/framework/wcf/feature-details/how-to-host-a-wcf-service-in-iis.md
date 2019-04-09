@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Héberger un Service WCF dans IIS'
+title: 'Procédure : héberger un service WCF dans IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124551"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Procédure : Héberger un Service WCF dans IIS
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Procédure : héberger un service WCF dans IIS
 Cette rubrique décrit les étapes de base requises pour créer un service Windows Communication Foundation (WCF) qui est hébergé dans Internet Information Services (IIS). Dans cette rubrique, on suppose que vous connaissez IIS et que vous comprenez la manière d'utiliser l'outil d'administration IIS pour créer et gérer des applications IIS. Pour plus d’informations sur IIS, consultez [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un service WCF qui s’exécute dans l’environnement IIS tire pleinement parti des fonctionnalités IIS, telles que le recyclage de processus, arrêt sur inactivité, processus sur l’intégrité et l’activation basée sur le message. Cette option d'hébergement requiert que les services IIS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. Vous pouvez utiliser l'hébergement IIS uniquement avec un transport HTTP.  
   
  Pour plus d’informations sur la façon WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagissent, consultez [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Pour plus d’informations sur la configuration de la sécurité, consultez [sécurité](../../../../docs/framework/wcf/feature-details/security.md).  
@@ -66,7 +66,7 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
   
      L'exemple spécifie explicitement les points de terminaison dans le fichier de configuration. Si vous n'ajoutez pas de points de terminaison au service, le runtime ajoute les points de terminaison par défaut. Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements voir [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Pour vous assurer que le service est hébergé correctement, ouvrez une instance d'Internet Explorer et naviguez jusqu'à l'URL du service : `http://localhost/IISHostedCalc/Service.svc`  
+11. Pour vous assurer que le service est hébergé correctement, ouvrez une instance d’Internet Explorer et accédez à l’URL du service : `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Exemple  
  L'intégralité du code pour le service de calculatrice hébergé IIS est présentée ci-dessous.  
@@ -76,6 +76,7 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)
 - [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

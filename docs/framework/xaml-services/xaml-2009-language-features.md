@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162278"
 ---
 # <a name="xaml-2009-language-features"></a>Fonctionnalités de langage XAML 2009
 XAML 2009 est l'abréviation désignant les nouvelles fonctionnalités du langage XAML qui étendent la spécification du langage XAML existante. XAML 2009 introduit plusieurs nouvelles directives et constructions. Ceux-ci incluent le [x : Arguments Directive](x-arguments-directive.md); le [x : FactoryMethod Directive](x-factorymethod-directive.md); le [x : Reference Markup Extension](x-reference-markup-extension.md); le [x : TypeArguments, Directive ](x-typearguments-directive.md); et les types intégrés pour les primitives de langage courantes (par exemple `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 est l'abréviation désignant les nouvelles fonctionnalités du langag
  Pour les attributs qui sont soutenus par des événements, XAML 2006 suppose que la compilation du balisage est impliquée et soumet les événements à la compilation du balisage. XAML 2009 prend en charge une forme de balisage ressemblant à une extension de balisage, ce qui diffère la connexion d'événements jusqu'au moment de l'analyse à l'exécution et du chargement du code XAML. Toutefois, les applications WPF et les scénarios XAML pour l'interface utilisateur WPF n'utilisent généralement pas cette fonction. WPF et son implémentation de XAML 2006 utilisent la combinaison de la connexion du gestionnaire d'événements pour les événements routés définis au niveau d' <xref:System.Windows.UIElement> et de l'étape de son compilateur de balisage pour une grande partie du traitement de ses attributs d'événement. Le compilateur de balisage prétraite également les attributs d'événement se trouvant dans le code XAML où les actions de génération déclarent que le compilateur de balisage est utilisé.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

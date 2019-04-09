@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfe06c1300a22757b363236454f4f494dab1978a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6c6d298c84b801b87832c56026b05f647cb5a9dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135170"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope, méthode
 Récupère l’étendue d’un type donné.  
@@ -53,10 +53,11 @@ HRESULT GetResolutionScope(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite alink.h.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

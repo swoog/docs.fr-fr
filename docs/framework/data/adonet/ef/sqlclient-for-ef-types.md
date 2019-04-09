@@ -2,12 +2,12 @@
 title: SqlClient pour Entity FrameworkTypes
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147653"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient pour Entity FrameworkTypes
 Le fichier de manifeste du fournisseur de données .NET Framework pour SQL Server (SqlClient) inclut la liste des types primitifs du fournisseur, les facettes de chaque type, les mappages entre les types primitifs des modèles conceptuels et de stockage, ainsi que les règles de promotion et de conversion entre les types primitifs des modèles conceptuels et de stockage.  
@@ -51,4 +51,5 @@ Le fichier de manifeste du fournisseur de données .NET Framework pour SQL Serve
 |`xml`|Comparable au niveau : False<br /><br /> Comparable en ordre : False|`Edm.String`|MaxLength :<br /><br /> -Valeur par défaut : 1073741823<br /><br /> -Constante : True<br /><br /> Unicode :<br /><br /> -Valeur par défaut : True<br /><br /> -Constante : True<br /><br /> FixedLength :<br /><br /> -Valeur par défaut : False<br /><br /> -Constante : True|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Spécifications CSDL, SSDL et MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

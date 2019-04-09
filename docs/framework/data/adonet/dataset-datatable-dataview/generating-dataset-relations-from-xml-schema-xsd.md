@@ -2,12 +2,12 @@
 title: Génération de relations de DataSet à partir du schéma XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: b74c992c4569512a8692b70663002fd609d3501e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170220"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Génération de relations de DataSet à partir du schéma XML (XSD)
 Dans un objet <xref:System.Data.DataSet>, vous créez une association entre deux ou plusieurs colonnes en établissant une relation parent-enfant. Il existe trois façons pour représenter un **DataSet** relation au sein d’un schéma XML Schema definition language (XSD) :  
@@ -91,11 +91,12 @@ msdata:childkey="" />
  Décrit comment créer des relations dans un **DataSet** entre les éléments de schéma XML qui ne sont pas imbriqués.  
   
 ### <a name="related-sections"></a>Rubriques connexes  
- [Dérivation de la structure relationnelle des DataSets à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Dérivation de la structure relationnelle des DataSet à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Décrit la structure relationnelle, ou schéma, d’un **DataSet** qui est créé à partir de schéma XML Schema definition language (XSD).  
   
  [Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Décrit les éléments de schéma XML utilisés pour créer des contraintes de clés étrangères et uniques dans un **DataSet**.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Comportements de sécurité dans WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180061"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportements de sécurité dans WCF
 Dans Windows Communication Foundation (WCF), les comportements modifient comportement au moment de l’exécution au niveau du service ou au niveau du point de terminaison. (Pour plus d’informations sur les comportements en général, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportements de sécurité* permettent de contrôler les informations d’identification, l’authentification, autorisation et les journaux d’audit. Vous pouvez les utiliser via la programmation ou la configuration. Cette rubrique se concentre sur la configuration des comportements relatifs aux fonctions de sécurité suivants :  
@@ -56,7 +56,7 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
  Pour plus d’informations sur l’utilisation de l’élément, consultez [Comment : Renseignez les informations d’identification Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<certificat > de \<clientCertificate > élément  
- Utilisez le [ \<certificat >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) élément lorsque le service doit avoir le certificat du client à l’avance pour communiquer en toute sécurité avec le client. Cela se produit lors de l’utilisation du modèle de communication duplex. Dans le modèle demande-réponse plus classique, le client inclut son certificat dans la demande, que le service utilise pour sécuriser de nouveau sa réponse au client. Toutefois, le modèle de communication duplex n’a pas de demande et de réponse. Le service ne peut pas déduire le certificat du client de la communication, et par conséquent, il en a besoin à l'avance pour sécuriser les messages au client. Vous devez obtenir le certificat du client hors bande et l'indiquer à l'aide de cet élément. Pour plus d’informations sur les services duplex, consultez [Comment : Créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Utilisez le [ \<certificat >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) élément lorsque le service doit avoir le certificat du client à l’avance pour communiquer en toute sécurité avec le client. Cela se produit lors de l'utilisation du modèle de communication duplex. Dans le modèle demande-réponse plus classique, le client inclut son certificat dans la demande, que le service utilise pour sécuriser de nouveau sa réponse au client. Toutefois, le modèle de communication duplex n’a pas de demande et de réponse. Le service ne peut pas déduire le certificat du client de la communication, et par conséquent, il en a besoin à l'avance pour sécuriser les messages au client. Vous devez obtenir le certificat du client hors bande et l'indiquer à l'aide de cet élément. Pour plus d’informations sur les services duplex, consultez [Comment : Créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<authentification > de \<clientCertificate > élément  
  Le [ \<authentification >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) élément vous permet de personnaliser la façon dont les clients sont authentifiés. Vous pouvez affecter `CertificateValidationMode`, `None`, `ChainTrust`, `PeerOrChainTrust` ou `PeerTrust` à l'attribut `Custom`. Par défaut, le niveau est défini sur `ChainTrust`, qui spécifie que chaque certificat doit se trouver dans une hiérarchie de certificats se terminant par un *autorité racine* en haut de la chaîne. C’est le mode le plus sécurisé. Vous pouvez également affecter la valeur `PeerOrChainTrust`, laquelle spécifie que les certificats auto-émis (approbation homologue) sont acceptés, de même que les certificats qui se trouvent dans une chaîne approuvée. Cette valeur est utilisée lors du développement et du débogage des clients et des services car il n'est pas nécessaire d'acheter les certificats auto-émis auprès d'une autorité approuvée. Lorsque vous déployez un client, utilisez à la place la valeur `ChainTrust`. Vous pouvez également utiliser `Custom`. Lorsque vous utilisez `Custom`, vous devez également affecter l'assembly et le type utilisés pour valider le certificat à l'attribut `CustomCertificateValidatorType`. Pour créer votre propre validateur personnalisé, vous devez hériter de la classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstraite.  
@@ -80,14 +80,14 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
   
 -   Définir le `audienceUriMode` attribut de [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) à `Always` ou `BearerKeyOnly`.  
   
--   Spécifiez le jeu d’URI valides en ajoutant les URI à cette collection. Pour ce faire, insérez un [ \<Ajouter >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) pour chaque URI  
+-   Spécifiez le jeu d'URI valides en ajoutant les URI à cette collection. Pour ce faire, insérez un [ \<Ajouter >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) pour chaque URI  
   
  Pour plus d'informations, consultez <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Pour plus d’informations sur l’utilisation de cet élément de configuration, consultez [Comment : Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Autorisation d'accès aux utilisateurs CardSpace anonymes  
- L'affectation de `AllowUntrustedRsaIssuers` à l'attribut `<IssuedTokenAuthentication>` de l'élément `true` permet aux clients de présenter un jeton auto-émis signé avec une paire de clés RSA arbitraire. L’émetteur est *non approuvés* , car la clé ne comporte aucune donnée de l’émetteur associée. Un utilisateur [!INCLUDE[infocard](../../../../includes/infocard-md.md)] peut créer une carte auto-émise incluant des revendications d'identité auto-fournies. Utilisez cette fonction avec précaution. Pour utiliser cette fonctionnalité, considérez la clé publique RSA comme un mot de passe plus sécurisé qui doit être stocké dans une base de données avec un nom d'utilisateur. Avant d'autoriser l'accès d'un client au service, vérifiez la clé publique RSA présentée par celui-ci en le comparant avec celle stockée pour le nom d'utilisateur présenté. Cela suppose que vous ayez établi un processus d'inscription permettant aux utilisateurs d'enregistrer leurs noms d'utilisateur et de les associer avec les clés publiques RSA auto-émises.  
+ L'affectation de `AllowUntrustedRsaIssuers` à l'attribut `<IssuedTokenAuthentication>` de l'élément `true` permet aux clients de présenter un jeton auto-émis signé avec une paire de clés RSA arbitraire. L’émetteur est *non approuvés* , car la clé ne comporte aucune donnée de l’émetteur associée. Un utilisateur [!INCLUDE[infocard](../../../../includes/infocard-md.md)] peut créer une carte auto-émise incluant des revendications d'identité auto-fournies. Utilisez cette fonction avec précaution. Pour utiliser cette fonctionnalité, considérez la clé publique RSA comme un mot de passe plus sécurisé qui doit être stocké dans une base de données avec un nom d’utilisateur. Avant d'autoriser l'accès d'un client au service, vérifiez la clé publique RSA présentée par celui-ci en le comparant avec celle stockée pour le nom d'utilisateur présenté. Cela suppose que vous ayez établi un processus d'inscription permettant aux utilisateurs d'enregistrer leurs noms d'utilisateur et de les associer avec les clés publiques RSA auto-émises.  
   
 ## <a name="client-credentials"></a>Informations d'identification du client  
  Les informations d'identification du client permettent d'authentifier le client auprès des services dans les cas où l'authentification mutuelle est requise. Vous pouvez utiliser la section pour spécifier des certificats de service pour les scénarios dans lesquels le client doit sécuriser des messages auprès d'un service à l'aide du certificat de ce dernier.  
@@ -118,7 +118,7 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
  Définissez le certificat utilisé pour authentifier le client avec cet élément. Pour plus d'informations, voir [Procédure : Renseignez les informations d’identification Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest>  
- Cette fonctionnalité doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
+ Cette fonction doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > élément  
  Le [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contient les éléments utilisés pour configurer un émetteur local de jetons, ou les comportements utilisés avec un service de jeton de sécurité. Pour obtenir des instructions sur la configuration d’un client à utiliser un émetteur local, consultez [Comment : Configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
@@ -218,5 +218,6 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

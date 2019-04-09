@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147249"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices, interface
 Fournit des méthodes pour les services de catalogage.  
   
- Cette interface prend en charge l'infrastructure .NET Framework et n'est pas destin&#233;e &#224; &#234;tre utilis&#233;e directement &#224; partir de votre code.  
+ Cette interface prend en charge l'infrastructure .NET Framework et n'est pas destin&amp;#233;e &amp;#224; &amp;#234;tre utilis&amp;#233;e directement &amp;#224; partir de votre code.  
   
 ## <a name="methods"></a>Méthodes  
   
@@ -36,4 +36,5 @@ Fournit des méthodes pour les services de catalogage.
 |[NotAutodone, méthode](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Réservé à un usage interne uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

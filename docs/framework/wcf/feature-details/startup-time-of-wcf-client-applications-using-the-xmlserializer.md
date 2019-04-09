@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Améliorer le temps de démarrage de WCF Client Applications à l’aide de XmlSerializer'
+title: 'Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dfc3dc8247a25442511d422192fea4f49bee5d92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169804"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procédure : Améliorer le temps de démarrage de WCF Client Applications à l’aide de XmlSerializer
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer
 Les applications clientes et de services qui utilisent des types de données sérialisables à l'aide de <xref:System.Xml.Serialization.XmlSerializer> génèrent et compilent le code de sérialisation de ces types de données lors de l'exécution, ce qui peut provoquer des performances de démarrage lentes.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Les applications clientes et de services qui utilisent des types de données sé
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
-     L’argument `assemblyPath` spécifie le chemin d’accès à un assembly contenant des types de contrat de service. Svcutil.exe génère le code de sérialisation de tous les types de données utilisés dans les contrats de service de l'assembly d'application compilé qui peut être sérialisé à l'aide de <xref:System.Xml.Serialization.XmlSerializer>.  
+     L'argument `assemblyPath` spécifie le chemin d'accès à un assembly contenant des types de contrat de service. Svcutil.exe génère le code de sérialisation de tous les types de données utilisés dans les contrats de service de l'assembly d'application compilé qui peut être sérialisé à l'aide de <xref:System.Xml.Serialization.XmlSerializer>.  
   
      Svcutil.exe peut uniquement générer du code de sérialisation C#. Un fichier de code source est généré pour chaque assembly d'entrée. Vous ne pouvez pas utiliser le **/language** commutateur pour modifier le langage du code généré.  
   
@@ -87,4 +87,5 @@ svcutil /t:xmlserializer myContractLibrary.exe
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

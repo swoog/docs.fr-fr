@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms'
+title: 'Procédure : voir plusieurs lignes dans le contrôle TextBox Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190910"
 ---
-# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procédure : Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procédure : voir plusieurs lignes dans le contrôle TextBox Windows Forms
 Par défaut, les formulaires Windows <xref:System.Windows.Forms.TextBox> contrôle affiche une seule ligne de texte et n’affiche pas de barres de défilement. Si le texte est supérieure à l’espace disponible, seule une partie du texte est visible. Vous pouvez modifier ce comportement par défaut en définissant le <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, et <xref:System.Windows.Forms.TextBox.ScrollBars%2A> valeurs appropriées aux propriétés.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Pour afficher un retour chariot dans le contrôle de zone de texte  
@@ -47,11 +47,12 @@ Par défaut, les formulaires Windows <xref:System.Windows.Forms.TextBox> contrô
     |`true` (valeur par défaut)|La barre de défilement horizontale s’affiche pas. Utilisez cette valeur si vous avez choisi <xref:System.Windows.Forms.ScrollBars.Vertical> les barres de défilement ou <xref:System.Windows.Forms.ScrollBars.None>, ci-dessus, pour afficher un ou plusieurs paragraphes.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.TextBox>
 - [Vue d’ensemble du contrôle TextBox](textbox-control-overview-windows-forms.md)
-- [Guide pratique pour Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Guide pratique pour Placez des guillemets doubles dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Guide pratique pour Sélectionner du texte dans le contrôle de zone de texte Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procédure : contrôler le point d’insertion dans un contrôle TextBox Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procédure : créer une zone de texte pour un mot de passe avec le contrôle TextBox Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procédure : créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Procédure : mettre des guillemets dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Procédure : sélectionner du texte dans le contrôle TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox, contrôle](textbox-control-windows-forms.md)

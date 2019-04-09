@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761479f8dcf51095b91033aa6038bac0047d1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d667013b23da3fb53ab87069748f6f5f646efeeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203923"
 ---
 # <a name="icorruntimehostcreatelogicalthreadstate-method"></a>ICorRuntimeHost::CreateLogicalThreadState, méthode
 Cette m&#233;thode prend en charge l'infrastructure .NET Framework et n'est pas destin&#233;e &#224; &#234;tre utilis&#233;e directement &#224; partir de votre code.  
@@ -33,7 +33,7 @@ Cette m&#233;thode prend en charge l'infrastructure .NET Framework et n'est pas 
 HRESULT CreateLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
@@ -43,4 +43,5 @@ HRESULT CreateLogicalThreadState ( );
  **Version du .NET framework :** 1.0, 1.1  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

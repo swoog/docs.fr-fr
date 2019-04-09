@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Générer une boîte de dialogue d'interface utilisateur standard à l'aide de Grid"
+title: 'Procédure : Générer une boîte de dialogue d’interface utilisateur standard à l’aide d’une grille'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149524"
 ---
-# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Procédure : Générer une boîte de dialogue d'interface utilisateur standard à l'aide de Grid
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Procédure : Générer une boîte de dialogue d’interface utilisateur standard à l’aide d’une grille
 Cet exemple montre comment créer une norme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] boîte de dialogue à l’aide de la <xref:System.Windows.Controls.Grid> élément.  
   
 ## <a name="example"></a>Exemple  
@@ -33,7 +33,8 @@ Cet exemple montre comment créer une norme [!INCLUDE[TLA#tla_ui](../../../../in
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [Vue d’ensemble de Panel](panels-overview.md)
-- [Rubriques de guide pratique](grid-how-to-topics.md)
+- [Vue d'ensemble de Panel](panels-overview.md)
+- [Rubriques Comment](grid-how-to-topics.md)

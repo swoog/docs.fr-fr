@@ -1,5 +1,5 @@
 ---
-title: <connectionManagement>, élément (paramètres réseau)
+title: <connectionManagement> Élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125183"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement >, élément (paramètres réseau)
 Spécifie le nombre maximal de connexions à un hôte réseau.  
@@ -40,7 +40,7 @@ Spécifie le nombre maximal de connexions à un hôte réseau.
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Ajoute une adresse IP ou un nom DNS à la liste de gestion des connexions.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Efface la liste de gestion des connexions.|  
+|[effacer](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Efface la liste de gestion des connexions.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Supprime une adresse IP ou le nom DNS de la liste de gestion de connexion.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
@@ -70,6 +70,7 @@ Spécifie le nombre maximal de connexions à un hôte réseau.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Produire une valeur en fonction d'une liste d'éléments liés"
+title: 'Procédure : Produire une valeur en fonction d’une liste d’éléments liés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: 77c832c1460749ced58e7a20af333c5ed9dd1555
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200517"
 ---
-# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Procédure : Produire une valeur en fonction d'une liste d'éléments liés
+# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Procédure : Produire une valeur en fonction d’une liste d’éléments liés
 <xref:System.Windows.Data.MultiBinding> vous permet de lier une propriété de cible de liaison à une liste de propriétés de la source, puis appliquer une logique pour produire une valeur avec les entrées données. Cet exemple montre comment utiliser <xref:System.Windows.Data.MultiBinding>.  
   
 ## <a name="example"></a>Exemple  
@@ -31,9 +31,10 @@ ms.locfileid: "57368123"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` implémente l'interface <xref:System.Windows.Data.IMultiValueConverter>. `NameConverter` prend les valeurs des liaisons individuelles et les stocke dans le tableau d’objets de valeurs. L’ordre dans lequel le <xref:System.Windows.Data.Binding> éléments apparaissent sous le <xref:System.Windows.Data.MultiBinding> élément est l’ordre dans lequel ces valeurs sont stockées dans le tableau. La valeur de la <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> attribut est référencé par l’argument de paramètre de la <xref:System.Windows.Data.MultiBinding.Converter%2A> (méthode), qui exécute une commutation sur le paramètre pour déterminer comment mettre en forme le nom.  
+ `NameConverter` Implémente le <xref:System.Windows.Data.IMultiValueConverter> interface. `NameConverter` prend les valeurs des liaisons individuelles et les stocke dans le tableau d’objets de valeurs. L’ordre dans lequel le <xref:System.Windows.Data.Binding> éléments apparaissent sous le <xref:System.Windows.Data.MultiBinding> élément est l’ordre dans lequel ces valeurs sont stockées dans le tableau. La valeur de la <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> attribut est référencé par l’argument de paramètre de la <xref:System.Windows.Data.MultiBinding.Converter%2A> (méthode), qui exécute une commutation sur le paramètre pour déterminer comment mettre en forme le nom.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Convertir des données liées](how-to-convert-bound-data.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

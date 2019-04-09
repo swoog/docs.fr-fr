@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Activer la détection de relecture de messages'
+title: 'Procédure : activer la détection de réexécution des messages'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156024"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Procédure : Activer la détection de relecture de messages
+# <a name="how-to-enable-message-replay-detection"></a>Procédure : activer la détection de réexécution des messages
 Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages entre deux correspondants et relit le flux à l'un ou plusieurs des correspondants. Sauf atténuation, les ordinateurs sujets à l'attaque traiteront le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
   
  Pour plus d’informations sur la détection de relecture de message, consultez [la détection de relecture des messages](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -86,11 +86,11 @@ Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages 
 ## <a name="secure-conversation-notes"></a>Remarques relatives aux conversations sécurisées  
  Pour les liaisons qui activent les conversations sécurisées, vous pouvez ajuster ces paramètres à la fois pour le canal d’application et pour la liaison du démarrage de conversation sécurisée. Par exemple, vous pouvez désactiver les relectures pour le canal d'application mais les activer pour le canal de démarrage qui établit la conversation sécurisée.  
   
- Si vous n'utilisez pas de sessions de conversation sécurisée, la détection des relectures n'est pas garantie dans les scénarios de batterie de serveurs et lorsque le processus est recyclé. Cela s'applique aux liaisons fournies par le système suivantes :  
+ Si vous n'utilisez pas de sessions de conversation sécurisée, la détection des relectures n'est pas garantie dans les scénarios de batterie de serveurs et lorsque le processus est recyclé. Cela s’applique aux liaisons fournies par le système suivantes :  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   Objet <xref:System.ServiceModel.WSHttpBinding> avec la propriété <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> définie à la valeur `false`.  
+-   <xref:System.ServiceModel.WSHttpBinding> avec le <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriété définie sur `false`.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
@@ -103,8 +103,9 @@ Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages 
 -   <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Conversations sécurisées et sessions sécurisées](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

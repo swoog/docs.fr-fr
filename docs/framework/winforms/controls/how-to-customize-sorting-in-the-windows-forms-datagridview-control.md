@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Personnaliser le tri dans le contrôle DataGridView Windows Forms'
+title: 'Procédure : personnaliser le tri dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 18d3ec4aa2c8c4a9bfd769b8d922bc76e7dac4a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0e7dffa45dc8d3ac467129d44a7c73a8c4b4bfa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192912"
 ---
-# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Procédure : Personnaliser le tri dans le contrôle DataGridView Windows Forms
+# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Procédure : personnaliser le tri dans le contrôle DataGridView Windows Forms
 Le contrôle <xref:System.Windows.Forms.DataGridView> assure le tri automatique mais, selon vos besoins, vous devrez peut-être personnaliser les opérations de tri. Par exemple, vous pouvez utiliser le tri par programmation pour créer une autre interface utilisateur. Vous pouvez également gérer l'événement <xref:System.Windows.Forms.DataGridView.SortCompare> ou appeler la surcharge `Sort(IComparer)` de la méthode <xref:System.Windows.Forms.DataGridView.Sort%2A> pour bénéficier d'une plus grande flexibilité de tri, par exemple pour trier plusieurs colonnes.  
   
  Les exemples de code suivants illustrent ces trois approches de tri personnalisé. Pour plus d’informations, consultez [Modes de tri des colonnes du contrôle DataGridView Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md).  
@@ -47,7 +47,8 @@ Le contrôle <xref:System.Windows.Forms.DataGridView> assure le tri automatique 
  Pour plus d’informations sur la création de ces exemples à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Tri des données dans le contrôle DataGridView Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Modes de tri des colonnes du contrôle DataGridView Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Procédure : définir les modes de tri des colonnes dans le contrôle DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)

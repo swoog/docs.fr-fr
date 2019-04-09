@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174601"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : démonstration de l’héritage visuel
 L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de base et d'ajouter de nouveaux contrôles. Dans cette procédure pas à pas, vous allez créer un formulaire de base et le compiler dans une bibliothèque de classes. Vous importerez cette bibliothèque de classes dans un autre projet et créerez un formulaire qui hérite du formulaire de base. Pendant cette procédure pas à pas, vous allez apprendre à :  
@@ -146,7 +146,7 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 7.  Sélectionnez privé **Say Goodbye** bouton et notez qu’il n’a pas de poignées de redimensionnement. En outre, dans le **propriétés** fenêtre, les propriétés de ce bouton sont estompées pour indiquer qu’ils ne sont pas modifiables.  
   
-8.  Si vous utilisez Visual C# :  
+8.  Si vous utilisez Visual c# :  
   
     1.  Dans **l’Explorateur de solutions**, avec le bouton droit **Form1** dans le **InheritanceTest** de projet, puis choisissez **supprimer**. Dans la boîte de message qui s’affiche, cliquez sur **OK** pour confirmer la suppression.  
   
@@ -161,9 +161,10 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
 12. Appuyez sur F5 pour exécuter l'application et observez le comportement du formulaire hérité.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- L'héritage pour les contrôles utilisateur fonctionne de la même façon. Ouvrez un nouveau projet de bibliothèque de classes et ajoutez un contrôle utilisateur. Placez les contrôles constituants dessus et compilez le projet. Ouvrez un autre projet de bibliothèque de classes et ajoutez une référence à la bibliothèque de classes compilée. Essayez également d’ajouter un contrôle hérité (via le **ajouter de nouveaux éléments** boîte de dialogue) au projet et à l’aide de la **sélecteur d’héritage**. Ajoutez un contrôle utilisateur et modifiez le `Inherits` (`:` en Visual C#) instruction. Pour plus d'informations, voir [Procédure : Hériter des Windows Forms](how-to-inherit-windows-forms.md).  
+ L'héritage pour les contrôles utilisateur fonctionne de la même façon. Ouvrez un nouveau projet de bibliothèque de classes et ajoutez un contrôle utilisateur. Placez les contrôles constituants dessus et compilez le projet. Ouvrez un autre projet de bibliothèque de classes et ajoutez une référence à la bibliothèque de classes compilée. Essayez également d’ajouter un contrôle hérité (via le **ajouter de nouveaux éléments** boîte de dialogue) au projet et à l’aide de la **sélecteur d’héritage**. Ajoutez un contrôle utilisateur et modifiez le `Inherits` (`:` en Visual c#) instruction. Pour plus d'informations, voir [Procédure : Hériter des Windows Forms](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Hériter des Windows Forms](how-to-inherit-windows-forms.md)
+
+- [Procédure : hériter de Windows Forms](how-to-inherit-windows-forms.md)
 - [Héritage visuel des Windows Forms](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159521"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Fournisseur de réflexion (services de données WCF)
-En plus d’exposer des données d’un modèle de données via Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] peut exposer des données qui ne sont pas définies strictement dans un modèle basé sur une entité. Le fournisseur de réflexion expose des données dans les classes qui retournent des types implémentant l'interface <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise la réflexion pour déduire un modèle de données pour ces classes et peut traduire des requêtes basées sur une adresse sur des ressources en requêtes LINQ (Language Integrated Query) en fonction des types <xref:System.Linq.IQueryable%601> exposés.  
+En plus d’exposer des données d’un modèle de données via Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] peut exposer des données qui ne sont pas définies strictement dans un modèle basé sur une entité. Le fournisseur de réflexion expose des données dans les classes qui retournent des types implémentant l’interface <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise la réflexion pour déduire un modèle de données pour ces classes et peut traduire des requêtes fondées sur une adresse auprès des ressources de language integrated Query (LINQ)-en fonction des requêtes sur exposés <xref:System.Linq.IQueryable%601> types.  
   
 > [!NOTE]
 >  Vous pouvez utiliser la méthode <xref:System.Linq.Queryable.AsQueryable%2A> pour retourner une interface <xref:System.Linq.IQueryable%601> à partir des classes qui implémentent l'interface <xref:System.Collections.Generic.IEnumerable%601>. De cette manière, la plupart des types de collection génériques peuvent être utilisé comme une source de données pour votre service de données.  
@@ -81,7 +81,7 @@ En plus d’exposer des données d’un modèle de données via Entity Framework
 |<xref:System.Data.Services.IUpdatable.DeleteResource%2A>|Fournit les fonctionnalités pour supprimer une ressource.|  
 |<xref:System.Data.Services.IUpdatable.GetResource%2A>|Fournit les fonctionnalités pour récupérer une ressource identifiée par une requête et un nom de type spécifiques.|  
 |<xref:System.Data.Services.IUpdatable.GetValue%2A>|Fournit les fonctionnalités pour retourner la valeur d'une propriété d'une ressource.|  
-|<xref:System.Data.Services.IUpdatable.RemoveReferenceFromCollection%2A>|Fournit les fonctionnalités pour supprimer un objet d'une collection d'objets connexes accessibles depuis une propriété de navigation.|  
+|<xref:System.Data.Services.IUpdatable.RemoveReferenceFromCollection%2A>|Fournit les fonctionnalités pour supprimer un objet d’une collection d’objets connexes accessibles depuis une propriété de navigation.|  
 |<xref:System.Data.Services.IUpdatable.ResetResource%2A>|Fournit les fonctionnalités pour mettre à jour une ressource spécifiée.|  
 |<xref:System.Data.Services.IUpdatable.ResolveResource%2A>|Fournit les fonctionnalités pour retourner la ressource représentée par une instance d'objet spécifique.|  
 |<xref:System.Data.Services.IUpdatable.SaveChanges%2A>|Fournit les fonctionnalités pour enregistrer toutes les modifications en attente.|  
@@ -89,10 +89,11 @@ En plus d’exposer des données d’un modèle de données via Entity Framework
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|Fournit les fonctionnalités pour définir la valeur de la propriété d'une ressource.|  
   
 ## <a name="handling-concurrency"></a>Gestion de l'accès concurrentiel  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge un modèle d'accès concurrentiel optimiste en vous permettant de définir un jeton d'accès concurrentiel pour une entité. Ce jeton d'accès concurrentiel, qui inclut une ou plusieurs propriétés de l'entité, est utilisé par le service de données pour déterminer si une modification a eu lieu dans les données demandées, mises à jour ou supprimées. Lorsque les valeurs du jeton obtenues de l'eTag dans la demande diffèrent des valeurs actuelles de l'entité, le service de données déclenche une exception. L'objet <xref:System.Data.Services.ETagAttribute> est appliqué à un type d'entité pour définir un jeton d'accès concurrentiel dans le fournisseur de réflexion. Le jeton d'accès concurrentiel ne peut pas inclure une propriété de clé ou de navigation. Pour plus d’informations, consultez [la mise à jour le Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge un modèle d’accès concurrentiel optimiste en vous permettant de définir un jeton d’accès concurrentiel pour une entité. Ce jeton d'accès concurrentiel, qui inclut une ou plusieurs propriétés de l'entité, est utilisé par le service de données pour déterminer si une modification a eu lieu dans les données demandées, mises à jour ou supprimées. Lorsque les valeurs du jeton obtenues de l'eTag dans la demande diffèrent des valeurs actuelles de l'entité, le service de données déclenche une exception. L'objet <xref:System.Data.Services.ETagAttribute> est appliqué à un type d'entité pour définir un jeton d'accès concurrentiel dans le fournisseur de réflexion. Le jeton d'accès concurrentiel ne peut pas inclure une propriété de clé ou de navigation. Pour plus d’informations, consultez [la mise à jour le Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Utilisation de LINQ to SQL avec le fournisseur de réflexion  
  Comme Entity Framework est pris en charge en mode natif par défaut, il s'agit du fournisseur de données recommandé pour l'utilisation de données relationnelles avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Toutefois, vous pouvez utiliser le fournisseur de réflexion pour utiliser les classes LINQ to SQL avec un service de données. Le <xref:System.Data.Linq.Table%601> résultats retournés par les méthodes sur le <xref:System.Data.Linq.DataContext> générées par LINQ l’implémentation SQL Concepteur Objet/Relationnel (Concepteur O/R) le <xref:System.Linq.IQueryable%601> interface. Cela permet au fournisseur de réflexion d'accéder à ces méthodes et de retourner les données d'entité de SQL Server en utilisant les classes LINQ to SQL générées. Toutefois, comme LINQ to SQL n'implémente pas l'interface <xref:System.Data.Services.IUpdatable>, vous devez ajouter une classe partielle qui étend la classe partielle <xref:System.Data.Linq.DataContext> existante pour ajouter l'implémentation <xref:System.Data.Services.IUpdatable>. Pour plus d'informations, voir [Procédure : Créer un Service de données à l’aide d’un LINQ vers la Source de données SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 54f52b1496ada2573949f98e1397b3b7736078d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160821"
 ---
 # <a name="issuer"></a>\<issuer>
 Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jetons de sécurité.  
@@ -50,13 +50,13 @@ Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jeto
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|address|Chaîne requise. URL du service STS.|  
+|adresse|Chaîne requise. URL du service STS.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Collection d’en-têtes d’adresse de points de terminaison pouvant être créée par le générateur.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Collection d'en-têtes d'adresse de points de terminaison pouvant être créée par le générateur.|  
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Lors de l'utilisation d'un jeton émis, spécifie des paramètres qui permettent au client d'authentifier le serveur.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
@@ -66,6 +66,7 @@ Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jeto
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Définit les paramètres de la sécurité au niveau du message pour le [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) élément.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>

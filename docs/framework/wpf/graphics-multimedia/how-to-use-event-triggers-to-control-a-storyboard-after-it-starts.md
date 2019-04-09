@@ -1,19 +1,19 @@
 ---
-title: "Procédure : Utiliser des déclencheurs d'événements pour contrôler un storyboard après son démarrage"
+title: 'Procédure : Utiliser des déclencheurs d’événements pour contrôler une table de montage séquentiel après son démarrage'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - triggers [WPF], controlling Storyboards
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170649"
 ---
-# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Procédure : Utiliser des déclencheurs d'événements pour contrôler un storyboard après son démarrage
+# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Procédure : Utiliser des déclencheurs d’événements pour contrôler une table de montage séquentiel après son démarrage
 Cet exemple montre comment contrôler un <xref:System.Windows.Media.Animation.Storyboard> après son démarrage. Pour démarrer un <xref:System.Windows.Media.Animation.Storyboard> à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilisez <xref:System.Windows.Media.Animation.BeginStoryboard>, qui distribue les animations aux objets et aux propriétés qu’ils animent, puis démarre le storyboard. Si vous donnez <xref:System.Windows.Media.Animation.BeginStoryboard> un nom en spécifiant son <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propriété, vous rendiez une table de montage séquentiel contrôlable. Vous pouvez ensuite contrôler interactivement la table de montage séquentiel après son démarrage.  
   
  Utilisez les actions suivantes de la table de montage séquentiel avec <xref:System.Windows.EventTrigger> objets pour contrôler un storyboard.  
@@ -40,12 +40,13 @@ Cet exemple montre comment contrôler un <xref:System.Windows.Media.Animation.St
  Pour obtenir des exemples supplémentaires, consultez le [Galerie d’exemples d’Animation](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>
 - <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>
 - <xref:System.Windows.Media.Animation.SkipStoryboardToFill>
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [Contrôler un storyboard après son démarrage à l'aide de ses méthodes interactives](how-to-control-a-storyboard-after-it-starts.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+- [Contrôler une table de montage séquentiel après son démarrage à l’aide de ses méthodes interactives](how-to-control-a-storyboard-after-it-starts.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des storyboards](storyboards-overview.md)

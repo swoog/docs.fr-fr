@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143271"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Procédure : Contrôler quand le texte TextBox met à jour la source
 Cette rubrique explique comment utiliser le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété pour contrôler le minutage des mises à jour de la source de liaison. La rubrique utilise le <xref:System.Windows.Controls.TextBox> contrôle comme exemple.  
   
 ## <a name="example"></a>Exemple  
- L’<xref:System.Windows.Controls.TextBox>opérateur<xref:System.Windows.Controls.TextBox.Text%2A> propriété a une valeur par défaut <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Cela signifie que si une application a un <xref:System.Windows.Controls.TextBox> avec une limite de données <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriété, le texte que vous tapez dans la <xref:System.Windows.Controls.TextBox> ne met pas à jour la source jusqu'à ce que le <xref:System.Windows.Controls.TextBox> perd le focus (par exemple, lorsque vous cliquez en dehors de la <xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriété a une valeur par défaut <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Cela signifie que si une application a un <xref:System.Windows.Controls.TextBox> avec une limite de données <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriété, le texte que vous tapez dans la <xref:System.Windows.Controls.TextBox> ne met pas à jour la source jusqu'à ce que le <xref:System.Windows.Controls.TextBox> perd le focus (par exemple, lorsque vous cliquez en dehors de la <xref:System.Windows.Controls.TextBox>).  
   
  Si vous souhaitez que la source de mise à jour que vous tapez, définissez le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> de la liaison à <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Dans l’exemple suivant, les lignes de code en surbrillance montrent que la `Text` propriétés des deux le <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.TextBlock> sont liés à la même propriété source. Le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété de la <xref:System.Windows.Controls.TextBox> liaison est définie sur <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -46,4 +46,5 @@ Cette rubrique explique comment utiliser le <xref:System.Windows.Data.Binding.Up
 >  Le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété porte sur la source des mises à jour et par conséquent concerne uniquement les <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons. Pour <xref:System.Windows.Data.BindingMode.TwoWay> et <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons fonctionne, l’objet source doit fournir des notifications de modification de propriété. Vous pouvez consulter les exemples figurant dans cette rubrique pour plus d’informations. Vous pouvez également consulter la page [Implémenter la notification des modifications de propriétés](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Rubriques Comment](data-binding-how-to-topics.md)

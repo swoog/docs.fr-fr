@@ -2,15 +2,15 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 746f98b54285f95bb63e15136508909327c0d140
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174926"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
-Cette section inscrit un nouveau point de terminaison standard dans la section des extensions du fichier de configuration machine ou d’application. Vous pouvez ajouter un point de terminaison standard à cette collection à l'aide du mot clé `add` et affecter à l'attribut `type` de l'élément le type du point de terminaison et à l'attribut `name` le nom du point de terminaison standard.  
+Cette section inscrit un nouveau point de terminaison standard dans la section des extensions du fichier de configuration machine ou d'application. Vous pouvez ajouter un point de terminaison standard à cette collection à l’aide du mot clé `add` et affecter à l’attribut `type` de l’élément le type du point de terminaison et à l’attribut `name` le nom du point de terminaison standard.  
   
  L'exemple suivant utilise l'élément `add`, ainsi que l'attribut `name`, pour ajouter un point de terminaison standard à la section `<endpointExtensions>` du fichier de configuration.  
   
@@ -44,4 +44,3 @@ Cette section inscrit un nouveau point de terminaison standard dans la section d
   </standardEndpoints>
 </system.serviceModel>
 ```  
-  

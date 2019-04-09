@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140853"
 ---
 # <a name="attached-events-overview"></a>Vue d'ensemble des événements attachés
-Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et un type d’événement appelé *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et le type d’événement appelé un *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique suppose que vous avez lu [Vue d’ensemble des événements routés](routed-events-overview.md) et [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md).  
@@ -92,6 +90,7 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
  Toutefois, si vous définissez un événement attaché personnalisé basé sur le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modèle de baser les événements attachés sur <xref:System.Windows.RoutedEvent>, vous pouvez utiliser <xref:System.Windows.UIElement.RaiseEvent%2A> pour déclencher un événement attaché à partir d’un <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement>. Le déclenchement d’un événement routé (attaché ou non) nécessite que vous déclarez un élément particulier dans l’arborescence d’éléments comme la source d’événements ; Cette source est signalée comme le <xref:System.Windows.UIElement.RaiseEvent%2A> appelant. Votre service est chargé de déterminer quel est l’élément signalé en tant que source dans l’arborescence  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
+
+- [Vue d'ensemble des événements routés](routed-events-overview.md)
 - [Syntaxe XAML en détail](xaml-syntax-in-detail.md)
 - [XAML et classes personnalisées pour WPF](xaml-and-custom-classes-for-wpf.md)

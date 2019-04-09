@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer des paramètres d’Application'
+title: 'Procédure : créer des paramètres d’application'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166398"
 ---
-# <a name="how-to-create-application-settings"></a>Procédure : Créer des paramètres d’Application
+# <a name="how-to-create-application-settings"></a>Procédure : créer des paramètres d’application
 À l'aide de code managé, vous pouvez créer des paramètres d'application et les lier à des propriétés ou des contrôles sur votre formulaire, pour que ces paramètres soient chargés et enregistrés automatiquement au moment de l'exécution.  
   
  Dans la procédure suivante, vous allez créer manuellement une classe wrapper qui dérive de <xref:System.Configuration.ApplicationSettingsBase>. Vous ajouterez à cette classe une propriété accessible publiquement pour chaque paramètre d'application que vous souhaitez exposer.  
@@ -47,7 +47,8 @@ ms.locfileid: "57721240"
  Le fournisseur de paramètres par défaut, <xref:System.Configuration.LocalFileSettingsProvider>, conserve les informations dans des fichiers de configuration en texte brut. Cela limite la sécurité à la sécurité d'accès de fichier fournie par le système d'exploitation pour l'utilisateur actuel. Pour cette raison, vous devez faire attention aux informations stockées dans les fichiers de configuration. Par exemple, l'une des utilisations courantes des paramètres d'application consiste à stocker des chaînes de connexion qui pointent vers le magasin de données de l'application. Toutefois, pour des raisons de sécurité, ces chaînes ne doivent pas inclure de mots de passe. Pour plus d'informations sur les chaînes de connexion, consultez <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Vue d'ensemble des paramètres d'application](application-settings-overview.md)
-- [Guide pratique pour Valider les paramètres d’Application](how-to-validate-application-settings.md)
+- [Procédure : valider les paramètres d’application](how-to-validate-application-settings.md)

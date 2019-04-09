@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 7c536c9420e94e9b8f8bc2656df284d95a9744c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158657"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Outil de configuration de modèle de service COM+ (ComSvcConfig.exe)
 L'outil en ligne de configuration de modèle de service COM+ (ComSvcConfig.exe) permet de configurer des interfaces COM+ à exposer en tant que services Web.  
@@ -47,7 +47,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Spécifie l'application COM+ à configurer.<br /><br /> Forme abrégée : `/a`.|  
 |`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Spécifie le composant et l'interface COM+ qui seront configurés en tant que contrat pour le service.<br /><br /> Forme abrégée : `/c`.<br /><br /> Tandis que le caractère générique (\*) peut être utilisé lorsque vous spécifiez les noms de composant et l’interface, nous recommandons que vous ne l’utilisez pas, car vous pouvez exposer des interfaces que vous ne souhaitez pas.|  
 |`/hosting:` \<*complus*  &#124; *was*\>|Spécifie s'il faut utiliser le mode d'hébergement COM+ ou Web.<br /><br /> Forme abrégée : `/h`.<br /><br /> L'utilisation du mode d'hébergement COM+ requiert l'activation explicite de l'application COM+. L'utilisation du mode d'hébergement Web permet à l'application COM+ d'être activée automatiquement, de façon appropriée. Si l'application COM+ est une application de bibliothèque, elle s'exécute au cours du processus de Services Internet (IIS). Si l'application COM+ est une application serveur, elle s'exécute au cours du processus Dllhost.exe.|  
-|`/webSite:` \<*Nom du site Web*\>|Spécifie le site web à utiliser pour l’hébergement lorsque le mode d’hébergement Web est utilisé (consultez l’indicateur `/hosting` ).<br /><br /> Forme abrégée : `/w`.<br /><br /> Si aucun site web n’est spécifié, le site web par défaut est utilisé.|  
+|`/webSite:` \<*WebsiteName*\>|Spécifie le site web à utiliser pour l’hébergement lorsque le mode d’hébergement Web est utilisé (consultez l’indicateur `/hosting` ).<br /><br /> Forme abrégée : `/w`.<br /><br /> Si aucun site Web n'est spécifié, le site Web par défaut est utilisé.|  
 |`/webDirectory:` \<*WebDirectoryName*\>|Spécifie le répertoire virtuel à utiliser pour l'hébergement lorsque le mode d'hébergement Web est utilisé (consultez l'indicateur `/hosting` ).<br /><br /> Forme abrégée : `/d`.|  
 |`/mex`|Ajoute un service d'échange de métadonnées (MEX, Metadata Exchange) à la configuration du service par défaut pour prendre en charge les clients qui souhaitent récupérer une définition de contrat à partir du service.<br /><br /> Forme abrégée : `/x`.|  
 |`/id`|Affiche les informations sur l'application, le composant et l'interface en tant qu'ID.<br /><br /> Forme abrégée : `/k`.|  
@@ -86,7 +86,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
 ```  
   
 ### <a name="description"></a>Description  
- L'exemple suivant répertoire les interfaces actuellement exposées, hébergées par COM+, ainsi que l'adresse correspondante et les détails de liaison, pour l'application COM+ OnlineStore située sur l'ordinateur local.  
+ L’exemple suivant répertoire les interfaces actuellement exposées, hébergées par COM+, ainsi que l’adresse correspondante et les détails de liaison, pour l’application COM+ OnlineStore située sur l’ordinateur local.  
   
 ### <a name="code"></a>Code  
   
@@ -95,4 +95,5 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Utilisez l’outil de Configuration de modèle de Service COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [Procédure : utiliser l’outil de configuration de modèle de service COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

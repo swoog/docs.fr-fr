@@ -1,17 +1,17 @@
 ---
-title: 'Procédure pas à pas : À l’aide de procédures stockées uniquement (Visual Basic)'
+title: 'Procédure pas à pas : Utilisation de procédures stockées uniquement (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188569"
 ---
-# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procédure pas à pas : À l’aide de procédures stockées uniquement (Visual Basic)
+# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procédure pas à pas : Utilisation de procédures stockées uniquement (Visual Basic)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base complet pour accéder aux données à l'aide de procédures stockées uniquement. Cette approche est souvent utilisée par les administrateurs de base de données pour limiter les moyens d'accès au magasin de données.  
   
 > [!NOTE]
@@ -105,14 +105,14 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 1.  Dans **l’Explorateur de solutions**, avec le bouton droit **Form1.vb**, puis cliquez sur **afficher le Code**.  
   
-     `Class Form1` apparaît dans l'éditeur de code.  
+     `Class Form1` s’affiche dans l’éditeur de code.  
   
 2.  Tapez le code suivant dans le bloc de code `Form1` :  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
 ## <a name="setting-up-the-user-interface"></a>Configuration de l'interface utilisateur.  
- Au cours de cette tâche, vous allez créez une interface pour permettre aux utilisateurs d'exécuter des procédures stockées pour accéder aux données de la base de données. Dans l'application que vous développez avec cette procédure pas à pas, les utilisateurs peuvent accéder aux données de la base de données uniquement en utilisant les procédures stockées incorporées dans l'application.  
+ Au cours de cette tâche, vous allez créez une interface pour permettre aux utilisateurs d’exécuter des procédures stockées pour accéder aux données de la base de données. Dans l'application que vous développez avec cette procédure pas à pas, les utilisateurs peuvent accéder aux données de la base de données uniquement en utilisant les procédures stockées incorporées dans l'application.  
   
 #### <a name="to-set-up-the-user-interface"></a>Pour configurer l'interface utilisateur  
   
@@ -192,5 +192,6 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
  Vous pouvez améliorer ce projet en apportant des modifications. Par exemple, vous pouvez répertorier les procédures stockées disponibles dans une zone de liste et demander à l'utilisateur de sélectionner les procédures à exécuter. Vous pouvez également transmettre en continu la sortie des rapports dans un fichier texte.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

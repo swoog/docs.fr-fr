@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197735"
 ---
 # <a name="drawings-how-to-topics"></a>Rubriques "Comment" relatives aux dessins
 Les rubriques de cette section décrivent comment utiliser <xref:System.Windows.Media.Drawing> objets pour dessiner des formes, des images ou texte.  
@@ -26,11 +26,12 @@ Les rubriques de cette section décrivent comment utiliser <xref:System.Windows.
   [Créer un dessin composite](how-to-create-a-composite-drawing.md)  
   [Créer un GeometryDrawing](how-to-create-a-geometrydrawing.md)  
   [Dessiner une image à l’aide d’ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
-  [Lire un média à l'aide d'un VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
-  [Utiliser un dessin comme source d'image](how-to-use-a-drawing-as-an-image-source.md)  
+  [Lire un média à l’aide d’un VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
+  [Utiliser un dessin comme source d’image](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Drawing>
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Graphiques et multimédia](index.md)
