@@ -2,17 +2,17 @@
 title: Client Validation
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 637b6bd26407feb3213503310396a20bf1c8bdcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177331"
 ---
 # <a name="client-validation"></a>Client Validation
 Les services publient fréquemment des métadonnées pour activer la génération et la configuration automatiques de types de proxy clients. Lorsque le service n'est pas approuvé, les applications clientes doivent valider que les métadonnées se conforment à la stratégie de l'application cliente en ce qui concerne la sécurité, les transactions, le type de contrat de service, etc. L'exemple suivant montre comment écrire un comportement de point de terminaison client qui valide le point de terminaison de service pour garantir que ce dernier est fiable.  
   
- Le service expose quatre points de terminaison de service. Le premier point de terminaison utilise WSDualHttpBinding, le deuxième utilise l'authentification NTLM, le troisième active le flux de transaction et le quatrième utilise l'authentification basée sur les certificats.  
+ Le service expose quatre points de terminaison de service. Le premier point de terminaison utilise WSDualHttpBinding, le deuxième utilise l’authentification NTLM, le troisième active le flux de transaction et le quatrième utilise l’authentification basée sur les certificats.  
   
  Le client utilise la classe <xref:System.ServiceModel.Description.MetadataResolver> pour récupérer les métadonnées pour le service. Le client met en vigueur une stratégie d’interdiction des liaisons duplex, d’authentification NTLM et de flux de transaction à l’aide d’un comportement de validation. Pour chaque <xref:System.ServiceModel.Description.ServiceEndpoint> instance importé à partir des métadonnées du service, l’application cliente ajoute une instance de la `InternetClientValidatorBehavior` comportement de point de terminaison pour le <xref:System.ServiceModel.Description.ServiceEndpoint> avant d’utiliser un client Windows Communication Foundation (WCF) pour se connecter à le point de terminaison. La méthode `Validate` du comportement s'exécute avant qu'une opération sur le service soit appelée et met en vigueur la stratégie du client en levant `InvalidOperationExceptions`.  
   
@@ -64,4 +64,5 @@ Les services publient fréquemment des métadonnées pour activer la génératio
     >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le CurrentUser - TrustedPeople stocker. Pour ce faire, utilisez la ligne de commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)

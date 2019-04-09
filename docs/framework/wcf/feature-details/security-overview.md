@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136953"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 Windows Communication Foundation (WCF) est une plateforme SOAP de la programmation distribuée basée sur message, et la sécurisation des messages entre les clients et services est essentielle à la protection des données. WCF fournit une plateforme souple et interopérable pour échanger des messages sécurisés en fonction de l’infrastructure de sécurité existante et les normes de sécurité reconnues pour les messages SOAP.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) est une plateforme SOAP de la programmati
   
  Pour plus d’informations sur ces différences, consultez [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Un troisième mode de sécurité utilise les deux modes précédents en offrant leurs avantages. Ce mode est appelé `TransportWithMessageCredential`. Dans ce mode, la sécurité de message est utilisée pour authentifier le client et la sécurité de transport est utilisée pour authentifier le serveur et fournir la confidentialité et l'intégrité des messages. Grâce à ces fonctions, le mode de sécurité `TransportWithMessageCredential` est presque aussi rapide que le mode de sécurité de transport et permet l'extensibilité de l'authentification du client de la même manière que la sécurité de message. Toutefois, il ne permet pas la sécurité complète de bout en bout contrairement au mode de sécurité de message.  
+ Un troisième mode de sécurité utilise les deux modes précédents en offrant leurs avantages. Ce mode est appelé `TransportWithMessageCredential`. Dans ce mode, la sécurité de message est utilisée pour authentifier le client et la sécurité de transport est utilisée pour authentifier le serveur et fournir la confidentialité et l'intégrité des messages. Grâce à ces fonctions, le mode de sécurité `TransportWithMessageCredential` est presque aussi rapide que le mode de sécurité de transport et permet l’extensibilité de l’authentification du client de la même manière que la sécurité de message. Toutefois, il ne permet pas la sécurité complète de bout en bout contrairement au mode de sécurité de message.  
   
 ### <a name="access-control"></a>Contrôle d'accès  
  *Contrôle d’accès* est également appelé autorisation. *Autorisation* permet à plusieurs utilisateurs à avoir des privilèges différents pour afficher les données. Par exemple, étant donné que les fichiers des ressources humaines d'une entreprise contiennent des données sensibles sur les employés, seuls les responsables sont autorisés à consulter ces données. De plus, les responsables peuvent consulter uniquement les données se rapportant à leurs collaborateurs directs. Dans ce cas, le contrôle d'accès est basé sur le rôle (« responsable ») ainsi que l'identité spécifique du responsable (pour empêcher un responsable de consulter les informations relatives aux employés d'un autre responsable).  
@@ -98,6 +98,7 @@ Windows Communication Foundation (WCF) est une plateforme SOAP de la programmati
  *L’audit* est la journalisation des événements de sécurité dans le journal des événements Windows. Vous pouvez enregistrer des événements relatifs à la sécurité, tels que les échecs (ou les succès) d'authentification. Pour plus d’informations, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Pour plus d’informations de programmation, consultez [Comment : Auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)
 - [Scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
@@ -107,9 +108,9 @@ Windows Communication Foundation (WCF) est une plateforme SOAP de la programmati
 - [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Aide sur la sécurité et bonnes pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Configuration des services à l’aide de fichiers de configuration](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Aide sur la sécurité et meilleures pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Configuration des services à l'aide de fichiers de configuration](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d'ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Extension de la sécurité](../../../../docs/framework/wcf/extending/extending-security.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

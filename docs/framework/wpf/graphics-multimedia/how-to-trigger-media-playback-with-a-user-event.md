@@ -7,12 +7,12 @@ helpviewer_keywords:
 - media [WPF], synchronizing playback with events
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
-ms.openlocfilehash: 1d71e69bcd0332ba7119977dcf67356a3d79a368
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150174"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Procédure : Déclencher la lecture du média avec un événement utilisateur
 Cet exemple montre comment synchroniser la lecture du média avec un événement.  
@@ -23,9 +23,10 @@ Cet exemple montre comment synchroniser la lecture du média avec un événement
  [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.EventTrigger.RoutedEvent%2A>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Rubriques de guide pratique](audio-and-video-how-to-topics.md)
+- [Rubriques Comment](audio-and-video-how-to-topics.md)
 - [Graphiques et multimédia](index.md)

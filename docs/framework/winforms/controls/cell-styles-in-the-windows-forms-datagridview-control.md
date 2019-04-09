@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171520"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Styles de cellules dans le contrôle DataGridView Windows Forms
 Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut avoir son propre style, telles que le format de texte, couleur d’arrière-plan, couleur de premier plan et police. En général, toutefois, plusieurs cellules partagent les caractéristiques de style particulier.  
@@ -145,6 +145,7 @@ Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut a
 >  La mise en cache les valeurs stockées dans la cellule <xref:System.Windows.Forms.DataGridViewCell.Style%2A> propriété est importante même si une valeur de style particulier est définie. Si vous remplacez temporairement un paramètre de style, restaurant à son état initial « non défini » permet de s’assurer que la cellule reviens à hériter le paramètre de style à un niveau supérieur. Si vous avez besoin déterminer le style réel en vigueur pour une cellule, quel que soit le style est hérité ou non, utilisez la cellule <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
@@ -163,5 +164,5 @@ Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut a
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
 - [Mises en forme et styles de base dans le contrôle DataGridView Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir des Styles de cellules par défaut pour le contrôle de DataGridView Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Procédure : définir des styles de cellules par défaut pour le contrôle DataGridView Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
 - [Mise en forme de données dans le contrôle DataGridView Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

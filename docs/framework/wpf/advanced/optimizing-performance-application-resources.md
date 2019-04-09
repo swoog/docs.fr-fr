@@ -1,5 +1,5 @@
 ---
-title: "Optimisation des performances : Ressources d'application"
+title: 'Optimisation des performances : Ressources d’application'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139423"
 ---
-# <a name="optimizing-performance-application-resources"></a>Optimisation des performances : Ressources d'application
+# <a name="optimizing-performance-application-resources"></a>Optimisation des performances : Ressources d’application
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de partager des ressources d’application afin que vous pouvez prendre en charge une apparence cohérente ou un comportement à travers des éléments similaires type. Cette rubrique fournit quelques recommandations dans ce domaine qui peut vous aider à améliorent les performances de vos applications.  
   
  Pour plus d’informations sur les ressources, consultez la page [Ressources XAML](xaml-resources.md).  
@@ -43,12 +43,13 @@ ms.locfileid: "57352397"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Text](optimizing-performance-text.md)
+- [Texte](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

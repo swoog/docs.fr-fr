@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164734"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronisation DataSet et XmlDataDocument
 L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation relationnelle des données. Pour un accès hiérarchique aux données, vous pouvez utiliser les classes XML disponibles dans le .NET Framework. Pour des raisons historiques, ces deux représentations des données ont jusqu'à présent été utilisées séparément. Toutefois, le .NET Framework permet un accès synchrone et en temps réel aux représentations relationnelles et hiérarchiques des données via le **DataSet** objet et le <xref:System.Xml.XmlDataDocument> de l’objet, respectivement.  
@@ -90,13 +90,13 @@ L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation rela
  Lors de la synchronisation une **DataSet** avec un **XmlDataDocument**, résultats peuvent différer selon s’il faut ou non votre <xref:System.Data.DataRelation> sont les objets imbriqués. Pour plus d’informations, consultez [d’imbrication de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Synchronisation d’un DataSet et d’un XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Synchronisation d'un DataSet et d'un XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Montre comment synchroniser fortement typé **DataSet**, avec un schéma minimal, avec un **XmlDataDocument**.  
   
  [Exécution d’une requête XPath sur un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Présente l’exécution d’une requête XPath sur le contenu d’un **DataSet**.  
   
- [Application d’une transformation XSLT à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Application d'une transformation XSLT à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Montre comment appliquer une transformation XSLT au contenu d’un **DataSet**.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
@@ -113,4 +113,5 @@ L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation rela
  Contient des informations de référence sur les **XmlDataDocument** classe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

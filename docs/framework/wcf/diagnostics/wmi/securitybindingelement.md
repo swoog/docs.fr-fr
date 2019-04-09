@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d367d0c5d14e6e75539dd2b20cdffcf2b34963d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153853"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -29,7 +29,7 @@ class SecurityBindingElement : BindingElement
 ## <a name="methods"></a>Méthodes  
  La classe SecurityBindingElement ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe SecurityBindingElement a les propriétés suivantes :  
   
 ### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
@@ -58,7 +58,7 @@ class SecurityBindingElement : BindingElement
   
  Type d’accès : Propriétés en lecture seule  
   
- Propriétés de sécurité spécifiques d’une liaison pour le service local.  
+ Propriétés de sécurité spécifiques d'une liaison pour le service local.  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Type de données : chaîne  
@@ -72,13 +72,14 @@ class SecurityBindingElement : BindingElement
   
  Type d’accès : Propriétés en lecture seule  
   
- Ordre des éléments dans l’en-tête de sécurité pour cette liaison.  
+ Ordre des éléments dans l'en-tête de sécurité pour cette liaison.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>

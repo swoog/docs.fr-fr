@@ -1,18 +1,18 @@
 ---
-title: "Procédure : Accumuler des valeurs d'animation pendant des cycles de répétition"
+title: 'Procédure : Accumuler des valeurs d’animation pendant des cycles de répétition'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: e38e1601e2f4eeab2b53918924bc21e05163d948
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146014"
 ---
-# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procédure : Accumuler des valeurs d'animation pendant des cycles de répétition
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procédure : Accumuler des valeurs d’animation pendant des cycles de répétition
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propriété à accumuler des valeurs d’animation des cycles de répétition.  
   
 ## <a name="example"></a>Exemple  
@@ -33,8 +33,9 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Doub
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Ajouter une valeur de sortie d'animation à une valeur de départ d'animation](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
+
+- [Ajouter une valeur de sortie d’animation à une valeur de départ d’animation](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Répéter une animation](how-to-repeat-an-animation.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
-- [Rubriques de guide pratique](animation-and-timing-how-to-topics.md)
+- [Rubriques Comment](animation-and-timing-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Améliorer les performances en évitant la mise à l’échelle automatique'
+title: 'Procédure : améliorer le niveau de performance en évitant la mise à l’échelle automatique'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163590"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procédure : Améliorer les performances en évitant la mise à l’échelle automatique
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procédure : améliorer le niveau de performance en évitant la mise à l’échelle automatique
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut automatiquement mettre à l’échelle une image pendant que vous la dessinez, ce qui diminue les performances. Ou bien, vous pouvez contrôler la mise à l’échelle de l’image en passant les dimensions du rectangle de destination pour le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  
   
  Par exemple, l’appel suivant à la <xref:System.Drawing.Graphics.DrawImage%2A> méthode spécifie un coin supérieur gauche de (50, 30) mais ne spécifie ne pas un rectangle de destination.  
@@ -41,5 +41,6 @@ ms.locfileid: "58653793"
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez Texture.jpg avec un nom de l’image et le chemin d’accès valides sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

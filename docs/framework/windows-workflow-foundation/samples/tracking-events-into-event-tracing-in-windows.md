@@ -2,12 +2,12 @@
 title: Événements de suivi dans Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166528"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Événements de suivi dans Event Tracing for Windows
 Cet exemple montre comment activer le suivi des modifications sur un service de flux de travail Windows Workflow Foundation (WF) et émettre les événements de suivi dans Event Tracing pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -20,7 +20,7 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 |Composant|Description|
 |---------------|-----------------|
 |Runtime de suivi|Fournit l'infrastructure permettant d'émettre des enregistrements de suivi.|
-|Participants de suivi|Accède aux enregistrements de suivi. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est fourni avec un participant de suivi qui écrit les enregistrements de suivi sous la forme d'événements Suivi d'événements pour Windows (ETW, Event Tracing for Windows).|
+|Participants de suivi|Accède aux enregistrements de suivi. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est fourni avec un participant de suivi qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW).|
 |Modèle de suivi|Mécanisme de filtrage qui permet à un participant de suivi de s'abonner à un sous-ensemble des enregistrements de suivi émis à partir d'une instance de workflow.|
 
  Le tableau suivant détaille les enregistrements de suivi que l'exécution de workflow émet.
@@ -81,7 +81,7 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 
 11. Répétez les étapes 9 et 10 avec une entrée de données autre que 0, afin qu'aucune erreur ne soit générée.
 
- Les modèles de suivi vous permettent de vous abonner à des événements émis par l'exécution lorsque l'état d'une instance de workflow est modifié. Selon vos spécifications d'analyse, vous pouvez créer un profil très général, qui s'abonne à un petit jeu de modifications d'état de haut niveau d'un workflow. En revanche, vous pouvez créer un profil très précis dont la sortie est assez riche pour reconstruire l'exécution ultérieurement. L'exemple illustre les événements émis à partir de l'exécution du workflow dans ETW à l'aide du `HealthMonitoring Tracking Profile`, qui émet un petit jeu d'événements. Un profil différent qui émet d'autres événements de suivi de workflow est également fourni dans le fichier Web.config nommé `Troubleshooting Tracking Profile`. Lorsque le [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est installé, un profil par défaut avec un nom vide est configuré dans le fichier Machine.config. Ce profil est utilisé par la configuration de comportement de suivi ETW lorsque aucun nom de profil n'est spécifié ou lorsqu'un nom de profil vide est spécifié.
+ Les modèles de suivi vous permettent de vous abonner à des événements émis par l'exécution lorsque l'état d'une instance de workflow est modifié. Selon vos exigences d’analyse, vous pouvez créer un profil très général, qui s’abonne à un petit jeu de modifications d’état de haut niveau d’un workflow. En revanche, vous pouvez créer un profil très précis dont la sortie est assez riche pour reconstruire l'exécution ultérieurement. L'exemple illustre les événements émis à partir de l'exécution du workflow dans ETW à l'aide du `HealthMonitoring Tracking Profile`, qui émet un petit jeu d'événements. Un profil différent qui émet d'autres événements de suivi de workflow est également fourni dans le fichier Web.config nommé `Troubleshooting Tracking Profile`. Lorsque le [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est installé, un profil par défaut avec un nom vide est configuré dans le fichier Machine.config. Ce profil est utilisé par la configuration de comportement de suivi ETW lorsque aucun nom de profil n'est spécifié ou lorsqu'un nom de profil vide est spécifié.
 
  Le modèle de suivi de contrôle d'état émet des enregistrements d'instance de workflow et des enregistrements de propagation d'erreur de l'activité. Ce profil est créé en ajoutant le modèle de suivi suivant à un fichier de configuration Web.config.
 
@@ -150,4 +150,5 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

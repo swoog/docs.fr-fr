@@ -2,12 +2,12 @@
 title: <add> de <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 799715ef008274ead6b745e8ab97e769cb59e6b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5200c8893a89488b72c2c71d1a3703bf2aad1235
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136745"
 ---
 # <a name="add-of-defaultports"></a>\<Ajouter > de \<defaultPorts >
 Point de terminaison de communication par défaut écouté par l'application cliente.  
@@ -51,4 +51,5 @@ Point de terminaison de communication par défaut écouté par l'application cli
 |[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Collection des ports par défaut répertoriant les points de terminaison de communication par défaut écoutés par l’application cliente.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.DefaultPortElement>

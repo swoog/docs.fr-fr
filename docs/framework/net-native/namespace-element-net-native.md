@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150746"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace >, élément (.NET Native)
 Applique la stratégie de réflexion runtime à tous les types dans un espace de noms spécifié.  
@@ -51,13 +51,13 @@ Applique la stratégie de réflexion runtime à tous les types dans un espace de
   
 ## <a name="name-attribute"></a>Name (attribut)  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*nom_espace_de_noms*|L'espace de noms. Si l’élément \<Namespace> est un enfant d’un élément [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) ou [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *nom_espace_de_noms* doit être un nom complet d’espace de noms. Si l’élément \<Namespace> est un enfant d’un autre élément \<Namespace>, *nom_espace_de_noms* doit être un nom d’espace de noms relatif.|  
   
 ## <a name="all-other-attributes"></a>Tous les autres attributs  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*paramètre_stratégie*|Le paramètre s'applique à ce type de stratégie pour tous les types dans l'espace de noms. Les valeurs possibles sont `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` et `Required All`. Pour plus d’informations, consultez [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -84,6 +84,7 @@ Applique la stratégie de réflexion runtime à tous les types dans un espace de
  Quand il est un enfant de l’élément [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), l’élément `<Namespace>` substitue la stratégie de réflexion runtime définie par l’élément [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

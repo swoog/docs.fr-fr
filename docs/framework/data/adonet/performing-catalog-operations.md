@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 1b13d1e3e210964331a710512876bd1f8503069e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141451"
 ---
 # <a name="performing-catalog-operations"></a>Exécution d'opérations du catalogue
 Pour exécuter une commande pour modifier une base de données ou un catalogue, telles que l’instruction CREATE TABLE ou CREATE PROCEDURE, créez un **commande** de l’objet à l’aide d’instructions SQL appropriées et un **connexion** objet. Exécutez la commande avec le **ExecuteNonQuery** méthode de la **commande** objet.  
@@ -46,6 +46,7 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des commandes pour modifier les données](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

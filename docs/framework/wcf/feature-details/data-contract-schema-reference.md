@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131935"
 ---
 # <a name="data-contract-schema-reference"></a>Référence des schémas de contrats de données
 Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
@@ -54,15 +54,15 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
   
 |Sommaire|Schéma|  
 |--------------|------------|  
-|`include`|Prise en charge. `DataContractSerializer` prend en charge xs:include et xs:import. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include`sont ignorés.|  
+|`include`|Prise en charge. `DataContractSerializer` prend en charge xs : inclure et xs : import. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include`sont ignorés.|  
 |`redefine`|Interdit. L'utilisation de `xs:redefine` est interdite par `DataContractSerializer` pour des raisons de sécurité : `x:redefine` requiert que `schemaLocation` soit suivi. Dans certaines circonstances, Svcutil.exe restreint l'utilisation de `schemaLocation`à l'aide de DataContract.|  
 |`import`|Prise en charge. `DataContractSerializer` prend en charge `xs:include` et `xs:import`. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include`sont ignorés.|  
 |`simpleType`|Prise en charge. Consultez la section `xs:simpleType` .|  
 |`complexType`|Pris en charge, mappe aux contrats de données. Consultez la section `xs:complexType` .|  
-|`group`|Ignoré. `DataContractSerializer` ne prend pas en charge l'utilisation de `xs:group`, `xs:attributeGroup`et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
-|`attributeGroup`|Ignoré. `DataContractSerializer` ne prend pas en charge l'utilisation de `xs:group`, `xs:attributeGroup`et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
+|`group`|Ignoré. `DataContractSerializer` ne prend pas en charge l’utilisation de `xs:group`, `xs:attributeGroup`, et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
+|`attributeGroup`|Ignoré. `DataContractSerializer` ne prend pas en charge l’utilisation de `xs:group`, `xs:attributeGroup`, et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
 |`element`|Prise en charge. Consultez la déclaration d'élément globale (GED).|  
-|`attribute`|Ignoré. `DataContractSerializer` ne prend pas en charge l'utilisation de `xs:group`, `xs:attributeGroup`et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
+|`attribute`|Ignoré. `DataContractSerializer` ne prend pas en charge l’utilisation de `xs:group`, `xs:attributeGroup`, et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
 |`notation`|Ignoré.|  
   
 ## <a name="complex-types--xscomplextype"></a>Les Types complexes – \<xs : complexType >  
@@ -118,7 +118,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
 ## <a name="elements--xselement"></a>Éléments – \<xs : element >  
   
 ### <a name="general-information"></a>Informations générales  
- `<xs:element>` peut se produire dans les contextes suivants :  
+ `<xs:element>` peut se produire dans les contextes suivants :  
   
 -   Il peut se produire dans un `<xs:sequence>`, qui décrit un membre de données d'un contrat de données normal (qui n'est pas une collection). Dans ce cas, l'attribut `maxOccurs` doit avoir la valeur 1. (Une valeur de 0 n'est pas autorisée).  
   
@@ -329,7 +329,7 @@ public enum MyEnum
 ```  
   
 ### <a name="xslist"></a>\<xs:list>  
- `DataContractSerializer` mappe des types énumération marqués avec `System.FlagsAttribute` à `xs:list` dérivé de `xs:string`. Aucune autre variation `xs:list` n'est prise en charge.  
+ `DataContractSerializer` mappe des types énumération marqués avec `System.FlagsAttribute` à `xs:list` dérivé `xs:string`. Aucune autre variation `xs:list` n'est prise en charge.  
   
 ### <a name="xslist-attributes"></a>\<xs : List > : attributs  
   
@@ -479,7 +479,7 @@ public class Employee : Person
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
 |`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|Objets<xref:System.DateTime> et <xref:System.TimeSpan> pour l'offset. Consultez Sérialisation DateTimeOffset ci-dessous.|  
+|`dateTimeOffset`|<xref:System.DateTime> et <xref:System.TimeSpan> pour le décalage. Consultez Sérialisation DateTimeOffset ci-dessous.|  
 |`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
@@ -488,7 +488,7 @@ public class Employee : Person
 |`gDay`|<xref:System.String>.|  
 |`gMonth`|<xref:System.String>.|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|Tableau<xref:System.Byte> .|  
+|`base64Binary`|<xref:System.Byte> .|  
 |`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Mappage de types ISerializable  
- Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, <xref:System.Runtime.Serialization.ISerializable> a été introduit comme mécanisme général pour sérialiser des objets pour la persistance ou le transfert de données. Il existe de nombreux types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui implémentent `ISerializable` et qui peuvent être passés entre les applications. <xref:System.Runtime.Serialization.DataContractSerializer> fournit naturellement le support pour les classes `ISerializable` . `DataContractSerializer` mappe des types de schéma d'implémentation `ISerializable` qui diffèrent uniquement par le QName (nom qualifié) du type et sont des collections de propriétés. Par exemple, le `DataContractSerializer` mappe <xref:System.Exception> au type XSD suivant dans le `http://schemas.datacontract.org/2004/07/System` espace de noms.  
+ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, <xref:System.Runtime.Serialization.ISerializable> a été introduit comme mécanisme général pour sérialiser des objets pour la persistance ou le transfert de données. Il existe de nombreux types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui implémentent `ISerializable` et qui peuvent être passés entre les applications. <xref:System.Runtime.Serialization.DataContractSerializer> fournit naturellement le support pour `ISerializable` classes. `DataContractSerializer` mappe des types de schéma d'implémentation `ISerializable` qui diffèrent uniquement par le QName (nom qualifié) du type et sont des collections de propriétés. Par exemple, le `DataContractSerializer` mappe <xref:System.Exception> au type XSD suivant dans le `http://schemas.datacontract.org/2004/07/System` espace de noms.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -609,14 +609,14 @@ public class Employee : Person
   
  Il convient de remarquer les points suivants :  
   
--   `ser:char` est introduit pour représenter des caractères Unicode de type <xref:System.Char>.  
+-   `ser:char` est introduit pour représenter les caractères Unicode de type <xref:System.Char>.  
   
 -   Le `valuespace` de `xs:duration` est réduit à un jeu ordonné afin qu'il puisse être mappé à un <xref:System.TimeSpan>.  
   
--   `FactoryType` est utilisé dans les schémas exportés des types dérivés de <xref:System.Runtime.Serialization.ISerializable>.  
+-   `FactoryType` est utilisé dans les schémas exportés à partir des types qui sont dérivés de <xref:System.Runtime.Serialization.ISerializable>.  
   
 ## <a name="importing-non-datacontract-schemas"></a>Importation de schémas qui ne sont pas DataContract  
- `DataContractSerializer` dispose de l'option `ImportXmlTypes` pour autoriser l'importation des schémas non conformes au profil XSD `DataContractSerializer` (consultez la propriété <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> ). Affecter à cette option la valeur `true` active l'acceptation des types de schémas non conformes et les mappe à l'implémentation suivante, <xref:System.Xml.Serialization.IXmlSerializable> qui encapsule un tableau de <xref:System.Xml.XmlNode> (seul le nom de la classe diffère).  
+ `DataContractSerializer` a la `ImportXmlTypes` option pour autoriser l’importation de schémas qui ne sont pas conformes à la `DataContractSerializer` profil XSD (voir la <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> propriété). Affecter à cette option la valeur `true` active l'acceptation des types de schémas non conformes et les mappe à l'implémentation suivante, <xref:System.Xml.Serialization.IXmlSerializable> qui encapsule un tableau de <xref:System.Xml.XmlNode> (seul le nom de la classe diffère).  
   
 ```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
@@ -682,6 +682,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

@@ -2,12 +2,12 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: 4a3e45140765f99f4a30b77fc9d02b167601b50b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8900af77d0d385bb68b4b85e1d15be57bb7a8d14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131909"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
@@ -26,7 +26,7 @@ class ChannelPoolSettings
 ## <a name="methods"></a>Méthodes  
  La classe ChannelPoolSettings ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ChannelPoolSettings a les propriétés suivantes :  
   
 ### <a name="idletimeout"></a>IdleTimeout  
@@ -50,11 +50,12 @@ class ChannelPoolSettings
   
  Nombre maximal de canaux sortants pour chaque point de terminaison.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.ChannelPoolSettings>

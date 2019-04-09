@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166632"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions, énumération
 Spécifie des indicateurs permettant de sélectionner des options pour l'éditeur de liens de métadonnées.  
@@ -42,12 +42,13 @@ typedef enum CorLinkerOptions {
 |`MDAssembly`|Les types privés et les fonctions globales ne sont pas conservées.|  
 |`MDNetModule`|Les types privés et les fonctions globales sont conservées.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

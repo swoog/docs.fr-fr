@@ -3,12 +3,12 @@ title: Génération de mon premier service WCF prenant en charge les revendicati
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144459"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Génération de mon premier service WCF prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -41,4 +41,5 @@ ms.locfileid: "58825766"
  Pour générer votre premier service WCF prenant en charge les revendications à l’aide de WIF, consultez [How To : Activer WIF pour une Application de Service Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main de WIF](../../../docs/framework/security/getting-started-with-wif.md)

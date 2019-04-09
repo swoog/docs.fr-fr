@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170701"
 ---
 # <a name="varieties-of-custom-controls"></a>Variétés de contrôles personnalisés
 .NET Framework vous offre la possibilité de développer et d’implémenter de nouveaux contrôles. Vous pouvez étendre les fonctionnalités du contrôle utilisateur standard et des contrôles existants grâce à l’héritage. Vous pouvez également créer des contrôles personnalisés qui gèrent eux-même leur apparence.  
@@ -57,7 +57,7 @@ ms.locfileid: "57713018"
   
  Pour créer un contrôle composite, dérivez de la <xref:System.Windows.Forms.UserControl> classe. Le <xref:System.Windows.Forms.UserControl> classe de base fournit le routage clavier pour les contrôles enfants et permet aux contrôles enfants fonctionner en tant que groupe. Pour plus d’informations, consultez l’article [Développement d’un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md).  
   
- **Recommendation**  
+ **Recommandation**  
   
  Héritez de la classe <xref:System.Windows.Forms.UserControl> si :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "57713018"
   
  Dans certains contrôles, vous pouvez également ajouter une apparence personnalisée à l’interface utilisateur graphique de votre contrôle en substituant la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode de la classe de base. Pour un bouton étendu qui assure le suivi des clics, vous pouvez remplacer le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode à appeler l’implémentation de base de <xref:System.Windows.Forms.Control.OnPaint%2A>, puis dessinez le nombre de clics dans un angle de la <xref:System.Windows.Forms.Button> zone cliente du contrôle.  
   
- **Recommendation**  
+ **Recommandation**  
   
  Héritez d'un contrôle Windows Forms si :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "57713018"
   
  Un contrôle personnalisé peut par exemple être un contrôle d’horloge imitant l’apparence et le comportement d’une horloge analogique. Peinture personnalisée est appelée pour déclencher l’aiguilles de l’horloge en réponse à <xref:System.Windows.Forms.Timer.Tick> événements à partir d’une commande interne <xref:System.Windows.Forms.Timer> composant. Pour plus d'informations, voir [Procédure : Développer un contrôle de formulaires Windows Simple](how-to-develop-a-simple-windows-forms-control.md).  
   
- **Recommendation**  
+ **Recommandation**  
   
  Héritez de la classe <xref:System.Windows.Forms.Control> si :  
   
@@ -107,8 +107,9 @@ ms.locfileid: "57713018"
  Utilisez le <xref:System.ComponentModel.DesignerAttribute> pour associer votre contrôle à votre concepteur. Pour plus d’informations, consultez [Extending Design-Time Support](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) et [Comment : Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
-- [Guide pratique pour Développer un contrôle de formulaires Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
-- [Développement d’un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md)
+- [Procédure : développer un contrôle Windows Forms simple](how-to-develop-a-simple-windows-forms-control.md)
+- [Développement d'un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md)
 - [Extension de la prise en charge au moment du design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Guide pratique pour Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Procédure : Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

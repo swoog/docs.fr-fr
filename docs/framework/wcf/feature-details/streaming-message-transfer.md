@@ -2,12 +2,12 @@
 title: Transfert des messages par diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136875"
 ---
 # <a name="streaming-message-transfer"></a>Transfert des messages par diffusion en continu
 Les transports de Windows Communication Foundation (WCF) prennent en charge deux modes de transfert de messages :  
@@ -16,7 +16,7 @@ Les transports de Windows Communication Foundation (WCF) prennent en charge deux
   
 -   Les transferts en flux continu exposent les messages sous forme de flux. Le destinataire commence à traiter les messages avant que ceux-ci ne soient complètement remis.  
   
--   Les transferts en flux continu permettent d’améliorer l’évolutivité d’un service car ils évitent d’avoir à recourir à de grandes mémoires tampon. Utilisez ce mode de transfert pour améliorer l'évolutivité en fonction de la taille des messages à transférer. Préférez le transfert en flux continu pour les messages de grande taille.  
+-   Les transferts en flux continu permettent d'améliorer l'évolutivité d'un service car ils évitent d'avoir à recourir à de grandes mémoires tampon. Utilisez ce mode de transfert pour améliorer l'évolutivité en fonction de la taille des messages à transférer. Préférez le transfert en flux continu pour les messages de grande taille.  
   
  Par défaut, les transports HTTP, TCP/IP et les transports de canal nommé utilisent les transferts mis en mémoire tampon. Cette rubrique contient des instructions permettant de faire basculer ces transports d'un mode de transfert mis en mémoire tampon à un mode de transfert en flux continu et présente les conséquences d'une telle modification.  
   
@@ -47,4 +47,5 @@ Les transports de Windows Communication Foundation (WCF) prennent en charge deux
  Modifier le mode de transfert de mis en mémoire tampon à flux continu modifie également la forme du canal natif des transports TCP et des transports de canal nommé. Pour les transferts mis en mémoire tampon, la forme du canal natif est <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Pour les transferts en flux continu, les canaux natifs correspondent à <xref:System.ServiceModel.Channels.IRequestChannel> et à <xref:System.ServiceModel.Channels.IReplyChannel>. Modifier le mode de transfert d'une application existante utilisant directement ces transports (c'est-à-dire sans passer par un contrat de service) nécessite de modifier la forme de canal escomptée des fabrications et écouteurs de canal.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Procédure : activer le streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

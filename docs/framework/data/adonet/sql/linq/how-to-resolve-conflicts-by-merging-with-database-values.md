@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Résoudre les conflits en fusionnant des valeurs de la base de données'
+title: 'Procédure : Résoudre les conflits d’accès concurrentiel en fusionnant des valeurs de base de données'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: 2b6daa28c23c74eaea21f1f3d499a2e206252abd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130206"
 ---
-# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Procédure : Résoudre les conflits en fusionnant des valeurs de la base de données
+# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Procédure : Résoudre les conflits d’accès concurrentiel en fusionnant des valeurs de base de données
 Pour harmoniser des différences entre des valeurs de base de données attendues et réelles avant de soumettre à nouveau vos modifications, vous pouvez utiliser <xref:System.Data.Linq.RefreshMode.KeepChanges> pour fusionner des valeurs de base de données avec les valeurs de membre client actuelles. Pour plus d’informations, consultez [d’accès concurrentiel optimiste : Vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -21,7 +21,7 @@ Pour harmoniser des différences entre des valeurs de base de données attendues
 ## <a name="example"></a>Exemple  
  Dans ce scénario, une exception <xref:System.Data.Linq.ChangeConflictException> est levée lorsque User1 tente de soumettre des modifications car User2 a modifié entre-temps les colonnes Assistant et Department. Le tableau suivant présente la situation.  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |État de la base de données d'origine lors d'une interrogation par User1 et User2.|Alfreds|Maria|Sales|  
 |User1 s'apprête à soumettre ces modifications.|Alfred||Marketing|  
@@ -31,7 +31,7 @@ Pour harmoniser des différences entre des valeurs de base de données attendues
   
  Lorsque User1 résout le conflit à l'aide de <xref:System.Data.Linq.RefreshMode.KeepChanges>, le résultat dans la base de données se présente comme dans le tableau suivant :  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |Nouvel état après résolution du conflit.|Alfred<br /><br /> (de User1)|Mary<br /><br /> (de User2)|Marketing<br /><br /> (de User1)|  
   
@@ -41,6 +41,7 @@ Pour harmoniser des différences entre des valeurs de base de données attendues
  [!code-vb[System.Data.Linq.RefreshMode#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Résoudre les conflits en remplaçant des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Guide pratique pour Résoudre les conflits en conservant des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Procédure : Résoudre des conflits en remplaçant des valeurs de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Procédure : Résoudre des conflits en conservant des valeurs de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

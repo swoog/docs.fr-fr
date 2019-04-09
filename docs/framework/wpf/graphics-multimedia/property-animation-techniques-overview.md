@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165436"
 ---
 # <a name="property-animation-techniques-overview"></a>Vue d'ensemble des techniques d'animation de propriétés
 Cette rubrique décrit les différentes approches pour animer des propriétés : tables de montage séquentiel, animations locales, horloges et animations par image.  
@@ -31,10 +31,10 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
 |Technique d’animation|Scénarios|XAML pris en charge|Contrôlable de manière interactive|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Animation de table de montage séquentiel|Per-instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
-|Animation locale|Par instance|Aucune|Aucune|  
-|Animation horloge|Par instance|Aucune|Oui|  
-|Animation par image|Par instance|Aucune|N/A|  
+|Animation de table de montage séquentiel|Par instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
+|Animation locale|Par instance|Non|Non|  
+|Animation horloge|Par instance|Non|Oui|  
+|Animation par image|Par instance|Non|N/A|  
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>Animations de table de montage séquentiel  
@@ -57,9 +57,9 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
 |La table de montage séquentiel démarre à l’aide de…|Par instance|Style|Modèle de contrôle|Modèle de données|Exemple|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> et une <xref:System.Windows.EventTrigger>|Oui|Oui|Oui|Oui|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Aucune|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Aucune|Oui|Oui|Oui|[Guide pratique pour Déclencher une Animation lors de la modification des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Aucune|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Non|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Non|Oui|Oui|Oui|[Procédure : Déclencher une Animation lors de la modification des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> méthode|Oui|Non|Non|Non|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Pour plus d’informations sur <xref:System.Windows.Media.Animation.Storyboard> , voir la [vue d’ensemble des Storyboards](storyboards-overview.md).  
   
@@ -122,7 +122,8 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
  Pour plus d’informations, consultez le <xref:System.Windows.Media.CompositionTarget.Rendering> page.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des storyboards](storyboards-overview.md)
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
 - [Vue d’ensemble des propriétés de dépendance](../advanced/dependency-properties-overview.md)

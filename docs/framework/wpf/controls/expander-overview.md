@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130401"
 ---
 # <a name="expander-overview"></a>Vue d'ensemble de l'expanseur
 Un <xref:System.Windows.Controls.Expander> contrôle offre un moyen pour fournir du contenu dans une zone extensible qui ressemble à une fenêtre et inclut un en-tête.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>Créer un Expander simple  
  L’exemple suivant montre comment créer un simple <xref:System.Windows.Controls.Expander> contrôle. Cet exemple crée un <xref:System.Windows.Controls.Expander> qui ressemble à l’illustration précédente.  
@@ -29,7 +28,7 @@ Un <xref:System.Windows.Controls.Expander> contrôle offre un moyen pour fournir
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Définir la direction de la zone de contenu extensible  
- Vous pouvez définir la zone de contenu d’un <xref:System.Windows.Controls.Expander> contrôle pour développer dans un des quatre directions (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) à l’aide de la <xref:System.Windows.Controls.ExpandDirection> propriété. Lorsque la zone de contenu est réduite, seul le <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et son bouton bascule apparaissent. Un <xref:System.Windows.Controls.Button> contrôle qui affiche une flèche directionnelle est utilisé comme un bouton bascule pour développer ou réduire la zone de contenu. Développée, le <xref:System.Windows.Controls.Expander> essaie d’afficher tout son contenu dans une zone de type fenêtre.  
+ Vous pouvez définir la zone de contenu d’un <xref:System.Windows.Controls.Expander> contrôle pour développer dans un des quatre directions (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) à l’aide de la <xref:System.Windows.Controls.ExpandDirection> propriété. Lorsque la zone de contenu est réduite, seul le <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et son bouton bascule apparaissent. Un <xref:System.Windows.Controls.Button> contrôle qui affiche une flèche directionnelle est utilisé comme un bouton bascule pour développer ou réduire la zone de contenu. Développée, le <xref:System.Windows.Controls.Expander> essaie d’afficher tout son contenu dans une zone de type fenêtre.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Contrôler la taille d’un Expander dans un panneau  
@@ -60,6 +59,7 @@ Un <xref:System.Windows.Controls.Expander> contrôle offre un moyen pour fournir
  Vous pouvez aligner le contenu en définissant le <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> et <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propriétés sur le <xref:System.Windows.Controls.Expander> contrôle. Lorsque vous définissez ces propriétés, l’alignement s’applique à l’en-tête ainsi qu’au contenu développé.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Rubriques de guide pratique](expander-how-to-topics.md)
+- [Rubriques Comment](expander-how-to-topics.md)

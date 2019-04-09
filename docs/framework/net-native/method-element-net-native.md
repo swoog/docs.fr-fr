@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131714"
 ---
 # <a name="method-element-net-native"></a>\<Méthode >, élément (.NET Native)
 Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.  
@@ -37,19 +37,19 @@ Applique une stratégie de réflexion runtime à un constructeur ou à une méth
   
 ## <a name="name-attribute"></a>Name (attribut)  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*nom_méthode*|Nom de la méthode. Le type de la méthode est défini par le [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) parent ou l’élément [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Attribut de signature  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*signature_méthode*|Types de paramètre qui constituent la signature de la méthode. Si plusieurs paramètres sont présents, ils sont séparés par des virgules. Par exemple : `"System.String,System.Int32,System.Int32)"`. Les noms de type de paramètre doivent être qualifiés complets.|  
   
 ## <a name="all-other-attributes"></a>Tous les autres attributs  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*paramètre_stratégie*|Paramètre à appliquer à ce type de stratégie. Les valeurs possibles sont `Auto`, `Excluded`, `Included` et `Required`. Pour plus d’informations, consultez [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -57,7 +57,7 @@ Applique une stratégie de réflexion runtime à un constructeur ou à une méth
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Applique la stratégie au type de l’argument passé à une méthode.|  
+|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Applique la stratégie au type de l'argument passé à une méthode.|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Applique la stratégie au type de paramètre d'un type ou d'une méthode générique.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Applique la stratégie à un type, si cette stratégie a été appliquée à la méthode représentée par l'élément `<Method>` conteneur.|  
 |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Applique la stratégie au type représenté par un argument <xref:System.Type> passé à une méthode.|  
@@ -146,7 +146,8 @@ Applique une stratégie de réflexion runtime à un constructeur ou à une méth
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<MethodInstantiation>, élément](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation > élément](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

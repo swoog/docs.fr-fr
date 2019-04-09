@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166879"
 ---
 # <a name="comcallunmarshal-coclass"></a>Coclasse ComCallUnmarshal
 Fournit des interfaces pour gérer le marshaling de pointeurs d’interface.  
@@ -40,14 +40,15 @@ coclass ComCallUnmarshal {
 |---------------|-----------------|  
 |`IMarshal`|Fournit des méthodes pour créer, de l’initialisation et de gérer un proxy dans un processus client.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Coclasses d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+
+- [Hébergement des coclasses](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

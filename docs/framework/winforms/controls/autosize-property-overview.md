@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173626"
 ---
 # <a name="autosize-property-overview"></a>Vue d'ensemble de la propriété AutoSize
 Le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété permet à un contrôle modifier sa taille, si nécessaire, pour atteindre la valeur spécifiée par le <xref:System.Windows.Forms.Control.PreferredSize%2A> propriété. Vous ajustez le comportement de dimensionnement de contrôles spécifiques en définissant le `AutoSizeMode` propriété.  
@@ -67,6 +67,7 @@ Le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété permet à un cont
 >  Pour optimiser la productivité, les ombres de Windows Forms Designer le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété pour la <xref:System.Windows.Forms.Form> classe. Au moment du design, le formulaire se comporte comme si le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété est définie sur `false`, quelle que soit sa valeur réelle. Lors de l’exécution, aucun aménagement spécial n’est effectuée et le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété est appliquée comme spécifié par le paramètre de propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

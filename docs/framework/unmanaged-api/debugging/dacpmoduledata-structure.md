@@ -1,5 +1,5 @@
 ---
-title: DacpModuleData Structure
+title: DacpModuleData, structure
 ms.date: 02/01/2019
 api.name:
 - DacpModuleData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: db3fdaa768e3d1b445f08c3964521570631f0965
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132000"
 ---
-# <a name="dacpmoduledata-structure"></a>DacpModuleData Structure
+# <a name="dacpmoduledata-structure"></a>DacpModuleData, structure
 
 Définit une mémoire tampon de transport pour les informations d’exécution d’un module.
 
@@ -49,17 +49,17 @@ struct DacpModuleData
 | `ilBase`  | L’adresse de l’image chargée de base.                                 |
 | `payLoad` | Un tampon de la charge utile pour les informations de module supplémentaire utilisées par le runtime. |
 
-
 ## <a name="remarks"></a>Notes
 
 Cette structure se trouve au sein du runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque. Pour l’utiliser, définir la structure comme indiqué ci-dessus.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  
 **Bibliothèque :** Aucun.  
-**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

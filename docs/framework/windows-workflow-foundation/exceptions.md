@@ -2,12 +2,12 @@
 title: Exceptions
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145988"
 ---
 # <a name="exceptions"></a>Exceptions
 Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Statements.TryCatch> pour gérer des exceptions déclenchées lors de leur exécution. Ces exceptions peuvent être gérées ou être à nouveau levées à l'aide de l'activité <xref:System.Activities.Statements.Rethrow>. Les activités de la section <xref:System.Activities.Statements.TryCatch.Finally%2A> sont exécutées lorsque soit la section <xref:System.Activities.Statements.TryCatch.Try%2A>, soit la section <xref:System.Activities.Statements.TryCatch.Catches%2A> est terminée. Les workflows hébergés par un <xref:System.Activities.WorkflowApplication> instance peut également utiliser le <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Gestionnaire d’événements pour gérer les exceptions qui ne sont pas gérées par un <xref:System.Activities.Statements.TryCatch> activité.  
@@ -24,7 +24,7 @@ Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Stateme
 -   exception levée par un code externe, tel que les bibliothèques, composants ou services utilisés dans le flux de travail.  
   
 ## <a name="handling-exceptions"></a>Gestion des exceptions  
- Si une exception est levée par une activité et n'est pas gérée, le comportement par défaut consiste à arrêter l'instance de flux de travail. En cas de présence d'un gestionnaire <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> personnalisé, il peut substituer ce comportement par défaut. Ce gestionnaire permet à l'auteur hôte du workflow de fournir la gestion appropriée, englobant par exemple l'enregistrement personnalisé, l'abandon de workflow, l'annulation de workflow ou l'arrêt de workflow.  Si un workflow lève une exception qui n'est pas gérée, le gestionnaire <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> est appelé. Il existe trois actions possibles retournées depuis <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> qui déterminent les résultats finaux du flux de travail.  
+ Si une exception est levée par une activité et n'est pas gérée, le comportement par défaut consiste à arrêter l'instance de flux de travail. En cas de présence d'un gestionnaire <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> personnalisé, il peut substituer ce comportement par défaut. Ce gestionnaire permet à l’auteur hôte du workflow de fournir la gestion appropriée, englobant par exemple l’enregistrement personnalisé, l’abandon de workflow, l’annulation de workflow ou l’arrêt de workflow.  Si un workflow lève une exception qui n'est pas gérée, le gestionnaire <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> est appelé. Il existe trois actions possibles retournées depuis <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> qui déterminent les résultats finaux du flux de travail.  
   
 -   **Annuler** -une instance de flux de travail annulé est une sortie normale de l’exécution d’une branche. Vous pouvez modéliser le comportement d'annulation (par exemple, en utilisant une activité CancellationScope). Le gestionnaire Completed est appelé lorsque le processus d'annulation se termine. Un flux de travail annulé est dans un état d'annulation.  
   
@@ -37,7 +37,7 @@ Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Stateme
  [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
   
 ### <a name="handling-exceptions-with-the-trycatch-activity"></a>Gestion des exceptions avec l'activité TryCatch  
- La gestion des exceptions au sein d'un workflow est effectuée avec l'activité <xref:System.Activities.Statements.TryCatch>. L'activité <xref:System.Activities.Statements.TryCatch> possède une collection <xref:System.Activities.Statements.TryCatch.Catches%2A> des activités <xref:System.Activities.Statements.Catch> qui sont toutes associées à un type <xref:System.Exception> spécifique. Si l'exception levée par une activité contenue dans la section <xref:System.Activities.Statements.TryCatch.Try%2A> d'une activité <xref:System.Activities.Statements.TryCatch> correspond à l'exception d'une activité <xref:System.Activities.Statements.Catch%601> dans la collection <xref:System.Activities.Statements.TryCatch.Catches%2A>, elle est gérée. L'exception passe à l'activité parente si elle est explicitement à nouveau levée ou si une nouvelle exception est levée. L'exemple de code suivant illustre une activité <xref:System.Activities.Statements.TryCatch> qui gère un objet <xref:System.ApplicationException> levé dans la section <xref:System.Activities.Statements.TryCatch.Try%2A> par une activité <xref:System.Activities.Statements.Throw>. Le message de l'exception est écrit sur la console par l'activité <xref:System.Activities.Statements.Catch%601>, puis un message est écrit sur la console dans la section <xref:System.Activities.Statements.TryCatch.Finally%2A>.  
+ La gestion des exceptions au sein d'un workflow est effectuée avec l'activité <xref:System.Activities.Statements.TryCatch>. L’activité <xref:System.Activities.Statements.TryCatch> possède une collection <xref:System.Activities.Statements.TryCatch.Catches%2A> des activités <xref:System.Activities.Statements.Catch> qui sont toutes associées à un type <xref:System.Exception> spécifique. Si l'exception levée par une activité contenue dans la section <xref:System.Activities.Statements.TryCatch.Try%2A> d'une activité <xref:System.Activities.Statements.TryCatch> correspond à l'exception d'une activité <xref:System.Activities.Statements.Catch%601> dans la collection <xref:System.Activities.Statements.TryCatch.Catches%2A>, elle est gérée. L'exception passe à l'activité parente si elle est explicitement à nouveau levée ou si une nouvelle exception est levée. L'exemple de code suivant illustre une activité <xref:System.Activities.Statements.TryCatch> qui gère un objet <xref:System.ApplicationException> levé dans la section <xref:System.Activities.Statements.TryCatch.Try%2A> par une activité <xref:System.Activities.Statements.Throw>. Le message de l'exception est écrit sur la console par l'activité <xref:System.Activities.Statements.Catch%601>, puis un message est écrit sur la console dans la section <xref:System.Activities.Statements.TryCatch.Finally%2A>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
@@ -51,6 +51,7 @@ Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Stateme
  La différence entre la gestion des exceptions et la compensation réside dans le fait que la gestion des exceptions a lieu lors de l'exécution d'une activité. La compensation a lieu une fois une activité terminée correctement. La gestion des exceptions permet de nettoyer une fois l'exception levée par l'activité, tandis que la compensation fournit un mécanisme permettant d'annuler un travail correctement terminé d'une activité précédemment terminée. Pour plus d’informations, consultez [Compensation](compensation.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

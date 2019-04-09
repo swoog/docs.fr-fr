@@ -3,12 +3,12 @@ title: <cancelRequestedQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-ms.openlocfilehash: 989d6e99457108336c38fb1eece4c9ac2444c974
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32a37fb3cc2b93046bea133f351185638b0d7545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163161"
 ---
 # <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
 Représente une collection de requêtes qui permettent d’effectuer le suivi des demandes d’annulation d’une activité enfant par l’activité parent. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des objets d'enregistrement de demande d'annulation.  
@@ -55,5 +55,6 @@ Représente une collection de requêtes qui permettent d’effectuer le suivi de
 |[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un élément de configuration qui contient toutes les requêtes pour un flux de travail spécifique identifié par le **activityDefinitionId** propriété.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

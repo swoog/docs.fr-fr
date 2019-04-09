@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104199"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 Détermine si deux collections ont des éléments en commun.  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  Toute expression de requête valide qui retourne une collection à comparer avec la collection retournée par une autre expression de requête. Toutes les expressions doivent être du même type que le `expression`ou d'un type de base commun ou dérivé de celui-ci.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` si les deux collections ont des éléments en commun ; sinon, `false`.  
+ `true` Si les deux collections ont des éléments en commun ; Sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  OVERLAPS est fonctionnellement équivalent à ce qui suit :  
@@ -42,4 +42,5 @@ expression OVERLAPS expression
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

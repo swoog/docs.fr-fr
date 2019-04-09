@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132091"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary, extension de balisage
 Cette extension offre un moyen aux auteurs de contrôles personnalisés ou aux applications qui intègrent des contrôles tiers de charger les dictionnaires de ressources de thème utilisés pour appliquer un style à un contrôle.  
@@ -49,9 +49,9 @@ Cette extension offre un moyen aux auteurs de contrôles personnalisés ou aux a
   
  La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d’identificateur `ThemeDictionary` est assigné en tant que valeur <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la classe d’extension <xref:System.Windows.ThemeDictionaryExtension> sous-jacente.  
   
- `ThemeDictionary` peut également être utilisé dans la syntaxe de l’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propriété est requise.  
+ `ThemeDictionary` peut également être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propriété est requise.  
   
- `ThemeDictionary` peut également être utilisé dans une utilisation d'attributs en clair qui spécifie la propriété <xref:System.Windows.Markup.StaticExtension.Member%2A> en tant que paire propriété=valeur :  
+ `ThemeDictionary` peut également être utilisé dans une utilisation d’attributs en clair qui spécifie la <xref:System.Windows.Markup.StaticExtension.Member%2A> propriété en tant que propriété = paire valeur :  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -64,7 +64,8 @@ Cette extension offre un moyen aux auteurs de contrôles personnalisés ou aux a
  `ThemeDictionary` est une extension de balisage. Les extensions de balisage sont généralement implémentées pour éviter que les valeurs d’attribut ne soient autre chose que des valeurs littérales ou des noms de gestionnaire et lorsque l’exigence dépasse le cadre de la définition de convertisseurs de type sur certains types ou propriétés. Toutes les extensions de balisage [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilisent les caractères { et } dans leur syntaxe d’attribut, convention selon laquelle un processeur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconnaît qu’une extension de balisage doit traiter l’attribut. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+
+- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Fichiers de ressources, de contenu et de données d’une application WPF](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Fichiers de ressources, de contenu et de données d'une application WPF](../app-development/wpf-application-resource-content-and-data-files.md)

@@ -2,12 +2,12 @@
 title: Procédure standard d'utilisation de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132845"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Procédure standard d'utilisation de LINQ to SQL
 Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], suivez les étapes décrites ultérieurement dans cette rubrique. Notez que de nombreuses étapes sont facultatives. Il est tout à fait possible que votre modèle objet soit utilisable dans son état par défaut.  
@@ -20,7 +20,7 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Sélectionnez un outil pour créer le modèle.  
  Trois outils sont disponibles pour la création du modèle.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
+-   La clé publique du signataire doit être fournie à la classe [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Ce concepteur fournit une interface utilisateur élaborée pour créer un modèle objet à partir d'une base de données existante. Cet outil fait partie de l’IDE Visual Studio et convient mieux aux bases de données de taille réduites ou moyennes.  
   
@@ -82,6 +82,7 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
  Pour plus d’informations, consultez [prise en charge de débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [Création du modèle objet](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

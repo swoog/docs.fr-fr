@@ -2,8 +2,14 @@
 title: Journalisation des événements dans WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'event logging [WCF]'
+- event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175277"
 ---
 # <a name="event-logging-in-wcf"></a>Journalisation des événements dans WCF
 Windows Communication Foundation (WCF) effectue le suivi des événements internes dans le journal des événements Windows.  
@@ -12,7 +18,7 @@ Windows Communication Foundation (WCF) effectue le suivi des événements intern
  La journalisation des événements est activée automatiquement par défaut et il n'existe aucun mécanisme pour la désactiver. Événements consignés par WCF peuvent être affichés à l’aide de l’Observateur d’événements. Pour lancer cet outil, cliquez sur **Démarrer**, cliquez sur **le panneau de configuration**, double-cliquez sur **outils d’administration**, puis double-cliquez sur **Observateur d’événements**.  
   
 ### <a name="application-event-log"></a>Journal des événements de l'application  
- Le **journal des événements Application** contient la plupart des événements générés par WCF. La plupart des entrées indiquent qu’une fonctionnalité particulière n’a pas réussi à démarrer pour une application. En voici quelques exemples :  
+ Le **journal des événements Application** contient la plupart des événements générés par WCF. La plupart des entrées indiquent qu'une fonctionnalité particulière n'a pas réussi à démarrer pour une application. En voici quelques exemples :  
   
 -   Journalisation/le suivi des messages : WCF écrit un événement dans le journal des événements lors de la trace et journalisation des messages échoue. Toutefois, tous les échecs de suivi ne déclenchent pas un événement. Pour empêcher le journal des événements de regorger d’échecs de traces, WCF implémente une période d’indisponibilité de 10 minutes pour un tel événement. Cela signifie que si WCF écrit un échec de la trace dans le journal des événements, il ne fera donc à nouveau au moins 10 minutes.  
   
@@ -42,5 +48,6 @@ Windows Communication Foundation (WCF) effectue le suivi des événements intern
  Lorsque vous cliquez sur « plus d’informations » lorsque vous affichez un événement dans l’Observateur d’événements, l’Observateur d’événements peut envoyer des informations sur Internet. Pour plus d'informations, consultez l'aide de l'Observateur d'événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Informations de référence générales sur les événements](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Référence générale relative aux événements](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

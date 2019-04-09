@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lier des contrôles Windows Forms à des valeurs de base de données DBNull'
+title: 'Procédure : lier des contrôles Windows Forms à des valeurs de base de données DBNull'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 0c0768b922133fa0be1c8a56b4481048d1e200ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137759"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procédure : Lier des contrôles Windows Forms à des valeurs de base de données DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procédure : lier des contrôles Windows Forms à des valeurs de base de données DBNull
 Quand vous liez des contrôles Windows Forms à une source de données et que celle-ci retourne une valeur <xref:System.DBNull>, vous pouvez substituer une valeur appropriée sans gérer, mettre en forme ou analyser des événements. La propriété <xref:System.Windows.Forms.Binding.NullValue%2A> convertira <xref:System.DBNull> en un objet spécifié lors de la mise en forme ou de l'analyse des valeurs de la source de données.  
   
 ## <a name="example"></a>Exemple  
@@ -35,6 +35,7 @@ Quand vous liez des contrôles Windows Forms à une source de données et que ce
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [BindingSource, composant](bindingsource-component.md)
-- [Guide pratique pour Gérer les erreurs et Exceptions qui se produisent avec Databinding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)
+
+- [Composant BindingSource](bindingsource-component.md)
+- [Procédure : gérer les erreurs et les exceptions qui se produisent avec Databinding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Procédure : lier un contrôle Windows Forms à un type](how-to-bind-a-windows-forms-control-to-a-type.md)

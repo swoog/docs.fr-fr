@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135575"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote, interface
 Fournit la possibilité de lancer ou de joindre un débogueur managé à un processus distant cible.  
@@ -68,7 +68,7 @@ interface ICorDebugRemote : IUnknown
 ## <a name="remarks"></a>Notes  
  Actuellement, cette fonctionnalité est prise en charge uniquement pour le débogage d’une cible de l’application basée sur Silverlight qui s’exécute sur un ordinateur Macintosh distant.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
@@ -78,6 +78,7 @@ interface ICorDebugRemote : IUnknown
  **Versions du .NET framework :** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugRemoteTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir des colonnes en lecture seule dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : mettre les colonnes en lecture seule dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: cad80a7b242622802b5897d9903c765a877e6fd4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171923"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procédure : Définir des colonnes en lecture seule dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procédure : mettre les colonnes en lecture seule dans le contrôle DataGridView Windows Forms
 Toutes les données ne sont pas censées être modifiées. Dans le contrôle <xref:System.Windows.Forms.DataGridView>, la valeur de propriété de la colonne <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> détermine si les utilisateurs peuvent modifier des cellules dans cette colonne. Pour plus d’informations sur la façon de rendre le contrôle entièrement en lecture seule, consultez [Comment : Empêcher l’ajout de ligne et de suppression dans les Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md).  
   
  Cette tâche est prise en charge dans Visual Studio.  Voir également [Guide pratique pour Définir une colonne en lecture seule dans les Windows Forms DataGridView Control à l’aide du concepteur](make-columns-read-only-in-the-datagrid-using-the-designer.md).  
@@ -35,8 +35,9 @@ Toutes les données ne sont pas censées être modifiées. Dans le contrôle <xr
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
 - [Fonctionnalités de base liées aux colonnes, lignes et cellules dans le contrôle DataGridView Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Guide pratique pour Empêcher l’ajout de ligne et la suppression dans le contrôle de DataGridView Windows Forms](prevent-row-addition-and-deletion-datagridview.md)
+- [Procédure : empêcher l’ajout et la suppression de lignes dans le contrôle DataGridView Windows Forms](prevent-row-addition-and-deletion-datagridview.md)

@@ -2,12 +2,12 @@
 title: MSMQ Activation
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162826"
 ---
 # <a name="msmq-activation"></a>MSMQ Activation
 Cet exemple illustre comment héberger des applications dans le service d'activation des processus Windows (WAS, Windows Process Activation Service), qui sont lues à partir d'une file d'attente de messages. Cet exemple utilise le `netMsmqBinding` et est basé sur le [bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) exemple. Dans cet exemple, le service est une application hébergée par le Web et le client est auto-hébergé. Les résultats, qui s'affichent sur la console, permettent d'observer le statut des bons de commande envoyés.  
@@ -28,7 +28,7 @@ Cet exemple illustre comment héberger des applications dans le service d'activa
   
  Le service d'adaptateur (NetMsmqActivator) de l'écouteur Net.Msmq active les applications en file d'attente en fonction des messages figurant dans cette file.  
   
- Le client envoie des bons de commande au service dans les limites de l'étendue d'une transaction. Le service traite les bons de commande qu'il reçoit via cette transaction. Le service rappelle ensuite le client en utilisant l'état des bons de commande. Pour faciliter la communication bidirectionnelle, le client et service utilisent tous deux des files d'attente pour y placer les bons de commande et leur état.  
+ Le client envoie des bons de commande au service dans les limites de l’étendue d’une transaction. Le service traite les bons de commande qu'il reçoit via cette transaction. Le service rappelle ensuite le client en utilisant l'état des bons de commande. Pour faciliter la communication bidirectionnelle, le client et service utilisent tous deux des files d'attente pour y placer les bons de commande et leur état.  
   
  Le contrat de service `IOrderProcessor` définit des opérations de service unidirectionnelles compatibles avec les files d'attente. L'opération de service utilise le point de terminaison de réponse pour envoyer les états de bon de commande au client. L'adresse du point de terminaison de réponse correspond à l'URI de la file d'attente utilisée pour renvoyer l'état des bons de commande au client. L'application de traitement des bons de commande implémente ce contrat.  
   
@@ -53,7 +53,7 @@ public interface IOrderStatus
 }  
 ```  
   
- L'opération de service traite le bon de commande envoyé. L'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> est appliqué à l'opération de service pour indiquer l'inscription automatique dans la transaction utilisée pour recevoir les messages depuis la file d'attente ainsi que pour spécifier l'arrivée à échéance automatique de cette transaction au terme de l'opération de service. La classe `Orders` encapsule la fonctionnalité de traitement des bons de commande. Dans cet exemple, elle ajoute les bons de commande à un dictionnaire. Les opérations peuvent accéder à la transaction à laquelle l'opération de service s'est inscrite depuis la classe `Orders`.  
+ L'opération de service traite le bon de commande envoyé. L’attribut <xref:System.ServiceModel.OperationBehaviorAttribute> est appliqué à l’opération de service pour indiquer l’inscription automatique dans la transaction utilisée pour recevoir les messages depuis la file d’attente ainsi que pour spécifier l’arrivée à échéance automatique de cette transaction au terme de l’opération de service. La classe `Orders` encapsule la fonctionnalité de traitement des bons de commande. Dans cet exemple, elle ajoute les bons de commande à un dictionnaire. Les opérations peuvent accéder à la transaction à laquelle l'opération de service s'est inscrite depuis la classe `Orders`.  
   
  L'opération de service, outre traiter des bons de commande envoyés, envoie une réponse au client l'informant de l'état des commandes.  
   
@@ -85,7 +85,7 @@ public class OrderProcessorService : IOrderProcessor
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings de ce fichier de configuration. Le point de terminaison du service est défini dans la section System.ServiceModel de ce même fichier.  
   
 > [!NOTE]
->  Le nom de la file d'attente MSMQ et l'adresse du point de terminaison utilisent des conventions d'adressage légèrement différentes. Le nom de la file d’attente MSMQ utilise un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès. L’adresse de point de terminaison WCF spécifie un net.msmq : schéma, utilise « localhost » pour l’ordinateur local et utilise des barres obliques dans son chemin d’accès. Pour lire une file d'attente hébergée sur un ordinateur distant, remplacez « . » et « localhost » par le nom de cet ordinateur.  
+>  Le nom de la file d'attente MSMQ et l'adresse du point de terminaison utilisent des conventions d'adressage légèrement différentes. Le nom de la file d'attente MSMQ utilise un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès. L’adresse de point de terminaison WCF spécifie un net.msmq : schéma, utilise « localhost » pour l’ordinateur local et utilise des barres obliques dans son chemin d’accès. Pour lire une file d'attente hébergée sur un ordinateur distant, remplacez « . » et « localhost » par le nom de cet ordinateur.  
   
  Un fichier .svc comportant le nom de la classe est utilisé pour héberger le code de service dans WAS.  
   
@@ -95,13 +95,13 @@ public class OrderProcessorService : IOrderProcessor
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>  
 ```  
   
- Ce fichier contient également une directive d'assembly permettant de vérifier que System.Transactions.dll est chargé.  
+ Ce fichier contient également une directive d’assembly permettant de vérifier que System.Transactions.dll est chargé.  
   
 ```svc  
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
- Le client crée une étendue de transaction. La communication avec le service s'effectuant dans les limites de l'étendue de la transaction, elle est considérée comme une unité atomique dans laquelle l'intégralité des messages réussissent ou échouent. La transaction est validée par l'appel de la méthode `Complete` sur l'étendue de la transaction.  
+ Le client crée une étendue de transaction. La communication avec le service s’effectuant dans les limites de l’étendue de la transaction, elle est considérée comme une unité atomique dans laquelle l’intégralité des messages réussissent ou échouent. La transaction est validée par l'appel de la méthode `Complete` sur l'étendue de la transaction.  
   
 ```csharp  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
@@ -259,9 +259,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Cette commande est une ligne unique de texte.  
   
-         Cette commande ajoute une liaison de site net.msmq au site Web par défaut.  
+         Cette commande ajoute une liaison de site net.msmq au site web par défaut.  
   
-    2.  Bien que toutes les applications d'un site partagent la même liaison net.msmq, chacune d'elles peut activer de manière individuelle la prise en charge de net.msmq. Pour activer net.msmq pour l'application /servicemodelsamples, exécutez la commande suivante à partir d'une invite de commandes avec élévation de privilèges.  
+    2.  Bien que toutes les applications d’un site partagent la même liaison net.msmq, chacune d’elles peut activer de manière individuelle la prise en charge de net.msmq. Pour activer net.msmq pour l'application /servicemodelsamples, exécutez la commande suivante à partir d'une invite de commandes avec élévation de privilèges.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

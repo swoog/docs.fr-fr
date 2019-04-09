@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164984"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters et XAML
 Cette rubrique présente l’objectif de la conversion de types de chaîne comme une fonctionnalité générale du langage XAML. Dans le .NET Framework, la <xref:System.ComponentModel.TypeConverter> classe sert un objectif particulier dans le cadre de l’implémentation pour une classe personnalisée managée qui peut être utilisée en tant que valeur de propriété dans l’utilisation d’attribut XAML. Si vous écrivez une classe personnalisée, et que les instances de la classe soient utilisables comme valeurs d’attribut définissables XAML, vous devrez peut-être appliquer un <xref:System.ComponentModel.TypeConverterAttribute> à votre classe, écrire une personnalisée <xref:System.ComponentModel.TypeConverter> classe, ou les deux.  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>Concepts de conversion de type  
   
 ### <a name="xaml-and-string-values"></a>XAML et valeurs de chaîne  
@@ -73,7 +71,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
   
  La méthode la plus importante suivante est <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Si une application est convertie en une représentation de balisage (par exemple, si elle est enregistrée en XAML sous forme de fichier), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> est chargée de produire une représentation de balisage. Dans ce cas, le chemin d’accès du code qui est important pour XAML est lorsque vous passez un `destinationType` de <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> et <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sont des méthodes de support utilisées lorsqu'un service interroge les fonctions de l'implémentation <xref:System.ComponentModel.TypeConverter> . Vous devez implémenter ces méthodes pour retourner `true` dans des cas spécifiques au type pris en charge par les méthodes de conversion correspondantes de votre convertisseur. Pour le langage XAML, cela correspond généralement au type <xref:System.String> .  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> et <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sont des méthodes de support utilisées lorsqu’un service interroge les fonctions de la <xref:System.ComponentModel.TypeConverter> implémentation. Vous devez implémenter ces méthodes pour retourner `true` dans des cas spécifiques au type pris en charge par les méthodes de conversion correspondantes de votre convertisseur. Pour le langage XAML, cela correspond généralement au type <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informations de culture et convertisseurs de type pour XAML  
  Chaque <xref:System.ComponentModel.TypeConverter> implémentation peut avoir sa propre interprétation de ce qui constitue une chaîne valide pour une conversion et peut également utiliser ou ignorer la description de type passée comme paramètres. Vous devez tenir compte d’un élément fondamental en ce qui concerne la culture et la conversion de type XAML. L’utilisation de chaînes localisables comme valeurs d’attribut est intégralement prise en charge par XAML. Mais l’utilisation de cette chaîne localisable comme entrée de convertisseur de type avec des spécifications de culture spécifiques n’est pas prise en charge, car les convertisseurs de types pour les valeurs d’attribut XAML impliquent un comportement d’analyse de langage fixe, à l’aide de la culture `en-US`. Pour plus d’informations sur les raisons de conception de cette restriction, consultez la spécification de langage XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)).  
@@ -89,7 +87,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
 >  N’utilisez pas les accolades, en particulier {, comme élément possible de format de chaîne. Ces caractères sont réservés comme entrée et sortie d’une séquence d’extension de balisage.  
   
 ### <a name="implementing-convertto"></a>Implémentation de ConvertTo  
- La méthode<xref:System.ComponentModel.TypeConverter.ConvertTo%2A> peut être utilisée pour assurer la prise en charge de la sérialisation. La prise en charge de la sérialisation via <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> pour votre type personnalisé et son convertisseur de type n'est pas une spécification absolue. Toutefois, si vous implémentez un contrôle ou que vous utilisez la sérialisation dans le cadre des fonctionnalités ou de la conception de la classe, vous devez implémenter <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> peut être utilisé pour la prise en charge de la sérialisation. La prise en charge de la sérialisation via <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> pour votre type personnalisé et son convertisseur de type n'est pas une spécification absolue. Toutefois, si vous implémentez un contrôle ou que vous utilisez la sérialisation dans le cadre des fonctionnalités ou de la conception de la classe, vous devez implémenter <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
   
  Pour être utilisable en tant qu’un <xref:System.ComponentModel.TypeConverter> implémentation qui prend en charge XAML, la <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> méthode pour ce convertisseur doit accepter une instance du type (ou une valeur) prise en charge en tant que le `value` paramètre. Lorsque le `destinationType` paramètre est le type <xref:System.String>, puis l’objet retourné doit pouvoir être casté en <xref:System.String>. La chaîne retournée doit représenter une valeur sérialisée de `value`. Dans l’idéal, le format de sérialisation que vous choisissez doit être capable de générer la même valeur si cette chaîne est passée à la <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> implémentation du même convertisseur, sans perte significative d’informations.  
   
@@ -110,6 +108,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
  Vous pouvez également fournir un convertisseur de type en fonction de la propriété. Au lieu d'appliquer un [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à la définition de classe, appliquez-le à une définition de propriété (c'est-à-dire à la définition principale, et non pas aux implémentations de `get`/`set` qu'elle contient). Le type de la propriété doit correspondre au type traité par votre convertisseur de type personnalisé. Une fois cet attribut appliqué, quand un processeur XAML gère des valeurs de cette propriété, il peut traiter des chaînes d’entrée et retourner des instances d’objet. La technique de conversion de type de chaque propriété est particulièrement utile si vous choisissez d’utiliser un type de propriété à partir de Microsoft .NET Framework ou d’une autre bibliothèque où vous ne pouvez pas contrôler la définition de classe et que vous ne pouvez pas appliquer un <xref:System.ComponentModel.TypeConverterAttribute> il.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.TypeConverter>
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9c9866ee5ee3076d144dc732286ee008cd78c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e438006d6424866514e73119c05e8fd69d7ba62e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132260"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader, fonction
 Crée un lecteur de l’historique pour le fichier spécifié.  
@@ -50,12 +50,13 @@ HRESULT CreateHistoryReader (
 |S_OK|Indique que la méthode a réussi.|  
 |E_INVALIDARG|Indique que `wzFilePath` ou `ppHistoryReader` sont définies sur une référence null.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Bibliothèque :** Fusion.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions statiques globales de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+
+- [Fonctions statiques globales de la fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

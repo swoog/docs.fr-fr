@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Observer à distance l'état d'imprimantes"
+title: 'Procédure : Observer à distance l’état d’imprimantes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143544"
 ---
-# <a name="how-to-remotely-survey-the-status-of-printers"></a>Procédure : Observer à distance l'état d'imprimantes
+# <a name="how-to-remotely-survey-the-status-of-printers"></a>Procédure : Observer à distance l’état d’imprimantes
 Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plusieurs imprimantes ne fonctionnent pas en raison d’un bourrage papier, d’un manque de papier ou d’un autre problème. L’ensemble des propriétés de l’imprimante exposé dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen de mener une enquête rapide de l’état des imprimantes.  
   
 ## <a name="example"></a>Exemple  
@@ -74,6 +74,7 @@ Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plu
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plu
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [&, opérateur (référence C#)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Vue d'ensemble de l'impression](printing-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Élément <oidMap>
+title: <oidMap> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146872"
 ---
 # <a name="oidmap-element"></a>\<oidMap > élément
 Contient des mappages d’identificateur (OID) d’objet ASN.1 aux classes.  
@@ -74,8 +74,9 @@ Contient des mappages d’identificateur (OID) d’objet ASN.1 aux classes.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [services de chiffrement](../../../../../docs/standard/security/cryptographic-services.md)
+- [Configuration de classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Mappage d'identificateurs d'objet à des algorithmes de chiffrement](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

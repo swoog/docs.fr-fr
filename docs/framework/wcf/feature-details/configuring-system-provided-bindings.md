@@ -6,26 +6,26 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172807"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuration des liaisons fournies par le système
-Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Liaisons se composent des éléments qui définissent comment les canaux Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requis. Une liaison contient trois types d’éléments :  
+Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Liaisons se composent des éléments qui définissent comment les canaux Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requis. Une liaison contient trois types d'éléments :  
   
 -   Éléments de liaison de canal de protocole qui déterminent la sécurité, la fiabilité, des paramètres de flux de contexte ou des protocoles définis par l'utilisateur à utiliser avec les messages envoyés au point de terminaison.  
   
--   Éléments de liaison de canal de transport qui déterminent le protocole de transport sous-jacent à utiliser lors de l'envoi des messages au point de terminaison, par exemple, le protocole TCP ou HTTP.  
+-   Éléments de liaison de canal de transport qui déterminent le protocole de transport sous-jacent à utiliser lors de l’envoi des messages au point de terminaison, par exemple, le protocole TCP ou HTTP.  
   
 -   Éléments de liaison d’encodage de message qui déterminent le code de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
   
  Cette rubrique présente toutes les liaisons Windows Communication Foundation (WCF) fournie par le système. Si aucun de ces éléments ne répond aux exigences exactes de votre application, vous pouvez créer une liaison à l’aide de la classe <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
->  Sélectionnez une liaison dont la sécurité est activée. Par défaut, toutes les liaisons, à l'exception de la liaison <xref:System.ServiceModel.BasicHttpBinding>, ont la sécurité activée. Si vous ne sélectionnez pas de liaison sécurisée, ou si vous désactivez la sécurité, assurez-vous que vos échanges de réseau sont protégés d'une autre manière, comme le fait d'appartenir à un centre de données sûr ou à un réseau isolé.  
+>  Sélectionnez une liaison dont la sécurité est activée. Par défaut, toutes les liaisons, à l'exception de la liaison <xref:System.ServiceModel.BasicHttpBinding>, ont la sécurité activée. Si vous ne sélectionnez pas de liaison sécurisée, ou si vous désactivez la sécurité, assurez-vous que vos échanges de réseau sont protégés d’une autre manière, comme le fait d’appartenir à un centre de données sûr ou à un réseau isolé.  
   
 > [!IMPORTANT]
 >  N’utilisez pas de contrats duplex avec les liaisons qui ne prennent pas en charge la sécurité, ou dont la sécurité est désactivée, sauf si l’échange de réseau est sécurisé par d’autres moyens.  
@@ -57,11 +57,11 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Aucun, transport, (message), mixte|(Aucun), transport, session fiable|(Aucun), oui|N/A|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Aucun, transport, (message), mixte|(Aucun), transport, session fiable|(Aucun), oui|N/A|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|Aucun, (Message)|(Session fiable)|(Aucun), oui|Oui|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Aucun, (Message), mixte|(Aucun), session fiable|(Aucun), oui|Aucune|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Aucun, (Message), mixte|(Aucun), session fiable|(Aucun), oui|Aucune|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Aucun, (Message), mixte|(Aucun), session fiable|(Aucun), oui|Non|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Aucun, (Message), mixte|(Aucun), session fiable|(Aucun), oui|Non|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|Aucun, (transport), message,<br /><br /> Mixte|Session fiable, (transport)|(Aucun), oui|Oui|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Aucun,<br /><br /> (Transport)|Aucun, (Transport)|(Aucun), oui|Oui|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Aucun, message, (transport), les deux|(Aucun)|(Aucun), oui|Aucune|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Aucun, message, (transport), les deux|(Aucun)|(Aucun), oui|Non|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|Aucun, message, (transport), mixte|(Aucun)|(Aucun)|Oui|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(Aucun)|(Aucun)|N/A|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Aucun, (Transport)|(Aucun)|(Aucun), oui|N/A|  
@@ -78,6 +78,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |Diffusion en continu|Spécifie si la diffusion en continu de message est prise en charge.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Vue d'ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)

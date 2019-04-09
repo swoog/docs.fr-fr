@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174809"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ToolBar (Windows Forms)
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708845"
  Le <xref:System.Windows.Forms.ToolBar> contrôle vous permet de créer des barres d’outils en ajoutant <xref:System.Windows.Forms.Button> des objets sur un <xref:System.Windows.Forms.ToolBar.Buttons%2A> collection. Vous pouvez utiliser l’éditeur de collections pour ajouter des boutons à un <xref:System.Windows.Forms.ToolBar> contrôle ; chaque <xref:System.Windows.Forms.Button> objet doit être texte ou une image, vous pouvez affecter à la fois. L’image est fournie par un composant [ImageList](imagelist-component-windows-forms.md) associé. Au moment de l’exécution, vous pouvez ajouter ou supprimer des boutons à partir de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> à l’aide de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> et <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> méthodes. Pour programmer les boutons d’une <xref:System.Windows.Forms.ToolBar>, ajouter du code pour le <xref:System.Windows.Forms.ToolBar.ButtonClick> événements de la <xref:System.Windows.Forms.ToolBar>, à l’aide la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propriété de la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe pour déterminer quel bouton l’utilisateur a cliqué.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar, contrôle](toolbar-control-windows-forms.md)
-- [Guide pratique pour Ajouter des boutons à un contrôle de barre d’outils](how-to-add-buttons-to-a-toolbar-control.md)
-- [Guide pratique pour Définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Procédure : ajouter des boutons à un contrôle ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Procédure : définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Procédure : déclencher des événements de menu pour des boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147106"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configuration des applications à l'aide de fichiers de configuration
 Le .NET Framework, par le biais de fichiers de configuration, permet aux développeurs et administrateurs de contrôler la façon dont les applications s'exécutent avec la souplesse requise. Les fichiers de configuration sont des fichiers XML qui peuvent être modifiés selon les besoins. Un administrateur peut exercer un contrôle sur les ressources protégées auxquelles une application peut accéder, les versions d'assemblys utilisées par une application et l'endroit où sont situés les applications et objets distants. Les développeurs peuvent stocker des paramètres dans des fichiers de configuration, de façon à ce qu'il ne leur soit pas nécessaire de recompiler une application chaque fois qu'un paramètre change. Cette section décrit les éléments qui peuvent être configurés et explique en quoi la configuration d'une application peut se révéler utile.  
@@ -40,7 +40,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
  Cette rubrique décrit la syntaxe des fichiers de configuration et fournit des informations sur les trois types de fichiers de configuration : ordinateur, application et sécurité.  
   
 ## <a name="configuration-file-format"></a>Format des fichiers de configuration  
- Les fichiers de configuration contiennent des éléments qui sont des structures de données logiques qui définissent des informations de configuration. Dans un fichier de configuration, vous utilisez des étiquettes pour indiquer le début et la fin d’un élément. Par exemple, l’élément `<runtime>` se compose d’`<runtime>`*éléments enfants*`</runtime>`. Un élément vide s’écrirait ainsi : `<runtime/>` ou `<runtime></runtime>`.  
+ Les fichiers de configuration contiennent des éléments qui sont des structures de données logiques qui définissent des informations de configuration. Dans un fichier de configuration, vous utilisez des balises pour indiquer le début et la fin d'un élément. Par exemple, l’élément `<runtime>` se compose d’`<runtime>`*éléments enfants*`</runtime>`. Un élément vide s’écrirait ainsi : `<runtime/>` ou `<runtime></runtime>`.  
   
  Comme avec tous les fichiers XML, la syntaxe des fichiers de configuration respecte la casse.  
   
@@ -70,7 +70,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
      Ces applications disposent de deux fichiers de configuration : un fichier de configuration source, modifié par le développeur lors du développement, et un fichier de sortie distribué avec l'application.  
   
-     Quand vous êtes en phase de développement dans Visual Studio, placez le fichier de configuration source de votre application dans le répertoire du projet, puis affectez à sa propriété **Copier dans le répertoire de sortie** la valeur **Toujours copier** ou **Copier si plus récent**. Le nom du fichier de configuration est le nom de l’application assorti d’une extension .config. Par exemple, une application nommée myApp.exe doit avoir un fichier de configuration source appelé myApp.exe.config.  
+     Quand vous êtes en phase de développement dans Visual Studio, placez le fichier de configuration source de votre application dans le répertoire du projet, puis affectez à sa propriété **Copier dans le répertoire de sortie** la valeur **Toujours copier** ou **Copier si plus récent**. Le nom du fichier de configuration est le nom de l'application assorti d'une extension .config. Par exemple, une application nommée myApp.exe doit avoir un fichier de configuration source appelé myApp.exe.config.  
   
      Visual Studio copie automatiquement le fichier de configuration source dans le répertoire où se trouve l'assembly compilé pour créer le fichier de configuration de sortie, qui est déployé avec l'application. Dans certains cas, Visual Studio peut modifier le fichier de configuration de sortie ; pour plus d'informations, consultez la section [Redirection des versions d’assemblys au niveau de l’application](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) dans l’article [Redirection des versions d’assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  
   
@@ -80,11 +80,11 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
 -   Application hébergée par Internet Explorer.  
   
-     Si une application hébergée dans Internet Explorer possède un fichier de configuration, l’emplacement de ce fichier est spécifié dans une étiquette `<link>` dont la syntaxe est la suivante :  
+     Si une application hébergée dans Internet Explorer possède un fichier de configuration, l'emplacement de ce fichier est spécifié dans une balise `<link>` dont la syntaxe est la suivante :  
   
      \<link rel="*ConfigurationFileName*" href="*location*">  
   
-     Dans cette étiquette, `location` représente une URL vers le fichier de configuration. Ceci définit la base de l'application. Le fichier de configuration doit être situé sur le même site web que l'application.  
+     Dans cette balise, `location` représente une URL vers le fichier de configuration. Ceci définit la base de l'application. Le fichier de configuration doit être situé sur le même site web que l'application.  
   
 ## <a name="security-configuration-files"></a>Fichiers de configuration de sécurité  
  Les fichiers de configuration de sécurité contiennent des informations sur la hiérarchie du groupe de codes et des jeux d'autorisations associée à un niveau de stratégie. Nous vous recommandons vivement d’utiliser l’[outil Stratégie de sécurité d’accès du code (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) pour modifier la stratégie de sécurité et éviter que les modifications de stratégie corrompent les fichiers de configuration de sécurité.  
@@ -101,7 +101,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
 -   Fichier de configuration de la stratégie de l’utilisateur : %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour Localiser des assemblys à l’aide de DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Procédure : Localiser des assemblys à l’aide de DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Explique comment demander au runtime d'utiliser la variable d'environnement DEVPATH pour rechercher les assemblys.  
   
  [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -110,20 +110,21 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
  [Spécification de l'emplacement d'un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  Explique comment spécifier l'endroit où le runtime doit rechercher un assembly.  
   
- [Configuration des classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Configuration de classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Décrit la manière d'associer un nom d'algorithme à une classe de chiffrement et un identificateur d'objet à un algorithme de chiffrement.  
   
- [Guide pratique pour Créer une stratégie d’éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Procédure : Créer une stratégie d’éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Explique quand et comment ajouter un fichier de stratégie de l'éditeur pour spécifier la redirection de l'assembly et les paramètres de base du code.  
   
  [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
  Décrit la hiérarchie du schéma pour les paramètres de démarrage, de runtime et de réseau, ainsi que pour d'autres types de paramètres de configuration.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Spécification de l'emplacement d'un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Administration de site web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Administration de Site Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (outil de stratégie de sécurité d’accès du code)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [Caspol.exe (outil Stratégie de sécurité d'accès du code)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

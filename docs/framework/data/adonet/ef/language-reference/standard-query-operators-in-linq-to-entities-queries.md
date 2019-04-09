@@ -2,12 +2,12 @@
 title: Opérateurs de requête standard dans les requêtes LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118142"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Opérateurs de requête standard dans les requêtes LINQ to Entities
 Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui comportent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
@@ -19,14 +19,14 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
   
  *Filtrage* fait référence à l’opération de restriction du jeu de résultats à contienne uniquement les éléments qui correspondent à une condition spécifiée. La méthode de filtrage est `Where`.  
   
- La plupart des surcharges des méthodes de projection et de filtrage sont prises en charge dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], à l'exception de celles qui acceptent un argument positionnel.  
+ La plupart des surcharges des méthodes de projection et de filtrage sont prises en charge dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], à l’exception de celles qui acceptent un argument positionnel.  
   
 ## <a name="join-methods"></a>Méthodes de jointure  
  La jointure est une opération importante dans les requêtes qui ciblent des sources de données qui n'ont pas de relations explorables les unes avec les autres. Une jointure de deux sources de données est l'association d'objets dans une source de données avec des objets dans l'autre source de données qui partagent un attribut commun ou une propriété commune. Les méthodes de jointure sont `Join` et `GroupJoin`.  
   
  La plupart des surcharges des méthodes de jointure sont prises en charge, à l'exception de celles qui utilisent un <xref:System.Collections.Generic.IEqualityComparer%601>. Ceci est dû au fait que le comparateur ne peut pas être traduit dans la source de données.  
   
-## <a name="set-methods"></a>Méthodes de définition  
+## <a name="set-methods"></a>Définir des méthodes  
  Les opérations de définition dans LINQ sont des opérations de requête qui basent leurs jeux de résultats sur la présence ou l'absence d'éléments équivalents dans une collection (ou un ensemble) identique ou distincte. Les méthodes de définition sont `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` et `Union`.  
   
  La plupart des surcharges des méthodes de définition sont prises en charge dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], bien qu'il existe des différences de comportement par rapport à LINQ to Objects. Toutefois, définir des méthodes qui utilisent un <xref:System.Collections.Generic.IEqualityComparer%601> ne sont pas pris en charge, car le comparateur ne peut pas être traduit dans la source de données.  
@@ -48,7 +48,7 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
  Les méthodes de regroupement sont mappées à la source de données à l'aide d'une sous-requête distincte pour le sélecteur de clé. La sous-requête de comparaison du sélecteur de clé est exécutée en utilisant la sémantique de la source de données, en tenant compte des problèmes en rapport avec la comparaison de valeurs `null`.  
   
 ## <a name="aggregate-methods"></a>Méthodes d'agrégation  
- Une opération d'agrégation calcule une valeur unique à partir d'une collection de valeurs. Par exemple, le calcul de la température quotidienne moyenne à partir des valeurs de température quotidiennes d'un mois est un exemple d'opération d'agrégation. Les méthodes d'agrégation sont `Aggregate`, `Average`, `Count`, `LongCount`, `Max`, `Min` et `Sum`.  
+ Une opération d’agrégation calcule une valeur unique à partir d’une collection de valeurs. Par exemple, le calcul de la température quotidienne moyenne à partir des valeurs de température quotidiennes d'un mois est un exemple d'opération d'agrégation. Les méthodes d'agrégation sont `Aggregate`, `Average`, `Count`, `LongCount`, `Max`, `Min` et `Sum`.  
   
  La plupart des surcharges des méthodes d'agrégation sont prises en charge. Pour le comportement vis-à-vis des valeurs NULL, les méthodes d'agrégation utilisent la sémantique de la source de données. Le comportement des méthodes d'agrégation en présence de valeurs NULL peut être différent selon la source de données principale utilisée. Le comportement des méthodes d'agrégation utilisant la sémantique de la source de données peut également être différent du comportement attendu des méthodes CLR. Par exemple, le comportement par défaut de la méthode `Sum` sur SQL Server consiste à ignorer toutes les valeurs NULL au lieu de lever une exception.  
   
@@ -69,7 +69,7 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
 ## <a name="type-methods"></a>Méthodes de type  
  Les deux méthodes LINQ qui traitent de la conversion de type et les tests sont tous deux pris en charge dans le contexte d’Entity Framework. Cela signifie que les seuls types pris en charge sont des types qui correspondent au type Entity Framework approprié. Pour obtenir la liste de ces types, consultez [Types du modèle conceptuel (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Les méthodes de type sont `Convert` et `OfType`.  
   
- La méthode `OfType` est prise en charge pour les types d'entités. La méthode `Convert` est prise en charge pour les types primitifs de modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
+ `OfType` est pris en charge pour les types d’entité. `Convert` est pris en charge pour les types primitifs du modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
   
 ## <a name="paging-methods"></a>Méthodes de pagination  
  Opérations de pagination retournent un élément unique ou plusieurs éléments d’une séquence. Les méthodes de pagination prises en charge sont `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, et `Take`.  
@@ -77,5 +77,6 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
  Un nombre de méthodes de pagination n’est pas compatibles, en raison de l’impossibilité pour mapper les fonctions à la source de données ou à l’absence de classement implicite des jeux sur la source de données. Les méthodes qui retournent une valeur par défaut sont limitées aux types primitifs de modèle conceptuel et aux types référence avec des valeurs par défaut NULL. Les méthodes de pagination qui sont exécutées sur une séquence vide retourneront la valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [Vue d’ensemble des opérateurs de requête standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

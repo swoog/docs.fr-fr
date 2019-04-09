@@ -2,12 +2,12 @@
 title: Sécurisation des messages à l'aide de la sécurité de message
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172001"
 ---
 # <a name="securing-messages-using-message-security"></a>Sécurisation des messages à l'aide de la sécurité de message
 Cette section traite de la sécurité de message WCF lors de l’utilisation <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -64,7 +64,8 @@ Cette section traite de la sécurité de message WCF lors de l’utilisation <xr
  Lorsque vous utilisez à la fois la sécurité de transport et la sécurité de message, le certificat utilisé pour sécuriser le message au niveau du transport et du message SOAP doit être le même.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Sécurisation des messages à l’aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Sécurité du message sur Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+
+- [Sécurisation des messages à l'aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Message Security over Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

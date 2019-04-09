@@ -2,12 +2,12 @@
 title: <transport> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170636"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport > de \<basicHttpBinding >
 Définit les propriétés qui déterminent les paramètres d'authentification pour le transport HTTP.  
@@ -54,17 +54,17 @@ Définit les propriétés qui déterminent les paramètres d'authentification po
   
 ## <a name="clientcredentialtype-attribute"></a>Attribut clientCredentialType  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|None|Les messages ne sont pas sécurisés pendant le transfert.|  
+|Aucun.|Les messages ne sont pas sécurisés pendant le transfert.|  
 |Basic|Spécifie l'authentification de base.|  
-|Digest|Spécifie l'authentification Digest.|  
+|Digest|Spécifie l’authentification Digest.|  
 |Ntlm|Spécifie l'authentification NTLM le cas échéant et en cas d'échec d'authentification Windows.|  
 |Windows|Spécifie l'authentification intégrée Windows.|  
   
 ## <a name="proxycredentialtype-attribute"></a>Attribut proxyCredentialType  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Aucun.|-Les messages ne sont pas sécurisés pendant le transfert.|  
 |Basic|Spécifie l’authentification de base tel que défini par RFC 2617 – HTTP Authentication : Base et authentification Digest.|  
@@ -118,6 +118,7 @@ Définit les propriétés qui déterminent les paramètres d'authentification po
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>

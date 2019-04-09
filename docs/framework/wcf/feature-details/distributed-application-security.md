@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132054"
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
 Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones fonctionnelles principales : sécurité de transfert, contrôle d’accès et l’audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
@@ -20,7 +20,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
 ## <a name="transfer-security-scenarios"></a>Scénarios de sécurité de transfert  
  Scénarios courants qui utilisent la sécurité de transfert WCF sont les suivantes :  
   
--   Transfert sécurisé à l'aide de Windows. Un client WCF et un service sont déployés dans un domaine Windows (ou une forêt Windows). Les messages contenant des données personnelles, les exigences incluent donc l’authentification mutuelle du client et du service, l’intégrité et la confidentialité des messages. En outre, la preuve est requise qu’une transaction spécifique s’est produite ; à titre d’exemple, le récepteur du message doit enregistrer les informations de signature.  
+-   Transfert sécurisé à l'aide de Windows. Un client WCF et un service sont déployés dans un domaine Windows (ou une forêt Windows). Les messages contenant des données personnelles, les exigences incluent donc l’authentification mutuelle du client et du service, l’intégrité et la confidentialité des messages. En outre, la preuve est requise qu'une transaction spécifique s'est produite ; à titre d'exemple, le récepteur du message doit enregistrer les informations de signature.  
   
 -   Transfert sécurisé à l'aide de `UserName` et HTTPS. Un client WCF et le service doivent être développés pour fonctionner sur Internet. Les informations d'identification du client permettent d'effectuer l'authentification par rapport à une base de données de paires nom d'utilisateur/mot de passe. Le service est déployé à une adresse HTTPS à l'aide d'un certificat SSL (Secure Sockets Layer) approuvé. Les messages transitant sur Internet, le client et le service doivent donc être mutuellement authentifiés, et la confidentialité et l'intégrité des messages doivent être conservées pendant le transfert.  
   
@@ -44,7 +44,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
 |Transport|Utilise un transport sécurisé tel que HTTPS pour l'intégrité, la confidentialité et l'authentification mutuelle.|  
 |Message|Utilise la sécurité de message SOAP pour l'intégrité, la confidentialité et l'authentification mutuelle. Les messages SOAP sont sécurisés conformément aux standards WS-Security.|  
 |Mixed Mode|Utilise la sécurité de transport pour l'intégrité, la confidentialité et l'authentification du serveur. Utilise la sécurité de message (WS-Security et autres standards) pour l'authentification du client.<br /><br /> (Cette énumération pour ce mode est `TransportWithMessageCredential`.)|  
-|Both|Effectue la protection et l'authentification aux deux niveaux. Ce mode est disponible uniquement dans le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) élément.|  
+|Les deux|Effectue la protection et l'authentification aux deux niveaux. Ce mode est disponible uniquement dans le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) élément.|  
   
 ## <a name="credentials-and-transfer-security"></a>Informations d'identification et sécurité de transfert  
  Un *informations d’identification* sont des données qui sont présentées pour établir une identité déclarée ou des fonctions. La présentation d'informations d'identification implique la présentation à la fois des données et la preuve de la propriété de ces données. WCF prend en charge divers types d’informations d’identification au niveau de sécurité du transport et message. Vous pouvez spécifier un type d’informations d’identification pour une liaison WCF.  
@@ -64,7 +64,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Spécifie l'authentification de base.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
 |Digest|Spécifie l’authentification Digest.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
 |Ntlm|Spécifie l'authentification Windows à l'aide de la négociation SSPI sur un domaine Windows.<br /><br /> La négociation SSPI entraîne l'utilisation du protocole Kerberos ou NTLM (NT LanMan).|  
@@ -87,7 +87,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
  Sécurité WCF a deux types d’informations d’identification : comportements d’informations d’identification et les comportements du canal d’informations d’identification de service. Comportements d’informations d’identification dans WCF spécifient les données réelles, à savoir, les informations d’identification utilisées pour satisfaire les exigences de sécurité exprimées par les liaisons. Dans WCF, une classe de client est le composant d’exécution qui effectue la conversion entre les messages et l’appel de l’opération. Tous les clients héritent de la classe <xref:System.ServiceModel.ClientBase%601>. La propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sur la classe de base vous permet de spécifier différentes valeurs d'informations d'identification du client.  
   
- Dans WCF, les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour contrôler par programme le service. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d’identification du service et des paramètres de validation de client pour divers types d’informations d’identification du client.  
+ Dans WCF, les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour contrôler par programme le service. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d'identification du service et des paramètres de validation de client pour divers types d'informations d'identification du client.  
   
 ### <a name="negotiation-model-for-message-security"></a>Modèle de négociation pour la sécurité de message  
  Le mode de sécurité du message vous permet d'exécuter la sécurité de transfert afin que les informations d'identification du service soient configurées au niveau du client hors bande. Par exemple, si vous utilisez un certificat stocké dans le magasin de certificats Windows, vous devez utiliser un outil tel qu'un composant logiciel enfichable MMC (Microsoft Management Console).  
@@ -95,7 +95,8 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
  Le mode de sécurité du message vous permet également d'exécuter la sécurité de transfert afin que les informations d'identification du service soient échangées avec le client dans le cadre d'une négociation initiale. Pour activer la négociation, affectez <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> à la propriété `true`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Vue d'ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

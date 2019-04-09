@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171572"
 ---
 # <a name="how-to-localize-an-application"></a>Procédure : Localiser une application
 Ce didacticiel explique comment créer une application localisée à l'aide de l'outil LocBaml.  
@@ -68,7 +68,7 @@ Ce didacticiel explique comment créer une application localisée à l'aide de l
   
 1.  Compilez HelloApp pour créer une [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] :  
   
-     **msbuild helloapp.csproj**  
+     **MSBuild helloapp.csproj**  
   
 2.  L'assembly d'application principal nouvellement créé, HelloApp.exe, se trouve dans le dossier suivant :  
   
@@ -210,5 +210,6 @@ Ce didacticiel explique comment créer une application localisée à l'aide de l
  Vous connaissez à présent les rudiments de l'outil LocBaml.  Vous êtes normalement en mesure de créer un fichier contenant des UID. À l'aide de l'outil LocBaml, vous devez être en mesure d'analyser un fichier pour extraire le contenu localisable, et une fois le contenu traduit, vous devez pouvoir générer un fichier .resources.dll qui fusionne le contenu traduit. Bien que non exhaustive, cette rubrique vous donne les moyens de localiser vos applications à l'aide LocBaml.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Globalisation pour WPF](globalization-for-wpf.md)
-- [Vue d’ensemble de l’utilisation de la disposition automatique](use-automatic-layout-overview.md)
+- [Vue d'ensemble de l'utilisation de la disposition automatique](use-automatic-layout-overview.md)

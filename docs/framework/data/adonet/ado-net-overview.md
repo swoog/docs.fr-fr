@@ -2,12 +2,12 @@
 title: Vue d'ensemble d'ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170054"
 ---
 # <a name="adonet-overview"></a>Vue d'ensemble d'ADO.NET
 ADO.NET propose un accès cohérent à des sources de données, telles que SQL Server et XML, ainsi qu'à des sources de données exposées via OLE DB et ODBC. Des applications grand public de partage de données peuvent utiliser ADO.NET pour se connecter à des sources de données et extraire, manipuler et mettre à jour les données qu'elles contiennent.  
@@ -32,10 +32,10 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
  [LINQ et ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Décrit comment les requêtes LINQ (Language-Integrated Query) sont implémentées dans ADO.NET et propose des liens vers les rubriques associées.  
   
- [Fournisseurs de données .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Fournisseur de données .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Propose une vue d'ensemble du design du fournisseur de données .NET Framework et des fournisseurs de données .NET Framework inclus dans ADO.NET.  
   
- [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Datasets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Fournit une vue d'ensemble du design et des composants du `DataSet`.  
   
  [Exécution côte à côte dans ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
@@ -45,7 +45,7 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
  Fournit des exemples de code qui récupèrent des données à l'aide des fournisseurs de données ADO.NET.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Nouveautés d’ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [Nouveautés dans ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Introduit des fonctionnalités nouvelles dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -58,6 +58,7 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
  Explique comment se connecter à une source de données, récupérer des données et modifier des données, notamment des `DataReaders` et des `DataAdapters`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [L’accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

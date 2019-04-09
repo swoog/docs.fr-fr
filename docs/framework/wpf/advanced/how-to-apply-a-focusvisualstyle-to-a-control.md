@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133547"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Procédure : Appliquer un FocusVisualStyle à un contrôle
 Cet exemple vous montre comment créer un style de focus visuel dans les ressources et appliquer le style à un contrôle, à l’aide de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété.  
@@ -27,6 +27,7 @@ Cet exemple vous montre comment créer un style de focus visuel dans les ressour
  Le focus de styles visuels doivent être utilisés de manière cohérente entre un thème ou une interface utilisateur, au lieu d’utiliser une autre pour chaque élément pouvant être actif. Pour plus d’informations, consultez [focus dans les contrôles et FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
 - [FocusVisualStyle et application d'un style au focus dans les contrôles](styling-for-focus-in-controls-and-focusvisualstyle.md)

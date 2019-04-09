@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un Client fédéré'
+title: 'Procédure : créer un client fédéré'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104323"
 ---
-# <a name="how-to-create-a-federated-client"></a>Procédure : Créer un Client fédéré
+# <a name="how-to-create-a-federated-client"></a>Procédure : créer un client fédéré
 Dans Windows Communication Foundation (WCF), création d’un client pour un *service fédéré* se compose de trois étapes principales :  
   
 1.  Configurer un [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou une liaison personnalisée similaire. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Vous pouvez également exécuter la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de métadonnées du service fédéré pour générer un fichier de configuration permettant de communiquer avec le service fédéré et un ou plusieurs services de jeton de sécurité.  
@@ -58,14 +58,14 @@ Dans Windows Communication Foundation (WCF), création d’un client pour un *se
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4.  Facultatif. Affectez au <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> un pourcentage. La valeur par défaut est 60 (pourcent). La propriété spécifie un pourcentage de la période de validité du jeton. Par exemple, si le jeton émis est valide pour 10 heures et <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> a la valeur 80, le jeton est renouvelé après huit heures. L'exemple suivant affecte la valeur de 80 pourcent.  
+4.  Optionnel. Affectez au <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> un pourcentage. La valeur par défaut est 60 (pourcent). La propriété spécifie un pourcentage de la période de validité du jeton. Par exemple, si le jeton émis est valide pour 10 heures et <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> a la valeur 80, le jeton est renouvelé après huit heures. L'exemple suivant affecte la valeur de 80 pourcent.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
   
      L'intervalle de renouvellement déterminé par la période de validité du jeton et la valeur `IssuedTokenRenewalThresholdPercentage` est substitué par la valeur `MaxIssuedTokenCachingTime` dans les cas où le temps de mise en cache est plus court que le temps du seuil de renouvellement. Par exemple, si le produit de `IssuedTokenRenewalThresholdPercentage` et la durée du jeton est huit heures, et la valeur `MaxIssuedTokenCachingTime` est 10 minutes, le client contacte le service d'émission de jeton de sécurité pour un jeton mis à jour toutes les 10 minutes.  
   
-5.  Si un mode d'entropie de clé différent de <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> est exigé sur une liaison qui n'utilise pas la sécurité de message ou la sécurité de transport avec les informations d'identification de message (par exemple, la liaison n’a pas de <xref:System.ServiceModel.Channels.SecurityBindingElement>), affectez une valeur appropriée à la propriété <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>. Le *entropie* mode détermine si les clés symétriques peuvent être contrôlées à l’aide de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> propriété. Cette valeur par défaut est <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, où le client et l'émetteur de jeton fournissent des données qui sont associées afin de produire la clé à part entière. D'autres valeurs sont <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> et <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, ce qui signifie que la clé entière est spécifiée par le client ou le serveur, respectivement. L'exemple suivant définit la propriété afin d'utiliser uniquement les données de serveur pour la clé.  
+5.  Si un mode d’entropie de clé différent de <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> est exigé sur une liaison qui n’utilise pas la sécurité de message ou la sécurité de transport avec les informations d’identification de message (par exemple, la liaison n'a pas de <xref:System.ServiceModel.Channels.SecurityBindingElement>), affectez une valeur appropriée à la propriété <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>. Le *entropie* mode détermine si les clés symétriques peuvent être contrôlées à l’aide de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> propriété. Cette valeur par défaut est <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, où le client et l'émetteur de jeton fournissent des données qui sont associées afin de produire la clé à part entière. D'autres valeurs sont <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> et <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, ce qui signifie que la clé entière est spécifiée par le client ou le serveur, respectivement. L'exemple suivant définit la propriété afin d'utiliser uniquement les données de serveur pour la clé.  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
@@ -99,7 +99,7 @@ Dans Windows Communication Foundation (WCF), création d’un client pour un *se
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6.  Facultatif. Configurez tout comportement de point de terminaison personnalisé spécifique à l’émetteur en créant un <`issuerChannelBehaviors`> élément en tant qu’enfant de la <`issuedToken`> élément. Pour chaque comportement, créez un <`add`> élément en tant qu’enfant de la <`issuerChannelBehaviors`> élément. Spécifiez l’adresse de l’émetteur du comportement en définissant le `issuerAddress` d’attribut sur le <`add`> élément. Spécifiez le comportement lui-même en définissant le `behaviorConfiguration` d’attribut sur le <`add`> élément.  
+6.  Optionnel. Configurez tout comportement de point de terminaison personnalisé spécifique à l’émetteur en créant un <`issuerChannelBehaviors`> élément en tant qu’enfant de la <`issuedToken`> élément. Pour chaque comportement, créez un <`add`> élément en tant qu’enfant de la <`issuerChannelBehaviors`> élément. Spécifiez l’adresse de l’émetteur du comportement en définissant le `issuerAddress` d’attribut sur le <`add`> élément. Spécifiez le comportement lui-même en définissant le `behaviorConfiguration` d’attribut sur le <`add`> élément.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -161,10 +161,11 @@ Dans Windows Communication Foundation (WCF), création d’un client pour un *se
 >  L'idée cliente des certificats dont l'étendue englobe un URI donné s'applique uniquement à des applications qui effectuent des appels sortants aux services qui exposent des points de terminaison à ces URI. Il ne s’applique pas aux certificats qui sont utilisés pour signer les jetons émis, telles que celles configurées sur le serveur dans la collection retournée par la <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> de la <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> classe. Pour plus d'informations, voir [Procédure : Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemple de fédération](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Guide pratique pour Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Guide pratique pour Configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+
+- [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procédure : créer un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Procédure : configurer des informations d’identification sur un service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Procédure : configurer un émetteur local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Guide pratique pour Sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Procédure : sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

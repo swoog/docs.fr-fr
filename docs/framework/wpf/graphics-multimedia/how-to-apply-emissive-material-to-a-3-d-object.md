@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Appliquer un matériau émissif à un objet 3D'
+title: 'Procédure : Appliquer un matériau émissif à un objet 3D'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - EmissiveMaterial [WPF], applying to 3-D objects
 - 3-D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
-ms.openlocfilehash: 7f4158d59334c2f80775541ea1b0f944e048b081
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b898148fa07950e3ad1eddcaf9206f7d6a837241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163116"
 ---
-# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procédure : Appliquer un matériau émissif à un objet 3D
+# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procédure : Appliquer un matériau émissif à un objet 3D
 L’exemple suivant montre comment utiliser <xref:System.Windows.Media.Media3D.EmissiveMaterial> pour ajouter une couleur à un matériau existant égal à la couleur du pinceau du EmissiveMaterial. Le code ci-dessous montre <xref:System.Windows.Media.Media3D.DiffuseMaterial> et <xref:System.Windows.Media.Media3D.EmissiveMaterial> combinés pour ajouter du bleu à l’apparence du DiffuseMaterial.  
   
  [!code-xaml[3DGallery_snip#EmmisiveMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emmisivematerialanimationexampleinline1)]  
@@ -37,7 +37,8 @@ L’exemple suivant montre comment utiliser <xref:System.Windows.Media.Media3D.E
  [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Créer une scène 3D](how-to-create-a-3-d-scene.md)
-- [Vue d’ensemble des graphiques 3D](3-d-graphics-overview.md)
+- [Vue d'ensemble des graphiques 3D](3-d-graphics-overview.md)
 - [Animer les propriétés de matériel dans une scène 3D](how-to-animate-material-properties-in-a-3-d-scene.md)
 - [Appliquer un matériau à l’avant et l’arrière d’un objet 3D](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)

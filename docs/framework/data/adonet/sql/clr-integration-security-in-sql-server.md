@@ -2,12 +2,12 @@
 title: Sécurité de l'intégration du CLR dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: af3ec1f8dba375082a9838f10fa63c9348f725b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165813"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Sécurité de l'intégration du CLR dans SQL Server
 Microsoft SQL Server introduit le composant Common Language Runtime (CLR) du .NET Framework. L'intégration du CLR vous permet d'écrire des procédures stockées, des déclencheurs, des types définis par l'utilisateur, des fonctions définies par l'utilisateur, des agrégats définis par l'utilisateur et des fonctions de flux évaluées par une table, en utilisant tout langage .NET Framework, tel que Microsoft Visual Basic .NET ou Microsoft Visual C#.  
@@ -19,11 +19,12 @@ Microsoft SQL Server introduit le composant Common Language Runtime (CLR) du .NE
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Sécurité d’accès du code](../../../../../docs/framework/misc/code-access-security.md)|Contient des rubriques qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
-|[Sécurité d’intégration du CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Présente le modèle de sécurité pour le code managé qui s'exécute au sein de SQL Server.|  
+|[Sécurité d'accès du code](../../../../../docs/framework/misc/code-access-security.md)|Contient des rubriques qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
+|[Sécurité d'intégration de CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Présente le modèle de sécurité pour le code managé qui s'exécute au sein de SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Intégration CLR SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Vue d'ensemble d'ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

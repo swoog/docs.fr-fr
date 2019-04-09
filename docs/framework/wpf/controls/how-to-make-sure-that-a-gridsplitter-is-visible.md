@@ -1,17 +1,17 @@
 ---
-title: "Procédure : Vérifier qu'un GridSplitter est visible"
+title: 'Procédure : Vérifier qu’un GridSplitter est visible'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-ms.openlocfilehash: 0e1984241c07a69e2b350a61dc5873716c6fa5df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147145"
 ---
-# <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Procédure : Vérifier qu'un GridSplitter est visible
+# <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Procédure : Vérifier qu’un GridSplitter est visible
 Cet exemple montre comment vérifier une <xref:System.Windows.Controls.GridSplitter> contrôle n’est pas masqué par les autres contrôles dans un <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Exemple  
@@ -32,5 +32,6 @@ Cet exemple montre comment vérifier une <xref:System.Windows.Controls.GridSplit
  [!code-xaml[GridSplitterSnips#GridSplitterMargin](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Rubriques de guide pratique](gridsplitter-how-to-topics.md)
+- [Rubriques Comment](gridsplitter-how-to-topics.md)

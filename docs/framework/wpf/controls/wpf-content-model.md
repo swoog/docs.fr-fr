@@ -11,25 +11,23 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134590"
 ---
 # <a name="wpf-content-model"></a>Modèle de contenu WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est une plateforme de présentation qui fournit de nombreux contrôles et des éléments de type contrôle dont le principal objectif est d’afficher différents types de contenu. Pour déterminer le contrôle à utiliser ou le contrôle d’où dériver, vous devez comprendre les types d’objets qu’un contrôle donné peut afficher de manière optimale.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est une plateforme de présentation qui fournit de nombreux contrôles et types de contrôles dont l’objectif principal consiste à afficher différents types de contenu. Pour déterminer le contrôle à utiliser ou le contrôle d’où dériver, vous devez comprendre les types d’objets qu’un contrôle donné peut afficher de manière optimale.  
   
  Cette rubrique présente de manière synthétique le modèle de contenu pour les contrôles et les éléments de type contrôle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le modèle de contenu décrit le contenu qui peut être utilisé dans un contrôle. Cette rubrique répertorie également les propriétés de contenu pour chaque modèle de contenu. Une propriété de contenu est une propriété qui est utilisée pour stocker le contenu de l’objet.  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>Classes qui contiennent du contenu arbitraire  
  Certains contrôles peuvent contenir un objet de tout type, comme une chaîne, un <xref:System.DateTime> objet, ou un <xref:System.Windows.UIElement> qui est un conteneur pour les éléments supplémentaires. Par exemple, un <xref:System.Windows.Controls.Button> peut contenir une image et du texte, ou un <xref:System.Windows.Controls.CheckBox> peut contenir la valeur de <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proposent quatre classes qui contiennent du contenu arbitraire. Le tableau suivant répertorie les classes qui héritent de <xref:System.Windows.Controls.Control>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a quatre classes qui contiennent du contenu arbitraire. Le tableau suivant répertorie les classes qui héritent de <xref:System.Windows.Controls.Control>.  
   
 |Classe qui contient du contenu arbitraire|Contenu|  
 |-------------------------------------------|-------------|  
@@ -217,7 +215,7 @@ TextBlock avec une bordure
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>Classes qui fournissent des commentaires visuels sur un UIElement  
- Le <xref:System.Windows.Documents.Adorner> classe fournit des signaux visuels à un utilisateur. Par exemple, utiliser un <xref:System.Windows.Documents.Adorner> pour ajouter des descripteurs fonctionnels à des éléments ou fournir des informations d’état sur un contrôle. Le <xref:System.Windows.Documents.Adorner> classe fournit une infrastructure afin que vous pouvez créer vos propres ornements. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne fournit aucun ornement implémenté. Pour plus d’informations, consultez [Vue d’ensemble des ornements](adorners-overview.md).  
+ Le <xref:System.Windows.Documents.Adorner> classe fournit des signaux visuels à un utilisateur. Par exemple, utiliser un <xref:System.Windows.Documents.Adorner> pour ajouter des descripteurs fonctionnels à des éléments ou fournir des informations d’état sur un contrôle. Le <xref:System.Windows.Documents.Adorner> classe fournit une infrastructure afin que vous pouvez créer vos propres ornements. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne fournit pas tous les ornements implémentés. Pour plus d’informations, consultez [Vue d’ensemble des ornements](adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Classes qui permettent aux utilisateurs d’entrer du texte  
@@ -250,4 +248,5 @@ TextBlock avec une bordure
  <xref:System.Windows.Documents.TextElement> et ses classes connexes vous permettent de mettre en forme texte. <xref:System.Windows.Documents.TextElement> les objets contiennent et mettre en forme le texte dans <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets. Les deux principaux types de <xref:System.Windows.Documents.TextElement> sont des objets <xref:System.Windows.Documents.Block> éléments et <xref:System.Windows.Documents.Inline> éléments. Un <xref:System.Windows.Documents.Block> élément représente un bloc de texte, tel qu’un paragraphe ou d’une liste. Un <xref:System.Windows.Documents.Inline> élément représente une partie du texte dans un bloc. Nombreux <xref:System.Windows.Documents.Inline> classes spécifient la mise en forme du texte à laquelle ils sont appliqués. Chaque <xref:System.Windows.Documents.TextElement> possède son propre modèle de contenu. Pour plus d’informations, consultez la page [Vue d’ensemble du modèle de contenu de TextElement](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Avancé](../advanced/index.md)

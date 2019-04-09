@@ -2,15 +2,15 @@
 title: Extraction des informations de schéma de base de données
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 8a076ca792ee1b4b2194b778c51fefbd0bb19bd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133703"
 ---
 # <a name="retrieving-database-schema-information"></a>Extraction des informations de schéma de base de données
-L'obtention des informations de schéma à partir d'une base de données est effectuée avec le processus de découverte de schéma. Découverte de schéma permet aux applications de demander que les fournisseurs managés trouvent et retournent des informations sur le schéma de base de données, également appelé *métadonnées*, d’une base de données. Différents éléments de schéma de base de données tels que des tables, des colonnes et des procédures stockées, sont exposés à l’aide de collections de schémas. Chaque collection de schémas contient une série d’informations de schéma spécifiques au fournisseur utilisé.  
+L'obtention des informations de schéma à partir d'une base de données est effectuée avec le processus de découverte de schéma. Découverte de schéma permet aux applications de demander que les fournisseurs managés trouvent et retournent des informations sur le schéma de base de données, également appelé *métadonnées*, d’une base de données. Différents éléments de schéma de base de données tels que des tables, des colonnes et des procédures stockées, sont exposés à l’aide de collections de schémas. Chaque collection de schémas contient une série d'informations de schéma spécifiques au fournisseur utilisé.  
   
  Chacun de l’implémentation de fournisseurs managés .NET Framework le **GetSchema** méthode dans le **connexion** classe et les informations de schéma qui sont retournées à partir de la **GetSchema**méthode est fourni sous la forme d’un <xref:System.Data.DataTable>. Le **GetSchema** méthode est une méthode surchargée qui fournit des paramètres facultatifs pour spécifier la collection de schémas à retourner et restreindre la quantité d’informations retournées.  
   
@@ -72,5 +72,6 @@ L'obtention des informations de schéma à partir d'une base de données est eff
  Décrit le **GetSchemaTable** méthode de la <xref:System.Data.SqlClient.SqlDataReader> classe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

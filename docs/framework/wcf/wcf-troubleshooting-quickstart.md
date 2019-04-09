@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168127"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Démarrage rapide de la résolution des problèmes WCF
 Cette rubrique décrit quelques problèmes connus rencontrés par les clients lorsqu'ils développement des clients et services WCF. Si le problème que vous rencontrez n'est pas répertorié dans la liste, nous vous recommandons de configurer le traçage de votre service. Vous allez ainsi générer un fichier de suivi que vous pourrez consulter à l'aide de la visionneuse dédiée pour obtenir des informations détaillées sur les exceptions pouvant se produire au sein du service. Pour plus d’informations sur la configuration du traçage, consultez : [Configuration du traçage](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Pour plus d’informations sur la visionneuse de fichier de trace, consultez : [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -19,27 +19,27 @@ Cette rubrique décrit quelques problèmes connus rencontrés par les clients lo
   
      Erreur HTTP 404.3 – Introuvable. Impossible d’afficher la page demandée en raison de la configuration d’extension. Si la page est un script, ajoutez un gestionnaire. Si le fichier doit être téléchargé, ajoutez un mappage MIME. Erreur détaillée InformationModule StaticFileModule.  
   
-2.  [Je reçois parfois une MessageSecurityException sur la deuxième demande si mon client est inactif pendant un instant après la première demande. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2.  [Je reçois parfois une MessageSecurityException sur la deuxième demande si mon client est inactif pendant un instant après la première demande. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Mon service commence à rejeter les nouveaux clients une fois qu'environ 10 clients interagissent avec lui. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3.  [Mon service commence à rejeter les nouveaux clients une fois qu'environ 10 clients interagissent avec lui. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
 4.  [Est-ce que je peux charger la configuration de mon service autrement qu'à partir du fichier de configuration de l'application WCF ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Mon service et mon client fonctionnent convenablement, mais je ne parviens pas à les faire fonctionner lorsque le client est sur un autre ordinateur. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5.  [Mon service et mon client fonctionnent convenablement, mais je ne parviens pas à les faire fonctionner lorsque le client est sur un autre ordinateur. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Lorsque je lève une FaultException\<Exception > où le type est une exception, je reçois toujours un type FaultException général sur le client et non le type générique. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6.  [Lorsque je lève une FaultException\<Exception > où le type est une exception, je reçois toujours un type FaultException général sur le client et non le type générique. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Il semble que les opérations monodirectionnelles et demande-réponse reviennent quasiment à la même vitesse lorsque la réponse ne contient pas de données. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7.  [Il semble que les opérations monodirectionnelles et demande-réponse reviennent quasiment à la même vitesse lorsque la réponse ne contient pas de données. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [J'utilise un certificat X.509 avec mon service et j'obtiens une System.Security.Cryptography.CryptographicException. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8.  [J'utilise un certificat X.509 avec mon service et j'obtiens une System.Security.Cryptography.CryptographicException. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
-9. [J'ai remplacé les majuscules du premier paramètre d'une opération par des minuscules ; à présent, mon client lève une exception. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [J'ai remplacé les majuscules du premier paramètre d'une opération par des minuscules ; à présent, mon client lève une exception. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
-10. [J'utilise l'un de mes outils de suivi et j'obtiens une EndpointNotFoundException. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
+10. [J'utilise l'un de mes outils de suivi et j'obtiens une EndpointNotFoundException. Que se passe-t-il ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
 11. [Lors de l’appel d’une application HTTP Web WCF à partir d’une application SOAP WCF le service retourne l’erreur suivante : 405 Méthode non autorisée](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
- [Qu'est-ce que l'adresse de base ? Comment est-elle liée à une adresse de point de terminaison ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [Qu'est-ce que l'adresse de base ? Comment est-elle liée à une adresse de point de terminaison ?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
 ## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Après avoir installé Windows 7 et IIS, lorsque je tente d’accéder à un service WCF, j’obtiens le message d’erreur suivant : Erreur HTTP 404.3 – introuvable  
@@ -54,11 +54,11 @@ Cette rubrique décrit quelques problèmes connus rencontrés par les clients lo
  La deuxième demande peut échouer pour deux raisons : (1) la session a expiré ou (2) le serveur Web qui héberge le service est recyclé. Dans le premier cas, la session est valide jusqu'à ce que le service expire. Lorsque le service ne reçoit pas de demande du client pendant la période spécifiée dans la liaison du service (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), le service met fin à la session de sécurité. Les messages clients suivants engendrent une <xref:System.ServiceModel.Security.MessageSecurityException>. Le client doit de nouveau établir une session sécurisée avec le service pour envoyer de futurs messages ou utiliser un jeton de contexte de sécurité avec état. Les jetons de contexte de sécurité avec état permettent également à une session sécurisée de survivre à un serveur Web en cours de recyclage. Pour plus d’informations sur l’utilisation de jetons de contexte de sécurité avec état dans une session sécurisée, consultez [Comment : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Vous pouvez également désactiver des sessions sécurisées. Lorsque vous utilisez le [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) de liaison, vous pouvez définir le `establishSecurityContext` propriété `false` pour désactiver des sessions sécurisées. Pour désactiver des sessions sécurisées pour d'autres liaisons, vous devez créer une liaison personnalisée. Pour plus d’informations sur la création d’une liaison personnalisée, consultez [Comment : Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Avant d'appliquer chacune de ces options, vous devez comprendre les conditions de sécurité de votre application.  
   
 <a name="BKMK_q2"></a>   
-## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mon service commence à rejeter les nouveaux clients une fois qu'environ 10 clients interagissent avec lui. Que se passe-t-il ?  
+## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mon service commence à rejeter les nouveaux clients une fois qu'environ 10 clients interagissent avec lui. Que se passe-t-il ?  
  Par défaut, les services peuvent avoir uniquement 10 sessions simultanées. Par conséquent, si les liaisons de service utilisent des sessions, le service accepte les nouvelles connexions clientes jusqu'à ce qu'il atteigne ce nombre, après quoi il refuse les nouvelles connexions clientes jusqu'à ce que l'une des sessions en cours se termine. Vous pouvez prendre en charge davantage de clients de plusieurs manières. Si votre service ne requiert pas de sessions, n’utilisez pas de liaison avec session. (Pour plus d’informations, consultez [à l’aide de Sessions](../../../docs/framework/wcf/using-sessions.md).) Une autre option consiste à augmenter la limite de session en changeant la valeur de la propriété <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> par le nombre approprié à votre situation.  
   
 <a name="BKMK_q3"></a>   
-## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Est-ce que je peux charger la configuration de mon service autrement qu'à partir du fichier de configuration de l'application WCF ?  
+## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Est-ce que je peux charger la configuration de mon service autrement qu'à partir du fichier de configuration de l'application WCF ?  
  Oui. Toutefois vous devez créer une classe <xref:System.ServiceModel.ServiceHost> personnalisée qui remplace la méthode <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> . À l'intérieur de cette méthode, vous pouvez appeler la base pour charger la configuration en premier (si vous souhaitez charger également les informations de configuration standard), mais vous pouvez également remplacer entièrement le système de chargement de la configuration. Notez que si vous souhaitez charger la configuration à partir d'un fichier de configuration différent du fichier de configuration de l'application, vous devez analyser le fichier de configuration vous-même et charger la configuration.  
   
  L'exemple de code suivant indique la manière de substituer la méthode <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> et de configurer directement un point de terminaison.  
@@ -95,7 +95,7 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q4"></a>   
-## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Mon service et mon client fonctionnent convenablement, mais je ne parviens pas à les faire fonctionner lorsque le client est sur un autre ordinateur. Que se passe-t-il ?  
+## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Mon service et mon client fonctionnent convenablement, mais je ne parviens pas à les faire fonctionner lorsque le client est sur un autre ordinateur. Que se passe-t-il ?  
  En fonction de l'exception, plusieurs problèmes peuvent exister :  
   
 -   Vous devrez peut-être remplacer les adresses de point de terminaison du client par le nom d'hôte, au lieu de « localhost ».  
@@ -106,7 +106,7 @@ public class MyServiceHost : ServiceHost
   
 -   Si votre client utilise des informations d'identification Windows et que l'exception est une <xref:System.ServiceModel.Security.SecurityNegotiationException>, configurez Kerberos comme suit.  
   
-    1.  Ajoutez les informations d'identification à l'élément de point de terminaison dans le fichier App.config du client :  
+    1.  Ajoutez les informations d'identification à l'élément de point de terminaison dans le fichier App.config du client :  
   
         ```xml
         <endpoint   
@@ -134,7 +134,7 @@ public class MyServiceHost : ServiceHost
   
  Pour plus d’informations sur le protocole Kerberos, consultez [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) et :  
   
--   [Débogage d’erreurs d’authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+-   [Débogage d'erreurs d'authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
 -   [Inscription de noms de principaux du service Kerberos à l’aide de Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
@@ -165,7 +165,7 @@ public class MyServiceHost : ServiceHost
  Pour plus d’informations sur comment octroyer l’accès de compte d’utilisateur correct au fichier qui contient la clé privée pour un certificat X.509 spécifique, consultez [Comment : Rendre des certificats X.509 accessibles à WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
-## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>J'ai remplacé les majuscules du premier paramètre d'une opération par des minuscules ; à présent, mon client lève une exception. Que se passe-t-il ?  
+## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>J'ai remplacé les majuscules du premier paramètre d'une opération par des minuscules ; à présent, mon client lève une exception. Que se passe-t-il ?  
  La valeur des noms de paramètre dans la signature de l'opération fait partie du contrat et respecte la casse. Utilisez l'attribut <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> lorsque vous devez distinguer le nom du paramètre local et les métadonnées qui décrivent l'opération pour les applications clientes.  
   
 <a name="BKMK_q99"></a>   
@@ -193,7 +193,7 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q10"></a>   
-## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Qu'est-ce que l'adresse de base ? Comment est-elle liée à une adresse de point de terminaison ?  
+## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Qu'est-ce que l'adresse de base ? Comment est-elle liée à une adresse de point de terminaison ?  
  Une adresse de base est l'adresse racine d'une classe <xref:System.ServiceModel.ServiceHost> . Par défaut, si vous ajoutez une classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> dans votre configuration de service, tous les points de terminaison WSDL (Web Services Description Language) que l'hôte publie sont récupérés à partir de l'adresse de base HTTP, plus toute adresse relative fournie au comportement de métadonnées, plus « ?wsdl ». Si vous connaissez bien [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] et IIS, l'adresse de base équivaut au répertoire virtuel.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Partage d'un port entre un point de terminaison de service et un point de terminaison mex à l'aide de NetTcpBinding  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Débogage d’erreurs d’authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+
+- [Débogage d'erreurs d'authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

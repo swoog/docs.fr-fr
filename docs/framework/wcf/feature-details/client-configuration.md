@@ -2,12 +2,12 @@
 title: Configuration client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144688"
 ---
 # <a name="client-configuration"></a>Configuration client
 Vous pouvez utiliser la configuration du client Windows Communication Foundation (WCF) pour spécifier l’adresse, liaison, comportement et contrat, les propriétés « ABC » du point de terminaison client, les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) élément dont les attributs sont utilisés pour configurer l’ABC de point de terminaison. Ces attributs sont décrits dans le [configuration des points de terminaison de](#configuring-endpoints) section.  
@@ -94,5 +94,6 @@ Vous pouvez utiliser la configuration du client Windows Communication Foundation
  Le [ \<métadonnées >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) élément est utilisé pour spécifier les paramètres utilisés pour enregistrer les métadonnées des extensions d’importation. Pour plus d’informations sur l’extension du système de métadonnées, consultez [extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Points de terminaison : Adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Configuration des comportements clients](../../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-ms.openlocfilehash: baef8bdee73d8493ba406f5eef1e3e3676680704
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147093"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Procédure : Utiliser des modèles pour appliquer un style à un ListView utilisant GridView
 Cet exemple montre comment utiliser le <xref:System.Windows.DataTemplate> et <xref:System.Windows.Style> objets pour spécifier l’apparence d’un <xref:System.Windows.Controls.ListView> contrôle qui utilise un <xref:System.Windows.Controls.GridView> mode d’affichage.  
@@ -36,8 +36,9 @@ Cet exemple montre comment utiliser le <xref:System.Windows.DataTemplate> et <xr
  [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Vue d’ensemble de GridView](gridview-overview.md)
-- [Rubriques de guide pratique](listview-how-to-topics.md)
-- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d'ensemble de GridView](gridview-overview.md)
+- [Rubriques Comment](listview-how-to-topics.md)
+- [Vue d'ensemble de ListView](listview-overview.md)

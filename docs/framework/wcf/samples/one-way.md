@@ -2,12 +2,12 @@
 title: One-Way
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131324"
 ---
 # <a name="one-way"></a>One-Way
 Cet exemple présente un contact de service avec des opérations de service monodirectionnelles. Le client n'attend pas que les opérations de service se terminent comme c'est le cas avec les opérations de service bidirectionnelles. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et utilise le `wsHttpBinding` liaison. Le service dans cet exemple est une application console auto-hébergée vous permettant d'observer le service qui reçoit et traite des demandes. Le client est également une application console.  
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP est, par définition, un protocole de demande/réponse ; lorsqu'une demande est effectuée, une réponse est retournée. Cela se vérifie même pour une opération de service monodirectionnelle qui est exposée sur HTTP. Lorsque l'opération est appelée, le service retourne un code d'état HTTP 202 avant que l'opération de service s'exécute. Ce code d'état signifie que la demande a été acceptée pour traitement, mais que le traitement n'est pas encore terminé. Le client qui a appelé l'opération se bloque jusqu'à ce qu'il reçoive la réponse 202 du service. Cela peut provoquer des comportements inattendus lorsque plusieurs messages unidirectionnels sont envoyés à l’aide d’une liaison configurée pour utiliser des sessions. La liaison `wsHttpBinding` utilisée dans cet exemple est configurée pour utiliser des sessions par défaut pour établir un contexte de sécurité. Par défaut, les messages d'une session sont assurés d'arriver dans l'ordre dans lequel ils sont envoyés. De ce fait, lorsque le deuxième message d'une session est envoyé, il n'est pas traité tant que le premier message ne l'a pas été. Il en résulte que le client ne reçoit pas de réponse 202 pour un message tant que le traitement du message précédent n'est pas terminé. Par conséquent, le client se bloque à chaque appel d'opération suivant. Pour éviter ce comportement, cet exemple configure l'exécution pour distribuer les messages simultanément aux différentes instances pour traitement. L'exemple définit <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> à `PerCall` afin que chaque message puisse être traité par une autre instance. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> est défini à `Multiple` pour permettre à plusieurs threads de distribuer des messages simultanément.  
+>  HTTP est, par définition, un protocole de demande/réponse ; lorsqu'une demande est effectuée, une réponse est retournée. Cela se vérifie même pour une opération de service monodirectionnelle qui est exposée sur HTTP. Lorsque l'opération est appelée, le service retourne un code d'état HTTP 202 avant que l'opération de service s'exécute. Ce code d'état signifie que la demande a été acceptée pour traitement, mais que le traitement n'est pas encore terminé. Le client qui a appelé l'opération se bloque jusqu'à ce qu'il reçoive la réponse 202 du service. Cela peut provoquer des comportements inattendus lorsque plusieurs messages unidirectionnels sont envoyés à l’aide d’une liaison configurée pour utiliser des sessions. La liaison `wsHttpBinding` utilisée dans cet exemple est configurée pour utiliser des sessions par défaut pour établir un contexte de sécurité. Par défaut, les messages d'une session sont assurés d'arriver dans l'ordre dans lequel ils sont envoyés. De ce fait, lorsque le deuxième message d'une session est envoyé, il n'est pas traité tant que le premier message ne l'a pas été. Il en résulte que le client ne reçoit pas de réponse 202 pour un message tant que le traitement du message précédent n'est pas terminé. Par conséquent, le client se bloque à chaque appel d'opération suivant. Pour éviter ce comportement, cet exemple configure l'exécution pour distribuer les messages simultanément aux différentes instances pour traitement. L'exemple définit <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> à `PerCall` afin que chaque message puisse être traité par une autre instance. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> a la valeur `Multiple` pour permettre à plusieurs threads de distribuer des messages à la fois.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -105,4 +105,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
-  

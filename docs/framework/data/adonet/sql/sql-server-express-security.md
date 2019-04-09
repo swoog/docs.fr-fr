@@ -2,12 +2,12 @@
 title: Sécurité SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174549"
 ---
 # <a name="sql-server-express-security"></a>Sécurité SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft SQL Server et prend en charge la plupart des fonctionnalités du moteur de base de données. Il est conçu de telle manière que les fonctionnalités non essentielles et la connectivité réseau sont désactivées par défaut afin de réduire la surface d'exposition susceptible d'être attaquée par un utilisateur malveillant.  
@@ -17,7 +17,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft 
 ## <a name="network-access"></a>Accès réseau  
  Pour des raisons de sécurité, les protocoles réseau sont désactivés par défaut dans SQL Server Express. Cela évite les attaques d'utilisateurs extérieurs qui risquent de compromettre l'ordinateur hébergeant l'instance de SQL Server Express. Vous devez activer explicitement la connectivité réseau et démarrer le service SQL Server Browser pour vous connecter à une instance SQL Server Express à partir d'un autre ordinateur.  
   
- Une fois la connectivité réseau activée, une instance SQL Server Express utilise les mêmes spécifications de sécurité que les autres éditions de SQL Server.  
+ Une fois la connectivité réseau activée, une instance SQL Server Express utilise les mêmes exigences de sécurité que les autres éditions de SQL Server.  
   
 ## <a name="user-instances"></a>Instances utilisateur  
  Une instance utilisateur est une instance distincte du moteur de base de données SQL Server Express qui est générée par une instance parente de SQL Server Express. Une instance utilisateur a pour objectif principal de permettre aux utilisateurs exécutant Windows sous un compte d'utilisateur disposant de privilèges minimum de profiter de privilèges d'administrateur système (`sysadmin`) sur l'instance SQL Server Express qui se trouve sur leur ordinateur local. Les instances utilisateur ne s'adressent pas aux utilisateurs qui sont des administrateurs système sur leurs propres ordinateurs.  
@@ -31,11 +31,12 @@ Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft 
   
 |||  
 |-|-|  
-|[Documentation en ligne de Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentation complète relative à SQL Server 2005 Express Edition.|  
+|[Documentation en ligne de SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentation complète relative à SQL Server 2005 Express Edition.|  
 |[Instances d’utilisateur pour les non-administrateurs](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) dans la documentation en ligne de SQL Server|Décrit comment créer et déployer des instances utilisateur.|  
 |[Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Décrit les fonctionnalités des instances utilisateur dans une application ADO.NET. Fournit des informations sur l'activation d'une interface utilisateur, la connexion à une instance utilisateur à l'aide d'un <xref:System.Data.SqlClient.SqlConnection>, la durée de vie d'une instance utilisateur et des scénarios d'instance utilisateur.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

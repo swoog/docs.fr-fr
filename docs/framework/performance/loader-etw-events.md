@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141529"
 ---
 # <a name="loader-etw-events"></a>Événements ETW de chargeur
 <a name="top"></a> Ces événements collectent des informations relatives au chargement et déchargement des domaines d'application, des assemblys et des modules.  
@@ -38,14 +38,14 @@ ms.locfileid: "54579002"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` et `AppDomainUnLoad_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
 |Événement|ID d'événement|Description|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (journalisé pour tous les domaines d'application)|156|Déclenché chaque fois qu'un domaine d'application est créé pendant la durée de vie d'un processus.|  
+|`AppDomainLoad_V1` (journalisé pour tous les domaines d’application)|156|Déclenché chaque fois qu'un domaine d'application est créé pendant la durée de vie d'un processus.|  
 |`AppDomainUnLoad_V1`|157|Déclenché chaque fois qu'un domaine d'application est détruit pendant la durée de vie d'un processus.|  
 |`AppDomainDCStart_V1`|157|Énumère les domaines d'application pendant un arrêt de début.|  
 |`AppDomainDCEnd_V1`|158|Énumère les domaines d'application pendant un arrêt de fin.|  
@@ -69,8 +69,8 @@ ms.locfileid: "54579002"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` et `AssemblyUnload`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "54579002"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` et `ModuleUnload_V2`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informatif (4)|  
 ||||  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
@@ -149,8 +149,8 @@ ms.locfileid: "54579002"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -213,4 +213,5 @@ ms.locfileid: "54579002"
  Les événements de plage de module sont déclenchés sous n'importe quel niveau ETW supérieur ou égal à 4 et sont classés en tant qu'événements d'information.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

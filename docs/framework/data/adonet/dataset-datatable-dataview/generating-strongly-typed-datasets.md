@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149628"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Génération de datasets fortement typés
 À partir d'un schéma XML conforme à la norme XSD (XML Schema Definition), vous pouvez générer un <xref:System.Data.DataSet> fortement typé à l'aide de l'outil XSD.exe fourni avec le [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "55825587"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Dans cette syntaxe, la `/d` directive indique à l’outil pour générer un **DataSet**et le `/l:` indique le langage à utiliser (par exemple, C# ou Visual Basic .NET). Le paramètre facultatif `/eld` directive spécifie que vous pouvez utiliser [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] à interroger le généré **jeu de données.** Cette option est utilisée lorsque l'option `/d` est également spécifiée. Pour plus d’informations, consultez [interrogation de DataSets typés](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Le paramètre facultatif `/n:` directive indique à l’outil génère également un espace de noms pour le **DataSet** appelé **XSDSchema.Namespace**. La commande donne en sortie un fichier XSDSchemaFileName.cs, qui peut être compilé et utilisé dans une application ADO.NET. Le code généré peut être compilé sous la forme d'une bibliothèque ou d'un module.  
+ Dans cette syntaxe, la `/d` directive indique à l’outil pour générer un **DataSet**et le `/l:` indique le langage à utiliser (par exemple, c# ou Visual Basic .NET). Le paramètre facultatif `/eld` directive spécifie que vous pouvez utiliser [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] à interroger le généré **jeu de données.** Cette option est utilisée lorsque l'option `/d` est également spécifiée. Pour plus d’informations, consultez [interrogation de DataSets typés](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Le paramètre facultatif `/n:` directive indique à l’outil génère également un espace de noms pour le **DataSet** appelé **XSDSchema.Namespace**. La commande donne en sortie un fichier XSDSchemaFileName.cs, qui peut être compilé et utilisé dans une application ADO.NET. Le code généré peut être compilé sous la forme d'une bibliothèque ou d'un module.  
   
  Le code suivant montre la syntaxe permettant de compiler le code généré sous la forme d'une bibliothèque à l'aide du compilateur C# (csc.exe).  
   
@@ -95,6 +95,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Datasets typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)

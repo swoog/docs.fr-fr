@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : S’assurer que plusieurs contrôles liés à la même Source de données restent synchronisés'
+title: 'Procédure : vérifier que plusieurs contrôles liés à la même source de données restent synchronisés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170337"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procédure : S’assurer que plusieurs contrôles liés à la même Source de données restent synchronisés
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procédure : vérifier que plusieurs contrôles liés à la même source de données restent synchronisés
 Souvent, lorsque vous travaillez avec la liaison de données dans les Windows Forms, plusieurs contrôles sont liés à la même source de données. Dans certains cas, il peut être nécessaire de prendre des mesures supplémentaires pour garantir que les propriétés liées des contrôles restent synchronisées entre eux et à la source de données. Ces étapes sont nécessaires dans deux situations :  
   
 -   Si la source de données n’implémente pas <xref:System.ComponentModel.IBindingList>et ainsi générer <xref:System.ComponentModel.IBindingList.ListChanged> événements de type <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -41,7 +41,8 @@ Souvent, lorsque vous travaillez avec la liaison de données dans les Windows Fo
 -   Un formulaire avec le <xref:System.Windows.Forms.Form.Load> événement géré et un appel à la `InitializeControlsAndDataSource` méthode dans l’exemple à partir du formulaire <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Partager des données liées entre des formulaires à l’aide du composant BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+
+- [Procédure : partager des données liées entre formulaires à l’aide du composant BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Interfaces participant à la liaison de données](interfaces-related-to-data-binding.md)
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

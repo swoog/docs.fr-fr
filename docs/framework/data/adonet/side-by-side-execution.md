@@ -2,22 +2,22 @@
 title: Exécution côte à côte dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136758"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
 L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] représente la capacité à exécuter une application sur un ordinateur sur lequel plusieurs versions du[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont installées, en utilisant exclusivement la version pour laquelle l'application a été compilée. Pour plus d’informations sur la configuration de l’exécution côte à côte, consultez [l’exécution côte à côte](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- Une application compilée en utilisant une version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peut s'exécuter sur une autre version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Toutefois, nous vous conseillons de compiler une version de l'application pour chaque version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installée et de les exécuter séparément. Dans l'un ou l'autre cas de figure, vous devez tenir compte des modifications apportées dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] entre les versions, qui peuvent affecter la compatibilité ascendante ou descendante de votre application.  
+ Une application compilée en utilisant une version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peut s'exécuter sur une autre version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Toutefois, nous vous conseillons de compiler une version de l'application pour chaque version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installée et de les exécuter séparément. Dans l’un ou l’autre cas de figure, vous devez tenir compte des modifications apportées dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] entre les mises en production, qui peuvent affecter la compatibilité ascendante ou descendante de votre application.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilités descendante et ascendante  
- La compatibilité ascendante signifie qu'une application peut être compilée avec une version antérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle fonctionnera correctement avec une version ultérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le code [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] écrit pour le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 sera compatible avec les versions ultérieures.  
+ La compatibilité ascendante signifie qu'une application peut être compilée avec une version antérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle fonctionnera correctement avec une version ultérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] le code écrit pour le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 sera compatible avec les versions ultérieures.  
   
- La compatibilité descendante signifie qu'une application est compilée pour une version plus récente du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle continue de s'exécuter sur des versions antérieures de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sans dégradation des fonctionnalités. Évidemment, ce ne sera pas le cas pour les fonctions introduites dans une nouvelle version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ La compatibilité descendante signifie qu'une application est compilée pour une version plus récente du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle continue de s'exécuter sur des versions antérieures de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sans dégradation des fonctionnalités. Évidemment, ce ne sera pas le cas pour les fonctionnalités introduites dans une nouvelle version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>Fournisseur de données .NET Framework pour ODBC  
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC (<xref:System.Data.Odbc>), à partir de la version 1.1, fait partie intégrante du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le fournisseur de données ODBC est disponible pour [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] développeurs version 1.0 comme un site Web le télécharger à partir de la [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173). L’espace de noms téléchargées [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour ODBC est **Microsoft.Data.Odbc**.  
@@ -34,7 +34,7 @@ L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/
 ## <a name="code-access-security"></a>Sécurité d'accès du code  
  Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] contenus dans la version 1.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (<xref:System.Data.SqlClient>, <xref:System.Data.OleDb>) doivent être exécutés avec l'autorisation FullTrust (confiance totale). Toute tentative d’utilisation le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseurs de données à partir de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0 dans une zone avec une moindre causes d’autorisation FullTrust un <xref:System.Security.SecurityException>.  
   
- Toutefois, avec la version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tous les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peuvent être utilisés dans des zones de confiance partielle. En outre, une nouvelle fonction de sécurité a été ajoutée aux fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dans la version 1.1 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cette fonction vous permet de restreindre les chaînes de connexion qui peuvent être utilisées dans une zone de sécurité particulière. Vous pouvez également désactiver l'utilisation des mots de passe vides pour une zone de sécurité particulière. Pour plus d'informations, consultez [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
+ Toutefois, avec la version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tous les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peuvent être utilisés dans des zones de confiance partielle. En outre, une nouvelle fonctionnalité de sécurité a été ajoutée aux fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dans la version 1.1 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cette fonctionnalité vous permet de restreindre les chaînes de connexion qui peuvent être utilisées dans une zone de sécurité particulière. Vous pouvez également désactiver l'utilisation des mots de passe vides pour une zone de sécurité particulière. Pour plus d'informations, consultez [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
  Dans la mesure où chaque installation du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] possède un fichier Security.config distinct, il n'existe pas de problème de compatibilité ascendante ou descendante avec les paramètres de sécurité. Toutefois, si votre application dépend des fonctionnalités de sécurité supplémentaires de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] incluses dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 et ultérieure, vous ne pourrez pas la distribuer sur un système doté d'une version 1.0.  
   
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

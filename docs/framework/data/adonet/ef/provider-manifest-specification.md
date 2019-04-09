@@ -2,12 +2,12 @@
 title: Spécification de manifeste du fournisseur
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169908"
 ---
 # <a name="provider-manifest-specification"></a>Spécification de manifeste du fournisseur
 Cette section explique comment un fournisseur de banques de données peut prendre en charge les types et les fonctions dans la banque de données.  
@@ -18,7 +18,7 @@ Cette section explique comment un fournisseur de banques de données peut prendr
   
  Les types de paramètres et les types de retour pour les fonctions prises en charge par la banque de données sont spécifiés en termes EDM.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et la banque de données doivent être en mesure de se passer des données entre eux dans des types connus sans aucune perte ni troncation de données.  
   
  Le manifeste du fournisseur doit pouvoir être chargé par les outils au moment du design sans devoir ouvrir une connexion à la banque de données.  
@@ -68,7 +68,7 @@ Cette section explique comment un fournisseur de banques de données peut prendr
 ### <a name="provider-manifest-token"></a>Jeton du manifeste du fournisseur.  
  Lorsqu'une connexion de banque de données est ouverte, le fournisseur peut demander des informations pour retourner le bon manifeste. Cela risque de ne pas être possible dans les scénarios hors connexion où les informations de connexion ne sont pas disponibles ou lorsqu'il est impossible de se connecter à la banque. Identifiez le manifeste en utilisant l'attribut `ProviderManifestToken` de l'élément `Schema` dans le fichier .ssdl. Il n'existe aucun format obligatoire pour cet attribut ; le fournisseur choisit les informations minimales nécessaires pour identifier un manifeste sans ouvrir une connexion à la banque.  
   
- Par exemple :  
+ Exemple :  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -260,13 +260,13 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nom|Chaîne|Oui|N/A|Identificateur/nom de la fonction|  
 |ReturnType|Chaîne|Non|Void|Type de retour EDM de la fonction|  
-|Aggregate|Boolean|Non|False|True si la fonction est une fonction d'agrégation|  
-|BuiltIn|Boolean|Non|True|True si la fonction est intégrée à la banque de données|  
-|StoreFunctionName|Chaîne|Aucune|\<Name>|Nom de fonction dans la banque de données.  Permet un niveau de redirection de noms de fonction.|  
-|NiladicFunction|Boolean|Non|False|True si la fonction ne requiert pas de paramètres et est appelée sans paramètre|  
+|Aggregate|Booléen|Non|False|True si la fonction est une fonction d'agrégation|  
+|BuiltIn|Booléen|Non|True|True si la fonction est intégrée à la banque de données|  
+|StoreFunctionName|Chaîne|Non|\<Name>|Nom de fonction dans la banque de données.  Permet un niveau de redirection de noms de fonction.|  
+|NiladicFunction|Booléen|Non|False|True si la fonction ne requiert pas de paramètres et est appelée sans paramètre|  
 |ParameterType<br /><br /> Sémantique|ParameterSemantics|Non|AllowImplicit<br /><br /> Conversion|Choix de la façon dont le pipeline de requête doit gérer la substitution de type de paramètre :<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Nœud Paramètres**  
+ **Nœud de paramètres**  
   
  Chaque fonction a une collection d’un ou plusieurs nœuds de paramètre.  
   
@@ -274,10 +274,11 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nom|Chaîne|Oui|N/A|Identificateur/nom du paramètre.|  
 |Type|Chaîne|Oui|N/A|Type EDM du paramètre.|  
-|Mode|Paramètre<br /><br /> Direction|Oui|N/A|Direction de paramètre :<br /><br /> -   in<br />-out<br />-   inout|  
+|Mode|Paramètre<br /><br /> Sens|Oui|N/A|Direction de paramètre :<br /><br /> -   in<br />-out<br />-   inout|  
   
 ##### <a name="namespace-attribute"></a>Attribut Namespace  
  Chaque fournisseur de banque de données doit définir un espace de noms ou un groupe d'espaces de noms pour les informations définies dans le manifeste. Cet espace de noms peut être utilisé dans les requêtes Entity SQL pour résoudre des noms de fonctions et de types. Par exemple : SQL Server. Cet espace de noms doit être différent de l'espace de noms canonique, EDM, défini par les Services d'entités pour les fonctions standard à prendre en charge par les requêtes Entity SQL.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+
+- [Écriture d'un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

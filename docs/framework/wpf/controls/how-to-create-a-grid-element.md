@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134535"
 ---
 # <a name="how-to-create-a-grid-element"></a>Procédure : Créer un élément de grille
 ## <a name="example"></a>Exemple  
@@ -26,5 +26,6 @@ ms.locfileid: "57379508"
 
   ![une capture d’écran illustre une interface utilisateur WPF qui contient une grille divisée en trois colonnes.  Il porte l’en-tête '2018 produits fournis » s’étendant sur toutes les colonnes de la ligne du haut et a trois colonnes avec des chiffres de ventes pour un certain trimestre.  La ligne inférieure comporte du texte s’étendant sur deux colonnes avec le message « nombre Total d’unités : 300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Grid>
-- [Vue d’ensemble de Panel](panels-overview.md)
+- [Vue d'ensemble de Panel](panels-overview.md)

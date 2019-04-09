@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer des travaux d’impression Standard de Windows Forms'
+title: 'Procédure : créer des travaux d’impression Windows Forms standard'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170974"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procédure : Créer des travaux d’impression Standard de Windows Forms
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procédure : créer des travaux d’impression Windows Forms standard
 La base de l’impression dans Windows Forms est la <xref:System.Drawing.Printing.PrintDocument> composant, plus précisément, le <xref:System.Drawing.Printing.PrintDocument.PrintPage> événement. En écrivant du code pour gérer le <xref:System.Drawing.Printing.PrintDocument.PrintPage> événement, vous pouvez spécifier les éléments à imprimer et l’imprimer.  
   
 ### <a name="to-create-a-print-job"></a>Pour créer un travail d’impression  
@@ -77,5 +77,6 @@ La base de l’impression dans Windows Forms est la <xref:System.Drawing.Printin
      Pour plus d’informations sur les spécificités des Windows Forms les travaux d’impression, y compris la création d’un travail d’impression par programmation, consultez <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
+- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)

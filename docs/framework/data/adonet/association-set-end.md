@@ -2,12 +2,12 @@
 title: terminaison d'ensemble d'associations
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 61dc00e6c349a25767f6221bed56ef8b65f823d9
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134626"
 ---
 # <a name="association-set-end"></a>terminaison d'ensemble d'associations
 Un *ensemble d’associations* identifie le [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) et [jeu d’entités](../../../../docs/framework/data/adonet/entity-set.md) à la fin d’un [ensemble d’associations](../../../../docs/framework/data/adonet/association-set.md). Les terminaisons d'ensemble d'associations sont définies dans le cadre d'un ensemble d'associations ; un ensemble d'associations doit avoir exactement deux terminaisons d'ensemble d'associations.  
@@ -32,5 +32,6 @@ Un *ensemble d’associations* identifie le [type d’entité](../../../../docs/
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Concepts clés d'Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

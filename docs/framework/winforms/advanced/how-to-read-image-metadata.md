@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Métadonnées d’Image en lecture'
+title: 'Procédure : lire des métadonnées d’image'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173613"
 ---
-# <a name="how-to-read-image-metadata"></a>Procédure : Métadonnées d’Image en lecture
+# <a name="how-to-read-image-metadata"></a>Procédure : lire des métadonnées d’image
 Certains fichiers image contiennent des métadonnées que vous pouvez lire pour déterminer les fonctionnalités de l’image. Par exemple, une photographie numérique peut contenir des métadonnées que vous pouvez lire pour déterminer la marque et le modèle de l’appareil photo utilisé pour capturer l’image. Avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez lire les métadonnées existantes et vous pouvez également écrire de nouvelles métadonnées dans des fichiers image.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stocke un élément individuel de métadonnées dans un <xref:System.Drawing.Imaging.PropertyItem> objet. Vous pouvez lire le <xref:System.Drawing.Image.PropertyItems%2A> propriété d’un <xref:System.Drawing.Image> objet pour récupérer toutes les métadonnées d’un fichier. Le <xref:System.Drawing.Image.PropertyItems%2A> propriété renvoie un tableau de <xref:System.Drawing.Imaging.PropertyItem> objets.  
@@ -40,7 +40,7 @@ Certains fichiers image contiennent des métadonnées que vous pouvez lire pour 
   
 |Valeur numérique|Description|  
 |-------------------|-----------------|  
-|1|`Byte`|  
+|1|A `Byte`|  
 |2|Un tableau de `Byte` objets codés au format ASCII|  
 |3|Un entier 16 bits|  
 |4|Un entier 32 bits|  
@@ -121,8 +121,9 @@ Certains fichiers image contiennent des métadonnées que vous pouvez lire pour 
  [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>. Gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événements et collez ce code dans le Gestionnaire d’événements paint. Vous devez remplacer `FakePhoto.jpg` avec un nom de l’image et le chemin d’accès valide sur votre système et à importer le `System.Drawing.Imaging` espace de noms.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événements et collez ce code dans le Gestionnaire d’événements paint. Vous devez remplacer `FakePhoto.jpg` avec un nom de l’image et le chemin d’accès valide sur votre système et à importer le `System.Drawing.Imaging` espace de noms.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

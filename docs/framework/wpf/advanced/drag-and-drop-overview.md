@@ -12,17 +12,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139215"
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
 Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplacer dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le glisser-déplacer fait généralement référence à une méthode de transfert de données qui implique l'utilisation d'une souris (ou d'un autre dispositif de pointage) pour sélectionner un ou plusieurs objets, les faire glisser vers une cible de déplacement souhaitée dans l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] et les y déplacer.  
-  
-  
+
 <a name="Drag_and_Drop_Support"></a>   
 ## <a name="drag-and-drop-support-in-wpf"></a>Prise en charge du glisser-déplacer dans WPF  
  Les opérations de glisser-déplacer se composent généralement de deux parties : une source de glissement d'où provient l'objet glissé et une cible de déplacement qui reçoit l'objet déplacé.  La source de glissement et la cible de déplacement peuvent être des éléments d'interface utilisateur d'une même application ou d'une application différente.  
@@ -55,7 +54,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
  La source et la cible d'une opération de glisser-déplacer sont des éléments d'interface utilisateur ; cependant, les données réellement transférées ne sont généralement pas représentées visuellement. Vous pouvez écrire du code pour fournir une représentation visuelle des données déplacées, à l'instar de ce qui se produit quand vous faites glisser des fichiers dans l'Explorateur Windows. Par défaut, l'utilisateur est tenu au courant de l'effet de son action par la modification du curseur, par la représentation de l'effet que l'opération de glisser-déplacer aura sur les données si ces dernières sont déplacées ou copiées.  
   
 ### <a name="drag-and-drop-effects"></a>Effets de glisser-déplacer  
- Les opérations de glisser-déplacer peuvent avoir différents effets sur les données transférées. Par exemple, vous pouvez copier les données ou bien les déplacer. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] définit une énumération <xref:System.Windows.DragDropEffects> que vous pouvez utiliser pour spécifier l'effet d'une opération de glisser-déplacer. Dans la source de glissement, vous pouvez spécifier les effets que la source autorisera dans la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Dans la cible de déplacement, vous pouvez spécifier l'effet attendu de la cible dans la propriété <xref:System.Windows.DragEventArgs.Effects%2A> de la classe <xref:System.Windows.DragEventArgs>. Quand la cible de déplacement spécifie son effet prévu dans l'événement <xref:System.Windows.DragDrop.DragOver>, ces informations sont passées à la source de glissement dans l'événement <xref:System.Windows.DragDrop.GiveFeedback>. La source de glissement utilise ces informations pour informer l'utilisateur de l'effet prévu de la cible de déplacement sur les données. Quand les données sont déplacées, la cible de déplacement spécifie son effet réel dans l'événement <xref:System.Windows.DragDrop.Drop>. Ces informations sont passées à la source de glissement en tant que valeur de retour de la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si la cible de déplacement retourne un effet qui n'est pas dans la liste des sources de glissement de `allowedEffects`, l'opération de glisser-déplacer est annulée sans que le transfert de données soit effectué.  
+ Les opérations de glisser-déplacer peuvent avoir différents effets sur les données transférées. Par exemple, vous pouvez copier les données ou bien les déplacer. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] définit un <xref:System.Windows.DragDropEffects> énumération que vous pouvez utiliser pour spécifier l’effet d’une opération de glisser-déplacer. Dans la source de glissement, vous pouvez spécifier les effets que la source autorisera dans la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Dans la cible de déplacement, vous pouvez spécifier l'effet attendu de la cible dans la propriété <xref:System.Windows.DragEventArgs.Effects%2A> de la classe <xref:System.Windows.DragEventArgs>. Quand la cible de déplacement spécifie son effet prévu dans l'événement <xref:System.Windows.DragDrop.DragOver>, ces informations sont passées à la source de glissement dans l'événement <xref:System.Windows.DragDrop.GiveFeedback>. La source du glissement utilise ces informations pour informer l'utilisateur de l'effet prévu de la cible du déplacement sur les données. Quand les données sont déplacées, la cible de déplacement spécifie son effet réel dans l'événement <xref:System.Windows.DragDrop.Drop>. Ces informations sont passées à la source de glissement en tant que valeur de retour de la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si la cible du déplacement retourne un effet qui n'est pas dans la liste des sources de glissement de `allowedEffects`, l'opération de glisser-déplacer est annulée sans que le transfert de données soit effectué.  
   
  Il est important de se rappeler que dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les valeurs <xref:System.Windows.DragDropEffects> servent uniquement à établir une communication entre la source de glissement et la cible de déplacement au sujet des effets de l'opération de glisser-déplacer. L'effet réel de l'opération de glisser-déplacer dépend de la façon dont vous aurez écrit le code de votre application.  
   
@@ -63,7 +62,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Événements de glisser-déplacer  
- Les opérations de glisser-déplacer prennent en charge un modèle piloté par les événements.  La source du glissement et la cible du déplacement utilisent toutes deux un ensemble standard d'événements pour gérer les opérations de glisser-déplacer.  Les tableaux suivants résument les événements de glisser-déplacer standard. Il s'agit d'événements attachés de la classe <xref:System.Windows.DragDrop>. Pour plus d’informations sur les événements attachés, consultez [Vue d’ensemble des événements attachés](attached-events-overview.md).  
+ Les opérations de glisser-déplacer prennent en charge un modèle piloté par les événements.  La source du glissement et la cible du déplacement utilisent toutes deux un ensemble standard d'événements pour gérer les opérations de glisser-déplacer.  Les tableaux suivants récapitulent les événements de glisser-déplacer standard. Il s'agit d'événements attachés de la classe <xref:System.Windows.DragDrop>. Pour plus d’informations sur les événements attachés, consultez [Vue d’ensemble des événements attachés](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Événements de la source du glissement  
   
@@ -74,7 +73,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 |<xref:System.Windows.DragDrop.PreviewGiveFeedback>|Version de tunneling de <xref:System.Windows.DragDrop.GiveFeedback>.|  
 |<xref:System.Windows.DragDrop.PreviewQueryContinueDrag>|Version de tunneling de <xref:System.Windows.DragDrop.QueryContinueDrag>.|  
   
-### <a name="drop-target-events"></a>Événements de cible de déplacement  
+### <a name="drop-target-events"></a>Événements de la cible du déplacement  
   
 |Événement|Récapitulatif|  
 |-----------|-------------|  
@@ -95,15 +94,15 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Pour implémenter le glisser-déplacer de base, effectuez les tâches suivantes :  
   
--   Identifiez l'élément destiné à être la source de glissement. Une source de glissement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
+-   Identifiez l'élément destiné à être la source du glissement. Une source de glissement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
   
--   Créez un gestionnaire d'événements pour la source de glissement qui sera chargé d'initier l'opération de glisser-déplacer. L'événement est généralement un événement <xref:System.Windows.UIElement.MouseMove>.  
+-   Créez un gestionnaire d’événements pour la source du glissement, qui sera chargé de lancer l’opération de glisser-déplacer. L'événement est généralement un événement <xref:System.Windows.UIElement.MouseMove>.  
   
 -   Dans le gestionnaire d'événements de la source de glissement, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. Dans l'appel <xref:System.Windows.DragDrop.DoDragDrop%2A>, spécifiez la source de glissement, les données à transférer et les effets autorisés.  
   
--   Identifiez l'élément destiné à être la cible de glissement. Une cible de déplacement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
+-   Identifiez l'élément destiné à être la cible du glissement. Une cible de déplacement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
   
--   Sur la cible de déplacement, attribuez la valeur `true` à la propriété <xref:System.Windows.UIElement.AllowDrop%2A>.  
+-   Sur la cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`.  
   
 -   Dans la cible de déplacement, créez un gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>  pour traiter les données déplacées.  
   
@@ -140,36 +139,36 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  La source de glissement peut aussi fournir une rétroaction visuelle au sujet des actions autorisées (déplacement, copie, aucune) et peut annuler l'opération de glisser-déplacer en fonction d'autres entrées utilisateur, comme par exemple, appuyer sur la touche Échap durant l'opération de glissement.  
   
- Il revient à votre application de déterminer à quel moment une opération de glissement se produit et d'initier l'opération de glisser-déplacer en appelant la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Il s'agit en général d'un événement <xref:System.Windows.UIElement.MouseMove> qui se produit sur l'élément à faire glisser pendant que l'utilisateur appuie sur un bouton de la souris. L'exemple suivant montre comment initier une opération de glisser-déplacer à partir du gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove> d'un élément <xref:System.Windows.Shapes.Ellipse>  pour faire de ce dernier la source de glissement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse.  
+ Il revient à votre application de déterminer à quel moment une opération de glissement se produit et d'initier l'opération de glisser-déplacer en appelant la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Il s'agit en général d'un événement <xref:System.Windows.UIElement.MouseMove> qui se produit sur l'élément à faire glisser pendant que l'utilisateur appuie sur un bouton de la souris. L’exemple suivant montre comment initier une opération de glisser-déposer à partir du gestionnaire d’événements <xref:System.Windows.UIElement.MouseMove> d’un élément <xref:System.Windows.Shapes.Ellipse> pour faire de ce dernier la source de glissement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse.  
   
  [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
  [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  Dans le gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove>, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> accepte trois paramètres :  
   
--   `dragSource` : référence à l'objet de dépendance correspondant à la source des données transférées ; il s'agit généralement de la source de l'événement <xref:System.Windows.UIElement.MouseMove>.  
+-   `dragSource` : Une référence à l’objet de dépendance qui est la source des données transférées ; Il s’agit généralement de la source de la <xref:System.Windows.UIElement.MouseMove> événement.  
   
--   `data` : objet qui contient les données transférées, inclus dans un wrapper dans un <xref:System.Windows.DataObject>.  
+-   `data` -Un objet qui contient les données transférées, encapsulées dans un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` : une des valeurs d'énumération <xref:System.Windows.DragDropEffects> qui spécifie les effets autorisés de l'opération de glisser-déplacer.  
+-   `allowedEffects` -Un de le <xref:System.Windows.DragDropEffects> des valeurs d’énumération qui spécifie les effets autorisés de l’opération de glisser-déplacer.  
   
  N'importe quel objet sérialisable peut être passé dans le paramètre `data`. Si les données ne sont pas déjà incluses dans un wrapper dans un <xref:System.Windows.DataObject>, elles sont automatiquement incluses dans un wrapper dans un nouveau <xref:System.Windows.DataObject>. Pour passer plusieurs éléments de données, vous devez créer vous-même le <xref:System.Windows.DataObject> et le passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Pour plus d’informations, consultez [Données et objets de données](data-and-data-objects.md).  
   
  Le paramètre `allowedEffects` est utilisé pour spécifier ce que la source du glissement autorise la cible du glissement à faire des données transférées. Les valeurs courantes pour une source de glissement sont <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> et <xref:System.Windows.DragDropEffects.All>.  
   
 > [!NOTE]
->  La cible de déplacement peut aussi spécifier les effets prévus en réponse aux données déplacées. Par exemple, si la cible de déplacement ne reconnaît pas le type de données à déplacer, elle peut refuser les données en attribuant à ses effets autorisés la valeur <xref:System.Windows.DragDropEffects.None>. C'est généralement le cas de son gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver>.  
+>  La cible du déplacement peut aussi spécifier les effets prévus en réponse aux données déplacées. Par exemple, si la cible de déplacement ne reconnaît pas le type de données à déplacer, elle peut refuser les données en attribuant à ses effets autorisés la valeur <xref:System.Windows.DragDropEffects.None>. C'est généralement le cas de son gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver>.  
   
  Une source de glissement peut éventuellement gérer les événements <xref:System.Windows.DragDrop.GiveFeedback> et <xref:System.Windows.DragDrop.QueryContinueDrag>. Ces événements possèdent des gestionnaires par défaut qui sont utilisés, à moins que vous marquiez les événements comme gérés. En général, vous pouvez ignorer ces événements, sauf si vous avez besoin de modifier leur comportement par défaut.  
   
- L'événement <xref:System.Windows.DragDrop.GiveFeedback> est déclenché en continu pendant l'opération de glissement de la source. Le gestionnaire par défaut de cet événement vérifie que la source de glissement se trouve sur une cible de déplacement valide. Si c'est le cas, il vérifie les effets autorisés de la cible du déplacement. Il fournit ensuite une rétroaction visuelle au sujet des effets de déplacement autorisés. Cette rétroaction visuelle se traduit généralement par le changement du curseur de la souris en curseur ne permettant ni copie, ni déplacement. Cet événement doit uniquement être géré si vous avez besoin d'utiliser des curseurs personnalisés pour fournir une rétroaction visuelle. Si vous gérez cet événement, assurez-vous de le marquer comme étant géré de sorte que le gestionnaire par défaut ne substitue pas à votre gestionnaire.  
+ L'événement <xref:System.Windows.DragDrop.GiveFeedback> est déclenché en continu pendant l'opération de glissement de la source. Le gestionnaire par défaut de cet événement vérifie que la source du glissement se trouve sur une cible de dépôt valide. Si c'est le cas, il vérifie les effets autorisés de la cible du déplacement. Il fournit ensuite une rétroaction visuelle au sujet des effets de déplacement autorisés. Cette rétroaction visuelle se traduit généralement par le changement du curseur de la souris en curseur ne permettant ni copie, ni déplacement. Cet événement doit uniquement être géré si vous avez besoin d'utiliser des curseurs personnalisés pour fournir une rétroaction visuelle. Si vous gérez cet événement, assurez-vous de le marquer comme étant géré de sorte que le gestionnaire par défaut ne substitue pas à votre gestionnaire.  
   
- L'événement <xref:System.Windows.DragDrop.QueryContinueDrag> est déclenché en continu pendant l'opération de glissement de la source. Vous pouvez gérer cet événement pour déterminer l'action qui doit terminer l'opération de glisser-déplacer, en fonction de l'état des touches Échap, Maj, Ctrl et Alt, ainsi que de l'état des boutons de la souris. Le gestionnaire par défaut de cet événement annule l'opération de glisser-déplacer si la touche Échap est enfoncée et déplace les données si le bouton de la souris est relâché.  
+ L'événement <xref:System.Windows.DragDrop.QueryContinueDrag> est déclenché en continu pendant l'opération de glissement de la source. Vous pouvez gérer cet événement pour déterminer l’action qui doit terminer l’opération de glisser-déplacer, en fonction de l’état des touches Échap, Maj, Ctrl et Alt, ainsi que de l’état des boutons de la souris. Le gestionnaire par défaut de cet événement annule l'opération de glisser-déplacer si la touche Échap est enfoncée et déplace les données si le bouton de la souris est relâché.  
   
 > [!CAUTION]
 >  Ces événements sont déclenchés en continu pendant l'opération de glisser-déplacer. Par conséquent, vous devez éviter les tâches nécessitant de nombreuses ressources dans les gestionnaires d'événements.  Utilisez, par exemple, un curseur mis en cache au lieu de créer un nouveau curseur chaque fois qu'un événement <xref:System.Windows.DragDrop.GiveFeedback> est déclenché.  
   
-### <a name="enabling-an-element-to-be-a-drop-target"></a>Activation d'un élément en tant que cible de déplacement  
+### <a name="enabling-an-element-to-be-a-drop-target"></a>Autoriser un élément à être une cible de déplacement  
  Un objet qui devient cible de déplacement est chargé des opérations suivantes :  
   
 -   Confirmation qu’il s’agit d’une cible de déplacement valide.  
@@ -178,9 +177,9 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 -   Vérification que les données transférées sont dans un format qu’elle peut recevoir.  
   
--   de traiter les données déplacées.  
+-   Traitement des données déplacées.  
   
- Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur `true` à la propriété <xref:System.Windows.UIElement.AllowDrop%2A>. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
+ Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
   
 1.  <xref:System.Windows.DragDrop.DragEnter>  
   
@@ -188,36 +187,37 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 3.  <xref:System.Windows.DragDrop.DragLeave> ou <xref:System.Windows.DragDrop.Drop>  
   
- L'événement <xref:System.Windows.DragDrop.DragEnter> se produit quand les données sont glissées dans les limites de la cible de déplacement. En général, la gestion de cet événement vous permet d'obtenir un aperçu des effets de l'opération de glisser-déplacer, si cela est adapté à votre application. Ne définissez pas la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> dans l'événement <xref:System.Windows.DragDrop.DragEnter>, car elle sera remplacée dans l'événement <xref:System.Windows.DragDrop.DragOver>.  
+ L'événement <xref:System.Windows.DragDrop.DragEnter> se produit quand les données sont glissées dans les limites de la cible de déplacement. En général, la gestion de cet événement vous permet d’obtenir un aperçu des effets de l’opération de glisser-déplacer, si cela est adapté à votre application. Ne définissez pas la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> dans l'événement <xref:System.Windows.DragDrop.DragEnter>, car elle sera remplacée dans l'événement <xref:System.Windows.DragDrop.DragOver>.  
   
  L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter> pour un élément <xref:System.Windows.Shapes.Ellipse>. Ce code permet d'obtenir un aperçu des effets de l'opération de glisser-déplacer en enregistrant le pinceau <xref:System.Windows.Shapes.Shape.Fill%2A> actif. Il utilise ensuite la méthode <xref:System.Windows.DataObject.GetDataPresent%2A> pour vérifier que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien les données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Si tel est le cas, les données sont extraites à l'aide de la méthode <xref:System.Windows.DataObject.GetData%2A>. Elles sont ensuite converties en <xref:System.Windows.Media.Brush> avant d'être appliquées à l'ellipse. La modification peut être annulée dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragLeave>. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, aucune action n'est effectuée.  
   
  [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
- L'événement <xref:System.Windows.DragDrop.DragOver> se produit en continu pendant le déplacement des données sur la cible de déplacement. Cet événement est couplé à l'événement <xref:System.Windows.DragDrop.GiveFeedback> sur la source de glissement. Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver>, les méthodes <xref:System.Windows.DataObject.GetDataPresent%2A> et <xref:System.Windows.DataObject.GetData%2A> sont généralement utilisées pour vérifier que les données transférées sont dans un format que la cible de déplacement peut traiter. Vous pouvez aussi vérifier si des touches de modification sont enfoncées, ce qui indique en général que l'utilisateur a l'intention d'opérer une copie ou un déplacement. Une fois ces vérifications effectuées, définissez la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> pour notifier la source de glissement de l'effet prévu du déplacement des données. La source de glissement reçoit ces informations dans les arguments de l'événement <xref:System.Windows.DragDrop.GiveFeedback> et peut définir un curseur approprié de façon à fournir une rétroaction visuelle.  
+ L'événement <xref:System.Windows.DragDrop.DragOver> se produit en continu pendant le déplacement des données sur la cible de déplacement. Cet événement est couplé à l'événement <xref:System.Windows.DragDrop.GiveFeedback> sur la source de glissement. Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver>, les méthodes <xref:System.Windows.DataObject.GetDataPresent%2A> et <xref:System.Windows.DataObject.GetData%2A> sont généralement utilisées pour vérifier que les données transférées sont dans un format que la cible de déplacement peut traiter. Vous pouvez aussi vérifier si des touches de modification sont enfoncées, ce qui indique en général que l'utilisateur a l'intention d'opérer une copie ou un déplacement. Une fois ces vérifications effectuées, définissez la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> pour notifier la source de glissement de l’effet prévu du dépôt des données. La source de glissement reçoit ces informations dans les arguments de l'événement <xref:System.Windows.DragDrop.GiveFeedback> et peut définir un curseur approprié de façon à fournir une rétroaction visuelle.  
   
- L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Si tel est le cas, il attribue à la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> la valeur <xref:System.Windows.DragDropEffects.Copy>. Cela indique à la source de glissement que les données peuvent être copiées vers l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> prend la valeur <xref:System.Windows.DragDropEffects.None>. Cela indique à la source du glissement que l’ellipse n’est pas une cible de dépôt valide pour les données.  
+ L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver> pour un élément <xref:System.Windows.Shapes.Ellipse>. Ce code vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Si tel est le cas, il attribue à la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> la valeur <xref:System.Windows.DragDropEffects.Copy>. Cela indique à la source du glissement que les données peuvent être copiées vers l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> prend la valeur <xref:System.Windows.DragDropEffects.None>. Cela indique à la source du glissement que l’ellipse n’est pas une cible de dépôt valide pour les données.  
   
  [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  L'événement <xref:System.Windows.DragDrop.DragLeave> se produit quand les données sont glissées hors des limites de la cible sans être déplacées. Cet événement permet d'annuler toutes vos actions dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter>.  
   
- L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragLeave> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code annule l'aperçu fourni par le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter> en appliquant le <xref:System.Windows.Media.Brush> enregistré à l'ellipse.  
+ L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragLeave> pour un élément <xref:System.Windows.Shapes.Ellipse>. Ce code annule l'aperçu fourni par le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter> en appliquant le <xref:System.Windows.Media.Brush> enregistré à l'ellipse.  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  L'événement <xref:System.Windows.DragDrop.Drop>  se produit quand les données sont déplacées sur la cible de déplacement ; par défaut, cela se produit quand le bouton de la souris est relâché. Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, utilisez la méthode <xref:System.Windows.DataObject.GetData%2A> pour extraire les données transférées à partir du <xref:System.Windows.DataObject> et exécuter tout traitement de données requis par votre application. L'événement <xref:System.Windows.DragDrop.Drop> met fin à l'opération de glisser-déplacer.  
   
- L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code applique les effets de l'opération de glisser-déplacer et est similaire à celui du gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter>. Il vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Dans ce cas, le <xref:System.Windows.Media.Brush> est appliqué à l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, aucune action n'est effectuée.  
+ L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop> pour un élément <xref:System.Windows.Shapes.Ellipse>. Ce code applique les effets de l'opération de glisser-déplacer et est similaire à celui du gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter>. Il vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Dans ce cas, le <xref:System.Windows.Media.Brush> est appliqué à l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, aucune action n'est effectuée.  
   
  [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Clipboard>
-- [Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Rubriques de guide pratique](drag-and-drop-how-to-topics.md)
+- [Procédure pas à pas : activation de Glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Rubriques Comment](drag-and-drop-how-to-topics.md)
 - [Glisser-déposer](drag-and-drop.md)

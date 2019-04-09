@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150447"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuration de liaisons pour les services Windows Communication Foundation
 Lorsque vous créez une application, vous souhaitez souvent confier des décisions à l'administrateur après le déploiement de l'application. Par exemple, il n'existe souvent aucune façon de savoir à l'avance ce que sera une adresse de service ou un URI (Uniform Resource Identifier). Au lieu de d'encoder de manière irréversible une adresse, il est préférable de permettre à un administrateur de le faire après avoir créé un service. Cette souplesse est obtenue par le biais de la configuration.  
@@ -58,16 +58,16 @@ Lorsque vous créez une application, vous souhaitez souvent confier des décisio
 </service>  
 ```  
   
- Dans cet exemple, l'attribut `name` indique à quel type de service la configuration est destinée. Lorsque vous créez un service dans votre code avec le contrat `HelloWorld`, il est initialisé avec tous les points de terminaison définis dans l'exemple de configuration. Si l’assembly qui implémente un seul contrat de service, le `name` attribut peut être omis, car le service utilise le seul type disponible. L'attribut utilise une chaîne, qui doit être dans le format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ Dans cet exemple, l'attribut `name` indique à quel type de service la configuration est destinée. Lorsque vous créez un service dans votre code avec le contrat `HelloWorld`, il est initialisé avec tous les points de terminaison définis dans l'exemple de configuration. Si l’assembly qui implémente un seul contrat de service, le `name` attribut peut être omis, car le service utilise le seul type disponible. L’attribut prend une chaîne, qui doit être au format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
- L'attribut `address` spécifie l'URI que d'autres points de terminaison utilisent pour communiquer avec le service. L'URI peut être un chemin d'accès absolu ou relatif. Si une adresse relative est fournie, l'hôte est censé fournir une adresse de base appropriée au schéma de transport utilisé dans la liaison. Si une adresse n'est pas configurée, l'adresse de base est l'adresse pour ce point de terminaison.  
+ L'attribut `address` spécifie l'URI que d'autres points de terminaison utilisent pour communiquer avec le service. L’URI peut être un chemin d’accès absolu ou relatif. Si une adresse relative est fournie, l’hôte est censé fournir une adresse de base appropriée au schéma de transport utilisé dans la liaison. Si une adresse n'est pas configurée, l'adresse de base est l'adresse pour ce point de terminaison.  
   
  L'attribut `contract` spécifie le contrat que ce point de terminaison expose. Le type d'implémentation de service doit implémenter le type de contrat. Si une implémentation de service implémente un seul type de contrat, cette propriété peut alors être omise.  
   
  L’attribut de `binding` sélectionne une liaison prédéfinie ou personnalisée à utiliser pour ce point de terminaison spécifique. Un point de terminaison qui ne sélectionne pas explicitement de liaison utilise la sélection de liaison par défaut, qui correspond à `BasicHttpBinding`.  
   
 #### <a name="modifying-a-predefined-binding"></a>Modification d'une liaison prédéfinie  
- Dans l’exemple suivant, une liaison prédéfinie est modifiée. Elle peut alors être utilisée pour configurer tout point de terminaison dans le service. La liaison est modifiée en affectant 1 seconde à la valeur <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A>. Notez que la propriété retourne un objet <xref:System.TimeSpan>.  
+ Dans l'exemple suivant, une liaison prédéfinie est modifiée. Elle peut alors être utilisée pour configurer tout point de terminaison dans le service. La liaison est modifiée en affectant 1 seconde à la valeur <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A>. Notez que la propriété retourne un objet <xref:System.TimeSpan>.  
   
  Cette liaison modifiée se trouve dans la section consacrée aux liaisons. Cette liaison modifiée peut maintenant être utilisée lors de la création de tout point de terminaison en définissant l'attribut `binding` dans l'élément `endpoint`.  
   
@@ -143,7 +143,7 @@ Lorsque vous créez une application, vous souhaitez souvent confier des décisio
 </bindings>  
 ```  
   
- Vous pouvez obtenir le même comportement à l’aide de la configuration par défaut en ajoutant une section `protocolMapping` et en configurant les liaisons comme illustré dans l’exemple suivant.  
+ Vous pouvez obtenir le même comportement à l'aide de la configuration par défaut en ajoutant une section `protocolMapping` et en configurant les liaisons comme illustré dans l'exemple suivant.  
   
 ```xml  
 <protocolMapping>  
@@ -162,7 +162,8 @@ Lorsque vous créez une application, vous souhaitez souvent confier des décisio
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)
 - [Liaisons fournies par le système](../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d'ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

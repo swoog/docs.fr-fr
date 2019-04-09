@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139137"
 ---
 # <a name="xarray-markup-extension"></a>x:Array, extension de balisage
 Fournit la prise en charge générale pour les tableaux d’objets dans XAML via une extension de balisage. Cela correspond à la `x:ArrayExtension` type XAML dans [MS-XAML].  
@@ -70,5 +70,6 @@ Fournit la prise en charge générale pour les tableaux d’objets dans XAML via
  Pour les types personnalisés qui sont utilisés comme éléments de tableau, la classe doit également en charge la configuration requise pour instanciée en XAML en tant qu’éléments de l’objet. Pour plus d’informations, consultez [XAML et Classes personnalisées pour WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Types migrés de WPF vers System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

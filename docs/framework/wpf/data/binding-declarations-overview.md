@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165267"
 ---
 # <a name="binding-declarations-overview"></a>Vue d'ensemble des déclarations de liaison
 Cette rubrique décrit les différentes façons dont vous pouvez déclarer une liaison.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Avant de lire cette rubrique, il est important de vous familiariser avec le concept et l’utilisation des extensions de balisage. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -81,7 +79,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Des indexeurs de propriété peuvent être spécifiés entre crochets après le nom de la propriété où l’indexeur est appliqué. Par exemple, la clause `Path=ShoppingCart[0]` définit la liaison à l’index qui correspond à la façon dont l’indexation interne de votre propriété gère la chaîne littérale « 0 ». Les indexeurs imbriqués sont également pris en charge.  
   
--   Les indexeurs et les sous-propriétés peuvent être combinés en une clause `Path` ; par exemple, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indexeurs et des sous-propriétés peuvent être combinées en un `Path` clause ; par exemple, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   À l’intérieur des indexeurs, vous pouvez avoir plusieurs paramètres d’indexeur séparés par des virgules (,). Le type de chaque paramètre peut être spécifié avec des parenthèses. Par exemple, vous pouvez avoir `Path="[(sys:Int32)42,(sys:Int32)24]"`, où `sys` est mappé à l’espace de noms `System`.  
   
@@ -126,7 +124,8 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
 -   La valeur par défaut <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur varie entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> et <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> en fonction de la propriété de dépendance liée. La valeur par défaut de la plupart des propriétés de dépendance est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, tandis que celle de la propriété <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> a comme valeur par défaut <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)
 - [Liaison de données](../advanced/optimizing-performance-data-binding.md)
-- [Syntaxe XAML PropertyPath](../advanced/propertypath-xaml-syntax.md)
+- [PropertyPath, syntaxe XAML](../advanced/propertypath-xaml-syntax.md)

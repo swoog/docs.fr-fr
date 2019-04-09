@@ -2,12 +2,12 @@
 title: Collections de schémas OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164682"
 ---
 # <a name="ole-db-schema-collections"></a>Collections de schémas OLE DB
 Cette section traite de la prise en charge des collections de schémas pour les fournisseurs OLE DB de Microsoft SQL Server, Oracle et Microsoft Jet.  
@@ -17,7 +17,7 @@ Cette section traite de la prise en charge des collections de schémas pour les 
   
 -   Tables  
   
--   Columns  
+-   Colonnes  
   
 -   Procédures  
   
@@ -35,13 +35,13 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |TABLE_TYPE|Chaîne|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|Chaîne|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
   
 |Nom de colonne|Type de données|  
 |----------------|--------------|  
@@ -49,15 +49,15 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Booléen|  
 |COLUMN_DEFAULT|Chaîne|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booléen|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -77,7 +77,7 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
 |COLUMN_TDSCOLLATION|Byte[]|  
-|IS_COMPUTED|Boolean|  
+|IS_COMPUTED|Booléen|  
   
 ### <a name="procedures"></a>Procédures  
   
@@ -102,9 +102,9 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |PARAMETER_NAME|Chaîne|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
-|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_HASDEFAULT|Booléen|  
 |PARAMETER_DEFAULT|Chaîne|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booléen|  
 |DATA_TYPE|Int32|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
@@ -131,32 +131,32 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |INDEX_CATALOG|Chaîne|  
 |INDEX_SCHEMA|Chaîne|  
 |INDEX_NAME|Chaîne|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Booléen|  
+|UNIQUE|Booléen|  
+|CLUSTERED|Booléen|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booléen|  
+|AUTO_UPDATE|Booléen|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|Chaîne|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|Booléen|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Fournisseur Microsoft Oracle OLE DB  
  Le pilote Microsoft Oracle OLE DB prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes :  
   
 -   Tables  
   
--   Columns  
+-   Colonnes  
   
 -   Procédures  
   
@@ -164,7 +164,7 @@ Cette section traite de la prise en charge des collections de schémas pour les 
   
 -   ProcedureParameters  
   
--   Vues  
+-   Affichages  
   
 -   Index  
   
@@ -176,13 +176,13 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |TABLE_TYPE|Chaîne|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|Chaîne|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
   
 |Nom de colonne|Type de données|  
 |----------------|--------------|  
@@ -190,15 +190,15 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Booléen|  
 |COLUMN_DEFAULT|Chaîne|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booléen|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -236,13 +236,13 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |PROCEDURE_SCHEMA|Chaîne|  
 |PROCEDURE_NAME|Chaîne|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booléen|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -250,7 +250,7 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |DESCRIPTION|Chaîne|  
 |OVERLOAD|Int16|  
   
-### <a name="views"></a>Vues  
+### <a name="views"></a>Affichages  
   
 |Nom de colonne|Type de données|  
 |----------------|--------------|  
@@ -258,8 +258,8 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |VIEW_DEFINITION|Chaîne|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
+|CHECK_OPTION|Booléen|  
+|IS_UPDATABLE|Booléen|  
 |DESCRIPTION|Chaîne|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -274,36 +274,36 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |INDEX_CATALOG|Chaîne|  
 |INDEX_SCHEMA|Chaîne|  
 |INDEX_NAME|Chaîne|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Booléen|  
+|UNIQUE|Booléen|  
+|CLUSTERED|Booléen|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booléen|  
+|AUTO_UPDATE|Booléen|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|Chaîne|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|Booléen|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Fournisseur Microsoft Jet OLE DB  
  Le pilote Microsoft Jet OLE DB prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes :  
   
 -   Tables  
   
--   Columns  
+-   Colonnes  
   
 -   Procédures  
   
--   Vues  
+-   Affichages  
   
 -   Index  
   
@@ -315,13 +315,13 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |TABLE_TYPE|Chaîne|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|Chaîne|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
   
 |Nom de colonne|Type de données|  
 |----------------|--------------|  
@@ -329,15 +329,15 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Booléen|  
 |COLUMN_DEFAULT|Chaîne|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booléen|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -367,7 +367,7 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="views"></a>Vues  
+### <a name="views"></a>Affichages  
   
 |Nom de colonne|Type de données|  
 |----------------|--------------|  
@@ -375,8 +375,8 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |TABLE_SCHEMA|Chaîne|  
 |TABLE_NAME|Chaîne|  
 |VIEW_DEFINITION|Chaîne|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
+|CHECK_OPTION|Booléen|  
+|IS_UPDATABLE|Booléen|  
 |DESCRIPTION|Chaîne|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -391,19 +391,19 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |INDEX_CATALOG|Chaîne|  
 |INDEX_SCHEMA|Chaîne|  
 |INDEX_NAME|Chaîne|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Booléen|  
+|UNIQUE|Booléen|  
+|CLUSTERED|Booléen|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booléen|  
+|AUTO_UPDATE|Booléen|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Chaîne|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
@@ -412,4 +412,5 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |INTEGRATED|Booléen|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,18 +1,18 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Filtrage'
+title: 'Exemples de syntaxe d’expression de requête : Filtrage'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 3a1f88035dd242c9f92a8a08806232b36f2fd9fd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134548"
 ---
-# <a name="query-expression-syntax-examples-filtering"></a>Exemples de syntaxe d’Expression de requête : Filtrage
+# <a name="query-expression-syntax-examples-filtering"></a>Exemples de syntaxe d’expression de requête : Filtrage
 Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…Contains` méthodes permettant d’interroger la [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. Notez que, dans lequel...`Contains` ne peut pas être utilisé dans le cadre d’un [requête compilée](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
  Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
@@ -57,7 +57,7 @@ Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…
  [!code-vb[DP L2E ArraysAndListsInQueries#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#1)]  
   
 > [!NOTE]
->  Dans le cadre du prédicat dans une clause `Where…Contains`, vous pouvez utiliser un <xref:System.Array>, un <xref:System.Collections.Generic.List%601> ou une collection de type quelconque qui implémente l'interface <xref:System.Collections.Generic.IEnumerable%601>. Vous pouvez également déclarer et initialiser une collection dans une requête LINQ to Entities. Pour plus d'informations, consultez l'exemple suivant.  
+>  Dans le cadre du prédicat dans une clause `Where…Contains`, vous pouvez utiliser un <xref:System.Array>, un <xref:System.Collections.Generic.List%601> ou une collection de type quelconque qui implémente l’interface <xref:System.Collections.Generic.IEnumerable%601>. Vous pouvez également déclarer et initialiser une collection dans une requête LINQ to Entities. Pour plus d'informations, consultez l'exemple suivant.  
   
 ### <a name="example"></a>Exemple  
  L'exemple ci-dessous déclare et initialise des tableaux dans une clause `Where…Contains` pour rechercher tous les produits qui ont un `ProductModelID` ou un `Size` correspondant aux valeurs dans les tableaux.  
@@ -66,4 +66,5 @@ Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…
  [!code-vb[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

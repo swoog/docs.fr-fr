@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Déployer une Application d’intégration COM +'
+title: 'Procédure : déployer une application d’intégration COM+'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 0dcaa7d12c7e35170dee155612f824ed22ab8b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146729"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>Procédure : Déployer une Application d’intégration COM +
+# <a name="how-to-deploy-a-com-integration-application"></a>Procédure : déployer une application d’intégration COM+
 Après avoir écrit une application d'intégration COM+, vous pouvez la déployer sur un autre ordinateur. Cette rubrique décrit comment déplacer une application d'intégration COM+ d'un ordinateur vers un autre.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Déplacement d'une application d'intégration hébergée COM+  
@@ -39,6 +39,7 @@ Après avoir écrit une application d'intégration COM+, vous pouvez la déploye
 5.  Copiez le fichier .svc (componentName.svc) et le fichier Web.config de la racine virtuelle sur l'ordinateur A vers la racine virtuelle que vous venez de créer sur l'ordinateur B.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Guide pratique pour Configurer les paramètres de Service COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Guide pratique pour Utilisez l’outil de Configuration de modèle de Service COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [Vue d'ensemble de l'intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Procédure : configurer des paramètres de service COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Procédure : utiliser l’outil de configuration de modèle de service COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

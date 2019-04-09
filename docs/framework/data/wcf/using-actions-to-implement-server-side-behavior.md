@@ -2,12 +2,12 @@
 title: Utilisation d'actions pour implémenter le comportement côté serveur
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144116"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilisation d'actions pour implémenter le comportement côté serveur
 
@@ -46,7 +46,7 @@ Les actions OData permettent d'implémenter un comportement qui agit sur une res
   
 3.  stockage des résultats de la méthode Invoke() de façon à ce qu'ils puissent être récupérés en utilisant la méthode GetResult().  
   
- Les paramètres peuvent être passés en tant que jetons. En effet, il est possible d'écrire un fournisseur de services de données qui fonctionne avec des jetons qui représentent des ressources ; le cas échéant, vous devrez peut-être convertir (marshaler) ces jetons en ressources réelles avant de les distribuer à l'action réelle. Une fois le paramètre marshalé, il doit être dans un état modifiable de façon à ce que les modifications apportées à la ressource lorsque l’action est appelée soient enregistrées et écrites sur le disque.  
+ Les paramètres peuvent être passés en tant que jetons. En effet, il est possible d’écrire un fournisseur de services de données qui fonctionne avec des jetons qui représentent des ressources ; le cas échéant, vous devrez peut-être convertir (marshaler) ces jetons en ressources réelles avant de les distribuer à l’action réelle. Une fois le paramètre marshalé, il doit être dans un état modifiable de façon à ce que les modifications apportées à la ressource lorsque l’action est appelée soient enregistrées et écrites sur le disque.  
   
  Cette interface nécessite deux méthodes : Invoke et GetResult appropriés. Invoke appelle le délégué qui implémente le comportement de l'action et GetResult retourne le résultat de l'action.  
   
@@ -81,7 +81,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  Dans l'extrait de code ci-dessus, la classe `MoviesModel` a été générée en utilisant Visual Studio pour ajouter une référence de service à un service de données WCF.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Développement et déploiement de WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Développer et déployer WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

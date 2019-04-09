@@ -2,12 +2,12 @@
 title: WSDL et stratégie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151903"
 ---
 # <a name="wsdl-and-policy"></a>WSDL et stratégie
 Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Policy et WS-PolicyAttachment détails d’implémentation, ainsi que les assertions de WS-Policy supplémentaires et extensions WSDL 1.1 a introduit par WCF.  
@@ -55,7 +55,7 @@ Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Po
 |Assertion de stratégie|Sujet de stratégie|Description|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|Point de terminaison|Le point de terminaison utilise l'authentification de base HTTP.|  
-|http:HttpDigestAuthentication|Point de terminaison|Le point de terminaison utilise l'authentification Digest HTTP.|  
+|http:HttpDigestAuthentication|Point de terminaison|Le point de terminaison utilise l’authentification HTTP Digest.|  
 |http:HttpNegotiateAuthentication|Point de terminaison|Le point de terminaison utilise l'authentification par négociation HTTP.|  
 |http:HttpNtlmAuthentication|Point de terminaison|Le point de terminaison utilise l'authentification NTLM HTTP.|  
 |msf:Streamed|Point de terminaison|Le point de terminaison utilise le tramage de message diffusé en continu. Cette assertion est utilisée avec le protocole de tramage de message fourni pour les transports tels que TCP et canaux nommés.|  
@@ -69,10 +69,11 @@ Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Po
 |cdp:CompositeDuplex|Point de terminaison|Le point de terminaison utilise deux connexions de transport réciproques distinctes pour les messages entrants et sortants.|  
 |mssp:RsaToken|Imbriqué|Assertion de jeton de clé RSA. Cette spécification est en général satisfaite par une clé RSA sérialisée directement dans le cadre des informations de clés dans une signature d'approbation.|  
 |mssp:SslContextToken|Imbriqué|Requiert l'utilisation d'un SecurityContextToken obtenu à l'aide du protocole de transfert TLS binaire avec WS-Trust. Les assertions imbriquées incluent : sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.|  
-|mssp:MustNotSendCancel|Imbriqué|Indique une spécification selon laquelle aucun message de demande de jeton de sécurité de demande (RST) [WS-Trust] à l'aide de la liaison Annulation [WS-Trust, WS-SC] ne doit être envoyé à l'émetteur d'un SecurityContextToken donné. Si cette assertion est présente, ces messages de demande ne doivent pas être envoyés à l'émetteur. Si cette assertion est absente, ces messages de demande peuvent être envoyés à l'émetteur.|  
-|mssp:RequireClientCertificate|Imbriqué|Cet élément facultatif indique une spécification selon laquelle un certificat client doit être fourni dans le cadre du protocole TLSNEGO. Si cette assertion est présente, un certificat client doit être fourni. Si cette assertion est absente, aucun certificat client ne doit être fourni. Cette assertion ne doit pas être utilisée en dehors de mssp:SslContextToken.|  
+|mssp:MustNotSendCancel|Imbriqué|Indique une spécification selon laquelle aucun message de demande de jeton de sécurité de demande (RST) [WS-Trust] à l’aide de la liaison Annulation [WS-Trust, WS-SC] ne doit être envoyé à l’émetteur d’un SecurityContextToken donné. Si cette assertion est présente, ces messages de demande ne doivent pas être envoyés à l'émetteur. Si cette assertion est absente, ces messages de demande peuvent être envoyés à l'émetteur.|  
+|mssp:RequireClientCertificate|Imbriqué|Cet élément facultatif indique une exigence selon laquelle un certificat client doit être fourni dans le cadre du protocole TLSNEGO. Si cette assertion est présente, un certificat client doit être fourni. Si cette assertion est absente, aucun certificat client ne doit être fourni. Cette assertion ne doit pas être utilisée en dehors de mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Publication WSDL personnalisée](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Guide pratique pour Exporter le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Guide pratique pour Importer le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Procédure : exporter un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Procédure : importer un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

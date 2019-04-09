@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164357"
 ---
 # <a name="client"></a>\<client>
 L'élément `client` définit une liste de points de terminaison auxquels un client peut se connecter.  
@@ -41,7 +41,7 @@ L'élément `client` définit une liste de points de terminaison auxquels un cli
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contient une collection d’éléments de point de terminaison qui spécifient les points de terminaison auxquels ce client peut se connecter.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contient une collection d'éléments de point de terminaison qui spécifient les points de terminaison auxquels ce client peut se connecter.|  
 |[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contient des paramètres pour le traitement de métadonnées.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
@@ -73,6 +73,7 @@ L'élément `client` définit une liste de points de terminaison auxquels un cli
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - [Configuration du client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b844a660da6a1e8d96ed7f5833435b413219e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141698"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult, énumération
 Indique l’équivalence de deux identités d’assembly, tel que déterminé par le [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) (fonction).  
@@ -62,15 +62,16 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_NonEquivalentVersion`|Indique que les deux assemblys correspondent à l’exception de leurs numéros de version qui ne correspondent pas.|  
 |`ACR_Unknown`|Indique que la raison de non-équivalence n’est pas connue.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [CompareAssemblyIdentity, fonction](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
 - [Énumérations de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

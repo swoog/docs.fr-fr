@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : S’authentifier avec un nom d’utilisateur et le mot de passe'
+title: 'Procédure : s’authentifier avec un nom d’utilisateur et un mot de passe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174133"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procédure : S’authentifier avec un nom d’utilisateur et le mot de passe
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procédure : s’authentifier avec un nom d’utilisateur et un mot de passe
 
 Cette rubrique montre comment activer un service Windows Communication Foundation (WCF) authentifier un client avec un nom d’utilisateur de domaine Windows et un mot de passe. Elle suppose que vous disposez d'un service WCF auto-hébergé fonctionnel. Pour obtenir un exemple de création d’un base consultez de service WCF auto-hébergé, [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Cette rubrique suppose que le service est configuré dans le code. Si vous souhaitez voir un exemple de configuration d’un service similaire à l’aide d’un fichier de configuration consultez [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -91,6 +92,6 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Sécurité de transport avec authentification de base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [Sécurité de transport avec l'authentification de base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [Sécurité des applications distribuées](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

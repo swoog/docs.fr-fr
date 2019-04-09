@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134184"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding, interface
 Fournit une méthode qui est appelée par le common language runtime (CLR) pour notifier l’application hôte qu’un domaine d’application a été créé.  
@@ -32,14 +32,15 @@ Fournit une méthode qui est appelée par le common language runtime (CLR) pour 
 |------------|-----------------|  
 |[OnAppDomain, méthode](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

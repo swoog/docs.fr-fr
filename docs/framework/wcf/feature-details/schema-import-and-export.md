@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133777"
 ---
 # <a name="schema-import-and-export"></a>Importation et exportation de schémas
 Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le moteur de sérialisation `DataContractSerializer` traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Outre le sérialiseur lui-même, WCF inclut l’importation de schéma associé et d’exporter les schémas afférents. *Schéma* est une description formelle, précise et lisible par machine de la forme du XML que le sérialiseur produit ou que le désérialiseur peut accéder. WCF utilise le langage de définition de World Wide Web Consortium (W3C) XML Schema (XSD) en tant que sa représentation sous forme de schéma, qui est largement interopérable avec nombreuses plateformes tierces.  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- Pour plus d’informations, consultez [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Lorsqu'un schéma ne se conforme pas aux règles des contrats de données, utilisez un autre moteur de sérialisation. Le moteur de sérialisation <xref:System.Xml.Serialization.XmlSerializer> utilise, par exemple, son propre mécanisme d'importation de schéma. De plus, il existe un mode spécial d’importation dans lequel la plage du schéma pris en charge est développée. Pour plus d’informations, consultez la section sur la génération <xref:System.Xml.Serialization.IXmlSerializable> tape [importation du schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Pour plus d’informations, consultez [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Lorsqu'un schéma ne se conforme pas aux règles des contrats de données, utilisez un autre moteur de sérialisation. Le moteur de sérialisation <xref:System.Xml.Serialization.XmlSerializer> utilise, par exemple, son propre mécanisme d'importation de schéma. De plus, il existe un mode spécial d'importation dans lequel la plage du schéma pris en charge est développée. Pour plus d’informations, consultez la section sur la génération <xref:System.Xml.Serialization.IXmlSerializable> tape [importation du schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
  L'exportateur `XsdDataContractExporter` prend en charge tous les types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui peuvent être sérialisés à l'aide du moteur de sérialisation `DataContractSerializer`. Pour plus d’informations, consultez [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Remarque : le schéma généré à l'aide de `XsdDataContractExporter` contient en principe des données utilisables par l'importateur `XsdDataContractImporter`, sauf si <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> est utilisé afin de personnaliser ce schéma).  
   
@@ -60,6 +60,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
  Pour plus d’informations sur l’utilisation de la <xref:System.Runtime.Serialization.XsdDataContractExporter>, consultez [exportation de schémas à partir de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

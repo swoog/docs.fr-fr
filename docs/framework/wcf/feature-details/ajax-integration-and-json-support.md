@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: 54942386bb4fb88e72a86b5e25f12cee4776a126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d9c29f3223624653f2d568bb351d90334a4318
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137109"
 ---
 # <a name="ajax-integration-and-json-support"></a>Intégration d'AJAX et prise en charge de JSON
 La prise en charge de Windows Communication Foundation (WCF) pour ASP.NET Asynchronous JavaScript and XML (AJAX) et le format de données JavaScript Objet Notation (JSON) autoriser les services WCF d’exposer des opérations aux clients AJAX. Clients AJAX sont les pages Web code JavaScript en cours d’exécution et l’accès à ces services WCF à l’aide de requêtes HTTP. Les rubriques de cette section fournissent des informations sur cette prise en charge et sur la manière de l'implémenter.  
@@ -20,15 +20,16 @@ La prise en charge de Windows Communication Foundation (WCF) pour ASP.NET Asynch
  [Création de services WCF pour ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
  Décrit comment un service WCF peut être exposé aux clients AJAX en ajoutant le point de terminaison AJAX approprié soit via la configuration ou à l’aide d’une fabrique d’hôte de service personnalisée pour générer un hôte de service qui configure le point de terminaison AJAX automatiquement.  
   
- [Création de services WCF AJAX sans ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
+ [Création de services AJAX WCF sans ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
  Décrit comment créer un service WCF sans l’aide d’ASP.NET.  
   
- [Prise en charge du format JSON et d’autres formats de transfert de données](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
+ [Prise en charge du format JSON et d'autres formats de transfert de données](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  Décrit la prise en charge du format JSON utilisé en général (à la place de XML) pour la messagerie avec les services ASP.NET AJAX.  
   
- [Guide pratique pour Migrer les Services Web ASP.NET compatibles AJAX vers WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ [Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
  Décrit comment migrer un service Web ASP.NET compatibles AJAX vers un service Web WCF.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>
-- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

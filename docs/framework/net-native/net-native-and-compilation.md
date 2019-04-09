@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139176"
 ---
 # <a name="net-native-and-compilation"></a>Compilation et .NET natif
 Les applications Windows 8.1 et les applications de bureau Windows qui ciblent le .NET Framework sont écrites dans un langage de programmation particulier et compilées dans un langage intermédiaire. Lors de l'exécution, un compilateur juste-à-temps (JIT) est chargé de compiler du langage intermédiaire en code natif pour l'ordinateur local, juste avant qu'une méthode ne soit exécutée pour la première fois. À l'inverse, la chaîne d'outils .NET Native convertit le code source en code natif au moment de la compilation. Cette rubrique compare .NET Native avec d'autres technologies de compilation disponibles pour les applications .NET Framework. Elle explique également de façon pratique comment .NET Native génère le code natif qui peut vous aider à comprendre pourquoi les exceptions qui se produisent dans le code compilé avec .NET Native ne se produisent pas dans le code compilé par le compilateur JIT.  
@@ -19,15 +19,15 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
   
 -   Des [métadonnées](../../../docs/standard/metadata-and-self-describing-components.md) qui décrivent l’assembly, ses dépendances, les types qu’il contient et leurs membres. Les métadonnées sont utilisées pour la réflexion et l'accès à liaison tardive et dans certains cas, par le compilateur et les outils de génération.  
   
--   Du code d'implémentation. Il s'agit des codes d'opération de langage intermédiaire. Lors de l'exécution, le compilateur juste-à-temps (JIT) le traduit en code natif pour la plateforme cible.  
+-   Du code d'implémentation. Il s’agit des opcodes de langage intermédiaire. Lors de l'exécution, le compilateur juste-à-temps (JIT) le traduit en code natif pour la plateforme cible.  
   
  En plus de votre assembly d'application principal, une application requiert les éléments suivants :  
   
 -   Toute bibliothèque de classes supplémentaire ou assembly tiers requis par votre application. De même, ces assemblys incluent des métadonnées qui décrivent l'assembly, ses types et leurs membres, ainsi que le langage intermédiaire qui implémente tous les membres de type.  
   
--   La bibliothèque de classes .NET Framework. Il s'agit d'une collection d'assemblys qui est installée sur le système local avec l'installation de .NET Framework. Les assemblys inclus dans la bibliothèque de classes .NET Framework comprennent un ensemble complet de métadonnées et de code d'implémentation.  
+-   La bibliothèque de classes .NET Framework. Il s’agit d’une collection d’assemblys qui est installée sur le système local avec l’installation de .NET Framework. Les assemblys inclus dans la bibliothèque de classes .NET Framework comprennent un ensemble complet de métadonnées et de code d'implémentation.  
   
--   Le common language runtime. Il s'agit d'une collection de bibliothèques de liens dynamiques qui fournissent des services tels que le chargement des assemblys, la gestion de la mémoire et des garbage collection, la gestion des exceptions, la compilation juste-à-temps, la communication à distance et l'interopérabilité. Tout comme la bibliothèque de classes, le runtime est installé sur le système local dans le cadre de l'installation .NET Framework.  
+-   Le common language runtime. Il s’agit d’une collection de bibliothèques de liens dynamiques qui fournissent des services tels que le chargement des assemblys, la gestion de la mémoire et des garbage collection, la gestion des exceptions, la compilation juste-à-temps, la communication à distance et l’interopérabilité. Tout comme la bibliothèque de classes, le runtime est installé sur le système local dans le cadre de l'installation .NET Framework.  
   
  Notez que l'ensemble du common language runtime, ainsi que les métadonnées et le langage intermédiaire de tous les types contenus dans les assemblys spécifiques à l'application, les assemblys tiers et les assemblys système doivent être présents pour que l'application fonctionne correctement.  
   
@@ -41,7 +41,7 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
   
  Au cours de la conversion d'une application du langage intermédiaire en code natif, la chaîne d'outils .NET Native effectue des opérations telles que les suivantes :  
   
--   Pour certains chemins de code, elle remplace le code qui s'appuie sur la réflexion et les métadonnées par du code natif statique. Par exemple, si un type valeur ne remplace pas la méthode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, le test d'égalité par défaut utilise la réflexion pour récupérer les objets <xref:System.Reflection.FieldInfo> qui représentent les champs du type valeur, puis compare les valeurs de champ des deux instances. Lors de la compilation en code natif, la chaîne d'outils .NET Native remplace le code et les métadonnées de réflexion par une comparaison statique des valeurs de champ.  
+-   Pour certains chemins de code, elle remplace le code qui s’appuie sur la réflexion et les métadonnées par du code natif statique. Par exemple, si un type valeur ne remplace pas la méthode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, le test d'égalité par défaut utilise la réflexion pour récupérer les objets <xref:System.Reflection.FieldInfo> qui représentent les champs du type valeur, puis compare les valeurs de champ des deux instances. Lors de la compilation en code natif, la chaîne d'outils .NET Native remplace le code et les métadonnées de réflexion par une comparaison statique des valeurs de champ.  
   
 -   Quand cela est possible, elle tente d'éliminer toutes les métadonnées.  
   
@@ -50,18 +50,18 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
 -   Elle remplace le CLR complet par un runtime refactorisé contenant principalement le garbage collector. Le runtime refactorisé se trouve dans une bibliothèque nommée mrt100_app.dll qui est locale pour l'application et dont la taille ne dépasse pas quelques centaines de kilo-octets. Ceci est possible parce que la liaison statique rend inutiles la plupart des services fournis par le common language runtime.  
   
     > [!NOTE]
-    >  .NET Native utilise le même garbage collector en tant que common language runtime standard. Dans le garbage collector .NET Native, le garbage collection d’arrière-plan est activé par défaut. Pour plus d’informations sur le garbage collection, consultez [Notions de base du garbage collection](../../../docs/standard/garbage-collection/fundamentals.md).  
+    >  .NET Native utilise le même garbage collector en tant que common language runtime standard. Dans le garbage collector .NET Native, le garbage collection d'arrière-plan est activé par défaut. Pour plus d’informations sur le garbage collection, consultez [Notions de base du garbage collection](../../../docs/standard/garbage-collection/fundamentals.md).  
   
 > [!IMPORTANT]
 >  .NET Native compile une application entière en une application native. Il ne vous permet pas de compiler en code natif un assembly unique contenant une bibliothèque de classes pour que celui-ci puisse être appelé de manière autonome depuis le code managé.  
   
- L'application résultante produite par la chaîne d'outils .NET Native est écrite dans un répertoire nommé ilc.out, lui-même situé dans le répertoire Debug ou Release de votre répertoire de projet. Elle se compose des fichiers suivants :  
+ L’application résultante produite par la chaîne d’outils .NET Native est écrite dans un répertoire nommé ilc.out, lui-même situé dans le répertoire Debug ou Release de votre répertoire de projet. Elle se compose des fichiers suivants :  
   
 -   *\<nom_application>*.exe, un exécutable stub qui cède le contrôle à une exportation `Main` spéciale dans *\<nom_application>*.dll.  
   
 -   *\<nom_application>*.dll, une bibliothèque de liens dynamiques Windows qui contient le code de votre application, ainsi que du code provenant de la bibliothèque de classes .NET Framework et de toute bibliothèque tierce avec laquelle il existe une dépendance.  Elle contient également le code de prise en charge, tel que le code nécessaire pour interagir avec Windows et sérialiser les objets de votre application.  
   
--   mrt100_app.dll, un runtime refactorisé qui fournit des services d'exécution tels que le garbage collection.  
+-   mrt100_app.dll, un runtime refactorisé qui fournit des services d’exécution tels que le garbage collection.  
   
  Toutes les dépendances sont capturées par le manifeste APPX de l'application.  En plus des fichiers .exe, .dll et mrt100_app.dll de l'application, qui sont fournis directement avec le package appx, deux autres fichiers sont inclus :  
   
@@ -71,7 +71,7 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
   
  Étant donné que la chaîne d'outils .NET Native ne lie le code d'implémentation à votre application que s'il sait que votre application appelle ce code, les métadonnées ou le code d'implémentation requis dans les scénarios suivants peuvent ne pas être inclus dans votre application :  
   
--   Réflexion  
+-   Réflexion.  
   
 -   Appel dynamique ou à liaison tardive  
   
@@ -96,11 +96,12 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
   
 -   Si aucune image native n'est disponible pour une méthode particulière, NGEN revient au code juste-à-temps. Cela signifie que les images natives doivent continuer d'inclure les métadonnées et le langage intermédiaire dans le cas où NGEN doive revenir à la compilation juste-à-temps. À l'inverse, .NET Native génère uniquement des images natives et ne revient pas à la compilation juste-à-temps. Seules les métadonnées requises pour certains scénarios d'interopérabilité, de sérialisation et de réflexion doivent donc être conservées.  
   
--   NGEN continue à s'appuyer sur le common language runtime complet pour des services tels que le chargement d'assemblys, la communication à distance, l'interopérabilité, la gestion de la mémoire, le garbage collection et, si nécessaire, la compilation JIT. Dans .NET Native, plusieurs de ces services sont soit inutiles (la compilation JIT), soit résolus au moment de la génération, puis incorporés dans l'assembly de l'application. Les services restants, le plus important étant le garbage collection, sont inclus dans un runtime refactorisé beaucoup plus petit nommé mrt100_app.dll.  
+-   NGEN continue à s’appuyer sur le common language runtime complet pour des services tels que le chargement d’assemblys, la communication à distance, l’interopérabilité, la gestion de la mémoire, le garbage collection et, si nécessaire, la compilation JIT. Dans .NET Native, plusieurs de ces services sont soit inutiles (la compilation JIT), soit résolus au moment de la génération, puis incorporés dans l'assembly de l'application. Les services restants, le plus important étant le garbage collection, sont inclus dans un runtime refactorisé beaucoup plus petit nommé mrt100_app.dll.  
   
 -   Les images NGEN ont tendance à être fragiles. Par exemple, un correctif ou une modification apportée à une dépendance requièrent généralement que les assemblys qui l'utilisent soient également régénérés par NGEN. Ceci est particulièrement vrai pour les assemblys système de la bibliothèque de classes .NET Framework. À l'inverse, .NET Native permet aux applications d'être fournies indépendamment les unes des autres.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Métadonnées et composants autodescriptifs](../../../docs/standard/metadata-and-self-describing-components.md)
 - [Inside .NET Native (vidéo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Réflexion et .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

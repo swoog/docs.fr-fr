@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Imprimer des graphiques dans les Windows Forms'
+title: 'Procédure : imprimer des graphismes dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167204"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Procédure : Imprimer des graphiques dans les Windows Forms
+# <a name="how-to-print-graphics-in-windows-forms"></a>Procédure : imprimer des graphismes dans Windows Forms
 Souvent, vous devez imprimer des graphiques dans votre application basée sur Windows. Le <xref:System.Drawing.Graphics> classe fournit des méthodes pour dessiner des objets sur un appareil, tel qu’un écran ou une imprimante.  
   
 ### <a name="to-print-graphics"></a>Pour imprimer des graphiques  
@@ -67,6 +67,7 @@ Souvent, vous devez imprimer des graphiques dans votre application basée sur Wi
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
+- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)

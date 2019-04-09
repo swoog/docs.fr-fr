@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139527"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considérations supplémentaires sur la sécurité des Windows Forms
-Les paramètres de sécurité de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] peuvent conduire votre application à s’exécuter différemment dans un environnement à confiance partielle que sur votre ordinateur local. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restreint l’accès aux ressources locales critiques, comme le système de fichiers, le réseau et les API non managées, entre autres choses. Les paramètres de sécurité affectent la possibilité d’appeler l’API Windows de Microsoft ou d’autres API qui ne peut pas être vérifié par le système de sécurité. La sécurité affecte également les autres aspects de votre application, y compris l’accès aux fichiers et aux données, ainsi que l’impression. Pour plus d’informations sur l’accès aux fichiers et aux données dans un environnement à confiance partielle, consultez [Accès plus sécurisé aux fichiers et aux données dans les Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Pour plus d’informations sur l’impression dans un environnement à confiance partielle, consultez [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] paramètres de sécurité peuvent conduire votre application à s’exécuter différemment dans un environnement de confiance partielle sur votre ordinateur local. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restreint l’accès aux ressources locales critiques, comme le système de fichiers, le réseau et les API non managées, entre autres choses. Les paramètres de sécurité affectent la possibilité d’appeler l’API Windows de Microsoft ou d’autres API qui ne peut pas être vérifié par le système de sécurité. La sécurité affecte également les autres aspects de votre application, y compris l’accès aux fichiers et aux données, ainsi que l’impression. Pour plus d’informations sur l’accès aux fichiers et aux données dans un environnement à confiance partielle, consultez [Accès plus sécurisé aux fichiers et aux données dans les Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Pour plus d’informations sur l’impression dans un environnement à confiance partielle, consultez [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  Les sections suivantes expliquent comment utiliser le Presse-papiers, effectuer une manipulation de fenêtre et appeler l’API de Windows à partir d’applications qui sont exécutent dans un environnement de confiance partielle.  
   
@@ -52,7 +52,7 @@ Les paramètres de sécurité de [!INCLUDE[dnprdnshort](../../../includes/dnprdn
 |<xref:System.Windows.Forms.Control>|-Obtention de la <xref:System.Windows.Forms.Control.Parent%2A> propriété.<br />-   Définition de la propriété `Region`.<br />-Appel de la <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> et <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, ou <xref:System.Windows.Forms.Control.SetTopLevel%2A> (méthode).<br />-Appel de la <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> méthode si le contrôle retourné n’est pas un enfant du contrôle appelant.<br />-   Modifier le focus du contrôle à l’intérieur d’un contrôle conteneur.|  
 |<xref:System.Windows.Forms.Cursor>|-   Définition de la propriété <xref:System.Windows.Forms.Cursor.Clip%2A>.<br />-Appel de la <xref:System.Windows.Forms.Control.Hide%2A> (méthode).|  
 |<xref:System.Windows.Forms.DataGrid>|-Appel de la <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> (méthode).|  
-|<xref:System.Windows.Forms.Form>|-Obtention de la <xref:System.Windows.Forms.Form.ActiveForm%2A> ou <xref:System.Windows.Forms.Form.MdiParent%2A> propriété.<br />-Définition de la <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, ou <xref:System.Windows.Forms.Form.TopMost%2A> propriété.<br />-Définition de la <xref:System.Windows.Forms.Form.Opacity%2A> propriété inférieure à 50 %.<br />-Définition de la <xref:System.Windows.Forms.Form.WindowState%2A> propriété <xref:System.Windows.Forms.FormWindowState.Minimized> par programmation.<br />-Appel de la <xref:System.Windows.Forms.Form.Activate%2A> (méthode).<br />-À l’aide de la <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, et <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> valeurs d’énumération.|  
+|<xref:System.Windows.Forms.Form>|-Obtention de la <xref:System.Windows.Forms.Form.ActiveForm%2A> ou <xref:System.Windows.Forms.Form.MdiParent%2A> propriété.<br />-Définition de la <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, ou <xref:System.Windows.Forms.Form.TopMost%2A> propriété.<br />-Définition de la <xref:System.Windows.Forms.Form.Opacity%2A> propriété inférieure à 50 %.<br />-Définition de la <xref:System.Windows.Forms.Form.WindowState%2A> propriété <xref:System.Windows.Forms.FormWindowState.Minimized> par programmation.<br />-Appel de la <xref:System.Windows.Forms.Form.Activate%2A> (méthode).<br />-À l’aide de la <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, et <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> valeurs d’énumération.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-À l’aide de la <xref:System.Windows.Forms.NotifyIcon> composant est complètement restreint.|  
   
  Le <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> valeur restreint les actions répertoriées dans le tableau suivant, en outre à des restrictions imposées par le <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> valeur.  
@@ -89,8 +89,9 @@ Les paramètres de sécurité de [!INCLUDE[dnprdnshort](../../../includes/dnprdn
  L’autorisation d’appeler du code non managé permet à une application d’exécuter pratiquement n’importe quoi. Par conséquent, l’autorisation d’appeler du code non managé doit uniquement être accordée pour les applications qui proviennent d’une source approuvée. Selon l’application, la fonctionnalité qui effectue l’appel au code non managé peut également être facultative ou activée uniquement dans l’environnement à confiance totale. Pour plus d’informations sur les autorisations, consultez [Autorisations dangereuses et administration de stratégie](../misc/dangerous-permissions-and-policy-administration.md). Pour plus d’informations sur l’élévation d’autorisations, consultez [Administration de la stratégie de sécurité générale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Accès plus sécurisé aux fichiers et aux données dans les Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Vue d’ensemble de la sécurité dans les Windows Forms](security-in-windows-forms-overview.md)
-- [Sécurité de Windows Forms](windows-forms-security.md)
+- [Vue d'ensemble de la sécurité dans les Windows Forms](security-in-windows-forms-overview.md)
+- [Sécurité des Windows Forms](windows-forms-security.md)
 - [Sécurisation des applications ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

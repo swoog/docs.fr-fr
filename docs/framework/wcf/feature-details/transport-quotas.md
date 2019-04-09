@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174627"
 ---
 # <a name="transport-quotas"></a>Quotas de transport
 Les quotas de transport sont un mécanisme stratégique permettant de déterminer lorsqu'une connexion consomme trop de ressources. Un quota est une limite imposée qui empêche l'utilisation de ressources supplémentaires une fois la valeur du quota dépassée. Les quotas de transport permettent de lutter contre les attaques par déni de service malveillantes ou non intentionnelles.  
@@ -30,7 +30,7 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
   
  Chaque paramètre de quota possède un type, une valeur minimale et une valeur par défaut. La valeur maximale d'un quota est limitée par son type. En raison des limites de l'ordinateur, il n'est pas toujours possible d'affecter à un quota sa valeur maximale.  
   
-|Name|Type|Valeur<br /><br /> par défaut|Par défaut<br /><br /> par défaut|Description|  
+|Nom|Type|Valeur<br /><br /> valeur|Par défaut<br /><br /> valeur|Description|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 graduation|5 s|Durée maximale à attendre pour qu'une connexion envoie le préambule pendant la lecture initiale. Ces données sont reçues avant que l'authentification ait lieu. Ce paramètre est généralement bien inférieur à la valeur de quota `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une connexion se ferme avant que le transport ne lève une exception.|  
@@ -43,23 +43,23 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 |`MaxOutboundConnectionsPerEndpoint`|Entier|1|10|Nombre maximal de connexions sortantes qui peuvent être associées à un point de terminaison particulier.<br /><br /> Ce paramètre ne s'applique qu'aux connexions en groupe.|  
 |`MaxOutputDelay`|TimeSpan|0|200 ms|Durée maximale à attendre après une opération d'envoi pour traiter par lot des messages supplémentaires dans une opération unique. Les messages sont envoyés plus tôt si la mémoire tampon du transport sous-jacent est pleine. L'envoi de messages supplémentaires ne réinitialise pas la période d'attente.|  
 |`MaxPendingAccepts`|Entier|1|1|Nombre maximal de canaux que l'écouteur peut mettre en attente d'acceptation.<br /><br /> Il existe un intervalle entre la fin de l'acceptation en cours et le début d'une nouvelle acceptation. Augmenter la taille de cette collection peut empêcher la suppression des clients qui se connectent pendant cet intervalle.|  
-|`MaxPendingConnections`|Entier|1|10|Nombre maximal de connexions que l'écouteur peut mettre en attente d'acceptation par l'application. Lorsque cette valeur de quota est dépassée, les nouvelles connexions entrantes sont supprimées plutôt que mises en attente d’acceptation.<br /><br /> Les fonctionnalités de connexion telles que la sécurité des messages peuvent entraîner qu'un client ouvre plusieurs connexions. Les administrateurs de service doivent prendre en compte ces connexions supplémentaires lors de la définition de cette valeur de quota.|  
+|`MaxPendingConnections`|Entier|1|10|Nombre maximal de connexions que l'écouteur peut mettre en attente d'acceptation par l'application. Lorsque cette valeur de quota est dépassée, les nouvelles connexions entrantes sont supprimées plutôt que mises en attente d'acceptation.<br /><br /> Les fonctionnalités de connexion telles que la sécurité des messages peuvent entraîner qu'un client ouvre plusieurs connexions. Les administrateurs de service doivent prendre en compte ces connexions supplémentaires lors de la définition de cette valeur de quota.|  
 |`MaxReceivedMessageSize`|Longue|1|64 Ko|Taille maximale, en octets, d'un message reçu (en-têtes compris) avant que le transport ne lève une exception.|  
 |`OpenTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une connexion soit établie avant que le transport ne lève une exception.|  
 |`ReceiveTimeout`|TimeSpan|0|10 minutes|Durée maximale à attendre pour qu'une opération de lecture se termine avant que le transport ne lève une exception.|  
 |`SendTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une opération d'écriture se termine avant que le transport ne lève une exception.|  
   
- Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections` en cas de définition par la liaison ou la configuration. Seul l'élément de liaison autorise la définition de ces valeurs de quota une par une. Le quota de transport `MaxConnections` a les mêmes valeurs minimale et par défaut.  
+ Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections` en cas de définition par la liaison ou la configuration. Seul l’élément de liaison autorise la définition de ces valeurs de quota une par une. Le quota de transport `MaxConnections` a les mêmes valeurs minimale et par défaut.  
   
 ## <a name="setting-transport-quotas"></a>Définition des quotas de transport  
- Les quotas de transport sont définis au moyen de l'élément de liaison de transport, la liaison de transport, la configuration de l'application ou la stratégie hôte. Ce document n'aborde pas le paramétrage des transports par la stratégie hôte. Consultez la documentation relative au transport sous-jacent pour découvrir les paramètres des quotas de stratégie hôte. Le [configuration de HTTP et HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) rubrique décrit les paramètres de quota pour le pilote Http.sys. Recherchez plus d'informations sur la configuration des limites de Windows pour des connexions HTTP, TCP/IP et de canal nommé dans la Base de connaissances Microsoft.  
+ Les quotas de transport sont définis au moyen de l’élément de liaison de transport, la liaison de transport, la configuration de l’application ou la stratégie hôte. Ce document n'aborde pas le paramétrage des transports par la stratégie hôte. Consultez la documentation relative au transport sous-jacent pour découvrir les paramètres des quotas de stratégie hôte. Le [configuration de HTTP et HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) rubrique décrit les paramètres de quota pour le pilote Http.sys. Recherchez plus d'informations sur la configuration des limites de Windows pour des connexions HTTP, TCP/IP et de canal nommé dans la Base de connaissances Microsoft.  
   
  D'autres types de quotas s'appliquent indirectement aux transports. L'encodeur de message que le transport utilise pour transformer un message en octets peut avoir ses propres paramètres de quota. Toutefois, ces quotas sont indépendants du type de transport utilisé.  
   
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Contrôle des quotas de transport depuis l’élément de liaison  
- La définition des quotas de transport au moyen de l'élément de liaison offre le maximum de souplesse pour contrôler le comportement du transport. Les délais par défaut pour les opérations de fermeture, d’ouverture, de réception et d’envoi sont issus de la liaison lorsqu’un canal est construit.  
+ La définition des quotas de transport au moyen de l’élément de liaison offre le maximum de souplesse pour contrôler le comportement du transport. Les délais par défaut pour les opérations de fermeture, d'ouverture, de réception et d'envoi sont issus de la liaison lorsqu'un canal est construit.  
   
-|Name|HTTP|TCP/IP|Canal nommé|  
+|Nom|HTTP|TCP/IP|Canal nommé|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -81,7 +81,7 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Contrôle des quotas de transport depuis la liaison  
  La définition des quotas de transport au moyen de la liaison permet de choisir parmi un ensemble de quotas simplifié tout en conservant l’accès aux valeurs de quota les plus courantes.  
   
-|Name|HTTP|TCP/IP|Canal nommé|  
+|Nom|HTTP|TCP/IP|Canal nommé|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -105,9 +105,10 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 2.  Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Contrôle des quotas de transport depuis la configuration  
- La configuration de l'application peut définir les mêmes quotas de transport qu'en accédant directement aux propriétés d'une liaison. Dans les fichiers de configuration, le nom d'un quota de transport commence toujours par une minuscule. Par exemple, la propriété `CloseTimeout` d’une liaison correspond au paramètre `closeTimeout` dans la configuration et la propriété `MaxConnections` d’une liaison correspond au paramètre `maxConnections` dans la configuration.  
+ La configuration de l’application peut définir les mêmes quotas de transport qu’en accédant directement aux propriétés d’une liaison. Dans les fichiers de configuration, le nom d'un quota de transport commence toujours par une minuscule. Par exemple, la propriété `CloseTimeout` d’une liaison correspond au paramètre `closeTimeout` dans la configuration et la propriété `MaxConnections` d’une liaison correspond au paramètre `maxConnections` dans la configuration.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

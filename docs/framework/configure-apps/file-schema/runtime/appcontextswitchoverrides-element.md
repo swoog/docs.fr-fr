@@ -1,5 +1,5 @@
 ---
-title: Élément <AppContextSwitchOverrides>
+title: <AppContextSwitchOverrides> Élément
 ms.custom: updateeachrelease
 ms.date: 03/07/2019
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136459"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > élément
 Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppContext> pour fournir un mécanisme d’annulation d’abonnement aux nouvelles fonctionnalités.  
@@ -65,10 +65,10 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |Nom du commutateur|Description|Introduite|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Détermine si Windows Presentation Foundation utilise hérité d’un algorithme pour contrôler la disposition. Pour plus d’informations, consultez [Atténuation : Disposition WPF](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
-|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Contrôle si l’algorithme par défaut utilisé pour la signature des parties d’un package par PackageDigitalSignatureManager est SHA1 ou SHA256.<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.1|
+|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Contrôle si l’algorithme par défaut utilisé pour la signature des parties d’un package par PackageDigitalSignatureManager est SHA1 ou SHA256.<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Lorsque la valeur `false`, permet le débogage de projets de workflow basé sur XAML avec Visual Studio lorsque FIPS est activé. Sans cela, un <xref:System.NullReferenceException> est levée dans les appels aux méthodes dans l’assembly System.Activities.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Détermine si la somme de contrôle pour une instance de flux de travail dans le débogueur utilise MD5 ou SHA1. | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Détermine si le hachage de somme de contrôle de flux de travail utilise l’algorithme SHA1 présenté comme la valeur par défaut dans .NET Framework 4.7 (`true`), ou qu’elle utilise l’algorithme SHA256 par défaut introduit en tant que la valeur par défaut dans .NET Framework 4.8 (`false`).<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Détermine si le hachage de somme de contrôle de flux de travail utilise l’algorithme SHA1 présenté comme la valeur par défaut dans .NET Framework 4.7 (`true`), ou qu’elle utilise l’algorithme SHA256 par défaut introduit en tant que la valeur par défaut dans .NET Framework 4.8 (`false`).<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Contrôle si les traces de pile obtenir lors de l’utilisation des fichiers PDB portables peut inclure des informations de fichier et de ligne source. `false` Pour inclure les informations de fichier et de ligne source ; Sinon, `true`.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Contrôles si le <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> méthode lève une exception quand un <xref:System.Drawing.Icon> objet comporte des cadres PNG. Pour plus d’informations, consultez [Atténuation : Des cadres PNG dans les objets Icon](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Détermine si <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> les objets sont correctement supprimés lors de l’ajout à la collection par le <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> (méthode). `true` Pour conserver le comportement hérité ; `false` à dispose de tous les objets de polices privées. |.NET Framework 4.7.2|
@@ -96,8 +96,8 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Contrôles si le <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> constructeur définit le nouvel objet <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> propriété avec une référence d’objet existant. Pour plus d’informations, consultez [Atténuation : Constructeur ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Contrôles si la tentative de réutiliser une <xref:System.Security.Cryptography.AesCryptoServiceProvider> déchiffreur lève un <xref:System.Security.Cryptography.CryptographicException>. Pour plus d’informations, consultez [le déchiffreur AesCryptoServiceProvider fournit une transformation réutilisable](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Contrôles si la valeur de la [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) propriété est un [IntPtr](xref:System.IntPtr) que représente l’emplacement de mémoire d’une fenêtre Gérer, ou s’il s’agit d’un handle de fenêtre (HWND). Pour plus d’informations, consultez [Atténuation : CspParameters.ParentWindowHandle attend un HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Détermine si la valeur par défaut pour certaines opérations SignedCMS est SHA1 ou SHA256.<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Détermine si la valeur par défaut pour certaines opérations SignedXML est SHA1 ou SHA256.<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Détermine si la valeur par défaut pour certaines opérations SignedCMS est SHA1 ou SHA256.<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Détermine si la valeur par défaut pour certaines opérations SignedXML est SHA1 ou SHA256.<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Détermine si le `TransportWithMessageCredential` mode de sécurité permet de messages avec un en-tête « to ». Il s’agit d’une option d’activation. Pour plus d’informations, consultez [modifications du Runtime dans .NET Framework 4.6.1](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Contrôles si le <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> constructeur lève un <xref:System.ArgumentException> si un des éléments est `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Détermine que si la tentative d’utilisation X509 certificats avec un fournisseur de stockage de clés CSG LÈVENT une exception. Pour plus d’informations, consultez [sécurité du transport WCF prend en charge les certificats stockés à l’aide de CNG](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
@@ -105,8 +105,8 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Gère les blocages qui résultent de restriction des instances d’un service réentrant à un seul thread d’exécution à la fois.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Avec `Switch.System.Net.DontEnableSchUseStrongCrypto`, détermine si la sécurité des messages WCF utilise TLS 1.1 et TLS 1.2.|.NET Framework 4.7 |    
 |`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|La valeur `false` définit la configuration par défaut pour permettre au système d’exploitation à choisir le protocole. La valeur `true` définit la valeur par défaut pour le protocole le plus élevé disponible. (Également disponible sur la branche des précédentes versions de framework de maintenance)|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Détermine si l’algorithme pour les messages MSMQ dans WCF de signature des messages de par défaut est SHA1 ou SHA256.<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Contrôle si WCF utilise un SHA1 ou un hachage SHA256 pour générer des noms aléatoires pour les canaux nommés.<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Détermine si l’algorithme pour les messages MSMQ dans WCF de signature des messages de par défaut est SHA1 ou SHA256.<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Contrôle si WCF utilise un SHA1 ou un hachage SHA256 pour générer des noms aléatoires pour les canaux nommés.<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Indique s’il faut lever une [NullReferenceException](xref:System.NullReferenceException) lorsque le message d’exception est null.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Contrôle si les exceptions levées au démarrage du service sont propagées à l’appelant de la <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> (méthode).|.NET Framework 4.7.1|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|Détermine si certains caractères encodés en pourcentage qui étaient parfois décodés sont demeurent désormais systématiquement encodés. Si `true`, ils sont décodés ; sinon, `false`.|.NET Framework 4.7.2|
@@ -122,7 +122,7 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|Détermine si le <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> propriété retourne le contrôle de code source lorsque l’utilisateur ouvre le menu à partir d’une liste imbriquée <xref:System.Windows.Forms.ToolStripMenuItem> contrôle. `true` pour retourner `null`, le comportement hérité ; `false` pour retourner le contrôle de code source.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|Contrôle si la prise en charge d’appel info-bulle est désactivé (`true`) ou activée (`false`). L’activation de prise en charge des info-bulle appel nécessite également les fonctionnalités d’accessibilité hérités définies par `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, et `Switch.UseLegacyAccessibilityFeatures.3` tous être désactivée (valeur `false`).|.NET framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Détermine si un texte facultatif `WM_POINTER`-pile tactile/de stylet en est activé dans les applications WPF. Pour plus d’informations, consultez [Atténuation : Pointeur tactile et prise en charge du stylet](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
-|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|Détermine si l’algorithme de hachage par défaut utilisé pour les sommes de contrôle est SHA256 (`false`) ou SHA1 (`true`).<br>Microsoft recommande d’en raison de problèmes de collision avec SHA1, SHA256.|.NET Framework 4.7.2|
+|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|Détermine si l’algorithme de hachage par défaut utilisé pour les sommes de contrôle est SHA256 (`false`) ou SHA1 (`true`).<br>En raison de problèmes de collision avec SHA-1, Microsoft recommande SHA-256.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Détermine si un héritage [NullReferenceException](xref:System.NullReferenceException) est levée au lieu de l’exception qui indique plus précisément la cause de l’exception (comme un [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) ou un [ FileNotFoundException](xref:System.IO.FileNotFoundException). Il est destiné à utiliser par le code qui dépend de la gestion de la [NullReferenceException](xref:System.NullReferenceException). | .NET Framework 4.7 |
 |`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|Les contrôles si le hachage de somme de contrôle des fichiers XOML dans le projet de flux de travail génère utilisent l’algorithme MD5 (`true`), ou qu’ils utilisent l’algorithme SHA256 présenté comme la valeur par défaut dans .NET Framework 4.8.<br>En raison de problèmes de collision avec MD5, Microsoft vous recommande de SHA256.|.NET framework 4.8|
 |`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|Détermine si le hachage de somme de contrôle par le service SqlTrackingService utilise l’algorithme MD5 (`true`) pour les chaînes de mise en cache, ou qu’elle utilise l’algorithme SHA256 présenté comme la valeur par défaut dans .NET Framework 4.8.<br>En raison de problèmes de collision avec MD5, Microsoft vous recommande de SHA256.|.NET framework 4.8|
@@ -134,7 +134,7 @@ Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppCo
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Contrôle si les séquences de touches vides dans les clés composées sont ignorés par la validation de schéma XSD. Pour plus d’informations, consultez [Atténuation : Validation de schéma XML](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Au lieu d’ajouter un `AppContextSwitchOverrides` élément à un fichier de configuration d’application, vous pouvez également définir les commutateurs par programmation en appelant le `static` (en C#) ou `Shared` (en Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (méthode).  
+>  Au lieu d’ajouter un `AppContextSwitchOverrides` élément à un fichier de configuration d’application, vous pouvez également définir les commutateurs par programmation en appelant le `static` (en c#) ou `Shared` (en Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (méthode).  
   
  Les développeurs de bibliothèque peuvent également définir des commutateurs pour autoriser les appelants à refuser la fonctionnalité modifiée introduite dans les versions ultérieures de leurs bibliothèques. Pour plus d'informations, consultez la classe <xref:System.AppContext>.  
   
@@ -175,6 +175,7 @@ L’exemple suivant utilise le `<add>` élément à ajouter deux paramètres à 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<runtime > élément](runtime-element.md)
-- [\<configuration>, élément](../configuration-element.md)
+- [\<configuration > élément](../configuration-element.md)

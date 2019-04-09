@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145624"
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
 D’un service *identité de point de terminaison* est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre *anti-hameçonnage* en empêchant un client soit redirigé à un point de terminaison hébergé par un service malveillant.  
@@ -54,13 +54,9 @@ D’un service *identité de point de terminaison* est une valeur générée à 
   
 ## <a name="using-the-identity-element-in-configuration"></a>À l’aide de la \<identité > élément de Configuration  
  Si vous remplacez le type d’information d’identification du client dans la liaison présentée précédemment par `Certificate,`, alors le fichier WSDL généré contient un certificat X.509 sérialisé en base 64 pour la valeur d’identité, tel qu’indiqué dans le code suivant. Il s'agit de la valeur par défaut pour tous les types d'informations d'identification du client autres que Windows.  
-  
-  
-  
+
  Vous pouvez modifier la valeur de l’identité de service par défaut ou le type de l’identité à l’aide de la `<identity>` élément de configuration ou en définissant l’identité dans le code. Le code de configuration suivant affecte à une identité DNS (Domain Name System) la valeur `contoso.com`.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>Définition de l'identité par programme  
  Votre service ne devra pas explicitement spécifier une identité, étant donné que WCF il détermine automatiquement. Cependant, WCF vous permet de spécifier une identité sur un point de terminaison, si nécessaire. Le code suivant ajoute un point de terminaison de service avec une identité DNS spécifique.  
   
@@ -69,16 +65,12 @@ D’un service *identité de point de terminaison* est une valeur générée à 
   
 ## <a name="specifying-identity-at-the-client"></a>Spécification de l'identité au client  
  Au moment du design, un développeur client utilise généralement le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer la configuration du client. Le fichier de configuration généré (prévu pour une utilisation par le client) contient l'identité du serveur. Par exemple, le code suivant est généré à partir d'un service qui spécifie une identité DNS, comme illustré dans l'exemple précédent. Notez que la valeur de l'identité du point de terminaison du client correspond à celle du service. Dans ce cas, lorsque le client reçoit les informations d'identification Windows (Kerberos) pour le service, il s'attend à ce que la valeur soit `contoso.com`.  
-  
-  
-  
+
  Si, au lieu de Windows, le service spécifie un certificat pour le type d'information d'identification du client, alors, la propriété DNS du certificat est supposée être la valeur `contoso.com`. (Ou si la propriété DNS est `null`, le nom de sujet du certificat doit être `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Utilisation d'une valeur spécifique pour l'identité  
  Le fichier de configuration client suivant illustre comment l'identité du service est supposée être une valeur spécifique. Dans l'exemple suivant, le client peut communiquer avec deux points de terminaison. Le premier est identifié par une empreinte numérique de certificat et le second par une clé RSA de certificat. Autrement dit, il s'agit d'un certificat qui contient uniquement une paire clé publique/clé privée, mais n'est pas publié par une autorité approuvée.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>Contrôle d'identité au moment de l'exécution  
  Au moment du design, un développeur d'applications détermine l'identité du serveur via ses métadonnées. Pendant l'exécution, le contrôle d'identité est effectué avant d'appeler un point de terminaison sur le service.  
   
@@ -113,11 +105,12 @@ D’un service *identité de point de terminaison* est une valeur générée à 
  Pour plus d’informations sur la pile de liaison éléments correctement pour une liaison personnalisée, consultez [Creating liaisons](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Pour plus d’informations sur la création d’une liaison personnalisée avec le <xref:System.ServiceModel.Channels.SecurityBindingElement>, consultez [Comment : Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Guide pratique pour Créer un vérificateur d’identité Client personnalisés](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procédure : créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Procédure : créer un vérificateur d’identité du client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Sélection d'un type d'informations d'identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Création de liaisons définies par l’utilisateur](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Procédure : récupérer l’empreinte d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

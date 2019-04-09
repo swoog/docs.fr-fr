@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133820"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Événements ETW d'analyse de ressource de domaine d'application
 <a name="top"></a> Ces événements fournissent des informations de diagnostic détaillées sur l'état d'un domaine d'application. Vous pouvez utiliser ces événements ou la fonctionnalité ARM d'analyse de ressource de domaine d'application pour obtenir les mêmes informations.  
@@ -37,8 +37,8 @@ ms.locfileid: "54689833"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informatif(4)|  
-|`ThreadingKeyword` (0x10000)|Informatif(4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informatif(4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54689833"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informatif(4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54689833"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informatif(4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -114,8 +114,8 @@ ms.locfileid: "54689833"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informatif(4)|  
-|`ThreadingKeyword` (0x10000)|Informatif(4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informatif(4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -139,8 +139,8 @@ ms.locfileid: "54689833"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementKeyword` (0x800)|Informatif(4)|  
-|`ThreadingKeyword` (0x10000)|Informatif(4)|  
+|`AppDomainResourceManagementKeyword` (0 x 800)|Informatif(4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -157,4 +157,5 @@ ms.locfileid: "54689833"
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

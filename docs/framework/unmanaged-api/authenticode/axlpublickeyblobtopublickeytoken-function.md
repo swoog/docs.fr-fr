@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37957931f9d1e2f8da44f70e5b99d3544bf0ae4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b2535441da173ee13653c68f25039fd1431261a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147431"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken, fonction
 Calcule le jeton de clé publique de nom fort à partir d'un format CSP PUBLICKEYBLOB.  
@@ -37,7 +37,8 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [en sortie] Un pointeur vers WCHAR * pour recevoir le hachage de clé publique codé au format hexadécimal.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` si la fonction réussit, sinon `S_FALSE`.  
+ `S_OK` Si la fonction aboutit ; sinon `S_FALSE`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

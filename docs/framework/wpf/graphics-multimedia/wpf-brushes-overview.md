@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132208"
 ---
 # <a name="wpf-brushes-overview"></a>Vue d'ensemble des pinceaux WPF
 Tous les éléments visibles sur votre écran sont visible, car il a été peint par un pinceau. Par exemple, un pinceau est utilisé pour décrire l’arrière-plan d’un bouton, le premier plan du texte et le remplissage d’une forme. Cette rubrique présente les concepts de la peinture avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceaux et fournit des exemples. Les pinceaux permettent de peindre des objets de l’[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aussi bien avec de simples couleurs unies qu’avec des ensembles complexes de modèles et d’images.  
@@ -161,13 +161,14 @@ Rectangle peint avec un VisualBrush
  Pour plus d’informations sur les raisons <xref:System.Windows.Media.VisualBrush> objets ne peut pas être figé, consultez le <xref:System.Windows.Media.VisualBrush> page de type.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
-- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
-- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
-- [Pinceaux, exemple](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
+- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
+- [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
+- [Exemples de pinceaux](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049) (Exemple de VisualBrush)
-- [Rubriques de guide pratique](brushes-how-to-topics.md)
+- [Exemple de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Rubriques Comment](brushes-how-to-topics.md)
 - [Autres recommandations relatives aux performances](../advanced/optimizing-performance-other-recommendations.md)

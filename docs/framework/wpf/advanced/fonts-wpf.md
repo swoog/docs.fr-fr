@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169245"
 ---
 # <a name="fonts-wpf"></a>Polices (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge la présentation enrichie du texte à l’aide [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices. Un exemple de pack de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices est inclus avec le [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -20,9 +20,10 @@ ms.locfileid: "57360977"
  [Fonctionnalités des polices OpenType](opentype-font-features.md)  
  [Empaquetage de polices avec des applications](packaging-fonts-with-applications.md)  
  [Exemple de pack de polices OpenType](sample-opentype-font-pack.md)  
- [Rubriques de guide pratique](fonts-how-to-topics.md)  
+ [Rubriques Comment](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [Documents dans WPF](documents-in-wpf.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Tâche 3 : Créer les volets Toolbox et PropertyGrid'
+title: 'Tâche 3 : créer les volets Toolbox et PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175043"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tâche 3 : Créer les volets Toolbox et PropertyGrid
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tâche 3 : créer les volets Toolbox et PropertyGrid
 Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid** volets et les ajouter à la réhébergé [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
  Pour référence, le code qui doit être dans le fichier MainWindow.xaml.cs après avoir effectué les trois tâches dans le [réhébergement du Concepteur de flux de travail](rehosting-the-workflow-designer.md) série de rubriques est fourni à la fin de cette rubrique.  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Réhébergement du concepteur de flux de travail](rehosting-the-workflow-designer.md)
-- [Tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tâche 2 : Héberger le Concepteur de flux de travail](task-2-host-the-workflow-designer.md)
+
+- [Réhébergement du Workflow Designer](rehosting-the-workflow-designer.md)
+- [Tâche 1 : créer une application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tâche 2 : héberger le concepteur de flux de travail](task-2-host-the-workflow-designer.md)

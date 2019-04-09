@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Supprimer des éléments dans des contrôles DomainUpDown Windows Forms'
+title: 'Procédure : supprimer des éléments dans des contrôles DomainUpDown Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: 58c93f478414d24c2fdda0f9662936a8b520e381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131402"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procédure : Supprimer des éléments dans des contrôles DomainUpDown Windows Forms
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procédure : supprimer des éléments dans des contrôles DomainUpDown Windows Forms
 Vous pouvez supprimer des éléments de formulaires Windows <xref:System.Windows.Forms.DomainUpDown> contrôle en appelant le <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> ou <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> méthode de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe. Le <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> méthode supprime un élément spécifique, tandis que le <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> méthode supprime un élément par sa position.  
   
 ### <a name="to-remove-an-item"></a>Pour supprimer un élément  
@@ -35,7 +35,7 @@ Vous pouvez supprimer des éléments de formulaires Windows <xref:System.Windows
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     ou  
+     - ou -  
   
 -   Utilisez le <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> méthode pour supprimer un élément par sa position.  
   
@@ -55,6 +55,7 @@ Vous pouvez supprimer des éléments de formulaires Windows <xref:System.Windows
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>

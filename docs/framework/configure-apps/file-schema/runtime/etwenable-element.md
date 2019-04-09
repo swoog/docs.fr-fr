@@ -1,5 +1,5 @@
 ---
-title: Élément <etwEnable>
+title: <etwEnable> Élément
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135068"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > élément
 Indique s’il faut activer le Suivi d’événements pour Windows (ETW) pour les événements du common language runtime.  
@@ -38,7 +38,7 @@ Indique s’il faut activer le Suivi d’événements pour Windows (ETW) pour le
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |true|Activer ETW. Il s’agit de la valeur par défaut pour les versions d’à partir de Windows avec les systèmes d’exploitation Windows Vista et Windows Server 2008.|  
 |False|Désactiver ETW. Il s’agit de la valeur par défaut pour les versions antérieures de Windows.|  
@@ -71,6 +71,7 @@ Indique s’il faut activer le Suivi d’événements pour Windows (ETW) pour le
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+
+- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Contrôle de l’enregistrement .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Contrôle de l'enregistrement .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

@@ -2,12 +2,12 @@
 title: clé d'entité
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140112"
 ---
 # <a name="entity-key"></a>clé d'entité
 Un *clé d’entité* est un [propriété](../../../../docs/framework/data/adonet/property.md) ou un jeu de propriétés d’un [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) qui servent à déterminer l’identité. Les propriétés qui composent une clé d'entité sont choisies au moment du design. Les valeurs des propriétés de clé d’entité doivent identifier de manière unique une instance de type d’entité dans un [jeu d’entités](../../../../docs/framework/data/adonet/entity-set.md) en cours d’exécution. Les propriétés qui composent une clé d'entité doivent être choisies pour garantir l'unicité des instances dans un jeu d'entités.  
@@ -40,5 +40,6 @@ Un *clé d’entité* est un [propriété](../../../../docs/framework/data/adone
  L'utilisation de `Name` et d'`Address` pour la clé d'entité est un choix raisonnable, car il est improbable que deux auteurs du même nom habitent à la même adresse. Toutefois, ce choix pour une clé d'entité ne garantit pas vraiment l'unicité des clés d'entité dans un jeu d'entités. Il est recommandé dans ce cas d'ajouter une propriété, telle qu'`AuthorId`, qui peut être utilisée pour identifier un auteur de façon unique.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Concepts clés d'Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

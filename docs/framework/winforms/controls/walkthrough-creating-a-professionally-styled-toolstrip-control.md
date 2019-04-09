@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Création d’un contrôle ToolStrip de style professionnel'
+title: 'Procédure pas à pas : création d’un contrôle ToolStrip de style professionnel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115789"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procédure pas à pas : Création d’un contrôle ToolStrip de style professionnel
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procédure pas à pas : création d’un contrôle ToolStrip de style professionnel
 Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un aspect professionnel et un comportement de contrôles en écrivant votre propre classe dérivée de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.  
   
  Cette procédure pas à pas montre comment utiliser <xref:System.Windows.Forms.ToolStrip> contrôles pour créer un contrôle composite qui ressemble à la **volet de Navigation** fourni par Microsoft® Outlook®. Les tâches suivantes sont illustrées dans cette procédure pas à pas :  
@@ -62,9 +62,9 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
   
 2.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.ToolStrip> propriétés de contrôle conformément au tableau suivant.  
   
-    |Propriété|Valeur|  
+    |Propriété|Value|  
     |--------------|-----------|  
-    |Name|`stackStrip`|  
+    |Nom|`stackStrip`|  
     |CanOverflow|`false`|  
     |Station d' accueil|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Police|`Tahoma, 10pt, style=Bold`|  
@@ -77,9 +77,9 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
   
 4.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.ToolStripButton> propriétés de contrôle conformément au tableau suivant.  
   
-    |Propriété|Valeur|  
+    |Propriété|Value|  
     |--------------|-----------|  
-    |Name|`mailStackButton`|  
+    |Nom|`mailStackButton`|  
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |Propriété DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -88,7 +88,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
     |ImageTransparentColor|`238, 238, 238`|  
     |Marge|`0, 0, 0, 0`|  
     |Padding|`3, 3, 3, 3`|  
-    |Texte|**Messagerie**|  
+    |Texte|**Courrier**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Répétez l’étape 7 pour les trois autres <xref:System.Windows.Forms.ToolStripButton> contrôles.  
@@ -185,8 +185,9 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
 -   Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d'informations, voir [Procédure : Créer un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
-- [Guide pratique pour Fournir des éléments de Menu Standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Procédure : fournir des éléments de menu standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)

@@ -2,31 +2,31 @@
 title: Sécurisation des applications ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149381"
 ---
 # <a name="securing-adonet-applications"></a>Sécurisation des applications ADO.NET
-L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter les pièges de codage courants, tels que la non validation des entrées d'utilisateur. Une application qui accède à des données présente de nombreux points de défaillance possibles qu'un agresseur peut exploiter pour extraire, manipuler ou détruire des données sensibles. Il est donc important de comprendre tous les aspects de la sécurité, depuis le processus de modélisation de menace durant la phase de conception de votre application, jusqu'à son déploiement éventuel et sa maintenance en cours.  
+L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter les pièges de codage courants, tels que la non validation des entrées d'utilisateur. Une application qui accède à des données présente de nombreux points de défaillance possibles qu’un agresseur peut exploiter pour extraire, manipuler ou détruire des données sensibles. Il est donc important de comprendre tous les aspects de la sécurité, depuis le processus de modélisation de menace durant la phase de conception de votre application, jusqu'à son déploiement éventuel et sa maintenance en cours.  
   
  Le .NET Framework fournit de nombreux services, classes et outils utiles permettant de sécuriser et d'administrer des applications de base de données. Le Common Language Runtime (CLR) fournit un environnement de type sécurisé pour l'exécution du code, avec une sécurité d'accès du code pour restreindre les autorisations de code managé. L'adoption des procédés de codage sécurisés pour l'accès aux données permet de réduire les dommages infligés par un intrus potentiel.  
   
  L'écriture d'un code sécurisé ne protège pas contre les défaillances de sécurité volontaires lors de l'utilisation de ressources non managées telles que des bases de données. La plupart des bases de données de serveur, telles que SQL Server, possèdent leurs propres systèmes de sécurité qui renforcent la sécurité si ceux-ci sont correctement implémentés. Cependant, même une source de données équipée d'un système de sécurité robuste peut faire l'objet d'une attaque si elle n'est pas configurée de manière appropriée.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Vue d'ensemble de la sécurité](../../../../docs/framework/data/adonet/security-overview.md)  
  Fournit des recommandations pour la conception d'applications ADO.NET sécurisées.  
   
- [Sécuriser l’accès aux données](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Sécuriser l'accès aux données](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Décrit comment utiliser des données à partir d'une source de données sécurisée.  
   
  [Applications clientes sécurisées](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Décrit des considérations sur la sécurité pour les applications clientes.  
   
- [Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Sécurité d'accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Décrit comment utiliser la sécurité d'accès du code (CAS) pour protéger le code ADO.NET. Explique également comment travailler avec une confiance partielle.  
   
  [Confidentialité et sécurité des données](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
@@ -52,5 +52,6 @@ L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter le
  Fournit des liens vers des ressources externes disponibles en ligne et sous forme de documentation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

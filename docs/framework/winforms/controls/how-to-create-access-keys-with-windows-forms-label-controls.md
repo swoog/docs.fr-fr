@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer des clés d’accès avec les contrôles Label Windows Forms'
+title: 'Procédure : créer des clés d’accès avec les contrôles Label Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171715"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procédure : Créer des clés d’accès avec les contrôles Label Windows Forms
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procédure : créer des clés d’accès avec les contrôles Label Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilisés pour définir des clés d’accès pour d’autres contrôles. Lorsque vous définissez une clé d’accès dans un contrôle label, l’utilisateur peut appuyer sur la touche ALT et le caractère que vous désignez pour déplacer le focus au contrôle qui suit dans l’ordre de tabulation. Étant donné que les étiquettes ne peuvent pas recevoir le focus, le focus se déplace automatiquement vers le contrôle suivant dans l’ordre de tabulation. Utilisez cette technique pour affecter des clés d’accès aux zones de texte, zones de liste modifiable, zones de liste et des grilles de données.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Pour affecter une touche d’accès à un contrôle avec une étiquette  
   
 1.  Dessiner d’abord l’étiquette et dessinez l’autre contrôle.  
   
-     ou  
+     - ou -  
   
      Dessiner les contrôles dans n’importe quel ordre et définir le <xref:System.Windows.Forms.Control.TabIndex%2A> propriété de l’étiquette et l’autre contrôle moins 1.  
   
@@ -64,6 +64,7 @@ Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilis�
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Taille d’un contrôle d’étiquette Windows Forms pour s’ajuster à son contenu](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Vue d'ensemble du contrôle Label](label-control-overview-windows-forms.md)
+
+- [Procédure : dimensionner un contrôle Label Windows Forms pour qu’il s’ajuste à son contenu](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Vue d’ensemble du contrôle Label](label-control-overview-windows-forms.md)
 - [Label, contrôle](label-control-windows-forms.md)

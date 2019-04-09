@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162109"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Vue d'ensemble du contrôle ToolStripProgressBar
 Le <xref:System.Windows.Forms.ToolStripProgressBar> combine le rafting et la fonctionnalité de rendu de tous les <xref:System.Windows.Forms.ToolStrip> contrôles avec sa fonctionnalité de suivi des processus typique. Un <xref:System.Windows.Forms.ToolStripProgressBar> est le plus souvent hébergée par <xref:System.Windows.Forms.StatusStrip>et moins souvent par une <xref:System.Windows.Forms.ToolStrip>.  
@@ -22,7 +22,7 @@ Le <xref:System.Windows.Forms.ToolStripProgressBar> combine le rafting et la fon
   
 ### <a name="important-toolstripprogressbar-members"></a>Membres ToolStripProgressBar importants  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Obtient ou définit une valeur représentant le délai entre chaque mise à jour de l'affichage <xref:System.Windows.Forms.ProgressBarStyle.Marquee>, en millisecondes.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Obtient ou définit la limite supérieure de la plage qui est définie pour ce <xref:System.Windows.Forms.ToolStripProgressBar>.|  
@@ -32,4 +32,5 @@ Le <xref:System.Windows.Forms.ToolStripProgressBar> combine le rafting et la fon
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|Fait avancer la position actuelle de la barre de progression de la quantité de la propriété <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

@@ -8,33 +8,33 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-ms.openlocfilehash: a32b42a63225dbd94233258a5d61c8dd4a0b728f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144623"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmation avec les cellules, lignes et colonnes dans le contrôle DataGridView Windows Forms
 Cette section fournit des rubriques qui illustrent diverses tâches de programmation impliquant des cellules, lignes et les objets de colonne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour Ajouter des info-bulles à des cellules dans un contrôle de DataGridView Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [Procédure : ajouter des info-bulles à des cellules individuelles dans un contrôle DataGridView Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Décrit comment gérer les <xref:System.Windows.Forms.DataGridView.CellFormatting> événement afin de fournir des info-bulles de différentes pour des cellules individuelles.  
   
- [Guide pratique pour Effectuer une Action personnalisée basée sur les modifications apportées dans une cellule d’un contrôle de DataGridView Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [Procédure : exécuter une action personnalisée en fonction des modifications apportées à une cellule d’un contrôle DataGridView Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  Décrit comment gérer les <xref:System.Windows.Forms.DataGridView.CellValueChanged> et <xref:System.Windows.Forms.DataGridView.CellStateChanged> événements.  
   
- [Guide pratique pour Manipuler des bandes dans le contrôle DataGridView Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [Procédure : manipuler des bandes dans le contrôle DataGridView Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  Décrit comment programmer avec les objets de type <xref:System.Windows.Forms.DataGridViewBand>, qui est le type de base pour les lignes et colonnes.  
   
- [Guide pratique pour Manipuler les lignes dans le contrôle de DataGridView Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Procédure : manipuler des lignes dans le contrôle DataGridView Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Décrit comment programmer avec les objets de type `DataGridViewRow`.  
   
- [Guide pratique pour Manipuler les colonnes dans le contrôle de DataGridView Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Procédure : manipuler des colonnes dans le contrôle DataGridView Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Décrit comment programmer avec les objets de type `DataGridViewColumn`.  
   
- [Guide pratique pour Travailler avec des colonnes de type Image dans le contrôle de DataGridView Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Procédure : utiliser des colonnes d’image dans le contrôle DataGridView Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  Décrit comment programmer avec le `DataGridViewImageColumn` classe.  
   
 ## <a name="reference"></a>Référence  
@@ -55,5 +55,6 @@ Cette section fournit des rubriques qui illustrent diverses tâches de programma
  Fournit des rubriques qui décrivent couramment utilisé des propriétés de cellule, ligne et colonne.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataGridView, contrôle](datagridview-control-windows-forms.md)
 - [Types de colonnes dans le contrôle DataGridView Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

@@ -3,12 +3,12 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: aab76949d9c31ac003b8afd519c2ad66529cbf26
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130323"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
 Définit le type de revendication qui spécifie le <xref:System.Security.Principal.IIdentity.Name%2A> propriété. Le type de revendication est utilisé pour rechercher un <xref:System.Security.Claims.Claim> dans la collection de <xref:System.Security.Claims.ClaimsIdentity> objets retournés par la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> méthode de ce gestionnaire de jetons. La valeur de la revendication correspondante est alors définie comme le nom de la <xref:System.Security.Principal.IIdentity> généré à partir de ce gestionnaire de jetons.  
@@ -44,7 +44,7 @@ Définit le type de revendication qui spécifie le <xref:System.Security.Princip
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|par défaut|Chaîne qui spécifie l’URI qui représente le type de revendication de la revendication à utiliser pour le <xref:System.Security.Principal.IIdentity.Name%2A> propriété. Obligatoire.|  
+|valeur|Chaîne qui spécifie l’URI qui représente le type de revendication de la revendication à utiliser pour le <xref:System.Security.Principal.IIdentity.Name%2A> propriété. Obligatoire.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -69,4 +69,5 @@ Définit le type de revendication qui spécifie le <xref:System.Security.Princip
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

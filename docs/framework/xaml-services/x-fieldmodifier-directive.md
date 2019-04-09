@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144545"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier, directive
 Modifie le comportement de compilation XAML afin que les champs pour les références d’objet nommé sont définis avec <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> accéder à la place de la <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> comportement par défaut.  
@@ -36,7 +36,7 @@ Modifie le comportement de compilation XAML afin que les champs pour les référ
   
  La valeur de la `x:FieldModifier` attribut varie selon le langage de programmation et son objectif peut varier dans les infrastructures spécifiques. La chaîne à utiliser dépend de la façon dont chaque langage implémente son <xref:System.CodeDom.Compiler.CodeDomProvider> et les convertisseurs de type qu’il retourne pour définir les significations de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> et <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, et si cette langue est sensible à la casse.  
   
--   Pour C#, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `public`.  
+-   Pour c#, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `public`.  
   
 -   Pour Microsoft Visual Basic .NET, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est `Public`.  
   
@@ -51,8 +51,9 @@ Modifie le comportement de compilation XAML afin que les champs pour les référ
  Par défaut, la classe partielle pour l’élément racine est publique ; Toutefois, vous pouvez rendre non publics à l’aide de la [x : ClassModifier, Directive](x-classmodifier-directive.md). Le [x : ClassModifier, Directive](x-classmodifier-directive.md) affecte également le niveau d’accès de l’instance de la classe d’élément racine. Vous pouvez placer les deux `x:Name` et `x:FieldModifier` sur la racine de l’élément, mais cela rend uniquement une copie du champ public de l’élément racine, avec le niveau d’accès racine true élément classe toujours contrôlée par [x : ClassModifier, Directive](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [XAML et classes personnalisées pour WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Code-behind et XAML dans WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name, directive](x-name-directive.md)
-- [Génération d’une application WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [Génération d'une application WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [x:ClassModifier, directive](x-classmodifier-directive.md)
