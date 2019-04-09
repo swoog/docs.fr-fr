@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111720"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense, fonction
 Horodate une licence XrML Authenticode.  
@@ -44,7 +44,8 @@ HRESULT CertTimestampAuthenticodeLicense (
  La signature de l'horodatage est en réalité un message PKCS #7 SignedData dont le contenu est la forme binaire de la valeur de SignatureValue de la signature de la licence. Ceci agit comme une contre-signature de la licence.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` si la fonction réussit. Sinon, retourne un code d'erreur.  
+ `S_OK` Si la fonction réussit. Sinon, retourne un code d'erreur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

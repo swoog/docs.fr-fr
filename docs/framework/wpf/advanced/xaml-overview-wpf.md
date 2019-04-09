@@ -19,18 +19,16 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102828"
 ---
 # <a name="xaml-overview-wpf"></a>Vue d’ensemble XAML (WPF)
 Cette rubrique décrit les fonctionnalités du langage XAML et montre comment utiliser XAML pour écrire des applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique décrit en particulier le langage XAML tel qu’il est implémenté par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le XAML lui-même est un concept de langage plus vaste que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
-  
-  
+
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Qu’est-ce que XAML ?  
  XAML est un langage de balisage déclaratif. Comme appliqué au modèle de programmation .NET Framework, XAML simplifie la création d’un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pour une application .NET Framework. Vous pouvez créer les éléments [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visibles dans le balisage XAML déclaratif, puis séparer la logique de la définition de l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] au moment de l’exécution, en utilisant les fichiers code-behind joints au balisage par le biais de définitions de classe partielle. XAML représente directement l’instanciation d’objets dans un ensemble spécifique de types de stockage définis dans des assemblys. C’est ce qui le différencie de la plupart des autres langages de balisage, qui sont en général des langages interprétés sans un lien aussi direct à un système de type de stockage. XAML permet un flux de travail dans lequel des parties distinctes peuvent travailler sur l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] et la logique d’une application avec des outils pouvant être différents.  
@@ -205,14 +203,14 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
   
  Cette utilisation de `xmlns` pour définir une étendue de l’utilisation et le mappage d’une portée de nom est conforme à la spécification XML 1.0. Les portées de nom XAML se distinguent des portées de nom XML uniquement parce qu’elles renseignent aussi sur la façon dont les éléments de la portée de nom sont stockés par les types lors d’une résolution de type et d’une analyse du code XAML.  
   
- Notez que les attributs `xmlns` ne sont strictement nécessaires que sur l’élément racine de chaque fichier XAML. Les définitions `xmlns` s’appliquent à tous les éléments descendants de l’élément racine (ce comportement est encore une fois conforme à la spécification XML 1.0 pour `xmlns`), tandis que les attributs `xmlns` sont également autorisés sur d’autres éléments situés sous la racine et s’appliquent à tous les éléments descendants de l’élément de définition. Toutefois, si vous définissez/redéfinissez fréquemment les espaces de noms XAML, le style de balisage XAML peut devenir difficile à lire.  
+ Notez que les attributs `xmlns` ne sont strictement nécessaires que sur l’élément racine de chaque fichier XAML. `xmlns` définitions seront applique à tous les éléments descendants de l’élément racine (ce comportement est cohérent avec la spécification XML 1.0 pour `xmlns`.) `xmlns` les attributs sont également autorisés sur d’autres éléments situés sous la racine et s’appliquera à tous les éléments descendants de l’élément de définition. Toutefois, si vous définissez/redéfinissez fréquemment les espaces de noms XAML, le style de balisage XAML peut devenir difficile à lire.  
   
  L’implémentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de son processeur XAML inclut une infrastructure qui a connaissance des assemblys principaux WPF. Les assemblys principaux [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont connus pour contenir les types qui prennent en charge les mappages [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à l’espace de noms XAML par défaut. Cette option est activée par le biais de la configuration faisant partie du fichier de build de votre projet et des systèmes de projet et de build WPF. Par conséquent, déclarer l’espace de noms XAML par défaut comme `xmlns` par défaut est la seule chose à faire pour référencer les éléments XAML provenant des assemblys [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="the-x-prefix"></a>Le préfixe x:  
  Dans l’exemple d’élément racine précédent, le préfixe `x:` a été utilisé pour mapper l’espace de noms XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], qui est l’espace de noms XAML dédié prenant en charge les constructions du langage XAML. Ce préfixe `x:` est utilisé pour mapper cet espace de noms XAML dans les modèles de projets, les exemples et dans la documentation de ce [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. L’espace de noms XAML du langage XAML contient plusieurs constructions de programmation que vous allez être amené à utiliser très fréquemment dans votre XAML. Voici une liste de constructions de programmation avec le préfixe `x:` parmi les plus courantes que vous allez utiliser :  
   
--   [x : Key](../../xaml-services/x-key-directive.md): Définit une clé unique pour chaque ressource dans un <xref:System.Windows.ResourceDictionary> (ou les concepts de dictionnaires semblables dans d’autres infrastructures). `x:Key` représente probablement 90 % des utilisations de `x:` que vous pouvez voir dans le balisage classique d’une application WPF.  
+-   [x : Key](../../xaml-services/x-key-directive.md): Définit une clé unique pour chaque ressource dans un <xref:System.Windows.ResourceDictionary> (ou les concepts de dictionnaires semblables dans d’autres infrastructures). `x:Key` représentera probablement 90 % de la `x:` utilisations s’affiche dans le balisage d’une application WPF typique.  
   
 -   [x : Class](../../xaml-services/x-class-directive.md): Spécifie le [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espace de noms et le nom de la classe qui fournit le code-behind pour une page XAML. Vous devez disposer d’une telle classe pour prendre en charge le code-behind selon le modèle de programmation WPF, et c’est la raison pour laquelle vous voyez presque toujours `x:` mappé, même s’il n’ y a aucune ressource.  
   
@@ -258,7 +256,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
  [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
  [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
- Notez que le fichier code-behind utilise l’espace de noms CLR `ExampleNamespace` et déclare `ExamplePage` comme une classe partielle dans cet espace de noms. Cela correspond à la valeur d’attribut `x:Class` de `ExampleNamespace`.`ExamplePage` qui a été fournie dans la racine de la balise. Le compilateur de balisage WPF crée une classe partielle pour tout fichier XAML compilé, en dérivant une classe à partir du type d’élément racine. Lorsque vous fournissez le code-behind qui définit également la même classe partielle, le code résultant est combiné dans le même espace de noms et la même classe de l’application compilée.  
+ Notez que le fichier code-behind utilise l’espace de noms CLR `ExampleNamespace` et déclare `ExamplePage` comme une classe partielle dans cet espace de noms. Cela correspond la `x:Class` valeur d’attribut `ExampleNamespace`.`ExamplePage` qui a été fournie dans la racine de la balise. Le compilateur de balisage WPF crée une classe partielle pour tout fichier XAML compilé, en dérivant une classe à partir du type d’élément racine. Lorsque vous fournissez le code-behind qui définit également la même classe partielle, le code résultant est combiné dans le même espace de noms et la même classe de l’application compilée.  
   
  Pour plus d’informations sur la configuration requise liée à la programmation de code-behind dans WPF, consultez la section « Exigences concernant le code-behind, le gestionnaire d’événements et les classes partielles » dans [Code-Behind et XAML dans WPF](code-behind-and-xaml-in-wpf.md).  
   
@@ -309,7 +307,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
 ## <a name="xaml-security"></a>Sécurité XAML  
  Le XAML est un langage de balisage qui représente directement l’instanciation d’objets et leur exécution. Ainsi, les éléments créés en XAML ont la même capacité d’interagir avec les ressources système (accès réseau, e/s de système de fichiers, par exemple) que le code généré équivalent.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge le framework de sécurité [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Cela signifie que le contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en cours d’exécution dans la zone Internet dispose d’autorisations d’exécution réduites. Le « XAML libre » (pages de code XAML non compilé, interprétées au moment du chargement par une visionneuse XAML) et [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] sont généralement exécutés dans cette zone internet et utilisent le même jeu d’autorisations.  Toutefois, le XAML chargé dans une application d’un niveau de confiance totale dispose du même accès aux ressources système que l’application d’hébergement. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] infrastructure de sécurité [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Cela signifie que le contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en cours d’exécution dans la zone Internet dispose d’autorisations d’exécution réduites. Le « XAML libre » (pages de code XAML non compilé, interprétées au moment du chargement par une visionneuse XAML) et [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] sont généralement exécutés dans cette zone internet et utilisent le même jeu d’autorisations.  Toutefois, le XAML chargé dans une application d’un niveau de confiance totale dispose du même accès aux ressources système que l’application d’hébergement. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Le chargement de XAML à partir du code  
@@ -328,9 +326,10 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
  [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md) vous renseigne davantage sur la polyvalence des propriétés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et présente le concept des propriétés de dépendance.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Syntaxe XAML en détail](xaml-syntax-in-detail.md)
 - [XAML et classes personnalisées pour WPF](xaml-and-custom-classes-for-wpf.md)
-- [XAML Namespace (x :)) Fonctionnalités de langage](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Espace de noms XAML (x:) Fonctionnalités de langage](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensions XAML WPF](wpf-xaml-extensions.md)
-- [Vue d’ensemble des éléments de base](base-elements-overview.md)
+- [Vue d'ensemble des éléments de base](base-elements-overview.md)
 - [Arborescences dans WPF](trees-in-wpf.md)

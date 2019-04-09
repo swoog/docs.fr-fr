@@ -2,12 +2,12 @@
 title: Types structurés autorisant la valeur null (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: c4b0584283e179be2661e518d5bb350b536b058f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127853"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Types structurés autorisant la valeur null (Entity SQL)
 Une instance `null` d'un type structuré est une instance qui n'existe pas. Cela est différent d'une instance existante dans laquelle toutes les propriétés ont des valeurs `null`.  
@@ -65,7 +65,7 @@ Une instance `null` d'un type structuré est une instance qui n'existe pas. Cela
     DEREF(NullRef)  
     ```  
   
--   Obtention d'ANYELEMENT à partir d'une collection vide :  
+-   Obtention d’ANYELEMENT à partir d’une collection vide :  
   
     ```  
     ANYELEMENT(EmptyCollection)  
@@ -89,4 +89,5 @@ Une instance `null` d'un type structuré est une instance qui n'existe pas. Cela
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

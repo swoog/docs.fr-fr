@@ -2,12 +2,12 @@
 title: Déduction des colonnes
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: f3edd09b1fb8169e8f609514de38b3c37574079b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107202"
 ---
 # <a name="inferring-columns"></a>Déduction des colonnes
 Après avoir déterminé les éléments à déduire en tant que tables pour un objet <xref:System.Data.DataSet> à partir d'un document XML, ADO.NET déduit les colonnes pour ces tables. ADO.NET 2.0 a introduit un nouveau moteur d’inférence de schéma qui déduit un type de données fortement typées pour chaque **simpleType** élément. Dans les versions précédentes, le type de données d’un élément déduit **simpleType** élément était toujours **xsd : String**.  
@@ -41,7 +41,7 @@ Après avoir déterminé les éléments à déduire en tant que tables pour un o
   
 |attr1|attr2|  
 |-----------|-----------|  
-|value1|value2|  
+|valeur1|valeur2|  
   
 ## <a name="elements-without-attributes-or-child-elements"></a>Éléments dépourvus d'attributs ou d'éléments enfants  
  Si un élément ne comporte ni éléments enfants, ni attributs, il sera déduit en tant que colonne. Le **ColumnMapping** propriété de la colonne est définie **MappingType.Element**. Le texte des éléments enfants est stocké dans une ligne de la table. Examinons, par exemple, le code XML suivant :  
@@ -66,8 +66,9 @@ Après avoir déterminé les éléments à déduire en tant que tables pour un o
 |Text1|Text2|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Inférence de la structure relationnelle d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+
+- [Déduction de la structure relationnelle des DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Chargement d'un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
 - [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

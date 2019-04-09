@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34349466594381441c11f947d682b018f95461e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110363"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE, structure
 Représente une référence par une application à un assembly de l’application a installé dans le global assembly cache.  
@@ -48,13 +48,14 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |`szIdentifier`|Une chaîne unique qui identifie l’application qui a installé l’assembly dans le global assembly cache. Sa valeur dépend de la valeur de la `guidScheme` champ.|  
 |`szNonCanonicalData`|Chaîne qui est interprétée uniquement par l’entité qui ajoute la référence. Le global assembly cache stocke cette chaîne, mais ne l’utilise pas.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

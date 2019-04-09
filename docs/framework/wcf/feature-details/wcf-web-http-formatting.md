@@ -2,12 +2,12 @@
 title: Mise en forme de HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094448"
 ---
 # <a name="wcf-web-http-formatting"></a>Mise en forme de HTTP Web WCF
 Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquement le format le plus approprié pour permettre à une opération de service de retourner sa réponse. Deux méthodes pour déterminer le format approprié sont prises en charge : automatique et explicite.  
@@ -123,7 +123,7 @@ public class Service : IService
     }  
 ```  
   
- Si vous devez prendre en charge d'autres formats que XML ou JSON, définissez votre opération pour qu'elle ait un type de retour de <xref:System.ServiceModel.Channels.Message>. Dans le code d'opération, déterminez le format approprié à utiliser, puis créez un objet <xref:System.ServiceModel.Channels.Message> à l'aide de l'une des méthodes suivantes :  
+ Si vous devez prendre en charge d’autres formats que XML ou JSON, définissez votre opération pour qu’elle ait un type de retour de <xref:System.ServiceModel.Channels.Message>. Dans le code d'opération, déterminez le format approprié à utiliser, puis créez un objet <xref:System.ServiceModel.Channels.Message> à l'aide de l'une des méthodes suivantes :  
   
 -   `WebOperationContext.CreateAtom10Response`  
   
@@ -164,9 +164,10 @@ public class Service : IService
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate et UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Vue d’ensemble du modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Modèle objet de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Vue d'ensemble du modèle de programmation Web HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Modèle objet de programmation Web HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

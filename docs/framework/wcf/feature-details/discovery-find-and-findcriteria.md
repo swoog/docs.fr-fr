@@ -2,12 +2,12 @@
 title: Recherche de découverte et FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095774"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
 Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -16,36 +16,36 @@ Une opération de recherche de découverte est lancée par un client pour décou
  La classe <xref:System.ServiceModel.Discovery.DiscoveryClient> fournit le mécanisme pour effectuer des opérations de recherche et permet d'effectuer plus facilement des opérations clientes de découverte. Elle contient une méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, qui effectue une recherche synchrone (bloquante), et une méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, qui initialise une recherche asynchrone non bloquante. Ces deux méthodes prennent un paramètre <xref:System.ServiceModel.Discovery.FindCriteria> et fournissent les résultats à l'utilisateur via un objet <xref:System.ServiceModel.Discovery.FindResponse>.  
   
 ## <a name="findcriteria"></a>FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria> possède plusieurs propriétés, qui peuvent être regroupées en critères de recherche (spécifiant les services recherchés) et critères d'arrêt de la recherche (durée de la recherche). Un <xref:System.ServiceModel.Discovery.FindCriteria> peut contenir plusieurs critères de recherche. Par défaut, le service doit correspondre à tous les composants, autrement, il ne se considère pas comme un service correspondant. Si vous souhaitez rechercher des services qui correspondent uniquement à certains critères, vous pouvez implémenter une logique de recherche personnalisée sur le service ou utiliser plusieurs requêtes.  
+ <xref:System.ServiceModel.Discovery.FindCriteria> possède plusieurs propriétés, qui peuvent être regroupées en critères de recherche, qui spécifient quels services que vous recherchez, et trouver les critères d’arrêt (la durée pendant laquelle la recherche doit durer). Un <xref:System.ServiceModel.Discovery.FindCriteria> peut contenir plusieurs critères de recherche. Par défaut, le service doit correspondre à tous les composants, autrement, il ne se considère pas comme un service correspondant. Si vous souhaitez rechercher des services qui correspondent uniquement à certains critères, vous pouvez implémenter une logique de recherche personnalisée sur le service ou utiliser plusieurs requêtes.  
   
  Les critères de recherche incluent :  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> : facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans WCF un point de terminaison peut uniquement prendre en charge un seul contrat.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans WCF un point de terminaison peut uniquement prendre en charge un seul contrat.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> : facultatif. Les étendues sont des URI absolus utilisés pour définir les catégories de points de terminaison de service individuels. Vous pouvez les utiliser dans des scénarios où plusieurs points de terminaison exposent le même contrat, lorsque vous souhaitez rechercher un sous-ensemble des points de terminaison. Si plusieurs étendues sont spécifiées, seuls les points de terminaison de service correspondant à TOUTES les étendues répondent.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -Facultatif. Les étendues sont des URI absolus utilisés pour définir les catégories de points de terminaison de service individuels. Vous pouvez les utiliser dans des scénarios où plusieurs points de terminaison exposent le même contrat, lorsque vous souhaitez rechercher un sous-ensemble des points de terminaison. Si plusieurs étendues sont spécifiées, seuls les points de terminaison de service correspondant à TOUTES les étendues répondent.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> : spécifie l'algorithme de correspondance à utiliser, lors de la comparaison des étendues dans le message Probe avec celles du point de terminaison. Il existe cinq règles de correspondance d'étendues prises en charge :  
+-   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Spécifie l’algorithme de correspondance à utiliser lors de la comparaison des portées dans le message Probe avec celles du point de terminaison. Il existe cinq règles de correspondance d'étendues prises en charge :  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> fait une comparaison de chaînes de base sensible à la casse.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> un respect de la casse de base comparaison de chaînes.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> correspond par segments séparés par « / ». Une recherche de `http://contoso/building1` correspond à un service avec une étendue `http://contoso/building/floor1`. Notez qu’il ne correspond pas à `http://contoso/building100` car les deux derniers segments ne correspondent pas.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> établit une correspondance des étendues par segments à l'aide d'une URL LDAP.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> correspond à des étendues par segments à l’aide d’une URL LDAP.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> établit une correspondance exacte des étendues, à l'aide d'une chaîne UUID.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> correspond aux étendues exactement à l’aide d’une chaîne UUID.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> correspond uniquement aux services qui ne spécifient pas d'étendue.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> correspond uniquement aux services qui ne spécifient pas une étendue.  
   
      Si une règle de correspondance d'étendue n'est pas spécifiée, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> est utilisée.  
   
  Les critères d'arrêt sont les suivants :  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> : temps d'attente maximal pour que les services répondent sur le réseau. La durée par défaut est de 20 secondes.  
+1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -La durée maximale à attendre des réponses à partir des services sur le réseau. La durée par défaut est de 20 secondes.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> : nombre maximal de réponses à attendre. Si les réponses <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> sont reçues avant que la propriété <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> expire, l'opération de recherche prend fin.  
+2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Le nombre maximal de réponses à attendre. Si les réponses <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> sont reçues avant que la propriété <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> expire, l'opération de recherche prend fin.  
   
 ## <a name="findresponse"></a>FindResponse  
- <xref:System.ServiceModel.Discovery.FindResponse> a une propriété de collection <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> qui contient toutes les réponses envoyées en mettant en correspondance les services sur le réseau. Si aucun service n'a répondu, la collection est vide. Si un ou plusieurs services ont répondu, chaque réponse est stockée dans un objet <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, qui contient l'adresse, le contrat et quelques informations supplémentaires sur le service.  
+ <xref:System.ServiceModel.Discovery.FindResponse> a un <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> propriété de collection qui contient toutes les réponses envoyées en mettant en correspondance des services sur le réseau. Si aucun service n’a répondu, la collection est vide. Si un ou plusieurs services ont répondu, chaque réponse est stockée dans un objet <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, qui contient l'adresse, le contrat et quelques informations supplémentaires sur le service.  
   
  L'exemple suivant indique comment effectuer une opération de recherche dans le code.  
   
@@ -65,7 +65,8 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+
+- [Vue d'ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Utilisation du canal client de découverte](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
 - [Découverte avec étendues](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
 - [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)

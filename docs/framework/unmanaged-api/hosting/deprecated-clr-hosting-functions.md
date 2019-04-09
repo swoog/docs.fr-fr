@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135801"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Fonction d'hébergement du CLR déconseillées
 Cette section décrit les fonctions statiques globales non managées qui a utilisent des versions antérieures de l’API d’hébergement.  
@@ -110,10 +110,10 @@ Cette section décrit les fonctions statiques globales non managées qui a utili
  [DestroyICeeFileGen, fonction](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Obsolète. Détruit un [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objet.  
   
- [FExecuteInAppDomainCallback, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
+ [FExecuteInAppDomainCallback (pointeur fonction)](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Obsolète. Pointe vers une fonction que le CLR appelle pour exécuter le code managé.  
   
- [FLockClrVersionCallback, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
+ [FLockClrVersionCallback (pointeur fonction)](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
  Obsolète. Pointe vers une fonction que le CLR appelle pour notifier l’hôte que l’initialisation a démarré ou terminé.  
   
  [GetCLRIdentityManager, fonction](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
@@ -128,16 +128,16 @@ Cette section décrit les fonctions statiques globales non managées qui a utili
  [LoadStringRCEx, fonction](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
  Obsolète. Traduit une valeur HRESULT à un message d’erreur approprié pour la culture spécifiée.  
   
- [LPOVERLAPPED_COMPLETION_ROUTINE, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
+ [LPOVERLAPPED_COMPLETION_ROUTINE (pointeur fonction)](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
  Obsolète. Pointe vers une fonction qui avertit l’hôte lorsqu’un chevauchement (autrement dit, asynchrone) e/s sur un appareil est terminée.  
   
- [LPTHREAD_START_ROUTINE, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
+ [LPTHREAD_START_ROUTINE (pointeur fonction)](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Obsolète. Pointe vers une fonction qui avertit l’hôte qu’un thread a commencé à exécuter.  
   
  [RunDll32ShimW, fonction](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
  Obsolète. Exécute la commande spécifiée.  
   
- [WAITORTIMERCALLBACK, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
+ [WAITORTIMERCALLBACK (pointeur fonction)](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
  Obsolète. Pointe vers une fonction qui avertit l’hôte qu’un handle d’attente a été signalé ou a expiré.  
   
 ## <a name="infrastructure-functions"></a>Fonctions d’infrastructure  
@@ -159,4 +159,5 @@ Cette section décrit les fonctions statiques globales non managées qui a utili
  Valide les images de modules managés et notifie le chargeur du système d’exploitation après avoir été chargés.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions statiques globales d’hébergement .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)
+
+- [Fonctions statiques globales de l'hébergement .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

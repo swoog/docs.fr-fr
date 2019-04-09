@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Encoder un Visual dans un fichier image'
+title: 'Procédure : Encoder un visuel dans un fichier image'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096782"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>Procédure : Encoder un Visual dans un fichier image
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>Procédure : Encoder un visuel dans un fichier image
 Cet exemple montre comment encoder un <xref:System.Windows.Media.Visual> objet dans un fichier image en utilisant un <xref:System.Windows.Media.Imaging.RenderTargetBitmap> et un <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Exemple  
@@ -28,7 +28,8 @@ Cet exemple montre comment encoder un <xref:System.Windows.Media.Visual> objet d
  Un <xref:System.Windows.Media.Imaging.PngBitmapEncoder> a été utilisé dans cet exemple, mais des dérivé <xref:System.Windows.Media.Imaging.BitmapEncoder> objets pourrait avoir été utilisés pour créer le fichier image.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.DrawingContext>
-- [Vue d’ensemble de la création d’images](imaging-overview.md)
-- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
-- [Utilisation d’objets DrawingVisual](using-drawingvisual-objects.md)
+- [Vue d'ensemble de la création d'images](imaging-overview.md)
+- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
+- [Utilisation d'objets DrawingVisual](using-drawingvisual-objects.md)

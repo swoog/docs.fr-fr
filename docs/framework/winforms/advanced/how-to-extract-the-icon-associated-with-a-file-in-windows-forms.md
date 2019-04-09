@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Extraire l’icône associée à un fichier dans Windows Forms'
+title: 'Procédure : extraire l’icône associée à un fichier dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: 5cbce48643d21418d580a6db44f86b00cf50fb9d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112552"
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Procédure : Extraire l’icône associée à un fichier dans Windows Forms
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Procédure : extraire l’icône associée à un fichier dans Windows Forms
 Grand nombre de fichiers ont des icônes incorporées qui fournissent une représentation visuelle du type de fichier associé. Par exemple, documents Microsoft Word contiennent une icône qui les identifie comme documents Word. Lors de l’affichage des fichiers dans un contrôle de table ou un contrôle de liste, vous souhaiterez afficher l’icône représentant le type de fichier en regard de chaque nom de fichier. Faire cela facilement à l’aide de la <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> (méthode).  
   
 ## <a name="example"></a>Exemple  
@@ -33,5 +33,6 @@ Grand nombre de fichiers ont des icônes incorporées qui fournissent une repré
      Vous devez vous assurer que votre formulaire importe le <xref:System.IO> espace de noms.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Contrôle ListView](../controls/listview-control-windows-forms.md)

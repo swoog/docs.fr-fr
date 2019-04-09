@@ -1,5 +1,5 @@
 ---
-title: <add>, élément de bypasslist (paramètres réseau)
+title: <add> Élément de bypasslist (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098284"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Ajouter >, élément de bypasslist (paramètres réseau)
 Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.  
@@ -41,7 +41,7 @@ Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.
   
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
-|**address**|Une expression régulière décrivant une adresse IP ou un nom DNS.|  
+|**adresse**|Une expression régulière décrivant une adresse IP ou un nom DNS.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -81,5 +81,6 @@ Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

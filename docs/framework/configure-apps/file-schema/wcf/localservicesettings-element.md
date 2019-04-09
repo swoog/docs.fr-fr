@@ -1,13 +1,13 @@
 ---
-title: <localServiceSettings> (élément)
+title: <localServiceSettings> d'élément
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102633"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> element
 Spécifie les paramètres de sécurité d’un service local pour cette liaison.  
@@ -72,21 +72,22 @@ Spécifie les paramètres de sécurité d’un service local pour cette liaison.
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Spécifie les valeurs par défaut utilisées pour initialiser un service de conversation sécurisé.|  
   
 ## <a name="remarks"></a>Notes  
- Les paramètres sont locaux car ils ne sont pas publiés dans le cadre de la stratégie de sécurité du service et n’affectent pas la liaison du client.  
+ Les paramètres sont locaux car ils ne sont pas publiés dans le cadre de la stratégie de sécurité du service et n'affectent pas la liaison du client.  
   
  Les attributs suivants de l'élément `localServiceSecuritySettings` peuvent aider à atténuer une attaque de sécurité par déni de service (DOS) :  
   
--   `maxCachedCookies` : contrôle le nombre maximal de SecurityContextTokens limités par le temps mis en cache par le serveur après une négociation SSL ou SPNEGO.  
+-   `maxCachedCookies`: contrôle le nombre maximal de SecurityContextTokens limités qui sont mis en cache par le serveur après une négociation SSL ou SPNEGO.  
   
--   `issuedCookieLifetime` : contrôle la durée de vie des SecurityContextTokens émis par le serveur après une négociation SSL ou SPNEGO. Le serveur met en cache les SecurityContextTokens pendant cette période.  
+-   `issuedCookieLifetime`: contrôle la durée de vie des SecurityContextTokens émis par le serveur après une négociation SSL ou SPNEGO. Le serveur met en cache les SecurityContextTokens pendant cette période.  
   
--   `maxPendingSessions` : contrôle le nombre maximal de conversations sécurisées établies au niveau du serveur mais pour lesquelles aucun message d'application n'a été traité. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, forçant ainsi le service à conserver l'état de chaque client, sans jamais les utiliser toutefois.  
+-   `maxPendingSessions`: contrôle le nombre maximal de conversations sécurisées établies au niveau du serveur, mais pour laquelle aucun message d’application n’ont été traités. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, forçant ainsi le service à conserver l'état de chaque client, sans jamais les utiliser toutefois.  
   
--   `inactivityTimeout` : contrôle le temps maximum pendant lequel le service garde une conversation sécurisée active sans jamais recevoir dessus un message d'application. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, forçant ainsi le service à conserver l'état de chaque client, sans jamais les utiliser toutefois.  
+-   `inactivityTimeout`: contrôle la durée maximale que le service garde une conversation sécurisée active sans jamais recevoir un message d’application sur ce dernier. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, forçant ainsi le service à conserver l'état de chaque client, sans jamais les utiliser toutefois.  
   
  Dans une session de conversation sécurisée, notez que les attributs `inactivityTimeout` et `receiveTimeout` sur la liaison affectent le délai d'attente de la session. Le plus court des deux détermine le dépassement du délai d'attente.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
@@ -96,5 +97,5 @@ Spécifie les paramètres de sécurité d’un service local pour cette liaison.
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127944"
 ---
 # <a name="standard-query-operator-translation"></a>Traduction des opérateurs de requête standard
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête Standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  
   
  Opérateurs de requête standard sont définis par rapport à *séquences*. Une séquence est *classés* et s’appuie sur l’identité de référence pour chaque élément de la séquence. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [présentation des opérateurs de requête Standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
@@ -24,9 +24,9 @@ ms.locfileid: "56093929"
 ## <a name="operator-support"></a>Prise en charge des opérateurs  
   
 ### <a name="concat"></a>Concat  
- La méthode <xref:System.Linq.Enumerable.Concat%2A> est définie pour des multijeux ordonnés lorsque les ordres du récepteur et de l'argument sont identiques. <xref:System.Linq.Enumerable.Concat%2A> fonctionne comme `UNION ALL` sur les multijeux suivis de l'ordre courant.  
+ La méthode <xref:System.Linq.Enumerable.Concat%2A> est définie pour des multijeux ordonnés lorsque les ordres du récepteur et de l’argument sont identiques. <xref:System.Linq.Enumerable.Concat%2A> fonctionne en tant que `UNION ALL` sur les multijeux suivis de l’ordre courant.  
   
- L'étape finale est le classement dans SQL avant que les résultats ne soient générés. <xref:System.Linq.Enumerable.Concat%2A> ne conserve pas l'ordre de ses arguments. Pour garantir un classement approprié, vous devez classer explicitement les résultats de <xref:System.Linq.Enumerable.Concat%2A>.  
+ L'étape finale est le classement dans SQL avant que les résultats ne soient générés. <xref:System.Linq.Enumerable.Concat%2A> ne conserve pas l’ordre de ses arguments. Pour garantir un classement approprié, vous devez classer explicitement les résultats de <xref:System.Linq.Enumerable.Concat%2A>.  
   
 ### <a name="intersect-except-union"></a>Intersect, Except, Union  
  Les méthodes <xref:System.Linq.Enumerable.Intersect%2A> et <xref:System.Linq.Enumerable.Except%2A> sont bien définies sur les jeux uniquement. La sémantique pour les multijeux n'est pas définie.  
@@ -37,7 +37,7 @@ ms.locfileid: "56093929"
  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> méthodes sont bien définies uniquement sur *jeux ordonnés*. La sémantique des jeux non ordonnés ou des multijeux n'est pas définie.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines limites lorsqu'ils sont utilisés dans des requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> présentent certaines limites lorsqu’ils sont utilisés dans les requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  En raison des limitations de classement dans SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tente de déplacer le classement de l’argument de ces méthodes pour le résultat de la méthode. Prenons l'exemple de la requête [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suivante :  
   
@@ -64,7 +64,7 @@ ORDER BY [t0].[CustomerID]
   
  Il devient évident que le classement spécifié doit être cohérent lorsque <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont enchaînés. Si ce n'est pas le cas, les résultats ne sont pas définis.  
   
- <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont bien définis pour des arguments intégraux constants non négatifs basés sur la spécification de l'opérateur de requête standard.  
+ <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont bien définis pour des arguments intégraux constants non négatifs basés sur la spécification de l’opérateur de requête standard.  
   
 ### <a name="operators-with-no-translation"></a>Opérateurs sans traduction  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne traduit pas les méthodes suivantes. La raison la plus courante est la différence entre les multijeux non ordonnés et les séquences.  
@@ -80,11 +80,11 @@ ORDER BY [t0].[CustomerID]
 ## <a name="expression-translation"></a>Traduction d'expressions  
   
 ### <a name="null-semantics"></a>Sémantique Null  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] n'impose pas de sémantique de comparaison null sur SQL. Les opérateurs de comparaison sont traduits syntaxiquement dans leurs équivalents SQL. Pour cette raison, la sémantique reflète la sémantique SQL définie par le serveur ou les paramètres de connexion. Par exemple, deux valeurs null sont considérées comme différentes selon les paramètres de SQL Server par défaut, mais vous pouvez modifier les paramètres pour changer la sémantique. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne tient pas compte des paramètres du serveur lorsqu'il traduit des requêtes.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] n’impose pas la sémantique de comparaison null sur SQL. Les opérateurs de comparaison sont traduits syntaxiquement dans leurs équivalents SQL. Pour cette raison, la sémantique reflète la sémantique SQL définie par le serveur ou les paramètres de connexion. Par exemple, deux valeurs null sont considérées comme différentes selon les paramètres de SQL Server par défaut, mais vous pouvez modifier les paramètres pour changer la sémantique. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne considère pas les paramètres du serveur lorsqu’il traduit des requêtes.  
   
  Une comparaison avec le littéral null est traduite dans la version SQL appropriée (`is null` ou `is not null`).  
   
- La valeur `null` dans le classement est définie par SQL Server. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne change pas le classement.  
+ La valeur `null` dans le classement est définie par SQL Server. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne modifie pas le classement.  
   
 ### <a name="aggregates"></a>Agrégats  
  La méthode d'agrégation (opérateur de requête standard) <xref:System.Linq.Enumerable.Sum%2A> prend la valeur zéro pour une séquence vide ou contenant uniquement des valeurs null. Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la sémantique de SQL reste inchangée, et <xref:System.Linq.Enumerable.Sum%2A> prend la valeur `null` au lieu de la valeur zéro pour une séquence vide ou une séquence qui contient uniquement des valeurs NULL.  
@@ -119,7 +119,7 @@ ORDER BY [t0].[CustomerID]
  [!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
  [!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]  
   
- Des éléments d'arguments non plats (hiérarchiques) sont présentés ci-dessous.  
+ Des éléments d’arguments non plats (hiérarchiques) sont présentés ci-dessous.  
   
  [!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
  [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]  
@@ -173,7 +173,7 @@ ORDER BY [t0].[CustomerID]
  Pour plus d’informations sur le mappage à ces types de date et d’heure SQL Server, consultez [mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="sql-server-2005-support"></a>Prise en charge de SQL Server 2005  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les fonctionnalités SQL Server 2005 suivantes :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les fonctionnalités suivantes de SQL Server 2005 :  
   
 -   Procédures stockées écrites pour le CLR SQL.  
   
@@ -198,7 +198,7 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (via SP4) binder présente des spécificités qui sont déclenchées par des requêtes imbriquées. Le jeu de requêtes SQL qui déclenche ces spécificités n'est pas bien défini. Pour cette raison, vous ne pouvez pas définir l’ensemble des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes susceptibles de provoquer des exceptions de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Opérateurs Skip et Take  
- <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines restrictions lorsqu'ils sont utilisés dans des requêtes sur [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> présentent certaines limites lorsqu’ils sont utilisés dans des requêtes [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="object-materialization"></a>Matérialisation d'objet  
  La matérialisation crée des objets CLR à partir de lignes retournées par une ou plusieurs requêtes SQL.  
@@ -207,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   Constructeurs  
   
-    -   Méthodes `ToString` dans les projections  
+    -   `ToString` méthodes dans les projections  
   
     -   Casts de type dans les projections  
   
@@ -215,7 +215,7 @@ ORDER BY [t0].[CustomerID]
   
 -   Vous pouvez utiliser un `struct` comme type de retour d'un résultat de requête ou comme membre du type de résultat. Les entités doivent être des classes. Les types anonymes sont matérialisés en instances de classe, mais les structs nommés (non entités) peuvent être utilisés dans la projection.  
   
--   Un membre du type de retour d'un résultat de requête peut être de type <xref:System.Linq.IQueryable%601>. Il est matérialisé en collection locale.  
+-   Un membre du type de retour d’un résultat de requête peut être de type <xref:System.Linq.IQueryable%601>. Il est matérialisé en collection locale.  
   
 -   Les méthodes suivantes provoquent la *matérialisation immédiate* de la séquence que les méthodes s’appliquent à :  
   
@@ -226,9 +226,10 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Retourner ou ignorer des éléments d’une séquence](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Comment : retourner ou ignorer des éléments d'une séquence](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [Concaténer deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
-- [Retourner la différence définie entre deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
-- [Retourner l’intersection définie de deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
-- [Retourner l’union définie de deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+- [Comment : retourner la différence définie entre deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Retourner l'intersection définie de deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Retourner l'union définie de deux séquences](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

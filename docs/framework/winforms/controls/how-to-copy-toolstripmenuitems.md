@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Copier des ToolStripMenuItems'
+title: 'Procédure : copier des ToolStripMenuItems'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116348"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Procédure : Copier des ToolStripMenuItems
+# <a name="how-to-copy-toolstripmenuitems"></a>Procédure : copier des ToolStripMenuItems
 Au moment du design, vous pouvez copier la totalité des menus du plus haut niveau et leurs éléments de sous-menu à un autre emplacement sur la <xref:System.Windows.Forms.MenuStrip>. Vous pouvez également copier des éléments de menu individuels entre des menus du plus haut niveau ou changer la position des éléments de menu dans un menu.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Pour copier un menu du plus haut niveau et ses éléments de sous-menu vers un autre emplacement du plus haut niveau  
@@ -43,6 +43,7 @@ Au moment du design, vous pouvez copier la totalité des menus du plus haut nive
      L’élément de sous-menu que vous avez copié est inséré avant l’élément de sous-menu sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

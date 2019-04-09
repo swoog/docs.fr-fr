@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Masquer des ToolStripMenuItems'
+title: 'Procédure : masquer des ToolStripMenuItems'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127424"
 ---
-# <a name="how-to-hide-toolstripmenuitems"></a>Procédure : Masquer des ToolStripMenuItems
+# <a name="how-to-hide-toolstripmenuitems"></a>Procédure : masquer des ToolStripMenuItems
 Masquage d’éléments de menu est un moyen de contrôler l’interface utilisateur de votre application et de restreindre les commandes de l’utilisateur. Souvent, vous devez masquer un menu quand tous les éléments de menu sur ce dernier ne sont pas disponibles. Cela est moins distrait pour l’utilisateur. En outre, vous souhaiterez peut-être cacher et désactiver le menu ou un élément de menu, comme simple masquage n’empêche pas l’utilisateur d’accéder à une commande de menu à l’aide d’une touche de raccourci.  
   
 ### <a name="to-hide-any-menu-item-programmatically"></a>Pour masquer un élément de menu par programme  
@@ -39,7 +39,8 @@ Masquage d’éléments de menu est un moyen de contrôler l’interface utilisa
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Guide pratique pour Désactiver des ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)
+- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Procédure : désactiver des ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)

@@ -2,12 +2,12 @@
 title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089885"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -21,12 +21,12 @@ ms.locfileid: "55903907"
   
 -   Il est possible qu’Entity Framework ne prenne pas en charge toutes les fonctionnalités d’un fournisseur de source de données, même si ce fournisseur prend en charge Entity Framework.  
   
--   Pour une application volumineuse ou complexe, vous n'êtes pas obligé de migrer la totalité de l'application vers Entity Framework à la fois. Toutefois, toute partie de l'application qui n'utilise pas Entity Framework doit néanmoins être modifiée lorsque la source de données change.  
+-   Pour une application volumineuse ou complexe, vous n'êtes pas obligé de migrer la totalité de l'application vers Entity Framework à la fois. Toutefois, toute partie de l’application qui n’utilise pas Entity Framework doit néanmoins être modifiée lorsque la source de données change.  
   
--   La connexion de fournisseur de données utilisée par Entity Framework peut être partagée avec d'autres parties de votre application car [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+-   La connexion de fournisseur de données utilisée par Entity Framework peut être partagée avec d’autres parties de votre application car [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Tâches de migration communes  
- Le chemin d'accès pour effectuer la migration d'une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dépend à la fois du type d'application et de la stratégie d'accès aux données existante. Toutefois, vous devez toujours effectuer les tâches suivantes lorsque vous migrez une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Le chemin d’accès pour effectuer la migration d’une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dépend à la fois du type d’application et de la stratégie d’accès aux données existante. Toutefois, vous devez toujours effectuer les tâches suivantes lorsque vous migrez une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
 >  Toutes ces tâches sont effectuées automatiquement lorsque vous utilisez les outils Entity Data Model à partir de Visual Studio 2008. Pour plus d'informations, voir [Procédure : Utilisez l’Assistant Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
@@ -75,16 +75,16 @@ ms.locfileid: "55903907"
 
   Lorsque vous interrogez le modèle conceptuel, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] retourne les données sous la forme d’objets qui sont des instances de types d’entités. Ces objets peuvent être liés directement à des contrôles, et cette liaison prend en charge les mises à jour. Cela signifie que les modifications apportées aux données dans un contrôle, par exemple une ligne dans un <xref:System.Windows.Forms.DataGridView>, sont automatiquement enregistrées dans la base de données lors de la <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> méthode est appelée.  
   
-  Si votre application énumère les résultats d'une requête pour afficher des données dans un objet <xref:System.Windows.Forms.DataGridView> ou un autre type de contrôle que prend en charge la liaison de données, vous pouvez modifier votre application pour lier le contrôle au résultat d'un objet <xref:System.Data.Objects.ObjectQuery%601>.  
+  Si votre application énumère les résultats d’une requête pour afficher des données dans un objet <xref:System.Windows.Forms.DataGridView> ou un autre type de contrôle que prend en charge la liaison de données, vous pouvez modifier votre application pour lier le contrôle au résultat d’un objet <xref:System.Data.Objects.ObjectQuery%601>.  
   
   Pour plus d’informations, consultez [liaison d’objets aux contrôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- Contrôles de source de données [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] contrôles de source de données.  
 
   Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications Web. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Autres considérations  
- Les remarques suivantes peuvent s'appliquer lorsque vous effectuez une migration de types spécifiques d'applications vers Entity Framework.  
+ Les remarques suivantes peuvent s’appliquer lorsque vous effectuez une migration de types spécifiques d’applications vers Entity Framework.  
   
 - Applications qui exposent des services de données.  
 
@@ -103,5 +103,6 @@ ms.locfileid: "55903907"
   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Terminologie Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)

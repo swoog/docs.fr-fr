@@ -2,12 +2,12 @@
 title: Utilisation des fournisseurs de données
 ms.date: 03/30/2017
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
-ms.openlocfilehash: ef1569701b80914a46883947f700a202e75b3dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fc40eb66b1885e3e4964bd216f996b34d96dbf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093733"
 ---
 # <a name="working-with-data-providers"></a>Utilisation des fournisseurs de données
 Les rubriques de cette section décrivent les services et les fournisseurs de données qui transforment des requêtes sur un modèle conceptuel en requêtes natives sur une source de données qui est prise en charge par Entity Framework.  
@@ -17,8 +17,9 @@ Les rubriques de cette section décrivent les services et les fournisseurs de do
   
  [Fournisseurs de données Entity Framework](../../../../../docs/framework/data/adonet/ef/data-providers.md)  
   
- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)  
+ [Écriture d'un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Langage Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+
+- [Langage d'Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

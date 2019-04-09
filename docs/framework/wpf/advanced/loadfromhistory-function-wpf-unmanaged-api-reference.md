@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 4fc083313c99b1b93db380bfbf6ddeacbc784dcb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084957"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>Fonction LoadFromHistory (référence des API non managées WPF)
 Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -36,7 +36,7 @@ HRESULT LoadFromHistory_export(
  pBindCtx  
  Pointeur vers un contexte de liaison.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [requise du .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL :**  
@@ -48,4 +48,5 @@ HRESULT LoadFromHistory_export(
  **Version du .NET framework :** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Référence des API non managées WPF](wpf-unmanaged-api-reference.md)
+
+- [Informations de référence sur les API non managées WPF](wpf-unmanaged-api-reference.md)

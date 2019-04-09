@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Associer un ContextMenuStrip à un contrôle'
+title: 'Procédure : associer un ContextMenuStrip à un contrôle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 4b61da8dc9f36e0a80807547e2049ef512c94747
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4e39769621c46ead92076489014f6e0e9dc7863d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122367"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Procédure : Associer un ContextMenuStrip à un contrôle
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Procédure : associer un ContextMenuStrip à un contrôle
 Après avoir créé vos contrôles et menus contextuels, appliquez les procédures suivantes pour afficher un menu contextuel donné quand l'utilisateur clique avec le bouton droit sur le contrôle. Ces procédures associent un <xref:System.Windows.Forms.ContextMenuStrip> à un Windows Form et à un contrôle <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>Pour associer un ContextMenuStrip à un Windows Form  
@@ -42,8 +42,9 @@ Après avoir créé vos contrôles et menus contextuels, appliquez les procédur
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Guide pratique pour Ajouter des éléments de Menu à un ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [Procédure : ajouter des éléments de menu à un ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
 - [ContextMenuStrip, contrôle](contextmenustrip-control.md)

@@ -1,13 +1,13 @@
 ---
-title: <dataContractSerializer> de < system.runtime.serialization >
+title: <dataContractSerializer> of <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: 488b0754194c1fa7896a168daac0a3a497076e56
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115360"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > de \<system.runtime.serialization >
 Contient les données de configuration correspondant au <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -61,6 +61,7 @@ Contient les données de configuration correspondant au <xref:System.Runtime.Ser
  Pour plus d’informations sur les types connus, consultez <xref:System.Runtime.Serialization.DataContractSerializer> et [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

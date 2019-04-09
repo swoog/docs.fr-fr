@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122354"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML et classes personnalisées pour WPF
 XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], prend en charge la possibilité de définir une classe ou une structure personnalisée dans n’importe quel langage de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], puis d’accéder à cette classe à l’aide du balisage XAML. Vous pouvez utiliser un mélange de types définis de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et de vos types personnalisés dans le même fichier de balisage, généralement en mappant les types personnalisés à un préfixe d’espace de noms XAML. Cette rubrique décrit les conditions que doit satisfaire une classe personnalisée pour pouvoir être utilisée comme élément XAML.  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Classes personnalisées dans les applications ou les assemblys  
  Les classes personnalisées qui sont utilisés dans XAML peuvent être définies de deux façons distinctes : dans le code-behind ou dans un autre code produisant l’application [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] principale, ou comme une classe dans un assembly distinct, comme un fichier exécutable ou une DLL utilisée comme bibliothèque de classes. Chacune de ces approches a des avantages et des inconvénients spécifiques.  
@@ -113,8 +111,9 @@ XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](..
  Dans certains cas, par exemple si vous êtes créateur de contrôles, vous voulez aussi garantir qu’une représentation d’objet qui peut être instanciée en XAML peut également être sérialisée dans un balisage XAML équivalent. Les spécifications de la sérialisation ne sont pas décrites dans cette rubrique. Consultez [Vue d’ensemble de la création de contrôles](../controls/control-authoring-overview.md) et [Sérialisation et arborescence d’éléments](element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
 - [Vue d’ensemble de la création de contrôles](../controls/control-authoring-overview.md)
-- [Vue d’ensemble des éléments de base](base-elements-overview.md)
+- [Vue d'ensemble des éléments de base](base-elements-overview.md)
 - [Propriétés de dépendance et chargement XAML](xaml-loading-and-dependency-properties.md)

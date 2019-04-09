@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des boutons à un contrôle de barre d’outils à l’aide du Concepteur'
+title: 'Procédure : ajouter des boutons à un contrôle ToolBar à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084022"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Procédure : Ajouter des boutons à un contrôle de barre d’outils à l’aide du Concepteur
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Procédure : ajouter des boutons à un contrôle ToolBar à l’aide du concepteur
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.ToolStrip> remplace le contrôle <xref:System.Windows.Forms.ToolBar> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.ToolBar> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix.  
   
@@ -48,8 +48,9 @@ ms.locfileid: "57702839"
 5.  Cliquez sur **OK** pour fermer la boîte de dialogue et créer les volets que vous avez spécifié.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Guide pratique pour Définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Procédure : définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Procédure : déclencher des événements de menu pour des boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Vue d’ensemble du contrôle ToolBar](toolbar-control-overview-windows-forms.md)
 - [ToolBar, contrôle](toolbar-control-windows-forms.md)

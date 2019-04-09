@@ -1,19 +1,19 @@
 ---
-title: "Procédure : Modifier l'embout à la fin d'une ligne ou d'un segment"
+title: 'Procédure : Modifier l’extrémité de fin d’une ligne ou d’un segment'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Shape elements [WPF], ends
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: ba61b30b4ff575bb504f792f8990bbfc64a6c33e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091302"
 ---
-# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procédure : Modifier l'embout à la fin d'une ligne ou d'un segment
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procédure : Modifier l’extrémité de fin d’une ligne ou d’un segment
 Cet exemple montre comment modifier la forme au début ou à la fin d’une ouverture <xref:System.Windows.Shapes.Shape> élément. Pour modifier l’embout au début d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propriété. Pour modifier l’embout à la fin d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propriété. Pour afficher les embouts de ligne disponibles, consultez le <xref:System.Windows.Media.PenLineCap> énumération.  
   
 > [!NOTE]
@@ -27,5 +27,6 @@ Cet exemple montre comment modifier la forme au début ou à la fin d’une ouve
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Media.PenLineCap>

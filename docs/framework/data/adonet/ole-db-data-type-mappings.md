@@ -2,21 +2,21 @@
 title: Mappages de types de données OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100585"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mappages de types de données OLE DB
 Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] déduit pour les types de données du fournisseur de données .NET Framework pour ADO et OLE DB (<xref:System.Data.OleDb>). Les méthodes d’accesseur typées pour les <xref:System.Data.OleDb.OleDbDataReader> sont également répertoriés.  
   
-|Type ADO|Type OLE DB|Type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Accesseur typé [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Type ADO|Type OLE DB|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] accesseur typé|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
-|adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
+|adBoolean|DBTYPE_BOOL|Booléen|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|Chaîne|GetString()|  
 |adChapter|DBTYPE_HCHAPTER|Pris en charge dans le `DataReader`. Consultez [récupération des données à l’aide d’un DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
 |adChar|DBTYPE_STR|Chaîne|GetString()|  
@@ -29,12 +29,12 @@ Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../include
 |adDouble|DBTYPE_R8|Double|GetDouble()|  
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
-|adGUID|DBTYPE_GUID|Guid|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Objet|GetValue()|  
+|adGUID|DBTYPE_GUID|GUID|GetGuid()|  
+|adIDispatch|DBTYPE_IDISPATCH *|Object|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
-|adIUnknown|DBTYPE_IUNKNOWN *|Objet|GetValue()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|Object|GetValue()|  
 |adNumeric|DBTYPE_NUMERIC|Decimal|GetDecimal()|  
-|adPropVariant|DBTYPE_PROPVARIANT|Objet|GetValue()|  
+|adPropVariant|DBTYPE_PROPVARIANT|Object|GetValue()|  
 |adSingle|DBTYPE_R4|Single|GetFloat()|  
 |adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
 |adTinyInt|DBTYPE_I1|Byte|GetByte()|  
@@ -42,7 +42,7 @@ Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../include
 |adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
-|adVariant|DBTYPE_VARIANT|Objet|GetValue()|  
+|adVariant|DBTYPE_VARIANT|Object|GetValue()|  
 |adWChar|DBTYPE_WSTR|Chaîne|GetString()|  
 |adUserDefined|DBTYPE_UDT|non pris en charge||  
 |adVarNumeric|DBTYPE_VARNUMERIC|non pris en charge||  
@@ -50,5 +50,6 @@ Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../include
  \* Pour les types OLE DB `DBTYPE_IUNKNOWN` et `DBTYPE_IDISPATCH`, la référence d’objet est une représentation marshalée du pointeur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

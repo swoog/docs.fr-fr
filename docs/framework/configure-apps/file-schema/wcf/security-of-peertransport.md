@@ -2,12 +2,12 @@
 title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: aadf2058c66cea4919d5dc9aa5aeab7850fcc395
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116856"
 ---
 # <a name="security-of-peertransport"></a>\<sécurité > de \<peerTransport >
 Contient les paramètres de sécurité associés à un canal homologue, y compris le type d'authentification utilisé et la sécurité utilisée pour le transport de messages.  
@@ -38,7 +38,7 @@ Contient les paramètres de sécurité associés à un canal homologue, y compri
   
 ## <a name="mode-attribute"></a>Attribut Mode  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`None`|La sécurité est désactivée.|  
 |`Transport`|La sécurité est fournie à l'aide de HTTPS.|  
@@ -58,12 +58,13 @@ Contient les paramètres de sécurité associés à un canal homologue, y compri
 |[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Définit un transport d’homologue pour une liaison personnalisée.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Sécurité de transport](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Choix d'un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)

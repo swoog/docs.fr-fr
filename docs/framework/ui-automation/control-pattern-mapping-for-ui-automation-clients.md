@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101131"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mappage de modèle de contrôle pour les clients UI Automation
 > [!NOTE]
@@ -49,14 +49,14 @@ ms.locfileid: "57679578"
 |Image|Aucun.|Grid Item, Table Item|Invoke, Selection Item|  
 |Liste|Aucun.|Grid, Multiple View, Scroll, Selection|Table|  
 |List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Aucun.|  
-|Menu|Aucun.|Aucun|Aucun.|  
+|Menu|Aucun.|Aucun.|Aucun.|  
 |Barre de menus|Aucun.|Expand Collapse, Dock, Transform|Aucun.|  
 |Élément de menu|Aucun.|Expand Collapse, Invoke, Selection Item, Toggle|Aucun.|  
 |Volet|Aucun.|Dock. Scroll, Transform|Fenêtre|  
 |ProgressBar|Aucun.|Range Value, Value|Aucun.|  
 |RadioButton|Selection Item|Aucun.|Basculer|  
 |Scroll Bar|Aucun.|Range Value|Scroll|  
-|Séparateur|Aucun.|Aucun|Aucun.|  
+|Séparateur|Aucun.|Aucun.|Aucun.|  
 |Curseur|None|Range Value, Selection, Value|Aucun.|  
 |Spinner|Aucun.|Range Value, Selection, Value|Aucun.|  
 |Bouton partagé|Invoke, Expand Collapse|Aucun.|Aucun.|  
@@ -66,7 +66,7 @@ ms.locfileid: "57679578"
 |Table|Grid, Grid Item, Table, Table Item|Aucun.|Aucun.|  
 |Texte|Aucun.|Grid Item, Table Item, Text|Value|  
 |Thumb|Transformer|Aucun.|Aucun.|  
-|Barre de titre|Aucun.|Aucun|Aucun.|  
+|Barre de titre|Aucun.|Aucun.|Aucun.|  
 |Tool Bar|Aucun.|Dock, Expand Collapse, Transform|Aucun.|  
 |Tool Tip|Aucun.|Text, Window|Aucun.|  
 |Arborescence|Aucun.|Scroll, Selection|Aucun.|  
@@ -77,4 +77,5 @@ ms.locfileid: "57679578"
 >  Si un type de contrôle ne possède aucun modèle de contrôle pris en charge répertorié, mais possède un ou plusieurs modèles de contrôle pris en charge de manière conditionnelle, l’un de ces modèles de contrôle conditionnels est constamment pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+
+- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

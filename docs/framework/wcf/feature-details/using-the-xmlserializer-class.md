@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105441"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilisation de la classe XmlSerializer
 Windows Communication Foundation (WCF) peut utiliser deux technologies de sérialisation différentes pour convertir les données dans votre application en code XML qui est transmis entre les clients et services, un processus appelé sérialisation.  
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
   
  D'autres considérations importantes relatives à la sécurité s'appliquent à la classe <xref:System.Xml.Serialization.XmlSerializer>. Tout d’abord, il est fortement recommandé de que n’importe quelle application WCF qui utilise le <xref:System.Xml.Serialization.XmlSerializer> classe est signée avec une clé qui est protégée contre toute divulgation. Cette recommandation s'applique à la fois lorsqu'un basculement manuel vers le <xref:System.Xml.Serialization.XmlSerializer> est exécuté et lorsqu'un basculement automatique est exécuté (par Svcutil.exe, la fonctionnalité Ajouter une référence de service ou un outil semblable). Il s’agit, car le <xref:System.Xml.Serialization.XmlSerializer> moteur de sérialisation prend en charge le chargement de *prégénérés des assemblys de sérialisation* tant qu’ils sont signés avec la même clé que l’application. Une application non signée n’est pas du tout protégée contre le risque qu’un assembly nuisible correspondant au nom attendu de l’assembly de sérialisation prégénéré soit placé dans le dossier d’application ou le cache GAC (Global Assembly Cache). Bien entendu, un intrus doit tout d'abord accéder en écriture à l'un de ces deux emplacements pour tenter cette action.  
   
- Une autre menace qui existe lorsque vous utilisez <xref:System.Xml.Serialization.XmlSerializer> concerne l’accès en écriture au dossier système temporaire. Le <xref:System.Xml.Serialization.XmlSerializer> moteur de sérialisation crée et utilise temporaire *assemblys de sérialisation* dans ce dossier. Vous devez savoir que tout processus ayant un accès en écriture au dossier temporaire peut remplacer ces assemblys de sérialisation par du code malveillant.  
+ Une autre menace qui existe lorsque vous utilisez <xref:System.Xml.Serialization.XmlSerializer> concerne l'accès en écriture au dossier système temporaire. Le <xref:System.Xml.Serialization.XmlSerializer> moteur de sérialisation crée et utilise temporaire *assemblys de sérialisation* dans ce dossier. Vous devez savoir que tout processus ayant un accès en écriture au dossier temporaire peut remplacer ces assemblys de sérialisation par du code malveillant.  
   
 ## <a name="rules-for-xmlserializer-support"></a>Règles pour la prise en charge de XmlSerializer  
  Vous ne pouvez pas appliquer directement des attributs compatibles avec <xref:System.Xml.Serialization.XmlSerializer> à des paramètres d'opération de contrat ou des valeurs de retour. Toutefois, ils peuvent être appliqués à des messages typés (parties du corps du contrat de message), comme illustré dans le code suivant.  
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
  Les mêmes règles de déclaration d'élément globale s'appliquent aux types de groupes de données hérités. Notez que `XmlRootAttribute` ne peut pas substituer de déclarations d'élément globales ajoutées par l'intermédiaire du code personnalisé, ajoutées soit à `XmlSchemaSet` à l'aide de la méthode du fournisseur de schéma, soit à l'aide de `GetSchema` pour les types de groupes de données hérités.  
   
 ### <a name="ixmlserializable-element-types"></a>Types d'élément IXmlSerializable  
- La propriété `IXmlSerializable` des types d'élément `IsAny` a la valeur `true` ou leur méthode du fournisseur de schéma retourne `null`.  
+ `IXmlSerializable` types d’élément le `IsAny` propriété définie sur `true` ou ont leur méthode du fournisseur de schéma à retourner `null`.  
   
  La sérialisation et la désérialisation d'un type d'élément est très semblable à la sérialisation et la désérialisation d'un type de contenu. Toutefois, il y a des différences importantes :  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
   
 -   Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut être `null` et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
   
--   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>, avec le paramètre `verifyObjectName` ayant la valeur `true`, se comporte de la même façon que `IsStartObject` avant de lire l'objet. `ReadObject` passe ensuite le contrôle à la méthode `ReadXml`.  
+-   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> avec le `verifyObjectName` paramètre défini sur `true` se comporte de la même façon que `IsStartObject` avant de lire l’objet. `ReadObject` puis passe le contrôle à `ReadXml` (méthode).  
   
  Le schéma exporté pour les types d'élément est le même que pour le type `XmlElement` décrit dans une section antérieure, sauf que la méthode du fournisseur de schéma peut ajouter tout schéma supplémentaire au <xref:System.Xml.Schema.XmlSchemaSet> comme avec les types de contenu. L'utilisation de l'attribut `XmlRootAttribute` avec les types d'élément n'est pas autorisé, et les déclarations d'élément globales ne sont jamais émises pour ces types.  
   
@@ -206,10 +206,11 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
 >  Le `<xmlSerializer useLegacySerializerGeneration="true"/>` commutateur fonctionne uniquement sur un ordinateur exécutant .NET Framework 4.5 ou version ultérieure. La méthode ci-dessus `appSettings` approche fonctionne sur toutes les versions de .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
 - [Spécification du transfert de données dans des contrats de service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Guide pratique pour Améliorer le temps de démarrage de WCF Client Applications à l’aide de XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Assignation du contenu WPF dans les Windows Forms au moment du Design'
+title: 'Procédure pas à pas : Attribution de contenu WPF dans Windows Forms au moment du design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108678"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : Assignation du contenu WPF dans les Windows Forms au moment du Design
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : Attribution de contenu WPF dans Windows Forms au moment du design
 Cette procédure pas à pas montre comment sélectionner les types de contrôle WPF (Windows Presentation Foundation) que vous souhaitez afficher sur votre formulaire. Vous pouvez sélectionner tout type de contrôle WPF inclus dans votre projet.
 
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
@@ -97,6 +97,7 @@ Cette procédure pas à pas montre comment sélectionner les types de contrôle 
 9. Le contrôle `elementHost2` héberge maintenant une instance du type `UserControl1`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migration et interopérabilité](../../wpf/advanced/migration-and-interoperability.md)

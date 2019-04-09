@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], subpaths
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
-ms.openlocfilehash: 0b57d0441c1aa9d5972af1f1c6b989aacba7f87f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111746"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Procédure : Créer plusieurs sous-chemins dans un PathGeometry
 Cet exemple montre comment créer plusieurs sous-chemins dans un <xref:System.Windows.Media.PathGeometry>. Pour créer plusieurs sous-chemins, vous créez un <xref:System.Windows.Media.PathFigure> de chaque sous-tracé.  
@@ -28,4 +28,5 @@ Cet exemple montre comment créer plusieurs sous-chemins dans un <xref:System.Wi
  (Notez que cette syntaxe d’attribut crée en fait un <xref:System.Windows.Media.StreamGeometry>, une version légère d’une <xref:System.Windows.Media.PathGeometry>. (Pour plus d’informations, consultez la page [Syntaxe XAML pour les tracés](path-markup-syntax.md).)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de Geometry](geometry-overview.md)
+
+- [Vue d'ensemble de Geometry](geometry-overview.md)

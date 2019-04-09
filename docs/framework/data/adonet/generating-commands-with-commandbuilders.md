@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120027"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Génération de commandes avec CommandBuilders
 Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au moment de l'exécution, par l'intermédiaire d'un outil de requête qui prend une commande textuelle provenant de l'utilisateur par exemple, il est possible que vous ne puissiez pas spécifier les propriétés `InsertCommand`, `UpdateCommand` ou `DeleteCommand` appropriées au moment de la conception. Si l'objet <xref:System.Data.DataTable> est mappé à une table de base de données unique ou est généré par elle, vous pouvez tirer parti de l'objet <xref:System.Data.Common.DbCommandBuilder> pour générer automatiquement les propriétés `DeleteCommand`, `InsertCommand` et `UpdateCommand` de l'objet <xref:System.Data.Common.DbDataAdapter>.  
@@ -30,7 +30,7 @@ Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au 
 ## <a name="rules-for-automatically-generated-commands"></a>Règles pour les commandes générées automatiquement  
  Le tableau suivant présente les règles de génération des commandes générées automatiquement.  
   
-|Commande|Règle|  
+|Command|Règle|  
 |-------------|----------|  
 |`InsertCommand`|Insère une ligne dans la source de données pour toutes les lignes de la table dont la propriété <xref:System.Data.DataRow.RowState%2A> a la valeur <xref:System.Data.DataRowState.Added>. Insère des valeurs pour toutes les colonnes qui peuvent être mises à jour (mais pas les colonnes comme les identités, les expressions ou les horodatages).|  
 |`UpdateCommand`|Met à jour les lignes dans la source de données pour toutes les lignes de la table dont la propriété `RowState` a la valeur <xref:System.Data.DataRowState.Modified>. Met à jour les valeurs de toutes les colonnes à l'exception de celles qui ne peuvent pas être mises à jour, telles que les identités ou les expressions. Met à jour toutes les lignes où les valeurs de colonne au niveau de la source de données correspondent aux valeurs de colonne de clé primaire de la ligne et où les colonnes restantes correspondent aux valeurs d'origine de la ligne. Pour plus d'informations, voir « Modèle d'accès simultané optimiste pour les mises à jour et les suppressions », plus loin dans cette rubrique.|  
@@ -51,7 +51,7 @@ Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au 
  La logique de génération automatique de commandes peut échouer si les noms de colonne ou de table contiennent des caractères spéciaux (notamment espaces, points, points d'interrogation ou autres caractères non alphanumériques), même s'ils sont délimités par des crochets. Selon le fournisseur, le fait de définir les paramètres QuotePrefix et QuoteSuffix peut permettre à la logique de génération de traiter les espaces, mais pas les caractères spéciaux d'échappement. Noms qualifiés complets table sous la forme de *catalog.schema.table* sont pris en charge.  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Utilisation de CommandBuilder pour générer automatiquement une instruction SQL  
- Pour générer automatiquement des instructions SQL pour un `DataAdapter`, commencez par définir la propriété `SelectCommand` du `DataAdapter`, puis créez un objet `CommandBuilder` et spécifiez comme argument le `DataAdapter` pour lequel l'objet `CommandBuilder` génère automatiquement des instructions SQL.  
+ Pour générer automatiquement des instructions SQL pour un `DataAdapter`, commencez par définir la propriété `SelectCommand` du `DataAdapter`, puis créez un objet `CommandBuilder` et spécifiez comme argument le `DataAdapter` pour lequel l’objet `CommandBuilder` génère automatiquement des instructions SQL.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object   
@@ -113,7 +113,8 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [Exécution d'une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

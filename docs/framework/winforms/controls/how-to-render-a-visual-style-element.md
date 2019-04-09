@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Restituer un élément de Style visuel'
+title: 'Procédure : afficher un élément de style visuel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099831"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Procédure : Restituer un élément de Style visuel
+# <a name="how-to-render-a-visual-style-element"></a>Procédure : afficher un élément de style visuel
 Le <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expose de l’espace de noms <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> objets qui représentent l’utilisateur Windows de l’interface éléments pris en charge par les styles visuels. Cette rubrique montre comment utiliser le <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe pour restituer le <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> qui représente le **fermer la session** et **arrêter** boutons du menu Démarrer.  
   
 ### <a name="to-render-a-visual-style-element"></a>Pour restituer un élément de style visuel  
@@ -44,4 +44,5 @@ Le <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expose 
 -   Fait référence à la <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, et <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> espaces de noms.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Rendu des contrôles avec les styles visuels](rendering-controls-with-visual-styles.md)

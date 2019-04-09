@@ -2,17 +2,17 @@
 title: Spécification d'un algorithme de chiffrement personnalisé
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113709"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Spécification d'un algorithme de chiffrement personnalisé
 WCF vous permet de spécifier un algorithme de chiffrement personnalité pour le chiffrement des données ou le calcul de signatures numériques. Voici les étapes qui permettent d'effectuer cette opération :  
   
-1.  Dériver une classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1.  Dérivez une classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Enregistrer l'algorithme  
   
@@ -87,7 +87,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 ```  
   
 ## <a name="register-the-custom-algorithm"></a>Enregistrer l'algorithme personnalisé  
- L'enregistrement peut être effectué dans un fichier de configuration ou en code impératif. L'enregistrement d'un algorithme personnalisé s'effectue en créant un mappage entre une classe qui implémente un fournisseur de service de chiffrement et un alias. L'alias est ensuite mappé sur un URI qui est utilisé pour spécifier l'algorithme dans la liaison du service WCF. L'extrait de configuration suivant illustre la méthode d'enregistrement d'un algorithme personnalisé :  
+ L'enregistrement peut être effectué dans un fichier de configuration ou en code impératif. L'enregistrement d'un algorithme personnalisé s'effectue en créant un mappage entre une classe qui implémente un fournisseur de service de chiffrement et un alias. L’alias est ensuite mappé sur un URI qui est utilisé pour spécifier l’algorithme dans la liaison du service WCF. L'extrait de configuration suivant illustre la méthode d'enregistrement d'un algorithme personnalisé :  
   
 ```xml  
 <configuration>  
@@ -126,7 +126,8 @@ WSHttpBinding binding = new WSHttpBinding();
  Pour obtenir un exemple de code complet, consultez la [agilité de chiffrement dans sécurité WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) exemple.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)

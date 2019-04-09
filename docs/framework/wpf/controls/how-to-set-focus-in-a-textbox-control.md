@@ -8,12 +8,12 @@ helpviewer_keywords:
 - focus [WPF], setting
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
-ms.openlocfilehash: 8c3b9881ada843d65db035835fc5f4c865a177e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115503"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>Procédure : Définir le focus dans un contrôle TextBox
 Cet exemple montre comment utiliser le <xref:System.Windows.UIElement.Focus%2A> méthode pour définir le focus sur un <xref:System.Windows.Controls.TextBox> contrôle.  
@@ -30,7 +30,8 @@ Cet exemple montre comment utiliser le <xref:System.Windows.UIElement.Focus%2A> 
  [!code-vb[TextBox_MiscCode#_FocusTextBox](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_focustextbox)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.UIElement.Focusable%2A>
 - <xref:System.Windows.UIElement.IsFocused%2A>
-- [Vue d’ensemble de TextBox](textbox-overview.md)
-- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)
+- [Vue d'ensemble de TextBox](textbox-overview.md)
+- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)

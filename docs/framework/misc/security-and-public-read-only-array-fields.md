@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03f3ce51eaab9e08d5f05932d9360adc4fd2110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113774"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Sécurité et champs de tableau en lecture seule publics
 Jamais utiliser les champs de tableau publics en lecture seule à partir de bibliothèques managées pour définir le comportement de limites ou la sécurité de vos applications, car les champs de tableau publics en lecture seule peuvent être modifiés.  
@@ -26,4 +26,5 @@ Jamais utiliser les champs de tableau publics en lecture seule à partir de bibl
  Notez que les types .NET Framework n’utilisent pas les champs publics pour définir les types de limites en interne.  Au lieu de cela, le .NET Framework utilise des champs privés séparés.  Modification des valeurs de ces champs publics ne modifie pas le comportement des types .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)

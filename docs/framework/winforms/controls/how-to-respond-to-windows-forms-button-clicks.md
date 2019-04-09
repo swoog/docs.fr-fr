@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Répondre aux clics de bouton Windows Forms'
+title: 'Procédure : répondre aux clics de bouton Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110069"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procédure : Répondre aux clics de bouton Windows Forms
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procédure : répondre aux clics de bouton Windows Forms
 L’utilisation la plus élémentaire d’un formulaire Windows <xref:System.Windows.Forms.Button> contrôle consiste à exécuter du code lorsque le bouton est activé.  
   
  En cliquant sur un <xref:System.Windows.Forms.Button> contrôle génère également un nombre d’événements, tels que le <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, et <xref:System.Windows.Forms.Control.MouseUp> événements. Si vous avez l’intention d’attacher des gestionnaires d’événements pour ces événements connexes, veillez à ce que leurs actions ne sont pas en conflit. Par exemple, si vous cliquez sur le bouton efface les informations que l’utilisateur a tapé dans une zone de texte, suspendant le pointeur de la souris sur le bouton ne doit pas afficher une info-bulle contenant ces informations inexistante pour l’instant.  
@@ -56,6 +56,7 @@ L’utilisation la plus élémentaire d’un formulaire Windows <xref:System.Win
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d'ensemble du contrôle Button](button-control-overview-windows-forms.md)
+
+- [Vue d’ensemble du contrôle Button](button-control-overview-windows-forms.md)
 - [Méthodes de sélection du contrôle Button Windows Forms](ways-to-select-a-windows-forms-button-control.md)
 - [Button, contrôle](button-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir au niveau de Compression JPEG'
+title: 'Procédure : définir le niveau de compression JPEG'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130674"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Procédure : Définir au niveau de Compression JPEG
+# <a name="how-to-set-jpeg-compression-level"></a>Procédure : définir le niveau de compression JPEG
 Vous pouvez modifier les paramètres d’une image quand vous enregistrez l’image sur disque de façon à réduire la taille du fichier ou améliorer sa qualité. Vous pouvez ajuster la qualité d’une image JPEG en changeant son niveau de compression. Pour spécifier le niveau de compression lorsque vous enregistrez une image JPEG, vous devez créer un <xref:System.Drawing.Imaging.EncoderParameters> de l’objet et transmettez-le à la <xref:System.Drawing.Image.Save%2A> méthode de la <xref:System.Drawing.Image> classe. Initialiser le <xref:System.Drawing.Imaging.EncoderParameters> objet afin qu’il a un tableau qui se compose d’un <xref:System.Drawing.Imaging.EncoderParameter>. Lorsque vous créez le <xref:System.Drawing.Imaging.EncoderParameter>, spécifiez la <xref:System.Drawing.Imaging.Encoder.Quality> codeur et le niveau de compression souhaité.  
   
 ## <a name="example"></a>Exemple  
@@ -130,6 +130,7 @@ End Function
 -   Un fichier image nommé `TestPhoto.jpg` et qui se trouve sur **c:\\**.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Déterminer les paramètres pris en charge par un encodeur](how-to-determine-the-parameters-supported-by-an-encoder.md)
+
+- [Procédure : déterminer les paramètres pris en charge par un encodeur](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Types de bitmaps](types-of-bitmaps.md)
-- [Utilisation d’encodeurs et de décodeurs d’images dans GDI+ managé](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [Utilisation d'encodeurs et de décodeurs d'images dans GDI+ managé](using-image-encoders-and-decoders-in-managed-gdi.md)

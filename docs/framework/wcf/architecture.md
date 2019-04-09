@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099701"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architecture Windows Communication Foundation
 Le graphique suivant illustre les principales couches de l’architecture de Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ Le graphique suivant illustre les principales couches de l’architecture de Win
 ### <a name="contracts-and-descriptions"></a>Contrats et descriptions  
  Les contrats définissent les différents aspects du système de messages. Le contrat de données décrit chaque paramètre qui compose chaque message qu'un service peut créer ou consommer. Les paramètres de message sont définis par des documents en langage XSD (XML Schema Definition), ce qui permet à tout système comprenant XML de gérer les documents. Le contrat de message définit des parties de message spécifiques à l'aide de protocoles SOAP, et permet un contrôle plus fin de celles-ci, lorsque l'interopérabilité exige une telle précision. Le contrat de service spécifie les signatures de méthode réelles du service et est distribué en tant qu'interface dans un des langages de programmation pris en charge, tels que Visual Basic ou Visual C#.  
   
- Les stratégies et liaisons stipulent les conditions requises pour communiquer avec un service.  Par exemple, la liaison doit spécifier (au minimum) le transport utilisé (par exemple, HTTP ou TCP) et un encodage. Les stratégies incluent des spécifications de sécurité et d'autres conditions qui doivent être remplies pour communiquer avec un service.  
+ Les stratégies et liaisons stipulent les conditions requises pour communiquer avec un service.  Par exemple, la liaison doit spécifier (au minimum) le transport utilisé (par exemple, HTTP ou TCP) et un encodage. Les stratégies incluent des exigences de sécurité et d’autres conditions qui doivent être remplies pour communiquer avec un service.  
   
 ### <a name="service-runtime"></a>Exécution du service  
  La couche d'exécution du service contient les comportements qui se produisent uniquement pendant le fonctionnement du service, autrement dit, les comportements au moment de l'exécution du service. La limitation contrôle le nombre de messages traités, qui peut varier si la demande pour le service atteint une limite prédéfinie. Un comportement d'erreur spécifie ce qui se passe lorsqu'une erreur interne se produit sur le service, par exemple, en contrôlant les informations communiquées au client. (Trop d'informations peuvent donner un avantage à un utilisateur malveillant pour mettre en œuvre une attaque.) Un comportement de métadonnées détermine si les métadonnées sont mises à la disposition du monde extérieur et comment elles le sont. Un comportement d'instance définit le nombre d'instances du service qui peuvent être exécutées (par exemple, un singleton spécifie une seule instance pour traiter tous les messages). Un comportement de transaction permet de restaurer les opérations traitées en cas de défaillance. Comportement de répartition est le contrôle de la manière dont un message est traité par l’infrastructure WCF.  
@@ -46,5 +46,6 @@ Le graphique suivant illustre les principales couches de l’architecture de Win
  Les services peuvent également être *hébergé*, ou de s’exécuter dans un fichier exécutable géré par un agent externe, tel que IIS ou Windows Activation Service (WAS). ÉTAIT permet aux applications de WCF d’être activé automatiquement lors du déploiement sur un ordinateur en cours d’exécution. Les services peuvent également être exécutés manuellement comme des fichiers exécutables (fichiers .exe). Un service peut également être exécuté automatiquement en tant que service Windows. Les composants COM + peuvent également être hébergés en tant que services WCF.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Concepts fondamentaux de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+- [Concepts fondamentaux concernant Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

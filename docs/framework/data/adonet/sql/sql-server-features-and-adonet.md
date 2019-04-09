@@ -2,12 +2,12 @@
 title: Fonctionnalités SQL Server et ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107521"
 ---
 # <a name="sql-server-features-and-adonet"></a>Fonctionnalités SQL Server et ADO.NET
 Les rubriques de cette section traitent des fonctionnalités dans SQL Server qui ont pour but le développement d’applications de base de données avec ADO.NET.  
@@ -22,7 +22,7 @@ Les rubriques de cette section traitent des fonctionnalités dans SQL Server qui
  [Énumération des instances de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Décrit comment énumérer des instances actives de SQL Server.  
   
- [Statistiques du fournisseur pour SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [Fournisseur de statistiques pour SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Décrit la prise en charge pour l'obtention de statistiques d'exécution SQL Server.  
   
  [Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
@@ -37,17 +37,18 @@ Les rubriques de cette section traitent des fonctionnalités dans SQL Server qui
  [Notifications de requête dans SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  Décrit la manière dont des applications .NET Framework peuvent demander une notification de SQL Server lorsque les données ont changé.  
   
- [Isolation d’instantanés dans SQL Server](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ [Isolation d'instantanés dans SQL Server](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  Décrit la prise en charge de l’isolation d’instantané, mécanisme de gestion des versions de ligne conçu pour réduire le blocage dans des applications transactionnelles.  
   
- [Prise en charge de SqlClient pour la haute disponibilité et la récupération d’urgence](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Décrit la prise en charge de SqlClient pour les groupes de disponibilité de récupération d'urgence (AlwaysOn) haute disponibilité.  
   
  [Prise en charge de SqlClient pour LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Décrit la prise en charge SqlClient des bases de données LocalDB.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+
+- [Opérations de données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

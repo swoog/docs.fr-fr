@@ -2,12 +2,12 @@
 title: Limitation de la distribution de messages
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130219"
 ---
 # <a name="limiting-message-distribution"></a>Limitation de la distribution de messages
 Le canal homologue est, de par sa conception, une maille de diffusion. Son modèle de saturation de base implique la distribution de chaque message envoyé par tout membre d'une maille à tous les autres membres de cette maille. C'est idéal dans les situations où chaque message généré par un membre est pertinent et utile à tous les autres membres (par exemple, une salle de conversation). Toutefois, de nombreuses applications ont parfois besoin de limiter la distribution de messages. Par exemple, si un nouveau membre rejoint une maille et souhaite extraire le dernier message envoyé sur cette maille, cette demande ne doit pas être envoyée à chaque membre de la maille. Elle peut être limitée aux voisins proches ou les messages générés localement peuvent être filtrés. Les messages peuvent également être envoyés à un nœud individuel sur la maille. Cette rubrique décrit l'utilisation du nombre de sauts, d'un filtre de propagation de messages, d'un filtre local ou d'une connexion directe pour contrôler la façon dont les messages sont transférés sur la maille, et fournit des recommandations générales sur le choix d'une approche.  
@@ -20,9 +20,9 @@ Le canal homologue est, de par sa conception, une maille de diffusion. Son modè
 -   Pour les extraits de code et des informations connexes, consultez le [Peer Channel Team blog](https://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>Filtre de propagation de messages  
- `MessagePropagationFilter` peut être utilisé pour le contrôle personnalisé de saturation de messages, en particulier lorsque le contenu des messages ou d'autres scénarios spécifiques déterminent la propagation. Le filtre prend les décisions de propagation pour chaque message passant par le nœud. C'est le cas des messages reçus par votre nœud en provenance d'autres emplacements de la maille ainsi que des messages créés par votre application. Le filtre ayant accès au message et à son origine, les décisions relatives à son transfert ou à sa suppression peuvent être basées sur toutes les informations disponibles.  
+ `MessagePropagationFilter` peut être utilisé pour le contrôle personnalisé de saturation de messages, en particulier lorsque le contenu du message ou d’autres scénarios spécifiques déterminent la propagation. Le filtre prend les décisions de propagation pour chaque message passant par le nœud. C'est le cas des messages reçus par votre nœud en provenance d'autres emplacements de la maille ainsi que des messages créés par votre application. Le filtre ayant accès au message et à son origine, les décisions relatives à son transfert ou à sa suppression peuvent être basées sur toutes les informations disponibles.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> est une classe abstraite de base avec une fonction unique, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Le premier argument de l'appel de méthode passe dans une copie complète du message. La modification du message n'entraîne pas le changement du message proprement dit. Le dernier argument de l’appel de méthode identifie l’origine du message (`PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote`). Les implémentations concrètes de cette méthode doivent retourner une constante à partir de l'énumération <xref:System.ServiceModel.PeerMessagePropagation> indiquant que le message doit être transféré à l'application locale (`Local`), à des clients distants (`Remote`), aux deux (`LocalAndRemote`), ou ni à l'un ni à l'autre (`None`). Vous pouvez appliquer ce filtre en accédant à l'objet `PeerNode` correspondant et en spécifiant une instance de la classe de filtre de propagation dérivée dans la propriété `PeerNode.MessagePropagationFilter`. Assurez-vous que le filtre de propagation est joint avant d'ouvrir le canal homologue.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> est une classe abstraite de base avec une seule fonction, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Le premier argument de l’appel de méthode passe dans une copie complète du message. La modification du message n'entraîne pas le changement du message proprement dit. Le dernier argument de l'appel de méthode identifie l'origine du message (`PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote`). Les implémentations concrètes de cette méthode doivent retourner une constante à partir de l'énumération <xref:System.ServiceModel.PeerMessagePropagation> indiquant que le message doit être transféré à l'application locale (`Local`), à des clients distants (`Remote`), aux deux (`LocalAndRemote`), ou ni à l'un ni à l'autre (`None`). Vous pouvez appliquer ce filtre en accédant à l'objet `PeerNode` correspondant et en spécifiant une instance de la classe de filtre de propagation dérivée dans la propriété `PeerNode.MessagePropagationFilter`. Assurez-vous que le filtre de propagation est joint avant d'ouvrir le canal homologue.  
   
 -   Pour les extraits de code et des informations connexes, consultez le [Peer Channel Team blog](https://go.microsoft.com/fwlink/?LinkID=114532).  
   
@@ -52,7 +52,7 @@ Le canal homologue est, de par sa conception, une maille de diffusion. Son modè
   
     -   *Sous-ensemble complexe de la maille*:  MessagePropagationFilter.  
   
--   **La fréquence à laquelle**  
+-   **Fréquence**  
   
     -   *Très fréquentes*:  Direct connection, PeerHopCount, MessagePropagationFilter.  
   
@@ -65,4 +65,5 @@ Le canal homologue est, de par sa conception, une maille de diffusion. Son modè
     -   *Faible*:  N’importe quel, connexion directe probablement pas nécessaire.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+
+- [Création d'une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119130"
 ---
 # <a name="thread-pool-etw-events"></a>Événements ETW de pool de threads
 <a name="top"></a> Ces événements collectent des informations sur les threads de travail et d'E/S.  
@@ -32,7 +32,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "54503311"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -216,4 +216,5 @@ ms.locfileid: "54503311"
 |ClrInstanceID|Win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

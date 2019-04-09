@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085920"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Procédure : Implémenter une logique de validation sur des objets personnalisés
 Cet exemple montre comment implémenter une logique de validation sur un objet personnalisé, puis lier à ce dernier.  
@@ -33,6 +33,7 @@ Cet exemple montre comment implémenter une logique de validation sur un objet p
  Vous pouvez également, au lieu d’utiliser le <xref:System.Windows.Controls.DataErrorValidationRule>, vous pouvez définir le <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> propriété `true`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [Implémenter la validation de la liaison](how-to-implement-binding-validation.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100299"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procédure : Créer un complément qui est une interface utilisateur
 Cet exemple montre comment créer un complément qui est un Windows Presentation Foundation (WPF) qui est hébergé par une application autonome WPF.  
   
  Le complément est une interface utilisateur qui est un contrôle utilisateur WPF. Le contenu du contrôle utilisateur est un bouton unique qui, quand on clique dessus, affiche une boîte de message. L’application autonome WPF héberge l’interface utilisateur Ajouter en tant que le contenu de la fenêtre principale de l’application.  
   
- **Composants requis**  
+ **Prérequis**  
   
  Cet exemple met en évidence les extensions WPF pour le modèle de complément .NET Framework qui permettent ce scénario et suppose ce qui suit :  
   
@@ -31,8 +31,7 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
   
 ## <a name="example"></a>Exemple  
  Pour créer un complément qui est une UI WPF nécessite du code spécifique pour chaque segment de pipeline, le complément et l’application hôte.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implémentation du segment de pipeline de contrat  
  Lorsqu’un complément est une interface utilisateur, le contrat pour le complément doit implémenter <xref:System.AddIn.Contract.INativeHandleContract>. Dans l’exemple, `IWPFAddInContract` implémente <xref:System.AddIn.Contract.INativeHandleContract>, comme illustré dans le code suivant.  
@@ -63,17 +62,13 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>Implémentation du segment de pipeline de vue hôte  
  Dans ce modèle, l’application hôte attend généralement la vue hôte soit une <xref:System.Windows.FrameworkElement> sous-classe. L’adaptateur côté hôte doit convertir le <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> après le <xref:System.AddIn.Contract.INativeHandleContract> dépasse la limite d’isolation. Car une méthode n’est pas appelée par l’application hôte pour obtenir le <xref:System.Windows.FrameworkElement>, la vue hôte doit « retourner » le <xref:System.Windows.FrameworkElement> par qui la contient. Par conséquent, la vue hôte doit dériver d’une sous-classe de <xref:System.Windows.FrameworkElement> qui peuvent contenir d’autres [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], tel que <xref:System.Windows.Controls.UserControl>. Le code suivant montre la vue hôte du contrat, implémentée en tant que la `WPFAddInHostView` classe.  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implémentation du segment de pipeline d’adaptateur côté hôte  
  Bien que le contrat soit un <xref:System.AddIn.Contract.INativeHandleContract>, l’application hôte attend un <xref:System.Windows.Controls.UserControl> (comme spécifié par la vue hôte). Par conséquent, le <xref:System.AddIn.Contract.INativeHandleContract> doit être converti en un <xref:System.Windows.FrameworkElement> après avoir traversé la limite d’isolation, avant d’être définie en tant que contenu de la vue hôte (qui dérive à son <xref:System.Windows.Controls.UserControl>).  
   
  Cette opération est exécutée par l’adaptateur côté hôte, comme illustré dans le code suivant.  
-  
-  
-  
+
  Comme vous pouvez le voir, l’adaptateur côté hôte acquiert le <xref:System.AddIn.Contract.INativeHandleContract> en appelant l’adaptateur côté complément <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> (méthode) (il s’agit du point où la <xref:System.AddIn.Contract.INativeHandleContract> dépasse la limite d’isolation).  
   
  L’adaptateur côté hôte convertit ensuite le <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Enfin, le <xref:System.Windows.FrameworkElement> est défini comme le contenu de la vue hôte.  
@@ -81,29 +76,24 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>Implémentation du complément  
  Avec l’adaptateur côté complément et la vue de complément en place, le complément peut être implémenté par dérivation de la vue de complément, comme illustré dans le code suivant.  
-  
-  
-  
-  
-  
+
  Dans cet exemple, vous pouvez constater un avantage intéressant de ce modèle : complément développeurs doivent uniquement implémenter le complément (dans la mesure où il s’agit de l’interface utilisateur également), et non une classe de complément et une interface utilisateur complément.  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implémentation de l'application hôte.  
  Avec l’adaptateur côté hôte et la vue hôte étant créés, l’application hôte peut utiliser le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modèle de complément pour ouvrir le pipeline et acquérir une vue hôte du complément-. Ces étapes sont présentées dans le code suivant.  
-  
-  
-  
+
  L’application hôte utilise le code de modèle de complément .NET Framework classique pour activer le complément, ce qui implicitement retourne la vue hôte à l’application hôte. L’application hôte affiche ensuite la vue hôte (qui est un <xref:System.Windows.Controls.UserControl>) à partir d’un <xref:System.Windows.Controls.Grid>.  
   
  Le code de traitement des interactions avec l’interface utilisateur complément s’exécute dans domaine d’application du complément. Ces interactions incluent :  
   
--   Gérer le <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
+-   Gérer le <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
   
 -   Affichant le <xref:System.Windows.MessageBox>.  
   
  Cette activité est complètement isolée de l’application hôte.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Vue d’ensemble des compléments WPF](wpf-add-ins-overview.md)
+- [Vue d'ensemble des compléments WPF](wpf-add-ins-overview.md)

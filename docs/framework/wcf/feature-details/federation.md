@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114028"
 ---
 # <a name="federation"></a>Fédération
 Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour le déploiement d’architectures de sécurité fédérée. Pour un exemple d’application présentant la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -29,7 +29,7 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 |Élément|Description|  
 |-------------|-----------------|  
 |Domaine|Unité unique de confiance ou d'administration de sécurité. Un domaine classique peut inclure une organisation unique.|  
-|Fédération|Collection de domaines qui ont établi la confiance. Le niveau de confiance peut varier, mais il inclut en général l’authentification et presque toujours l’autorisation. Une fédération classique peut inclure un certain nombre d'organisations qui ont établi la confiance pour l'accès partagé à un ensemble de ressources.|  
+|Fédération|Collection de domaines qui ont établi la confiance. Le niveau de confiance peut varier, mais il inclut en général l'authentification et presque toujours l'autorisation. Une fédération classique peut inclure un certain nombre d'organisations qui ont établi la confiance pour l'accès partagé à un ensemble de ressources.|  
 |Service d'émission de jeton de sécurité (STS, Security Token Service)|Service Web qui émet des jetons de sécurité ; autrement dit, fait des assertions en fonction de la preuve qu'il approuve, à quiconque l'approuve. Il constitue la base de l'échange de confiance entre les domaines.|  
   
 ### <a name="example-scenario"></a>Exemple de scénario  
@@ -93,7 +93,7 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
  ![Sécurité de la fédération dans WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
 ### <a name="example-myservice"></a>Exemple MyService  
- Le service `MyService` expose un point de terminaison unique via `MyServiceEndpoint`. L’illustration suivante présente l’adresse, la liaison et le contrat associés au point de terminaison.  
+ Le service `MyService` expose un point de terminaison unique via `MyServiceEndpoint`. L'illustration suivante présente l'adresse, la liaison et le contrat associés au point de terminaison.  
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. En tant que plateforme pour la création et déploiement d’applications distribuées, WCF fournit la prise en charge native pour implémenter la sécurité fédérée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)

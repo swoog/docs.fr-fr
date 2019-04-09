@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Arrondir les angles d'un RectangleGeometry"
+title: 'Procédure : Arrondir les angles d’un RectangleGeometry'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corners [WPF], rounding
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089131"
 ---
-# <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Procédure : Arrondir les angles d'un RectangleGeometry
+# <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Procédure : Arrondir les angles d’un RectangleGeometry
 Pour arrondir les angles d’un <xref:System.Windows.Media.RectangleGeometry>, définissez son <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> et <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> propriétés à une valeur supérieure à zéro. Plus les valeurs, plus angles du rectangle.  
   
 ## <a name="example"></a>Exemple  
@@ -26,6 +26,7 @@ Pour arrondir les angles d’un <xref:System.Windows.Media.RectangleGeometry>, d
 Rectangles aux angles arrondis  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de Geometry](geometry-overview.md)
+
+- [Vue d'ensemble de Geometry](geometry-overview.md)
 - [Créer une forme composite](how-to-create-a-composite-shape.md)
 - [Créer une forme à l’aide d’un PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

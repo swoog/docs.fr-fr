@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: f99b8626ca4a89bf94e44652e8277f8b2c147fe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091939"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportation et importation de métadonnées
 Dans Windows Communication Foundation (WCF), l’exportation de métadonnées est le processus de décrire des points de terminaison de service et les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour comprendre comment utiliser le service. L'importation des métadonnées du service est le processus de génération d'instances <xref:System.ServiceModel.Description.ServiceEndpoint> ou de parties de métadonnées de service.  
@@ -27,40 +27,40 @@ Dans Windows Communication Foundation (WCF), l’exportation de métadonnées es
 ### <a name="importing-wsdl-documents"></a>Importation de documents WSDL  
  Pour importer les métadonnées de service dans WCF, utilisez une implémentation de la <xref:System.ServiceModel.Description.MetadataImporter> classe abstraite. Le <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> type est l’implémentation de la <xref:System.ServiceModel.Description.MetadataImporter> inclus avec WCF de classe abstraite. Le type <xref:System.ServiceModel.Description.WsdlImporter> importe des métadonnées WSDL avec les stratégies attachées fournies dans un objet <xref:System.ServiceModel.Description.MetadataSet>.  
   
- Le type <xref:System.ServiceModel.Description.WsdlImporter> vous permet de contrôler comment importer les métadonnées. Vous pouvez importer tous les points de terminaison, toutes les liaisons ou tous les contrats. Vous pouvez importer tous les points de terminaison associés à un service WSDL spécifique, une liaison ou un type de port. Vous pouvez également importer le point de terminaison d'un port WSDL spécifique, la liaison d'une liaison WSDL spécifique ou le contrat d'un type de port WSDL spécifique.  
+ Le type <xref:System.ServiceModel.Description.WsdlImporter> vous permet de contrôler comment importer les métadonnées. Vous pouvez importer tous les points de terminaison, toutes les liaisons ou tous les contrats. Vous pouvez importer tous les points de terminaison associés à un service WSDL spécifique, une liaison ou un type de port. Vous pouvez également importer le point de terminaison d’un port WSDL spécifique, la liaison d’une liaison WSDL spécifique ou le contrat d’un type de port WSDL spécifique.  
   
  <xref:System.ServiceModel.Description.WsdlImporter> expose également une propriété <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> qui vous permet de spécifier un jeu de contrats ne devant pas être importés. <xref:System.ServiceModel.Description.WsdlImporter> utilise les contrats dans la propriété <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> au lieu d'importer un contrat avec le même nom qualifié à partir des métadonnées.  
   
 ### <a name="importing-policies"></a>Importation de stratégies  
- Le type <xref:System.ServiceModel.Description.WsdlImporter> recueille les expressions de stratégie jointes aux sujets du message, de l’opération et de la stratégie de point de terminaison, puis utilise les implémentations <xref:System.ServiceModel.Description.IPolicyImportExtension> dans la collection <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> pour importer les expressions de stratégie.  
+ Le type <xref:System.ServiceModel.Description.WsdlImporter> recueille les expressions de stratégie jointes aux sujets du message, de l'opération et de la stratégie de point de terminaison, puis utilise les implémentations <xref:System.ServiceModel.Description.IPolicyImportExtension> dans la collection <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> pour importer les expressions de stratégie.  
   
  La logique d'importation de la stratégie gère automatiquement les références aux expressions de stratégie dans le même document WSDL et est identifiée avec un attribut `wsu:Id` ou `xml:id`. La logique d'importation de la stratégie protège les applications contre les références de stratégie circulaires en limitant la taille d'une expression de stratégie à 4096 nœuds, où un nœud est l'un des éléments suivants : `wsp:Policy`, `wsp:All`, `wsp:ExactlyOne`, `wsp:policyReference`.  
   
  La logique d'importation de stratégie normalise également automatiquement des expressions de stratégie. Les expressions de stratégie imbriquées et l'attribut `wsp:Optional` ne sont pas normalisés. Le traitement de normalisation effectué est limitée à 4096 étapes, où chaque étape cède une assertion de stratégie ou un élément enfant d'un élément `wsp:ExactlyOne`.  
   
- Le type <xref:System.ServiceModel.Description.WsdlImporter> essaye jusqu'à 32 combinaisons d'alternatives de stratégie jointes aux différents sujets de stratégie WSDL. Si aucune combinaison n'est correctement importée, la première combinaison est utilisée pour construire une liaison personnalisée partielle.  
+ Le type <xref:System.ServiceModel.Description.WsdlImporter> essaye jusqu'à 32 combinaisons d'alternatives de stratégie jointes aux différents sujets de stratégie WSDL. Si aucune combinaison n’est correctement importée, la première combinaison est utilisée pour construire une liaison personnalisée partielle.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
- Les types <xref:System.ServiceModel.Description.MetadataExporter> et <xref:System.ServiceModel.Description.MetadataImporter> exposent une propriété `Errors` qui peut contenir une collection de messages d'erreur et d'avertissement rencontrés pendant les processus d'exportation et d'importation, respectivement ; ces derniers peuvent être utilisés lors de l'implémentation d'outils.  
+ Les types <xref:System.ServiceModel.Description.MetadataExporter> et <xref:System.ServiceModel.Description.MetadataImporter> exposent une propriété `Errors` qui peut contenir une collection de messages d’erreur et d’avertissement rencontrés pendant les processus d’exportation et d’importation, respectivement ; ces derniers peuvent être utilisés lors de l’implémentation d’outils.  
   
  Le type <xref:System.ServiceModel.Description.WsdlImporter> lève généralement une exception pour une exception détectée pendant l'importation et ajoute une erreur correspondante à sa propriété `Errors`. Les méthodes <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A>et <xref:System.ServiceModel.Description.WsdlImporter.ImportEndpoints%2A>, toutefois, ne lèvent pas ces exceptions, vous devez donc vérifier la propriété `Errors` pour déterminer si un problème s'est produit lors de l'appel de ces méthodes.  
   
  Le type <xref:System.ServiceModel.Description.WsdlExporter> lève à nouveau toutes les exceptions détectées pendant le processus d'exportation. Ces exceptions ne sont pas capturées en tant qu'erreurs dans la propriété `Errors`. Une fois que <xref:System.ServiceModel.Description.WsdlExporter> lève une exception, celle-ci se trouve dans un état de faute et ne peut pas être réutilisée. <xref:System.ServiceModel.Description.WsdlExporter> ajoute des avertissements à sa propriété `Errors` lorsqu'une opération ne peut pas être exportée parce qu'elle utilise des actions génériques et lorsque des noms de liaison dupliqués sont rencontrés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour Importer des métadonnées dans les points de terminaison de Service](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Procédure : importer des métadonnées dans des points de terminaison de service](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Décrit comment importer les métadonnées téléchargées dans des objets description.  
   
- [Guide pratique pour Exporter les métadonnées à partir de points de terminaison de Service](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Procédure : exporter des métadonnées à partir de points de terminaison de service](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Décrit comment exporter des objets description dans des métadonnées.  
   
- [Informations de référence sur ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [Référence pour ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Décrit le mappage entre les objets description et WSDL.  
   
- [Guide pratique pour Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Décrit l'utilisation de Svcutil.exe pour exporter les métadonnées pour les services, les contrats et les types de données dans les assemblys compilés.  
   
- [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Référence des schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  Décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
   
 ## <a name="reference"></a>Référence  
@@ -69,5 +69,6 @@ Dans Windows Communication Foundation (WCF), l’exportation de métadonnées es
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exportation de métadonnées personnalisées pour une extension WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
 - [Importation de métadonnées personnalisées pour une extension WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

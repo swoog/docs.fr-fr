@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Obtenir le décalage d'un Visual"
+title: 'Procédure : Obtenir le décalage d’un visuel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093408"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Procédure : Obtenir le décalage d'un Visual
+# <a name="how-to-get-the-offset-of-a-visual"></a>Procédure : Obtenir le décalage d’un visuel
 Ces exemples montrent comment récupérer la valeur de décalage d’un objet visuel qui est relative à son parent, ou de n’importe quel ancêtre ou descendant.  
   
 ## <a name="example"></a>Exemple  
@@ -66,6 +66,7 @@ TextBlock imbriqué dans deux StackPanel
  L’offset prend en compte la <xref:System.Windows.FrameworkElement.Margin%2A> valeurs pour tous les objets. Dans ce cas, <xref:System.Windows.Vector.X%2A> est -4, et <xref:System.Windows.Vector.Y%2A> est -4. Les valeurs de décalage sont des valeurs négatives, étant donné que l’objet parent est décalé vers par rapport à son objet enfant.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

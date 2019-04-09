@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Obtenir des métriques de police'
+title: 'Procédure : obtenir des métriques de polices'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: c1701b07958509e663f0ac651471e82a60120618
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119052"
 ---
-# <a name="how-to-obtain-font-metrics"></a>Procédure : Obtenir des métriques de police
+# <a name="how-to-obtain-font-metrics"></a>Procédure : obtenir des métriques de polices
 Le <xref:System.Drawing.FontFamily> classe fournit les méthodes suivantes qui récupèrent diverses métriques pour une combinaison famille/style particulière :  
   
 -   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
@@ -53,8 +53,9 @@ Le <xref:System.Drawing.FontFamily> classe fournit les méthodes suivantes qui r
  [!code-vb[System.Drawing.FontsAndText#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)

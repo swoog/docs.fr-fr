@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099779"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -147,10 +147,11 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
  Votre fournisseur n’a pas besoin prendre en charge tous les paramètres d’attributs définis dans le <xref:System.Configuration?displayProperty=nameWithType> espace de noms, même s’il doit à une prise en charge minimale <xref:System.Configuration.ApplicationScopedSettingAttribute> et <xref:System.Configuration.UserScopedSettingAttribute>et doit également prendre en charge <xref:System.Configuration.DefaultSettingValueAttribute>. Pour les attributs qu’il ne prend pas en charge, votre fournisseur doit simplement échouer sans notification. Il ne doit pas lever une exception. Si la classe de paramètres utilise une combinaison non valide d’attributs, toutefois, telles que l’application <xref:System.Configuration.ApplicationScopedSettingAttribute> et <xref:System.Configuration.UserScopedSettingAttribute> sur le même paramètre, votre fournisseur doit lever une exception et s’arrêter.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Vue d'ensemble des paramètres d'application](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
-- [ClickOnce et paramètres d’application](/visualstudio/deployment/clickonce-and-application-settings)
-- [Schéma des paramètres d'application](../../configure-apps/file-schema/application-settings-schema.md)
+- [Paramètres d'application pour les contrôles personnalisés](application-settings-for-custom-controls.md)
+- [ClickOnce et paramètres d'application](/visualstudio/deployment/clickonce-and-application-settings)
+- [Schéma des paramètres d’application](../../configure-apps/file-schema/application-settings-schema.md)

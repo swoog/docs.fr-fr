@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108964"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisation d'éléments objet ne figurant pas dans une arborescence d'objets
 Certains aspects de l’initialisation [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sont différés à des processus qui reposent généralement sur le fait que cet élément est connecté à l’arborescence logique ou à l’arborescence d’éléments visuels. Cette rubrique décrit les étapes qui peuvent être nécessaires pour initialiser un élément qui n’est connecté à aucune de ces arborescences.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Éléments et arborescence logique  
  Quand vous créez une instance d’une classe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dans le code, vous devez savoir que plusieurs aspects de l’initialisation de l’objet pour une classe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne font délibérément pas partie du code qui est exécuté lors de l’appel du constructeur de classe. En particulier pour une classe de contrôle, la majeure partie de la représentation visuelle de ce contrôle n’est pas définie par le constructeur. Au lieu de cela, la représentation visuelle est définie par le modèle du contrôle. Le modèle peut provenir de diverses sources, mais le plus souvent il est obtenu à partir de styles de thème. Les modèles sont en fait à liaison tardive ; le modèle nécessaire n’est attaché au contrôle en question qu’une fois le contrôle prêt pour la disposition. Et le contrôle est prêt pour la disposition seulement une fois qu’il est attaché à une arborescence logique qui se connecte à une surface de rendu à la racine. C’est cet élément de niveau racine qui démarre le rendu de tous ses éléments enfants tels que définis dans l’arborescence logique.  
   
@@ -43,6 +41,7 @@ Certains aspects de l’initialisation [!INCLUDE[TLA#tla_winclient](../../../../
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Arborescences dans WPF](trees-in-wpf.md)
-- [Vue d’ensemble du rendu graphique de WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

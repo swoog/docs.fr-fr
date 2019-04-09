@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un contrôle ToolStrip de style professionnel'
+title: 'Procédure : créer un contrôle ToolStrip de style professionnel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 039bdd3907851d1f5e756652dd1b42765606c0c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6da6e113867efed79dfcd02f3b89ee1f9ae13c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104585"
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Procédure : Créer un contrôle ToolStrip de style professionnel
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Procédure : créer un contrôle ToolStrip de style professionnel
 Vous pouvez donner aux contrôles <xref:System.Windows.Forms.ToolStrip> de votre application une apparence et un comportement professionnels en écrivant votre propre classe dérivée du type <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
  Il existe une prise en charge étendue pour cette fonctionnalité dans Visual Studio.  
@@ -38,8 +38,9 @@ Vous pouvez donner aux contrôles <xref:System.Windows.Forms.ToolStrip> de votre
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [procédure pas à pas : Création d’un contrôle ToolStrip de style professionnel](walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
-- [Guide pratique pour Fournir des éléments de Menu Standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Procédure : fournir des éléments de menu standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)

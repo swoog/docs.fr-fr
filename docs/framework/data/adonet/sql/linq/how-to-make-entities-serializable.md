@@ -2,12 +2,12 @@
 title: 'Procédure : Rendre les entités sérialisables'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: 9b4ff81b4a779b474097de1a69e65f4864e08691
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086765"
 ---
 # <a name="how-to-make-entities-serializable"></a>Procédure : Rendre les entités sérialisables
 Vous pouvez rendre des entités sérialisables lorsque vous générez votre code. Les classes d'entité sont décorées avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> et les colonnes avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute>.  
@@ -28,5 +28,6 @@ sqlmetal /code:nwserializable.cs /language:csharp "c:\northwnd.mdf" /sprocs /fun
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sérialisation](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)
 - [Création du modèle objet](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

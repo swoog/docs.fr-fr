@@ -2,12 +2,12 @@
 title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089859"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 La sécurisation d'une application est un processus permanent. Un développeur ne peut à aucun moment garantir qu'une application est à l'abri de toute attaque car il est impossible de prédire les types d'attaques futures que les nouvelles technologies permettront de faire apparaître. Inversement, le fait que personne n'a encore découvert (ou révélé) les défaillances de la sécurité d'un système ne signifie pas qu'il n'en existe pas ou qu'il ne peut pas en exister. Vous devez planifier la sécurité au cours de la phase de conception du projet, ainsi que la manière dont la sécurité sera maintenue tout au long de la durée de vie de l'application.  
@@ -15,7 +15,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 ## <a name="design-for-security"></a>Concevoir la sécurité  
  L'un des principaux problèmes liés au développement d'applications sécurisées est que la sécurité constitue souvent un aspect pris en considération après coup, après qu'un projet a été complètement codé. Le fait de ne pas concevoir la sécurité dans une application au début engendre des applications non sécurisées, car ce qui rend une application sûre n'a pas été pris en compte.  
   
- Lorsque la sécurité est implémentée en dernière minute, cela entraîne également davantage de bogues, tels que des blocages de logiciels suite aux nouvelles restrictions ou la nécessité de réécrire du code pour la prise en charge de fonctionnalités non prévues initialement. Chaque ligne de code révisé ouvre la possibilité d'introduire un nouveau bogue. C'est pourquoi vous devez songer à la sécurité à un stade précoce du processus de développement, de façon à pouvoir la développer en même temps que les nouvelles fonctionnalités.  
+ Lorsque la sécurité est implémentée en dernière minute, cela entraîne également davantage de bogues, tels que des blocages de logiciels suite aux nouvelles restrictions ou la nécessité de réécrire du code pour la prise en charge de fonctionnalités non prévues initialement. Chaque ligne de code révisé ouvre la possibilité d'introduire un nouveau bogue. C’est pourquoi vous devez songer à la sécurité à un stade précoce du processus de développement, de façon à pouvoir la développer en même temps que les nouvelles fonctionnalités.  
   
 ### <a name="threat-modeling"></a>Modélisation des menaces  
  Vous ne pouvez pas protéger un système contre une attaque si vous ne comprenez pas toutes les attaques potentielles auxquelles il est exposé. Le processus d’évaluation des menaces de sécurité, appelé *la modélisation des menaces*, est nécessaire pour déterminer la probabilité et les ramifications des brèches de sécurité dans votre application ADO.NET.  
@@ -35,7 +35,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
  Vous pouvez employer une contre-mesure qui consiste à tenter d'ériger autant de murs autour de votre code que possible, en l'exécutant avec des privilèges minimum. Le principe des privilèges minimum consiste à accorder des droits sur un minimum de code pendant la durée de temps la plus courte nécessaire pour effectuer le travail.  
   
- La recommandation concernant la création d'applications sécurisées consiste à démarrer sans autorisation du tout, puis d'ajouter les autorisations les plus minimales pour la tâche spécifique en cours de réalisation. En revanche, démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées, plus difficiles à tester et à maintenir en raison de l'existence éventuelle de brèches dans la sécurité causées par l'octroi involontaire d'autorisations superflues.  
+ La recommandation concernant la création d’applications sécurisées consiste à démarrer sans autorisation du tout, puis d’ajouter les autorisations les plus minimales pour la tâche spécifique en cours de réalisation. En revanche, démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées, plus difficiles à tester et à maintenir en raison de l'existence éventuelle de brèches dans la sécurité causées par l'octroi involontaire d'autorisations superflues.  
   
  Pour plus d'informations sur la sécurisation de vos applications, voir les ressources suivantes.  
   
@@ -66,8 +66,8 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
-|[Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
+|[Sécurité d'accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
+|[Sécurité d'accès du code](../../../../docs/framework/misc/code-access-security.md)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
   
 ## <a name="database-security"></a>Sécurité de base de données  
  Le principe des privilèges minimum s'applique également à votre source de données. Ci-dessous figurent quelques-unes des instructions générales concernant la sécurité de la base de données :  
@@ -102,6 +102,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 |[Meilleures pratiques de stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fournit des liens qui décrivent comment administrer la stratégie de sécurité.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sécurité dans .NET](../../../standard/security/index.md)
 - [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)

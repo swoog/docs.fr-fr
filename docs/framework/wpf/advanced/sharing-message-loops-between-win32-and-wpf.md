@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115074"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Partage de boucles de messages entre Win32 et WPF
 Cette rubrique décrit comment implémenter une boucle de messages pour l’interopérabilité avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], soit en utilisant les messages d’exposition de boucle dans <xref:System.Windows.Threading.Dispatcher> ou en créant une boucle de message séparé sur le [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] côté de votre code d’interopérabilité.  
@@ -62,8 +62,9 @@ Cette rubrique décrit comment implémenter une boucle de messages pour l’inte
  Un message qui pointe vers le récepteur de clavier ne peut pas être envoyé à HWND si vous avez ajouté des raccordements pour ce message à l’aide de la <xref:System.Windows.Interop.HwndSource.AddHook%2A> (méthode). Le message a été géré au niveau de la pompe de message directement et non soumis à la `DispatchMessage` (fonction).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [Interopérabilité WPF et Win32](wpf-and-win32-interoperation.md)
 - [Modèle de thread](threading-model.md)
-- [Vue d’ensemble des entrées](input-overview.md)
+- [Vue d'ensemble des entrées](input-overview.md)
