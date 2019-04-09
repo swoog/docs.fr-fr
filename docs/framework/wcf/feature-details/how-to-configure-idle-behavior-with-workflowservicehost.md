@@ -1,23 +1,23 @@
 ---
-title: 'Procédure : Configurer le comportement inactif avec WorkflowServiceHost'
+title: 'Procédure : configurer le comportement inactif avec WorkflowServiceHost'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164019"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Procédure : Configurer le comportement inactif avec WorkflowServiceHost
-Les workflows deviennent inactifs lorsqu'ils rencontrent un signet qui doit être repris au moyen d'une impulsion externe, par exemple, l'instance de workflow attend qu'un message soit remis à l'aide d'une activité <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> est un comportement qui vous permet de spécifier le délai entre le moment où une instance du service devient inactive et celui où elle est persistante ou déchargée. Il contient deux propriétés qui permettent de définir ces intervalles. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> spécifie l'intervalle de temps entre le moment où une instance du service de workflow devient inactive et celui où elle est persistante. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> spécifie l'intervalle entre le moment où une instance du service de workflow devient inactive et celui où elle est déchargée, c'est-à-dire rendue persistante dans le magasin d'instances et supprimée de la mémoire. Cette rubrique explique comment configurer le comportement <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> dans un fichier de configuration.  
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Procédure : configurer le comportement inactif avec WorkflowServiceHost
+Les workflows deviennent inactifs lorsqu'ils rencontrent un signet qui doit être repris au moyen d'une impulsion externe, par exemple, l'instance de workflow attend qu'un message soit remis à l'aide d'une activité <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> est un comportement qui vous permet de spécifier la durée entre où une instance de service devient inactive et où l’instance est persistante ou déchargée. Il contient deux propriétés qui permettent de définir ces intervalles. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Spécifie l’intervalle de temps entre quand une instance de service de workflow devient inactive et celui où elle est persistante l’instance de service de workflow. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Spécifie l’intervalle de temps entre un flux de travail lorsque l’instance de service devient inactive et l’instance de service de workflow est déchargé, où c'est-à-dire rendue persistante dans le magasin d’instances et de supprimer de la mémoire. Cette rubrique explique comment configurer le comportement <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> dans un fichier de configuration.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Pour configurer WorkflowIdleBehavior  
   
-1.  Ajoutez un élément <`workflowIdle`> à l’élément <`behavior`> dans l’élément <`serviceBehaviors`>, comme indiqué dans l’exemple suivant.  
+1.  Ajouter un <`workflowIdle`> élément à la <`behavior`> élément dans le <`serviceBehaviors`> comme illustré dans l’exemple suivant.  
   
     ```xml  
     <behaviors>  
@@ -42,6 +42,7 @@ Les workflows deviennent inactifs lorsqu'ils rencontrent un signet qui doit êtr
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Extensibilité de l’hôte du service de workflow](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [Extensibilité de l'hôte du service de workflow](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)

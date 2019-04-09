@@ -2,15 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: f66569f36dc61a063b79a088dcbc405126a074d8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204443"
 ---
 # <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
-Représente un élément de liaison personnalisé qui prend en charge la sécurité de canal à l’aide d’un flux SSL.  
+Représente un élément de liaison personnalisé qui prend en charge la sécurité de canal à l'aide d'un flux SSL.  
   
  \<system.serviceModel>  
 \<bindings>  
@@ -45,6 +45,7 @@ Représente un élément de liaison personnalisé qui prend en charge la sécuri
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

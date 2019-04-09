@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204196"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Peinture avec des objets d'image, de dessin et visuels
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> objets pour peindre une zone avec une image, un <xref:System.Windows.Media.Drawing>, ou un <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Pour comprendre cette rubrique, vous devez connaître les différents types de pinceaux fournis par [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et leurs fonctions de base. Pour une introduction, consultez [Vue d’ensemble des pinceaux WPF](wpf-brushes-overview.md).  
@@ -135,15 +134,16 @@ Composants d’un élément TileBrush avec plusieurs mosaïques
  Pour plus d’informations sur les fonctionnalités de disposition en mosaïque de <xref:System.Windows.Media.TileBrush> , voir la [vue d’ensemble de TileBrush](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Vue d’ensemble de TileBrush](tilebrush-overview.md)
-- [Vue d’ensemble des pinceaux WPF](wpf-brushes-overview.md)
-- [Vue d’ensemble de la création d’images](imaging-overview.md)
-- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
+- [Vue d'ensemble de TileBrush](tilebrush-overview.md)
+- [Vue d'ensemble des pinceaux WPF](wpf-brushes-overview.md)
+- [Vue d'ensemble de la création d'images](imaging-overview.md)
+- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
 - [Vue d'ensemble des masques d'opacité](opacity-masks-overview.md)
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
 - [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049) (Exemple de VisualBrush)
+- [Exemple de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

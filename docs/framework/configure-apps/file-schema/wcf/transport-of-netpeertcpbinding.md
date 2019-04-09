@@ -2,12 +2,12 @@
 title: <transport> de <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: f5feca232265cbcad7feff78c0c66e3606c8567e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204872"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<transport> of \<netPeerTcpBinding>
 Spécifie les paramètres de sécurité de niveau transport lorsque vous utilisez le [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
@@ -42,7 +42,7 @@ Spécifie les paramètres de sécurité de niveau transport lorsque vous utilise
   
 ## <a name="credentialtype-attribute"></a>Attribut credentialType  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Certificat|L'authentification du transport de canal homologue requiert un certificat X509.|  
 |Mot de passe|L'authentification du transport de canal homologue requiert un mot de passe correct.|  
@@ -57,6 +57,7 @@ Spécifie les paramètres de sécurité de niveau transport lorsque vous utilise
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Définit les paramètres de sécurité pour le [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>

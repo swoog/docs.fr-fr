@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210670"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Spécification et gestion des erreurs dans les contrats et les services
 Applications Windows Communication Foundation (WCF) gérer les situations d’erreur en mappant les objets exception managés aux objets erreur SOAP et les objets erreur SOAP aux objets exception managés. Les rubriques de cette section expliquent comment concevoir des contrats pour exposer des conditions d'erreur en tant qu'erreurs SOAP personnalisées, comment retourner de telles erreurs dans le cadre de l'implémentation du service et comment les clients interceptent de telles erreurs.  
@@ -50,12 +50,13 @@ Applications Windows Communication Foundation (WCF) gérer les situations d’er
 >  Par conséquent, affecter à <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ou à <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> la valeur `true` est recommandé uniquement pour déboguer temporairement une application de service. De plus, le WSDL pour une méthode qui retourne des exceptions managées non prises en charge de cette façon ne contient pas le contrat pour le <xref:System.ServiceModel.FaultException%601> de type <xref:System.ServiceModel.ExceptionDetail>. Les clients doivent attendre une erreur SOAP inconnue (retournée aux clients WCF en tant que <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> objets) pour obtenir les informations de débogage correctement.  
   
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>Personnalisation de la gestion des erreurs avec IErrorHandler  
- Si vous avez des exigences spéciales pour personnaliser le message de réponse au client lorsqu’une exception au niveau de l’application se produit ou pour effectuer un traitement personnalisé après avoir retourné le message de réponse, implémentez l’interface <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType>.  
+ Si vous avez des spécifications spéciales pour personnaliser le message de réponse au client lorsqu'une exception au niveau de l'application se produit ou pour effectuer un traitement personnalisé après avoir retourné le message de réponse, implémentez l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType>.  
   
 ## <a name="fault-serialization-issues"></a>Problèmes de sérialisation d'erreur  
  Lors de la désérialisation d'un contrat d'erreur, WCF essaie d'abord de faire correspondre le nom du contrat d'erreur figurant dans le message SOAP avec le type de contrat d'erreur. S'il ne trouve pas de correspondance exacte, il recherche ensuite un type compatible dans la liste des contrats d'erreur disponibles, par ordre alphabétique. Si deux contrats d'erreur sont des types compatibles (l'un étant une sous-classe de l'autre, par exemple), il est possible que le mauvais soit utilisé pour désérialiser l'erreur. Cela ne se produit que lorsque le contrat  d'erreur ne spécifie pas de nom, d'espace de noms et d'action. Pour éviter la survenue de ce problème, qualifiez toujours les contrats d'erreur en spécifiant les attributs de nom, d'espace de noms et d'action. En outre, si vous avez défini un certain nombre de contrats d'erreur connexes dérivés d'une classe de base partagée, veillez à marquer tout nouveau membre avec `[DataMember(IsRequired=true)]`. Pour plus d'informations sur cet attribut `IsRequired`, consultez <xref:System.Runtime.Serialization.DataMemberAttribute>. Cela empêchera une classe de base d'être un type compatible et forcera la désérialisation de l'erreur vers le type dérivé approprié.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124616"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Sources de données prises en charge par les Windows Forms
 En règle générale, la liaison de données a été utilisée au sein d’applications pour tirer parti des données stockées dans les bases de données. Avec la liaison de données Windows Forms, vous pouvez accéder aux données à partir de bases de données, ainsi que des données dans d’autres structures, telles que des tableaux et collections, tant que certaines exigences minimales sont respectées.  
@@ -58,6 +58,7 @@ En règle générale, la liaison de données a été utilisée au sein d’appli
 -   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> est une vue personnalisée de l’ensemble du <xref:System.Data.DataSet>, analogue à un <xref:System.Data.DataView>, mais avec les relations incluses. Avec un <xref:System.Data.DataViewManager.DataViewSettings%2A> collection, vous pouvez définir des filtres par défaut et les options de tri pour toutes les vues qui le <xref:System.Data.DataViewManager> a pour une table donnée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207524"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Points de terminaison : Adresses, liaisons et contrats
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison fournissent les clients l’accès à la fonctionnalité offerte par un service WCF.  
@@ -47,7 +47,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
     -   Les exigences de sécurité nécessaires (par exemple, SSL ou la sécurité des messages SOAP).  
   
-     Pour plus d’informations, consultez [vue d’ensemble des liaisons WCF](../../../../docs/framework/wcf/bindings-overview.md). Une liaison est représentée dans le modèle objet WCF par la classe de base abstraite <xref:System.ServiceModel.Channels.Binding>. Pour la plupart des scénarios, les utilisateurs peuvent utiliser l’une des liaisons fournies par le système. Pour plus d’informations, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Pour plus d’informations, consultez [vue d’ensemble des liaisons WCF](../../../../docs/framework/wcf/bindings-overview.md). Une liaison est représentée dans le modèle objet WCF par la classe de base abstraite <xref:System.ServiceModel.Channels.Binding>. Pour la plupart des scénarios, les utilisateurs peuvent utiliser l'une des liaisons fournies par le système. Pour plus d’informations, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contrats : Le contrat définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie :  
   
@@ -78,15 +78,16 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
  [Contrats](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Décrit comment les contrats définissent les méthodes d'un service.  
   
- [Guide pratique pour Créer un point de terminaison de Service dans la Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Procédure : créer un point de terminaison de service dans la configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Décrit comment créer un point de terminaison de service dans la configuration.  
   
- [Guide pratique pour Créer un point de terminaison de Service dans le Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Procédure : créer un point de terminaison de Service dans le code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Décrit comment créer un point de terminaison de service dans le code.  
   
- [Guide pratique pour Utiliser Svcutil.exe pour valider le Code de Service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Procédure : utiliser Svcutil.exe pour valider le code de service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Décrit comment détecter les erreurs dans les configurations et les implémentations de service sans héberger le service en utilisant le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Configuration des services](../../../../docs/framework/wcf/configuring-services.md)
 - [Extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md)

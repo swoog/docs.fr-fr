@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe de requête fondée sur une méthode : Opérateurs d'agrégation"
+title: 'Exemples de syntaxe de requête fondée sur une méthode : Opérateurs d’agrégation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: 69bc2d1ae64ee4aaa016a70f6b46ac1f26dcf563
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 06609ce14edeb7e9306816b8a8d58d2212b61751
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207771"
 ---
-# <a name="method-based-query-syntax-examples-aggregate-operators"></a>Exemples de syntaxe de requête fondée sur une méthode : Opérateurs d'agrégation
+# <a name="method-based-query-syntax-examples-aggregate-operators"></a>Exemples de syntaxe de requête fondée sur une méthode : Opérateurs d’agrégation
 Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, et <xref:System.Linq.Enumerable.Sum%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe de requête fondée sur une méthode. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
@@ -135,4 +135,5 @@ Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.En
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -1,13 +1,13 @@
 ---
-title: <= (inférieur ou égal à) (Entity SQL)
+title: < = (inférieur ou égal à) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 68a4c91800dce2ab6a632e849a8c58c378150535
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 9e5a61cb68895982344eadec083a697bdaff54e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193952"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Inférieur ou égal à) (Entity SQL)
 Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite.  
@@ -23,7 +23,7 @@ expression <= expression
  Toute expression valide. Les deux expressions doivent posséder des types de données implicitement convertibles.  
   
 ## <a name="result-types"></a>Types de résultats  
- `true` si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite ; sinon, `false`.  
+ `true` Si l’expression de gauche a une valeur inférieure ou égale à l’expression de droite ; Sinon, `false`.  
   
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur de comparaison <= pour comparer deux expressions afin de déterminer si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  
@@ -35,4 +35,5 @@ expression <= expression
  [!code-csharp[DP EntityServices Concepts 2#LESS_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less_or_equals)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

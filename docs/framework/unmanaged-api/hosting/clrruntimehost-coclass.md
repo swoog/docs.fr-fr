@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207758"
 ---
 # <a name="clrruntimehost-coclass"></a>Coclasse CLRRuntimeHost
 Fournit des interfaces pour la gestion de l’exécution de code par le runtime.  
@@ -42,14 +42,15 @@ coclass CLRRuntimeHost {
 |[ICLRRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Fournit des méthodes pour contrôler l’exécution d’applications par le runtime.|  
 |[ICLRValidator, interface](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Fournit des méthodes pour la validation d’images exécutables portables et pour un rapport détaillé des erreurs de validation.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Coclasses d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+
+- [Hébergement des coclasses](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

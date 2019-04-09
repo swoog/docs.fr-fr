@@ -2,12 +2,12 @@
 title: Identificateurs (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 19c28eb4c883cc0d1cf18cba1751115277848208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204898"
 ---
 # <a name="identifiers-entity-sql"></a>Identificateurs (Entity SQL)
 Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] pour représenter des alias d'expression de requête, des références de variables, des propriétés d'objets, des fonctions, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit deux types d’identificateurs : les identificateurs simples et les identificateurs entre guillemets.  
@@ -103,7 +103,7 @@ SELECT 1 AS X, 2 AS X …
 ### <a name="query-expressions"></a>Expressions de requête  
  Un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression introduit une nouvelle étendue de requête. Les noms définis dans la clause FROM sont introduits dans l'étendue from dans l'ordre de leur apparition, de gauche à droite. Dans la liste de jointure, les expressions peuvent faire référence aux noms définis précédemment dans la liste. Les propriétés publiques (champs, etc.) des éléments identifiés dans la clause FROM ne sont pas ajoutées à l'étendue from. Elles doivent toujours être référencées par le nom qualifié par un alias. En général, toutes les parties de l'expression SELECT sont considérées dans l'étendue from.  
   
- La clause GROUP BY introduit également une nouvelle étendue sœur. Chaque groupe peut avoir un nom de groupe qui fait référence à la collection d'éléments dans le groupe. Chaque expression de regroupement introduira également un nouveau nom dans l'étendue de groupe. De plus, l'agrégat d'imbrication (ou le groupe nommé) est également ajouté à l'étendue. Les expressions de regroupement elles-mêmes sont incluses dans l'étendue from. Toutefois, lorsqu'une clause GROUP BY est utilisée, la liste de sélection (projection), la clause HAVING et la clause ORDER BY sont considérées incluses dans l'étendue de groupe et non dans l'étendue from. Les agrégats reçoivent un traitement spécial, tel que cela est décrit dans la liste à puce ci-dessous.  
+ La clause GROUP BY introduit également une nouvelle étendue sœur. Chaque groupe peut avoir un nom de groupe qui fait référence à la collection d’éléments dans le groupe. Chaque expression de regroupement introduira également un nouveau nom dans l'étendue de groupe. De plus, l'agrégat d'imbrication (ou le groupe nommé) est également ajouté à l'étendue. Les expressions de regroupement elles-mêmes sont incluses dans l'étendue from. Toutefois, lorsqu'une clause GROUP BY est utilisée, la liste de sélection (projection), la clause HAVING et la clause ORDER BY sont considérées incluses dans l'étendue de groupe et non dans l'étendue from. Les agrégats reçoivent un traitement spécial, tel que cela est décrit dans la liste à puce ci-dessous.  
   
  Remarques supplémentaires sur les étendues :  
   
@@ -121,6 +121,7 @@ SELECT 1 AS X, 2 AS X …
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Jeu de caractères en entrée](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Jeu de caractères d’entrée](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

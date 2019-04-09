@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modifier des colonnes et lignes dans un contrôle TableLayoutPanel'
+title: 'Procédure : modifier des colonnes et des lignes dans un contrôle TableLayoutPanel'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201960"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Procédure : Modifier des colonnes et lignes dans un contrôle TableLayoutPanel
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Procédure : modifier des colonnes et des lignes dans un contrôle TableLayoutPanel
 Vous pouvez utiliser l’éditeur de collections de la <xref:System.Windows.Forms.TableLayoutPanel> contrôle, appelé le **Styles de ligne et colonne** boîte de dialogue pour modifier les lignes et colonnes de vos contrôles.  
   
 > [!NOTE]
@@ -44,5 +44,6 @@ Vous pouvez utiliser l’éditeur de collections de la <xref:System.Windows.Form
 8.  Pour supprimer une ligne ou colonne, cliquez sur le **supprimer** bouton pour supprimer l’élément actuellement sélectionné dans le **membre** liste.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SizeType>
 - [TableLayoutPanel, contrôle](tablelayoutpanel-control-windows-forms.md)

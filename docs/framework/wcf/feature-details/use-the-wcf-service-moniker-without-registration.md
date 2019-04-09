@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : Utiliser le Moniker de Service Windows Communication Foundation sans inscription'
+title: 'Procédure : utiliser le moniker de service Windows Communication Foundation sans inscription'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203975"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procédure : Utiliser le Moniker de Service Windows Communication Foundation sans inscription
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procédure : utiliser le moniker de service Windows Communication Foundation sans inscription
 Pour se connecter à communiquer avec un service Windows Communication Foundation (WCF), une application cliente WCF doit avoir les détails de l’adresse du service, la configuration de liaison et le contrat de service.  
   
  Le moniker de service WCF obtient généralement le contrat requis par le biais inscription préalable des types d’attribut requis, mais il peut y avoir des cas où cela n’est pas possible. À la place de l'inscription, le moniker peut obtenir la définition du contrat sous la forme d'un document WSDL (Web Services Definition Language) en utilisant le paramètre `wsdl` ou par le biais de l'échange de métadonnées en utilisant le paramètre `mexAddress`.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Si le moniker est incorrect ou si le service n'est pas disponible, l'appel à `GetObject` retourne une erreur indiquant que la syntaxe n'est pas valide. Si vous recevez cette erreur, assurez-vous que le moniker que vous utilisez est correct et que le service est disponible.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Inscrire et configurer un Moniker de Service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Procédure : inscrire et configurer un moniker de service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

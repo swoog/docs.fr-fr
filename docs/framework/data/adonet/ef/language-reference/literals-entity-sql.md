@@ -2,12 +2,12 @@
 title: Littéraux (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209773"
 ---
 # <a name="literals-entity-sql"></a>Littéraux (Entity SQL)
 Cette rubrique décrit la prise en charge des littéraux dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -22,7 +22,7 @@ Cette rubrique décrit la prise en charge des littéraux dans [!INCLUDE[esql](..
 ## <a name="boolean"></a>Booléen  
  Les littéraux booléens sont représentés par les mots clés `true` et `false`.  
   
-## <a name="integer"></a>Integer  
+## <a name="integer"></a>Entier  
  Les littéraux entiers (integer) peuvent être de type <xref:System.Int32> ou <xref:System.Int64>. Un littéral <xref:System.Int32> est une série de caractères numériques. Un littéral <xref:System.Int64> est une série de caractères numériques suivie d'un L majuscule.  
   
 ## <a name="decimal"></a>Decimal  
@@ -91,7 +91,7 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
+## <a name="guid"></a>GUID  
  Un littéral `GUID` représente un identificateur global unique. C’est une séquence formée par le mot clé `GUID` suivi de chiffres hexadécimaux présentés au format dit de *Registre* format : 8-4-4-4-12 entre guillemets simples. Les chiffres hexadécimaux ne respectent pas la casse.  
   
  Le symbole GUID et la charge utile du littéral peuvent être séparés d'autant d'espaces que nécessaire, mais pas de nouvelles lignes.  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

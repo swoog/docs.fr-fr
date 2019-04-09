@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Manipuler les groupes de lignes d'un tableau avec la propriété RowGroups"
+title: 'Procédure : Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209968"
 ---
-# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Procédure : Manipuler les groupes de lignes d'un tableau avec la propriété RowGroups
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Procédure : Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups
 Cet exemple montre quelques-unes des opérations plus courantes qui peuvent être effectuées sur les groupes de lignes d’une table avec la <xref:System.Windows.Documents.Table.RowGroups%2A> propriété.  
   
 ## <a name="example"></a>Exemple  
@@ -84,6 +84,7 @@ Cet exemple montre quelques-unes des opérations plus courantes qui peuvent êtr
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Comment : Manipuler des éléments de contenu de flux avec la propriété Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [Guide pratique : Manipuler des éléments de contenu de flux avec la propriété Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Manipuler un FlowDocument avec la propriété Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipuler les colonnes d’un tableau avec la propriété Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

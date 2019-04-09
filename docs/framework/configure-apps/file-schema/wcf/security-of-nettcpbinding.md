@@ -2,12 +2,12 @@
 title: <security> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: be3417296a401c002e59487cd4903e15e6301a63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199074"
 ---
 # <a name="security-of-nettcpbinding"></a>\<security> of \<netTcpBinding>
 Définit les paramètres de sécurité d’une liaison.  
@@ -40,9 +40,9 @@ Définit les paramètres de sécurité d’une liaison.
   
 ## <a name="mode-attribute"></a>Attribut Mode  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|None|La sécurité est désactivée.|  
+|Aucun.|La sécurité est désactivée.|  
 |Transport|La sécurité de transport est fournie à l'aide du TLS sur le TCP ou SPNego. Le service peut devoir être configuré avec les certificats SSL. Il est possible de contrôler le niveau de protection avec ce mode.|  
 |Message|La sécurité est fournie à l'aide de la sécurité des messages SOAP. Par défaut, le corps SOAP est chiffré et signé. Ce mode offre diverses fonctionnalités, telles que, si les informations d'identification du service sont disponibles pour le client hors bande, la suite algorithmique à utiliser et quel niveau de protection à appliquer au corps du message. L'authentification du client est exécutée une fois par session et les résultats d'authentification sont mis en cache pour la durée de la session.|  
 |TransportWithMessageCredential|La sécurité de transport est associée à la sécurité de message. La sécurité de transport est fournie par le TLS sur le TCP ou SPNego, et garantit l'intégrité, la confidentialité et l'authentification du serveur. La sécurité des messages SOAP fournit l'authentification du client. Par défaut, l'authentification du client est exécutée une fois par session et les résultats d'authentification sont mis en cache pour la durée de la session.|  
@@ -61,13 +61,14 @@ Définit les paramètres de sécurité d’une liaison.
 |liaison|L’élément de liaison de la [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Notes  
- Chaque liaison standard fournit des paramètres pour le contrôle des exigences de sécurité de transfert. Ces paramètres incluent généralement le mode de sécurité qui indique si la sécurité au niveau du message ou du transport est utilisée et le choix du type d'informations d'identification du client. Selon le choix d'options présentées par ces paramètres, une pile de canaux est construite avec la sécurité appropriée.  
+ Chaque liaison standard fournit des paramètres pour le contrôle des conditions de sécurité de transfert. Ces paramètres incluent généralement le mode de sécurité qui indique si la sécurité au niveau du message ou du transport est utilisée et le choix du type d'informations d'identification du client. Selon le choix d'options présentées par ces paramètres, une pile de canaux est construite avec la sécurité appropriée.  
   
- Les liaisons fournies par le système par Windows Communication Foundation (WCF) constituent un ensemble conçu pour satisfaire aux impératifs de scénario les plus courants. Chaque liaison permet la spécification des conditions de sécurité pour des scénarios spécifiques.  
+ Les liaisons fournies par le système par Windows Communication Foundation (WCF) constituent un ensemble conçu pour satisfaire aux exigences de scénario les plus courants. Chaque liaison permet la spécification des conditions de sécurité pour des scénarios spécifiques.  
   
- Cet élément de configuration fournit les caractéristiques de sécurité pour `netTcpBinding`. Il s'agit d'une liaison sécurisée, fiable et optimisée, adaptée à la communication entre ordinateurs. Par défaut, elle génère une pile de communication d'exécution prenant en charge le TCP pour la remise des messages, Windows Security pour l'authentification et la sécurité des messages, WS-ReliableMessaging pour la fiabilité et l'encodage de messages binaires.  
+ Cet élément de configuration fournit les caractéristiques de sécurité pour `netTcpBinding`. Il s’agit d’une liaison sécurisée, fiable et optimisée, adaptée à la communication entre ordinateurs. Par défaut, elle génère une pile de communication d'exécution prenant en charge le TCP pour la remise des messages, Windows Security pour l'authentification et la sécurité des messages, WS-ReliableMessaging pour la fiabilité et l'encodage de messages binaires.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>

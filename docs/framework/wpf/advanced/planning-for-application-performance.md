@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210202"
 ---
 # <a name="planning-for-application-performance"></a>Planification des performances des applications
 La réussite de vos objectifs de performances dépend du degré de l’élaboration de votre stratégie de performances. La planification est la première étape dans le développement de tous les produits. Cette rubrique décrit quelques règles très simples pour le développement d’une stratégie de bonnes performances.  
@@ -33,12 +33,13 @@ La réussite de vos objectifs de performances dépend du degré de l’élaborat
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les contrôles sont par nature extensibles en permettant la personnalisation de la poussée de leur apparence, sans modification de leur comportement de contrôle. En tirant parti des styles, des modèles de données et des modèles de contrôle, vous pouvez créer et évoluer un personnalisable [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] qui s’adapte à vos exigences de performances.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d'application](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Ressources d’application](optimizing-performance-application-resources.md)
+- [Texte](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

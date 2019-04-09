@@ -2,12 +2,12 @@
 title: Weakly-typed JSON Serialization, exemple
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 370030671a6a8c6709567bf070411543722ab8d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205054"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization, exemple
 Lors de la sérialisation d'un type défini par l'utilisateur dans un format de transmission donné, ou de la désérialisation d'un format de transmission dans un type défini par l'utilisateur, le type défini par l'utilisateur donné doit être disponible à la fois sur le service et sur le client. En général, l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est alors appliqué à ces types définis par l'utilisateur, et l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué à leurs membres. Ce mécanisme s’applique également lorsque vous travaillez avec des objets JavaScript Objet Notation (JSON), comme décrit dans la rubrique [Comment : Sérialiser et désérialiser des données JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Lors de la sérialisation d'un type défini par l'utilisateur dans un format de 
   
  Cela peut être gênant, surtout si le client doit gérer plusieurs types d'objets JSON.  
   
- Le type `JsonObject` introduit une représentation faiblement typée de l'objet JSON désérialisé. `JsonObject` repose sur le mappage naturel entre les objets JSON et les dictionnaires [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , et le mappage entre les tableaux JSON et les tableaux [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Le code suivant illustre le type `JsonObject` .  
+ Le type `JsonObject` introduit une représentation faiblement typée de l'objet JSON désérialisé. `JsonObject` s’appuie sur le mappage naturel entre les objets JSON et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dictionnaires et le mappage entre les tableaux JSON et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tableaux. Le code suivant illustre le type `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -139,4 +139,3 @@ My favorite bands are Band ABC and Band XYZ.
 >  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
-  

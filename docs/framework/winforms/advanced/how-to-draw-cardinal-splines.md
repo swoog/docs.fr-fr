@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner des splines cardinales'
+title: 'Procédure : dessiner des splines cardinales'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204950"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Procédure : Dessiner des splines cardinales
+# <a name="how-to-draw-cardinal-splines"></a>Procédure : dessiner des splines cardinales
 Une spline cardinale est une courbe qui traverse facilement un ensemble donné de points. Pour dessiner une spline cardinale, créez un <xref:System.Drawing.Graphics> de l’objet et passez l’adresse d’un tableau de points à la <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode).  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dessin d’une Spline cardinale en forme de cloche  
@@ -50,5 +50,6 @@ Une spline cardinale est une courbe qui traverse facilement un ensemble donné d
  Les exemples précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
 - [Génération et dessin de courbes](constructing-and-drawing-curves.md)

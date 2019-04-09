@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207355"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Vue d'ensemble de l'utilisation des contrôles dans Windows Forms
 Cette rubrique décrit les éléments essentiels d’une application Windows Forms et fournit un exemple simple qui utilise des contrôles et gère les événements dans une application Windows Forms.  
@@ -224,5 +224,6 @@ public class MyForm : Form {
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
 - [Concepts de base du développement de contrôles Windows Forms](windows-forms-control-development-basics.md)

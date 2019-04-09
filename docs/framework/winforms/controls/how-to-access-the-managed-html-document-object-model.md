@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Accéder au modèle d’objet de Document HTML managé'
+title: 'Procédure : accéder au modèle objet de document HTML managé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205015"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Procédure : Accéder au modèle d’objet de Document HTML managé
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Procédure : accéder au modèle objet de document HTML managé
 Vous pouvez accéder au modèle DOM (Document Object Model) HTML géré à partir de deux types d'applications :  
   
--   l'application Windows Forms (.exe) qui a hébergé le contrôle <xref:System.Windows.Forms.WebBrowser> géré. Ces deux technologies se complètent mutuellement, avec le contrôle <xref:System.Windows.Forms.WebBrowser> qui affiche la page pour l'utilisateur et le modèle DOM HTML qui représente la structure logique du document ;  
+-   l’application Windows Forms (.exe) qui a hébergé le contrôle <xref:System.Windows.Forms.WebBrowser> géré. Ces deux technologies se complètent mutuellement, avec le contrôle <xref:System.Windows.Forms.WebBrowser> qui affiche la page pour l'utilisateur et le modèle DOM HTML qui représente la structure logique du document ;  
   
 -   l'<xref:System.Windows.Forms.UserControl> Windows Forms hébergé dans Internet Explorer. Vous pouvez accéder au modèle DOM HTML qui représente la page sur laquelle votre <xref:System.Windows.Forms.UserControl> est hébergé pour modifier la structure du document ou ouvrir des boîtes de dialogue modales, entre autres possibilités.  
   
-### <a name="to-access-dom-from-a-windows-forms-application"></a>Pour accéder au modèle DOM à partir d'une application Windows Forms  
+### <a name="to-access-dom-from-a-windows-forms-application"></a>Pour accéder au modèle DOM à partir d’une application Windows Forms  
   
 1.  Hébergez un contrôle <xref:System.Windows.Forms.WebBrowser> dans votre application Windows Forms et surveillez l'événement <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Pour plus d’informations sur l’hébergement de contrôles et la surveillance d’événements, consultez [Événements](../../../standard/events/index.md).  
   
@@ -46,4 +46,5 @@ Vous pouvez accéder au modèle DOM (Document Object Model) HTML géré à parti
 1.  Votre application ou <xref:System.Windows.Forms.UserControl> nécessite la confiance totale pour accéder au modèle DOM HTML géré. Si vous déployez une application Windows Forms à l’aide de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], vous pouvez demander une confiance totale en utilisant les options d’élévation d’autorisations ou de déploiement d’application approuvée. Pour plus d’informations, consultez [Sécurisation des applications ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation du modèle DOM HTML managé](using-the-managed-html-document-object-model.md)
+
+- [Utilisation du modèle objet de document HTML managé](using-the-managed-html-document-object-model.md)

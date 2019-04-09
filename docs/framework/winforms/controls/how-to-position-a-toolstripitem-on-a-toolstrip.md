@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Positionner un ToolStripItem sur un ToolStrip'
+title: 'Procédure : positionner un ToolStripItem sur un ToolStrip'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], aligning items
 - toolbars [Windows Forms], positioning items
 ms.assetid: 11fd7c5b-ee5c-4993-9a11-89127ff0aa7a
-ms.openlocfilehash: 66f0a4215baa55fcc7156017e06e7f6364b3eb3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bf5034a2cafab57997d68bb52d36bc319dfab22e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155023"
 ---
-# <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>Procédure : Positionner un ToolStripItem sur un ToolStrip
+# <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>Procédure : positionner un ToolStripItem sur un ToolStrip
 Vous pouvez déplacer ou ajouter un <xref:System.Windows.Forms.ToolStripItem> vers la gauche ou la droite d’un <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-move-or-add-a-toolstripitem-to-the-left-side-of-a-toolstrip"></a>Pour déplacer ou ajouter un ToolStripItem sur le côté gauche d’un ToolStrip  
@@ -24,6 +24,7 @@ Vous pouvez déplacer ou ajouter un <xref:System.Windows.Forms.ToolStripItem> ve
 1.  Définir le <xref:System.Windows.Forms.ToolStripItemAlignment> propriété de la <xref:System.Windows.Forms.ToolStripItem> à <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripItemAlignment>
 - <xref:System.Windows.Forms.ToolStripItemAlignment.Left>
