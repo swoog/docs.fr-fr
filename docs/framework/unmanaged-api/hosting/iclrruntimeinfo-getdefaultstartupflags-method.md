@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ef61c8ae1d8c2e5cf1fee80d8900a0e0e7f73b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c39ad4638c7db45c481bd3dfccb0a82759397aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072575"
 ---
-# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="1253a-102">ICLRRuntimeInfo::GetDefaultStartupFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="1253a-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
-<span data-ttu-id="1253a-103">Obtient les indicateurs de démarrage et le fichier de configuration d’hôte qui sera utilisé pour démarrer le runtime.</span><span class="sxs-lookup"><span data-stu-id="1253a-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
+# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="f5c4b-102">ICLRRuntimeInfo::GetDefaultStartupFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="f5c4b-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
+<span data-ttu-id="f5c4b-103">Obtient les indicateurs de démarrage et le fichier de configuration d’hôte qui sera utilisé pour démarrer le runtime.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1253a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1253a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5c4b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f5c4b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDefaultStartupFlags(  
@@ -36,36 +36,37 @@ HRESULT GetDefaultStartupFlags(
      [in, out]  DWORD *pcchHostConfigFile);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1253a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1253a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f5c4b-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="f5c4b-105">Parameters</span></span>  
  `pdwStartupFlags`  
- <span data-ttu-id="1253a-106">[out] Pointeur vers les indicateurs de démarrage hôte qui sont actuellement définies.</span><span class="sxs-lookup"><span data-stu-id="1253a-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
+ <span data-ttu-id="f5c4b-106">[out] Pointeur vers les indicateurs de démarrage hôte qui sont actuellement définies.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
   
  `pwzHostConfigFile`  
- <span data-ttu-id="1253a-107">[out] Pointeur vers le chemin du répertoire du fichier de configuration d’hôte actuel.</span><span class="sxs-lookup"><span data-stu-id="1253a-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
+ <span data-ttu-id="f5c4b-107">[out] Pointeur vers le chemin du répertoire du fichier de configuration d’hôte actuel.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
   
  `pcchHostConfigFile`  
- <span data-ttu-id="1253a-108">[in, out] En entrée, la taille de `pwzHostConfigFile`, afin d’éviter les dépassements de mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="1253a-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="1253a-109">Si `pwzHostConfigFile` est null, la méthode retourne la taille requise de `pwzHostConfigFile` pour préallocation.</span><span class="sxs-lookup"><span data-stu-id="1253a-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
+ <span data-ttu-id="f5c4b-108">[in, out] En entrée, la taille de `pwzHostConfigFile`, afin d’éviter les dépassements de mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="f5c4b-109">Si `pwzHostConfigFile` est null, la méthode retourne la taille requise de `pwzHostConfigFile` pour préallocation.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1253a-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="1253a-110">Return Value</span></span>  
- <span data-ttu-id="1253a-111">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l’échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="1253a-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f5c4b-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="f5c4b-110">Return Value</span></span>  
+ <span data-ttu-id="f5c4b-111">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l’échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="1253a-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1253a-112">HRESULT</span></span>|<span data-ttu-id="1253a-113">Description</span><span class="sxs-lookup"><span data-stu-id="1253a-113">Description</span></span>|  
+|<span data-ttu-id="f5c4b-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f5c4b-112">HRESULT</span></span>|<span data-ttu-id="f5c4b-113">Description</span><span class="sxs-lookup"><span data-stu-id="f5c4b-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1253a-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="1253a-114">S_OK</span></span>|<span data-ttu-id="1253a-115">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="1253a-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="f5c4b-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="f5c4b-114">S_OK</span></span>|<span data-ttu-id="f5c4b-115">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-115">The method completed successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1253a-116">Notes</span><span class="sxs-lookup"><span data-stu-id="1253a-116">Remarks</span></span>  
- <span data-ttu-id="1253a-117">Cette méthode retourne les valeurs d’indicateur par défaut (`STARTUP_CONCURRENT_GC` et `NULL`), ou les valeurs fournies par un appel précédent à la [ICLRRuntimeInfo::SetDefaultStartupFlags, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), ou les valeurs définies par un de la `CorBind*` méthodes si elles sont liées à cette exécution.</span><span class="sxs-lookup"><span data-stu-id="1253a-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5c4b-116">Notes</span><span class="sxs-lookup"><span data-stu-id="f5c4b-116">Remarks</span></span>  
+ <span data-ttu-id="f5c4b-117">Cette méthode retourne les valeurs d’indicateur par défaut (`STARTUP_CONCURRENT_GC` et `NULL`), ou les valeurs fournies par un appel précédent à la [ICLRRuntimeInfo::SetDefaultStartupFlags, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), ou les valeurs définies par un de la `CorBind*` méthodes si elles sont liées à cette exécution.</span><span class="sxs-lookup"><span data-stu-id="f5c4b-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1253a-118">Spécifications</span><span class="sxs-lookup"><span data-stu-id="1253a-118">Requirements</span></span>  
- <span data-ttu-id="1253a-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1253a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5c4b-118">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f5c4b-118">Requirements</span></span>  
+ <span data-ttu-id="f5c4b-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5c4b-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1253a-120">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1253a-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f5c4b-120">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f5c4b-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="1253a-121">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1253a-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f5c4b-121">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f5c4b-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1253a-122">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1253a-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="f5c4b-122">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="f5c4b-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1253a-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1253a-123">See also</span></span>
-- [<span data-ttu-id="1253a-124">ICLRRuntimeInfo, interface</span><span class="sxs-lookup"><span data-stu-id="1253a-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="1253a-125">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="1253a-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="1253a-126">Hébergement</span><span class="sxs-lookup"><span data-stu-id="1253a-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="f5c4b-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f5c4b-123">See also</span></span>
+
+- [<span data-ttu-id="f5c4b-124">ICLRRuntimeInfo, interface</span><span class="sxs-lookup"><span data-stu-id="f5c4b-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="f5c4b-125">Interfaces d'hébergement</span><span class="sxs-lookup"><span data-stu-id="f5c4b-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f5c4b-126">Hébergement</span><span class="sxs-lookup"><span data-stu-id="f5c4b-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
