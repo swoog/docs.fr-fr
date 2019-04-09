@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166671"
 ---
 # <a name="dns"></a>\<dns>
 Spécifie l'identité attendue du serveur. Cette identité est valide pour le mode d'authentification du certificat X509 si le certificat du serveur contient un DNS avec la même valeur. Elle est également valide pour le mode d'authentification Windows si le SPN a la même valeur.  
@@ -30,7 +30,7 @@ Spécifie l'identité attendue du serveur. Cette identité est valide pour le mo
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|par défaut|Système DNS du certificat. Le système DNS est un protocole standard utilisé pour localiser des ordinateurs sur un réseau IP. Les utilisateurs peuvent se souvenir de noms complets, tels que [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) ou [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), il est plus facile que le nombre que des adresses, 207.46.131.137.|  
+|valeur|Système DNS du certificat. Le système DNS est un protocole standard utilisé pour localiser des ordinateurs sur un réseau IP. Les utilisateurs peuvent se souvenir de noms complets, tels que [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) ou [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), il est plus facile que le nombre que des adresses, 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -51,6 +51,7 @@ Spécifie l'identité attendue du serveur. Cette identité est valide pour le mo
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

@@ -1,16 +1,16 @@
 ---
-title: Élément <httpDigest>
+title: <httpDigest> Élément
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165319"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > élément
-Spécifie une information d’identification de type condensat utilisée lors de l’authentification du client à un service.  
+Spécifie une information d'identification de type condensé utilisée lors de l'authentification du client à un service.  
   
  \<system.ServiceModel>  
 \<behaviors>  
@@ -46,9 +46,10 @@ Spécifie une information d’identification de type condensat utilisée lors de
 ## <a name="remarks"></a>Notes  
  Un condensat est un hachage déterminé à l’aide d’un algorithme et d’un jeu d’entrées. L'authentificateur et l'authentifié acceptent un algorithme et échangent les données utilisées comme entrées. Le client peut calculer le hachage et l'envoyer au service. Le service calcule également le hachage et compare les valeurs. Une correspondance valide le client.  
   
- Cette fonctionnalité doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
+ Cette fonction doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>

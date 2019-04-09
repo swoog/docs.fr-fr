@@ -3,12 +3,12 @@ title: WIF et batteries de serveurs web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135354"
 ---
 # <a name="wif-and-web-farms"></a>WIF et batteries de serveurs web
 Si vous utilisez WIF (Windows Identity Foundation) pour sécuriser les ressources d’une application par partie de confiance déployée dans une batterie de serveurs web, vous devez définir des paramètres spécifiques pour vous assurer que WIF peut traiter les jetons provenant d’instances de l’application par partie de confiance qui sont exécutées sur les différents ordinateurs de la batterie de serveurs. Ces paramètres incluent la validation des signatures de jetons de session, le chiffrement et le déchiffrement des jetons de session, la mise en cache des jetons de session et la détection des jetons de sécurité relus.  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

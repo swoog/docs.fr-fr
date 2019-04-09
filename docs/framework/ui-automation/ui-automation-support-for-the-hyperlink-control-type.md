@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-ms.openlocfilehash: f0d9e6b4823e62f67d4d0966cb78df260a819a71
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e239919426297d879a9ac90928481b554157e7e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186275"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Hyperlink
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57676705"
 ## <a name="required-ui-automation-properties"></a>Propriétés UI Automation requises  
  Le tableau suivant répertorie les propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dont la valeur ou la définition est particulièrement pertinente pour le type de contrôle Hyperlink. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriétés, consultez [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Propriété[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Value|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriété|Value|Notes|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consultez les notes.|La valeur de cette propriété doit être unique dans tous les contrôles d’une application.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consultez les notes.|Rectangle externe qui contient l’ensemble du contrôle.|  
@@ -57,22 +57,23 @@ ms.locfileid: "57676705"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Oui|Tous les contrôles de lien hypertexte doivent prendre en charge le modèle Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Selon le cas|Les contrôles de lien hypertexte doivent prendre en charge le modèle de contrôle Value quand le lien contient des informations explicites qui sont utilisables par l’utilisateur.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Par exemple, `"https://www...."`.|Une URL d’adresse Internet ou intranet est un exemple de lien hypertexte qui contient des informations explicites pour l’utilisateur. Toutefois, un lien créé par programmation est uniquement explicite pour une application, et n’est pas recommandé pour la propriété Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Par exemple : `"https://www...."`|Une URL d’adresse Internet ou intranet est un exemple de lien hypertexte qui contient des informations explicites pour l’utilisateur. Toutefois, un lien créé par programmation est uniquement explicite pour une application, et n’est pas recommandé pour la propriété Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Événements UI Automation requis  
  Le tableau suivant répertorie les événements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] qui doivent être pris en charge par tous les contrôles de lien hypertexte. Pour plus d’informations sur les événements, consultez [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|Événement[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Assistance|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Événement|Assistance|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Automation.ControlType.Hyperlink>
-- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Vue d'ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

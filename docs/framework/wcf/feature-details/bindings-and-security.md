@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122146"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
@@ -21,7 +21,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Si vous avez déjà sélectionné une liaison, vous trouverez plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
- Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [des fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Certaines fonctions de sécurité ne sont pas programmables à l'aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [des fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Fonctions de sécurité des liaisons  
  WCF inclut plusieurs liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -43,7 +43,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 -   Profil de sécurité de base tel que défini dans WS-I.  
   
- Par défaut, cette liaison n’est pas sécurisée. Elle est conçue pour interagir avec les services ASMX. Lorsque la sécurité est activée, la liaison fournit une interopérabilité transparente avec les mécanismes de sécurité IIS (Internet Information Services), tels que l’authentification de base, Digest et la sécurité Windows intégrée. Pour plus d’informations, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Cette liaison prend en charge les fonctionnalités suivantes :  
+ Par défaut, cette liaison n’est pas sécurisée. Elle est conçue pour interagir avec les services ASMX. Lorsque la sécurité est activée, la liaison fournit une interopérabilité transparente avec les mécanismes de sécurité IIS (Internet Information Services), tels que l'authentification de base, Digest et la sécurité Windows intégrée. Pour plus d’informations, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Cette liaison prend en charge les fonctionnalités suivantes :  
   
 -   Sécurité du transport HTTPS.  
   
@@ -79,7 +79,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 -   Utilise l'encodage de message Text/XML.  
   
- À l’aide de WS-Security (sécurité au niveau de la couche de message), la liaison vous permet de configurer les paramètres suivants :  
+ À l'aide de WS-Security (sécurité au niveau de la couche de message), la liaison vous permet de configurer les paramètres suivants :  
   
 -   La suite algorithmique de sécurité afin de déterminer l'algorithme de chiffrement.  
   
@@ -199,12 +199,12 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |`MsmqIntegrationBinding`|Oui|Non|Non|  
 |`wsFederationHttpBinding`|Non|Oui|Oui|  
   
-## <a name="transport-credentials-in-bindings"></a>Informations d’identification de transport dans les liaisons  
+## <a name="transport-credentials-in-bindings"></a>Informations d'identification de transport dans les liaisons  
  Le tableau suivant répertorie les types d'informations d'identification du client disponibles lors de l'utilisation de `BasicHttpBinding` ou `WSHttpBinding` en mode de sécurité Transport.  
   
 |Type|Description|  
 |----------|-----------------|  
-|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
@@ -212,7 +212,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |Certificat|Authentification effectuée à l'aide d'un certificat.|  
 |IssuedToken|Autorise le service à imposer que le client soit authentifié à l'aide d'un jeton émis par un service d'émission de jeton de sécurité ou par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Pour plus d’informations, consultez [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
-### <a name="message-client-credentials-in-bindings"></a>Informations d’identification du client de message dans les liaisons  
+### <a name="message-client-credentials-in-bindings"></a>Informations d'identification du client de message dans les liaisons  
  Le tableau suivant répertorie les types d'informations d'identification du client disponibles lors de l'utilisation d'une liaison en mode de sécurité Message.  
   
 |Type|Description|  
@@ -224,9 +224,10 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |IssuedToken|Autorise le service à utiliser un service d'émission de jeton de sécurité afin de fournir un jeton personnalisé.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Sélection d'un type d'informations d'identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

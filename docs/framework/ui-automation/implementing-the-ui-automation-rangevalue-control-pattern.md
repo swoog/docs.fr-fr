@@ -1,17 +1,17 @@
 ---
-title: Implémentation du modèle de contrôle RangeValue d'UI Automation
+title: Implémentation du modèle de contrôle RangeValue d’UI Automation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Range Value
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 34044b337dfb7498fd75f7f9a8bd17c2db9eb7d2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175787"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implémentation du modèle de contrôle RangeValue d’UI Automation
 > [!NOTE]
@@ -53,11 +53,12 @@ Exemple d’une barre de progression où la valeur est de type entier, et où le
   
 |Type d'exception|Condition|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> est appelé avec une valeur supérieure à <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> , ou inférieure à <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> est appelé avec une valeur qui est soit supérieure à <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> ou inférieur à <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

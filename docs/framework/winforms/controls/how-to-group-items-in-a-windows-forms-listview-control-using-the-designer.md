@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Grouper des éléments dans un contrôle de ListView Windows Forms à l’aide du Concepteur'
+title: 'Procédure : regrouper des éléments dans un contrôle ListView Windows Forms à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136654"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procédure : Grouper des éléments dans un contrôle de ListView Windows Forms à l’aide du Concepteur
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procédure : regrouper des éléments dans un contrôle ListView Windows Forms à l’aide du concepteur
 La fonctionnalité de regroupement de la <xref:System.Windows.Forms.ListView> contrôle vous permet d’afficher les jeux d’éléments liés en groupes. Ces groupes sont séparés sur l’écran par des en-têtes de groupe horizontal qui contiennent les titres de groupe. Vous pouvez utiliser <xref:System.Windows.Forms.ListView> groupes pour faciliter la navigation dans les longues listes en regroupant les éléments par ordre alphabétique, par date, ou par tout autre regroupement logique. L’illustration suivante montre des éléments regroupés.  
   
  ![Groupes de ListView](./media/listviewgroups.gif "ListViewGroups")  
@@ -46,9 +46,10 @@ La fonctionnalité de regroupement de la <xref:System.Windows.Forms.ListView> co
 3.  Sélectionnez le <xref:System.Windows.Forms.ListViewItem.Group%2A> propriété et choisissez un groupe dans la liste déroulante.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [Contrôle ListView](listview-control-windows-forms.md)
 - [Vue d’ensemble du contrôle ListView](listview-control-overview-windows-forms.md)
-- [Guide pratique pour Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procédure : ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

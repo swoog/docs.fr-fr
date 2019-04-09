@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162879"
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -154,7 +154,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|N/A|N/A|Aucun suivi n'est émis.|N/A|  
 |Critique|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.||Les exceptions non prises en charge, notamment les suivantes, sont enregistrées :<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException (le CLR appelle tout ThreadAbortExceptionHandler)<br />-StackOverflowException (interception impossible)<br />-   ConfigurationErrorsException<br />-   SEHException<br />-Erreurs de de l’application<br />-Événements Failfast<br />-Blocages du système<br />-Messages incohérents : suivis de messages qui provoquent l’échec de l’application.|Administrateurs<br /><br /> Développeurs d'applications|  
-|Error|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un traitement inattendu s'est produit. L'application n'a pas pu effectuer une tâche comme prévu. Toutefois, l'application s'exécute encore.|Toutes les exceptions sont enregistrées.|Administrateurs<br /><br /> Développeurs d'applications|  
+|Error|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un traitement inattendu s'est produit. L’application n’a pas pu effectuer une tâche comme prévu. Toutefois, l'application s'exécute encore.|Toutes les exceptions sont enregistrées.|Administrateurs<br /><br /> Développeurs d'applications|  
 |Warning|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un problème possible s'est produit ou peut se produire, mais l'application fonctionne encore correctement. Toutefois, elle risque de ne plus fonctionner correctement.|-L’application reçoit davantage de demandes que ses paramètres de limitation ne l’autorisent.<br />-La file d’attente de réception est proche de sa capacité maximale configurée.<br />-Délai d’attente a été dépassé.<br />-Informations d’identification sont rejetées.|Administrateurs<br /><br /> Développeurs d'applications|  
 |Information|Événements « Positifs » : événements qui marquent des jalons|Jalons importants et atteints relatifs à l'exécution d'application, indépendamment du fonctionnement correct de l'application.|En général, des messages d'aide au contrôle et au diagnostic de l'état système, à la mesure des performances ou au profilage sont générés. Vous pouvez utiliser ces informations pour la planification de capacité et la gestion des performances :<br /><br /> -Les canaux sont créés.<br />-Écouteurs de point de terminaison sont créés.<br />-Message pénètre/quitte le transport.<br />-Jeton de sécurité est récupéré.<br />-Paramètre de configuration est en lecture.|Administrateurs<br /><br /> Développeurs d'applications<br /><br /> Développeurs de produits.|  
 |Verbose|Événements « Positifs » : événements qui marquent des jalons.|Des événements de bas niveau pour le code utilisateur et la maintenance sont émis.|En général, vous pouvez utiliser ce niveau pour le débogage ou l'optimisation d'application.<br /><br /> -En-tête de message compris.|Administrateurs<br /><br /> Développeurs d'applications<br /><br /> Développeurs de produits.|  
@@ -181,7 +181,8 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
  Vous ne pouvez pas utiliser l'attribut `propagateActivity` avec des sources de suivi définies par l'utilisateur. Pour la propagation d'ID d'activité de code utilisateur, assurez-vous de ne pas définir ServiceModel `ActivityTracing`, tout en ayant encore l'attribut `propagateActivity` ServiceModel défini à `true`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+
+- [Traçage](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Guide pratique pour Créer et initialiser des écouteurs de Trace](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [Création d’un TraceListener personnalisé](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [Procédure : Créer et initialiser les écouteurs de trace](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Création d'un TraceListener personnalisé](https://go.microsoft.com/fwlink/?LinkId=96239)

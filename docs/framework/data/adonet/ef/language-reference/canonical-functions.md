@@ -2,12 +2,12 @@
 title: Fonctions canoniques
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202935"
 ---
 # <a name="canonical-functions"></a>Fonctions canoniques
 Cette section décrit les fonctions canoniques qui sont prises en charge par tous les fournisseurs de données et qui peuvent être utilisée par toutes les technologies de requête. Les fonctions canoniques ne peuvent pas être étendues par un fournisseur.  
@@ -26,19 +26,19 @@ Cette section décrit les fonctions canoniques qui sont prises en charge par tou
  L'espace de noms des fonctions canoniques est <xref:System.Data.Metadata.Edm>. L'espace de noms <xref:System.Data.Metadata.Edm> est automatiquement inclus dans toutes les requêtes. Toutefois, si un autre espace de noms est importé et que celui-ci contient une fonction de même nom qu'une fonction canonique (dans l'espace de noms <xref:System.Data.Metadata.Edm>), vous devez spécifier l'espace de noms.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Fonctions canoniques d’agrégation](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [Fonctions d'agrégation canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Décrit les fonctions canoniques d'agrégation [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Fonctions canoniques mathématiques](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [Fonctions mathématiques canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
  Décrit les fonctions canoniques mathématiques [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Fonctions canoniques de chaîne](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ [Fonctions de chaînes canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
  Décrit les fonctions canoniques de chaîne [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Fonctions canoniques de date et d’heure](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [Fonctions de date et d'heure canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  Décrit les fonctions canoniques de date et d'heure [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Fonctions canoniques au niveau du bit](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Fonctions de chaînes canoniques au niveau du bit](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  Décrit les fonctions canoniques au niveau du bit [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Fonctions spatiales](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
@@ -48,7 +48,8 @@ Cette section décrit les fonctions canoniques qui sont prises en charge par tou
  Décrit les fonctions qui ne sont pas considérées comme des fonctions au niveau du bit, des fonctions de date/heure, des fonctions de chaîne, des fonctions mathématiques ni des fonctions d'agrégation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Mappage du modèle conceptuel canonique aux fonctions SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
-- [Fonctions définies par l’utilisateur](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+- [Fonctions définies par l'utilisateur](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

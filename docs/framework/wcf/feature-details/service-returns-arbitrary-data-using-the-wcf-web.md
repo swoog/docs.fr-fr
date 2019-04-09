@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Créer un Service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP Web WCF'
+title: 'Procédure : créer un service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP web WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157481"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procédure : Créer un Service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP Web WCF
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procédure : créer un service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP web WCF
 Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner des données dans un format non pris en charge par WCF. Cette rubrique décrit l’utilisation du modèle de programmation WCF WEB HTTP pour créer un tel service. Ce service a une opération qui retourne un flux de données.  
   
 ### <a name="to-implement-the-service-contract"></a>Pour implémenter le contrat de service  
@@ -51,7 +51,7 @@ Les développeurs doivent parfois avoir le contrôle total de la manière dont l
        }  
     ```  
   
-     Observez l'avant-dernière ligne de code : `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Notez que la deuxième à la dernière ligne de code : `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Cela définit l’en-tête de type de contenu sur `"image/jpeg"`. Bien que cet exemple indique comment retourner un fichier .jpg, il peut être modifié pour retourner tout type de données requis, dans n'importe quel format. L'opération doit extraire ou générer les données, puis les écrire dans un flux de données.  
   
@@ -176,4 +176,5 @@ namespace RawImageService
 -   Lors de la compilation de l'exemple de code, faites référence à System.ServiceModel.dll et System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+
+- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

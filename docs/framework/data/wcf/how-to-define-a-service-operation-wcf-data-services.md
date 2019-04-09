@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: fffc0efaea200a7b0aa26b0f273b3c0d99338bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138097"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Procédure : Définir une opération de Service (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] exposent des méthodes définies sur le serveur comme des opérations de service. Opérations de service permettent à un service de données fournir l’accès via un URI à une méthode qui est définie sur le serveur. Pour définir une opération de service, appliquez le [`WebGet]` ou `[WebInvoke]` d’attribut à la méthode. Pour prendre en charge les opérateurs de requête, l’opération de service doit retourner un <xref:System.Linq.IQueryable%601> instance. Les opérations de service peuvent accéder à la source de données sous-jacente via la propriété <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> sur <xref:System.Data.Services.DataService%601>. Pour plus d’informations, consultez [opérations de Service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] exposer des méthodes qui sont définies sur le serveur en tant qu’opérations de service. Opérations de service permettent à un service de données fournir l’accès via un URI à une méthode qui est définie sur le serveur. Pour définir une opération de service, appliquez le [`WebGet]` ou `[WebInvoke]` d’attribut à la méthode. Pour prendre en charge les opérateurs de requête, l’opération de service doit retourner un <xref:System.Linq.IQueryable%601> instance. Les opérations de service peuvent accéder à la source de données sous-jacente via la propriété <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> sur <xref:System.Data.Services.DataService%601>. Pour plus d’informations, consultez [opérations de Service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
  L'exemple dans cette rubrique définit une opération de service nommée `GetOrdersByCity` qui retourne une instance <xref:System.Linq.IQueryable%601> filtrée d'objets `Orders` et  `Order_Details` connexes. L'exemple accède à l'instance <xref:System.Data.Objects.ObjectContext> qui est la source de données pour l'exemple de service de données Northwind. Ce service est créé lorsque vous effectuez la [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54586551"
     -   `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc`  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant implémente une opération de service nommée `GetOrderByCity` sur le service de données Northwind. Cette opération utilise ADO.NET Entity Framework pour retourner un jeu d'objets `Orders` et `Order_Details` connexes comme une instance <xref:System.Linq.IQueryable%601> basée sur le nom de ville fourni.  
+ L'exemple suivant implémente une opération de service nommée `GetOrderByCity` sur le service de données Northwind. Cette opération utilise ADO.NET Entity Framework pour retourner un jeu d’objets `Orders` et `Order_Details` connexes comme une instance <xref:System.Linq.IQueryable%601> basée sur le nom de ville fourni.  
   
 > [!NOTE]
 >  Les opérateurs de requête sont pris en charge sur ce point de terminaison d'opération de service parce que la méthode retourne une instance <xref:System.Linq.IQueryable%601>.  
@@ -54,4 +54,5 @@ ms.locfileid: "54586551"
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+
+- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbeada983e89a1ecae436a8d25ce2c86be0a9626
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 92137e1a5b0923bc34745513715934c483616700
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179840"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert, méthode
 Rétablit les versions d'origine de toutes les instances des fonctions spécifiées.  
@@ -58,8 +58,8 @@ HRESULT RequestRevert (
 |S_OK|Une tentative de rétablissement de toutes les demandes a été effectuée ; toutefois, le tableau d'états retourné doit être examiné pour déterminer les fonctions qui ont été correctement rétablies.|  
 |CORPROF_E_CALLBACK4_REQUIRED|Le profileur doit implémenter le [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface pour cet appel être pris en charge.|  
 |CORPROF_E_REJIT_NOT_ENABLED|La recompilation juste-à-temps n'a pas été activée. Vous devez activer la recompilation JIT pendant l’initialisation à l’aide de la [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) méthode pour définir le `COR_PRF_ENABLE_REJIT` indicateur.|  
-|E_INVALIDARG|`cFunctions` est égal à 0, ou `moduleIds` ou `methodIds` a la valeur `NULL`.|  
-|E_OUTOFMEMORY|Le CLR n'a pas pu terminer la demande, car la mémoire est insuffisante.|  
+|E_INVALIDARG|`cFunctions` est égal à 0, ou `moduleIds` ou `methodIds` est `NULL`.|  
+|E_OUTOFMEMORY|Le CLR n'a pas pu terminer la demande en raison d'une mémoire insuffisante.|  
   
 ## <a name="status-hresults"></a>HRESULT d'état  
   
@@ -75,16 +75,17 @@ HRESULT RequestRevert (
 ## <a name="remarks"></a>Notes  
  Lors du prochain appel des instances de la fonction rétablie, les versions d'origine des fonctions seront exécutées. Si une fonction est déjà en cours d'exécution, il termine l'exécution de la version en cours d'exécution.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorProfilerInfo4, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilage](../../../../docs/framework/unmanaged-api/profiling/index.md)

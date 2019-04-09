@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Construire des familles de polices et des polices'
+title: 'Procédure : construire des familles de polices et des polices'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181218"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a>Procédure : Construire des familles de polices et des polices
+# <a name="how-to-construct-font-families-and-fonts"></a>Procédure : construire des familles de polices et des polices
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] regroupe les polices avec le même type de caractère, mais des styles différents dans des familles de polices. Par exemple, la famille de polices Arial contient les polices suivantes :  
   
 -   Arial normal  
@@ -47,8 +47,9 @@ ms.locfileid: "57708552"
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)

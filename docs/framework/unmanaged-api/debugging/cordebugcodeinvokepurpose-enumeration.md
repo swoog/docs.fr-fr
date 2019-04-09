@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155569"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose, énumération
 Indique pourquoi une fonction exportée appelle du code managé.  
@@ -49,15 +49,16 @@ typedef enum CorDebugCodeInvokePurpose
 > [!NOTE]
 >  Cette énumération est destinée à une utilisation dans des scénarios de débogage .NET Native uniquement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

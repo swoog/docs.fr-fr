@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: c32d6bff7171bb43d1f288500c9b24e8b288340b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125682"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Rendu d'un contrôle Windows Forms
 Le rendu désigne le processus de création d’une représentation visuelle sur l’écran d’un utilisateur. Windows Forms utilise [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nouvelle bibliothèque de graphiques Windows) pour le rendu. Les classes managées qui donnent accès aux [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] se trouvent dans le <xref:System.Drawing?displayProperty=nameWithType> espace de noms et ses sous-espaces de noms.  
@@ -118,4 +118,5 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  [!code-vb[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un contrôle Windows Forms affiche la progression](how-to-create-a-windows-forms-control-that-shows-progress.md)
+
+- [Procédure : créer un contrôle Windows Forms qui indique une progression](how-to-create-a-windows-forms-control-that-shows-progress.md)

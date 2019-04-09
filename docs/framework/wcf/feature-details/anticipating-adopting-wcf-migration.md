@@ -1,15 +1,15 @@
 ---
-title: 'Anticipation de l’adoption de Windows Communication Foundation : Faciliter la Migration Future'
+title: 'Anticipation de l’adoption de Windows Communication Foundation : Facilitation de la migration future'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 41deb6cb982e65b2af054840cdcb84e3d1db3451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176382"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipation de l’adoption de Windows Communication Foundation : Faciliter la Migration Future
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipation de l’adoption de Windows Communication Foundation : Facilitation de la migration future
 Afin de faciliter une future migration de nouvelles applications ASP.NET vers WCF, suivez les recommandations précédentes ainsi que les recommandations suivantes.  
   
 ## <a name="protocols"></a>Protocoles  
@@ -125,4 +125,5 @@ throw new SoapException(
 -   Vous pouvez faire appel à des fournisseurs de rôles ASP.NET 2.0 pour autoriser l'accès aux ressources d'un service.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Anticipation de l’adoption de Windows Communication Foundation : Faciliter l’intégration Future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [Anticipation de l’adoption de Windows Communication Foundation : Facilitation de l’intégration future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156076"
 ---
 # <a name="security-transparent-code-level-2"></a>Code transparent de sécurité, niveau 2
 <a name="top"></a>
@@ -44,13 +44,13 @@ ms.locfileid: "54567020"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Exemples d’utilisation et de comportements](#examples)  
+-   [Exemples d'utilisation et comportements](#examples)  
   
 -   [Modèles de substitution](#override)  
   
--   [Règles d’héritage](#inheritance)  
+-   [Règles d'héritage](#inheritance)  
   
--   [Règles et des informations supplémentaires](#additional)  
+-   [Informations et règles supplémentaires](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Exemples d'utilisation et comportements  
@@ -123,7 +123,7 @@ ms.locfileid: "54567020"
   
 -   Règles pour les types : Allant de gauche à droite, l’accès devient plus restrictif. Les types dérivés doivent être au moins aussi restrictifs que le type de base.  
   
--   Règles pour les méthodes : Méthodes dérivées ne peuvent pas changer l’accessibilité depuis la méthode de base. Pour le comportement par défaut, toutes les méthodes dérivées qui ne sont pas annotées sont `Transparent`. Les dérivés des types critiques provoquent une exception si la méthode substituée n'est pas explicitement annotée comme étant `SecurityCritical`.  
+-   Règles pour les méthodes : Méthodes dérivées ne peuvent pas changer l’accessibilité depuis la méthode de base. Pour le comportement par défaut, toutes les méthodes dérivées qui ne sont pas annotées sont `Transparent`. Les dérivés des types critiques provoquent une exception si la méthode substituée n’est pas explicitement annotée comme étant `SecurityCritical`.  
   
  Le tableau suivant présente les modèles d'héritage de type autorisés.  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54567020"
  La valeur par défaut de la propriété <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> étant `false`, elle doit avoir la valeur `true` pour ignorer la vérification. Cela doit être fait uniquement à des fins d'optimisation. Vous devez vous assurer que le code transparent de l’assembly est vérifiable à l’aide de la `transparent` option dans le [outil PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Modifications de sécurité](../../../docs/framework/security/security-changes.md)
+- [Changements relatifs à la sécurité](../../../docs/framework/security/security-changes.md)

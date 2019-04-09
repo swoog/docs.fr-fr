@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148081"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Sécurité de transport avec l'authentification Windows
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et un service sécurisé par la sécurité de Windows. Pour plus d’informations sur la programmation, consultez [Comment : Sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -78,7 +78,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
   
 -   Créez un client autonome à l'aide du code (et du code client).  
   
--   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Par exemple :  
+-   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -118,6 +118,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Guide pratique pour Sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Procédure : sécuriser un service avec des informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

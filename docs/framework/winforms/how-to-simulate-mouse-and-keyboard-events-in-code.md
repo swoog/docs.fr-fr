@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Simuler des événements de souris et clavier dans le Code'
+title: 'Procédure : simuler des événements de souris et de clavier dans le code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123446"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procédure : Simuler des événements de souris et clavier dans le Code
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procédure : simuler des événements de souris et de clavier dans le code
 Windows Forms fournit plusieurs options pour simuler par programmation l'entrée de souris et de clavier. Cette rubrique offre une vue d'ensemble de ces options.  
   
 ## <a name="simulating-mouse-input"></a>Simulation de l'entrée de souris  
@@ -90,4 +90,5 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Entrées d’utilisateur dans les Windows Forms](user-input-in-windows-forms.md)
+
+- [Entrées d'utilisateur dans les Windows Forms](user-input-in-windows-forms.md)

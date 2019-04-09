@@ -3,12 +3,12 @@ title: Utilisation de l'annotation dans les requêtes
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
-ms.openlocfilehash: 03951a374d81f53953fffad41c321470739cdcf6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2d98852ca44e3485ddcf4be29d505b39011698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208642"
 ---
 # <a name="using-annotation-in-queries"></a>Utilisation de l'annotation dans les requêtes
 Grâce aux annotations, vous pouvez baliser arbitrairement des enregistrements de suivi avec une valeur configurable après la génération. Par exemple, vous souhaiterez plusieurs enregistrements de suivi sur plusieurs flux de travail soient balisés avec « Mail Server » == « Mail Server1 ». Lors de l’interrogation ultérieure d’enregistrements de suivi, cela facilite la recherche de tous les enregistrements ayant cette étiquette.  
@@ -31,8 +31,9 @@ Grâce aux annotations, vous pouvez baliser arbitrairement des enregistrements d
 >  Ces éléments de requête de suivi peuvent être utilisés pour créer un modèle de suivi. Un modèle de suivi peut être créé dans la configuration ou à l'aide du code.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>
 - <xref:System.Activities.Tracking.TrackingProfile>
 - [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

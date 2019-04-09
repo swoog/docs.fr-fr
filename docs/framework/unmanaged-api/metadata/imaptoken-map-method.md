@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a85dc586b0c08fabdd34c018e82314c9003eeded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171006"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map, méthode
 Mappe une relation entre les assemblys à l’aide de signatures de métadonnées.  
@@ -46,14 +46,15 @@ HRESULT Map (
 ## <a name="remarks"></a>Notes  
  Lorsque le jeton remapper se produit pendant une fusion, le jeton d’origine est étendu dans la portée de métadonnées importées (source) et le nouveau jeton est limité dans la portée de métadonnées émise (cible).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IMapToken, interface](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

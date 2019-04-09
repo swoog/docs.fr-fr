@@ -6,18 +6,18 @@ helpviewer_keywords:
 - status bars
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-ms.openlocfilehash: 809590ff19619b3693466d4f6a0567ff1e5ab38a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194108"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel, contrôle
 Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage dans un <xref:System.Windows.Forms.StatusStrip> du texte, images ou les deux.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble du contrôle ToolStripStatusLabel](toolstripstatuslabel-control-overview.md)  
+ [Vue d'ensemble du contrôle ToolStripStatusLabel](toolstripstatuslabel-control-overview.md)  
  Fournit des rubriques qui décrivent la fonction et les principaux concepts du contrôle Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel>.  
   
 ## <a name="reference"></a>Référence  
@@ -31,4 +31,5 @@ Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’afficha
  Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

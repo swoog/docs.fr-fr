@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3d7555ec5b87957ff1c8e085a4c3ac44c660b0c
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 909c283b1355153ffe1aa02acfbe8acc25a7e215
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124096"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo, fonction
 Obtient le dernier code d’erreur déclenché par l’une des fonctions de nom fort.  
@@ -44,12 +44,11 @@ HRESULT StrongNameErrorInfo ();
 ## <a name="remarks"></a>Notes  
  La plupart des méthodes à nom fort retournent une simple `true` ou `false` indication de leur achèvement. Utilisez le `StrongNameErrorInfo` fonction pour récupérer un HRESULT qui spécifie la dernière erreur générée par les fonctions de nom fort.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149732"
 ---
 # <a name="garbage-collection-etw-events"></a>Événements ETW de garbage collection
 <a name="top"></a> Ces événements collectent des informations relatives au garbage collection. Ils vous aident dans le diagnostic et le débogage, y compris pour déterminer combien de fois le garbage collection a été effectué, la quantité de mémoire libérée pendant le garbage collection, etc.  
@@ -337,7 +337,7 @@ ms.locfileid: "54685215"
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informatif (4)|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -356,7 +356,7 @@ ms.locfileid: "54685215"
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informatif (4)|  
-|`ThreadingKeyword` (0x10000)|Informatif (4)|  
+|`ThreadingKeyword` (0 x 10000)|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -367,4 +367,5 @@ ms.locfileid: "54685215"
  Aucune donnée d'événement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

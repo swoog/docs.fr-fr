@@ -2,12 +2,12 @@
 title: <add> de <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 1340b70cf4656b764370a14955a2f4d6f6209fe4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128698"
 ---
 # <a name="add-of-filters"></a>\<Ajouter > de \<filtres >
 Filtre XPath qui spécifie le type de message à enregistrer.  
@@ -33,7 +33,7 @@ Filtre XPath qui spécifie le type de message à enregistrer.
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|filtre|Chaîne qui spécifie une requête sur un document XML défini par une expression XPath 1.0. Pour plus d'informations, consultez <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|Filter|Chaîne qui spécifie une requête sur un document XML défini par une expression XPath 1.0. Pour plus d'informations, consultez <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -42,7 +42,7 @@ Filtre XPath qui spécifie le type de message à enregistrer.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<filtres>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contient une collection de filtres XPath utilisés pour contrôler le type de message enregistré.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contient une collection de filtres XPath utilisés pour contrôler le type de message enregistré.|  
   
 ## <a name="remarks"></a>Notes  
  Les filtres sont appliqués uniquement à la couche de transport, spécifiée par `logMessagesAtTransportLevel` (valeur `true`). Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.  
@@ -71,6 +71,7 @@ Filtre XPath qui spécifie le type de message à enregistrer.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>

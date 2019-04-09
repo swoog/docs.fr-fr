@@ -2,12 +2,12 @@
 title: Autorisation et permissions dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185859"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisation et permissions dans SQL Server
 Lorsque vous créez des objets de base de données, vous devez accorder explicitement des autorisations de manière à les rendre accessibles aux utilisateurs. Chaque objet sécurisable possède des autorisations qui peuvent être accordées à une principal de sécurité à l'aide d'instructions d'autorisation.  
@@ -18,7 +18,7 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
  Suivez toujours le principe des privilèges minimum lorsque vous accordez des autorisations aux utilisateurs de base de données. Accordez les autorisations minimales nécessaires à un utilisateur ou à un rôle pour accomplir une tâche donnée.  
   
 > [!IMPORTANT]
->  Le développement et le test d'une application selon l'approche LUA compliquent quelque peu le processus. Il est plus simple de créer des objets et d'écrire du code tout en étant connecté en tant qu'administrateur système ou propriétaire de base de données qu'en utilisant un compte LUA. Cependant, le fait de développer des applications en utilisant un compte disposant de privilèges élevés peut masquer l'impact de fonctionnalités réduites lorsque des utilisateurs disposant de privilèges minimum essaient d'exécuter une application qui requiert des autorisations élevées pour fonctionner correctement. Par ailleurs, le fait d'accorder des autorisations excessives aux utilisateurs afin qu'ils puissent réacquérir une fonctionnalité perdue peut rendre votre application vulnérable aux attaques. La conception, le développement et le test de votre application alors que vous êtes connecté avec un compte LUA appliquent une approche stricte qui évite toute mauvaise surprise et empêche de céder à la facilité en accordant des privilèges élevés. Vous pouvez utiliser une connexion SQL Server pour le test même si votre application doit être déployée à l'aide de l'authentification Windows.  
+>  Le développement et le test d'une application selon l'approche LUA compliquent quelque peu le processus. Il est plus simple de créer des objets et d'écrire du code tout en étant connecté en tant qu'administrateur système ou propriétaire de base de données qu'en utilisant un compte LUA. Cependant, le fait de développer des applications en utilisant un compte disposant de privilèges élevés peut masquer l'impact de fonctionnalités réduites lorsque des utilisateurs disposant de privilèges minimum essaient d'exécuter une application qui requiert des autorisations élevées pour fonctionner correctement. Par ailleurs, le fait d'accorder des autorisations excessives aux utilisateurs afin qu'ils puissent réacquérir une fonctionnalité perdue peut rendre votre application vulnérable aux attaques. La conception, le développement et le test de votre application alors que vous êtes connecté avec un compte LUA appliquent une approche disciplinée qui évite toute mauvaise surprise et empêche de céder à la facilité en accordant des privilèges élevés. Vous pouvez utiliser une connexion SQL Server pour le test même si votre application doit être déployée à l'aide de l'authentification Windows.  
   
 ## <a name="role-based-permissions"></a>Autorisations basées sur les rôles  
  L'octroi d'autorisations aux rôles plutôt qu'aux utilisateurs simplifie l'administration de la sécurité. Les jeux d'autorisations qui sont assignés aux rôles sont hérités par tous les membres du rôle. Il est plus facile d'ajouter des utilisateurs à un rôle ou d'en supprimer que de recréer des jeux d'autorisations distincts individuellement pour chaque utilisateur. Les rôles peuvent être imbriqués ; toutefois, des niveaux d'imbrication trop nombreux peuvent dégrader les performances. Vous pouvez également ajouter des utilisateurs aux rôles de base de données fixes pour simplifier l'assignation d'autorisations.  
@@ -59,6 +59,7 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
 |[Autorisations](/sql/relational-databases/security/permissions-database-engine)|Contient des rubriques qui décrivent la hiérarchie des autorisations, les affichages catalogue et les autorisations des rôles serveur et de base de données fixes.|
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

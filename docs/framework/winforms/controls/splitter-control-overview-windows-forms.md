@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176408"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Vue d'ensemble du contrôle Splitter (Windows Forms)
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703190"
  Lorsque l’utilisateur pointe le pointeur de la souris sur le bord non ancré d’un contrôle qui peut être redimensionné par un contrôle splitter, le pointeur change d’apparence pour indiquer que le contrôle peut être redimensionné. Avec le contrôle splitter, l’utilisateur peut redimensionner le contrôle ancré qui précède immédiatement. Par conséquent, pour permettre à l’utilisateur redimensionner un contrôle fixé au moment de l’exécution, le contrôle soit redimensionné à un bord d’un conteneur d’ancrage et puis ancrer un contrôle splitter sur le même côté de ce conteneur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [Guide pratique pour Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Procédure : arrimer des contrôles dans des Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

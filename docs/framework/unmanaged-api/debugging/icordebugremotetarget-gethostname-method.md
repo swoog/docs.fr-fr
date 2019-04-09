@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2861a2f0aec66832c618dda7d50dd543920102f4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0ca7aee79b5b8c3d58b4beb8f1ff886a7d55afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127580"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName, méthode
 Retourne le nom de domaine complet ou l’adresse IPv4 de l’ordinateur cible de débogage distant. IPv6 n’est pas pris en charge pour l’instant.  
@@ -57,7 +57,7 @@ HRESULT GetHostName (
 ## <a name="remarks"></a>Notes  
  Cette méthode est implémentée par le writer de débogueur. Il doit respecter le paradigme d’appel plusieurs : Lors du premier appel, l’appelant transmet null à la fois aux `cchHostName` et `szHostName`, et `pcchHostName` retourne la taille de la mémoire tampon requise. Sur le deuxième appel, la taille qui a été retournée précédemment est passée dans `cchHostName`, et une taille de tampon appropriée est transmis en `szHostName`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl  
@@ -67,5 +67,6 @@ HRESULT GetHostName (
  **Versions du .NET framework :** 3.5 SP1  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugRemoteTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

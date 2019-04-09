@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164370"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Spécification du comportement du client au moment de l'exécution
 Windows Communication Foundation (WCF) clients, tels que les services Windows Communication Foundation (WCF), peuvent être configurés pour modifier le comportement au moment de l’exécution en fonction de l’application cliente. Trois attributs sont disponibles pour spécifier le comportement du client au moment de l'exécution. Les objets de rappel de client duplex peuvent utiliser les attributs <xref:System.ServiceModel.CallbackBehaviorAttribute> et <xref:System.ServiceModel.Description.CallbackDebugBehavior> pour modifier leur comportement à l'exécution. L'autre attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, peut être utilisé pour séparer la destination logique de la destination réseau immédiate. De plus, les types de rappel de client duplex peuvent utiliser certains des comportements du côté service. Pour plus d’informations, consultez [spécifiant le comportement de runtime du Service](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) clients, tels que les services Windows Co
 ## <a name="using-the-callbackbehaviorattribute"></a>Utilisation de CallbackBehaviorAttribute  
  Vous pouvez configurer ou étendre le comportement d'exécution d'une implémentation de contrat de rappel dans une application cliente en utilisant la classe <xref:System.ServiceModel.CallbackBehaviorAttribute>. Cet attribut exécute pour la classe de rappel une fonction semblable à la classe <xref:System.ServiceModel.ServiceBehaviorAttribute>, à l'exception du comportement d'instanciation et des paramètres de transaction.  
   
- La classe <xref:System.ServiceModel.CallbackBehaviorAttribute> doit être appliquée à la classe qui implémente le contrat de rappel. En cas d'application à une implémentation de contrat non-duplex, une exception <xref:System.InvalidOperationException> est levée au moment de l'exécution. L'exemple de code suivant illustre une classe <xref:System.ServiceModel.CallbackBehaviorAttribute> sur un objet de rappel qui utilise l'objet <xref:System.Threading.SynchronizationContext> pour déterminer le thread à marshaler, la propriété <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> pour appliquer la validation de message et la propriété <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> pour retourner des exceptions comme objets <xref:System.ServiceModel.FaultException> au service à des fins de débogage.  
+ La classe <xref:System.ServiceModel.CallbackBehaviorAttribute> doit être appliquée à la classe qui implémente le contrat de rappel. En cas d'application à une implémentation de contrat non-duplex, une exception <xref:System.InvalidOperationException> est levée au moment de l'exécution. L’exemple de code suivant illustre une classe <xref:System.ServiceModel.CallbackBehaviorAttribute> sur un objet de rappel qui utilise l’objet <xref:System.Threading.SynchronizationContext> pour déterminer le thread à marshaler, la propriété <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> pour appliquer la validation de message et la propriété <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> pour retourner des exceptions comme objets <xref:System.ServiceModel.FaultException> au service à des fins de débogage.  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
@@ -44,4 +44,5 @@ Windows Communication Foundation (WCF) clients, tels que les services Windows Co
  Vous pouvez utiliser le comportement <xref:System.ServiceModel.Description.ClientViaBehavior> pour spécifier l'URI pour lequel le canal de transport doit être créé. Utilisez ce comportement lorsque la destination réseau immédiate n'est pas le processeur prévu du message. Cela autorise les conversations à sauts multiples lorsque l'application appelante ne connaît pas nécessairement la destination ultime ou lorsque l'en-tête `Via` de destination n'est pas une adresse.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Spécification du comportement du service au moment de l’exécution](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+
+- [Spécification du comportement du service au moment de l'exécution](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

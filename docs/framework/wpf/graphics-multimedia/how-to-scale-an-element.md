@@ -1,18 +1,18 @@
 ---
-title: "Procédure : Mettre à l'échelle un élément"
+title: 'Procédure : Mettre à l’échelle un élément'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131701"
 ---
-# <a name="how-to-scale-an-element"></a>Procédure : Mettre à l'échelle un élément
+# <a name="how-to-scale-an-element"></a>Procédure : Mettre à l’échelle un élément
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.ScaleTransform> à l’échelle un élément.  
   
  Utilisez le <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> et <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propriétés pour redimensionner l’élément selon le facteur que vous spécifiez. Par exemple, un <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> valeur de 1,5 étire l’élément à 150 % de sa largeur d’origine. A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> la valeur 0,5 diminue la hauteur d’un élément de 50 %.  
@@ -38,7 +38,8 @@ Deux opérations ScaleTransform avec des valeurs ScaleX et ScaleY identiques, ma
  Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
-- [Vue d’ensemble des transformations](transforms-overview.md)
-- [Rubriques de guide pratique](transformations-how-to-topics.md)
+- [Vue d'ensemble des transformations](transforms-overview.md)
+- [Rubriques Comment](transformations-how-to-topics.md)

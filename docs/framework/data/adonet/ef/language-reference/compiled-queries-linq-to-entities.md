@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193068"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Requêtes compilées (LINQ to Entities)
 Lorsque vous possédez une application qui exécute de nombreuses fois des requêtes similaires d’un point de vue structurel dans Entity Framework, vous pouvez souvent améliorer les performances en compilant la requête une fois et en l’exécutant plusieurs fois avec des paramètres différents. Par exemple, une application peut avoir besoin de récupérer tous les clients d'une ville spécifique ; la ville est spécifiée à l'exécution par l'utilisateur dans un formulaire. À cette fin, LINQ to Entities prend en charge l'utilisation des requêtes compilées.  
   
- Depuis le .NET Framework 4.5, les requêtes LINQ sont mises en cache automatiquement. Cependant, vous pouvez toujours utiliser des requêtes LINQ compilées pour réduire ce coût dans les exécutions ultérieures et les requêtes compilées peuvent être plus efficaces que les requêtes LINQ qui sont automatiquement mises en cache. Notez que les requêtes LINQ to Entities qui appliquent l'opérateur `Enumerable.Contains` aux collections en mémoire ne sont pas automatiquement mises en cache. Le paramétrage des collections en mémoire dans les requêtes LINQ compilées n'est pas autorisé.  
+ Depuis le .NET Framework 4.5, les requêtes LINQ sont mises en cache automatiquement. Cependant, vous pouvez toujours utiliser des requêtes LINQ compilées pour réduire ce coût dans les exécutions ultérieures et les requêtes compilées peuvent être plus efficaces que les requêtes LINQ qui sont automatiquement mises en cache. Notez que les requêtes LINQ to Entities qui appliquent l’opérateur `Enumerable.Contains` aux collections en mémoire ne sont pas automatiquement mises en cache. Le paramétrage des collections en mémoire dans les requêtes LINQ compilées n’est pas autorisé.  
   
  La classe <xref:System.Data.Objects.CompiledQuery> permet la compilation et la mise en cache des requêtes en vue de leur réutilisation. Conceptuellement, cette classe contient une méthode <xref:System.Data.Objects.CompiledQuery>'s `Compile` avec plusieurs surcharges. Appelez la méthode `Compile` pour créer un nouveau délégué pour représenter la requête compilée. Les méthodes `Compile`, fournies avec un objet <xref:System.Data.Objects.ObjectContext> et des valeurs de paramètres, retournent un délégué qui produit un résultat (tel qu'une instance de <xref:System.Linq.IQueryable%601>). La requête compile une fois durant la première exécution uniquement. Les options de fusion définies pour la requête au moment de la compilation ne peuvent pas être modifiées ultérieurement. Une fois la requête compilée vous pouvez seulement fournir des paramètres de type primitif, mais vous ne pouvez pas remplacer des parties de la requête qui modifieraient le SQL généré. Pour plus d’informations, consultez [Options de fusion Entity Framework et requêtes compilées](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
@@ -69,6 +69,7 @@ Lorsque vous possédez une application qui exécute de nombreuses fois des requ�
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [Options de fusion Entity Framework et requêtes compilées](https://go.microsoft.com/fwlink/?LinkId=199591)

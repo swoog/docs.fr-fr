@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184780"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost, interface
 Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le common language runtime (CLR) explicitement, pour créer et configurer des domaines d’application, pour accéder au domaine par défaut et d’énumérer tous les domaines en cours d’exécution dans le processus.  
@@ -52,7 +52,7 @@ Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le commo
 |[SwitchOutLogicalThreadState, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|Ne pas utiliser.|  
 |[UnloadDomain, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Décharge le domaine d’application du processus actuel.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
@@ -62,9 +62,10 @@ Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le commo
  **Versions du .NET framework :** 1.0, 1.1  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.AppDomain>
 - [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [Hôtes du runtime](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hôtes de runtime](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost, coclasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

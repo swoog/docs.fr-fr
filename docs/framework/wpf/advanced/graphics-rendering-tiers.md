@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197384"
 ---
 # <a name="graphics-rendering-tiers"></a>Couches de rendu graphiques
 Une couche de rendu définit un niveau des capacités et des performances du matériel graphique pour un appareil qui exécute une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>Matériel graphique  
  Les fonctionnalités du matériel graphique qui ont le plus d’impact sur les niveaux de la couche de rendu sont les suivantes :  
@@ -58,7 +56,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
   
 |Fonctionnalité|Couche 1|Couche 2|  
 |-------------|------------|------------|  
-|Version de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]|Doit être supérieure ou égale à 9.0.|Doit être supérieure ou égale à 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Doit être supérieure ou égale à 9.0.|Doit être supérieure ou égale à 9.0.|  
 |RAM vidéo|Doit être supérieure ou égale à 60 Mo.|Doit être supérieure ou égale à 120 Mo.|  
 |Nuanceur de pixels|Le niveau de version doit être supérieur ou égal à 2.0.|Le niveau de version doit être supérieur ou égal à 2.0.|  
 |Nuanceur de sommets|Aucune spécification.|Le niveau de version doit être supérieur ou égal à 2.0.|  
@@ -70,10 +68,10 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 |-------------|-----------|  
 |Rendu 2D|La plupart des types de rendu 2D sont pris en charge.|  
 |Rastérisation 3D|La plupart des types de rastérisation 3D sont pris en charge.|  
-|Filtrage anisotropique 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le filtrage anisotropique lors de l’affichage du contenu 3D. Le filtrage anisotropique correspond à l’amélioration de la qualité d’image des textures des surfaces éloignées et en biais par rapport à l’appareil photo.|  
-|Mappage MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le mappage MIP lors de l’affichage du contenu 3D. Le mappage MIP améliore la qualité de rendu de la texture lorsque celle-ci occupe un champ plus restreint dans un <xref:System.Windows.Controls.Viewport3D>.|  
+|Filtrage anisotropique 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le filtrage anisotropique lors de l’affichage du contenu 3D. Le filtrage anisotropique correspond à l’amélioration de la qualité d’image des textures des surfaces éloignées et en biais par rapport à l’appareil photo.|  
+|Mappage MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le mappage MIP lors de l’affichage du contenu 3D. Le mappage MIP améliore la qualité de rendu de la texture lorsque celle-ci occupe un champ plus restreint dans un <xref:System.Windows.Controls.Viewport3D>.|  
 |Dégradés radiaux|Bien que la prise en charge, évitez d’utiliser <xref:System.Windows.Media.RadialGradientBrush> sur des objets volumineux.|  
-|Calculs d’éclairage 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exécute l’éclairage par sommet, ce qui signifie qu’une intensité légère doit être calculée à chaque sommet pour chaque matériel appliqué à un maillage.|  
+|Calculs d’éclairage 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exécute l’éclairage par sommet, ce qui signifie qu’une intensité légère doit être calculée à chaque vertex pour chaque matériel appliqué à un maillage.|  
 |Rendu de texte|Le rendu de police de sous-pixel utilise les nuanceurs de pixels disponibles sur le matériel graphique.|  
   
  Les fonctionnalités et fonctions suivantes sont à accélération matérielle uniquement pour la couche de rendu 2 :  
@@ -98,7 +96,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
  Les ressources suivantes peuvent vous aider à analyser les caractéristiques des performances de votre application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="graphics-rendering-registry-settings"></a>Paramètres du Registre pour le rendu des graphiques  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit quatre paramètres du Registre pour le contrôle du rendu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] :  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit quatre paramètres du Registre pour le contrôle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendu :  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
@@ -110,7 +108,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
  Ces paramètres sont accessibles à tout utilitaire de configuration externe capable de référencer les paramètres du Registre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces paramètres peuvent également être créés ou modifiés en accédant directement aux valeurs à l’aide de l’Éditeur du Registre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Pour plus d’informations, consultez [Paramètres du Registre pour le rendu des graphiques](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Outils de profilage des performances WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une suite d’outils de profilage des performances qui vous permettent d’analyser le comportement au moment de l’exécution de votre application et de déterminer les types d’optimisations des performances que vous pouvez appliquer. Le tableau suivant répertorie les outils de profilage des performances qui sont inclus dans l’outil [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite :  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit une suite d’outils qui vous permettent d’analyser le comportement au moment de l’exécution de votre application et de déterminer les types d’optimisations des performances que vous pouvez appliquer de profilage des performances. Le tableau suivant répertorie les outils de profilage des performances qui sont inclus dans l’outil [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite :  
   
 |Tool|Description|  
 |----------|-----------------|  
@@ -130,6 +128,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 Fenêtre principale de l’outil de diagnostic DirectX  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)

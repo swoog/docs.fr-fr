@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166242"
 ---
 # <a name="sorting-and-filtering-data"></a>Tri et filtre de données
 L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtrage de données dans un objet <xref:System.Data.DataTable> :  
@@ -31,12 +31,12 @@ L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtr
     |------------------------------|-----------------|  
     |**CurrentRows**|Le **actuel** version de ligne de tous les **Unchanged**, **Added**, et **Modified** lignes. Il s'agit de la valeur par défaut.|  
     |**Added**|Le **actuel** version de ligne de tous les **Added** lignes.|  
-    |**Deleted**|Le **d’origine** version de ligne de tous les **Deleted** lignes.|  
+    |**Supprimé**|Le **d’origine** version de ligne de tous les **Deleted** lignes.|  
     |**ModifiedCurrent**|Le **actuel** version de ligne de tous les **Modified** lignes.|  
     |**ModifiedOriginal**|Le **d’origine** version de ligne de tous les **Modified** lignes.|  
-    |**Aucun**|Aucune ligne.|  
+    |**Aucun.**|Aucune ligne.|  
     |**OriginalRows**|Le **d’origine** version de ligne de tous les **Unchanged**, **Modified**, et **Deleted** lignes.|  
-    |**inchangé**|Le **actuel** version de ligne de tous les **Unchanged** lignes.|  
+    |**Inchangé**|Le **actuel** version de ligne de tous les **Unchanged** lignes.|  
   
  Pour plus d’informations sur les États et les versions de ligne, consultez [États des lignes et des Versions de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
@@ -57,6 +57,7 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>

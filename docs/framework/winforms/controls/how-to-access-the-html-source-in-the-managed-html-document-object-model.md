@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Accéder à la Source HTML dans le modèle d’objet de Document HTML managé'
+title: 'Procédure : accéder à la source HTML dans le modèle objet de document HTML managé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203260"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Procédure : Accéder à la Source HTML dans le modèle d’objet de Document HTML managé
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Procédure : accéder à la source HTML dans le modèle objet de document HTML managé
 Les propriétés <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> et <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> sur le contrôle <xref:System.Windows.Forms.WebBrowser> renvoient le code HTML du document actif comme il était quand il a été affiché pour la première fois. Toutefois, si vous modifiez la page à l'aide des appels de méthode et de propriété tels que <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> et <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, ces modifications n'apparaissent pas quand vous appelez <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> et <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Pour obtenir le code source HTML le plus à jour pour le modèle DOM, vous devez appeler la propriété <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> sur l'élément HTML.  
   
  La procédure suivante illustre comment récupérer la source dynamique et l'afficher dans un menu contextuel distinct.  
@@ -46,5 +46,6 @@ Les propriétés <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> et <xr
  Testez systématiquement la valeur de <xref:System.Windows.Forms.WebBrowser.Document%2A> avant d'essayer de le récupérer. Si le chargement de la page active n'est pas terminé, l'initialisation de <xref:System.Windows.Forms.WebBrowser.Document%2A> ou de ses objets enfants peut éventuellement ne pas se produire.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation du modèle DOM HTML managé](using-the-managed-html-document-object-model.md)
-- [Vue d’ensemble du contrôle WebBrowser](webbrowser-control-overview.md)
+
+- [Utilisation du modèle objet de document HTML managé](using-the-managed-html-document-object-model.md)
+- [Vue d'ensemble du contrôle WebBrowser](webbrowser-control-overview.md)

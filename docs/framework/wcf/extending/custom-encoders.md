@@ -2,12 +2,12 @@
 title: Encodeurs personnalisés
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190572"
 ---
 # <a name="custom-encoders"></a>Encodeurs personnalisés
 Cette rubrique décrit comment créer des encodeurs personnalisés.  
@@ -50,7 +50,7 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
 ### <a name="pooling"></a>Pooling  
  Chacune des implémentations d'encodeur essaient de regrouper autant que possible. La réduction d'allocations est un moyen clé pour améliorer les performances du code managé. Pour accomplir ce regroupement, les implémentations utilisent la classe `SynchronizedPool`. Le fichier C# contient une description des optimisations supplémentaires utilisées par cette classe.  
   
- Les instances <xref:System.Xml.XmlDictionaryReader> et <xref:System.Xml.XmlDictionaryWriter> sont regroupées et réinitialisées pour empêcher d'en allouer des nouvelles pour chaque message. Pour les lecteurs, un rappel `OnClose` récupère le lecteur lorsque `Close()` est appelé. L'encodeur recycle aussi certains objets de l'état du message utilisés pour construire des messages. Les tailles de ces regroupements sont configurables par les propriétés `MaxReadPoolSize` et `MaxWritePoolSize` sur chacune des trois classes dérivées de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> et <xref:System.Xml.XmlDictionaryWriter> instances sont regroupées et réinitialisées pour empêcher d’allouer des nouvelles pour chaque message. Pour les lecteurs, un rappel `OnClose` récupère le lecteur lorsque `Close()` est appelé. L'encodeur recycle aussi certains objets de l'état du message utilisés pour construire des messages. Les tailles de ces regroupements sont configurables par les propriétés `MaxReadPoolSize` et `MaxWritePoolSize` sur chacune des trois classes dérivées de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Encodage Binaire  
  Lorsque l'encodage binaire utilise des sessions, la chaîne de dictionnaire dynamique doit être communiquée au récepteur du message. Cette opération s'effectue en préfixant le message avec les chaînes de dictionnaire dynamiques. Le récepteur supprime des chaînes, les ajoute à la session et traite le message. La transmission correcte des chaînes de dictionnaire nécessite la mise en mémoire tampon du transport.  
@@ -79,9 +79,9 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
   
 -   Les méthodes clés de cette classe que vous devez substituer sont :  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> qui accepte un objet <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> et l'écrit dans un objet <xref:System.IO.Stream>.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> qui accepte un <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> de l’objet et l’écrit dans un <xref:System.IO.Stream> objet.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> qui accepte un objet <xref:System.IO.Stream> et une taille d'en-tête maximale et retourne un objet <xref:System.ServiceModel.Channels.Message>.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> qui accepte un <xref:System.IO.Stream> objet et une taille d’en-tête maximale et retourne un <xref:System.ServiceModel.Channels.Message> objet.  
   
  C'est le code que vous écrivez dans ces méthodes qui gèrent la conversion entre le protocole de transport standard et votre encodage personnalisé.  
   
@@ -92,9 +92,10 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
  Il existe deux exemples fournis avec WCF qui illustrent ce processus avec l’exemple de code : [Encodeur de Message personnalisé : Encodeur de texte personnalisé](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) et [encodeur de Message personnalisé : Encodeur de compression](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>
-- [Vue d’ensemble de l’architecture de transfert de données](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
-- [Sélection d’un encodeur de message](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Choix d’un transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Vue d'ensemble de l'architecture de transfert de données](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Sélection d'un encodeur de message](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Choix d'un transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

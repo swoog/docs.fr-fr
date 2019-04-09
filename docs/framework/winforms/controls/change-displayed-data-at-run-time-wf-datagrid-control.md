@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modification des données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms'
+title: 'Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 3ba23dd3966591777c7e354f79dd45ec4530955a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175602"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procédure : Modification des données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -94,7 +94,8 @@ ms.locfileid: "57714955"
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [DataSets ADO.NET](../../data/adonet/ado-net-datasets.md)
-- [Guide pratique pour Supprimer ou masquer des colonnes dans le contrôle DataGrid Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Guide pratique pour Ajouter des Tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Guide pratique pour Lier le contrôle DataGrid Windows Forms à une Source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+
+- [Datasets ADO.NET](../../data/adonet/ado-net-datasets.md)
+- [Procédure : supprimer ou masquer des colonnes dans le contrôle DataGrid Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Procédure : ajouter des tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procédure : lier le contrôle DataGrid Windows Forms à une source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

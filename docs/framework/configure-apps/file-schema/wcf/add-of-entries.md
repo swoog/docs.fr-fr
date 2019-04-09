@@ -2,12 +2,12 @@
 title: <add> de <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165410"
 ---
 # <a name="add-of-entries"></a>\<Ajouter > de \<entrées >
 Représente une entrée de routage qui mappe un filtre à un point de terminaison client défini précédemment. Les messages correspondant à ce filtre sont envoyés à cette destination.  
@@ -47,7 +47,7 @@ Représente une entrée de routage qui mappe un filtre à un point de terminaiso
 |Attribut|Description|  
 |---------------|-----------------|  
 |backupList|Chaîne qui spécifie une référence à une liste de sauvegarde de points de terminaison.|  
-|Point de terminaison (endpoint)|Chaîne qui spécifie une référence à un point de terminaison client qui reçoit les messages correspondant au filtre indiqué par l'attribut `filterName`.|  
+|point de terminaison|Chaîne qui spécifie une référence à un point de terminaison client qui reçoit les messages correspondant au filtre indiqué par l'attribut `filterName`.|  
 |filterName|Chaîne qui spécifie une référence à un élément de filtre.|  
 |priority|Entier qui spécifie la priorité de cette entrée.<br /><br /> Les entrées dans la table de routage sont évaluées selon leur priorité, 0 correspondant à la priorité la plus basse. Toutes les entrées d'une priorité donnée sont évaluées simultanément, si aucune entrée correspondante n'est trouvée pour la priorité actuelle, le niveau de priorité suivant est évalué.<br /><br /> Cette valeur est facultative.|  
   
@@ -61,5 +61,6 @@ Représente une entrée de routage qui mappe un filtre à un point de terminaiso
 |[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Section de configuration qui contient les entrées de mappage de routage.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

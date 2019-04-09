@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152722"
 ---
 # <a name="row-error-information"></a>Informations sur l'erreur de ligne
 Pour éviter d'avoir à répondre chaque fois qu'une erreur de ligne se produit pendant que vous modifiez des valeurs dans un objet <xref:System.Data.DataTable>, vous pouvez ajouter les informations d'erreur à la ligne pour une utilisation ultérieure. L'objet <xref:System.Data.DataRow> fournit une propriété <xref:System.Data.DataRow.RowError%2A> sur chaque ligne à cette fin. Ajout de données à la **RowError** propriété d’un **DataRow** définit le <xref:System.Data.DataRow.HasErrors%2A> propriété de la **DataRow** à **true**. Si le **DataRow** fait partie d’un **DataTable**, et **DataRow.HasErrors** est **true**, le **DataTable.HasErrors** propriété est également **true**. Cela s’applique également à la **DataSet** auquel le **DataTable** appartient. Lorsque vous testez les erreurs, vous pouvez vérifier le **HasErrors** propriété afin de déterminer si les informations d’erreur a été ajoutées à toutes les lignes. Si **HasErrors** est **true**, vous pouvez utiliser la <xref:System.Data.DataTable.GetErrors%2A> méthode de la **DataTable** à retourner et n’examiner uniquement les lignes avec des erreurs, comme illustré dans l’exemple suivant.  
@@ -78,6 +78,7 @@ protected static void OnRowChanged(
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>

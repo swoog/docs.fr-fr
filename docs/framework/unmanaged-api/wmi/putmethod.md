@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152501"
 ---
 # <a name="putmethod-function"></a>PutMethod (fonction)
 Crée une méthode.
@@ -60,7 +60,6 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in]  Un pointeur vers une copie de la [classe __Parameters](/windows/desktop/WmiSdk/--parameters) qui contient le `out` paramètres de la méthode. Ce paramètre est ignoré si la valeur `null`.
- 
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -94,12 +93,13 @@ Chaque propriété dans un [__Parameters](/windows/desktop/WmiSdk/--parameters) 
 
 Pour obtenir un exemple, consultez le [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) (méthode).
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

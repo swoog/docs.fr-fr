@@ -2,17 +2,17 @@
 title: Développement de canaux
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175199"
 ---
 # <a name="developing-channels"></a>Développement de canaux
 Pour développer un canal de transport ou protocole qui peut être utilisé avec Windows Communication Foundation (WCF), couche d’application nécessite plusieurs étapes. Cette rubrique liste ces étapes et renvoie à des rubriques spécifiques qui vous permettront d'en savoir plus. Pour comprendre le modèle de canal et les différents types qui sont mentionnées dans cette rubrique, consultez [vue d’ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Pour voir un exemple de canal de transport complet, [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
   
-## <a name="the-channel-development-task-list"></a>Liste des tâches à effectuer dans le cadre du développement d’un canal  
+## <a name="the-channel-development-task-list"></a>Liste des tâches à effectuer dans le cadre du développement d'un canal  
  Les étapes pour créer un canal défini par l'utilisateur sont les suivantes : Pour tous les canaux :  
   
 1.  Choisissez quel modèle d’échange de messages de canal (<xref:System.ServiceModel.Channels.IOutputChannel>, <xref:System.ServiceModel.Channels.IInputChannel>, <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IReplyChannel>) que vos <xref:System.ServiceModel.Channels.IChannelFactory> et <xref:System.ServiceModel.Channels.IChannelListener> prendront en charge. Décidez également si ces derniers devront prendre en charge les versions avec session de ces interfaces. Pour plus d’informations, consultez [en choisissant un modèle d’échange de Message](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md).  
@@ -31,7 +31,8 @@ Pour développer un canal de transport ou protocole qui peut être utilisé avec
   
 3.  Ajoutez une liaison qui préconfigure une pile d’éléments de liaison d’après un profil bien défini. Pour plus d’informations, consultez [Creating liaisons](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
-4.  Ajoutez une section de liaison ainsi qu’un élément de configuration de liaison afin d’exposer la liaison au système de configuration. Pour plus d’informations, consultez [Configuration et la prise en charge des métadonnées](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
+4.  Ajoutez une section de liaison ainsi qu'un élément de configuration de liaison afin d'exposer la liaison au système de configuration. Pour plus d’informations, consultez [Configuration et la prise en charge des métadonnées](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md)

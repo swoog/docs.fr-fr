@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115308"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinceaux et remplissage de formes dans GDI+
 Une forme fermée, comme un rectangle ou une ellipse, se compose d’un plan et un intérieur. Le contour est dessiné avec un stylet et l’intérieur est rempli avec un pinceau. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit plusieurs classes de pinceau pour remplir l’intérieur des formes fermées : <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, et <xref:System.Drawing.Drawing2D.PathGradientBrush>. Toutes ces classes héritent de la <xref:System.Drawing.Brush> classe. L’illustration suivante montre un rectangle rempli avec un pinceau uni et une ellipse remplie avec un pinceau de hachurage.  
@@ -77,10 +77,11 @@ Une forme fermée, comme un rectangle ou une ellipse, se compose d’un plan et 
  ![Rempli forme](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Guide pratique pour Dessiner un Rectangle rempli dans un formulaire Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Guide pratique pour Dessiner une Ellipse remplie dans un formulaire Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Procédure : dessiner un rectangle plein dans un formulaire Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Procédure : dessiner une ellipse pleine dans un formulaire Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

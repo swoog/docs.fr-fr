@@ -2,12 +2,12 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 3e3e4bf18b204db5a4068cc3f6cbb1337d5f611d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115828"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 La section de configuration `comContracts` contient des éléments qui vous permettent de spécifier différentes propriétés d'un contrat de service d'intégration COM+.  
@@ -15,7 +15,7 @@ La section de configuration `comContracts` contient des éléments qui vous perm
 ## <a name="specifying-namespace-and-contract"></a>Spécification d'espace de noms et de contrat  
  Contrats de service d’intégration COM + sont actuellement restreints à le `http://tempuri.org` espace de noms et nom de contrat est dérivé de l’interface COM de prise en charge. Toutefois, vous pouvez en spécifier d'autres à l'aide de la section `comContracts` du fichier de configuration.  
   
- Par exemple, vous pouvez utiliser la configuration suivante pour spécifier l'espace de noms et le nom du contrat de service, aussi bien qu'une option pour mettre en vigueur l'utilisation sur les liaisons de session.  
+ Par exemple, vous pouvez utiliser la configuration suivante pour spécifier l’espace de noms et le nom du contrat de service, aussi bien qu’une option pour mettre en vigueur l’utilisation sur les liaisons de session.  
   
 ```xml  
 <comContracts>
@@ -34,6 +34,7 @@ La section de configuration `comContracts` contient des éléments qui vous perm
  En outre, vous pouvez utiliser la [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) élément pour spécifier les méthodes COM + exposées lorsque l’interface sur un composant COM + est exposée comme un service Web. Vous pouvez également utiliser le [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) pour spécifier des types persistables utilisés dans l’intégration. Enfin, vous pouvez utiliser la [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) élément à inclure défini Types utilisateur (UDT) qui doivent être incluses dans le contrat de service.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
@@ -41,4 +42,4 @@ La section de configuration `comContracts` contient des éléments qui vous perm
 - [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
 - [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
 - [Intégration à des applications COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Guide pratique pour Configurer les paramètres de Service COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Procédure : configurer des paramètres de service COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

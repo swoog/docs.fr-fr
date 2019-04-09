@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Importer des métadonnées dans les points de terminaison de Service'
+title: 'Procédure : importer des métadonnées dans des points de terminaison de service'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126865"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Procédure : Importer des métadonnées dans les points de terminaison de Service
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Procédure : importer des métadonnées dans des points de terminaison de service
 Cette rubrique explique comment importer des métadonnées dans une collection de points de terminaison de service et d’utiliser le service défini dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Cette rubrique montre comment créer une application cliente qui importe les métadonnées à partir du service, puis appelle la méthode `Add` sur le service.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Pour importer des métadonnées dans des points de terminaison de service  
@@ -22,7 +22,7 @@ Cette rubrique explique comment importer des métadonnées dans une collection d
   
      [!code-csharp[UE_ImportMetadata#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#1)]  
   
-3.  Créez un <xref:System.ServiceModel.Description.WsdlImporter> en passant les métadonnées précédemment récupérées, puis appelez <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>. Cette opération génère une collection d'objets <xref:System.ServiceModel.Description.ContractDescription>. Vous pouvez aussi appeler <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A> ou <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, selon vos besoins.  
+3.  Créez un <xref:System.ServiceModel.Description.WsdlImporter> en passant les métadonnées précédemment récupérées, puis appelez <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>. Cette opération génère une collection d’objets <xref:System.ServiceModel.Description.ContractDescription>. Vous pouvez aussi appeler <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A> ou <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, selon vos besoins.  
   
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
@@ -38,5 +38,6 @@ Cette rubrique explique comment importer des métadonnées dans une collection d
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)

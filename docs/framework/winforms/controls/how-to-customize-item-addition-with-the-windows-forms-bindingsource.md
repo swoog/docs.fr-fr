@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Personnaliser l’ajout d’élément avec le BindingSource Windows Forms'
+title: 'Procédure : personnaliser l’ajout d’élément avec le composant BindingSource de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: f199fd55262b1b72bf8bc1a133a09b80db95c27a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a2f8491d0f027ca834257e2ec3a08d0b8bdb7ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129544"
 ---
-# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Procédure : Personnaliser l’ajout d’élément avec le BindingSource Windows Forms
+# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Procédure : personnaliser l’ajout d’élément avec le composant BindingSource de Windows Forms
 Quand vous utilisez un composant <xref:System.Windows.Forms.BindingSource> pour lier un contrôle Windows Forms à une source de données, vous pouvez être contraint de personnaliser la création de nouveaux éléments. Le composant <xref:System.Windows.Forms.BindingSource> simplifie cette personnalisation en fournissant l'événement <xref:System.Windows.Forms.BindingSource.AddingNew> , qui est généralement déclenché quand le contrôle lié doit créer un élément. Votre gestionnaire d'événements peut fournir tout comportement personnalisé nécessaire (par exemple, appeler une méthode sur un service web ou obtenir un nouvel objet à partir d'une fabrique de classe).  
   
 > [!NOTE]
@@ -39,8 +39,9 @@ Quand vous utilisez un composant <xref:System.Windows.Forms.BindingSource> pour 
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, composant](bindingsource-component.md)
-- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Composant BindingSource](bindingsource-component.md)
+- [Procédure : lier un contrôle Windows Forms à un type](how-to-bind-a-windows-forms-control-to-a-type.md)

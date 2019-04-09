@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135536"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Paramètres du Registre pour le rendu des graphiques
 Cette rubrique fournit une vue d’ensemble des paramètres du Registre pour le rendu des graphiques [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] qui affectent les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Quand utiliser les paramètres du Registre pour le rendu des graphiques  
  Ces paramètres du Registre sont fournis à des fins de résolution des problèmes, de débogage et de prise en charge du produit. Étant donné que les modifications apportées au Registre affectent toutes applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], votre application ne doit jamais modifier ces clés de Registre automatiquement, ni lors de l’installation.  
@@ -30,7 +28,7 @@ Cette rubrique fournit une vue d’ensemble des paramètres du Registre pour le 
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Paramètres du Registre  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit quatre paramètres du Registre pour le contrôle du rendu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] :  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit quatre paramètres du Registre pour le contrôle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendu :  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
@@ -98,5 +96,6 @@ Cette rubrique fournit une vue d’ensemble des paramètres du Registre pour le 
  **L’option Utiliser le rastériseur de référence** prend une valeur DWORD. La valeur 0 indique que le rastériseur de référence n’est pas utilisé. Toute autre valeur non égale à 0 force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à utiliser le rastériseur de référence.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Couches de rendu graphiques](../advanced/graphics-rendering-tiers.md)
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

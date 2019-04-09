@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Ajouter un gestionnaire d'événements à l'aide de code"
+title: 'Procédure : Ajouter un gestionnaire d’événements à l’aide de code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129354"
 ---
-# <a name="how-to-add-an-event-handler-using-code"></a>Procédure : Ajouter un gestionnaire d'événements à l'aide de code
+# <a name="how-to-add-an-event-handler-using-code"></a>Procédure : Ajouter un gestionnaire d’événements à l’aide de code
 Cet exemple montre comment ajouter un gestionnaire d’événements à un élément à l’aide de code.  
   
  Si vous souhaitez ajouter un gestionnaire d’événements à un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] élément et la page de balisage qui contient l’élément a déjà été chargé, vous devez ajouter le gestionnaire à l’aide de code. Vous pouvez également, si vous développez l’arborescence d’éléments pour une application entièrement à l’aide de code et ne déclare ne pas tous les éléments à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous pouvez appeler des méthodes spécifiques pour ajouter des gestionnaires d’événements à l’arborescence d’éléments construite.  
@@ -38,5 +38,6 @@ Cet exemple montre comment ajouter un gestionnaire d’événements à un élém
 >  Ajout d’un gestionnaire d’événements dans analysée initialement [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page est beaucoup plus simple. Dans l’élément objet dans lequel vous souhaitez ajouter le Gestionnaire d’événements, ajoutez un attribut qui correspond au nom de l’événement que vous souhaitez gérer. Puis spécifiez la valeur de cet attribut comme nom de la méthode de gestionnaire d’événements que vous avez défini dans le fichier code-behind de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page. Pour plus d’informations, consultez [vue d’ensemble de XAML (WPF)](xaml-overview-wpf.md) ou [vue d’ensemble des événements routés](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
-- [Rubriques de guide pratique](events-how-to-topics.md)
+
+- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Rubriques Comment](events-how-to-topics.md)

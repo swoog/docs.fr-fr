@@ -2,12 +2,12 @@
 title: 'Entity Data Model : Espaces de noms'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
-ms.openlocfilehash: aa11902ece5197905c20e7e572562643c57f51c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180564"
 ---
 # <a name="entity-data-model-namespaces"></a>Entity Data Model : Espaces de noms
 Un espace de noms dans le modèle EDM (Entity Data Model) est un conteneur abstrait pour [types d’entité](../../../../docs/framework/data/adonet/entity-type.md), [des types complexes](../../../../docs/framework/data/adonet/complex-type.md), et [associations](../../../../docs/framework/data/adonet/association-type.md). Les espaces de noms dans le modèle EDM sont semblables aux espaces de noms dans un langage de programmation : ils fournissent le contexte pour les objets qu'ils contiennent et offrent un moyen de lever l'ambiguïté entre les objets qui portent le même nom (mais qui sont contenus dans des espaces de noms différents).  
@@ -18,5 +18,6 @@ Un espace de noms dans le modèle EDM (Entity Data Model) est un conteneur abstr
  [!code-xml[EDM_Example_Model#ImportedNamespace](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books6.edmx#importednamespace)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Concepts clés d'Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

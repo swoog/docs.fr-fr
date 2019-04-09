@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir la taille des panneaux de barre d’état'
+title: 'Procédure : définir la taille des panneaux de barre d’état'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131052"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>Procédure : Définir la taille des panneaux de barre d’état
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Procédure : définir la taille des panneaux de barre d’état
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.ToolStripStatusLabel> remplace le contrôle <xref:System.Windows.Forms.StatusBar> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.StatusBar> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix.  
   
@@ -66,8 +66,9 @@ ms.locfileid: "57711939"
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Procédure pas à pas : La mise à jour des informations de barre d’état en cours d’exécution](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Guide pratique pour Déterminer l’utilisateur a cliqué sur le panneau du contrôle StatusBar Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Procédure pas à pas : mise à jour des informations de barre d’état au moment de l’exécution](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Procédure : déterminer sur quel panneau l’utilisateur a cliqué dans le contrôle StatusBar Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Vue d’ensemble du contrôle StatusBar](statusbar-control-overview-windows-forms.md)

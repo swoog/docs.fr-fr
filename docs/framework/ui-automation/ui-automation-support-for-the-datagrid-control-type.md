@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 0c9873638bca43e5e0d005d36053e7c75d48168b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161029"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle DataGrid
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "57679071"
 ## <a name="required-ui-automation-tree-structure"></a>Arborescence UI Automation obligatoire  
  Le tableau suivant représente l’affichage de contrôle et l’affichage de contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relative aux contrôles de grille de données, et décrit ce que peut contenir chaque affichage. Pour plus d’informations sur l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , consultez [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contrôle|Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contenu|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Arborescence - affichage de contrôle|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Arborescence - affichage de contenu|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataGrid<br /><br /> <ul><li>Header (0, 1 ou 2)<br /><br /> <ul><li>HeaderItem (nombre de lignes ou colonnes)</li></ul></li><li>DataItem (0 ou plus. Peut être structuré dans une hiérarchie)</li></ul>|DataGrid<br /><br /> -DataItem (0 ou plus ; peut être structuré dans une hiérarchie)|  
   
@@ -73,21 +73,21 @@ ms.locfileid: "57679071"
 ## <a name="required-ui-automation-events"></a>Événements UI Automation requis  
  Le tableau suivant répertorie les événements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] qui doivent être pris en charge par tous les contrôles de grille de données. Pour plus d’informations sur les événements, consultez [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|Événement[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Assistance|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Événement|Assistance|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Selon le cas|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Selon le cas|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> événement de modification de propriété.|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatoire|Aucun.|  
   
 <a name="List_View_Control_Example"></a>   
@@ -98,13 +98,14 @@ ms.locfileid: "57679071"
   
  L’affichage de contrôle et l’affichage de contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relative au contrôle d’affichage de liste sont affichés ci-dessous. Les modèles de contrôle de chaque élément Automation sont indiqués entre parenthèses.  
   
-|Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contrôle|Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contenu|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Arborescence - affichage de contrôle|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Arborescence - affichage de contenu|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem « Nom » (Invoke)</li><li>HeaderItem « Date de modification » (Invoke)</li><li>HeaderItem « Taille » (Invoke)</li></ul></li><li>Groupe « Contoso » (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem « Accounts Receivable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Groupe « Contoso » (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem « Accounts Receivable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *L’exemple précédent montre un DataGrid contenant plusieurs niveaux de contrôles. Le contrôle Group (« Contoso ») contient deux contrôles DataItem (« Accounts Receivable.doc » et « Accounts Payable.doc »). Une paire DataGrid/GridItem est indépendante d’une paire d’un autre niveau. Les contrôles DataItem sous un contrôle Group peuvent également être exposés en tant que type de contrôle ListItem, ce qui leur permet d’être présentés plus clairement comme des objets sélectionnables, plutôt que comme de simples éléments de données. Cet exemple n’inclut pas les sous-éléments des éléments de données groupés.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Vue d'ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

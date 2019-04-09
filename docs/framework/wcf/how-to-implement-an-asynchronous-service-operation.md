@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: ec1c6549c4a386f529ca2191e1876975b2bf5dcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186847"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procédure : implémenter une opération de service asynchrone
 Dans les applications Windows Communication Foundation (WCF), une opération de service peut être implémentée en mode asynchrone ou synchrone sans dicter au client comment l’appeler. Par exemple, les opérations de service asynchrone peuvent être appelées de façon synchrone, et les opérations de service synchrones peuvent être appelées de façon asynchrone. Pour obtenir un exemple qui montre comment appeler une opération de façon asynchrone dans une application cliente, consultez [Comment : Appeler des opérations de Service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) et [synchrone et opérations asynchrones](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Cette rubrique décrit la structure de base d'une opération de service asynchrone, le code n'est pas complet. Pour obtenir un exemple complet de côtés le service et le client, consultez [asynchrone](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -46,5 +46,6 @@ Dans les applications Windows Communication Foundation (WCF), une opération de 
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Conception de contrats de service](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Opérations synchrones et asynchrones](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

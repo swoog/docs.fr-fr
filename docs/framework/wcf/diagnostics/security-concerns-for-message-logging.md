@@ -2,12 +2,12 @@
 title: Problèmes de sécurité relatifs à la journalisation des messages
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170662"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
@@ -23,9 +23,9 @@ Cette rubrique contient des instructions permettant de protéger des données se
   
 -   Assurez-vous que les fichiers journaux sont protégés par des listes de contrôle d'accès (ACL, Access Control Lists), à la fois dans les scénarios auto-hébergés et hébergés sur le Web.  
   
--   Choisissez une extension de fichier qui ne peut pas être facilement fournie à l'aide d'une demande Web. Par exemple, l'extension de fichier .xml n'est pas un choix sûr. Consultez le guide d'administration IIS (Internet Information Services) pour obtenir la liste des extensions qui peuvent être fournies.  
+-   Choisissez une extension de fichier qui ne peut pas être facilement fournie à l’aide d’une demande Web. Par exemple, l’extension de fichier .xml n’est pas un choix sûr. Consultez le guide d'administration IIS (Internet Information Services) pour obtenir la liste des extensions qui peuvent être fournies.  
   
--   Spécifiez un chemin d’accès absolu pour l’emplacement de fichier journal, qui doit se trouver hors du répertoire public de la racine virtuelle de l’hôte Web afin d’empêcher tout intervenant externe d’y accéder à l’aide d’un navigateur Web.  
+-   Spécifiez un chemin d'accès absolu pour l'emplacement de fichier journal, qui doit se trouver hors du répertoire public de la racine virtuelle de l'hôte Web afin d'empêcher tout intervenant externe d'y accéder à l'aide d'un navigateur Web.  
   
  Par défaut, les clés et informations personnelles, telles que le nom d'utilisateur et le mot de passe, ne sont pas enregistrées dans les traces et les messages consignés. Toutefois, un administrateur d'ordinateur peut utiliser l'attribut `enableLoggingKnownPII` dans l'élément `machineSettings` du fichier Machine.config pour autoriser les applications s'exécutant sur l'ordinateur à enregistrer les informations personnelles connues. La configuration suivante montre comment procéder :  
   
@@ -110,5 +110,6 @@ Cette rubrique contient des instructions permettant de protéger des données se
  Ces événements peuvent être affichés dans l'outil Observateur d'événements fourni avec Windows. Pour plus d’informations, consultez [la consignation des événements](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Problèmes de sécurité et conseils utiles pour le suivi](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser des TraceSource et des filtres avec des écouteurs de Trace'
+title: 'Procédure : Utiliser des TraceSource et des filtres avec des écouteurs de trace'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157467"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procédure : Utiliser des TraceSource et des filtres avec des écouteurs de Trace
-L’une des nouveautés du .NET Framework version 2.0 est un système de suivi amélioré. Le principe de base reste inchangé : les messages de suivi sont envoyés par l’intermédiaire de commutateurs aux écouteurs qui transmettent les données à un support de sortie associé. Une différence majeure de la version 2.0 est que les suivis peuvent être lancés via des instances de la classe <xref:System.Diagnostics.TraceSource>. La classe <xref:System.Diagnostics.TraceSource> est conçue pour fonctionner comme système de suivi amélioré et peut être utilisée à la place des méthodes statiques des anciennes classes de suivi <xref:System.Diagnostics.Trace> et <xref:System.Diagnostics.Debug>. Les classes <xref:System.Diagnostics.Trace> et <xref:System.Diagnostics.Debug> existent encore, mais l’utilisation de la classe <xref:System.Diagnostics.TraceSource> est désormais la méthode recommandée pour le suivi.  
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procédure : Utiliser des TraceSource et des filtres avec des écouteurs de trace
+L’une des nouveautés du .NET Framework version 2.0 est un système de suivi amélioré. Le principe de base reste inchangé : les messages de suivi sont envoyés par l’intermédiaire de commutateurs aux écouteurs qui transmettent les données à un support de sortie associé. Une différence majeure de la version 2.0 est que les suivis peuvent être lancés via des instances de la classe <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> est conçu pour fonctionner comme un système de suivi amélioré et peut être utilisé à la place des méthodes statiques des anciennes <xref:System.Diagnostics.Trace> et <xref:System.Diagnostics.Debug> classes de traçage. Les classes <xref:System.Diagnostics.Trace> et <xref:System.Diagnostics.Debug> existent encore, mais l’utilisation de la classe <xref:System.Diagnostics.TraceSource> est désormais la méthode recommandée pour le suivi.  
   
  Cette rubrique décrit l’utilisation de la classe <xref:System.Diagnostics.TraceSource> associée à un fichier de configuration de l’application.  Il est déconseillé, mais néanmoins possible, d’effectuer le suivi à l’aide de <xref:System.Diagnostics.TraceSource> sans utiliser de fichier de configuration. Pour plus d’informations sur le suivi sans un fichier de configuration, consultez [Comment : Créer et initialiser des Sources de Trace](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
@@ -62,7 +62,7 @@ L’une des nouveautés du .NET Framework version 2.0 est un système de suivi 
   
 ### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Pour créer et initialiser des filtres et des écouteurs de suivi  
   
-1.  Le code de la première procédure n’identifie aucun filtre ni écouteur de suivi par programmation. Le code permet uniquement d’écrire les messages de suivi dans l’écouteur de suivi par défaut. Pour configurer des écouteurs de suivi spécifiques et leurs filtres associés, modifiez le fichier de configuration correspondant au nom de votre application. Dans ce fichier, vous pouvez ajouter ou supprimer un écouteur, définir les propriétés et un filtre pour un écouteur ou supprimer des écouteurs. L’exemple de fichier de configuration suivant montre comment initialiser un écouteur de suivi de console et un écouteur de suivi TextWriter pour la source de suivi créée dans la procédure précédente. En plus de configurer les écouteurs de suivi, le fichier de configuration crée des filtres pour les deux écouteurs ainsi qu’un commutateur source pour la source de suivi. L’exemple illustre deux techniques pour ajouter des écouteurs de la trace : l’ajout direct de l’écouteur à la source de trace et l’ajout d’un écouteur à la collection d’écouteurs partagés suivi de l’ajout de son nom à la source de trace. Les filtres identifiés pour les deux écouteurs sont initialisés avec des niveaux de source différents. Par conséquent, certains messages ne sont écrits que par un seul des deux écouteurs.  
+1.  Le code de la première procédure n’identifie aucun filtre ni écouteur de suivi par programmation. Le code permet uniquement d’écrire les messages de suivi dans l’écouteur de suivi par défaut. Pour configurer des écouteurs de suivi spécifiques et leurs filtres associés, modifiez le fichier de configuration correspondant au nom de votre application. Dans ce fichier, vous pouvez ajouter ou supprimer un écouteur, définir les propriétés et un filtre pour un écouteur ou supprimer des écouteurs. L’exemple de fichier de configuration suivant montre comment initialiser un écouteur de suivi de console et un écouteur de suivi TextWriter pour la source de suivi créée dans la procédure précédente. En plus de configurer les écouteurs de suivi, le fichier de configuration crée des filtres pour les deux écouteurs ainsi qu’un commutateur source pour la source de suivi. L'exemple illustre deux techniques pour ajouter des écouteurs de la trace : l'ajout direct de l'écouteur à la source de trace et l'ajout d'un écouteur à la collection d'écouteurs partagés suivi de l'ajout de son nom à la source de trace. Les filtres identifiés pour les deux écouteurs sont initialisés avec des niveaux de source différents. Par conséquent, certains messages ne sont écrits que par un seul des deux écouteurs.  
   
     ```xml  
     <configuration>  
@@ -164,9 +164,10 @@ L’une des nouveautés du .NET Framework version 2.0 est un système de suivi 
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Guide pratique pour Créer et initialiser des Sources de Trace](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Procédure : Créer et initialiser des sources de trace](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Écouteurs de la trace](../../../docs/framework/debug-trace-profile/trace-listeners.md)

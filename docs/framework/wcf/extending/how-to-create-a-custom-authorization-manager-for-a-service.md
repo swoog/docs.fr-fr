@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un gestionnaire d’autorisation personnalisé pour un Service'
+title: 'Procédure : créer un gestionnaire d’autorisations personnalisé pour un service'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156492"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procédure : Créer un gestionnaire d’autorisation personnalisé pour un Service
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procédure : créer un gestionnaire d’autorisations personnalisé pour un service
 L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle extensible d’autorisation basée sur les revendications. Les revendications sont extraites de jetons et sont éventuellement traitées par les stratégies d'autorisation personnalisées puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>. Un gestionnaire d'autorisations examine les revendications dans le <xref:System.IdentityModel.Policy.AuthorizationContext> pour prendre des décisions concernant les autorisations.  
   
  Par défaut, les décisions relatives aux autorisations sont prises par la classe <xref:System.ServiceModel.ServiceAuthorizationManager> ; cependant, ces décisions peuvent être substituées en créant un gestionnaire d'autorisations personnalisé. Pour créer un gestionnaire d'autorisations personnalisé, créez une classe qui dérive de <xref:System.ServiceModel.ServiceAuthorizationManager> et implémente la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. Les décisions relatives aux autorisations sont prises dans la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, qui retourne la valeur `true` lorsque l'accès est accordé et `false` lorsque l'accès est refusé.  
@@ -118,5 +118,6 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Authorization Policy](../../../../docs/framework/wcf/samples/authorization-policy.md)

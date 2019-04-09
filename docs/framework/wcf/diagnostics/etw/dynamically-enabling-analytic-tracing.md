@@ -2,12 +2,12 @@
 title: Activation dynamique du traçage analytique
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197475"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Activation dynamique du traçage analytique
 À l'aide des outils fournis par le système d'exploitation Windows, vous pouvez activer ou désactiver de manière dynamique le suivi d'événements Windows (ETW). Pour toutes les [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] services Windows Communication Foundation (WCF), le traçage analytique peut être activé et désactivé de manière dynamique sans modifier le fichier Web.config de l’application ou le redémarrage du service. Cela permet de ne pas perturber l'application qui émet les événements de suivi.  
@@ -41,4 +41,5 @@ ms.locfileid: "54719987"
 |`WCFMessageLogging`|Événements de journalisation de message WCF.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Services WCF et suivi des événements pour Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+
+- [WCF Services et suivi d'événements Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

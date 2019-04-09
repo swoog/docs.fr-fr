@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155101"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Définit une liaison sécurisée, fiable et interopérable qui est appropriée pour les contrats de service ou les communications en duplex à travers des intermédiaires SOAP.  
@@ -65,7 +65,7 @@ Définit une liaison sécurisée, fiable et interopérable qui est appropriée p
 |closeTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de fermeture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |hostnameComparisonMode|Spécifie le mode de comparaison du nom d'hôte HTTP utilisé pour analyser des URI. Cet attribut est de type <xref:System.ServiceModel.HostNameComparisonMode>, ce qui indique si le nom d'hôte est utilisé pour atteindre le service en cas de correspondance sur l'URI. La valeur par défaut est <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, qui ignore le nom d'hôte dans la correspondance.|  
 |maxBufferPoolSize|Entier qui spécifie la taille maximale du pool de mémoires tampons pour cette liaison. La valeur par défaut est 524 288 octets (512 x 1024). De nombreuses parties de Windows Communication Foundation (WCF) utilisent des mémoires tampons. La création et la destruction des mémoires tampons à chaque utilisation sont chères, tout comme leur nettoyage. Avec les pools de mémoires tampons, vous pouvez prendre une mémoire tampon du pool, l'utiliser et la retourner au pool une fois que vous avez terminé. Ainsi, la surcharge de la création et de la destruction des mémoires tampons est évitée.|  
-|maxReceivedMessageSize|Entier positif qui spécifie la taille maximale du message, en octets, y compris les en-têtes, pouvant être reçu sur un canal configuré avec cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65536.|  
+|maxReceivedMessageSize|Entier positif qui spécifie la taille maximale du message, en octets, y compris les en-têtes, pouvant être reçu sur un canal configuré avec cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier dépose le message et crée une entrée d’événement dans le journal de suivi. La valeur par défaut est 65536.|  
 |messageEncoding|Définit l'encodeur utilisé pour encoder le message. Les valeurs valides sont les suivantes :<br /><br /> -Texte : Utiliser un encodeur de message texte.<br />-   Mtom: Utiliser un encodeur Message Transmission Organization Mechanism 1.0 (MTOM).<br />-La valeur par défaut est texte.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.WSMessageEncoding>.|  
 |name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
@@ -91,7 +91,7 @@ Définit une liaison sécurisée, fiable et interopérable qui est appropriée p
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` prend uniquement en charge la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
+ `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` seulement prend en charge de la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
   
  Cette liaison peut être utilisée pour une communication fiable via un ou plusieurs intermédiaires SOAP.  
   
@@ -132,6 +132,7 @@ Définit une liaison sécurisée, fiable et interopérable qui est appropriée p
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)

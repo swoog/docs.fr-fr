@@ -2,15 +2,15 @@
 title: System.String, méthodes
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160496"
 ---
 # <a name="systemstring-methods"></a>System.String, méthodes
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les méthodes <xref:System.String> suivantes.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les éléments suivants <xref:System.String> méthodes.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Méthodes System.String non prises en charge en général  
  Méthodes <xref:System.String> non prises en charge en général :  
@@ -56,4 +56,5 @@ ms.locfileid: "54618120"
 -   Comme de nombreuses méthodes, telles que `Replace`, `ToLower`, `ToUpper` et l'indexeur de caractère, n'ont aucune traduction valide pour les colonnes `TEXT` ou `NTEXT` et XML, `SqlExceptions` se produit si la traduction se produit normalement. Ce comportement est considéré comme acceptable pour ces types. Toutefois, toutes les opérations de chaînes doivent correspondre à la sémantique Common Language Runtime (CLR) pour `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` et `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fonctions et types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

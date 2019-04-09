@@ -2,15 +2,15 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 6fdfa696890459e92aabd4bdf24e0c3a1b0e17f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179606"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
-Représente un élément de liaison qui spécifie l’assertion de stratégie. Cet élément n'a aucun attribut et est présent en tant que commutateur vide.  
+Représente un élément de liaison qui spécifie l'assertion de stratégie. Cet élément n'a aucun attribut et est présent en tant que commutateur vide.  
   
  \<system.serviceModel>  
 \<bindings>  
@@ -43,6 +43,7 @@ Représente un élément de liaison qui spécifie l’assertion de stratégie. C
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)

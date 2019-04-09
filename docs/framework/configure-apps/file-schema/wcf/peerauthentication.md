@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 424bc0f223dbdc6dbfc69a6623f86bcc2c71fa88
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180594"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
 Spécifie des paramètres d'authentification pour un certificat d'homologue utilisé par un nœud homologue.  
@@ -54,6 +54,7 @@ Spécifie des paramètres d'authentification pour un certificat d'homologue util
  L'élément `<authentication>` correspond à la classe <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Cet élément spécifie un validateur, appelé pendant l'authentification de voisins dans la maille. Lorsqu'un nouvel homologue essaie d'établir une connexion avec un voisin, il transmet ses propres informations d'identification à l'homologue répondant. Le validateur du répondeur est appelé pour vérifier les informations d'identification du tiers distant. Chaque fois qu'une connexion est établie avec un homologue de la maille, les deux homologues sont authentifiés mutuellement, ce qui signifie que des validateurs sont appelés à chaque extrémité.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
@@ -61,6 +62,6 @@ Spécifie des paramètres d'authentification pour un certificat d'homologue util
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Authentification de Message de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Authentification personnalisée de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

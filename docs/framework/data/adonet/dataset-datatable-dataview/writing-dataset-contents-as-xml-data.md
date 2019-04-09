@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 9e4ef54321acec508aac787329cb911e083317bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158949"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Écriture du contenu d'un DataSet comme données XML
 Dans ADO.NET, vous pouvez écrire une représentation XML d'un objet<xref:System.Data.DataSet>, avec ou sans son schéma. Si les informations de schéma sont incluses inline avec le XML, elles sont écrites à l'aide du langage XSD (XML Schema Definition). Le schéma contient les définitions des tables de l'objet <xref:System.Data.DataSet>, ainsi que les définitions des relations et des contraintes.  
@@ -74,6 +74,7 @@ xmlSW.Close();
 |**Hidden**|La colonne n'est pas écrite dans la sortie XML.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
 - [Imbrication de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)

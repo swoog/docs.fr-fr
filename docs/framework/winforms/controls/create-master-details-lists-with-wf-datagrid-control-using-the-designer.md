@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Créer des listes maître / détails avec le contrôle de DataGrid Windows Forms à l’aide du Concepteur'
+title: 'Procédure : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 0bf967ed364447782c8e8df4c86ac32371ac880f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125963"
 ---
-# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : Créer des listes maître / détails avec le contrôle de DataGrid Windows Forms à l’aide du Concepteur
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l’aide du concepteur
 
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -53,7 +53,8 @@ ms.locfileid: "57705153"
     2.  Sélectionnez la relation (par exemple, « Customers.CustOrd ») entre les tables maître / détail dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété. Pour voir la relation, développez le nœud en cliquant sur le signe plus (**+**) en regard de la table principale dans la liste déroulante.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataGrid, contrôle](datagrid-control-windows-forms.md)
 - [Vue d’ensemble du contrôle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Guide pratique pour Lier le contrôle DataGrid Windows Forms à une Source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Procédure : lier le contrôle DataGrid Windows Forms à une source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

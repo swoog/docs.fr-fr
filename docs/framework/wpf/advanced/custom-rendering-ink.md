@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125656"
 ---
 # <a name="custom-rendering-ink"></a>Encre de rendu personnalisé
 Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trait vous permet de spécifier l’apparence d’un trait, telles que sa taille, la couleur et la forme, mais il peut arriver que vous souhaitez personnaliser l’apparence au-delà de ce que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> autoriser. Vous souhaiterez peut-être personnaliser l’apparence de l’encre en appliquant des effets tels qu’aérographe, peinture à l’huile et autres. Permet à Windows Presentation Foundation (WPF) vous permettent de personnaliser l’encre de rendu en implémentant un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et <xref:System.Windows.Ink.Stroke> objet.  
@@ -92,4 +92,5 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
  Vous pouvez personnaliser l’apparence de l’encre en dérivant vos propres <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, et <xref:System.Windows.Controls.InkCanvas> classes. Ensemble, ces classes garantissent que l’apparence du trait est cohérente quand l’utilisateur dessine le trait et après que celui-ci a été recueilli.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Gestion avancée de l’encre](advanced-ink-handling.md)
+
+- [Gestion avancée de l'encre](advanced-ink-handling.md)

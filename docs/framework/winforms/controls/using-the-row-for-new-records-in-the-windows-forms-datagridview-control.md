@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184819"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilisation de la ligne pour les nouveaux enregistrements dans le contrôle DataGridView Windows Forms
 Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modification des données dans votre application, vous souhaiterez souvent donner aux utilisateurs la possibilité d’ajouter de nouvelles lignes de données au magasin de données. Le <xref:System.Windows.Forms.DataGridView> contrôle prend en charge cette fonctionnalité en fournissant une ligne pour les nouveaux enregistrements, qui est toujours affichée en tant que la dernière ligne. Elle est marquée avec un astérisque (*) dans son en-tête de ligne. Les sections suivantes décrivent certains éléments que vous devez envisager lorsque vous programmez avec la ligne pour les nouveaux enregistrements est activé.  
@@ -58,7 +58,8 @@ Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modifi
  Si vous implémentez le mode virtuel, vous devez suivre à quel moment une ligne pour les nouveaux enregistrements est nécessaire dans le modèle de données et quand annuler l’ajout de la ligne. L’implémentation exacte de cette fonctionnalité dépend de l’implémentation du modèle de données et sa sémantique de transaction, par exemple, si la validation étendue est au niveau de la cellule ou la ligne. Pour plus d’informations, consultez [Mode virtuel dans le contrôle DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Saisie de données dans le contrôle DataGridView Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Procédure : spécifier les valeurs par défaut des nouvelles lignes dans le contrôle DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

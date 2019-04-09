@@ -2,12 +2,12 @@
 title: Priorité des opérateurs (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159131"
 ---
 # <a name="operator-precedence-entity-sql"></a>Priorité des opérateurs (Entity SQL)
 Quand un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] requête comporte plusieurs opérateurs, priorité des opérateurs détermine l’ordre dans lequel les opérations sont effectuées. Cet ordre peut affecter considérablement le résultat de la requête.  
@@ -30,4 +30,5 @@ Quand un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] requête compor
  Vous pouvez utiliser des parenthèses pour modifier la priorité habituelle des opérateurs dans une requête. Tout ce qui se trouve entre parenthèses est évalué en premier pour produire un seul résultat, qui est ensuite utilisé par un opérateur en dehors des parenthèses. Par exemple, `x+y*z` multiplie `y` par `z` , puis ajoute `x`, mais `(x+y)*z` ajoute `x` à `y` , puis multiplie le résultat par `z`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

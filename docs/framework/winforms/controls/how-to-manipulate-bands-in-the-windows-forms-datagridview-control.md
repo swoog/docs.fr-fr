@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Manipuler des bandes dans le contrôle DataGridView Windows Forms'
+title: 'Procédure : manipuler des bandes dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: abea52361577c97e806b4621e781c2c22ee0f018
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162369"
 ---
-# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procédure : Manipuler des bandes dans le contrôle DataGridView Windows Forms
+# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procédure : manipuler des bandes dans le contrôle DataGridView Windows Forms
 L'exemple de code suivant illustre différentes manières de manipuler des lignes et colonnes <xref:System.Windows.Forms.DataGridView> à l'aide des propriétés de la <xref:System.Windows.Forms.DataGridViewBand> classe à partir de laquelle les classes <xref:System.Windows.Forms.DataGridViewRow> et <xref:System.Windows.Forms.DataGridViewColumn> dérivent.  
   
 ## <a name="example"></a>Exemple  
@@ -33,6 +33,7 @@ L'exemple de code suivant illustre différentes manières de manipuler des ligne
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>

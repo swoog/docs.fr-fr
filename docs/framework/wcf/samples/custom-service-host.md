@@ -2,12 +2,12 @@
 title: Custom Service Host
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 09a69e489c4b4eb5d3af6e2e74316e678be3d049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: daa6645440a9988fc148757948d7d24615d5a9f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127790"
 ---
 # <a name="custom-service-host"></a>Custom Service Host
 Cet exemple montre comment utiliser un dérivé personnalisé de la classe <xref:System.ServiceModel.ServiceHost> pour altérer le comportement d'exécution d'un service. Cette approche propose une alternative réutilisable à la configuration d'un grand nombre de services de manière commune. L'exemple montre également comment utiliser la classe <xref:System.ServiceModel.Activation.ServiceHostFactory> pour utiliser un ServiceHost personnalisé dans l'environnement d'hébergement des services IIS (Internet Information Services) ou WAS (Windows Process Activation Service).  
@@ -74,7 +74,7 @@ else
 }  
 ```  
   
- La dernière chose que notre substitution `ApplyConfiguration`() doit faire est ajouter le point de terminaison de métadonnées par défaut. Par convention, un point de terminaison de métadonnées est créé pour chaque URI dans la collection BaseAddresses de l'hôte de service.  
+ La dernière chose que notre substitution `ApplyConfiguration`() doit faire est ajouter le point de terminaison de métadonnées par défaut. Par convention, un point de terminaison de métadonnées est créé pour chaque URI dans la collection BaseAddresses de l’hôte de service.  
   
 ```  
 //Add a metadata endpoint at each base address  
@@ -175,4 +175,5 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 5.  Pour supprimer l'application [!INCLUDE[iisver](../../../../includes/iisver-md.md)], exécutez Cleanup.bat.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Héberger un Service WCF dans IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+
+- [Procédure : héberger un service WCF dans IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

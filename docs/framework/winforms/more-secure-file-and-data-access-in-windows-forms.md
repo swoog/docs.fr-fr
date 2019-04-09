@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115763"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Dans Visual c#, veillez à ajouter le code pour activer le Gestionnaire d’événements. En utilisant le code de l'exemple précédent, le code suivant montre comment activer le gestionnaire d'événements.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Dans Visual c#, veillez à ajouter le code pour activer le Gestionnaire d’événements. En utilisant le code de l’exemple précédent, le code suivant montre comment activer le Gestionnaire d’événements.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Autres fichiers  
  Vous devrez parfois lire ou écrire dans des fichiers que l'utilisateur ne spécifie pas, par exemple quand vous devrez conserver les paramètres d'application. Dans les zones Intranet local et Internet, votre application ne sera pas autorisée à stocker des données dans un fichier local. Toutefois, elle pourra stocker des données dans un stockage isolé. Le stockage isolé est un compartiment de données abstrait (et non un emplacement de stockage spécifique) composé d'au moins un fichier de stockage isolé, appelé magasin, contenant les emplacements de répertoire réels où sont stockées les données. Les autorisations d'accès aux fichiers telles que <xref:System.Security.Permissions.FileIOPermission> ne sont pas nécessaires. Au lieu de cela, la classe <xref:System.Security.Permissions.IsolatedStoragePermission> contrôle les autorisations pour le stockage isolé. Par défaut, les applications qui s'exécutent dans les zones Intranet local et Internet peuvent stocker des données à l'aide du stockage isolé. Toutefois, des paramètres tels que les quotas de disque peuvent varier. Pour plus d’informations sur le stockage isolé, consultez [le stockage isolé](../../standard/io/isolated-storage.md).  
@@ -354,14 +354,15 @@ public void Write()
  Si vous ne pouvez pas accéder directement à une base de données car vous souhaitez que votre application s'exécute en mode de confiance partielle, vous pouvez utiliser un service web comme alternative pour accéder à vos données. Un service web est un élément logiciel accessible par programmation sur un réseau. Avec les services web, les applications peuvent partager des données entre des zones de groupe de code. Par défaut, les applications des zones Intranet local et Internet sont autorisées à accéder à leurs sites d'origine, ce qui leur permet d'appeler un service web hébergé sur le même serveur. Pour plus d’informations, consultez [Services Web dans ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) ou [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Accès au Registre  
- La classe <xref:System.Security.Permissions.RegistryPermission> contrôle l'accès au Registre du système d'exploitation. Par défaut, seules les applications qui s'exécutent localement peuvent accéder au Registre.  <xref:System.Security.Permissions.RegistryPermission> accorde uniquement à une application le droit de tenter d'accéder au Registre. Il ne garantit pas la réussite de l'accès, car le système d'exploitation applique quand même la sécurité sur le Registre.  
+ La classe <xref:System.Security.Permissions.RegistryPermission> contrôle l'accès au Registre du système d'exploitation. Par défaut, seules les applications qui s'exécutent localement peuvent accéder au Registre.  <xref:System.Security.Permissions.RegistryPermission> accorde uniquement à une application le droit de tenter d’accéder au Registre ; Il ne garantit pas la réussite de l’accès, car le système d’exploitation applique encore la sécurité sur le Registre.  
   
  Étant donné que vous ne pouvez pas accéder au Registre avec une confiance partielle, vous devrez peut-être trouver d'autres méthodes pour stocker vos données. Quand vous stockez des paramètres d'application, utilisez le stockage isolé plutôt que le Registre. Vous pouvez aussi utiliser le stockage isolé pour stocker d'autres fichiers spécifiques à l'application. Vous pouvez stocker des informations d'application globales relatives au serveur ou au site d'origine, car par défaut une application a le droit d'accéder au site de son origine.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Considérations supplémentaires sur la sécurité des Windows Forms](additional-security-considerations-in-windows-forms.md)
-- [Vue d’ensemble de la sécurité dans les Windows Forms](security-in-windows-forms-overview.md)
-- [Sécurité de Windows Forms](windows-forms-security.md)
+- [Vue d'ensemble de la sécurité dans les Windows Forms](security-in-windows-forms-overview.md)
+- [Sécurité des Windows Forms](windows-forms-security.md)
 - [Mage.exe (outil Manifest Generation and Editing)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

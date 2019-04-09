@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166125"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Meilleures pratiques pour la sécurité dans WCF
 Les sections suivantes répertorient les bonnes pratiques à prendre en compte durant la création d’applications sécurisées à l’aide de WCF (Windows Communication Foundation). Pour plus d’informations sur la sécurité, consultez [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) et [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -57,6 +57,7 @@ Les sections suivantes répertorient les bonnes pratiques à prendre en compte d
  Lorsque vous créez une liaison personnalisée, vous devez affecter la valeur <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> à `true`. Sinon, si <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> a la valeur `false` et que le client utilise un jeton basé sur une clé asymétrique comme un certificat X509, le message ne sera pas signé.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

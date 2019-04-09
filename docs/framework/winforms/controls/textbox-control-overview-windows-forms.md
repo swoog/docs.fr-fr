@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: 716195238e99938c8c416466fc84c2eff0bc7ba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162135"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle TextBox (Windows Forms)
 Les zones de texte Windows Forms sont utilisés pour obtenir des données à partir de l’utilisateur ou pour afficher le texte. Le <xref:System.Windows.Forms.TextBox> contrôle est généralement utilisé pour le texte modifiable, bien qu’il peut également être en lecture seule. Zones de texte peuvent afficher plusieurs lignes, habiller le texte à la taille du contrôle et ajouter une mise en forme. Le <xref:System.Windows.Forms.TextBox> contrôle fournit un style de format unique pour le texte affiché ou entré dans le contrôle. Pour afficher plusieurs types de texte mis en forme, utilisez la <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [vue d’ensemble du contrôle RichTextBox](richtextbox-control-overview-windows-forms.md).  
@@ -50,11 +50,12 @@ private:
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.TextBox>
-- [Guide pratique pour Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Guide pratique pour Créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Guide pratique pour Placez des guillemets doubles dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Guide pratique pour Sélectionner du texte dans le contrôle de zone de texte Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Guide pratique pour Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Procédure : contrôler le point d’insertion dans un contrôle TextBox Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procédure : créer une zone de texte pour un mot de passe avec le contrôle TextBox Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procédure : créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Procédure : mettre des guillemets dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Procédure : sélectionner du texte dans le contrôle TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procédure : voir plusieurs lignes dans le contrôle TextBox Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox, contrôle](textbox-control-windows-forms.md)

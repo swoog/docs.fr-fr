@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Définir l'alignement horizontal et vertical d'un TileBrush"
+title: 'Procédure : Définir l’alignement horizontal et vertical d’un TileBrush'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: d18e4a9fe4f99c1947402c252082e1580a0b22cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149176"
 ---
-# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procédure : Définir l'alignement horizontal et vertical d'un TileBrush
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procédure : Définir l’alignement horizontal et vertical d’un TileBrush
 Cet exemple montre comment contrôler l’alignement horizontal et vertical d’un contenu dans une mosaïque. Pour contrôler l’alignement horizontal et vertical d’un <xref:System.Windows.Media.TileBrush>, utilisez son <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés.  
   
  Le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés d’un <xref:System.Windows.Media.TileBrush> sont utilisées lorsque une des conditions suivantes est vraie :  
@@ -73,7 +73,8 @@ Modèle de mosaïque avec contenu aligné en bas à droite dans la mosaïque de 
  Les exemples utilisent <xref:System.Windows.Media.DrawingBrush> objets afin d’illustrer comment le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés sont utilisées. Ces propriétés ont un comportement identique pour tous les pinceaux de mosaïque : <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, et <xref:System.Windows.Media.VisualBrush>. Pour plus d’informations sur les pinceaux mosaïques, consultez l’article [Peinture avec des objets d’image, de dessin et visuels](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.VisualBrush>
-- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
+- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)

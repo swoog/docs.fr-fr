@@ -2,12 +2,12 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 79fadb422a2330677bc5d8c64c81931615b6be91
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191567"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 Cet élément définit les paramètres pour les fonctions d'enregistrement des messages de Windows Communication Foundation (WCF).  
@@ -53,7 +53,7 @@ Cet élément définit les paramètres pour les fonctions d'enregistrement des m
   
 |Élément|Description|  
 |-------------|-----------------|  
-|filtres|L'élément `filters` maintient une collection de filtres XPath. Lorsque l'enregistrement des messages de transport est activé (`logMessagesAtTransportLevel` a la valeur `true`), seuls les messages correspondant aux filtres sont enregistrés.<br /><br /> Les filtres sont appliqués uniquement à la couche transport. Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.<br /><br /> Le seul attribut pour cet élément, `filter`, est un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|Filtres|L'élément `filters` maintient une collection de filtres XPath. Lorsque l'enregistrement des messages de transport est activé (`logMessagesAtTransportLevel` a la valeur `true`), seuls les messages correspondant aux filtres sont enregistrés.<br /><br /> Les filtres sont appliqués uniquement à la couche transport. Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.<br /><br /> Le seul attribut pour cet élément, `filter`, est un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -64,7 +64,7 @@ Cet élément définit les paramètres pour les fonctions d'enregistrement des m
 ## <a name="remarks"></a>Notes  
  Les messages sont entrés à trois niveaux différents dans la pile : les messages de service, de transport et incorrects. Chaque niveau peut être activé séparément.  
   
- Les filtres XPath peuvent être ajoutés afin d'enregistrer des messages spécifiques aux niveaux de transport et de service. Si aucun filtre n'est défini, tous les messages sont enregistrés. Les filtres sont appliqués uniquement aux en-têtes du message. Le corps est ignoré. WCF ignore le corps du message pour améliorer la performance. Si vous souhaitez filtrer le contenu du corps, vous pouvez créer un écouteur personnalisé avec un filtre approprié.  
+ Les filtres XPath peuvent être ajoutés afin d’enregistrer des messages spécifiques aux niveaux de transport et de service. Si aucun filtre n'est défini, tous les messages sont enregistrés. Les filtres sont appliqués uniquement aux en-têtes du message. Le corps est ignoré. WCF ignore le corps du message pour améliorer la performance. Si vous souhaitez filtrer le contenu du corps, vous pouvez créer un écouteur personnalisé avec un filtre approprié.  
   
  Vous devez créer un écouteur de trace pour activer le suivi de message. L'écouteur lui-même peut être tout écouteur qui fonctionne avec le <xref:System.Diagnostics> qui effectue le suivi de l'architecture. L'exemple suivant montre comment créer un écouteur de ce type.  
   
@@ -122,6 +122,7 @@ Cet élément définit les paramètres pour les fonctions d'enregistrement des m
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>

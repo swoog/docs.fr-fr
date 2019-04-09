@@ -2,12 +2,12 @@
 title: LOB Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: faf7ec75334f20742ff9d27f029d88bfaca9efd4
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135666"
 ---
 # <a name="oracle-lobs"></a>LOB Oracle
 Le fournisseur de données .NET Framework pour Oracle inclut la <xref:System.Data.OracleClient.OracleLob> (classe), qui est utilisée pour travailler avec Oracle **LOB** types de données.  
@@ -23,7 +23,7 @@ Le fournisseur de données .NET Framework pour Oracle inclut la <xref:System.Dat
  Un **OracleLob** diffère d’un <xref:System.Data.OracleClient.OracleBFile> car les données sont stockées sur le serveur au lieu de dans un fichier physique dans le système d’exploitation. Il peut également être un objet en lecture-écriture, contrairement à un **OracleBFile**, qui est toujours en lecture seule.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Création d'un LOB, extraction à partir d'un LOB et écriture dans un LOB  
- L’exemple C# suivant montre comment vous pouvez créer des LOB dans une table Oracle, puis récupérer et y écrire sous la forme de **OracleLob** objets. L’exemple montre comment utiliser le <xref:System.Data.OracleClient.OracleDataReader> objet et le **OracleLob** **en lecture** et **écrire** méthodes. L’exemple utilise Oracle **BLOB**, **CLOB**, et **NCLOB** types de données.  
+ L’exemple c# suivant montre comment vous pouvez créer des LOB dans une table Oracle, puis récupérer et y écrire sous la forme de **OracleLob** objets. L’exemple montre comment utiliser le <xref:System.Data.OracleClient.OracleDataReader> objet et le **OracleLob** **en lecture** et **écrire** méthodes. L’exemple utilise Oracle **BLOB**, **CLOB**, et **NCLOB** types de données.  
   
 ```csharp  
 using System;  
@@ -248,5 +248,6 @@ tx.Commit();
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

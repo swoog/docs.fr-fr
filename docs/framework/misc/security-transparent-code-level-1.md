@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161068"
 ---
 # <a name="security-transparent-code-level-1"></a>Code Transparent de sécurité, niveau 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "54590387"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Le modèle de transparence de niveau 1](#the_level_1_transparency_model)  
+-   [Modèle de transparence de niveau 1](#the_level_1_transparency_model)  
   
 -   [Attributs de transparence](#transparency_attributes)  
   
--   [Exemples de transparence de sécurité](#security_transparency_examples)  
+-   [Exemples de transparence de la sécurité](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Modèle de transparence de niveau 1  
@@ -46,9 +46,9 @@ ms.locfileid: "54590387"
   
 -   Tout code non sécurisé (non vérifiable) qui doit s'exécuter dans du code transparent de sécurité provoque une demande complète pour l'autorisation de sécurité <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
- Ces règles sont mises en application par le common language runtime (CLR) pendant l'exécution. Le code transparent de sécurité transmet toutes les exigences de sécurité du code qu'il rappelle à ses appelants. Les demandes qui transitent par le code transparent de sécurité ne peuvent pas élever les privilèges. Si une application de confiance basse appelle du code transparent de sécurité et génère une demande de privilège élevé, celle-ci est renvoyée au code de confiance basse et échoue. Le code transparent de sécurité ne peut pas arrêter la demande, car il ne peut pas effectuer d'actions d'assertion. Le même code transparent de sécurité appelé à partir de code de niveau de confiance totale débouche sur une demande qui aboutit.  
+ Ces règles sont mises en application par le common language runtime (CLR) pendant l'exécution. Le code transparent de sécurité transmet toutes les exigences de sécurité du code qu’il rappelle à ses appelants. Les demandes qui transitent par le code transparent de sécurité ne peuvent pas élever les privilèges. Si une application de confiance basse appelle du code transparent de sécurité et génère une demande de privilège élevé, celle-ci est renvoyée au code de confiance basse et échoue. Le code transparent de sécurité ne peut pas arrêter la demande, car il ne peut pas effectuer d'actions d'assertion. Le même code transparent de sécurité appelé à partir de code de niveau de confiance totale débouche sur une demande qui aboutit.  
   
- Critique de sécurité est l'inverse de transparent de sécurité. Le code critique de sécurité s'exécute avec une confiance totale et peut effectuer toutes les opérations nécessitant des privilèges. Le code critique sécurisé est du code à privilèges qui a fait l'objet d'un audit de sécurité approfondi pour s'assurer qu'il n'autorise pas les appelants ayant un niveau de confiance partielle à utiliser des ressources auxquelles ils ne sont pas autorisés à accéder.  
+ Critique de sécurité est l’inverse de transparent de sécurité. Le code critique de sécurité s'exécute avec une confiance totale et peut effectuer toutes les opérations nécessitant des privilèges. Le code critique sécurisé est du code à privilèges qui a fait l'objet d'un audit de sécurité approfondi pour s'assurer qu'il n'autorise pas les appelants ayant un niveau de confiance partielle à utiliser des ressources auxquelles ils ne sont pas autorisés à accéder.  
   
  Vous devez appliquer la transparence explicitement. La majeure partie de votre code qui gère la manipulation des données et la logique peut être marquée comme étant transparente de sécurité, tandis que le code subsidiaire qui opère des élévations de privilèges est marqué comme étant critique de sécurité ou critique sécurisé.  
   
@@ -131,5 +131,6 @@ public class B
  Le code précédent est transparent à l'exception de la méthode `Critical`, qui est marquée explicitement comme étant de sécurité critique. La transparence est le paramètre par défaut, même avec l'attribut <xref:System.Security.SecurityCriticalAttribute> au niveau de l'assembly.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [Modifications de sécurité](../../../docs/framework/security/security-changes.md)
+
+- [Code transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Changements relatifs à la sécurité](../../../docs/framework/security/security-changes.md)

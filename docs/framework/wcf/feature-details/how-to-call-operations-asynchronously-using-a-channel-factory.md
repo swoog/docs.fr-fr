@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Appeler des opérations de façon asynchrone à l’aide d’une fabrique de canaux'
+title: 'Procédure : appeler des opérations de façon asynchrone à l’aide d’une fabrique de canaux'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: e266dbf3fed2c1f1bcadd010e2ad6dfd0804230d
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202727"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procédure : Appeler des opérations de façon asynchrone à l’aide d’une fabrique de canaux
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procédure : appeler des opérations de façon asynchrone à l’aide d’une fabrique de canaux
 Cette rubrique décrit comment un client peut accéder de façon asynchrone à une opération de service lors de l'utilisation d'une application cliente basée sur <xref:System.ServiceModel.ChannelFactory%601>. (Lors de l'utilisation d'un objet <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> pour appeler un service, vous pouvez utiliser le modèle d'appel asynchrone commandé par événement. Pour plus d'informations, voir [Procédure : Appeler des opérations de Service de façon asynchrone](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Pour plus d’informations sur le modèle d’appel asynchrone basé sur des événements, consultez [modèle asynchrone basé sur des événements (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
  Le service dans cette rubrique implémente l'interface `ICalculator`. Le client peut appeler les opérations sur cette interface de façon asynchrone, ce qui signifie que des opérations telles que `Add` sont divisées en deux méthodes : `BeginAdd` et `EndAdd`, la première initiant l'appel et la seconde récupérant le résultat au terme de l'opération. Pour obtenir un exemple montrant comment implémenter une opération de façon asynchrone dans un service, consultez [Comment : Implémenter une opération de Service asynchrone](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [synchrone et opérations asynchrones](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -46,4 +46,3 @@ Cette rubrique décrit comment un client peut accéder de façon asynchrone à u
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
-  

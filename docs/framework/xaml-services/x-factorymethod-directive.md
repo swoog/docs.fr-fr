@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: cb78514540f5f44b07b1fdd16283d26c647a3ac4
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190689"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod, directive
 Spécifie une méthode autre qu’un constructeur qu’un processeur XAML doit utiliser pour initialiser un objet après avoir résolu son type de stockage.  
@@ -57,4 +57,5 @@ Spécifie une méthode autre qu’un constructeur qu’un processeur XAML doit u
  `x:FactoryMethod` comme un élément doit précéder tous les autres éléments de propriété, il doit précéder tout `x:Arguments` également fourni en tant qu’éléments et doit précéder n’importe quel contenu/interne texte/texte d’initialisation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [x:Arguments (directive)](x-arguments-directive.md)
+
+- [x:Arguments, directive](x-arguments-directive.md)

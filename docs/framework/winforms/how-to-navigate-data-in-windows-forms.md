@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Naviguer parmi les données dans les Windows Forms'
+title: 'Procédure : parcourir les données dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154594"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>Procédure : Naviguer parmi les données dans les Windows Forms
+# <a name="how-to-navigate-data-in-windows-forms"></a>Procédure : parcourir les données dans Windows Forms
 Dans une application Windows, pour parcourir les enregistrements dans une source de données le plus simple consiste à lier un <xref:System.Windows.Forms.BindingSource> composant à la source de données, puis lier les contrôles à le <xref:System.Windows.Forms.BindingSource>. Vous pouvez ensuite utiliser la méthode de navigation intégrée sur le <xref:System.Windows.Forms.BindingSource> tel un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> et <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. À l’aide de ces méthodes ajustera la <xref:System.Windows.Forms.BindingSource.Position%2A> et <xref:System.Windows.Forms.BindingSource.Current%2A> propriétés de la <xref:System.Windows.Forms.BindingSource> en conséquence. Vous pouvez également rechercher un élément et définissez-le comme l’élément actuel en définissant le <xref:System.Windows.Forms.BindingSource.Position%2A> propriété.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Pour incrémenter la position dans une source de données  
@@ -51,7 +51,8 @@ Dans une application Windows, pour parcourir les enregistrements dans une source
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sources de données prises en charge par les Windows Forms](data-sources-supported-by-windows-forms.md)
 - [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

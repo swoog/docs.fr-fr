@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172885"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilité entre types SQL-CLR
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatise en grande partie la traduction entre le modèle objet et SQL Server. Certaines situations ne permettent toutefois pas une traduction exacte. Cette incompatibilité majeure entre les types CLR (Common Language Runtime) et les types de base de données SQL Server est résumée dans les sections suivantes. Vous trouverez plus d’informations sur les mappages de types spécifiques et de traduction de fonctions à [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) et [Types de données et fonctions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatise la majeure partie de la traduction entre le modèle objet et SQL Server. Certaines situations ne permettent toutefois pas une traduction exacte. Cette incompatibilité majeure entre les types CLR (Common Language Runtime) et les types de base de données SQL Server est résumée dans les sections suivantes. Vous trouverez plus d’informations sur les mappages de types spécifiques et de traduction de fonctions à [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) et [Types de données et fonctions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Types de données  
  La traduction entre CLR et SQL Server se produit lorsqu'une requête est envoyée à la base de données, et lorsque les résultats sont renvoyés au modèle objet. Par exemple, la requête Transact-SQL suivante requiert deux conversions de valeurs :  
@@ -114,11 +114,11 @@ or col1 != col2
  La valeur `null` (`nothing`) dans le classement est définie par SQL Server et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne change pas le classement.  
   
 ### <a name="type-conversion-and-promotion"></a>Conversion et promotion de type  
- SQL prend en charge un ensemble complet de conversions implicites d'expressions. Des expressions similaires en C# nécessiteraient un cast explicite. Par exemple :  
+ SQL prend en charge un ensemble complet de conversions implicites d'expressions. Des expressions similaires en C# nécessiteraient un cast explicite. Exemple :  
   
--   Les types `Nvarchar` et `DateTime` peuvent être comparés dans SQL sans cast explicite mais C# nécessite une conversion explicite.  
+-   `Nvarchar` et `DateTime` types peuvent être comparés dans SQL sans cast explicite ; C# requiert une conversion explicite.  
   
--   `Decimal` est converti implicitement en `DateTime` dans SQL. C# n'autorise pas de conversion implicite.  
+-   `Decimal` est implicitement converti en `DateTime` dans SQL. C# n'autorise pas de conversion implicite.  
   
  De même, la priorité des types de Transact-SQL diffère de celle de C# car l'ensemble de types sous-jacent est différent. En fait, il n'existe pas de relation sous-ensemble/sur-ensemble claire entre les listes de priorités. Par exemple, la comparaison d'un `nvarchar` avec un `varchar` entraîne la conversion implicite de l'expression `varchar` en `nvarchar`. CLR ne fournit aucune promotion équivalente.  
   
@@ -146,18 +146,18 @@ Where Col1 = Col2
   
  En effet, la sous-clause de classement crée un *restreint type* qui n’est pas substituable.  
   
- De même, l'ordre de tri peut être considérablement différent selon les systèmes de type. Cette différence concerne le tri des résultats. <xref:System.Guid> est trié sur les 16 octets dans l'ordre lexicographique (`IComparable()`), tandis que T-SQL compare les GUID dans l'ordre suivant : node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Cette organisation a été définie dans SQL 7.0 lorsque les GUID générés par NT présentaient cet ordre d'octets. Cette approche a permis de s'assurer que les GUID générés sur le même cluster de nœuds se présentaient dans l'ordre séquentiel en fonction de l'horodatage. Elle s'est également avérée utile pour la génération d'index (les insertions deviennent des ajouts plutôt que des E/S aléatoires). L'ordre a été brouillé ultérieurement dans Windows en raison de problèmes de confidentialité, mais SQL doit maintenir la compatibilité. Une solution de contournement consiste à utiliser <xref:System.Data.SqlTypes.SqlGuid> au lieu de <xref:System.Guid>.  
+ De même, l'ordre de tri peut être considérablement différent selon les systèmes de type. Cette différence concerne le tri des résultats. <xref:System.Guid> est trié sur toutes les 16 octets dans l’ordre lexicographique (`IComparable()`), tandis que T-SQL Compare les GUID dans l’ordre suivant : node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Cette organisation a été définie dans SQL 7.0 lorsque les GUID générés par NT présentaient cet ordre d'octets. Cette approche a permis de s'assurer que les GUID générés sur le même cluster de nœuds se présentaient dans l'ordre séquentiel en fonction de l'horodatage. Elle s'est également avérée utile pour la génération d'index (les insertions deviennent des ajouts plutôt que des E/S aléatoires). L'ordre a été brouillé ultérieurement dans Windows en raison de problèmes de confidentialité, mais SQL doit maintenir la compatibilité. Une solution de contournement consiste à utiliser <xref:System.Data.SqlTypes.SqlGuid> au lieu de <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Différences d'opérateur et de fonction  
- Les opérateurs et les fonctions qui sont pour l'essentiel comparables ont une sémantique légèrement différente. Par exemple :  
+ Les opérateurs et les fonctions qui sont pour l'essentiel comparables ont une sémantique légèrement différente. Exemple :  
   
--   C# spécifie une sémantique de « court-circuit » selon l'ordre lexical des opérandes pour les opérateurs logiques `&&` et `||`. SQL est destiné aux requêtes basées sur des ensembles et laisse par conséquent une plus grande marge de manœuvre à l'optimiseur pour décider de l'ordre d'exécution. Les conséquences sont notamment les suivantes :  
+-   C# spécifie une sémantique de « court-circuit » selon l’ordre lexical des opérandes pour les opérateurs logiques `&&` et `||`. SQL est destiné aux requêtes basées sur des ensembles et laisse par conséquent une plus grande marge de manœuvre à l'optimiseur pour décider de l'ordre d'exécution. Les conséquences sont notamment les suivantes :  
   
     -   Traduction sémantiquement équivalente nécessiterait «`CASE` ... `WHEN` … `THEN`« construire dans SQL pour éviter la réorganisation d’exécution des opérandes.  
   
     -   Une traduction faible dans `AND` / `OR` opérateurs peuvent entraîner des erreurs inattendues si les C# expression repose sur l’évaluation de la deuxième opérande basée sur le résultat de l’évaluation du premier opérande.  
   
--   La sémantique de la fonction `Round()` est différente dans le [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] et dans T-SQL.  
+-   `Round()` fonction a une sémantique différente [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] et dans T-SQL.  
   
 -   L'index de départ des chaînes correspond à 0 dans CLR et à 1 dans SQL. Par conséquent, toute fonction comportant des index nécessite une traduction des index.  
   
@@ -202,7 +202,7 @@ Where Col1 = Col2
  [!code-csharp[DLinqMismatch#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#6)]
  [!code-vb[DLinqMismatch#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#6)]  
   
--   Les opérateurs/fonctions appliqués aux arguments de type de caractères de longueur fixe dans SQL ont une sémantique sensiblement différente par rapport aux mêmes opérateurs/fonctions appliqués à un objet <xref:System.String?displayProperty=nameWithType> CLR. Cela peut également être considéré comme une prolongation du problème d'équivalents manquants abordé dans la section consacrée aux types.  
+-   Les opérateurs/fonctions appliqués aux arguments de type de caractères de longueur fixe dans SQL ont une sémantique sensiblement différente par rapport aux mêmes opérateurs/fonctions appliqués à un objet <xref:System.String?displayProperty=nameWithType> CLR. Cela peut également être considéré comme une extension du problème d’équivalents manquants abordé dans la section consacrée aux types.  
   
     ```  
     create table T4 (  
@@ -235,7 +235,7 @@ Where Col1 = Col2
 ### <a name="type-casting"></a>Cast de type  
  Dans C# et SQL, les utilisateurs peuvent substituer la sémantique par défaut d'expressions en utilisant des casts de types explicites (`Cast` et `Convert`). Toutefois, l'exposition de cette fonction sur la limite du système de type crée un dilemme. Un cast SQL qui fournit la sémantique souhaitée ne peut pas être traduit facilement en cast C# correspondant. Par contre, un cast C# ne peut pas être traduit directement en cast SQL équivalent en raison des incompatibilités de type, des équivalents manquants et des hiérarchies de priorité des types. Il existe un compromis entre l'exposition de l'incompatibilité du système de type et une perte importante de puissance d'expression.  
   
- Dans d'autres cas, le cast de type peut ne pas être nécessaire dans un domaine de validation d'une expression mais peut être requis pour s'assurer qu'un mappage non défini par défaut est appliqué correctement à l'expression.  
+ Dans d’autres cas, le cast de type peut ne pas être nécessaire dans un domaine de validation d’une expression mais peut être requis pour s’assurer qu’un mappage non défini par défaut est appliqué correctement à l’expression.  
   
 ```  
 -- Example from "Non-default Mapping" section extended  
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  Outre les différences sémantiques, il est important de prendre en compte l'impact sur les performances lors du passage entre les systèmes de types SQL Server et CLR. Pour les grands groupes de données, de tels problèmes de performances peuvent déterminer si une application est déployable.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
