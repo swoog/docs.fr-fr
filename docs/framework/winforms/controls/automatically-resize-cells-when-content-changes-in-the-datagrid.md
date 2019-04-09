@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Redimensionner automatiquement des cellules lorsque le contenu change dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : redimensionner automatiquement les cellules quand le contenu change dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 15a3538dddfb1c36aa276bdf2fbe53cb8597992b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7acd7777ede726b9dfed2b821e4248a0ebf7797f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182492"
 ---
-# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Procédure : Redimensionner automatiquement des cellules lorsque le contenu change dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Procédure : redimensionner automatiquement les cellules quand le contenu change dans le contrôle DataGridView Windows Forms
 Vous pouvez configurer le contrôle <xref:System.Windows.Forms.DataGridView> pour redimensionner ses lignes, colonnes et en-têtes automatiquement chaque fois que du contenu change, pour que les cellules soient toujours assez grandes pour afficher leurs valeurs sans être découpées.  
   
  Vous disposez de nombreuses options pour limiter les cellules qui sont utilisées pour déterminer les nouvelles tailles. Par exemple, vous pouvez configurer le contrôle pour redimensionner automatiquement la largeur de ses colonnes uniquement en fonction des valeurs figurant sur les lignes qui sont affichées actuellement. Vous optimiserez ainsi les opérations lors de l'utilisation d'un nombre de lignes, bien que dans ce cas vous souhaiterez peut-être utiliser des méthodes de dimensionnement telles que <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> pour ajuster la taille quand bon vous semble.  
@@ -39,6 +39,7 @@ Vous pouvez configurer le contrôle <xref:System.Windows.Forms.DataGridView> pou
 -   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType>
@@ -53,4 +54,4 @@ Vous pouvez configurer le contrôle <xref:System.Windows.Forms.DataGridView> pou
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Options de dimensionnement dans le contrôle DataGridView Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Redimensionner par programme les cellules en fonction du contenu dans le contrôle de DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [Procédure : redimensionner par programmation des cellules pour les adapter au contenu du contrôle DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)

@@ -2,12 +2,12 @@
 title: Extending Tracing
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ff110a4b293a987ac07c29e3e4c1d52fe2d08294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 829ebd2f935135b8765ccd48532d357bf95f805a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208239"
 ---
 # <a name="extending-tracing"></a>Extending Tracing
 Cet exemple montre comment étendre la fonctionnalité de suivi de Windows Communication Foundation (WCF) en écrivant les suivis d’activité définis par l’utilisateur dans le code client et le service. Cela permet à l'utilisateur de créer des activités de suivi et de regrouper les suivis dans des unités de travail logiques. Il est également possible de mettre en corrélation des activités à travers des transferts (au sein du même point de terminaison) et la propagation (sur plusieurs points de terminaison). Dans cet exemple, le suivi est activé à la fois pour le client et pour le service. Pour plus d’informations sur comment activer le suivi dans les fichiers de configuration client et le service, consultez [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -97,4 +97,5 @@ Cet exemple montre comment étendre la fonctionnalité de suivi de Windows Commu
 3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

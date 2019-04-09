@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Utiliser l'élément Image"
+title: 'Procédure : Utiliser l’élément Image'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: ec3ca16915038ebbb68df24bfd071168c346663d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205301"
 ---
-# <a name="how-to-use-the-image-element"></a>Procédure : Utiliser l'élément Image
+# <a name="how-to-use-the-image-element"></a>Procédure : Utiliser l’élément Image
 Cet exemple montre comment inclure des images dans une application à l’aide de la <xref:System.Windows.Controls.Image> élément.  
   
 ## <a name="example"></a>Exemple  
@@ -42,4 +42,5 @@ Cet exemple montre comment inclure des images dans une application à l’aide d
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la création d’images](../graphics-multimedia/imaging-overview.md)
+
+- [Vue d'ensemble de la création d'images](../graphics-multimedia/imaging-overview.md)

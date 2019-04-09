@@ -3,12 +3,12 @@ title: <states> de <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
-ms.openlocfilehash: 97664518f7c7c0078cef1c81035724a02c9857c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fa3736fc13f6f40f52d15b8257b7a79f4179d738
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189597"
 ---
 # <a name="states-of-activitystatequery"></a>\<États > de \<activityStateQuery >
 Collection d’éléments de configuration qui contiennent les états de l’activité faisant l’objet d’un abonnement pour laquelle un enregistrement de suivi doit être émis.  
@@ -76,7 +76,8 @@ Collection d’éléments de configuration qui contiennent les états de l’act
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

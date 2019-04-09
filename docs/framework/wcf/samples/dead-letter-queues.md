@@ -2,12 +2,12 @@
 title: Dead Letter Queues
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177929"
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
@@ -24,7 +24,7 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
  La file d’attente de lettres mortes dans la liaison `NetMsmqBinding` est exprimée dans les propriétés suivantes :
 
--   La propriété <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> permet d'exprimer le type de file d'attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriété à exprimer le type de file d’attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
 
 -   `None`: Aucune file d’attente de lettres mortes n’est requis par le client.
 
@@ -32,7 +32,7 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
 -   `Custom`: Une file d’attente de lettres mortes personnalisée spécifiée à l’aide de la <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriété est utilisée pour stocker des messages morts. Cette fonctionnalité est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle est utilisée lorsque l'application doit utiliser sa propre file d'attente de lettres mortes au lieu de la partager avec d'autres applications exécutées sur le même ordinateur.
 
--   La propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> permet d'exprimer la file d'attente spécifique à utiliser comme file d'attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriété pour exprimer la file d’attente spécifique à utiliser comme une file d’attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Dans cet exemple, le client envoie un lot de messages au service à partir de l’étendue d’une transaction et indique un valeur arbitraire faible de durée de vie pour ces messages (approximativement 2 secondes). Le client indique également la file d'attente de lettres mortes personnalisée à utiliser pour mettre les messages qui ont expiré en file d'attente.
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

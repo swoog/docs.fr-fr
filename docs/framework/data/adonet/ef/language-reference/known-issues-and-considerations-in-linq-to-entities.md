@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191326"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problèmes connus et éléments à prendre en compte dans LINQ to Entities
 Cette section fournit des informations sur les problèmes connus au niveau des requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Requêtes LINQ qui ne peut pas être mis en cache](#LINQQueriesThatAreNotCached)  
+-   [Requêtes LINQ qui ne peuvent pas être mises en cache](#LINQQueriesThatAreNotCached)  
   
--   [Perte des informations de classement](#OrderingInfoLost)  
+-   [Perte des informations de tri](#OrderingInfoLost)  
   
--   [Entiers non signés non pris en charge.](#UnsignedIntsUnsupported)  
+-   [Entiers non signés non pris en charge](#UnsignedIntsUnsupported)  
   
--   [Erreurs de Conversion de type](#TypeConversionErrors)  
+-   [Erreurs de conversion de type](#TypeConversionErrors)  
   
--   [Référencement des Variables Non scalaires non pris en charge.](#RefNonScalarClosures)  
+-   [Référencement de variables non scalaires non pris en charge](#RefNonScalarClosures)  
   
--   [Requêtes imbriquées peuvent échouer avec SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Les requêtes imbriquées peuvent échouer avec SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Projection dans un Type anonyme](#ProjectToAnonymousType)  
+-   [Projection dans un type anonyme](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Requêtes LINQ qui ne peuvent pas être mises en cache  
- Depuis le .NET Framework 4.5, les requêtes LINQ to Entities sont automatiquement mises en cache. Cependant, les requêtes LINQ to Entities qui appliquent l'opérateur `Enumerable.Contains` aux collections en mémoire ne sont pas automatiquement mises en cache. Le paramétrage des collections en mémoire dans les requêtes LINQ compilées n'est pas autorisé.  
+ Depuis le .NET Framework 4.5, les requêtes LINQ to Entities sont automatiquement mises en cache. Cependant, les requêtes LINQ to Entities qui appliquent l’opérateur `Enumerable.Contains` aux collections en mémoire ne sont pas automatiquement mises en cache. Le paramétrage des collections en mémoire dans les requêtes LINQ compilées n’est pas autorisé.  
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Perte des informations de tri  
@@ -58,7 +58,7 @@ Cette section fournit des informations sur les problèmes connus au niveau des r
  Le référencement d'une variable non scalaire, telle qu'une entité, dans une requête n'est pas pris en charge. Lorsqu'une telle requête s'exécute, une exception <xref:System.NotSupportedException> est levée avec un message indiquant « Impossible de créer une valeur constante de type «`EntityType`. Seuls les types primitifs (« Int32, String et Guid ») sont pris en charge dans ce contexte. »  
   
 > [!NOTE]
->  Le référencement d'une collection de variables scalaires est pris en charge.  
+>  Le référencement d’une collection de variables scalaires est pris en charge.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  
@@ -69,7 +69,7 @@ Cette section fournit des informations sur les problèmes connus au niveau des r
   
 <a name="ProjectToAnonymousType"></a>   
 ## <a name="projecting-to-an-anonymous-type"></a>Projection dans un type anonyme  
- Si vous définissez le chemin d'accès de votre requête initiale pour inclure des objets connexes à l'aide de la méthode <xref:System.Data.Objects.ObjectQuery%601.Include%2A> sur <xref:System.Data.Objects.ObjectQuery%601> et si vous utilisez LINQ pour projeter les objets retournés dans un type anonyme, les objets spécifiés dans la méthode d'inclusion ne sont pas inclus dans les résultats de la requête.  
+ Si vous définissez le chemin d’accès de votre requête initiale pour inclure des objets connexes à l’aide de la méthode <xref:System.Data.Objects.ObjectQuery%601.Include%2A> sur <xref:System.Data.Objects.ObjectQuery%601> et si vous utilisez LINQ pour projeter les objets retournés dans un type anonyme, les objets spécifiés dans la méthode d’inclusion ne sont pas inclus dans les résultats de la requête.  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype1)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype1)]  
@@ -80,4 +80,5 @@ Cette section fournit des informations sur les problèmes connus au niveau des r
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer et initialiser des Sources de Trace'
+title: 'Procédure : Créer et initialiser des sources de trace'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194888"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Procédure : Créer et initialiser des Sources de Trace
-La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applications pour produire des traces qui peuvent être associées à l'application. <xref:System.Diagnostics.TraceSource> fournit des méthodes de traçage qui vous permettent de tracer facilement des événements et des données, ainsi que de fournir des traces d'information. Il est possible de créer et d'initialiser une sortie de trace <xref:System.Diagnostics.TraceSource> en utilisant ou non les fichiers de configuration. Cette rubrique fournit des instructions pour les deux options. Toutefois, nous vous recommandons d'utiliser des fichiers de configuration pour simplifier la reconfiguration des traces produites par les sources de trace au moment de l'exécution.  
+# <a name="how-to-create-and-initialize-trace-sources"></a>Procédure : Créer et initialiser des sources de trace
+La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applications pour produire des traces qui peuvent être associées à l'application. <xref:System.Diagnostics.TraceSource> Fournit des méthodes de suivi qui vous permettent de tracer facilement des événements, données de trace et émettre des traces d’information. Il est possible de créer et d'initialiser une sortie de trace <xref:System.Diagnostics.TraceSource> en utilisant ou non les fichiers de configuration. Cette rubrique fournit des instructions pour les deux options. Toutefois, nous vous recommandons d'utiliser des fichiers de configuration pour simplifier la reconfiguration des traces produites par les sources de trace au moment de l'exécution.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Pour créer et initialiser une source de trace à l'aide d'un fichier de configuration  
   
@@ -79,8 +79,9 @@ La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applicatio
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Traçage et instrumentation d'applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

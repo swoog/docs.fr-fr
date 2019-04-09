@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7452b76509d5eca592cc3b95df1f77703ec1111
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190422"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP, structure
 Spécifie des modifications dans le décalage relatif d'une fonction.  
@@ -81,15 +81,16 @@ typedef struct _COR_IL_MAP {
   
 -   Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorProf.idl  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

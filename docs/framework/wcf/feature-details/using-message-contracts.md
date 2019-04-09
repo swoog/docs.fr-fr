@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121977"
 ---
 # <a name="using-message-contracts"></a>Utilisation de contrats de message
 En général, lors de la création d’applications Windows Communication Foundation (WCF), les développeurs attention particulière aux structures de données et aux problèmes de sérialisation et n’avez pas besoin de se préoccuper de la structure des messages dans lesquels les données sont stockées. Pour ces applications, créer des contrats de données pour les paramètres ou les valeurs de retour est une procédure simple. (Pour plus d’informations, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> vous permet de spécifier les attributs WrapperName et WrapperNamespace qui contrôlent le nom de l'élément wrapper dans le corps du message SOAP. Par défaut le nom du type de contrat de message est utilisé pour le wrapper et l'espace de noms dans lequel le contrat de message est défini `http://tempuri.org/` est utilisé comme espace de noms par défaut.  
   
 > [!NOTE]
->  Les attributs <xref:System.Runtime.Serialization.KnownTypeAttribute> sont ignorés dans les contrats de message. Si un <xref:System.Runtime.Serialization.KnownTypeAttribute> est requis, placez-le sur l'opération qui utilise le contrat de message en question.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> les attributs sont ignorés dans les contrats de message. Si un <xref:System.Runtime.Serialization.KnownTypeAttribute> est requis, placez-le sur l'opération qui utilise le contrat de message en question.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Contrôle des espaces de noms et noms des en-têtes et parties du corps  
  Dans la représentation SOAP d'un contrat de message, chaque en-tête et le partie du corps mappe à un élément XML ayant un nom et un espace de noms.  
@@ -203,7 +203,7 @@ public class BankingDepositLog
   
  L'attribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> hérite de <xref:System.ServiceModel.MessageHeaderAttribute>. Il a le même jeu de fonctionnalités que les attributs non-tableau ; il est possible, par exemple, de définir l’ordre, le nom et l’espace de noms d’un tableau d’en-têtes de la même façon que pour un en-tête unique. Lorsque vous utilisez la propriété `Order` sur un tableau, elle s'applique à l'ensemble de celui-ci.  
   
- Vous ne pouvez appliquer <xref:System.ServiceModel.MessageHeaderArrayAttribute> qu'aux tableaux, et non pas aux collections.  
+ Vous ne pouvez appliquer <xref:System.ServiceModel.MessageHeaderArrayAttribute> qu’aux tableaux, et non pas aux collections.  
   
 ## <a name="using-byte-arrays-in-message-contracts"></a>Utilisation de tableaux d'octets dans des contrats de message  
  Les tableaux d'octets, lorsqu'ils sont utilisés avec des attributs non-tableau (<xref:System.ServiceModel.MessageBodyMemberAttribute> et <xref:System.ServiceModel.MessageHeaderAttribute>), ne sont pas traités comme des tableaux mais comme un type primitif spécial représenté sous forme de données encodées en base 64 dans le XML résultant.  
@@ -215,7 +215,7 @@ public class BankingDepositLog
   
  Pour ce faire, définissez la propriété <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> sur les attributs <xref:System.ServiceModel.MessageHeaderAttribute> et <xref:System.ServiceModel.MessageBodyMemberAttribute>. La propriété est une énumération du type <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> et peut être définie à <xref:System.Net.Security.ProtectionLevel.None> (pas de chiffrement ni de signature), <xref:System.Net.Security.ProtectionLevel.Sign> (signature numérique uniquement) ou <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (chiffrement et signature numérique). La valeur par défaut est <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Pour que ces fonctionnalités de sécurité fonctionnent, vous devez configurer la liaison et les comportements correctement. Si vous utilisez ces fonctionnalités de sécurité sans configuration correcte (par exemple, essayer de signer un message sans fournir vos informations d'identification), une exception est levée lors de la validation.  
+ Pour que ces fonctionnalités de sécurité fonctionnent, vous devez configurer la liaison et les comportements correctement. Si vous utilisez ces fonctionnalités de sécurité sans configuration correcte (par exemple, essayer de signer un message sans fournir vos informations d’identification), une exception est levée lors de la validation.  
   
  Pour les en-têtes de message, le niveau de protection est déterminé individuellement pour chaque en-tête.  
   
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Attributs d'en-tête SOAP  
  Le standard SOAP définit les attributs suivants qui peuvent exister dans un en-tête :  
   
--   `Actor/Role` (`Actor` dans SOAP 1.1, `Role` dans SOAP 1.2)  
+-   `Actor/Role` (`Actor` dans SOAP 1.1, `Role` dans SOAP 1.2)  
   
 -   `MustUnderstand`  
   
@@ -336,7 +336,7 @@ public class BankingTransaction
   
 -   Tous les en-têtes de message dans la hiérarchie d'héritage sont regroupés pour former le jeu complet d'en-têtes pour le message.  
   
--   Toutes les parties de corps du message dans la hiérarchie d'héritage sont regroupées pour former le corps du message complet. Les parties du corps sont ordonnées conformément aux règles de classement habituelles (par la propriété <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>, puis par ordre alphabétique), sans tenir compte de leur place dans la hiérarchie d'héritage. L'utilisation d'un héritage de contrat de message dans lequel les parties de corps du message se produisent à plusieurs niveaux de l'arborescence d'héritage est fortement déconseillée. Si une classe de base et une classe dérivée définissent un en-tête ou une partie du corps avec le même nom, le membre de la classe la plus de base est utilisé pour stocker la valeur de cet en-tête ou partie du corps.  
+-   Toutes les parties de corps du message dans la hiérarchie d'héritage sont regroupées pour former le corps du message complet. Les parties du corps sont ordonnées conformément aux règles de classement habituelles (par la propriété <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>, puis par ordre alphabétique), sans tenir compte de leur place dans la hiérarchie d'héritage. L’utilisation d’un héritage de contrat de message dans lequel les parties de corps du message se produisent à plusieurs niveaux de l’arborescence d’héritage est fortement déconseillée. Si une classe de base et une classe dérivée définissent un en-tête ou une partie du corps avec le même nom, le membre de la classe la plus de base est utilisé pour stocker la valeur de cet en-tête ou partie du corps.  
   
  Examinons les classes dans l'exemple de code suivant.  
   
@@ -448,5 +448,6 @@ public class OperationDetails
  Pour recevoir l'objet message comme la propriété `Result` et que les valeurs retournées sur cet objet soient des propriétés, utilisez l'option de commande `/messageContract`. Cette opération génère une signature qui retourne le message de réponse comme la propriété `Result` sur l'objet <xref:System.EventArgs>. Toutes les valeurs de retour internes sont ensuite des propriétés de l'objet de message de réponse.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Conception et implémentation de services](../../../../docs/framework/wcf/designing-and-implementing-services.md)

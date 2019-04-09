@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Appliquer plusieurs transformations à un modèle 3D'
+title: 'Procédure : Appliquer plusieurs transformations à un modèle 3D'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
-ms.openlocfilehash: d18b9bc78e011796f9d9e6d535f3dc949bd5a0f8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186379"
 ---
-# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Procédure : Appliquer plusieurs transformations à un modèle 3D
+# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Procédure : Appliquer plusieurs transformations à un modèle 3D
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.Media3D.RotateTransform3D> et un <xref:System.Windows.Media.Media3D.ScaleTransform3D> pour faire pivoter et de modifier l’échelle d’un modèle 3D. Le code ci-dessous montre comment appliquer ces transformations à la <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propriété d’un <xref:System.Windows.Media.Media3D.GeometryModel3D> dans XAML.  
   
  [!code-xaml[3DGallery_snip#Multiple3DTransformationsExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/MultipleTransformationsExample.xaml#multiple3dtransformationsexampleinline1)]  
@@ -36,4 +36,5 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Media.Media3D.Rotate
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Transformer l’échelle d’un modèle 3D](how-to-transform-the-scale-of-a-3-d-model.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: 7fe8107f7b5b65f00f2c5ac029f806aeba758d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182856"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Procédure : Contrôler un MediaElement (lecture, pause, arrêt, volume et vitesse)
 L’exemple suivant montre comment contrôler la lecture de média à l’aide un <xref:System.Windows.Controls.MediaElement>. L’exemple crée un lecteur multimédia simple qui vous permet de lire, suspendre, arrêter et ignorer dans les deux sens dans le média ainsi qu’ajustez le ratio de volume et vitesse.  
@@ -35,4 +35,5 @@ L’exemple suivant montre comment contrôler la lecture de média à l’aide u
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôler un MediaElement à l'aide d'un storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md)
+
+- [Contrôler un MediaElement à l’aide d’une table de montage séquentiel](how-to-control-a-mediaelement-by-using-a-storyboard.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208538"
 ---
 # <a name="trusted-subsystem"></a>Sous-système approuvé
 Un client accède à un ou plusieurs services Web distribués sur un réseau. Les services Web sont conçus afin que l'accès aux ressources supplémentaires (telles que les bases de données ou autres services Web) soit encapsulé dans la logique métier du service Web. Ces ressources doivent être protégées contre tout accès non autorisé. L'illustration suivante présente un processus de sous-système approuvé.  
@@ -38,7 +38,7 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
 |Intégrité|Oui|  
 |Confidentialité|Oui|  
 |Transport|HTTP entre client et le service du sous-système approuvé.<br /><br /> NET.TCP entre le service du sous-système approuvé et la ressource (service principal).|  
-|Liaison|<xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Liaison|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (service principal)  
   
@@ -211,5 +211,6 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

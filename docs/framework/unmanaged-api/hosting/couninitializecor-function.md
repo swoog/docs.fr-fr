@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202714"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor, fonction
 `CoUninitializeCor` est obsolète.  
@@ -37,4 +37,5 @@ STDAPI_(void) CoUninitializeCor(void);
  Le common language runtime ne peut pas être déchargé d’un processus. Pour supprimer complètement le runtime d’un processus en cours d’exécution, vous devez arrêter ce processus.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

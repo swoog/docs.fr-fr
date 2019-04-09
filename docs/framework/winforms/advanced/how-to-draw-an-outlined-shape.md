@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner une forme avec contour'
+title: 'Procédure : dessiner une forme avec contour'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192201"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>Procédure : Dessiner une forme avec contour
+# <a name="how-to-draw-an-outlined-shape"></a>Procédure : dessiner une forme avec contour
 Cet exemple dessine avec contour ellipses et rectangles dans un formulaire.  
   
 ## <a name="example"></a>Exemple  
@@ -41,9 +41,10 @@ Cet exemple dessine avec contour ellipses et rectangles dans un formulaire.
  Vous devez toujours appeler <xref:System.IDisposable.Dispose%2A> sur tous les objets qui consomment des ressources système, telles que <xref:System.Drawing.Pen> et <xref:System.Drawing.Graphics> objets.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)

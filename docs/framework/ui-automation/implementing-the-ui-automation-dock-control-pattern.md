@@ -1,17 +1,17 @@
 ---
-title: Implémentation du modèle de contrôle Dock d'UI Automation
+title: Implémentation du modèle de contrôle Dock d’UI Automation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 30ae7928d2c9dd9a636b714d82109ad2f7297523
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190514"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implémentation du modèle de contrôle Dock d’UI Automation
 > [!NOTE]
@@ -28,7 +28,7 @@ Exemple d’ancrage de Visual Studio où la fenêtre « Affichage de classes » 
 ## <a name="implementation-guidelines-and-conventions"></a>Conventions et recommandations en matière d'implémentation  
  Lorsque vous implémentez le modèle de contrôle Dock, notez les conventions et recommandations suivantes :  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> n’expose aucune propriété du conteneur d’ancrage ni aucune propriété des contrôles qui sont ancrés de façon à être adjacents au contrôle actuel dans le conteneur d’ancrage.  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> n’expose pas toutes les propriétés du conteneur d’ancrage ni aucune propriété des contrôles qui sont ancrés adjacents au contrôle actuel dans le conteneur d’ancrage.  
   
 -   Les contrôles sont ancrés les uns par rapport aux autres selon leur ordre de plan actuel ; plus leur positionnement dans l’ordre de plan est haut, plus ils sont placés loin du bord spécifié du conteneur d’ancrage.  
   
@@ -56,8 +56,9 @@ Exemple d’ancrage de Visual Studio où la fenêtre « Affichage de classes » 
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -Lorsqu’un contrôle n’est pas en mesure d’exécuter le style d’ancrage demandé.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

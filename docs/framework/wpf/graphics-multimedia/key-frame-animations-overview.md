@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191585"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
 Cette rubrique présente les animations d’image clé. Les animations d’image clé vous permettent d’effectuer des animation en utilisant plus de deux valeurs cibles et de contrôler la méthode d’interpolation d’une animation.  
@@ -284,12 +284,13 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
 8.  Triez les images clés dans l’ordre de temps résolu (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Exemple de l’Animation d’image clé](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des storyboards](storyboards-overview.md)
 - [Guides pratiques relatifs aux images clés](key-frame-animation-how-to-topics.md)
-- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)
+- [Vue d'ensemble des comportements de minutage](timing-behaviors-overview.md)

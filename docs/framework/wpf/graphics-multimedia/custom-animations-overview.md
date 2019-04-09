@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190728"
 ---
 # <a name="custom-animations-overview"></a>Vue d'ensemble des animations personnalisées
 Cette rubrique décrit comment et quand étendre le système d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en créant des images clés personnalisées et des classes d’animation, ou à l’aide du rappel image par image pour l’ignorer.  
@@ -124,12 +124,13 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
  Pour plus d’informations, consultez le <xref:System.Windows.Media.CompositionTarget.Rendering> page.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
-- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
+- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
 - [Vue d'ensemble des animations de tracés](path-animations-overview.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
-- [Exemple d’animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Exemple d’Animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)

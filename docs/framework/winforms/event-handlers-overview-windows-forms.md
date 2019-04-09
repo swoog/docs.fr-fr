@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186080"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Vue d'ensemble des gestionnaires d'événements (Windows Forms)
 Un gestionnaire d’événements est une méthode qui est liée à un événement. Lorsque l’événement est déclenché, le code dans le Gestionnaire d’événements est exécuté. Chaque gestionnaire d’événements fournit deux paramètres qui vous permettent de gérer l’événement correctement. L’exemple suivant montre un gestionnaire d’événements pour un <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> événement.  
@@ -49,5 +49,6 @@ private:
  Vous pouvez également utiliser le même gestionnaire d’événements pour gérer l’événement de même pour les différents contrôles. Par exemple, si vous disposez d’un groupe de <xref:System.Windows.Forms.RadioButton> contrôles sur un formulaire, vous pouvez créer un gestionnaire d’événements unique pour le <xref:System.Windows.Forms.Control.Click> événement et avoir de chaque contrôle <xref:System.Windows.Forms.Control.Click> événement lié au gestionnaire d’événements unique. Pour plus d'informations, voir [Procédure : Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
+
+- [Création de gestionnaires d'événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Vue d'ensemble des événements](events-overview-windows-forms.md)

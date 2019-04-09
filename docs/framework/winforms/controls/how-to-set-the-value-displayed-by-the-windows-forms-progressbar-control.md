@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir la valeur affichée par le contrôle ProgressBar Windows Forms'
+title: 'Procédure : définir la valeur affichée par le contrôle ProgressBar Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196877"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procédure : Définir la valeur affichée par le contrôle ProgressBar Windows Forms
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procédure : définir la valeur affichée par le contrôle ProgressBar Windows Forms
 > [!IMPORTANT]
 >  Le contrôle <xref:System.Windows.Forms.ToolStripProgressBar> remplace le contrôle <xref:System.Windows.Forms.ProgressBar> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.ProgressBar> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix.  
   
@@ -225,6 +225,7 @@ ms.locfileid: "57715891"
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
 - [Vue d’ensemble du contrôle ProgressBar](progressbar-control-overview-windows-forms.md)

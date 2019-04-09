@@ -1,5 +1,5 @@
 ---
-title: Élément <assert>
+title: <assert> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: aa5682c1cb2d662e1352c1d6c78e1a4a7e41f760
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197605"
 ---
 # <a name="assert-element"></a>\<Assert > élément
 Indique si une boîte de message doit s’afficher quand vous appelez la méthode <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ; spécifie également le nom du fichier dans lequel écrire les messages.  
@@ -70,5 +70,6 @@ Indique si une boîte de message doit s’afficher quand vous appelez la méthod
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Diagnostics.Debug>
-- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schéma des paramètres de traçage et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

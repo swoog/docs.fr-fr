@@ -2,15 +2,15 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: b3554db2ee037eceb43126968a02e826b65928a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191417"
 ---
 # <a name="behaviorextensions"></a>\<behaviorExtensions>
-Les extensions de comportement permettent la création d’éléments de comportement définis par l’utilisateur. Ces éléments peuvent être utilisés avec les éléments de comportement standard Windows Communication Foundation (WCF). La section `behaviorExtensions` définit l'élément tel qu'il peut être utilisé dans la configuration. Voici un exemple d'une extension de comportement typique.  
+Les extensions de comportement permettent la création d'éléments de comportement définis par l'utilisateur. Ces éléments peuvent être utilisés avec les éléments de comportement standard Windows Communication Foundation (WCF). La section `behaviorExtensions` définit l'élément tel qu'il peut être utilisé dans la configuration. Voici un exemple d'une extension de comportement typique.  
   
 ```xml  
 <system.serviceModel>
@@ -26,7 +26,7 @@ Les extensions de comportement permettent la création d’éléments de comport
   
  Pour ajouter des capacités de configuration à l'élément, vous devez écrire et enregistrer un élément de configuration. Pour plus d'informations, consultez la documentation <xref:System.Configuration>.  
   
- Après la définition de l'élément et de son type de configuration, l'extension peut être utilisée comme dans l'exemple suivant.  
+ Après la définition de l’élément et de son type de configuration, l’extension peut être utilisée comme dans l’exemple suivant.  
   
 ```xml  
 <behaviors>
@@ -52,5 +52,6 @@ Les extensions de comportement permettent la création d’éléments de comport
  Pour plus d’informations, consultez [méthode de localisation des assemblys par le Runtime](https://go.microsoft.com/fwlink/?LinkId=95336) et <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [Configuration et extension de l’exécution à l’aide de comportements](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configuration et extension de l'exécution à l'aide de comportements](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

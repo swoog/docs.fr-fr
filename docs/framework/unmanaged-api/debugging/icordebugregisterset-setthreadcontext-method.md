@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ee62c903da2f2568884b9be30b22bdcdc2d2c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1ea34c187de99d23b05b5e1a30c53bc54a6c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197397"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext, méthode
 `SetThreadContext` n’est pas implémentée dans le .NET Framework version 2.0. N'appelez pas cette méthode.  
@@ -40,7 +40,7 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
@@ -50,5 +50,6 @@ HRESULT SetThreadContext (
  **Versions du .NET framework :** 1.1, 1.0  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugRegisterSet, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

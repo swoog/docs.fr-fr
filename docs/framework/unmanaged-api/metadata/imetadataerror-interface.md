@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188628"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError, interface
 Fournit un mécanisme de rappel pour signaler les erreurs pendant la fusion des métadonnées.  
@@ -35,14 +35,15 @@ Fournit un mécanisme de rappel pour signaler les erreurs pendant la fusion des 
 |------------|-----------------|  
 |[OnError, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Fournit une notification des erreurs qui se produisent pendant la fusion des métadonnées.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

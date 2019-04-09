@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197150"
 ---
 # <a name="datagrid"></a>DataGrid
 Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’afficher et modifier des données à partir de nombreuses sources différentes, comme à partir d’une base de données SQL, requête LINQ ou toute autre source de données pouvant être liées. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](../data/binding-sources-overview.md).  
@@ -49,17 +49,18 @@ Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’afficher et
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Décrit comment configurer un projet WPF, ajouter un élément Entity Framework, définissez la source et afficher les données dans un <xref:System.Windows.Controls.DataGrid>.|  
-|[Guide pratique pour Ajouter des détails de la ligne à un contrôle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Décrit comment créer des détails de la ligne pour un <xref:System.Windows.Controls.DataGrid>.|  
-|[Guide pratique pour Implémenter la Validation avec le contrôle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Décrit comment valider des valeurs dans <xref:System.Windows.Controls.DataGrid> cellules et des lignes et des commentaires de validation complet.|  
+|[Procédure pas à pas : afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Décrit comment configurer un projet WPF, ajouter un élément Entity Framework, définissez la source et afficher les données dans un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procédure : ajouter des détails de ligne à un contrôle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Décrit comment créer des détails de la ligne pour un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procédure : implémenter la validation avec le contrôle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Décrit comment valider des valeurs dans <xref:System.Windows.Controls.DataGrid> cellules et des lignes et des commentaires de validation complet.|  
 |[Comportement par défaut du clavier et de la souris dans le contrôle DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Décrit comment interagir avec le <xref:System.Windows.Controls.DataGrid> contrôle à l’aide du clavier et la souris.|  
-|[Guide pratique pour Regrouper, trier et filtrer les données dans le contrôle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Décrit comment afficher des données dans un <xref:System.Windows.Controls.DataGrid> de différentes façons par regroupement, le tri et filtrage des données.|  
+|[Procédure : regrouper, trier et filtrer des données dans le contrôle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Décrit comment afficher des données dans un <xref:System.Windows.Controls.DataGrid> de différentes façons par regroupement, le tri et filtrage des données.|  
 |[Options de dimensionnement dans le contrôle DataGrid](sizing-options-in-the-datagrid-control.md)|Décrit comment contrôler le dimensionnement absolu et automatique dans le <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DataGrid>
-- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
-- [Vue d’ensemble des modèles de données](../data/data-templating-overview.md)
+- [Vue d'ensemble des modèles de données](../data/data-templating-overview.md)
 - [Contrôles](index.md)
-- [Modèle de contenu WPF](wpf-content-model.md)
+- [Modèle de contenu WPF](wpf-content-model.md)

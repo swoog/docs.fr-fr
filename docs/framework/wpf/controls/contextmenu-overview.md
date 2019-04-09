@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203546"
 ---
 # <a name="contextmenu-overview"></a>Vue d'ensemble de ContextMenu
 Le <xref:System.Windows.Controls.ContextMenu> classe représente l’élément qui expose les fonctionnalités à l’aide d’un contexte spécifiques <xref:System.Windows.Controls.Menu>. En règle générale, un utilisateur expose le <xref:System.Windows.Controls.ContextMenu> dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] en double-cliquant sur le bouton de la souris. Cette rubrique présente la <xref:System.Windows.Controls.ContextMenu> élément et fournit des exemples montrant comment l’utiliser dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et le code.  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>Contrôle ContextMenu  
  Un <xref:System.Windows.Controls.ContextMenu> est attaché à un contrôle spécifique. Le <xref:System.Windows.Controls.ContextMenu> élément vous permet de présenter aux utilisateurs une liste d’éléments qui spécifient des commandes ou des options qui sont associées à un contrôle particulier, par exemple, un <xref:System.Windows.Controls.Button>. Les utilisateurs cliquent avec le bouton droit sur le contrôle pour afficher le menu. En règle générale, en cliquant sur un <xref:System.Windows.Controls.MenuItem> ouvre un sous-menu ou entraîne l’application à exécuter une commande.  
@@ -63,6 +61,7 @@ Le <xref:System.Windows.Controls.ContextMenu> classe représente l’élément q
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>

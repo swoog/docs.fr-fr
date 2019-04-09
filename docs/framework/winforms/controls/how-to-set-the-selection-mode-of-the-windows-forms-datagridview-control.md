@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir le Mode de sélection du contrôle DataGridView Windows Forms'
+title: 'Procédure : définir le mode de sélection du contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 7529251e19989708bcb4a116cdb5edee64a417d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200556"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Procédure : Définir le Mode de sélection du contrôle DataGridView Windows Forms
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Procédure : définir le mode de sélection du contrôle DataGridView Windows Forms
 L’exemple de code suivant montre comment configurer un <xref:System.Windows.Forms.DataGridView> contrôle afin qu’automatiquement de cliquer n’importe où dans une ligne sélectionne la ligne entière, et par conséquent, ce qu’une seule ligne à la fois peut être sélectionnée.  
   
 ## <a name="example"></a>Exemple  
@@ -31,6 +31,7 @@ L’exemple de code suivant montre comment configurer un <xref:System.Windows.Fo
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: d215d4b8adcf3e4892c00be1629f92b657496780
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129621"
 ---
 # <a name="data-contract-known-types"></a>Types connus de contrats de données
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de spécifier, en avance, les types qui doivent être inclus pour être pris en compte pendant la désérialisation. Pour obtenir un exemple fonctionnel, consultez l’exemple [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -168,11 +168,12 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de 
  Un type de contrat de données dans le fichier de configuration précédent appelé `MyCompany.Library.Shape` est déclaré comme ayant `MyCompany.Library.Circle` comme type connu.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
-- [Types connus](../../../../docs/framework/wcf/samples/known-types.md)
-- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Known Types](../../../../docs/framework/wcf/samples/known-types.md)
+- [Équivalence de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Conception de contrats de service](../../../../docs/framework/wcf/designing-service-contracts.md)

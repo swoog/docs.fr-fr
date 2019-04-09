@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Modifiez la valeur d’un paramètre existant au moment du Design'
+title: 'Procédure : modifier la valeur d’un paramètre existant au moment du design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194238"
 ---
-# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Procédure : Modifiez la valeur d’un paramètre existant au moment du Design
+# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Procédure : modifier la valeur d’un paramètre existant au moment du design
 Vous pouvez utiliser Visual Studio pour modifier les valeurs des paramètres existants dans votre projet.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Pour modifier la valeur d’un paramètre existant au moment du Design en C\#
@@ -32,6 +32,7 @@ Vous pouvez utiliser Visual Studio pour modifier les valeurs des paramètres exi
 3.  Dans le Concepteur de paramètres, recherchez le paramètre pour lequel vous souhaitez modifier la valeur et tapez la nouvelle valeur dans la colonne valeur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de paramètres d'application et de paramètres utilisateur](using-application-settings-and-user-settings.md)
-- [Guide pratique pour Créer un nouveau paramètre au moment du Design](how-to-create-a-new-setting-at-design-time.md)
+- [Procédure : créer un paramètre au moment du design](how-to-create-a-new-setting-at-design-time.md)
 - [Vue d'ensemble des paramètres d'application](application-settings-overview.md)

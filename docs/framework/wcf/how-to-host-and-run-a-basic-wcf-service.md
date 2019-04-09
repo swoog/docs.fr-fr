@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197904"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutoriel : Héberger et exécuter un service Windows Communication Foundation de base
 
@@ -30,7 +30,6 @@ Dans ce didacticiel, vous apprendrez à :
 > - Ajoutez le code pour héberger le service WCF.
 > - Mettre à jour le fichier de configuration.
 > - Démarrer le service WCF et vérifier qu’il est en cours d’exécution.
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Créer et configurer un projet d’application console pour héberger le service
 
@@ -176,7 +175,6 @@ Apportez les modifications suivantes au code :
     
     Pour plus d’informations sur le fonctionne de ce code, consultez [Service étapes du programme d’hébergement](#service-hosting-program-steps).
 
-
 2. Mettre à jour les propriétés du projet :
 
    1. Dans le **l’Explorateur de solutions** fenêtre, sélectionnez le **GettingStartedHost** dossier, puis sélectionnez **propriétés** dans le menu contextuel.
@@ -189,7 +187,6 @@ Apportez les modifications suivantes au code :
 
    3. À partir de la **fichier** menu, sélectionnez **Enregistrer tout**.
 
-
 ## <a name="verify-the-service-is-working"></a>Vérifiez que le service fonctionne
 
 1. Générez la solution, puis exécutez le **GettingStartedHost** console application à partir de Visual Studio. 
@@ -200,7 +197,6 @@ Apportez les modifications suivantes au code :
    
    > [!NOTE]
    > Services tels que celui-ci requièrent l’autorisation appropriée pour enregistrer des adresses HTTP sur l’ordinateur pour l’écoute. Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur. Pour plus d’informations sur la configuration des réservations d’espaces de noms, consultez [Configuration de HTTP et HTTPS](feature-details/configuring-http-and-https.md). 
-
 
 ## <a name="service-hosting-program-steps"></a>Étapes de programme hébergement de service
 
@@ -223,7 +219,6 @@ Les étapes dans le code que vous avez ajouté pour héberger le service sont d�
 > Lorsque vous ajoutez une bibliothèque de service WCF, Visual Studio héberge il pour vous si vous le déboguez en démarrant un hôte de service. Pour éviter les conflits, vous pouvez empêcher Visual Studio à partir de l’hébergement de la bibliothèque de service WCF. 
 > 1. Sélectionnez le **GettingStartedLib** projet **l’Explorateur de solutions** et choisissez **propriétés** dans le menu contextuel.
 > 2. Sélectionnez **Options WCF** et décochez la case **démarrer WCF Service hôte lors du débogage d’un autre projet dans la même solution**.
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

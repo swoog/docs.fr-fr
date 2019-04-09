@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186873"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Spécification du comportement du service au moment de l'exécution
 Une fois que vous avez conçu un contrat de service ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) et implémenté votre contrat de service ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), vous pouvez configurer le comportement d’opération de l’exécution du service. Cette rubrique traite des comportements de service fournis par le système et des comportements d'opération et précise où rechercher plus d'informations pour créer de nouveaux comportements. Si certains comportements sont appliqués sous la forme d'attributs, un grand nombre s'appliquent à l'aide d'un fichier de configuration de l'application ou par programme. Pour plus d’informations sur la configuration de votre application de service, consultez [configuration des Services](../../../docs/framework/wcf/configuring-services.md).  
@@ -121,5 +121,6 @@ Une fois que vous avez conçu un contrat de service ([Designing Service Contract
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Spécifie le niveau dans lequel une opération de service accepte un en-tête de transaction.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Configuration des services](../../../docs/framework/wcf/configuring-services.md)
-- [Guide pratique pour L’instanciation de Service de contrôle](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Procédure : contrôler l’instanciation des services](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

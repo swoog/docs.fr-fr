@@ -1,16 +1,16 @@
 ---
-title: 'Procédure : Ajouter plusieurs jeux de paramètres à votre Application dansC#'
+title: 'Procédure : ajouter plusieurs jeux de paramètres à votre application en C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 106e0ee0b8775f329f3ffd8babe458cac8492bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187380"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procédure : Ajouter plusieurs jeux de paramètres à votre Application en C\#
 Dans certains cas, vous souhaiterez avoir plusieurs jeux de paramètres dans une application. Par exemple, si vous développez une application où un groupe particulier de paramètres est amené à changer fréquemment, il peut être judicieux de les placer dans un seul fichier afin que le fichier puisse être remplacé globalement, sans affecter les autres paramètres. Visual Studio permet d’ajouter plusieurs jeux de paramètres à votre projet. Ensembles de paramètres supplémentaires sont accessibles via l’objet Properties.Settings.  
@@ -26,5 +26,6 @@ Dans certains cas, vous souhaiterez avoir plusieurs jeux de paramètres dans une
 4.  Ajouter et utiliser des paramètres dans ce fichier comme vous le feriez pour tout autre fichier de paramètres. Vous pouvez accéder à ce groupe de paramètres via l’objet Properties.Settings.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de paramètres d'application et de paramètres utilisateur](using-application-settings-and-user-settings.md)
 - [Vue d'ensemble des paramètres d'application](application-settings-overview.md)

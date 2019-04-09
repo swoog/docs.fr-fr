@@ -2,12 +2,12 @@
 title: Opérations de copie en bloc dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 787fc283a258842b762923b620541b709b119894
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194797"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Opérations de copie en bloc dans SQL Server
 Microsoft SQL Server inclut un utilitaire de ligne de commande connu nommé **bcp** pour rapidement copier en bloc des fichiers volumineux dans des tables ou vues dans les bases de données SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> vous permet d'écrire des solutions de code managé qui offrent une fonctionnalité similaire. Il existe d'autres manières de charger des données dans une table SQL Server (par exemple, des instructions INSERT) mais <xref:System.Data.SqlClient.SqlBulkCopy> présente un avantage sensible sur le plan des performances.  
@@ -20,7 +20,7 @@ Microsoft SQL Server inclut un utilitaire de ligne de commande connu nommé **bc
   
 -   plusieurs opérations de copie en bloc ;  
   
--   une opération de copie en bloc à l’intérieur d’une transaction.  
+-   une opération de copie en bloc à l'intérieur d'une transaction.  
   
 > [!NOTE]
 >  Lorsque vous utilisez .NET Framework version 1.1 ou antérieure (qui ne prend pas en charge la <xref:System.Data.SqlClient.SqlBulkCopy> classe), vous pouvez exécuter SQL Server Transact-SQL **BULK INSERT** à l’aide de l’instruction la <xref:System.Data.SqlClient.SqlCommand> objet.  
@@ -36,8 +36,9 @@ Microsoft SQL Server inclut un utilitaire de ligne de commande connu nommé **bc
  Décrit comment effectuer plusieurs opérations de copie en bloc de données dans une instance de SQL Server à l'aide de la classe <xref:System.Data.SqlClient.SqlBulkCopy>.  
   
  [Transaction et opérations de copie en bloc](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
- Décrit comment effectuer une opération de copie en bloc à l’intérieur d’une transaction, y compris comment valider ou annuler la transaction.  
+ Décrit comment effectuer une opération de copie en bloc à l'intérieur d'une transaction, y compris comment valider ou annuler la transaction.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

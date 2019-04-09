@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 513fb623e328a8fa3abb1531715026ff9b6bf97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178995"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2, interface
 Fournit des méthodes qui sont utilisées par le common language runtime (CLR) pour signaler un profileur de code qui se produisent les événements auxquels le profileur s’est abonnée. Le `ICorProfilerCallback2` interface est une extension de la [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interface. Autrement dit, elle fournit des rappels nouvelle introduites dans .NET Framework version 2.0.  
@@ -52,16 +52,17 @@ Fournit des méthodes qui sont utilisées par le common language runtime (CLR) p
 > [!NOTE]
 >  Le profileur enregistre un objet COM unique. Si le profileur cible .NET Framework version 1.0 ou 1.1, cet objet COM doit uniquement implémenter les méthodes de `ICorProfilerCallback`. Si elle cible .NET Framework version 2.0 et versions ultérieures, l’objet COM doit également implémenter les méthodes de `ICorProfilerCallback2`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback3, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)

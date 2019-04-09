@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf061de3e75550e33ba67c1d624279b1673c5382
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 08c219dd033b39fc07159875b184cdf70e3aa3ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181517"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan, méthode
 Cartes s’étendent sur le jeton de métadonnées donné à la ligne source donné dans le fichier source spécifié.  
@@ -36,8 +36,9 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 ## <a name="return-value"></a>Valeur de retour  
  Retourne `HRESULT`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ISymUnmanagedWriter5, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)

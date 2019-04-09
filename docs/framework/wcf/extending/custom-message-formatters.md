@@ -2,12 +2,12 @@
 title: Formateurs de messages personnalisés
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196240"
 ---
 # <a name="custom-message-formatters"></a>Formateurs de messages personnalisés
 Le contenu d'un message est souvent au format XML, ce qui n'est pas généralement un format pratique pour une application. Les applications manipulent des objets, obtiennent et définissent leurs propriétés. Windows Communication Foundation (WCF) utilise le *contrat de données* pour convertir un <xref:System.ServiceModel.Channels.Message> objet dans un objet facile à traiter par une application. Ces processus sont appelés sérialisation et désérialisation. Notez que ces mêmes termes sont utilisés pour décrire la sérialisation et la désérialisation effectuées par la couche transport en direction et à partir du format de transmission de message, qui est un processus non apparenté.  
@@ -33,6 +33,7 @@ Le contenu d'un message est souvent au format XML, ce qui n'est pas généraleme
  Pour insérer le formateur personnalisé dans l'application de service, assignez l'objet <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> à la propriété <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> à l'aide d'un comportement d'opération. Pour plus d’informations sur les comportements, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
-- [Configuration et extension de l’exécution à l’aide de comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configuration et extension de l'exécution à l'aide de comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

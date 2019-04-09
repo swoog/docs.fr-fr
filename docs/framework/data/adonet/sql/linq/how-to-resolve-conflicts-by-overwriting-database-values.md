@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Résoudre les conflits en remplaçant des valeurs de la base de données'
+title: 'Procédure : Résoudre des conflits en remplaçant des valeurs de bases de données'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189116"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procédure : Résoudre les conflits en remplaçant des valeurs de la base de données
-Pour rapprocher des différences entre des valeurs de base de données attendues et réelles avant d’essayer de renvoyer vos modifications, vous pouvez utiliser <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> pour remplacer les valeurs de la base de données. Pour plus d’informations, consultez [d’accès concurrentiel optimiste : Vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procédure : Résoudre des conflits en remplaçant des valeurs de bases de données
+Pour harmoniser des différences entre des valeurs de base de données attendues et réelles avant d'essayer de renvoyer vos modifications, vous pouvez utiliser <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> pour remplacer les valeurs de la base de données. Pour plus d’informations, consultez [d’accès concurrentiel optimiste : Vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 >  Dans tous les cas, l'enregistrement sur le client est actualisé lors de la récupération des données mises à jour de la base de données. Cette action permet de s'assurer que la prochaine tentative de mise à jour n'échouera pas sur les mêmes vérifications d'accès concurrentiel.  
@@ -21,7 +21,7 @@ Pour rapprocher des différences entre des valeurs de base de données attendues
 ## <a name="example"></a>Exemple  
  Dans ce scénario, une exception <xref:System.Data.Linq.ChangeConflictException> est levée lorsque User1 tente de soumettre des modifications, car User2 a modifié entre-temps les colonnes Assistant et Department. Le tableau suivant présente la situation.  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |État de la base de données d'origine lors d'une interrogation par User1 et User2.|Alfreds|Maria|Sales|  
 |User1 s'apprête à soumettre ces modifications.|Alfred||Marketing|  
@@ -31,7 +31,7 @@ Pour rapprocher des différences entre des valeurs de base de données attendues
   
  Lorsque User1 résout le conflit à l'aide de <xref:System.Data.Linq.RefreshMode.KeepCurrentValues>, le résultat dans la base de données se présente comme dans le tableau suivant :  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |Nouvel état après résolution du conflit.|Alfred<br /><br /> (de User1)|Maria<br /><br /> (d'origine)|Marketing<br /><br /> (de User1)|  
   
@@ -41,4 +41,5 @@ Pour rapprocher des différences entre des valeurs de base de données attendues
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

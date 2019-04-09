@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner du texte encapsulé dans un Rectangle'
+title: 'Procédure : dessiner un habillage de texte dans un rectangle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152787"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procédure : Dessiner du texte encapsulé dans un Rectangle
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procédure : dessiner un habillage de texte dans un rectangle
 Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> paramètre. Vous utiliserez également un <xref:System.Drawing.Brush> et un <xref:System.Drawing.Font>.  
   
  Vous pouvez également dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> surchargées de la <xref:System.Windows.Forms.TextRenderer> qui accepte un <xref:System.Drawing.Rectangle> et un <xref:System.Windows.Forms.TextFormatFlags> paramètre. Vous utiliserez également un <xref:System.Drawing.Color> et un <xref:System.Drawing.Font>.  
@@ -45,7 +45,8 @@ Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xr
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+
+- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Guide pratique pour Construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
-- [Guide pratique pour Dessiner du texte à un emplacement spécifié](how-to-draw-text-at-a-specified-location.md)
+- [Procédure : construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
+- [Procédure : dessiner du texte à un emplacement spécifié](how-to-draw-text-at-a-specified-location.md)

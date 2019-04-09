@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Substituer les métadonnées d'une propriété de dépendance"
+title: 'Procédure : Substituer les métadonnées d’une propriété de dépendance'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209435"
 ---
-# <a name="how-to-override-metadata-for-a-dependency-property"></a>Procédure : Substituer les métadonnées d'une propriété de dépendance
+# <a name="how-to-override-metadata-for-a-dependency-property"></a>Procédure : Substituer les métadonnées d’une propriété de dépendance
 Cet exemple montre comment substituer les métadonnées de propriété de dépendance par défaut héritées d’une classe, en appelant le <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> (méthode) et en fournissant des métadonnées spécifiques au type.  
   
 ## <a name="example"></a>Exemple  
@@ -32,7 +32,8 @@ Cet exemple montre comment substituer les métadonnées de propriété de dépen
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.DependencyProperty>
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
-- [Rubriques de guide pratique](properties-how-to-topics.md)
+- [Rubriques Comment](properties-how-to-topics.md)

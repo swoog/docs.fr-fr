@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir les attributs de police pour le contrôle RichTextBox Windows Forms'
+title: 'Procédure : définir des attributs de police pour le contrôle RichTextBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 50a65a6828968f7bd9f1b17f5b8c8b1e4f70d051
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182908"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Procédure : Définir les attributs de police pour le contrôle RichTextBox Windows Forms
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Procédure : définir des attributs de police pour le contrôle RichTextBox Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de nombreuses options pour mettre en forme le texte affiché. Vous pouvez afficher les caractères sélectionnés en gras, italique ou en souligné, à l’aide de la <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propriété. Vous pouvez également utiliser cette propriété pour changer la taille et la police des caractères sélectionnés. Le <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propriété permet de modifier la couleur des caractères sélectionnés.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Pour changer l’apparence de caractères  
@@ -54,6 +54,7 @@ Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle a de n
     >  Ces propriétés affectent uniquement le texte sélectionné ou, si aucun texte n’est sélectionné, le texte tapé à l’emplacement actif du point d’insertion. Pour plus d’informations sur la sélection de texte par programmation, consultez <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, contrôle](richtextbox-control-windows-forms.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

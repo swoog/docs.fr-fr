@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Affecter un arrière-plan Transparent à votre contrôle'
+title: 'Procédure : donner à votre contrôle un arrière-plan transparent'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent backgrounds [Windows Forms], custom controls
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 5a54b76eb92c7d3f518b9bf13e154e6faf58de63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206094"
 ---
-# <a name="how-to-give-your-control-a-transparent-background"></a>Procédure : Affecter un arrière-plan Transparent à votre contrôle
+# <a name="how-to-give-your-control-a-transparent-background"></a>Procédure : donner à votre contrôle un arrière-plan transparent
 Dans les versions antérieures de .NET Framework, les contrôles ne prenaient pas en charge la définition de couleurs d’arrière-plan transparentes sans définition préalable de la méthode <xref:System.Windows.Forms.Control.SetStyle%2A> dans le constructeur du formulaire. Dans la version actuelle de l’infrastructure, vous pouvez affecter <xref:System.Drawing.Color.Transparent%2A> comme couleur d’arrière-plan de la plupart des contrôles  dans la fenêtre **Propriétés** au moment du design ou dans le code dans le constructeur du formulaire.  
   
 > [!NOTE]
@@ -24,10 +24,11 @@ Dans les versions antérieures de .NET Framework, les contrôles ne prenaient pa
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>Pour affecter un arrière-plan transparent à votre contrôle  
   
--   Dans la fenêtre Propriétés, choisissez la propriété <xref:System.Windows.Forms.ButtonBase.BackColor%2A> et affectez-lui la valeur <xref:System.Drawing.Color.Transparent%2A>.  
+-   Dans la fenêtre Propriétés, choisissez le <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propriété et affectez-lui la valeur <xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
 - [Utilisation de classes graphiques managées](../advanced/using-managed-graphics-classes.md)
-- [Guide pratique pour Dessiner des lignes opaques et translucides](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Procédure : dessiner des lignes opaques et translucides](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

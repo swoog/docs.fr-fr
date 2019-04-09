@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déterminer le moment de la mise en forme de la modification d’attributs dans le contrôle RichTextBox Windows Forms'
+title: 'Procédure : déterminer à quel moment les attributs de mise en forme changent dans le contrôle RichTextBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e35ebb7c90be00a814d465af3546de2bcd11c5de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183939"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procédure : Déterminer le moment de la mise en forme de la modification d’attributs dans le contrôle RichTextBox Windows Forms
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procédure : déterminer à quel moment les attributs de mise en forme changent dans le contrôle RichTextBox Windows Forms
 Une utilisation courante des formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle est mise en forme de texte avec des attributs tels que les options de police ou des styles de paragraphe. Votre application peut avoir besoin d’effectuer le suivi de toutes les modifications de texte mise en forme en vue d’afficher une barre d’outils, comme dans nombreuses applications de traitement de texte.  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>Pour répondre aux modifications de mise en forme des attributs  
@@ -81,6 +81,7 @@ Une utilisation courante des formulaires Windows <xref:System.Windows.Forms.Rich
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, contrôle](richtextbox-control-windows-forms.md)

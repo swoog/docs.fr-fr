@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128678"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Récupérer des données à l’aide d’un DataReader
 Pour récupérer des données à l’aide un **DataReader**, créez une instance de la **commande** de l’objet, puis créez un **DataReader** en appelant **Command.ExecuteReader**  pour extraire des lignes à partir d’une source de données. Le **DataReader** fournit un flux sans tampon de données qui permet la logique procédurale de traiter efficacement les résultats à partir d’une source de données de manière séquentielle. Le **DataReader** constitue un bon choix lorsque vous récupérez les grandes quantités de données, car les données ne sont pas mis en cache en mémoire.
@@ -258,7 +258,8 @@ adapter.Fill(ds);
 >  Pour éviter un **OverflowException**, nous recommandons que vous gérez également toute conversion à partir du type Oracle NUMBER en un type .NET Framework valide avant de stocker la valeur dans un <xref:System.Data.DataRow>. Vous pouvez utiliser la <xref:System.Data.Common.DataAdapter.FillError> événement pour déterminer si un **OverflowException** s’est produite. Pour plus d’informations sur la <xref:System.Data.Common.DataAdapter.FillError> événement, consultez [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Extraction des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

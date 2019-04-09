@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206939"
 ---
 # <a name="documents"></a>Documents
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un ensemble polyvalent de composants qui permettent aux développeurs de créer des applications avec les fonctionnalités de document avancées et une expérience de lecture améliorée. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également des services de gestion simplifiée pour le packaging, la sécurité et le stockage des documents.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un ensemble polyvalent de composants qui permettent aux développeurs de créer des applications avec des fonctionnalités de document avancées et une expérience de lecture améliorée. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également des services de gestion simplifiée pour le packaging, la sécurité et le stockage des documents.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Documents dans WPF](documents-in-wpf.md)  
@@ -22,9 +22,10 @@ ms.locfileid: "54546973"
  [Annotations](annotations.md)  
  [Contenu de flux](flow-content.md)  
  [Typographie](typography.md)  
- [Impression et gestion du système d’impression](printing-and-print-system-management.md)  
+ [Impression et gestion du système d'impression](printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>

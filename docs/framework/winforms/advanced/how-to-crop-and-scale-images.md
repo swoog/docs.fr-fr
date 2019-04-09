@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Rogner et mettre à l’échelle des Images'
+title: 'Procédure : rogner et mettre à l’échelle des images'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189883"
 ---
-# <a name="how-to-crop-and-scale-images"></a>Procédure : Rogner et mettre à l’échelle des Images
+# <a name="how-to-crop-and-scale-images"></a>Procédure : rogner et mettre à l’échelle des images
 Le <xref:System.Drawing.Graphics> classe fournit plusieurs <xref:System.Drawing.Graphics.DrawImage%2A> méthodes, dont certaines ont des paramètres de rectangle source et destination que vous pouvez utiliser pour rogner et mettre à l’échelle des images.  
   
 ## <a name="example"></a>Exemple  
@@ -36,5 +36,6 @@ Le <xref:System.Drawing.Graphics> classe fournit plusieurs <xref:System.Drawing.
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Veillez à remplacer `Apple.gif` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

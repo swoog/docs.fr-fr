@@ -2,25 +2,25 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191911"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET est un ensemble de classes qui exposent les services d'accès aux données pour les programmeurs .NET Framework. ADO.NET propose un large ensemble de composants pour la création d'applications distribuées avec partage de données. Partie intégrante du .NET Framework, il permet d'accéder à des données relationnelles, XML et d'application. ADO.NET répond à divers besoins en matière de développement, en permettant notamment de créer des clients de bases de données frontaux et des objets métier de couche intermédiaire utilisés par des applications, outils, langages ou navigateurs Internet.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Nouveautés d’ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [Nouveautés dans ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Introduit des fonctionnalités nouvelles dans ADO.NET.  
   
- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Propose une introduction à la conception et aux composants de la technologie ADO.NET.  
   
  [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
- Décrit comment créer des applications à l’aide d’Entity Framework.  
+ Décrit comment créer des applications à l'aide d'Entity Framework.  
   
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Décrit des pratiques de codage sécurisées dans ADO.NET.  
@@ -41,7 +41,7 @@ ADO.NET est un ensemble de classes qui exposent les services d'accès aux donné
  Décrit comment utiliser des fonctions et fonctionnalités spécifiques à SQL Server.  
   
  [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- Décrit des fonctionnalités et des comportements spécifiques au fournisseur de données .NET Framework pour Oracle.  
+ Décrit des fonctions et des comportements spécifiques au fournisseur de données .NET Framework pour Oracle.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Language-Integrated Query (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
@@ -56,9 +56,10 @@ ADO.NET est un ensemble de classes qui exposent les services d'accès aux donné
  [Guide de développement .NET Framework](../../development-guide.md)  
  Fournit des liens vers des informations sur les tâches de développement standard dans le .NET Framework.  
   
- [Exemples et tutoriels](../../../samples-and-tutorials/index.md)  
+ [Exemples et didacticiels](../../../samples-and-tutorials/index.md)  
  Fournit une liste de didacticiels et exemples .NET.
   
 ## <a name="see-also"></a>Voir aussi
-- [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+
+- [L’accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

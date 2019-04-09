@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197839"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Options de dimensionnement dans le contrôle DataGridView Windows Forms
 <xref:System.Windows.Forms.DataGridView> lignes, colonnes et en-têtes peuvent modifier la taille à la suite de nombreuses occurrences différentes. Le tableau suivant présente ces occurrences.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717906"
  Les énumérations utilisées par les méthodes et propriétés de dimensionnement ont des valeurs similaires pour le dimensionnement en fonction du contenu. Avec ces valeurs, vous pouvez limiter les cellules sont utilisées pour calculer les tailles préférées. Pour toutes les énumérations de dimensionnement, les valeurs avec des noms qui font référence aux cellules affichées limitent leurs calculs aux cellules des lignes affichées. Exclusion de lignes est utile pour éviter une altération des performances lorsque vous travaillez avec une grande quantité de lignes. Vous pouvez également limiter les calculs aux valeurs des cellules dans un en-tête ou aux cellules.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -156,4 +157,4 @@ ms.locfileid: "57717906"
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Procédure : définir les modes de dimensionnement du contrôle DataGridView Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

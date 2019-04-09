@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Exécution d’une opération de glisser-déplacer dans les Windows Forms'
+title: 'Procédure pas à pas : exécution d’une opération glisser-déplacer dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189025"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procédure pas à pas : Exécution d’une opération de glisser-déplacer dans les Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procédure pas à pas : exécution d’une opération glisser-déplacer dans Windows Forms
 Pour effectuer des opérations de glisser-déplacer dans des applications Windows vous devez gérer une série d’événements, plus particulièrement la <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, et <xref:System.Windows.Forms.Control.DragDrop> événements. En utilisant les informations disponibles dans les arguments de ces événements, vous pouvez faciliter les opérations de glisser-déplacer.  
   
 ## <a name="dragging-data"></a>Faire glisser des données  
@@ -107,6 +107,7 @@ Pour effectuer des opérations de glisser-déplacer dans des applications Window
     >  En outre, vous pouvez travailler avec le <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> propriété, afin que, selon les touches enfoncées pendant l’opération de glisser-déplacer, certains effets se produisent (par exemple, il est standard pour copier les données glissées quand la touche CTRL est enfoncée).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Ajouter des données dans le Presse-papiers](how-to-add-data-to-the-clipboard.md)
-- [Guide pratique pour Récupérer des données à partir du Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)
+
+- [Procédure : ajouter des données au Presse-papiers](how-to-add-data-to-the-clipboard.md)
+- [Procédure : récupérer des données dans le Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)
 - [Opérations glisser-déposer et prise en charge du Presse-papiers](drag-and-drop-operations-and-clipboard-support.md)

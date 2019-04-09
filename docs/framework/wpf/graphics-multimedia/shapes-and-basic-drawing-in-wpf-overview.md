@@ -12,19 +12,18 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189130"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Vue d'ensemble des formes et dessins de base dans WPF
 Cette rubrique donne une vue d’ensemble de la façon de dessiner avec <xref:System.Windows.Shapes.Shape> objets. Un <xref:System.Windows.Shapes.Shape> est un type de <xref:System.Windows.UIElement> qui vous permet de dessiner une forme à l’écran. Étant donné que ce sont des éléments d’interface utilisateur, <xref:System.Windows.Shapes.Shape> objets peuvent être utilisés à l’intérieur de <xref:System.Windows.Controls.Panel> la plupart des contrôles et éléments.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre plusieurs couches d’accès aux services graphiques et de rendu. À la couche supérieure, <xref:System.Windows.Shapes.Shape> les objets sont faciles à utiliser et fournissent de nombreuses fonctionnalités utiles, telles que la disposition et la participation dans le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] système d’événements.  
-  
-  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre plusieurs couches d’accès aux services de rendu et de graphiques. À la couche supérieure, <xref:System.Windows.Shapes.Shape> les objets sont faciles à utiliser et fournissent de nombreuses fonctionnalités utiles, telles que la disposition et la participation dans le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] système d’événements.  
+
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Objets Shape  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit un certain nombre de prêts à l’emploi <xref:System.Windows.Shapes.Shape> objets.  Tous les objets de forme héritent la <xref:System.Windows.Shapes.Shape> classe. Objets de forme disponibles incluent <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, et <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> objets partagent les propriétés communes suivantes.  
@@ -215,8 +214,9 @@ myPolygon.StrokeThickness = 2;
  Dans les exemples précédents, une transformation unique a été appliquée à chaque objet Shape. Pour appliquer plusieurs transformations à une forme (ou tout autre élément d’interface utilisateur), utilisez un <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d’ensemble de Geometry](geometry-overview.md)
+
+- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d'ensemble de Geometry](geometry-overview.md)
 - [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)

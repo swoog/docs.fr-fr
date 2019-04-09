@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209735"
 ---
 # <a name="typography-how-to-topics"></a>Rubriques "Comment" relatives à la typographie
 Les rubriques de cette section décrivent comment utiliser [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prise en charge pour la présentation enrichie du texte dans vos applications.  
@@ -20,14 +20,15 @@ Les rubriques de cette section décrivent comment utiliser [!INCLUDE[TLA#tla_win
  [Créer une décoration de texte](how-to-create-a-text-decoration.md)  
  [Spécifier si un lien hypertexte est souligné ou non](how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [Appliquer des transformations à du texte](how-to-apply-transforms-to-text.md)  
- [Guide pratique pour appliquer des animations à du texte](how-to-apply-animations-to-text.md)  
+ [Appliquer des animations à du texte](how-to-apply-animations-to-text.md)  
  [Créer du texte avec une ombre](how-to-create-text-with-a-shadow.md)  
  [Créer du texte avec contour](how-to-create-outlined-text.md)  
  [Dessiner du texte sur l’arrière-plan d’un contrôle](how-to-draw-text-to-a-control-background.md)  
- [Ajouter du texte à un Visual](how-to-draw-text-to-a-visual.md)  
+ [Ajouter du texte à un visuel](how-to-draw-text-to-a-visual.md)  
  [Utiliser des caractères spéciaux en XAML](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Documents.Typography>
 - [Documents dans WPF](documents-in-wpf.md)
 - [Fonctionnalités des polices OpenType](opentype-font-features.md)

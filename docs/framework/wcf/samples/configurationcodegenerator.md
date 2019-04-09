@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195187"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer vos implémentations de canal personnalisées au système de configuration. Cela permet aux utilisateurs de votre canal personnalisé de configurer votre canal en utilisant un fichier .config comme ils configureraient une liaison fournie par le système telle que `NetTcpBinding` ou une liaison personnalisée à l'aide de `TcpTransportBindingElement`.  
@@ -49,4 +49,3 @@ Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer
          Si vous avez spécifié le/SB : option le CodeToAddTo\<*YourStdBinding*> .cs comprend un code que vous devez ajouter manuellement à la classe qui implémente votre liaison standard.  
   
      Le fichier SampleConfig.xml contient le code de configuration que vous devez ajouter au fichier de configuration qui enregistre les gestionnaires définis à l'étape 1 ou 2 précédente.  
-  

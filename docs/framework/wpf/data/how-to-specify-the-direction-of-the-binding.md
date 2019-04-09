@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 265271cee16d203d7652281c5416b93759e66d4b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206432"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Procédure : Spécifier le sens de la liaison
 Cet exemple montre comment spécifier si la liaison met à jour uniquement la propriété de la cible de liaison (cible), uniquement la propriété de la source de liaison (source), ou bien à la fois la propriété cible et la propriété source.  
@@ -40,6 +40,7 @@ Cet exemple montre comment spécifier si la liaison met à jour uniquement la pr
  Pour <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons, vous pouvez contrôler le minutage des mises à jour des source en définissant le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété. Pour plus d'informations, voir <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Data.Binding>
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

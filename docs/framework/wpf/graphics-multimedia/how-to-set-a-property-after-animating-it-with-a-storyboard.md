@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Définir une propriété après l'avoir animée avec un storyboard"
+title: 'Procédure : Définir une propriété après l’avoir animée avec une table de montage séquentiel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-ms.openlocfilehash: 1f66c79f18fd02327c0c1f4f20787e566437f20f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188309"
 ---
-# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procédure : Définir une propriété après l'avoir animée avec un storyboard
+# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procédure : Définir une propriété après l’avoir animée avec une table de montage séquentiel
 Dans certains cas, il peut sembler que vous ne pouvez pas modifier la valeur d’une propriété après que qu’elle a été animée.  
   
 ## <a name="example"></a>Exemple  
@@ -63,8 +63,9 @@ Dans certains cas, il peut sembler que vous ne pouvez pas modifier la valeur d�
  Cette technique fonctionne également pour les animations table de montage séquentiel.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.Animation.RemoveStoryboard>
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)

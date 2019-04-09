@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193666"
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
 <a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](./app-development/wpf-add-ins-overview.md).  
@@ -266,16 +266,17 @@ ms.locfileid: "58654313"
   
 |Domaine|Ressource|  
 |----------|--------------|  
-|Code managé|[Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Sécurité d’accès du code](../misc/code-access-security.md)|  
+|Code managé|[Modèles et pratiques de sécurité pour les Applications](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Sécurité d'accès du code](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Sécurité de confiance partielle de WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité de confiance partielle de WPF](wpf-partial-trust-security.md)
 - [Stratégie de sécurité de WPF - sécurité de la plateforme](wpf-security-strategy-platform-security.md)
 - [Stratégie de sécurité de WPF - ingénierie de sécurité](wpf-security-strategy-security-engineering.md)
-- [Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)
-- [Sécurité d’accès du code](../misc/code-access-security.md)
+- [Modèles et pratiques de sécurité pour les Applications](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Sécurité d'accès du code](../misc/code-access-security.md)
 - [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Vue d’ensemble du langage XAML (WPF)](./advanced/xaml-overview-wpf.md)

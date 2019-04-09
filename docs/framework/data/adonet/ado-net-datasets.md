@@ -2,12 +2,12 @@
 title: Datasets ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190936"
 ---
 # <a name="adonet-datasets"></a>Datasets ADO.NET
 L'objet <xref:System.Data.DataSet> est l'élément central pour la prise en charge de scénarios impliquant des données distribuées et déconnectées avec [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Le **DataSet** est une représentation résidente en mémoire de données qui fournit un modèle de programmation relationnel cohérent quelle que soit la source de données. Il peut être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le **DataSet** représente un ensemble complet de données, y compris les tables associées, des contraintes et des relations entre les tables. L’illustration suivante montre le **DataSet** modèle objet.  
@@ -41,12 +41,13 @@ Modèle d'objet DataSet
  Le **DataSet**, **DataTable**, et **DataColumn** ont toutes un **ExtendedProperties** propriété. **ExtendedProperties** est un **PropertyCollection** où vous pouvez placer des informations personnalisées, telles que l’instruction SELECT qui a été utilisée pour générer le jeu de résultats, ou l’heure à laquelle les données a été générées. Le **ExtendedProperties** collection est rendue persistante avec les informations de schéma pour le **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fournit les fonctionnalités LINQ (Language Integrated Query) pour traiter les données déconnectées stockées dans un DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilise le standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] syntaxe et fournit la vérification de la syntaxe de la compilation, le typage statique et la prise en charge IntelliSense lorsque vous utilisez l’IDE Visual Studio.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Fournit des fonctionnalités language-integrated Query pour les données déconnectées stockées dans un jeu de données. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilise le standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] syntaxe et fournit la vérification de la syntaxe de la compilation, le typage statique et la prise en charge IntelliSense lorsque vous utilisez l’IDE Visual Studio.  
   
  Pour plus d’informations, [consultez LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

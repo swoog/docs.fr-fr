@@ -1,5 +1,5 @@
 ---
-title: Structure de DacpMethodDescData
+title: DacpMethodDescData, structure
 ms.date: 02/01/2019
 api.name:
 - DacpMethodDescData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203195"
 ---
-# <a name="dacpmethoddescdata-structure"></a>Structure de DacpMethodDescData
+# <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData, structure
 
 Définit une mémoire tampon de transport pour les informations d’exécution d’une méthode.
 
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Informations de ReJIT pour l’adresse native demandée.                                             |
 | `cJittedRejitVersions`       | Nombre de fois que la méthode a été rejitted via l’instrumentation.                           |
 
-
 ## <a name="remarks"></a>Notes
 
 Cette structure se trouve au sein du runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque. Pour l’utiliser, définir la structure comme indiqué ci-dessus.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  
 **Bibliothèque :** Aucun.  
-**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Types de données communs](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

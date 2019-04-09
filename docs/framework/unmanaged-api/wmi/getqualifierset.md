@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193094"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet (fonction)
 Récupère le jeu de qualificateurs pour une instance de classe ou une définition de classe.
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `ppQualSet`  
-[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe. `ppQualSet` ne peut pas avoir la valeur `null`. Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié. 
+[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe. `ppQualSet` Ne peut pas être `null`. Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié. 
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -67,12 +67,13 @@ Cette fonction encapsule un appel à la [IWbemClassObject::GetQualifierSet](/win
 
 Le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permet à l’appelant ajouter, modifier ou supprimer ces qualificateurs. Ces qualificateurs ajoutés, modifiés ou supprimés s’appliquent à la définition de classe ou instance entière.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

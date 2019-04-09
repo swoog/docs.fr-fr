@@ -1,5 +1,5 @@
 ---
-title: <add>, élément de webRequestModules (paramètres réseau)
+title: <add> Élément de webRequestModules (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188238"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<Ajouter >, élément de webRequestModules (paramètres réseau)
 Ajoute un module de demande Web personnalisé à l’application.  
@@ -82,5 +82,6 @@ Ajoute un module de demande Web personnalisé à l’application.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.WebRequest>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

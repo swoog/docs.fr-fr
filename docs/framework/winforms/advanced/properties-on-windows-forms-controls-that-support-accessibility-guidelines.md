@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183779"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Propriétés des contrôles Windows Forms que prennent en charge les instructions relatives à l'accessibilité
 Contrôles sur la boîte à outils standard pour les Windows Forms prennent en charge de nombreuses règles d’accessibilité, y compris l’exposition du focus clavier et l’exposition des éléments de l’écran.  
@@ -31,4 +31,5 @@ Contrôles sur la boîte à outils standard pour les Windows Forms prennent en c
 |BackgroundImage|Ne renseignez pas cette propriété pour rendre le texte plus lisible.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Procédure pas à pas : Création d’une Application Windows Accessible](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [Procédure pas à pas : création d’une application Windows accessible](walkthrough-creating-an-accessible-windows-based-application.md)

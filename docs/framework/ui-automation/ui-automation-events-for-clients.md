@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b384e3dde3f2f6ba75feef7954dc9872bd3e3cd5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196357"
 ---
 # <a name="ui-automation-events-for-clients"></a>Événements UI Automation pour les clients
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57676380"
   
  Cette rubrique décrit comment les événements [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sont utilisés par les clients UI Automation.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permet aux clients de s’abonner à des événements d’intérêt. Cette fonctionnalité améliore les performances en éliminant le besoin d’interroger continuellement tous les éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] du système pour vérifier si des informations, la structure ou l’état ont été modifiés.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permet aux clients de s’abonner aux événements d’intérêt. Cette fonctionnalité améliore les performances en éliminant le besoin d’interroger continuellement tous les éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] du système pour vérifier si des informations, la structure ou l’état ont été modifiés.  
   
  L’efficacité est également améliorée par la possibilité d’écouter des événements uniquement dans une portée définie. Par exemple, un client peut écouter des événements de modification de focus sur tous les éléments [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de l’arborescence ou sur un seul élément et ses descendants.  
   
@@ -58,7 +58,8 @@ ms.locfileid: "57676380"
  Par exemple de code, consultez [s’abonner aux événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [S’abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [Vue d’ensemble des événements UI Automation](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [Vue d’ensemble des propriétés UI Automation](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+
+- [S'abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Vue d'ensemble des événements UI Automation](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [Vue d'ensemble des propriétés UI Automation](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
 - [Exemple de TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

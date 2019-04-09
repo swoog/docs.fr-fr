@@ -2,12 +2,12 @@
 title: 'Procédure : Partitionnement des données du service'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150096"
 ---
 # <a name="how-to-service-data-partitioning"></a>Procédure : Partitionnement des données du service
 Cette rubrique présente les étapes de base requises pour partitionner des messages entre plusieurs instances du même service de destination. Le partitionnement des données du service est en général utilisé pour faire évoluer un service vers une meilleure qualité ou pour gérer les demandes de différents clients de manière spécifique. Par exemple, les messages à partir de valeur élevée ou les clients « Gold » devront peut-être être traités avec une priorité plus élevée que les messages à partir d’un client standard.  
@@ -174,4 +174,5 @@ Cette rubrique présente les étapes de base requises pour partitionner des mess
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Services de routage](../../../../docs/framework/wcf/samples/routing-services.md)

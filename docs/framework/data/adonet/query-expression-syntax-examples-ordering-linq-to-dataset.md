@@ -1,18 +1,18 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Classement (LINQ to DataSet)'
+title: 'Exemples de syntaxe d’expression de requête : Classement (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
-ms.openlocfilehash: 442ae0cfaf93fbd7d7fd20a1867909206cca3b21
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b8f605eaa3a186ebb6bad7800d6576bd4d5a34b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203897"
 ---
-# <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Classement (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Exemples de syntaxe d’expression de requête : Classement (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> et <xref:System.Linq.Enumerable.ThenByDescending%2A> pour interroger un <xref:System.Data.DataSet> et classer les résultats à l'aide de la syntaxe d'expression de requête.  
   
  Le `FillDataSet` méthode utilisé dans ces exemples est spécifiée dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -65,7 +65,8 @@ Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:Sys
  [!code-vb[DP LINQ to DataSet Examples#ThenByDescendingSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Exemples de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Présentation des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

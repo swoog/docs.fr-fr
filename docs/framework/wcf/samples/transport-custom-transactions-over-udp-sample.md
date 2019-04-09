@@ -2,12 +2,12 @@
 title: 'Transport : Transactions personnalisées sur UDP exemple'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174276"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport : Transactions personnalisées sur UDP exemple
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple dans Windows Communication Foundation (WCF)[extensibilité du Transport](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l’exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l’utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` est une méthode d'assistance qui contient de nouvelles fonctionnalités permettant de fusionner le jeton de propagation de la transaction actuelle avec l'entité de message, et de le placer dans une mémoire tampon.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` est une méthode d’assistance qui contient de nouvelles fonctionnalités pour fusionner le jeton de propagation de la transaction en cours avec l’entité de message et le placer dans une mémoire tampon.  
   
  Pour le transport de flux de transaction personnalisée, l’implémentation du client doit connaître les opérations de service nécessitent des flux de transaction et de transmettre ces informations à WCF. Un mécanisme doit également permettre de transmettre la transaction utilisateur à la couche de transport. Cet exemple utilise « Inspecteurs de message WCF » pour obtenir ces informations. L’inspecteur de message client implémenté ici et appelé `TransactionFlowInspector` effectue les tâches suivantes :  
   
 -   Il détermine si une transaction doit être transmise pour une action de message donnée (cette opération a lieu dans `IsTxFlowRequiredForThisOperation()`).  
   
--   Il joint la transaction ambiante actuelle au message à l'aide de `TransactionFlowProperty`, si une transaction doit être transmise (cette opération s'effectue dans `BeforeSendRequest()`).  
+-   Il joint la transaction ambiante actuelle au message à l’aide de `TransactionFlowProperty`, si une transaction doit être transmise (cette opération s’effectue dans `BeforeSendRequest()`).  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -117,7 +117,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- Le mécanisme précédent étant en place, le code utilisateur crée un `TransactionScope` avant d'appeler l'opération de service. L’inspecteur de message veille à ce que la transaction soit passée au transport si elle doit être transmise à l’opération de service.  
+ Le mécanisme précédent étant en place, le code utilisateur crée un `TransactionScope` avant d'appeler l'opération de service. L'inspecteur de message veille à ce que la transaction soit passée au transport si elle doit être transmise à l'opération de service.  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- Après réception d’un paquet UDP émanant du client, le service désérialise ce paquet afin d’extraire le message et éventuellement une transaction.  
+ Après réception d'un paquet UDP émanant du client, le service désérialise ce paquet afin d'extraire le message et éventuellement une transaction.  
   
 ```  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` est la méthode d'assistance qui annule le processus de sérialisation effectué par `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` est la méthode d’assistance qui inverse le processus de sérialisation effectué par `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Si une transaction a été transmise, elle est ajoutée au message dans `TransactionMessageProperty`.  
   
@@ -172,7 +172,7 @@ if (transaction != null)
 }  
 ```  
   
- Cela garantit que le répartiteur sélectionne la transaction au moment de la distribution et l'utilise lors de l'appel de l'opération de service traitée par le message.  
+ Cela garantit que le répartiteur sélectionne la transaction au moment de la distribution et l’utilise lors de l’appel de l’opération de service traitée par le message.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -219,7 +219,7 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  L'application de service affiche le message `The client transaction has flowed to the service` si elle peut faire correspondre l'identificateur de transaction envoyé par le client (dans le paramètre `clientTransactionId` de l'opération `CalculatorService.Add()`) à l'identificateur de la transaction de service. Une correspondance est obtenue uniquement si la transaction cliente est transmise au service.  
+6.  L’application de service affiche le message `The client transaction has flowed to the service` si elle peut faire correspondre l’identificateur de transaction envoyé par le client (dans le paramètre `clientTransactionId` de l’opération `CalculatorService.Add()`) à l’identificateur de la transaction de service. Une correspondance est obtenue uniquement si la transaction cliente est transmise au service.  
   
 7.  Pour exécuter l'application cliente sur des points de terminaison publiés à l'aide de la configuration, appuyez sur ENTRÉE dans la fenêtre d'application de service, puis réexécutez le client test. La sortie suivante doit s'afficher sur le service.  
   
@@ -237,7 +237,7 @@ if (transaction != null)
     svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Svcutil.exe ne générant pas de configuration d'extension de liaison pour `sampleProfileUdpBinding`, vous devez donc l'ajouter manuellement.  
+10. Svcutil.exe ne générant pas de configuration d’extension de liaison pour `sampleProfileUdpBinding`, vous devez donc l’ajouter manuellement.  
   
     ```xml  
     <configuration>  
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

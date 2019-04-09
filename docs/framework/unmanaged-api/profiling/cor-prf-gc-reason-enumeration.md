@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13740920e8db5d44b71cd3c324742945c64b3e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196942"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON, énumération
 Indique la raison pour laquelle une récupération de mémoire se produit.  
@@ -42,14 +42,15 @@ typedef enum {
 |`COR_PRF_GC_INDUCED`|Le garbage collection a été induit par une <xref:System.GC.Collect%2A> (méthode).|  
 |`COR_PRF_GC_OTHER`|La raison n’est pas spécifiée.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

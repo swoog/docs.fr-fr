@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125930"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset, méthode
 Pour un offset IL spécifié, obtient les offsets natifs où un point d’arrêt doit être placé afin que le débogueur puisse obtenir la valeur de retour d’une fonction.  
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  La fonction retourne le `HRESULT` valeurs indiquées dans le tableau suivant.  
   
-|Valeur`HRESULT` |Description|  
+|`HRESULT` valeur|Description|  
 |---------------------|-----------------|  
 |`S_OK`|Opération réussie.|  
 |`CORDBG_E_INVALID_OPCODE`|Le site offset IL donné n’est pas une instruction d’appel, ou la fonction retourne `void`.|  
@@ -69,15 +69,16 @@ HRESULT GetReturnValueLiveOffset(
   
  Le `ICorDebugCode3::GetReturnValueLiveOffset` méthode n’est disponible uniquement sur x86 et les systèmes AMD64.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [GetReturnValueForILOffset, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
 - [ICorDebugCode3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

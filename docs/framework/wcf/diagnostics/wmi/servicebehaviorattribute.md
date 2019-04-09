@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6221e93f10b87a368bd594932a8c36ae14df8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206874"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -89,7 +89,7 @@ Type d’accès : Propriétés en lecture seule
   
  Nombre maximal d'éléments autorisés dans un objet sérialisé.  
   
-### <a name="name"></a>Name  
+### <a name="name"></a>Nom  
  Type de données : chaîne  
   
  Type d’accès : Propriétés en lecture seule  
@@ -122,7 +122,7 @@ Type d’accès : Propriétés en lecture seule
   
  Type d’accès : Propriétés en lecture seule  
   
- Spécifie le niveau d’isolation de la transaction.  
+ Spécifie le niveau d'isolation de la transaction.  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
  Type de données : datetime  
@@ -145,11 +145,12 @@ Type d’accès : Propriétés en lecture seule
   
  Spécifie si le système ou l'application applique le traitement d'en-tête SOAP MustUnderstand.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>

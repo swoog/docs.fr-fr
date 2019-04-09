@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202649"
 ---
 # <a name="getnames-function"></a>GetNames, fonction
 Récupère une partie ou l’ensemble des noms des propriétés d’un objet. 
@@ -80,7 +80,6 @@ Nommé retourné est contrôlé par une combinaison d’indicateurs et de param�
 
 L’indicateur des valeurs dans `lFlags` sont des champs de bits
 
-
 Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument sont des champs de bits qui sont définis dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code.  Vous pouvez combiner un indicateur de chaque groupe avec n’importe quel indicateur à partir d’un autre groupe. Toutefois, les indicateurs à partir du même groupe sont mutuellement exclusifs. 
 
 | Indicateurs de groupe 1 |Value  |Description  |
@@ -104,12 +103,13 @@ Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument s
 
 La fonction alloue toujours un nouveau `SAFEARRAY` si elle retourne `WBEM_S_NO_ERROR`, et `pstrNames` est toujours défini pour pointer vers elle. Le tableau retourné peut avoir les éléments 0 si aucune propriété correspondent aux filtres spécifiés. Si la fonction retourne une valeur autre que `WBM_S_NO_ERROR`, un nouveau `SAFEARRAY` structure n’est pas retournée.
  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

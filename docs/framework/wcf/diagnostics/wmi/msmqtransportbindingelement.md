@@ -2,12 +2,12 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: d37ee4527226d9347e24fc2ee8007a263c71f198
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 706cec5c414197ebabda7939728b95be32582e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197930"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -41,7 +41,7 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
   
  Type d’accès : Propriétés en lecture seule  
   
- Valeur d’énumération qui indique le transport de canal de communication mis en file d’attente que cette liaison utilise.  
+ Valeur d'énumération qui indique le transport de canal de communication mis en file d'attente que cette liaison utilise.  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
  Type de données : booléen  
@@ -50,11 +50,12 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
   
  Retourne une valeur Boolean qui indique si les adresses de file d'attente doivent être converties à l'aide d'Active Directory.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

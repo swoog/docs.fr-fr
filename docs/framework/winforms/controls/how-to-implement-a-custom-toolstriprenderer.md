@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Implémenter un ToolStripRenderer personnalisé'
+title: 'Procédure : implémenter un ToolStripRenderer personnalisé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: c6150b23cf8390a31c6b77ae3c56cfb898eded4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151916"
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procédure : Implémenter un ToolStripRenderer personnalisé
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procédure : implémenter un ToolStripRenderer personnalisé
 Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.ToolStrip> en implémentant une classe qui dérive de <xref:System.Windows.Forms.ToolStripRenderer>. Cela offre la flexibilité nécessaire pour créer une apparence qui diffère de celle fournie par les classes <xref:System.Windows.Forms.ToolStripProfessionalRenderer> et <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
   
 ## <a name="example"></a>Exemple  
@@ -23,11 +23,11 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
   
  La classe `GridStripRenderer` personnalise trois aspects de l'apparence du contrôle `GridStrip` :  
   
--   la bordure `GridStrip` ;  
+-   `GridStrip` border  
   
--   la bordure <xref:System.Windows.Forms.ToolStripButton> ;  
+-   <xref:System.Windows.Forms.ToolStripButton> border  
   
--   l'image <xref:System.Windows.Forms.ToolStripButton>.  
+-   <xref:System.Windows.Forms.ToolStripButton> image  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -40,10 +40,11 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)

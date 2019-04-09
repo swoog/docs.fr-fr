@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 6775f14a6f90b9e8194a68a07b3354f8a972ece0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179814"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applications Windows utilisant des rappels
 Dans la plupart des scénarios de traitement asynchrone, vous devez démarrer une opération de base de données et continuer à exécuter d'autres processus sans attendre que l'opération de base de données soit terminée. Toutefois, de nombreux scénarios exigent de faire quelque chose une fois l'opération de base de données terminée. Dans une application Windows, par exemple, vous pouvez déléguer l'opération de longue durée à un thread d'arrière-plan tout en autorisant le thread d'interface utilisateur à rester réactif. Toutefois, une fois l'opération de base de données terminée, vous pouvez utiliser les résultats pour remplir le formulaire. La meilleure façon d'implémenter ce type de scénario consiste à utiliser un rappel.  
@@ -376,5 +376,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

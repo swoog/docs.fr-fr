@@ -6,18 +6,16 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201297"
 ---
 # <a name="gridview-overview"></a>Vue d'ensemble de GridView
 <xref:System.Windows.Controls.GridView> mode d’affichage est un des modes d’affichage pour un <xref:System.Windows.Controls.ListView> contrôle. Le <xref:System.Windows.Controls.GridView> classe et ses classes de prise en charge permettent aux administrateurs et vos utilisateurs afficher des collections d’éléments dans une table qui utilise généralement des boutons comme en-têtes de colonnes interactifs. Cette rubrique présente la <xref:System.Windows.Controls.GridView> classe et décrit son utilisation.  
-  
-  
-  
+
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## <a name="what-is-a-gridview-view"></a>Qu’est-ce qu’un affichage de grille ou GridView ?  
  Le <xref:System.Windows.Controls.GridView> mode affiche une liste d’éléments de données en liaison des champs de données à des colonnes et en affichant un en-tête de colonne pour identifier le champ de vue. La valeur par défaut <xref:System.Windows.Controls.GridView> style implémente des boutons comme en-têtes de colonnes. À l’aide des boutons comme en-têtes de colonnes, vous pouvez implémenter des fonctionnalités d’interaction utilisateur importantes ; par exemple, les utilisateurs sur l’en-tête de colonne pour trier <xref:System.Windows.Controls.GridView> données en fonction du contenu d’une colonne spécifique.  
@@ -81,14 +79,14 @@ ms.locfileid: "58185439"
   
      Si vous souhaitez modifier le style par défaut de la version flottante d’un en-tête, spécifiez un <xref:System.Windows.Controls.ControlTemplate> pour un <xref:System.Windows.Controls.GridViewColumnHeader> type qui est déclenchée lorsque le <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> propriété est définie sur <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Pour plus d’informations, consultez [Créer un style pour un en-tête de colonne GridView déplacé](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Redimensionner une colonne selon son contenu.**  
+-   **Redimensionner une colonne à son contenu.**  
   
      Les utilisateurs peuvent double-cliquer sur la barre de redimensionnement à droite d’un en-tête de colonne afin de redimensionner une colonne en fonction de son contenu.  
   
     > [!NOTE]
     >  Vous pouvez définir le <xref:System.Windows.Controls.GridViewColumn.Width%2A> propriété `Double.NaN` pour produire le même effet.  
   
--   **Sélectionner des éléments de lignes.**  
+-   **Sélectionnez les éléments de ligne.**  
   
      Les utilisateurs peuvent sélectionner un ou plusieurs éléments dans un <xref:System.Windows.Controls.GridView>.  
   
@@ -125,6 +123,7 @@ ms.locfileid: "58185439"
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Controls.GridViewColumn>
@@ -132,6 +131,6 @@ ms.locfileid: "58185439"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d'ensemble de ListView](listview-overview.md)
 - [Trier une colonne GridView lors d’un clic sur un en-tête](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Rubriques Comment](listview-how-to-topics.md)

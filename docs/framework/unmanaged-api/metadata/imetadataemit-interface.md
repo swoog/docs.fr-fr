@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f28facc8acb430de4aa255208a62c5fc61f12cd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184416"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit, interface
 Fournit des méthodes pour créer, modifier et enregistrer les métadonnées relatives à l’assembly dans la portée actuellement définie. Les métadonnées peuvent être stockées en mémoire ou enregistrées sur le disque.  
@@ -80,15 +80,16 @@ Fournit des méthodes pour créer, modifier et enregistrer les métadonnées rel
 |[SetTypeDefProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-settypedefprops-method.md)|Définit les fonctionnalités d’un type défini par un appel antérieur à `IMetaDataEmit::DefineTypeDef`.|  
 |[TranslateSigWithScope, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|Importe un assembly dans la portée actuelle et obtient une nouvelle signature de métadonnées pour la portée fusionnée.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

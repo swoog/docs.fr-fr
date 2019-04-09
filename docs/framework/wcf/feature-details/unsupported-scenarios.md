@@ -2,12 +2,12 @@
 title: Scénarios non pris en charge
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178774"
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en charge certains scénarios de sécurité spécifiques. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n’implémente pas les protocoles d’authentification SSPI ou Kerberos, et par conséquent, WCF ne prend pas en charge l’exécution d’un service avec l’authentification Windows sur cette plateforme. Autres mécanismes d’authentification, telles que le nom d’utilisateur/mot de passe et l’authentification intégrée HTTP/HTTPS sont pris en charge lors de l’exécution de WCF sous Windows XP Édition familiale.  
@@ -30,10 +30,10 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
   
  Ce jeton peut uniquement être crée à l’aide d’une liaison personnalisée. Pour plus d'informations, voir [Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Dans le code, ce jeton est activé en créant un élément de liaison de sécurité (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) à l'aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> et en affectant au paramètre `requireCancellation` la valeur `false`. Ce paramètre concerne la mise en cache du jeton. L'affectation de la valeur `false` à ce paramètre permet d'activer la fonctionnalité de jeton basé sur l'état.  
   
- Ou bien, dans la configuration, le jeton est activé en créant une liaison <`customBinding`>, en ajoutant un élément <`security`>, puis en affectant à l’attribut `authenticationMode` la valeur SecureConversation et à l’attribut `requireSecurityContextCancellation` la valeur `true`.  
+ Vous pouvez également, dans la configuration, le jeton est activé en créant un <`customBinding`>, puis en ajoutant un <`security`> élément et en définissant le `authenticationMode` attribut SecureConversation et le `requireSecurityContextCancellation` attribut `true`.  
   
 > [!NOTE]
->  Les exigences précédentes sont spécifiques. Par exemple, l'élément <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crée un élément de liaison qui aboutit à une identité Windows, mais cet élément ne définit pas de jeton de contexte de sécurité avec état. Vous pouvez donc utiliser cet élément avec l'option `Required` de [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+>  Les spécifications précédentes sont spécifiques. Par exemple, l’élément <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crée un élément de liaison qui aboutit à une identité Windows, mais cet élément ne définit pas de jeton de contexte de sécurité avec état. Vous pouvez donc utiliser cet élément avec l'option `Required` de [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Éventuel conflit avec ASP.NET  
  WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peuvent activer ou désactiver l’emprunt d’identité. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge une application WCF, un conflit peut survenir entre WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] paramètres de configuration. En cas de conflit, le paramètre de WCF est prioritaire, sauf si le <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriété est définie sur <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, auquel cas le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le paramètre de l’emprunt d’identité est prioritaire.  
@@ -75,7 +75,7 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
  WCF ne prend pas en charge la combinaison suivante de paramètres, car ils peuvent également empêcher l’authentification du client ne se produise :  
   
--   L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cette activation s’effectue dans le fichier Web.config en affectant à l’attribut `impersonate` de l’élément <`identity`> la valeur `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] L’emprunt d’identité est activée. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
   
@@ -104,14 +104,15 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
  Pour qu'il fonctionne, vous pouvez placer le point de terminaison `issue_ticket` ailleurs.  
   
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Risques de perte des attributs d'importation WSDL  
- WCF perd la trace des attributs sur un élément `<wst:Claims>` dans un modèle `RST` lors de l'exécution d'une importation WSDL. Cela se produit pendant une importation WSDL si vous spécifiez directement `<Claims>` dans `WSFederationHttpBinding.Security.Message.TokenRequestParameters` ou `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` au lieu d'utiliser directement les collections de types de revendication.  Puisque l’importation perd les attributs, la liaison ne fait pas l’aller-retour correctement dans WSDL et est donc incorrecte du côté client.  
+ WCF perd la trace des attributs sur un élément `<wst:Claims>` dans un modèle `RST` lors de l'exécution d'une importation WSDL. Cela se produit pendant une importation WSDL si vous spécifiez directement `<Claims>` dans `WSFederationHttpBinding.Security.Message.TokenRequestParameters` ou `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` au lieu d’utiliser directement les collections de types de revendication.  Puisque l’importation perd les attributs, la liaison ne fait pas l’aller-retour correctement dans WSDL et est donc incorrecte du côté client.  
   
  pour corriger cette situation, il convient de modifier directement la liaison sur le client après l’importation.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

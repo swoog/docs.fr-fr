@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 776fa01d78c59d38a55de969a10096c22f34e9e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4fa4c7ff92252733fcff65e4fc3ab3c6b3624181
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186886"
 ---
 # <a name="iis-hosting-using-inline-code"></a>IIS Hosting Using Inline Code
 Cet exemple montre comment implémenter un service hébergé par les services IIS (Internet Information Services), où le code de service est contenu en ligne dans un fichier .svc et est compilé à la demande. Le code de service peut également être implémenté directement dans les fichiers de code source localisés dans le répertoire de \App_Code de l'application, ou être compilé dans l'assembly déployé dans \bin. Cet exemple ne présente pas ces techniques.  
@@ -95,4 +95,5 @@ Press <ENTER> to terminate client.
 4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Pour obtenir un exemple sur la création d’une application cliente qui peut appeler ce service, consultez [Comment : Créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

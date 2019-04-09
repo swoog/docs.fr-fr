@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un dégradé de tracé'
+title: 'Procédure : créer un dégradé de tracé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186093"
 ---
-# <a name="how-to-create-a-path-gradient"></a>Procédure : Créer un dégradé de tracé
+# <a name="how-to-create-a-path-gradient"></a>Procédure : créer un dégradé de tracé
 Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de personnaliser la façon dont vous remplissez une forme avec des couleurs progressifs. Par exemple, vous pouvez spécifier une couleur pour le centre d’un chemin d’accès et un autre pour la limite d’un chemin d’accès. Vous pouvez également spécifier des couleurs distinctes pour chacun des points le long de la limite d’un chemin d’accès.  
   
 > [!NOTE]
@@ -111,4 +111,5 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
  Les exemples précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation d'un pinceau à dégradé pour remplir des formes](using-a-gradient-brush-to-fill-shapes.md)

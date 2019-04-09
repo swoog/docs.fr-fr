@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189298"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procédure : Créer un workflow séquentiel
 Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Sequence> activité et les activités personnalisées de la précédente [Comment : Créer une activité](how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
@@ -64,7 +64,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 ## <a name="to-add-the-workflow-activities"></a>Pour ajouter les activités de flux de travail  
   
-1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et déposez-le sur le **séquence** activité. Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une expression C#** ou **entrer une expression VB** boîte.  
+1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et déposez-le sur le **séquence** activité. Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une expression c#** ou **entrer une expression VB** boîte.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
     > [!NOTE]
     >  Lorsque vous déposez le **affecter** activité, notez comment le Concepteur de workflow ajoute automatiquement un **séquence** activité qui permet de contenir à la fois le **invite** activité et récemment ajouté **Affecter** activité.  
   
-7.  Type `Turns` dans le **à** boîte et `Turns + 1` dans le **entrer une expression C#** ou **entrer une expression VB** boîte.  
+7.  Type `Turns` dans le **à** boîte et `Turns + 1` dans le **entrer une expression c#** ou **entrer une expression VB** boîte.  
   
 8.  Faites glisser un **si** activité à partir de la **flux de contrôle** section de la **boîte à outils** et déposez-le dans la **séquence** activité afin qu’elle suive le qui vient d’être ajouté **affecter** activité.  
   
@@ -158,10 +158,11 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
      Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow séquentiel à partir de cette étape, passez directement à la [pour générer et exécuter l’application](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programmation Windows Workflow Foundation](programming.md)
-- [Conception des workflows](designing-workflows.md)
-- [Didacticiel Bien démarrer](getting-started-tutorial.md)
-- [Guide pratique pour Créer une activité](how-to-create-an-activity.md)
-- [Guide pratique pour Exécuter un Workflow](how-to-run-a-workflow.md)
+- [Conception des flux de travaux](designing-workflows.md)
+- [Didacticiel de mise en route](getting-started-tutorial.md)
+- [Procédure : créer une activité](how-to-create-an-activity.md)
+- [Procédure : exécuter un workflow](how-to-run-a-workflow.md)

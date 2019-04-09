@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197683"
 ---
 # <a name="trees-in-wpf"></a>Arborescences dans WPF
-Dans de nombreuses technologies, les éléments et les composants sont organisés en une arborescence, où les développeurs manipulent directement les nœuds d’objet dans l’arborescence pour modifier le rendu ou le comportement d’une application. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise également plusieurs métaphores d’arborescence pour définir des relations entre des éléments du programme. Pour la plupart, les développeurs WPF peuvent créer une application dans le code ou définir des parties de l’application en XAML, en se représentant mentalement la métaphore de l’arborescence des objets, mais en appelant pour cela une API spécifique ou en utilisant un balisage spécifique, au lieu d’utiliser une API générale de manipulation d’une arborescence d’objets, comme ce peut être le cas dans le modèle DOM XML. WPF expose deux classes d’assistance qui fournissent une vue de la métaphore de l’arborescence, <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>. Les termes « arborescence d’éléments visuels » et « arborescence logique » sont également utilisés dans la documentation WPF, car ils sont utiles pour comprendre le comportement de certaines fonctionnalités clés de WPF. Cette rubrique définit ce que représentent l’arborescence d’éléments visuels et l’arborescence logique, explique la relation de ces arborescences avec le concept d’arborescence d’un objet global et introduit <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>s.  
-  
+Dans de nombreuses technologies, les éléments et les composants sont organisés en une arborescence, où les développeurs manipulent directement les nœuds d’objet dans l’arborescence pour modifier le rendu ou le comportement d’une application. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise également plusieurs métaphores d’arborescence pour définir des relations entre éléments de programme. Pour la plupart, les développeurs WPF peuvent créer une application dans le code ou définir des parties de l’application en XAML, en se représentant mentalement la métaphore de l’arborescence des objets, mais en appelant pour cela une API spécifique ou en utilisant un balisage spécifique, au lieu d’utiliser une API générale de manipulation d’une arborescence d’objets, comme ce peut être le cas dans le modèle DOM XML. WPF expose deux classes d’assistance qui fournissent une vue de la métaphore de l’arborescence, <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>. Les termes « arborescence d’éléments visuels » et « arborescence logique » sont également utilisés dans la documentation WPF, car ils sont utiles pour comprendre le comportement de certaines fonctionnalités clés de WPF. Cette rubrique définit ce que représentent l’arborescence d’éléments visuels et l’arborescence logique, explique la relation de ces arborescences avec le concept d’arborescence d’un objet global et introduit <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>s.  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>Arborescences dans WPF  
  L’arborescence la plus complète dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est l’arborescence d’objets. Si vous définissez une page d’application dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] puis que vous chargez le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], l’arborescence est créée sur la base des relations d’imbrication des éléments dans le balisage. Si vous définissez une application ou une partie de l’application dans le code, l’arborescence est créée en fonction de la façon dont vous affectez les valeurs de propriété pour les propriétés qui implémentent le modèle de contenu d’un objet donné. Dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], vous pouvez conceptualiser et signaler l’arborescence à son API publique de deux façons : en tant qu’arborescence logique et en tant qu’arborescence d’éléments visuels. Les distinctions entre arborescence logique et arborescence d’éléments visuels ne sont pas toujours nécessairement importantes, mais elles peuvent parfois générer des problèmes avec certains sous-systèmes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], et affecter vos choix dans le balisage ou le code.  
@@ -87,8 +85,9 @@ Dans de nombreuses technologies, les éléments et les composants sont organisé
  Cependant, la recherche de ressources peut également s’étendre au-delà de l’arborescence logique immédiate. Pour le balisage de l’application, la recherche de ressources peut continuer ensuite dans les dictionnaires de ressources de niveau application, puis dans la prise en charge des thèmes et les valeurs système qui sont référencées en tant que clés ou propriétés statiques. Les thèmes eux-mêmes peuvent également référencer des valeurs système en dehors de l’arborescence logique des thèmes si les références de ressource sont dynamiques. Pour plus d’informations sur les dictionnaires de ressources et la logique de la recherche, consultez [Ressources XAML](xaml-resources.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des entrées](input-overview.md)
-- [Vue d’ensemble du rendu graphique de WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
-- [Initialisation d’éléments objet ne figurant pas dans une arborescence d’objets](initialization-for-object-elements-not-in-an-object-tree.md)
+
+- [Vue d'ensemble des entrées](input-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Initialisation d'éléments objet ne figurant pas dans une arborescence d'objets](initialization-for-object-elements-not-in-an-object-tree.md)
 - [Architecture de WPF](wpf-architecture.md)

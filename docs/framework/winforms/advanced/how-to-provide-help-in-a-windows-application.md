@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Fournir une aide dans une Application Windows'
+title: 'Procédure : fournir de l’aide dans une application Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129478"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : Fournir une aide dans une Application Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : fournir de l’aide dans une application Windows
 Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant pour attacher des rubriques d’aide d’un fichier d’aide à des contrôles spécifiques sur les Windows Forms. Le fichier d’aide peut être au format HTML, ou HTMLHelp 1.x ou ultérieur.  
   
 > [!NOTE]
@@ -40,7 +40,7 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
     |Nom du membre|Description|  
     |-----------------|-----------------|  
     |AssociateIndex|Spécifie que l’index d’une rubrique spécifiée est exécuté dans l’URL spécifiée.|  
-    |Find|Spécifie que la page de recherche d’une URL spécifiée est affichée.|  
+    |Rechercher|Spécifie que la page de recherche d’une URL spécifiée est affichée.|  
     |Index|Spécifie que l’index d’une URL spécifiée est affiché.|  
     |KeywordIndex|Spécifie un mot clé à rechercher et l’action à effectuer dans l’URL spécifiée.|  
     |TableOfContents|Spécifie que la table des matières du fichier d’aide HTML 1.0 est affiché.|  
@@ -56,7 +56,8 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
  Vous pouvez également utiliser le <xref:System.Windows.Forms.HelpProvider> composant pour afficher l’aide contextuelle, même si vous avez configuré pour afficher les fichiers d’aide pour les contrôles sur vos formulaires Windows. Pour plus d'informations, voir [Procédure : Afficher l’aide contextuelle](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Afficher l’aide contextuelle](how-to-display-pop-up-help.md)
-- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](control-help-using-tooltips.md)
-- [Intégration de l’aide d’utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Procédure : afficher l’aide contextuelle](how-to-display-pop-up-help.md)
+- [Affichage sous forme d'info-bulles de l'aide relative aux contrôles](control-help-using-tooltips.md)
+- [Intégration de l'aide d'utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

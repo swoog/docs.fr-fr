@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une Interface utilisateur à plusieurs volets avec des Windows Forms'
+title: 'Procédure : créer une interface utilisateur à plusieurs volets avec Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192691"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Procédure : Créer une Interface utilisateur à plusieurs volets avec des Windows Forms
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Procédure : créer une interface utilisateur à plusieurs volets avec Windows Forms
 Dans la procédure suivante, vous allez créer une interface utilisateur à plusieurs volets semblable à celle utilisée dans Microsoft Outlook, avec un **dossier** liste, un **Messages** volet et un **aperçu** volet. Cette disposition est obtenue principalement en ancrant les contrôles dans le formulaire.  
   
  Lorsque vous ancrez un contrôle, vous déterminez le bord du conteneur parent auquel un contrôle est attaché. Par conséquent, si vous définissez la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Right>, le bord droit du contrôle sera ancré sur le bord droit de son contrôle parent. En outre, le bord du contrôle ancré est redimensionné pour correspondre à celle de son contrôle conteneur. Pour plus d’informations sur la façon dont <xref:System.Windows.Forms.SplitContainer.Dock%2A> fonctionne de la propriété, consultez [Comment : Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md).  
@@ -177,6 +177,7 @@ Dans la procédure suivante, vous allez créer une interface utilisateur à plus
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer, contrôle](splitcontainer-control-windows-forms.md)
-- [Guide pratique pour Créer une Interface utilisateur à plusieurs volets avec des formulaires Windows à l’aide du Concepteur](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Procédure : créer une interface utilisateur à plusieurs volets avec Windows Forms à l’aide du concepteur](create-a-multipane-user-interface-with-wf-using-the-designer.md)

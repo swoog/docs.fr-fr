@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Manipuler les lignes dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : manipuler des lignes dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-ms.openlocfilehash: a793c47773b0d3181b38d61b9c49fbdcdd1a4a22
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 095efc7279a1dc6702aeeb5ec5d598dbdd8818b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193289"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Procédure : Manipuler les lignes dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Procédure : manipuler des lignes dans le contrôle DataGridView Windows Forms
 L'exemple de code suivant illustre les différentes façons de manipuler des lignes de <xref:System.Windows.Forms.DataGridView> à l'aide des propriétés de la classe <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ## <a name="example"></a>Exemple  
@@ -33,6 +33,7 @@ L'exemple de code suivant illustre les différentes façons de manipuler des lig
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>

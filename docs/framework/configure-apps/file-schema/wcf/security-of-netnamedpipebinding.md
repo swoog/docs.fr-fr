@@ -2,12 +2,12 @@
 title: <security> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: ee2c4161f70c01dc09ac36bbcf6a234f822682d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203390"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<security> of \<netNamedPipeBinding>
 Définit les paramètres de sécurité d’une liaison.  
@@ -52,12 +52,13 @@ Définit les paramètres de sécurité d’une liaison.
 |liaison|L’élément de liaison de la [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.NetNamedPipeSecurity>
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
 - [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Sélection d'un type d'informations d'identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194524"
 ---
 # <a name="accessing-services-using-a-client"></a>Accès aux services à l'aide d'un client
 Les applications clientes doivent créer, configurer et utiliser des objets de client ou de canal WCF pour communiquer avec les services. Le [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) rubrique fournit une vue d’ensemble des objets et des étapes impliquées dans la création d’objets de client et le canal de base et leur utilisation.  
@@ -40,7 +40,7 @@ Les applications clientes doivent créer, configurer et utiliser des objets de c
 > [!NOTE]
 >  Le fait de tenter de détecter de manière explicite des canaux de session défaillants est en général inutile, car le moment où vous en êtes informé dépend de l'implémentation de session. Par exemple, étant donné que le <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (avec la session fiable désactivée) est à la surface de la session de la connexion TCP, si vous écoutez l'événement <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> sur le service ou le client, vous recevrez sans doute rapidement une notification en cas de panne réseau. Mais les sessions fiables (établies par des liaisons dans lesquelles le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> est activé) sont conçues pour isoler les services des petites pannes réseau. Si la session peut être rétablie dans un délai raisonnable, la même liaison (configuré pour des sessions fiables) risque de ne subir une défaillance que longtemps après l'interruption.  
   
- La plupart des liaisons fournies par le système (qui exposent des canaux à la couche Application) utilisent des sessions par défaut, ce qui n’est pas le cas du <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>. Pour plus d’informations, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  
+ La plupart des liaisons fournies par le système (qui exposent des canaux à la couche Application) utilisent des sessions par défaut, ce qui n'est pas le cas du <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>. Pour plus d’informations, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>Utilisation correcte des sessions  
  Les sessions offrent un moyen de savoir si l'intégralité de l'échange de messages a été effectué et si les deux côtés l'ont considéré réussi. Il est recommandé qu'une application appelante ouvre le canal, l'utilise et le ferme à l'intérieur d'un bloc try. Si un canal de session est ouvert, que la méthode <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> est appelée une fois et que cet appel est retourné avec succès, cela signifie que la session a réussi. Le terme « réussi » dans ce cas signifie que toutes les garanties de remise spécifiées par la liaison ont été satisfaites et que l'autre côté n'a pas appelé <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> sur le canal avant d'appeler <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
@@ -53,7 +53,7 @@ Les applications clientes doivent créer, configurer et utiliser des objets de c
 > [!NOTE]
 >  Utilisation de la `using` instruction (`Using` en Visual Basic) n’est pas recommandée. Cela est dû au fait que la fin de l'instruction `using` peut provoquer des exceptions qui peuvent masquer d'autres exceptions dont vous devez avoir connaissance. Pour plus d’informations, consultez [utilisez fermer et abandon pour libérer les ressources de client WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
- L’exemple de code suivant illustre le modèle client recommandé à l’aide d’un bloc try/catch, et non de l’instruction `using`.  
+ L'exemple de code suivant illustre le modèle client recommandé à l'aide d'un bloc try/catch, et non de l'instruction `using`.  
   
  [!code-csharp[FaultContractAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
@@ -91,13 +91,14 @@ Les applications clientes doivent créer, configurer et utiliser des objets de c
   
  Il est recommandé que les applications de qualité de production contrôlent le processus d'interface utilisateur en adoptant l'approche explicite.  
   
- Les applications qui utilisent l’approche implicite appellent les initialiseurs d’interface utilisateur, mais si l’utilisateur de l’application ne répond pas avant la fin du délai d’attente d’envoi de la liaison, une exception est levée lorsque l’interface utilisateur retourne.  
+ Les applications qui utilisent l'approche implicite appellent les initialiseurs d'interface utilisateur, mais si l'utilisateur de l'application ne répond pas avant la fin du délai d'attente d'envoi de la liaison, une exception est levée lorsque l'interface utilisateur retourne.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Services duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Guide pratique pour Accéder aux Services avec unidirectionnel et contrats demande-réponse](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Guide pratique pour Access Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Guide pratique pour Accéder à un service WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Guide pratique pour Utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [Guide pratique pour Appeler des opérations de Service de façon asynchrone](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Procédure : accéder aux services avec des contrats demande-réponse unidirectionnels](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Procédure : accéder aux services avec un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Procédure : accéder à un service WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Procédure : utiliser ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Procédure : appeler des opérations de service de façon asynchrone](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Applications clientes de niveau intermédiaire](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

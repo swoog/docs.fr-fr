@@ -2,12 +2,12 @@
 title: Files d'attente et sessions fiables
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 2f79e1eac469dc1d9d775cbca0f06046f10dfb20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196825"
 ---
 # <a name="queues-and-reliable-sessions"></a>Files d'attente et sessions fiables
 Files d’attente et sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Les rubriques contenues dans cette section décrivent les fonctionnalités de messagerie fiables de WCF.  
@@ -39,7 +39,8 @@ Files d’attente et sessions fiables sont les fonctionnalités de Windows Commu
  La séparation, associée aux transferts fiables de messages entre les files d'attente, permet aux applications faiblement couplées de communiquer de manière fiable. À la différence des sessions fiables, dans le cadre d'une séparation, la source et la destination n'ont pas besoin de s'exécuter simultanément. Cela permet, de manière indirecte, d'utiliser les files d'attente comme dispositif de régulation de la charge lorsqu'il y a un écart entre le taux de production de messages de la source et le taux de consommation de messages de la destination. Pour plus d’informations sur les files d’attente, consultez [files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Mise en file d'attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Vue d’ensemble des sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Vue d'ensemble des sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

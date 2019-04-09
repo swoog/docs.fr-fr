@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Répondre aux clics dans le contrôle DataGrid Windows Forms'
+title: 'Procédure : répondre aux clics dans le contrôle DataGrid Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191898"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procédure : Répondre aux clics dans le contrôle DataGrid Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procédure : répondre aux clics dans le contrôle DataGrid Windows Forms
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -141,5 +141,6 @@ ms.locfileid: "57708199"
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataGrid, contrôle](datagrid-control-windows-forms.md)
-- [Guide pratique pour Modification des données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

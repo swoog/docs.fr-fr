@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157870"
 ---
 # <a name="panels-overview"></a>Vue d'ensemble de Panel
 <xref:System.Windows.Controls.Panel> les éléments sont des composants qui contrôlent le rendu des éléments : leur taille et dimensions, leur position et la disposition de leur contenu enfant. Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un certain nombre de prédéfinis <xref:System.Windows.Controls.Panel> éléments, ainsi que la possibilité de construire personnalisé <xref:System.Windows.Controls.Panel> éléments.  
@@ -23,7 +23,7 @@ ms.locfileid: "57377162"
   
 -   [La classe Panel](#Panels_view_from_10000_feet)  
   
--   [Membres communs aux éléments Panel](#Panels_declared_members)  
+-   [Membres communs aux éléments de panneau](#Panels_declared_members)  
   
 -   [Éléments Panel dérivés](#Panels_derived_elements)  
   
@@ -68,10 +68,10 @@ ms.locfileid: "57377162"
 |<xref:System.Windows.Controls.DockPanel>|Oui|Définit une zone dans laquelle vous pouvez organiser des éléments enfants horizontalement ou verticalement, les uns par rapport aux autres.|  
 |<xref:System.Windows.Controls.Grid>|Oui|Définit une zone de grille flexible composée de colonnes et de lignes. Éléments enfants d’un <xref:System.Windows.Controls.Grid> peuvent être positionnés avec précision à l’aide de la <xref:System.Windows.FrameworkElement.Margin%2A> propriété.|  
 |<xref:System.Windows.Controls.StackPanel>|Oui|Dispose des éléments enfants sur une seule ligne orientée horizontalement ou verticalement.|  
-|<xref:System.Windows.Controls.Primitives.TabPanel>|Aucune|Gère la disposition des boutons d’onglet dans un <xref:System.Windows.Controls.TabControl>.|  
-|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Aucune|Réorganise le contenu dans un <xref:System.Windows.Controls.ToolBar> contrôle.|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|Aucune|<xref:System.Windows.Controls.Primitives.UniformGrid> est utilisé pour organiser les enfants dans une grille avec toutes les tailles de cellule égales.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|Aucune|Fournit une classe de base pour les éléments Panel qui peuvent « virtualiser » leur collection d’enfants.|  
+|<xref:System.Windows.Controls.Primitives.TabPanel>|Non|Gère la disposition des boutons d’onglet dans un <xref:System.Windows.Controls.TabControl>.|  
+|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Non|Réorganise le contenu dans un <xref:System.Windows.Controls.ToolBar> contrôle.|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|Non|<xref:System.Windows.Controls.Primitives.UniformGrid> est utilisé pour organiser les enfants dans une grille avec toutes les tailles de cellule égales.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|Non|Fournit une classe de base pour les éléments Panel qui peuvent « virtualiser » leur collection d’enfants.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Oui|Organise et virtualise un contenu sur une seule ligne orientée horizontalement ou verticalement.|  
 |<xref:System.Windows.Controls.WrapPanel>|Oui|<xref:System.Windows.Controls.WrapPanel> Positionne des éléments enfants dans un ordre séquentiel de gauche à droite, en faisant passer le contenu à la ligne suivante à la périphérie de la zone conteneur. Classement continue ensuite séquentiellement de haut en bas ou de droite à gauche, selon la valeur de la <xref:System.Windows.Controls.WrapPanel.Orientation%2A> propriété.|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "57377162"
   
  Chaque dérivée <xref:System.Windows.Controls.Panel> élément traite différemment les contraintes de dimensionnement. Comprendre comment un <xref:System.Windows.Controls.Panel> gère les contraintes dans le sens horizontal ou vertical peuvent rendre la disposition plus prévisible.  
   
-|**Nom de l’élément Panel**|**Dimension x**|**Dimension y**|  
+|**Nom du panneau**|**x-Dimension**|**y-Dimension**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Restreinte au contenu|Restreinte au contenu|  
 |<xref:System.Windows.Controls.DockPanel>|Restreinte|Restreinte|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377162"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Prise en charge de la localisation/globalisation  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge un certain nombre de fonctionnalités qui facilitent la création d’IU [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localisables.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge un nombre de fonctionnalités qui facilitent la création de localisables [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Tous les éléments panel prennent nativement en charge le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété, qui peut être utilisée pour redisposer dynamiquement du contenu selon les paramètres de langue ou de paramètres régionaux d’un utilisateur. Pour plus d'informations, consultez <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -253,12 +253,13 @@ ms.locfileid: "57377162"
  Pour plus d’informations sur la création d’applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] avec des interfaces utilisateur (IU) localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)], consultez [Vue d’ensemble de l’utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)
-- [Disposition](../advanced/layout.md)
+- [Exemple de galerie de dispositions WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Mise en page](../advanced/layout.md)
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Vue d'ensemble de l'alignement, des marges et du remplissage](../advanced/alignment-margins-and-padding-overview.md)
 - [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Vue d'ensemble des propriétés jointes](../advanced/attached-properties-overview.md)
-- [Vue d’ensemble de l’utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md)
+- [Vue d'ensemble de l'utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md)
 - [Disposition et conception](../advanced/optimizing-performance-layout-and-design.md)

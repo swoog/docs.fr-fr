@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190627"
 ---
 # <a name="3-d-transformations-overview"></a>Vue d'ensemble des transformations 3D
 Cette rubrique décrit comment appliquer des transformations à des modèles 3D dans le système graphique [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Les transformations permettent au développeur de repositionner, redimensionner et réorienter des modèles sans modifier les valeurs de base qui les définissent.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>Espace de coordonnées 3D  
  Contenu graphique 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est encapsulé dans un élément, <xref:System.Windows.Controls.Viewport3D>, qui peut participer à la structure de l’élément à deux dimensions. Le système graphique traite Viewport3D comme un élément visuel à deux dimensions comme de nombreux autres éléments dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D fonctionne comme une fenêtre, ou plus précisément une fenêtre d’affichage, dans une scène 3D. Plus précisément, c’est une surface sur laquelle une scène 3D est projetée.  Bien que vous puissiez utiliser Viewport3D avec d’autres objets de dessin 2D dans le même graphique de scène, vous ne pouvez pas interpénétrer les objets 2D et 3D au sein d’un Viewport3D. Dans la discussion suivante, l’espace de coordonnées décrit est contenu par l’élément Viewport3D.  
   
@@ -106,6 +104,7 @@ Exemple de rotation
  Étant donné que les caméras sont également des modèles, il est aussi possible de transformer les propriétés de la caméra.  Même si vous pouvez tout à fait modifier l’apparence de la scène en transformant les distances sur le plan de la position de la caméra (en transformant ainsi la projection de scène entière), notez que beaucoup d’effets que vous obtenez de cette façon peuvent ne pas paraître aussi « visuellement cohérents » que les transformations appliquées à l’emplacement ou la position des modèles dans la scène.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des graphiques 3D](3-d-graphics-overview.md)
-- [Vue d’ensemble des transformations](transforms-overview.md)
+
+- [Vue d'ensemble des graphiques 3D](3-d-graphics-overview.md)
+- [Vue d'ensemble des transformations](transforms-overview.md)
 - [Exemple de transformations 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

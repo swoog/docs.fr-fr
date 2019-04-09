@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7e9125b68412aab12585bf5dade3c718301dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c741e58eb0389211fc6d8784d2c5bc66efbb773
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206055"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>ICorDebugObjectValue::GetContext, méthode
 `GetContext` n’est pas implémentée dans cette version du .NET Framework.  
@@ -35,9 +35,7 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** CorDebug.idl, CorDebug.h  
   
 ## <a name="see-also"></a>Voir aussi
-
-

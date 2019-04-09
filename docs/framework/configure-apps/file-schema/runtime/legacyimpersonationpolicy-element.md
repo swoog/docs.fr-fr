@@ -1,5 +1,5 @@
 ---
-title: Élément <legacyImpersonationPolicy>
+title: <legacyImpersonationPolicy> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201011"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > élément
 Spécifie que l’identité Windows n’est pas transmise entre des points asynchrones, indépendamment des paramètres de flux du contexte d’exécution sur le thread actif.  
@@ -42,7 +42,7 @@ Spécifie que l’identité Windows n’est pas transmise entre des points async
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity> flux entre des points asynchrones, en fonction de la <xref:System.Threading.ExecutionContext> de flux de paramètres pour le thread actuel. Il s'agit de la valeur par défaut.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> n’est pas transmise entre des points asynchrones, indépendamment de la <xref:System.Threading.ExecutionContext> de flux de paramètres sur le thread actuel.|  
@@ -116,6 +116,7 @@ Spécifie que l’identité Windows n’est pas transmise entre des points async
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+
+- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > élément](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

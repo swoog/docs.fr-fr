@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34049f113ce9da0ed1c4cc63fd53093a0775bbad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208304"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Procédure pas à pas : Manipulation de données (Visual Basic)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel pour l'ajout, la modification et la suppression de données dans une base de données. Vous utiliserez une copie de l'exemple de base de données Northwind pour ajouter un client, modifier le nom d'un client et supprimer une commande.  
@@ -187,4 +187,5 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 >  Une fois que vous avez soumis les modifications (ajouté le nouveau client), vous ne pouvez plus exécuter cette solution telle quelle car vous ne pouvez plus ajouter le même client tel quel. Pour exécuter à nouveau la solution, modifiez la valeur de l'ID client à ajouter.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

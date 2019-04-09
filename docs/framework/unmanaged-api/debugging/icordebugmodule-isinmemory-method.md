@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f057896d9dd65a850c0b07e4084bc263e804d20
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d79a8b0c3c56ffe2b8f57ec26f5942ee0d681194
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187588"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory, méthode
 Obtient une valeur qui indique si ce module existe uniquement en mémoire.  
@@ -42,15 +42,13 @@ HRESULT IsInMemory(
 ## <a name="remarks"></a>Notes  
  Le common language runtime (CLR) prend en charge le chargement des modules à partir de flux bruts d’octets. Ces modules sont appelés *en mémoire modules* et n’existent pas sur le disque.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-
-

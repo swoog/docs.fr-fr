@@ -8,19 +8,19 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193706"
 ---
 # <a name="security-in-windows-forms-overview"></a>Vue d'ensemble de la sécurité dans les Windows Forms
 Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], tout code exécuté sur l'ordinateur d'un utilisateur avait les mêmes droits ou autorisations d'accéder aux ressources que l'utilisateur de l'ordinateur. Par exemple, si l'utilisateur était autorisé à accéder au système de fichiers, le code était autorisé à accéder au système de fichiers. Si l'utilisateur était autorisé à accéder à une base de données, le code était autorisé à accéder à cette base de données. Bien que ces droits ou autorisations puissent être acceptables pour le code dans les exécutables que l'utilisateur a explicitement installé sur l'ordinateur local, ils peuvent ne pas être acceptables pour le code potentiellement malveillant provenant d'Internet ou d'un intranet local. Ce code ne doit pas pouvoir accéder aux ressources de l'ordinateur de l'utilisateur sans autorisation.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] introduit une infrastructure appelée Sécurité d'accès du code qui vous permet de différencier les autorisations, ou droits, dont disposent le code des droits dont disposent l'utilisateur. Par défaut, le code provenant d'Internet et de l'intranet peut uniquement s'exécuter dans un mode qui porte le nom de confiance partielle. La confiance partielle soumet une application à une série de restrictions : entre autres, une application ne peut pas accéder au disque dur local et ne peut pas exécuter de code non managé. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contrôle les ressources auxquelles le code est autorisé à accéder en fonction de l’identité de ce code : d’où il provient, s’il comporte des [assemblys avec nom fort](../app-domains/strong-named-assemblies.md), s’il est signé avec un certificat, etc.  
   
- La technologie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], qui vous permet de déployer des applications Windows Forms, simplifie le développement des applications qui s'exécutent avec une confiance partielle, avec une confiance totale ou avec une confiance partielle avec des autorisations élevées. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] fournit des fonctionnalités telles que l'élévation d'autorisations et le déploiement d'applications approuvées pour que votre application puisse demander une confiance totale ou des autorisations élevées à l'utilisateur local de manière responsable.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] la technologie, qui vous permet de déployer des applications Windows Forms, simplifie pour vous permet de développer des applications qui s’exécutent en confiance partielle, avec une confiance totale ou avec une confiance partielle avec des autorisations élevées. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Fournit des fonctionnalités telles que l’élévation d’autorisations et le déploiement d’applications approuvées afin que votre application peut demander une confiance totale ou des autorisations élevées à partir de l’utilisateur local de manière responsable.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>Présentation de la sécurité dans .NET Framework  
  La sécurité d'accès du code permet au code d'avoir un niveau de confiance à différents degrés, en fonction de son origine et d'autres aspects de son identité. Pour plus d’informations sur les preuves utilisées par le Common Language Runtime afin de déterminer la stratégie de sécurité, consultez [Preuve](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Elle vous aide à protéger les systèmes contre les programmes malveillants et à empêcher que le code approuvé ne compromette la sécurité de manière intentionnelle ou accidentelle. La sécurité d'accès du code vous permet aussi de mieux contrôler les actions que votre application peut effectuer, car vous pouvez spécifier uniquement les autorisations dont elle a besoin. La sécurité d'accès du code affecte tout le code managé qui cible le Common Language Runtime, même si ce code ne fait aucune vérification d'autorisation de sécurité d'accès du code. Pour plus d’informations sur la sécurité dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consultez [Concepts fondamentaux sur la sécurité](../../standard/security/key-security-concepts.md) et [Notions fondamentales de la sécurité d’accès du code](../misc/code-access-security-basics.md).  
@@ -62,7 +62,7 @@ Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Déploiement d'une application avec les autorisations appropriées  
- L'approche la plus courante pour déployer une application Windows Forms sur un ordinateur client consiste à utiliser [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], une technologie de déploiement qui décrit tous les composants dont votre application a besoin pour s'exécuter. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] utilise des fichiers XML appelés manifestes pour décrire les assemblys et les fichiers qui composent votre application, ainsi que les autorisations requises.  
+ L'approche la plus courante pour déployer une application Windows Forms sur un ordinateur client consiste à utiliser [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], une technologie de déploiement qui décrit tous les composants dont votre application a besoin pour s'exécuter. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] utilise des fichiers XML appelés manifestes pour décrire les assemblys et les fichiers qui composent votre application, et que les autorisations requises.  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dispose de deux technologies permettant de demander des autorisations élevées sur un ordinateur client. Ces deux technologies reposent sur l'utilisation de certificats Authenticode. Les certificats permettent de garantir à vos utilisateurs que l'application provient d'une source approuvée.  
   
@@ -83,9 +83,10 @@ Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
  Si vous avez déployé votre application Windows Forms à l’aide de Visual Studio, vous pouvez activer le débogage avec confiance partielle ou un jeu à partir de l’environnement de développement d’autorisations restreint.  Voir également [Guide pratique pour Déboguer une application ClickOnce avec des autorisations restreintes](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Sécurité de Windows Forms](windows-forms-security.md)
-- [Notions fondamentales de la sécurité d’accès du code](../misc/code-access-security-basics.md)
+
+- [Sécurité des Windows Forms](windows-forms-security.md)
+- [Notions fondamentales de la sécurité d'accès du code](../misc/code-access-security-basics.md)
 - [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Vue d’ensemble du déploiement d’applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Vue d'ensemble du déploiement d'applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (outil Manifest Generation and Editing)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

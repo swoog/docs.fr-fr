@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188836"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Vue d’ensemble du contrôle PrintPreviewDialog (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.PrintPreviewDialog> contrôle est une boîte de dialogue préconfigurée permettant d’afficher comment un [PrintDocument](printdocument-component-windows-forms.md) apparaîtra une fois imprimé. Utilisez-la dans votre application Windows comme une solution simple au lieu de configurer votre propre boîte de dialogue. Le contrôle contient des boutons pour l'impression, le zoom avant, l'affichage d'une ou plusieurs pages et la fermeture de la boîte de dialogue.  
@@ -52,6 +52,7 @@ Si le commutateur n’est pas présent ou si elle est définie sur une autre val
 Si vous utilisez le <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> événement pour modifier les paramètres d’imprimante, les performances de la <xref:System.Windows.Forms.PrintPreviewDialog> contrôle n’améliorera pas même si un commutateur de configuration de l’optimisation est défini.  
 
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Vue d’ensemble du contrôle PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog, contrôle](printpreviewdialog-control-windows-forms.md)

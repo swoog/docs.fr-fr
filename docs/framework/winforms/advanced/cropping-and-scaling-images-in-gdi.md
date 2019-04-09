@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3cdb06e99770808461f9266fb5f07df9074149b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183727"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Rognage et mise à l'échelle d'images dans GDI+
 Vous pouvez utiliser la <xref:System.Drawing.Graphics.DrawImage%2A> méthode de la <xref:System.Drawing.Graphics> classe pour dessiner et positionner des images vectorielles et des images raster. <xref:System.Drawing.Graphics.DrawImage%2A> est une méthode surchargée, donc il existe plusieurs façons, vous pouvez lui fournir arguments.  
@@ -47,5 +47,6 @@ Vous pouvez utiliser la <xref:System.Drawing.Graphics.DrawImage%2A> méthode de 
  ![Rognage et mise à l’échelle](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 93a291b6dd35f9cc13c3c6f88aca5dc376b8bc1b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204352"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Procédure : Implémenter la notification des modifications de propriétés
 Pour prendre en charge <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> de liaison pour activer les propriétés de votre cible de liaison afin de refléter automatiquement les modifications dynamiques de la source de liaison (par exemple, pour que le volet de visualisation mis à jour automatiquement lorsque l’utilisateur modifie un formulaire), votre classe doit fournir les notifications de modification de propriété appropriées. Cet exemple montre comment créer une classe qui implémente <xref:System.ComponentModel.INotifyPropertyChanged>.  
@@ -29,6 +29,7 @@ Pour prendre en charge <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:Sy
  Pour voir un exemple montrant comment les `Person` classe peut être utilisée pour prendre en charge <xref:System.Windows.Data.BindingMode.TwoWay> liaison, consultez [contrôler quand le texte TextBox met à jour la Source](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d'ensemble des sources de liaison](binding-sources-overview.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

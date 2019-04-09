@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155933"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilisation d'un service de données dans une application cliente (services de données WCF)
 Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux en fournissant un URI à un navigateur Web. L'URI fournit l'adresse d'une ressource, et les messages de demande sont envoyés à ces adresses pour accéder ou modifier les données sous-jacentes que représente la ressource. Le navigateur émet une commande HTTP GET et retourne la ressource demandée sous forme d'un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Pour plus d’informations, consultez [l’accès au Service à partir d’un navigateur Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -21,7 +21,7 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vous aide à garantir l’interopérabilité entre les services qui exposent [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux et les applications qui consomment [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Applications accéder et modifier des données dans un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-en fonction de service en envoyant des messages de demande d’une action HTTP spécifique et avec un URI qui adresse une ressource d’entité par rapport à laquelle l’action doit être effectuée. Lorsque les données d'entité doivent être fournies, elles le sont comme une charge utile spécifiquement encodée dans le corps du message.  
   
 ### <a name="http-actions"></a>Actions HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les actions HTTP suivantes pour effectuer des opérations de création, lecture, mise à jour et suppression sur les données d'entité représentées par la ressource adressée :  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les actions HTTP suivantes pour effectuer créent, lire, mettre à jour et supprimer des opérations sur les données d’entité qui représente la ressource adressée :  
   
 -   **HTTP GET** -il s’agit l’action par défaut lorsqu’une ressource est accessible à partir d’un navigateur. Aucune charge utile n'est fournie dans le message de demande, et une méthode de réponse avec une charge utile qui contient les données demandées est retournée.  
   
@@ -36,7 +36,7 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
  Pour plus d’informations, consultez [OData : Opérations](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formats de charge utile  
- Pour une demande HTTP PUT, HTTP POST ou HTTP MERGE, la charge utile d'un message de demande contient les données d'entité que vous envoyez au service de données. Le contenu de la charge utile dépend du format de données du message. Les réponses HTTP à toutes les actions sauf DELETE contiennent également une charge utile. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats de charge utile suivants pour l’accès et modification de données avec le service :  
+ Pour une demande HTTP PUT, HTTP POST ou HTTP MERGE, la charge utile d’un message de demande contient les données d’entité que vous envoyez au service de données. Le contenu de la charge utile dépend du format de données du message. Les réponses HTTP à toutes les actions sauf DELETE contiennent également une charge utile. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats de charge utile suivants pour l’accès et modification de données avec le service :  
   
 -   **Atom** -encodage de message basé sur XML défini par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en tant qu’extension aux Atom Publishing Protocol (AtomPub) pour permettre l’échange de données sur HTTP pour les flux Web, podcasts, wikis et fonctionnalité Internet au XML. Pour plus d’informations, consultez [OData : Format Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
@@ -52,5 +52,6 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
  Il existe des bibliothèques de programmation que vous pouvez utiliser pour consommer un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux dans d’autres types d’applications clientes. Pour plus d’informations, consultez le [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Accès aux ressources d’un service de données](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

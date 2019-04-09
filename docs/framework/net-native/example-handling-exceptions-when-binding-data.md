@@ -1,17 +1,17 @@
 ---
-title: 'Exemple : Gestion des Exceptions lors de la liaison de données'
+title: 'Exemple : Gestion des exceptions pendant la liaison de données'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199893"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Exemple : Gestion des Exceptions lors de la liaison de données
+# <a name="example-handling-exceptions-when-binding-data"></a>Exemple : Gestion des exceptions pendant la liaison de données
 > [!NOTE]
 >  Cette rubrique fait référence à .NET Native Developer Preview, qui correspond à la version préliminaire du logiciel. Vous pouvez télécharger la préversion sur le [site web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (inscription nécessaire).  
   
@@ -57,8 +57,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Le code peut-il être réécrit de manière à ne pas utiliser la réflexion ?  
  Comme la liaison de données repose sur la réflexion, modifier le code pour éviter la réflexion est impossible.  
   
- Toutefois, certains procédés permettent de spécifier le `ViewModel` pour la page XAML afin que la chaîne d’outils associe les liaisons de propriété au type approprié au moment de la compilation et conserve les métadonnées sans utiliser de directive runtime.  Par exemple, vous pouvez appliquer le <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribut sur les propriétés. Ainsi, le compilateur XAML génère les informations de recherche nécessaires et évite la présence d'une directive runtime dans le fichier Default.rd.xml.  
+ Toutefois, certains procédés permettent de spécifier le `ViewModel` pour la page XAML afin que la chaîne d'outils associe les liaisons de propriété au type approprié au moment de la compilation et conserve les métadonnées sans utiliser de directive runtime.  Par exemple, vous pouvez appliquer le <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribut sur les propriétés. Ainsi, le compilateur XAML génère les informations de recherche nécessaires et évite la présence d'une directive runtime dans le fichier Default.rd.xml.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Exemple : Résolution des problèmes de programmation dynamique](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Exemple : Résolution des problèmes de programmation dynamique](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

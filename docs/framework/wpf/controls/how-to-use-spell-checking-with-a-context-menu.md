@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Utiliser la vérification de l'orthographe avec un menu contextuel"
+title: 'Procédure : Utiliser la vérification de l’orthographe avec un menu contextuel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192977"
 ---
-# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procédure : Utiliser la vérification de l'orthographe avec un menu contextuel
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procédure : Utiliser la vérification de l’orthographe avec un menu contextuel
 Par défaut, lorsque vous activez la vérification orthographique dans un contrôle d’édition telles que <xref:System.Windows.Controls.TextBox> ou <xref:System.Windows.Controls.RichTextBox>, vous obtenez les options de vérification orthographique dans le menu contextuel. Par exemple, les utilisateurs le droit d’un mot mal orthographié, ils obtiennent un ensemble de suggestions orthographiques ou l’option **ignorer tout**. Toutefois, lorsque vous substituez le menu contextuel par défaut avec votre propre menu contextuel personnalisé, cette fonctionnalité est perdue, et vous devez écrire du code pour réactiver la fonctionnalité de vérification orthographique dans le menu contextuel. L’exemple suivant montre comment activer cette fonctionnalité sur un <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Exemple  
@@ -39,7 +39,8 @@ Par défaut, lorsque vous activez la vérification orthographique dans un contr�
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de TextBox](textbox-overview.md)
-- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)
-- [Activer la vérification de l'orthographe dans un contrôle d'édition de texte](how-to-enable-spell-checking-in-a-text-editing-control.md)
+
+- [Vue d'ensemble de TextBox](textbox-overview.md)
+- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)
+- [Activer la vérification de l’orthographe dans un contrôle d’édition de texte](how-to-enable-spell-checking-in-a-text-editing-control.md)
 - [Utiliser un menu contextuel personnalisé avec un TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)

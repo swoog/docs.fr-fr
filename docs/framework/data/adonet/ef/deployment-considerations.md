@@ -2,12 +2,12 @@
 title: Remarques sur le déploiement (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 683f5e9b43bceb09d6354079fd9f7fcb7ed09eac
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199594"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Remarques sur le déploiement (Entity Framework)
 Cette rubrique fournit des informations sur le déploiement d’applications qui utilisent ADO.NET Entity Framework pour l’accès aux données. Pour plus d’informations sur Entity Framework, consultez [mise en route](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -29,5 +29,6 @@ Cette rubrique fournit des informations sur le déploiement d’applications qui
 -   Entity Framework étant un composant du .NET Framework, il peut ainsi être redistribué avec votre application si le contrat de licence du .NET Framework l’autorise.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Points à prendre en considération pour le développement et le déploiement](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

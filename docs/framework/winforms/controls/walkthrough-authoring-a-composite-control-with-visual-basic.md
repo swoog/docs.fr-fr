@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic'
+title: 'Procédure pas à pas : création d’un contrôle composite avec Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186106"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procédure pas à pas : création d’un contrôle composite avec Visual Basic
 Les contrôles composites permettent de créer et de réutiliser des interfaces graphiques personnalisées. Un contrôle composite est avant tout un composant doté d’une représentation visuelle. Par conséquent, il peut comporter un ou plusieurs blocs de code, composants ou contrôles Windows Forms qui peuvent en étendre les fonctionnalités en validant les entrées d’utilisateur, en modifiant les propriétés d’affichage ou en effectuant d’autres tâches requises par l’auteur. Les contrôles composites peuvent être insérés dans les Windows Forms de la même manière que les autres contrôles. Dans la première partie de cette procédure pas à pas, vous allez créer un contrôle composite simple appelé `ctlClock`. Dans la seconde partie de la procédure pas à pas, vous allez étendre les fonctionnalités de `ctlClock` via l’héritage.  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 2.  Dans la liste des projets Visual Basic, sélectionnez le **bibliothèque de contrôles Windows** modèle de projet, tapez `ctlClockLib` dans le **nom** , puis cliquez sur **OK**.  
   
-     Le nom du projet, `ctlClockLib`, est également assigné à l’espace de noms racine par défaut. L’espace de noms racine est utilisé pour qualifier les noms des composants dans l’assembly. Par exemple, si deux assemblies contiennent des composants nommés `ctlClock`, vous pouvez spécifier votre composant `ctlClock` à l’aide de `ctlClockLib.ctlClock.`.  
+     Le nom du projet, `ctlClockLib`, est également assigné à l’espace de noms racine par défaut. L’espace de noms racine est utilisé pour qualifier les noms des composants dans l’assembly. Par exemple, si deux assemblys contiennent des composants nommés `ctlClock`, vous pouvez spécifier votre `ctlClock` à l’aide du composant `ctlClockLib.ctlClock.`  
   
 3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **UserControl1.vb**, puis cliquez sur **Renommer**. Remplacez le nom de fichier par `ctlClock.vb`. Cliquez sur le bouton **Oui** lorsque l’on vous demande si vous souhaitez renommer toutes les références à l’élément de code « UserControl1 ».  
   
@@ -59,8 +59,8 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
     |Propriété|Remplacer par|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**Nom**|`lblDisplay`|  
+    |**Texte**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -244,8 +244,8 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
     |Propriété|Paramètre|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**Nom**|`lblAlarm`|  
+    |**Texte**|**Alarme !**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`False`|  
   
@@ -358,9 +358,9 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
     |Contrôle|Propriété|Value|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    |`label1`|**Texte**|`(blank space)`|  
+    ||**Nom**|`lblTest`|  
+    |`dateTimePicker1`|**Nom**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. Dans le concepteur, double-cliquez sur **dtpTest**.  
@@ -396,6 +396,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
      Cette procédure pas à pas a abordé plusieurs concepts clés. Vous avez appris à créer un contrôle composite en combinant des contrôles et des composants dans un conteneur de contrôle composite. Vous avez appris à ajouter des propriétés à votre contrôle et à écrire du code pour implémenter des fonctionnalités personnalisées. Dans la dernière section, vous avez appris à étendre les fonctionnalités d’un contrôle composite grâce à l’héritage et à modifier les fonctionnalités des méthodes hôtes en remplaçant ces méthodes.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)
-- [Guide pratique pour Créer des contrôles composites](how-to-author-composite-controls.md)
-- [Guide pratique pour Afficher un contrôle dans la boîte de dialogue de boîte à outils éléments choisir](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procédure : créer des contrôles composites](how-to-author-composite-controls.md)
+- [Procédure : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

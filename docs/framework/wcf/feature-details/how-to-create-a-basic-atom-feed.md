@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer un flux Atom de base'
+title: 'Procédure : créer un flux Atom de base'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2d254d0c87bb9e0a2ce10b8cba0233680b24f4be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181556"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>Procédure : Créer un flux Atom de base
+# <a name="how-to-create-a-basic-atom-feed"></a>Procédure : créer un flux Atom de base
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication Atom.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Pour créer un service de syndication de base  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
  Lors de la compilation du code précédent, référencez System.ServiceModel.dll et System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

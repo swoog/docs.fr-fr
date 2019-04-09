@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203689"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : création d’une application Windows accessible
 La création d'une application accessible implique de nombreuses contraintes pour l'entreprise. De nombreux gouvernements ont mis en place une réglementation relative à l'accessibilité pour l'achat des logiciels. Le logo Certifié pour Windows inclut des normes d’accessibilité. Rien qu’aux États-Unis, on estime à 30 millions le nombre de personnes affectées par l’accessibilité des logiciels, dont beaucoup sont des clients potentiels.  
@@ -141,7 +141,6 @@ La création d'une application accessible implique de nombreuses contraintes pou
     
       ![Le formulaire de commande de pizza avec une sélection de zone de texte, taille et garniture de nom.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>Prise en charge du mode de contraste élevé  
  Le mode de contraste élevé est un paramètre système Windows qui améliore la lisibilité en utilisant des couleurs contrastées et des tailles de polices adaptées aux personnes malvoyantes. Le <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriété est fournie pour déterminer si le mode de contraste élevé est activé.  
   

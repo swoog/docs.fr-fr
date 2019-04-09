@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des fonctionnalités de navigateur Web à une Application de formulaires Windows'
+title: 'Procédure : ajouter des fonctionnalités de navigateur web à une application Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: bb1eb057814b44e2fd184c14e0c7e16ecb2fbb3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29422ad384240b017b279795d07e3c8100fae493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208798"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Procédure : Ajouter des fonctionnalités de navigateur Web à une Application de formulaires Windows
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Procédure : ajouter des fonctionnalités de navigateur web à une application Windows Forms
 Avec le contrôle <xref:System.Windows.Forms.WebBrowser>, vous pouvez ajouter des fonctionnalités de navigateur web à votre application. Le contrôle fonctionne comme un navigateur web par défaut. Après avoir chargé une URL initiale en définissant la propriété <xref:System.Windows.Forms.WebBrowser.Url%2A>, vous pouvez naviguer en cliquant sur des liens hypertexte ou en utilisant des raccourcis clavier pour parcourir l'historique de navigation. Par défaut, vous pouvez accéder à d'autres fonctionnalités de navigateur via le menu contextuel. Vous pouvez aussi ouvrir de nouveaux documents en les déposant sur le contrôle. Le contrôle <xref:System.Windows.Forms.WebBrowser> possède également plusieurs propriétés, méthodes et événements que vous pouvez utiliser pour implémenter des fonctionnalités d'interface utilisateur semblables à celles d'Internet Explorer.  
   
  L’exemple de code suivant implémente une barre d’adresses, des boutons de navigateur courants, un menu **Fichier**, une barre d’état et une barre de titre qui affiche le titre de la page actuelle.  
@@ -37,5 +37,6 @@ Avec le contrôle <xref:System.Windows.Forms.WebBrowser>, vous pouvez ajouter de
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser, contrôle](webbrowser-control-windows-forms.md)

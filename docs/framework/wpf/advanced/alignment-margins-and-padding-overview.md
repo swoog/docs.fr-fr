@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209162"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Vue d'ensemble de l'alignement, des marges et du remplissage
 Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés qui sont utilisées pour positionner des éléments enfants. Cette rubrique présente quatre des propriétés plus importantes : <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Il est important de comprendre les effets de ces propriétés, car elles servent de base au contrôle de la position des éléments dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Introduction au positionnement d’un élément  
  Il existe de nombreuses manières de positionner des éléments à l’aide de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Toutefois, pour obtenir une disposition idéale dépasse simplement de choisir le bon <xref:System.Windows.Controls.Panel> élément. Contrôle de positionnement précis nécessite une compréhension de la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriétés.  
@@ -56,7 +55,7 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
 |<xref:System.Windows.HorizontalAlignment.Left>|Les éléments enfants sont alignés à gauche de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Les éléments enfants sont alignés au centre de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Les éléments enfants sont alignés à droite de l’espace de disposition alloué par l’élément parent.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (Valeur par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Default)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu.  
   
@@ -76,7 +75,7 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
 |<xref:System.Windows.VerticalAlignment.Top>|Les éléments enfants sont alignés en haut de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Les éléments enfants sont alignés au centre de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Les éléments enfants sont alignés en bas de l’espace de disposition alloué par l’élément parent.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (Valeur par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Default)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu. Pour les besoins de cet exemple, un <xref:System.Windows.Controls.Grid> élément avec un quadrillage visible est utilisé en tant que parent pour mieux illustrer le comportement de disposition de chaque valeur de propriété.  
   
@@ -142,10 +141,11 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
  Des ressources supplémentaires expliquent plus en détail la disposition [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le [vue d’ensemble de panneaux](../controls/panels-overview.md) rubrique contient des détails supplémentaires sur les différents <xref:System.Windows.Controls.Panel> éléments. La rubrique [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) présente des techniques avancées qui utilisent des éléments de disposition pour positionner des composants et lier leurs actions aux sources de données.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
-- [Vue d’ensemble de Panel](../controls/panels-overview.md)
-- [Disposition](layout.md)
-- [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Vue d'ensemble de Panel](../controls/panels-overview.md)
+- [Mise en page](layout.md)
+- [Exemple de galerie de dispositions WPF](https://go.microsoft.com/fwlink/?LinkID=160054)

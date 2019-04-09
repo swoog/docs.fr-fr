@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX'
+title: 'Procédure : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 188e88d40536b1d31c72f404957ef2de4ff87b1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26a7b0d3fef67cf9dae0913e22e3cd7ec443c111
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202974"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procédure : Utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procédure : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET
 Windows Communication Foundation (WCF) vous permet de créer un service qui rend un compatible ASP.NET AJAX point de terminaison disponible qui peuvent être appelés à partir de JavaScript sur un site Web client. Pour créer ce point de terminaison, vous pouvez utiliser un fichier de configuration, comme avec tous les autres points de terminaison Windows Communication Foundation (WCF), ou utiliser une méthode qui ne nécessite pas d’éléments de configuration. Cette rubrique décrit l'approche utilisant le fichier de configuration.  
   
  La partie de la procédure qui permet le service point de terminaison compatible ASP.NET AJAX consiste à configurer le point de terminaison à utiliser le <xref:System.ServiceModel.WebHttpBinding> et d’ajouter le [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) comportement de point de terminaison. Après avoir configuré le point de terminaison, les étapes pour implémenter et héberger le service sont semblables à celles utilisées par n’importe quel service WCF. Pour obtenir un exemple, consultez le [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
@@ -105,5 +105,6 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui rend
 1.  Le point de terminaison est configuré avec une adresse vide renvoyant au fichier .svc, afin que le service est désormais disponible et peut être appelé en envoyant des demandes à service.svc /\<opération >, par exemple, service.svc/Add pour le `Add` opération. Vous pouvez l’utiliser en entrant le point l’URL du point de terminaison dans la collection Scripts du contrôle Script Manager ASP.NET AJAX . Pour obtenir un exemple, consultez le [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création de services WCF pour ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Guide pratique pour Migrer les Services Web ASP.NET compatibles AJAX vers WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: Élément <bypassTrustedAppStrongNames>
+title: <bypassTrustedAppStrongNames> Élément
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179138"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Element
 Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de confiance totale sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.  
@@ -41,7 +41,7 @@ Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de 
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`true`|Les signatures avec nom fort sur les assemblys de confiance totale ne sont pas validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>. Il s'agit de la valeur par défaut.|  
 |`false`|Les signatures avec nom fort sur les assemblys de confiance totale sont validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>. La signature de nom fort est vérifiée uniquement pour l’exactitude de la signature ; Il n’est pas comparée à un autre nom fort pour une correspondance.|  
@@ -84,6 +84,7 @@ Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+
+- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Guide pratique pour désactiver la fonctionnalité consistant à ignorer les noms forts](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [Procédure : désactiver la fonctionnalité consistant à ignorer les noms forts](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

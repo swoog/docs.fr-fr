@@ -2,17 +2,16 @@
 title: Types F#
 description: En savoir plus sur les types qui sont utilisés dans F# et comment F# sont nommés et décrits.
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193588"
 ---
 # <a name="f-types"></a>Types F#
 
 Cette rubrique décrit les types qui sont utilisés dans F# et comment F# sont nommés et décrits.
-
 
 ## <a name="summary-of-f-types"></a>Résumé de F# Types
 Certains types sont considérés comme *types primitifs*, telles que le type booléen `bool` et les types intégraux et à virgule flottante de différentes tailles, qui incluent les types pour les octets et les caractères. Ces types sont décrits dans [Types primitifs](primitive-types.md).
@@ -27,39 +26,35 @@ En outre, F# code peut définir des alias, qui sont nommés *abréviations de ty
 
 F#Fournit des types de collection utiles qui sont conçues avec la programmation fonctionnelle à l’esprit. À l’aide de ces types de collection vous permet d’écrire du code qui ne fonctionne plus dans le style. Pour plus d’informations, consultez [ F# Types de collections](fsharp-collection-types.md).
 
-
 ## <a name="syntax-for-types"></a>Syntaxe pour les Types
 Dans F# code, vous devez souvent écrire les noms des types. Chaque type a une forme syntaxique, et vous utilisez ces formes syntaxiques dans les annotations de type, les déclarations de méthode abstraite, les déclarations de délégué, signatures et d’autres constructions. Chaque fois que vous déclarez une nouvelle construction de programme dans l’interpréteur, l’interpréteur imprime le nom de la construction et la syntaxe pour son type. Cette syntaxe peut être simplement un identificateur pour un type défini par l’utilisateur ou un identificateur intégré tel que pour `int` ou `string`, mais pour des types plus complexes, la syntaxe est plus complexe.
 
 Le tableau suivant présente les aspects de la syntaxe de type pour F# types.
 
-
-
 |Type|Syntaxe de type|Exemples|
 |----|-----------|--------|
 |type primitif|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |type d’agrégat (classe, structure, union, enregistrement, enum et ainsi de suite)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|abréviation de type|*nom de l’abréviation de type*|`bigint`|
-|type qualifié complet|*Namespaces.type-nom*<br /><br />ou<br /><br />*modules.type-nom*<br /><br />ou<br /><br />*Namespaces.modules.type-nom*|`System.IO.StreamWriter`|
+|abréviation de type|*type-abbreviation-name*|`bigint`|
+|type qualifié complet|*namespaces.type-name*<br /><br />ou<br /><br />*modules.type-name*<br /><br />ou<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*nom de type*[] ou<br /><br />*nom de type* tableau|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|tableau à deux dimensions|*nom de type*[,]|`int[,]`<br /><br />`float[,]`|
-|tableau tridimensionnel|*nom de type*[,]|`float[,,]`|
-|tuple|*type-name1* &#42; *type-nom2* ...|Par exemple, `(1,'b',3)` a le type `int * char * int`|
+|tableau à deux dimensions|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|tableau tridimensionnel|*type-name*[,,]|`float[,,]`|
+|tuple|*type-name1* &#42; *type-name2* ...|Par exemple, `(1,'b',3)` a le type `int * char * int`|
 |type générique|*paramètre de type* *nom de type générique*<br /><br />ou<br /><br />*nom de type générique*&lt;*liste de paramètres de type*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |type (un type générique qui a un argument de type spécifique fourni) construit|*argument de type* *nom de type générique*<br /><br />ou<br /><br />*nom de type générique*&lt;*liste d’arguments type*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|type de fonction qui a un paramètre unique|*paramètre-type1*  - &gt; *type de retour*|Une fonction qui accepte un `int` et retourne un `string` a le type `int -> string`|
+|type de fonction qui a un paramètre unique|*parameter-type1* -&gt; *return-type*|Une fonction qui accepte un `int` et retourne un `string` a le type `int -> string`|
 |type de fonction qui a plusieurs paramètres|*paramètre-type1*  - &gt; *paramètre-type2*  - &gt; ... -&gt; *type de retour*|Une fonction qui accepte un `int` et un `float` et retourne un `string` a le type `int -> float -> string`|
-|fonction d’ordre supérieur en tant que paramètre|(*type de fonction*)|`List.map` a le type `('a -> 'b) -> 'a list -> 'b list`|
+|fonction d’ordre supérieur en tant que paramètre|(*function-type*)|`List.map` a le type `('a -> 'b) -> 'a list -> 'b list`|
 |délégué|délégué de *type de fonction*|`delegate of unit -> int`|
-|type flexible|#*nom de type*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|type flexible|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Rubriques connexes
-
 
 |Rubrique|Description|
 |-----|-----------|
 |[Types primitifs](primitive-types.md)|Décrit les types simples intégrés tels que les types intégraux, le type booléen et les types de caractères.|
-|[Type d’unité](unit-type.md)|Décrit le `unit` type, un type qui a une valeur et qui est indiqué par () ; équivalent au `void` dans C# et `Nothing` en Visual Basic.|
+|[Unit, type](unit-type.md)|Décrit le `unit` type, un type qui a une valeur et qui est indiqué par () ; équivalent au `void` dans C# et `Nothing` en Visual Basic.|
 |[Tuples](tuples.md)|Décrit le type de tuple, un type qui se compose de valeurs associées de n’importe quel type groupées en paires, triples, quadruples et ainsi de suite.|
 |[Options](options.md)|Décrit le type d’option, un type qui peut avoir une valeur ou être vide.|
 |[Listes](lists.md)|Décrit les listes, qui sont des séries immuables et ordonnée d’éléments tous du même type.|

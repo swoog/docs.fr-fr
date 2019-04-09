@@ -2,12 +2,12 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 786a70e8c686497e91492938a4d0796db4f6dd91
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e1a53869faa1997d2e79c3d2869a15001ee29626
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187744"
 ---
 # <a name="dynamicendpoint"></a>\<dynamicEndpoint>
 Cet élément de configuration définit un point de terminaison standard qui contient des informations pour permettre à une application de fonctionner en tant que programme client qui peut rechercher l'adresse du point de terminaison de manière dynamique au moment de l'exécution.  
@@ -61,5 +61,6 @@ Cet élément de configuration définit un point de terminaison standard qui con
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Collection de points de terminaison standard qui sont des points de terminaison prédéfinis dont une ou plusieurs propriétés (adresse, liaison, contrat) sont fixes.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

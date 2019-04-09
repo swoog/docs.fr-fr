@@ -2,12 +2,12 @@
 title: Considérations sur la sécurité (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161358"
 ---
 # <a name="security-considerations-entity-framework"></a>Considérations sur la sécurité (Entity Framework)
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution d'applications [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sécurisées. Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -20,7 +20,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
 -   recevoir la chaîne de connexion d'[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ;  
   
--   traduire l'arborescence de commandes en langage de requête natif de la source de données ;  
+-   traduire l’arborescence de commandes en langage de requête natif de la source de données ;  
   
 -   assembler et retourner des jeux de résultats.  
   
@@ -57,7 +57,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  Après avoir établi une connexion, vous ne devez pas la passer à l'extérieur du contexte de sécurité. Par exemple, un thread bénéficiant de l'autorisation nécessaire pour ouvrir une connexion ne doit pas stocker la connexion dans un emplacement global. Si la connexion est disponible dans un emplacement global, un autre thread malveillant peut utiliser la connexion ouverte sans que cette autorisation lui soit explicitement accordée.  
   
 #### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>Gardez à l'esprit que les informations de connexion et les mots de passe peuvent être visibles dans un vidage de la mémoire.  
- Lorsque les informations d'ouverture de session et de mot de passe de la source de données sont fournies dans la chaîne de connexion, ces informations sont conservées en mémoire jusqu'à ce que le garbage collection récupère les ressources. Il est par conséquent impossible de déterminer quand une chaîne de mot de passe n'est plus en mémoire. Si une application se bloque, un fichier de vidage de la mémoire peut contenir des informations sensibles sur la sécurité, et l'utilisateur qui exécute l'application ainsi que tout utilisateur disposant d'un accès en tant qu'administrateur à l'ordinateur peuvent consulter le fichier de vidage de la mémoire. Utilisez l'authentification Windows pour les connexions à Microsoft SQL Server.  
+ Lorsque les informations d’ouverture de session et de mot de passe de la source de données sont fournies dans la chaîne de connexion, ces informations sont conservées en mémoire jusqu’à ce que le garbage collection récupère les ressources. Il est par conséquent impossible de déterminer quand une chaîne de mot de passe n'est plus en mémoire. Si une application se bloque, un fichier de vidage de la mémoire peut contenir des informations sensibles sur la sécurité, et l'utilisateur qui exécute l'application ainsi que tout utilisateur disposant d'un accès en tant qu'administrateur à l'ordinateur peuvent consulter le fichier de vidage de la mémoire. Utilisez l'authentification Windows pour les connexions à Microsoft SQL Server.  
   
 #### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>Accordez aux utilisateurs uniquement les autorisations nécessaires dans la source de données.  
  Un administrateur de source de données doit accorder uniquement les autorisations nécessaires aux utilisateurs. Même si [!INCLUDE[esql](../../../../../includes/esql-md.md)] ne prend pas en charge les instructions DML qui modifient les données, telles qu'INSERT, UPDATE ou DELETE, les utilisateurs peuvent néanmoins accéder à la connexion à la source de données. Un utilisateur malveillant pourrait utiliser cette connexion pour exécuter des instructions DML dans le langage natif de la source de données.  
@@ -65,13 +65,13 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 #### <a name="run-applications-with-the-minimum-permissions"></a>Exécutez les applications avec les autorisations minimales.  
  Lorsque vous permettez à une application managée de s'exécuter avec une autorisation de confiance totale, le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ne limite pas l'accès de l'application à votre ordinateur. De ce fait, une faille de sécurité dans votre application risque de compromettre l'ensemble de votre système. Pour utiliser la sécurité d'accès du code et d'autres mécanismes de sécurité dans le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], vous devez exécuter les applications en utilisant des autorisations de confiance partielle et avec l'ensemble minimal des autorisations qui sont requises pour permettre à l'application de fonctionner. Les autorisations d'accès au code suivantes sont les autorisations minimales requises par votre application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] :  
   
--   <xref:System.Security.Permissions.FileIOPermission> : <xref:System.Security.Permissions.FileIOPermissionAccess.Write> pour ouvrir les fichiers de métadonnées spécifiés ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> pour rechercher des fichiers de métadonnées dans un répertoire.  
+-   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> pour ouvrir les fichiers de métadonnées spécifiés ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> à rechercher dans un répertoire pour les fichiers de métadonnées.  
   
--   <xref:System.Security.Permissions.ReflectionPermission> : <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> pour prendre en charge des requêtes LINQ to Entities.  
+-   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> pour prendre en charge de LINQ aux requêtes d’entités.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> pour s'inscrire dans un objet <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> pour s’inscrire dans un <xref:System.Transactions><xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission> : <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l'aide de l'interface <xref:System.Runtime.Serialization.ISerializable>.  
+-   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l’aide de la <xref:System.Runtime.Serialization.ISerializable> interface.  
   
 -   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, telles que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
   
@@ -92,15 +92,15 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  Vous devez tenir compte des considérations sur la sécurité suivantes lors de l'interrogation d'un modèle conceptuel. Ces considérations s'appliquent aux requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] utilisant EntityClient et aux requêtes d'objet utilisant LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] et les méthodes du Générateur de requêtes.  
   
 #### <a name="prevent-sql-injection-attacks"></a>Empêchez les attaques par injection de code SQL.  
- Les applications reçoivent fréquemment des entrées externes (provenant d'un utilisateur ou d'un autre agent externe) et exécutent des actions en fonction de ces entrées. Toute entrée qui provient directement ou indirectement d'un utilisateur ou d'un agent externe doit avoir un contenu qui utilise la syntaxe du langage cible afin d'exécuter des actions non autorisées. Lorsque le langage cible est un langage SQL, tel que [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], cette manipulation est appelée « attaque par injection de code SQL ». Un utilisateur malveillant peut injecter des commandes directement dans la requête et effacer une table de base de données, provoquer un déni de service ou modifier d'une manière ou d'une autre la nature de l'opération en cours.  
+ Les applications reçoivent fréquemment des entrées externes (provenant d'un utilisateur ou d'un autre agent externe) et exécutent des actions en fonction de ces entrées. Toute entrée qui provient directement ou indirectement d'un utilisateur ou d'un agent externe doit avoir un contenu qui utilise la syntaxe du langage cible afin d'exécuter des actions non autorisées. Lorsque le langage cible est un langage SQL, tel que [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], cette manipulation est appelée « attaque par injection de code SQL ». Un utilisateur malveillant peut injecter des commandes directement dans la requête et déposer une table de base de données, provoquer un déni de service ou modifier d’une manière ou d’une autre la nature de l’opération en cours.  
   
--   Attaques par injection [!INCLUDE[esql](../../../../../includes/esql-md.md)] :  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] attaques par injection :  
   
      Les attaques par injection de code SQL peuvent être effectuées dans [!INCLUDE[esql](../../../../../includes/esql-md.md)] en fournissant une entrée malveillante à des valeurs qui sont utilisées dans un prédicat de requête et dans les noms de paramètres. Pour éviter le risque d'injection de code SQL, vous ne devez jamais associer une entrée d'utilisateur à un texte de commande [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] acceptent des paramètres partout où des littéraux sont admis. Vous devez utiliser des requêtes paramétrables plutôt que d'injecter des littéraux directement dans la requête à partir d'un agent externe. Vous devez également envisager d’utiliser [méthodes du Générateur de requêtes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) pour construire sans risque Entity SQL.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] elles acceptent des paramètres partout où des littéraux sont admis. Vous devez utiliser des requêtes paramétrables plutôt que d'injecter des littéraux directement dans la requête à partir d'un agent externe. Vous devez également envisager d’utiliser [méthodes du Générateur de requêtes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) pour construire sans risque Entity SQL.  
   
--   Attaques par injection [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] :  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] attaques par injection :  
   
      Bien qu'il soit possible de composer des requêtes dans [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], cette opération est effectuée via l'API de modèle objet. Contrairement aux requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)], les requêtes [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ne sont pas composées par manipulation ou concaténation de chaînes, et elles ne sont pas sujettes à des attaques par injection de code SQL au sens classique du terme.  
   
@@ -143,25 +143,26 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 ## <a name="security-considerations-for-aspnet-applications"></a>Considérations sur la sécurité pour les applications ASP.NET  
  Lorsque vous utilisez des chemins d'accès dans des applications [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)], il est recommandé de tenir compte des points suivants.  
   
-#### <a name="verify-whether-your-host-performs-path-checks"></a>Vérifiez si votre hôte effectue des contrôles de chemin d'accès.  
- Lorsque la chaîne de la substitution `|DataDirectory|` (placées entre barres verticales) est utilisée, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] vérifie que le chemin d'accès résolu est pris en charge. Par exemple, « .. » n'est pas autorisé derrière `DataDirectory`. Le même contrôle est effectué par le processus qui héberge `~` pour résoudre l'opérateur de racine de l'application Web ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]). IIS effectue ce contrôle ; toutefois, les hôtes autres qu'IIS ne peuvent pas vérifier que le chemin d'accès résolu est pris en charge. Vous devez connaître le comportement de l'hôte sur lequel vous déployez une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+#### <a name="verify-whether-your-host-performs-path-checks"></a>Vérifiez si votre hôte effectue des contrôles de chemin d’accès.  
+ Lorsque la chaîne de la substitution `|DataDirectory|` (placées entre barres verticales) est utilisée, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] vérifie que le chemin d’accès résolu est pris en charge. Par exemple, « .. » n'est pas autorisé derrière `DataDirectory`. Le même contrôle est effectué par le processus qui héberge `~` pour résoudre l'opérateur de racine de l'application Web ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]). IIS effectue ce contrôle ; toutefois, les hôtes autres qu'IIS ne peuvent pas vérifier que le chemin d'accès résolu est pris en charge. Vous devez connaître le comportement de l'hôte sur lequel vous déployez une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
-#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Ne faites pas de suppositions sur les noms de chemins d'accès résolus.  
+#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Ne faites pas de suppositions sur les noms de chemins d’accès résolus.  
  Bien que les valeurs auxquelles l'opérateur racine (`~`) et la chaîne de la substitution `DataDirectory` correspondent doivent rester constantes pendant l'exécution de l'application, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] n'empêche pas l'hôte de modifier ces valeurs.  
   
-#### <a name="verify-the-path-length-before-deployment"></a>Vérifiez la longueur du chemin d'accès avant le déploiement.  
- Avant de déployer une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous devez vous assurer que les valeurs de l'opérateur racine (~) et de la chaîne de substitution `DataDirectory` ne dépassent pas les limites de longueur de chemin d'accès du système d'exploitation. Les fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] ne garantissent pas que la longueur du chemin d'accès respecte les limites valides.  
+#### <a name="verify-the-path-length-before-deployment"></a>Vérifiez la longueur du chemin d’accès avant le déploiement.  
+ Avant de déployer une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous devez vous assurer que les valeurs de l’opérateur racine (~) et de la chaîne de substitution `DataDirectory` ne dépassent pas les limites de longueur de chemin d’accès du système d’exploitation. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] fournisseurs de données ne garantissent pas que la longueur de chemin d’accès est respectent les limites valides.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considérations sur la sécurité pour les métadonnées ADO.NET  
  Les considérations sur la sécurité suivantes s'appliquent lors de la génération et de l'utilisation de fichiers de modèle et de mappage.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>N'exposez pas d'informations sensibles via la journalisation.  
- Les composants du service de métadonnées [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] n'enregistrent aucune information personnelle. Si des résultats ne peuvent pas être retournés à cause de restrictions d'accès, les systèmes de gestion de base de données et les systèmes de fichiers doivent retourner zéro résultat au lieu de lever une exception qui pourrait contenir des informations sensibles.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] composants de service de métadonnées ne consigne pas des informations confidentielles. Si des résultats ne peuvent pas être retournés à cause de restrictions d'accès, les systèmes de gestion de base de données et les systèmes de fichiers doivent retourner zéro résultat au lieu de lever une exception qui pourrait contenir des informations sensibles.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>N'acceptez pas d'objets MetadataWorkspace provenant de sources non fiables.  
  Les applications ne doivent pas accepter les instances de la classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> provenant de sources non fiables. Il est préférable de construire et de remplir explicitement un espace de travail à partir d'une telle source.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Considérations sur la migration](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+- [Considérations relatives à la migration](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner des lignes opaques et translucides'
+title: 'Procédure : dessiner des lignes opaques et translucides'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188264"
 ---
-# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procédure : Dessiner des lignes opaques et translucides
+# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procédure : dessiner des lignes opaques et translucides
 Quand vous dessinez une ligne, vous devez passer un objet <xref:System.Drawing.Pen> à la méthode <xref:System.Drawing.Graphics.DrawLine%2A> de la classe <xref:System.Drawing.Graphics>. L'un des paramètres du constructeur <xref:System.Drawing.Pen.%23ctor%2A> est un objet <xref:System.Drawing.Color>. Pour dessiner une ligne opaque, affectez au composant alpha de la couleur la valeur 255. Pour dessiner une ligne translucide, affectez au composant alpha n'importe quelle valeur comprise entre 1 et 254.  
   
  Quand vous dessinez une ligne translucide sur un arrière-plan, la couleur de la ligne est fusionnée avec les couleurs de l'arrière-plan. Le composant alpha spécifie comment les couleurs de ligne et de l'arrière-plan sont mélangées ; les valeurs alpha proches de 0 favorisent les couleurs d'arrière-plan, tandis que les valeurs alpha proches de 255 favorisent la couleur de ligne.  
@@ -33,9 +33,10 @@ Quand vous dessinez une ligne, vous devez passer un objet <xref:System.Drawing.P
  ![Illustration qui montre la sortie opaque et translucide](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fusion alpha de lignes et de remplissages](alpha-blending-lines-and-fills.md)
-- [Guide pratique pour Affecter un arrière-plan Transparent à votre contrôle](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Guide pratique pour Dessiner avec des pinceaux opaques et translucides](how-to-draw-with-opaque-and-semitransparent-brushes.md)
+- [Procédure : donner à votre contrôle un arrière-plan transparent](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Procédure : dessiner avec des pinceaux opaques et translucides](how-to-draw-with-opaque-and-semitransparent-brushes.md)

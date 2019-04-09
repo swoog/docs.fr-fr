@@ -8,27 +8,28 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195512"
 ---
 # <a name="typography"></a>Typographie
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge la présentation enrichie du contenu de texte. Le texte dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est affiché à l’aide de [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], ce qui améliore sa clarté et sa lisibilité. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend également en charge [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices qui fournissent des fonctionnalités supplémentaires au-delà de celles définies par le [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Typographie dans WPF](typography-in-wpf.md)  
- [Vue d’ensemble ClearType](cleartype-overview.md)  
+ [Vue d'ensemble de ClearType](cleartype-overview.md)  
  [Paramètres du Registre ClearType](cleartype-registry-settings.md)  
  [Dessin du texte mis en forme](drawing-formatted-text.md)  
  [Mise en forme de texte avancée](advanced-text-formatting.md)  
  [Polices](fonts-wpf.md)  
  [Glyphes](glyphs.md)  
- [Rubriques de guide pratique](typography-how-to-topics.md)  
+ [Rubriques Comment](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Documents.Typography>
 - [Documents dans WPF](documents-in-wpf.md)
 - [Fonctionnalités des polices OpenType](opentype-font-features.md)

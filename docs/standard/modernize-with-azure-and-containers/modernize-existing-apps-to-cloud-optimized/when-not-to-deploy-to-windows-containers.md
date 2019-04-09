@@ -4,12 +4,12 @@ description: Moderniser des applications .NET existantes avec des conteneurs de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200738"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Quand ne pas déployer sur des conteneurs Windows
 
@@ -34,7 +34,6 @@ Cas non pris en charge dans des conteneurs Windows, à compter de mai 2018 :
 -   Applications d’interface utilisateur (applications clientes avec une interface utilisateur visuelle) ne sont pas prises en charge de scénarios.
 
 -   Rôles d’infrastructure Windows (DNS, DHCP, DC, NTP, impression, serveur de fichiers, etc. IAM) ne sont pas des scénarios pris en charge.
-
 
 Pour des scénarios supplémentaires non prise en charge et les demandes à partir de la Communauté, consultez le forum UserVoice pour les conteneurs Windows : <https://windowsserver.uservoice.com/forums/304624-containers>.
 

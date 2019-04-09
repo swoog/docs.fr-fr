@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Lier des données pour le contrôle de DataGridView Windows Forms à l’aide du Concepteur'
+title: 'Procédure : lier des données au contrôle DataGridView Windows Forms à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200231"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : Lier des données pour le contrôle de DataGridView Windows Forms à l’aide du Concepteur
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : lier des données au contrôle DataGridView Windows Forms à l’aide du concepteur
 Vous pouvez utiliser le concepteur pour connecter un <xref:System.Windows.Forms.DataGridView> contrôle aux sources de données de plusieurs types différents, y compris les bases de données, les objets métier ou les services Web. Lorsque vous liez le contrôle à une source de données à l’aide du concepteur, le contrôle est automatiquement lié à un <xref:System.Windows.Forms.BindingSource> composant qui représente la source de données. En outre, les colonnes sont générées automatiquement dans le contrôle pour faire correspondre les informations de schéma fournies par la source de données.  
   
  Après avoir généré les colonnes, vous pouvez les modifier pour répondre à vos besoins. Par exemple, vous pouvez supprimer ou masquer des colonnes qui ne vous intéressent pas dans l’affichage, vous pouvez réorganiser les colonnes, ou vous pouvez modifier les types de colonnes. Pour plus d’informations sur la modification des colonnes, consultez les rubriques répertoriées dans la section Voir aussi.  
@@ -45,18 +45,19 @@ Vous pouvez utiliser le concepteur pour connecter un <xref:System.Windows.Forms.
     >  Si votre projet a déjà une source de données, vous pouvez également utiliser la fenêtre **Sources de données** pour créer un formulaire de données. Pour plus d’informations, consultez la page [Fenêtre Sources de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
-- [Guide pratique pour Se connecter aux données dans une base de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Guide pratique pour Ajouter et supprimer des colonnes dans le contrôle de DataGridView Windows Forms à l’aide du Concepteur](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Guide pratique pour Modifier l’ordre des colonnes dans le contrôle de DataGridView Windows Forms à l’aide du Concepteur](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Guide pratique pour Modifier le Type d’une colonne de DataGridView Windows Forms à l’aide du Concepteur](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Guide pratique pour Figer des colonnes dans le contrôle de DataGridView Windows Forms à l’aide du Concepteur](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Guide pratique pour Masquer des colonnes dans le contrôle de DataGridView Windows Forms à l’aide du Concepteur](hide-columns-in-the-datagrid-using-the-designer.md)
-- [Guide pratique pour Rendre les colonnes en lecture seule dans le contrôle de DataGridView Windows Forms à l’aide du Concepteur](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [Guide pratique pour Créer un projet Application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procédure : Se connecter aux données dans une base de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
+- [Procédure : ajouter et supprimer des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Procédure : modifier l’ordre des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Procédure : modifier le type d’une colonne DataGridView Windows Forms à l’aide du concepteur](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Procédure : figer des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Procédure : masquer des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Procédure : mettre les colonnes en lecture seule dans le contrôle DataGridView Windows Forms à l’aide du concepteur](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Procédure : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procédure : ajouter des contrôles à des Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Fenêtre Sources de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
-- [Guide pratique pour Afficher les données associées dans une Application de formulaires Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))
+- [Procédure : Afficher les données associées dans une Application de formulaires Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

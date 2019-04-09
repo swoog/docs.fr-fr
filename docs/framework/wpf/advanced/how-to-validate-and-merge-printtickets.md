@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199945"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Procédure : Valider et fusionner des PrintTicket
 Le [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [schéma d’impression](https://go.microsoft.com/fwlink/?LinkId=186397) inclut flexible et extensible <xref:System.Printing.PrintCapabilities> et <xref:System.Printing.PrintTicket> éléments. Le premier comptabilise les fonctions d’un périphérique d’impression, et ce dernier spécifie comment l’appareil doit utiliser ces fonctionnalités par rapport à une séquence particulière de documents, de document individuel ou de page individuelle.  
@@ -57,6 +57,7 @@ Le [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [schéma 
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
@@ -65,5 +66,5 @@ Le [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [schéma 
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Vue d'ensemble de l'impression](printing-overview.md)
 - [Schéma d’impression](https://go.microsoft.com/fwlink/?LinkId=186397)

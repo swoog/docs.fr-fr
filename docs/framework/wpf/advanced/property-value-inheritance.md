@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186822"
 ---
 # <a name="property-value-inheritance"></a>Héritage de la valeur de propriété
 L’héritage de la valeur de propriété est une fonctionnalité du système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L’héritage de la valeur de propriété permet aux éléments enfants d’une arborescence d’éléments d’obtenir la valeur d’une propriété particulière des éléments parents, en héritant cette valeur telle qu’elle a été définie dans l’élément parent le plus proche. L’élément parent peut également avoir obtenu sa valeur par héritage de la valeur de propriété, le système peut donc remonter jusqu’à la racine de la page. L’héritage de la valeur de propriété n’est pas le comportement du système de propriétés par défaut. Une propriété doit être établie avec un paramètre de métadonnées particulier pour pouvoir lancer l’héritage de la valeur de propriété sur les éléments enfants.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>L’héritage de la valeur de propriété est un héritage de relation contenant-contenu  
  Le terme « Héritage » ne désigne pas tout à fait le même concept que l’héritage dans le contexte des types et de la programmation générale orientée objet, où les classes dérivées héritent des définitions de membre de leurs classes de base. Cette signification d’héritage s’applique également dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] : les propriétés définies dans différentes classes de base sont exposées comme des attributs pour les classes [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dérivées quand elles sont utilisées comme éléments et exposées sous forme de membres pour le code. L’héritage de la valeur de propriété concerne particulièrement la façon dont les valeurs de propriété peuvent hériter d’un élément à l’autre en fonction des relations parent-enfant dans une arborescence d’éléments. Cette arborescence d’éléments est plus directement visible quand des éléments sont imbriqués dans d’autres éléments à mesure que vous définissez des applications dans le balisage [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Les arborescences d’objets peuvent également être créées par programmation en ajoutant des objets aux collections désignées d’autres objets, et l’héritage de la valeur de propriété fonctionne de la même façon dans l’arborescence terminée au moment de l’exécution.  
@@ -42,6 +40,7 @@ L’héritage de la valeur de propriété est une fonctionnalité du système de
  L’héritage des propriétés fonctionne sur une arborescence d’éléments. Cette arborescence est souvent parallèle à l’arborescence logique. Toutefois, chaque fois que vous incluez un objet de niveau noyau WPF dans le balisage qui définit une arborescence d’éléments, comme un <xref:System.Windows.Media.Brush>, vous avez créé une arborescence logique discontinue. Une arborescence logique véritable ne s’étend pas conceptuellement via le <xref:System.Windows.Media.Brush>, car l’arborescence logique est un concept de niveau infrastructure WPF. Vous pouvez observer ce phénomène dans les résultats lorsque vous utilisez les méthodes de <xref:System.Windows.LogicalTreeHelper>. Toutefois, l’héritage de valeur de propriété peut rétablir la continuité de l’arborescence logique et peut toujours passer des valeurs héritées, tant que la propriété héritable a été enregistrée comme une propriété jointe et aucune limite de blocage d’héritage délibérée (comme un <xref:System.Windows.Controls.Frame>) est rencontré.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Métadonnées de propriété de dépendance](dependency-property-metadata.md)
 - [Vue d'ensemble des propriétés jointes](attached-properties-overview.md)
 - [Priorité de la valeur de propriété de dépendance](dependency-property-value-precedence.md)

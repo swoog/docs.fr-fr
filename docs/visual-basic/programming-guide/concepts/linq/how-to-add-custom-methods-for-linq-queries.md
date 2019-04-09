@@ -2,12 +2,12 @@
 title: 'Procédure : Ajouter des méthodes personnalisées pour les requêtes LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f61db6c17fa3ead1e9dbc47c172a2cef91c042eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123303"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Procédure : Ajouter des méthodes personnalisées pour les requêtes LINQ (Visual Basic)
 Vous pouvez étendre l’ensemble de méthodes que vous pouvez utiliser pour les requêtes LINQ en ajoutant des méthodes d’extension à l’interface <xref:System.Collections.Generic.IEnumerable%601>. Par exemple, en plus des opérations standard d’obtention de valeur moyenne et maximale, vous pouvez créer une méthode d’agrégation personnalisée pour calculer une valeur unique à partir d’une séquence de valeurs. Vous pouvez également créer une méthode qui fonctionne comme un filtre personnalisé ou une transformation de données pour une séquence de valeurs, et qui retourne une nouvelle séquence. <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Reverse%2A> en sont quelques exemples.  
@@ -68,7 +68,6 @@ Console.WriteLine("Double: Median = " & query1)
 '  
 ' Double: Median = 4.85  
 ```  
-  
 
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Surcharge d’une méthode d’agrégation pour accepter différents types  
  Vous pouvez surcharger votre méthode d’agrégation pour qu’elle accepte des séquences de différents types. L’approche standard consiste à créer une surcharge pour chaque type. Une autre approche consiste à créer une surcharge qui accepte un type générique et le convertit en un autre type à l’aide d’un délégué. Vous pouvez également combiner ces deux approches.  
@@ -108,8 +107,7 @@ Console.WriteLine("Integer: Median = " & query2)
 ' Double: Median = 4.85  
 ' Integer: Median = 3  
 ```  
-  
- 
+
 #### <a name="to-create-a-generic-overload"></a>Pour créer une surcharge générique  
  Vous pouvez également créer une surcharge qui accepte une séquence d’objets génériques. Cette surcharge prend un délégué comme paramètre et l’utilise pour convertir une séquence d’objets de type générique en un autre type d’objets.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203936"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 La connexion à un serveur de base de données consiste généralement en plusieurs étapes de longue durée. Un canal physique tel qu'un socket ou un canal nommé doit être établi, le contrôle initial avec le serveur doit avoir lieu, les informations de chaîne de connexion doivent être analysées, la connexion doit être authentifiée par le serveur, des contrôles doivent être effectués pour l'inscription dans la transaction en cours, etc.  
@@ -19,7 +19,7 @@ La connexion à un serveur de base de données consiste généralement en plusie
   
  Le regroupement de connexions réduit le nombre de fois où il est nécessaire d'ouvrir de nouvelles connexions. Le *pooler* conserve la propriété de la connexion physique. Elle gère les connexions en conservant en vie un ensemble de connexions actives pour chaque configuration de connexion donnée. Chaque fois qu'un utilisateur appelle `Open` sur une connexion, le dispositif de regroupement de connexions recherche une connexion disponible dans le pool. Si une connexion regroupée est disponible, le dispositif de regroupement de connexions la retourne à l'appelant au lieu d'ouvrir une nouvelle connexion. Lorsque l'application appelle `Close` sur la connexion, le dispositif de regroupement de connexions la retourne à l'ensemble regroupé de connexions actives au lieu de la fermer. Une fois la connexion retournée au pool, elle est prête à être réutilisée sur l'appel de `Open` suivant.  
   
- Seules les connexions utilisant la même configuration peuvent être groupées par pools. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] garde en même temps plusieurs pools, un pour chaque configuration. Les connexions sont séparées en pools par chaîne de connexion, ainsi que par identité Windows en cas d'utilisation de la sécurité intégrée. Les connexions sont également regroupées selon si elles sont inscrites dans une transaction. Lorsque vous utilisez <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, l'instance <xref:System.Data.SqlClient.SqlCredential> affecte le pool de connexions. Les différentes instances de <xref:System.Data.SqlClient.SqlCredential> utilisent différents pool de connexions, même si l'ID d'utilisateur et le mot de passe sont identiques.  
+ Seules les connexions utilisant la même configuration peuvent être groupées par pools. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] conserve plusieurs pools en même temps, un pour chaque configuration. Les connexions sont séparées en pools par chaîne de connexion, ainsi que par identité Windows en cas d'utilisation de la sécurité intégrée. Les connexions sont également regroupées selon si elles sont inscrites dans une transaction. Lorsque vous utilisez <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, l'instance <xref:System.Data.SqlClient.SqlCredential> affecte le pool de connexions. Les différentes instances de <xref:System.Data.SqlClient.SqlCredential> utilisent différents pool de connexions, même si l'ID d'utilisateur et le mot de passe sont identiques.  
   
  Le regroupement de connexions peut considérablement améliorer les performances et l'évolutivité de votre application. Le regroupement de connexions est activé par défaut dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. À moins que vous ne le désactiviez explicitement, le dispositif de regroupement de connexions optimise les connexions au fur et à mesure de leur ouverture et de leur fermeture dans votre application. Vous pouvez également fournir plusieurs modificateurs de chaîne de connexion pour contrôler le comportement de regroupement de connexions. Pour plus d'informations, voir la section sur le contrôle des pools de connexions avec les mots clés des chaînes de connexion, plus loin dans cette rubrique.  
   
@@ -80,7 +80,7 @@ Pour plus d’informations sur les événements liés à l’ouverture et fermet
  Si une connexion existante à un serveur a disparu, il est possible de la retirer du pool même si le dispositif de regroupement de connexions n'a pas détecté d'interruption de la connexion et ne l'a pas marquée comme non valide. C'est le cas parce que la charge de vérifier que la connexion est encore valide éliminerait les avantages liés au fait de disposer d'une fonction de regroupement de connexions en entraînant un aller-retour supplémentaire vers le serveur. Lorsque cela se produit, la première tentative d'utilisation de la connexion détecte que la connexion a été interrompue et une exception est levée.  
   
 ## <a name="clearing-the-pool"></a>Effacement du pool  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduit deux nouvelles méthodes pour effacer un pool : <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> et <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` efface les pools de connexions pour un fournisseur donné et `ClearPool` efface le pool de connexions associé à une connexion spécifique. Si des connexions sont utilisées au moment de l'appel, elles sont marquées de façon appropriée. Lors de leur fermeture, elles sont écartées au lieu d'être retournées au pool.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduit deux nouvelles méthodes pour effacer le pool : <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> et <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Efface les pools de connexions pour un fournisseur donné et `ClearPool` efface le pool de connexions associé à une connexion spécifique. Si des connexions sont utilisées au moment de l'appel, elles sont marquées de façon appropriée. Lors de leur fermeture, elles sont écartées au lieu d'être retournées au pool.  
   
 ## <a name="transaction-support"></a>Prise en charge des transactions  
  Les connexions sont retirées du pool et assignées en fonction du contexte de transaction. À moins que `Enlist=false` ne soit spécifié dans la chaîne de connexion, le pool de connexions s'assure que la connexion est inscrite dans le contexte <xref:System.Transactions.Transaction.Current%2A>. Lorsqu'une connexion est fermée et retournée au pool avec une transaction `System.Transactions` inscrite, elle est mise de côté de sorte que la demande suivante de ce pool de connexions avec la même transaction `System.Transactions` retourne la même connexion, si elle est disponible. Si une telle demande est émise et qu'aucune connexion regroupée n'est disponible, une connexion est retirée de la partie non traitée du pool et est inscrite. Si aucune connexion n'est disponible où que ce soit dans le pool, une nouvelle connexion est créée et inscrite.  
@@ -130,7 +130,8 @@ using (SqlConnection connection = new SqlConnection(
  Il est recommandé de tirer parti des mécanismes de sécurité qui peuvent être employés à la place des rôles d'application. Pour plus d’informations, consultez [création de rôles d’Application dans SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Compteurs de performance](../../../../docs/framework/data/adonet/performance-counters.md)
+- [Compteurs de performances](../../../../docs/framework/data/adonet/performance-counters.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

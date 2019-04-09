@@ -1,5 +1,5 @@
 ---
-title: Élément <source>
+title: <source> Élément
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186548"
 ---
 # <a name="source-element"></a>\<source > élément
 Spécifie une source de trace qui lance des messages de traçage.  
@@ -83,5 +83,6 @@ Spécifie une source de trace qui lance des messages de traçage.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Commutateurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+
+- [Schéma des paramètres de traçage et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Commutateurs de traçage](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

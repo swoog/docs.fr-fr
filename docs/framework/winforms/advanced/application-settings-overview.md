@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203624"
 ---
 # <a name="application-settings-overview"></a>Vue d'ensemble des paramètres d'application
 Cette rubrique explique comment créer et stocker des données de paramètres pour le compte de votre application et de vos utilisateurs.  
@@ -48,13 +48,14 @@ Cette rubrique explique comment créer et stocker des données de paramètres po
  Vous pouvez également utiliser la classe <xref:System.Windows.Forms.Binding> pour lier des paramètres par programmation à des propriétés sur des formulaires et des contrôles.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Guide pratique pour Valider les paramètres d’Application](how-to-validate-application-settings.md)
-- [Gestion des paramètres d’une application (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Guide pratique pour Lire des paramètres au moment de l’exécution avecC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Procédure : valider les paramètres d’application](how-to-validate-application-settings.md)
+- [Gestion des paramètres d'une application (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [Procédure : lire des paramètres au moment de l’exécution avec C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Utilisation de paramètres d'application et de paramètres utilisateur](using-application-settings-and-user-settings.md)
 - [Architecture des paramètres d'application](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Paramètres d'application pour les contrôles personnalisés](application-settings-for-custom-controls.md)

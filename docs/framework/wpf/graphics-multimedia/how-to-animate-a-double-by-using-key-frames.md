@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Animer un double à l'aide d'images clés"
+title: 'Procédure : Animer un double à l’aide d’images clés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: fe2efdada43e5dd6aced730ab59d9dd004899822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208776"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Procédure : Animer un double à l'aide d'images clés
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Procédure : Animer un double à l’aide d’images clés
 Cet exemple montre comment animer la valeur d’une propriété qui accepte un <xref:System.Double> à l’aide d’images clés.  
   
 ## <a name="example"></a>Exemple  
@@ -37,6 +37,7 @@ Cet exemple montre comment animer la valeur d’une propriété qui accepte un <
  Par souci de cohérence avec d’autres exemples d’animation, les versions de code de cet exemple utilisent un <xref:System.Windows.Media.Animation.Storyboard> objet pour appliquer le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Lorsque vous appliquez une seule animation dans le code, il est également plus simple d’utiliser le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode au lieu d’utiliser un <xref:System.Windows.Media.Animation.Storyboard>. Si vous voulez voir un exemple, consultez l’article [Comment : animer une propriété sans utiliser de storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>
 - <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>

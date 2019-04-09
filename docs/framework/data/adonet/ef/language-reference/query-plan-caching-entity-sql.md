@@ -2,12 +2,12 @@
 title: Mise en cache d'un plan de requête (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178176"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Mise en cache d'un plan de requête (Entity SQL)
 À chaque tentative d'exécution d'une requête, le pipeline de la requête recherche son cache de plan de requête pour voir si la requête exacte est déjà compilée et disponible. Si tel est le cas, il réutilise le plan mis en cache plutôt que d'en générer un nouveau. Si aucune correspondance n'est trouvée dans le cache du plan de requête, la requête est compilée et mise en cache. Une requête est identifiée par son texte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et sa collection de paramètres (noms et types). Toutes les comparaisons de texte respectent la casse.  
@@ -20,7 +20,7 @@ ms.locfileid: "54671133"
  Vous pouvez activer la mise en cache du plan de requête via <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
   
 ## <a name="recommended-practice"></a>Pratique recommandée  
- Les requêtes dynamiques doivent être évitées, en général. L'exemple de requête dynamique suivant est vulnérable aux attaques par injection de code SQL, car il accepte directement l'entrée utilisateur sans aucune validation.  
+ Les requêtes dynamiques doivent être évitées, en général. L’exemple de requête dynamique suivant est vulnérable aux attaques par injection de code SQL, car il accepte directement l’entrée utilisateur sans aucune validation.  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
@@ -32,11 +32,11 @@ ms.locfileid: "54671133"
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
- Pour que les requêtes soient mappées correctement par le cache du plan de requête, elles doivent satisfaire les conditions suivantes :  
+ Pour que les requêtes soient mappées correctement par le cache du plan de requête, elles doivent satisfaire les exigences suivantes :  
   
 -   Le texte de requête doit être un modèle constant, de préférence une chaîne ou une ressource constante.  
   
--   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisé partout où une valeur fournie par l'utilisateur doit être transmise.  
+-   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisée partout où une valeur fournie par l’utilisateur doit être passée.  
   
  Vous devez éviter les modèles de requête suivants, qui consomment inutilement des emplacements dans le cache du plan de requête :  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54671133"
 -   modifications du texte à l'intérieur des commentaires.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

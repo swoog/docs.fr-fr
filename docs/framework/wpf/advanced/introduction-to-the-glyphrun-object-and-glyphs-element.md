@@ -9,17 +9,16 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 24ffffc959891b6dab45350c6cda02adcc4f619a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 7c78853aef9dfa96c49a0f2a4b585a2bd0cd5e98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206978"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introduction à l'objet GlyphRun et à l'élément Glyphs
 Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref:System.Windows.Documents.Glyphs> élément.  
-  
-  
+
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>Introduction à GlyphRun  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit la prise en charge de texte avancée, y compris le balisage au niveau du glyphe avec accès direct à <xref:System.Windows.Documents.Glyphs> pour les clients qui souhaitent intercepter et rendre le texte persistant après la mise en forme. Ces fonctionnalités assurent une prise en charge critique pour les différentes spécifications de rendu de texte propres à chacun des scénarios suivants.  
@@ -28,7 +27,7 @@ Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref
   
 2.  Scénarios d’impression.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] comme langage d’imprimante.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en tant que langage d’imprimante.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -95,6 +94,7 @@ Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Typographie dans WPF](typography-in-wpf.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Text](optimizing-performance-text.md)
+- [Texte](optimizing-performance-text.md)

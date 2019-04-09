@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188446"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Dessin, positionnement et clonage d'images dans GDI+
 Vous pouvez utiliser la <xref:System.Drawing.Bitmap> classe pour charger et afficher des images raster et vous pouvez utiliser la <xref:System.Drawing.Imaging.Metafile> classe pour charger et afficher des images vectorielles. Le <xref:System.Drawing.Bitmap> et <xref:System.Drawing.Imaging.Metafile> classes héritent de la <xref:System.Drawing.Image> classe. Pour afficher une image vectorielle, vous avez besoin d’une instance de la <xref:System.Drawing.Graphics> classe et un <xref:System.Drawing.Imaging.Metafile>. Pour afficher une image raster, vous avez besoin d’une instance de la <xref:System.Drawing.Graphics> classe et un <xref:System.Drawing.Bitmap>. L’instance de la <xref:System.Drawing.Graphics> classe fournit le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode), qui reçoit le <xref:System.Drawing.Imaging.Metafile> ou <xref:System.Drawing.Bitmap> en tant qu’argument.  
@@ -52,6 +52,7 @@ Vous pouvez utiliser la <xref:System.Drawing.Bitmap> classe pour charger et affi
  ![Cropping](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
-- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

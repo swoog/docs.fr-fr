@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cd5a7696e7630b21c8bdfa7e4d2f902d6f36995
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7fa90aff73d94baf2cbf7d01f41710cb2aa10213
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178735"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject, méthode
 Obtient un pointeur d’interface vers le thread de common language runtime (CLR).  
@@ -39,14 +39,15 @@ HRESULT GetObject (
  `ppObject`  
  [out] Pointeur vers l’adresse d’un objet d’interface ICorDebugValue qui représente le thread de CLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Threading.Thread>

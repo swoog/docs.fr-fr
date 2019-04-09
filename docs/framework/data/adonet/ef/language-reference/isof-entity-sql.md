@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 87d69f58fc0c45eacb4ee63997129347f7f2a857
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195746"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.  
@@ -32,14 +32,14 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  Type sur lequel tester `expression`. Le type doit être qualifié par un espace de noms.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` si `expression` est de type T, qui est soit un type de base, soit un type dérivé de `type` ; null si `expression` a la valeur null au moment de l'exécution ; sinon, `false`.  
+ `true` Si `expression` est de type T et T sont un type de base, ou un type dérivé de `type`; null si `expression` est null lors de l’exécution ; sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Les expressions `expression IS NOT OF (type)` et `expression IS NOT OF (ONLY type)` sont syntaxiquement équivalente à `NOT (expression IS OF (type))` et `NOT (expression IS OF (ONLY type))`, respectivement.  
   
- Le tableau suivant indique le comportement de l’opérateur `IS OF` sur certains modèles courants et d’autres plus singuliers. Toutes les exceptions sont levées côté client avant que le fournisseur soit appelé :  
+ Le tableau suivant indique le comportement de l'opérateur `IS OF` sur certains modèles courants et d'autres plus singuliers. Toutes les exceptions sont levées côté client avant que le fournisseur soit appelé :  
   
-|Modèle|Comportement|  
+|Motif|Comportement|  
 |-------------|--------------|  
 |null IS OF (EntityType)|Exception|  
 |null IS OF (ComplexType)|Exception|  
@@ -57,4 +57,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

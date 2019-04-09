@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c38c3399c95d40acd6fafb05f51eb934647827e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: af4c7feb7076eeac6089a3255c7832c17a43469b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208837"
 ---
 # <a name="icordebugexceptiondebugeventgetflags-method"></a>ICorDebugExceptionDebugEvent::GetFlags, méthode
 Obtient un indicateur qui précise si l'exception peut être interceptée.  
@@ -31,15 +31,16 @@ HRESULT GetFlags(
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugExceptionDebugEvent, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

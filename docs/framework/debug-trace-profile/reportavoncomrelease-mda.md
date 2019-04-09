@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c70c70f251fca9312019d4c63304e8354bf87fd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125578"
 ---
 # <a name="reportavoncomrelease-mda"></a>Assistant Débogage managé reportAvOnComRelease
 L'Assistant Débogage managé `reportAvOnComRelease` est activé quand des exceptions sont levées en raison d'erreurs de comptage de références utilisateur pendant une opération COM Interop et l'utilisation de la méthode <xref:System.Runtime.InteropServices.Marshal.Release%2A> ou <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> combinée avec des appels COM bruts.  
@@ -29,7 +29,7 @@ L'Assistant Débogage managé `reportAvOnComRelease` est activé quand des excep
 ## <a name="cause"></a>Cause  
  Parfois, une exception est levée en raison d'erreurs de comptage de références utilisateur pendant une opération COM Interop et l'utilisation de la méthode <xref:System.Runtime.InteropServices.Marshal.Release%2A> ou <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> combinée avec des appels COM bruts. Normalement, cette exception est ignorée, car elle entraînerait une violation d'accès dans le CLR et l'arrêt de ce dernier. Quand cet Assistant est activé, les exceptions de ce type peuvent être détectées et signalées au lieu d'être simplement ignorées.  
   
-## <a name="resolution"></a>Solution  
+## <a name="resolution"></a>Résolution  
  Examinez votre code de comptage de références, ainsi que les clients natifs de votre objet pour déterminer s'ils contiennent des erreurs de comptage.  
   
 ## <a name="effect-on-the-runtime"></a>Effet sur le runtime  
@@ -49,6 +49,7 @@ L'Assistant Débogage managé `reportAvOnComRelease` est activé quand des excep
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

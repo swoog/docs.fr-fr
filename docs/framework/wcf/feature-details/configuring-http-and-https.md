@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195148"
 ---
 # <a name="configuring-http-and-https"></a>Configuration de HTTP et HTTPS
 Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les paramètres HTTP/HTTPS sont configurés à l'aide d'IIS (Internet Information Services) ou d'un outil de ligne de commande. Lorsqu'un service WCF est hébergé sous IIS, des paramètres HTTP ou HTTPS peuvent être configurés dans IIS (avec l'outil inetmgr.exe). Si un service WCF est auto-hébergé, les paramètres HTTP ou HTTPS sont configurés à l'aide d'un outil de ligne de commande.  
@@ -23,7 +23,7 @@ Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les param
  Lors de l’exécution [!INCLUDE[wv](../../../../includes/wv-md.md)] ou Windows 7, vous configurez ces paramètres avec l’outil Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Configuration de réservations d'espace de noms  
- La réservation d'espace de noms assigne les droits d'une partie de l'espace de noms de l'URL HTTP à un groupe d'utilisateurs particulier. Une réservation leur donne le droit de créer des services qui écoutent sur cette partie de l'espace de noms. Les réservations sont des préfixes d'URL, autrement dit, la réservation couvre tous les sous-chemins d'accès du chemin d'accès de la réservation. Les réservations d'espace de noms autorisent deux façons d'utiliser des caractères génériques. La documentation de l’API du serveur HTTP décrit le [ordre de résolution entre les revendications d’espace de noms qui impliquent des caractères génériques](https://go.microsoft.com/fwlink/?LinkId=94841).  
+ La réservation d'espace de noms assigne les droits d'une partie de l'espace de noms de l'URL HTTP à un groupe d'utilisateurs particulier. Une réservation leur donne le droit de créer des services qui écoutent sur cette partie de l'espace de noms. Les réservations sont des préfixes d’URL, autrement dit, la réservation couvre tous les sous-chemins d’accès du chemin d’accès de la réservation. Les réservations d'espace de noms autorisent deux façons d'utiliser des caractères génériques. La documentation de l’API du serveur HTTP décrit le [ordre de résolution entre les revendications d’espace de noms qui impliquent des caractères génériques](https://go.microsoft.com/fwlink/?LinkId=94841).  
   
  Une application exécutée peut créer une demande similaire pour ajouter des inscriptions d'espace de noms. Les inscriptions et les réservations rivalisent pour les parties de l'espace de noms. Une réservation peut avoir la priorité sur une inscription selon l’ordre indiqué dans le [ordre de résolution entre les revendications d’espace de noms qui impliquent des caractères génériques](https://go.microsoft.com/fwlink/?LinkId=94841). Dans ce cas, la réservation empêche à l'application courante de recevoir des demandes.  
   
@@ -61,7 +61,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ## <a name="configuring-ssl-certificates"></a>Configuration de certificats SSL  
  Le protocole SSL (Secure Sockets Layer) utilise des certificats sur le client et le serveur pour stocker les clés de chiffrement. Le serveur fournit son certificat SSL à l'établissement d'une connexion afin que le client puisse vérifier son identité. Le serveur peut également demander un certificat au client pour permettre une authentification mutuelle des deux sens de connexion.  
   
- Les certificats sont stockés dans un magasin centralisé en fonction de l'adresse IP et du numéro de port de la connexion. L'adresse IP 0.0.0.0 spéciale correspond à l'adresse IP de l'ordinateur local. Notez que le magasin de certificats ne distingue pas l'URL en fonction du chemin d'accès. Les services ayant la même combinaison d’adresse IP et de port doivent partager les mêmes certificats même si le chemin d’accès des services dans l’URL est différent.  
+ Les certificats sont stockés dans un magasin centralisé en fonction de l'adresse IP et du numéro de port de la connexion. L'adresse IP 0.0.0.0 spéciale correspond à l'adresse IP de l'ordinateur local. Notez que le magasin de certificats ne distingue pas l’URL en fonction du chemin d’accès. Les services ayant la même combinaison d'adresse IP et de port doivent partager les mêmes certificats même si le chemin d'accès des services dans l'URL est différent.  
   
  Pour obtenir des instructions détaillées, consultez [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  IIS ne prend pas en charge le partage de ports sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Si IIS est en cours d’exécution et un service WCF tente d’utiliser un espace de noms avec le même port, le service WCF ne parvient pas à démarrer. IIS et WCF par défaut la valeur à l’aide du port 80. Modifier l’affectation de port pour un des services ou la liste d’écoutes IP permet d’affecter le service WCF à une carte réseau non utilisée par IIS. IIS 6.0 et ses versions ultérieures ont été redessinés pour utiliser les API du serveur HTTP.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Guide pratique pour Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Procédure : configurer un port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

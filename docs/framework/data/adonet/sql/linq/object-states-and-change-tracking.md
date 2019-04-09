@@ -2,12 +2,12 @@
 title: États des objets et suivi des modifications
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191153"
 ---
 # <a name="object-states-and-change-tracking"></a>États des objets et suivi des modifications
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objets toujours participent à certaines *état*. Par exemple, lorsque [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crée un objet, l'état de l'objet est `Unchanged`. Un nouvel objet que vous créez est inconnu pour le <xref:System.Data.Linq.DataContext> et se trouve dans `Untracked` état. Après l'exécution réussie de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, l'état de tous les objets connus dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est `Unchanged`. La seule exception est représentée par les objets qui ont été supprimés de la base de données, dont l'état est `Deleted`, et qui sont inutilisables dans cette instance <xref:System.Data.Linq.DataContext>.  
@@ -63,5 +63,6 @@ ms.locfileid: "54683308"
  Si vous mettez à jour à la fois la référence requise et la clé étrangère correspondante, vous devez vous assurer de leur correspondance. Une exception <xref:System.InvalidOperationException> est levée si elles ne sont pas toutes les deux synchronisés au moment où vous appelez <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Bien que les modifications de valeur de clé étrangère soient suffisantes pour affecter une mise à jour de ligne sous-jacente, vous devez modifier la référence pour maintenir la connectivité du graphique d'objet et la cohérence bidirectionnelle des relations.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Opérations d’insertion, de mise à jour et de suppression](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Opérations d'insertion, de mise à jour et de suppression](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

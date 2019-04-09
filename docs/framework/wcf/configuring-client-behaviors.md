@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193653"
 ---
 # <a name="configuring-client-behaviors"></a>Configuration des comportements clients
 Windows Communication Foundation (WCF) configure les comportements de deux manières : soit en vous reportant aux configurations de comportement, qui sont définies dans la `<behavior>` section d’un fichier de configuration client application – ou par programmation dans l’appel application. Cette rubrique décrit ces deux approches.  
   
- Lors de l'utilisation d'un fichier de configuration, la configuration du comportement est une collection nommée de paramètres de configuration. Le nom de chaque configuration de comportement doit être unique. Cette chaîne est utilisée dans l'attribut `behaviorConfiguration` d'une configuration de point de terminaison pour lier le point de terminaison au comportement.  
+ Lors de l’utilisation d’un fichier de configuration, la configuration du comportement est une collection nommée de paramètres de configuration. Le nom de chaque configuration de comportement doit être unique. Cette chaîne est utilisée dans l'attribut `behaviorConfiguration` d'une configuration de point de terminaison pour lier le point de terminaison au comportement.  
   
 ## <a name="example"></a>Exemple  
  Le code de configuration suivant définit un comportement appelé `myBehavior`. Le point de terminaison de client référence ce comportement dans l'attribut `behaviorConfiguration`.  
@@ -52,4 +52,5 @@ Windows Communication Foundation (WCF) configure les comportements de deux mani�
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

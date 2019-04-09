@@ -2,12 +2,12 @@
 title: Manipulation des données dans un DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202571"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulation des données dans un DataTable
 Après avoir créé un objet <xref:System.Data.DataTable> dans un objet <xref:System.Data.DataSet>, vous pouvez réaliser les mêmes opérations que lorsque vous utilisez une table d'une base de données. Vous pouvez ajouter, afficher, modifier et supprimer les données de la table, surveiller les erreurs et les événements et interroger les données de la table. Lors de la modification des données dans un **DataTable**, vous pouvez également vérifier si les modifications sont précises et déterminent s’il faut par programmation accepter ou rejeter les modifications.  
@@ -31,13 +31,14 @@ Après avoir créé un objet <xref:System.Data.DataTable> dans un objet <xref:Sy
  [Suppression de DataRow](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
  Décrit comment supprimer une ligne d'une table.  
   
- [Informations sur l’erreur de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
+ [Informations sur l'erreur de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  Explique comment insérer des informations d'erreur par ligne et résoudre les problèmes liés aux données dans une application.  
   
  [AcceptChanges et RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  Explique comment accepter ou rejeter les modifications apportées à une ligne.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Gestion des événements de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

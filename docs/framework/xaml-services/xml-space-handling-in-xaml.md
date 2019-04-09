@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193315"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>Gestion de xml:space en XAML
 Le `xml:space` attribut est un attribut XML qui déclare le comportement de traitement des espaces blancs significatifs dans un élément objet. Ce comportement s’applique pour tout le contenu (texte interne) contenu dans l’élément où `xml:space` est déclaré et s’étend également aux éléments enfants.  
@@ -41,5 +41,6 @@ Le `xml:space` attribut est un attribut XML qui déclare le comportement de trai
  Pour obtenir une description complète de l’espace blanc-traitement dans XAML, consultez [blancs en XAML traitement](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Espace blanc dans XAML de traitement](whitespace-processing-in-xaml.md)
+
+- [Traitement des espaces blancs en XAML](whitespace-processing-in-xaml.md)
 - [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

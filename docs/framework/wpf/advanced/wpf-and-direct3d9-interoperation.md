@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199321"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interopérabilité WPF et Direct3D9
 Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentation Foundation (WPF). Cette rubrique décrit la procédure créer un contenu Direct3D9 afin qu’il interagit efficacement avec WPF.  
@@ -148,7 +148,8 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
 >  Si WPF est rendu complètement dans le logiciel, <xref:System.Windows.Interop.D3DImage> n’est pas affiché car WPF ne dispose pas d’un tampon d’affichage.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Considérations sur les performances de l'interopérabilité entre Direct3D9 et WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Procédure pas à pas : création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procédure pas à pas : hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

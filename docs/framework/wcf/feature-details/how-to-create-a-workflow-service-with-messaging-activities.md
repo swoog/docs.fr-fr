@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Créer un Service de flux de travail avec les activités de messagerie'
+title: 'Procédure : créer un service de workflow avec des activités de messagerie'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192818"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : Créer un Service de flux de travail avec les activités de messagerie
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : créer un service de workflow avec des activités de messagerie
 Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [How To : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Pour créer un projet de service de workflow  
@@ -90,6 +90,7 @@ Cette rubrique décrit comment créer un service de workflow simple, à l'aide d
 4.  Passez à la [Comment : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) rubrique pour créer un client de workflow qui appelle ce service.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Vue d’ensemble de l’hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Vue d'ensemble de l'hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

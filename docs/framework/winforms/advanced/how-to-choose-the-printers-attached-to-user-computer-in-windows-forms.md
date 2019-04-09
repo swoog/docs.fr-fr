@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Choisir les imprimantes connectées à l’ordinateur d’un utilisateur dans les Windows Forms'
+title: 'Procédure : choisir les imprimantes connectées à l’ordinateur d’un utilisateur dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184026"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procédure : Choisir les imprimantes connectées à l’ordinateur d’un utilisateur dans les Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procédure : choisir les imprimantes connectées à l’ordinateur d’un utilisateur dans Windows Forms
 Souvent, les utilisateurs souhaitent choisir une imprimante autre que l’imprimante par défaut. Vous pouvez permettre aux utilisateurs de choisir une imprimante parmi celles installées actuellement à l’aide du composant <xref:System.Windows.Forms.PrintDialog> . Par le biais du composant <xref:System.Windows.Forms.PrintDialog> , le <xref:System.Windows.Forms.DialogResult> du composant <xref:System.Windows.Forms.PrintDialog> est capturé et utilisé pour sélectionner l’imprimante.  
   
  Dans la procédure suivante, un fichier texte est sélectionné pour impression vers l’imprimante par défaut. La classe <xref:System.Windows.Forms.PrintDialog> est ensuite instanciée.  
@@ -107,4 +107,5 @@ Souvent, les utilisateurs souhaitent choisir une imprimante autre que l’imprim
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
+
+- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)

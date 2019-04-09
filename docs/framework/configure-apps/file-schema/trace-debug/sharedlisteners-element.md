@@ -1,5 +1,5 @@
 ---
-title: Élément <sharedListeners>
+title: <sharedListeners> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190796"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > élément
 Contient des écouteurs auxquels toute source ou tout élément de trace peuvent faire référence.  Ces écouteurs ne reçoivent pas les traces par défaut, et il n’est pas possible de récupérer au moment de l’exécution. Écouteurs identifiés comme des écouteurs partagés peuvent être ajoutés à des sources ou des traces par nom.  
@@ -89,6 +89,7 @@ Contient des écouteurs auxquels toute source ou tout élément de trace peuvent
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Diagnostics.TraceListener>
-- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schéma des paramètres de traçage et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Écouteurs de la trace](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181764"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procédure : Utiliser des procédures stockées qui prennent des paramètres
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe des paramètres de sortie à des paramètres de référence et, pour les types valeur, déclare le paramètre comme Nullable.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe des paramètres de sortie pour les paramètres de référence et pour les types valeur déclare le paramètre comme nullable.  
   
  Pour obtenir un exemple montrant comment utiliser un paramètre d’entrée dans une requête qui retourne un ensemble de lignes, consultez [Comment : Retourner des ensembles de lignes](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -40,6 +40,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Utilisation de types Nullable](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)

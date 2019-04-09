@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3254b449c06ad54bca438905ec1c413338f87e69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205860"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName, interface
 Fournit des fonctions statiques globales de base pour la signature des assemblys avec noms forts. Tous les `ICLRStrongName` méthodes retournent des valeurs HRESULT COM standard.  
@@ -53,21 +53,22 @@ Fournit des fonctions statiques globales de base pour la signature des assemblys
 |[StrongNameSignatureVerificationEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)|Obtient une valeur indiquant si le manifeste d’assembly au chemin fourni contient une signature de nom fort.|  
 |[StrongNameSignatureVerificationFromImage, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)|Vérifie qu’un assembly qui a déjà été mappé en mémoire est valide pour la clé publique associée.|  
 |[StrongNameTokenFromAssembly, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)|Crée un jeton de nom fort à partir du fichier d’assembly spécifié.|  
-|[StrongNameTokenFromAssemblyEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|Crée un jeton de nom fort à partir du fichier d’assembly spécifié et retourne la clé publique.|  
+|[StrongNameTokenFromAssembly, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|Crée un jeton de nom fort à partir du fichier d’assembly spécifié et retourne la clé publique.|  
 |[StrongNameTokenFromPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)|Obtient un jeton représentant une clé publique.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez obtenir une instance de la `ICLRStrongName` en appelant le [ICLRRuntimeInfo::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) à l’aide de la méthode `CLSID_CLRStrongName` et `IID_ICLRStrongName` en tant que paramètres.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

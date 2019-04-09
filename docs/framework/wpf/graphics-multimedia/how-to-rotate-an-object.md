@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 49de419f22980ab9101c388079e0348b4c1113f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189641"
 ---
 # <a name="how-to-rotate-an-object"></a>Procédure : Faire pivoter un objet
 Cet exemple montre comment faire pivoter un objet. L’exemple crée d’abord un <xref:System.Windows.Media.RotateTransform> puis spécifie sa <xref:System.Windows.Media.RotateTransform.Angle%2A> en degrés.  
@@ -45,6 +45,7 @@ Deux objets en rotation de 45 degrés à partir de différents centres de rotat
  Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Transform>
-- [Vue d’ensemble des transformations](transforms-overview.md)
-- [Rubriques de guide pratique](transformations-how-to-topics.md)
+- [Vue d'ensemble des transformations](transforms-overview.md)
+- [Rubriques Comment](transformations-how-to-topics.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190923"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procédure : Animer un objet sur un tracé (animation de matrice)
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> classe pour animer un objet sur un tracé défini par un <xref:System.Windows.Media.PathGeometry>.  
@@ -35,6 +35,7 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Matr
  Pour obtenir un exemple complet, consultez [Animation de tracés, exemple](https://go.microsoft.com/fwlink/?LinkID=160028). Pour plus d’informations sur les tracés géométriques, consultez le [vue d’ensemble de Geometry](geometry-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](animation-overview.md)
+
+- [Vue d'ensemble de l'animation](animation-overview.md)
 - [Animation de tracés, exemple](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
+- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)

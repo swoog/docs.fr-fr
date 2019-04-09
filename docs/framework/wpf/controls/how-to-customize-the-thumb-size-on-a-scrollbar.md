@@ -6,12 +6,12 @@ helpviewer_keywords:
 - customizing thumb size [WPF]
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
-ms.openlocfilehash: 30fc72e3f0631b01777bf058c7a7470cc376a547
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 60ae7c4e95801036c5deb0c485645297509b830c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207277"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Procédure : Personnaliser la taille du curseur sur une barre de défilement
 Cette rubrique explique comment définir le <xref:System.Windows.Controls.Primitives.Thumb> d’un <xref:System.Windows.Controls.Primitives.ScrollBar> à une taille fixe et comment spécifier une taille minimale pour le <xref:System.Windows.Controls.Primitives.Thumb> d’un <xref:System.Windows.Controls.Primitives.ScrollBar>.  
@@ -31,4 +31,5 @@ Cette rubrique explique comment définir le <xref:System.Windows.Controls.Primit
  [!code-xaml[ScrollBarCustomThumbSize#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Styles et modèles ScrollBar](scrollbar-styles-and-templates.md)

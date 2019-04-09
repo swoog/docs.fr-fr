@@ -2,12 +2,12 @@
 title: Regroupement de connexions OLE DB, ODBC et Oracle Connection
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208889"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Regroupement de connexions OLE DB, ODBC et Oracle Connection
 Le regroupement de connexions peut considérablement améliorer les performances et l'évolutivité de votre application. Cette section traite du regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.  
@@ -34,17 +34,17 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="pool-creation-and-assignment"></a>Création et assignation d'un pool  
  Lorsqu'une connexion est ouverte, un pool de connexions est créé sur la base d'un algorithme à correspondance exacte qui associe le pool à la chaîne de connexion dans la connexion. Chaque pool de connexions est associé à une chaîne de connexion distincte. Lorsqu'une nouvelle connexion est ouverte, si la chaîne de connexion ne correspond pas exactement à un pool existant, un nouveau pool est créé.  
   
- Une fois créés, les pools de connexions ne sont détruits qu'à la fin du processus actif. La maintenance des pools inactifs ou vides requiert très peu de ressources système.  
+ Une fois créés, les pools de connexions ne sont détruits qu’à la fin du processus actif. La maintenance des pools inactifs ou vides requiert très peu de ressources système.  
   
 ### <a name="connection-addition"></a>Ajout de connexions  
  Un pool de connexions est créé pour chaque chaîne de connexion unique. Lorsqu'un pool est créé, plusieurs objets de connexion sont créés et ajoutés au pool de sorte que l'exigence de taille minimale du pool soit remplie. Les connexions sont ajoutées au pool jusqu'à ce que sa taille maximale soit atteinte.  
   
- Quand un objet <xref:System.Data.OracleClient.OracleConnection> est demandé, il est obtenu du pool si une connexion utilisable est disponible. Pour être utilisable, la connexion ne doit pas être en cours d'utilisation, avoir un contexte de transaction correspondant ou ne pas être associée à un contexte de transaction et avoir un lien valide vers le serveur.  
+ Quand un objet <xref:System.Data.OracleClient.OracleConnection> est demandé, il est obtenu du pool si une connexion utilisable est disponible. Pour être utilisable, la connexion ne doit pas être en cours d’utilisation, avoir un contexte de transaction correspondant ou ne pas être associée à un contexte de transaction et avoir un lien valide vers le serveur.  
   
- Si la taille maximale du pool est atteinte et qu'aucune connexion utilisable n'est disponible, la requête est mise en attente. Le dispositif de regroupement répond à ces requêtes en réallouant les connexions à mesure qu'elles se libèrent. Les connexions sont libérées et retournées au pool en cas de fermeture ou de suppression.  
+ Si la taille maximale du pool est atteinte et qu'aucune connexion utilisable n'est disponible, la requête est mise en attente. Le dispositif de regroupement répond à ces requêtes en réallouant les connexions à mesure qu’elles se libèrent. Les connexions sont libérées et retournées au pool en cas de fermeture ou de suppression.  
   
 ### <a name="connection-removal"></a>Suppression des connexions  
- Le dispositif de regroupement de connexions supprime une connexion du pool restée inactive pendant une période prolongée ou s'il détecte que la connexion au serveur a été interrompue. Notez que cela ne peut être détecté qu'après une tentative de communication avec le serveur. Si une connexion n'est plus reliée au serveur, elle est marquée comme étant non valide. Le dispositif de regroupement analyse périodiquement les pools de connexions à la recherche d'objets qui ont été libérés vers le pool et sont marqués comme étant non valides. Ces connexions sont alors définitivement supprimées.  
+ Le dispositif de regroupement de connexions supprime une connexion du pool restée inactive pendant une période prolongée ou s'il détecte que la connexion au serveur a été interrompue. Notez que cela ne peut être détecté qu'après une tentative de communication avec le serveur. Si une connexion n'est plus reliée au serveur, elle est marquée comme étant non valide. Le dispositif de regroupement analyse périodiquement les pools de connexions à la recherche d’objets qui ont été libérés vers le pool et sont marqués comme étant non valides. Ces connexions sont alors définitivement supprimées.  
   
  Si une connexion existante à un serveur a disparu, il est possible de la retirer du pool si le dispositif de regroupement n'a pas détecté d'interruption de la connexion et ne l'a pas marquée comme non valide. Dans ce cas, une exception est générée. Vous devez cependant toujours fermer la connexion afin de la libérer à nouveau vers le pool.  
   
@@ -53,7 +53,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="transaction-support"></a>Prise en charge des transactions  
  Les connexions sont retirées du pool et assignées en fonction du contexte de transaction. Le contexte du thread de requête et la connexion assignée doivent correspondre. Par conséquent, chaque pool de connexions est en fait sous-divisé en connexions aucun contexte de transaction associé avec eux et dans *N* sous-divisions qui contiennent chacune des connexions avec un contexte de transaction particulier.  
   
- Lorsqu’une connexion est fermée, elle est libérée à nouveau vers le pool et dans la sous-division appropriée en fonction de son contexte de transaction. Par conséquent, vous pouvez fermer la connexion sans générer d'erreur, même si une transaction distribuée est toujours en attente. Cela vous permet de valider ou d'abandonner ultérieurement la transaction distribuée.  
+ Lorsqu'une connexion est fermée, elle est libérée à nouveau vers le pool et dans la sous-division appropriée en fonction de son contexte de transaction. Par conséquent, vous pouvez fermer la connexion sans générer d'erreur, même si une transaction distribuée est toujours en attente. Cela vous permet de valider ou d'abandonner ultérieurement la transaction distribuée.  
   
 ### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Contrôle des pools de connexions avec les mots clés des chaînes de connexion  
  La propriété <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> de l'objet <xref:System.Data.OracleClient.OracleConnection> prend en charge les paires clé-valeur des chaînes de connexion qui peuvent être utilisées pour ajuster le comportement de la logique de regroupement des connexions.  
@@ -62,13 +62,14 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 |Nom|Par défaut|Description|  
 |----------|-------------|-----------------|  
-|`Connection Lifetime`|0|Lorsqu'une connexion est retournée au pool, l'heure de sa création est comparée à l'heure actuelle et la connexion est détruite si cet intervalle de temps (en secondes) excède la valeur spécifiée par `Connection Lifetime`. Cela est utile dans les configurations en clusters pour forcer l'équilibrage de la charge entre un serveur en cours d'exécution et un serveur qui vient d'être mis en ligne.<br /><br /> La valeur zéro (0) aura pour conséquence un délai d'attente maximal pour les connexions regroupées.|  
+|`Connection Lifetime`|0|Lorsqu’une connexion est retournée au pool, l’heure de sa création est comparée à l’heure actuelle et la connexion est détruite si cet intervalle de temps (en secondes) excède la valeur spécifiée par `Connection Lifetime`. Cela est utile dans les configurations en clusters pour forcer l'équilibrage de la charge entre un serveur en cours d'exécution et un serveur qui vient d'être mis en ligne.<br /><br /> La valeur zéro (0) aura pour conséquence un délai d'attente maximal pour les connexions regroupées.|  
 |`Enlist`|'true'|Si la valeur est `true`, le dispositif de regroupement inscrit automatiquement la connexion dans le contexte de transaction en cours du thread de création si un contexte de transaction existe.|  
 |`Max Pool Size`|100|Nombre maximal de connexions autorisées dans le pool.|  
 |`Min Pool Size`|0|Nombre minimal de connexions conservées dans le pool.|  
 |`Pooling`|'true'|Si la valeur est `true`, la connexion est retirée du pool approprié ou, si nécessaire, créée et ajoutée au pool approprié.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Compteurs de performance](../../../../docs/framework/data/adonet/performance-counters.md)
+- [Compteurs de performances](../../../../docs/framework/data/adonet/performance-counters.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

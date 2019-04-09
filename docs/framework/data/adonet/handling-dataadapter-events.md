@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: adda1bd1f16a43087d43382f9b7476856f4bc5c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180750"
 ---
 # <a name="handling-dataadapter-events"></a>Gestion des événements DataAdapter 
 <xref:System.Data.Common.DataAdapter> ADO.NET expose trois événements que vous pouvez utiliser pour répondre aux modifications apportées aux données au niveau de la source de données. Le tableau ci-dessous répertorie les événements `DataAdapter`.  
@@ -22,13 +22,13 @@ ms.locfileid: "54692702"
 |`FillError`|Une erreur est survenue pendant une opération `Fill`.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating et RowUpdated  
- `RowUpdating` est déclenché avant le traitement d'une mise à jour d'une ligne de l'objet <xref:System.Data.DataSet> au niveau de la source de données. `RowUpdated` est déclenché après le traitement d'une mise à jour d'une ligne de l'objet `DataSet` au niveau de la source de données. En conséquence, vous pouvez utiliser `RowUpdating` pour modifier le comportement de la mise à jour avant qu'elle ne survienne, pour fournir une gestion supplémentaire lors d'une mise à jour, pour conserver une référence à une ligne mise à jour, pour annuler la mise à jour en cours et la programmer pour un traitement par lots à traiter ultérieurement, etc. `RowUpdated` est utile pour réagir aux erreurs et aux exceptions qui surviennent pendant la mise à jour. Vous pouvez ajouter des informations d'erreur au `DataSet`, ainsi qu'une logique pour les nouvelles tentatives et ainsi de suite.  
+ `RowUpdating` est déclenché avant toute mise à jour d’une ligne de la <xref:System.Data.DataSet> a été traitée au niveau de la source de données. `RowUpdated` est déclenché après une mise à jour d’une ligne de la `DataSet` a été traitée au niveau de la source de données. En conséquence, vous pouvez utiliser `RowUpdating` pour modifier le comportement de la mise à jour avant qu'elle ne survienne, pour fournir une gestion supplémentaire lors d'une mise à jour, pour conserver une référence à une ligne mise à jour, pour annuler la mise à jour en cours et la programmer pour un traitement par lots à traiter ultérieurement, etc. `RowUpdated` est utile pour répondre aux erreurs et exceptions qui se produisent pendant la mise à jour. Vous pouvez ajouter des informations d'erreur au `DataSet`, ainsi qu'une logique pour les nouvelles tentatives et ainsi de suite.  
   
- Les arguments <xref:System.Data.Common.RowUpdatingEventArgs> et <xref:System.Data.Common.RowUpdatedEventArgs> passés aux événements `RowUpdating` et `RowUpdated` comprennent les élément suivants : une propriété `Command` qui référence l'objet `Command` utilisé pour effectuer la mise à jour ; une propriété `Row` qui référence l'objet `DataRow` contenant les informations mises à jour ; une propriété `StatementType` pour le type de mise à jour effectuée ; le `TableMapping`, le cas échéant ; et le `Status` de l'opération.  
+ Les arguments <xref:System.Data.Common.RowUpdatingEventArgs> et <xref:System.Data.Common.RowUpdatedEventArgs> passés aux événements `RowUpdating` et `RowUpdated` comprennent les élément suivants : une propriété `Command` qui référence l’objet `Command` utilisé pour effectuer la mise à jour ; une propriété `Row` qui référence l’objet `DataRow` contenant les informations mises à jour ; une propriété `StatementType` pour le type de mise à jour effectuée ; le `TableMapping`, le cas échéant ; et le `Status` de l’opération.  
   
  Vous pouvez utiliser la propriété `Status` pour déterminer si une erreur est survenue pendant l'opération et éventuellement contrôler les actions sur les lignes actuelles et qui en résultent. Lorsque l'événement se produit, la propriété `Status` est égale à `Continue` ou `ErrorsOccurred`. Le tableau suivant présente les valeurs que vous pouvez affecter à la propriété `Status` afin de contrôler les actions ultérieures pendant la mise à jour.  
   
-|État|Description|  
+|Status|Description|  
 |------------|-----------------|  
 |`Continue`|Continuer l'opération de mise à jour.|  
 |`ErrorsOccurred`|Abandonner l'opération de mise à jour et lever une exception.|  
@@ -187,6 +187,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Gestion des événements de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [Gestion des événements de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)

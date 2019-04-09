@@ -2,12 +2,12 @@
 title: Données binaires et à valeurs élevées SQL Server
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: f6bd62d2e9d2f87947e01b7964c5d151690b62bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192964"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Données binaires et à valeurs élevées SQL Server
 SQL Server fournit le spécificateur `max`, qui développe la capacité de stockage des types de données `varchar`, `nvarchar` et `varbinary`. `varchar(max)`, `nvarchar(max)`, et `varbinary(max)` sont appelés collectivement *les types de données de grande valeur*. Les types de données de valeur élevée permettent de stocker jusqu'à 2^31-1 octets de données.  
@@ -22,7 +22,8 @@ SQL Server fournit le spécificateur `max`, qui développe la capacité de stoc
  Décrit comment utiliser les données de valeur élevée stockées dans SQL Server 2008 avec l'attribut FILESTREAM.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types de données SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Opérations de données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

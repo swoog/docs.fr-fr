@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203533"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuration de la prise en charge WS-Atomic Transaction
 Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransaction (WS-AT) à l'aide de l'utilitaire de configuration WS-AT.  
   
 ## <a name="using-the-ws-at-configuration-utility"></a>Utilisation de l'utilitaire de configuration WS-AT  
- L'utilitaire de configuration WS-AT (wsatConfig.exe) permet de configurer les paramètres WS-AT. Pour activer le service de protocole WS-AT, vous devez utiliser l'utilitaire de configuration pour configurer le port HTTPS pour WS-AT, lier un certificat X.509 au port HTTPS et configurer des certificats de partenaire autorisés en spécifiant des noms de sujet de certificat ou des empreintes numériques. L'utilitaire de configuration vous permet également de sélectionner le mode de suivi et de définir les délais d'attente de transaction sortants et entrants maximaux par défaut.  
+ L'utilitaire de configuration WS-AT (wsatConfig.exe) permet de configurer les paramètres WS-AT. Pour activer le service de protocole WS-AT, vous devez utiliser l'utilitaire de configuration pour configurer le port HTTPS pour WS-AT, lier un certificat X.509 au port HTTPS et configurer des certificats de partenaire autorisés en spécifiant des noms de sujet de certificat ou des empreintes numériques. L’utilitaire de configuration vous permet également de sélectionner le mode de suivi et de définir les délais d’attente de transaction sortants et entrants maximaux par défaut.  
   
  Vous pouvez accéder aux fonctionnalités de cet outil à l'aide d'un composant logiciel enfichable de page de propriétés MMC (Microsoft Management Console) dans la console de gestion Services de composants, ou à partir d'une fenêtre de ligne de commande. Configurez la prise en charge WS-AT sur l'ordinateur local par le biais de la fenêtre de ligne de commande ; configurez les paramètres sur les ordinateurs locaux et distants à l'aide du composant logiciel enfichable MMC.  
   
@@ -23,7 +23,7 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  Pour plus d’informations sur l’outil de ligne de commande, consultez [(wsatConfig.exe) de l’utilitaire de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
- Si vous exécutez [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], vous pouvez accéder dans le composant logiciel enfichable MMC en naviguant jusqu’au **contrôle panneau/Administrative Tools/Services de composants**, droit **poste de travail**, et en sélectionnant **propriétés**. Il s’agit du même emplacement que celui où vous pouvez configurer Microsoft Distributed Transaction Coordinator (MSDTC). Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], le composant logiciel enfichable MMC et être accessible en cliquant sur le **Démarrer** bouton et en entrant `dcomcnfg.exe` dans le **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **mes travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit puis sélectionnez **propriétés**. Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet.  
+ Si vous exécutez [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], vous pouvez accéder dans le composant logiciel enfichable MMC en naviguant jusqu’au **contrôle panneau/Administrative Tools/Services de composants**, droit **poste de travail**, et en sélectionnant **propriétés**. Il s'agit du même emplacement que celui où vous pouvez configurer Microsoft Distributed Transaction Coordinator (MSDTC). Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], le composant logiciel enfichable MMC et être accessible en cliquant sur le **Démarrer** bouton et en entrant `dcomcnfg.exe` dans le **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **mes travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit puis sélectionnez **propriétés**. Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet.  
   
  Pour plus d’informations sur le composant logiciel enfichable, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
@@ -47,7 +47,7 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
  `WsatConfig.exe –network:disable -restart`  
   
 ## <a name="configuring-trust-between-two-machines"></a>Configuration de la confiance entre deux ordinateurs  
- Le service de protocole WS-AT requiert que l'administrateur autorise explicitement les différents comptes à participer aux transactions distribuées. Si vous êtes administrateur de deux ordinateurs, vous pouvez configurer les deux ordinateurs de façon à établir une relation de confiance mutuelle en échangeant l'ensemble correct de certificats entre les ordinateurs, en les installant dans les magasins de certificats appropriés et en utilisant l'outil wsatConfig.exe pour ajouter le certificat de chaque ordinateur à la liste de certificats de participants autorisés de l'autre ordinateur. Cette étape est nécessaire pour exécuter des transactions distribuées entre deux ordinateurs à l'aide de WS-AT.  
+ Le service de protocole WS-AT requiert que l’administrateur autorise explicitement les différents comptes à participer aux transactions distribuées. Si vous êtes administrateur de deux ordinateurs, vous pouvez configurer les deux ordinateurs de façon à établir une relation de confiance mutuelle en échangeant l'ensemble correct de certificats entre les ordinateurs, en les installant dans les magasins de certificats appropriés et en utilisant l'outil wsatConfig.exe pour ajouter le certificat de chaque ordinateur à la liste de certificats de participants autorisés de l'autre ordinateur. Cette étape est nécessaire pour exécuter des transactions distribuées entre deux ordinateurs à l'aide de WS-AT.  
   
  L'exemple suivant illustre les étapes requises pour établir la confiance entre deux ordinateurs, A et B.  
   
@@ -94,7 +94,7 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
  Lors du déploiement de MSDTC, l'administrateur doit s'assurer que tout échange de données MSDTC est sécurisé. Dans un déploiement de groupe de travail, isolez l'infrastructure transactionnelle des utilisateurs malveillants ; dans un déploiement de cluster, sécurisez le Registre de cluster.  
   
 ## <a name="tracing"></a>Traçage  
- Le prend en charge du service de protocole WS-AT intégré, transaction suivi spécifique qui peut être activé et géré à l’aide de la [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) outil.  Les suivis peuvent inclure des données qui indiquent l’heure d’une inscription pour une transaction spécifique, l’heure à laquelle une transaction atteint son état terminal, le résultat que chaque inscription de transaction a reçu. Toutes les traces peuvent être affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) outil.  
+ Le prend en charge du service de protocole WS-AT intégré, transaction suivi spécifique qui peut être activé et géré à l’aide de la [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) outil.  Les suivis peuvent inclure des données qui indiquent l'heure d'une inscription pour une transaction spécifique, l'heure à laquelle une transaction atteint son état terminal, le résultat que chaque inscription de transaction a reçu. Toutes les traces peuvent être affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) outil.  
   
  Le service de protocole WS-AT prend en charge également le suivi ServiceModel intégré sur l'ensemble de la session de suivi ETW. Cela procure des suivis plus détaillés et spécifiques à la communication, en plus des suivis de transaction existants.  Pour activer ces suivis supplémentaires, procédez comme suit  
   
@@ -119,5 +119,6 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
 -   31 : en clair  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Composant logiciel enfichable MMC Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

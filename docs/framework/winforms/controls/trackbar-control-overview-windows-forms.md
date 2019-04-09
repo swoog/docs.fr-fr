@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 74a8feba14b7e2186fb64729cb915e53132805d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200634"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Vue d'ensemble du contrôle TrackBar (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.TrackBar> contrôle (parfois appelé un contrôle « curseur ») est utilisé pour naviguer dans une grande quantité d’informations ou d’ajuster visuellement un paramètre numérique. Le <xref:System.Windows.Forms.TrackBar> contrôle comporte deux parties : le curseur de défilement, également appelé un curseur et les graduations. Le curseur est la partie qui peut être ajustée. Sa position correspond à la <xref:System.Windows.Forms.TrackBar.Value%2A> propriété. Les graduations sont des indicateurs visuels sont espacés à intervalles réguliers. La barre de suivi se déplace dans les incréments que vous spécifiez. Par exemple, vous pouvez utiliser la barre de suivi pour contrôler la vitesse ou la souris clignotement du curseur pour un système.  
@@ -24,5 +24,6 @@ Les formulaires Windows <xref:System.Windows.Forms.TrackBar> contrôle (parfois 
  Deux autres propriétés importantes sont <xref:System.Windows.Forms.TrackBar.SmallChange%2A> et <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. La valeur de la <xref:System.Windows.Forms.TrackBar.SmallChange%2A> propriété est le nombre de positions le curseur se déplace en réponse à avoir la touche gauche ou flèche droite. La valeur de la <xref:System.Windows.Forms.TrackBar.LargeChange%2A> propriété est le nombre de positions le curseur se déplace en réponse à avoir la touche Pg préc ou Pg suiv enfoncée, ou en réponse à la souris clique sur la barre de suivi de chaque côté du curseur de défilement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar, contrôle](trackbar-control-windows-forms.md)

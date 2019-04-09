@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
-ms.openlocfilehash: c860f7b1fac7d2101f883e949218bd25bf78c1a6
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: c40254627952e71abd259fe8d38b7fa5b60955a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207225"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Procédure : Exécuter une requête qui retourne des résultats StructuralType
 Cette rubrique montre comment exécuter une commande par rapport à un modèle conceptuel en utilisant un objet <xref:System.Data.EntityClient.EntityCommand> et comment récupérer les résultats de <xref:System.Data.Metadata.Edm.StructuralType> en utilisant un objet <xref:System.Data.EntityClient.EntityDataReader>. Les classes <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.RowType> et <xref:System.Data.Metadata.Edm.ComplexType> sont dérivées de la classe <xref:System.Data.Metadata.Edm.StructuralType>.  
@@ -25,7 +25,7 @@ Cette rubrique montre comment exécuter une commande par rapport à un modèle c
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple exécute une requête qui retourne des résultats <xref:System.Data.Metadata.Edm.EntityType>. Si vous transmettez la requête suivante en tant qu'argument à la fonction `ExecuteStructuralTypeQuery`, celle-ci affiche des détails sur l'objet `Products` :  
+ Cet exemple exécute une requête qui retourne des résultats <xref:System.Data.Metadata.Edm.EntityType>. Si vous transmettez la requête suivante en tant qu’argument à la fonction `ExecuteStructuralTypeQuery`, celle-ci affiche des détails sur l’objet `Products` :  
   
  [!code-csharp[DP EntityServices Concepts 2#SelectProduct](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#selectproduct)]  
   
@@ -37,5 +37,6 @@ Cette rubrique montre comment exécuter une commande par rapport à un modèle c
  [!code-vb[DP EntityServices Concepts#eSQLStructuralTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlstructuraltypes)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

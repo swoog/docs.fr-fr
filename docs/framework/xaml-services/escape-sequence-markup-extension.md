@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182067"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} Séquence d’échappement / Extension de balisage
+# <a name="-escape-sequence--markup-extension"></a>{} Séquence d’échappement/Extension de balisage
 Fournit la séquence d’échappement XAML pour les valeurs d’attribut. La séquence d’échappement autorise les valeurs suivantes dans l’attribut doit être interprété comme un littéral.  
   
 ## <a name="xaml-attribute-usage"></a>Utilisation d'attributs XAML  
@@ -59,5 +59,6 @@ Fournit la séquence d’échappement XAML pour les valeurs d’attribut. La sé
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Convertisseurs de types et extensions de balisage pour XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [Entités de caractères XML et XAML](xml-character-entities-and-xaml.md)

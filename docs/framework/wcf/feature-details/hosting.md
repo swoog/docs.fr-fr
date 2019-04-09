@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209110"
 ---
 # <a name="hosting"></a>Hébergement
 Les rubriques de cette section décrivent l'hébergement de service. Un service peut être hébergé par Internet Information Services (IIS), Service d’Activation des processus Windows (WAS), Windows Server AppFabric, un service Windows, ou par une application managée, cette option est souvent appelée *auto-hébergement*.  
@@ -18,7 +18,7 @@ Les rubriques de cette section décrivent l'hébergement de service. Un service 
  [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  Décrit comment un service Windows Communication Foundation (WCF) est hébergé dans Internet Information Services ou [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496).  
   
- [Hébergement dans le service d’activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [Hébergement dans le service d'activation de processus de Windows (WAS, Windows Process Activation Service)](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  Décrit comment un service WCF est hébergé par le Service d’Activation des processus Windows.  
   
  [Hébergement dans une application de service Windows](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
@@ -34,5 +34,6 @@ Les rubriques de cette section décrivent l'hébergement de service. Un service 
  Décrit comment spécifier plusieurs adresses de base pour un service à l’aide du même modèle d’URI sur un site web unique.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)
 - [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

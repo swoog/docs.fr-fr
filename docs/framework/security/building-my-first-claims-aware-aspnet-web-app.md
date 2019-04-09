@@ -3,12 +3,12 @@ title: Création de ma première application web ASP.NET prenant en charge les r
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151370"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Création de ma première application web ASP.NET prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -41,11 +41,12 @@ ms.locfileid: "58838129"
   
  Pour créer votre première application ASP.NET. NET prenant en charge les revendications à l'aide de WIF, suivez les instructions de l'une des opérations suivantes :  
   
--   [Guide pratique pour Création d’Application de Web prenant en charge les revendications ASP.NET MVC à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Procédure : Générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Procédure : Générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Guide pratique pour Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main de WIF](../../../docs/framework/security/getting-started-with-wif.md)

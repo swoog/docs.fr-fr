@@ -2,12 +2,12 @@
 title: Exécution des exemples Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
-ms.translationtype: MT
+ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209214"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Exécution des exemples Windows Communication Foundation
 Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dans une configuration avec ordinateur unique ou plusieurs ordinateurs. Tels qu'ils sont fournis, les exemples sont configurés pour être exécutés sur un ordinateur unique. Pour les exécuter sur plusieurs ordinateurs, il est nécessaire de modifier les paramètres de leur fichier de configuration. Les procédures suivantes permettent d'exécuter les exemples sur un même ordinateur ou sur plusieurs ordinateurs. Notez que ces procédures ne sont pas tout à fait les mêmes pour les exemples hébergés dans les services IIS et les exemples auto-hébergés. La plupart des exemples sont hébergés dans les services IIS. Consultez les informations contenues dans leur fichier lisezmoi respectif pour connaître leurs modalités d'hébergement.  
@@ -41,13 +41,13 @@ Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dan
   
     1.  Sur l'ordinateur du service, créez un répertoire afin d'y stocker les fichiers lui correspondant.  
   
-    2.  Copiez les fichiers de programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur de service.  
+    2.  Copiez les fichiers de programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur de service.  
   
     3.  Dans le fichier de configuration du service, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
   
     4.  Lancez Service.exe depuis une invite de commandes.  
   
-2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.  
+2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
   
 3.  Définissez l'adresse de point de terminaison.  
   
@@ -80,5 +80,6 @@ Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dan
 -   Si le service est hébergé par IIS, pour des raisons de sécurité, supprimez la définition du répertoire virtuel ainsi que les autorisations accordées au cours des étapes d'installation (une fois l'exécution des exemples terminée).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
 - [Conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

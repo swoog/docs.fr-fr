@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188433"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procédure : Créer et effectuer une liaison à un ObservableCollection
 Cet exemple montre comment créer et lier à une collection qui dérive de la <xref:System.Collections.ObjectModel.ObservableCollection%601> (classe), qui est une classe de collection qui fournit des notifications lorsque des éléments sont ajoutés ou supprimés.  
@@ -141,8 +141,9 @@ End Class
  Pour plus d’informations, consultez la section « Liaisons de collections » de la [Vue d’ensemble de la liaison de données](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Trier des données dans une vue](how-to-sort-data-in-a-view.md)
 - [Filtrer les données d’une vue](how-to-filter-data-in-a-view.md)
-- [Trier et grouper des données à l'aide d'une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Trier et grouper des données à l’aide d’une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

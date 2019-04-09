@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188960"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procédure : Effectuer une initialisation tardive d’objets
 La classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifie les opérations d’initialisation tardive et d’instanciation des objets. L’initialisation des objets de manière tardive vous évite d’avoir à créer inutilement des objets non nécessaires, ou vous permet de différer l’initialisation des objets jusqu’à ce qu’ils commencent à être utilisés. Pour plus d’informations, consultez [Initialisation tardive](../../../docs/framework/performance/lazy-initialization.md).  
@@ -77,5 +77,6 @@ End Sub
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
 - [Initialisation tardive](../../../docs/framework/performance/lazy-initialization.md)

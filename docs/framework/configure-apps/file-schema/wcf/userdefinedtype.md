@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a69571f5d34c2f844662f3d70ca67a2fb8ed0291
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182126"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Représente un type défini par l'utilisateur (UDT) à inclure dans le contrat de service.  
@@ -59,7 +59,7 @@ Représente un type défini par l'utilisateur (UDT) à inclure dans le contrat d
   
  Pour contourner ce problème, vous pouvez ajouter les UDT au fichier de configuration afin qu'ils puissent être inclus comme types connus sur le contrat de service approprié. Pour ce faire, vous devez identifier de manière unique l'UDT et le ou les contrats, autrement dit, le ou les interfaces COM d'origine qui les utilisent.  
   
- L'exemple suivant décrit l'ajout à cette fin de deux UDT spécifiques à la section <`userDefinedTypes`> du fichier de configuration.  
+ L’exemple suivant illustre l’ajout de deux UDT spécifiques à la <`userDefinedTypes`> section du fichier de configuration à cet effet.  
   
 ```xml  
 <comContracts>
@@ -88,12 +88,13 @@ Représente un type défini par l'utilisateur (UDT) à inclure dans le contrat d
 </comContracts>
 ```  
   
- Lorsque le service est initialisé, le runtime d’intégration recherche les types spécifiés et les ajoute à la collection de types connus pour les contrats spécifiés.  
+ Lorsque le service est initialisé, le runtime d'intégration recherche les types spécifiés et les ajoute à la collection de types connus pour les contrats spécifiés.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Intégration à des applications COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Guide pratique pour Configurer les paramètres de Service COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Procédure : configurer des paramètres de service COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

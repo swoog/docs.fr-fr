@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208668"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Procédure : Appliquer des transformations à du texte
 Les transformations peuvent modifier l’affichage de texte dans votre application. Les exemples suivants utilisent différents types de transformations du rendu pour changer l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  
@@ -65,4 +65,5 @@ Les transformations peuvent modifier l’affichage de texte dans votre applicati
 >  Le <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> fournit un ensemble rich de fonctionnalités pour fournir des effets d’ombre. Pour plus d’informations, consultez [créer du texte avec une ombre](how-to-create-text-with-a-shadow.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour appliquer des animations à du texte](how-to-apply-animations-to-text.md)
+
+- [Appliquer des animations à du texte](how-to-apply-animations-to-text.md)

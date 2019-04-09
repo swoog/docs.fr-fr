@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 02d111a630459344efbc5d1e45b53daffcde427f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 260146cd901fe2b80a73c01060ccd55958cd169e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203039"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>Vue d'ensemble du contrôle FlowLayoutPanel
 Le contrôle <xref:System.Windows.Forms.FlowLayoutPanel> réorganise son contenu dans un sens de flux horizontal ou vertical. Vous pouvez encapsuler le contenu du contrôle d'une ligne à la suivante ou d'une colonne à la suivante. Vous pouvez également ajuster plutôt qu'encapsuler son contenu.  
@@ -28,6 +28,7 @@ Le contrôle <xref:System.Windows.Forms.FlowLayoutPanel> réorganise son contenu
  Consultez également [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [FlowLayoutPanel, contrôle](flowlayoutpanel-control-windows-forms.md)

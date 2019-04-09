@@ -2,12 +2,12 @@
 title: Attaques par relecture
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186756"
 ---
 # <a name="replay-attacks"></a>Attaques par relecture
 Un *attaque par relecture* se produit lorsqu’un intrus copie un flux de messages entre deux correspondants et relit le flux à un ou plusieurs des parties. Sauf atténuation, les ordinateurs sujets à l'attaque traitent le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
@@ -30,16 +30,17 @@ Un *attaque par relecture* se produit lorsqu’un intrus copie un flux de messag
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Batterie de serveurs Web : Intrus relit la demande à plusieurs nœuds  
  Un client utilise un service implémenté sur une batterie de serveurs Web. Un intrus relit une demande qui a été envoyée à un nœud de la ferme à un autre nœud de la ferme. De plus, si un service est redémarré, le cache de relecture est vidé, ce qui permet à un intrus de relire la demande. (Le cache contient des valeurs de signature de message utilisées et vues précédemment et il empêche toute relecture ; ces signatures ne peuvent donc être utilisées qu'une seule fois. Les caches de relecture ne sont pas partagés dans une batterie de serveurs Web.)  
   
- Les solutions d'atténuation des risques sont les suivantes :  
+ Les solutions d’atténuation sont les suivantes :  
   
 -   Utilisez la sécurité de mode de message avec des jetons de contexte de sécurité avec état (avec ou sans la conversation sécurisée activée). Pour plus d'informations, voir [Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 -   Configurez le service pour utiliser la sécurité de niveau transport.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

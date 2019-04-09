@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffcd6971a3229423f055765b0d64258a2dfa2aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5f52999c3f680fbccefe4681f83d473cdb86306
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206484"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName, méthode
 Obtient le nom du champ static.  
@@ -39,15 +39,16 @@ HRESULT GetName(
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugStaticFieldSymbol, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

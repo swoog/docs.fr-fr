@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117402"
 ---
 # <a name="runtime-information-etw-events"></a>Événements ETW d'information du runtime
 Ces événements ETW journalise des informations sur l’exécution, notamment la référence SKU, le numéro de version, le mode d’activation du runtime, les paramètres de ligne de commande avec lesquels il a été démarré, le GUID (le cas échéant) et d’autres informations pertinentes. Si plusieurs runtimes sont exécutés dans un processus, les informations fournies par ces événements (le ClrInstanceID) permettent de lever l’ambiguïté sur les runtimes.  
@@ -45,4 +45,5 @@ Ces événements ETW journalise des informations sur l’exécution, notamment 
 |RuntimeDLLPath|win:UnicodeString|Chemin du fichier .dll du CLR qui a été chargé dans le processus.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197215"
 ---
 # <a name="how-to-implement-binding-validation"></a>Procédure : Implémenter la validation de la liaison
 Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et un déclencheur de style pour fournir des commentaires visuels afin d’informer l’utilisateur lorsqu’une valeur non valide est entrée, basée sur une règle de validation personnalisée.  
@@ -38,5 +38,6 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.
  Notez que si vous ne fournissez pas un personnalisé <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> le modèle d’erreur par défaut s’affiche pour fournir des commentaires visuels à l’utilisateur lorsqu’il existe une erreur de validation. Pour plus d’informations, consultez la section relative à la validation de données de la rubrique [Vue d’ensemble de la liaison de données](data-binding-overview.md). En outre, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une règle de validation intégrée qui capte les exceptions levées pendant la mise à jour de la propriété de source de liaison. Pour plus d'informations, consultez <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

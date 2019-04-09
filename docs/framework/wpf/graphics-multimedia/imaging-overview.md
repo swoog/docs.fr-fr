@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209708"
 ---
 # <a name="imaging-overview"></a>Vue d'ensemble de la création d'images
 Cette rubrique fournit une introduction au [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permet aux développeurs d’afficher, transformer et mettre en forme des images.  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Composant de création d’images WPF  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Fournit des améliorations importantes dans les fonctions au sein d’imagerie [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Les fonctionnalités de création d’images, comme l’affichage d’une bitmap ou l’utilisation d’une image sur un contrôle ordinaire, dépendaient auparavant des bibliothèques [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ou [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Ces [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] proposent des fonctionnalités de base en matière de création d’images, mais elles sont dépourvues de certaines autres fonctionnalités telles que la prise en charge de l’extensibilité de codec et des images haute fidélité. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] est conçu pour surmonter les lacunes de [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] et [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] et fournissent un nouvel ensemble de [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] pour afficher et utiliser des images dans vos applications.  
@@ -190,6 +189,7 @@ Les pinceaux d’image peuvent remplir des formes, des contrôles, du texte, etc
 >  Le codec doit être signé numériquement pour pouvoir être reconnu par le système.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

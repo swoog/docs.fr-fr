@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178228"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject, méthode
 Alloue une nouvelle instance d’objet et appelle la méthode de constructeur spécifié.  
@@ -49,7 +49,7 @@ HRESULT NewObject (
  `ppArgs`  
  [in] Tableau d’objets ICorDebugValue, chacun d’eux représente un argument à passer au constructeur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
@@ -59,4 +59,5 @@ HRESULT NewObject (
  **Versions du .NET framework :** 1.1, 1.0  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [NewParameterizedObject, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

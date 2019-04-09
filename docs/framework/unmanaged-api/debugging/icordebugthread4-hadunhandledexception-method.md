@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef4049ee8b1a4881128047b4d7e50fd0a28ea31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 12433786f353212c1ffbd57e9bf526c3ecc60e9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163629"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException, méthode
 Indique si le thread a déjà eu une exception non gérée.  
@@ -50,16 +50,17 @@ HRESULT GetBlockingObjects (
 ## <a name="remarks"></a>Notes  
  Cette méthode indique si le thread a déjà eu une exception non gérée. Au moment où le rappel d’exception non gérée est déclenché ou natif JIT-attach est lancée, cette méthode renvoie toujours S_OK. Il n’existe aucune garantie que le [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) méthode retournera l’exception non gérée ; Cependant, cette opération si le processus n’a pas encore repris après avoir obtenu le rappel d’exception non gérée ou en cas de JIT natif. En outre, il est possible (bien qu’improbable) d’avoir plusieurs threads avec une exception non gérée au moment de JIT natif est déclenchée. Dans ce cas il n’existe aucun moyen pour déterminer quelle exception a déclenché la JIT-attach.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugThread4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

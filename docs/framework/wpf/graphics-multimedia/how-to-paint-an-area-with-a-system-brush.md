@@ -6,12 +6,12 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195044"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Procédure : Peindre une zone avec un pinceau système
 Le <xref:System.Windows.SystemColors> classe fournit l’accès aux pinceaux système et les couleurs, tel que <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, et <xref:System.Windows.SystemColors.DesktopBrush%2A>. Un pinceau système est un <xref:System.Windows.Media.SolidColorBrush> objet qui peint une zone avec la couleur système spécifiée. Un pinceau système produit toujours un remplissage uni ; vous ne pouvez pas l’utiliser pour créer un dégradé.  
@@ -48,5 +48,6 @@ Le <xref:System.Windows.SystemColors> classe fournit l’accès aux pinceaux sys
  Pour obtenir un exemple montrant comment utiliser une couleur système dans un dégradé, consultez [utiliser les couleurs système dans un dégradé](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utiliser des couleurs système dans un dégradé](how-to-use-system-colors-in-a-gradient.md)
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)

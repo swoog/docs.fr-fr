@@ -2,12 +2,12 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 5ec2ae0db7239ff0c376ab4a8f050cc4f1df4f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181569"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
@@ -31,7 +31,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ## <a name="methods"></a>Méthodes  
  La classe ConnectionOrientedTransportBindingElement ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ConnectionOrientedTransportBindingElement a les propriétés suivantes :  
   
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
@@ -90,11 +90,12 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
   
  Valeur qui spécifie si les messages sont mis en mémoire tampon ou transmis en continu par le transport orienté connexion.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

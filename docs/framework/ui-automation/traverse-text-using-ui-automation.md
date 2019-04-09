@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 11f1b189d16d572ac1661e2b175f15ecae2f039f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d73ae4ca11d6f5417bb5cb768eae4e586538bd92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154789"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Accéder au texte à l'aide d'UI Automation
 > [!NOTE]
@@ -38,8 +38,9 @@ ms.locfileid: "57678200"
  Toute méthode utilisant <xref:System.Windows.Automation.Text.TextUnit> est différée au prochain <xref:System.Windows.Automation.Text.TextUnit> le plus long pris en charge, si le <xref:System.Windows.Automation.Text.TextUnit> concerné n’est pas pris en charge par le contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de TextPattern d’UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Ajouter du contenu à une zone de texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Rechercher et mettre en surbrillance le texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Vue d'ensemble de TextPattern d'UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Ajouter du contenu à une zone de texte à l'aide d'UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Rechercher et mettre un texte en surbrillance à l'aide d'UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

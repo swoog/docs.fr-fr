@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Utiliser le fournisseur de rôle ASP.NET avec un Service'
+title: 'Procédure : utiliser le fournisseur de rôle ASP.NET avec un service'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 0ad581a6967c759095d85d946a8557b47a075355
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20ffd1bb51bc2d6ac106927f805c7349c12059c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209084"
 ---
-# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Procédure : Utiliser le fournisseur de rôle ASP.NET avec un Service
+# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Procédure : utiliser le fournisseur de rôle ASP.NET avec un service
 Le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] (conjointement au fournisseur d’appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ) est une fonctionnalité qui permet aux développeurs [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] de créer des sites web permettant aux utilisateurs de créer un compte avec un site et d’être affectés d’un rôle à des fins d’autorisation. Grâce à cette fonctionnalité, les utilisateurs peuvent établir un compte avec le site et disposer d’un accès exclusif à celui-ci et à ses services. Cette approche diffère de la sécurité Windows, qui requiert que les utilisateurs disposent de comptes dans un domaine Windows. Au lieu de cela, tout utilisateur qui fournit ses informations d'identification (combinaison nom d'utilisateur/mot de passe) peut utiliser le site et ses services.  
   
  Pour un exemple d’application, consultez [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Pour plus d’informations sur la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionnalité du fournisseur d’appartenance, consultez [Comment : Utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
@@ -67,5 +67,6 @@ Le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fournisseur d’appartenances et de rôles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [Guide pratique pour Utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+
+- [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+- [Procédure : utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194420"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass (fonction)
 Crée un objet de classe dérivé à partir d’un objet spécifié.    
@@ -62,7 +62,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Une opération non valide, telle que la génération d’une classe à partir d’une instance, a été demandée. |
 | `WBEM_E_INCOMPLETE_CLASS` | La classe source n’a pas complètement a été définie ou inscrite avec la gestion de Windows, donc une nouvelle classe dérivée n’est pas autorisée. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` a la valeur `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` is `null`. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
@@ -73,12 +73,13 @@ Cette fonction encapsule un appel à la [IWbemClassObject::SpawnDerivedClass](/w
 
 Le nouvel objet retourné dans `ppNewClass` devient automatiquement une sous-classe de l’objet actuel. Ce comportement ne peut pas être remplacé. Il n’existe aucune autre méthode par laquelle les sous-classes (classes dérivées) peuvent être créés.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

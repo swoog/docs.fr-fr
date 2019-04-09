@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171156"
 ---
 # <a name="routed-events-overview"></a>Vue d'ensemble des événements routés
 Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Elle définit les termes utilisés pour les événements routés, elle explique comment ces événements sont routés via une arborescence d’éléments, elle résume la façon dont sont gérés les événements routés et elle explique comment créer ses propres événements routés personnalisés.
@@ -195,7 +195,7 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
 ## <a name="wpf-input-events"></a>Événements d’entrée WPF  
  Les événements routés sont fréquemment utilisés dans la plateforme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour les événements d’entrée. Par convention, dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les noms d’événements routés par tunneling comprennent le préfixe « Preview ». Les événements d’entrée vont souvent par paires, l’un étant l’événement de propagation et l’autre, l’événement de tunneling. Par exemple, le <xref:System.Windows.ContentElement.KeyDown> événement et le <xref:System.Windows.ContentElement.PreviewKeyDown> événements ont la même signature, le premier étant l’événement d’entrée de propagation et cette dernière étant le tunneling des événements d’entrée. Parfois, les événements d’entrée ont uniquement une version par propagation, ou uniquement une version à routage direct. Dans la documentation, les rubriques relatives aux événements routés font référence à des événements routés similaires avec d’autres stratégies de routage, et les sections des pages concernant les références managées expliquent plus en détail la stratégie de routage de chaque événement routé.  
   
- Les événements d’entrée [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournis par paires sont implémentés de telle sorte qu’une seule opération d’entrée, comme un clic de souris, déclenche les deux événements de la paire l’un après l’autre. Tout d’abord, l’événement de tunneling est déclenché et suit son itinéraire. Ensuite, l’événement de propagation est déclenché et suit son itinéraire. Les deux événements partagent littéralement la même instance de données de l’événement, car le <xref:System.Windows.UIElement.RaiseEvent%2A> appel de méthode dans la classe d’implémentation qui déclenche l’événement de propagation écoute pour les données d’événement à partir de l’événement de tunneling et les réutilise dans le nouvel événement déclenché. Les écouteurs qui comportent des gestionnaires pour l’événement de tunneling sont les premiers à pouvoir marquer l’événement routé comme géré (d’abord les gestionnaires de classe, ensuite les gestionnaires d’instance). Si un élément a marqué l’événement routé comme géré sur l’itinéraire de tunneling, les données d’événement déjà gérées sont envoyées à l’événement de propagation, et les gestionnaires standard attachés pour les événements d’entrée de propagation équivalents ne sont pas appelés. Vu de l’extérieur, il peut sembler que l’événement de propagation géré n’a pas encore été déclenché. Ce comportement de gestion est utile pour la composition de contrôles, où vous pouvez souhaiter que tous les événements d’entrée basés sur les tests d’atteinte ou le focus soient signalés par votre dernier contrôle, plutôt que par ses parties composites. Le dernier élément de contrôle est plus proche de la racine dans la composition et peut donc être le premier à gérer la classe de l’événement de tunneling et éventuellement à « remplacer » l’événement routé par un événement plus spécifique au contrôle dans le code qui stocke la classe de contrôle.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les événements d’entrée fournis par paires sont implémentés afin qu’une seule opération d’entrée, comme un clic de souris, déclenche les deux événements de la paire de séquence. Tout d’abord, l’événement de tunneling est déclenché et suit son itinéraire. Ensuite, l’événement de propagation est déclenché et suit son itinéraire. Les deux événements partagent littéralement la même instance de données de l’événement, car le <xref:System.Windows.UIElement.RaiseEvent%2A> appel de méthode dans la classe d’implémentation qui déclenche l’événement de propagation écoute pour les données d’événement à partir de l’événement de tunneling et les réutilise dans le nouvel événement déclenché. Les écouteurs qui comportent des gestionnaires pour l’événement de tunneling sont les premiers à pouvoir marquer l’événement routé comme géré (d’abord les gestionnaires de classe, ensuite les gestionnaires d’instance). Si un élément a marqué l’événement routé comme géré sur l’itinéraire de tunneling, les données d’événement déjà gérées sont envoyées à l’événement de propagation, et les gestionnaires standard attachés pour les événements d’entrée de propagation équivalents ne sont pas appelés. Vu de l’extérieur, il peut sembler que l’événement de propagation géré n’a pas encore été déclenché. Ce comportement de gestion est utile pour la composition de contrôles, où vous pouvez souhaiter que tous les événements d’entrée basés sur les tests d’atteinte ou le focus soient signalés par votre dernier contrôle, plutôt que par ses parties composites. Le dernier élément de contrôle est plus proche de la racine dans la composition et peut donc être le premier à gérer la classe de l’événement de tunneling et éventuellement à « remplacer » l’événement routé par un événement plus spécifique au contrôle dans le code qui stocke la classe de contrôle.  
   
  En guise d’illustration du traitement des événements d’entrée, prenez l’exemple d’événement d’entrée suivant. Dans l’arborescence suivante, `leaf element #2` est la source d’un événement `PreviewMouseDown`, puis d’un événement `MouseDown`.  
   
@@ -206,13 +206,13 @@ Propagation et tunneling des événements d’entrée
   
 1.  `PreviewMouseDown` (tunneling) sur l’élément racine.  
   
-2.  `PreviewMouseDown` (tunneling) sur l’élément intermédiaire numéro 1.  
+2.  `PreviewMouseDown` (tunneling) sur l’élément intermédiaire #1.  
   
-3.  `PreviewMouseDown` (tunneling) sur l’élément source numéro 2.  
+3.  `PreviewMouseDown` (tunneling) sur l’élément source #2.  
   
-4.  `MouseDown` (propagation) sur l’élément source numéro 2.  
+4.  `MouseDown` (propagation) sur l’élément source #2.  
   
-5.  `MouseDown` (propagation) sur l’élément intermédiaire numéro 1.  
+5.  `MouseDown` (propagation) sur l’élément intermédiaire #1.  
   
 6.  `MouseDown` (propagation) sur l’élément racine.  
   
@@ -245,12 +245,13 @@ Propagation et tunneling des événements d’entrée
  Cette rubrique traite principalement des concepts de base relatifs aux événements routés, et explique comment et à quel moment répondre aux événements routés qui sont déjà présents dans les différents éléments et contrôles de base. Toutefois, vous pouvez créer vos propres événements routés dans votre classe personnalisée, ainsi que toute la prise en charge nécessaire, telle que les classes et les délégués spécialisés de données d’événement. Le propriétaire de l’événement routé peut être n’importe quelle classe, mais les événements routés doivent être déclenchés par et gérées par <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> classes dérivées pour pouvoir être utiles. Pour plus d’informations sur les événements personnalisés, consultez [Créer un événement routé personnalisé](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
-- [Vue d’ensemble des entrées](input-overview.md)
-- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Marquage des événements routés comme étant gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Vue d'ensemble des entrées](input-overview.md)
+- [Vue d'ensemble des commandes](commanding-overview.md)
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
 - [Arborescences dans WPF](trees-in-wpf.md)
-- [Modèles d’événement faible](weak-event-patterns.md)
+- [Modèles d'événement faible](weak-event-patterns.md)

@@ -2,12 +2,12 @@
 title: Service de routage
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129439"
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
@@ -106,6 +106,7 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
 -   Configuration dynamique  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction au routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
 - [Contrats de routage](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
 - [Filtres de message](../../../../docs/framework/wcf/feature-details/message-filters.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a41eb4b5df7786558a73d5a195d57c9f30e9235d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192951"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considérations sur LINQ (WCF Data Services)
 Cette rubrique fournit des informations sur la façon dont les requêtes LINQ sont composées et exécutées lorsque vous utilisez le client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] et décrit les restrictions d'utilisation de LINQ pour interroger un service de données qui implémente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Pour plus d’informations sur la composition et l’exécution de requêtes sur un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-service de données, consultez [interrogation du Service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Composition de requêtes LINQ  
- LINQ vous permet de composer des requêtes pour interroger une collection d’objets qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Les deux le **ajouter une référence de Service** boîte de dialogue dans Visual Studio et de l’outil DataSvcUtil.exe sont utilisés pour générer la représentation d’un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service comme une classe de conteneur d’entités qui hérite de <xref:System.Data.Services.Client.DataServiceContext>, ainsi que objets qui représentent les entités retournées dans les flux. Ces outils génèrent également des propriétés sur la classe de conteneur d’entités des collections qui sont exposées en tant que flux par le service. Chacune de ces propriétés de classe qui encapsule le service de données retourne un <xref:System.Data.Services.Client.DataServiceQuery%601>. Étant donné que la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implémente l'interface <xref:System.Linq.IQueryable%601> définie par LINQ, vous pouvez composer une requête LINQ sur des flux exposés par le service de données, qui sont convertis par la bibliothèque cliente en un URI de demande de requête envoyé au service de données lors de l'exécution.  
+ LINQ vous permet de composer des requêtes pour interroger une collection d'objets qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Les deux le **ajouter une référence de Service** boîte de dialogue dans Visual Studio et de l’outil DataSvcUtil.exe sont utilisés pour générer la représentation d’un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service comme une classe de conteneur d’entités qui hérite de <xref:System.Data.Services.Client.DataServiceContext>, ainsi que objets qui représentent les entités retournées dans les flux. Ces outils génèrent également des propriétés sur la classe de conteneur d’entités des collections qui sont exposées en tant que flux par le service. Chacune de ces propriétés de classe qui encapsule le service de données retourne un <xref:System.Data.Services.Client.DataServiceQuery%601>. Étant donné que la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implémente l'interface <xref:System.Linq.IQueryable%601> définie par LINQ, vous pouvez composer une requête LINQ sur des flux exposés par le service de données, qui sont convertis par la bibliothèque cliente en un URI de demande de requête envoyé au service de données lors de l'exécution.  
   
 > [!IMPORTANT]
 >  L'ensemble de requêtes pouvant être exprimées dans la syntaxe LINQ est plus étendu que dans la syntaxe d'URI utilisée par les services de données [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. <xref:System.NotSupportedException> est levée lorsque la requête ne peut pas être mappée à un URI dans le service de données cible. Pour plus d’informations, consultez le [des méthodes LINQ non prises en charge](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) dans cette rubrique.  
@@ -112,8 +112,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 [!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqselectmethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqselectmethodspecific)]         
- 
-  
+
 > [!NOTE]
 >  L'option de requête `$select` ne peut pas être ajoutée à un URI de requête à l'aide de la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. Nous vous recommandons d'utiliser la méthode LINQ <xref:System.Linq.Enumerable.Select%2A> pour que le client génère l'option de requête `$select` dans l'URI de requête.  
   
@@ -150,8 +149,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryexpandmethodspecific)]       
 [!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryexpandmethodspecific)]       
-  
-  
+
  Les deux exemples précédents sont traduits dans l'URI de requête : `http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details`.  
   
 <a name="unsupportedMethods"></a>   
@@ -172,7 +170,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="supported-expression-functions"></a>Fonctions d'expression prises en charge  
  Les méthodes et propriétés CLR (Common-Language Runtime) suivantes sont prises en charge car elles peuvent être traduites dans une expression de requête et incluses dans l'URI de la requête exécutée sur un service [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] :  
   
-|Membre <xref:System.String>|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
+|<xref:System.String> Membre|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
 |-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.String.Concat%28System.String%2CSystem.String%29>|`string concat(string p0, string p1)`|  
 |<xref:System.String.Contains%28System.String%29>|`bool substringof(string p0, string p1)`|  
@@ -197,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <sup>1</sup>la date équivalente et les propriétés au moment de <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, ainsi que le <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> méthode dans Visual Basic sont également acceptés.  
   
-|Membre <xref:System.Math>|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
+|<xref:System.Math> Membre|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Math.Ceiling%28System.Decimal%29>|`decimal ceiling(decimal p0)`|  
 |<xref:System.Math.Ceiling%28System.Double%29>|`double ceiling(double p0)`|  
@@ -206,14 +204,15 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.Math.Round%28System.Decimal%29>|`decimal round(decimal p0)`|  
 |<xref:System.Math.Round%28System.Double%29>|`double round(double p0)`|  
   
-|Membre <xref:System.Linq.Expressions.Expression>|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
+|<xref:System.Linq.Expressions.Expression> Membre|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Linq.Expressions.Expression.TypeIs%28System.Linq.Expressions.Expression%2CSystem.Type%29>|`bool isof(type p0)`|  
   
  Le client peut également être en mesure d'évaluer les fonctions CLR supplémentaires sur le client. Une exception <xref:System.NotSupportedException> est levée pour toute expression qui ne peut pas être évaluée sur le client ou traduite dans un URI de requête valide pour l'évaluation sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Projections de requête](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Matérialisation d’objet](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [OData: Conventions d’URI](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [Projections de requêtes](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Matérialisation d'objet](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [OData : Conventions d’URI](https://go.microsoft.com/fwlink/?LinkID=185564)

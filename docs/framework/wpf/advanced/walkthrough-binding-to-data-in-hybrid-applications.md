@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Liaison de données dans des Applications hybrides'
+title: 'Procédure pas à pas : liaison de données dans des applications hybrides'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191989"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : Liaison de données dans des Applications hybrides
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : liaison de données dans des applications hybrides
 Liaison d’une source de données à un contrôle est essentielle pour permettre aux utilisateurs ayant accès aux données sous-jacentes, que vous utilisiez [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette procédure pas à pas montre comment vous pouvez utiliser la liaison de données dans des applications hybrides qui incluent les [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
@@ -174,9 +174,10 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
 10. Appuyez sur F5 pour générer et exécuter l'application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Liaison de données dans des Applications hybrides, exemple](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Procédure pas à pas : hébergement d’un contrôle composite Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

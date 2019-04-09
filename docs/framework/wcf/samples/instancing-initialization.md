@@ -2,12 +2,12 @@
 title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 553272c9059b41eac7d8807ef7a283edbfb8f791
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142374"
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
 Cet exemple étend la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet par l’activation et à le désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Cet exemple utilise un attribut personnalisé. Lorsque <xref:System.ServiceModel.ServiceHost> est généré, il examine les attributs utilisés dans la définition de type du service et ajoute les comportements disponibles à la collection de comportements de la description de service.  
   
- Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. l'<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; elle autorise l'inspection du service pour retrouver les éventuelles incohérences. l'<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; cette méthode est requise uniquement dans les scénarios très avancés. l'<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier ; elle est responsable de la configuration de l'exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
+ Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; Il permet au service à inspecter des incohérences. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; Cette méthode est requise uniquement dans les scénarios très avancés. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier et est responsable de la configuration de l’exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
   
 -   `Description`: Ce paramètre fournit la description de service pour l’ensemble du service. Il permet d’inspecter les données de description des points de terminaison, des contrats et des liaisons, et les autres données associées au service.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Activation et désactivation du raccordement  
  L'objectif principal de la mise en mise en pool d’objets est d'optimiser la création et l'initialisation relativement coûteuses des objets éphémères. Par conséquent, elle peut singulièrement améliorer les performances d'une application si elle est utilisée correctement. Étant donné que l'objet est retourné depuis le pool, le constructeur est appelé une seule fois. Toutefois, certaines applications requièrent un certain niveau de contrôle afin de pouvoir initialiser et nettoyer les ressources utilisées dans un contexte unique. Par exemple, un objet utilisé pour un ensemble de calculs peut réinitialiser ses champs privés avant de traiter le calcul suivant. Les Enterprise Services ont activé ce type d'initialisation spécifique au contexte en laissant le développeur d'objets substituer les méthodes `Activate` et `Deactivate` de la classe <xref:System.EnterpriseServices.ServicedComponent> de base.  
   
- Le pool d'objets appelle la méthode `Activate` juste avant de retourner l'objet depuis le pool. `Deactivate` est appelé lorsque l'objet est retourné au pool. La classe <xref:System.EnterpriseServices.ServicedComponent> de base a également une propriété `boolean` appelée `CanBePooled`, qui peut être utilisée pour notifier au pool que l'objet peut être davantage regroupé.  
+ Le pool d'objets appelle la méthode `Activate` juste avant de retourner l'objet depuis le pool. `Deactivate` est appelé lorsque l’objet est retournée au pool. La classe <xref:System.EnterpriseServices.ServicedComponent> de base a également une propriété `boolean` appelée `CanBePooled`, qui peut être utilisée pour notifier au pool que l'objet peut être davantage regroupé.  
   
  Pour reproduire ces fonctionnalités, l'exemple déclare une interface publique (`IObjectControl`) avec les membres susmentionnés. Puis cette interface est implémentée par les classes de service conçues pour assurer l'initialisation spécifique au contexte. L’implémentation <xref:System.ServiceModel.Dispatcher.IInstanceProvider> doit être modifiée pour satisfaire ces exigences. Désormais, chaque fois que vous obtenez un objet en appelant le `GetInstance` (méthode), vous devez vérifier si l’objet implémente `IObjectControl.` le cas échéant, vous devez appeler la `Activate` méthode correctement.  
   
@@ -264,4 +264,3 @@ else if (pool.Count < minPoolSize)
 >  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
-  
