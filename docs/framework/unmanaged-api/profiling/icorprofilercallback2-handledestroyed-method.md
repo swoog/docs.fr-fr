@@ -17,36 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d666b01ae202831df38e0537221e238b9e2bf35e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bc6b086b444a769afbf01369b50c69e242a21050
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090483"
 ---
-# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="e3adf-102">ICorProfilerCallback2::HandleDestroyed, méthode</span><span class="sxs-lookup"><span data-stu-id="e3adf-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
-<span data-ttu-id="e3adf-103">Notifie le profileur de code qu’un handle de garbage collection a été détruit.</span><span class="sxs-lookup"><span data-stu-id="e3adf-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
+# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="ca9ce-102">ICorProfilerCallback2::HandleDestroyed, méthode</span><span class="sxs-lookup"><span data-stu-id="ca9ce-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
+<span data-ttu-id="ca9ce-103">Notifie le profileur de code qu’un handle de garbage collection a été détruit.</span><span class="sxs-lookup"><span data-stu-id="ca9ce-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3adf-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e3adf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca9ce-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ca9ce-104">Syntax</span></span>  
   
 ```  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e3adf-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e3adf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca9ce-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ca9ce-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="e3adf-106">[in] L’ID du handle pour le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="e3adf-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="ca9ce-106">[in] L’ID du handle pour le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ca9ce-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3adf-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e3adf-107">Requirements</span></span>  
- <span data-ttu-id="e3adf-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3adf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca9ce-107">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ca9ce-107">Requirements</span></span>  
+ <span data-ttu-id="ca9ce-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca9ce-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3adf-109">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e3adf-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ca9ce-109">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca9ce-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e3adf-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3adf-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ca9ce-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca9ce-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e3adf-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3adf-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ca9ce-111">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="ca9ce-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e3adf-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e3adf-112">See also</span></span>
-- [<span data-ttu-id="e3adf-113">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="e3adf-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="e3adf-114">ICorProfilerCallback2, interface</span><span class="sxs-lookup"><span data-stu-id="e3adf-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ca9ce-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ca9ce-112">See also</span></span>
+
+- [<span data-ttu-id="ca9ce-113">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="ca9ce-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="ca9ce-114">ICorProfilerCallback2, interface</span><span class="sxs-lookup"><span data-stu-id="ca9ce-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
