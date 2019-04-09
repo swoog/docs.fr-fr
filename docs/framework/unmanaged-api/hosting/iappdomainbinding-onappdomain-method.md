@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 798ef6a9b058d9d49019554feba63627360e6a0e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2903395f5f834f2435b14d0b3f3e8bfe24af2867
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183051"
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="6a3e0-102">IAppDomainBinding::OnAppDomain, méthode</span><span class="sxs-lookup"><span data-stu-id="6a3e0-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="6a3e0-103">Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="6a3e0-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="fa480-102">IAppDomainBinding::OnAppDomain, méthode</span><span class="sxs-lookup"><span data-stu-id="fa480-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="fa480-103">Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.</span><span class="sxs-lookup"><span data-stu-id="fa480-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a3e0-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6a3e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa480-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fa480-104">Syntax</span></span>  
   
 ```  
 HRESULT OnAppDomain (  
@@ -35,18 +35,19 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a3e0-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="6a3e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa480-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fa480-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="6a3e0-106">[in] Un pointeur vers un [IUnknown](/cpp/atl/iunknown) objet d’interface qui représente le nouveau domaine d’application.</span><span class="sxs-lookup"><span data-stu-id="6a3e0-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="fa480-106">[in] Un pointeur vers un [IUnknown](/cpp/atl/iunknown) objet d’interface qui représente le nouveau domaine d’application.</span><span class="sxs-lookup"><span data-stu-id="fa480-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a3e0-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6a3e0-107">Requirements</span></span>  
- <span data-ttu-id="6a3e0-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a3e0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa480-107">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="fa480-107">Requirements</span></span>  
+ <span data-ttu-id="fa480-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa480-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a3e0-109">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6a3e0-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="fa480-109">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fa480-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6a3e0-110">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6a3e0-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fa480-110">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fa480-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6a3e0-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a3e0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="fa480-111">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="fa480-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6a3e0-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6a3e0-112">See also</span></span>
-- [<span data-ttu-id="6a3e0-113">IAppDomainBinding, interface</span><span class="sxs-lookup"><span data-stu-id="6a3e0-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fa480-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa480-112">See also</span></span>
+
+- [<span data-ttu-id="fa480-113">IAppDomainBinding, interface</span><span class="sxs-lookup"><span data-stu-id="fa480-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

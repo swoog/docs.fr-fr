@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026aab33207544e21a21f6c2374925d1d7923e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180737"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="9c4b2-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode, méthode</span><span class="sxs-lookup"><span data-stu-id="9c4b2-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="9c4b2-103">`GetErrorCode` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="9c4b2-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="9c4b2-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="9c4b2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="670e8-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode, méthode</span><span class="sxs-lookup"><span data-stu-id="670e8-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+`GetErrorCode` <span data-ttu-id="670e8-103">est obsolète.</span><span class="sxs-lookup"><span data-stu-id="670e8-103">is obsolete.</span></span> <span data-ttu-id="670e8-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="670e8-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c4b2-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9c4b2-105">See also</span></span>
-- [<span data-ttu-id="9c4b2-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="9c4b2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="670e8-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="670e8-105">See also</span></span>
+
+- [<span data-ttu-id="670e8-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="670e8-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

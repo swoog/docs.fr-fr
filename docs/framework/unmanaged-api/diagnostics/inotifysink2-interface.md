@@ -16,29 +16,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc5d09ac12919b8c68b9fe4bf9f7dc0009b2d4b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157740"
 ---
-# <a name="inotifysink2-interface"></a><span data-ttu-id="3217c-102">INotifySink2, interface</span><span class="sxs-lookup"><span data-stu-id="3217c-102">INotifySink2 Interface</span></span>
-<span data-ttu-id="3217c-103">Déclare des méthodes pour la notification du récepteur.</span><span class="sxs-lookup"><span data-stu-id="3217c-103">Declares methods for sink notification.</span></span>  
+# <a name="inotifysink2-interface"></a><span data-ttu-id="d6176-102">INotifySink2, interface</span><span class="sxs-lookup"><span data-stu-id="d6176-102">INotifySink2 Interface</span></span>
+<span data-ttu-id="d6176-103">Déclare des méthodes pour la notification du récepteur.</span><span class="sxs-lookup"><span data-stu-id="d6176-103">Declares methods for sink notification.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3217c-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="3217c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d6176-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="d6176-104">Methods</span></span>  
   
-|<span data-ttu-id="3217c-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="3217c-105">Method</span></span>|<span data-ttu-id="3217c-106">Description</span><span class="sxs-lookup"><span data-stu-id="3217c-106">Description</span></span>|  
+|<span data-ttu-id="d6176-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="d6176-105">Method</span></span>|<span data-ttu-id="d6176-106">Description</span><span class="sxs-lookup"><span data-stu-id="d6176-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3217c-107">OnSyncCallEnter, méthode</span><span class="sxs-lookup"><span data-stu-id="3217c-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="3217c-108">Est appelé lors de la saisie d’un appel.</span><span class="sxs-lookup"><span data-stu-id="3217c-108">Gets invoked when entering a call.</span></span>|  
-|[<span data-ttu-id="3217c-109">OnSyncCallExit, méthode</span><span class="sxs-lookup"><span data-stu-id="3217c-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="3217c-110">Est appelé lors de la sortie d’un appel.</span><span class="sxs-lookup"><span data-stu-id="3217c-110">Gets invoked when exiting a call.</span></span>|  
-|[<span data-ttu-id="3217c-111">OnSyncCallOut, méthode</span><span class="sxs-lookup"><span data-stu-id="3217c-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="3217c-112">Appelée lorsque l’appel est sortant.</span><span class="sxs-lookup"><span data-stu-id="3217c-112">Gets invoked when a call is out.</span></span>|  
-|[<span data-ttu-id="3217c-113">OnSyncCallReturn, méthode</span><span class="sxs-lookup"><span data-stu-id="3217c-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="3217c-114">Appelée lorsqu’un appel est retourné.</span><span class="sxs-lookup"><span data-stu-id="3217c-114">Gets invoked when a call returns.</span></span>|  
+|[<span data-ttu-id="d6176-107">OnSyncCallEnter, méthode</span><span class="sxs-lookup"><span data-stu-id="d6176-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="d6176-108">Est appelé lors de la saisie d’un appel.</span><span class="sxs-lookup"><span data-stu-id="d6176-108">Gets invoked when entering a call.</span></span>|  
+|[<span data-ttu-id="d6176-109">OnSyncCallExit, méthode</span><span class="sxs-lookup"><span data-stu-id="d6176-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="d6176-110">Est appelé lors de la sortie d’un appel.</span><span class="sxs-lookup"><span data-stu-id="d6176-110">Gets invoked when exiting a call.</span></span>|  
+|[<span data-ttu-id="d6176-111">OnSyncCallOut, méthode</span><span class="sxs-lookup"><span data-stu-id="d6176-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="d6176-112">Appelée lorsque l’appel est sortant.</span><span class="sxs-lookup"><span data-stu-id="d6176-112">Gets invoked when a call is out.</span></span>|  
+|[<span data-ttu-id="d6176-113">OnSyncCallReturn, méthode</span><span class="sxs-lookup"><span data-stu-id="d6176-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="d6176-114">Appelée lorsqu’un appel est retourné.</span><span class="sxs-lookup"><span data-stu-id="d6176-114">Gets invoked when a call returns.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3217c-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="3217c-115">Requirements</span></span>  
- <span data-ttu-id="3217c-116">**En-tête :** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="3217c-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6176-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="d6176-115">Requirements</span></span>  
+ <span data-ttu-id="d6176-116">**En-tête :** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="d6176-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3217c-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3217c-117">See also</span></span>
-- [<span data-ttu-id="3217c-118">INotifyConnection2, interface</span><span class="sxs-lookup"><span data-stu-id="3217c-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="3217c-119">INotifySource2, interface</span><span class="sxs-lookup"><span data-stu-id="3217c-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="3217c-120">Interfaces du magasin de symboles de diagnostics</span><span class="sxs-lookup"><span data-stu-id="3217c-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="d6176-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d6176-117">See also</span></span>
+
+- [<span data-ttu-id="d6176-118">INotifyConnection2, interface</span><span class="sxs-lookup"><span data-stu-id="d6176-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="d6176-119">INotifySource2, interface</span><span class="sxs-lookup"><span data-stu-id="d6176-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="d6176-120">Interfaces du magasin de symboles de diagnostics</span><span class="sxs-lookup"><span data-stu-id="d6176-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

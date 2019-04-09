@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128659"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="3b4a9-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="3b4a9-102">ScrollViewer</span></span>
-<span data-ttu-id="3b4a9-103">Le <xref:System.Windows.Controls.ScrollViewer> contrôle crée une région déroulante où contenu peut défiler horizontalement ou verticalement.</span><span class="sxs-lookup"><span data-stu-id="3b4a9-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="1b1cd-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1b1cd-102">ScrollViewer</span></span>
+<span data-ttu-id="1b1cd-103">Le <xref:System.Windows.Controls.ScrollViewer> contrôle crée une région déroulante où contenu peut défiler horizontalement ou verticalement.</span><span class="sxs-lookup"><span data-stu-id="1b1cd-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b4a9-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="3b4a9-104">In This Section</span></span>  
- [<span data-ttu-id="3b4a9-105">Vue d’ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="3b4a9-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="3b4a9-106">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="3b4a9-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1b1cd-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="1b1cd-104">In This Section</span></span>  
+ [<span data-ttu-id="1b1cd-105">Vue d'ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1b1cd-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="1b1cd-106">Rubriques Comment</span><span class="sxs-lookup"><span data-stu-id="1b1cd-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3b4a9-107">Référence</span><span class="sxs-lookup"><span data-stu-id="3b4a9-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1b1cd-107">Référence</span><span class="sxs-lookup"><span data-stu-id="1b1cd-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="3b4a9-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3b4a9-108">See also</span></span>
-- [<span data-ttu-id="3b4a9-109">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="3b4a9-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="3b4a9-110">Disposition</span><span class="sxs-lookup"><span data-stu-id="3b4a9-110">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="1b1cd-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1b1cd-108">See also</span></span>
+
+- [<span data-ttu-id="1b1cd-109">Vue d'ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="1b1cd-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="1b1cd-110">Mise en page</span><span class="sxs-lookup"><span data-stu-id="1b1cd-110">Layout</span></span>](../advanced/layout.md)

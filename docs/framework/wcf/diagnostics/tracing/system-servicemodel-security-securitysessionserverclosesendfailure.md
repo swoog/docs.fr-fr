@@ -2,20 +2,21 @@
 title: System.ServiceModel.Security.SecuritySessionServerCloseSendFailure
 ms.date: 03/30/2017
 ms.assetid: b848eeeb-07d6-4f2d-a14a-e62ee1968dfa
-ms.openlocfilehash: b87044ae4f8b0cde273ca574c628a48fa934e8e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0565d310f368deec2d61854d8dae0c4231d3c8a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157444"
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesendfailure"></a><span data-ttu-id="4de28-102">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span><span class="sxs-lookup"><span data-stu-id="4de28-102">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span></span>
-<span data-ttu-id="4de28-103">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span><span class="sxs-lookup"><span data-stu-id="4de28-103">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesendfailure"></a><span data-ttu-id="8a933-102">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span><span class="sxs-lookup"><span data-stu-id="8a933-102">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span></span>
+<span data-ttu-id="8a933-103">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span><span class="sxs-lookup"><span data-stu-id="8a933-103">System.ServiceModel.Security.SecuritySessionServerCloseSendFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4de28-104">Description</span><span class="sxs-lookup"><span data-stu-id="4de28-104">Description</span></span>  
- <span data-ttu-id="4de28-105">Échec lors de l'envoi d'une réponse de fermeture de session de sécurité au client.</span><span class="sxs-lookup"><span data-stu-id="4de28-105">A failure occurred while sending the security session Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="8a933-104">Description</span><span class="sxs-lookup"><span data-stu-id="8a933-104">Description</span></span>  
+ <span data-ttu-id="8a933-105">Échec lors de l'envoi d'une réponse de fermeture de session de sécurité au client.</span><span class="sxs-lookup"><span data-stu-id="8a933-105">A failure occurred while sending the security session Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4de28-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4de28-106">See also</span></span>
-- [<span data-ttu-id="4de28-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="4de28-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="4de28-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="4de28-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="4de28-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="4de28-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8a933-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8a933-106">See also</span></span>
+
+- [<span data-ttu-id="8a933-107">Traçage</span><span class="sxs-lookup"><span data-stu-id="8a933-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="8a933-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="8a933-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8a933-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="8a933-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

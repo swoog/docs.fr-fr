@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157363"
 ---
-# <a name="icorruntimehostcreatedomainsetup-method"></a><span data-ttu-id="5b5a6-102">ICorRuntimeHost::CreateDomainSetup, méthode</span><span class="sxs-lookup"><span data-stu-id="5b5a6-102">ICorRuntimeHost::CreateDomainSetup Method</span></span>
-<span data-ttu-id="5b5a6-103">Obtient un pointeur d’interface de type IAppDomainSetup à un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-103">Gets an interface pointer of type IAppDomainSetup to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="5b5a6-104">`IAppDomainSetup` Fournit des méthodes pour configurer les aspects d’un domaine d’application avant sa création.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-104">`IAppDomainSetup` provides methods to configure aspects of an application domain before it is created.</span></span>  
+# <a name="icorruntimehostcreatedomainsetup-method"></a><span data-ttu-id="d33d2-102">ICorRuntimeHost::CreateDomainSetup, méthode</span><span class="sxs-lookup"><span data-stu-id="d33d2-102">ICorRuntimeHost::CreateDomainSetup Method</span></span>
+<span data-ttu-id="d33d2-103">Obtient un pointeur d’interface de type IAppDomainSetup à un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span><span class="sxs-lookup"><span data-stu-id="d33d2-103">Gets an interface pointer of type IAppDomainSetup to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> `IAppDomainSetup` <span data-ttu-id="d33d2-104">Fournit des méthodes pour configurer les aspects d’un domaine d’application avant sa création.</span><span class="sxs-lookup"><span data-stu-id="d33d2-104">provides methods to configure aspects of an application domain before it is created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b5a6-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5b5a6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d33d2-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d33d2-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateDomainSetup (  
@@ -35,34 +35,35 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5b5a6-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5b5a6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d33d2-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="d33d2-106">Parameters</span></span>  
  `pAppDomainSetup`  
- <span data-ttu-id="5b5a6-107">[out] Un pointeur d’interface vers un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-107">[out] An interface pointer to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="5b5a6-108">Ce paramètre est de type `IUnknown`, de sorte que les appelants doivent généralement appeler `QueryInterface` sur ce pointeur pour obtenir un pointeur d’interface de type `IAppDomainSetup`.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-108">This parameter is typed as `IUnknown`, so callers should generally call `QueryInterface` on this pointer to obtain an interface pointer of type `IAppDomainSetup`.</span></span>  
+ <span data-ttu-id="d33d2-107">[out] Un pointeur d’interface vers un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span><span class="sxs-lookup"><span data-stu-id="d33d2-107">[out] An interface pointer to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="d33d2-108">Ce paramètre est de type `IUnknown`, de sorte que les appelants doivent généralement appeler `QueryInterface` sur ce pointeur pour obtenir un pointeur d’interface de type `IAppDomainSetup`.</span><span class="sxs-lookup"><span data-stu-id="d33d2-108">This parameter is typed as `IUnknown`, so callers should generally call `QueryInterface` on this pointer to obtain an interface pointer of type `IAppDomainSetup`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b5a6-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5b5a6-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d33d2-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="d33d2-109">Return Value</span></span>  
   
-|<span data-ttu-id="5b5a6-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5b5a6-110">HRESULT</span></span>|<span data-ttu-id="5b5a6-111">Description</span><span class="sxs-lookup"><span data-stu-id="5b5a6-111">Description</span></span>|  
+|<span data-ttu-id="d33d2-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d33d2-110">HRESULT</span></span>|<span data-ttu-id="d33d2-111">Description</span><span class="sxs-lookup"><span data-stu-id="d33d2-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5b5a6-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="5b5a6-112">S_OK</span></span>|<span data-ttu-id="5b5a6-113">L’opération a réussi.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-113">The operation was successful.</span></span>|  
-|<span data-ttu-id="5b5a6-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="5b5a6-114">S_FALSE</span></span>|<span data-ttu-id="5b5a6-115">L’opération a échoué.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-115">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="5b5a6-116">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5b5a6-116">E_FAIL</span></span>|<span data-ttu-id="5b5a6-117">Une défaillance grave et inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-117">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="5b5a6-118">Si une méthode retourne E_FAIL, le common language runtime (CLR) n’est plus utilisable dans le processus.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-118">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="5b5a6-119">Les appels suivants à toute API d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-119">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="5b5a6-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5b5a6-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5b5a6-121">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="5b5a6-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d33d2-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="d33d2-112">S_OK</span></span>|<span data-ttu-id="d33d2-113">L’opération a réussi.</span><span class="sxs-lookup"><span data-stu-id="d33d2-113">The operation was successful.</span></span>|  
+|<span data-ttu-id="d33d2-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d33d2-114">S_FALSE</span></span>|<span data-ttu-id="d33d2-115">L’opération a échoué.</span><span class="sxs-lookup"><span data-stu-id="d33d2-115">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="d33d2-116">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d33d2-116">E_FAIL</span></span>|<span data-ttu-id="d33d2-117">Une défaillance grave et inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="d33d2-117">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="d33d2-118">Si une méthode retourne E_FAIL, le common language runtime (CLR) n’est plus utilisable dans le processus.</span><span class="sxs-lookup"><span data-stu-id="d33d2-118">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="d33d2-119">Les appels suivants à toute API d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="d33d2-119">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d33d2-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d33d2-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d33d2-121">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="d33d2-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5b5a6-122">Notes</span><span class="sxs-lookup"><span data-stu-id="5b5a6-122">Remarks</span></span>  
- <span data-ttu-id="5b5a6-123">Le pointeur retourné par cette méthode est généralement passé en tant que paramètre à la [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="5b5a6-123">The pointer returned from this method is typically passed as a parameter to the [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d33d2-122">Notes</span><span class="sxs-lookup"><span data-stu-id="d33d2-122">Remarks</span></span>  
+ <span data-ttu-id="d33d2-123">Le pointeur retourné par cette méthode est généralement passé en tant que paramètre à la [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="d33d2-123">The pointer returned from this method is typically passed as a parameter to the [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b5a6-124">Spécifications</span><span class="sxs-lookup"><span data-stu-id="5b5a6-124">Requirements</span></span>  
- <span data-ttu-id="5b5a6-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b5a6-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d33d2-124">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="d33d2-124">Requirements</span></span>  
+ <span data-ttu-id="d33d2-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d33d2-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b5a6-126">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5b5a6-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d33d2-126">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d33d2-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5b5a6-127">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5b5a6-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d33d2-127">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d33d2-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5b5a6-128">**Version du .NET framework :** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="5b5a6-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="d33d2-128">**Version du .NET framework :** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="d33d2-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b5a6-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5b5a6-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d33d2-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d33d2-129">See also</span></span>
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [<span data-ttu-id="5b5a6-130">ICorRuntimeHost, interface</span><span class="sxs-lookup"><span data-stu-id="5b5a6-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="d33d2-130">ICorRuntimeHost, interface</span><span class="sxs-lookup"><span data-stu-id="d33d2-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

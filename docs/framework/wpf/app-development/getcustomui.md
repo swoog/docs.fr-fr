@@ -4,46 +4,47 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: af51a0d76ac080017f58ac8fc3acca86c23fb480
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191248"
 ---
-# <a name="getcustomui"></a><span data-ttu-id="9f19d-102">GetCustomUI</span><span class="sxs-lookup"><span data-stu-id="9f19d-102">GetCustomUI</span></span>
-<span data-ttu-id="9f19d-103">Appelé par PresentationHost.exe pour obtenir des messages d’erreur et de progression personnalisée à partir de l’hôte, si implémenté.</span><span class="sxs-lookup"><span data-stu-id="9f19d-103">Called by PresentationHost.exe to get custom progress and error messages from the host, if implemented.</span></span>  
+# <a name="getcustomui"></a><span data-ttu-id="1365a-102">GetCustomUI</span><span class="sxs-lookup"><span data-stu-id="1365a-102">GetCustomUI</span></span>
+<span data-ttu-id="1365a-103">Appelé par PresentationHost.exe pour obtenir des messages d’erreur et de progression personnalisée à partir de l’hôte, si implémenté.</span><span class="sxs-lookup"><span data-stu-id="1365a-103">Called by PresentationHost.exe to get custom progress and error messages from the host, if implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f19d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="9f19d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1365a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1365a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f19d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="9f19d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1365a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1365a-105">Parameters</span></span>  
  `pwzProgressAssemblyName`  
   
- <span data-ttu-id="9f19d-106">[out] Pointeur vers l’assembly qui contient l’interface utilisateur de progression fourni par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="9f19d-106">[out] A pointer to the assembly that contains the host-supplied progress user interface.</span></span>  
+ <span data-ttu-id="1365a-106">[out] Pointeur vers l’assembly qui contient l’interface utilisateur de progression fourni par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="1365a-106">[out] A pointer to the assembly that contains the host-supplied progress user interface.</span></span>  
   
  `pwzProgressClassName`  
   
- <span data-ttu-id="9f19d-107">[out] Le nom de la classe qui est l’interface utilisateur de progression fourni par l’hôte, de préférence un [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] de fichiers avec <xref:System.Windows.Controls.Page> comme élément de niveau supérieur.</span><span class="sxs-lookup"><span data-stu-id="9f19d-107">[out] The name of the class that is the host-supplied progress user interface, preferably a [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file with <xref:System.Windows.Controls.Page> is its top-level element.</span></span> <span data-ttu-id="9f19d-108">Cette classe réside dans l’assembly spécifié par `pwzProgressAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="9f19d-108">This class resides in the assembly that is specified by `pwzProgressAssemblyName`.</span></span>  
+ <span data-ttu-id="1365a-107">[out] Le nom de la classe qui est l’interface utilisateur de progression fourni par l’hôte, de préférence un [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] de fichiers avec <xref:System.Windows.Controls.Page> comme élément de niveau supérieur.</span><span class="sxs-lookup"><span data-stu-id="1365a-107">[out] The name of the class that is the host-supplied progress user interface, preferably a [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file with <xref:System.Windows.Controls.Page> is its top-level element.</span></span> <span data-ttu-id="1365a-108">Cette classe réside dans l’assembly spécifié par `pwzProgressAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="1365a-108">This class resides in the assembly that is specified by `pwzProgressAssemblyName`.</span></span>  
   
  `pwzErrorAssemblyName`  
   
- <span data-ttu-id="9f19d-109">[out] Pointeur vers l’assembly qui contient l’interface utilisateur d’erreur fourni par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="9f19d-109">[out] A pointer to the assembly that contains the host-supplied error user interface.</span></span>  
+ <span data-ttu-id="1365a-109">[out] Pointeur vers l’assembly qui contient l’interface utilisateur d’erreur fourni par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="1365a-109">[out] A pointer to the assembly that contains the host-supplied error user interface.</span></span>  
   
  `pwzErrorClassName`  
   
- <span data-ttu-id="9f19d-110">[out] Le nom de la classe qui est l’utilisateur d’erreur fourni par l’hôte de l’interface, de préférence un fichier XAML avec <xref:System.Windows.Controls.Page> comme élément de niveau supérieur.</span><span class="sxs-lookup"><span data-stu-id="9f19d-110">[out] The name of the class that is the host-supplied error user interface, preferably a XAML file with <xref:System.Windows.Controls.Page> is its top-level element.</span></span> <span data-ttu-id="9f19d-111">Cette classe réside dans l’assembly spécifié par `pwzErrorAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="9f19d-111">This class resides in the assembly that is specified by `pwzErrorAssemblyName`.</span></span>  
+ <span data-ttu-id="1365a-110">[out] Le nom de la classe qui est l’utilisateur d’erreur fourni par l’hôte de l’interface, de préférence un fichier XAML avec <xref:System.Windows.Controls.Page> comme élément de niveau supérieur.</span><span class="sxs-lookup"><span data-stu-id="1365a-110">[out] The name of the class that is the host-supplied error user interface, preferably a XAML file with <xref:System.Windows.Controls.Page> is its top-level element.</span></span> <span data-ttu-id="1365a-111">Cette classe réside dans l’assembly spécifié par `pwzErrorAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="1365a-111">This class resides in the assembly that is specified by `pwzErrorAssemblyName`.</span></span>  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="9f19d-112">Valeur de propriété/valeur de retour</span><span class="sxs-lookup"><span data-stu-id="9f19d-112">Property Value/Return Value</span></span>  
- <span data-ttu-id="9f19d-113">HRESULT : Ignoré.</span><span class="sxs-lookup"><span data-stu-id="9f19d-113">HRESULT: Ignored.</span></span>  
+## <a name="property-valuereturn-value"></a><span data-ttu-id="1365a-112">Valeur de propriété/valeur de retour</span><span class="sxs-lookup"><span data-stu-id="1365a-112">Property Value/Return Value</span></span>  
+ <span data-ttu-id="1365a-113">HRESULT : Ignoré.</span><span class="sxs-lookup"><span data-stu-id="1365a-113">HRESULT: Ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9f19d-114">Notes</span><span class="sxs-lookup"><span data-stu-id="9f19d-114">Remarks</span></span>  
- <span data-ttu-id="9f19d-115">Une application hôte peut avoir un thème spécifique des interfaces utilisateur de PresentationHost.exe par défaut n’est peut-être pas conforme à.</span><span class="sxs-lookup"><span data-stu-id="9f19d-115">A host application may have a specific theme that PresentationHost.exe’s default user interfaces may not conform to.</span></span> <span data-ttu-id="9f19d-116">Si c’est le cas, l’application hôte peut implémenter [GetCustomUI](getcustomui.md) pour retourner les interfaces utilisateur progression et erreur à PresentationHost.exe.</span><span class="sxs-lookup"><span data-stu-id="9f19d-116">If this is the case, the host application can implement [GetCustomUI](getcustomui.md) to return progress and error user interfaces to PresentationHost.exe.</span></span> <span data-ttu-id="9f19d-117">PresentationHost.exe appellera toujours [GetCustomUI](getcustomui.md) avant d’utiliser ses interfaces d’utilisateur par défaut.</span><span class="sxs-lookup"><span data-stu-id="9f19d-117">PresentationHost.exe will always call [GetCustomUI](getcustomui.md) before using its default user interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1365a-114">Notes</span><span class="sxs-lookup"><span data-stu-id="1365a-114">Remarks</span></span>  
+ <span data-ttu-id="1365a-115">Une application hôte peut avoir un thème spécifique des interfaces utilisateur de PresentationHost.exe par défaut n’est peut-être pas conforme à.</span><span class="sxs-lookup"><span data-stu-id="1365a-115">A host application may have a specific theme that PresentationHost.exe’s default user interfaces may not conform to.</span></span> <span data-ttu-id="1365a-116">Si c’est le cas, l’application hôte peut implémenter [GetCustomUI](getcustomui.md) pour retourner les interfaces utilisateur progression et erreur à PresentationHost.exe.</span><span class="sxs-lookup"><span data-stu-id="1365a-116">If this is the case, the host application can implement [GetCustomUI](getcustomui.md) to return progress and error user interfaces to PresentationHost.exe.</span></span> <span data-ttu-id="1365a-117">PresentationHost.exe appellera toujours [GetCustomUI](getcustomui.md) avant d’utiliser ses interfaces d’utilisateur par défaut.</span><span class="sxs-lookup"><span data-stu-id="1365a-117">PresentationHost.exe will always call [GetCustomUI](getcustomui.md) before using its default user interfaces.</span></span>  
   
- <span data-ttu-id="9f19d-118">Cette fonction est appelée une fois pendant l’initialisation de PresentationHost.</span><span class="sxs-lookup"><span data-stu-id="9f19d-118">This function is called once during PresentationHost’s initialization.</span></span>  
+ <span data-ttu-id="1365a-118">Cette fonction est appelée une fois pendant l’initialisation de PresentationHost.</span><span class="sxs-lookup"><span data-stu-id="1365a-118">This function is called once during PresentationHost’s initialization.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f19d-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9f19d-119">See also</span></span>
-- [<span data-ttu-id="9f19d-120">IWpfHostSupport</span><span class="sxs-lookup"><span data-stu-id="9f19d-120">IWpfHostSupport</span></span>](iwpfhostsupport.md)
+## <a name="see-also"></a><span data-ttu-id="1365a-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1365a-119">See also</span></span>
+
+- [<span data-ttu-id="1365a-120">IWpfHostSupport</span><span class="sxs-lookup"><span data-stu-id="1365a-120">IWpfHostSupport</span></span>](iwpfhostsupport.md)

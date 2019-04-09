@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a38de994575bf0191ff2ab5ce1c7b047540289f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4ebde1d506a120a99e1c637c660b45d698994f5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181673"
 ---
-# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="aa21d-102">IMetaDataEmit::SetFieldRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="aa21d-102">IMetaDataEmit::SetFieldRVA Method</span></span>
-<span data-ttu-id="aa21d-103">Définit une valeur de variable globale pour l’adresse virtuelle relative du champ référencé par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="aa21d-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="b7bb6-102">IMetaDataEmit::SetFieldRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="b7bb6-102">IMetaDataEmit::SetFieldRVA Method</span></span>
+<span data-ttu-id="b7bb6-103">Définit une valeur de variable globale pour l’adresse virtuelle relative du champ référencé par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="b7bb6-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa21d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="aa21d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7bb6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b7bb6-104">Syntax</span></span>  
   
 ```  
 HRESULT SetFieldRVA (   
@@ -36,22 +36,23 @@ HRESULT SetFieldRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aa21d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="aa21d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b7bb6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b7bb6-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="aa21d-106">[in] Le jeton pour le champ cible.</span><span class="sxs-lookup"><span data-stu-id="aa21d-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="b7bb6-106">[in] Le jeton pour le champ cible.</span><span class="sxs-lookup"><span data-stu-id="b7bb6-106">[in] The token for the target field.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="aa21d-107">[in] L’adresse d’une zone de code ou de données.</span><span class="sxs-lookup"><span data-stu-id="aa21d-107">[in] The address of a code or data area.</span></span>  
+ <span data-ttu-id="b7bb6-107">[in] L’adresse d’une zone de code ou de données.</span><span class="sxs-lookup"><span data-stu-id="b7bb6-107">[in] The address of a code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa21d-108">Spécifications</span><span class="sxs-lookup"><span data-stu-id="aa21d-108">Requirements</span></span>  
- <span data-ttu-id="aa21d-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa21d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7bb6-108">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b7bb6-108">Requirements</span></span>  
+ <span data-ttu-id="b7bb6-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7bb6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa21d-110">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="aa21d-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b7bb6-110">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b7bb6-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="aa21d-111">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="aa21d-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b7bb6-111">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b7bb6-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="aa21d-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa21d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b7bb6-112">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b7bb6-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="aa21d-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="aa21d-113">See also</span></span>
-- [<span data-ttu-id="aa21d-114">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="aa21d-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="aa21d-115">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="aa21d-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b7bb6-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b7bb6-113">See also</span></span>
+
+- [<span data-ttu-id="b7bb6-114">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="b7bb6-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="b7bb6-115">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="b7bb6-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
