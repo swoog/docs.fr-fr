@@ -8,34 +8,35 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: 2888d285723b37bb61dfbf7ec9ef9c3ba597f897
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122510"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="3b9df-102">Désactiver une fonction (référence des API non managées WPF)</span><span class="sxs-lookup"><span data-stu-id="3b9df-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="3b9df-103">Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.</span><span class="sxs-lookup"><span data-stu-id="3b9df-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="24b86-102">Désactiver une fonction (référence des API non managées WPF)</span><span class="sxs-lookup"><span data-stu-id="24b86-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="24b86-103">Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.</span><span class="sxs-lookup"><span data-stu-id="24b86-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="3b9df-104">Utilisé par l’infrastructure Windows Presentation Foundation (WPF) pour la gestion de windows.</span><span class="sxs-lookup"><span data-stu-id="3b9df-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="24b86-104">Utilisé par l’infrastructure Windows Presentation Foundation (WPF) pour la gestion de windows.</span><span class="sxs-lookup"><span data-stu-id="24b86-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b9df-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3b9df-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24b86-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="24b86-105">Syntax</span></span>  
   
 ```cpp  
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3b9df-106">Spécifications</span><span class="sxs-lookup"><span data-stu-id="3b9df-106">Requirements</span></span>  
- <span data-ttu-id="3b9df-107">**Plateformes :** Consultez [requise du .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b9df-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24b86-106">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="24b86-106">Requirements</span></span>  
+ <span data-ttu-id="24b86-107">**Plateformes :** Consultez [requise du .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24b86-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b9df-108">**DLL :**</span><span class="sxs-lookup"><span data-stu-id="3b9df-108">**DLL:**</span></span>  
+ **<span data-ttu-id="24b86-108">DLL :</span><span class="sxs-lookup"><span data-stu-id="24b86-108">DLL:</span></span>**  
   
- <span data-ttu-id="3b9df-109">Dans le .NET Framework 3.0 et 3.5 : PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="3b9df-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="24b86-109">Dans le .NET Framework 3.0 et 3.5 : PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="24b86-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="3b9df-110">Dans le .NET Framework 4 et versions ultérieur : PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="3b9df-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="24b86-110">Dans le .NET Framework 4 et versions ultérieur : PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="24b86-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="3b9df-111">**Version du .NET framework :** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b9df-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ **<span data-ttu-id="24b86-111">Version du .NET framework :</span><span class="sxs-lookup"><span data-stu-id="24b86-111">.NET Framework Version:</span></span>** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3b9df-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3b9df-112">See also</span></span>
-- [<span data-ttu-id="3b9df-113">Référence des API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="3b9df-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="24b86-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="24b86-112">See also</span></span>
+
+- [<span data-ttu-id="24b86-113">Informations de référence sur les API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="24b86-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

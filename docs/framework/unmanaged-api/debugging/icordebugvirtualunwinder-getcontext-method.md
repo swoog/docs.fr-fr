@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a554efc89c1242537bec7de074220cbec95ecdd2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3125fd5081e68237714bcb10f760b73ce7509f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119221"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a><span data-ttu-id="600ea-102">ICorDebugVirtualUnwinder::GetContext, méthode</span><span class="sxs-lookup"><span data-stu-id="600ea-102">ICorDebugVirtualUnwinder::GetContext Method</span></span>
-<span data-ttu-id="600ea-103">Obtient le contexte actuel de ce dérouleur.</span><span class="sxs-lookup"><span data-stu-id="600ea-103">Gets the current context of this unwinder.</span></span>  
+# <a name="icordebugvirtualunwindergetcontext-method"></a><span data-ttu-id="4bd9d-102">ICorDebugVirtualUnwinder::GetContext, méthode</span><span class="sxs-lookup"><span data-stu-id="4bd9d-102">ICorDebugVirtualUnwinder::GetContext Method</span></span>
+<span data-ttu-id="4bd9d-103">Obtient le contexte actuel de ce dérouleur.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-103">Gets the current context of this unwinder.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="600ea-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="600ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bd9d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4bd9d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext(  
@@ -25,39 +25,40 @@ HRESULT GetContext(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="600ea-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="600ea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bd9d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4bd9d-105">Parameters</span></span>  
  `contextFlags`  
- <span data-ttu-id="600ea-106">[in] Indicateurs spécifiant les parties du contexte à retourner (définition contenue dans WinNT.h).</span><span class="sxs-lookup"><span data-stu-id="600ea-106">[in] Flags that specify which parts of the context to return (defined in WinNT.h).</span></span>  
+ <span data-ttu-id="4bd9d-106">[in] Indicateurs spécifiant les parties du contexte à retourner (définition contenue dans WinNT.h).</span><span class="sxs-lookup"><span data-stu-id="4bd9d-106">[in] Flags that specify which parts of the context to return (defined in WinNT.h).</span></span>  
   
  `cbContextBuf`  
- <span data-ttu-id="600ea-107">[in] Nombre d'octets dans `contextBuf`.</span><span class="sxs-lookup"><span data-stu-id="600ea-107">[in] The number of bytes in `contextBuf`.</span></span>  
+ <span data-ttu-id="4bd9d-107">[in] Nombre d'octets dans `contextBuf`.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-107">[in] The number of bytes in `contextBuf`.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="600ea-108">[out] Pointeur vers le nombre d'octets réellement écrits dans `contextBuf`.</span><span class="sxs-lookup"><span data-stu-id="600ea-108">[out] A pointer to the number of bytes actually written to `contextBuf`.</span></span>  
+ <span data-ttu-id="4bd9d-108">[out] Pointeur vers le nombre d'octets réellement écrits dans `contextBuf`.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-108">[out] A pointer to the number of bytes actually written to `contextBuf`.</span></span>  
   
  `contextBuf`  
- <span data-ttu-id="600ea-109">[out] Tableau d'octets contenant le contexte actuel de ce dérouleur.</span><span class="sxs-lookup"><span data-stu-id="600ea-109">[out] A byte array that contains the current context of this unwinder.</span></span>  
+ <span data-ttu-id="4bd9d-109">[out] Tableau d'octets contenant le contexte actuel de ce dérouleur.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-109">[out] A byte array that contains the current context of this unwinder.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="600ea-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="600ea-110">Return Value</span></span>  
- <span data-ttu-id="600ea-111">Toute valeur HRESULT indiquant un échec reçue par mscordbi est considérée comme irrécupérable et forcent les API ICorDebug à retourner `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="600ea-111">Any failing HRESULT value received by mscordbi is considered fatal and will cause ICorDebug APIs to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bd9d-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4bd9d-110">Return Value</span></span>  
+ <span data-ttu-id="4bd9d-111">Toute valeur HRESULT indiquant un échec reçue par mscordbi est considérée comme irrécupérable et forcent les API ICorDebug à retourner `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-111">Any failing HRESULT value received by mscordbi is considered fatal and will cause ICorDebug APIs to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="600ea-112">Notes</span><span class="sxs-lookup"><span data-stu-id="600ea-112">Remarks</span></span>  
- <span data-ttu-id="600ea-113">Vous définissez la valeur initiale de la `contextBuf` l’argument de la mémoire tampon de contexte retourné en appelant le [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="600ea-113">You set the initial value of the `contextBuf` argument to the context buffer returned by calling the [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bd9d-112">Notes</span><span class="sxs-lookup"><span data-stu-id="4bd9d-112">Remarks</span></span>  
+ <span data-ttu-id="4bd9d-113">Vous définissez la valeur initiale de la `contextBuf` l’argument de la mémoire tampon de contexte retourné en appelant le [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="4bd9d-113">You set the initial value of the `contextBuf` argument to the context buffer returned by calling the [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="600ea-114">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="600ea-114">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="4bd9d-114">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-114">This method is available with .NET Native only.</span></span>  
   
- <span data-ttu-id="600ea-115">Le déroulement ne pouvant restaurer qu'un sous-ensemble des registres, par exemple les registres non volatiles, le contexte peut différer de l'état du registre au moment de l'appel de la méthode.</span><span class="sxs-lookup"><span data-stu-id="600ea-115">Because unwinding may only restore a subset of the registers, such as the non-volatile registers only, the context may not exactly match the register state at the time of the actual method call.</span></span>  
+ <span data-ttu-id="4bd9d-115">Le déroulement ne pouvant restaurer qu'un sous-ensemble des registres, par exemple les registres non volatiles, le contexte peut différer de l'état du registre au moment de l'appel de la méthode.</span><span class="sxs-lookup"><span data-stu-id="4bd9d-115">Because unwinding may only restore a subset of the registers, such as the non-volatile registers only, the context may not exactly match the register state at the time of the actual method call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="600ea-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="600ea-116">Requirements</span></span>  
- <span data-ttu-id="600ea-117">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="600ea-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bd9d-116">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="4bd9d-116">Requirements</span></span>  
+ <span data-ttu-id="4bd9d-117">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bd9d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="600ea-118">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="600ea-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4bd9d-118">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4bd9d-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="600ea-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="600ea-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4bd9d-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bd9d-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="600ea-120">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="600ea-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="4bd9d-120">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="4bd9d-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="600ea-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="600ea-121">See also</span></span>
-- [<span data-ttu-id="600ea-122">ICorDebugMemoryBuffer, interface</span><span class="sxs-lookup"><span data-stu-id="600ea-122">ICorDebugMemoryBuffer Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [<span data-ttu-id="600ea-123">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="600ea-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4bd9d-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4bd9d-121">See also</span></span>
+
+- [<span data-ttu-id="4bd9d-122">ICorDebugMemoryBuffer, interface</span><span class="sxs-lookup"><span data-stu-id="4bd9d-122">ICorDebugMemoryBuffer Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
+- [<span data-ttu-id="4bd9d-123">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="4bd9d-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -10,17 +10,17 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 252a3153a49867faf67051be01eeb141fa3ab681
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106702"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="96ddc-102">_AxlGetIssuerPublicKeyHash, fonction</span><span class="sxs-lookup"><span data-stu-id="96ddc-102">_AxlGetIssuerPublicKeyHash Function</span></span>
-<span data-ttu-id="96ddc-103">Récupère le hachage SHA-1 de la clé publique associée à la clé privée utilisée pour signer le certificat spécifié.</span><span class="sxs-lookup"><span data-stu-id="96ddc-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="5ba58-102">_AxlGetIssuerPublicKeyHash, fonction</span><span class="sxs-lookup"><span data-stu-id="5ba58-102">_AxlGetIssuerPublicKeyHash Function</span></span>
+<span data-ttu-id="5ba58-103">Récupère le hachage SHA-1 de la clé publique associée à la clé privée utilisée pour signer le certificat spécifié.</span><span class="sxs-lookup"><span data-stu-id="5ba58-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96ddc-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="96ddc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ba58-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5ba58-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlGetIssuerPublicKeyHash (  
@@ -29,15 +29,16 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96ddc-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="96ddc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5ba58-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5ba58-105">Parameters</span></span>  
  `pChainContext`  
- <span data-ttu-id="96ddc-106">[en entrée] L'objet blob de clé publique CSP.</span><span class="sxs-lookup"><span data-stu-id="96ddc-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="96ddc-107">Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span><span class="sxs-lookup"><span data-stu-id="96ddc-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="5ba58-106">[en entrée] L'objet blob de clé publique CSP.</span><span class="sxs-lookup"><span data-stu-id="5ba58-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="5ba58-107">Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span><span class="sxs-lookup"><span data-stu-id="5ba58-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="96ddc-108">[en sortie] Un pointeur vers WCHAR \* pour recevoir le jeton de clé publique codé en hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="96ddc-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="5ba58-108">[en sortie] Un pointeur vers WCHAR \* pour recevoir le jeton de clé publique codé en hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="5ba58-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="96ddc-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="96ddc-109">Return Value</span></span>  
- <span data-ttu-id="96ddc-110">`S_OK` si la fonction réussit, sinon `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="96ddc-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5ba58-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5ba58-109">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="5ba58-110">Si la fonction aboutit ; sinon `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="5ba58-110">if the function succeeds; otherwise `S_FALSE`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96ddc-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="96ddc-111">See also</span></span>
-- [<span data-ttu-id="96ddc-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="96ddc-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="5ba58-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5ba58-111">See also</span></span>
+
+- [<span data-ttu-id="5ba58-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="5ba58-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
