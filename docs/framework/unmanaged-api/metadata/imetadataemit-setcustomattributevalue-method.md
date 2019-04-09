@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6e97327497993372f17e1c352ca6a8e5b2eac9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6f9e684b90dcc7f0ff83962361486caf7e991568
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096340"
 ---
-# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="46bce-102">IMetaDataEmit::SetCustomAttributeValue, méthode</span><span class="sxs-lookup"><span data-stu-id="46bce-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
-<span data-ttu-id="46bce-103">Définit ou met à jour la valeur d’un attribut personnalisé défini par un appel antérieur à [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span><span class="sxs-lookup"><span data-stu-id="46bce-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
+# <a name="imetadataemitsetcustomattributevalue-method"></a><span data-ttu-id="bd8a6-102">IMetaDataEmit::SetCustomAttributeValue, méthode</span><span class="sxs-lookup"><span data-stu-id="bd8a6-102">IMetaDataEmit::SetCustomAttributeValue Method</span></span>
+<span data-ttu-id="bd8a6-103">Définit ou met à jour la valeur d’un attribut personnalisé défini par un appel antérieur à [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span><span class="sxs-lookup"><span data-stu-id="bd8a6-103">Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46bce-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="46bce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd8a6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bd8a6-104">Syntax</span></span>  
   
 ```  
 HRESULT SetCustomAttributeValue (   
@@ -37,25 +37,26 @@ HRESULT SetCustomAttributeValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46bce-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="46bce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bd8a6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="bd8a6-105">Parameters</span></span>  
  `pcv`  
- <span data-ttu-id="46bce-106">[in] Le jeton de l’attribut personnalisé cible.</span><span class="sxs-lookup"><span data-stu-id="46bce-106">[in] The token of the target custom attribute.</span></span>  
+ <span data-ttu-id="bd8a6-106">[in] Le jeton de l’attribut personnalisé cible.</span><span class="sxs-lookup"><span data-stu-id="bd8a6-106">[in] The token of the target custom attribute.</span></span>  
   
  `pCustomAttribute`  
- <span data-ttu-id="46bce-107">[in] Un pointeur vers le tableau qui contient l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="46bce-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
+ <span data-ttu-id="bd8a6-107">[in] Un pointeur vers le tableau qui contient l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="bd8a6-107">[in] A pointer to the array that contains the custom attribute.</span></span>  
   
  `cbCustomAttribute`  
- <span data-ttu-id="46bce-108">[in] La taille, en octets, de l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="46bce-108">[in] The size, in bytes, of the custom attribute.</span></span>  
+ <span data-ttu-id="bd8a6-108">[in] La taille, en octets, de l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="bd8a6-108">[in] The size, in bytes, of the custom attribute.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46bce-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="46bce-109">Requirements</span></span>  
- <span data-ttu-id="46bce-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46bce-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd8a6-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="bd8a6-109">Requirements</span></span>  
+ <span data-ttu-id="bd8a6-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd8a6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46bce-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="46bce-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bd8a6-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bd8a6-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="46bce-112">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="46bce-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bd8a6-112">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bd8a6-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="46bce-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46bce-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="bd8a6-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="bd8a6-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="46bce-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="46bce-114">See also</span></span>
-- [<span data-ttu-id="46bce-115">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="46bce-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="46bce-116">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="46bce-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bd8a6-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bd8a6-114">See also</span></span>
+
+- [<span data-ttu-id="bd8a6-115">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="bd8a6-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bd8a6-116">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="bd8a6-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

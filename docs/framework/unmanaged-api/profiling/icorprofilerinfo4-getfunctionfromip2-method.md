@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51f8768fc3cd73f0fd5bdb84842af03b900fafdf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 18099e6e658391d6dae7a666cd0cebefa5859b1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110532"
 ---
-# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="a01a2-102">ICorProfilerInfo4::GetFunctionFromIP2, méthode</span><span class="sxs-lookup"><span data-stu-id="a01a2-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
-<span data-ttu-id="a01a2-103">Mappe un pointeur d’instruction de code managé vers la version recompilée au juste d’une fonction.</span><span class="sxs-lookup"><span data-stu-id="a01a2-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
+# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="caae5-102">ICorProfilerInfo4::GetFunctionFromIP2, méthode</span><span class="sxs-lookup"><span data-stu-id="caae5-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
+<span data-ttu-id="caae5-103">Mappe un pointeur d’instruction de code managé vers la version recompilée au juste d’une fonction.</span><span class="sxs-lookup"><span data-stu-id="caae5-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a01a2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a01a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="caae5-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="caae5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromIP2(  
@@ -36,30 +36,31 @@ HRESULT GetFunctionFromIP2(
     [out] ReJITID *pReJitId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a01a2-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a01a2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="caae5-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="caae5-105">Parameters</span></span>  
  `ip`  
- <span data-ttu-id="a01a2-106">[in] Le pointeur d’instruction dans le code managé.</span><span class="sxs-lookup"><span data-stu-id="a01a2-106">[in] The instruction pointer in managed code.</span></span>  
+ <span data-ttu-id="caae5-106">[in] Le pointeur d’instruction dans le code managé.</span><span class="sxs-lookup"><span data-stu-id="caae5-106">[in] The instruction pointer in managed code.</span></span>  
   
  `pFunctionId`  
- <span data-ttu-id="a01a2-107">[out] L’ID de fonction.</span><span class="sxs-lookup"><span data-stu-id="a01a2-107">[out] The function ID.</span></span>  
+ <span data-ttu-id="caae5-107">[out] L’ID de fonction.</span><span class="sxs-lookup"><span data-stu-id="caae5-107">[out] The function ID.</span></span>  
   
  `pReJitId`  
- <span data-ttu-id="a01a2-108">[out] L’identité de la version recompilée au juste de la fonction.</span><span class="sxs-lookup"><span data-stu-id="a01a2-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
+ <span data-ttu-id="caae5-108">[out] L’identité de la version recompilée au juste de la fonction.</span><span class="sxs-lookup"><span data-stu-id="caae5-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a01a2-109">Notes</span><span class="sxs-lookup"><span data-stu-id="a01a2-109">Remarks</span></span>  
- <span data-ttu-id="a01a2-110">`GetFunctionFromIP2` est similaire à `GetFunctionFromIP`, sauf qu’il obtient l’ID recompilé de JIT au lieu de l’ID de la fonction de la fonction qui contient l’adresse IP spécifiée.</span><span class="sxs-lookup"><span data-stu-id="a01a2-110">`GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="caae5-109">Notes</span><span class="sxs-lookup"><span data-stu-id="caae5-109">Remarks</span></span>  
+ `GetFunctionFromIP2` <span data-ttu-id="caae5-110">est similaire à `GetFunctionFromIP`, sauf qu’il obtient l’ID recompilé de JIT au lieu de l’ID de la fonction de la fonction qui contient l’adresse IP spécifiée.</span><span class="sxs-lookup"><span data-stu-id="caae5-110">is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a01a2-111">`GetFunctionFromIP2` peut déclencher un garbage collection, tandis que `GetFunctionFromIP` ne sera pas.</span><span class="sxs-lookup"><span data-stu-id="a01a2-111">`GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="a01a2-112">Pour plus d’informations, consultez [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span><span class="sxs-lookup"><span data-stu-id="a01a2-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
+>  `GetFunctionFromIP2` <span data-ttu-id="caae5-111">peut déclencher un garbage collection, tandis que `GetFunctionFromIP` ne sera pas.</span><span class="sxs-lookup"><span data-stu-id="caae5-111">can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="caae5-112">Pour plus d’informations, consultez [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span><span class="sxs-lookup"><span data-stu-id="caae5-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a01a2-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a01a2-113">Requirements</span></span>  
- <span data-ttu-id="a01a2-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a01a2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="caae5-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="caae5-113">Requirements</span></span>  
+ <span data-ttu-id="caae5-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="caae5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a01a2-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a01a2-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="caae5-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="caae5-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a01a2-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a01a2-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="caae5-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="caae5-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a01a2-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a01a2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="caae5-117">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="caae5-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a01a2-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a01a2-118">See also</span></span>
-- [<span data-ttu-id="a01a2-119">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="a01a2-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="caae5-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="caae5-118">See also</span></span>
+
+- [<span data-ttu-id="caae5-119">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="caae5-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

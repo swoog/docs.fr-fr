@@ -2,20 +2,21 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationLeftActivity
 ms.date: 03/30/2017
 ms.assetid: 266e21b6-2809-4561-b7d9-eec40f1e1e10
-ms.openlocfilehash: eaa12b8b3beda82970c121cd313452ef9d17c85a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b76ff66a525891eb65a48f8d9366c22af9fad31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116740"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationleftactivity"></a><span data-ttu-id="4c06b-102">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span><span class="sxs-lookup"><span data-stu-id="4c06b-102">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span></span>
-<span data-ttu-id="4c06b-103">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span><span class="sxs-lookup"><span data-stu-id="4c06b-103">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationleftactivity"></a><span data-ttu-id="1ec54-102">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span><span class="sxs-lookup"><span data-stu-id="1ec54-102">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span></span>
+<span data-ttu-id="1ec54-103">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span><span class="sxs-lookup"><span data-stu-id="1ec54-103">System.ServiceModel.ComIntegration.ComIntegrationLeftActivity</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4c06b-104">Description</span><span class="sxs-lookup"><span data-stu-id="4c06b-104">Description</span></span>  
- <span data-ttu-id="4c06b-105">ComPlus : Application COM + gauche activité.</span><span class="sxs-lookup"><span data-stu-id="4c06b-105">ComPlus: Left COM+ activity.</span></span>  
+## <a name="description"></a><span data-ttu-id="1ec54-104">Description</span><span class="sxs-lookup"><span data-stu-id="1ec54-104">Description</span></span>  
+ <span data-ttu-id="1ec54-105">ComPlus : Application COM + gauche activité.</span><span class="sxs-lookup"><span data-stu-id="1ec54-105">ComPlus: Left COM+ activity.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c06b-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4c06b-106">See also</span></span>
-- [<span data-ttu-id="4c06b-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="4c06b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="4c06b-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="4c06b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="4c06b-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="4c06b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1ec54-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1ec54-106">See also</span></span>
+
+- [<span data-ttu-id="1ec54-107">Traçage</span><span class="sxs-lookup"><span data-stu-id="1ec54-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="1ec54-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="1ec54-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="1ec54-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="1ec54-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
