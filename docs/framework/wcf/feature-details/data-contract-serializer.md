@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199529"
 ---
-# <a name="data-contract-serializer"></a><span data-ttu-id="2c887-102">Sérialiseur de contrat de données</span><span class="sxs-lookup"><span data-stu-id="2c887-102">Data Contract Serializer</span></span>
-<span data-ttu-id="2c887-103">L’infrastructure Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serialization.DataContractSerializer> classe en tant que le sérialiseur par défaut.</span><span class="sxs-lookup"><span data-stu-id="2c887-103">The Windows Communication Foundation (WCF) infrastructure uses the <xref:System.Runtime.Serialization.DataContractSerializer> class as the default serializer.</span></span> <span data-ttu-id="2c887-104">Les rubriques de cette section fournissent davantage d'informations sur son utilisation en tant que sérialiseur autonome.</span><span class="sxs-lookup"><span data-stu-id="2c887-104">The topics in this section provide more details for using it as a stand-alone serializer.</span></span>  
+# <a name="data-contract-serializer"></a><span data-ttu-id="47030-102">Sérialiseur de contrat de données</span><span class="sxs-lookup"><span data-stu-id="47030-102">Data Contract Serializer</span></span>
+<span data-ttu-id="47030-103">L’infrastructure Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serialization.DataContractSerializer> classe en tant que le sérialiseur par défaut.</span><span class="sxs-lookup"><span data-stu-id="47030-103">The Windows Communication Foundation (WCF) infrastructure uses the <xref:System.Runtime.Serialization.DataContractSerializer> class as the default serializer.</span></span> <span data-ttu-id="47030-104">Les rubriques de cette section fournissent davantage d'informations sur son utilisation en tant que sérialiseur autonome.</span><span class="sxs-lookup"><span data-stu-id="47030-104">The topics in this section provide more details for using it as a stand-alone serializer.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c887-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="2c887-105">In This Section</span></span>  
- [<span data-ttu-id="2c887-106">Sérialisation et désérialisation</span><span class="sxs-lookup"><span data-stu-id="2c887-106">Serialization and Deserialization</span></span>](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
- <span data-ttu-id="2c887-107">Explique comment utiliser la classe <xref:System.Runtime.Serialization.DataContractSerializer> pour sérialiser des graphiques d'objet et désérialiser des documents XML dans des objets.</span><span class="sxs-lookup"><span data-stu-id="2c887-107">Details how to use the <xref:System.Runtime.Serialization.DataContractSerializer> class to serialize object graphs and deserialize XML documents into objects.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="47030-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="47030-105">In This Section</span></span>  
+ [<span data-ttu-id="47030-106">Sérialisation et désérialisation</span><span class="sxs-lookup"><span data-stu-id="47030-106">Serialization and Deserialization</span></span>](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
+ <span data-ttu-id="47030-107">Explique comment utiliser la classe <xref:System.Runtime.Serialization.DataContractSerializer> pour sérialiser des graphiques d'objet et désérialiser des documents XML dans des objets.</span><span class="sxs-lookup"><span data-stu-id="47030-107">Details how to use the <xref:System.Runtime.Serialization.DataContractSerializer> class to serialize object graphs and deserialize XML documents into objects.</span></span>  
   
- [<span data-ttu-id="2c887-108">Importation et exportation de schémas</span><span class="sxs-lookup"><span data-stu-id="2c887-108">Schema Import and Export</span></span>](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- <span data-ttu-id="2c887-109">Explique comment générer un schéma en langage XSD (XML Schema Definition) XML à partir d'une classe [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ou comment générer du code à partir d'un document de schéma XSD.</span><span class="sxs-lookup"><span data-stu-id="2c887-109">Explains how to generate an XML Schema definition language (XSD) schema from a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] class, or how to generate code from an XSD schema document.</span></span>  
+ [<span data-ttu-id="47030-108">Importation et exportation de schémas</span><span class="sxs-lookup"><span data-stu-id="47030-108">Schema Import and Export</span></span>](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ <span data-ttu-id="47030-109">Explique comment générer un schéma en langage XSD (XML Schema Definition) XML à partir d'une classe [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ou comment générer du code à partir d'un document de schéma XSD.</span><span class="sxs-lookup"><span data-stu-id="47030-109">Explains how to generate an XML Schema definition language (XSD) schema from a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] class, or how to generate code from an XSD schema document.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2c887-110">Référence</span><span class="sxs-lookup"><span data-stu-id="2c887-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="47030-110">Référence</span><span class="sxs-lookup"><span data-stu-id="47030-110">Reference</span></span>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
   
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -32,11 +32,12 @@ ms.locfileid: "54676131"
   
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-## <a name="related-sections"></a><span data-ttu-id="2c887-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="2c887-111">Related Sections</span></span>  
- [<span data-ttu-id="2c887-112">Utilisation de contrats de données</span><span class="sxs-lookup"><span data-stu-id="2c887-112">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+## <a name="related-sections"></a><span data-ttu-id="47030-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="47030-111">Related Sections</span></span>  
+ [<span data-ttu-id="47030-112">Utilisation de contrats de données</span><span class="sxs-lookup"><span data-stu-id="47030-112">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
- [<span data-ttu-id="2c887-113">Transfert de données et sérialisation</span><span class="sxs-lookup"><span data-stu-id="2c887-113">Data Transfer and Serialization</span></span>](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [<span data-ttu-id="47030-113">Transfert de données et sérialisation</span><span class="sxs-lookup"><span data-stu-id="47030-113">Data Transfer and Serialization</span></span>](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2c887-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2c887-114">See also</span></span>
-- [<span data-ttu-id="2c887-115">Informations de référence sur les schémas de contrats de données</span><span class="sxs-lookup"><span data-stu-id="2c887-115">Data Contract Schema Reference</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
-- [<span data-ttu-id="2c887-116">Spécification du transfert de données dans des contrats de service</span><span class="sxs-lookup"><span data-stu-id="2c887-116">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="47030-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="47030-114">See also</span></span>
+
+- [<span data-ttu-id="47030-115">Référence des schémas de contrats de données</span><span class="sxs-lookup"><span data-stu-id="47030-115">Data Contract Schema Reference</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [<span data-ttu-id="47030-116">Spécification du transfert de données dans des contrats de service</span><span class="sxs-lookup"><span data-stu-id="47030-116">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
