@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une Table de recherche pour un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle'
+title: 'Procédure : créer une table de choix pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125968"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : Créer une Table de recherche pour un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : créer une table de choix pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Il est parfois utile d'afficher les données dans un format convivial dans un Windows Form, mais de les stocker dans un format plus pertinent pour votre programme. Par exemple, un formulaire de commande de produits alimentaires peut présenter les éléments de menu par leur nom dans une zone de liste. Toutefois, la table de données dans laquelle la commande est enregistrée contient alors les numéros d'ID uniques représentant les produits alimentaires. Les tableaux ci-dessous montrent un exemple de stockage et d’affichage des données du formulaire de commande des produits alimentaires.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -33,7 +33,7 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id|Name|  
+|Id|Nom|  
 |--------|----------|  
 |12|Pomme de terre|  
 |13|Poulet|  
@@ -71,8 +71,9 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Liaison de données et Windows Forms](../data-binding-and-windows-forms.md)
-- [Vue d'ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
-- [Vue d'ensemble du contrôle ComboBox](combobox-control-overview-windows-forms.md)
-- [Vue d'ensemble du contrôle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
-- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)
+- [Vue d’ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle ComboBox](combobox-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Contrôles Windows Forms utilisés pour l'affichage de listes d'options](windows-forms-controls-used-to-list-options.md)

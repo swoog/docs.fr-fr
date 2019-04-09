@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120664"
 ---
 # <a name="oracle-and-adonet"></a>Oracle et ADO.NET
 > [!NOTE]
->  Les types dans <xref:System.Data.OracleClient> sont déconseillés. Les types restent pris en charge dans la version actuelle du .NET Framework, mais seront supprimés dans une version ultérieure. Microsoft recommande l'utilisation d'un fournisseur Oracle tiers.  
+>  Les types dans <xref:System.Data.OracleClient> sont déconseillés. Les types restent pris en charge dans la version actuelle du .NET Framework, mais seront supprimés dans une mise en production ultérieure. Microsoft recommande l'utilisation d'un fournisseur Oracle tiers.  
   
  Cette section décrit des fonctions et des comportements spécifiques au fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle.  
   
@@ -55,7 +55,7 @@ csc /r:System.Data.OracleClient.dll
  [Séquences Oracle](../../../../docs/framework/data/adonet/oracle-sequences.md)  
  Décrit la prise en charge de l'extraction des valeurs de séquence Oracle générées par le serveur.  
   
- [Mappages de types de données Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
+ [Mappages des types de données Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
  Répertorie les types de données Oracle et leurs mappages sur le <xref:System.Data.OracleClient.OracleDataReader>.  
   
  [Transactions distribuées Oracle](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
@@ -78,5 +78,6 @@ csc /r:System.Data.OracleClient.dll
  Décrit des classes génériques qui vous permettent d'écrire du code indépendant du fournisseur dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

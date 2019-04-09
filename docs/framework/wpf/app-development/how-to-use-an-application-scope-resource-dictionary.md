@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125373"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procédure : Utiliser un dictionnaire de ressources de portée application
 Cet exemple montre comment définir et utiliser un dictionnaire de ressources personnalisé de portée application.  
@@ -42,6 +42,7 @@ Cet exemple montre comment définir et utiliser un dictionnaire de ressources pe
  Il existe deux considérations à prendre lorsque vous utilisez <xref:System.Windows.Application.Resources%2A>. Tout d’abord, le dictionnaire *clé* est un objet, vous devez donc utiliser exactement la même instance d’objet lors du paramétrage et l’obtention d’une valeur de propriété. (Notez qu’en cas d’utilisation d’une chaîne, la clé respecte la casse.) Ensuite, le dictionnaire *valeur* est un objet, donc vous devrez convertir la valeur vers le type souhaité lors de l’obtention d’une valeur de propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [Ressources XAML](../advanced/xaml-resources.md)

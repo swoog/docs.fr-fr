@@ -1,18 +1,18 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Opérateurs d’agrégation (LINQ to DataSet)'
+title: 'Exemples de syntaxe d’expression de requête : Opérateurs d’agrégation (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 5dbe00686d44d5861f4334cdc2cbc996934a3e57
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7151fd85c7e3988051ed87a60acc2b53a8af646
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122770"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Opérateurs d’agrégation (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Exemples de syntaxe d’expression de requête : Opérateurs d’agrégation (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> et <xref:System.Linq.Enumerable.Sum%2A> pour interroger un <xref:System.Data.DataSet> et agréger les données à l'aide de la syntaxe d'expression de requête.  
   
  Le `FillDataSet` méthode utilisé dans ces exemples est spécifiée dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -97,7 +97,8 @@ Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:Sys
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Exemples de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Présentation des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

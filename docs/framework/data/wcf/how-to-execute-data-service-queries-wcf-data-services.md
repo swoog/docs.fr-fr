@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: aac0e4c71ae2752d4f56ae5eadb5f0a8d381d5fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b68595285eb5ec06be86c771733f7bb9036c9f21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154971"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Procédure : Exécuter des requêtes de Service de données (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet d'interroger un service de données depuis une application cliente .NET Framework à l'aide des classes de service de données client générées. Vous pouvez exécuter des requêtes à l'aide d'une des méthodes suivantes :  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet d’interroger un service de données à partir d’une application cliente .NET Framework en utilisant les classes de service de données client généré. Vous pouvez exécuter des requêtes à l'aide d'une des méthodes suivantes :  
   
 -   Exécution d'une requête LINQ sur la <xref:System.Data.Services.Client.DataServiceQuery%601> nommée que vous obtenez du <xref:System.Data.Services.Client.DataServiceContext> que l'outil `Add Data Service Reference` génère.  
   
@@ -48,4 +48,5 @@ ms.locfileid: "54623285"
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Ajouter des Options de requête à une requête de Service de données](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+
+- [Procédure : Ajouter des options de requête à une requête de service de données](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

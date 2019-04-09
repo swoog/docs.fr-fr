@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123787"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetage de polices avec des applications
 Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des polices avec votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.  
   
 > [!NOTE]
 >  Comme avec la plupart des types de logiciels, les fichiers de police sont sous licence et ne sont pas vendus. Les licences qui régissent l’utilisation des polices varient d’un fournisseur à l’autre, mais en général, la plupart des licences, y compris celles qui concernent les polices [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] fournit avec les applications et [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], n’autorisent pas les polices être incorporé au sein d’applications ou autre redistribué. Par conséquent, en tant que développeur, c’est à vous de vérifier que vous disposez des droits de licence nécessaires pour toute police incorporée dans une application ou redistribuée.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Présentation de l’empaquetage de polices  
  Vous pouvez empaqueter facilement des polices en tant que ressources au sein de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu basé sur des applications pour afficher le texte de l’interface utilisateur et d’autres types de texte. Les polices peuvent être séparées des fichiers d’assembly de l’application ou y être incorporées. Vous pouvez également créer une bibliothèque de polices de ressources uniquement, que votre application peut référencer.  
@@ -173,6 +171,7 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
 -   En cas de référence incorrecte, l’application utilise une police disponible à la place.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Typographie Microsoft : Des liens, des actualités et des Contacts](https://docs.microsoft.com/typography/)

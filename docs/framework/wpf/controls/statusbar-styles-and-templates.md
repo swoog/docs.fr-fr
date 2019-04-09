@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: 42bf7aa672addadbc4205c796c09914fe8f3054d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b5b66f7f32ea31b51b4da990ceede4078c27cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177721"
 ---
 # <a name="statusbar-styles-and-templates"></a>Styles et modèles StatusBar
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Primitives.StatusBar> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -55,9 +55,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

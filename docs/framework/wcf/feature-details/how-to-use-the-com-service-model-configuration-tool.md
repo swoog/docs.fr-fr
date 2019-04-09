@@ -1,21 +1,21 @@
 ---
-title: 'Procédure : Utilisez l’outil de Configuration de modèle de Service COM +'
+title: 'Procédure : utiliser l’outil de configuration de modèle de service COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196890"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procédure : Utilisez l’outil de Configuration de modèle de Service COM +
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procédure : utiliser l’outil de configuration de modèle de service COM+
 Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez l'outil en ligne de commande de configuration de modèle de service COM+ (ComSvcConfig.exe) pour configurer les interfaces d'application qui seront exposées en tant que services Web.  
   
 > [!NOTE]
->  Vous devez être administrateur sur l'ordinateur pour exécuter chacune des tâches suivantes.  
+>  Vous devez être administrateur sur l’ordinateur pour exécuter chacune des tâches suivantes.  
   
  Lorsque vous utilisez ComSvcConfig.exe sur un ordinateur Windows 7 pour configurer un service Web de façon à utiliser la dernière version de modèle de service (v4.5), exécutez les étapes suivantes :  
   
@@ -89,7 +89,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
     ComSvcConfig.exe /list  
     ```  
   
-     La commande répertoire les interfaces actuellement exposées, avec l'adresse correspondante et les détails de liaison, avec comme étendue l'ordinateur local.  
+     La commande répertoire les interfaces actuellement exposées, avec l’adresse correspondante et les détails de liaison, avec comme étendue l’ordinateur local.  
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>Pour répertorier des interfaces spécifiques exposées actuellement  
   
@@ -110,4 +110,5 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+
+- [Vue d'ensemble de l'intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

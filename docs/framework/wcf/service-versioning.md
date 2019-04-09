@@ -2,12 +2,12 @@
 title: Contrôle des versions du service
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122406"
 ---
 # <a name="service-versioning"></a>Contrôle des versions du service
 Après leur déploiement initial, et potentiellement plusieurs fois pendant leur durée de vie, il peut s’avérer nécessaire de modifier les services (et les points de terminaison qu’ils exposent) pour diverses raisons, telles que l’évolution des besoins de l’entreprise, des exigences informatiques, ou pour résoudre d’autres problèmes. Chaque modification introduit une nouvelle version du service. Cette rubrique explique comment prendre en compte le contrôle de version dans Windows Communication Foundation (WCF).  
@@ -45,14 +45,14 @@ Après leur déploiement initial, et potentiellement plusieurs fois pendant leur
   
 -   Les anciens clients ont été développés dans l'hypothèse que le schéma ne changera pas. Il se peut qu'ils échouent à traiter des messages pour lesquels ils n'ont jamais été conçus.  
   
--   Les anciens clients peuvent effectuer la validation de schéma réelle par rapport à l'ancien schéma avant même d'essayer de traiter les messages.  
+-   Les anciens clients peuvent effectuer la validation de schéma réelle par rapport à l’ancien schéma avant même d’essayer de traiter les messages.  
   
  L'approche recommandée dans les scénarios de ce type consiste à traiter les contrats de données existants comme immuables et à en créer de nouveaux avec des noms complets XML uniques. Le développeur de service dispose alors de deux options : ajouter de nouvelles méthodes à un contrat de service existant ou créer un contrat de service avec des méthodes qui utilisent le nouveau contrat de données.  
   
  Bien souvent, le développeur de service doit écrire la logique métier qui doit s'exécuter dans toutes les versions d'un contrat de données ainsi que le code métier spécifique à la version pour chaque version du contrat de données. L'annexe à la fin de cette rubrique explique comment utiliser les interfaces pour répondre à ce besoin.  
   
 ### <a name="lax-versioning"></a>Contrôle de version souple  
- Dans de nombreux autres scénarios, le développeur de service peut partir de l'hypothèse que l'ajout d'un nouveau membre facultatif au contrat de données n'interrompra pas les clients existants. Cela implique que le développeur de service étudie si les clients existants n'exécutent pas de validation de schéma et s'ils ignorent des membres de données inconnus. Dans ces scénarios, il est possible de tirer parti des fonctionnalités de contrat de données permettant d'ajouter de nouveaux membres sans rupture. Le développeur de service peut partir sans problème de cette hypothèse si les fonctionnalités de contrat de données permettant le contrôle de version ont déjà été utilisées pour la première version du service.  
+ Dans de nombreux autres scénarios, le développeur de service peut partir de l'hypothèse que l'ajout d'un nouveau membre facultatif au contrat de données n'interrompra pas les clients existants. Cela implique que le développeur de service étudie si les clients existants n’exécutent pas de validation de schéma et s’ils ignorent des membres de données inconnus. Dans ces scénarios, il est possible de tirer parti des fonctionnalités de contrat de données permettant d'ajouter de nouveaux membres sans rupture. Le développeur de service peut partir sans problème de cette hypothèse si les fonctionnalités de contrat de données permettant le contrôle de version ont déjà été utilisées pour la première version du service.  
   
  Prise en charge des piles de service WCF, de Services Web ASP.NET et de nombreux autres Web *contrôle de version souple*: autrement dit, elles ne lèvent pas les exceptions pour les nouveaux membres de données inconnu dans les données reçues.  
   
@@ -107,8 +107,8 @@ Après leur déploiement initial, et potentiellement plusieurs fois pendant leur
 > [!NOTE]
 >  L'ajout des opérations à un contrat de rappel duplex est une modification avec rupture.  
   
-### <a name="changing-operation-parameter-or-return-types"></a>Modification des types de retours ou de paramètres d’opération  
- La modification des types de retours ou de paramètres est généralement une modification avec rupture, sauf si le nouveau type implémente le même contrat de données implémenté par l’ancien type. Pour apporter une modification de ce type, ajoutez une nouvelle opération au contrat de service ou définissez un nouveau contrat de service.  
+### <a name="changing-operation-parameter-or-return-types"></a>Modification des types de retours ou de paramètres d'opération  
+ La modification des types de retours ou de paramètres est généralement une modification avec rupture, sauf si le nouveau type implémente le même contrat de données implémenté par l'ancien type. Pour apporter une modification de ce type, ajoutez une nouvelle opération au contrat de service ou définissez un nouveau contrat de service.  
   
 ### <a name="removing-operations"></a>Suppression d'opérations  
  La suppression d'opérations est également une modification avec rupture. Pour apporter une modification de ce type, définissez un nouveau contrat de service et exposez-le sur un nouveau point de terminaison.  
@@ -119,10 +119,10 @@ Après leur déploiement initial, et potentiellement plusieurs fois pendant leur
  La liste d'erreurs décrite dans le contrat d'un service n'est pas considérée comme exhaustive. À tout moment, une opération peut retourner des erreurs qui ne sont pas décrites dans son contrat. Par conséquent, la modification du jeu d'erreurs décrit dans le contrat n'est pas considérée comme une modification avec rupture. Par exemple, ajouter une nouvelle erreur au contrat à l'aide de <xref:System.ServiceModel.FaultContractAttribute> ou supprimer une erreur existante du contrat.  
   
 ### <a name="service-contract-libraries"></a>Bibliothèques de contrats de service  
- Les entreprises peuvent avoir des bibliothèques de contrats dans lesquelles un contrat est publié sur un référentiel central, et des implémenteurs de service qui implémentent des contrats à partir de ce référentiel. Dans ce cas, lorsque vous publiez un contrat de service sur le référentiel, vous n'avez aucun contrôle sur l'élément qui crée les services qui l'implémentent. Par conséquent, vous ne pouvez pas modifier le contrat de service une fois celui-ci publié, et le rendre ainsi immuable. WCF prend en charge l’héritage de contrat, qui peut être utilisé pour créer un nouveau contrat qui étend les contrats existants. Pour utiliser cette fonctionnalité, définissez une nouvelle interface de contrat de service qui hérite de l’ancienne interface de contrat de service, puis ajoutez-lui des méthodes. Modifiez ensuite le service qui implémente l'ancien contrat pour implémenter le nouveau contrat et modifier la définition de point de terminaison de l'« AncienneVersion » afin d'utiliser le nouveau contrat. Pour les clients de l'« AncienneVersion », le point de terminaison continuera d'exposer le contrat de l'« AncienneVersion » ; pour les clients de la « NouvelleVersion », le point de terminaison exposera le contrat de la « NouvelleVersion ».  
+ Les entreprises peuvent avoir des bibliothèques de contrats dans lesquelles un contrat est publié sur un référentiel central, et des implémenteurs de service qui implémentent des contrats à partir de ce référentiel. Dans ce cas, lorsque vous publiez un contrat de service sur le référentiel, vous n'avez aucun contrôle sur l'élément qui crée les services qui l'implémentent. Par conséquent, vous ne pouvez pas modifier le contrat de service une fois celui-ci publié, et le rendre ainsi immuable. WCF prend en charge l’héritage de contrat, qui peut être utilisé pour créer un nouveau contrat qui étend les contrats existants. Pour utiliser cette fonctionnalité, définissez une nouvelle interface de contrat de service qui hérite de l'ancienne interface de contrat de service, puis ajoutez-lui des méthodes. Modifiez ensuite le service qui implémente l'ancien contrat pour implémenter le nouveau contrat et modifier la définition de point de terminaison de l'« AncienneVersion » afin d'utiliser le nouveau contrat. Pour les clients de l'« AncienneVersion », le point de terminaison continuera d'exposer le contrat de l'« AncienneVersion » ; pour les clients de la « NouvelleVersion », le point de terminaison exposera le contrat de la « NouvelleVersion ».  
   
 ## <a name="address-and-binding-versioning"></a>Contrôle de version des adresses et liaisons  
- Les modifications apportées à la liaison et à l'adresse de point de terminaison sont des modifications avec rupture, sauf si les clients sont capables de découvrir dynamiquement la nouvelle liaison ou adresse de point de terminaison. L'un des mécanismes permettant d'implémenter cette fonctionnalité consiste à utiliser un registre UDDI (Universal Discovery Description and Integration) et le modèle d'appel UDDI lorsqu'un client tente de communiquer avec un point de terminaison et, qu'après échec, il interroge un registre UDDI connu pour les métadonnées de point de terminaison actuelles. Le client utilise ensuite l’adresse et la liaison à partir de ces métadonnées pour communiquer avec le point de terminaison. Si cette communication réussit, le client met en cache les informations d'adresse et de liaison pour un usage ultérieur.  
+ Les modifications apportées à la liaison et à l'adresse de point de terminaison sont des modifications avec rupture, sauf si les clients sont capables de découvrir dynamiquement la nouvelle liaison ou adresse de point de terminaison. L’un des mécanismes permettant d’implémenter cette fonctionnalité consiste à utiliser un registre UDDI (Universal Discovery Description and Integration) et le modèle d’appel UDDI lorsqu’un client tente de communiquer avec un point de terminaison et, qu’après échec, il interroge un registre UDDI connu pour les métadonnées de point de terminaison actuelles. Le client utilise ensuite l'adresse et la liaison à partir de ces métadonnées pour communiquer avec le point de terminaison. Si cette communication réussit, le client met en cache les informations d'adresse et de liaison pour un usage ultérieur.  
   
 ## <a name="routing-service-and-versioning"></a>Contrôle de version et service de routage  
  Si les modifications apportées à un service sont des modifications avec rupture et vous n'avez pas besoin de plusieurs versions différentes d'un service exécutées simultanément, vous pouvez utiliser le Service de routage WCF pour acheminer les messages vers l'instance de service appropriée. Le Service de routage WCF utilise le routage basé sur le contenu, c'est-à-dire qu'il utilise les informations contenues dans le message pour déterminer la destination du message. Pour plus d’informations sur le Service de routage WCF, consultez [Service de routage](../../../docs/framework/wcf/feature-details/routing-service.md). Pour obtenir un exemple montrant comment utiliser le Service de routage WCF pour la gestion des versions de service, consultez [How To : Service de contrôle de version](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  Le contrat de service est mis à jour afin d'inclure les nouvelles opérations écrites par rapport à `PurchaseOrderV2`. La logique métier existante écrite par rapport à `IPurchaseOrderV1` continue à fonctionner pour `PurchaseOrderV2`, et la nouvelle logique métier qui nécessite la propriété `OrderDate` est écrite par rapport à `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -186,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Équivalence des contrats de données](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Équivalence de contrats de données](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Rappels de sérialisation avec tolérance de version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

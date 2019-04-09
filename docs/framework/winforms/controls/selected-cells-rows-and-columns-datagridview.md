@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Obtenir les cellules sélectionnées, les lignes et les colonnes dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : obtenir les cellules, lignes et colonnes sélectionnées dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-ms.openlocfilehash: ad6e704b64e3f25f456b98691dfe12c13f8440a2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cd3e88b5b01b67f677fbe203a0db9c4de7fe67ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160548"
 ---
-# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Procédure : Obtenir les cellules sélectionnées, les lignes et les colonnes dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Procédure : obtenir les cellules, lignes et colonnes sélectionnées dans le contrôle DataGridView Windows Forms
 Vous pouvez obtenir les cellules sélectionnées, les lignes ou les colonnes à partir d’un <xref:System.Windows.Forms.DataGridView> contrôle en utilisant les propriétés correspondantes : <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, et <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. Dans les procédures suivantes, vous les cellules sélectionnées et afficher leurs index de ligne et de colonne dans un <xref:System.Windows.Forms.MessageBox>.  
   
 ### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>Pour obtenir les cellules sélectionnées dans un contrôle DataGridView  
@@ -56,6 +56,7 @@ Vous pouvez obtenir les cellules sélectionnées, les lignes ou les colonnes à 
  Les collections décrites dans cette rubrique n’effectuent pas efficacement quand un grand nombre de cellules, lignes ou colonnes est sélectionnées. Pour plus d’informations sur l’utilisation de ces collections avec grandes quantités de données, consultez [meilleures pratiques pour la mise à l’échelle le contrôle de DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>

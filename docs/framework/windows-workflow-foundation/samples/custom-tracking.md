@@ -2,12 +2,12 @@
 title: Suivi personnalisé
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161843"
 ---
 # <a name="custom-tracking"></a>Suivi personnalisé
 Cet exemple montre comment créer un participant de suivi personnalisé et écrire le contenu des données de suivi sur la console. De plus, il montre comment émettre des objets <xref:System.Activities.Tracking.CustomTrackingRecord> remplis avec des données définies par l'utilisateur. Le participant de suivi basé sur la console filtre les objets <xref:System.Activities.Tracking.TrackingRecord> émis par le workflow à l'aide d'un objet de modèle de suivi créé dans le code.
@@ -18,7 +18,7 @@ Cet exemple montre comment créer un participant de suivi personnalisé et écri
 |Composant|Description|
 |---------------|-----------------|
 |Runtime de suivi|Fournit l'infrastructure permettant d'émettre des enregistrements de suivi.|
-|Participants de suivi|Consomme les enregistrements de suivi. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] est fourni avec un participant de suivi qui écrit les enregistrements de suivi sous la forme d'événements Suivi d'événements pour Windows (ETW, Event Tracing for Windows).|
+|Participants de suivi|Consomme les enregistrements de suivi. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] est fourni avec un participant de suivi qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW).|
 |Modèle de suivi|Mécanisme de filtrage qui permet à un participant de suivi de s'abonner à un sous-ensemble des enregistrements de suivi émis à partir d'une instance de workflow.|
 
  Le tableau suivant détaille les enregistrements de suivi que l'exécution de workflow émet.
@@ -33,7 +33,7 @@ Cet exemple montre comment créer un participant de suivi personnalisé et écri
  Le participant de suivi s'abonne à un sous-ensemble des objets <xref:System.Activities.Tracking.TrackingRecord> émis à l'aide de modèles de suivi. Un modèle de suivi contient des requêtes de suivi qui permettent de s'abonner à un type d'enregistrement de suivi particulier. Les modèles de suivi peuvent être spécifiés dans le code ou dans la configuration.
 
 ### <a name="custom-tracking-participant"></a>Participant de suivi personnalisé
- L'API de participant de suivi permet d'étendre du runtime de suivi avec un participant de suivi fourni par l'utilisateur, qui peut inclure une logique personnalisée permettant de gérer les objets <xref:System.Activities.Tracking.TrackingRecord> émis par le runtime de workflow.
+ L’API de participant de suivi permet l’extension du runtime de suivi avec un participant de suivi fourni par l’utilisateur, qui peut inclure une logique personnalisée permettant de gérer les objets <xref:System.Activities.Tracking.TrackingRecord> émis par le runtime de workflow.
 
  Pour écrire un participant de suivi, l'utilisateur doit implémenter <xref:System.Activities.Tracking.TrackingParticipant>. Plus précisément, la méthode <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> doit être implémentée par le participant personnalisé. Cette méthode est appelée lorsqu'un <xref:System.Activities.Tracking.TrackingRecord> est émis par le runtime de workflow.
 
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

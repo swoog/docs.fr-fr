@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170324"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilisation de données binaires (services de données WCF)
 Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cliente vous permet de récupérer et de mettre à jour des données binaires à partir d’un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux dans une des manières suivantes :  
@@ -67,5 +67,6 @@ Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cli
 >  Lorsque vous appelez <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, le flux n'est pas transmis au service de données jusqu'à ce que la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> soit appelée.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+
+- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Liaison de données à des contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

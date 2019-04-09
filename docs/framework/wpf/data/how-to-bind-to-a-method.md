@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123238"
 ---
 # <a name="how-to-bind-to-a-method"></a>Procédure : Effectuer une liaison à une méthode
 L’exemple suivant montre comment lier une à l’aide de la méthode <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -32,5 +32,6 @@ L’exemple suivant montre comment lier une à l’aide de la méthode <xref:Sys
  Le `InvalidationCharacterRule` est un <xref:System.Windows.Controls.ValidationRule> qui vérifie les caractères non valides. Le modèle d’erreur par défaut, qui est une bordure rouge autour de la <xref:System.Windows.Controls.TextBox>, s’affiche pour signaler aux utilisateurs la valeur d’entrée n’est pas une valeur double.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+
+- [Rubriques Comment](data-binding-how-to-topics.md)
 - [Effectuer une liaison à une énumération](how-to-bind-to-an-enumeration.md)

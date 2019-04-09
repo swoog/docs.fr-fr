@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms'
+title: 'Procédure : connecter plusieurs événements à un seul gestionnaire d’événements dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d55ccc21efb92ba1e51f4ae88be5025f2f80905b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117960"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procédure : Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procédure : connecter plusieurs événements à un seul gestionnaire d’événements dans Windows Forms
 Conception de votre application, vous pouvez s’avérer nécessaire pour utiliser un seul gestionnaire d’événements pour plusieurs événements ou d’avoir plusieurs événements à effectuer la même procédure. Par exemple, il est souvent un temps précieux pour avoir une commande de menu à déclencher l’événement de même qu’un bouton sur votre formulaire peut si elles exposent les mêmes fonctionnalités. Vous pouvez faire à l’aide de l’affichage des événements de la fenêtre Propriétés dans C# ou à l’aide de la `Handles` mot clé et le **nom de la classe** et **nom de la méthode** listes déroulantes dans l’éditeur de Code Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Pour connecter plusieurs événements à un seul gestionnaire d’événements en Visual Basic  
@@ -61,5 +61,6 @@ Conception de votre application, vous pouvez s’avérer nécessaire pour utilis
      Code sera ajouté au formulaire pour lier l’événement au gestionnaire d’événements existant.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
-- [Vue d'ensemble des gestionnaires d'événements](event-handlers-overview-windows-forms.md)
+
+- [Création de gestionnaires d'événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Vue d’ensemble des gestionnaires d’événements](event-handlers-overview-windows-forms.md)

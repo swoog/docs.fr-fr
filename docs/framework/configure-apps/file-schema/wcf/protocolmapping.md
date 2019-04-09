@@ -2,12 +2,12 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118209"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
 Représente une section de configuration pour définir un ensemble de mappage de protocole par défaut entre les schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et des liaisons WCF. Lorsque vous créez des points de terminaison par défaut lors de l’exécution, Windows Communication Foundation (WCF) examine les mappages configurés et décide de liaison à utiliser en tant qu’adresse de base.  
@@ -35,7 +35,7 @@ Représente une section de configuration pour définir un ensemble de mappage de
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<filtres>](filters-of-routing.md)|Contient un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison WCF.|  
+|[\<filters>](filters-of-routing.md)|Contient un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison WCF.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -60,5 +60,6 @@ Représente une section de configuration pour définir un ensemble de mappage de
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 544fffd1b230469227d6ddbe3afcba54b6a7d5c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cfd466f48a55f8b8905f6c76cf876fb8a32d4a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151396"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace, méthode
 Obtient l’espace de noms dans lequel cette méthode est définie.  
@@ -41,8 +41,9 @@ HRESULT GetNamespace(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

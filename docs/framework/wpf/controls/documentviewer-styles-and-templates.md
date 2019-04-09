@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: b120359e63c2916e82b79b2f7b7f1aa5426be99c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e91a640b36e4793567c9e728fd71ec8ce596743
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158416"
 ---
 # <a name="documentviewer-styles-and-templates"></a>Styles et modèles DocumentViewer
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DocumentViewer> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -48,9 +48,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

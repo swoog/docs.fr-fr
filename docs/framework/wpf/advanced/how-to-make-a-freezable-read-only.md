@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191436"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Procédure : Mettre un Freezable en lecture seule
 Cet exemple montre comment rendre un <xref:System.Windows.Freezable> en lecture seule en appelant son <xref:System.Windows.Freezable.Freeze%2A> (méthode).  
@@ -36,8 +36,9 @@ Cet exemple montre comment rendre un <xref:System.Windows.Freezable> en lecture 
  Pour plus d’informations sur <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
-- [Vue d’ensemble des objets Freezable](freezable-objects-overview.md)
-- [Rubriques de guide pratique](base-elements-how-to-topics.md)
+- [Vue d'ensemble des objets Freezable](freezable-objects-overview.md)
+- [Rubriques Comment](base-elements-how-to-topics.md)

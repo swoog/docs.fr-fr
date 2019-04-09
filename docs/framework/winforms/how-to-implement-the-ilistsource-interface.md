@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Implémenter l’Interface IListSource'
+title: 'Procédure : implémenter l’interface IListSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159781"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Procédure : Implémenter l’Interface IListSource
+# <a name="how-to-implement-the-ilistsource-interface"></a>Procédure : implémenter l’interface IListSource
 Implémenter le <xref:System.ComponentModel.IListSource> interface permettant de créer une classe pouvant être liée qui n’implémente pas <xref:System.Collections.IList> mais plutôt une liste à partir d’un autre emplacement.  
   
 ## <a name="example"></a>Exemple  
@@ -39,6 +39,7 @@ Implémenter le <xref:System.ComponentModel.IListSource> interface permettant de
 -   Références aux assemblys System.Drawing et System.Windows.Forms.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>

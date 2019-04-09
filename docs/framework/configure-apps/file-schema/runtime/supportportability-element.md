@@ -1,5 +1,5 @@
 ---
-title: Élément <supportPortability>
+title: <supportPortability> Élément
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183940"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > élément
 Spécifie qu’une application peut référencer le même assembly dans deux implémentations différentes du .NET Framework, en désactivant le comportement par défaut qui traite les assemblys de façon équivalente à des fins de portabilité des applications.  
@@ -40,7 +40,7 @@ Spécifie qu’une application peut référencer le même assembly dans deux imp
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |true|Activer la prise en charge pour la portabilité entre les implémentations de l’assembly .NET Framework spécifié. Il s'agit de la valeur par défaut.|  
 |False|Désactiver la prise en charge pour la portabilité entre les implémentations de l’assembly .NET Framework spécifié. Cela permet à l’application d’avoir des références à plusieurs implémentations de l’assembly spécifié.|  
@@ -79,5 +79,6 @@ Spécifie qu’une application peut référencer le même assembly dans deux imp
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [/appconfig (Options du compilateur C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Vue d’ensemble du Unification des assemblys .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+
+- [/appconfig (Options du compilateur C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Vue d'ensemble de l'unification des assemblys .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

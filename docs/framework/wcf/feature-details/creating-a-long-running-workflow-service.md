@@ -2,12 +2,12 @@
 title: Création d'un service de workflow de longue durée
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109653"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Création d'un service de workflow de longue durée
 Cette rubrique décrit comment créer un service de workflow de longue durée. Les services de workflow de longue durée peuvent s'exécuter sur de longues périodes. À un certain stade, le workflow peut devenir inactif en attendant des informations supplémentaires. Lorsque cela se produit, le workflow est rendu persistant dans une base de données SQL et supprimé de la mémoire. Une fois que les informations supplémentaires sont disponibles, l'instance de workflow est à nouveau chargée dans la mémoire et continue de s'exécuter.  Dans ce scénario, vous implémentez un système de commande très simplifié.  Le client envoie un message initial au service de workflow pour commencer la commande. Un ID de commande est retourné au client. À ce stade, le service de workflow attend un autre message du client, passe à l'état inactif et est rendu persistant dans une base de données SQL Server.  Lorsque le client envoie le message suivant pour commander un article, le service de workflow est à nouveau chargé dans la mémoire et termine le traitement de la commande. Dans l'exemple de code, il retourne une chaîne indiquant que l'article a été ajouté à la commande. L'exemple de code n'est pas censé refléter une application réelle de la technologie mais plutôt un exemple simple illustrant des services de workflow de longue durée. Cette rubrique suppose que vous savez comment créer des solutions et projets de Visual Studio 2012.
@@ -19,7 +19,7 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
 2.  Visual Studio 2012
 
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  Vous êtes familiarisé avec WCF et Visual Studio 2012 et que vous savez comment créer des projets et des solutions.
 
@@ -199,4 +199,5 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
     ```
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)

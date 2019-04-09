@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: e3171322e0f24060422f54c74f4d2b4751433415
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157051"
 ---
 # <a name="listbox-styles-and-templates"></a>Styles et modèles ListBox
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ListBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -65,9 +65,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

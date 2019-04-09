@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Utiliser des fonctions définies par l’utilisateur de table'
+title: 'Procédure : Utiliser des fonctions tables définies par l’utilisateur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 03ed780cfba006f43f957dadf449cb4a369cbc96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186827"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>Procédure : Utiliser des fonctions définies par l’utilisateur de table
-Une fonction table retourne un jeu de lignes unique (contrairement aux procédures stockées qui peuvent retourner plusieurs formes de résultats). Étant donné que le type de retour d'une fonction table est `Table`, vous pouvez utiliser une fonction table à tout endroit dans SQL où il est possible d'utiliser une table. Vous pouvez également utiliser la fonction table comme une table.  
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Procédure : Utiliser des fonctions tables définies par l’utilisateur
+Une fonction table retourne un jeu de lignes unique (contrairement aux procédures stockées qui peuvent retourner plusieurs formes de résultats). Étant donné que le type de retour d’une fonction table est `Table`, vous pouvez utiliser une fonction table à tout endroit dans SQL où il est possible d’utiliser une table. Vous pouvez également utiliser la fonction table comme une table.  
   
 ## <a name="example"></a>Exemple  
  La fonction SQL suivante déclare explicitement qu'elle retourne un `TABLE`. Par conséquent, la structure de jeu de lignes retournée est définie implicitement.  
@@ -48,4 +48,5 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions définies par l’utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+
+- [Fonctions définies par l'utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

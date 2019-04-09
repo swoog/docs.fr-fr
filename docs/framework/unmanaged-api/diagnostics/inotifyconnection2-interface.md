@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c39797c720cdfcab58d64caf05e65c6b623325d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167516"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2, interface
 Déclare des méthodes pour inscrire et désinscrire une source de notification de connexion.  
@@ -33,10 +33,11 @@ Déclare des méthodes pour inscrire et désinscrire une source de notification 
 |[RegisterNotifySource, méthode](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installe un objet de source de notification spécifié.|  
 |[UnregisterNotifySource, méthode](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Supprime un objet de source de notification spécifié à partir de la connexion.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

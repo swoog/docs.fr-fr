@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158442"
 ---
 # <a name="user-drawn-controls"></a>Contrôles dessinés par l'utilisateur
 Le .NET Framework vous offre la possibilité de développer facilement vos propres contrôles. Vous pouvez créer un contrôle utilisateur, qui est un ensemble de contrôles standard liés ensemble par le code, ou vous pouvez concevoir votre propre contrôle de bout en bout des. Vous pouvez même utiliser l’héritage pour créer un contrôle qui hérite d’un contrôle existant et ajouter ses fonctionnalités inhérentes. N’importe quelle approche que vous utilisez, le .NET Framework fournit la fonctionnalité permettant de dessiner une interface graphique personnalisée pour n’importe quel contrôle que vous créez.  
@@ -76,11 +76,12 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  Utilisez le <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> propriété pour implémenter un contrôle non rectangulaire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Guide pratique pour Créer des objets graphiques pour le dessin](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Procédure : créer des objets de graphismes pour le dessin](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Contrôles constitutifs](constituent-controls.md)
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)

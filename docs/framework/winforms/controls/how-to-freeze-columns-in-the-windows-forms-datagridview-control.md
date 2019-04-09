@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Figer des colonnes dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : figer des colonnes dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187420"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procédure : Figer des colonnes dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procédure : figer des colonnes dans le contrôle DataGridView Windows Forms
 Quand des utilisateurs consultent des données affichées dans un contrôle Windows Forms <xref:System.Windows.Forms.DataGridView>, ils doivent parfois faire fréquemment référence à une même colonne ou un même ensemble de colonnes. Par exemple, lors de l'affichage d'un tableau d'informations sur des clients qui contient de nombreuses colonnes, il est utile d'afficher le nom du client en permanence tout en laissant d'autres colonnes défiler à l'extérieur de la zone visible.  
   
  Pour obtenir ce comportement, vous pouvez figer des colonnes dans le contrôle. Quand vous figez une colonne, toutes les colonnes à sa gauche (ou à sa droite dans les scripts de droite à gauche) sont aussi figées. Les colonnes figées restent en place, tandis que toutes les autres colonnes peuvent défiler.  
@@ -43,7 +43,8 @@ Quand des utilisateurs consultent des données affichées dans un contrôle Wind
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Fonctionnalités de base liées aux colonnes, lignes et cellules dans le contrôle DataGridView Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Guide pratique pour Activer la réorganisation des colonnes dans le contrôle de DataGridView Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Procédure : activer la réorganisation des colonnes dans le contrôle DataGridView Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

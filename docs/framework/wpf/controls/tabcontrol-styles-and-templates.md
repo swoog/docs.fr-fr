@@ -9,12 +9,12 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: ac8349453eaef2167746de639a7e2c111a019b86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e38756c5f266abc16b99f2359f8a87460d5d9450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155374"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Styles et modèles TabControl
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.TabControl> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -70,9 +70,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d’un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

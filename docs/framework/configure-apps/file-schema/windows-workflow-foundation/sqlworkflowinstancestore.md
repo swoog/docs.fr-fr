@@ -3,12 +3,12 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 9808d5f1f5053f8b68603e03d44b502aee6f5f0c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8601f1c7f4e1dbf911020c328652c371bf039124
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119078"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 Comportement de service qui vous permet de configurer le <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fonctionnalité, qui prend en charge les informations d’état persistantes pour les instances de service de flux de travail dans une base de données SQL Server 2005 ou SQL Server 2008. Pour plus d’informations sur cette fonctionnalité, consultez [SQL Workflow Instance Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
@@ -61,7 +61,8 @@ Comportement de service qui vous permet de configurer le <xref:System.Activities
 |[\<comportement > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Spécifie un élément de comportement.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>
 - <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>
-- [Magasin d’instances de workflow SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)
+- [Magasin d'instances de workflow SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144961"
 ---
 # <a name="how-to-skew-an-element"></a>Procédure : Incliner un élément
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.SkewTransform> pour incliner un élément. Une inclinaison est une transformation qui étire l’espace de coordonnées de façon non uniforme. Une utilisation typique d’un <xref:System.Windows.Media.SkewTransform> est la simulation [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profondeur dans [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objets.  
@@ -43,7 +43,8 @@ Les trois exemples SkewTransform illustrés
  Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
-- [Vue d’ensemble des transformations](transforms-overview.md)
-- [Rubriques de guide pratique](transformations-how-to-topics.md)
+- [Vue d'ensemble des transformations](transforms-overview.md)
+- [Rubriques Comment](transformations-how-to-topics.md)

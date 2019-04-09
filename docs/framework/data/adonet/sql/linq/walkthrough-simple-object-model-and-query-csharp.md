@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Requête et modèle objet simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155127"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procédure pas à pas : Requête et modèle objet simples (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel de complexité minimale. Vous allez créer une classe d'entité qui modélise la table Customers dans l'exemple de base de données Northwind. Vous créerez ensuite une requête simple pour répertorier les clients localisés à Londres.  
@@ -87,7 +87,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 -   Désignez la propriété `CustomerID` comme représentant une colonne de clé primaire dans la base de données.  
   
--   Désignez les champs `_CustomerID` et `_City` pour le stockage privé. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut ensuite stocker et récupérer directement des valeurs, au lieu d'utiliser des accesseurs publics qui peuvent inclure la logique métier.  
+-   Désignez les champs `_CustomerID` et `_City` pour le stockage privé. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut ensuite stocker et récupérer des valeurs directement, au lieu d’utiliser des accesseurs publics qui peuvent inclure la logique métier.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Pour représenter les caractéristiques de deux colonnes de base de données  
   
@@ -111,7 +111,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 ## <a name="creating-a-simple-query"></a>Création d'une requête simple  
  Au cours de cette étape, vous allez créer une requête pour rechercher les clients localisés à Londres dans la table Customers de la base de données. Le code de requête de cette étape décrit simplement la requête. Il ne l'exécute pas. Cette approche est appelée *exécution différée*. Pour plus d’informations, consultez [Introduction aux requêtes LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- Vous produirez également une sortie de journal pour afficher les commandes SQL générées par [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Cette fonction d'enregistrement (qui utilise <xref:System.Data.Linq.DataContext.Log%2A>) est utile pour le débogage et pour déterminer que les commandes envoyées à la base de données représentent précisément votre requête.  
+ Vous produirez également une sortie de journal pour afficher les commandes SQL générées par [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Cette fonctionnalité d’enregistrement (qui utilise <xref:System.Data.Linq.DataContext.Log%2A>) est utile pour le débogage et pour déterminer que les commandes envoyées à la base de données représentent précisément votre requête.  
   
 #### <a name="to-create-a-simple-query"></a>Pour créer une requête simple  
   
@@ -155,4 +155,5 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
  Si vous souhaitez suivre la procédure pas à pas Interrogation de relations, pensez à enregistrer la solution de la procédure que vous venez d'exécuter car elle est indispensable.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-ms.openlocfilehash: 005bb27803830a2e38a7b143d2c4cff669ad1da6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197059"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Procédure : Déterminer si un Freezable est gelé
 Cet exemple montre comment déterminer si un <xref:System.Windows.Freezable> objet est figé. Si vous essayez de modifier un objet figé <xref:System.Windows.Freezable> de l’objet, elle lève une <xref:System.InvalidOperationException>. Pour éviter de lever cette exception, utilisez la <xref:System.Windows.Freezable.IsFrozen%2A> propriété de la <xref:System.Windows.Freezable> objet afin de déterminer si elle est figée.  
@@ -26,7 +26,8 @@ Cet exemple montre comment déterminer si un <xref:System.Windows.Freezable> obj
  Pour plus d’informations sur <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
-- [Vue d’ensemble des objets Freezable](freezable-objects-overview.md)
-- [Rubriques de guide pratique](base-elements-how-to-topics.md)
+- [Vue d'ensemble des objets Freezable](freezable-objects-overview.md)
+- [Rubriques Comment](base-elements-how-to-topics.md)

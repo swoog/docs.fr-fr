@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112084"
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
@@ -72,13 +72,13 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  Vous pouvez contrôler le niveau d'enregistrement en définissant les attributs `logMessagesAtServiceLevel`, `logMalformedMessages` et `logMessagesAtTransportLevel` de l'élément `messageLogging`.  
   
 ### <a name="service-level"></a>Niveau service  
- Les messages enregistrés à ce niveau sont ceux qui sont sur le point d'arriver (côté destinataire) dans le code utilisateur ou de quitter ce dernier (côté expéditeur). Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages du niveau service seront enregistrés. Les messages d’infrastructure (transactions, canal homologue et sécurité) sont également enregistrés à ce niveau, à l’exception des messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés et déchiffrés à ce niveau.  
+ Les messages enregistrés à ce niveau sont ceux qui sont sur le point d'arriver (côté destinataire) dans le code utilisateur ou de quitter ce dernier (côté expéditeur). Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages du niveau service seront enregistrés. Les messages d'infrastructure (transactions, canal homologue et sécurité) sont également enregistrés à ce niveau, à l'exception des messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés et déchiffrés à ce niveau.  
   
 ### <a name="transport-level"></a>Niveau transport  
  Les messages enregistrés à ce niveau sont prêts à être encodés ou décodés pour ou après transmission. Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages de niveau transport seront enregistrés. Tous les messages d'infrastructure sont enregistrés à ce niveau, notamment les messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés à ce niveau sous leur forme chiffrée, sauf si un transport sécurisé tel qu'HTTPS est utilisé.  
   
 ### <a name="malformed-level"></a>Niveau erreurs  
- Messages mal formés sont des messages qui ont été rejetés par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
+ Messages mal formés sont des messages qui ont été rejetés par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à consigner en tant que CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
   
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  
@@ -117,9 +117,9 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 ## <a name="message-filters"></a>Filtres de message  
  Les filtres de message sont définis dans l'élément de configuration `messageLogging` de la section de configuration `diagnostics`. Ils sont appliqués aux niveaux service et transport. Lorsqu'un ou plusieurs filtres sont définis, seuls les messages qui correspondent au moins à l'un des filtres sont enregistrés. Si aucun filtre n'est défini, tous les messages passent.  
   
- Les filtres prennent en charge la syntaxe XPath complète et s’appliquent dans l’ordre dans lequel ils apparaissent dans le fichier de configuration. Un filtre syntaxiquement incorrect provoque la levée d'une exception de configuration.  
+ Les filtres prennent en charge la syntaxe XPath complète et s'appliquent dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. Un filtre syntaxiquement incorrect provoque la levée d'une exception de configuration.  
   
- Les filtres fournissent également une fonctionnalité de sécurité qui utilise l'attribut `nodeQuota` et qui limite le nombre maximal de nœuds dans XPath DOM pouvant être examinés pour comparaison avec les filtres définis.  
+ Les filtres fournissent également une fonctionnalité de sécurité qui utilise l’attribut `nodeQuota` et qui limite le nombre maximal de nœuds dans XPath DOM pouvant être examinés pour comparaison avec les filtres définis.  
   
  L'exemple de code suivant illustre comment configurer un filtre afin que seuls les messages contenant une section d'en-tête SOAP soient enregistrés.  
   
@@ -164,6 +164,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  N'oubliez pas que l'attribut `type` doit avoir la valeur « nom d'assembly qualifié de ce type ».  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
 - [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [Paramètres recommandés pour le suivi et l'enregistrement des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

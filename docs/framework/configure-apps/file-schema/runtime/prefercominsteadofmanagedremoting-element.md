@@ -1,5 +1,5 @@
 ---
-title: Élément <PreferComInsteadOfManagedRemoting>
+title: <PreferComInsteadOfManagedRemoting> Élément
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195668"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> Element
 Spécifie si le runtime utilisera COM interop au lieu de la communication à distance pour tous les appels entre les limites du domaine d’application.  
@@ -38,7 +38,7 @@ Spécifie si le runtime utilisera COM interop au lieu de la communication à dis
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`false`|Le runtime utilisera la communication à distance entre les limites du domaine d’application. Il s'agit de la valeur par défaut.|  
 |`true`|Le runtime utilisera COM interop dans les limites du domaine d’application.|  
@@ -74,5 +74,6 @@ Spécifie si le runtime utilisera COM interop au lieu de la communication à dis
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+
+- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

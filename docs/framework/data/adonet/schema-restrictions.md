@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151201"
 ---
 # <a name="schema-restrictions"></a>Restrictions de schéma
 Le deuxième paramètre facultatif de la **GetSchema** méthode est retournée les restrictions qui sont utilisées pour limiter la quantité d’informations de schéma, et il est transmis à la **GetSchema** sous forme de tableau de chaînes (méthode) . La position dans le tableau détermine les valeurs que vous pouvez passer et équivaut au numéro de restriction.  
   
  Par exemple, le tableau suivant décrit les restrictions prises en charge par la collection de schémas « Tables » utilisant le fournisseur de données .NET Framework pour SQL Server. Des restrictions supplémentaires pour les collections de schémas SQL Server figurent à la fin de cette rubrique.  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
@@ -135,46 +135,46 @@ class Program
   
 ### <a name="users"></a>Utilisateurs  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |User_Name|@Name|name|1|  
   
 ### <a name="databases"></a>Bases de données  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Name|@Name|Name|1|  
+|Nom|@Name|Nom|1|  
   
 ### <a name="tables"></a>Tables  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|Colonne|@Column|COLUMN_NAME|4|  
+|colonne|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|Colonne|@Column|COLUMN_NAME|4|  
+|colonne|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>Vues  
+### <a name="views"></a>Affichages  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
@@ -182,44 +182,44 @@ class Program
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|VIEW_CATALOG|1|  
 |Propriétaire|@Owner|VIEW_SCHEMA|2|  
 |Table|@Table|VIEW_NAME|3|  
-|Colonne|@Column|COLUMN_NAME|4|  
+|colonne|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|SPECIFIC_CATALOG|1|  
 |Propriétaire|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|Nom|@Name|SPECIFIC_NAME|3|  
 |Paramètre|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Procédures  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|SPECIFIC_CATALOG|1|  
 |Propriétaire|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|Nom|@Name|SPECIFIC_NAME|3|  
 |Type|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|db_name()|1|  
 |Propriétaire|@Owner|user_name()|2|  
 |Table|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|Colonne|@Column|c.name|5|  
+|colonne|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Index  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|db_name()|1|  
 |Propriétaire|@Owner|user_name()|2|  
@@ -227,26 +227,26 @@ class Program
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |assembly_name|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|CONSTRAINT_CATALOG|1|  
 |Propriétaire|@Owner|CONSTRAINT_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|Name|@Name|CONSTRAINT_NAME|4|  
+|Nom|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Restrictions de schéma SQL Server 2008  
  Les tableaux suivants répertorient les restrictions pour les collections de schémas SQL Server 2008. Ces restrictions s'appliquent à partir de la version 3.5 SP1 de .NET Framework et SQL Server 2008. Elles ne sont pas prises en charge dans les versions précédentes de .NET Framework et SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
@@ -254,12 +254,13 @@ class Program
   
 ### <a name="allcolumns"></a>AllColumns  
   
-|Nom de restriction|Nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
+|Nom de restriction|nom du paramètre|Valeur par défaut de la restriction|Numéro de restriction|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|Colonne|@Column|COLUMN_NAME|4|  
+|colonne|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

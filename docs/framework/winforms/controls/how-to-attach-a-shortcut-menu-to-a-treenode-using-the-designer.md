@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Attacher un Menu contextuel à un TreeNode à l’aide du Concepteur'
+title: 'Procédure : attacher un menu contextuel à un TreeNode à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: aa161af65b7e8e1f3636398cd02139b5623eb154
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191435"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Procédure : Attacher un Menu contextuel à un TreeNode à l’aide du Concepteur
+# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Procédure : attacher un menu contextuel à un TreeNode à l’aide du concepteur
 Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle affiche une hiérarchie de nœuds, similaires aux fichiers et dossiers affichés dans le volet gauche de la fonctionnalité de l’Explorateur Windows dans les systèmes d’exploitation Windows. En définissant le <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propriété, vous pouvez fournir des opérations contextuelles à l’utilisateur lorsqu’ils avec le bouton droit le <xref:System.Windows.Forms.TreeView> contrôle. En associant un <xref:System.Windows.Forms.ContextMenuStrip> composant individuels <xref:System.Windows.Forms.TreeNode> éléments, vous pouvez ajouter un niveau personnalisé de fonctionnalités de menu contextuel à votre <xref:System.Windows.Forms.TreeView> contrôles.  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle affiche u
      En outre, vous devez écrire du code pour gérer le <xref:System.Windows.Forms.ToolStripItem.Click> événements pour ces éléments de menu.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [TreeView, contrôle](treeview-control-windows-forms.md)
 - [Vue d’ensemble du contrôle TreeView](treeview-control-overview-windows-forms.md)
 - [ContextMenuStrip, contrôle](contextmenustrip-control.md)

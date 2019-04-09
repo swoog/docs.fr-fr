@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129504"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Accès aux membres non exposés sur le modèle objet de document HTML managé
 Le DOM HTML managé Document objet Model () contient une classe appelée <xref:System.Windows.Forms.HtmlElement> qui expose des propriétés, méthodes et événements de tous les éléments HTML ont en commun. Parfois, cependant, vous devez accéder aux membres de l’interface managée n’expose pas directement. Cette rubrique examine deux façons d’accéder aux membres non exposés, y compris [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] et les fonctions VBScript définies à l’intérieur d’une page Web.  
@@ -72,4 +72,5 @@ Le DOM HTML managé Document objet Model () contient une classe appelée <xref:S
  Vous pouvez appeler des fonctions de script que vous définissez dans une page HTML à l’aide du <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> (méthode). Si la méthode de script retourne un élément HTML, vous pouvez utiliser un cast pour convertir ce résultat en un <xref:System.Windows.Forms.HtmlElement>. Pour plus d’informations et des exemples de code, consultez <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation du modèle DOM HTML managé](using-the-managed-html-document-object-model.md)
+
+- [Utilisation du modèle objet de document HTML managé](using-the-managed-html-document-object-model.md)

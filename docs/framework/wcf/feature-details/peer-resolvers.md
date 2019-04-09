@@ -2,12 +2,12 @@
 title: Programmes de résolution d'homologue
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151617"
 ---
 # <a name="peer-resolvers"></a>Programmes de résolution d'homologue
 Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d'autres nœuds. Les adresses IP sont obtenues en contactant un service de résolution, qui prend l'ID de la maille et retourne une liste d'adresses correspondant aux nœuds enregistrés sous cet ID de maille particulier. Le programme de résolution conserve une liste des adresses inscrites, qu'il crée en inscrivant chaque nœud de la maille avec le service.  
@@ -35,9 +35,10 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
  Pour une démonstration de la façon d’implémenter un programme de résolution personnalisé, consultez [homologue canal homologue programme de résolution personnalisé](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Dans CustomPeerResolverService : Enregistrements de clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Dans CustomPeerResolverService : Inscription de clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+
+- [Concepts relatifs au canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Sécurité de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Création d'une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

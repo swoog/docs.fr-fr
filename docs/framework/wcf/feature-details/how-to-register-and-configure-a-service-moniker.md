@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Inscrire et configurer un Moniker de Service'
+title: 'Procédure : inscrire et configurer un moniker de service'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141919"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Procédure : Inscrire et configurer un Moniker de Service
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Procédure : inscrire et configurer un moniker de service
 Avant d’utiliser le moniker de service Windows Communication Foundation (WCF) dans une application COM avec un contrat typé, vous devez inscrire les types attribués requis avec COM et configurer l’application COM et le moniker avec la liaison requise configuration.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Pour inscrire les types avec attributs requis avec COM  
@@ -55,7 +55,7 @@ Avant d’utiliser le moniker de service Windows Communication Foundation (WCF) 
     }  
     ```  
   
-     L'application est exposée à l'aide d'une liaison `wsHttpBinding`. Pour une configuration de type et d'application donnée, les exemples de chaînes de moniker suivants sont utilisés.  
+     L’application est exposée à l’aide d’une liaison `wsHttpBinding`. Pour une configuration de type et d'application donnée, les exemples de chaînes de moniker suivants sont utilisés.  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -81,7 +81,7 @@ Avant d’utiliser le moniker de service Windows Communication Foundation (WCF) 
     result = MathProxy.Add(3, 5)  
     ```  
   
-     Dans cet exemple, la définition de la configuration de liaison `Binding1` est stockée dans un fichier de configuration judicieusement nommé pour l'application cliente, par exemple vb6nomapp.exe.config.  
+     Dans cet exemple, la définition de la configuration de liaison `Binding1` est stockée dans un fichier de configuration judicieusement nommé pour l’application cliente, par exemple vb6nomapp.exe.config.  
   
     > [!NOTE]
     >  Vous pouvez utiliser un code semblable dans une application C#, C++ ou d'un autre langage .NET.  
@@ -98,4 +98,5 @@ Avant d’utiliser le moniker de service Windows Communication Foundation (WCF) 
      Cela modifie les définitions d'interface importées afin que toutes les méthodes retournent un `HResult`. Toutes les autres valeurs de retour sont converties en paramètres de sortie. L'exécution globale des méthodes reste la même. Cela vous permet de déterminer la cause d'une exception lorsque vous appelez une méthode sur le proxy. Cette fonctionnalité n'est disponible qu'à partir du code C++.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

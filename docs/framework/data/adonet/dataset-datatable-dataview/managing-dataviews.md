@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127710"
 ---
 # <a name="managing-dataviews"></a>Gestion des DataViews
 Vous pouvez utiliser un objet <xref:System.Data.DataViewManager> pour gérer les paramètres de vue pour toutes les tables d'un objet <xref:System.Data.DataView>. Si vous avez un contrôle que vous souhaitez lier à plusieurs tables, tel qu’une grille qui parcourt des relations, un **DataViewManager** est idéale.  
@@ -120,6 +120,7 @@ grid.SetDataBinding(viewManager, "Customers");
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>

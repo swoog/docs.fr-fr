@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Créer une Interface de Style Explorateur Windows sur un formulaire Windows'
+title: 'Procédure : créer une interface de style Explorateur Windows dans un formulaire Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192132"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procédure : Créer une Interface de Style Explorateur Windows sur un formulaire Windows
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procédure : créer une interface de style Explorateur Windows dans un formulaire Windows
 L’Explorateur Windows est un choix d’interface utilisateur commune pour les applications en raison de son caractère familier.  
   
  L’Explorateur Windows est, fondamentalement, un <xref:System.Windows.Forms.TreeView> contrôle et un <xref:System.Windows.Forms.ListView> contrôle sur des panneaux séparés. Les panneaux sont rendus redimensionnables par un séparateur. Cette disposition de contrôles est très efficace pour afficher et parcourir des informations.  
@@ -50,8 +50,9 @@ L’Explorateur Windows est un choix d’interface utilisateur commune pour les 
     >  Lorsque vous faites glisser le séparateur, les panneaux se redimensionnent.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [Guide pratique pour Créer une Interface utilisateur à plusieurs volets avec des Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Guide pratique pour Définir le redimensionnement et le positionnement du comportement dans une fenêtre fractionnée](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Guide pratique pour Fractionner une fenêtre horizontalement](how-to-split-a-window-horizontally.md)
+- [Procédure : créer une interface utilisateur à plusieurs volets avec Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Procédure : définir le comportement de redimensionnement et de positionnement dans une fenêtre fractionnée](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Procédure : fractionner une fenêtre horizontalement](how-to-split-a-window-horizontally.md)
 - [SplitContainer, contrôle](splitcontainer-control-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151500"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informations de confidentialité relatives à Windows Communication Foundation
 Microsoft s’engage à protéger la confidentialité des utilisateurs finals. Lorsque vous créez une application à l’aide de Windows Communication Foundation (WCF), version 3.0, votre application peut avoir un impact sur confidentialité de vos utilisateurs finaux. Par exemple, votre application peut recueillir des informations de contact utilisateur de manière explicite ou elle peut demander ou envoyer des informations sur Internet à votre site Web. Si vous incorporez la technologie Microsoft dans votre application, cette technologie peut avoir son propre comportement qui peut affecter la confidentialité. WCF n’envoie pas toutes les informations à Microsoft à partir de votre application, si vous ou l’utilisateur final ne nous l’envoyer.  
@@ -19,12 +19,12 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
 ## <a name="wcf-in-brief"></a>WCF en bref  
  WCF est une infrastructure de messagerie distribuée à l’aide de Microsoft .NET Framework qui permet aux développeurs de créer des applications distribuées. Les messages transmis entre deux applications contiennent des informations d'en-tête et de corps.  
   
- Les en-têtes peuvent contenir le routage des messages, des informations de sécurité, des transactions et d'autres éléments, en fonction des services utilisés par l'application. Les messages sont en général chiffrés par défaut. L'unique exception concerne l'utilisation du `BasicHttpBinding`, qui a été conçu pour une utilisation avec des services Web hérités non sécurisés. En tant que concepteur d'applications, vous êtes responsable de la conception finale. Messages dans le corps SOAP contiennent des données de spécifique à l’application ; Toutefois, ces données, telles que définies par l’application des informations personnelles, peuvent être sécurisées à l’aide des fonctionnalités de confidentialité ou de chiffrement de WCF. Les sections suivantes décrivent les fonctionnalités qui peuvent avoir un impact sur la confidentialité.  
+ Les en-têtes peuvent contenir le routage des messages, des informations de sécurité, des transactions et d’autres éléments, en fonction des services utilisés par l’application. Les messages sont en général chiffrés par défaut. L'unique exception concerne l'utilisation du `BasicHttpBinding`, qui a été conçu pour une utilisation avec des services Web hérités non sécurisés. En tant que concepteur d'applications, vous êtes responsable de la conception finale. Messages dans le corps SOAP contiennent des données de spécifique à l’application ; Toutefois, ces données, telles que définies par l’application des informations personnelles, peuvent être sécurisées à l’aide des fonctionnalités de confidentialité ou de chiffrement de WCF. Les sections suivantes décrivent les fonctionnalités qui peuvent avoir un impact sur la confidentialité.  
   
 ## <a name="messaging"></a>Messagerie  
  Chaque message WCF a un en-tête d’adresse qui spécifie la destination du message et où la réponse doit aller.  
   
- Le composant adresse d'une adresse de point de terminaison est un URI (Uniform Resource Identifier) qui identifie le point de terminaison. L'adresse peut être une adresse réseau ou une adresse logique. L'adresse peut inclure le nom de l'ordinateur (nom d'hôte, nom de domaine complet) et une adresse IP. L'adresse de point de terminaison peut également contenir un identificateur global unique (GUID) ou une collection de GUID pour l'adressage temporaire utilisé pour distinguer chaque adresse. Chaque message contient un ID de message qui est un GUID. Cette fonctionnalité respecte la norme de référence WS-Addressing.  
+ Le composant adresse d'une adresse de point de terminaison est un URI (Uniform Resource Identifier) qui identifie le point de terminaison. L'adresse peut être une adresse réseau ou une adresse logique. L'adresse peut inclure le nom de l'ordinateur (nom d'hôte, nom de domaine complet) et une adresse IP. L’adresse de point de terminaison peut également contenir un identificateur global unique (GUID) ou une collection de GUID pour l’adressage temporaire utilisé pour distinguer chaque adresse. Chaque message contient un ID de message qui est un GUID. Cette fonctionnalité respecte la norme de référence WS-Addressing.  
   
  La couche de messagerie WCF n’écrit pas d’informations personnelles sur l’ordinateur local. Toutefois, elle peut propager des informations personnelles au niveau du réseau si un développeur de service a créé un service qui expose de telles informations (par exemple, en utilisant le nom d'une personne dans un nom de point de terminaison, ou en incluant des informations personnelles dans le Web Services Description Language du point de terminaison sans exiger que les clients utilisent https pour accéder au WSDL). En outre, si un développeur exécute la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil par rapport à un point de terminaison qui expose des informations personnelles, sortie de l’outil peut contenir ces informations, et le fichier de sortie est écrite dans le disque dur local.  
   
@@ -40,14 +40,14 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
 -   Avec la sécurité des messages SOAP, l'authentification est exécutée par le biais des informations d'identification telles que nom d'utilisateur/mots de passe, certificats X.509, tickets Kerberos et jetons SAML, qui peuvent tous contenir des informations personnelles selon l'émetteur.  
   
--   Avec la sécurité de transport, l'authentification est effectuée par le biais des mécanismes d'authentification de transport traditionnels tels que les modèles d'authentification HTTP (De base, Digest, Négocier, Autorisation Windows Intégrée, NTLM, Aucun et Anonyme) et l'authentification par formulaire.  
+-   Avec la sécurité de transport, l’authentification est effectuée par le biais des mécanismes d’authentification de transport traditionnels tels que les modèles d’authentification HTTP (De base, Digest, Négocier, Autorisation Windows Intégrée, NTLM, Aucun et Anonyme) et l’authentification par formulaire.  
   
  L'authentification peut entraîner l'établissement d'une session sécurisée entre les points de terminaison communicants. La session est identifiée par un GUID valide pendant toute la durée de vie de la session de sécurité. Le tableau suivant indique ce qui est conservé, et à quel emplacement.  
   
 |Données|Stockage|  
 |----------|-------------|  
 |Informations d'identification de présentation, telles que nom d'utilisateur, certificats X.509, jetons Kerberos et références aux informations d'identification.|Mécanismes de gestion des informations d'identification Windows standard tels que le magasin de certificats Windows.|  
-|Informations d'appartenance utilisateur, telles que noms d'utilisateur et mots de passe.|Fournisseurs d'appartenances [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].|  
+|Informations d'appartenance utilisateur, telles que noms d'utilisateur et mots de passe.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] fournisseurs d’appartenances.|  
 |Informations d'identité à propos du service utilisé pour authentifier le service aux clients.|Adresse de point de terminaison du service.|  
 |Informations sur l'appelant.|Journaux d'audit.|  
   
@@ -61,7 +61,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  Les en-têtes de transaction utilisés dans la propagation de transaction peuvent contenir des ID de transaction ou des ID d'inscription, qui sont des GUID.  
   
- La fonctionnalité Transactions utilise le gestionnaire de transactions Microsoft Distributed Transaction Coordinator (MSDTC) (un composant Windows) pour gérer l'état des transactions. Par défaut, les communications entre les gestionnaires de transactions sont chiffrées. Les gestionnaires de transactions peuvent enregistrer des références à des points de terminaison, des ID de transaction et des ID d'inscription dans le cadre de leur état durable. La durée de vie de cet état est déterminée par la durée de vie du fichier journal du gestionnaire de transactions. Le service MSDTC détient la propriété et assure la maintenance de ce journal.  
+ La fonctionnalité Transactions utilise le gestionnaire de transactions Microsoft Distributed Transaction Coordinator (MSDTC) (un composant Windows) pour gérer l’état des transactions. Par défaut, les communications entre les gestionnaires de transactions sont chiffrées. Les gestionnaires de transactions peuvent enregistrer des références à des points de terminaison, des ID de transaction et des ID d'inscription dans le cadre de leur état durable. La durée de vie de cet état est déterminée par la durée de vie du fichier journal du gestionnaire de transactions. Le service MSDTC détient la propriété et assure la maintenance de ce journal.  
   
  La fonctionnalité Transactions implémente les normes WS-Coordination et WS-Atomic Transaction.  
   
@@ -77,7 +77,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  La fonctionnalité de canaux en file d'attente n'ajoute pas d'en-tête à un message. Au lieu de cela, elle crée un message Message Queuing avec les propriétés de message Message Queuing appropriées définies et elle appelle des méthodes Message Queuing pour mettre le message dans la file d'attente Message Queuing. Message Queuing est un composant facultatif fourni avec Windows.  
   
- Aucune information n'est conservée sur l'ordinateur de l'utilisateur final par la fonctionnalité de canaux en file d'attente, car elle utilise Message Queuing comme infrastructure de mise en file d'attente.  
+ Aucune information n’est conservée sur l’ordinateur de l’utilisateur final par la fonctionnalité de canaux en file d’attente, car elle utilise Message Queuing comme infrastructure de mise en file d’attente.  
   
 ## <a name="com-integration"></a>Intégration COM+  
  Cette fonctionnalité encapsule les fonctionnalités COM et COM + existantes pour créer des services qui sont compatibles avec les services WCF. Cette fonctionnalité n’utilise pas d’en-tête spécifique et ne conserve pas de données sur l’ordinateur de l’utilisateur final.  
@@ -245,7 +245,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  `/>?`  
   
- <AuthorityBinding  
+ < AuthorityBinding  
   
  AuthorityKind="[NomQ]"  
   
@@ -374,7 +374,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
 ### <a name="other-features-for-it-professionals"></a>Autres fonctionnalités pour les professionnels de l'informatique  
  WCF propose un fournisseur WMI qui expose les informations de configuration d’infrastructure WCF via WMI (fourni avec Windows). Par défaut, l'interface WMI est accessible aux administrateurs.  
   
- La configuration WCF utilise le mécanisme de configuration .NET Framework. Les fichiers de configuration sont stockés sur l'ordinateur. Le développeur d'applications et l'administrateur créent les fichiers de configuration et la liste ACL pour chacune des spécifications de l'application. Un fichier de configuration peut contenir des adresses de point de terminaison et des liens vers des certificats dans le magasin de certificats. Les certificats peuvent être utilisés pour fournir des données d’application afin de configurer différentes propriétés des fonctionnalités utilisées par l’application.  
+ La configuration WCF utilise le mécanisme de configuration .NET Framework. Les fichiers de configuration sont stockés sur l'ordinateur. Le développeur d’applications et l’administrateur créent les fichiers de configuration et la liste ACL pour chacune des exigences de l’application. Un fichier de configuration peut contenir des adresses de point de terminaison et des liens vers des certificats dans le magasin de certificats. Les certificats peuvent être utilisés pour fournir des données d’application afin de configurer différentes propriétés des fonctionnalités utilisées par l’application.  
   
  WCF utilise également la fonctionnalité de vidage de processus de .NET Framework en appelant le <xref:System.Environment.FailFast%2A> (méthode).  
   
@@ -394,7 +394,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
  Ces outils permettent aux professionnels de l’informatique à configurer la prise en charge de réseau WS-AtomicTransaction interopérable dans WCF. Les outils affichent et permettent aux utilisateurs de modifier les valeurs des paramètres WS-AtomicTransaction le plus couramment utilisés stockés dans le Registre.  
   
 ## <a name="cross-cutting-features"></a>Fonctionnalités composites  
- Les fonctionnalités suivantes sont composites. En d'autres termes, elles peuvent être composées de n'importe lesquelles des fonctionnalités précédentes.  
+ Les fonctionnalités suivantes sont composites. En d’autres termes, elles peuvent être composées de n’importe lesquelles des fonctionnalités précédentes.  
   
 ### <a name="service-framework"></a>Infrastructure de service  
  Les en-têtes peuvent contenir un ID d'instance, qui est un GUID qui associe un message à une instance d'une classe CLR.  
@@ -402,5 +402,6 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
  Le langage WDSL (Web Services Description Language) contient une définition du port. Chaque port a une adresse de point de terminaison et une liaison qui représente les services utilisés par l'application. L'exposition du langage WSDL peut être désactivée à l'aide de la configuration. Aucune information n'est conservée sur l'ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Windows Communication Foundation](index.md)
 - [Sécurité](../../../docs/framework/wcf/feature-details/security.md)

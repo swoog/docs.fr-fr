@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127606"
 ---
 # <a name="bindingfailure-mda"></a>Assistant Débogage managé bindingFailure
 L’Assistant débogage managé (MDA) `bindingFailure` est activé quand le chargement d’un assembly échoue.  
@@ -48,7 +48,7 @@ L’Assistant débogage managé (MDA) `bindingFailure` est activé quand le char
   
 -   Résolvez le problème en fonction de la détermination précédente. Les options de résolution possibles sont les suivantes :  
   
-    -   Installez l’assembly demandé dans le global assembly cache et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> pour charger l’assembly par identité.  
+    -   Installez l’assembly demandé dans le global assembly cache et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> méthode pour charger l’assembly par identité.  
   
     -   Copiez l’assembly demandé dans le répertoire de l’application et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> pour charger l’assembly par identité.  
   
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+
+- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

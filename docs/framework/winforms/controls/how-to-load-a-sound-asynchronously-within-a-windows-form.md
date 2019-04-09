@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Charger un son de façon asynchrone dans un formulaire Windows'
+title: 'Procédure : charger un son de façon asynchrone dans un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185755"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Procédure : Charger un son de façon asynchrone dans un formulaire Windows
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Procédure : charger un son de façon asynchrone dans un formulaire Windows
 L'exemple de code suivant charge un son de façon asynchrone à partir d'une URL et le lit sur un nouveau thread.  
   
 ## <a name="example"></a>Exemple  
@@ -53,7 +53,8 @@ L'exemple de code suivant charge un son de façon asynchrone à partir d'une URL
  Ne vous basez pas sur le nom d'un fichier pour en déterminer le contenu. Par exemple, le fichier `Form1.vb` peut ne pas être un fichier source Visual Basic. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Procédure : émettre un signal sonore à partir d’un formulaire Windows](how-to-play-a-sound-from-a-windows-form.md)

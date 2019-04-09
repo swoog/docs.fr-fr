@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183636"
 ---
 # <a name="service-transaction-behavior"></a>Service Transaction Behavior
 Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d'une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Cliquez sur **OK** pour fermer la **ajouter un programme** boîte de dialogue, puis cliquez sur **OK** à nouveau pour fermer l’applet de pare-feu de Windows.  
   
-3.  Sur l'ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
+3.  Sur l’ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
   
     1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
@@ -264,4 +264,3 @@ Creating new service instance...
 >  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
-  

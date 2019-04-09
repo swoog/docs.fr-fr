@@ -2,12 +2,12 @@
 title: Protection des informations de connexion
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184442"
 ---
 # <a name="protecting-connection-information"></a>Protection des informations de connexion
 La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée. Le stockage d'informations de connexion au format texte brut ou sa conservation dans la mémoire risque de compromettre l'ensemble de votre système. Chaînes de connexion incorporées dans votre code source peuvent être lu à l’aide de la [Ildasm.exe (désassembleur IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) pour afficher le langage intermédiaire Microsoft (MSIL) dans un assembly compilé.  
@@ -40,6 +40,7 @@ La protection de l'accès à votre source de données représente l'un de vos pr
  Vous pouvez également stocker des chaînes de connexion dans des fichiers de configuration, ce qui évite d'avoir à les incorporer dans le code de votre application. Les fichiers de configuration sont des fichiers XML standard pour lesquels le .NET Framework a défini un ensemble commun d'éléments. Chaînes de connexion dans les fichiers de configuration sont généralement stockées à l’intérieur de la  **\<connectionStrings >** élément dans le **app.config** pour une application Windows, ou le  **Web.config** fichier pour une application ASP.NET. Pour plus d’informations sur les principes de base du stockage, la récupération et chiffrement des chaînes de connexion à partir des fichiers de configuration, consultez [chaînes de connexion et les fichiers de Configuration](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Chiffrement des informations de Configuration à l’aide de la Configuration protégée](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Sécurité dans .NET](../../../standard/security/index.md)

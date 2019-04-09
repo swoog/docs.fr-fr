@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Configurer les informations d’identification sur un Service de fédération'
+title: 'Procédure : configurer des informations d’identification sur un service de fédération'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112565"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>Procédure : Configurer les informations d’identification sur un Service de fédération
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>Procédure : configurer des informations d’identification sur un service de fédération
 Dans Windows Communication Foundation (WCF), création d’un service fédéré comprend les principales procédures suivantes :  
   
-1.  Configuration d’un <xref:System.ServiceModel.WSFederationHttpBinding> ou d’une liaison personnalisée similaire. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1.  Configuration d'un <xref:System.ServiceModel.WSFederationHttpBinding> ou d'une liaison personnalisée similaire. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2.  Configuration de <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> qui contrôle la manière dont les jetons émis présentés au service sont authentifiés.  
   
@@ -65,18 +65,19 @@ Dans Windows Communication Foundation (WCF), création d’un service fédéré 
   
 -   Lorsque la signature numérique du jeton émis utilise un identificateur de clé de sécurité RSA, la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> doit avoir la valeur `true`.  
   
--   Lorsque la signature du jeton émis utilise un numéro de série d'émetteur X.509, un identificateur de clé du sujet X.509 ou un identificateur de sécurité d'empreinte numérique X.509, le jeton émis doit être signé par un certificat de la collection retournée par la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>.  
+-   Lorsque la signature du jeton émis utilise un numéro de série d’émetteur X.509, un identificateur de clé du sujet X.509 ou un identificateur de sécurité d’empreinte numérique X.509, le jeton émis doit être signé par un certificat de la collection retournée par la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>.  
   
 -   Lorsque le jeton émis est signé à l'aide d'un certificat X.509, le certificat doit valider suivant la sémantique spécifiée par la valeur de la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, indépendamment du fait que le certificat a été envoyé à la partie de confiance en tant que <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> ou qu'il a été obtenu à partir de la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>. Pour plus d’informations sur la validation du certificat X.509, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Par exemple, si vous affectez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> à <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>, les jetons émis dont le certificat de signature se trouve dans le magasin de certificats `TrustedPeople` sont authentifiés. Dans ce cas, affectez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> ou <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> à la propriété <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Vous pouvez sélectionner d'autres modes, dont <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Lorsque `Custom` est sélectionné, vous devez assigner une instance de la classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> à la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Le validateur personnalisé peut valider des certificats à l'aide de n'importe quel critère. Pour plus d'informations, voir [Procédure : Créer un Service qui utilise un validateur de certificat personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fédération](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Fédération et confiance](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
-- [Exemple de fédération](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Guide pratique pour Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Guide pratique pour Créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procédure : créer un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Procédure : créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+- [Modes d'authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

@@ -2,12 +2,12 @@
 title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: e82312cb17fbd3f76f781ea37f761e946319a0a0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eaa3998d3d0b1642c0c92380ec1228eea69d4da8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129549"
 ---
 # <a name="findcriteria"></a>\<findCriteria>
 Élément de configuration qui fournit un jeu de critères utilisé par une application cliente pour rechercher un service de découverte. Critères peuvent être regroupées en critères de recherche (spécifiant les services que vous recherchez) et recherchez les critères d’arrêt (la durée pendant laquelle la recherche doit durer).  
@@ -68,5 +68,6 @@ ms.locfileid: "57351852"
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Contient les paramètres requis par une application pour participer au processus de découverte de service en tant que client.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

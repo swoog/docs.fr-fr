@@ -2,12 +2,12 @@
 title: Using Performance Counters
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 755d93e8165b9747f799571836d6b54e54a5fc45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa4e309c7097359e538e92aa3ddf88794150f3c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186775"
 ---
 # <a name="using-performance-counters"></a>Using Performance Counters
 Cet exemple montre comment accéder aux compteurs de performances de Windows Communication Foundation (WCF) et comment créer des compteurs de performances définis par l’utilisateur. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -59,7 +59,7 @@ Cet exemple montre comment accéder aux compteurs de performances de Windows Com
   
 2.  Dans le menu fichier, cliquez sur **Open** puis cliquez sur **fichier de configuration...** .  
   
-3.  Naviguez jusqu’au dossier de service de l’exemple d’application et ouvrez le fichier Web.config.  
+3.  Naviguez jusqu'au dossier de service de l'exemple d'application et ouvrez le fichier Web.config.  
   
 4.  Cliquez sur **Diagnostics** sur l’arborescence de la Configuration.  
   
@@ -77,4 +77,5 @@ Cet exemple montre comment accéder aux compteurs de performances de Windows Com
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

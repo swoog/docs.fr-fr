@@ -2,12 +2,12 @@
 title: Compatibilité des fonctionnalités dans un environnement de confiance partielle
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124564"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilité des fonctionnalités dans un environnement de confiance partielle
 Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité de fonctionnalités lors de l’exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
   
 -   Lors de l'utilisation de l'attribut `[ServiceKnownType]` , la méthode spécifiée doit être `public`.  
   
--   Les classes`[MessageContract]` et leurs membres peuvent être `public`. Si la classe `[MessageContract]` est définie dans l'assembly d'application, elle peut être `internal` et avoir des membres `internal` .  
+-   `[MessageContract]` classes et leurs membres peuvent être `public`. Si la classe `[MessageContract]` est définie dans l'assembly d'application, elle peut être `internal` et avoir des membres `internal` .  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
  <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WebHttpBinding> sont totalement pris en charge dans un environnement de confiance partielle. <xref:System.ServiceModel.WSHttpBinding> est pris en charge uniquement pour le mode de sécurité Transport.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>et <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, et <xref:System.IdentityModel.Tokens>.  
   
  Les sources de suivi suivantes ne sont pas prises en charge :  
   
@@ -160,9 +160,10 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
  La meilleure méthode pour découvrir qu'une information ou qu'une action n'est pas disponible en cas d'exécution dans un environnement de confiance partielle est d'essayer d'accéder à la ressource ou d'exécuter l'action dans un bloc `try` , puis d'intercepter l'échec via `catch` . Pour éviter de saturer les fichiers de trace avec des erreurs en double, WCF désactive le suivi de la ressource ou l’action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Scénarios de déploiement pris en charge](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Bonnes pratiques dans un environnement de confiance partielle](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Meilleures pratiques dans un environnement de confiance partielle](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

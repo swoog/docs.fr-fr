@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126215"
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à jour de données dans une base de données : l'accès simultané optimiste et l'accès simultané pessimiste. L'objet <xref:System.Data.DataSet> est conçu pour privilégier l'utilisation de l'accès simultané optimiste pour les activités longues, comme lors de la communication à distance de données ou de l'interaction avec ces dernières.  
   
- L'accès simultané pessimiste implique le verrouillage de lignes à la source de données pour empêcher que d'autres utilisateurs modifient des données d'une manière affectant l'utilisateur actuel. Dans un modèle pessimiste, lorsqu'un utilisateur effectue une action entraînant l'application d'un verrou, les autres utilisateurs ne peuvent pas effectuer d'actions qui créeraient un conflit avec le verrou tant que le propriétaire de ce dernier ne l'a pas libéré. Ce modèle est principalement utilisé dans les environnements où les conflits relatifs aux données sont fréquents, de sorte que le coût de la protection des données par verrous est inférieur à celui de la restauration des transactions en cas de conflits d'accès simultané.  
+ L'accès simultané pessimiste implique le verrouillage de lignes à la source de données pour empêcher que d'autres utilisateurs modifient des données d'une manière affectant l'utilisateur actuel. Dans un modèle pessimiste, lorsqu'un utilisateur effectue une action entraînant l'application d'un verrou, les autres utilisateurs ne peuvent pas effectuer d'actions qui créeraient un conflit avec le verrou tant que le propriétaire de ce dernier ne l'a pas libéré. Ce modèle est principalement utilisé dans les environnements où les conflits relatifs aux données sont fréquents, de sorte que le coût de la protection des données par verrous est inférieur à celui de la restauration des transactions en cas de conflits d’accès simultané.  
   
  Par conséquent, dans un modèle d'accès simultané pessimiste, un utilisateur qui met à jour une ligne crée un verrou. Jusqu'à ce que cet utilisateur ait terminé sa mise à jour et libéré le verrou, personne d'autre ne peut modifier cette ligne. C'est pourquoi il est préférable d'implémenter l'accès simultané pessimiste lorsque les temps de verrouillage sont courts, comme c'est le cas pour le traitement d'enregistrements par programme. L'accès simultané pessimiste ne constitue pas la solution la plus adaptée lorsque des utilisateurs interagissent avec les données, ce qui entraîne le verrouillage d'enregistrements pendant des laps de temps relativement longs.  
   
 > [!NOTE]
->  Si vous devez mettre à jour plusieurs lignes en une même opération, la création d'une transaction constitue une option plus adaptée que l'utilisation du verrouillage pessimiste.  
+>  Si vous devez mettre à jour plusieurs lignes en une même opération, la création d’une transaction constitue une option plus adaptée que l’utilisation du verrouillage pessimiste.  
   
  Au contraire, les utilisateurs qui ont recours à un accès simultané optimiste ne verrouillent pas une ligne lorsqu'ils la lisent. Lorsqu'un utilisateur souhaite mettre à jour une ligne, l'application doit déterminer si un autre utilisateur a modifié cette ligne depuis sa dernière lecture. L'accès simultané optimiste est généralement utilisé dans les environnements où les conflits relatifs aux données sont rares. L'accès simultané optimiste améliore les performances, dans la mesure où aucun verrouillage des enregistrements n'est requis et où le verrouillage d'enregistrements nécessite des ressources serveur supplémentaires. Il faut également savoir que la gestion des verrous d'enregistrements requiert une connexion permanente au serveur de base de données. Parce que ce n'est pas le cas dans un modèle d'accès simultané optimiste, les connexions au serveur sont disponibles pour traiter plus rapidement un nombre important de clients.  
   
@@ -207,8 +207,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Informations sur l’erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Mise à jour des sources de données avec les DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Informations sur l'erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
+- [Transactions et accès simultané](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

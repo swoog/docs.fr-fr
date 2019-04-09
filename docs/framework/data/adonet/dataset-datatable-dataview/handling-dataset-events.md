@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 6d3ce8262800fbea8e01ba4296715349bc0e140a
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e1de3effcae5700aa25f5dbb84f2dec3a0b20f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195280"
 ---
 # <a name="handling-dataset-events"></a>Gestion des événements de DataSet
 L'objet <xref:System.Data.DataSet> fournit trois événements : <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>et <xref:System.Data.DataSet.MergeFailed>.  
@@ -18,7 +18,7 @@ L'objet <xref:System.Data.DataSet> fournit trois événements : <xref:System.Com
 ## <a name="the-mergefailed-event"></a>Événement MergeFailed  
  L'événement le plus couramment utilisé de l'objet `DataSet` est `MergeFailed`, qui se déclenche en cas de conflit au niveau du schéma des objets `DataSet` en cours de fusion. Cela se produit lorsque des <xref:System.Data.DataRow> cible et source possèdent la même valeur de clé primaire et que la propriété <xref:System.Data.DataSet.EnforceConstraints%2A> a la valeur `true`. Par exemple, si les colonnes de clé primaire d'une table en cours de fusion sont identiques entre les tables des deux objets `DataSet` , une exception est levée et l'événement `MergeFailed` est déclenché. L'objet <xref:System.Data.MergeFailedEventArgs> passé à l'événement `MergeFailed` possède une propriété <xref:System.Data.MergeFailedEventArgs.Conflict%2A> qui identifie le conflit au niveau du schéma entre les deux objets `DataSet` et une propriété <xref:System.Data.MergeFailedEventArgs.Table%2A> qui identifie le nom de la table en conflit.  
   
- Le fragment de code ci-dessous montre comment ajouter un gestionnaire d'événements pour l'événement `MergeFailed`.  
+ Le fragment de code ci-dessous montre comment ajouter un gestionnaire d'événements pour l'événement `MergeFailed` .  
   
 ```vb  
 AddHandler workDS.MergeFailed, New MergeFailedEventHandler( _  
@@ -48,7 +48,7 @@ private static void DataSetMergeFailed(
  La propriété <xref:System.Data.DataSet.IsInitialized%2A> retourne `true` si le `DataSet` a terminé l'initialisation ; dans le cas contraire, elle retourne `false`. La méthode <xref:System.Data.DataSet.BeginInit%2A> , qui commence l'initialisation d'un `DataSet`, affecte à la propriété <xref:System.Data.DataSet.IsInitialized%2A> la valeur `false`. La méthode <xref:System.Data.DataSet.EndInit%2A> , qui termine l'initialisation du `DataSet`, lui affecte la valeur `true`. Ces méthodes sont utilisées par l’environnement de conception de Visual Studio pour initialiser un `DataSet` qui est utilisé par un autre composant. Vous ne les utiliserez pas couramment dans votre code.  
   
 ## <a name="the-disposed-event"></a>Événement Disposed  
- `DataSet` est dérivé de la classe <xref:System.ComponentModel.MarshalByValueComponent> , qui expose la méthode <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> et l'événement <xref:System.ComponentModel.MarshalByValueComponent.Disposed> . Le <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement ajoute un gestionnaire d’événements pour écouter l’événement libéré sur le composant. Vous pouvez utiliser la <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement d’un `DataSet` si vous souhaitez exécuter le code lorsque le <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> méthode est appelée. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> Libère les ressources utilisées par le <xref:System.ComponentModel.MarshalByValueComponent>.  
+ `DataSet` est dérivé le <xref:System.ComponentModel.MarshalByValueComponent> (classe), qui expose le <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> (méthode) et le <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement. Le <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement ajoute un gestionnaire d’événements pour écouter l’événement libéré sur le composant. Vous pouvez utiliser la <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement d’un `DataSet` si vous souhaitez exécuter le code lorsque le <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> méthode est appelée. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> Libère les ressources utilisées par le <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
 >  Le `DataSet` et `DataTable` objets héritent <xref:System.ComponentModel.MarshalByValueComponent> et prennent en charge la <xref:System.Runtime.Serialization.ISerializable> interface pour la communication à distance. Ce sont les seuls objets ADO.NET qui peuvent être exécutés à distance. Pour plus d’informations, consultez [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  
@@ -56,6 +56,7 @@ private static void DataSetMergeFailed(
  Pour plus d’informations sur les autres événements disponibles lorsque vous travaillez avec un `DataSet`, consultez [gestion des événements de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) et [gestion des événements DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Validation des données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
 - [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

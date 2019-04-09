@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lier le contrôle DataGrid Windows Forms à une Source de données à l’aide du Concepteur'
+title: 'Procédure : lier le contrôle DataGrid Windows Forms à une source de données à l’aide du concepteur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 9386ca229894cff61da32289f2d78a7016ea00e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115724"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procédure : Lier le contrôle DataGrid Windows Forms à une Source de données à l’aide du Concepteur
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procédure : lier le contrôle DataGrid Windows Forms à une source de données à l’aide du concepteur
 
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -70,8 +70,9 @@ ms.locfileid: "57720461"
 3.  Écrire du code pour remplir le dataset.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du contrôle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Guide pratique pour Ajouter des Tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procédure : ajouter des tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid, contrôle](datagrid-control-windows-forms.md)
-- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
-- [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
+- [L’accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

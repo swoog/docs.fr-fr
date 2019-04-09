@@ -2,15 +2,15 @@
 title: Security Validation
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202870"
 ---
 # <a name="security-validation"></a>Security Validation
-Cet exemple montre comment utiliser un comportement personnalisé pour valider des services sur un ordinateur afin de garantir qu'ils répondent à des critères spécifiques. Dans cet exemple, les services sont validés par le comportement personnalisé en analysant chaque point de terminaison sur le service et en vérifiant s’ils contiennent des éléments de liaison sécurisés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Cet exemple montre comment utiliser un comportement personnalisé pour valider des services sur un ordinateur afin de garantir qu'ils répondent à des critères spécifiques. Dans cet exemple, les services sont validés par le comportement personnalisé en analysant chaque point de terminaison sur le service et en vérifiant s'ils contiennent des éléments de liaison sécurisés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -47,7 +47,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- L'ajout du code suivant au fichier Web.config ajoute l'extension de comportement `serviceValidate` au service à reconnaître.  
+ L’ajout du code suivant au fichier Web.config ajoute l’extension de comportement `serviceValidate` au service à reconnaître.  
   
 ```xml  
 <system.serviceModel>  
@@ -79,7 +79,7 @@ public void Validate(ServiceDescription serviceDescription,
   
  Exécutez maintenant le client fourni dans le répertoire client\bin de cet exemple. A une exception se produit avec le message suivant : « Le service demandé, 'http://localhost/servicemodelsamples/service.svc' ne peut pas être activé. » Cette exception est attendue parce qu'un point de terminaison est considéré comme non sécurisé par le comportement de validation de point de terminaison et empêche le démarrage du service. Le comportement lève également une exception interne qui décrit quel point de terminaison n'est pas sécurisé et écrit un message à l'observateur d'événements du système sous la source « System.ServiceModel 4.0.0.0 » et la catégorie « WebHost ». Il est également possible d'activer le suivi sur le service dans cet exemple. Cela permet à l'utilisateur de consulter les exceptions levées par le comportement de validation de point de terminaison en ouvrant les suivis du service à l'aide de l'outil Service Trace Viewer.  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Pour consulter les messages d’exception de validation non réussie d’un point de terminaison dans l’observateur d’événements  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Pour consulter les messages d'exception de validation non réussie d'un point de terminaison dans l'observateur d'événements  
   
 1.  Cliquez sur le **Démarrer** menu et sélectionnez **exécuter...** .  
   
@@ -107,4 +107,5 @@ public void Validate(ServiceDescription serviceDescription,
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

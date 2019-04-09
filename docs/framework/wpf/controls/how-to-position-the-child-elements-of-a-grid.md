@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Positionner les éléments enfants d'une grille"
+title: 'Procédure : Positionner les éléments enfants d’une grille'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202987"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Procédure : Positionner les éléments enfants d'une grille
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Procédure : Positionner les éléments enfants d’une grille
 Cet exemple montre comment obtenir et définir des méthodes qui sont définies sur <xref:System.Windows.Controls.Grid> pour positionner des éléments enfants.  
   
 ## <a name="example"></a>Exemple  
@@ -31,5 +31,6 @@ Cet exemple montre comment obtenir et définir des méthodes qui sont définies 
  ![une capture d’écran illustre une interface utilisateur WPF avec deux colonnes, la partie droite a une grille de 3 x 3 et gauche comprend des boutons pour déplacer un rectangle coloré entre les colonnes et les lignes de la grille](././media/grid-methods-sample.png) 
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Grid>
-- [Vue d’ensemble de Panel](panels-overview.md)
+- [Vue d'ensemble de Panel](panels-overview.md)

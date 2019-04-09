@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 0e44b2944a24ea4201fda2f0891d74c672a64a4a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112110"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Procédure : Activer la saisie semi-automatique dans les contrôles ToolStrip dans les Windows Forms
 La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> avec un <xref:System.Windows.Forms.ToolStripComboBox> qui peut être déplacé vers le bas pour afficher une liste d’éléments, tels que récemment visité les sites Web. Si l’utilisateur tape un caractère qui correspond au premier caractère d’un des éléments dans la liste, l’élément est immédiatement affiché.  
@@ -90,6 +90,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripLabel>
 - <xref:System.Windows.Forms.ToolStripComboBox>

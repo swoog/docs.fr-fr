@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée'
+title: 'Procédure : créer un jeton de contexte de sécurité pour une session sécurisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189337"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procédure : créer un jeton de contexte de sécurité pour une session sécurisée
 En utilisant un jeton de contexte de sécurité avec état (SCT) dans une session sécurisée, la session peut résister au service qui est recyclé. Par exemple, lorsqu'un SCT sans état est utilisé dans une session sécurisée et que les services IIS (Internet Information Services) sont réinitialisés, les données de session associées au service sont perdues. Ces données de session incluent un cache du jeton SCT. Ainsi, la prochaine fois qu'un client enverra au service un SCT sans état, une erreur sera retournée, parce que la clé associée au SCT ne peut pas être récupérée. Toutefois, si un SCT avec état est utilisé, la clé associée au SCT est contenue dans le SCT. Étant donné que la clé est contenue dans le SCT et donc contenue dans le message, la session sécurisée n'est pas affectée par le service qui est recyclé. Par défaut, Windows Communication Foundation (WCF) utilise des SCT sans état dans une session sécurisée. Cette rubrique détaille la manière d’utiliser des SCT avec état dans une session sécurisée.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
 >  Pour les applications qui utilisent des SCT avec état dans une session sécurisée, l’identité de thread pour le service doit être un compte d’utilisateur ayant un profil utilisateur associé. Lorsque le service est exécuté sous un compte qui n'a pas de profil utilisateur, tel qu'un `Local Service`, une exception peut être levée.  
   
 > [!NOTE]
->  Lorsque l'emprunt d'identité est requis sur Windows XP, utilisez une session sécurisée sans SCT avec état. Lorsque des SCT avec état sont utilisés avec l’emprunt d’identité, une <xref:System.InvalidOperationException> est levée. Pour plus d’informations, consultez [scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Lorsque l’emprunt d’identité est requis sur Windows XP, utilisez une session sécurisée sans SCT avec état. Lorsque des SCT avec état sont utilisés avec l’emprunt d’identité, une <xref:System.InvalidOperationException> est levée. Pour plus d’informations, consultez [scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Pour utiliser des SCT avec état dans une session sécurisée  
   
@@ -36,7 +36,7 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
   
     2.  Ajouter un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-         Spécifiez un nom de liaison en affectant à l’attribut `name` un nom unique dans le fichier de configuration.  
+         Spécifiez un nom de liaison en affectant à l'attribut `name` un nom unique dans le fichier de configuration.  
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
@@ -44,7 +44,7 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
   
     3.  Spécifiez le mode d’authentification pour les messages envoyés vers et à partir de ce service en ajoutant un [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-         Spécifiez qu'une session sécurisée est utilisée en affectant à l'attribut `authenticationMode` la valeur `SecureConversation`. Spécifiez que des SCT avec état sont utilisés en affectant à l’attribut `requireSecurityContextCancellation` la valeur `false`.  
+         Spécifiez qu'une session sécurisée est utilisée en affectant à l'attribut `authenticationMode` la valeur `SecureConversation`. Spécifiez que des SCT avec état sont utilisés en affectant à l'attribut `requireSecurityContextCancellation` la valeur `false`.  
   
         ```xml  
         <security authenticationMode="SecureConversation"  
@@ -110,4 +110,5 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

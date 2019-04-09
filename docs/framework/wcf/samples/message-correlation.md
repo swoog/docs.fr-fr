@@ -2,12 +2,12 @@
 title: Message Correlation
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157764"
 ---
 # <a name="message-correlation"></a>Message Correlation
 Cet exemple montre comment une application Message Queuing (MSMQ) peut envoyer un message MSMQ à un service Windows Communication Foundation (WCF) et comment les messages peuvent être corrélés entre les applications de l’expéditeur et du récepteur dans un scénario de demande/réponse. Cet exemple utilise la liaison msmqIntegrationBinding. Dans le cas présent, le service est une application console auto-hébergée qui vous permet d'observer le service qui reçoit les messages mis en file d'attente. k  
@@ -28,7 +28,7 @@ public interface IOrderProcessor
 }
 ```
 
- L'opération de service traite le bon de commande et en affiche le contenu et l'état dans la fenêtre de console du service. L'<xref:System.ServiceModel.OperationBehaviorAttribute> configure l'opération pour l'inscrire dans une transaction avec la file d'attente et marquer la transaction comme complète lorsque l'opération est retournée. Le `PurchaseOrder` contient les détails de la commande qui doivent être traités par le service.
+ L'opération de service traite le bon de commande et en affiche le contenu et l'état dans la fenêtre de console du service. L’<xref:System.ServiceModel.OperationBehaviorAttribute> configure l’opération pour l’inscrire dans une transaction avec la file d’attente et marquer la transaction comme complète lorsque l’opération est retournée. Le `PurchaseOrder` contient les détails de la commande qui doivent être traités par le service.
 
 ```csharp
 // Service class that implements the service contract.
@@ -213,7 +213,7 @@ static void PlaceOrder()
  La file d'attente MSMQ à partir de laquelle les réponses à la commande sont reçues est spécifiée dans une section appSettings du fichier de configuration, comme le montre l'exemple de configuration suivant.
 
 > [!NOTE]
->  Le nom de la file d’attente utilise un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès. L’adresse de point de terminaison WCF spécifie un schéma msmq.formatname et utilise « localhost » pour l’ordinateur local. Un nom de format correct suit msmq.formatname dans l'URI d'après les règles d'adressage MSMQ.
+>  Le nom de la file d'attente utilise un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès. L’adresse de point de terminaison WCF spécifie un schéma msmq.formatname et utilise « localhost » pour l’ordinateur local. Un nom de format correct suit msmq.formatname dans l'URI d'après les règles d'adressage MSMQ.
 
 ```xml
 <appSettings>
@@ -291,9 +291,9 @@ static void DisplayOrderStatus()
 
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs
 
-1.  Copiez les fichiers programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur de service.
+1.  Copiez les fichiers programme du service figurant dans le dossier \service\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur de service.
 
-2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.
+2.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.
 
 3.  Dans le fichier Client.exe.config, dans orderQueueName, remplacez « . » par le nom de l'ordinateur de service.
 
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+
+- [Mise en file d'attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: 8eae5dafa314bb293f55a780f6be67d06f376004
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138110"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle fournit de nombreuses options permettant de personnaliser le comportement de dimensionnement de ses colonnes et de lignes. En règle générale, `DataGridView` cellules ne se redimensionnent pas en fonction de leur contenu. Au lieu de cela, elles tronquent toute valeur d’affichage qui est supérieure à la cellule. Si le contenu peut être affiché sous forme de chaîne, la cellule l’affiche dans une info-bulle.  
@@ -27,13 +27,13 @@ Le `DataGridView` contrôle fournit de nombreuses options permettant de personna
  [Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  Décrit le mode de remplissage de colonne en détail et fournit du code de démonstration qui vous permettent de faire des essais avec le mode de remplissage de colonne et les autres modes.  
   
- [Guide pratique pour Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [Procédure : définir les modes de dimensionnement du contrôle DataGridView Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  Décrit comment configurer les modes de dimensionnement pour des objectifs communs.  
   
- [Guide pratique pour Redimensionner par programme les cellules en fonction du contenu dans le contrôle de DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Procédure : redimensionner par programmation des cellules pour les adapter au contenu du contrôle DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Fournit du code de démonstration que vous pouvez utiliser pour expérimenter le redimensionnement par programmation.  
   
- [Guide pratique pour Redimensionner automatiquement des cellules lorsque le contenu change dans le contrôle de DataGridView Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Procédure : redimensionner automatiquement les cellules quand le contenu change dans le contrôle DataGridView Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Fournit du code de démonstration qui vous permettent de faire des essais avec les modes de dimensionnement automatique.  
   
 ## <a name="reference"></a>Référence  
@@ -41,4 +41,5 @@ Le `DataGridView` contrôle fournit de nombreuses options permettant de personna
  Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DataGridView, contrôle](datagridview-control-windows-forms.md)

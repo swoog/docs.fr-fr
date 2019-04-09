@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 295b150f6881a47b3816a93ac7a20382bc5c20c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152150"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob, méthode
 Récupère le blob de ressources Win32. Appelez cette méthode après avoir défini les options d’assembly.  
@@ -61,10 +61,11 @@ HRESULT GetWin32ResBlob(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite alink.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7cc7b83f7bf1657195778ea38944b2354b09c38
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9153c9b3735e265d59ba072f747c92434c95d9ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184494"
 ---
 # <a name="getfiledef-method"></a>GetFileDef, méthode
 Récupère le jeton FileDef réel utilisé dans les métadonnées (par opposition au jeton assigné par ALink).  
@@ -49,10 +49,11 @@ HRESULT GetFileDef(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite alink.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

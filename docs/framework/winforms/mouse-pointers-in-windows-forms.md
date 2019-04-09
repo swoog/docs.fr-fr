@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122783"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Pointeurs de souris dans les Windows Forms
 La souris *pointeur*, qui est parfois appelé curseur, est une bitmap qui spécifie un point de focus sur l’écran de l’utilisateur avec la souris. Cette rubrique fournit une vue d’ensemble du pointeur de la souris dans les Windows Forms et décrit quelques-unes des façons de modifier et de contrôler le pointeur de la souris.  
@@ -31,6 +31,7 @@ La souris *pointeur*, qui est parfois appelé curseur, est une bitmap qui spéci
  Le principal moyen de modifier le pointeur de la souris est en définissant le <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.Control.DefaultCursor%2A> propriété d’un contrôle vers un nouveau <xref:System.Windows.Forms.Cursor>. Pour obtenir des exemples de modification du pointeur de la souris, consultez l’exemple de code dans la <xref:System.Windows.Forms.Cursor> classe. En outre, le <xref:System.Windows.Forms.Cursors> classe expose un ensemble de <xref:System.Windows.Forms.Cursor> objets pour de nombreux types de pointeurs, telles qu’un pointeur qui ressemble à une main. Pour afficher le pointeur d’attente, qui ressemble à un sablier, chaque fois que le pointeur de la souris est sur le contrôle, utilisez la <xref:System.Windows.Forms.Control.UseWaitCursor%2A> propriété de la <xref:System.Windows.Forms.Control> classe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Cursor>
 - [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Fonctionnalité de glisser-déposer dans les Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Fonctionnalité de glisser-déplacer dans les Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

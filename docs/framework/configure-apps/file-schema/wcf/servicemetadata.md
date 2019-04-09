@@ -2,12 +2,12 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 04bc29e8e842f5bb0252685fc3088a86535f4668
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b06d61a33cd6a704a5ab0f75d29bde3f72d77fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115854"
 ---
 # <a name="servicemetadata"></a>\<serviceMetadata>
 Spécifie la publication de métadonnées de service et des informations associées.  
@@ -42,11 +42,11 @@ Spécifie la publication de métadonnées de service et des informations associ�
 |---------------|-----------------|  
 |externalMetadataLocation|Uri contenant l'emplacement d'un fichier WSDL renvoyé à l'utilisateur en réponse aux demandes WSDL et MEX au lieu du WSDL généré automatiquement. Lorsque cet attribut n'est pas défini, le WSDL par défaut est renvoyé. La valeur par défaut est une chaîne vide.|  
 |httpGetBinding|Chaîne qui spécifie le type de la liaison qui sera utilisée pour la récupération de métadonnées via HTTP GET. Ce paramètre est facultatif. En l'absence de spécification, les liaisons par défaut seront utilisées.<br /><br /> La prise en charge n'est assurée que pour les liaisons comportant des éléments de liaison internes qui prennent en charge <xref:System.ServiceModel.Channels.IReplyChannel>. En outre, la propriété <xref:System.ServiceModel.Channels.MessageVersion> de la liaison doit être <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpGetBindingConfiguration|Chaîne qui définit le nom de la liaison spécifiée dans l'attribut `httpGetBinding`, qui fait référence aux informations de configuration supplémentaires de cette liaison. Le même nom doit être défini dans la section `<bindings>`.|  
+|httpGetBindingConfiguration|Chaîne qui définit le nom de la liaison spécifiée dans l’attribut `httpGetBinding`, qui fait référence aux informations de configuration supplémentaires de cette liaison. Le même nom doit être défini dans la section `<bindings>`.|  
 |httpGetEnabled|Valeur booléenne indiquant si les métadonnées de service correspondant à la récupération doivent être publiées à l'aide d'une demande HTTP/Get. La valeur par défaut est `false`.<br /><br /> Si l'attribut httpGetUrl n'est pas spécifié, l'adresse utilisée pour publier les métadonnées est celle du service à laquelle est ajouté le suffixe « ? wsdl ». Par exemple, si l’adresse du service est « http://localhost:8080/CalculatorService«, l’adresse de métadonnées HTTP/Get est » http://localhost:8080/CalculatorService?wsdl».<br /><br /> Si cette propriété est `false`, ou l’adresse du service n’est pas basée sur HTTP ou HTTPS, « ? wsdl » est ignoré.|  
 |httpGetUrl|URI indiquant l'adresse utilisée pour publier les métadonnées correspondant à la récupération à l'aide d'une demande HTTP/Get. Si l'URI relatif est spécifié, il sera traité comme étant relatif à l'adresse de base du service.|  
 |httpsGetBinding|Chaîne qui spécifie le type de la liaison qui sera utilisée pour la récupération de métadonnées via HTTPS GET. Ce paramètre est facultatif. En l'absence de spécification, les liaisons par défaut seront utilisées.<br /><br /> La prise en charge n'est assurée que pour les liaisons comportant des éléments de liaison internes qui prennent en charge <xref:System.ServiceModel.Channels.IReplyChannel>. En outre, la propriété <xref:System.ServiceModel.Channels.MessageVersion> de la liaison doit être <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpsGetBindingConfiguration|Chaîne qui définit le nom de la liaison spécifiée dans l'attribut `httpsGetBinding`, qui fait référence aux informations de configuration supplémentaires de cette liaison. Le même nom doit être défini dans la section `<bindings>`.|  
+|httpsGetBindingConfiguration|Chaîne qui définit le nom de la liaison spécifiée dans l’attribut `httpsGetBinding`, qui fait référence aux informations de configuration supplémentaires de cette liaison. Le même nom doit être défini dans la section `<bindings>`.|  
 |httpsGetEnabled|Valeur booléenne indiquant si les métadonnées de service correspondant à la récupération doivent être publiées à l'aide d'une demande HTTPS/Get. La valeur par défaut est `false`.<br /><br /> Si l'attribut httpsGetUrl n'est pas spécifié, l'adresse utilisée pour publier les métadonnées est celle du service à laquelle est ajouté le suffixe « ? wsdl ». Par exemple, si l’adresse du service est « https://localhost:8080/CalculatorService«, l’adresse de métadonnées HTTP/Get est » https://localhost:8080/CalculatorService?wsdl».<br /><br /> Si cette propriété est `false`, ou l’adresse du service n’est pas basée sur HTTP ou HTTPS, « ? wsdl » est ignoré.|  
 |httpsGetUrl|URI indiquant l'adresse utilisée pour publier les métadonnées afin d'effectuer une récupération à l'aide d'une demande HTTPS/Get.|  
 |policyVersion|Chaîne indiquant la version de la spécification WS-Policy utilisée. Cet attribut est de type <xref:System.ServiceModel.Description.PolicyVersion>.|  
@@ -65,7 +65,7 @@ Spécifie la publication de métadonnées de service et des informations associ�
   
  Pour obtenir un exemple détaillé de la configuration de ce comportement, consultez [comportement de publication de métadonnées](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
   
- Les attributs facultatifs `httpGetBinding` et `httpsGetBinding` vous permettent de configurer les liaisons utilisées pour la récupération de métadonnées via HTTP GET (ou HTTPS GET). S'ils ne sont pas spécifiés, les liaisons par défaut (`HttpTransportBindingElement` dans le cas de HTTP et `HttpsTransportBindingElement` dans le cas de HTTPS) sont utilisées pour la récupération des métadonnées. Notez que vous ne pouvez pas utiliser ces attributs avec les liaisons WCF intégrées. La prise en charge n'est assurée que pour les liaisons comportant des éléments de liaison internes qui prennent en charge <xref:System.ServiceModel.Channels.IReplyChannel>. En outre, la propriété <xref:System.ServiceModel.Channels.MessageVersion> de la liaison doit être <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
+ Les attributs facultatifs `httpGetBinding` et `httpsGetBinding` vous permettent de configurer les liaisons utilisées pour la récupération de métadonnées via HTTP GET (ou HTTPS GET). S’ils ne sont pas spécifiés, les liaisons par défaut (`HttpTransportBindingElement` dans le cas de HTTP et `HttpsTransportBindingElement` dans le cas de HTTPS) sont utilisées pour la récupération des métadonnées. Notez que vous ne pouvez pas utiliser ces attributs avec les liaisons WCF intégrées. La prise en charge n'est assurée que pour les liaisons comportant des éléments de liaison internes qui prennent en charge <xref:System.ServiceModel.Channels.IReplyChannel>. En outre, la propriété <xref:System.ServiceModel.Channels.MessageVersion> de la liaison doit être <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   
  Pour éviter l'exposition d'un service aux utilisateurs malveillants, il est possible de sécuriser le transfert à l'aide du mécanisme HTTPS (SSL over HTTP). Pour ce faire, vous devez d'abord lier un certificat X.509 approprié à un port spécifique sur l'ordinateur qui héberge le service. (Pour plus d’informations, consultez [utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Ensuite, ajoutez cet élément à la configuration du service et affectez la valeur `httpsGetEnabled` à l'attribut `true`. Enfin, affectez l'URL du point de terminaison des métadonnées du service à l'attribut `httpsGetUrl`, comme indiqué dans l'exemple suivant.  
   
@@ -117,7 +117,8 @@ Spécifie la publication de métadonnées de service et des informations associ�
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Comportement de publication des métadonnées](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+- [Metadata Publishing Behavior](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

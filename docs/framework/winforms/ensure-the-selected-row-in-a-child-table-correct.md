@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : S’assurer que la ligne sélectionnée dans une Table enfant reste au bon emplacement'
+title: 'Procédure : vérifier que la ligne sélectionnée dans une table enfant reste à la bonne position'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149108"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procédure : S’assurer que la ligne sélectionnée dans une Table enfant reste au bon emplacement
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procédure : vérifier que la ligne sélectionnée dans une table enfant reste à la bonne position
 Souvent, lors de l’utilisation de la liaison de données dans des Windows Forms, vous affichez des données dans ce que l’on appelle une vue parent/enfant ou maître/détails. Cela fait référence à un scénario de liaison de données où les données de la même source sont affichées dans deux contrôles. La modification de la sélection dans un contrôle entraîne la modification des données affichées dans le deuxième contrôle. Par exemple, le premier contrôle peut contenir une liste de clients et le second une liste de commandes associées au client sélectionné dans le premier contrôle.  
   
  À compter de .NET Framework version 2.0, quand vous affichez des données dans une vue parent/enfant, vous devrez peut-être effectuer des étapes supplémentaires pour vous assurer que la ligne actuellement sélectionnée dans la table enfant n'est pas réinitialisée à la première ligne de la table. Pour cela, vous devez mettre en cache la position de la table enfant et la réinitialiser une fois que la table parente a changé. En général, la réinitialisation de l'enfant se produit la première fois qu'un champ sur une ligne de la table parente change.  
@@ -84,6 +84,7 @@ Souvent, lors de l’utilisation de la liaison de données dans des Windows Form
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour S’assurer que plusieurs contrôles liés à la même Source de données restent synchronisés](multiple-controls-bound-to-data-source-synchronized.md)
-- [BindingSource, composant](./controls/bindingsource-component.md)
+
+- [Procédure : vérifier que plusieurs contrôles liés à la même source de données restent synchronisés](multiple-controls-bound-to-data-source-synchronized.md)
+- [Composant BindingSource](./controls/bindingsource-component.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)

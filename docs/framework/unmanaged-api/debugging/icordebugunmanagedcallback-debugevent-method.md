@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: beb2b9f17696e293d14cf997ef69deb7557ed0bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6ec45004f5dd87983187690a0a4feefb35b05e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183610"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent, méthode
 Notifie le débogueur qu’un événement natif a été déclenché.  
@@ -52,14 +52,15 @@ HRESULT DebugEvent (
   
  Dans le .NET Framework version 2.0, le débogueur doit continuer immédiatement après un événement de point d’arrêt hors-bande. Le débogueur doit être à l’aide de la [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) et [ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) méthodes pour ajouter et supprimer des points d’arrêt. Ces méthodes ignoreront automatiquement les points d’arrêt hors-bande. Par conséquent, les points d’arrêt uniquement out-of-band distribuer doivent être des points d’arrêt bruts qui sont déjà dans le flux d’instructions, tel qu’un appel à la constante Win32 `DebugBreak` (fonction). N’essayez pas d’utiliser `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess::GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess::SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), ou tout autre membre de la [API de débogage](../../../../docs/framework/unmanaged-api/debugging/index.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICorDebugUnmanagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)

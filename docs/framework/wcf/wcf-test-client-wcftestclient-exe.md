@@ -2,12 +2,12 @@
 title: Client test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106767"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client test WCF (WcfTestClient.exe)
 Client de Test de Windows Communication Foundation (WCF) (WcfTestClient.exe) est un outil GUI qui permet aux utilisateurs d’entrer des paramètres de test, envoyer ces entrées au service et afficher la réponse que le service renvoie. Il offre de service transparentes lorsqu’il est associé avec l’hôte de Service WCF de test.  
@@ -166,4 +166,5 @@ Client de Test de Windows Communication Foundation (WCF) (WcfTestClient.exe) est
 -   Cliquez sur le **hôte de Service WCF** icône dans la zone de notification, puis cliquez sur **Exit.** Cela arrête d’hôte de Service WCF et le Client Test WCF et arrête le processus de débogage de Visual Studio.  
   
 ## <a name="see-also"></a>Voir aussi
-- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+
+- [Hôte de service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

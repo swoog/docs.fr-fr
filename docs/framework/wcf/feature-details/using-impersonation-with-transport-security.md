@@ -2,12 +2,12 @@
 title: Utilisation de l'emprunt d'identité avec la sécurité de transport
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151435"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilisation de l'emprunt d'identité avec la sécurité de transport
 *L’emprunt d’identité* est la capacité d’une application serveur pour prendre l’identité du client. Les services utilisent couramment l'emprunt d'identité lors de la validation de l'accès aux ressources. L'application serveur s'exécute à l'aide d'un compte de service, mais lorsque le serveur accepte une connexion cliente, il emprunte l'identité du client afin d'exécuter des contrôles d'accès à l'aide des informations d'identification du client. La sécurité de transport est un mécanisme permettant à la fois de passer des informations d'identification et sécuriser les communications à l'aide de ces informations. Cette rubrique décrit l’utilisation de la sécurité du transport dans Windows Communication Foundation (WCF) avec la fonctionnalité d’emprunt d’identité. Pour plus d’informations sur l’emprunt d’identité à l’aide de la sécurité des messages, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -55,7 +55,8 @@ ms.locfileid: "54532706"
  Pour plus d’informations sur le transport HTTP, consultez [choix d’un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Guide pratique pour Emprunter l’identité d’un Client sur un Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Fonctionnement de l’authentification HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+- [Procédure : emprunter l’identité d’un client sur un service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Fonctionnement de l'authentification HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

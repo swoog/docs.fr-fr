@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Verrouiller les contrôles aux Windows Forms'
+title: 'Procédure : verrouiller des contrôles avec des Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117921"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Procédure : Verrouiller les contrôles aux Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Procédure : verrouiller des contrôles avec des Windows Forms
 Lorsque vous concevez l’interface utilisateur (IU) de votre application Windows, vous pouvez verrouiller les contrôles une fois qu’ils sont correctement placés, afin que vous ne pas par inadvertance de déplacer ou de les redimensionner lors de la définition d’autres propriétés.  
   
  En outre, vous pouvez verrouiller et déverrouiller tous les contrôles sur le formulaire à la fois, ce qui est utile pour les formulaires avec de nombreux contrôles, ou vous pouvez déverrouiller des contrôles individuels. Une fois que vous avez passé tous les contrôles où vous le souhaitez sur le formulaire, les verrouiller tout en place pour empêcher un mouvement erroné.  
@@ -47,7 +47,8 @@ Lorsque vous concevez l’interface utilisateur (IU) de votre application Window
 1.  Dans le **propriétés** fenêtre, cliquez sur le **verrouillé** propriété et sélectionnez `false`. (Double-cliquez sur le nom Active ou désactive le paramètre de propriété.)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles Windows Forms](index.md)
+
+- [contrôles Windows Forms](index.md)
 - [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
 - [Création d'étiquettes et de raccourcis pour les contrôles Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

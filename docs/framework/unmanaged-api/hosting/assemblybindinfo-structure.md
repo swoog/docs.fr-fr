@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0247f356bfc9f354edc420ea5460da02b17ab116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112812"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo, structure
 Fournit des informations détaillées sur l’assembly référencé.  
@@ -49,17 +49,18 @@ typedef struct _AssemblyBindInfo {
 ## <a name="remarks"></a>Notes  
  L’hôte fournit l’identificateur unique `dwAppDomainId` pour le common language runtime (CLR). Après un appel à `IHostAssemblyStore::ProvideAssembly` retourne, le runtime utilise l’identificateur pour déterminer si le contenu de la `IStream` ont été mappés. Dans ce cas, le runtime charge la copie existante plutôt que de remapper le flux. Le runtime utilise également cet identificateur en tant que clé de recherche des flux retournés d’appels à [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). Par conséquent, l’identificateur doit être unique pour les demandes de module et pour les demandes de l’assembly.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+
+- [Structures d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [ICLRAssemblyIdentityManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

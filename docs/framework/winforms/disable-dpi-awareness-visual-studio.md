@@ -1,21 +1,24 @@
 ---
 title: Désactiver la prise en charge-DPI dans Visual Studio
-description: Présente les limitations du Concepteur de formulaires Windows sur les écrans HDPI et l’exécution de Visual Studio comme un processus dépendant PPP.
-ms.date: 03/19/2019
+description: Présente les limitations du Concepteur de Windows Forms sur les écrans HDPI et l’exécution de Visual Studio comme un processus dépendant PPP.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181378"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
 Visual Studio est un points par pouce (PPP) application prenant en charge, ce qui signifie que les échelles affichage automatiquement. Si une application indique qu’il n’est pas reconnaissant les résolutions, le système d’exploitation met à l’échelle de l’application sous forme de bitmap. Ce comportement est également appelé virtualisation de PPP. L’application croit toujours qu’il s’exécute à la mise à l’échelle de 100 % ou 96 PPP.
+
+Cet article décrit les limitations du Concepteur de formulaires Windows sur les écrans HDPI et l’exécution de Visual Studio comme un processus dépendant PPP.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Concepteur Windows Forms sur les écrans HDPI
 
@@ -32,11 +35,15 @@ Lit le message **mise à l’échelle sur votre écran d’affichage principal e
 > [!NOTE]
 > Cette barre d’information a été introduite dans Visual Studio 2017 version 15.8.
 
-Si vous ne travaillez pas dans le concepteur et que vous n’avez pas besoin d’ajuster la disposition de votre formulaire, vous pouvez ignorer la barre d’information et continuer à travailler dans l’éditeur de code ou dans d’autres types de concepteurs. (Vous pouvez également [désactiver les notifications](#disable-notifications) afin que la barre d’information ne continue de s’afficher.) Uniquement les **Windows Forms Designer** est affecté. Si vous n’avez pas besoin de travailler dans le **Windows Forms Designer**, la section suivante vous aide à [résoudre le problème](#to-resolve-the-problem).
+Si vous ne travaillez pas dans le concepteur et que vous n’avez pas besoin d’ajuster la disposition de votre formulaire, vous pouvez ignorer la barre d’information et continuer à travailler dans l’éditeur de code ou dans d’autres types de concepteurs. (Vous pouvez également [désactiver les notifications](#disable-notifications) afin que la barre d’information ne continue de s’afficher.) Uniquement les **Windows Forms Designer** est affecté. Si vous n’avez pas besoin de travailler dans le **Windows Forms Designer**, la section suivante vous aide à [résoudre le problème](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Pour résoudre le problème
+## <a name="to-resolve-the-display-problem"></a>Pour résoudre le problème d’affichage
 
-Il existe trois options pour résoudre le problème d’affichage.
+Il existe trois options pour résoudre le problème d’affichage :
+
+1. [Redémarrez Visual Studio comme un processus dépendant PPP](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Ajouter une entrée de Registre](#add-a-registry-entry)
+3. [Définissez votre affichage mise à l’échelle à 100 %](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Redémarrez Visual Studio comme un processus dépendant PPP
 

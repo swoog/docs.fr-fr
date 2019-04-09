@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 825df88f4e8ee79f7159307d3f22416ddc27ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178241"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>Fonctions statiques globales de l'hébergement .NET Framework 4
 Le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduit une nouvelle méthode exportée dans MSCorEE.dll : [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
@@ -23,5 +23,6 @@ Le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduit u
  Fournit l’un des trois interfaces : [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions statiques globales d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+
+- [Fonctions statiques globales de l'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
 - [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

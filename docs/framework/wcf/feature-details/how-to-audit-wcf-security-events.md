@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125757"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procédure : Auditer les événements de sécurité Windows Communication Foundation
 Windows Communication Foundation (WCF) vous permet de consigner les événements de sécurité pour le journal des événements Windows, qui peut être affiché à l’aide de l’Observateur d’événements Windows. Cette rubrique explique comment installer une application afin qu'elle enregistre des événements de sécurité. Pour plus d’informations sur l’audit de WCF, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
   
      La propriété `SuppressAuditFailure` par défaut a la valeur `true`, afin que l'échec de l'audit n'affecte pas l'application. Sinon, une exception est levée. Tout audit exécuté avec succès entraîne l'écriture d'un suivi de détails d'information. Tout échec d'audit entraîne l'écriture d'un suivi au niveau d'erreur.  
   
-4.  Supprimez le <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> existant de la collection de comportements située dans la description d'un <xref:System.ServiceModel.ServiceHost>. La collection de comportements est accessible par le biais de la propriété <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>, qui elle-même est accessible à partir de la propriété <xref:System.ServiceModel.ServiceHostBase.Description%2A>. Puis, ajoutez le nouveau <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> à la même collection, tel qu'indiqué dans le code suivant.  
+4.  Supprimez le <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> existant de la collection de comportements située dans la description d’un <xref:System.ServiceModel.ServiceHost>. La collection de comportements est accessible par le biais de la propriété <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>, qui elle-même est accessible à partir de la propriété <xref:System.ServiceModel.ServiceHostBase.Description%2A>. Puis, ajoutez le nouveau <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> à la même collection, tel qu’indiqué dans le code suivant.  
   
      [!code-csharp[AuditingSecurityEvents#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#5)]
      [!code-vb[AuditingSecurityEvents#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#5)]  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
  Si le <xref:System.ServiceModel.AuditLogLocation> propriété est définie sur <xref:System.ServiceModel.AuditLogLocation.Security> et **auditer l’accès aux objets** n’est pas définie le **stratégie de sécurité locale**, événements d’audit ne seront pas écrites dans le journal de sécurité. Notez qu'aucun échec n'est retourné, mais que les entrées d'audit ne sont pas écrites dans le journal de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

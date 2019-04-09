@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Implémenter un formulaire qui utilise une opération d’arrière-plan'
+title: 'Procédure : implémenter un formulaire qui utilise une opération en arrière-plan'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 9fe514cce4d4aec386f9d61cb84f3a39273c35b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192158"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procédure : Implémenter un formulaire qui utilise une opération d’arrière-plan
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procédure : implémenter un formulaire qui utilise une opération en arrière-plan
 L'exemple de programme suivant crée un formulaire qui calcule les nombres de Fibonacci. Le calcul s'exécute sur un thread distinct du thread d'interface utilisateur, pour que l'interface utilisateur continue de s'exécuter sans délai lors du calcul.  
   
  Cette tâche est très bien prise en charge dans Visual Studio.  
@@ -48,7 +48,8 @@ L'exemple de programme suivant crée un formulaire qui calcule les nombres de Fi
 >  Quand vous utilisez le multithreading, vous vous exposez potentiellement à des bogues très sérieux et complexes. Consultez les [Meilleures pratiques pour le threading managé](../../../standard/threading/managed-threading-best-practices.md) avant d’implémenter une solution qui utilise le multithreading.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Bonnes pratiques de threading géré](../../../standard/threading/managed-threading-best-practices.md)
+- [Vue d’ensemble du modèle asynchrone basé sur des événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Meilleures pratiques pour le threading managé](../../../standard/threading/managed-threading-best-practices.md)

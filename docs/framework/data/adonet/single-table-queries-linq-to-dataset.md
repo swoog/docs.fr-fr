@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187640"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Requêtes d'analyse unique (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] les requêtes fonctionnent sur des sources de données qui implémentent le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Le <xref:System.Data.DataTable> classe n’implémente pas ces deux interfaces, vous devez appeler la <xref:System.Data.DataTableExtensions.AsEnumerable%2A> méthode si vous souhaitez utiliser le <xref:System.Data.DataTable> en tant que source dans le `From` clause d’une [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] requête.  
@@ -26,11 +26,12 @@ ms.locfileid: "54637247"
   
  La boucle `foreach` énumère ensuite l'objet énumérable retourné par `Select` puis génère les résultats de la requête. Parce que la requête est du type <xref:System.Linq.Enumerable>, qui implémente <xref:System.Collections.Generic.IEnumerable%601>, l'évaluation de la requête est différée jusqu'à ce que la variable de requête soit itérée au sein de la boucle `foreach`. L'évaluation de requête différée permet de conserver les requêtes en tant que valeurs qui peuvent être évaluées plusieurs fois, produisant chaque fois des résultats potentiellement différents.  
   
- La méthode <xref:System.Data.DataRowExtensions.Field%2A> fournit l'accès aux valeurs de colonne d'un <xref:System.Data.DataRow> et le <xref:System.Data.DataRowExtensions.SetField%2A> (non illustré dans l'exemple précédent) définit les valeurs de colonne dans un <xref:System.Data.DataRow>. Les deux méthodes <xref:System.Data.DataRowExtensions.Field%2A> et <xref:System.Data.DataRowExtensions.SetField%2A> gèrent des types Nullable, ce qui fait que vous n'avez pas à vérifier explicitement les valeurs Null. Les deux méthodes sont également des méthodes génériques, ce qui veut dire que vous n'avez pas à effectuer un cast du type de retour. Vous pourriez utiliser l'accesseur de colonne existant dans <xref:System.Data.DataRow> (par exemple, `o["OrderDate"]`), mais il vous faudrait alors effectuer un cast de l'objet de retour vers le type approprié.  Si la colonne est Nullable, vous devez vérifier si la valeur est Null à l'aide de la méthode <xref:System.Data.DataRow.IsNull%2A>. Pour plus d’informations, consultez [méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).  
+ La méthode <xref:System.Data.DataRowExtensions.Field%2A> fournit l'accès aux valeurs de colonne d'un <xref:System.Data.DataRow> et le <xref:System.Data.DataRowExtensions.SetField%2A> (non illustré dans l'exemple précédent) définit les valeurs de colonne dans un <xref:System.Data.DataRow>. Les deux méthodes <xref:System.Data.DataRowExtensions.Field%2A> et <xref:System.Data.DataRowExtensions.SetField%2A> gèrent des types Nullable, ce qui fait que vous n'avez pas à vérifier explicitement les valeurs Null. Les deux méthodes sont également des méthodes génériques, ce qui veut dire que vous n’avez pas à effectuer un cast du type de retour. Vous pourriez utiliser l’accesseur de colonne existant dans <xref:System.Data.DataRow> (par exemple, `o["OrderDate"]`), mais il vous faudrait alors effectuer un cast de l’objet de retour vers le type approprié.  Si la colonne est Nullable, vous devez vérifier si la valeur est Null à l'aide de la méthode <xref:System.Data.DataRow.IsNull%2A>. Pour plus d’informations, consultez [méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).  
   
  Notez que le type de données spécifié dans le paramètre générique `T` de la méthode <xref:System.Data.DataRowExtensions.Field%2A> et de la méthode <xref:System.Data.DataRowExtensions.SetField%2A> doit correspondre au type de la valeur sous-jacente, sinon une <xref:System.InvalidCastException> est levée. Le nom de la colonne spécifiée doit également correspondre à celui de la colonne dans le <xref:System.Data.DataSet>, sinon une <xref:System.ArgumentException> est levée. Dans les deux cas, l'exception est levée au moment de l'exécution de l'énumération des données lorsque la requête est exécutée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes de table croisée](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
 - [Interrogation de DataSets typés](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [Méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca922d8b582c0608073d4fd0ba986167ae470e34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109666"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy, énumération
 Fournit une valeur qui détermine si un débogueur charge les images natives (NGen) depuis le cache d'images natives.  
@@ -45,14 +45,15 @@ enum CorDebugNGENPolicy {
 ## <a name="remarks"></a>Notes  
  Le `CorDebugNGENPolicy` énumération est utilisée par le [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) (méthode). La désactivation de l’utilisation d’images à partir du cache d’images natives locales fournit une expérience de débogage cohérente en veillant à ce que le débogueur charge des images pouvant être débogués compilé par JIT au lieu des images natives optimisées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

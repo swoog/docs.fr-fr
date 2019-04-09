@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 0f2e7626cb0526ac897853374b483ad09c20d368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f198de20a3fa788fb8d5f2dc4ebf799989814756
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184000"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Fournisseurs de services de données personnalisés (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclut un jeu de fournisseurs qui vous permet de définir un modèle de données basé sur des types de données à liaison tardive.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclut un ensemble de fournisseurs qui vous permet de définir un modèle de données basé sur les types de données de la liaison tardive.  
   
 |Fournisseur|Description|  
 |--------------|-----------------|  
@@ -25,6 +25,7 @@ ms.locfileid: "54712613"
  Pour plus d’informations, consultez l’article [fournisseurs de services de données personnalisés](https://go.microsoft.com/fwlink/?LinkID=186850) et [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Provider Toolkit dans le [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Fournisseur Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
 - [Fournisseur de réflexion](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

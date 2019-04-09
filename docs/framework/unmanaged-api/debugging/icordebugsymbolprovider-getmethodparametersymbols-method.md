@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5866947160be6ceac36e0642a48b41e3df754fc8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 98efd1446c88c3a6c004b5a3254c9db835a43804
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197371"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols, méthode
 Obtient les symboles de paramètre d'une méthode en fonction de l'adresse virtuelle relative (RVA) de cette méthode.  
@@ -43,16 +43,17 @@ HRESULT GetMethodParameterSymbols(
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [GetMethodLocalSymbols, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodlocalsymbols-method.md)
 - [ICorDebugSymbolProvider, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

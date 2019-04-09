@@ -2,12 +2,12 @@
 title: Gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136433"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestion des erreurs dans Windows Communication Foundation  
@@ -16,7 +16,7 @@ ms.locfileid: "56261150"
  Ces solutions sont expliquées plus en détail dans le reste de cette section.  
   
 ### <a name="the-microsoft-enterprise-library"></a>Microsoft Enterprise Library  
- Le bloc d'application de gestion des exceptions Microsoft Enterprise Library permet d'implémenter des modèles communs de conception et de créer une stratégie cohérente de traitement des exceptions qui se produisent dans toutes les couches de l'architecture d'une application d'entreprise. Il est conçu pour prendre en charge le code spécifique contenu dans les instructions catch des composants de l'application. Au lieu de répéter ce code (par exemple le code qui stocke les informations sur l'exception) dans des blocs catch identiques d'une application, le bloc d'application de gestion des exceptions permet aux développeurs d'encapsuler cette logique comme gestionnaires d'exceptions réutilisables.  
+ Le bloc d’application de gestion des exceptions Microsoft Enterprise Library permet d’implémenter des modèles communs de conception et de créer une stratégie cohérente de traitement des exceptions qui se produisent dans toutes les couches de l’architecture d’une application d’entreprise. Il est conçu pour prendre en charge le code spécifique contenu dans les instructions catch des composants de l'application. Au lieu de répéter ce code (par exemple le code qui stocke les informations sur l'exception) dans des blocs catch identiques d'une application, le bloc d'application de gestion des exceptions permet aux développeurs d'encapsuler cette logique comme gestionnaires d'exceptions réutilisables.  
   
  Cette bibliothèque comprend un gestionnaire d'exceptions du contrat d'erreur prêt à l'emploi. Ce gestionnaire d'exceptions est conçu pour une utilisation aux limites du service Windows® Communication Foundation (WCF) et génère un nouveau contrat d'erreur à partir de l'exception.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56261150"
   
 5.  Exécuter d'autres activités personnalisées  
   
- Pour installer un gestionnaire d'erreurs personnalisé, ajoutez-le à la propriété ErrorHandlers des répartiteurs de canal de votre service.  Il est possible d'avoir plusieurs gestionnaire d'erreurs et ils sont appelés dans l'ordre où ils sont ajoutés à cette collection.  
+ Pour installer un gestionnaire d'erreurs personnalisé, ajoutez-le à la propriété ErrorHandlers des répartiteurs de canal de votre service.  Il est possible d’avoir plusieurs gestionnaire d’erreurs et ils sont appelés dans l’ordre où ils sont ajoutés à cette collection.  
   
  IErrorHandler.ProvideFault contrôle le message d'erreur qui est envoyé au client. Cette méthode est appelée quel que soit le type de l'exception levée par une opération dans votre service. Si aucune opération n'est effectuée ici, WCF suppose le comportement par défaut et continue comme si aucun gestionnaire d'erreurs personnalisé n'était installé.  
   
@@ -68,4 +68,5 @@ ms.locfileid: "56261150"
  Une erreur de distribution de conversion de type peut être inspectée de la même façon que d'autres types d'erreurs de distribution en installant un gestionnaire d'erreurs. Le point d'extensibilité d'IErrorHandler est appelé pour gérer les exceptions au niveau de service. À partir de là, choisissez la réponse à renvoyer à l’appelant, et effectuez des tâches et des rapports personnalisés.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Programmation WCF de base](../basic-wcf-programming.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Ajouter ou supprimer des Images ImageList avec le Concepteur'
+title: 'Procédure : ajouter ou supprimer des images ImageList avec le concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161523"
 ---
-# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Procédure : Ajouter ou supprimer des Images ImageList avec le Concepteur
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Procédure : ajouter ou supprimer des images ImageList avec le concepteur
 Vous pouvez ajouter des images à un <xref:System.Windows.Forms.ImageList> composant plusieurs façons différentes. Vous pouvez ajouter très rapidement des images à l’aide de la balise active associée le <xref:System.Windows.Forms.ImageList>, ou si vous définissez plusieurs autres propriétés sur le <xref:System.Windows.Forms.ImageList>, vous pouvez s’avérer plus facile d’ajouter des images avec la fenêtre Propriétés. Vous pouvez également ajouter des images à l’aide de code. Pour plus d’informations sur la façon d’ajouter des images avec le code, consultez [Comment : Ajouter ou supprimer des Images avec les Windows Forms composant ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). En général vous remplissez le <xref:System.Windows.Forms.ImageList> composant avec des images avant il est associé à un contrôle, mais cela n’est pas nécessaire.  
   
 > [!NOTE]
@@ -38,6 +38,7 @@ Vous pouvez ajouter des images à un <xref:System.Windows.Forms.ImageList> compo
 4.  Dans le **éditeur de collections d’Images** cliquez sur **ajouter** ou **supprimer** pour ajouter ou supprimer des images à partir de la liste.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](../advanced/images-bitmaps-and-metafiles.md)
-- [Procédure pas à pas : Effectuer des tâches courantes à l’aide d’intelligent des balises sur Windows Forms contrôles](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Procédure pas à pas : exécution de tâches courantes à l’aide de balises actives dans les contrôles Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList, composant](imagelist-component-windows-forms.md)

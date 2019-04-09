@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61660a668e152accee7557c8663e8eec77a953ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125935"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback, interface
 Fournit des méthodes qui sont utilisées par le common language runtime (CLR) pour signaler un profileur de code qui se produisent les événements auxquels le profileur s’est abonnée.  
@@ -94,7 +94,7 @@ Fournit des méthodes qui sont utilisées par le common language runtime (CLR) p
 |[RuntimeSuspendStarted, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|Notifie le profileur que le runtime est sur le point d’interrompre tous les threads d’exécution.|  
 |[RuntimeThreadResumed, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|Notifie le profileur que le thread spécifié a repris après avoir été interrompue.|  
 |[RuntimeThreadSuspended, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|Notifie le profileur que le thread spécifié a été ou est sur le point d’être suspendu.|  
-|[Shutdown, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Notifie le profileur que l’application est en cours d’arrêt.|  
+|[Shutdown Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Notifie le profileur que l’application est en cours d’arrêt.|  
 |[ThreadAssignedToOSThread, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|Notifie le profileur qu’un thread managé est implémenté à l’aide d’un thread de système d’exploitation (OS).|  
 |[ThreadCreated, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|Informe le profileur qu’un thread a été créé.|  
 |[ThreadDestroyed, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|Informe le profileur qu’un thread a été détruit.|  
@@ -110,16 +110,17 @@ Fournit des méthodes qui sont utilisées par le common language runtime (CLR) p
 > [!NOTE]
 >  Le profileur enregistre un objet COM unique. Si le profileur cible le .NET Framework version 1.0 ou 1.1, que l’objet COM doit implémenter uniquement les méthodes de `ICorProfilerCallback`. S’il cible .NET Framework version 2.0 ou ultérieure, l’objet COM doit également implémenter les méthodes de `ICorProfilerCallback2`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerCallback2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
 - [ICorProfilerCallback3, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)

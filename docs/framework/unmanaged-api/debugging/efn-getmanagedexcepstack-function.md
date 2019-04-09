@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e86a1d2dfeb0d36b369d3b6cd7ea985591b5959
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e201b9a350c030da59e2b6ed27f84f570c8e621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126657"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack, fonction
 Retourne une version de chaîne de la trace de pile contenue dans une adresse d'objet exception managée donnée.  
@@ -53,7 +53,7 @@ HRESULT _EFN_GetManagedExcepStack(
 ## <a name="remarks"></a>Notes  
  S’il n’existe aucun code managé sur le thread actuellement dans le contexte, la fonction retourne les HRESULT SOS_E_NOMANAGEDCODE avec une valeur de 0xa0 et un code d’erreur de 0 x 1000.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** SOS_Stacktrace.h  
@@ -61,4 +61,5 @@ HRESULT _EFN_GetManagedExcepStack(
  **Version du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions statiques globales de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+
+- [Fonctions statiques globales du débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

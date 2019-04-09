@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir des info-bulles pour les contrôles sur un formulaire Windows au moment du Design'
+title: 'Procédure : définir des info-bulles pour des contrôles dans un formulaire Windows au moment du design'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157598"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procédure : Définir des info-bulles pour les contrôles sur un formulaire Windows au moment du Design
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procédure : définir des info-bulles pour des contrôles dans un formulaire Windows au moment du design
 Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code ou dans le Concepteur de formulaires Windows. Pour plus d’informations sur la <xref:System.Windows.Forms.ToolTip> composant, consultez [vue d’ensemble du composant ToolTip](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code
 2.  Dans le **propriétés** fenêtre, supprimez le texte dans le **info-bulle sur ToolTip1**.  
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble du composant ToolTip](tooltip-component-overview-windows-forms.md)
-- [Guide pratique pour Modifier la durée avant affichage du composant ToolTip Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [Procédure : modifier le délai du composant ToolTip Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip, composant](tooltip-component-windows-forms.md)

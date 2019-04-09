@@ -2,12 +2,12 @@
 title: Fonctions et types de données
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151942"
 ---
 # <a name="data-types-and-functions"></a>Fonctions et types de données
 Les rubriques répertoriées dans le tableau suivant décrivent la prise en charge de LINQ to SQL pour les membres, les constructions et les casts du Common Language Runtime (CLR). Les membres et constructions pris en charge peuvent être utilisés dans vos requêtes LINQ to SQL.  
@@ -29,8 +29,9 @@ Les rubriques répertoriées dans le tableau suivant décrivent la prise en char
 |[System.Object, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|Résume les différences de comportement par rapport au [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[System.String, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Résume les différences de comportement par rapport au [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[System.TimeSpan, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Décrit la prise en charge de LINQ to SQL pour les membres de la structure <xref:System.TimeSpan?displayProperty=nameWithType>.|  
-|[Fonctionnalité non prise en charge](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Décrit les fonctionnalités qui ne sont pas prises en charge dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|[Fonctionnalités non prises en charge](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Décrit les fonctionnalités qui ne sont pas prises en charge dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Incompatibilité entre types SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

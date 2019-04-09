@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208291"
 ---
 # <a name="subtypes-element-net-native"></a>\<Sous-types >, élément (.NET Native)
 Applique la stratégie runtime à toutes les classes héritées du type conteneur.  
@@ -49,7 +49,7 @@ Applique la stratégie runtime à toutes les classes héritées du type conteneu
   
 ## <a name="all-attributes"></a>Tous les attributs  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*paramètre_stratégie*|Paramètre à appliquer à ce type de stratégie. Les valeurs possibles sont `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` et `Required All`. Pour plus d’informations, consultez [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -90,6 +90,7 @@ Applique la stratégie runtime à toutes les classes héritées du type conteneu
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<Type > élément](../../../docs/framework/net-native/type-element-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
