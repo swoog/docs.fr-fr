@@ -6,29 +6,30 @@ helpviewer_keywords:
 - status bars
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-ms.openlocfilehash: 809590ff19619b3693466d4f6a0567ff1e5ab38a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194108"
 ---
-# <a name="toolstripstatuslabel-control"></a><span data-ttu-id="6a530-102">ToolStripStatusLabel, contrôle</span><span class="sxs-lookup"><span data-stu-id="6a530-102">ToolStripStatusLabel Control</span></span>
-<span data-ttu-id="6a530-103">Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage dans un <xref:System.Windows.Forms.StatusStrip> du texte, images ou les deux.</span><span class="sxs-lookup"><span data-stu-id="6a530-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> provides a display area in a <xref:System.Windows.Forms.StatusStrip> for text, images, or both.</span></span>  
+# <a name="toolstripstatuslabel-control"></a><span data-ttu-id="02245-102">ToolStripStatusLabel, contrôle</span><span class="sxs-lookup"><span data-stu-id="02245-102">ToolStripStatusLabel Control</span></span>
+<span data-ttu-id="02245-103">Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage dans un <xref:System.Windows.Forms.StatusStrip> du texte, images ou les deux.</span><span class="sxs-lookup"><span data-stu-id="02245-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> provides a display area in a <xref:System.Windows.Forms.StatusStrip> for text, images, or both.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6a530-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6a530-104">In This Section</span></span>  
- [<span data-ttu-id="6a530-105">Vue d’ensemble du contrôle ToolStripStatusLabel</span><span class="sxs-lookup"><span data-stu-id="6a530-105">ToolStripStatusLabel Control Overview</span></span>](toolstripstatuslabel-control-overview.md)  
- <span data-ttu-id="6a530-106">Fournit des rubriques qui décrivent la fonction et les principaux concepts du contrôle Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="6a530-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel> control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="02245-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="02245-104">In This Section</span></span>  
+ [<span data-ttu-id="02245-105">Vue d'ensemble du contrôle ToolStripStatusLabel</span><span class="sxs-lookup"><span data-stu-id="02245-105">ToolStripStatusLabel Control Overview</span></span>](toolstripstatuslabel-control-overview.md)  
+ <span data-ttu-id="02245-106">Fournit des rubriques qui décrivent la fonction et les principaux concepts du contrôle Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="02245-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel> control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="6a530-107">Référence</span><span class="sxs-lookup"><span data-stu-id="6a530-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="02245-107">Référence</span><span class="sxs-lookup"><span data-stu-id="02245-107">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <span data-ttu-id="6a530-108">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="6a530-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripStatusLabel> control.</span></span>  
+ <span data-ttu-id="02245-108">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="02245-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripStatusLabel> control.</span></span>  
   
  <xref:System.Windows.Forms.StatusStrip>  
- <span data-ttu-id="6a530-109">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="6a530-109">Provides reference documentation for the <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
+ <span data-ttu-id="02245-109">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="02245-109">Provides reference documentation for the <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripProgressBar>  
- <span data-ttu-id="6a530-110">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="6a530-110">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
+ <span data-ttu-id="02245-110">Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="02245-110">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a530-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6a530-111">See also</span></span>
-- [<span data-ttu-id="6a530-112">Contrôles à utiliser dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6a530-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="02245-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="02245-111">See also</span></span>
+
+- [<span data-ttu-id="02245-112">Contrôles à utiliser dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="02245-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66d650adb39a9c7dade0936ec671ae5a8b4aeecd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170061"
 ---
-# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="fbee7-102">CorNativeLinkType, énumération</span><span class="sxs-lookup"><span data-stu-id="fbee7-102">CorNativeLinkType Enumeration</span></span>
-<span data-ttu-id="fbee7-103">Fournit des valeurs qui indiquent le type lié en code natif.</span><span class="sxs-lookup"><span data-stu-id="fbee7-103">Provides values that indicate the type linked in native code.</span></span>  
+# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="9586e-102">CorNativeLinkType, énumération</span><span class="sxs-lookup"><span data-stu-id="9586e-102">CorNativeLinkType Enumeration</span></span>
+<span data-ttu-id="9586e-103">Fournit des valeurs qui indiquent le type lié en code natif.</span><span class="sxs-lookup"><span data-stu-id="9586e-103">Provides values that indicate the type linked in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbee7-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fbee7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9586e-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="9586e-104">Syntax</span></span>  
   
 ```  
 typedef enum   
@@ -40,25 +40,26 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fbee7-105">Membres</span><span class="sxs-lookup"><span data-stu-id="fbee7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9586e-105">Membres</span><span class="sxs-lookup"><span data-stu-id="9586e-105">Members</span></span>  
   
-|<span data-ttu-id="fbee7-106">Membre</span><span class="sxs-lookup"><span data-stu-id="fbee7-106">Member</span></span>|<span data-ttu-id="fbee7-107">Description</span><span class="sxs-lookup"><span data-stu-id="fbee7-107">Description</span></span>|  
+|<span data-ttu-id="9586e-106">Membre</span><span class="sxs-lookup"><span data-stu-id="9586e-106">Member</span></span>|<span data-ttu-id="9586e-107">Description</span><span class="sxs-lookup"><span data-stu-id="9586e-107">Description</span></span>|  
 |------------|-----------------|  
-|`nltNone`|<span data-ttu-id="fbee7-108">Indique qu’aucun des mots clés sont spécifiés.</span><span class="sxs-lookup"><span data-stu-id="fbee7-108">Indicates that none of the keywords are specified.</span></span>|  
-|`nltAnsi`|<span data-ttu-id="fbee7-109">Indique qu’un mot clé ANSI est spécifié.</span><span class="sxs-lookup"><span data-stu-id="fbee7-109">Indicates that an ANSI keyword is specified.</span></span>|  
-|`nltUnicode`|<span data-ttu-id="fbee7-110">Indique qu’un mot clé Unicode est spécifié.</span><span class="sxs-lookup"><span data-stu-id="fbee7-110">Indicates that a Unicode keyword is specified</span></span>|  
-|`nltAuto`|<span data-ttu-id="fbee7-111">Indique qu’un mot clé auto est spécifié.</span><span class="sxs-lookup"><span data-stu-id="fbee7-111">Indicates that an auto keyword is specified.</span></span>|  
-|`nltOle`|<span data-ttu-id="fbee7-112">Indique qu’un mot clé OLE est spécifié.</span><span class="sxs-lookup"><span data-stu-id="fbee7-112">Indicates that an OLE keyword is specified.</span></span>|  
-|`nltMaxValue`|<span data-ttu-id="fbee7-113">Non utilisé.</span><span class="sxs-lookup"><span data-stu-id="fbee7-113">Not used.</span></span>|  
+|`nltNone`|<span data-ttu-id="9586e-108">Indique qu’aucun des mots clés sont spécifiés.</span><span class="sxs-lookup"><span data-stu-id="9586e-108">Indicates that none of the keywords are specified.</span></span>|  
+|`nltAnsi`|<span data-ttu-id="9586e-109">Indique qu’un mot clé ANSI est spécifié.</span><span class="sxs-lookup"><span data-stu-id="9586e-109">Indicates that an ANSI keyword is specified.</span></span>|  
+|`nltUnicode`|<span data-ttu-id="9586e-110">Indique qu’un mot clé Unicode est spécifié.</span><span class="sxs-lookup"><span data-stu-id="9586e-110">Indicates that a Unicode keyword is specified</span></span>|  
+|`nltAuto`|<span data-ttu-id="9586e-111">Indique qu’un mot clé auto est spécifié.</span><span class="sxs-lookup"><span data-stu-id="9586e-111">Indicates that an auto keyword is specified.</span></span>|  
+|`nltOle`|<span data-ttu-id="9586e-112">Indique qu’un mot clé OLE est spécifié.</span><span class="sxs-lookup"><span data-stu-id="9586e-112">Indicates that an OLE keyword is specified.</span></span>|  
+|`nltMaxValue`|<span data-ttu-id="9586e-113">Non utilisé.</span><span class="sxs-lookup"><span data-stu-id="9586e-113">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fbee7-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="fbee7-114">Requirements</span></span>  
- <span data-ttu-id="fbee7-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fbee7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9586e-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="9586e-114">Requirements</span></span>  
+ <span data-ttu-id="9586e-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9586e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fbee7-116">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fbee7-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9586e-116">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9586e-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fbee7-117">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fbee7-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9586e-117">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9586e-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fbee7-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fbee7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="9586e-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="9586e-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fbee7-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fbee7-119">See also</span></span>
-- [<span data-ttu-id="fbee7-120">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="fbee7-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="9586e-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9586e-119">See also</span></span>
+
+- [<span data-ttu-id="9586e-120">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="9586e-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

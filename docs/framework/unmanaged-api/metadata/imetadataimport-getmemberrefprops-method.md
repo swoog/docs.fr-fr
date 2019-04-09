@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbc297ce129ba223d85b5e13da1f046b3010f4d3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a2c431abb7a4a872454b9c2689ee195ed36ef236
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177007"
 ---
-# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="782e1-102">IMetaDataImport::GetMemberRefProps, méthode</span><span class="sxs-lookup"><span data-stu-id="782e1-102">IMetaDataImport::GetMemberRefProps Method</span></span>
-<span data-ttu-id="782e1-103">Obtient les métadonnées associées au membre référencé par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="782e1-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
+# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="7169d-102">IMetaDataImport::GetMemberRefProps, méthode</span><span class="sxs-lookup"><span data-stu-id="7169d-102">IMetaDataImport::GetMemberRefProps Method</span></span>
+<span data-ttu-id="7169d-103">Obtient les métadonnées associées au membre référencé par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="7169d-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="782e1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="782e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7169d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7169d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemberRefProps (  
@@ -41,37 +41,38 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="782e1-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="782e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7169d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7169d-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="782e1-106">[in] Le jeton MemberRef pour retourner les métadonnées associées.</span><span class="sxs-lookup"><span data-stu-id="782e1-106">[in] The MemberRef token to return associated metadata for.</span></span>  
+ <span data-ttu-id="7169d-106">[in] Le jeton MemberRef pour retourner les métadonnées associées.</span><span class="sxs-lookup"><span data-stu-id="7169d-106">[in] The MemberRef token to return associated metadata for.</span></span>  
   
  `ptk`  
- <span data-ttu-id="782e1-107">[out] Jeton TypeDef ou TypeRef ou TypeSpec qui représente la classe qui déclare le membre, ou un jeton ModuleRef qui représente la classe de module qui déclare le membre, ou MethodDef qui représente le membre.</span><span class="sxs-lookup"><span data-stu-id="782e1-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
+ <span data-ttu-id="7169d-107">[out] Jeton TypeDef ou TypeRef ou TypeSpec qui représente la classe qui déclare le membre, ou un jeton ModuleRef qui représente la classe de module qui déclare le membre, ou MethodDef qui représente le membre.</span><span class="sxs-lookup"><span data-stu-id="7169d-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="782e1-108">[out] Un mémoire tampon de chaîne pour le nom du membre.</span><span class="sxs-lookup"><span data-stu-id="782e1-108">[out] A string buffer for the member's name.</span></span>  
+ <span data-ttu-id="7169d-108">[out] Un mémoire tampon de chaîne pour le nom du membre.</span><span class="sxs-lookup"><span data-stu-id="7169d-108">[out] A string buffer for the member's name.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="782e1-109">[in] La taille demandée en caractères larges de `szMember`.</span><span class="sxs-lookup"><span data-stu-id="782e1-109">[in] The requested size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="7169d-109">[in] La taille demandée en caractères larges de `szMember`.</span><span class="sxs-lookup"><span data-stu-id="7169d-109">[in] The requested size in wide characters of `szMember`.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="782e1-110">[out] La taille retournée en caractères larges de `szMember`.</span><span class="sxs-lookup"><span data-stu-id="782e1-110">[out] The returned size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="7169d-110">[out] La taille retournée en caractères larges de `szMember`.</span><span class="sxs-lookup"><span data-stu-id="7169d-110">[out] The returned size in wide characters of `szMember`.</span></span>  
   
  `ppvSibBlob`  
- <span data-ttu-id="782e1-111">[out] Pointeur vers la signature de métadonnées binaires pour le membre.</span><span class="sxs-lookup"><span data-stu-id="782e1-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
+ <span data-ttu-id="7169d-111">[out] Pointeur vers la signature de métadonnées binaires pour le membre.</span><span class="sxs-lookup"><span data-stu-id="7169d-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
   
  `pbSig`  
- <span data-ttu-id="782e1-112">[out] La taille en octets de `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="782e1-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="7169d-112">[out] La taille en octets de `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="7169d-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="782e1-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="782e1-113">Requirements</span></span>  
- <span data-ttu-id="782e1-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="782e1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7169d-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="7169d-113">Requirements</span></span>  
+ <span data-ttu-id="7169d-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7169d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="782e1-115">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="782e1-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7169d-115">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7169d-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="782e1-116">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="782e1-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7169d-116">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7169d-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="782e1-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="782e1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="7169d-117">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="7169d-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="782e1-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="782e1-118">See also</span></span>
-- [<span data-ttu-id="782e1-119">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="782e1-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="782e1-120">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="782e1-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7169d-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7169d-118">See also</span></span>
+
+- [<span data-ttu-id="7169d-119">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="7169d-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7169d-120">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="7169d-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

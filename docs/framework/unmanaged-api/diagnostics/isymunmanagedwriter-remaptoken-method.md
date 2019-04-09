@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4a486b9dfb72c05a9e614fca22626dd84a83f7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 979d14b4c404c3bf12c427bd5b8b1d4997805e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160678"
 ---
-# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="23857-102">ISymUnmanagedWriter::RemapToken, méthode</span><span class="sxs-lookup"><span data-stu-id="23857-102">ISymUnmanagedWriter::RemapToken Method</span></span>
-<span data-ttu-id="23857-103">Avertit le writer de symbole qu’un jeton de métadonnées a été remappé comme les métadonnées a été émises.</span><span class="sxs-lookup"><span data-stu-id="23857-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="23857-104">Si le writer de symbole a stocké l’ancien jeton dans le magasin de symboles, il doit soit mettre à jour que le jeton stocké avec la nouvelle valeur, soit enregistrer le mappage pour le lecteur de symboles correspondant à remapper pendant la phase de lecture.</span><span class="sxs-lookup"><span data-stu-id="23857-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
+# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="d704f-102">ISymUnmanagedWriter::RemapToken, méthode</span><span class="sxs-lookup"><span data-stu-id="d704f-102">ISymUnmanagedWriter::RemapToken Method</span></span>
+<span data-ttu-id="d704f-103">Avertit le writer de symbole qu’un jeton de métadonnées a été remappé comme les métadonnées a été émises.</span><span class="sxs-lookup"><span data-stu-id="d704f-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="d704f-104">Si le writer de symbole a stocké l’ancien jeton dans le magasin de symboles, il doit soit mettre à jour que le jeton stocké avec la nouvelle valeur, soit enregistrer le mappage pour le lecteur de symboles correspondant à remapper pendant la phase de lecture.</span><span class="sxs-lookup"><span data-stu-id="d704f-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23857-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="23857-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d704f-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d704f-105">Syntax</span></span>  
   
 ```  
 HRESULT RemapToken(  
@@ -35,18 +35,19 @@ HRESULT RemapToken(
     [in] mdToken  newToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="23857-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="23857-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d704f-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="d704f-106">Parameters</span></span>  
  `oldToken`  
- <span data-ttu-id="23857-107">[in] Le jeton de métadonnées qui a été remappé.</span><span class="sxs-lookup"><span data-stu-id="23857-107">[in] The metadata token that was remapped.</span></span>  
+ <span data-ttu-id="d704f-107">[in] Le jeton de métadonnées qui a été remappé.</span><span class="sxs-lookup"><span data-stu-id="d704f-107">[in] The metadata token that was remapped.</span></span>  
   
  `newToken`  
- <span data-ttu-id="23857-108">[in] Le nouveau jeton de métadonnées auquel `oldToken` a été remappée.</span><span class="sxs-lookup"><span data-stu-id="23857-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
+ <span data-ttu-id="d704f-108">[in] Le nouveau jeton de métadonnées auquel `oldToken` a été remappée.</span><span class="sxs-lookup"><span data-stu-id="d704f-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="23857-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="23857-109">Return Value</span></span>  
- <span data-ttu-id="23857-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="23857-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d704f-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="d704f-109">Return Value</span></span>  
+ <span data-ttu-id="d704f-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="d704f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23857-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="23857-111">Requirements</span></span>  
- <span data-ttu-id="23857-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="23857-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d704f-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="d704f-111">Requirements</span></span>  
+ <span data-ttu-id="d704f-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d704f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23857-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="23857-113">See also</span></span>
-- [<span data-ttu-id="23857-114">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="23857-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d704f-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d704f-113">See also</span></span>
+
+- [<span data-ttu-id="d704f-114">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="d704f-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

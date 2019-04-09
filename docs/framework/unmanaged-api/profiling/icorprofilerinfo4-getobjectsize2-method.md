@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb82f45ab9008f7c6da95b6f74a4e121badb95c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 15829e08a755b91ff91ca939b92a5a87bd377e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176291"
 ---
-# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="66872-102">ICorProfilerInfo4::GetObjectSize2, méthode</span><span class="sxs-lookup"><span data-stu-id="66872-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
-<span data-ttu-id="66872-103">Retourne la taille d’un objet spécifié.</span><span class="sxs-lookup"><span data-stu-id="66872-103">Returns the size of a specified object.</span></span> <span data-ttu-id="66872-104">Remplace le [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) méthode en signalant les tailles des objets supérieurs à ce qui peut être exprimé dans un `ULONG`.</span><span class="sxs-lookup"><span data-stu-id="66872-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
+# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="50cbd-102">ICorProfilerInfo4::GetObjectSize2, méthode</span><span class="sxs-lookup"><span data-stu-id="50cbd-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
+<span data-ttu-id="50cbd-103">Retourne la taille d’un objet spécifié.</span><span class="sxs-lookup"><span data-stu-id="50cbd-103">Returns the size of a specified object.</span></span> <span data-ttu-id="50cbd-104">Remplace le [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) méthode en signalant les tailles des objets supérieurs à ce qui peut être exprimé dans un `ULONG`.</span><span class="sxs-lookup"><span data-stu-id="50cbd-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66872-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="66872-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50cbd-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="50cbd-105">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectSize2(  
@@ -35,24 +35,25 @@ HRESULT GetObjectSize2(
     [out] SIZE_T *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="66872-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="66872-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50cbd-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="50cbd-106">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="66872-107">[in] L’ID de l’objet.</span><span class="sxs-lookup"><span data-stu-id="66872-107">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="50cbd-107">[in] L’ID de l’objet.</span><span class="sxs-lookup"><span data-stu-id="50cbd-107">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="66872-108">[out] Pointeur vers la taille de l’objet, en octets.</span><span class="sxs-lookup"><span data-stu-id="66872-108">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="50cbd-108">[out] Pointeur vers la taille de l’objet, en octets.</span><span class="sxs-lookup"><span data-stu-id="50cbd-108">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="66872-109">Notes</span><span class="sxs-lookup"><span data-stu-id="66872-109">Remarks</span></span>  
- <span data-ttu-id="66872-110">Différents objets des mêmes types ont souvent la même taille.</span><span class="sxs-lookup"><span data-stu-id="66872-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="66872-111">Toutefois, certains types, tels que des tableaux ou des chaînes, peuvent avoir une taille différente pour chaque objet.</span><span class="sxs-lookup"><span data-stu-id="66872-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50cbd-109">Notes</span><span class="sxs-lookup"><span data-stu-id="50cbd-109">Remarks</span></span>  
+ <span data-ttu-id="50cbd-110">Différents objets des mêmes types ont souvent la même taille.</span><span class="sxs-lookup"><span data-stu-id="50cbd-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="50cbd-111">Toutefois, certains types, tels que des tableaux ou des chaînes, peuvent avoir une taille différente pour chaque objet.</span><span class="sxs-lookup"><span data-stu-id="50cbd-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66872-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="66872-112">Requirements</span></span>  
- <span data-ttu-id="66872-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66872-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50cbd-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="50cbd-112">Requirements</span></span>  
+ <span data-ttu-id="50cbd-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50cbd-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="66872-114">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="66872-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="50cbd-114">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="50cbd-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="66872-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66872-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50cbd-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50cbd-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="66872-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66872-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="50cbd-116">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="50cbd-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="66872-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="66872-117">See also</span></span>
-- [<span data-ttu-id="66872-118">ICorProfilerInfo4, interface</span><span class="sxs-lookup"><span data-stu-id="66872-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+## <a name="see-also"></a><span data-ttu-id="50cbd-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="50cbd-117">See also</span></span>
+
+- [<span data-ttu-id="50cbd-118">ICorProfilerInfo4, interface</span><span class="sxs-lookup"><span data-stu-id="50cbd-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)

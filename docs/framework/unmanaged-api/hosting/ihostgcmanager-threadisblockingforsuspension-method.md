@@ -17,51 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d338b03247f1304f065afc459eb70aac725937c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 740f408b84dad67ee20c2508ae42a9569ed095f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179866"
 ---
-# <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a><span data-ttu-id="6b141-102">IHostGCManager::ThreadIsBlockingForSuspension, méthode</span><span class="sxs-lookup"><span data-stu-id="6b141-102">IHostGCManager::ThreadIsBlockingForSuspension Method</span></span>
-<span data-ttu-id="6b141-103">Avertit l’hôte que le thread à partir duquel l’appel de méthode a été effectué sur le point de bloquer pendant un garbage collection.</span><span class="sxs-lookup"><span data-stu-id="6b141-103">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>  
+# <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a><span data-ttu-id="3f0b4-102">IHostGCManager::ThreadIsBlockingForSuspension, méthode</span><span class="sxs-lookup"><span data-stu-id="3f0b4-102">IHostGCManager::ThreadIsBlockingForSuspension Method</span></span>
+<span data-ttu-id="3f0b4-103">Avertit l’hôte que le thread à partir duquel l’appel de méthode a été effectué sur le point de bloquer pendant un garbage collection.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-103">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b141-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6b141-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f0b4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3f0b4-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadIsBlockingForSuspension ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="6b141-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="6b141-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f0b4-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="3f0b4-105">Return Value</span></span>  
   
-|<span data-ttu-id="6b141-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6b141-106">HRESULT</span></span>|<span data-ttu-id="6b141-107">Description</span><span class="sxs-lookup"><span data-stu-id="6b141-107">Description</span></span>|  
+|<span data-ttu-id="3f0b4-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3f0b4-106">HRESULT</span></span>|<span data-ttu-id="3f0b4-107">Description</span><span class="sxs-lookup"><span data-stu-id="3f0b4-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="6b141-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="6b141-108">S_OK</span></span>|<span data-ttu-id="6b141-109">`ThreadIsBlockingForSuspension` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="6b141-109">`ThreadIsBlockingForSuspension` returned successfully.</span></span>|  
-|<span data-ttu-id="6b141-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="6b141-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="6b141-111">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="6b141-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="6b141-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="6b141-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="6b141-113">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="6b141-113">The call timed out.</span></span>|  
-|<span data-ttu-id="6b141-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="6b141-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="6b141-115">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="6b141-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="6b141-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="6b141-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="6b141-117">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="6b141-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="6b141-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="6b141-118">E_FAIL</span></span>|<span data-ttu-id="6b141-119">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="6b141-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="6b141-120">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="6b141-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="6b141-121">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="6b141-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3f0b4-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="3f0b4-108">S_OK</span></span>|`ThreadIsBlockingForSuspension` <span data-ttu-id="3f0b4-109">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-109">returned successfully.</span></span>|  
+|<span data-ttu-id="3f0b4-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3f0b4-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3f0b4-111">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3f0b4-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3f0b4-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3f0b4-113">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-113">The call timed out.</span></span>|  
+|<span data-ttu-id="3f0b4-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3f0b4-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3f0b4-115">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3f0b4-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3f0b4-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3f0b4-117">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3f0b4-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3f0b4-118">E_FAIL</span></span>|<span data-ttu-id="3f0b4-119">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3f0b4-120">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3f0b4-121">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6b141-122">Notes</span><span class="sxs-lookup"><span data-stu-id="6b141-122">Remarks</span></span>  
- <span data-ttu-id="6b141-123">Le CLR appelle généralement la `ThreadIsBlockForSuspension` méthode dans la préparation d’une garbage collection, pour permettre à l’hôte de replanifier le thread pour les tâches non managées.</span><span class="sxs-lookup"><span data-stu-id="6b141-123">The CLR typically calls the `ThreadIsBlockForSuspension` method in preparation for a garbage collection, to give the host an opportunity to reschedule the thread for unmanaged tasks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f0b4-122">Notes</span><span class="sxs-lookup"><span data-stu-id="3f0b4-122">Remarks</span></span>  
+ <span data-ttu-id="3f0b4-123">Le CLR appelle généralement la `ThreadIsBlockForSuspension` méthode dans la préparation d’une garbage collection, pour permettre à l’hôte de replanifier le thread pour les tâches non managées.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-123">The CLR typically calls the `ThreadIsBlockForSuspension` method in preparation for a garbage collection, to give the host an opportunity to reschedule the thread for unmanaged tasks.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="6b141-124">L’hôte peut replanifier des tâches uniquement après un appel à `ThreadIsBlockingForSuspension`.</span><span class="sxs-lookup"><span data-stu-id="6b141-124">The host can reschedule tasks only after a call to `ThreadIsBlockingForSuspension`.</span></span> <span data-ttu-id="6b141-125">Une fois le runtime appelle [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), l’hôte ne doit pas replanifier une tâche.</span><span class="sxs-lookup"><span data-stu-id="6b141-125">After the runtime calls [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), the host must not reschedule a task.</span></span>  
+>  <span data-ttu-id="3f0b4-124">L’hôte peut replanifier des tâches uniquement après un appel à `ThreadIsBlockingForSuspension`.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-124">The host can reschedule tasks only after a call to `ThreadIsBlockingForSuspension`.</span></span> <span data-ttu-id="3f0b4-125">Une fois le runtime appelle [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), l’hôte ne doit pas replanifier une tâche.</span><span class="sxs-lookup"><span data-stu-id="3f0b4-125">After the runtime calls [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), the host must not reschedule a task.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b141-126">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6b141-126">Requirements</span></span>  
- <span data-ttu-id="6b141-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b141-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f0b4-126">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="3f0b4-126">Requirements</span></span>  
+ <span data-ttu-id="3f0b4-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f0b4-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b141-128">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6b141-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3f0b4-128">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3f0b4-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6b141-129">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6b141-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3f0b4-129">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3f0b4-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6b141-130">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b141-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="3f0b4-130">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="3f0b4-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6b141-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6b141-131">See also</span></span>
-- [<span data-ttu-id="6b141-132">ICLRTask, interface</span><span class="sxs-lookup"><span data-stu-id="6b141-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="6b141-133">ICLRTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="6b141-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="6b141-134">IHostTask, interface</span><span class="sxs-lookup"><span data-stu-id="6b141-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="6b141-135">IHostTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="6b141-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="6b141-136">IHostGCManager, interface</span><span class="sxs-lookup"><span data-stu-id="6b141-136">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3f0b4-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3f0b4-131">See also</span></span>
+
+- [<span data-ttu-id="3f0b4-132">ICLRTask, interface</span><span class="sxs-lookup"><span data-stu-id="3f0b4-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="3f0b4-133">ICLRTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="3f0b4-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="3f0b4-134">IHostTask, interface</span><span class="sxs-lookup"><span data-stu-id="3f0b4-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="3f0b4-135">IHostTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="3f0b4-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="3f0b4-136">IHostGCManager, interface</span><span class="sxs-lookup"><span data-stu-id="3f0b4-136">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)

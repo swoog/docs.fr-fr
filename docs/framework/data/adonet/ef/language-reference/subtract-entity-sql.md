@@ -2,37 +2,38 @@
 title: '- (Soustraction) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: aa179f65dbbf1f411fd137a759bb37efbdd1fb48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7eee2fdb8e61711b453f4f444cc8dc8d5a43558
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128828"
 ---
-# <a name="--subtract-entity-sql"></a><span data-ttu-id="ffa4b-102">- (soustraction) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ffa4b-102">- (Subtract) (Entity SQL)</span></span>
-<span data-ttu-id="ffa4b-103">Soustrait deux nombres.</span><span class="sxs-lookup"><span data-stu-id="ffa4b-103">Subtracts two numbers.</span></span>  
+# <a name="--subtract-entity-sql"></a><span data-ttu-id="fa0bc-102">- (soustraction) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="fa0bc-102">- (Subtract) (Entity SQL)</span></span>
+<span data-ttu-id="fa0bc-103">Soustrait deux nombres.</span><span class="sxs-lookup"><span data-stu-id="fa0bc-103">Subtracts two numbers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffa4b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ffa4b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa0bc-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fa0bc-104">Syntax</span></span>  
   
 ```  
 expression - expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="ffa4b-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="ffa4b-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="fa0bc-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="fa0bc-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="ffa4b-106">Toute expression valide de l'un des types de données numériques.</span><span class="sxs-lookup"><span data-stu-id="ffa4b-106">Any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="fa0bc-106">Toute expression valide de l'un des types de données numériques.</span><span class="sxs-lookup"><span data-stu-id="fa0bc-106">Any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="ffa4b-107">Types de résultats</span><span class="sxs-lookup"><span data-stu-id="ffa4b-107">Result Types</span></span>  
- <span data-ttu-id="ffa4b-108">Type de données qui résulte de la promotion de type implicite de deux arguments.</span><span class="sxs-lookup"><span data-stu-id="ffa4b-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="ffa4b-109">Pour plus d’informations sur la promotion de type implicite, consultez [système de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="ffa4b-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="fa0bc-107">Types de résultats</span><span class="sxs-lookup"><span data-stu-id="fa0bc-107">Result Types</span></span>  
+ <span data-ttu-id="fa0bc-108">Type de données qui résulte de la promotion de type implicite de deux arguments.</span><span class="sxs-lookup"><span data-stu-id="fa0bc-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="fa0bc-109">Pour plus d’informations sur la promotion de type implicite, consultez [système de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="fa0bc-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ffa4b-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="ffa4b-110">Example</span></span>  
- <span data-ttu-id="ffa4b-111">La requête Entity SQL ci-dessous utilise l'opérateur arithmétique - pour soustraire deux nombres.</span><span class="sxs-lookup"><span data-stu-id="ffa4b-111">The following Entity SQL query uses the - arithmetic operator to subtract two numbers.</span></span> <span data-ttu-id="ffa4b-112">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="ffa4b-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="ffa4b-113">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="ffa4b-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="fa0bc-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="fa0bc-110">Example</span></span>  
+ <span data-ttu-id="fa0bc-111">La requête Entity SQL ci-dessous utilise l'opérateur arithmétique - pour soustraire deux nombres.</span><span class="sxs-lookup"><span data-stu-id="fa0bc-111">The following Entity SQL query uses the - arithmetic operator to subtract two numbers.</span></span> <span data-ttu-id="fa0bc-112">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="fa0bc-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="fa0bc-113">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="fa0bc-113">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="ffa4b-114">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="ffa4b-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="fa0bc-114">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="fa0bc-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="ffa4b-115">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="ffa4b-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="fa0bc-115">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="fa0bc-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#SUBTRACT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#subtract)]  
   
-## <a name="see-also"></a><span data-ttu-id="ffa4b-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ffa4b-116">See also</span></span>
-- [<span data-ttu-id="ffa4b-117">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ffa4b-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="fa0bc-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa0bc-116">See also</span></span>
+
+- [<span data-ttu-id="fa0bc-117">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fa0bc-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

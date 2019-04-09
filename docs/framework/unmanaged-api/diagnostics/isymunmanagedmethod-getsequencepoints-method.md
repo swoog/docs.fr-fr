@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad9e552d31944523222798fe7dba2201461b1243
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f6b1e253fb7bf1a97f44e1eb05676fc356af9837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123706"
 ---
-# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="40585-102">ISymUnmanagedMethod::GetSequencePoints, méthode</span><span class="sxs-lookup"><span data-stu-id="40585-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
-<span data-ttu-id="40585-103">Obtient tous les points de séquence au sein de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="40585-103">Gets all the sequence points within this method.</span></span>  
+# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="fee25-102">ISymUnmanagedMethod::GetSequencePoints, méthode</span><span class="sxs-lookup"><span data-stu-id="fee25-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
+<span data-ttu-id="fee25-103">Obtient tous les points de séquence au sein de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="fee25-103">Gets all the sequence points within this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40585-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="40585-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fee25-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fee25-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSequencePoints(  
@@ -41,36 +41,37 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40585-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="40585-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fee25-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fee25-105">Parameters</span></span>  
  `cPoints`  
- <span data-ttu-id="40585-106">[in] Un `ULONG32` qui reçoit la taille de la `offsets`, `documents`, `lines`, `columns`, `endLines`, et `endColumns` tableaux.</span><span class="sxs-lookup"><span data-stu-id="40585-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
+ <span data-ttu-id="fee25-106">[in] Un `ULONG32` qui reçoit la taille de la `offsets`, `documents`, `lines`, `columns`, `endLines`, et `endColumns` tableaux.</span><span class="sxs-lookup"><span data-stu-id="fee25-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
   
  `pcPoints`  
- <span data-ttu-id="40585-107">[out] Un pointeur vers un `ULONG32` qui reçoit la longueur de la mémoire tampon requise pour contenir les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="40585-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
+ <span data-ttu-id="fee25-107">[out] Un pointeur vers un `ULONG32` qui reçoit la longueur de la mémoire tampon requise pour contenir les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="fee25-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
   
  `offsets`  
- <span data-ttu-id="40585-108">[in] Tableau dans lequel stocker le Microsoft intermediate language (MSIL) offsets à partir du début de la méthode pour les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="40585-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
+ <span data-ttu-id="fee25-108">[in] Tableau dans lequel stocker le Microsoft intermediate language (MSIL) offsets à partir du début de la méthode pour les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="fee25-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
   
  `documents`  
- <span data-ttu-id="40585-109">[in] Tableau dans lequel stocker les documents dans laquelle se trouvent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="40585-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
+ <span data-ttu-id="fee25-109">[in] Tableau dans lequel stocker les documents dans laquelle se trouvent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="fee25-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
   
  `lines`  
- <span data-ttu-id="40585-110">[in] Tableau dans lequel stocker les lignes des documents auxquelles figurent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="40585-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="fee25-110">[in] Tableau dans lequel stocker les lignes des documents auxquelles figurent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="fee25-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
   
  `columns`  
- <span data-ttu-id="40585-111">[in] Tableau dans lequel stocker les colonnes des documents auxquelles figurent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="40585-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="fee25-111">[in] Tableau dans lequel stocker les colonnes des documents auxquelles figurent les points de séquence.</span><span class="sxs-lookup"><span data-stu-id="fee25-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
   
  `endLines`  
- <span data-ttu-id="40585-112">[in] Tableau de lignes des documents auxquelles la séquence de points de fin.</span><span class="sxs-lookup"><span data-stu-id="40585-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="fee25-112">[in] Tableau de lignes des documents auxquelles la séquence de points de fin.</span><span class="sxs-lookup"><span data-stu-id="fee25-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="40585-113">[in] Tableau de colonnes des documents auxquelles la séquence de points de fin.</span><span class="sxs-lookup"><span data-stu-id="40585-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="fee25-113">[in] Tableau de colonnes des documents auxquelles la séquence de points de fin.</span><span class="sxs-lookup"><span data-stu-id="fee25-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="40585-114">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="40585-114">Return Value</span></span>  
- <span data-ttu-id="40585-115">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="40585-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fee25-114">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="fee25-114">Return Value</span></span>  
+ <span data-ttu-id="fee25-115">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="fee25-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40585-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="40585-116">Requirements</span></span>  
- <span data-ttu-id="40585-117">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="40585-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fee25-116">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="fee25-116">Requirements</span></span>  
+ <span data-ttu-id="fee25-117">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fee25-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40585-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="40585-118">See also</span></span>
-- [<span data-ttu-id="40585-119">ISymUnmanagedMethod, interface</span><span class="sxs-lookup"><span data-stu-id="40585-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fee25-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fee25-118">See also</span></span>
+
+- [<span data-ttu-id="fee25-119">ISymUnmanagedMethod, interface</span><span class="sxs-lookup"><span data-stu-id="fee25-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

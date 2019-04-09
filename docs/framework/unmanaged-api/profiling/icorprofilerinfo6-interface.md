@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo6 Interface
+title: ICorProfilerInfo6, interface
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo6
@@ -10,30 +10,31 @@ api_type:
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53120508c4810270747f749f1adfbae6ba800404
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: febe130b4d61b6179aeab3bfcd63891c38b13fbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128932"
 ---
-# <a name="icorprofilerinfo6-interface"></a><span data-ttu-id="d3687-102">ICorProfilerInfo6 Interface</span><span class="sxs-lookup"><span data-stu-id="d3687-102">ICorProfilerInfo6 Interface</span></span>
-<span data-ttu-id="d3687-103">[Pris en charge dans le .NET Framework 4.6 et versions ultérieures]</span><span class="sxs-lookup"><span data-stu-id="d3687-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  
+# <a name="icorprofilerinfo6-interface"></a><span data-ttu-id="1693d-102">ICorProfilerInfo6, interface</span><span class="sxs-lookup"><span data-stu-id="1693d-102">ICorProfilerInfo6 Interface</span></span>
+<span data-ttu-id="1693d-103">[Pris en charge dans le .NET Framework 4.6 et versions ultérieures]</span><span class="sxs-lookup"><span data-stu-id="1693d-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  
   
- <span data-ttu-id="d3687-104">Une sous-classe de [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) qui fournit un énumérateur pour toutes les méthodes qui sont définis dans un module NGen donné et un inline une méthode donnée.</span><span class="sxs-lookup"><span data-stu-id="d3687-104">A subclass of [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) that provides an enumerator for all methods that are defined in a given NGen module and inline a given method.</span></span>  
+ <span data-ttu-id="1693d-104">Une sous-classe de [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) qui fournit un énumérateur pour toutes les méthodes qui sont définis dans un module NGen donné et un inline une méthode donnée.</span><span class="sxs-lookup"><span data-stu-id="1693d-104">A subclass of [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) that provides an enumerator for all methods that are defined in a given NGen module and inline a given method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d3687-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="d3687-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1693d-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="1693d-105">Methods</span></span>  
   
-|<span data-ttu-id="d3687-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="d3687-106">Method</span></span>|<span data-ttu-id="d3687-107">Description</span><span class="sxs-lookup"><span data-stu-id="d3687-107">Description</span></span>|  
+|<span data-ttu-id="1693d-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="1693d-106">Method</span></span>|<span data-ttu-id="1693d-107">Description</span><span class="sxs-lookup"><span data-stu-id="1693d-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d3687-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, méthode</span><span class="sxs-lookup"><span data-stu-id="d3687-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|<span data-ttu-id="d3687-109">Retourne un énumérateur pour toutes les méthodes qui appartiennent à un module NGen donné et qui sont incorporées dans le corps d’une méthode donnée.</span><span class="sxs-lookup"><span data-stu-id="d3687-109">Returns an enumerator for all methods that belong to a given NGen module and that are inlined in the body of a given method.</span></span>|  
+|[<span data-ttu-id="1693d-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, méthode</span><span class="sxs-lookup"><span data-stu-id="1693d-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|<span data-ttu-id="1693d-109">Retourne un énumérateur pour toutes les méthodes qui appartiennent à un module NGen donné et qui sont incorporées dans le corps d’une méthode donnée.</span><span class="sxs-lookup"><span data-stu-id="1693d-109">Returns an enumerator for all methods that belong to a given NGen module and that are inlined in the body of a given method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3687-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="d3687-110">Requirements</span></span>  
- <span data-ttu-id="d3687-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3687-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1693d-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1693d-110">Requirements</span></span>  
+ <span data-ttu-id="1693d-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1693d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3687-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d3687-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1693d-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1693d-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d3687-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3687-113">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ **<span data-ttu-id="1693d-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="1693d-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d3687-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d3687-114">See also</span></span>
-- [<span data-ttu-id="d3687-115">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="d3687-115">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1693d-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1693d-114">See also</span></span>
+
+- [<span data-ttu-id="1693d-115">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="1693d-115">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

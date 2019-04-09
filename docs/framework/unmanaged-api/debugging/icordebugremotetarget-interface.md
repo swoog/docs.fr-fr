@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eb57295b72dade0bb396b3caa724b21722b26db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197319"
 ---
-# <a name="icordebugremotetarget-interface"></a><span data-ttu-id="6e072-102">ICorDebugRemoteTarget, interface</span><span class="sxs-lookup"><span data-stu-id="6e072-102">ICorDebugRemoteTarget Interface</span></span>
-<span data-ttu-id="6e072-103">Fournit des méthodes qui permettent aux développeurs de déboguer les applications Silverlight dans l’environnement du common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="6e072-103">Provides methods that enable developers to debug Silverlight-based applications in the common language runtime (CLR) environment.</span></span>  
+# <a name="icordebugremotetarget-interface"></a><span data-ttu-id="dd216-102">ICorDebugRemoteTarget, interface</span><span class="sxs-lookup"><span data-stu-id="dd216-102">ICorDebugRemoteTarget Interface</span></span>
+<span data-ttu-id="dd216-103">Fournit des méthodes qui permettent aux développeurs de déboguer les applications Silverlight dans l’environnement du common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="dd216-103">Provides methods that enable developers to debug Silverlight-based applications in the common language runtime (CLR) environment.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e072-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6e072-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd216-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="dd216-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugRemoteTarget  : IUnknown  
@@ -41,25 +41,26 @@ interface ICorDebugRemoteTarget  : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="6e072-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="6e072-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dd216-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="dd216-105">Methods</span></span>  
   
-|<span data-ttu-id="6e072-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="6e072-106">Method</span></span>|<span data-ttu-id="6e072-107">Description</span><span class="sxs-lookup"><span data-stu-id="6e072-107">Description</span></span>|  
+|<span data-ttu-id="dd216-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="dd216-106">Method</span></span>|<span data-ttu-id="dd216-107">Description</span><span class="sxs-lookup"><span data-stu-id="dd216-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6e072-108">ICorDebugRemoteTarget::GetHostName, méthode</span><span class="sxs-lookup"><span data-stu-id="6e072-108">ICorDebugRemoteTarget::GetHostName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|<span data-ttu-id="6e072-109">Retourne le nom d’hôte ou l’adresse IP d’un ordinateur distant.</span><span class="sxs-lookup"><span data-stu-id="6e072-109">Returns the host name or the IP address of a remote machine.</span></span>|  
+|[<span data-ttu-id="dd216-108">ICorDebugRemoteTarget::GetHostName, méthode</span><span class="sxs-lookup"><span data-stu-id="dd216-108">ICorDebugRemoteTarget::GetHostName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|<span data-ttu-id="dd216-109">Retourne le nom d’hôte ou l’adresse IP d’un ordinateur distant.</span><span class="sxs-lookup"><span data-stu-id="dd216-109">Returns the host name or the IP address of a remote machine.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e072-110">Notes</span><span class="sxs-lookup"><span data-stu-id="6e072-110">Remarks</span></span>  
- <span data-ttu-id="6e072-111">Le débogage en mode mixte (autrement dit, code managé et natif) n’est pas pris en charge sur Windows 95, Windows 98 ou Windows ME, ou sur les plateformes non x86 (par exemple, IA-64 et AMD64).</span><span class="sxs-lookup"><span data-stu-id="6e072-111">Mixed-mode (that is, managed and native code) debugging is not supported on Windows 95, Windows 98, or Windows ME, or on non-x86 platforms (such as IA-64 and AMD64).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd216-110">Notes</span><span class="sxs-lookup"><span data-stu-id="dd216-110">Remarks</span></span>  
+ <span data-ttu-id="dd216-111">Le débogage en mode mixte (autrement dit, code managé et natif) n’est pas pris en charge sur Windows 95, Windows 98 ou Windows ME, ou sur les plateformes non x86 (par exemple, IA-64 et AMD64).</span><span class="sxs-lookup"><span data-stu-id="dd216-111">Mixed-mode (that is, managed and native code) debugging is not supported on Windows 95, Windows 98, or Windows ME, or on non-x86 platforms (such as IA-64 and AMD64).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e072-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6e072-112">Requirements</span></span>  
- <span data-ttu-id="6e072-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e072-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd216-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="dd216-112">Requirements</span></span>  
+ <span data-ttu-id="dd216-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd216-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e072-114">**En-tête :** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="6e072-114">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="dd216-114">**En-tête :** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="dd216-114">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="6e072-115">**Bibliothèque :** : CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e072-115">**Library:** : CorGuids.lib</span></span>  
+ <span data-ttu-id="dd216-115">**Bibliothèque :** : CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd216-115">**Library:** : CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e072-116">**Versions du .NET framework :** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="6e072-116">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="dd216-116">**Versions du .NET framework :** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="dd216-116">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e072-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6e072-117">See also</span></span>
-- [<span data-ttu-id="6e072-118">ICorDebugRemote, interface</span><span class="sxs-lookup"><span data-stu-id="6e072-118">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [<span data-ttu-id="6e072-119">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="6e072-119">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [<span data-ttu-id="6e072-120">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="6e072-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="dd216-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="dd216-117">See also</span></span>
+
+- [<span data-ttu-id="dd216-118">ICorDebugRemote, interface</span><span class="sxs-lookup"><span data-stu-id="dd216-118">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [<span data-ttu-id="dd216-119">ICorDebug, interface</span><span class="sxs-lookup"><span data-stu-id="dd216-119">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="dd216-120">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="dd216-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
