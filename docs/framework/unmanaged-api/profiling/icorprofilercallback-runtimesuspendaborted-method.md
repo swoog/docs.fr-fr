@@ -17,37 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63d03e83e1688979e4fffe5d31d1f3c393f60e44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9aaf7325b8e7e65aa98904513cc7efe94e35087
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180563"
 ---
-# <a name="icorprofilercallbackruntimesuspendaborted-method"></a><span data-ttu-id="160c0-102">ICorProfilerCallback::RuntimeSuspendAborted, méthode</span><span class="sxs-lookup"><span data-stu-id="160c0-102">ICorProfilerCallback::RuntimeSuspendAborted Method</span></span>
-<span data-ttu-id="160c0-103">Notifie le profileur que le runtime a abandonné la suspension de runtime qui s’est produit.</span><span class="sxs-lookup"><span data-stu-id="160c0-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span></span>  
+# <a name="icorprofilercallbackruntimesuspendaborted-method"></a><span data-ttu-id="6b2e2-102">ICorProfilerCallback::RuntimeSuspendAborted, méthode</span><span class="sxs-lookup"><span data-stu-id="6b2e2-102">ICorProfilerCallback::RuntimeSuspendAborted Method</span></span>
+<span data-ttu-id="6b2e2-103">Notifie le profileur que le runtime a abandonné la suspension de runtime qui s’est produit.</span><span class="sxs-lookup"><span data-stu-id="6b2e2-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="160c0-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="160c0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b2e2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6b2e2-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="160c0-105">Notes</span><span class="sxs-lookup"><span data-stu-id="160c0-105">Remarks</span></span>  
- <span data-ttu-id="160c0-106">L’exécution peut être abandonné si deux threads tentent simultanément d’arrêter le runtime.</span><span class="sxs-lookup"><span data-stu-id="160c0-106">The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6b2e2-105">Notes</span><span class="sxs-lookup"><span data-stu-id="6b2e2-105">Remarks</span></span>  
+ <span data-ttu-id="6b2e2-106">L’exécution peut être abandonné si deux threads tentent simultanément d’arrêter le runtime.</span><span class="sxs-lookup"><span data-stu-id="6b2e2-106">The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.</span></span>  
   
- <span data-ttu-id="160c0-107">Soit le [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) rappel ou `RuntimeSuspendAborted` rappel se produira un suivant le thread unique un [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) rappel.</span><span class="sxs-lookup"><span data-stu-id="160c0-107">Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
+ <span data-ttu-id="6b2e2-107">Soit le [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) rappel ou `RuntimeSuspendAborted` rappel se produira un suivant le thread unique un [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) rappel.</span><span class="sxs-lookup"><span data-stu-id="6b2e2-107">Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
   
- <span data-ttu-id="160c0-108">Le `RuntimeSuspendAborted` rappel est assuré de se produire sur le même thread que le `RuntimeSuspendStarted` rappel.</span><span class="sxs-lookup"><span data-stu-id="160c0-108">The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.</span></span>  
+ <span data-ttu-id="6b2e2-108">Le `RuntimeSuspendAborted` rappel est assuré de se produire sur le même thread que le `RuntimeSuspendStarted` rappel.</span><span class="sxs-lookup"><span data-stu-id="6b2e2-108">The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="160c0-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="160c0-109">Requirements</span></span>  
- <span data-ttu-id="160c0-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="160c0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b2e2-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="6b2e2-109">Requirements</span></span>  
+ <span data-ttu-id="6b2e2-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b2e2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="160c0-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="160c0-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6b2e2-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6b2e2-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="160c0-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="160c0-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6b2e2-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b2e2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="160c0-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="160c0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="6b2e2-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="6b2e2-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="160c0-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="160c0-114">See also</span></span>
-- [<span data-ttu-id="160c0-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="160c0-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6b2e2-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6b2e2-114">See also</span></span>
+
+- [<span data-ttu-id="6b2e2-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="6b2e2-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

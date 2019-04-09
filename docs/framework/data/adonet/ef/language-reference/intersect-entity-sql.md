@@ -2,40 +2,41 @@
 title: INTERSECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
-ms.openlocfilehash: 2fe7a9610863efab9fd332c40f7a644cd5c07e35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4d2111425dc3222f86fdb46109442c8b365e841b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128464"
 ---
-# <a name="intersect-entity-sql"></a><span data-ttu-id="bd03d-102">INTERSECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="bd03d-102">INTERSECT (Entity SQL)</span></span>
-<span data-ttu-id="bd03d-103">Retourne une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.</span><span class="sxs-lookup"><span data-stu-id="bd03d-103">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="bd03d-104">Toutes les expressions doivent être du même type que le `expression`ou d'un type de base commun ou dérivé de celui-ci.</span><span class="sxs-lookup"><span data-stu-id="bd03d-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
+# <a name="intersect-entity-sql"></a><span data-ttu-id="1ac73-102">INTERSECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1ac73-102">INTERSECT (Entity SQL)</span></span>
+<span data-ttu-id="1ac73-103">Retourne une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.</span><span class="sxs-lookup"><span data-stu-id="1ac73-103">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="1ac73-104">Toutes les expressions doivent être du même type que le `expression`ou d'un type de base commun ou dérivé de celui-ci.</span><span class="sxs-lookup"><span data-stu-id="1ac73-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd03d-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bd03d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ac73-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1ac73-105">Syntax</span></span>  
   
 ```  
 expression INTERSECT expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="bd03d-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="bd03d-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="1ac73-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="1ac73-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="bd03d-107">Toute expression de requête valide qui retourne une collection à comparer avec la collection retournée par une autre expression de requête.</span><span class="sxs-lookup"><span data-stu-id="bd03d-107">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span>  
+ <span data-ttu-id="1ac73-107">Toute expression de requête valide qui retourne une collection à comparer avec la collection retournée par une autre expression de requête.</span><span class="sxs-lookup"><span data-stu-id="1ac73-107">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bd03d-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="bd03d-108">Return Value</span></span>  
- <span data-ttu-id="bd03d-109">Collection du même type que l' `expression`ou d'un type de base commun ou dérivé de celui-ci.</span><span class="sxs-lookup"><span data-stu-id="bd03d-109">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1ac73-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="1ac73-108">Return Value</span></span>  
+ <span data-ttu-id="1ac73-109">Collection du même type que l' `expression`ou d'un type de base commun ou dérivé de celui-ci.</span><span class="sxs-lookup"><span data-stu-id="1ac73-109">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bd03d-110">Notes</span><span class="sxs-lookup"><span data-stu-id="bd03d-110">Remarks</span></span>  
- <span data-ttu-id="bd03d-111">INTERSECT est l'un des opérateurs de jeu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bd03d-111">INTERSECT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="bd03d-112">Tous les opérateurs de jeu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sont évalués de gauche à droite.</span><span class="sxs-lookup"><span data-stu-id="bd03d-112">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="bd03d-113">Pour plus d’informations de priorité pour le [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opérateurs de jeu, consultez [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="bd03d-113">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ac73-110">Notes</span><span class="sxs-lookup"><span data-stu-id="1ac73-110">Remarks</span></span>  
+ <span data-ttu-id="1ac73-111">INTERSECT est l'un des opérateurs de jeu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="1ac73-111">INTERSECT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="1ac73-112">Tous les opérateurs de jeu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sont évalués de gauche à droite.</span><span class="sxs-lookup"><span data-stu-id="1ac73-112">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="1ac73-113">Pour plus d’informations de priorité pour le [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opérateurs de jeu, consultez [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="1ac73-113">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd03d-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="bd03d-114">Example</span></span>  
- <span data-ttu-id="bd03d-115">La requête Entity SQL ci-dessous utilise l'opérateur INTERSECT pour retourner une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.</span><span class="sxs-lookup"><span data-stu-id="bd03d-115">The following Entity SQL query uses the INTERSECT operator to return a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="bd03d-116">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="bd03d-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="bd03d-117">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="bd03d-117">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="1ac73-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="1ac73-114">Example</span></span>  
+ <span data-ttu-id="1ac73-115">La requête Entity SQL ci-dessous utilise l'opérateur INTERSECT pour retourner une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.</span><span class="sxs-lookup"><span data-stu-id="1ac73-115">The following Entity SQL query uses the INTERSECT operator to return a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="1ac73-116">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="1ac73-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="1ac73-117">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="1ac73-117">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="bd03d-118">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="bd03d-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="1ac73-118">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="1ac73-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="bd03d-119">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="bd03d-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="1ac73-119">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="1ac73-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#INTERSECT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#intersect)]  
   
-## <a name="see-also"></a><span data-ttu-id="bd03d-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bd03d-120">See also</span></span>
-- [<span data-ttu-id="bd03d-121">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="bd03d-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="1ac73-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1ac73-120">See also</span></span>
+
+- [<span data-ttu-id="1ac73-121">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="1ac73-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

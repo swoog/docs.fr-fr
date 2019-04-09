@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173990"
 ---
-# <a name="icordebugstringvalue-interface"></a><span data-ttu-id="21751-102">ICorDebugStringValue, interface</span><span class="sxs-lookup"><span data-stu-id="21751-102">ICorDebugStringValue Interface</span></span>
-<span data-ttu-id="21751-103">Une sous-classe de ICorDebugHeapValue qui s’applique aux valeurs de chaîne.</span><span class="sxs-lookup"><span data-stu-id="21751-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
+# <a name="icordebugstringvalue-interface"></a><span data-ttu-id="b4860-102">ICorDebugStringValue, interface</span><span class="sxs-lookup"><span data-stu-id="b4860-102">ICorDebugStringValue Interface</span></span>
+<span data-ttu-id="b4860-103">Une sous-classe de ICorDebugHeapValue qui s’applique aux valeurs de chaîne.</span><span class="sxs-lookup"><span data-stu-id="b4860-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="21751-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="21751-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b4860-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="b4860-104">Methods</span></span>  
   
-|<span data-ttu-id="21751-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="21751-105">Method</span></span>|<span data-ttu-id="21751-106">Description</span><span class="sxs-lookup"><span data-stu-id="21751-106">Description</span></span>|  
+|<span data-ttu-id="b4860-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="b4860-105">Method</span></span>|<span data-ttu-id="b4860-106">Description</span><span class="sxs-lookup"><span data-stu-id="b4860-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="21751-107">GetLength, méthode</span><span class="sxs-lookup"><span data-stu-id="21751-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="21751-108">Obtient le nombre de caractères dans la chaîne référencée par ce `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="21751-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
-|[<span data-ttu-id="21751-109">GetString, méthode</span><span class="sxs-lookup"><span data-stu-id="21751-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="21751-110">Obtient la chaîne référencée par ce `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="21751-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="b4860-107">GetLength, méthode</span><span class="sxs-lookup"><span data-stu-id="b4860-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="b4860-108">Obtient le nombre de caractères dans la chaîne référencée par ce `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="b4860-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="b4860-109">GetString, méthode</span><span class="sxs-lookup"><span data-stu-id="b4860-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="b4860-110">Obtient la chaîne référencée par ce `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="b4860-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="21751-111">Notes</span><span class="sxs-lookup"><span data-stu-id="21751-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4860-111">Notes</span><span class="sxs-lookup"><span data-stu-id="b4860-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="21751-112">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="21751-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b4860-112">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="b4860-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21751-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="21751-113">Requirements</span></span>  
- <span data-ttu-id="21751-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21751-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4860-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b4860-113">Requirements</span></span>  
+ <span data-ttu-id="b4860-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4860-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21751-115">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="21751-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b4860-115">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b4860-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="21751-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21751-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b4860-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b4860-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="21751-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21751-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b4860-117">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b4860-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="21751-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="21751-118">See also</span></span>
-- [<span data-ttu-id="21751-119">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="21751-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b4860-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b4860-118">See also</span></span>
+
+- [<span data-ttu-id="b4860-119">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b4860-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

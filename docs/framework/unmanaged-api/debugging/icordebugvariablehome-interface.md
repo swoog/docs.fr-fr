@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome Interface
+title: ICorDebugVariableHome, interface
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,30 +18,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 339a0f502b7e47f7bee82a0da92185481d909e64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202909"
 ---
-# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="a392a-102">ICorDebugVariableHome Interface</span><span class="sxs-lookup"><span data-stu-id="a392a-102">ICorDebugVariableHome Interface</span></span>
-<span data-ttu-id="a392a-103">Représente une variable locale ou un argument d’une fonction.</span><span class="sxs-lookup"><span data-stu-id="a392a-103">Represents a local variable or argument of a function.</span></span>  
+# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="da18b-102">ICorDebugVariableHome, interface</span><span class="sxs-lookup"><span data-stu-id="da18b-102">ICorDebugVariableHome Interface</span></span>
+<span data-ttu-id="da18b-103">Représente une variable locale ou un argument d’une fonction.</span><span class="sxs-lookup"><span data-stu-id="da18b-103">Represents a local variable or argument of a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a392a-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="a392a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="da18b-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="da18b-104">Methods</span></span>  
   
-|<span data-ttu-id="a392a-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-105">Method</span></span>|<span data-ttu-id="a392a-106">Description</span><span class="sxs-lookup"><span data-stu-id="a392a-106">Description</span></span>|  
+|<span data-ttu-id="da18b-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-105">Method</span></span>|<span data-ttu-id="da18b-106">Description</span><span class="sxs-lookup"><span data-stu-id="da18b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a392a-107">GetArgumentIndex, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="a392a-108">Obtient l’index d’un argument de fonction.</span><span class="sxs-lookup"><span data-stu-id="a392a-108">Gets the index of a function argument.</span></span>|  
-|[<span data-ttu-id="a392a-109">GetCode, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="a392a-110">Obtient l’instance « ICorDebugCode » qui contient ce `ICorDebugVariableHome` objet.</span><span class="sxs-lookup"><span data-stu-id="a392a-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
-|[<span data-ttu-id="a392a-111">GetLiveRange, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="a392a-112">Obtient la plage native sur laquelle cette variable est en ligne.</span><span class="sxs-lookup"><span data-stu-id="a392a-112">Gets the native range over which this variable is live.</span></span>|  
-|[<span data-ttu-id="a392a-113">GetLocationType, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="a392a-114">Obtient le type d’emplacement native de la variable.</span><span class="sxs-lookup"><span data-stu-id="a392a-114">Gets the type of the variable's native location.</span></span>|  
-|[<span data-ttu-id="a392a-115">GetOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="a392a-116">Obtient le décalage à partir du Registre de base pour une variable.</span><span class="sxs-lookup"><span data-stu-id="a392a-116">Gets the offset from the base register for a variable.</span></span>|  
-|[<span data-ttu-id="a392a-117">GetRegister, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="a392a-118">Obtient le Registre qui contient une variable avec un type d’emplacement de `VLT_REGISTER`, le Registre de base et d’une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="a392a-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
-|[<span data-ttu-id="a392a-119">GetSlotIndex, méthode</span><span class="sxs-lookup"><span data-stu-id="a392a-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="a392a-120">Obtient l’index emplacement managé d’une variable locale.</span><span class="sxs-lookup"><span data-stu-id="a392a-120">Gets the managed slot-index of a local variable.</span></span>|  
+|[<span data-ttu-id="da18b-107">GetArgumentIndex, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="da18b-108">Obtient l’index d’un argument de fonction.</span><span class="sxs-lookup"><span data-stu-id="da18b-108">Gets the index of a function argument.</span></span>|  
+|[<span data-ttu-id="da18b-109">GetCode, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="da18b-110">Obtient l’instance « ICorDebugCode » qui contient ce `ICorDebugVariableHome` objet.</span><span class="sxs-lookup"><span data-stu-id="da18b-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
+|[<span data-ttu-id="da18b-111">GetLiveRange, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="da18b-112">Obtient la plage native sur laquelle cette variable est en ligne.</span><span class="sxs-lookup"><span data-stu-id="da18b-112">Gets the native range over which this variable is live.</span></span>|  
+|[<span data-ttu-id="da18b-113">GetLocationType, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="da18b-114">Obtient le type d’emplacement native de la variable.</span><span class="sxs-lookup"><span data-stu-id="da18b-114">Gets the type of the variable's native location.</span></span>|  
+|[<span data-ttu-id="da18b-115">GetOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="da18b-116">Obtient le décalage à partir du Registre de base pour une variable.</span><span class="sxs-lookup"><span data-stu-id="da18b-116">Gets the offset from the base register for a variable.</span></span>|  
+|[<span data-ttu-id="da18b-117">GetRegister, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="da18b-118">Obtient le Registre qui contient une variable avec un type d’emplacement de `VLT_REGISTER`, le Registre de base et d’une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="da18b-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
+|[<span data-ttu-id="da18b-119">GetSlotIndex, méthode</span><span class="sxs-lookup"><span data-stu-id="da18b-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="da18b-120">Obtient l’index emplacement managé d’une variable locale.</span><span class="sxs-lookup"><span data-stu-id="da18b-120">Gets the managed slot-index of a local variable.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="a392a-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="a392a-121">Example</span></span>  
- <span data-ttu-id="a392a-122">Le fragment de code suivant utilise la [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) objet nommé `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="a392a-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
+## <a name="example"></a><span data-ttu-id="da18b-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="da18b-121">Example</span></span>  
+ <span data-ttu-id="da18b-122">Le fragment de code suivant utilise la [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) objet nommé `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="da18b-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -82,15 +82,16 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a392a-123">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a392a-123">Requirements</span></span>  
- <span data-ttu-id="a392a-124">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a392a-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da18b-123">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="da18b-123">Requirements</span></span>  
+ <span data-ttu-id="da18b-124">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da18b-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a392a-125">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a392a-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="da18b-125">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da18b-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a392a-126">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a392a-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da18b-126">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da18b-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a392a-127">**Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a392a-127">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ **<span data-ttu-id="da18b-127">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="da18b-127">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a392a-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a392a-128">See also</span></span>
-- [<span data-ttu-id="a392a-129">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="a392a-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a392a-130">ICorDebugVariableHomeEnum, interface</span><span class="sxs-lookup"><span data-stu-id="a392a-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="da18b-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="da18b-128">See also</span></span>
+
+- [<span data-ttu-id="da18b-129">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="da18b-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="da18b-130">ICorDebugVariableHomeEnum Interface</span><span class="sxs-lookup"><span data-stu-id="da18b-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

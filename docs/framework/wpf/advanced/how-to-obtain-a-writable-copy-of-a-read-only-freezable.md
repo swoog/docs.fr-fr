@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Obtenir une copie en écriture d'un Freezable en lecture seule"
+title: 'Procédure : Obtenir une copie en écriture d’un Freezable en lecture seule'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,28 +8,29 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-ms.openlocfilehash: 08b7007911d15019c043a74e093ccc0fba072fd1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206471"
 ---
-# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="60956-102">Procédure : Obtenir une copie en écriture d'un Freezable en lecture seule</span><span class="sxs-lookup"><span data-stu-id="60956-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
-<span data-ttu-id="60956-103">Cet exemple montre comment utiliser le <xref:System.Windows.Freezable.Clone%2A> méthode pour créer une copie accessible en écriture en lecture seule <xref:System.Windows.Freezable>.</span><span class="sxs-lookup"><span data-stu-id="60956-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  
+# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="7b7e7-102">Procédure : Obtenir une copie en écriture d’un Freezable en lecture seule</span><span class="sxs-lookup"><span data-stu-id="7b7e7-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
+<span data-ttu-id="7b7e7-103">Cet exemple montre comment utiliser le <xref:System.Windows.Freezable.Clone%2A> méthode pour créer une copie accessible en écriture en lecture seule <xref:System.Windows.Freezable>.</span><span class="sxs-lookup"><span data-stu-id="7b7e7-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  
   
- <span data-ttu-id="60956-104">Après un <xref:System.Windows.Freezable> objet est marqué comme en lecture seule (« figé »), vous ne pouvez pas le modifier.</span><span class="sxs-lookup"><span data-stu-id="60956-104">After a <xref:System.Windows.Freezable> object is marked as read-only ("frozen"), you cannot modify it.</span></span> <span data-ttu-id="60956-105">Toutefois, vous pouvez utiliser la <xref:System.Windows.Freezable.Clone%2A> méthode pour créer un clone modifiable de l’objet figé.</span><span class="sxs-lookup"><span data-stu-id="60956-105">However, you can use the <xref:System.Windows.Freezable.Clone%2A> method to create a modifiable clone of the frozen object.</span></span>  
+ <span data-ttu-id="7b7e7-104">Après un <xref:System.Windows.Freezable> objet est marqué comme en lecture seule (« figé »), vous ne pouvez pas le modifier.</span><span class="sxs-lookup"><span data-stu-id="7b7e7-104">After a <xref:System.Windows.Freezable> object is marked as read-only ("frozen"), you cannot modify it.</span></span> <span data-ttu-id="7b7e7-105">Toutefois, vous pouvez utiliser la <xref:System.Windows.Freezable.Clone%2A> méthode pour créer un clone modifiable de l’objet figé.</span><span class="sxs-lookup"><span data-stu-id="7b7e7-105">However, you can use the <xref:System.Windows.Freezable.Clone%2A> method to create a modifiable clone of the frozen object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="60956-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="60956-106">Example</span></span>  
- <span data-ttu-id="60956-107">L’exemple suivant crée un clone modifiable de figé <xref:System.Windows.Media.SolidColorBrush> objet.</span><span class="sxs-lookup"><span data-stu-id="60956-107">The following example creates a modifiable clone of a frozen <xref:System.Windows.Media.SolidColorBrush> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b7e7-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="7b7e7-106">Example</span></span>  
+ <span data-ttu-id="7b7e7-107">L’exemple suivant crée un clone modifiable de figé <xref:System.Windows.Media.SolidColorBrush> objet.</span><span class="sxs-lookup"><span data-stu-id="7b7e7-107">The following example creates a modifiable clone of a frozen <xref:System.Windows.Media.SolidColorBrush> object.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
- <span data-ttu-id="60956-108">Pour plus d’informations sur <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="60956-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
+ <span data-ttu-id="7b7e7-108">Pour plus d’informations sur <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="7b7e7-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60956-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="60956-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b7e7-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7b7e7-109">See also</span></span>
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
-- [<span data-ttu-id="60956-110">Vue d’ensemble des objets Freezable</span><span class="sxs-lookup"><span data-stu-id="60956-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
-- [<span data-ttu-id="60956-111">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="60956-111">How-to Topics</span></span>](base-elements-how-to-topics.md)
+- [<span data-ttu-id="7b7e7-110">Vue d'ensemble des objets Freezable</span><span class="sxs-lookup"><span data-stu-id="7b7e7-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
+- [<span data-ttu-id="7b7e7-111">Rubriques Comment</span><span class="sxs-lookup"><span data-stu-id="7b7e7-111">How-to Topics</span></span>](base-elements-how-to-topics.md)
