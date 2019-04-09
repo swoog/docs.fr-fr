@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Implémenter un moteur de disposition personnalisée'
+title: 'Procédure : implémenter un moteur de disposition personnalisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,22 @@ helpviewer_keywords:
 - layout engines [Windows Forms], implementing
 - FlowLayoutPanel control [Windows Forms], layout engine
 ms.assetid: f91aa91c-29f4-4089-95ca-5d48b774b00e
-ms.openlocfilehash: 2b5bdab243039014b42d2f57f4037833f2137d67
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8e5043e2b42b1e7449c6dab51691b6d57e28cd53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083372"
 ---
-# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="f933f-102">Procédure : Implémenter un moteur de disposition personnalisée</span><span class="sxs-lookup"><span data-stu-id="f933f-102">How to: Implement a Custom Layout Engine</span></span>
-<span data-ttu-id="f933f-103">L’exemple de code suivant montre comment créer un moteur de disposition personnalisée qui effectue une disposition de flux simple.</span><span class="sxs-lookup"><span data-stu-id="f933f-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="f933f-104">Il implémente un contrôle de panneau de configuration nommé `DemoFlowPanel`, qui remplace le <xref:System.Windows.Forms.Control.LayoutEngine%2A> propriété afin de fournir une instance de la `DemoFlowLayout` classe.</span><span class="sxs-lookup"><span data-stu-id="f933f-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
+# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="c7e01-102">Procédure : implémenter un moteur de disposition personnalisée</span><span class="sxs-lookup"><span data-stu-id="c7e01-102">How to: Implement a Custom Layout Engine</span></span>
+<span data-ttu-id="c7e01-103">L’exemple de code suivant montre comment créer un moteur de disposition personnalisée qui effectue une disposition de flux simple.</span><span class="sxs-lookup"><span data-stu-id="c7e01-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="c7e01-104">Il implémente un contrôle de panneau de configuration nommé `DemoFlowPanel`, qui remplace le <xref:System.Windows.Forms.Control.LayoutEngine%2A> propriété afin de fournir une instance de la `DemoFlowLayout` classe.</span><span class="sxs-lookup"><span data-stu-id="c7e01-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f933f-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="f933f-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c7e01-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="c7e01-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/cpp/DemoFlowLayout.cpp#1)]
  [!code-csharp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/CS/DemoFlowLayout.cs#1)]
  [!code-vb[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/VB/DemoFlowLayout.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f933f-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f933f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7e01-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c7e01-106">See also</span></span>
+
 - <xref:System.Windows.Forms.Layout.LayoutEngine>
 - <xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=nameWithType>

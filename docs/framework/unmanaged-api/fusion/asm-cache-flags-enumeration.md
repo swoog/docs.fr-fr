@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29388f7a83182fe3149a9df364a0f4721232012d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 619643eb50abc75fd10d59b38767013b2617c8cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077764"
 ---
-# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="704c4-102">ASM_CACHE_FLAGS, énumération</span><span class="sxs-lookup"><span data-stu-id="704c4-102">ASM_CACHE_FLAGS Enumeration</span></span>
-<span data-ttu-id="704c4-103">Indique la source d’un assembly qui est représenté par [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) dans le global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="704c4-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
+# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="8b3a8-102">ASM_CACHE_FLAGS, énumération</span><span class="sxs-lookup"><span data-stu-id="8b3a8-102">ASM_CACHE_FLAGS Enumeration</span></span>
+<span data-ttu-id="8b3a8-103">Indique la source d’un assembly qui est représenté par [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) dans le global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="704c4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="704c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b3a8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8b3a8-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,26 +38,27 @@ typedef enum {
 } ASM_CACHE_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="704c4-105">Membres</span><span class="sxs-lookup"><span data-stu-id="704c4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8b3a8-105">Membres</span><span class="sxs-lookup"><span data-stu-id="8b3a8-105">Members</span></span>  
   
-|<span data-ttu-id="704c4-106">Membre</span><span class="sxs-lookup"><span data-stu-id="704c4-106">Member</span></span>|<span data-ttu-id="704c4-107">Description</span><span class="sxs-lookup"><span data-stu-id="704c4-107">Description</span></span>|  
+|<span data-ttu-id="8b3a8-106">Membre</span><span class="sxs-lookup"><span data-stu-id="8b3a8-106">Member</span></span>|<span data-ttu-id="8b3a8-107">Description</span><span class="sxs-lookup"><span data-stu-id="8b3a8-107">Description</span></span>|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|<span data-ttu-id="704c4-108">Énumère le cache d’assemblys précompilés à l’aide de Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="704c4-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
-|`ASM_CACHE_GAC`|<span data-ttu-id="704c4-109">Énumère le global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="704c4-109">Enumerates the global assembly cache.</span></span>|  
-|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="704c4-110">Énumère les assemblys qui ont été téléchargées à la demande ou qui ont été une copie fantôme.</span><span class="sxs-lookup"><span data-stu-id="704c4-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
-|`ASM_CACHE_ROOT`|<span data-ttu-id="704c4-111">Indique que le [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) fonction doit retourner le chemin d’accès dans le global assembly cache pour le common language runtime (CLR) version 2.0.</span><span class="sxs-lookup"><span data-stu-id="704c4-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="704c4-112">Pertinent uniquement dans le contexte d’un appel à [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="704c4-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
-|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="704c4-113">Indique que le [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) fonction doit retourner le chemin d’accès dans le global assembly cache pour le CLR version 4.</span><span class="sxs-lookup"><span data-stu-id="704c4-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="704c4-114">Pertinent uniquement dans le contexte d’un appel à [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="704c4-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ZAP`|<span data-ttu-id="8b3a8-108">Énumère le cache d’assemblys précompilés à l’aide de Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
+|`ASM_CACHE_GAC`|<span data-ttu-id="8b3a8-109">Énumère le global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-109">Enumerates the global assembly cache.</span></span>|  
+|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="8b3a8-110">Énumère les assemblys qui ont été téléchargées à la demande ou qui ont été une copie fantôme.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
+|`ASM_CACHE_ROOT`|<span data-ttu-id="8b3a8-111">Indique que le [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) fonction doit retourner le chemin d’accès dans le global assembly cache pour le common language runtime (CLR) version 2.0.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="8b3a8-112">Pertinent uniquement dans le contexte d’un appel à [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="8b3a8-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="8b3a8-113">Indique que le [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) fonction doit retourner le chemin d’accès dans le global assembly cache pour le CLR version 4.</span><span class="sxs-lookup"><span data-stu-id="8b3a8-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="8b3a8-114">Pertinent uniquement dans le contexte d’un appel à [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="8b3a8-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="704c4-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="704c4-115">Requirements</span></span>  
- <span data-ttu-id="704c4-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="704c4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b3a8-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="8b3a8-115">Requirements</span></span>  
+ <span data-ttu-id="8b3a8-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b3a8-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="704c4-117">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="704c4-117">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="8b3a8-117">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8b3a8-117">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="704c4-118">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="704c4-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8b3a8-118">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8b3a8-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="704c4-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="704c4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="8b3a8-119">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="8b3a8-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="704c4-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="704c4-120">See also</span></span>
-- [<span data-ttu-id="704c4-121">GetCachePath, fonction</span><span class="sxs-lookup"><span data-stu-id="704c4-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [<span data-ttu-id="704c4-122">IAssemblyCacheItem, interface</span><span class="sxs-lookup"><span data-stu-id="704c4-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [<span data-ttu-id="704c4-123">Énumérations de fusion</span><span class="sxs-lookup"><span data-stu-id="704c4-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8b3a8-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8b3a8-120">See also</span></span>
+
+- [<span data-ttu-id="8b3a8-121">GetCachePath, fonction</span><span class="sxs-lookup"><span data-stu-id="8b3a8-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
+- [<span data-ttu-id="8b3a8-122">IAssemblyCacheItem, interface</span><span class="sxs-lookup"><span data-stu-id="8b3a8-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [<span data-ttu-id="8b3a8-123">Énumérations de fusion</span><span class="sxs-lookup"><span data-stu-id="8b3a8-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

@@ -2,25 +2,25 @@
 title: <clear> de <claimTypeRequirements> élément
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: b20d5c1808bf41d1ecd6b3e3a61606ae45b0fbdd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090318"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a><span data-ttu-id="ab807-102">\<Désactivez > de \<claimTypeRequirements > élément</span><span class="sxs-lookup"><span data-stu-id="ab807-102">\<clear> of \<claimTypeRequirements> element</span></span>
-<span data-ttu-id="ab807-103">Indique que tous les types de revendications doivent être supprimés dans les informations d'identification fédérées.</span><span class="sxs-lookup"><span data-stu-id="ab807-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="ab807-104">Cela garantit que la collection est vide au démarrage.</span><span class="sxs-lookup"><span data-stu-id="ab807-104">This ensures that the collection starts empty.</span></span>  
+# <a name="clear-of-claimtyperequirements-element"></a><span data-ttu-id="b2946-102">\<Désactivez > de \<claimTypeRequirements > élément</span><span class="sxs-lookup"><span data-stu-id="b2946-102">\<clear> of \<claimTypeRequirements> element</span></span>
+<span data-ttu-id="b2946-103">Indique que tous les types de revendications doivent être supprimés dans les informations d'identification fédérées.</span><span class="sxs-lookup"><span data-stu-id="b2946-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="b2946-104">Cela garantit que la collection est vide au démarrage.</span><span class="sxs-lookup"><span data-stu-id="b2946-104">This ensures that the collection starts empty.</span></span>  
   
- <span data-ttu-id="ab807-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ab807-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ab807-106">\<bindings></span><span class="sxs-lookup"><span data-stu-id="ab807-106">\<bindings></span></span>  
-<span data-ttu-id="ab807-107">\<wsFederatedBinding></span><span class="sxs-lookup"><span data-stu-id="ab807-107">\<wsFederatedBinding></span></span>  
-<span data-ttu-id="ab807-108">\<binding></span><span class="sxs-lookup"><span data-stu-id="ab807-108">\<binding></span></span>  
-<span data-ttu-id="ab807-109">\<security></span><span class="sxs-lookup"><span data-stu-id="ab807-109">\<security></span></span>  
-<span data-ttu-id="ab807-110">\<message></span><span class="sxs-lookup"><span data-stu-id="ab807-110">\<message></span></span>  
-<span data-ttu-id="ab807-111">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="ab807-111">\<claimTypeRequirements></span></span>  
+ <span data-ttu-id="b2946-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="b2946-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="b2946-106">\<bindings></span><span class="sxs-lookup"><span data-stu-id="b2946-106">\<bindings></span></span>  
+<span data-ttu-id="b2946-107">\<wsFederatedBinding></span><span class="sxs-lookup"><span data-stu-id="b2946-107">\<wsFederatedBinding></span></span>  
+<span data-ttu-id="b2946-108">\<binding></span><span class="sxs-lookup"><span data-stu-id="b2946-108">\<binding></span></span>  
+<span data-ttu-id="b2946-109">\<security></span><span class="sxs-lookup"><span data-stu-id="b2946-109">\<security></span></span>  
+<span data-ttu-id="b2946-110">\<message></span><span class="sxs-lookup"><span data-stu-id="b2946-110">\<message></span></span>  
+<span data-ttu-id="b2946-111">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="b2946-111">\<claimTypeRequirements></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab807-112">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ab807-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2946-112">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b2946-112">Syntax</span></span>  
   
 ```xml  
 <claimTypeRequirements>
@@ -28,22 +28,23 @@ ms.locfileid: "55270336"
 </claimTypeRequirements>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ab807-113">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="ab807-113">Attributes and Elements</span></span>  
- <span data-ttu-id="ab807-114">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="ab807-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b2946-113">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="b2946-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="b2946-114">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="b2946-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ab807-115">Attributs</span><span class="sxs-lookup"><span data-stu-id="ab807-115">Attributes</span></span>  
- <span data-ttu-id="ab807-116">Aucun.</span><span class="sxs-lookup"><span data-stu-id="ab807-116">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b2946-115">Attributs</span><span class="sxs-lookup"><span data-stu-id="b2946-115">Attributes</span></span>  
+ <span data-ttu-id="b2946-116">Aucun.</span><span class="sxs-lookup"><span data-stu-id="b2946-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ab807-117">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="ab807-117">Child Elements</span></span>  
- <span data-ttu-id="ab807-118">Aucun.</span><span class="sxs-lookup"><span data-stu-id="ab807-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b2946-117">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="b2946-117">Child Elements</span></span>  
+ <span data-ttu-id="b2946-118">Aucun.</span><span class="sxs-lookup"><span data-stu-id="b2946-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ab807-119">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="ab807-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b2946-119">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="b2946-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="ab807-120">Élément</span><span class="sxs-lookup"><span data-stu-id="ab807-120">Element</span></span>|<span data-ttu-id="ab807-121">Description</span><span class="sxs-lookup"><span data-stu-id="ab807-121">Description</span></span>|  
+|<span data-ttu-id="b2946-120">Élément</span><span class="sxs-lookup"><span data-stu-id="b2946-120">Element</span></span>|<span data-ttu-id="b2946-121">Description</span><span class="sxs-lookup"><span data-stu-id="b2946-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ab807-122">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="ab807-122">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|<span data-ttu-id="ab807-123">Spécifie une collection de types de revendications requis.</span><span class="sxs-lookup"><span data-stu-id="ab807-123">Specifies a collection of required claim types.</span></span> <span data-ttu-id="ab807-124">Chaque élément est de type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="ab807-124">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span><br /><br /> <span data-ttu-id="ab807-125">Dans un scénario fédéré, les services déclarent les spécifications relatives aux informations d'identification entrantes.</span><span class="sxs-lookup"><span data-stu-id="ab807-125">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="ab807-126">Par exemple, ces informations d'identification doivent posséder un jeu de types de revendications défini.</span><span class="sxs-lookup"><span data-stu-id="ab807-126">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="ab807-127">Chaque élément de la collection indique les types de revendications requis et facultatifs censés apparaître dans les informations d’identification fédérées.</span><span class="sxs-lookup"><span data-stu-id="ab807-127">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
+|[<span data-ttu-id="b2946-122">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="b2946-122">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|<span data-ttu-id="b2946-123">Spécifie une collection de types de revendications requis.</span><span class="sxs-lookup"><span data-stu-id="b2946-123">Specifies a collection of required claim types.</span></span> <span data-ttu-id="b2946-124">Chaque élément est de type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="b2946-124">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span><br /><br /> <span data-ttu-id="b2946-125">Dans un scénario fédéré, les services déclarent les spécifications relatives aux informations d'identification entrantes.</span><span class="sxs-lookup"><span data-stu-id="b2946-125">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="b2946-126">Par exemple, ces informations d'identification doivent posséder un jeu de types de revendications défini.</span><span class="sxs-lookup"><span data-stu-id="b2946-126">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="b2946-127">Chaque élément de la collection indique les types de revendications requis et facultatifs censés apparaître dans les informations d'identification fédérées.</span><span class="sxs-lookup"><span data-stu-id="b2946-127">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ab807-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ab807-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2946-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b2946-128">See also</span></span>
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
