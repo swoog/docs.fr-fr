@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308651"
 ---
 # <a name="c-operators"></a>Opérateurs C#
 
@@ -75,7 +75,7 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 [-x](subtraction-operator.md) : négation numérique.
 
-[\!x](logical-negation-operator.md) : négation logique.
+[\!x](boolean-logical-operators.md#logical-negation-operator-) : négation logique.
 
 [~x](bitwise-complement-operator.md) : complément au niveau du bit.
 
@@ -163,13 +163,13 @@ Cet opérateur a une priorité supérieure à celle de la section suivante et un
 
 Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x && y](conditional-and-operator.md) : ET logique. Si le premier opérande prend la valeur false, C# n’évalue pas le second opérande.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) : ET logique. Si le premier opérande prend la valeur false, C# n’évalue pas le second opérande.
 
 ## <a name="conditional-or-operator"></a>Opérateur OR conditionnel
 
 Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x &#124;&#124; y](conditional-or-operator.md) : OU logique. Si le premier opérande prend la valeur true, C# n’évalue pas le second opérande.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) : OU logique. Si le premier opérande prend la valeur true, C# n’évalue pas le second opérande.
 
 ## <a name="null-coalescing-operator"></a>Opérateur de fusion de Null
 

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139605"
 ---
 # <a name="flow-document-overview"></a>Vue d'ensemble des documents dynamiques
 Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibilité. Au lieu d’avoir une disposition prédéfinie, ces documents dynamiques ajustent et refluent dynamiquement leur contenu en fonction des variables d’exécution telles que la taille de la fenêtre, la résolution de l’appareil et les préférences facultatives de l’utilisateur. En outre, les documents dynamiques offrent des fonctionnalités de document avancées, telles que la pagination et les colonnes. Cette rubrique fournit une vue d’ensemble des documents dynamiques et explique comment les créer.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Description d’un document dynamique  
  Un document dynamique est conçu pour « redisposer le contenu » en fonction de la taille de la fenêtre, de la résolution de l’appareil et d’autres variables d’environnement. En outre, les documents dynamiques possèdent plusieurs fonctionnalités intégrées, notamment la recherche, les modes d’affichage qui optimisent la lisibilité et la possibilité de changer la taille et l’apparence des polices. Les documents dynamiques sont utilisés surtout quand la facilité de lecture est le scénario principal de consommation des documents. À l’inverse, les documents fixes sont conçus pour avoir une présentation statique. Ces documents sont utiles quand le contenu source doit être fidèlement respecté. Consultez [Documents dans WPF](documents-in-wpf.md) pour plus d’informations sur les différents types de documents.  
@@ -132,7 +130,7 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
   
  ![Capture d’écran montrant un UIElement incorporé dans le contenu dynamique.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **List**  
+ **Liste**  
   
  <xref:System.Windows.Documents.List> est utilisé pour créer une liste à puces ou numérique. Définir le <xref:System.Windows.Documents.List.MarkerStyle%2A> propriété un <xref:System.Windows.TextMarkerStyle> valeur d’énumération pour déterminer le style de la liste. L’exemple ci-dessous montre comment créer une liste simple.  
   
@@ -156,7 +154,7 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
   
  **Remarque :**  À compter de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], le <xref:System.Windows.Documents.Run.Text%2A> propriété de la <xref:System.Windows.Documents.Run> objet est une propriété de dépendance. Vous pouvez lier le <xref:System.Windows.Documents.Run.Text%2A> propriété à une données source, par exemple un <xref:System.Windows.Controls.TextBlock>. Le <xref:System.Windows.Documents.Run.Text%2A> propriété prend entièrement en charge la liaison unidirectionnelle. Le <xref:System.Windows.Documents.Run.Text%2A> propriété prend également en charge la liaison bidirectionnelle, à l’exception de <xref:System.Windows.Controls.RichTextBox>. Pour obtenir un exemple, consultez <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **Span**  
+ **étendue**  
   
  <xref:System.Windows.Documents.Span> regroupe les autres éléments de contenu inline. Aucun rendu inhérent n’est appliqué au contenu dans un <xref:System.Windows.Documents.Span> élément. Toutefois, les éléments hérités de <xref:System.Windows.Documents.Span> notamment <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> et <xref:System.Windows.Documents.Underline> s’appliquent à la mise en forme au texte.  
   
@@ -349,11 +347,12 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
  Consultez [typographie dans WPF](typography-in-wpf.md) pour plus d’informations sur la typographie.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Text](optimizing-performance-text.md)
+
+- [Texte](optimizing-performance-text.md)
 - [Typographie dans WPF](typography-in-wpf.md)
-- [Rubriques de guide pratique](flow-content-elements-how-to-topics.md)
+- [Rubriques Comment](flow-content-elements-how-to-topics.md)
 - [Vue d'ensemble du modèle de contenu de TextElement](textelement-content-model-overview.md)
-- [Vue d’ensemble de RichTextBox](../controls/richtextbox-overview.md)
+- [Vue d'ensemble de RichTextBox](../controls/richtextbox-overview.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de Table](table-overview.md)
-- [Vue d’ensemble des annotations](annotations-overview.md)
+- [Vue d'ensemble de Table](table-overview.md)
+- [Vue d'ensemble des annotations](annotations-overview.md)

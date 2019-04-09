@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153242"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM+
 Windows Communication Foundation (WCF) fournit un environnement riche pour la création d’applications distribuées. Si vous utilisez déjà la logique d’application basée sur le composant hébergée dans COM +, vous pouvez utiliser WCF pour étendre votre logique existante plutôt que d’avoir à la réécrire. Un scénario courant consiste à exposer une logique métier COM+ ou Enterprise Services existante par le biais de services Web.  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) fournit un environnement riche pour la cr
 ### <a name="limited-object-reference-support"></a>Prise en charge limitée des références d'objet  
  Comme un certain nombre de composants COM+ déployés n'utilisent pas de paramètres de référence d'objet, pour retourner un objet ADO Recordset par exemple, l'intégration COM+ inclut une prise en charge limitée des paramètres de référence d'objet. Cette prise en charge est limitée aux objets qui implémentent l'interface COM `IPersistStream`. Elle inclut les objets ADO Recordset et peut être implémentée pour des objets COM propres à l'application.  
   
- Pour activer cette prise en charge, l’outil ComSvcConfig.exe fournit le **allowreferences** commutateur qui désactive le paramètre de signature de méthode normal et vérifie que l’outil s’exécute pour vous assurer que les paramètres de référence d’objet ne sont pas utilisés . De plus, les types d'objet que vous passez comme paramètres doivent être nommés et identifiés dans l'élément de configuration <`persistableTypes`> qui est un enfant de l'élément <`comContract`>.  
+ Pour activer cette prise en charge, l’outil ComSvcConfig.exe fournit le **allowreferences** commutateur qui désactive le paramètre de signature de méthode normal et vérifie que l’outil s’exécute pour vous assurer que les paramètres de référence d’objet ne sont pas utilisés . En outre, les types d’objets que vous passez comme paramètres doivent être nommés et identifiés dans le <`persistableTypes`> élément de configuration qui est un enfant de la <`comContract`> élément.  
   
- Lorsque cette fonctionnalité est activée, le service d'intégration COM+ utilise l'interface `IPersistStream` pour sérialiser ou désérialiser l'instance d'objet. Si l'instance d'objet ne prend pas en charge `IPersistStream`, une exception est levée.  
+ Lorsque cette fonctionnalité est activée, le service d’intégration COM+ utilise l’interface `IPersistStream` pour sérialiser ou désérialiser l’instance d’objet. Si l'instance d'objet ne prend pas en charge `IPersistStream`, une exception est levée.  
   
  Dans une application cliente, les méthodes sur l'objet <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> peuvent être utilisées pour passer un objet dans un service, et pour récupérer un objet de la même façon.  
   
@@ -82,16 +82,16 @@ Windows Communication Foundation (WCF) fournit un environnement riche pour la cr
   
 -   Hébergé sur le Web  
   
-     Le service Web est hébergé dans un processus de travail de serveur Web. Ce mode ne requiert pas l'activation de COM+ lorsque la demande initiale est reçue. Si l'application n'est pas active lorsque cette demande est reçue, elle est activée automatiquement avant le traitement de la demande. Ce mode fournit également un service Web et un accès DCOM à l'application serveur, mais provoque un saut de processus pour les demandes de service Web.  En général, il requiert l'activation de l'emprunt d'identité par le client. Dans WCF, cela est possible avec la <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriété de la <xref:System.ServiceModel.Security.WindowsClientCredential> (classe), qui est accessible en tant que propriété du générique <xref:System.ServiceModel.ChannelFactory%601> (classe), ainsi que le <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valeur d’énumération.  
+     Le service Web est hébergé dans un processus de travail de serveur web. Ce mode ne requiert pas l'activation de COM+ lorsque la demande initiale est reçue. Si l'application n'est pas active lorsque cette demande est reçue, elle est activée automatiquement avant le traitement de la demande. Ce mode fournit également un service Web et un accès DCOM à l'application serveur, mais provoque un saut de processus pour les demandes de service Web.  En général, il requiert l'activation de l'emprunt d'identité par le client. Dans WCF, cela est possible avec la <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriété de la <xref:System.ServiceModel.Security.WindowsClientCredential> (classe), qui est accessible en tant que propriété du générique <xref:System.ServiceModel.ChannelFactory%601> (classe), ainsi que le <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valeur d’énumération.  
   
 -   Hébergé sur le Web dans un processus  
   
-     Le service Web et la logique d'application COM+ sont hébergés dans le processus de travail de serveur Web. Cela permet l'activation automatique du mode Hébergé sur le Web sans provoquer de saut de processus pour les demandes de service Web. L'inconvénient est que l'application serveur n'est pas accessible par le biais de DCOM.  
+     Le service Web et la logique d’application COM+ sont hébergés dans le processus de travail de serveur web. Cela permet l'activation automatique du mode Hébergé sur le Web sans provoquer de saut de processus pour les demandes de service Web. L'inconvénient est que l'application serveur n'est pas accessible par le biais de DCOM.  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
  Comme d’autres services WCF, les paramètres de sécurité pour le service exposé sont administrés par le biais des paramètres de configuration pour le canal WCF. D'ordinaire, les paramètres de sécurité DCOM, tels que les paramètres des autorisations DCOM à l'échelle de l'ordinateur, ne sont pas appliqués. Pour appliquer des rôles d'application COM+, l'autorisation « Appliquer les vérifications d'accès au niveau du composant » doit être activée pour le composant.  
   
- L'utilisation d'une liaison non sécurisée peut exposer la communication à des risques de falsification et de divulgation d'informations. Pour éviter ce problème, il est recommandé de recourir à une liaison sécurisée.  
+ L’utilisation d’une liaison non sécurisée peut exposer la communication à des risques de falsification et de divulgation d’informations. Pour éviter ce problème, il est recommandé de recourir à une liaison sécurisée.  
   
  Pour les modes Hébergé par COM+ et Hébergé sur le Web, les applications clientes doivent autoriser le processus serveur à emprunter l'identité de l'utilisateur client. Cela est possible dans les clients WCF en définissant l’emprunt d’identité au niveau <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) fournit un environnement riche pour la cr
  Les fonctionnalités de recyclage de processus COM+ ne peuvent pas être utilisées sur des applications intégrées. Si l'application est configurée pour utiliser le recyclage de processus et que les composants s'exécutent dans un processus hébergé par COM+, le service ne démarre pas. Cette exigence ne concerne pas les services utilisant le mode Hébergé sur le Web dans un processus car les paramètres de recyclage de processus ne sont pas appliqués.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’intégration à des applications COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [Vue d'ensemble de l'intégration à des applications COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

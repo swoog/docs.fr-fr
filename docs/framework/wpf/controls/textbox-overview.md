@@ -5,25 +5,23 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162644"
 ---
 # <a name="textbox-overview"></a>Vue d'ensemble de TextBox
 Le <xref:System.Windows.Controls.TextBox> classe vous permet d’afficher ou éditer du texte non formaté. Une utilisation courante d’un <xref:System.Windows.Controls.TextBox> modifie sans mise en forme de texte dans un formulaire. Par exemple, un formulaire demandant le nom de l’utilisateur, numéro de téléphone, etc. utiliserait <xref:System.Windows.Controls.TextBox> contrôles pour l’entrée de texte. Cette rubrique présente la <xref:System.Windows.Controls.TextBox> classe et fournit des exemples montrant comment l’utiliser dans les deux [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et C#.  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox ou RichTextBox ?  
  Les deux <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox> permettent aux utilisateurs d’entrer du texte mais les deux contrôles sont utilisés pour différents scénarios. Un <xref:System.Windows.Controls.TextBox> nécessite moins de ressources système un <xref:System.Windows.Controls.RichTextBox> donc est idéal lorsque seul du texte brut doit être modifié (c'est-à-dire toute utilisation dans un formulaire). Un <xref:System.Windows.Controls.RichTextBox> est un meilleur choix lorsqu’il est nécessaire pour l’utilisateur de modifier le texte mis en forme, des images, des tables ou autres prises en charge contenu. Par exemple, la modification d’un document, un article ou un blog qui nécessite une mise en forme, des images, etc. est mieux réalisée à l’aide un <xref:System.Windows.Controls.RichTextBox>. Le tableau ci-dessous résume les principales fonctionnalités de <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.TextBox>.  
   
 |Contrôle|Vérification de l’orthographe en temps réel|Menu contextuel|Mise en forme des commandes telles que <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument> contenu tel que des images, des paragraphes, des tables, etc.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|Oui|Oui|Aucune|Non.|  
+|<xref:System.Windows.Controls.TextBox>|Oui|Oui|Non|Non.|  
 |<xref:System.Windows.Controls.RichTextBox>|Oui|Oui|Oui (voir [Vue d’ensemble de RichTextBox](richtextbox-overview.md))|Oui (voir [Vue d’ensemble de RichTextBox](richtextbox-overview.md))|  
   
 > [!NOTE]
@@ -68,5 +66,6 @@ Le <xref:System.Windows.Controls.TextBox> classe vous permet d’afficher ou éd
  Généralement le <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> événement doit être utilisé pour détecter chaque fois que le texte dans un <xref:System.Windows.Controls.TextBox> ou <xref:System.Windows.Controls.RichTextBox> modifié, et non <xref:System.Windows.UIElement.KeyDown> comme prévu. Pour obtenir un exemple, consultez [Détecter la modification du texte figurant dans un TextBox](how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Rubriques de guide pratique](textbox-how-to-topics.md)
-- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)
+
+- [Rubriques Comment](textbox-how-to-topics.md)
+- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)

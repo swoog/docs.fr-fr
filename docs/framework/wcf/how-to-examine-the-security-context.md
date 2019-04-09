@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Examinez le contexte de sécurité'
+title: 'Procédure : examiner le contexte de sécurité'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207108"
 ---
-# <a name="how-to-examine-the-security-context"></a>Procédure : Examinez le contexte de sécurité
+# <a name="how-to-examine-the-security-context"></a>Procédure : examiner le contexte de sécurité
 Lors de la programmation des services Windows Communication Foundation (WCF), le contexte de sécurité de service vous permet de déterminer les détails sur les informations d’identification du client et les revendications utilisées pour s’authentifier auprès du service. Pour ce faire, utilisez les propriétés de la classe <xref:System.ServiceModel.ServiceSecurityContext>.  
   
  Par exemple, vous pouvez récupérer l'identité du client actuel en utilisant la propriété <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> ou <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Pour déterminer si le client est ou non anonyme, utilisez la propriété <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
@@ -55,5 +55,6 @@ Lors de la programmation des services Windows Communication Foundation (WCF), le
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation de services](../../../docs/framework/wcf/securing-services.md)
 - [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -8,24 +8,23 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162709"
 ---
 # <a name="richtextbox-overview"></a>Vue d'ensemble de RichTextBox
 Le <xref:System.Windows.Controls.RichTextBox> contrôle vous permet d’afficher ou modifier le contenu dynamique, notamment des paragraphes, des images, des tables et bien plus encore. Cette rubrique présente la <xref:System.Windows.Controls.TextBox> classe et fournit des exemples montrant comment l’utiliser dans les deux [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox ou RichTextBox ?  
  Les deux <xref:System.Windows.Controls.RichTextBox> et <xref:System.Windows.Controls.TextBox> permettre aux utilisateurs de modifier le texte, toutefois, les deux contrôles sont utilisés dans des scénarios différents. Un <xref:System.Windows.Controls.RichTextBox> est un meilleur choix lorsqu’il est nécessaire pour l’utilisateur de modifier le texte mis en forme, des images, des tables ou autres contenus riches. Par exemple, la modification d’un document, un article ou un blog qui nécessite une mise en forme, des images, etc. est mieux réalisée à l’aide un <xref:System.Windows.Controls.RichTextBox>. Un <xref:System.Windows.Controls.TextBox> nécessite moins de ressources système un <xref:System.Windows.Controls.RichTextBox> et elle est idéale lorsque uniquement du texte brut doit être modifié (autrement dit, l’utilisation dans des formulaires). Consultez [vue d’ensemble de la zone de texte](textbox-overview.md) pour plus d’informations sur <xref:System.Windows.Controls.TextBox>. Le tableau ci-dessous résume les principales fonctionnalités de <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox>.  
   
 |Contrôle|Vérification de l’orthographe en temps réel|Menu contextuel|Mise en forme des commandes telles que <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument> contenu tel que des images, des paragraphes, des tables, etc.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|Oui|Oui|Aucune|Non.|  
+|<xref:System.Windows.Controls.TextBox>|Oui|Oui|Non|Non.|  
 |<xref:System.Windows.Controls.RichTextBox>|Oui|Oui|Oui|Oui|  
   
  **Remarque :** Bien que <xref:System.Windows.Controls.TextBox> ne prend pas en charge la mise en forme de commandes connexes telles que <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B), de nombreuses commandes de base sont pris en charge par les deux contrôles comme <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
@@ -95,5 +94,6 @@ Le <xref:System.Windows.Controls.RichTextBox> contrôle vous permet d’afficher
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Rubriques de guide pratique](richtextbox-how-to-topics.md)
-- [Vue d’ensemble de TextBox](textbox-overview.md)
+
+- [Rubriques Comment](richtextbox-how-to-topics.md)
+- [Vue d'ensemble de TextBox](textbox-overview.md)

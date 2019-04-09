@@ -2,12 +2,12 @@
 title: Didacticiels C#
 description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214440"
 ---
 # <a name="c-tutorials"></a>Didacticiels C#
 
@@ -61,5 +61,3 @@ Les didacticiels suivants vous permettent de générer des programmes C# à l’
 * [Utilisation de LINQ](working-with-linq.md) : ce didacticiel illustre plusieurs fonctionnalités de LINQ et les éléments de langage qui le prennent en charge.
 * [Utilisation d’attributs](attributes.md) : ce tutoriel décrit comment créer et utiliser des attributs en C#.
 * Le tutoriel [Interpolation de chaîne](exploration/interpolated-strings.yml) vous montre comment insérer des valeurs dans une chaîne. Vous allez apprendre à créer une chaîne interpolée avec des expressions C# incorporées, et à contrôler l’apparence du texte des résultats des expressions dans la chaîne de résultat. Vous pouvez également [exécuter ce tutoriel localement sur votre ordinateur](exploration/interpolated-strings-local.md).
-
-
