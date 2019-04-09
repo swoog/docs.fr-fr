@@ -2,19 +2,19 @@
 title: Fonctions système
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 9ab9298214813e7dd3af31f224d84a00040fbf01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135154d2f5e26cdf7f2e41e8ed2b561bb75f377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073442"
 ---
 # <a name="system-functions"></a>Fonctions système
 Le fournisseur de données .NET Framework pour SQL Server (SqlClient) fournit les fonctions système suivantes :  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Retourne la valeur de somme de contrôle. `CHECKSUM` est destiné à être utilisé dans la création d'index de hachage.<br /><br /> **Arguments**<br /><br /> `value`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, ou `Guid`. Vous pouvez spécifier un, deux ou trois valeurs.<br /><br /> **Valeur de retour**<br /><br /> Valeur absolue de l'expression spécifiée.<br /><br /> **Exemple**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Retourne la valeur de somme de contrôle. `CHECKSUM` est conçu pour une utilisation dans la création d’index de hachage.<br /><br /> **Arguments**<br /><br /> `value`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, ou `Guid`. Vous pouvez spécifier un, deux ou trois valeurs.<br /><br /> **Valeur de retour**<br /><br /> Valeur absolue de l'expression spécifiée.<br /><br /> **Exemple**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|Produit la date et l'heure actuelles dans le format utilisé de manière interne par SQL Server pour les valeurs `DateTime` avec une précision de 7 dans SQL Server 2008 et une précision de 3 dans SQL Server 2005.<br /><br /> **Valeur de retour**<br /><br /> Date et heure système actuelles sous la forme d'une valeur `DateTime`.<br /><br /> **Exemple**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER` `()`|Retourne le nom de l'utilisateur actuel.<br /><br /> **Valeur de retour**<br /><br /> `String` ASCII.<br /><br /> **Exemple**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|Retourne le nombre d'octets utilisés pour représenter une expression.<br /><br /> **Arguments**<br /><br /> `expression`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valeur de retour**<br /><br /> Taille des propriétés sous la forme d'une valeur `Int32`.<br /><br /> **Exemple**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
@@ -28,8 +28,9 @@ Le fournisseur de données .NET Framework pour SQL Server (SqlClient) fournit l
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[Système fonctions Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[Système fonctions Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Fonctions système (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[Fonctions système (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[Fonctions système (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Fonctions système (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Langage Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Fonctions SqlClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+
+- [Langage d'Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Fonctions SqlClient pour l'Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

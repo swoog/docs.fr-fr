@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Développer un contrôle de formulaires Windows Simple'
+title: 'Procédure : développer un contrôle Windows Forms simple'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089358"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Procédure : Développer un contrôle de formulaires Windows Simple
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Procédure : développer un contrôle Windows Forms simple
 Cette section vous guide à travers les étapes clés de création d’un contrôle Windows Forms personnalisé. Le contrôle simple développé dans cette procédure pas à pas permet l’alignement de ses <xref:System.Windows.Forms.Control.Text%2A> propriété à modifier. Il ne permet pas de déclencher ni de gérer des événements.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Pour créer un contrôle personnalisé simple  
@@ -103,5 +103,6 @@ Cette section vous guide à travers les étapes clés de création d’un contr�
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Propriétés dans les contrôles Windows Forms](properties-in-windows-forms-controls.md)
 - [Événements dans les contrôles Windows Forms](events-in-windows-forms-controls.md)

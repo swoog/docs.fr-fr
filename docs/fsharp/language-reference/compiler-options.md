@@ -2,22 +2,19 @@
 title: Options du compilateur
 description: Utilisez F# options de ligne de commande du compilateur pour contrôler la compilation de votre F# applications et des bibliothèques.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089755"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
 Cette rubrique décrit les options de ligne de commande du compilateur pour le F# compilateur, fsc.exe. L’environnement de compilation peut également être contrôlé en définissant les propriétés du projet.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>Options du compilateur classées par ordre alphabétique
 Le tableau suivant présente les options du compilateur classées par ordre alphabétique. Certaines de la F# options du compilateur sont similaires à la C# options du compilateur. Si qui est le cas, un lien vers le C# rubrique des options du compilateur est fournie.
-
-
 
 |Option du compilateur|Description|
 |---------------|-----------|
@@ -74,4 +71,4 @@ Le tableau suivant présente les options du compilateur classées par ordre alph
 |Titre|Description|
 |-----|-----------|
 |[Options F# Interactive](fsharp-interactive-options.md)|Décrit les options de ligne de commande pris en charge par le F# interpréteur, fsi.exe.|
-|[Informations de référence sur les propriétés de projet](/visualstudio/ide/reference/project-properties-reference)|Décrit l’interface utilisateur pour les projets, y compris les pages de propriétés de projet qui fournissent des options de génération.|
+|[Référence de propriétés de projet](/visualstudio/ide/reference/project-properties-reference)|Décrit l’interface utilisateur pour les projets, y compris les pages de propriétés de projet qui fournissent des options de génération.|

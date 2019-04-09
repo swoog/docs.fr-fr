@@ -1,13 +1,13 @@
 ---
-title: Élément <peerAuthentication>
+title: <peerAuthentication> Élément
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 7607f5bab6083c190303fd0a9121ffab55c620c3
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092966"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > élément
 Spécifie les options d'authentification pour les clients du réseau pair à pair.  
@@ -45,25 +45,25 @@ Spécifie les options d'authentification pour les clients du réseau pair à pai
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType, attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Chaîne|Spécifie le nom de type, l'assembly et d'autres données utilisées pour rechercher le type. Au minimum, un espace de noms et un nom de type sont requis. Les informations facultatives incluent : le nom de l'assembly, le numéro de version, la culture et le jeton de clé publique.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode, attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Énumération|Une des valeurs suivantes : `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust` et `Custom`. La valeur par défaut est `ChainTrust`.<br /><br /> Pour plus d’informations, consultez [utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode, attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Énumération|Une des valeurs suivantes : `NoCheck`, `Online` et `Offline`. La valeur par défaut est `Online`.<br /><br /> Pour plus d’informations, consultez [utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation, attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Énumération|Une des valeurs suivantes : `LocalMachine` ou `CurrentUser`. La valeur par défaut est `CurrentUser`. Si l'application cliente s'exécute sous un compte système, le certificat se trouve généralement dans `LocalMachine`. Si l'application cliente s'exécute sous un compte d'utilisateur, le certificat se trouve généralement dans `CurrentUser`.|  
   
@@ -101,6 +101,7 @@ Spécifie les options d'authentification pour les clients du réseau pair à pai
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
@@ -108,6 +109,6 @@ Spécifie les options d'authentification pour les clients du réseau pair à pai
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Authentification de Message de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Authentification personnalisée de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

@@ -1,15 +1,15 @@
 ---
-title: Problèmes connus dans SqlClient pour l’Entity Framework
+title: Problèmes connus dans SqlClient pour l'Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073804"
 ---
-# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problèmes connus dans SqlClient pour l’Entity Framework
+# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problèmes connus dans SqlClient pour l'Entity Framework
 Cette section décrit les problèmes connus liés au fournisseur de données .NET Framework pour SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Espaces de fin dans les fonctions de chaîne  
@@ -18,7 +18,7 @@ Cette section décrit les problèmes connus liés au fournisseur de données .NE
  Si vous devez avoir des espaces de fin dans votre chaîne, vous devez envisager l’ajout d’un caractère d’espace blanc à la fin, afin que SQL Server ne supprime pas la chaîne. Si les espaces de fin ne sont pas indispensables, ils doivent être supprimés avant le passage au pipeline de la requête.  
   
 ## <a name="right-function"></a>Fonction RIGHT  
- Si une valeur non `null` est passée comme premier argument et que 0 est passé comme deuxième argument à `RIGHT(nvarchar(max)`, 0`)` ou `RIGHT(varchar(max)`, 0`)`, c'est une valeur `NULL` qui sera retournée, et non une chaîne `empty`.  
+ Si une valeur non `null` est passée comme premier argument et que 0 est passé comme deuxième argument à `RIGHT(nvarchar(max)`, 0`)` ou `RIGHT(varchar(max)`, 0`)`, c’est une valeur `NULL` qui sera retournée, et non une chaîne `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Opérateurs CROSS et OUTER APPLY  
  Les opérateurs CROSS et OUTER APPLY ont été introduits dans [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Dans certains cas, le pipeline de requête peut produire une instruction Transact-SQL qui contient des opérateurs CROSS APPLY et/ou OUTER APPLY. Étant donné que certains fournisseurs principaux, y compris les versions de SQL Server antérieure à [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], ne prennent pas en charge ces opérateurs, les requêtes de ce type ne peut pas être exécutées sur ces fournisseurs.  
@@ -60,5 +60,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge les valeurs d'identité de type GUID générées par le serveur, mais le fournisseur doit prendre en charge le retour de la valeur d'identité générée par le serveur après l'insertion d'une ligne. À compter de SQL Server 2005, vous pouvez retourner le type GUID généré par le serveur dans une base de données SQL Server via le [clause OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [SqlClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
 - [Problèmes connus et éléments à prendre en compte dans LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

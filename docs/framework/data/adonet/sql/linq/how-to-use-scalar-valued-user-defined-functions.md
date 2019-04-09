@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Utiliser des fonctions définies par l’utilisateur scalaires'
+title: 'Procédure : Utiliser des fonctions scalaires définies par l’utilisateur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: 33c6ae89184b90ba69cc9c3c01f0b1ec9d7ff1cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127161"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procédure : Utiliser des fonctions définies par l’utilisateur scalaires
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procédure : Utiliser des fonctions scalaires définies par l’utilisateur
 Vous pouvez mapper une méthode cliente définie sur une classe à une fonction définie par l'utilisateur à l'aide de l'attribut <xref:System.Data.Linq.Mapping.FunctionAttribute>. Notez que le corps de la méthode construit une expression qui capture l'intention de l'appel de méthode et passe cette expression au <xref:System.Data.Linq.DataContext> pour la traduire et l'exécuter.  
   
 > [!NOTE]
@@ -38,4 +38,5 @@ END
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Fonctions définies par l’utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+
+- [Fonctions définies par l'utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

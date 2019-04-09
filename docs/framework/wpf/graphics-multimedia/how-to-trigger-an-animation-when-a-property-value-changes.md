@@ -1,19 +1,19 @@
 ---
-title: "Procédure : Déclencher une animation en cas de modification d'une valeur de propriété"
+title: 'Procédure : Déclencher une animation en cas de modification d’une valeur de propriété'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], starting when property values change
 - triggering animation [WPF]
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-ms.openlocfilehash: 87f7525755556301fec3f00da612fc5262f1f533
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080707"
 ---
-# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Procédure : Déclencher une animation en cas de modification d'une valeur de propriété
+# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Procédure : Déclencher une animation en cas de modification d’une valeur de propriété
 Cet exemple montre comment utiliser un <xref:System.Windows.Trigger> pour démarrer un <xref:System.Windows.Media.Animation.Storyboard> quand une valeur de propriété change. Vous pouvez utiliser un <xref:System.Windows.Trigger> à l’intérieur d’un <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, ou <xref:System.Windows.DataTemplate>.  
   
 ## <a name="example"></a>Exemple  
@@ -24,6 +24,7 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Trigger> pour démar
  Les animations appliquées par la propriété <xref:System.Windows.Trigger> objets se comportent de façon plus complexe que <xref:System.Windows.EventTrigger> animations ou les animations démarrées à l’aide de <xref:System.Windows.Media.Animation.Storyboard> méthodes.  Elles « effectuent un transfert » avec des animations défini par d’autres <xref:System.Windows.Trigger> objets, mais composent avec <xref:System.Windows.EventTrigger> et animations déclenchées à la méthode.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Trigger>
-- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
-- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d'ensemble des storyboards](storyboards-overview.md)

@@ -2,12 +2,12 @@
 title: Terminologie Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104167"
 ---
 # <a name="entity-framework-terminology"></a>Terminologie Entity Framework
 Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation. Des liens vers des rubriques pertinentes dans lesquelles des informations supplémentaires sont disponibles sont fournis.  
@@ -44,7 +44,7 @@ Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_e
 |association indépendante|Association entre des entités qui est représentée et suivie par un objet indépendant.|  
 |clé|Attribut d'un type d'entité qui spécifie quelle propriété ou quel jeu de propriétés est utilisé pour identifier des instances uniques du type d'entité. Représenté dans la couche objet par la classe <xref:System.Data.EntityKey>.<br /><br /> Pour plus d’informations, consultez [clé élément (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) et [clé d’entité](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |chargement différé|Lorsque des objets sont retournés par une requête, les objets connexes ne sont pas chargés en même temps. Ils sont en revanche chargés automatiquement lorsque la propriété de navigation est accédée.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Syntaxe de requête qui définit un ensemble d’opérateurs de requête qui permettent des opérations de parcours, de filtre et de projection être exprimés de manière directe et déclarative dans Visual C# et Visual Basic.<br /><br /> Pour plus d’informations, consultez [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Syntaxe de requête qui définit un ensemble d’opérateurs de requête qui permettent des opérations de parcours, de filtre et de projection être exprimés de manière directe et déclarative dans Visual c# et Visual Basic.<br /><br /> Pour plus d’informations, consultez [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapper|Spécification des correspondances entre des éléments d'un modèle conceptuel et des éléments d'un modèle de stockage.<br /><br /> Pour plus d’informations, consultez [spécification MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |fichier .msl|Fichier XML qui contient le mappage entre le modèle conceptuel et le modèle de stockage, exprimé en MSL.|  
 |langage MSL (Mapping Specification Language)|Langage basé sur XML utilisé pour mapper les éléments définis dans un modèle conceptuel aux éléments d'un modèle de stockage.<br /><br /> Pour plus d’informations, consultez [spécification MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -76,6 +76,7 @@ Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_e
 |table par type|Méthode consistant à modéliser une hiérarchie de types dans une base de données qui utilise plusieurs tables avec des relations un-à-un pour modéliser les différents types.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Vue d’ensemble d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Prise en main](../../../../../docs/framework/data/adonet/ef/getting-started.md)

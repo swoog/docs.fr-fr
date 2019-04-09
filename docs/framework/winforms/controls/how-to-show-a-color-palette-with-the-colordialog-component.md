@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Afficher une Palette de couleurs avec le composant ColorDialog'
+title: 'Procédure : montrer une palette de couleurs avec le composant ColorDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 35f6f81c2b13234b23b3b2295e45caf5f16abd9e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096034"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Procédure : Afficher une Palette de couleurs avec le composant ColorDialog
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Procédure : montrer une palette de couleurs avec le composant ColorDialog
 Le [ColorDialog](colordialog-component-windows-forms.md) composant affiche une palette de couleurs et retourne une propriété contenant la couleur sélectionnée par l’utilisateur.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>Pour choisir une couleur à l’aide du composant ColorDialog  
@@ -77,5 +77,6 @@ Le [ColorDialog](colordialog-component-windows-forms.md) composant affiche une p
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog, composant](colordialog-component-windows-forms.md)

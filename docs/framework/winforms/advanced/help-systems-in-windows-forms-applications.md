@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087272"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systèmes d’aide dans les applications Windows Forms
 Un de la fournissiez plus importantes, comme un développeur d’applications, peut fournir à vos utilisateurs avec est un système d’aide. Il s’agit où ils activera lorsqu’ils deviennent confondus ou désorientés. En fournissant un système d’aide dans une application basée sur Windows est assez facile en utilisant le [du composant HelpProvider](../controls/helpprovider-component-windows-forms.md).  
@@ -24,7 +24,8 @@ Un de la fournissiez plus importantes, comme un développeur d’applications, p
  Vous pouvez générer des fichiers d’aide HTML 1.x avec HTML Help Workshop. Pour plus d’informations sur HTML Help, consultez « HTML Help Workshop » ou les autres rubriques « HTML Help » dans MSDN.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Intégration de l’aide d’utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Intégration de l'aide d'utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
 - [HelpProvider, composant](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip, composant](../controls/tooltip-component-windows-forms.md)
 - [Vue d'ensemble des Windows Forms](../windows-forms-overview.md)

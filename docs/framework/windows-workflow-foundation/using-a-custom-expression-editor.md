@@ -2,12 +2,12 @@
 title: Utilisation d'un éditeur d'expressions personnalisé
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101274"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
@@ -279,6 +279,7 @@ namespace WpfApplication1
  Si vous utilisez un **ExpressionTextBox** contrôle dans un concepteur d’activités personnalisées, il n’est pas nécessaire créer et détruire les éditeurs d’expressions à l’aide de la <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> et <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> méthodes de la <xref:System.Activities.Presentation.View.IExpressionEditorService> interface. La classe <xref:System.Activities.Presentation.View.ExpressionTextBox> gère cet aspect pour vous.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Utilisation d'ExpressionTextBox dans un concepteur d'activités personnalisées](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0889b1f3e5aac00c4cbb0361a95732fa951cc48d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea8acab4b8a45fe089a871fb5ada5e24aa98bb84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112032"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant, interface
 Fournit l’accès aux constantes non managées.  
@@ -34,8 +34,9 @@ Fournit l’accès aux constantes non managées.
 |[GetSignature, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Obtient la signature de la constante.|  
 |[GetValue, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Obtient la valeur de la constante.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

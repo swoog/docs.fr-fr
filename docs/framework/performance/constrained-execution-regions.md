@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097172"
 ---
 # <a name="constrained-execution-regions"></a>régions d'exécution limitée
 Une région d’exécution limitée (CER, Constrained Execution Region) fait partie d’un mécanisme pour la création de code managé fiable. Elle définit une zone dans laquelle le Common Language Runtime (CLR) ne peut pas lever d’exceptions hors-bande qui empêcheraient le code dans la zone de s’exécuter dans son intégralité. Dans cette région, le code utilisateur ne peut pas exécuter de code qui entraînerait la levée d’exceptions hors-bande. La méthode <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> doit précéder immédiatement un bloc `try`, et marque les blocs `catch`, `finally` et `fault` en tant que régions d’exécution limitée. Une fois marqué comme région limitée, le code doit appeler uniquement du code avec des contrats de fiabilité forts, et il ne doit pas allouer ou effectuer des appels virtuels à des méthodes non préparées ou non fiables, sauf s’il est prêt à gérer les échecs. Le CLR retarde les abandons de thread pour le code qui s’exécute dans une région CER.  
@@ -70,7 +70,7 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Dans des conditions exceptionnelles, il est garanti que la méthode limite l’altération de l’état à l’instance actuelle.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. Dans des conditions exceptionnelles, le CLR n’offre aucune garantie quant à la cohérence de l’état. Autrement dit, la condition peut endommager le processus.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Dans des conditions exceptionnelles, le CLR n’offre aucune garantie quant à la cohérence de l’état ; Autrement dit, ces conditions peuvent altérer le processus.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Dans des conditions exceptionnelles, il est garanti que la méthode n’altère pas l’état.  
   
@@ -106,7 +106,7 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
   
 -   Vérifications de sécurité N’effectuez pas de demande, mais uniquement des demandes de liaison.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> et <xref:System.Reflection.Emit.OpCodes.Castclass> pour les proxys et les objets COM  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> et <xref:System.Reflection.Emit.OpCodes.Castclass> pour des objets COM et les proxys  
   
 -   Obtention ou définition de champs sur un proxy transparent.  
   
@@ -115,4 +115,5 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
 -   Pointeurs de fonction et délégués.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bonnes pratiques relatives à la fiabilité](../../../docs/framework/performance/reliability-best-practices.md)
+
+- [Meilleures pratiques pour la fiabilité](../../../docs/framework/performance/reliability-best-practices.md)

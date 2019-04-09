@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Animer une propriété sans utiliser de storyboard'
+title: 'Procédure : Animer une propriété sans utiliser de table de montage séquentiel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: b76afeb0187065ff07c832363d3a52896aa36822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091705"
 ---
-# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Procédure : Animer une propriété sans utiliser de storyboard
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Procédure : Animer une propriété sans utiliser de table de montage séquentiel
 Cet exemple montre comment appliquer une animation à une propriété sans utiliser un <xref:System.Windows.Media.Animation.Storyboard>.  
   
 > [!NOTE]
@@ -37,9 +37,10 @@ Cet exemple montre comment appliquer une animation à une propriété sans utili
  Il existe d’autres façons d’animer sans utiliser <xref:System.Windows.Media.Animation.Storyboard> objets ; pour plus d’informations, consultez [vue d’ensemble des Techniques d’Animation propriété](property-animation-techniques-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
-- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d'ensemble de l'animation](animation-overview.md)

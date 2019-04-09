@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 3f53c9889e1fdae6c582e8d4a17f640e425e6594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121652"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Création d'un objet DataView (LINQ to DataSet)
 Il existe deux manières de créer un <xref:System.Data.DataView> dans le contexte de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Vous pouvez créer un <xref:System.Data.DataView> à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sur une <xref:System.Data.DataTable>, ou vous pouvez la créer à partir d'une <xref:System.Data.DataTable> typée ou non typée. Dans les deux cas, vous allez créer le <xref:System.Data.DataView> en utilisant l’une de le <xref:System.Data.DataTableExtensions.AsDataView%2A> les méthodes d’extension ; <xref:System.Data.DataView> n’est pas être construit directement dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexte.  
   
  Une fois le <xref:System.Data.DataView> créé, vous pouvez le lier à un contrôle d’interface utilisateur dans une application Windows Forms ou ASP.NET, ou modifier les paramètres de filtrage et de tri.  
   
- <xref:System.Data.DataView> construit un index, ce qui augmente considérablement les performances des applications qui utilisent l'index, telles que le filtrage et le tri. L'index d'un <xref:System.Data.DataView> est construit à la fois lors de la création du <xref:System.Data.DataView> et lorsque l'une des informations de tri ou de filtrage est modifiée. La création d'un <xref:System.Data.DataView>, suivie de la définition des informations de tri et de filtrage, entraîne la construction de l'index deux fois au moins : une fois lors de la création du <xref:System.Data.DataView>, puis à nouveau lorsqu'une des propriétés de tri ou de filtrage est modifiée.  
+ <xref:System.Data.DataView> Construit un index, ce qui augmente considérablement les performances des opérations qui peut utiliser l’index, telles que le filtrage et le tri. L'index d'un <xref:System.Data.DataView> est construit à la fois lors de la création du <xref:System.Data.DataView> et lorsque l'une des informations de tri ou de filtrage est modifiée. La création d'un <xref:System.Data.DataView>, suivie de la définition des informations de tri et de filtrage, entraîne la construction de l'index deux fois au moins : une fois lors de la création du <xref:System.Data.DataView>, puis à nouveau lorsqu'une des propriétés de tri ou de filtrage est modifiée.  
   
  Pour plus d’informations sur le filtrage et tri avec <xref:System.Data.DataView>, consultez [filtrage avec DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) et [tri avec DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
@@ -71,6 +71,7 @@ Il existe deux manières de créer un <xref:System.Data.DataView> dans le contex
  Cependant, on constate une baisse de performance lorsqu'on définit la propriété <xref:System.Data.DataView.RowFilter%2A> ou <xref:System.Data.DataView.Sort%2A> après la création du <xref:System.Data.DataView> à partir d'une requête, parce que le <xref:System.Data.DataView> construit un index pour prendre en charge les opérations de filtrage et de tri. Le paramétrage de la propriété <xref:System.Data.DataView.RowFilter%2A> ou <xref:System.Data.DataView.Sort%2A> entraîne une nouvelle génération de l'index des données, ce qui accroît la charge pour votre application et, par voie de conséquence, fait baisser les performances. Dans la mesure du possible, il est préférable de spécifier les informations de filtrage et de tri dès la création du <xref:System.Data.DataView> et d'éviter de les modifier par la suite.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Liaison de données et LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Filtrage avec DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
 - [Tri avec DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

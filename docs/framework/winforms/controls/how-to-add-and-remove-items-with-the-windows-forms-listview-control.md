@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms'
+title: 'Procédure : ajouter et supprimer des éléments avec le contrôle ListView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104648"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Procédure : Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Procédure : ajouter et supprimer des éléments avec le contrôle ListView Windows Forms
 Le processus d’ajout d’un élément à un formulaire Windows <xref:System.Windows.Forms.ListView> contrôle se compose principalement de la spécification de l’élément et lui assigner des propriétés. Ajouter ou supprimer des éléments de liste peut être effectuée à tout moment.  
   
 ### <a name="to-add-items-programmatically"></a>Pour ajouter des éléments par programmation  
@@ -34,6 +34,7 @@ Le processus d’ajout d’un élément à un formulaire Windows <xref:System.Wi
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ListView>
 - [Contrôle ListView](listview-control-windows-forms.md)
 - [Vue d’ensemble du contrôle ListView](listview-control-overview-windows-forms.md)

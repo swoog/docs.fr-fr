@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Spécifier le Mode édition pour le contrôle de DataGridView Windows Forms'
+title: 'Procédure : spécifier le mode d’édition pour le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080395"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Procédure : Spécifier le Mode édition pour le contrôle de DataGridView Windows Forms
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Procédure : spécifier le mode d’édition pour le contrôle DataGridView Windows Forms
 Par défaut, les utilisateurs peuvent modifier le contenu du cours <xref:System.Windows.Forms.DataGridView> cellule de zone de texte en tapant qu’il contient, ou en appuyant sur F2. Cela met la cellule en mode édition si toutes les conditions suivantes sont remplies :  
   
 -   La source de données sous-jacente prend en charge la modification.  
@@ -45,6 +45,7 @@ Par défaut, les utilisateurs peuvent modifier le contenu du cours <xref:System.
 -   des références aux assemblys <xref:System> et <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
 - [Saisie de données dans le contrôle DataGridView Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)

@@ -1,5 +1,5 @@
 ---
-title: < System.Net >, élément (paramètres réseau)
+title: <system.Net>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: f9fbf48325c7cb5216d16041543bc53c00584ea3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095268"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net >, élément (paramètres réseau)
 Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.  
@@ -43,7 +43,7 @@ Contient des paramètres qui spécifient la manière dont .NET Framework se conn
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configure le serveur proxy HTTP (Hypertext Transfer Protocol).|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configure les options d’envoi du courrier SMTP Simple Mail Transport Protocol ().|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Contrôle le mécanisme de mise en cache pour les demandes réseau.|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour les classes dans le <xref:System.Net> et les espaces de noms enfants.|  
+|[paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour les classes dans le <xref:System.Net> et les espaces de noms enfants.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules à utiliser pour demander des informations à partir d’hôtes Internet.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
@@ -93,4 +93,5 @@ Contient des paramètres qui spécifient la manière dont .NET Framework se conn
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

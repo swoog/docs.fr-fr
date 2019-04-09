@@ -2,12 +2,12 @@
 title: Suivi de bout en bout
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092116"
 ---
 # <a name="end-to-end-tracing"></a>Suivi de bout en bout
 Bout en bout (e2e) suivi permet aux développeurs de suivre l’exécution de code dans l’infrastructure Windows Communication Foundation (WCF) pour examiner pourquoi un chemin d’accès du code a échoué, ou pour assurer le suivi détaillé pour l’analyse de performances et de planification de capacité. Windows Communication Foundation (WCF) fournit trois mécanismes de corrélation pour aider à diagnostiquer la cause d’une erreur : activités, transferts et propagation.  
@@ -26,7 +26,8 @@ Bout en bout (e2e) suivi permet aux développeurs de suivre l’exécution de co
  Fournit un résumé de tous les types de suivi d'activité  
   
 ## <a name="see-also"></a>Voir aussi
-- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configuration du traçage](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

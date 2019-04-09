@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074655"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze, attribut
 Définit le <xref:System.Windows.Freezable.IsFrozen%2A> état `true` sur la contenant <xref:System.Windows.Freezable> élément. Comportement par défaut un <xref:System.Windows.Freezable> sans le `PresentationOptions:Freeze` attribut spécifié est que <xref:System.Windows.Freezable.IsFrozen%2A> est `false` au moment de la charge et selon que vous général <xref:System.Windows.Freezable> comportement lors de l’exécution.  
@@ -42,6 +42,7 @@ Définit le <xref:System.Windows.Freezable.IsFrozen%2A> état `true` sur la cont
  N’importe quelle valeur pour la `Freeze` attribut autre que `true` (non sensible à la casse) génère une erreur de temps de chargement. (En spécifiant le `Freeze` sous la forme `false` n’est pas une erreur, mais qui est déjà le paramètre par défaut, par conséquent, pour `false` n’a aucun effet).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Freezable>
-- [Vue d’ensemble des objets Freezable](freezable-objects-overview.md)
+- [Vue d'ensemble des objets Freezable](freezable-objects-overview.md)
 - [mc:Ignorable, attribut](mc-ignorable-attribute.md)

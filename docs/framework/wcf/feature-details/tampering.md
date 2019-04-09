@@ -2,12 +2,12 @@
 title: Falsification
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 86446778008782c733629ef94e6b192501bee2da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107885"
 ---
 # <a name="tampering"></a>Falsification
 *Falsification* est l’action de modification d’un message ou la remise d’un message et à l’aide de ce message modifié à un usage autre que celles prévues pour.  
@@ -20,9 +20,10 @@ ms.locfileid: "54607184"
  Pour atténuer ce risque, n'affectez jamais <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> à la propriété <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> et évitez d'utiliser <xref:System.ServiceModel.Channels.MessageVersion>, tel que la propriété statique <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A>, qui affecte <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> à la propriété <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
 - [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

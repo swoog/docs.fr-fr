@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091614"
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le .NET Framework inclut un modèle de complément, qui permet aux développeurs de créer des applications qui prennent en charge d’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les interfaces utilisateur qui sont fournies par des compléments. Cette rubrique montre comment WPF étend le modèle de complément .NET Framework pour activer ces scénarios, l’architecture sous-jacente, ses avantages et ses limitations.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Vous êtes familiarisé avec le modèle de complément .NET Framework est requise. Pour plus d’informations, consultez [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -167,7 +165,7 @@ ms.locfileid: "57365839"
  Ces tâches sont décrites en détail dans les sous-sections suivantes.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configuration du pipeline et du complément pour un déploiement ClickOnce  
- Les applications [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sont téléchargées et exécutées dans un dossier sécurisé du cache de déploiement [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]. Pour qu’une application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] héberge un complément, l’assembly de pipeline et de complément doit également être téléchargé dans ce dossier sécurisé. Ainsi, vous devez configurer le manifeste de l’application pour qu’il contienne l’assembly de pipeline et de complément à télécharger. Le plus simple est d’effectuer cette opération dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]. Toutefois, l’assembly de pipeline et de complément doit se trouver dans le dossier racine du projet d’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] de l’hôte pour que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] puisse détecter les assemblys de pipeline.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sont téléchargées et exécutées à partir d’un dossier sécurisé le [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] du cache de déploiement. Pour qu’une application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] héberge un complément, l’assembly de pipeline et de complément doit également être téléchargé dans ce dossier sécurisé. Ainsi, vous devez configurer le manifeste de l’application pour qu’il contienne l’assembly de pipeline et de complément à télécharger. Le plus simple est d’effectuer cette opération dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]. Toutefois, l’assembly de pipeline et de complément doit se trouver dans le dossier racine du projet d’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] de l’hôte pour que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] puisse détecter les assemblys de pipeline.  
   
  La première étape consiste donc à générer l’assembly de pipeline et de complément à la racine du projet [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] en définissant la sortie de build de chaque projet d’assembly de pipeline et d’assembly de complément. Le tableau suivant présente les chemins de sortie de build des projets d’assembly de pipeline et du projet d’assembly de complément se trouvant dans le même dossier solution et racine que le projet [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] de l’hôte.  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365839"
  Par défaut, lorsque plusieurs domaines d’application sont utilisés, les différents assemblys .NET Framework requises par chaque application sont tous chargés dans ce domaine d’application. Ainsi, le temps nécessaire à la création de domaines d’application et au démarrage des applications dans ces domaines peut affecter les performances. Toutefois, le .NET Framework fournit un moyen de réduire les heures de début en indiquant aux applications de partager des assemblages entre domaines d’application si ceux-ci sont déjà chargés. Pour cela, vous devez utiliser le <xref:System.LoaderOptimizationAttribute> attribut, qui doit être appliqué à la méthode de point d’entrée (`Main`). Dans ce cas, utilisez uniquement du code pour implémenter votre définition d’application (consultez [Vue d’ensemble de la gestion d’applications](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domaines d’application](../../app-domains/application-domains.md)
-- [Vue d’ensemble de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [Objets accessibles à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Rubriques de guide pratique](how-to-topics.md)
+- [Domaines d'application](../../app-domains/application-domains.md)
+- [Vue d'ensemble de .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Rendre des objets accessibles à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [Rubriques Comment](how-to-topics.md)

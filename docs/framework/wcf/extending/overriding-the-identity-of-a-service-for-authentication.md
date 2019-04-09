@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082189"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Substitution de l'identité d'un service pour l'authentification
 Généralement, vous n'avez pas besoin de définir l'identité sur un service car la sélection d'un type d'informations d'identification du client impose le type d'identité exposé dans les métadonnées du service. Par exemple, le code de configuration suivant utilise le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) et affecte le `clientCredentialType` attribut Windows.  
-  
-  
-  
+
  Le fragment WSDL (Web Services Description Language) suivant affiche l'identité du point de terminaison défini précédemment. Dans cet exemple, le service s’exécute comme un service auto-hébergé sous un compte d’utilisateur particulier (username@contoso.com) et par conséquent, l’identité d’utilisateur principaux (UPN) contient le nom du compte. L'UPN est également appelé nom de connexion d'utilisateur dans un domaine Windows.  
-  
-  
-  
+
  Pour un exemple d’application qui illustre la définition de l’identité, consultez [Service Identity, exemple](../../../../docs/framework/wcf/samples/service-identity-sample.md). Pour plus d’informations sur l’identité du service, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Authentification et identité Kerberos  
@@ -52,13 +48,9 @@ Généralement, vous n'avez pas besoin de définir l'identité sur un service ca
   
 ### <a name="using-the-identity-element-in-configuration"></a>À l’aide de la \<identité > élément de Configuration  
  Si vous remplacez le type d’informations d’identification du client dans la liaison présentée précédemment par Certificate`,` le fichier WSDL généré contient alors un certificat X.509 sérialisé pour la valeur d’identité, comme illustré dans le code suivant. Il s'agit de la valeur par défaut pour tous les types d'informations d'identification du client autres que Windows.  
-  
-  
-  
- Vous pouvez modifier la valeur de l'identité de service par défaut ou le type de l'identité à l'aide de l'élément <`identity`> dans la configuration ou en définissant l'identité dans le code. Le code de configuration suivant affecte à une identité DNS (Domain Name System) la valeur `contoso.com`.  
-  
-  
-  
+
+ Vous pouvez modifier la valeur de l’identité de service par défaut ou le type de l’identité à l’aide de la <`identity`> élément de configuration ou en définissant l’identité dans le code. Le code de configuration suivant affecte à une identité DNS (Domain Name System) la valeur `contoso.com`.  
+
 ### <a name="setting-identity-programmatically"></a>Définition de l'identité par programme  
  Votre service ne devra pas explicitement spécifier une identité, étant donné que WCF il détermine automatiquement. Cependant, WCF vous permet de spécifier une identité sur un point de terminaison, si nécessaire. Le code suivant ajoute un point de terminaison de service avec une identité DNS spécifique.  
   
@@ -66,5 +58,6 @@ Généralement, vous n'avez pas besoin de définir l'identité sur un service ca
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un vérificateur d’identité Client personnalisés](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Procédure : créer un vérificateur d’identité du client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

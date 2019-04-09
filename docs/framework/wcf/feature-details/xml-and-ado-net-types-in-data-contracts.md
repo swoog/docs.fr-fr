@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: b5d9c3362ebd69e587d58104e7ebc9d9e96a9020
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073960"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Types XML et ADO.NET dans les contrats de données
 Le modèle de contrat de données de Windows Communication Foundation (WCF) prend en charge certains types qui représentent directement du XML. Lorsque ces types sont sérialisés en XML, le sérialiseur écrit le contenu XML de ces types sans traitement supplémentaire. Les types pris en charge sont <xref:System.Xml.XmlElement>, les tableaux de <xref:System.Xml.XmlNode> (mais pas le type `XmlNode` lui-même), ainsi que les types qui implémentent <xref:System.Xml.Serialization.IXmlSerializable>. Le type <xref:System.Data.DataSet> et <xref:System.Data.DataTable>, ainsi que les groupes de données typés, sont utilisés couramment dans la programmation de base de données. Ces types implémentent l'interface `IXmlSerializable` et sont par conséquent sérialisables dans le modèle de contrat de données. Des considérations particulières pour ces types sont répertoriées à la fin de cette rubrique.  
@@ -37,7 +37,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
   
  Notez qu'un élément du membre de données du wrapper `<myDataMember>` est encore présent. Il est impossible de supprimer cet élément dans le modèle de contrat de données. Les sérialiseurs qui gèrent ce modèle (<xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.NetDataContractSerializer>) peuvent émettre des attributs spéciaux dans cet élément wrapper. Ces attributs incluent l'attribut « nil » de l'instance de schéma Xml standard (qui permet à `XmlElement` d'être `null`) et l'attribut « type" (qui permet une utilisation polymorphe de `XmlElement`). En outre, les attributs XML suivants sont spécifiques à WCF : « Id », « Ref », « Type » et « Assembly ». Ces attributs peuvent être émis pour prendre en charge l'utilisation de `XmlElement` avec le mode de conservation des graphiques d'objet activé ou avec <xref:System.Runtime.Serialization.NetDataContractSerializer>. (Pour plus d’informations sur le mode de conservation de l’objet graphique, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
   
- Les tableaux ou les collections de `XmlElement` sont autorisés et gérés comme les autres tableaux ou collections. Autrement dit, il y a un élément wrapper pour la collection entière, et un élément wrapper séparé (semblable à `<myDataMember>` dans l'exemple précédent) pour chaque `XmlElement` du tableau.  
+ Les tableaux ou les collections de `XmlElement` sont autorisés et gérés comme les autres tableaux ou collections. Autrement dit, il y a un élément wrapper pour la collection entière, et un élément wrapper séparé (semblable à `<myDataMember>` dans l’exemple précédent) pour chaque `XmlElement` du tableau.  
   
  Au moment de la désérialisation, un `XmlElement` est créé par le désérialiseur à partir du XML entrant. Un parent valide <xref:System.Xml.XmlDocument> est fourni par le désérialiseur.  
   
@@ -83,11 +83,11 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
   
  Seuls les tableaux réguliers de `XmlNode` font l'objet d'un traitement particulier par le sérialiseur. Les membres de données déclarés comme d'autres types de collection qui contiennent `XmlNode`, ou les membres de données déclarés comme tableaux de types dérivés de `XmlNode`, ne font pas l'objet d'un traitement particulier. Par conséquent, elles ne sont pas normalement sérialisables sauf si elles correspondent aussi à l'un des autres critères pour la sérialisation.  
   
- Les tableaux ou collections de tableaux de `XmlNode` sont autorisés. Il existe un élément wrapper pour la collection entière, et un élément wrapper séparé (semblable à `<myDataMember>` dans l'exemple précédent) pour chaque tableau du `XmlNode` de la collection ou du tableau externe.  
+ Les tableaux ou collections de tableaux de `XmlNode` sont autorisés. Il existe un élément wrapper pour la collection entière, et un élément wrapper séparé (semblable à `<myDataMember>` dans l’exemple précédent) pour chaque tableau du `XmlNode` de la collection ou du tableau externe.  
   
  Le remplissage d'un membre de données de type <xref:System.Array> de `Object` ou `Array` de `IEnumerable` avec les instances `XmlNode` n'entraîne pas le traitement du membre de données en tant que `Array` des instances `XmlNode`. Chaque membre de tableau est sérialisé séparément.  
   
- Lorsqu'ils sont utilisés avec `DataContractSerializer`, les tableaux `XmlNode` peuvent être assignés d'une manière polymorphe mais uniquement à un membre de données de type `Object`. Même s’il implémente `IEnumerable`, un tableau de `XmlNode` ne peut pas être utilisé comme un type de collection et ne peut pas être assigné à un membre de données `IEnumerable`. Comme avec toutes les assignations polymorphes, le `DataContractSerializer` émet le nom de contrat de données dans le XML résultant – dans ce cas, il est « arrayofxmlnode » est dans le « http://schemas.datacontract.org/2004/07/System.Xml« espace de noms. Lorsqu’il est utilisé avec le `NetDataContractSerializer`, les assignations valides d’un `XmlNode` tableau est pris en charge.  
+ Lorsqu'ils sont utilisés avec `DataContractSerializer`, les tableaux `XmlNode` peuvent être assignés d'une manière polymorphe mais uniquement à un membre de données de type `Object`. Même s'il implémente `IEnumerable`, un tableau de `XmlNode` ne peut pas être utilisé comme un type de collection et ne peut pas être assigné à un membre de données `IEnumerable`. Comme avec toutes les assignations polymorphes, le `DataContractSerializer` émet le nom de contrat de données dans le XML résultant – dans ce cas, il est « arrayofxmlnode » est dans le « http://schemas.datacontract.org/2004/07/System.Xml« espace de noms. Lorsqu’il est utilisé avec le `NetDataContractSerializer`, les assignations valides d’un `XmlNode` tableau est pris en charge.  
   
 ### <a name="schema-considerations"></a>Considérations sur le schéma  
  Pour plus d’informations sur le mappage de schéma des types XML, consultez [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Cette section fournit un résumé des points importants.  
@@ -146,7 +146,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
  Les mêmes règles de déclaration d'élément globale s'appliquent aux types de groupes de données hérités. Notez que `XmlRootAttribute` ne peut pas substituer de déclarations d'élément globales ajoutées par l'intermédiaire du code personnalisé, ajoutées soit à `XmlSchemaSet` à l'aide de la méthode du fournisseur de schéma, soit à l'aide de `GetSchema` pour les types de groupes de données hérités.  
   
 ### <a name="ixmlserializable-element-types"></a>Types d'élément IXmlSerializable  
- La propriété `IXmlSerializable` des types d'élément `IsAny` a la valeur `true` ou leur méthode du fournisseur de schéma retourne `null`.  
+ `IXmlSerializable` types d’élément le `IsAny` propriété définie sur `true` ou ont leur méthode du fournisseur de schéma à retourner `null`.  
   
  La sérialisation et la désérialisation d'un type d'élément est très semblable à la sérialisation et la désérialisation d'un type de contenu. Toutefois, il y a des différences importantes :  
   
@@ -158,7 +158,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
   
 -   Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut pas être null et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
   
--   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>, avec le paramètre `verifyObjectName` ayant la valeur `true`, se comporte de la même façon que `IsStartObject` avant de lire l'objet. `ReadObject` passe ensuite le contrôle à la méthode `ReadXml`.  
+-   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> avec le `verifyObjectName` paramètre défini sur `true` se comporte de la même façon que `IsStartObject` avant de lire l’objet. `ReadObject` puis passe le contrôle à `ReadXml` (méthode).  
   
  Le schéma exporté pour les types d'élément est le même que pour le type `XmlElement` décrit dans une section antérieure, sauf que la méthode du fournisseur de schéma peut ajouter tout schéma supplémentaire au <xref:System.Xml.Schema.XmlSchemaSet> comme avec les types de contenu. L'utilisation de l'attribut `XmlRootAttribute` avec les types d'élément n'est pas autorisé, et les déclarations d'élément globales ne sont jamais émises pour ces types.  
   
@@ -203,6 +203,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
  La prise en charge des groupes de données typés dans le modèle de contrat de données est limitée. Les groupes de données typés peuvent être sérialisés et désérialisés et exportés à partir de leur schéma. Cependant, l'importation du schéma de contrat de données ne peut pas générer de nouveaux types DataSet typés depuis le schéma, elle ne peut que réutiliser les types existants. Vous pouvez pointer vers un DataSet typé existant à l'aide du commutateur `/r` sur Svcutil.exe. Si vous tentez d'utiliser Svcutil.exe sans le commutateur `/r` sur un service qui utilise un groupe de données typé, un autre sérialiseur est automatiquement (XmlSerializer) sélectionné. Si vous devez utiliser DataContractSerializer et générer des DataSets à partir du schéma, procédez comme suit : générez les types DataSet typés (à l'aide de l'outil Xsd.exe et du commutateur `/d` sur le service), compilez les types, et pointez vers eux à l'aide du commutateur `/r` sur Svcutil.exe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
 - [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

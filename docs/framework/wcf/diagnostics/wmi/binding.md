@@ -2,12 +2,12 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: aaf0dd9d6918f2c248942cee3773eee8332adda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a040cc6e12833d2c737eb14c591300e5873ddce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106513"
 ---
 # <a name="binding"></a>Liaison
 WMI Binding  
@@ -39,7 +39,7 @@ class Binding
   
  Type d’accès : Propriétés en lecture seule  
   
- Collection d’éléments de liaison implémentés par la liaison.  
+ Collection d'éléments de liaison implémentés par la liaison.  
   
 ### <a name="closetimeout"></a>CloseTimeout  
  Type de données : datetime  
@@ -48,7 +48,7 @@ class Binding
   
  Intervalle de temps spécifié pour l'exécution d'une opération de fermeture.  
   
-### <a name="name"></a>Name  
+### <a name="name"></a>Nom  
  Type de données : chaîne  
   
  Type d’accès : Propriétés en lecture seule  
@@ -90,11 +90,12 @@ class Binding
   
  Intervalle de temps spécifié pour l'exécution d'une opération d'envoi.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.Binding>

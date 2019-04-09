@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner du texte à un emplacement spécifié'
+title: 'Procédure : dessiner du texte à un emplacement spécifié'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 3f54da182e6cc1489eadba6fa1d3cef683c3ba51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075507"
 ---
-# <a name="how-to-draw-text-at-a-specified-location"></a>Procédure : Dessiner du texte à un emplacement spécifié
+# <a name="how-to-draw-text-at-a-specified-location"></a>Procédure : dessiner du texte à un emplacement spécifié
 Lorsque vous effectuez un dessin personnalisé, vous pouvez dessiner du texte dans une seule ligne horizontale, en commençant à un point spécifié. Vous pouvez dessiner du texte de cette manière à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Point> ou <xref:System.Drawing.PointF> paramètre. Le <xref:System.Drawing.Graphics.DrawString%2A> méthode requiert également un <xref:System.Drawing.Brush> et <xref:System.Drawing.Font>  
   
  Vous pouvez également utiliser le <xref:System.Windows.Forms.TextRenderer.DrawText%2A> surchargées de la <xref:System.Windows.Forms.TextRenderer> qui accepte un <xref:System.Drawing.Point>. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> requiert également un <xref:System.Drawing.Color> et un <xref:System.Drawing.Font>.  
@@ -46,7 +46,8 @@ Lorsque vous effectuez un dessin personnalisé, vous pouvez dessiner du texte da
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+
+- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Guide pratique pour Construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
-- [Guide pratique pour Dessiner du texte encapsulé dans un Rectangle](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [Procédure : construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
+- [Procédure : dessiner un habillage de texte dans un rectangle](how-to-draw-wrapped-text-in-a-rectangle.md)

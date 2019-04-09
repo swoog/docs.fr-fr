@@ -2,12 +2,12 @@
 title: Syntaxe des chaînes de connexion
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084953"
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
 Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur. La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`. Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.  
@@ -43,7 +43,7 @@ Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérit
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` lève une exception lors de son utilisation avec le fournisseur `OleDb`.  
+>  `Integrated Security=true` lève une exception lorsqu’il est utilisé avec le `OleDb` fournisseur.  
   
 ## <a name="sqlclient-connection-strings"></a>Chaînes de connexion SqlClient  
 La syntaxe pour une chaîne de connexion <xref:System.Data.SqlClient.SqlConnection> est documentée dans la propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. La propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> vous permet d'obtenir ou de définir une chaîne de connexion pour une base de données SQL Server. Si vous devez vous connecter à une version antérieure de SQL Server, utilisez le fournisseur de données .NET Framework pour OleDb (<xref:System.Data.OleDb>). La plupart des mots clés de chaîne connexion sont aussi mappés à des propriétés dans le <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -88,7 +88,7 @@ Vous pouvez également définir la propriété <xref:System.Data.SqlClient.SqlCo
  Le `Type System Version` mot clé dans un <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> spécifie la représentation côté client des types SQL Server. Pour plus d'informations sur le mot clé <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, consultez `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Connexion et attachement aux instances utilisateur de SQL Server Express  
- Les instances utilisateur sont une nouveauté de SQL Server Express. Elles permettent à un utilisateur qui s'exécute sur un compte Windows local disposant de privilèges minimum de se connecter à une base de données SQL Server et de l'exécuter sans nécessiter de privilèges d'administrateur. Une instance utilisateur s'exécute avec les informations d'identification Windows de l'utilisateur, pas en tant que service.  
+ Les instances utilisateur sont une fonctionnalité de SQL Server Express. Elles permettent à un utilisateur qui s'exécute sur un compte Windows local disposant de privilèges minimum de se connecter à une base de données SQL Server et de l'exécuter sans nécessiter de privilèges d'administrateur. Une instance utilisateur s'exécute avec les informations d'identification Windows de l'utilisateur, pas en tant que service.  
   
  Pour plus d’informations sur l’utilisation des instances utilisateur, consultez [SQL Server Express User Instances](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Il est possible de fournir des informations de connexion pour un **OleDbConnection** dans un fichier lien UDL (Universal Data) ; toutefois vous devez éviter cela. Les fichiers UDL n'étant pas chiffrés, ils exposent les informations de chaîne de connexion en texte brut. Comme un fichier UDL est une ressource basée sur un fichier externe pour votre application, il n'est pas possible de le sécuriser à l'aide du .NET Framework. Fichiers UDL ne sont pas pris en charge pour **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Utilisation de DataDirectory pour se connecter à Access/Jet  
- `DataDirectory` n'est pas exclusif à `SqlClient`. Il peut être aussi utilisé avec les fournisseurs de données .NET <xref:System.Data.OleDb> et <xref:System.Data.Odbc>. L'exemple de chaîne <xref:System.Data.OleDb.OleDbConnection> suivant illustre la syntaxe nécessaire pour se connecter au fichier Northwind.mdb situé dans le dossier app_data de l'application. La base de données système (System.mdw) est également stockée à cet emplacement.  
+ `DataDirectory` n’est pas exclusif à `SqlClient`. Il peut être aussi utilisé avec les fournisseurs de données .NET <xref:System.Data.OleDb> et <xref:System.Data.Odbc>. L’exemple de chaîne <xref:System.Data.OleDb.OleDbConnection> suivant illustre la syntaxe nécessaire pour se connecter au fichier Northwind.mdb situé dans le dossier app_data de l’application. La base de données système (System.mdw) est également stockée à cet emplacement.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  Pour plus d'informations sur la syntaxe de chaîne de connexion ODBC, consultez <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

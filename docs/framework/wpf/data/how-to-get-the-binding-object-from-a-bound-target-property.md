@@ -1,18 +1,18 @@
 ---
-title: "Procédure : Obtenir l'objet de liaison d'une propriété cible liée aux données"
+title: 'Procédure : Obtenir l’objet de liaison d’une propriété cible liée aux données'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083105"
 ---
-# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Procédure : Obtenir l'objet de liaison d'une propriété cible liée aux données
+# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Procédure : Obtenir l’objet de liaison d’une propriété cible liée aux données
 Cet exemple montre comment obtenir l’objet de liaison à partir d’une propriété cible liée à des données.  
   
 ## <a name="example"></a>Exemple  
@@ -31,5 +31,6 @@ Cet exemple montre comment obtenir l’objet de liaison à partir d’une propri
 >  Si votre liaison est un <xref:System.Windows.Data.MultiBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. S’il s’agit une <xref:System.Windows.Data.PriorityBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Si vous ne savez pas si la propriété cible est liée à l’aide un <xref:System.Windows.Data.Binding>, un <xref:System.Windows.Data.MultiBinding>, ou un <xref:System.Windows.Data.PriorityBinding>, vous pouvez utiliser <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Créer une liaison dans du code](how-to-create-a-binding-in-code.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

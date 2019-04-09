@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076859"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API qui s'appuient sur la réflexion
-Dans certains cas, l'utilisation de la réflexion dans du code n'est pas évidente, et la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne conserve donc pas les métadonnées nécessaires au moment de l'exécution. Cette rubrique décrit certaines API courantes ou des modèles de programmation courants qui ne sont pas considérés comme faisant partie de l’API de réflexion, mais dont l’exécution s’appuie sur la réflexion. Si vous les utilisez dans votre code source, vous pouvez ajouter des informations les concernant au fichier de directives runtime (.rd.xml) pour que les appels de ces API ne lèvent pas d’exceptions, telles que [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), au moment de l’exécution.  
+Dans certains cas, l'utilisation de la réflexion dans du code n'est pas évidente, et la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne conserve donc pas les métadonnées nécessaires au moment de l'exécution. Cette rubrique décrit certaines API courantes ou des modèles de programmation courants qui ne sont pas considérés comme faisant partie de l'API de réflexion, mais dont l'exécution s'appuie sur la réflexion. Si vous les utilisez dans votre code source, vous pouvez ajouter des informations les concernant au fichier de directives runtime (.rd.xml) pour que les appels de ces API ne lèvent pas d’exceptions, telles que [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), au moment de l’exécution.  
   
 ## <a name="typemakegenerictype-method"></a>Méthode Type.MakeGenericType  
  Vous pouvez instancier dynamiquement un type générique `AppClass<T>` en appelant la méthode <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> à l'aide d'un code tel que celui-ci :  
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Pour s'exécuter correctement, ce code nécessite plusieurs éléments de métadonnées :  
   
--   Les métadonnées `Browse` pour le type dont vous souhaitez appeler la méthode.  
+-   `Browse` métadonnées pour le type dont vous souhaitez appeler la méthode.  
   
--   Les métadonnées `Browse` pour la méthode que vous souhaitez appeler.  S'il s'agit d'une méthode publique, l'ajout de métadonnées `Browse` publiques pour le type conteneur comprend également la méthode.  
+-   `Browse` métadonnées de la méthode que vous souhaitez appeler.  S'il s'agit d'une méthode publique, l'ajout de métadonnées `Browse` publiques pour le type conteneur comprend également la méthode.  
   
 -   Les métadonnées dynamiques pour la méthode que vous souhaitez appeler, afin que le délégué d'appel de réflexion ne soit pas supprimé par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si des métadonnées dynamiques sont manquantes pour la méthode, l'exception suivante est levée quand la méthode <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> est appelée :  
   
@@ -86,12 +86,13 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- Les métadonnées `Browse` pour le type de tableau sont nécessaires à son instanciation de manière dynamique.  La directive runtime suivante permet l'instanciation dynamique de `Class1[]`.  
+ `Browse` métadonnées pour le type de tableau sont nécessaire pour instancier dynamiquement.  La directive runtime suivante permet l'instanciation dynamique de `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

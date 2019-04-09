@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098635"
 ---
 # <a name="bindingsource-component-overview"></a>Vue d'ensemble du composant BindingSource
 Le composant <xref:System.Windows.Forms.BindingSource> est conçu pour simplifier le processus de liaison de contrôles à une source de données sous-jacente. Le composant <xref:System.Windows.Forms.BindingSource> agit à la fois comme un canal de communication et comme une source de données avec laquelle d'autres contrôles établissent une liaison. Il fournit une abstraction de la connexion de données de votre formulaire tout en transmettant les commandes à la liste de données sous-jacente. De plus, vous pouvez y ajouter des données directement, pour que le composant lui-même fonctionne comme une source de données.  
@@ -20,7 +20,7 @@ Le composant <xref:System.Windows.Forms.BindingSource> est conçu pour simplifie
 ## <a name="bindingsource-component-as-an-intermediary"></a>Composant BindingSource comme intermédiaire  
  Le composant <xref:System.Windows.Forms.BindingSource> agit comme source de données pour tout ou une partie des contrôles du formulaire. Dans Visual Studio, le <xref:System.Windows.Forms.BindingSource> peut être lié à un contrôle par le biais de la `DataBindings` propriété, qui est accessible à partir de la **propriétés** fenêtre. Voir également [Guide pratique pour Lier des contrôles Windows Forms au composant BindingSource à l’aide du concepteur](bind-wf-controls-with-the-bindingsource.md).  
   
- Vous pouvez lier le composant <xref:System.Windows.Forms.BindingSource> à des sources de données simples (comme une seule propriété d'un objet ou une collection de base telle que <xref:System.Collections.ArrayList>) et à des sources de données complexes (comme une table de base de données). Le composant <xref:System.Windows.Forms.BindingSource> joue le rôle d'intermédiaire fournissant des services de liaison et de gestions de devises. Au moment du design ou de l'exécution, vous pouvez lier un composant <xref:System.Windows.Forms.BindingSource> à une source de données complexe en affectant respectivement la base de données et la table à ses propriétés <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. L'illustration suivante montre où vient se placer le composant <xref:System.Windows.Forms.BindingSource> dans l'architecture de liaison de données existante.  
+ Vous pouvez lier le composant <xref:System.Windows.Forms.BindingSource> à des sources de données simples (comme une seule propriété d'un objet ou une collection de base telle que <xref:System.Collections.ArrayList>) et à des sources de données complexes (comme une table de base de données). Le composant <xref:System.Windows.Forms.BindingSource> joue le rôle d’intermédiaire fournissant des services de liaison et de gestions de devises. Au moment du design ou de l'exécution, vous pouvez lier un composant <xref:System.Windows.Forms.BindingSource> à une source de données complexe en affectant respectivement la base de données et la table à ses propriétés <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. L'illustration suivante montre où vient se placer le composant <xref:System.Windows.Forms.BindingSource> dans l'architecture de liaison de données existante.  
   
  ![Source de liaison et architecture de liaison de données](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
@@ -36,32 +36,33 @@ Le composant <xref:System.Windows.Forms.BindingSource> est conçu pour simplifie
  Pour les utilisateurs qui doivent parcourir les données d'un formulaire, le composant <xref:System.Windows.Forms.BindingNavigator> permet de parcourir et de manipuler les données conjointement avec un composant <xref:System.Windows.Forms.BindingSource>. Pour plus d'informations, consultez [BindingNavigator, contrôle](bindingnavigator-control-windows-forms.md).  
   
 ## <a name="data-manipulation"></a>Manipulation de données  
- Le composant <xref:System.Windows.Forms.BindingSource> agit comme un <xref:System.Windows.Forms.CurrencyManager> pour toutes ses liaisons et peut par conséquent fournir l'accès aux informations de devise et de position concernant la source de données. Le tableau suivant montre les membres fournis par le composant <xref:System.Windows.Forms.BindingSource> pour accéder aux données sous-jacentes et les manipuler.  
+ Le composant <xref:System.Windows.Forms.BindingSource> agit comme un <xref:System.Windows.Forms.CurrencyManager> pour toutes ses liaisons et peut par conséquent fournir l’accès aux informations de devise et de position concernant la source de données. Le tableau suivant montre les membres fournis par le composant <xref:System.Windows.Forms.BindingSource> pour accéder aux données sous-jacentes et les manipuler.  
   
 |Membre|Description|  
 |------------|-----------------|  
-|Propriété <xref:System.Windows.Forms.BindingSource.Current%2A>|Obtient l'élément actuel de la source de données.|  
-|Propriété <xref:System.Windows.Forms.BindingSource.Position%2A>|Obtient ou définit la position actuelle dans la liste sous-jacente.|  
-|Propriété <xref:System.Windows.Forms.BindingSource.List%2A>|Obtient la liste qui est l'évaluation de <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> n'est pas défini, retourne la liste spécifiée par <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|Méthode <xref:System.Windows.Forms.BindingSource.Insert%2A>|Insère un élément dans la liste à l'index spécifié.|  
-|Méthode <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Supprime l'élément sélectionné de la liste.|  
-|Méthode <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Applique des modifications en attente à la source de données sous-jacente.|  
-|Méthode <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Annule l'opération de modification actuelle.|  
-|Méthode <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Ajoute un nouvel élément à la liste sous-jacente. Si la source de données implémente <xref:System.ComponentModel.IBindingList> et retourne un élément à partir de l'événement <xref:System.Windows.Forms.BindingSource.AddingNew>, ajoute cet élément. Dans le cas contraire, la demande est passée à la méthode <xref:System.ComponentModel.IBindingList.AddNew%2A> de la liste. Si la liste sous-jacente n'est pas un <xref:System.ComponentModel.IBindingList>, l'élément est créé automatiquement via son constructeur public par défaut.|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A> propriété|Obtient l'élément actuel de la source de données.|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A> propriété|Obtient ou définit la position actuelle dans la liste sous-jacente.|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> propriété|Obtient la liste qui est l'évaluation de <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> n'est pas défini, retourne la liste spécifiée par <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|<xref:System.Windows.Forms.BindingSource.Insert%2A> méthode|Insère un élément dans la liste à l'index spécifié.|  
+|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> méthode|Supprime l'élément sélectionné de la liste.|  
+|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> méthode|Applique des modifications en attente à la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> méthode|Annule l'opération de modification actuelle.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> méthode|Ajoute un nouvel élément à la liste sous-jacente. Si la source de données implémente <xref:System.ComponentModel.IBindingList> et retourne un élément à partir de l'événement <xref:System.Windows.Forms.BindingSource.AddingNew>, ajoute cet élément. Dans le cas contraire, la demande est passée à la méthode <xref:System.ComponentModel.IBindingList.AddNew%2A> de la liste. Si la liste sous-jacente n'est pas un <xref:System.ComponentModel.IBindingList>, l'élément est créé automatiquement via son constructeur public par défaut.|  
   
 ## <a name="sorting-and-filtering"></a>Tri et filtrage  
  En règle générale, vous devez travailler avec un affichage ordonné ou filtré de la source de données. Le tableau suivant montre les membres fournis par la source de données du composant <xref:System.Windows.Forms.BindingSource>.  
   
 |Membre|Description|  
 |------------|-----------------|  
-|Propriété <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri. Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge le tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et les informations d'ordre de tri.|  
-|Propriété <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingListView>, obtient ou définit l'expression utilisée pour filtrer les lignes affichées.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> propriété|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri. Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge le tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et les informations d'ordre de tri.|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> propriété|Si la source de données est un <xref:System.ComponentModel.IBindingListView>, obtient ou définit l'expression utilisée pour filtrer les lignes affichées.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Architecture du composant BindingSource](bindingsource-component-architecture.md)
-- [BindingSource, composant](bindingsource-component.md)
+- [Composant BindingSource](bindingsource-component.md)
 - [BindingNavigator, contrôle](bindingnavigator-control-windows-forms.md)
-- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

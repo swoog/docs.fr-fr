@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130037"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Définit une liaison qui prend en charge la mise en file d’attente par routage des messages via MSMQ.  
@@ -57,7 +57,7 @@ msmqIntegrationBinding
 |deadLetterQueue|Valeur <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> spécifiant le type de file d'attente de lettres mortes à utiliser (le cas échéant).<br /><br /> Une file d'attente de lettres mortes correspond à l'emplacement dans lequel sont transférés les messages dont la remise à l'application a échoué.<br /><br /> Pour les messages qui requièrent la garantie exactlyOnce (ceux pour lesquels l'attribut `exactlyOnce` a la valeur `true`), cet attribut a comme valeur par défaut la file d'attente de lettres mortes transactionnelle à l'échelle du système dans MSMQ.<br /><br /> Pour les messages qui ne requièrent pas de garanties, cet attribut a `null` comme valeur par défaut.|  
 |fiable|Valeur booléenne qui indique si le message est fiable ou volatil dans la file d'attente. Un message durable survit à une panne du gestionnaire de files d'attente, alors qu'un message volatil n'y survit pas. Les messages volatils sont utiles lorsque les applications requièrent la latence plus faible et peuvent autoriser la perte occasionnelle de messages. Si l'attribut `exactlyOnce` a la valeur `true`, les messages doivent être fiables. La valeur par défaut est `true`.|  
 |exactlyOnce|Valeur booléenne indiquant si chaque message est remis une seule fois. L'expéditeur est ensuite notifié des échecs de remise. Lorsque `durable` a pour valeur `false`, cet attribut est ignoré et les messages sont transférés sans garantie de remise. La valeur par défaut est `true`. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
-|maxReceivedMessageSize|Entier positif qui définit la taille maximale du message (en octets, en-têtes compris), qui est traité par cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65536. Cette limite de taille des messages a pour but d'atténuer l'exposition aux attaques par déni de service (DoS).|  
+|maxReceivedMessageSize|Entier positif qui définit la taille maximale du message (en octets, en-têtes compris), qui est traité par cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier dépose le message et crée une entrée d’événement dans le journal de suivi. La valeur par défaut est 65536. Cette limite de taille des messages a pour but d'atténuer l'exposition aux attaques par déni de service (DoS).|  
 |maxRetryCycles|Entier indiquant le nombre de cycles de tentatives utilisés par la fonctionnalité de détection de messages incohérents. Un message devient incohérent lorsque toutes les tentatives de remise de tous les cycles échouent. La valeur par défaut est 2. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
 |name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
@@ -74,13 +74,13 @@ msmqIntegrationBinding
   
 ## <a name="serializationformat-attribute"></a>Attribut {serializationFormat}  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Xml|Format XML|  
 |Binaire|Format binaire|  
 |ActiveX|Format ActiveX|  
 |ByteArray|Sérialise l'objet en un tableau d'octets.|  
-|Flux de données|Corps mis en forme en tant que flux|  
+|Stream|Corps mis en forme en tant que flux|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -130,6 +130,7 @@ msmqIntegrationBinding
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

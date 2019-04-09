@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0d7baacb9525e0c268ae53b0c3617324ecd0772f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106533"
 ---
 # <a name="endpoint-creation-overview"></a>Vue d'ensemble de la création de points de terminaison
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison fournissent les clients à accéder aux fonctionnalités offertes par un service WCF. Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.  
@@ -24,7 +24,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
 -   **Liaison**. La liaison spécifie le mode de communication avec le point de terminaison. La liaison spécifie comment le point de terminaison communique avec le monde, y compris quel protocole de transport utiliser (par exemple, TCP ou HTTP), quel encodage utiliser pour les messages (par exemple, texte ou binaire), et quelles exigences de sécurité sont nécessaires (par exemple, SSL [Secure Sockets Layer] ou la sécurité des messages SOAP). Pour plus d’informations, consultez [à l’aide de liaisons pour configurer les Services et Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contrat de service**. Le contrat de service définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie les opérations qu'un client peut appeler, la forme du message et le type de paramètres d'entrée ou de données requis pour appeler l'opération, ainsi que le type du traitement ou le message de réponse auquel le client peut s'attendre. Trois types de contrats de base correspondent aux modèles d'échange de messages (MEPs, message exchange patterns) de base : datagramme (unidirectionnel), demande/réponse et duplex (bidirectionnel). Le contrat de service peut aussi employer des contrats de données et de message pour requérir des types de données spécifiques et des formats de message lors de son accès. Pour plus d’informations sur la façon de définir un contrat de service, consultez [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md). Notez qu'un client peut aussi devoir implémenter un contrat défini par le service, appelé un contrat de rappel, pour recevoir des messages du service dans un MEP duplex. Pour plus d’informations, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Contrat de service**. Le contrat de service définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie les opérations qu'un client peut appeler, la forme du message et le type de paramètres d'entrée ou de données requis pour appeler l'opération, ainsi que le type du traitement ou le message de réponse auquel le client peut s'attendre. Trois types de contrats de base correspondent aux modèles d’échange de messages (MEPs, message exchange patterns) de base : datagramme (unidirectionnel), demande/réponse et duplex (bidirectionnel). Le contrat de service peut aussi employer des contrats de données et de message pour requérir des types de données spécifiques et des formats de message lors de son accès. Pour plus d’informations sur la façon de définir un contrat de service, consultez [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md). Notez qu'un client peut aussi devoir implémenter un contrat défini par le service, appelé un contrat de rappel, pour recevoir des messages du service dans un MEP duplex. Pour plus d’informations, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Le point de terminaison pour un service peut être spécifié de manière impérative en utilisant le code ou de façon déclarative par la configuration. Si aucun point de terminaison n'est spécifié, le runtime fournit les points de terminaison par défaut en ajoutant un point de terminaison par défaut pour chaque adresse de base pour chaque contrat de service implémenté par le service. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. En général, il est plus pratique de définir des points de terminaison de service à l'aide de la configuration plutôt que du code. Le fait de conserver les informations de liaison et d'adressage hors du code leur permet de changer sans devoir recompiler ou de redéployer l'application.  
   
@@ -199,4 +199,5 @@ serviceHost.Open()
  Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Pour plus d’informations sur les points de terminaison par défaut, consultez [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)

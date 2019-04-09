@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083593"
 ---
 # <a name="three-categories-of-graphics-services"></a>Trois catégories de services graphiques
 Les offres de graphiques dans les Windows Forms se répartissent en trois grandes catégories :  
@@ -40,6 +40,7 @@ Les offres de graphiques dans les Windows Forms se répartissent en trois grande
  En outre, Windows Forms permet de dessiner du texte avec [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] fonctionnalités dans son <xref:System.Windows.Forms.TextRenderer> classe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble des graphismes](graphics-overview-windows-forms.md)
 - [À propos du code managé GDI+](about-gdi-managed-code.md)
 - [Utilisation de classes graphiques managées](using-managed-graphics-classes.md)

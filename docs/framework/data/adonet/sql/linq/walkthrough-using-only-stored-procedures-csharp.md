@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : À l’aide de procédures stockées uniquement (C#)'
+title: 'Procédure pas à pas : Utilisation de procédures stockées uniquement (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098167"
 ---
-# <a name="walkthrough-using-only-stored-procedures-c"></a>Procédure pas à pas : À l’aide de procédures stockées uniquement (C#)
+# <a name="walkthrough-using-only-stored-procedures-c"></a>Procédure pas à pas : Utilisation de procédures stockées uniquement (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base de bout en bout pour accéder aux données en exécutant des procédures stockées uniquement. Cette approche est souvent utilisée par les administrateurs de base de données pour limiter les moyens d'accès au magasin de données.  
   
 > [!NOTE]
@@ -97,7 +97,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
      Le fichier northwind.cs est ajouté au projet.  
   
 ## <a name="creating-a-database-connection"></a>Création d'une connexion à une base de données  
- Au cours de cette étape, vous allez définir la connexion à l'exemple de base de données Northwind. Cette procédure pas à pas utilise "c:\linqtest7\northwnd.mdf" comme chemin d'accès.  
+ Au cours de cette étape, vous allez définir la connexion à l'exemple de base de données Northwind. Cette procédure pas à pas utilise "c:\linqtest7\northwnd.mdf" comme chemin d’accès.  
   
 #### <a name="to-create-the-database-connection"></a>Pour créer la connexion de base de données  
   
@@ -188,5 +188,6 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
  Vous pouvez améliorer ce projet en apportant des modifications. Par exemple, vous pouvez répertorier les procédures stockées disponibles dans une zone de liste et demander à l'utilisateur de sélectionner les procédures à exécuter. Vous pouvez également transmettre en continu la sortie des rapports dans un fichier texte.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

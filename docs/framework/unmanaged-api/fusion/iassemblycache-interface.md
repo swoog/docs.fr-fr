@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 157cc9f5f520f376c0c055ab49b116bc7961f421
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075630"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache, interface
 Représente le global assembly cache pour une utilisation par la technologie de fusion.  
@@ -36,13 +36,14 @@ Représente le global assembly cache pour une utilisation par la technologie de 
 |[QueryAssemblyInfo, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Obtient les données demandées sur l’assembly spécifié.|  
 |[UninstallAssembly, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Désinstalle l’assembly spécifié du global assembly cache.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

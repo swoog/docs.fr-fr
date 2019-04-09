@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dates définies et de retour à l’aide du contrôle DateTimePicker Windows Forms'
+title: 'Procédure : définir et retourner des dates avec le contrôle DateTimePicker Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081539"
 ---
-# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Procédure : Dates définies et de retour à l’aide du contrôle DateTimePicker Windows Forms
+# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Procédure : définir et retourner des dates avec le contrôle DateTimePicker Windows Forms
 La date ou l'heure actuellement sélectionnée dans le contrôle Windows Forms <xref:System.Windows.Forms.DateTimePicker> est déterminée par la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A>. Vous pouvez définir la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> avant l'affichage du contrôle (par exemple au moment du design ou dans l'événement <xref:System.Windows.Forms.Form.Load> du contrôle) pour déterminer la date qui sera initialement sélectionnée dans le contrôle. Par défaut, la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> du contrôle a comme valeur la date actuelle. Si vous modifiez la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> du contrôle dans le code, le contrôle est automatiquement mis à jour sur le formulaire pour refléter le nouveau paramètre.  
   
  La propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> retourne une structure <xref:System.DateTime> comme valeur. Il existe plusieurs propriétés de la structure <xref:System.DateTime> qui retournent des informations spécifiques sur la date affichée. Ces propriétés peuvent être utilisées uniquement pour retourner une valeur. Vous ne devez pas les utiliser pour définir une valeur.  
@@ -73,5 +73,6 @@ La date ou l'heure actuellement sélectionnée dans le contrôle Windows Forms <
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DateTimePicker, contrôle](datetimepicker-control-windows-forms.md)
-- [Guide pratique pour Afficher une Date dans un Format personnalisé à l’aide du contrôle DateTimePicker Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Procédure : afficher une date dans un format personnalisé avec le contrôle DateTimePicker Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

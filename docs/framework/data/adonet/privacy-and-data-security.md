@@ -2,12 +2,12 @@
 title: Confidentialité et sécurité des données
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081826"
 ---
 # <a name="privacy-and-data-security"></a>Confidentialité et sécurité des données
 La protection et la gestion d'informations sensibles dans une application ADO.NET dépendent des produits et des technologies sous-jacents, utilisés pour les créer. ADO.NET ne fournit pas directement de services pour la sécurisation ou le chiffrement des données.  
@@ -28,6 +28,7 @@ La protection et la gestion d'informations sensibles dans une application ADO.NE
  La classe <xref:System.Security.SecureString> fournit des méthodes pour le chiffrement du texte à l'aide de l'API de protection des données (DPAPI) en mémoire. La chaîne est ensuite supprimée de la mémoire lorsqu'elle n'est plus utile. Il n'existe aucune méthode `ToString` pour lire rapidement le contenu d'une classe <xref:System.Security.SecureString>. Vous pouvez initialiser une nouvelle instance de `SecureString` sans valeur ou en lui passant un pointeur vers un tableau d'objets <xref:System.Char>. Vous pouvez ensuite utiliser les différentes méthodes de la classe pour travailler avec la chaîne. Pour plus d’informations, téléchargez le [exemple d’Application SecureString](https://go.microsoft.com/fwlink/?LinkId=120418), qui montre comment utiliser le `SecureString` classe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

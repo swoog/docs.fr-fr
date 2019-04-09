@@ -1,19 +1,19 @@
 ---
-title: "Procédure : Animer une rotation 3D à l'aide d'images clés (QuaternionAnimationUsingKeyFrames)"
+title: 'Procédure : Animer une rotation 3D à l’aide d’images clés (QuaternionAnimationUsingKeyFrames)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
 - key frames [WPF], QuaternionAnimationUsingKeyFrames
 - animation [WPF], 3-D translations [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
 ms.assetid: 09e5707b-7523-4a08-9aa7-bb13cbedccdf
-ms.openlocfilehash: b524e9a37f778243cdf25255461f7f6607051264
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f0b46e488f5f0ff0a918d7766998528fef001794
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100104"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Procédure : Animer une rotation 3D à l'aide d'images clés (QuaternionAnimationUsingKeyFrames)
+# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Procédure : Animer une rotation 3D à l’aide d’images clés (QuaternionAnimationUsingKeyFrames)
 Dans l’exemple suivant, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> est utilisé pour faire pivoter un objet 3D. Cette animation utilise les images clés suivantes :  
   
 1.  <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> permet de créer une interpolation linéaire fluide entre les valeurs.  
@@ -26,9 +26,10 @@ Dans l’exemple suivant, <xref:System.Windows.Media.Animation.QuaternionAnimati
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationUsingKeyFramesExample.xaml#quaternionanimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Animer une rotation 3D à l’aide de storyboards](how-to-animate-a-3-d-rotation-using-storyboards.md)
+
+- [Animer une rotation 3D à l’aide de tables de montage séquentiel](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Animer une rotation 3D à l’aide de Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [Animer une rotation 3D à l'aide de quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [Animer une rotation 3D à l’aide de quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
 - [Animer une rotation 3D à l’aide d’images clés (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [Vue d’ensemble des graphiques 3D](3-d-graphics-overview.md)
+- [Vue d'ensemble des graphiques 3D](3-d-graphics-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)

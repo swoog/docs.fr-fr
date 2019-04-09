@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé'
+title: 'Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084912"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procédure : Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé
 Svcutil.exe peut exporter les métadonnées pour des services, des contrats et des types de données dans des assemblys compilés, comme suit :  
   
 -   Pour exporter les métadonnées pour tous les contrats de service compilés pour un ensemble d'assemblys en utilisant Svcutil.exe, spécifiez les assemblys en tant que paramètres d'entrée. Il s'agit du comportement par défaut.  
@@ -96,7 +96,7 @@ svcutil.exe /dataContractOnly Contracts.dll
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- `<path>` est le chemin d’accès à Contracts.dll.  
+ `<path>` est le chemin d'accès à Contracts.dll.  
   
 ```  
 // The following service contract and data contracts are compiled into   
@@ -163,5 +163,6 @@ public class MyService : IPersonFinder
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lier des données au contrôle MaskedTextBox'
+title: 'Procédure : lier des données au contrôle MaskedTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090600"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procédure : Lier des données au contrôle MaskedTextBox
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procédure : lier des données au contrôle MaskedTextBox
 Vous pouvez lier des données à un <xref:System.Windows.Forms.MaskedTextBox> contrôle comme vous pouvez le faire à tout autre contrôle Windows Forms. Toutefois, si le format de vos données dans la base de données ne correspond pas au format attendu par votre définition masque, vous devez remettre en forme les données. La procédure suivante montre comment effectuer cette opération à l’aide de la <xref:System.Windows.Forms.Binding.Format> et <xref:System.Windows.Forms.Binding.Parse> événements de la <xref:System.Windows.Forms.Binding> classe pour afficher le numéro de téléphone distinct et champs de base de données d’extension de téléphone en tant qu’un seul champ modifiable.  
   
  La procédure suivante nécessite que vous avez accès à une base de données SQL Server avec la base de données Northwind installé.  
@@ -250,4 +250,5 @@ Vous pouvez lier des données à un <xref:System.Windows.Forms.MaskedTextBox> co
 -   Compilez l'application.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Procédure pas à pas : Utilisation du contrôle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Procédure pas à pas : utilisation du contrôle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

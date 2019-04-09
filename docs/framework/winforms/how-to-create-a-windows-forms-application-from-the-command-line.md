@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102425"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procédure : Créer une application Windows Forms à partir de la ligne de commande
 Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : Hébergement d’un Windows contrôle Forms dans WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -65,7 +65,7 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
     -   Si vous utilisez Visual Basic, tapez : `vbc form1.vb`  
   
-3.  À l’invite de commandes, tapez : `Form1.exe`  
+3.  À l'invite de commandes, tapez : `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Ajout d'un contrôle et gestion d'un événement  
  Les étapes de la procédure précédente illustrent simplement comment créer un Windows Form de base qui se compile et s'exécute. La procédure suivante illustre comment créer et ajouter un contrôle au formulaire et comment gérer un événement pour le contrôle. Pour plus d’informations sur les contrôles que vous pouvez ajouter aux Windows Forms, consultez [des contrôles Windows Forms](./controls/index.md).  
@@ -114,8 +114,9 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
 -   Pour compiler le code, suivez les instructions de la procédure précédente qui expliquent comment compiler et exécuter l'application.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
 - [Modification de l'apparence des Windows Forms](changing-the-appearance-of-windows-forms.md)
 - [Amélioration des applications Windows Forms](./advanced/index.md)
-- [Bien démarrer avec Windows Forms](getting-started-with-windows-forms.md)
+- [Mise en route des Windows Forms](getting-started-with-windows-forms.md)

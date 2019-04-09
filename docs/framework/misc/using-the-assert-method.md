@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073726"
 ---
 # <a name="using-the-assert-method"></a>Utilisation de la méthode Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> est une méthode qui peut être appelée sur les classes d'autorisation d'accès au code et sur la classe <xref:System.Security.PermissionSet>. Vous pouvez utiliser **Assert** pour activer votre code (et aux appelants en aval) effectuer des actions que votre code est autorisé à exécuter, mais ses appelants êtes ne peut-être pas autorisé à faire. Une assertion de sécurité modifie le processus normal de vérification de sécurité effectué par le runtime. Lors de l'assertion d'une autorisation, le système de sécurité reçoit l'ordre de ne pas vérifier que les appelants de votre code disposent de l'autorisation ayant fait l'objet d'une assertion.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> est une méthode qui peut être appelée sur les classes d’autorisation de l’accès de code et sur la <xref:System.Security.PermissionSet> classe. Vous pouvez utiliser **Assert** pour activer votre code (et aux appelants en aval) effectuer des actions que votre code est autorisé à exécuter, mais ses appelants êtes ne peut-être pas autorisé à faire. Une assertion de sécurité modifie le processus normal de vérification de sécurité effectué par le runtime. Lors de l'assertion d'une autorisation, le système de sécurité reçoit l'ordre de ne pas vérifier que les appelants de votre code disposent de l'autorisation ayant fait l'objet d'une assertion.  
   
 > [!CAUTION]
 >  Utilisez les assertions avec précaution, car elles peuvent ouvrir des failles de sécurité et perturber le mécanisme d'application des restrictions de sécurité du runtime.  
@@ -168,9 +168,10 @@ namespace LogUtil
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.Permissions.SecurityAction>
 - [Attributs](../../../docs/standard/attributes/index.md)
-- [Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)
+- [Sécurité d'accès du code](../../../docs/framework/misc/code-access-security.md)

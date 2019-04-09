@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Obtenir et définir la cellule active dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure : obtenir et définir la cellule active dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: 712340e6fbc081cbac9ecfb516bffb7a58bf0c12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096977"
 ---
-# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Procédure : Obtenir et définir la cellule active dans le contrôle de DataGridView Windows Forms
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Procédure : obtenir et définir la cellule active dans le contrôle DataGridView Windows Forms
 Interaction avec le <xref:System.Windows.Forms.DataGridView> nécessite souvent que vous découvriez par programme la cellule qui est actuellement active. Vous serez peut-être amené à modifier la cellule active. Vous pouvez effectuer ces tâches avec la <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propriété.  
   
 > [!NOTE]
@@ -48,6 +48,7 @@ Interaction avec le <xref:System.Windows.Forms.DataGridView> nécessite souvent 
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>
 - [Fonctionnalités de base liées aux colonnes, lignes et cellules dans le contrôle DataGridView Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

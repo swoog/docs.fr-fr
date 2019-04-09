@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087285"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr, énumération
 Contient des valeurs qui indiquent les métadonnées de type.  
@@ -113,12 +113,13 @@ typedef enum CorTypeAttr {
 |`tdRTSpecialName`|Spécifie que le common language runtime doit vérifier l’encodage des noms.|  
 |`tdHasSecurity`|Spécifie que le type a la sécurité, il est associée.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

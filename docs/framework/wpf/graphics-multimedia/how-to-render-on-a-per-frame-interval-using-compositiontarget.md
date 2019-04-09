@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Effectuer une restitution par intervalle de trame à l'aide de CompositionTarget"
+title: 'Procédure : Effectuer une restitution par intervalle de trame à l’aide de CompositionTarget'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089410"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procédure : Effectuer une restitution par intervalle de trame à l'aide de CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procédure : Effectuer une restitution par intervalle de trame à l’aide de CompositionTarget
 Le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit de nombreuses fonctionnalités qui permettent de créer une animation à partir d’une trame. Il existe cependant des scénarios d’application dans lesquels vous devez affiner le rendu trame par trame. Le <xref:System.Windows.Media.CompositionTarget> objet offre la possibilité de créer des animations personnalisées selon un rappel image par image.  
   
  <xref:System.Windows.Media.CompositionTarget> est une classe statique qui représente la surface d’affichage sur laquelle votre application est dessinée. Le <xref:System.Windows.Media.CompositionTarget.Rendering> événement est déclenché chaque fois que la scène de l’application est dessinée. La fréquence d’images de rendu représente le nombre de fois que la scène est dessinée par seconde.  
@@ -41,5 +41,6 @@ Le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2s
  Ajout ou suppression d’un rendu <xref:System.EventHandler> délégué pendant le déclenchement de l’événement sera différé jusqu'à la fin de l’événement déclenchement. Cela est cohérent avec la manière <xref:System.MulticastDelegate>-événements basés sur sont gérées dans le Common Language Runtime (CLR). Notez également que les événements de rendu ne sont pas forcément appelés dans un ordre particulier. Si vous disposez de plusieurs <xref:System.EventHandler> délégués qui s’appuient sur un ordre particulier, vous devez inscrire un seul <xref:System.Windows.Media.CompositionTarget.Rendering> événement et multiplexer les délégués dans le bon ordre vous-même.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.CompositionTarget>
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

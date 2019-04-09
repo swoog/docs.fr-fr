@@ -2,12 +2,12 @@
 title: Composant logiciel enfichable MMC Configuration WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138203"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Composant logiciel enfichable MMC Configuration WS-AtomicTransaction
 Le composant logiciel enfichable MMC Configuration WS-AtomicTransaction est utilisé pour configurer une partie des paramètres WS-AtomicTransaction sur les ordinateurs locaux et distants.  
@@ -19,7 +19,7 @@ Le composant logiciel enfichable MMC Configuration WS-AtomicTransaction est util
   
  Les étapes précédentes sont utilisées pour lancer le composant logiciel enfichable afin de configurer un ordinateur local. Si vous souhaitez configurer un ordinateur distant, vous devez rechercher le nom de l’ordinateur distant dans **contrôle panneau/Administrative Tools/Services de composants /** et effectuer des étapes similaires si vous exécutez [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], suivez les étapes précédentes pour Vista et [!INCLUDE[lserver](../../../includes/lserver-md.md)], mais utiliser le **Distributed Transaction Coordinator\Local DTC** nœud sous le nœud de l’ordinateur distant.  
   
- Pour utiliser l’interface utilisateur fournie par l’outil, vous devez enregistrer le fichier WsatUI.dll, situé à l’emplacement suivant :  
+ Pour utiliser l'interface utilisateur fournie par l'outil, vous devez enregistrer le fichier WsatUI.dll, situé à l'emplacement suivant :  
   
  **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
@@ -29,7 +29,7 @@ Le composant logiciel enfichable MMC Configuration WS-AtomicTransaction est util
 regasm.exe /codebase WsatUI.dll  
 ```  
   
- Vous pouvez utiliser cet outil pour modifier les paramètres de base WS-AtomicTransaction. Par exemple, vous pouvez activer et désactiver le support de protocole de WS-AtomicTransaction, configurer les ports HTTP pour WS-AT, lier un certificat SSL au port HTTP, configurer des certificats en spécifiant les noms de sujet correspondants, sélectionner le mode de suivi et définir la valeur par défaut et les délais d’attente maximum.  
+ Vous pouvez utiliser cet outil pour modifier les paramètres de base WS-AtomicTransaction. Par exemple, vous pouvez activer et désactiver le support de protocole de WS-AtomicTransaction, configurer les ports HTTP pour WS-AT, lier un certificat SSL au port HTTP, configurer des certificats en spécifiant les noms de sujet correspondants, sélectionner le mode de suivi et définir la valeur par défaut et les délais d'attente maximum.  
   
  Si vous devez configurer uniquement le support WS-AtomicTransaction sur l'ordinateur local, vous pouvez utiliser la version de ligne de commande de cet outil. Pour plus d’informations sur l’outil de ligne de commande, consultez le [(wsatConfig.exe) de l’utilitaire de Configuration WS-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) rubrique.  
   
@@ -47,7 +47,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Port HTTPS**  
   
- C'est la valeur du port HTTPS utilisée pour WS-AT. Cette valeur doit être un nombre compris dans la plage 1-65535 (pour représenter un port valide). La modification du port HTTP modifie la configuration du service HTTP, ce qui signifie que l'adresse de service WS-AT utilisée précédemment est libérée et qu'une nouvelle adresse de service WS-AT est enregistrée sur la base du nouveau port. De plus, le port que vous venez de sélectionner est chiffré avec le certificat sélectionné pour le chiffrement SSL.  
+ C'est la valeur du port HTTPS utilisée pour WS-AT. Cette valeur doit être un nombre compris dans la plage 1-65535 (pour représenter un port valide). La modification du port HTTP modifie la configuration du service HTTP, ce qui signifie que l’adresse de service WS-AT utilisée précédemment est libérée et qu’une nouvelle adresse de service WS-AT est enregistrée sur la base du nouveau port. De plus, le port que vous venez de sélectionner est chiffré avec le certificat sélectionné pour le chiffrement SSL.  
   
 > [!NOTE]
 >  Si vous avez déjà activé le pare-feu avant d'exécuter cet outil, le port est enregistré automatiquement dans la liste d'exceptions. Si le pare-feu est désactivé avant l'exécution de cet outil, aucun élément supplémentaire n'est configuré concernant le pare-feu.  
@@ -87,6 +87,7 @@ regasm.exe /codebase WsatUI.dll
  Pour plus d’informations sur le suivi et la journalisation, consultez [Administration et Diagnostics](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Configuration de la prise en charge WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Administration et diagnostics](../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un formulaire Windows mis en forme'
+title: 'Procédure : créer un formulaire Windows mis en forme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: a130614b0977aab6191f195c93454c527e6be9b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087247"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a>Procédure : Créer un formulaire Windows mis en forme
+# <a name="how-to-create-a-shaped-windows-form"></a>Procédure : créer un formulaire Windows mis en forme
 Cet exemple donne une forme elliptique redimensionne le formulaire à un formulaire.  
   
 ## <a name="example"></a>Exemple  
@@ -41,6 +41,7 @@ Cet exemple donne une forme elliptique redimensionne le formulaire à un formula
  Cet exemple remplace le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode pour modifier la forme du formulaire. Pour utiliser ce code, copiez la déclaration de méthode, ainsi que le code de dessin à l’intérieur de la méthode.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Region>
 - <xref:System.Drawing>

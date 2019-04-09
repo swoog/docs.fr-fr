@@ -2,12 +2,12 @@
 title: Connexion à une source de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083710"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connexion à une source de données dans ADO.NET
 Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une source de données spécifique en fournissant des informations d’authentification nécessaires dans une chaîne de connexion. Le **connexion** objet que vous utilisez varie selon le type de source de données.  
@@ -22,9 +22,10 @@ Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une sour
  Décrit comment utiliser un **InfoMessage** événement afin de récupérer les messages d’information à partir d’une source de données.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Transactions et accès simultané](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

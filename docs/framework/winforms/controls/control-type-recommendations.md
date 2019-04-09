@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098453"
 ---
 # <a name="control-type-recommendations"></a>Recommandations relatives au type du contrôle
 .NET Framework vous offre la possibilité de développer et d'implémenter de nouveaux contrôles. Outre le contrôle utilisateur familier, vous constaterez que vous pouvez désormais écrire des contrôles personnalisés qui effectuent leur propre peinture et même étendre les fonctionnalités des contrôles existants via l'héritage. Le choix du type de contrôle à créer peut être délicat. Cette section souligne les différences entre les différents types de contrôles à partir desquels vous pouvez hériter et fournit des conseils quant au type le plus adapté à votre projet.  
@@ -30,7 +30,7 @@ ms.locfileid: "57717699"
 -   vous n'avez pas besoin d'une interface graphique personnalisée ou vous souhaitez concevoir une nouvelle interface graphique frontale pour un contrôle existant.  
   
 ## <a name="inheriting-from-the-usercontrol-class"></a>Héritage de la classe UserControl  
- Un contrôle utilisateur est une collection de contrôles Windows Forms encapsulés dans un conteneur commun. Le conteneur contient toutes les fonctionnalités inhérentes associées à chacun des contrôles Windows Forms et vous permet d'exposer et de lier leurs propriétés de manière sélective. En guise d'exemple de contrôle utilisateur, vous pourriez avoir un contrôle conçu pour afficher des données d'adresses de clients à partir d'une base de données. Ce contrôle contiendrait plusieurs zones de texte pour afficher chaque champ et des contrôles de bouton pour parcourir les enregistrements. Les propriétés de liaison de données pourraient être exposées de manière sélective et l'ensemble du contrôle pourrait être empaqueté et réutilisé d'une application à l'autre.  
+ Un contrôle utilisateur est une collection de contrôles Windows Forms encapsulés dans un conteneur commun. Le conteneur contient toutes les fonctionnalités inhérentes associées à chacun des contrôles Windows Forms et vous permet d'exposer et de lier leurs propriétés de manière sélective. En guise d'exemple de contrôle utilisateur, vous pourriez avoir un contrôle conçu pour afficher des données d'adresses de clients à partir d'une base de données. Ce contrôle contiendrait plusieurs zones de texte pour afficher chaque champ et des contrôles de bouton pour parcourir les enregistrements. Les propriétés de liaison de données pourraient être exposées de manière sélective et l’ensemble du contrôle pourrait être empaqueté et réutilisé d’une application à l’autre.  
   
  Héritez de la classe <xref:System.Windows.Forms.UserControl> si :  
   
@@ -45,40 +45,41 @@ ms.locfileid: "57717699"
   
 -   vous devez implémenter des fonctionnalités personnalisées qui ne sont pas disponible via les contrôles standard.  
   
--   [Guide pratique pour Afficher un contrôle dans la boîte de dialogue de boîte à outils éléments choisir](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [Procédure : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [Procédure pas à pas : Sérialisation des Collections de Types Standard avec DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [Procédure pas à pas : Sérialisation des collections de types standard avec DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [Procédure pas à pas : Héritage d'un contrôle Windows Forms à l'aide de Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [Guide pratique pour Fournir une Bitmap de boîte à outils pour un contrôle](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+-   [Procédure : fournir une image bitmap de boîte à outils pour un contrôle](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [Guide pratique pour Windows existant hériter de contrôles de formulaires](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [Procédure : hériter de contrôles Windows Forms existants](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [Procédure pas à pas : Débogage des contrôles Windows Forms personnalisés au moment du design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+-   [Procédure pas à pas : débogage des contrôles Windows Forms personnalisés au moment du design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [Guide pratique pour Héritez de la classe de contrôle](how-to-inherit-from-the-control-class.md)  
+-   [Procédure : hériter de la classe Control](how-to-inherit-from-the-control-class.md)  
   
--   [Guide pratique pour Tester le comportement au moment de l’exécution d’un UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Procédure : tester le comportement au moment de l’exécution d’un UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Guide pratique pour Aligner un contrôle sur les bords des formulaires au moment du Design](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [Procédure : aligner un contrôle sur les bords des formulaires au moment du design](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [Guide pratique pour Hériter de la classe UserControl](how-to-inherit-from-the-usercontrol-class.md)  
+-   [Procédure : hériter de la classe UserControl](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [Guide pratique pour Créer des contrôles pour les Windows Forms](how-to-author-controls-for-windows-forms.md)  
+-   [Procédure : créer des contrôles pour Windows Forms](how-to-author-controls-for-windows-forms.md)  
   
--   [Guide pratique pour Créer des contrôles composites](how-to-author-composite-controls.md)  
+-   [Procédure : créer des contrôles composites](how-to-author-composite-controls.md)  
   
--   [Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [Procédure pas à pas : création d’un contrôle composite avec Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [Procédure pas à pas : Création d’un contrôle Composite avec VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [Procédure pas à pas : Création d'un contrôle composite à l'aide de Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [Procédure pas à pas : héritage d’un contrôle Windows Forms avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [Procédure pas à pas : Création d’un contrôle de formulaire Windows qui tire parti des fonctionnalités au moment du Design de Visual Studio](creating-a-wf-control-design-time-features.md)  
+-   [Procédure pas à pas : création d’un contrôle Windows Forms qui tire parti des fonctionnalités au moment du design de Visual Studio](creating-a-wf-control-design-time-features.md)  
   
--   [Guide pratique pour Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
+-   [Procédure : Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Développer un contrôle de formulaires Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
+
+- [Procédure : développer un contrôle Windows Forms simple](how-to-develop-a-simple-windows-forms-control.md)
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)

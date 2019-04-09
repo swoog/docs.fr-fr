@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089552"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Validation d'une transaction en une phase unique et en plusieurs phases
 Les ressources utilisées dans une transaction sont managées par un gestionnaire de ressources, dont les actions sont coordonnées par un gestionnaire de transactions. Le [l’inscription de ressources comme Participants à une Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) rubrique explique comment une ressource (ou plusieurs ressources) peuvent être inscrit dans une transaction. Elle traite de la coordination de la validation d'une transaction entre les ressources inscrites.  
@@ -66,7 +66,7 @@ public void Prepare(PreparingEnlistment preparingEnlistment)
   
  Une fois que le gestionnaire de ressources a terminé son travail de préparation, il doit voter pour la validation ou la restauration en appelant la méthode <xref:System.Transactions.PreparingEnlistment.Prepared%2A> ou <xref:System.Transactions.PreparingEnlistment.ForceRollback%2A>. Notez que la classe <xref:System.Transactions.PreparingEnlistment> hérite d'une méthode <xref:System.Transactions.Enlistment.Done%2A> de la classe <xref:System.Transactions.Enlistment>. L'appel à cette méthode sur le rappel <xref:System.Transactions.PreparingEnlistment> au cours de la phase de préparation indique au gestionnaire de transactions qu'il s'agit d'une inscription en lecture seule (des gestionnaires de ressources qui peuvent être lus mais qui ne peuvent pas mettre à jour les données protégées par la transaction) et le gestionnaire de ressources ne reçoit plus de notification du gestionnaire de transaction jusqu'au résultat de la transaction en phase 2.  
   
- L'application est informée de la validation réussie de la transaction après le vote <xref:System.Transactions.PreparingEnlistment.Prepared%2A> de tous les gestionnaires de ressources  
+ L'application est informée de la validation réussie de la transaction après le vote <xref:System.Transactions.PreparingEnlistment.Prepared%2A> de tous les gestionnaires de ressources   
   
 ### <a name="commit-phase-phase-2"></a>Phase de validation (Phase 2)  
  Lors de la seconde phase de la transaction, si le gestionnaire de transactions a reçu les préparations réussies de tous les gestionnaires de ressources (c'est-à-dire, si tous les gestionnaires de ressources ont appelé <xref:System.Transactions.PreparingEnlistment.Prepared%2A> à la fin de la phase 1), il appelle la méthode <xref:System.Transactions.IEnlistmentNotification.Commit%2A> pour chaque gestionnaire de ressources. Les gestionnaires de ressources peuvent ensuite confirmer les modifications et terminer la validation.  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  Le protocole de validation en une phase est plus efficace lors de l'exécution car toutes les mises à jour sont effectuées sans coordination explicite. Pour plus d’informations sur ce protocole, consultez [optimisation à l’aide de la validation à Phase unique et la Notification de Phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Optimisation à l’aide de la validation à phase unique et de la notification de phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+
+- [Optimisation à l'aide de la validation à phase unique et de la notification de phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Inscription de ressources comme participants à une transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

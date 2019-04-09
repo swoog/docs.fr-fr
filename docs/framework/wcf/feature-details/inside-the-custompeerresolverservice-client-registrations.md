@@ -1,15 +1,15 @@
 ---
-title: 'Dans CustomPeerResolverService : Enregistrements de clients'
+title: 'Dans CustomPeerResolverService : Inscription de clients'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095787"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dans CustomPeerResolverService : Enregistrements de clients
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dans CustomPeerResolverService : Inscription de clients
 Chaque nœud de la maille publie ses informations sur le point de terminaison sur le service de résolution par le biais de la fonction `Register`. Le service de résolution stocke ces informations comme un enregistrement d'inscription. Cet enregistrement contient un identificateur unique (RegistrationID) et les informations sur le point de terminaison (PeerNodeAddress) concernant le nœud.  
   
 ## <a name="stale-records-and-expiration-time"></a>Enregistrements périmés et heure d'expiration  
@@ -34,4 +34,5 @@ Chaque nœud de la maille publie ses informations sur le point de terminaison su
  Lorsqu'un nœud s'inscrit auprès d'un service de résolution, il reçoit de ce dernier un objet <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo>. Cet objet a une propriété `RegistrationLifetime` qui indique au nœud combien de temps il reste avant que l'inscription expire et sa suppression par le service de résolution. Par exemple, si `RegistrationLifetime` est égal à 2 minutes, le nœud doit appeler `Refresh` dans moins de 2 minutes afin de garantir que l'enregistrement reste actualisé et ne soit pas supprimé. Lorsque le service de résolution reçoit une demande `Refresh`, il examine l'enregistrement et réinitialise l'heure d'expiration. Refresh retourne un objet <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> avec une propriété `RegistrationLifetime`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Programmes de résolution d’homologue](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+
+- [Programmes de résolution d'homologue](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

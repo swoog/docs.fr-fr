@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107326"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier cardinales dans GDI +
 Une spline de Bézier est une courbe spécifiée par quatre points : deux points de terminaison (p1 et p2) et deux points de contrôle (c1 et c2). La courbe commence en p1 et p2 se termine. La courbe ne passe pas par les points de contrôle, mais les points de contrôle agissent comme des aimants qui la courbe dans certaines directions et influencent la courbure de la courbe. L’illustration suivante montre une courbe de Bézier, ainsi que ses points de terminaison et les points de contrôle.  
@@ -38,9 +38,10 @@ Une spline de Bézier est une courbe spécifiée par quatre points : deux point
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
 - [Génération et dessin de courbes](constructing-and-drawing-curves.md)
-- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
-- [Guide pratique pour Créer un stylet](how-to-create-a-pen.md)
+- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Procédure : créer un stylet](how-to-create-a-pen.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définissez la propriété ProtectionLevel'
+title: 'Procédure : définir la propriété ProtectionLevel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089846"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Procédure : Définissez la propriété ProtectionLevel
+# <a name="how-to-set-the-protectionlevel-property"></a>Procédure : définir la propriété ProtectionLevel
 Vous pouvez définir le niveau de protection en appliquant un attribut approprié et en définissant la propriété. Vous pouvez définir la protection au niveau du service afin d'affecter toutes les parties de chaque message, ou vous pouvez la définir à des niveaux de plus en plus spécifiques, des méthodes aux parties du message. Pour plus d’informations sur la `ProtectionLevel` propriété, consultez [niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
@@ -89,9 +89,10 @@ Vous pouvez définir le niveau de protection en appliquant un attribut appropri�
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.MessageContractAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
-- [Présentation du niveau de protection](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Fonctionnement des niveaux de protection](../../../docs/framework/wcf/understanding-protection-level.md)

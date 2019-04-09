@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091328"
 ---
 # <a name="controlling-net-framework-logging"></a>Contrôle de l'enregistrement .NET Framework
 Vous pouvez utiliser le suivi d'événements pour Windows (ETW) pour enregistrer les événements du Common Language Runtime (CLR). Vous pouvez créer et afficher des traces à l'aide des outils suivants :  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Le paramètre `-p` identifie le GUID du fournisseur.  
   
-    -   `0x1CCBD` spécifie les catégories d'événements qui seront déclenchés.  
+    -   `0x1CCBD` Spécifie les catégories d’événements qui seront déclenchés.  
   
-    -   `0x5` définit le niveau de la journalisation (dans ce cas, détaillé (5)).  
+    -   `0x5` définit le niveau de journalisation (dans ce cas, détaillé (5)).  
   
     -   Le paramètre `-ets` indique à Logman d'envoyer des commandes aux sessions de suivi d'événements.  
   
@@ -92,7 +92,7 @@ Provider                                 GUID
   
      Cette commande crée deux fichiers : dumpfile.xml et summary.txt. Le fichier dumpfile.xml répertorie tous les événements et le fichier summary.txt fournit un résumé des événements.  
   
-#### <a name="to-view-clr-etw-events-using-xperf"></a>Pour afficher les événements ETW du CLR à l'aide de Xperf  
+#### <a name="to-view-clr-etw-events-using-xperf"></a>Pour afficher les événements ETW du CLR à l’aide de Xperf  
   
 -   À l'invite de commandes, tapez :  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Cette commande indique à Xperf d’effectuer un dump des événements dans un fichier de valeurs séparées par des virgules (.csv) que vous pouvez consulter. Étant donné que des événements différents ont des champs différents, ce fichier .csv contient plusieurs lignes d'en-têtes avant les données. Le premier champ de chaque ligne correspond au type d'événement, qui indique l'en-tête à utiliser pour déterminer le reste des champs.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Événements ETW dans le Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

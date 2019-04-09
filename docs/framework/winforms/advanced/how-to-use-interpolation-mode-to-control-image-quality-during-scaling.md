@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser le Mode d’Interpolation pour contrôler la qualité d’Image pendant la mise à l’échelle'
+title: 'Procédure : utiliser le mode d’interpolation pour contrôler la qualité d’image pendant la mise à l’échelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080980"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Procédure : Utiliser le Mode d’Interpolation pour contrôler la qualité d’Image pendant la mise à l’échelle
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Procédure : utiliser le mode d’interpolation pour contrôler la qualité d’image pendant la mise à l’échelle
 Le mode d’interpolation d’une <xref:System.Drawing.Graphics> objet influence la façon dont [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dimensionne (étire et réduit) les images. Le <xref:System.Drawing.Drawing2D.InterpolationMode> énumération définit plusieurs modes d’interpolation, certains d'entre eux sont affichés dans la liste suivante :  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
@@ -47,5 +47,6 @@ Le mode d’interpolation d’une <xref:System.Drawing.Graphics> objet influence
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

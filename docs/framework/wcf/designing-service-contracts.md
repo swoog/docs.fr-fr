@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102737"
 ---
 # <a name="designing-service-contracts"></a>Conception de contrats de service
-Cette rubrique explique ce que sont les contrats de service, comment ils sont définis, quelles opérations sont disponibles (et les implications des échanges de messages sous-jacents), quels types de données sont utilisés et d’autres aspects qui vous aident à concevoir des opérations qui répondent aux exigences de votre scénario.  
+Cette rubrique explique ce que sont les contrats de service, comment ils sont définis, quelles opérations sont disponibles (et les implications des échanges de messages sous-jacents), quels types de données sont utilisés et d'autres aspects qui vous aident à concevoir des opérations qui répondent aux spécifications de votre scénario.  
   
 ## <a name="creating-a-service-contract"></a>Création d'un contrat de service  
  Les services exposent un certain nombre d'opérations. Dans les applications Windows Communication Foundation (WCF), définissez les opérations en créant une méthode et en marquant avec le <xref:System.ServiceModel.OperationContractAttribute> attribut. Ensuite, pour créer un contrat de service, groupez vos opérations en les déclarant dans une interface marquée avec l'attribut <xref:System.ServiceModel.ServiceContractAttribute> ou en les définissant dans une classe marquée avec le même attribut. (Pour obtenir un exemple de base, consultez [Comment : Définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
@@ -28,7 +28,7 @@ Cette rubrique explique ce que sont les contrats de service, comment ils sont d�
   
 -   Comment spécifier les types de données que vous souhaitez échanger.  
   
--   Les types de modèles d'échange que vous pouvez utiliser.  
+-   Les types de modèles d’échange que vous pouvez utiliser.  
   
 -   Si vous pouvez inclure des exigences de sécurité explicites dans le contrat.  
   
@@ -76,7 +76,7 @@ Cette rubrique explique ce que sont les contrats de service, comment ils sont d�
  Bien que l’application WCF typique utilise le <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute> attributs pour créer des contrats de données pour les opérations, vous pouvez utiliser d’autres mécanismes de sérialisation. Les mécanismes <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> et <xref:System.Xml.Serialization.IXmlSerializable> standard gèrent tous la sérialisation de vos types de données dans les messages SOAP sous-jacents qui les transportent d'une application à une autre. Vous pouvez employer davantage de stratégies de sérialisation si vos types de données requièrent une prise en charge spéciale. Pour plus d’informations sur les choix pour la sérialisation de types de données dans les applications WCF, consultez [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Mappage des paramètres et des valeurs de retour aux échanges de messages  
- Les opérations de service sont prises en charge par un échange sous-jacent de messages SOAP qui transfèrent les données d’application, en plus des données requises par l’application pour prendre en charge certaines fonctionnalités standard liées à la sécurité, aux transaction et aux sessions. Étant donné que c’est le cas, la signature d’une opération de service dicte un certain sous-jacent *modèle d’échange de message* (MEP) qui peut prendre en charge le transfert de données et les fonctionnalités nécessite une opération. Vous pouvez spécifier trois modèles dans le modèle de programmation WCF : demande/réponse, unidirectionnel et duplex.  
+ Les opérations de service sont prises en charge par un échange sous-jacent de messages SOAP qui transfèrent les données d'application, en plus des données requises par l'application pour prendre en charge certaines fonctionnalités standard liées à la sécurité, aux transaction et aux sessions. Étant donné que c’est le cas, la signature d’une opération de service dicte un certain sous-jacent *modèle d’échange de message* (MEP) qui peut prendre en charge le transfert de données et les fonctionnalités nécessite une opération. Vous pouvez spécifier trois modèles dans le modèle de programmation WCF : demande/réponse, unidirectionnel et duplex.  
   
 ##### <a name="requestreply"></a>Demande/réponse  
  Un modèle de demande/réponse est un modèle dans lequel un expéditeur de demande (une application cliente) reçoit une réponse avec laquelle la demande est mise en corrélation. Il s'agit du modèle d'échange de messages par défaut, car il prend en charge une opération dans laquelle un ou plusieurs paramètres sont passés à l'opération et une valeur de retour est repassée à l'appelant. Par exemple, l'extrait de code C# suivant illustre une opération de service simple qui prend une chaîne et retourne une chaîne.  
@@ -109,7 +109,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- L'exemple précédent peut ralentir les performances et la réactivité du client si l'exécution de l'opération prend beaucoup de temps, mais les opérations demande/réponse présentent des avantages même lorsqu'elles retournent `void`. Le plus évident est que des erreurs SOAP peuvent être retournées dans le message de réponse, ce qui indique qu'une certaine condition d'erreur liée au service s'est produite, lors de la communication ou lors du traitement. Les erreurs SOAP spécifiées dans un contrat de service sont passées à l’application cliente en tant qu’objets <xref:System.ServiceModel.FaultException%601>, où le paramètre de type est le type spécifié dans le contrat de service. Cela facilite la notification des clients sur les conditions d’erreur dans les services WCF. Pour plus d’informations sur les exceptions, les erreurs SOAP et la gestion des erreurs, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Pour voir un exemple d’un service de demande/réponse et un client, consultez [Comment : Créer un contrat demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Pour plus d’informations sur les problèmes concernant le modèle demande-réponse, consultez [Services demande-réponse](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
+ L'exemple précédent peut ralentir les performances et la réactivité du client si l'exécution de l'opération prend beaucoup de temps, mais les opérations demande/réponse présentent des avantages même lorsqu'elles retournent `void`. Le plus évident est que des erreurs SOAP peuvent être retournées dans le message de réponse, ce qui indique qu'une certaine condition d'erreur liée au service s'est produite, lors de la communication ou lors du traitement. Les erreurs SOAP spécifiées dans un contrat de service sont passées à l'application cliente en tant qu'objets <xref:System.ServiceModel.FaultException%601>, où le paramètre de type est le type spécifié dans le contrat de service. Cela facilite la notification des clients sur les conditions d’erreur dans les services WCF. Pour plus d’informations sur les exceptions, les erreurs SOAP et la gestion des erreurs, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Pour voir un exemple d’un service de demande/réponse et un client, consultez [Comment : Créer un contrat demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Pour plus d’informations sur les problèmes concernant le modèle demande-réponse, consultez [Services demande-réponse](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Unidirectionnel  
  Si le client d’une application de service WCF ne doit pas attendre l’opération se termine et ne traite pas les erreurs SOAP, cette opération peut spécifier un modèle de message unidirectionnel. Une opération unidirectionnelle est une dans laquelle un client appelle une opération et continue le traitement d’après que WCF écrit le message dans le réseau. En général, cela signifie qu’à moins que le volume des données envoyées dans le message sortant ne soit extrêmement important, le client continue de s’exécuter presque immédiatement (à moins qu’une erreur ne soit survenue pendant l’envoi des données). Ce type de modèle d'échange de messages prend en charge un comportement semblable aux événements d'un client à une application de service.  
@@ -135,7 +135,7 @@ Sub Hello (ByVal greeting As String)
  Cette méthode est identique à l'exemple de demande/réponse précédent, mais le fait d'affecter à la propriété <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> la valeur `true` signifie que bien que la méthode soit identique, l'opération de service n'envoie pas de message de retour et les clients retournent immédiatement une fois le message sortant transmis à la couche du canal. Pour voir un exemple, consultez [Comment : Créer un contrat unidirectionnel](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). Pour plus d’informations sur le modèle unidirectionnel, consultez [unidirectionnel Services](../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Duplex  
- Un modèle duplex se caractérise par la capacité qu'ont le service et le client à s'envoyer des messages l'un à l'autre, que le mode de messagerie utilisé soit unidirectionnel ou demande/réponse. Cette forme de communication bidirectionnelle est utile pour les services qui doivent communiquer directement avec le client ou pour fournir une expérience asynchrone à l'un des côtés d'un échange de messages, y compris un comportement semblables aux événements.  
+ Un modèle duplex se caractérise par la capacité qu’ont le service et le client à s’envoyer des messages l’un à l’autre, que le mode de messagerie utilisé soit unidirectionnel ou demande/réponse. Cette forme de communication bidirectionnelle est utile pour les services qui doivent communiquer directement avec le client ou pour fournir une expérience asynchrone à l'un des côtés d'un échange de messages, y compris un comportement semblables aux événements.  
   
  Le modèle duplex est légèrement plus complexe que le modèle demande/réponse ou unidirectionnel à cause du mécanisme supplémentaire nécessaire pour la communication avec le client.  
   
@@ -170,12 +170,12 @@ Public Interface IMyContract
 End Interface  
 ```  
   
- Les seules exceptions sont les cas dans lesquels votre signature a une structure particulière. Par exemple, vous pouvez utiliser la liaison <xref:System.ServiceModel.NetMsmqBinding> pour communiquer avec les clients uniquement si la méthode utilisée pour déclarer une opération retourne `void` ; il ne peut y avoir aucune valeur de sortie, qu'il s'agisse d'une valeur de retour ou d'un paramètre `ref` ou `out`.  
+ Les seules exceptions sont les cas dans lesquels votre signature a une structure particulière. Par exemple, vous pouvez utiliser la liaison <xref:System.ServiceModel.NetMsmqBinding> pour communiquer avec les clients uniquement si la méthode utilisée pour déclarer une opération retourne `void` ; il ne peut y avoir aucune valeur de sortie, qu’il s’agisse d’une valeur de retour ou d’un paramètre `ref` ou `out`.  
   
  De plus, l'utilisation de paramètres `out` ou `ref` requiert que l'opération contienne un message de réponse sous-jacent afin de retourner l'objet modifié. Si votre opération est unidirectionnelle, une exception <xref:System.InvalidOperationException> est levée au moment de l'exécution.  
   
 ### <a name="specify-message-protection-level-on-the-contract"></a>Spécifier le niveau de protection des messages sur le contrat  
- Lorsque vous concevez votre contrat, vous devez également décider du niveau de protection des messages des services qui implémentent votre contrat. Cela est nécessaire uniquement si la sécurité de message est appliquée à la liaison dans le point de terminaison du contrat. Si la sécurité est désactivée pour la liaison (autrement dit, si la liaison fournie par le système affecte au <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> la valeur <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>), vous n'avez pas à choisir le niveau de protection des messages pour le contrat. Dans la plupart des cas, les liaisons fournies par le système avec la sécurité au niveau du message appliquée fournissent un niveau de protection suffisant et il n'est pas nécessaire de considérer le niveau de protection sur la base de chaque opération ou de chaque message.  
+ Lorsque vous concevez votre contrat, vous devez également décider du niveau de protection des messages des services qui implémentent votre contrat. Cela est nécessaire uniquement si la sécurité de message est appliquée à la liaison dans le point de terminaison du contrat. Si la sécurité est désactivée pour la liaison (autrement dit, si la liaison fournie par le système affecte au <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> la valeur <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>), vous n’avez pas à choisir le niveau de protection des messages pour le contrat. Dans la plupart des cas, les liaisons fournies par le système avec la sécurité au niveau du message appliquée fournissent un niveau de protection suffisant et il n’est pas nécessaire de considérer le niveau de protection sur la base de chaque opération ou de chaque message.  
   
  Le niveau de protection est une valeur qui spécifie si les messages (ou parties de messages) qui prennent en charge un service sont signés, signés et chiffrés, ou envoyés sans signature ou chiffrement. Le niveau de protection peut être défini dans différentes portées : Au niveau de service, pour une opération particulière, pour un message dans cette opération, ou une partie de message. Les valeurs définies à une portée deviennent la valeur par défaut pour les plus petites portées, sauf substitution explicite. Si une configuration de liaison est incapable de fournir le niveau de protection minimum requis pour le contrat, une exception est levée. Et lorsque aucune valeur de niveau de protection n’est définie explicitement sur le contrat, la configuration de liaison contrôle le niveau de protection pour tous les messages si la liaison a la sécurité de message. Il s'agit du comportement par défaut.  
   
@@ -255,7 +255,7 @@ End Interface
   
 -   Les messages d'opération `GetInt` sont envoyés comme texte non chiffré et non signé (autrement dit, en texte clair).  
   
--   L'opération `GetGuid` <xref:System.Guid?displayProperty=nameWithType> est retournée dans un message qui est chiffré et signé.  
+-   L'opération `GetGuid`<xref:System.Guid?displayProperty=nameWithType> est retournée dans un message qui est chiffré et signé.  
   
  Pour plus d’informations sur les niveaux de protection et leur utilisation, consultez [niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md). Pour plus d’informations sur la sécurité, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
   
@@ -264,15 +264,16 @@ End Interface
   
  Un autre exemple est l'utilisation de types <xref:System.IO.Stream> dans les opérations. Étant donné que le paramètre <xref:System.IO.Stream> inclut le corps du message entier, si une entrée ou une sortie (autrement dit, un paramètre `ref`, un paramètre `out` ou une valeur de retour) est de type <xref:System.IO.Stream>, il doit s'agir de la seule entrée ou sortie spécifiée dans votre opération. De plus, le paramètre ou type de retour doit être <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Pour plus d’informations sur les flux, consultez [données volumineuses et diffusion en continu](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
-##### <a name="names-namespaces-and-obfuscation"></a>Noms, espaces de noms et obfuscation  
+##### <a name="names-namespaces-and-obfuscation"></a>Noms, espaces de noms et obscurcissement  
  Les noms et les espaces de noms des types .NET dans la définition de contrats et les opérations sont significatifs lorsque les contrats sont convertis en WSDL et lorsque les messages de contrat sont créés et envoyés. Par conséquent, il est vivement recommandé que les noms et les espaces de noms du contrat de service soient définis explicitement à l'aide des propriétés `Name` et `Namespace` de tous les attributs de contrat de prise en charge tels que <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>,  <xref:System.Runtime.Serialization.DataMemberAttribute> et d'autres attributs de contrat.  
   
  Il en résulte notamment que si les noms et les espaces de noms ne sont pas définis explicitement, l’utilisation de l’obfuscation IL sur l’assembly altère les noms et les espaces de noms des types de contrat, WSDL est modifié et les échanges sur le câble échouent généralement. Si vous ne définissez pas explicitement les noms et les espaces de noms des contrats mais prévoyez d’utiliser l’obfuscation, utilisez les attributs <xref:System.Reflection.ObfuscationAttribute> et <xref:System.Reflection.ObfuscateAssemblyAttribute> pour empêcher la modification des noms et des espaces de noms des types de contrat.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un contrat demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Guide pratique pour Créer un contrat unidirectionnel](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Guide pratique pour Créer un contrat Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+
+- [Procédure : créer un contrat de demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Procédure : créer un contrat unidirectionnel](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Procédure : créer un contrat duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Spécification du transfert de données dans des contrats de service](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Utilisation de sessions](../../../docs/framework/wcf/using-sessions.md)

@@ -2,12 +2,12 @@
 title: Requêtes LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 1390ca36ce9071a16ef21e32dfd7f7a6211644f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076183"
 ---
 # <a name="linq-to-sql-queries"></a>Requêtes LINQ to SQL
 Vous définissez des requêtes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en utilisant la même syntaxe que dans [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. La seule différence est que les objets référencés dans vos requêtes sont mappés aux éléments d'une base de données. Pour plus d’informations, consultez [Introduction aux requêtes LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -19,9 +19,9 @@ Vous définissez des requêtes [!INCLUDE[vbtecdlinq](../../../../../../includes/
   
  Le tableau suivant affiche les ressemblances et différences entre les éléments de requête [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-|Élément|Requête LINQ|Requête [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|Élément|Requête LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Query|  
 |----------|----------------|----------------------------------------------------------------------|  
-|Type de retour de la variable locale qui contient la requête (pour les requêtes qui retournent des séquences)|`IEnumerable` générique|`IQueryable` générique|  
+|Type de retour de la variable locale qui contient la requête (pour les requêtes qui retournent des séquences)|Générique `IEnumerable`|Générique `IQueryable`|  
 |Spécification de la source de données|Utilise le `From` (Visual Basic) ou `from` (C#) clause|Identique|  
 |Filtrage|Utilise le `Where` / `where` clause|Identique|  
 |Regroupement|Utilise le `Group…By` / `groupby` clause|Identique|  
@@ -32,6 +32,7 @@ Vous définissez des requêtes [!INCLUDE[vbtecdlinq](../../../../../../includes/
 |Transmission en continu / interrogation mise en cache|Non applicable dans un scénario de mémoire locale||  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux requêtes LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
 - [Opérations de requête LINQ de base](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [Relations des types dans des opérations de requête LINQ](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)

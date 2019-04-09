@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097524"
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l’adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L’adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l’adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l’identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
@@ -56,9 +56,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
 ## <a name="endpoint-address-in-metadata"></a>Adresse de point de terminaison dans les métadonnées  
  Une adresse de point de terminaison est représentée dans WSDL (Web Services Description Language) comme un élément `EndpointReference` (EPR) WS-Addressing dans l'élément `wsdl:port` du point de terminaison correspondant. L'EPR contient l'adresse du point de terminaison ainsi que toutes les propriétés d'adresse. Notez que l'EPR à l'intérieur de `wsdl:port` remplace `soap:Address` comme dans l'exemple suivant.  
-  
-  
-  
+
 ## <a name="defining-endpoint-addresses-in-code"></a>Définition d'adresses de point de terminaison dans le code  
  Une adresse de point de terminaison peut être créée dans le code avec la classe <xref:System.ServiceModel.EndpointAddress>. L’URI spécifié pour l’adresse de point de terminaison peut être un chemin d’accès qualifié complet ou un chemin d’accès qui est relatif à l’adresse de base du service. L'exemple de code suivant illustre la création d'une nouvelle instance de la classe <xref:System.ServiceModel.EndpointAddress> et son ajout à l'instance <xref:System.ServiceModel.ServiceHost> qui héberge le service.  
   
@@ -83,7 +81,8 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
  Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d'ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Hébergement](../../../docs/framework/wcf/feature-details/hosting.md)

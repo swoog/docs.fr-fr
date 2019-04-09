@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer, initialiser et configurer des commutateurs de Trace'
+title: 'Procédure : Créer, initialiser et configurer les commutateurs de trace'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079134"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procédure : Créer, initialiser et configurer des commutateurs de Trace
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procédure : Créer, initialiser et configurer les commutateurs de trace
 Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie de traçage, et de la filtrer.  
   
 <a name="create"></a>   
@@ -77,7 +77,7 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
     -   **Visual Basic :** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier de Configuration d’Application**.  
   
-         Le fichier de configuration de l'application est créé, puis ouvert. Il s'agit d'un document XML dont l'élément racine est `<configuration>.`  
+         Le fichier de configuration de l'application est créé, puis ouvert. Il s’agit d’un document XML dont l’élément racine est `<configuration>.`  
   
     -   **Visual C#:** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier XML**. Nommez ce fichier **app.config**. Dans l'éditeur XML, après la déclaration XML, ajoutez les balises suivantes :  
   
@@ -126,7 +126,8 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Guide pratique pour Ajouter des instructions de traçage au Code d’Application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Commutateurs de suivi](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Schéma des paramètres de trace et de débogage](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+
+- [Traçage et instrumentation d'applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Procédure : Ajouter des instructions de trace dans le code d’une application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Commutateurs de traçage](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Schéma des paramètres de traçage et de débogage](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

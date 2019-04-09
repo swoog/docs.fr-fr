@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e228cfbdade420c4d5248ffd417c6131083ee74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110415"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES (énumération)
 Spécifie les statistiques à enregistrer pour un garbage collection.  
@@ -45,13 +45,14 @@ typedef enum {
 |`COR_GC_COUNTS`|Enregistre le nombre de garbage collections effectué pour chaque génération.|  
 |`COR_GC_MEMORYUSAGE`|Enregistre l’utilisation et le garbage collection taille statistiques de la mémoire.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** GCHost.idl, GCHost.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [COR_GC_STATS, structure](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Énumérations d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

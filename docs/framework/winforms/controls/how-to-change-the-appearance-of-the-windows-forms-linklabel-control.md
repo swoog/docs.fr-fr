@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modifier l’apparence du contrôle LinkLabel Windows Forms'
+title: 'Procédure : modifier l’aspect du contrôle LinkLabel Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105025"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procédure : Modifier l’apparence du contrôle LinkLabel Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procédure : modifier l’aspect du contrôle LinkLabel Windows Forms
 Vous pouvez modifier le texte affiché par le <xref:System.Windows.Forms.LinkLabel> contrôle pour l’adapter à différentes fins. Par exemple, il est courant d’indiquer à l’utilisateur que vous pouvez cliquer sur texte en définissant le texte s’affiche dans une couleur spécifique avec un trait de soulignement. Une fois que l’utilisateur clique sur le texte, la couleur est remplacée par une couleur différente. Pour contrôler ce comportement, vous pouvez définir cinq propriétés différentes : le <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, et <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriétés.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Pour modifier l’apparence d’un contrôle LinkLabel  
@@ -122,10 +122,11 @@ Vous pouvez modifier le texte affiché par le <xref:System.Windows.Forms.LinkLab
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [Vue d'ensemble du contrôle LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Guide pratique pour Lier à un objet ou la Page Web avec un contrôle LinkLabel Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Vue d’ensemble du contrôle LinkLabel](linklabel-control-overview-windows-forms.md)
+- [Procédure : établir un lien à un objet ou une page web avec le contrôle LinkLabel Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel, contrôle](linklabel-control-windows-forms.md)

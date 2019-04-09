@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110454"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters, structure
 Stocke le nom de type d’un événement et les paramètres de l’exception actuelle est associé à l’événement.  
@@ -44,12 +44,13 @@ typedef struct _BucketParameters {
 |`pszEventTypeName`|Nom du type d’événement.|  
 |`pszParams`|Tableau de chaînes, dont chacun spécifie un paramètre pour l’exception actuelle associée à l’événement.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+
+- [Structures d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: cefeee320e10a9e9de0d38894d4d865ca2e639ec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102529"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Procédure : Substituer la méthode OnRender de Panel
 Cet exemple montre comment substituer la <xref:System.Windows.Controls.Panel.OnRender%2A> méthode de <xref:System.Windows.Controls.Panel> afin d’ajouter des effets graphiques personnalisés à un élément de disposition.  
@@ -31,7 +31,8 @@ Cet exemple montre comment substituer la <xref:System.Windows.Controls.Panel.OnR
  [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Panel>
-- [Vue d’ensemble de Panel](panels-overview.md)
+- [Vue d'ensemble de Panel](panels-overview.md)
 - [Exemple de panneau Radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982)
-- [Rubriques de guide pratique](panel-how-to-topics.md)
+- [Rubriques Comment](panel-how-to-topics.md)

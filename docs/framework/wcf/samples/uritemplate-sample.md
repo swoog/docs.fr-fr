@@ -2,12 +2,12 @@
 title: UriTemplate, exemple
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 565e01fd591149e7eefb7e125b917ddb9acccbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0d0fa339cb4c8feab3c8341b4508826ca75d4259
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083775"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate, exemple
 La classe <xref:System.UriTemplate> fournit des méthodes pour utiliser des ensembles d'URI qui partagent une structure commune. Cet exemple illustre les concepts clés suivants relatifs au `UriTemplate` :  
@@ -16,7 +16,7 @@ La classe <xref:System.UriTemplate> fournit des méthodes pour utiliser des ense
   
 -   Instanciation d'URI depuis un `UriTemplate` à l'aide de <xref:System.UriTemplate.BindByName%2A> et <xref:System.UriTemplate.BindByPosition%2A>.  
   
--   <xref:System.UriTemplateTable.Match%2A>, qui est l'opération inverse de `BindByName` et `BindByPosition`.  
+-   <xref:System.UriTemplateTable.Match%2A>, qui est l’opération inverse de `BindByName` et `BindByPosition`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -34,5 +34,6 @@ La classe <xref:System.UriTemplate> fournit des méthodes pour utiliser des ense
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplate`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [Répartiteur de table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

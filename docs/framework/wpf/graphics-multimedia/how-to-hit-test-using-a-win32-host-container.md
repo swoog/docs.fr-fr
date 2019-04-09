@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Effectuer un test de positionnement à l'aide d'un conteneur hôte Win32"
+title: 'Procédure : Test de positionnement à l’aide d’un conteneur hôte Win32'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: 19526c064efefd80c17fdb4f544b65fcda872bf7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081461"
 ---
-# <a name="how-to-hit-test-using-a-win32-host-container"></a>Procédure : Effectuer un test de positionnement à l'aide d'un conteneur hôte Win32
+# <a name="how-to-hit-test-using-a-win32-host-container"></a>Procédure : Test de positionnement à l’aide d’un conteneur hôte Win32
 Vous pouvez créer des objets visuels dans un [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] fenêtre en fournissant un hôte de conteneur de fenêtre pour les objets visuels. Pour assurer la gestion des événements des objets visuels du conteneur, vous devez traiter les messages transmis à la boucle de filtre de messages du conteneur de fenêtre hôte. Reportez-vous à [didacticiel : Hébergement d’objets visuels dans une Application Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) pour plus d’informations sur l’hébergement d’objets visuels dans un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] fenêtre.  
   
 ## <a name="example"></a>Exemple  
@@ -35,6 +35,7 @@ Vous pouvez créer des objets visuels dans un [!INCLUDE[TLA#tla_win32](../../../
  Pour l’exemple complet sur le test de positionnement des objets à l’aide d’un conteneur hôte Win32, consultez [Test de positionnement avec interopérabilité Win32, exemple](https://go.microsoft.com/fwlink/?LinkID=159995).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Interop.HwndSource>
 - [Test de positionnement dans la couche visuelle](hit-testing-in-the-visual-layer.md)
-- [Tutoriel : Hébergement d’objets visuels dans une Application Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Tutoriel : hébergement d’objets visuels dans une application Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)

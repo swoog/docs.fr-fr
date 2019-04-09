@@ -2,12 +2,12 @@
 title: Architecture de syndication
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075910"
 ---
 # <a name="architecture-of-syndication"></a>Architecture de syndication
 L'API de syndication est conçue pour fournir un modèle de programmation neutre en ce qui concerne le format qui autorise l'écriture du contenu syndiqué sur le fil dans divers formats. Le modèle de données abstrait inclut les classes suivantes :  
@@ -57,7 +57,7 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|Classe qui représente la catégorie d'un flux de syndication.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Classe de base qui représente le contenu de syndication.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Classe représentant une extension d'élément de syndication.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Classe représentant une extension d’élément de syndication.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Collection d'objets <xref:System.ServiceModel.Syndication.SyndicationElementExtension>.|  
 |<xref:System.ServiceModel.Syndication.SyndicationFeed>|Classe qui représente un objet de flux de niveau supérieur.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Classe qui représente un élément de flux.|  
@@ -69,15 +69,16 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
 |<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|Classe qui représente un contenu de syndication qui se compose d'une URL à une autre ressource.|  
 |<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|Classe qui représente un contenu de syndication qui ne sera pas affiché dans un navigateur.|  
   
- Les abstractions des données principales dans le modèle objet sont Flux et Élément, qui correspondent aux classes <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem>. Un flux expose des métadonnées (par exemple, Title, Description et Author) au niveau du flux, un emplacement pour stocker des extensions inconnues et un jeu d'éléments qui composent le reste du contenu d'information du flux. Un élément met à disposition les métadonnées (par exemple, Title, Summary et PublicationDate) au niveau de l'élément, un emplacement pour stocker des extensions inconnues et un élément de contenu qui contient le reste du contenu d'information de l'élément. Les abstractions principales de Flux et Élément sont prises en charge par des classes supplémentaires qui représentent des constructions de données communes référencées dans les spécifications Atom 1.0 et RSS.  
+ Les abstractions des données principales dans le modèle objet sont Flux et Élément, qui correspondent aux classes <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem>. Un flux expose des métadonnées (par exemple, Title, Description et Author) au niveau du flux, un emplacement pour stocker des extensions inconnues et un jeu d’éléments qui composent le reste du contenu d’information du flux. Un élément met à disposition les métadonnées (par exemple, Title, Summary et PublicationDate) au niveau de l’élément, un emplacement pour stocker des extensions inconnues et un élément de contenu qui contient le reste du contenu d’information de l’élément. Les abstractions principales de Flux et Élément sont prises en charge par des classes supplémentaires qui représentent des constructions de données communes référencées dans les spécifications Atom 1.0 et RSS.  
   
  Les informations contenues dans une instance de flux peuvent être converties en divers formats XML. Le processus de conversion vers et depuis XML est géré par la classe <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Cette classe est abstraite ; les implémentations concrètes sont fournies pour Atom 1.0 et RSS 2.0, <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> et <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>. Pour utiliser des classes Feed dérivées, utilisez <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> ou <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> car ils vous permettent de spécifier une classe Feed dérivée. Pour utiliser des classes d'élément dérivées utilisez <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> ou <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> car ils vous permettent de spécifier une classe d'élément dérivée. Les tiers peuvent dériver leur propre implémentation de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pour prendre en charge des formats de syndication différents.  
   
 ## <a name="extensibility"></a>Extensibilité  
   
--   L'une des fonctionnalités clés de protocoles de syndication est l'extensibilité. Atom 1.0 et RSS 2.0 vous permettent d'ajouter aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de la syndication WCF fournit deux façons de travailler avec les attributs personnalisés et des extensions : dériver une nouvelle classe et l’accès faiblement typé. Pour plus d’informations, consultez [extensibilité de la Syndication](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   L’une des fonctionnalités clés de protocoles de syndication est l’extensibilité. Atom 1.0 et RSS 2.0 vous permettent d'ajouter aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de la syndication WCF fournit deux façons de travailler avec les attributs personnalisés et des extensions : dériver une nouvelle classe et l’accès faiblement typé. Pour plus d’informations, consultez [extensibilité de la Syndication](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la syndication WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+
+- [Vue d'ensemble de la syndication WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Comment le modèle objet Syndication WCF est mappé à Atom et RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
-- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

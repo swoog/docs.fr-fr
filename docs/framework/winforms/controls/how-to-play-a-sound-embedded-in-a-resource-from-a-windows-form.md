@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lire un son incorporé dans une ressource à partir d’un formulaire Windows'
+title: 'Procédure : émettre un signal sonore incorporé dans une ressource à partir d’un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078575"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Procédure : Lire un son incorporé dans une ressource à partir d’un formulaire Windows
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Procédure : émettre un signal sonore incorporé dans une ressource à partir d’un formulaire Windows
 Vous pouvez utiliser la <xref:System.Media.SoundPlayer> classe pour lire un son à partir d’une ressource incorporée.  
   
 ## <a name="example"></a>Exemple  
@@ -34,6 +34,7 @@ Vous pouvez utiliser la <xref:System.Media.SoundPlayer> classe pour lire un son 
  Le remplacement de « \<AssemblyName » par le nom de l’assembly dans lequel le fichier audio est incorporé. N’incluez pas le suffixe « .dll ».  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Media.SoundPlayer>
-- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](how-to-play-a-sound-from-a-windows-form.md)
-- [Guide pratique pour Lecture d’un formulaire Windows d’un son en boucle](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [Procédure : émettre un signal sonore à partir d’un formulaire Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Procédure : émettre un son en boucle dans un formulaire Windows](how-to-loop-a-sound-playing-on-a-windows-form.md)

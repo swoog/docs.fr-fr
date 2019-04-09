@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Restreindre l’accès à la classe PrincipalPermissionAttribute'
+title: 'Procédure : restreindre l’accès à la classe PrincipalPermissionAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105285"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procédure : Restreindre l’accès à la classe PrincipalPermissionAttribute
-Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autoriser l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procédure : restreindre l’accès à la classe PrincipalPermissionAttribute
+Le contrôle de l'accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autoriser l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  La tâche se compose de deux procédures séparées. La première crée le groupe et le remplit avec les utilisateurs. La deuxième applique la classe <xref:System.Security.Permissions.PrincipalPermissionAttribute> pour spécifier le groupe.  
   
@@ -85,10 +85,11 @@ Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows e
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [Autorisation de l’accès aux opérations de service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Authorizing Access to Service Operations](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Vue d'ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089261"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Procédure : Créer une liaison dans du code
 Cet exemple montre comment créer et définir un <xref:System.Windows.Data.Binding> dans le code.  
@@ -39,5 +39,6 @@ Cet exemple montre comment créer et définir un <xref:System.Windows.Data.Bindi
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107365"
 ---
 # <a name="how-to-implement-icommandsource"></a>Procédure : Implémenter ICommandSource
 Cet exemple montre comment créer une source de commande en implémentant <xref:System.Windows.Input.ICommandSource>.  Une source de commande est un objet qui sait comment appeler une commande.  Le <xref:System.Windows.Input.ICommandSource> interface expose trois membres : <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, et <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> est la commande qui sera appelée. Le <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> est un type de données défini par l’utilisateur qui est passé à partir de la source de commande à la méthode qui gère la commande. Le <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est l’objet qui est en cours d’exécution sur la commande.  
@@ -59,7 +59,8 @@ Cet exemple montre comment créer une source de commande en implémentant <xref:
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>
-- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Vue d'ensemble des commandes](commanding-overview.md)

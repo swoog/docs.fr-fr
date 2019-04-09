@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Parcourir un DataSet avec le contrôle BindingNavigator Windows Forms'
+title: 'Procédure : parcourir un jeu de données avec le contrôle BindingNavigator de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d8db965993e82040cfe88c22aaabfaed21462a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086518"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procédure : Parcourir un DataSet avec le contrôle BindingNavigator Windows Forms
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procédure : parcourir un jeu de données avec le contrôle BindingNavigator de Windows Forms
 Quand vous générez des applications pilotées par les données, vous devez souvent présenter des collections de données aux utilisateurs. Le contrôle <xref:System.Windows.Forms.BindingNavigator>, associé au composant <xref:System.Windows.Forms.BindingSource>, fournit une solution pratique et extensible pour parcourir une collection et afficher des éléments de façon séquentielle.  
   
 ## <a name="example"></a>Exemple  
@@ -36,9 +36,10 @@ Quand vous générez des applications pilotées par les données, vous devez sou
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator, contrôle](bindingnavigator-control-windows-forms.md)
-- [BindingSource, composant](bindingsource-component.md)
-- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Composant BindingSource](bindingsource-component.md)
+- [Procédure : lier un contrôle Windows Forms à un type](how-to-bind-a-windows-forms-control-to-a-type.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078224"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Stylets, lignes et rectangles dans GDI+
 Pour dessiner des lignes avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vous devez créer un <xref:System.Drawing.Graphics> objet et un <xref:System.Drawing.Pen> objet. Le <xref:System.Drawing.Graphics> objet fournit les méthodes qui effectuent réellement le dessin, et le <xref:System.Drawing.Pen> objet stocke les attributs, tels que la couleur de ligne, la largeur et le style.  
@@ -68,9 +68,10 @@ Pour dessiner des lignes avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndpt
  Un <xref:System.Drawing.Rectangle> objet possède des méthodes et propriétés permettant de manipuler et de collecter des informations sur le rectangle. Par exemple, le <xref:System.Drawing.Rectangle.Inflate%2A> et <xref:System.Drawing.Rectangle.Offset%2A> les méthodes de modifier la taille et la position du rectangle. Le <xref:System.Drawing.Rectangle.IntersectsWith%2A> méthode vous indique si le rectangle coupe un rectangle donné et la <xref:System.Drawing.Rectangle.Contains%2A> méthode vous indique si un point donné se trouve à l’intérieur du rectangle.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [Guide pratique pour Créer un stylet](how-to-create-a-pen.md)
-- [Guide pratique pour Dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)
-- [Guide pratique pour Dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)
+- [Procédure : créer un stylet](how-to-create-a-pen.md)
+- [Procédure : dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)
+- [Procédure : dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)

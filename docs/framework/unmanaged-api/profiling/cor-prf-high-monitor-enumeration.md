@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24fde3901f4a866fb14461533a24f0ce265847ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572fcee528098a4f2929e07dfae63efc56e93dfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081643"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_MODULE_FLAGS, énumération
 [Pris en charge dans .NET Framework 4.5.2 et ultérieur]  
@@ -50,16 +50,17 @@ En commençant par le [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)],
 
 `COR_PRF_HIGH_MONITOR_IMMUTABLE` est destiné à être un masque de bits qui représente tous les indicateurs qui peuvent uniquement être définies lors de l’initialisation. Essayez de modifier un de ces indicateurs autre part génèrent un échec `HRESULT`.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
 - [COR_PRF_MONITOR, énumération](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)
 - [ICorProfilerInfo5, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)

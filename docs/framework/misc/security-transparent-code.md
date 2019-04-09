@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075936"
 ---
 # <a name="security-transparent-code"></a>Code transparent de sécurité (security-transparent)
 <a name="top"></a>
@@ -27,9 +27,9 @@ ms.locfileid: "54510115"
   
 -   [Objectif du modèle de transparence](#purpose)  
   
--   [En spécifiant le niveau de transparence](#level)  
+-   [Spécification du niveau de transparence](#level)  
   
--   [Mise en œuvre de la transparence](#enforcement)  
+-   [Mise en application de la transparence](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Objectif du modèle de transparence  
@@ -107,5 +107,6 @@ ms.locfileid: "54510115"
  Les règles de transparence ne sont pas appliquées tant que la transparence n'est pas calculée. Dès lors, une exception <xref:System.InvalidOperationException> est levée en cas de violation d'une règle de transparence. Le moment où la transparence est calculée dépend de plusieurs facteurs et ne peut pas être prédite. Elle est calculée le plus tard possible. Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], le calcul de la transparence au niveau de l'assembly intervient à un stade plus précoce que dans le .NET Framework 2.0. La seule garantie est que le calcul de la transparence se produit dès que cela est nécessaire. Cela est comparable à la façon dont le compilateur juste-à-temps (JIT) peut modifier le point au moment où une méthode est compilée et que des erreurs sont détectées dans cette méthode. Le calcul de la transparence n'est pas perceptible si votre code ne présente aucune erreur de transparence.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Code transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

@@ -2,12 +2,12 @@
 title: Chiffrement des données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102165"
 ---
 # <a name="data-encryption-in-sql-server"></a>Chiffrement des données dans SQL Server
 SQL Server fournit des fonctions de chiffrement et déchiffrement de données à l'aide d'un certificat, d'une clé asymétrique ou d'une clé symétrique. Il gère tous ces éléments dans un magasin de certificats interne. Le magasin utilise une hiérarchie de chiffrement qui sécurise les certificats et les clés sur un niveau à l'aide de la couche située au-dessus dans la hiérarchie. Ce domaine de fonctionnalités de SQL Server est appelé stockage secret.  
@@ -30,6 +30,7 @@ SQL Server fournit des fonctions de chiffrement et déchiffrement de données à
 |[Hiérarchie de chiffrement](/sql/relational-databases/security/encryption/encryption-hierarchy)|Fournit une vue d'ensemble du chiffrement dans SQL Server. Cette rubrique fournit des liens vers des articles supplémentaires.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

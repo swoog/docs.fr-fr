@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Créer une stratégie d’autorisation personnalisée'
+title: 'Procédure : créer une stratégie d’autorisation personnalisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115386"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Procédure : Créer une stratégie d’autorisation personnalisée
-L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle d’autorisation basée sur les revendications. Les revendications, une fois extraites des jetons, sont traitées par une stratégie d'autorisation personnalisée lorsqu'une telle stratégie a été définie, puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>, lequel peut ensuite être examiné afin de délivrer ou non les autorisations. Il est possible d'utiliser une stratégie personnalisée afin de transformer les revendications émanant des jetons entrants en revendications escomptées par l'application. De cette façon, la couche d’application peut être isolée des détails sur les différentes revendications pris en charge par les différents types de jetons qui prend en charge par WCF. Cette rubrique contient des instructions permettant d’implémenter une stratégie d’autorisation personnalisée et d’ajouter celle-ci à la collection de stratégies utilisées par un service donné.  
+# <a name="how-to-create-a-custom-authorization-policy"></a>Procédure : créer une stratégie d’autorisation personnalisée
+L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle d’autorisation basée sur les revendications. Les revendications, une fois extraites des jetons, sont traitées par une stratégie d'autorisation personnalisée lorsqu'une telle stratégie a été définie, puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>, lequel peut ensuite être examiné afin de délivrer ou non les autorisations. Il est possible d'utiliser une stratégie personnalisée afin de transformer les revendications émanant des jetons entrants en revendications escomptées par l'application. De cette façon, la couche d’application peut être isolée des détails sur les différentes revendications pris en charge par les différents types de jetons qui prend en charge par WCF. Cette rubrique contient des instructions permettant d'implémenter une stratégie d'autorisation personnalisée et d'ajouter celle-ci à la collection de stratégies utilisées par un service donné.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Pour implémenter une stratégie d'autorisation personnalisée  
   
@@ -76,7 +76,8 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Guide pratique pour Comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Guide pratique pour Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Procédure : comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Procédure : créer un gestionnaire d’autorisations personnalisé pour un service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Authorization Policy](../../../../docs/framework/wcf/samples/authorization-policy.md)

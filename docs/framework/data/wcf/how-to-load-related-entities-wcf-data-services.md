@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7687378ae2a6c7d8021acc53b19544206ee0cc84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092628"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Procédure : Charger des entités connexes (WCF Data Services)
 Lorsque vous devez charger des entités connexes dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez utiliser la méthode <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sur la classe <xref:System.Data.Services.Client.DataServiceContext>. Vous pouvez également utiliser le <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> méthode sur le <xref:System.Data.Services.Client.DataServiceQuery%601> pour exiger que connexes chargement anticipé des entités dans la même réponse de requête.  
@@ -33,4 +33,5 @@ Lorsque vous devez charger des entités connexes dans [!INCLUDE[ssAstoria](../..
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

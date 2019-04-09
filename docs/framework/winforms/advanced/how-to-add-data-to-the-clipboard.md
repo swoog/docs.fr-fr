@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des données dans le Presse-papiers'
+title: 'Procédure : ajouter des données au Presse-papiers'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109094"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Procédure : Ajouter des données dans le Presse-papiers
+# <a name="how-to-add-data-to-the-clipboard"></a>Procédure : ajouter des données au Presse-papiers
 Le <xref:System.Windows.Forms.Clipboard> classe fournit des méthodes que vous pouvez utiliser pour interagir avec la fonctionnalité de Presse-papiers du système d’exploitation Windows. De nombreuses applications utilisent le Presse-papiers comme référentiel temporaire pour les données. Par exemple, les traitements de texte utiliser le Presse-papiers lors des opérations de couper-coller. Le Presse-papiers est également utile pour transférer des données d’une application vers un autre.  
   
  Lorsque vous ajoutez des données dans le Presse-papiers, vous pouvez indiquer le format de données afin que les autres applications puissent reconnaître les données lorsqu’elles peuvent utiliser ce format. Vous pouvez également ajouter des données dans le Presse-papiers dans plusieurs formats différents pour augmenter le nombre d’autres applications qui peut utiliser les données.  
@@ -61,5 +61,6 @@ Le <xref:System.Windows.Forms.Clipboard> classe fournit des méthodes que vous p
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Opérations glisser-déposer et prise en charge du Presse-papiers](drag-and-drop-operations-and-clipboard-support.md)
-- [Guide pratique pour Récupérer des données à partir du Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)
+- [Procédure : récupérer des données dans le Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)

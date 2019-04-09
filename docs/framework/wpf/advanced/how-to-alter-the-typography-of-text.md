@@ -1,5 +1,5 @@
 ---
-title: "Comment : Modifier la typographie d'un texte"
+title: 'Guide pratique : Modifier la typographie d’un texte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - setting Typography attributes [WPF]
 - Typography attribute [WPF], setting
 ms.assetid: 19a3b49b-60a2-4c11-a786-e26b4c965588
-ms.openlocfilehash: eeed93f62802a942915511db060c0e6c029579e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c027424632f8671ba8d7cae1c899ef3a53edc26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078861"
 ---
-# <a name="how-to-alter-the-typography-of-text"></a>Comment : Modifier la typographie d'un texte
+# <a name="how-to-alter-the-typography-of-text"></a>Guide pratique : Modifier la typographie d’un texte
 L’exemple suivant montre comment définir le <xref:System.Windows.Documents.TextElement.Typography%2A> d’attribut, à l’aide de <xref:System.Windows.Documents.Paragraph> en tant que l’élément de l’exemple.  
   
 ## <a name="example"></a>Exemple  
@@ -36,4 +36,5 @@ L’exemple suivant montre comment définir le <xref:System.Windows.Documents.Te
  [!code-vb[TextElementSnippets#_TextElement_Typog](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
+
+- [Vue d'ensemble des documents dynamiques](flow-document-overview.md)

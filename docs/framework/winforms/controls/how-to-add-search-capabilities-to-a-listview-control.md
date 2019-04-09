@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des fonctionnalités de recherche à un contrôle ListView'
+title: 'Procédure : ajouter des fonctionnalités de recherche à un contrôle ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108548"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procédure : Ajouter des fonctionnalités de recherche à un contrôle ListView
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procédure : ajouter des fonctionnalités de recherche à un contrôle ListView
 Souvent, lorsque vous travaillez avec une longue liste d’éléments dans un <xref:System.Windows.Forms.ListView> contrôle, que vous souhaitez proposer des fonctionnalités de recherche à l’utilisateur. Le <xref:System.Windows.Forms.ListView> contrôle offre cette fonctionnalité de deux manières différentes : correspondance de texte et la recherche d’emplacement.  
   
  Le <xref:System.Windows.Forms.ListView.FindItemWithText%2A> méthode vous permet d’effectuer une recherche de texte sur un <xref:System.Windows.Forms.ListView> dans la vue liste ou détails, donné une chaîne de recherche et d’un début facultatif et d’index de fin. En revanche, le <xref:System.Windows.Forms.ListView.FindNearestItem%2A> méthode permet de rechercher un élément dans un <xref:System.Windows.Forms.ListView> en mode icône ou une vignette, étant donné un ensemble de coordonnées x et y et une direction à rechercher.  
@@ -48,9 +48,10 @@ Souvent, lorsque vous travaillez avec une longue liste d’éléments dans un <x
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [Contrôle ListView](listview-control-windows-forms.md)
 - [Vue d’ensemble du contrôle ListView](listview-control-overview-windows-forms.md)
-- [Guide pratique pour Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procédure : ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

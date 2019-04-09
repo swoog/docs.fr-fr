@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Implémenter la Validation avec le contrôle DataGrid'
+title: 'Procédure : implémenter la validation avec le contrôle DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086804"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procédure : Implémenter la Validation avec le contrôle DataGrid
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procédure : implémenter la validation avec le contrôle DataGrid
 Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’effectuer la validation au niveau de la cellule et la ligne. La validation au niveau de la cellule vous valider les propriétés individuelles d’un objet de données liées quand un utilisateur met à jour une valeur. La validation au niveau des lignes, vous validez les objets de données entier lorsqu’un utilisateur valide des modifications apportées à une ligne. Vous pouvez également fournir une rétroaction visuelle personnalisée pour les erreurs de validation, ou utiliser la rétroaction visuelle par défaut qui le <xref:System.Windows.Controls.DataGrid> fournit du contrôle.  
   
  Les procédures suivantes décrivent comment appliquer des règles de validation à <xref:System.Windows.Controls.DataGrid> liaisons et personnaliser la rétroaction visuelle.  
@@ -91,6 +91,7 @@ Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’effectuer l
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Liaison de données](../data/data-binding-wpf.md)

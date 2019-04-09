@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Déterminer si un travail d'impression peut être imprimé à cette heure de la journée"
+title: 'Procédure : Déterminer si un travail d’impression peut être imprimé à cette heure de la journée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099857"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procédure : Déterminer si un travail d'impression peut être imprimé à cette heure de la journée
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procédure : Déterminer si un travail d’impression peut être imprimé à cette heure de la journée
 Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils ont des propriétés au moment de début et de fin qui peuvent être définies pour les rendre indisponibles à certains moments de la journée. Cette fonctionnalité peut être utilisée, par exemple, pour réserver une imprimante à l’usage exclusif d’un département après 17 h 00. Ce département aurait une autre file d’attente l’imprimante que les autres services à utiliser. La file d’attente pour les autres départements serait défini comme être indisponible après 17 h 00, tandis que la file d’attente pour le département privilégié peut être définie pour être disponible à tout moment.  
   
  En outre, les travaux d’impression eux-mêmes peuvent être définis pour être imprimables uniquement dans un intervalle de temps spécifié.  
@@ -75,8 +75,9 @@ Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Vue d'ensemble de l'impression](printing-overview.md)

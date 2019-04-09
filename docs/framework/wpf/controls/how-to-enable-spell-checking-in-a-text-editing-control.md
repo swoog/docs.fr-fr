@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Activer la vérification de l'orthographe dans un contrôle d'édition de texte"
+title: 'Procédure : Activer la vérification de l’orthographe dans un contrôle d’édition de texte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - spelling checker [WPF]
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
-ms.openlocfilehash: 633ffe38503df743df355a8b476e7b254fcafffa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076846"
 ---
-# <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Procédure : Activer la vérification de l'orthographe dans un contrôle d'édition de texte
+# <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Procédure : Activer la vérification de l’orthographe dans un contrôle d’édition de texte
 L’exemple suivant montre comment activer la correction orthographique en temps réel un <xref:System.Windows.Controls.TextBox> à l’aide de la <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> propriété de la <xref:System.Windows.Controls.SpellCheck> classe.  
   
 ## <a name="example"></a>Exemple  
@@ -28,6 +28,7 @@ L’exemple suivant montre comment activer la correction orthographique en temps
  [!code-vb[TextBoxMiscSnippets_procedural_snip#SpellCheckCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/spellcheckexample.vb#spellcheckcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utiliser la vérification de l'orthographe avec un menu contextuel](how-to-use-spell-checking-with-a-context-menu.md)
-- [Vue d’ensemble de TextBox](textbox-overview.md)
-- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)
+
+- [Utiliser la vérification de l’orthographe avec un menu contextuel](how-to-use-spell-checking-with-a-context-menu.md)
+- [Vue d'ensemble de TextBox](textbox-overview.md)
+- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)

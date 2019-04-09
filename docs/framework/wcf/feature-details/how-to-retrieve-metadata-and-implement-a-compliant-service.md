@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Récupérer les métadonnées et implémenter un Service conforme'
+title: 'Procédure : récupérer des métadonnées et implémenter un service conforme'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095969"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procédure : Récupérer les métadonnées et implémenter un Service conforme
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procédure : récupérer des métadonnées et implémenter un service conforme
 Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous souhaiterez également migrer un service existant à Windows Communication Foundation (WCF) tout en conservant le format de câble. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  
   
  Dans ce cas, vous devez utiliser le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou un outil équivalent) pour générer une interface de contrat de service dans un langage géré que vous pouvez implémenter pour répondre aux exigences de la contrat. En règle générale le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) est utilisé pour acquérir un contrat de service qui est utilisé avec une fabrication de canal ou un type de client WCF, ainsi qu’avec un fichier de configuration de client qui configure la liaison correcte et l’adresse. Pour utiliser le fichier de configuration généré, vous devez le remplacer par un fichier de configuration de service. Vous devrez peut-être aussi modifier le contrat de service.  
@@ -39,7 +39,7 @@ Souvent, la personne qui conçoit et implémente des services n'est pas la même
   
  L'exemple de code suivant montre :  
   
--   L'interface de contrat de service qui, lorsqu'elle est implémentée, se conforme aux spécifications de contrat (`ISampleService`).  
+-   L’interface de contrat de service qui, lorsqu’elle est implémentée, se conforme aux exigences de contrat (`ISampleService`).  
   
 -   L'interface d'assistance destinée au client qui étend à la fois l'interface de contrat de service et <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, et doit être utilisée dans une application cliente `ISampleServiceChannel`.  
   
@@ -60,4 +60,5 @@ Souvent, la personne qui conçoit et implémente des services n'est pas la même
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Voir aussi
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

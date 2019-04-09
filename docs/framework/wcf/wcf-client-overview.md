@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115919"
 ---
 # <a name="wcf-client-overview"></a>Vue d'ensemble d'un client WCF
 Cette section décrit comment les applications clientes, comment configurer, créer et utiliser un client Windows Communication Foundation (WCF) et comment sécuriser les applications clientes.  
@@ -20,7 +20,7 @@ Cette section décrit comment les applications clientes, comment configurer, cr�
 ## <a name="using-wcf-client-objects"></a>Utilisation des objets clients WCF  
  Une application cliente est une application managée qui utilise un client WCF pour communiquer avec une autre application. Pour créer un client application pour un service WCF requiert les étapes suivantes :  
   
-1.  Obtenez le contrat de service, les informations de liaison et d’adresse pour un point de terminaison de service.  
+1.  Obtenez le contrat de service, les informations de liaison et d'adresse pour un point de terminaison de service.  
   
 2.  Créer un client WCF à l’aide de ces informations.  
   
@@ -137,7 +137,7 @@ End Interface
 ## <a name="configuring-and-securing-clients"></a>Configuration et sécurisation des clients  
  La configuration d'un client démarre par le chargement nécessaire des informations de point de terminaison cibles pour l'objet client ou de canal, généralement depuis un fichier de configuration, même s'il est possible aussi de charger ces informations par programme à l'aide des constructeurs et des propriétés du client. Toutefois, des étapes de configuration supplémentaires sont nécessaires pour activer certain comportement client et pour de nombreux scénarios de sécurité.  
   
- Par exemple, les conditions de sécurité pour les contrats de service sont déclarées dans l'interface de contrat de service, et si Svcutil.exe a créé un fichier de configuration, ce fichier contient généralement une liaison qui peut prendre en charge les spécifications de sécurité du service. Dans certains cas, toutefois, davantage de configuration de sécurité peut être requis, tel que configurer des informations d'identification du client. Pour obtenir des informations complètes sur la configuration de sécurité pour les clients WCF, consultez [sécurisation des Clients](../../../docs/framework/wcf/securing-clients.md).  
+ Par exemple, les conditions de sécurité pour les contrats de service sont déclarées dans l’interface de contrat de service, et si Svcutil.exe a créé un fichier de configuration, ce fichier contient généralement une liaison qui peut prendre en charge les spécifications de sécurité du service. Dans certains cas, toutefois, davantage de configuration de sécurité peut être requis, tel que configurer des informations d'identification du client. Pour obtenir des informations complètes sur la configuration de sécurité pour les clients WCF, consultez [sécurisation des Clients](../../../docs/framework/wcf/securing-clients.md).  
   
  De plus, certaines modifications personnalisées peuvent être activées dans des applications clientes, telles que les comportements d'exécution personnalisés. Pour plus d’informations sur la configuration d’un comportement client personnalisé, consultez [configuration des comportements clients](../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -156,7 +156,7 @@ End Interface
   
  Par exemple, vous pouvez contrôler différents aspects de comportement à l'exécution de l'objet de rappel en utilisant des propriétés de l'attribut <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> sur la classe de rappel. Un autre exemple est l'utilisation de la classe <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> pour permettre le retour d'informations sur les exceptions aux services qui appellent l'objet de rappel. Pour plus d’informations, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Pour obtenir un exemple complet, consultez [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
   
- Sur les ordinateurs Windows XP qui exécutent les services IIS (Internet Information Services) 5.1, les clients duplex doivent spécifier une adresse de base cliente à l’aide de la classe <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> ou une exception est levée. L'exemple de code suivant montre comment procéder.  
+ Sur les ordinateurs Windows XP qui exécutent les services IIS (Internet Information Services) 5.1, les clients duplex doivent spécifier une adresse de base cliente à l'aide de la classe <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> ou une exception est levée. L'exemple de code suivant montre comment procéder.  
   
  [!code-csharp[S_DualHttp#8](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#8)]
  [!code-vb[S_DualHttp#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_dualhttp/vb/module1.vb#8)]  
@@ -166,11 +166,12 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Appels des services de façon asynchrone.  
- Le mode d'appel des opérations dépend entièrement du développeur du client. En effet, les messages qui composent une opération peuvent être mappés aux méthodes synchrones ou asynchrones lorsqu'ils sont exprimés dans le code managé. Par conséquent, si vous souhaitez générer un client qui appelle des opérations de façon asynchrone, vous pouvez utiliser Svcutil.exe pour générer le code client asynchrone à l'aide de l'option `/async`. Pour plus d'informations, voir [Procédure : Appeler des opérations de Service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Le mode d'appel des opérations dépend entièrement du développeur du client. En effet, les messages qui composent une opération peuvent être mappés aux méthodes synchrones ou asynchrones lorsqu’ils sont exprimés dans le code managé. Par conséquent, si vous souhaitez générer un client qui appelle des opérations de façon asynchrone, vous pouvez utiliser Svcutil.exe pour générer le code client asynchrone à l'aide de l'option `/async`. Pour plus d'informations, voir [Procédure : Appeler des opérations de Service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Appels des services à l'aide des canaux clients WCF  
  Étendent des types de client WCF <xref:System.ServiceModel.ClientBase%601>, elle-même dérivée de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface à exposer le système de canal sous-jacent. Vous pouvez appeler des services à l'aide du contrat de service cible avec la classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Pour plus d’informations, consultez [Architecture du Client WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

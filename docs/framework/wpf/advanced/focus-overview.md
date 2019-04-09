@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073882"
 ---
 # <a name="focus-overview"></a>Vue d'ensemble du focus
 Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il existe deux concepts principaux associés au focus : le focus clavier et le focus logique.  Le focus clavier fait référence à l’élément qui reçoit une entrée au clavier, tandis que le focus logique fait référence à l’élément d’une portée de focus qui a le focus.  Ces concepts sont présentés en détail dans cette vue d’ensemble.  Il est important de bien comprendre les différences entre ces concepts lors de la création d’applications complexes qui comportent plusieurs régions où le focus peut être obtenu.  
@@ -21,9 +21,7 @@ Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-m
  Les principales classes impliquées dans la gestion du focus sont les <xref:System.Windows.Input.Keyboard> (classe), le <xref:System.Windows.Input.FocusManager> classe et l’élément de base des classes, telles que <xref:System.Windows.UIElement> et <xref:System.Windows.ContentElement>.  Pour plus d’informations sur les éléments de base, consultez [Vue d’ensemble des éléments de base](base-elements-overview.md).  
   
  Le <xref:System.Windows.Input.Keyboard> classe concerne principalement le focus clavier et la <xref:System.Windows.Input.FocusManager> concerne principalement avec le focus logique, mais il ne s’agit pas d’une distinction absolue.  En effet, un élément qui a le focus clavier possède également le focus logique, tandis qu’un élément qui a le focus logique ne possède pas nécessairement le focus clavier.  Cela est évident lorsque vous utilisez la <xref:System.Windows.Input.Keyboard> classe pour définir l’élément qui a le focus clavier, pour qu’il définit également le focus logique sur l’élément.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Focus clavier  
  Le focus clavier fait référence à l’élément qui reçoit l’entrée au clavier.  Un seul élément de l’ordinateur peut avoir le focus clavier.  Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], l’élément qui a le focus clavier aura <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> défini sur `true`.  La propriété statique <xref:System.Windows.Input.Keyboard.FocusedElement%2A> sur la <xref:System.Windows.Input.Keyboard> classe obtient l’élément qui a le focus clavier.  
@@ -118,8 +116,9 @@ Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-m
  Les événements liés au focus logique sont <xref:System.Windows.UIElement.GotFocus> et <xref:System.Windows.UIElement.LostFocus>.  Ces événements sont définis sur le <xref:System.Windows.Input.FocusManager> en tant qu’événements attachés, mais la <xref:System.Windows.Input.FocusManager> n’expose pas les wrappers d’événements du CLR.  <xref:System.Windows.UIElement> et <xref:System.Windows.ContentElement> exposent ces événements plus facilement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [Vue d’ensemble des entrées](input-overview.md)
-- [Vue d’ensemble des éléments de base](base-elements-overview.md)
+- [Vue d'ensemble des entrées](input-overview.md)
+- [Vue d'ensemble des éléments de base](base-elements-overview.md)

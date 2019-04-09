@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122237"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Délégation et emprunt d'identité avec WCF
 L'*emprunt d'identité* est une technique courante utilisée par les services pour restreindre l'accès du client aux ressources d'un domaine de service. Les ressources de domaine de service peuvent être des ressources d'ordinateur, telles que des fichiers locaux (emprunt d'identité), ou une ressource sur un autre ordinateur, tel qu'un partage de fichiers (délégation). Pour obtenir un exemple d'application, consultez [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour obtenir un exemple montrant comment utiliser l’emprunt d’identité, consultez [Comment : Emprunter l’identité d’un Client sur un Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,9 +37,9 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 ### <a name="cached-token-impersonation"></a>Emprunt d'identité avec jeton mis en cache  
  Vous pouvez effectuer l'emprunt d'identité avec jeton mis en cache à l'aide des éléments suivants :  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client Windows.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, et <xref:System.ServiceModel.NetTcpBinding> avec une information d’identification du client Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> avec <xref:System.ServiceModel.BasicHttpSecurityMode> défini à l'information d'identification <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , ou toute autre liaison standard dans laquelle le client présente une information d'identification de nom d'utilisateur que le service peut mapper à un compte Windows valide.  
+-   <xref:System.ServiceModel.BasicHttpBinding> avec un <xref:System.ServiceModel.BasicHttpSecurityMode> défini sur le <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> informations d’identification, ou toute autre liaison standard où le client présente une information d’identification de nom d’utilisateur du service peut mapper à un compte Windows valide.  
   
 -   Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec `requireCancellation` défini à `true`. (La propriété est disponible sur les classes suivantes : <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> et <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si une conversation sécurisée est utilisée sur la liaison, sa propriété `requireCancellation` doit également avoir la valeur `true`.  
   
@@ -48,7 +48,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 ### <a name="s4u-based-impersonation"></a>Emprunt d'identité basé sur S4U  
  Vous pouvez effectuer l'emprunt d'identité basé sur S4U à l'aide des éléments suivants :  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client de certificat que le service peut mapper à un compte Windows valide.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, et <xref:System.ServiceModel.NetTcpBinding> avec une information d’identification du client de certificat que le service peut mapper à un compte Windows valide.  
   
 -   Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec la propriété `requireCancellation` définie à `false`.  
   
@@ -111,7 +111,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
   
  Le tableau suivant spécifie le niveau d'emprunt d'identité que le service obtient lors de l'emprunt d'identité à partir d'un jeton mis en cache.  
   
-|Valeur`AllowedImpersonationLevel` |Le Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton `ImpersonationLevel`mis en cache|  
+|`AllowedImpersonationLevel` valeur|Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton mis en cache `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|Oui|N/A|Emprunt d'identité|  
 |Anonymous|Aucune|N/A|Identification|  
@@ -125,7 +125,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Niveau d'emprunt d'identité obtenu à partir des informations d'identification de nom d'utilisateur et emprunt d'identité avec jeton mis en cache  
  En transmettant le service de son nom d’utilisateur et le mot de passe, un client permet à WCF pour se connecter en tant que cet utilisateur, ce qui revient à affecter la `AllowedImpersonationLevel` propriété <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` est disponible sur les classes <xref:System.ServiceModel.Security.WindowsClientCredential> et <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) Le tableau suivant indique le niveau d'emprunt d'identité obtenu lorsque le service reçoit des informations d'identification de nom d'utilisateur.  
   
-|`AllowedImpersonationLevel`|Le Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton `ImpersonationLevel`mis en cache|  
+|`AllowedImpersonationLevel`|Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton mis en cache `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/A|Oui|Oui|Delegation|  
 |N/A|Oui|Aucune|Emprunt d'identité|  
@@ -133,7 +133,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Niveau d'emprunt d'identité obtenu à partir de l'emprunt d'identité basé sur S4U  
   
-|Le Service a `SeTcbPrivilege`|Le Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton `ImpersonationLevel`mis en cache|  
+|Service a `SeTcbPrivilege`|Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton mis en cache `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Oui|Oui|N/A|Emprunt d'identité|  
 |Oui|Aucune|N/A|Identification|  
@@ -206,6 +206,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 -   [Kerberos Protocol Transition and Constrained Delegation (Transition du protocole Kerberos et délégation contrainte)](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
 - <xref:System.ServiceModel.ImpersonationOption>
@@ -219,7 +220,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [Utilisation de l’emprunt d’identité avec la sécurité de transport](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Emprunt de l’identité du client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [Guide pratique pour Emprunter l’identité d’un Client sur un Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Utilisation de l'emprunt d'identité avec la sécurité de transport](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Emprunt de l'identité du client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Procédure : emprunter l’identité d’un client sur un service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

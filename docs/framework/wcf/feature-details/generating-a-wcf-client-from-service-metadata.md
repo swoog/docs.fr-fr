@@ -2,12 +2,12 @@
 title: Génération d'un client WCF à partir de métadonnées de service
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078250"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Génération d'un client WCF à partir de métadonnées de service
 Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe pour générer des clients à partir de documents de métadonnées.  
@@ -31,7 +31,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Option|Description|  
 |------------|-----------------|  
 |**/ reference :\<chemin d’accès de fichier >**|Référence les types contenus dans l'assembly spécifié. Lorsque vous générez des clients, utilisez cette option pour spécifier des assemblys qui peuvent contenir des types représentant les métadonnées importées.<br /><br /> Forme abrégée : `/r`|  
-|**/excludeType:\<type>**|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Forme abrégée : `/et`|  
+|**/excludeType :\<type >**|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Forme abrégée : `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Choix d'un sérialiseur  
   
@@ -41,13 +41,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/serializer:DataContractSerializer**|Génère des types de données qui utilisent le sérialiseur `DataContract` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:DataContractSerializer`|  
 |**/serializer:XmlSerializer**|Génère des types de données qui utilisent le `XmlSerializer` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configure le sérialiseur `DataContract` pour importer les types non `DataContract` comme types `IXmlSerializable`.<br /><br /> Forme abrégée : `/ixt`|  
-|**/dataContractOnly**|Génère du code pour les types `DataContract` uniquement. Les types `ServiceContract` sont générés.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
+|**/dataContractOnly**|Génère du code pour les types `DataContract` uniquement. `ServiceContract` les types sont générés.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
   
 ## <a name="choosing-a-language-for-the-client"></a>Choix d'un langage pour le client  
   
 |Option|Description|  
 |------------|-----------------|  
-|**/Language :\<langage >**|Spécifie le langage de programmation à utiliser pour la génération de code. Spécifiez un nom de langage enregistré dans le fichier Machine.config, ou le nom qualifié complet d'une classe qui hérite de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valeurs : c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valeur par défaut : csharp<br /><br /> Forme abrégée : `/l`<br /><br /> Pour plus d’informations, consultez [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language :\<langage >**|Spécifie le langage de programmation à utiliser pour la génération de code. Spécifiez un nom de langage enregistré dans le fichier Machine.config, ou le nom qualifié complet d'une classe qui hérite de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valeurs : C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valeur par défaut : csharp<br /><br /> Forme abrégée : `/l`<br /><br /> Pour plus d’informations, consultez [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Choix d'un espace de noms pour le client  
   
@@ -65,10 +65,11 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Description|  
 |------------|-----------------|  
-|**/config:\<configFile>**|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
+|**/ config :\<configFile >**|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
 |**/mergeConfig**|Fusionne la configuration générée dans un fichier existant au lieu de remplacer le fichier existant.|  
 |**/noConfig**|Ne génère pas de fichiers de configuration.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Vue d'ensemble de l'architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

@@ -2,12 +2,12 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 2edd3bd7802dfc418490553cd0848a4ae458ae9a
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: bbc3ffd4902fe8c1c41aebe88317d0e3c32f7771
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077093"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 Retourne une collection d'objets à partir d'une expression de requête d'un type spécifique.  
@@ -53,7 +53,7 @@ OfType(executives, NamespaceName.Manager)
   
  Le tableau suivant montre le comportement de l'opérateur `OFTYPE` sur certains modèles. Toutes les exceptions sont levées du côté client avant que le fournisseur ne soit appelé :  
   
-|Modèle|Comportement|  
+|Motif|Comportement|  
 |-------------|--------------|  
 |OFTYPE(Collection(EntityType), EntityType)|Collection(EntityType)|  
 |OFTYPE(Collection(ComplexType), ComplexType)|Exception|  
@@ -65,4 +65,5 @@ OfType(executives, NamespaceName.Manager)
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

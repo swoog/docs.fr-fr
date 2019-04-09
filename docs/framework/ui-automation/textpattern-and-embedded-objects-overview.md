@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 03316ae7ecc6dab6d9f3d4856f396e4a05fd3293
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077912"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
@@ -66,7 +66,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
   
 ### <a name="hyperlink"></a>Lien hypertexte  
 
-**Exemple 1 - Plage de texte contenant un lien hypertexte textuel incorporé**
+**Exemple 1 - Plage de texte contenant un lien hypertexte textuel incorporé**
   
 `{The URL https://www.microsoft.com is embedded in text}.`
   
@@ -75,9 +75,9 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retourne la chaîne `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit de l' <xref:System.Windows.Automation.AutomationElement> qui représente le fournisseur de texte lui-même.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle de lien hypertexte.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetChildren` précédente.|Retourne la plage qui représente « https://www.microsoft.com».|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l’objet retourné par la précédente `GetChildren` (méthode).|Retourne la plage qui représente « https://www.microsoft.com».|  
   
- **Exemple 2 - Plage de texte couvrant partiellement un lien hypertexte textuel incorporé**  
+ **Exemple 2 - Plage de texte couvrant partiellement un lien hypertexte textuel incorporé**  
   
  L’URL `https://{[www]}` est incorporée dans le texte.  
   
@@ -87,7 +87,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit du contrôle de lien hypertexte.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne `null` étant donné que la plage de texte ne couvre pas entièrement la chaîne d'URL.|  
   
-**Exemple 3 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
+**Exemple 3 - Plage de texte couvrant partiellement le contenu d'un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
   
 `{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
@@ -99,7 +99,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
   
 <a name="Image"></a>   
 ### <a name="image"></a>Image  
- **Exemple 1 - Plage de texte contenant une image incorporée**  
+ **Exemple 1 - Plage de texte contenant une image incorporée**  
   
  {L’image ![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") est incorporée dans le texte}.  
   
@@ -108,9 +108,9 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retourne la chaîne « L' est incorporée dans le texte ». Tout texte alternatif associé à l'image n'est pas censé être inclus dans le flux de texte.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit de l' <xref:System.Windows.Automation.AutomationElement> qui représente le fournisseur de texte lui-même.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle image.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> précédente.|Retourne la plage dégénérée qui représente «![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")».|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l’objet retourné par la précédente <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> (méthode).|Retourne la plage dégénérée qui représente «![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")».|  
   
- **Exemple 2 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte comporte une image incorporée qui ne fait pas partie de la plage de texte.**  
+ **Exemple 2 - Plage de texte couvrant partiellement le contenu d'un conteneur de texte. Le conteneur de texte comporte une image incorporée qui ne fait pas partie de la plage de texte.**  
   
  {L’image} ![Exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") est incorporée dans le texte.  
   
@@ -131,29 +131,30 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |![Incorporé exemple Image 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
 |![Incorporé exemple Image 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Image pour Z|Z|  
   
- **Exemple 1 - Obtenir le conteneur de texte à partir du contenu d'une cellule.**  
+ **Exemple 1 - Obtenir le conteneur de texte à partir du contenu d'une cellule.**  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> avec des paramètres (0,0)|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le contenu de la cellule du tableau ; dans ce cas, l'élément est un contrôle de texte.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetItem` précédente.|Retourne la plage qui couvre l’image ![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l'objet retourné par la méthode `RangeFromChild` précédente.|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant la cellule du tableau ; dans ce cas, l'élément est un contrôle de texte qui prend en charge TableItemPattern.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l'objet retourné par la méthode `GetEnclosingElement` précédente.|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le tableau.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l'objet retourné par la méthode `GetEnclosingElement` précédente.|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le fournisseur de texte lui-même.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l’objet retourné par la précédente `GetItem` (méthode).|Retourne la plage qui couvre l’image ![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l’objet retourné par la précédente `RangeFromChild` (méthode).|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant la cellule du tableau ; dans ce cas, l'élément est un contrôle de texte qui prend en charge TableItemPattern.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l’objet retourné par la précédente `GetEnclosingElement` (méthode).|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le tableau.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> pour l’objet retourné par la précédente `GetEnclosingElement` (méthode).|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le fournisseur de texte lui-même.|  
   
- **Exemple 2 - Obtenir le contenu textuel d'une cellule.**  
+ **Exemple 2 - Obtenir le contenu textuel d'une cellule.**  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> avec des paramètres {1,1}.|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le contenu de la cellule du tableau ; dans ce cas, l'élément est un contrôle de texte.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetItem` précédente.|Retourne « Y ».|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> avec des paramètres (1,1).|Retourne l' <xref:System.Windows.Automation.AutomationElement> représentant le contenu de la cellule du tableau ; dans ce cas, l'élément est un contrôle de texte.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l’objet retourné par la précédente `GetItem` (méthode).|Retourne « Y ».|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Automation.TextPattern>
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [Accéder à des objets incorporés à l’aide d’UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
-- [Exposer le contenu d’une table à l’aide d’UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
-- [Accéder au texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [Accéder à des objets incorporés à l'aide d'UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+- [Exposer le contenu d'un tableau à l'aide d'UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
+- [Accéder au texte à l'aide d'UI Automation](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
 - [Recherche de TextPattern et exemple de sélection](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

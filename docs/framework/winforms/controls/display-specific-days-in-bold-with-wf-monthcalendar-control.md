@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Afficher en gras certains jours avec les Windows Forms du contrôle MonthCalendar'
+title: 'Procédure : afficher des jours spécifiques en gras avec le contrôle MonthCalendar Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073698"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procédure : Afficher en gras certains jours avec les Windows Forms du contrôle MonthCalendar
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procédure : afficher des jours spécifiques en gras avec le contrôle MonthCalendar Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher les jours en gras, en tant que dates au singulier ou répétitive. Vous pouvez procéder ainsi pour attirer l’attention sur des dates particulières, telles que les week-ends et jours fériés.  
   
  Trois propriétés contrôlent cette fonctionnalité. Le <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriété contient des dates uniques. Le <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque année. Le <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque mois. Chacune de ces propriétés contient un tableau de <xref:System.DateTime> objets. Pour ajouter ou supprimer une date à partir d’une de ces listes, vous devez ajouter ou supprimer un <xref:System.DateTime> objet.  
@@ -59,7 +59,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – ou –  
+     - ou -  
   
      Afficher un ensemble de dates en gras à la fois en créant un tableau de <xref:System.DateTime> objets et l’affecter à une des propriétés.  
   
@@ -97,7 +97,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – ou –  
+     - ou -  
   
      Supprimer toutes les dates en gras de l’une des trois listes en appelant le <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, ou <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> (méthode).  
   
@@ -128,7 +128,8 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [MonthCalendar, contrôle](monthcalendar-control-windows-forms.md)
-- [Guide pratique pour Sélectionnez une plage de Dates dans le contrôle MonthCalendar Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Guide pratique pour Modifier l’apparence du contrôle de MonthCalendar de formulaires Windows](how-to-change-monthcalendar-control-appearance.md)
-- [Guide pratique pour Afficher plusieurs mois dans le contrôle MonthCalendar Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Procédure : sélectionner une plage de dates dans le contrôle MonthCalendar Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Procédure : modifier l’aspect du contrôle MonthCalendar Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Procédure : afficher plusieurs mois dans le contrôle MonthCalendar Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

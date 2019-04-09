@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Utiliser des info-bulles dans les contrôles ToolStrip'
+title: 'Procédure : utiliser des info-bulles dans des contrôles ToolStrip'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding tooltips
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: 7177daef469f6c601cfa468c6437deb9653ffc85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 884fb75d53e425702cdef46615a16394b835518f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076470"
 ---
-# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Procédure : Utiliser des info-bulles dans les contrôles ToolStrip
+# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Procédure : utiliser des info-bulles dans des contrôles ToolStrip
 Vous pouvez afficher un <xref:System.Windows.Forms.ToolTip> pour le <xref:System.Windows.Forms.ToolStrip> contrôle souhaité en définissant le contrôle <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propriété `true`.  
   
 ### <a name="to-display-a-tooltip"></a>Pour afficher une info-bulle  
@@ -30,12 +30,13 @@ Vous pouvez afficher un <xref:System.Windows.Forms.ToolTip> pour le <xref:System
   
      Le `AutoToolTip` propriété est `true` par défaut pour <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, et <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-     Un <xref:System.Windows.Forms.ToolStripButton> utilise son `Text` propriété pour la <xref:System.Windows.Forms.ToolTip> texte par défaut. Utilisez cette procédure pour afficher un texte personnalisé dans un <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
+     Un <xref:System.Windows.Forms.ToolStripButton> utilise son `Text` propriété pour la <xref:System.Windows.Forms.ToolTip> texte par défaut. Utilisez cette procédure pour afficher un texte personnalisé dans un <xref:System.Windows.Forms.ToolStripButton><xref:System.Windows.Forms.ToolTip>.  
   
 > [!NOTE]
 >  Si vous définissez <xref:System.Windows.Forms.ToolStripItemDisplayStyle> à <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> ou <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, aucun texte n’apparaît sur le bouton, mais l’info-bulle apparaît toujours.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>
 - <xref:System.Windows.Forms.ToolStripButton>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>

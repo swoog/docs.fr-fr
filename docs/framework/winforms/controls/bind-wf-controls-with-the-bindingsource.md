@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Lier des contrôles Windows Forms au composant BindingSource à l’aide du Concepteur'
+title: 'Procédure : lier des contrôles Windows Forms au composant BindingSource à l’aide du concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: e12498bc71957d49893e49e54095b6bb184ac2c3
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074649"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procédure : Lier des contrôles Windows Forms au composant BindingSource à l’aide du Concepteur
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procédure : lier des contrôles Windows Forms au composant BindingSource à l’aide du concepteur
 Après avoir ajouté des contrôles à votre formulaire et de déterminer l’interface utilisateur pour votre application, vous pouvez lier les contrôles à une source de données, afin que, au moment de l’exécution, les utilisateurs peuvent modifier et enregistrer des données relatives à l’application.  
   
  Liaison d’un contrôle ou une série de contrôles dans les Windows Forms plus simple consiste à l’aide de la <xref:System.Windows.Forms.BindingSource> contrôle comme un pont entre les contrôles sur le formulaire et la source de données.  
@@ -60,6 +60,7 @@ Après avoir ajouté des contrôles à votre formulaire et de déterminer l’in
      Le **DataSource** se ferme l’éditeur et le jeu de données, type d’interface utilisateur <xref:System.Windows.Forms.BindingSource> et l’adaptateur de table spécifique pour que la connexion de données sont ajoutés à votre formulaire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Ajouter de nouvelles sources de données](/visualstudio/data-tools/add-new-data-sources)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Copier des Pixels pour réduire le scintillement dans les Windows Forms'
+title: 'Procédure : copier des pixels pour réduire le scintillement dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094032"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procédure : Copier des Pixels pour réduire le scintillement dans les Windows Forms
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procédure : copier des pixels pour réduire le scintillement dans Windows Forms
 Lorsque vous animez un graphique simple, les utilisateurs peuvent rencontrer parfois le scintillement ou autres effets visuels indésirables. Une pour limiter ce problème consiste à utiliser un processus « bitblt » sur le graphique. BitBlt est le « transfert de bloc bits » des données de couleur à partir d’un rectangle d’origine de pixels à un rectangle de destination de pixels.  
   
  Avec Windows Forms, le processus bitblt s’effectue à l’aide de la <xref:System.Drawing.Graphics.CopyFromScreen%2A> méthode de la <xref:System.Drawing.Graphics> classe. Dans les paramètres de la méthode, vous spécifiez la source et destination (en tant que points), la taille de la zone doit être copié et l’objet graphics utilisé pour dessiner la nouvelle forme.  
@@ -63,8 +63,9 @@ private void Form1_Paint(System.Object sender,
  Le code ci-dessus est exécuté dans le formulaire <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements afin que les graphiques persistent si le formulaire est redessiné. Par conséquent, n’appelez pas de méthodes graphiques dans le <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements, étant donné que le contenu dessiné ne sera pas redessiné si le formulaire est redimensionné ou masqué par un autre formulaire.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)

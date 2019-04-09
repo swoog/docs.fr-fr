@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093798"
 ---
 # <a name="how-to-convert-bound-data"></a>Procédure : Convertir des données liées
 Cet exemple montre comment appliquer la conversion de données qui sont utilisées dans les liaisons.  
@@ -38,6 +38,7 @@ Cet exemple montre comment appliquer la conversion de données qui sont utilisé
  Les ressources de style référencées dans l’exemple ci-dessus sont définies dans une section de ressources ne pas présentée dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Implémenter la validation de la liaison](how-to-implement-binding-validation.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

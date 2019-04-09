@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner une ligne en pointillés personnalisée'
+title: 'Procédure : dessiner une ligne en pointillé personnalisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109185"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>Procédure : Dessiner une ligne en pointillés personnalisée
+# <a name="how-to-draw-a-custom-dashed-line"></a>Procédure : dessiner une ligne en pointillé personnalisée
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit plusieurs styles de ligne sont répertoriées dans le <xref:System.Drawing.Drawing2D.DashStyle> énumération. Si ces styles de tiret standard ne répondent pas à vos besoins, vous pouvez créer un modèle de tirets personnalisés.  
   
 ## <a name="example"></a>Exemple  
@@ -33,4 +33,5 @@ ms.locfileid: "58410223"
  Créer un formulaire Windows et de gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez le code précédent dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)

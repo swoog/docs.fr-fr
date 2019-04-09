@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Naviguer dans les objets d'un CollectionView de données"
+title: 'Procédure : Naviguer dans les objets d’un CollectionView de données'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-ms.openlocfilehash: 9272a2f635a62abdac2746f2c8cce515812706f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138175"
 ---
-# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Procédure : Naviguer dans les objets d'un CollectionView de données
+# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Procédure : Naviguer dans les objets d’un CollectionView de données
 Les vues permettent à la même collection de données de différentes façons, en fonction de tri, de filtrage ou de regroupement. Affichages également un concept de pointeur d’enregistrement actuel et permettent le déplacement du pointeur. Cet exemple montre comment obtenir l’objet en cours ainsi que pour naviguer dans les objets dans une collection de données à l’aide de la fonctionnalité fournie dans la <xref:System.Windows.Data.CollectionView> classe.  
   
 ## <a name="example"></a>Exemple  
@@ -30,8 +30,9 @@ Les vues permettent à la même collection de données de différentes façons, 
  [!code-vb[CollectionView#OnButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
 - [Trier des données dans une vue](how-to-sort-data-in-a-view.md)
 - [Filtrer les données d’une vue](how-to-filter-data-in-a-view.md)
-- [Trier et grouper des données à l'aide d'une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Trier et grouper des données à l’aide d’une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

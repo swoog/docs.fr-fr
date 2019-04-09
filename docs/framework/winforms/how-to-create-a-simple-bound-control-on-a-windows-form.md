@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer un contrôle de liaison Simple dans un formulaire Windows'
+title: 'Procédure : créer un contrôle à liaison simple dans un formulaire Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094067"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : Créer un contrôle de liaison Simple dans un formulaire Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : créer un contrôle à liaison simple dans un formulaire Windows
 Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle qu’une valeur de colonne à partir d’une table de dataset dans un contrôle. Vous pouvez créer une liaison simple n’importe quelle propriété d’un contrôle à une valeur de données.  
   
 > [!NOTE]
@@ -34,7 +34,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
   
      Une liste des sources de données disponibles s'affiche.  
   
-6.  Développez la source de données avec laquelle vous voulez établir une liaison jusqu'à trouver l'élément de données souhaité. Par exemple, si vous établissez une liaison à une valeur de colonne dans une table de dataset, développez le nom du dataset, puis développez le nom de la table pour afficher les noms des colonnes.  
+6.  Développez la source de données avec laquelle vous voulez établir une liaison jusqu’à trouver l’élément de données souhaité. Par exemple, si vous établissez une liaison à une valeur de colonne dans une table de dataset, développez le nom du dataset, puis développez le nom de la table pour afficher les noms des colonnes.  
   
 7.  Cliquez sur le nom d'un élément avec lequel établir une liaison.  
   
@@ -46,6 +46,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
     >  Étant donné que les contrôles de liaison simple affichent uniquement un seul élément de données, il est très courant d’inclure une logique de navigation dans un formulaire Windows avec des contrôles de liaison simple.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Binding>
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)

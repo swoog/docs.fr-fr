@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer un flux RSS de base'
+title: 'Procédure : créer un flux RSS de base'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073830"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Procédure : Créer un flux RSS de base
+# <a name="how-to-create-a-basic-rss-feed"></a>Procédure : créer un flux RSS de base
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication RSS.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Pour créer un service de syndication de base  
@@ -95,5 +95,6 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
  Lors de la compilation du code précédent, référencez System.ServiceModel.dll et System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

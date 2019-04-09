@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110082"
 ---
 # <a name="duplex-services"></a>Services duplex
-Un contrat de service duplex est un modèle d’échange de messages dans lequel les deux points de terminaison peuvent envoyer indépendamment des messages à l’autre. Un service duplex peut, par conséquent, renvoyer des messages au point de terminaison client, en fournissant un comportement de type événement. La communication duplex se produit lorsqu'un client se connecte à un service et lui fournit un canal sur lequel il peut lui renvoyer des messages. Notez que le comportement de type événement des services duplex ne fonctionne que dans une session.  
+Un contrat de service duplex est un modèle d'échange de messages dans lequel les deux points de terminaison peuvent envoyer indépendamment des messages à l'autre. Un service duplex peut, par conséquent, renvoyer des messages au point de terminaison client, en fournissant un comportement de type événement. La communication duplex se produit lorsqu'un client se connecte à un service et lui fournit un canal sur lequel il peut lui renvoyer des messages. Notez que le comportement de type événement des services duplex ne fonctionne que dans une session.  
   
  Pour créer un contrat duplex, créez une paire d'interfaces. La première est l'interface de contrat de service qui décrit les opérations qu'un client peut appeler. Ce contrat de service doit spécifier un *contrat de rappel* dans le <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> propriété. Le contrat de rappel est l'interface qui définit les opérations que le service peut appeler sur le point de terminaison client. Un contrat duplex ne requiert pas de session, bien que les liaisons duplex fournies par le système en utilisent.  
   
@@ -40,9 +40,7 @@ Un contrat de service duplex est un modèle d’échange de messages dans lequel
  La configuration pour le service doit être installée pour fournir une liaison prenant à la fois en charge la communication de session et la communication duplex. L'élément `wsDualHttpBinding` prend en charge la communication de session et permet la communication duplex en fournissant des connexions HTTP doubles, à raison d'une pour chaque direction.  
   
  Sur le client, vous devez configurer une adresse que le serveur peut utiliser afin de s'y connecter, tel qu'indiqué dans l'exemple de configuration suivant.  
-  
-  
-  
+
 > [!NOTE]
 >  Les clients non duplex qui ne parviennent pas à s'authentifier à l'aide d'une conversation sécurisée lèvent en général une exception <xref:System.ServiceModel.Security.MessageSecurityException>. Toutefois, si un client duplex qui utilise une conversation sécurisée ne parvient pas à s'authentifier, il reçoit à la place une exception <xref:System.TimeoutException>.  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  Le model duplex ne détecte pas automatiquement si un service ou un client ferme son canal. Par conséquent, si un client se ferme de façon inattendue, par défaut le service n'est pas notifié ; il en est de même pour un client qui se ferme de façon inattendue. Les clients et les services peuvent implémenter leur propre protocole pour se notifier mutuellement s'ils le souhaitent.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Spécification du comportement du client au moment de l’exécution](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Guide pratique pour Créer une fabrique de canal et l’utiliser pour créer et gérer des canaux](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Spécification du comportement du client au moment de l'exécution](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Procédure : créer une fabrique de canaux et l’utiliser pour créer et gérer des canaux](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

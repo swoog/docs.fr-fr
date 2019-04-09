@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: dd6cf74560694e7e16103c624b33a4c590ce5d50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102581"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Spécifie les paramètres du pool du canal pour une liaison personnalisée.  
@@ -54,11 +54,12 @@ Spécifie les paramètres du pool du canal pour une liaison personnalisée.
   
 -   Le quota `idleTimeout` est utilisé pour atténuer des attaques par déni de service (DOS) sur le serveur qui monopolise des ressources sur une longue période. Sur le client, la définition de la valeur correcte peut augmenter la fiabilité de la connexion avec le service. La valeur par défaut est basée sur une allocation habituellement modeste de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
--   Le quota `leaseTimeout` est utilisé pour l'intégration avec les programmes d'équilibrage de charge et pour l'amélioration de la fiabilité. La valeur par défaut est basée sur une allocation classique de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
+-   Le quota `leaseTimeout` est utilisé pour l’intégration avec les programmes d’équilibrage de charge et pour l’amélioration de la fiabilité. La valeur par défaut est basée sur une allocation classique de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
 -   Le quota `maxOutboundChannelsPerEndpoint` définit des limites de cache sur le serveur et le client et est utilisé pour améliorer la fiabilité. La valeur par défaut est basée $$sur une allocation habituellement modeste des ressources qui sont appropriées pour un environnement de développement et de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.ChannelPoolSettings>
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer des boutons bascule dans les contrôles ToolStrip'
+title: 'Procédure : créer des boutons bascule dans des contrôles ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091250"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procédure : Créer des boutons bascule dans les contrôles ToolStrip
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procédure : créer des boutons bascule dans des contrôles ToolStrip
 Quand un utilisateur clique sur un bouton bascule, il apparaît enfoncé et garde cette apparence jusqu'à ce que l’utilisateur clique sur le bouton Nouveau.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Pour créer un ToolStripButton  
@@ -36,5 +36,6 @@ Quand un utilisateur clique sur un bouton bascule, il apparaît enfoncé et gard
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripButton>
 - [Vue d’ensemble du contrôle ToolStrip](toolstrip-control-overview-windows-forms.md)

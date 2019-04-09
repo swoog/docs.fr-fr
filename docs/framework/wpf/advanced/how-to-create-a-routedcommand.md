@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109042"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Procédure : Créer un RoutedCommand
 Cet exemple montre comment créer un personnalisé <xref:System.Windows.Input.RoutedCommand> et comment implémenter la commande personnalisée en créant un <xref:System.Windows.Input.ExecutedRoutedEventHandler> et un <xref:System.Windows.Input.CanExecuteRoutedEventHandler> et leur attachement à un <xref:System.Windows.Input.CommandBinding>.  Pour plus d’informations sur l’exécution de commandes, consultez le [vue d’ensemble des commandes](commanding-overview.md).  
@@ -48,5 +48,6 @@ Cet exemple montre comment créer un personnalisé <xref:System.Windows.Input.Ro
  Lorsque le bouton est activé, le <xref:System.Windows.Input.RoutedCommand.Execute%2A> méthode sur personnalisé <xref:System.Windows.Input.RoutedCommand> est appelée.  Le <xref:System.Windows.Input.RoutedCommand> déclenche le <xref:System.Windows.Input.CommandManager.PreviewExecuted> et <xref:System.Windows.Input.CommandManager.Executed> événements routés.  Ces événements parcourent l’arborescence d’éléments que vous recherchez un <xref:System.Windows.Input.CommandBinding> pour cette commande particulière.  Si un <xref:System.Windows.Input.CommandBinding> est trouvée, le <xref:System.Windows.Input.ExecutedRoutedEventHandler> associé <xref:System.Windows.Input.CommandBinding> est appelée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Input.RoutedCommand>
-- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Vue d'ensemble des commandes](commanding-overview.md)

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108704"
 ---
 # <a name="framework-property-metadata"></a>Métadonnées de propriété de framework
 Des options de métadonnées de propriété de framework sont signalées pour les propriétés des éléments objet considérés comme étant au niveau du framework WPF dans l’architecture [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En général, la désignation niveau de framework WPF implique la gestion de fonctionnalités telles que le rendu, la liaison de données et les ajustements du système de propriétés par les fichiers exécutables et [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de présentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les métadonnées de propriété de framework sont interrogées par ces systèmes afin d’identifier les caractéristiques spécifiques aux fonctionnalités de propriétés d’un élément particulier.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique part du principe que vous savez ce que sont les propriétés de dépendance du point de vue d’un consommateur de propriétés de dépendance existantes sur les classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et que vous avez lu [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md). Vous devez également avoir lu [Métadonnées de propriété de dépendance](dependency-property-metadata.md).  
@@ -73,6 +71,7 @@ Des options de métadonnées de propriété de framework sont signalées pour le
  Ce comportement est implémenté par <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>et peut être substitué sur des classes de métadonnées dérivées.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [Métadonnées de propriété de dépendance](dependency-property-metadata.md)
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)

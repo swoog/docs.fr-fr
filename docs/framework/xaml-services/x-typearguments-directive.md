@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085803"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments, directive
 Passes contraindre les arguments d’un générique au constructeur du type générique de type.  
@@ -82,6 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  Dans WPF et lorsque vous ciblez [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser les fonctionnalités XAML 2009 avec `x:TypeArguments` mais uniquement pour XAML libre (XAML non compilé par balisage). Le code XAML compilé par balisage pour WPF et la forme BAML du code XAML ne prennent actuellement pas en charge les mots clés et les fonctionnalités XAML 2009. Si vous avez besoin de compiler le XAML par balisage, vous devez fonctionner selon les restrictions notées dans la section « XAML 2006 et WPF XAML utilisations générique ».  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [x:Class, directive](x-class-directive.md)
 - [x:Type, extension de balisage](x-type-markup-extension.md)
 - [Types intégrés pour les primitives associées au langage XAML courant](built-in-types-for-common-xaml-language-primitives.md)

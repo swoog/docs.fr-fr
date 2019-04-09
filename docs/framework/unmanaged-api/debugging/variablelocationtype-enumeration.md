@@ -1,5 +1,5 @@
 ---
-title: Variablelocationtype, énumération
+title: VariableLocationType, énumération
 ms.date: 03/30/2017
 api_name:
 - VariableLocationType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099948"
 ---
-# <a name="variablelocationtype-enumeration"></a>Variablelocationtype, énumération
+# <a name="variablelocationtype-enumeration"></a>VariableLocationType, énumération
 Indique le type d’emplacement native d’une variable.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,14 +48,15 @@ typedef enum VariableLocationType
 ## <a name="remarks"></a>Notes  
  Un membre de la `VariableLocationType` énumération est retournée par la [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) (méthode).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Un signal sonore à partir d’un formulaire Windows'
+title: 'Procédure : émettre un signal sonore à partir d’un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078679"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Procédure : Un signal sonore à partir d’un formulaire Windows
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Procédure : émettre un signal sonore à partir d’un formulaire Windows
 Cet exemple émet un son à un chemin donné au moment de l’exécution.  
   
 ## <a name="example"></a>Exemple  
@@ -51,13 +51,13 @@ private void playSimpleSound()
   
 -   Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>).  
   
--   Le chemin d’accès est en lecture seule (classe <xref:System.IO.IOException>).  
+-   Le chemin d'accès est en lecture seule (classe <xref:System.IO.IOException>).  
   
 -   Le nom du chemin d'accès est `null` (classe <xref:System.ArgumentNullException>).  
   
 -   Le nom du chemin d'accès est trop long (classe <xref:System.IO.PathTooLongException>).  
   
--   Le chemin d’accès n’est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
+-   Le chemin d'accès n'est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
   
 -   Le chemin d’accès est uniquement un signe deux-points, « : » (<xref:System.NotSupportedException> classe).  
   
@@ -65,6 +65,6 @@ private void playSimpleSound()
  Ne vous basez pas sur le nom d'un fichier pour en déterminer le contenu. Par exemple, le fichier `Form1.vb` peut ne pas être un fichier source Visual Basic. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
 ## <a name="see-also"></a>Voir aussi
-- <xref:System.Media.SoundPlayer>
-- [Guide pratique pour Charger un son de façon asynchrone dans un formulaire Windows](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [Procédure : charger un son de façon asynchrone dans un formulaire Windows](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077768"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc, interface
 Fournit une méthode pour allouer de la mémoire pour un nouveau corps de fonction Microsoft intermediate language (MSIL).  
@@ -38,14 +38,15 @@ Fournit une méthode pour allouer de la mémoire pour un nouveau corps de foncti
 ## <a name="remarks"></a>Notes  
  Chaque allocateur est spécifique au module et vous permet de garantir que le corps de fonction à un décalage positif à partir de la base du module. Mémoire au-dessus de la base d’un module peut être précieuse, l’allocateur doit être utilisé pour allouer de la mémoire uniquement pour un corps de fonction.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

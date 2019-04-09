@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083606"
 ---
 # <a name="interop-etw-events"></a>Événements ETW d'interopérabilité
 <a name="top"></a> Les événements d'interopérabilité capturent des informations sur la création et la mise en cache du stub MSIL (Microsoft Intermediate Language).  
@@ -29,7 +29,7 @@ ms.locfileid: "54611772"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informatif(4)|  
+|`InteropKeyword` (0 x 2000)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54611772"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informatif(4)|  
+|`InteropKeyword` (0 x 2000)|Informatif(4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -84,4 +84,5 @@ ms.locfileid: "54611772"
  [Retour au début](#top)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

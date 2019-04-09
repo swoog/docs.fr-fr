@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096047"
 ---
 # <a name="understanding-protection-level"></a>Fonctionnement des niveaux de protection
 La propriété `ProtectionLevel` est partagée par de nombreuses classes différentes, par exemple par les classes <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute>. Cette propriété contrôle tout ou partie des modalités de protection d'un message. Cette rubrique explique la fonctionnalité de Windows Communication Foundation (WCF) et son fonctionnement.  
@@ -24,7 +24,7 @@ La propriété `ProtectionLevel` est partagée par de nombreuses classes différ
 >  Les niveaux de protection peuvent uniquement être définis dans le code et non dans la configuration.  
   
 ## <a name="basics"></a>Principes de base  
- Pour appréhender les fonctionnalités des niveaux de protection, il est nécessaire de comprendre au préalable les principes de base les régissant :  
+ Le fonctionnement des niveaux de protection ne peut être correctement appréhendé sans comprendre au préalable les principes de base les régissant :  
   
 -   Il existe trois niveaux de base de protection pour les différentes parties d'un message. La propriété (où qu'elle intervienne) a la valeur de l'une des valeurs d'énumération <xref:System.Net.Security.ProtectionLevel>. Ces valeurs sont (par niveau de protection croissant) :  
   
@@ -38,19 +38,19 @@ La propriété `ProtectionLevel` est partagée par de nombreuses classes différ
   
 -   Lorsque le mode de sécurité a la valeur `Transport`, le message est protégé dans sa totalité par les mécanismes de transport. Par conséquent, la définition de niveaux de protection distincts pour ses différentes parties est sans effet.  
   
--   Le `ProtectionLevel` permet aux développeurs de définir le *niveau minimum* auxquels une liaison doit se conformer. Lors du déploiement d’un service, la liaison réelle spécifiée dans la configuration peut ou non prendre en charge ce niveau minimum. Par exemple, la classe <xref:System.ServiceModel.BasicHttpBinding> n'offre, par défaut, aucune sécurité (bien que le système de sécurité puisse être activé). Par conséquent, l'utilisation d'un contrat ayant une valeur autre que `None` provoquera la levée d'une exception.  
+-   Le `ProtectionLevel` permet aux développeurs de définir le *niveau minimum* auxquels une liaison doit se conformer. Lors du déploiement d'un service, la liaison réelle spécifiée dans la configuration peut ou non prendre en charge ce niveau minimum. Par exemple, la classe <xref:System.ServiceModel.BasicHttpBinding> n'offre, par défaut, aucune sécurité (bien que le système de sécurité puisse être activé). Par conséquent, l'utilisation d'un contrat ayant une valeur autre que `None` provoquera la levée d'une exception.  
   
 -   Si le service exige que la valeur minimale `ProtectionLevel` pour tous les messages est `Sign`, un client (par exemple créé par une technologie non-WCF) peut chiffrer et signer tous les messages (ce qui est supérieur à la condition minimale requise). Dans ce cas, WCF lève pas une exception, car le client a effectué plus de la valeur minimale. Notez, cependant, que les applications WCF (clients ou services) ne seront pas excessif sécurisé une partie de message si possible mais doit respecter le niveau minimal. Notez également que lorsque le paramètre `Transport` est utilisé comme mode de sécurité, celui-ci risque de sur-sécuriser le flux des messages, car, de part sa nature il n'est pas en mesure de les sécuriser à un niveau plus granulaire.  
   
 -   Si vous affectez explicitement `ProtectionLevel` ou `Sign` à la propriété `EncryptAndSign`, vous devrez alors utiliser une liaison dont la sécurité est activée, faute de quoi une exception sera levée.  
   
--   Si vous sélectionnez une liaison qui active la sécurité et que vous ne définissez pas la propriété `ProtectionLevel` à quelque endroit du contrat, toutes les données d'application seront chiffrées et signées.  
+-   Si vous sélectionnez une liaison qui active la sécurité et que vous ne définissez pas la propriété `ProtectionLevel` à quelque endroit du contrat, toutes les données d’application seront chiffrées et signées.  
   
 -   Si vous sélectionnez une liaison dont la sécurité n'est pas activée (par exemple, la sécurité de la classe `BasicHttpBinding` est désactivée par défaut) et que la propriété `ProtectionLevel` n'est pas définie explicitement, alors aucune des données d'application ne sera protégée.  
   
 -   Si vous utilisez une liaison qui applique la sécurité au niveau du transport, toutes les données d’application seront sécurisées en fonction des paramètres de sécurité du transport.  
   
--   Si vous utilisez une liaison qui applique la sécurité au niveau du message, les données d'application seront sécurisées en fonction des niveaux de protection définis sur le contrat. Si vous ne spécifiez aucun niveau de protection, toutes les données d'application figurant dans les messages seront chiffrées et signées.  
+-   Si vous utilisez une liaison qui applique la sécurité au niveau du message, les données d’application seront sécurisées en fonction des niveaux de protection définis sur le contrat. Si vous ne spécifiez aucun niveau de protection, toutes les données d'application figurant dans les messages seront chiffrées et signées.  
   
 -   Des niveaux de portée différents peuvent être affectés à la propriété `ProtectionLevel`. Il existe en effet une hiérarchie dans les niveaux de portée. Cette hiérarchie est abordée en détail dans la section suivante.  
   
@@ -95,6 +95,7 @@ La propriété `ProtectionLevel` est partagée par de nombreuses classes différ
  Lorsque le client appelle la méthode `Price`, il lève une exception lorsqu'il reçoit une réponse du service. Cela se produit parce que le client ne spécifie pas de `ProtectionLevel` sur le `ServiceContractAttribute`. Par conséquent, le client utilise la valeur par défaut (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) pour toutes les méthodes, y compris pour la méthode `Price`. Toutefois, le service retourne la valeur à l'aide du niveau <xref:System.Net.Security.ProtectionLevel.Sign>, le contrat de service définissant une seule méthode dont le niveau de protection a la valeur <xref:System.Net.Security.ProtectionLevel.Sign>. Dans ce cas, le client générera une erreur lors de la validation de la réponse émanant du service.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -103,6 +104,6 @@ La propriété `ProtectionLevel` est partagée par de nombreuses classes différ
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [Sécurisation de services](../../../docs/framework/wcf/securing-services.md)
-- [Guide pratique pour Définissez la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Procédure : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Utilisation de contrats de message](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

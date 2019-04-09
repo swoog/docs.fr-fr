@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096587"
 ---
 # <a name="marshalcleanuperror-mda"></a>Assistant Débogage managé marshalCleanupError
 L’Assistant Débogage managé `marshalCleanupError` est activé quand le Common Language Runtime (CLR) rencontre une erreur pendant une tentative de nettoyage de la mémoire et des structures temporaires utilisées pour le marshaling de types de données entre des limites de code native et managé.  
@@ -28,7 +28,7 @@ L’Assistant Débogage managé `marshalCleanupError` est activé quand le Commo
 ## <a name="cause"></a>Cause  
  Une erreur inattendue s'est produite pendant le nettoyage des structures temporaires.  
   
-## <a name="resolution"></a>Solution  
+## <a name="resolution"></a>Résolution  
  Examinez toutes les implémentations de marshaleur personnalisé, de finaliseur et de destructeur <xref:System.Runtime.InteropServices.SafeHandle> pour déterminer si elles contiennent des erreurs.  
   
 ## <a name="effect-on-the-runtime"></a>Effet sur le runtime  
@@ -48,6 +48,7 @@ L’Assistant Débogage managé `marshalCleanupError` est activé quand le Commo
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

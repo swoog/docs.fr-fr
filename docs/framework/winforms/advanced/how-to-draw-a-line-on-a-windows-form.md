@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Dessiner une ligne dans un formulaire Windows'
+title: 'Procédure : dessiner une ligne dans un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: 68c1d9220754e40e8eef4b5ed63c1fba63b541e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074447"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a>Procédure : Dessiner une ligne dans un formulaire Windows
+# <a name="how-to-draw-a-line-on-a-windows-form"></a>Procédure : dessiner une ligne dans un formulaire Windows
 Cet exemple dessine une ligne dans un formulaire. En général, lorsque vous dessinez dans un formulaire, vous gérez le formulaire <xref:System.Windows.Forms.Control.Paint> événements et effectuer le dessin à l’aide du <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propriété de la <xref:System.Windows.Forms.PaintEventArgs>, comme illustré dans cet exemple  
   
 ## <a name="example"></a>Exemple  
@@ -27,14 +27,15 @@ Cet exemple dessine une ligne dans un formulaire. En général, lorsque vous des
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Vous devez toujours appeler <xref:System.IDisposable.Dispose%2A> sur tous les objets qui consomment des ressources système, telles que <xref:System.Drawing.Pen> objets.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Graphics.DrawLine%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)
-- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)

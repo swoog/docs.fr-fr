@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081266"
 ---
 # <a name="data-binding-overview"></a>Vue d’ensemble de la liaison de données
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] liaison de données fournit un moyen simple et cohérent pour les applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055350"
  La fonctionnalité de liaison de données dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] présente plusieurs avantages par rapport aux modèles traditionnels, notamment une large gamme de propriétés qui prennent en charge par nature la liaison de données, une représentation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flexible des données et une séparation nette de la logique métier de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Cette rubrique traite d’abord des concepts fondamentaux [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] liaison de données, puis traite ensuite de l’utilisation de la <xref:System.Windows.Data.Binding> classe et autres fonctionnalités de liaison de données.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Qu’est-ce que la liaison de données ?  
  La liaison de données est le processus qui établit une connexion entre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de l’application et logique métier. Si la liaison est correctement paramétrée et si les données fournissent les notifications appropriées, lorsque les données changent de valeur, les éléments qui sont liés aux données reflètent automatiquement ces changements. La liaison de données peut également signifier que si une représentation externe des données dans un élément change, les données sous-jacentes peuvent être automatiquement mises à jour pour refléter les modifications. Par exemple, si l’utilisateur modifie la valeur dans un <xref:System.Windows.Controls.TextBox> élément, la valeur de données sous-jacente est automatiquement mis à jour pour refléter cette modification.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055350"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Vues de collection  
  Une fois votre <xref:System.Windows.Controls.ItemsControl> est lié à une collection de données, vous souhaiterez trier, filtrer ou regrouper les données. Pour ce faire, vous utilisez des vues de collection, qui sont des classes qui implémentent le <xref:System.ComponentModel.ICollectionView> interface.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Que sont les vues de collection ?  
  Une vue de collection est une couche sur une collection de sources de liaison qui vous permet de parcourir et d’afficher la collection source sur la base de requêtes de tri, de filtrage et de groupage, sans avoir à modifier la collection source sous-jacente elle-même. Une vue de collection maintient également un pointeur vers l’élément actuel dans la collection. Si la collection source implémente le <xref:System.Collections.Specialized.INotifyCollectionChanged> interface, les modifications déclenchées par le <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> événement sont propagées aux vues.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055350"
  Vous pouvez définir la propriété jointe <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> sur un objet lié à la liaison pour recevoir des informations sur l’état d’une liaison spécifique.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Nouveautés de WPF version 4.5](../getting-started/whats-new.md)
 - [Effectuer une liaison avec les résultats d’une requête LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

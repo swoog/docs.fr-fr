@@ -2,12 +2,12 @@
 title: Canal de segmentation
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 0733a1ce914be98f6bad9b8f58ca8e4384ac74fa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073817"
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
 Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
@@ -201,11 +201,11 @@ as the ChunkingStart message.
 ## <a name="chunking-channel-architecture"></a>Architecture des canaux de segmentation  
  Les canaux de segmentation sont des canaux `IDuplexSessionChannel` dont l'architecture, au plus haut niveau, s'apparente à celle des canaux standard. Il existe en effet un élément `ChunkingBindingElement` capable de générer une fabrication `ChunkingChannelFactory` ainsi qu'un écouteur `ChunkingChannelListener`. La fabrication `ChunkingChannelFactory` crée des instances de `ChunkingChannel` lorsqu'elle en reçoit la demande. L'écouteur `ChunkingChannelListener` crée des instances de `ChunkingChannel` lorsqu'un nouveau canal interne est accepté. Le `ChunkingChannel` est lui-même chargé d'envoyer et de recevoir des messages.  
   
- Au niveau inférieur suivant, le canal `ChunkingChannel` s'appuie sur plusieurs composants afin d'implémenter le protocole de segmentation. Du côté expéditeur, ce canal utilise un <xref:System.Xml.XmlDictionaryWriter> personnalisé appelé `ChunkingWriter` qui procède à la segmentation effective des messages. `ChunkingWriter` utilise directement le canal interne pour envoyer les segments. L'utilisation d'un `XmlDictionaryWriter` personnalisé nous permet d'envoyer les segments pendant l'écriture du corps des messages initiaux de grande taille. Cela signifie que nous ne mettons pas en mémoire tampon l'intégralité des messages initiaux.  
+ Au niveau inférieur suivant, le canal `ChunkingChannel` s'appuie sur plusieurs composants afin d'implémenter le protocole de segmentation. Du côté expéditeur, ce canal utilise un <xref:System.Xml.XmlDictionaryWriter> personnalisé appelé `ChunkingWriter` qui procède à la segmentation effective des messages. `ChunkingWriter` utilise le canal interne directement pour envoyer les segments. L'utilisation d'un `XmlDictionaryWriter` personnalisé nous permet d'envoyer les segments pendant l'écriture du corps des messages initiaux de grande taille. Cela signifie que nous ne mettons pas en mémoire tampon l'intégralité des messages initiaux.  
   
  ![Canal de segmentation](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- Côté destinataire, `ChunkingChannel` extrait les messages du canal interne, puis les remet à un <xref:System.Xml.XmlDictionaryReader> personnalisé appelé `ChunkingReader`, qui reconstitue les messages initiaux à partir des segments entrants. `ChunkingChannel` encapsule ce `ChunkingReader` dans une implémentation de `Message` personnalisée appelée `ChunkingMessage` et retourne ce message à la couche supérieure. Cette combinaison de `ChunkingReader` et `ChunkingMessage` nous permet de désegmenter le corps des messages initiaux pendant leur lecture par la couche supérieure, nous évitant ainsi d'avoir à mettre la totalité de leur corps en mémoire tampon. `ChunkingReader` met en mémoire tampon un certain nombre de segments entrants, ce nombre étant configurable. Cette limite atteinte, le lecteur patiente jusqu'à ce que les messages soient extraits de la file d'attente par la couche supérieure (c'est-à-dire par simple lecture de leur corps) ou jusqu'à ce que le délai de réception arrive à échéance.  
+ Côté destinataire, `ChunkingChannel` extrait les messages du canal interne, puis les remet à un <xref:System.Xml.XmlDictionaryReader> personnalisé appelé `ChunkingReader`, qui reconstitue les messages initiaux à partir des segments entrants. `ChunkingChannel` encapsule ce `ChunkingReader` personnalisé `Message` implémentation appelée `ChunkingMessage` et retourne ce message pour la couche supérieure. Cette combinaison de `ChunkingReader` et `ChunkingMessage` nous permet de désegmenter le corps des messages initiaux pendant leur lecture par la couche supérieure, nous évitant ainsi d'avoir à mettre la totalité de leur corps en mémoire tampon. `ChunkingReader` a une file d’attente où met en mémoire tampon entrantes blocs jusqu'à un nombre configurable maximal de segments mis en mémoire tampon. Cette limite atteinte, le lecteur patiente jusqu'à ce que les messages soient extraits de la file d'attente par la couche supérieure (c'est-à-dire par simple lecture de leur corps) ou jusqu'à ce que le délai de réception arrive à échéance.  
   
  ![Canal de segmentation](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
@@ -268,13 +268,13 @@ interface ITestService
 ## <a name="communicationobject-overrides"></a>Substitutions CommunicationObject  
   
 ### <a name="onopen"></a>OnOpen  
- `OnOpen` appelle la méthode `innerChannel.Open` afin d'ouvrir le canal interne.  
+ `OnOpen` appels `innerChannel.Open` pour ouvrir le canal interne.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` affecte d'abord à `stopReceive` la valeur `true` pour arrêter l'exécution de la boucle `ReceiveChunkLoop` en attente. Il attend ensuite le `receiveStopped` <xref:System.Threading.ManualResetEvent>, qui est défini lorsque `ReceiveChunkLoop` s’arrête. En partant de l'hypothèse que la boucle `ReceiveChunkLoop` s'arrête avant l'expiration du délai spécifié, la méthode `OnClose` appelle alors `innerChannel.Close` dans le temps encore imparti.  
+ `OnClose` tout d’abord définit `stopReceive` à `true` pour signaler l’en attente `ReceiveChunkLoop` à arrêter. Il attend ensuite le `receiveStopped` <xref:System.Threading.ManualResetEvent>, qui est défini lorsque `ReceiveChunkLoop` s’arrête. En partant de l'hypothèse que la boucle `ReceiveChunkLoop` s'arrête avant l'expiration du délai spécifié, la méthode `OnClose` appelle alors `innerChannel.Close` dans le temps encore imparti.  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort` appelle la méthode `innerChannel.Abort` afin d'annuler le canal interne. Lorsqu'une boucle `ReceiveChunkLoop` est en attente, une exception est levée depuis l'appel de `innerChannel.Receive` en attente.  
+ `OnAbort` appels `innerChannel.Abort` d’abandonner le canal interne. Lorsqu'une boucle `ReceiveChunkLoop` est en attente, une exception est levée depuis l'appel de `innerChannel.Receive` en attente.  
   
 ### <a name="onfaulted"></a>OnFaulted  
  Le `ChunkingChannel` ne requiert pas de comportement spécial lorsqu'il est rendu défaillant afin d'empêcher la substitution de `OnFaulted`.  
@@ -282,7 +282,7 @@ interface ITestService
 ## <a name="implementing-channel-factory"></a>Implémentation de la fabrication de canal  
  La fabrication `ChunkingChannelFactory` est chargée de créer des instances de `ChunkingDuplexSessionChannel` et de mettre en cascade les transitions d'état au niveau de la fabrication de canal interne.  
   
- `OnCreateChannel` utilise la fabrication de canal interne pour créer un canal interne `IDuplexSessionChannel`. Cette méthode crée ensuite un nouveau canal `ChunkingDuplexSessionChannel` auquel elle passe ce canal interne, la liste des actions de message à segmenter et le nombre maximal de segments pouvant être mis en mémoire tampon à réception. Cette liste et ce nombre correspondent à deux paramètres passés à `ChunkingChannelFactory` par l'intermédiaire de son constructeur. La section consacrée à `ChunkingBindingElement` contient des explications sur l'origine de ces deux valeurs.  
+ `OnCreateChannel` utilise la fabrication de canal interne pour créer un `IDuplexSessionChannel` canal interne. Cette méthode crée ensuite un nouveau canal `ChunkingDuplexSessionChannel` auquel elle passe ce canal interne, la liste des actions de message à segmenter et le nombre maximal de segments pouvant être mis en mémoire tampon à réception. Cette liste et ce nombre correspondent à deux paramètres passés à `ChunkingChannelFactory` par l'intermédiaire de son constructeur. La section consacrée à `ChunkingBindingElement` contient des explications sur l'origine de ces deux valeurs.  
   
  Les méthodes `OnOpen`, `OnClose`, `OnAbort` et leurs équivalents asynchrones appellent la méthode de transition d'état correspondante sur la fabrication de canal interne.  
   
@@ -290,15 +290,15 @@ interface ITestService
  L'écouteur `ChunkingChannelListener` correspond à un wrapper autour d'un écouteur de canal interne. Sa fonction principale, outre déléguer les appels à l'écouteur de canal interne, consiste à encapsuler les nouveaux canaux `ChunkingDuplexSessionChannels` autour des canaux acceptés depuis l'écouteur de canal interne. Ce processus s'effectue dans `OnAcceptChannel` et `OnEndAcceptChannel`. Le canal interne ainsi que les autres paramètres décrits précédemment sont passés au nouveau canal `ChunkingDuplexSessionChannel` créé.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Implémentation de l'élément de liaison et de la liaison  
- L'élément `ChunkingBindingElement` est chargé de créer la fabrication `ChunkingChannelFactory` et l'écouteur `ChunkingChannelListener`. Le `ChunkingBindingElement` vérifie si les T dans `CanBuildChannelFactory` \<T > et `CanBuildChannelListener` \<T > est de type `IDuplexSessionChannel` (le seul canal pris en charge par le canal de segmentation) et que les autres éléments de liaison dans la liaison prend en charge ce type de canal.  
+ `ChunkingBindingElement` est chargé de créer le `ChunkingChannelFactory` et `ChunkingChannelListener`. Le `ChunkingBindingElement` vérifie si les T dans `CanBuildChannelFactory` \<T > et `CanBuildChannelListener` \<T > est de type `IDuplexSessionChannel` (le seul canal pris en charge par le canal de segmentation) et que les autres éléments de liaison dans la liaison prend en charge ce type de canal.  
   
  `BuildChannelFactory`\<T > vérifie d’abord que le type de canal demandée peut être généré, puis obtient une liste d’actions de message à segmenter. Pour plus d'informations, consultez la section suivante. Cette méthode crée alors une nouvelle fabrication `ChunkingChannelFactory` à laquelle elle passe la fabrication de canal interne (telle que retournée depuis `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la liste d'actions de message et le nombre maximal de segments pouvant être mise en mémoire tampon. Ce nombre maximal est issu de la propriété appelée `MaxBufferedChunks`, laquelle est exposée par l'élément `ChunkingBindingElement`.  
   
- `BuildChannelListener<T>` utilise une implémentation similaire pour créer `ChunkingChannelListener` et lui passer l'écouteur de canal interne.  
+ `BuildChannelListener<T>` a une implémentation semblable pour la création de `ChunkingChannelListener` et en lui passant l’écouteur de canal interne.  
   
  Cet exemple de code contient une liaison appelée `TcpChunkingBinding`. Cette liaison se compose de deux éléments de liaison : `TcpTransportBindingElement` et `ChunkingBindingElement`. En plus d’exposer la propriété `MaxBufferedChunks`, cette liaison définit également quelques-unes des propriétés `TcpTransportBindingElement` telles que `MaxReceivedMessageSize` (elle affecte à cette dernière la valeur `ChunkingUtils.ChunkSize` + 100 Ko pour les en-têtes).  
   
- `TcpChunkingBinding` implémente également `IBindingRuntimePreferences` et retourne la valeur true depuis la méthode `ReceiveSynchronously`, indiquant que seuls les appels Receive synchrones sont implémentés.  
+ `TcpChunkingBinding` implémente également `IBindingRuntimePreferences` et retourne la valeur true à partir de la `ReceiveSynchronously` méthode indiquant que seuls les appels Receive synchrones sont implémentés.  
   
 ### <a name="determining-which-messages-to-chunk"></a>Identification des messages à segmenter  
  Les canaux de segmentation segmentent uniquement les messages identifiés à l'aide de l'attribut `ChunkingBehavior`. La classe `ChunkingBehavior` implémente `IOperationBehavior` et est elle-même implémentée par l'appel de la méthode `AddBindingParameter`. Dans cette méthode, la classe `ChunkingBehavior` examine la valeur de sa propriété `AppliesTo` (`InMessage` ou `OutMessage` ou encore les deux) afin d'identifier les messages à segmenter. Elle obtient ensuite l’action correspondant à chacun de ces messages (depuis la collection Messages sur `OperationDescription`), puis ajoute chacune de ces actions aux collections de chaînes contenue dans les instances de `ChunkingBindingParameter`. Elle ajoute enfin ce `ChunkingBindingParameter` à la collection `BindingParameterCollection`.  
@@ -377,4 +377,3 @@ Service started, press enter to exit
  > Sent chunk 9 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
  > Sent chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
-  

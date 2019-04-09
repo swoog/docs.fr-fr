@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 1838b2492e7ea8a33139fdb5682362998d84a98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101443"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Procédure : Animer un objet sur un tracé (animation double)
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> classe pour déplacer un objet sur un tracé défini par un <xref:System.Windows.Media.PathGeometry>.  
@@ -35,5 +35,6 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Doub
  Une autre façon de déplacer un objet à l’aide d’un tracé géométrique consiste à utiliser un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> objet. Pour obtenir un exemple, consultez [animer un objet sur un tracé (Animation de matrice)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](animation-overview.md)
-- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
+
+- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)

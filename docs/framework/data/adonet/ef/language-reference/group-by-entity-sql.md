@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081916"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Indique les groupes dans lesquels doivent être placés les objets retournés par une expression de requête ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)).  
@@ -20,7 +20,7 @@ Indique les groupes dans lesquels doivent être placés les objets retournés pa
   
 ## <a name="arguments"></a>Arguments  
  `aliasedExpression`  
- Toute expression de requête valide sur laquelle le regroupement est effectué. `expression` peut être une propriété ou une expression non agrégée qui référence une propriété retournée par la clause FROM. Chaque expression contenue dans une clause GROUP BY doit être évaluée à un type pouvant être comparé en égalité. Ces types sont généralement des primitives scalaires telles que des nombres, des chaînes et des dates. Vous ne pouvez pas effectuer de regroupement sur une collection.  
+ Toute expression de requête valide sur laquelle le regroupement est effectué. `expression` peut être une propriété ou une expression de non-agrégation qui référence une propriété retournée par la clause FROM. Chaque expression contenue dans une clause GROUP BY doit être évaluée à un type pouvant être comparé en égalité. Ces types sont généralement des primitives scalaires telles que des nombres, des chaînes et des dates. Vous ne pouvez pas effectuer de regroupement sur une collection.  
   
 ## <a name="remarks"></a>Notes  
  Si les fonctions d’agrégation sont incluses dans la clause SELECT \<liste de sélection >, GROUP BY calcule une valeur de synthèse pour chaque groupe. Lorsque la clause GROUP BY est spécifiée, vous devez inclure dans la liste GROUP BY chaque nom de propriété des expressions de non-agrégation figurant dans la liste de sélection, ou l'expression GROUP BY doit correspondre exactement à l'expression figurant dans la liste de sélection.  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Expressions de requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

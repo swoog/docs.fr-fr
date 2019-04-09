@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105740"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Niveaux et mots clés ETW du CLR
 <a name="top"></a> Les événements de suivi d'événements pour Windows (ETW) peuvent être filtrés par catégorie et par niveau. Les [Mots clés ETW du CLR](#keywords) d’événement permettent de filtrer les événements par catégorie. Ils sont utilisés sous forme de combinaisons pour les fournisseurs d’arrêt et de runtime. Les [niveaux d'événement](#levels) sont identifiés par des indicateurs.  
@@ -95,12 +95,12 @@ ms.locfileid: "54572355"
   
 |Mots clés et indicateurs|Domaine d'application, assembly, événements DCStart/DCEnd de module|Événements DCStart/DCEnd de méthode (y compris les événements de méthode dynamique)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Événements`DCStart` .|Aucun.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Événements`DCEnd` .|Aucun.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|Événements`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|Événements`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|Événements`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|Événements`DCEnd` .|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` événements.|Aucun.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` événements.|Aucun.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|`DCStart` événements.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|`DCEnd` événements.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|`DCStart` événements.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|`DCEnd` événements.|  
   
  [Retour au début](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572355"
  0x0 - Toujours journaliser  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fournisseurs ETW du CLR](../../../docs/framework/performance/clr-etw-providers.md)
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [Événements ETW dans le Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

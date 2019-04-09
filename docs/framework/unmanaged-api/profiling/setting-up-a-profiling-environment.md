@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098180"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configuration d'un environnement de profilage
 > [!NOTE]
@@ -59,7 +59,7 @@ ms.locfileid: "54682026"
   
 -   La classe du profileur implémente le [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) et [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces. Dans le .NET Framework version 2.0, un profileur doit implémenter `ICorProfilerCallback2`. Dans ce cas, `ICorProfilerCallback2` ne sera pas chargé.  
   
--   Un seul profileur peut profiler un processus à la fois dans un environnement donné. Vous pouvez inscrire deux profileurs différents dans des environnements différents, mais chacun doit profiler des processus distincts. Le profileur doit être implémenté en tant que DLL de serveur COM in-process, mappée dans le même espace d'adressage que le processus en cours de profilage. Cela signifie que le profileur s'exécute in-process. Le .NET Framework ne prend pas en charge un autre type de serveur COM. Par exemple, si un profileur souhaite surveiller des applications à partir d'un ordinateur distant, il doit implémenter des agents collecteurs sur chaque ordinateur. Ces agents traitent les résultats par lots et les communiquent à l'ordinateur de collecte de données central.  
+-   Un seul profileur peut profiler un processus à la fois dans un environnement donné. Vous pouvez inscrire deux profileurs différents dans des environnements différents, mais chacun doit profiler des processus distincts. Le profileur doit être implémenté en tant que DLL de serveur COM in-process, mappée dans le même espace d'adressage que le processus en cours de profilage. Cela signifie que le profileur s'exécute in-process. Le .NET Framework ne prend pas en charge un autre type de serveur COM. Par exemple, si un profileur souhaite surveiller des applications à partir d'un ordinateur distant, il doit implémenter des agents collecteurs sur chaque ordinateur. Ces agents traitent les résultats par lots et les communiquent à l’ordinateur de collection de données central.  
   
 -   Étant donné que le profileur est un objet COM instancié in-process, chaque application profilée possède sa propre copie du profileur. Par conséquent, une instance de profileur particulière n'a pas à gérer les données de plusieurs applications. Toutefois, vous devrez ajouter une logique au code de journalisation du profileur pour éviter le remplacement du fichier journal d'autres applications profilées.  
   
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Cette technique entraîne également le profilage de chaque processus CLR. Le profileur doit ajouter la logique pour son [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) rappel pour déterminer si le processus en cours d’intérêt. Si ce n'est pas le cas, le profileur peut faire échouer le rappel sans exécuter l'initialisation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+
+- [Vue d'ensemble du profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

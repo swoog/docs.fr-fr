@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b8cccf395e77c7dfefb85302b522d7e9398ffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080941"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent, interface
 Fournit une représentation de l’implémentation de l’hôte d’un événement d’auto-réinitialisation.  
@@ -33,17 +33,18 @@ Fournit une représentation de l’implémentation de l’hôte d’un événeme
 |[Set, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Définit l’actuel `IHostAutoEvent` instance à un état signalé.|  
 |[Wait, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Fait en `IHostAutoEvent` instance attendre que l’événement est détenu ou un certain laps de temps.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICLRSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostManualEvent, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
 - [IHostSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

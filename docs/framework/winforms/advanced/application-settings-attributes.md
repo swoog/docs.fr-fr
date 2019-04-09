@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079641"
 ---
 # <a name="application-settings-attributes"></a>Attributs des paramètres d'application
 L’architecture de paramètres d’Application fournit beaucoup d’attributs qui peut être appliqués à la classe wrapper de paramètres des applications ou à ses propriétés individuelles. Ces attributs sont examinées au moment de l’exécution par l’infrastructure de paramètres d’application, souvent en particulier le fournisseur de paramètres, afin d’adapter son fonctionnement aux besoins énoncés du wrapper personnalisé.  
@@ -38,7 +38,8 @@ L’architecture de paramètres d’Application fournit beaucoup d’attributs q
  *Classe* indique que l’attribut peut être appliqué uniquement à une classe wrapper de paramètres application. *Propriété* indique que l’attribut peut être appliqué uniquement aux propriétés de paramètres. *Les deux* indique que l’attribut peut être appliqué à tout niveau.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Architecture des paramètres d'application](application-settings-architecture.md)
-- [Guide pratique pour Créer des paramètres d’Application](how-to-create-application-settings.md)
+- [Procédure : créer des paramètres d’application](how-to-create-application-settings.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076261"
 ---
 # <a name="claims-and-tokens"></a>Revendications et jetons
 Cette rubrique décrit les différents types de revendication Windows Communication Foundation (WCF) crée à partir des jetons par défaut pris en charge.  
@@ -65,8 +65,9 @@ Cette rubrique décrit les différents types de revendication Windows Communicat
  Si aucun de la `ClaimSet` objets résultant les informations d’identification du client contient une revendication avec un `Right` de `Identity,` le <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> retourne de la propriété `true`. En présence d'une ou plusieurs revendications de ce type, la propriété `IsAnonymous` retourne `false`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestion des revendications et autorisation avec le modèle d'identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

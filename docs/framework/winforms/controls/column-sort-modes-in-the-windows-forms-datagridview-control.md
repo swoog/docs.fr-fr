@@ -5,17 +5,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106664"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modes de tri des colonnes du contrôle DataGridView Windows Forms
 <xref:System.Windows.Forms.DataGridView> colonnes ont trois modes de tri. Le mode de tri pour chaque colonne est spécifié via le <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriété de la colonne, qui peut être définie à une des opérations suivantes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valeurs d’énumération.  
   
-|Valeur`DataGridViewColumnSortMode` |Description|  
+|`DataGridViewColumnSortMode` valeur|Description|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Par défaut pour les colonnes de zone de texte. À moins que les en-têtes de colonne sont utilisés pour la sélection, en cliquant sur l’en-tête de colonne automatiquement trie le <xref:System.Windows.Forms.DataGridView> par cette colonne et afficher un glyphe qui indique l’ordre de tri.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Par défaut pour les colonnes de la zone de texte non –. Vous pouvez trier cette colonne par programme. Toutefois, il n’est pas conçu pour le tri, donc aucun espace n’est réservé pour le glyphe de tri.|  
@@ -59,6 +59,7 @@ ms.locfileid: "57717854"
 >  Le <xref:System.Windows.Forms.DataGridView.SortCompare> événement ne se produit pas lorsque le <xref:System.Windows.Forms.DataGridView.DataSource%2A> propriété est définie ou lorsque la <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> valeur de propriété est `true`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
@@ -66,5 +67,5 @@ ms.locfileid: "57717854"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Tri des données dans le contrôle DataGridView Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Guide pratique pour Personnaliser le tri dans le contrôle DataGridView Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Procédure : définir les modes de tri des colonnes dans le contrôle DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Procédure : personnaliser le tri dans le contrôle DataGridView Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

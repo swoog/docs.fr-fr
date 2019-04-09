@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088201"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask, interface
 Fournit des méthodes qui permettent à l’hôte pour effectuer des demandes du common language runtime (CLR), ou pour fournir une notification au CLR sur la tâche associée.  
@@ -47,18 +47,19 @@ Fournit des méthodes qui permettent à l’hôte pour effectuer des demandes du
   
  Une tâche se termine généralement à la fin de l’exécution de code. À ce moment-là, l’hôte appelle `ICLRTask::ExitTask` à détruire associé `ICLRTask`. Toutefois, les tâches peuvent également être recyclées en à l’aide d’un appel à `ICLRTask::Reset`, ce qui permet la `ICLRTask` instance à utiliser à nouveau. Cette approche évite la surcharge liée à la création et destruction des instances répétées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICLRTaskManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask, interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [ICLRTask2, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

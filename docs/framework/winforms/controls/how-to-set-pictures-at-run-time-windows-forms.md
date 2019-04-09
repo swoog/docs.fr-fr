@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073596"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procédure : Définir des images au moment de l’exécution (Windows Forms)
 Vous pouvez définir par programmation l’image affichée par un formulaire Windows <xref:System.Windows.Forms.PictureBox> contrôle.  
@@ -98,9 +98,10 @@ Vous pouvez définir par programmation l’image affichée par un formulaire Win
      Ce code efface l’image même si un graphisme a été chargé dans le contrôle au moment du design.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [Vue d’ensemble du contrôle PictureBox](picturebox-control-overview-windows-forms.md)
-- [Guide pratique pour Charger une image à l’aide du Concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Guide pratique pour Modifier la taille ou l’emplacement d’une image au moment de l’exécution](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Procédure : charger une image à l’aide du concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procédure : modifier la taille ou l’emplacement d’une image au moment de l’exécution](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox, contrôle](picturebox-control-windows-forms.md)

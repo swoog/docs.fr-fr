@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Valider les fichiers de mappage externes et DBML'
+title: 'Procédure : Valider des fichiers de mappage externes et DBML'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078731"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procédure : Valider les fichiers de mappage externes et DBML
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procédure : Valider des fichiers de mappage externes et DBML
 Les fichiers de mappage externes et les fichiers .dbml que vous modifiez doivent être validés par rapport à leurs définitions de schéma respectives. Cette rubrique fournit aux utilisateurs de Visual Studio avec les étapes pour implémenter le processus de validation.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ Les fichiers de mappage externes et les fichiers .dbml que vous modifiez doivent
 7.  Dans le **nom de fichier** zone, créer un nom de fichier avec une extension .xsd.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

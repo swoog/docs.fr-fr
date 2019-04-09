@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095891"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contrats de données à compatibilité ascendante
 Une fonctionnalité de la Windows Communication Foundation (WCF) système de contrat de données est les contrats peut évoluer au fil du temps rupture. Autrement dit, un client avec une version antérieure d'un contrat de données peut communiquer avec un service disposant d'une version plus récente du même contrat de données, ou un client avec une version plus récente d'un contrat de données peut communiquer avec une version antérieure du même contrat de données. Pour plus d’informations, consultez [meilleures pratiques : Le contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -39,10 +39,11 @@ Une fonctionnalité de la Windows Communication Foundation (WCF) système de con
   
  Le type <xref:System.Runtime.Serialization.ExtensionDataObject> ne contient pas de méthodes ou de propriétés publiques. Il est donc impossible d'accéder directement aux données stockées à l'intérieur de la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>.  
   
- La fonctionnalité d'aller-retour peut être désactivée, soit en affectant à `ignoreExtensionDataObject` la valeur `true` dans le constructeur <xref:System.Runtime.Serialization.DataContractSerializer>, soit en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true` sur <xref:System.ServiceModel.ServiceBehaviorAttribute>. Lorsque cette fonctionnalité est désactivée, le désérialiseur ne complète pas la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, et le sérialiseur n’émet pas le contenu de la propriété.  
+ La fonctionnalité d’aller-retour peut être désactivée, soit en affectant à `ignoreExtensionDataObject` la valeur `true` dans le constructeur <xref:System.Runtime.Serialization.DataContractSerializer>, soit en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true` sur <xref:System.ServiceModel.ServiceBehaviorAttribute>. Lorsque cette fonctionnalité est désactivée, le désérialiseur ne complète pas la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, et le sérialiseur n’émet pas le contenu de la propriété.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
-- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Contrôle de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Bonnes pratiques : Contrôle de version des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

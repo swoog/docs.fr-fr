@@ -2,12 +2,12 @@
 title: Débogage des requêtes LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133327"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Débogage des requêtes LINQ to DataSet
 
@@ -23,10 +23,11 @@ Visual Studio prend en charge le débogage de [!INCLUDE[linq_dataset](../../../.
   
  De plus, Modifier & Continuer ne prend pas en charge la modification du type ou la valeur d’une variable qui est utilisée dans un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruction. Ici aussi, vous pouvez annuler les modifications apportées ou arrêter et redémarrer la session de débogage.  
   
- Dans Visual C# dans Visual Studio, vous ne pouvez pas utiliser Modifier & Continuer dans un code d’une méthode qui contient un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête.  
+ Dans Visual c# dans Visual Studio, vous ne pouvez pas utiliser Modifier & Continuer dans un code d’une méthode qui contient un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête.  
   
  Dans Visual Basic dans Visual Studio, vous pouvez utiliser Modifier & Continuer sur non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] code, même dans une méthode qui contient un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête. Vous pouvez ajouter ou supprimer du code avant le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruction, même si les modifications affectent le numéro de ligne de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête. Votre expérience de débogage Visual Basic non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] code reste le même qu’auparavant [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] a été introduit. Vous ne pouvez pas modifier, ajouter ou supprimer un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] de requête, toutefois, sauf si vous arrêtez le débogage pour appliquer les modifications.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Débogage du code managé](/visualstudio/debugger/debugging-managed-code)
 - [Guide de programmation](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

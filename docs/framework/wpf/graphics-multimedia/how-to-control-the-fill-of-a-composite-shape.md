@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Contrôler le remplissage d'une forme composite"
+title: 'Procédure : Contrôler le remplissage d’une forme composite'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084048"
 ---
-# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Procédure : Contrôler le remplissage d'une forme composite
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Procédure : Contrôler le remplissage d’une forme composite
 Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xref:System.Windows.Media.GeometryGroup> ou un <xref:System.Windows.Media.PathGeometry>, spécifie une « règle » que la forme composite utilise pour déterminer si un point donné fait partie de la géométrie. Il existe deux valeurs possibles pour <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> et <xref:System.Windows.Media.FillRule.Nonzero>. Les sections suivantes décrivent comment utiliser ces deux règles.  
   
  **EvenOdd :** Cette règle détermine si un point est dans la région de remplissage en dessinant un rayon à partir de ce point vers l’infini dans n’importe quelle direction et en comptant le nombre de segments de chemin d’accès dans la forme donnée que le rayon traverse. Si ce nombre est impair, le point est à l’intérieur ; s’il est pair, le point est à l’extérieur.  
@@ -62,5 +62,6 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
 ## <a name="example"></a>Exemple  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Créer une forme composite](how-to-create-a-composite-shape.md)
-- [Vue d’ensemble de Geometry](geometry-overview.md)
+- [Vue d'ensemble de Geometry](geometry-overview.md)

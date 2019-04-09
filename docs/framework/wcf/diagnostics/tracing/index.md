@@ -2,12 +2,12 @@
 title: Traçage
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 4165dbb68ac962737c9dcc99e984248c668bb1b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093395"
 ---
 # <a name="tracing"></a>Traçage
 Windows Communication Foundation (WCF) fournit une instrumentation de l’application et les données de diagnostic pour la surveillance des pannes et l’analyse. Vous pouvez utiliser le suivi au lieu d'un débogueur pour comprendre le comportement d'une application ou la raison de sa défaillance. Vous pouvez également mettre en corrélation les erreurs et le traitement sur l'ensemble des composants afin de fournir une expérience de bout en bout.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) fournit une instrumentation de l’applic
 -   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configuration du traçage](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  Cette rubrique décrit comment configurer le suivi à différents niveaux en fonction de vos besoins spécifiques.  
   
@@ -35,9 +35,10 @@ Windows Communication Foundation (WCF) fournit une instrumentation de l’applic
   
  Cette rubrique décrit comment empêcher l'exposition des informations sensibles et fournit également des conseils utiles en cas d'utilisation de WebHost.  
   
- [Informations de référence sur les suivis](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [Référence des suivis](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
  Cette rubrique répertorie tous les suivis générés par WCF.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+
+- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

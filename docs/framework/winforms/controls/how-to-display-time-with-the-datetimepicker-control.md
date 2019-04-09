@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Afficher l’heure avec le contrôle DateTimePicker'
+title: 'Procédure : afficher l’heure avec le contrôle DateTimePicker'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: a88b93dfe5296873fa3503fbeb020118f2606859
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5163ca3eb04732152960c86c9a7428d87c6280f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083035"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Procédure : Afficher l’heure avec le contrôle DateTimePicker
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Procédure : afficher l’heure avec le contrôle DateTimePicker
 Si vous souhaitez que votre application permette aux utilisateurs de sélectionner une date et une heure et qu'elle affiche la date et l'heure au format spécifié, utilisez le contrôle <xref:System.Windows.Forms.DateTimePicker>. La procédure suivante montre comment utiliser le contrôle <xref:System.Windows.Forms.DateTimePicker> pour afficher l'heure.  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>Pour afficher l'heure avec le contrôle DateTimePicker  
   
-1.  Affectez à la propriété <xref:System.Windows.Forms.DateTimePicker.Format%2A> la valeur <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
+1.  Définir le <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriété <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
@@ -45,4 +45,5 @@ Si vous souhaitez que votre application permette aux utilisateurs de sélectionn
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [DateTimePicker, contrôle](datetimepicker-control-windows-forms.md)

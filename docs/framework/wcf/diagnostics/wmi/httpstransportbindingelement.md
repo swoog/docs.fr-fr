@@ -2,12 +2,12 @@
 title: HttpsTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: e78aa8c6-b53b-4105-a900-d3e7a39670f2
-ms.openlocfilehash: be4d78867081dbe511b83d39b5e07e06b689cc09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bf6df7d49c88cc93caacb92cebc23a297046e1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084633"
 ---
 # <a name="httpstransportbindingelement"></a>HttpsTransportBindingElement
 HttpsTransportBindingElement  
@@ -24,7 +24,7 @@ class HttpsTransportBindingElement : HttpTransportBindingElement
 ## <a name="methods"></a>Méthodes  
  La classe HttpsTransportBindingElement ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe HttpsTransportBindingElement a la propriété suivante :  
   
 ### <a name="requireclientcertificate"></a>RequireClientCertificate  
@@ -34,11 +34,12 @@ class HttpsTransportBindingElement : HttpTransportBindingElement
   
  Valeur qui indique si l'authentification du client SSL est requise.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

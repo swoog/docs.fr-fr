@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078496"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anticrénelage avec des lignes et des courbes
 Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour dessiner une ligne, vous fournissez le point de départ et le point de fin de la ligne, mais vous n’êtes pas obligé de fournir toutes les informations concernant les pixels individuels sur la ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fonctionne conjointement avec le logiciel de pilote d’affichage pour déterminer quels pixels seront activées pour afficher la ligne sur un périphérique d’affichage particulier.  
@@ -45,6 +45,7 @@ Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplu
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Guide pratique pour Utiliser l’anticrénelage avec du texte](how-to-use-antialiasing-with-text.md)
+- [Procédure : utiliser l’anticrénelage avec du texte](how-to-use-antialiasing-with-text.md)

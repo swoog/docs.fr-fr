@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire'
+title: 'Procédure pas à pas : fourniture d’éléments de menu standard à un formulaire'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: 846660fda37797e9d53d8f1d5a8a4f812d33e8df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094877"
 ---
-# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : fourniture d’éléments de menu standard à un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
   
  Cette procédure pas à pas montre comment utiliser un <xref:System.Windows.Forms.MenuStrip> contrôle pour créer un menu standard. Le formulaire répond également lorsqu’un utilisateur sélectionne un élément de menu. Les tâches suivantes sont illustrées dans cette procédure pas à pas :  
@@ -120,6 +120,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
 -   Donnez à votre <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel. Pour plus d'informations, voir [Procédure : Définir le convertisseur ToolStrip pour une Application](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

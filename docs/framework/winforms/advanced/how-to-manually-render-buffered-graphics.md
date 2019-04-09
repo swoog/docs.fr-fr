@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Restituer manuellement des graphiques mis en mémoire tampon'
+title: 'Procédure : afficher manuellement les graphismes mis en mémoire tampon'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: f9763620d5fe56a0720d5d5f4ad53ec2ef18531c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b01e10ff0f65b3abfe1e60d84d66447968a310c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097949"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Procédure : Restituer manuellement des graphiques mis en mémoire tampon
+# <a name="how-to-manually-render-buffered-graphics"></a>Procédure : afficher manuellement les graphismes mis en mémoire tampon
 Si vous gérez vos propres graphismes mis en mémoire tampon, vous devez pouvoir créer et restituer des mémoires tampon de graphiques. Vous pouvez créer des instances de la classe <xref:System.Drawing.BufferedGraphics> associée aux surfaces de dessin sur votre écran en appelant la méthode <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Cette méthode crée une instance de <xref:System.Drawing.BufferedGraphics> associée à une surface de rendu particulière, comme un formulaire ou un contrôle. Après avoir créé une instance de <xref:System.Drawing.BufferedGraphics>, vous pouvez dessiner des graphismes dans la mémoire tampon qu'elle représente par le biais de la propriété <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Après avoir effectué toutes les opérations graphiques, vous pouvez copier le contenu de la mémoire tampon à l'écran en appelant la méthode <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
@@ -46,7 +46,8 @@ Si vous gérez vos propres graphismes mis en mémoire tampon, vous devez pouvoir
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Graphiques mis deux fois en mémoire tampon](double-buffered-graphics.md)
-- [Guide pratique pour Gérer manuellement des graphiques mis en mémoire tampon](how-to-manually-manage-buffered-graphics.md)
+- [Procédure : gérer manuellement les graphismes mis en mémoire tampon](how-to-manually-manage-buffered-graphics.md)
