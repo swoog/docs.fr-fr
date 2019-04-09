@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088650"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implémentation du mode virtuel avec le chargement de données juste-à-temps dans le contrôle DataGridView Windows Forms
 Une des raisons d’implémenter le mode virtuel dans le <xref:System.Windows.Forms.DataGridView> contrôle consiste à récupérer des données uniquement qu’il est nécessaire. Il s’agit *lors du chargement de données juste-à-temps*.  
@@ -71,10 +71,11 @@ Une des raisons d’implémenter le mode virtuel dans le <xref:System.Windows.Fo
  Pour améliorer les performances de défilement de votre application, vous pouvez augmenter la quantité de données stockées localement. Pour améliorer les temps de démarrage, toutefois, vous devez éviter de charger trop de données initialement. Vous pouvez souhaiter modifier le `Cache` classe pour augmenter le nombre de pages de données qu’elle peut stocker. L’utilisation de plusieurs pages de données peut améliorer l’efficacité de défilement, mais vous devrez déterminer le nombre idéal de lignes dans une page de données, en fonction de la bande passante disponible et la latence du serveur. Avec des pages plus petites, le serveur est accessible plus fréquemment, mais prend moins de temps pour renvoyer les données demandées. Si la latence est plus un problème que la bande passante, vous souhaiterez utiliser les pages de données plus volumineux.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Réglage des performances dans le contrôle DataGridView Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Mode virtuel dans le contrôle DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Procédure pas à pas : Implémentation du Mode virtuel dans le contrôle de DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Guide pratique pour Implémenter le Mode virtuel avec le chargement de données juste-à-temps dans le contrôle de DataGridView Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Procédure pas à pas : implémentation du mode virtuel dans le contrôle DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Procédure : implémenter le mode virtuel avec le chargement de données juste-à-temps dans le contrôle DataGridView Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

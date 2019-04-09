@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076471"
 ---
 # <a name="stack-etw-event"></a>Événement ETW de pile
 L’événement de pile doit être utilisé conjointement avec d’autres événements pour générer des arborescences d’appels de procédure après le déclenchement d’un événement. Il est enregistré quand le fournisseur du runtime est activé. Il s’agit d’un événement très fréquent, car il est déclenché à chaque déclenchement d’un autre événement runtime. Pour cette raison, nous vous recommandons d’utiliser cet événement avec précaution.  
@@ -21,7 +21,7 @@ L’événement de pile doit être utilisé conjointement avec d’autres évén
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|`StackKeyword` (0x40000000)|LogAlways(0)|  
+|`StackKeyword` (0 x 40000000)|LogAlways(0)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -40,4 +40,5 @@ L’événement de pile doit être utilisé conjointement avec d’autres évén
 |Stack|win:Pointer|Colonnes de pointeurs d’instruction.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

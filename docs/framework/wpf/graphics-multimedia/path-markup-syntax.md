@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082488"
 ---
 # <a name="path-markup-syntax"></a>Syntaxe XAML pour les tracés
 Les tracés sont abordés dans [formes et dessins de base dans la vue d’ensemble de WPF](shapes-and-basic-drawing-in-wpf-overview.md) et [vue d’ensemble de Geometry](geometry-overview.md), toutefois, cette rubrique décrit en détail le mini langage puissant et plus complexe, vous pouvez utiliser pour spécifier le chemin d’accès géométries de manière plus compacte en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -57,7 +57,7 @@ Les tracés sont abordés dans [formes et dessins de base dans la vue d’ensemb
   
 |Terme|Description|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Spécifie si le <xref:System.Windows.Media.StreamGeometry> utilise le <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Spécifie le <xref:System.Windows.Media.FillRule.EvenOdd> règle de remplissage.<br />-   `F1` Spécifie le <xref:System.Windows.Media.FillRule.Nonzero> règle de remplissage.<br /><br /> Si vous omettez cette commande, le sous-tracé utilise le comportement par défaut, qui est <xref:System.Windows.Media.FillRule.EvenOdd>. Si vous spécifiez cette commande, vous devez la placer en premier.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Spécifie si le <xref:System.Windows.Media.StreamGeometry> utilise le <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Spécifie le <xref:System.Windows.Media.FillRule.EvenOdd> règle de remplissage.<br />-   `F1` Spécifie le <xref:System.Windows.Media.FillRule.Nonzero> règle de remplissage.<br /><br /> Si vous omettez cette commande, le sous-tracé utilise le comportement par défaut, qui est <xref:System.Windows.Media.FillRule.EvenOdd>. Si vous spécifiez cette commande, vous devez la placer en premier.|  
 |*figureDescription*|Une figure composée d’une commande move, de commandes draw et d’une commande close facultative.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Une commande move qui spécifie le point de départ de la figure. Consultez le [commande Move](#themovecommand) section.|  
 |*drawCommands*|Une ou plusieurs commandes draw qui décrivent le contenu de la figure. Consultez le [commandes Draw](#drawcommands) section.|  
@@ -97,9 +97,8 @@ Les tracés sont abordés dans [formes et dessins de base dans la vue d’ensemb
 Une majuscule `L` indique que `endPoint` est une valeur absolue ; un minuscule `l` indique que `endPoint` est un décalage par rapport au point précédent, ou (0,0) s’il n’en existe aucun.
 
 ### <a name="horizontal-line-command"></a>Commande Horizontal Line  
- Crée une ligne horizontale entre le point actuel et la coordonnée x spécifiée. `H 90` est un exemple de commande horizontal line valide.
+ Crée une ligne horizontale entre le point actuel et la coordonnée x spécifiée. `H 90` est un exemple d’une commande horizontal line valide.
 
-  
 |Syntaxe|  
 |------------|  
 |`H`  *x*<br /><br /> ou<br /><br /> `h`  *x*|  
@@ -111,16 +110,15 @@ Une majuscule `L` indique que `endPoint` est une valeur absolue ; un minuscule 
 Une majuscule `H` indique que `x` est une valeur absolue ; un minuscule `h` indique que `x` est un décalage par rapport au point précédent, ou (0,0) s’il n’en existe aucun.
   
 ### <a name="vertical-line-command"></a>Commande Vertical Line  
- Crée une ligne verticale entre le point actuel et la coordonnée y spécifiée. `v 90` est un exemple de commande vertical line valide.
+ Crée une ligne verticale entre le point actuel et la coordonnée y spécifiée. `v 90` est un exemple d’une commande vertical line valide.
 
-  
 |Syntaxe|  
 |------------|  
-|`V`  *y*<br /><br /> ou<br /><br /> `v`  *y*|  
+|`V`  *o*<br /><br /> ou<br /><br /> `v`  *o*|  
   
 |Terme|Description|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> La coordonnée y du point de fin de la ligne.|  
+|*o*|<xref:System.Double?displayProperty=nameWithType><br /><br /> La coordonnée y du point de fin de la ligne.|  
 
 Une majuscule `V` indique que `y` est une valeur absolue ; un minuscule `v` indique que `y` est un décalage par rapport au point précédent, ou (0,0) s’il n’en existe aucun.  
     
@@ -138,7 +136,7 @@ Une majuscule `V` indique que `y` est une valeur absolue ; un minuscule `v` ind
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Point vers lequel la courbe est dessinée.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>Commande Quadratic Bezier Curve  
- Crée une courbe de Bézier quadratique entre le point actuel et le point de terminaison spécifié en utilisant le point de contrôle spécifié (`controlPoint`). `q 100,200 300,200` est un exemple de commande quadratic Bezier curve valide.  
+ Crée une courbe de Bézier quadratique entre le point actuel et le point de terminaison spécifié en utilisant le point de contrôle spécifié (`controlPoint`). `q 100,200 300,200` est un exemple de commande de courbe de Bézier quadratique valide.  
   
 |Syntaxe|  
 |------------|  
@@ -225,10 +223,11 @@ Une majuscule `V` indique que `y` est une valeur absolue ; un minuscule `v` ind
  Vous pouvez également utiliser la notation scientifique. Par exemple, `+1.e17` est une valeur valide.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Vue d’ensemble de Geometry](geometry-overview.md)
-- [Rubriques de guide pratique](geometries-how-to-topics.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble de Geometry](geometry-overview.md)
+- [Rubriques Comment](geometries-how-to-topics.md)

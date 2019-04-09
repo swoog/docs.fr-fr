@@ -2,12 +2,12 @@
 title: Concepteurs composites personnalisés - Présentateur d'éléments de workflow
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089196"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Concepteurs composites personnalisés - Présentateur d'éléments de workflow
 Le <xref:System.Activities.Presentation.WorkflowItemPresenter> est un type de clé dans le modèle de programmation concepteur WF qui permet la création d’une « zone de dépôt » où une activité arbitraire peut être placée. Cet exemple montre comment créer un concepteur d’activités qui fait apparaître telle « zone de dépôt. »
@@ -63,7 +63,7 @@ Le <xref:System.Activities.Presentation.WorkflowItemPresenter> est un type de cl
 </sap:ActivityDesigner>
 ```
 
- Notez l’utilisation de la liaison de données WPF pour lier à `ModelItem.Body`. `ModelItem` est la propriété sur <xref:System.Activities.Presentation.ActivityDesigner> qui fait référence à l’objet sous-jacent, le concepteur est utilisé, dans ce cas, **SimpleNativeActivity**.
+ Notez l'utilisation de la liaison de données WPF pour lier à `ModelItem.Body`. `ModelItem` est la propriété sur <xref:System.Activities.Presentation.ActivityDesigner> qui fait référence à l’objet sous-jacent, le concepteur est utilisé, dans ce cas, **SimpleNativeActivity**.
 
 #### <a name="to-setup-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
@@ -81,5 +81,6 @@ Le <xref:System.Activities.Presentation.WorkflowItemPresenter> est un type de cl
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [Développement d’applications avec le Concepteur de flux de travail](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Développement d'applications avec Workflow Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
