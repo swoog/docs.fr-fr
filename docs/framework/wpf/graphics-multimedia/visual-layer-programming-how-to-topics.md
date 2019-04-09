@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142686"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Rubriques "Comment" relatives à la programmation de la couche visuelle
 Les rubriques de cette section montrent comment utiliser la couche visuelle de la composition de bas niveau et le test de positionnement.  
@@ -24,11 +24,12 @@ Les rubriques de cette section montrent comment utiliser la couche visuelle de l
  [Effectuer un test de positionnement avec Geometry dans un Visual](how-to-hit-test-geometry-in-a-visual.md)  
  [Effectuer un test de positionnement avec Geometry comme paramètre](how-to-hit-test-using-geometry-as-a-parameter.md)  
  [Test de positionnement à l’aide d’un conteneur hôte Win32](how-to-hit-test-using-a-win32-host-container.md)  
- [Effectuer une restitution par intervalle de trame à l'aide de CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [Effectuer une restitution par intervalle de trame à l’aide de CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
 - [Graphiques et multimédia](index.md)

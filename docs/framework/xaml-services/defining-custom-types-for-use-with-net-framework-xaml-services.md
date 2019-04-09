@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164435"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
 Lorsque vous définissez des types personnalisés qui sont des objets métier ou sont des types qui n’ont pas d’une dépendance sur des infrastructures spécifiques, il existe certaines meilleures pratiques pour XAML, vous pouvez suivre. Si vous respectez ces pratiques, les Services XAML .NET Framework et ses lecteurs XAML et les writers XAML peuvent découvrir les caractéristiques XAML de votre type et lui donner une représentation appropriée dans un flux de nœud XAML à l’aide du système de type XAML. Cette rubrique décrit les meilleures pratiques pour les définitions de type, définitions de membre et aux attributs CLR des types ou membres.  
@@ -70,7 +70,7 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
 #### <a name="the-getpropertyname-accessor"></a>L’accesseur GetPropertyName  
  La signature pour l’accesseur `Get`*NomPropriété* doit être :  
   
- `public static object Get` *NomPropriété* `(object`  `target` `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Vous pouvez l’utiliser pour limiter l’utilisation de votre membre pouvant être attaché ; utilisations en dehors de votre portée prévue lève des exceptions de cast non valide qui sont ensuite signalées par une erreur d’analyse XAML. Le nom du paramètre `target` n’est pas obligatoire, mais est nommé `target` par convention dans la plupart des implémentations.  
   
@@ -81,7 +81,7 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
 #### <a name="the-setpropertyname-accessor"></a>L’accesseur SetPropertyName  
  La signature pour l’ensemble*PropertyName* accesseur doit être :  
   
- `public static void Set` *NomPropriété* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   Le `target` objet peut être spécifié comme un type plus spécifique dans votre implémentation, avec la même logique et les conséquences, comme décrit dans la section précédente.  
   
@@ -115,5 +115,6 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
  Dans la terminologie de WPF XAML, un *type interne* est un type qui est défini par le même assembly qui inclut également le XAML de référencement. Ce type peut être mappé par un espace de noms XAML qui omet délibérément l’assembly = partie d’un mappage, par exemple, `xmlns:local="clr-namespace:WPFApplication1"`.  Si BAML fait référence à un type interne et que le type a `internal` accéder à niveau, cela génère un `GeneratedInternalTypeHelper` classe pour l’assembly. Si vous souhaitez éviter `GeneratedInternalTypeHelper`, vous devez utiliser `public` niveau d’accès ou doit tenir compte de la classe appropriée dans un assembly distinct et créez une dépendance entre cet assembly.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Attributs CLR XAML pour les bibliothèques et types personnalisés](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [Services XAML](index.md)

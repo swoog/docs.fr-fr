@@ -2,12 +2,12 @@
 title: Considérations sur la sécurité des métadonnées
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172963"
 ---
 # <a name="security-considerations-with-metadata"></a>Considérations sur la sécurité des métadonnées
 Lorsque vous utilisez les fonctionnalités de métadonnées Windows Communication Foundation (WCF), prendre en compte les implications de sécurité de publication, la récupération et à l’aide des métadonnées de service.  
@@ -39,5 +39,6 @@ Lorsque vous utilisez les fonctionnalités de métadonnées Windows Communicatio
  Le fichier de configuration d'application d'un service peut spécifier si des métadonnées doivent être publiées et de quelle façon. Il est judicieux de protéger le fichier de configuration d'application à l'aide des listes de contrôle d'accès (ACL) appropriées pour vous assurer qu'aucun intrus ne pourra modifier ces paramètres.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [Procédure : sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)

@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aed65311d2b36a5dc764511de04e34c4bfb69d7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140476"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -35,7 +35,7 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
   
  Type d’accès : Propriétés en lecture seule  
   
- Encodage de jeu de caractères à utiliser pour l’émission de messages sur la liaison.  
+ Encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison.  
   
 ### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Type de données : sint32  
@@ -58,11 +58,12 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
   
  Quotas des lecteurs.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163135"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migration de votre application du Windows Store vers .NET Native
 .NET native fournit une compilation statique des applications dans le Windows Store ou sur l’ordinateur du développeur. Cela diffère de la compilation dynamique effectuée pour les applications du Windows Store par le compilateur juste-à-temps (JIT) ou le [générateur d'images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sur l'appareil. Malgré les différences, .NET Native tente de maintenir la compatibilité avec les [les applications .NET pour Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). La plupart du temps, les éléments qui fonctionnent sur les applications .NET pour Windows Store fonctionnent également avec .NET Native.  Toutefois, dans certains cas, vous pouvez rencontrer des changements de comportement. Ce document aborde ces différences entre les applications .NET pour Windows Store standard et .NET Native dans les domaines suivants :  
@@ -79,9 +79,9 @@ ms.locfileid: "56966786"
   
 -   Les membres publics sur les structures <xref:System.RuntimeFieldHandle> et <xref:System.RuntimeMethodHandle> ne sont pas pris en charge. Ces types sont pris en charge uniquement pour LINQ, les arborescences d'expression et l'initialisation de tableau statique.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> et <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> comprennent des membres masqués dans des classes de base et peuvent donc être remplacés sans substitutions explicites. Cela vaut également pour les autres méthodes [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> et <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> comprennent des membres masqués dans les classes de base et peuvent donc être remplacés sans substitutions explicites. Cela vaut également pour les autres méthodes [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> et <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> n'échouent pas quand vous essayez de créer certaines combinaisons (par exemple, un tableau de valeurs byref).  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> et <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> n’échouent pas quand vous essayez de créer certaines combinaisons (par exemple, un tableau de valeurs ByRef).  
   
 -   Vous ne pouvez pas utiliser la réflexion pour appeler des membres qui ont des paramètres de pointeur.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "56966786"
   
 -   Lorsque le nombre d’arguments et le type d’un des arguments est incorrect, .NET Native lève une <xref:System.ArgumentException> au lieu d’un <xref:System.Reflection.TargetParameterCountException>.  
   
--   La sérialisation binaire des exceptions n'est généralement pas prise en charge. Ainsi, les objets non sérialisables peuvent être ajoutés au dictionnaire <xref:System.Exception.Data%2A?displayProperty=nameWithType>.  
+-   La sérialisation binaire des exceptions n'est généralement pas prise en charge. Ainsi, les objets non sérialisables peuvent être ajoutés au dictionnaire <xref:System.Exception.Data%2A?displayProperty=nameWithType> .  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>API et scénarios non pris en charge  
@@ -115,9 +115,9 @@ ms.locfileid: "56966786"
   
  **Tableaux**  
   
--   Les tableaux présentant une limite inférieure différente de zéro ne sont pas pris en charge. En règle générale, ces tableaux sont créés en appelant la surcharge <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType>.  
+-   Les tableaux présentant une limite inférieure différente de zéro ne sont pas pris en charge. En règle générale, ces tableaux sont créés en appelant la surcharge <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .  
   
--   La création dynamique de tableaux multidimensionnels n'est pas prise en charge. Ces tableaux sont généralement créés en appelant une surcharge de la méthode <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> qui inclut un paramètre `lengths`, ou en appelant la méthode <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType>.  
+-   La création dynamique de tableaux multidimensionnels n'est pas prise en charge. Ces tableaux sont généralement créés en appelant une surcharge de la méthode <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> qui inclut un paramètre `lengths` , ou en appelant la méthode <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .  
   
 -   Les tableaux multidimensionnels qui ont quatre dimensions ou plus ne sont pas pris en charge ; il s'agit de tableaux dont la propriété <xref:System.Array.Rank%2A?displayProperty=nameWithType> à une valeur supérieure ou égale à quatre. Utilisez des [tableaux en escalier](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (tableaux de tableaux) à la place. Par exemple, `array[x,y,z]` n'est pas valide, contrairement à `array[x][y][z]` .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "56966786"
   
 -   Le <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> méthode traite correctement les chaînes qui contiennent des dates courtes dans .NET Native. Toutefois, elle n’assure pas la compatibilité avec les changements apportés à l’analyse des dates et heures, décrits dans les articles de la Base de connaissances Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) et [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` est arrondi correctement dans .NET Native. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correest arrondi correctement dans .NET Native. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Différences pour HttpClient  
@@ -215,7 +215,7 @@ ms.locfileid: "56966786"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> est pris en charge, mais lève une exception dans certains scénarios, par exemple quand il est utilisé avec [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) ou des variants byref.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> est pris en charge, mais elle lève une exception dans certains scénarios, tels que lorsqu’il est utilisé avec [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) ou des variants byref.  
   
  API déconseillées pour [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) prise en charge incluent :  
   
@@ -574,19 +574,15 @@ Autres fonctionnalités d’interopérabilité non pris en charge sont les suiva
   
      Le type `InnerType` n'est pas connu du sérialiseur, car les membres de la classe de base ne sont pas parcourus pendant la sérialisation.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ne parviennent pas à sérialiser une classe ou une structure qui implémente l'interface <xref:System.Collections.Generic.IEnumerable%601> . Par exemple, les types suivants ne parviennent pas à sérialiser ou à désérialiser :  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> ne sérialise pas la valeur d'objet suivante, car il ne connaît pas le type exact de l'objet à sérialiser :  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> ne parvient pas à sérialiser ou à désérialiser si le type de l'objet sérialisé est <xref:System.Xml.XmlQualifiedName>.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ne parviennent pas à sérialiser une classe ou structure qui implémente le <xref:System.Collections.Generic.IEnumerable%601> interface. Par exemple, les types suivants ne parviennent pas à sérialiser ou à désérialiser :  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> ne pas sérialiser la valeur suivante de l’objet, car il ne connaît pas le type exact de l’objet à sérialiser :  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> ne parvient pas à sérialiser ou désérialiser si le type de l’objet sérialisé est <xref:System.Xml.XmlQualifiedName>.  
   
 -   Tous les sérialiseurs (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>et <xref:System.Xml.Serialization.XmlSerializer>) ne parviennent pas à générer un code de sérialisation pour un type <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ou pour un type contenant <xref:System.Xml.Linq.XElement>. Ils affichent des erreurs de génération à la place.  
   
--   Les constructeurs suivants des types de sérialisation ne fonctionnent pas nécessairement comme prévu :  
+-   Les constructeurs suivants des types de sérialisation ne fonctionnent pas nécessairement comme prévu :  
   
     -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
@@ -610,7 +606,7 @@ Autres fonctionnalités d’interopérabilité non pris en charge sont les suiva
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> ne parvient pas à générer le code pour un type dont les méthodes possèdent un des attributs suivants :  
+-   <xref:System.Xml.Serialization.XmlSerializer> ne parvient pas à générer du code pour un type qui a des méthodes qui possèdent un des attributs suivants :  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -620,7 +616,7 @@ Autres fonctionnalités d’interopérabilité non pris en charge sont les suiva
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> ne traite pas l'interface de sérialisation personnalisée <xref:System.Xml.Serialization.IXmlSerializable> . Si vous avez une classe qui implémente cette interface, <xref:System.Xml.Serialization.XmlSerializer> considère le type comme un ancien objet CLR simple et sérialise uniquement ses propriétés publiques.  
+-   <xref:System.Xml.Serialization.XmlSerializer> ne traite pas les <xref:System.Xml.Serialization.IXmlSerializable> interface de sérialisation personnalisée. Si vous avez une classe qui implémente cette interface, <xref:System.Xml.Serialization.XmlSerializer> considère le type comme un ancien objet CLR simple et sérialise uniquement ses propriétés publiques.  
   
 -   Sérialisation d’un brut <xref:System.Exception> objet ne fonctionne pas correctement avec <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
@@ -651,7 +647,8 @@ Autres fonctionnalités d’interopérabilité non pris en charge sont les suiva
  L’activation de .NET Native sur une bibliothèque de tests unitaires pour un projet d’applications Windows Store n’est pas pris en charge et, le projet ne parviennent pas à générer.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Vue d’ensemble des applications .NET pour Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Vue d’ensemble de .NET pour les applications Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

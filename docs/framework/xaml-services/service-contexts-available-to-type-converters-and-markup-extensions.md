@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147795"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextes de services disponibles aux convertisseurs de types ou aux extensions de balisage
 Les auteurs des types qui prennent en charge les utilisations de convertisseurs de type et d'extensions de balisage doivent souvent disposer d'informations contextuelles concernant l'emplacement où une utilisation existe dans le balisage ou dans la structure de graphique d'objets environnante. Les informations peuvent être exigées afin que l'objet fourni soit correctement instancié ou que les références d'objets à des objets existants dans le graphique d'objets puissent être créées. Lorsque vous utilisez les services XAML .NET Framework, le contexte qui peut être requis est exposé sous la forme d'une série d'interfaces de service. Le code de prise en charge de convertisseur de type ou d'extension de balisage peut lancer une requête pour un service, à l'aide d'un contexte de fournisseur de services disponible et passé à partir de <xref:System.Xaml.XamlObjectWriter> ou des types associés. Le contexte de schéma XAML est directement disponible via un service de ce type. Cette rubrique décrit comment accéder aux contextes de service à partir d'une implémentation de convertisseur de valeurs et répertorie les services qui sont généralement disponibles et leurs rôles.  
@@ -20,7 +20,7 @@ Les auteurs des types qui prennent en charge les utilisations de convertisseurs 
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>Services pour une extension de balisage  
- <xref:System.Windows.Markup.MarkupExtension> dispose d'une seule méthode virtuelle, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Le paramètre d'entrée `serviceProvider` décrit comment les services sont communiqués aux implémentations lorsque l'extension de balisage est appelée par un processeur XAML. Le pseudo-code suivant illustre comment une implémentation d'extension de balisage peut lancer une requête pour les services dans sa méthode <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>:  
+ <xref:System.Windows.Markup.MarkupExtension> a qu’une seule méthode virtuelle, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Le paramètre d'entrée `serviceProvider` décrit comment les services sont communiqués aux implémentations lorsque l'extension de balisage est appelée par un processeur XAML. Le pseudo-code suivant illustre comment une implémentation d'extension de balisage peut lancer une requête pour les services dans sa méthode <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>:  
   
 ```  
 public override object ProvideValue(IServiceProvider serviceProvider)  
@@ -42,7 +42,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
 <a name="services_for_a_type_converter"></a>   
 ## <a name="services-for-a-type-converter"></a>Services pour un convertisseur de type  
- <xref:System.ComponentModel.TypeConverter> dispose de quatre méthodes virtuelles qui utilisent un contexte de service et qui prennent en charge des utilisations de code XAML. Chacune de ces méthodes passe un paramètre d'entrée `context` . Ce paramètre est de type <xref:System.ComponentModel.ITypeDescriptorContext>, mais cette interface hérite de l'élément <xref:System.IServiceProvider>; par conséquent, il existe une méthode <xref:System.IServiceProvider.GetService%2A> disponible pour les implémentations de convertisseur de type.  
+ <xref:System.ComponentModel.TypeConverter> a quatre méthodes virtuelles qui utilisent un contexte de service et qui prennent en charge les utilisations XAML. Chacune de ces méthodes passe un paramètre d'entrée `context` . Ce paramètre est de type <xref:System.ComponentModel.ITypeDescriptorContext>, mais cette interface hérite de l'élément <xref:System.IServiceProvider>; par conséquent, il existe une méthode <xref:System.IServiceProvider.GetService%2A> disponible pour les implémentations de convertisseur de type.  
   
  Le pseudo-code suivant illustre comment une implémentation de convertisseur de type pour les utilisations de code XAML peut lancer une requête pour les services dans l'une de ses substitutions, dans le cas présent, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:  
   
@@ -80,7 +80,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Documentation de référence**: <xref:System.ComponentModel.ITypeDescriptorContext>  
   
- Dérive de <xref:System.IServiceProvider>. Cette classe représente le contexte dans les signatures <xref:System.ComponentModel.TypeConverter> ; <xref:System.ComponentModel.TypeConverter> est une classe qui existe depuis .NET Framework 1.0. Elle est antérieure à XAML et au scénario <xref:System.ComponentModel.TypeConverter> XAML pour la conversion de type de valeur de chaîne. Dans le contexte des services XAML .NET Framework, les méthodes de <xref:System.ComponentModel.TypeConverter> sont implémentées explicitement. Le comportement de l'implémentation explicite indique aux appelants que l'API de <xref:System.ComponentModel.ITypeDescriptorContext> n'est pas appropriée pour les systèmes de type XAML, ni pour la lecture ou l'écriture d'objets à partir de XAML. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>et <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> retournent généralement la valeur `null` à partir des contextes des services XAML .NET Framework.  
+ Dérive de <xref:System.IServiceProvider>. Cette classe représente le contexte dans les signatures <xref:System.ComponentModel.TypeConverter> ; <xref:System.ComponentModel.TypeConverter> est une classe qui existe depuis .NET Framework 1.0. Elle est antérieure à XAML et au scénario <xref:System.ComponentModel.TypeConverter> XAML pour la conversion de type de valeur de chaîne. Dans le contexte des services XAML .NET Framework, les méthodes de <xref:System.ComponentModel.TypeConverter> sont implémentées explicitement. Le comportement de l'implémentation explicite indique aux appelants que l'API de <xref:System.ComponentModel.ITypeDescriptorContext> n'est pas appropriée pour les systèmes de type XAML, ni pour la lecture ou l'écriture d'objets à partir de XAML. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, et <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> retournent généralement `null` à partir de contextes de Services XAML du .NET Framework.  
   
 ### <a name="ivalueserializercontext"></a>IValueSerializerContext  
  **Documentation de référence**: <xref:System.Windows.Markup.IValueSerializerContext>  
@@ -94,9 +94,9 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Pertinent pour :** Scénarios de chemin d’accès de chargement et interaction avec le contexte de schéma XAML  
   
- **API de service :**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
+ **API de service :**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- Influence potentiellement le mappage de type de XAML à CLR, nécessaire lorsque le writer XAML crée un objet CLR dans un graphique d'objets. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> traite une chaîne potentiellement qualifiée par préfixe qui correspond à un nom de type XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>), et retourne un CLR <xref:System.Type>. La résolution de types dépend en général fortement du contexte de schéma XAML. Seul le contexte de schéma XAML tient compte de considérations telles que les suivantes : quels assemblys sont chargés et lesquels d'entre eux peuvent ou doivent être accessibles pour la résolution de type.  
+ Influence potentiellement le mappage de type de XAML à CLR, nécessaire lorsque le writer XAML crée un objet CLR dans un graphique d'objets. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> traite une chaîne potentiellement qualifiée par préfixe qui correspond à un nom de type XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) et retourne un type CLR <xref:System.Type>. La résolution de types dépend en général fortement du contexte de schéma XAML. Seul le contexte de schéma XAML tient compte de considérations telles que les suivantes : quels assemblys sont chargés et lesquels d'entre eux peuvent ou doivent être accessibles pour la résolution de type.  
   
 ### <a name="iuricontext"></a>IUriContext  
  **Documentation de référence**: <xref:System.Windows.Markup.IUriContext>  
@@ -105,7 +105,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Pertinent pour :** Chemin de chargement et d’enregistrer la gestion de chemin d’accès des valeurs de membres qui sont des URI ou `x:Uri` valeurs.  
   
- **API de service :**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
+ **API de service :**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
  Ce service signale une racine d'URI globalement disponible, le cas échéant. La racine d'URI peut être utilisée pour résoudre des URI relatifs en URI absolus, ou inversement. Ce scénario s'applique principalement aux services d'application exposés par une infrastructure particulière, ou des fonctions d'une classe d'élément racine communément utilisée dans une infrastructure. L'URI de base peut être établi comme un paramètre de lecteur XAML, qui est ensuite passé au writer d'objet XAML et signalé par ce service.  
   
@@ -127,7 +127,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Pertinent pour :** Chemin de chargement et toute opération qui doit résoudre un type XAML pour un type de sauvegarde.  
   
- **API de service :**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
+ **API de service :**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
  Le contexte de schéma XAML est nécessaire pour toutes les opérations de chargement différé, car le même contexte de schéma doit agir sur la zone différée pour intégrer le contenu différé. Pour plus d’informations sur le rôle du contexte de schéma XAML, consultez [XAML Services](index.md).  
   
@@ -138,7 +138,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Pertinent pour :** Chemin de chargement.  
   
- **API de service :**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
+ **API de service :**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
  Ce service s'applique aux services d'application exposés par une infrastructure particulière, ou des fonctions d'une classe d'élément racine communément utilisée dans une infrastructure. Un scénario pour l'obtention de l'objet racine connecte le code-behind et la connexion d'événements. Par exemple, l'implémentation WPF de `x:Class` est utilisée pour la compilation de balisage et la connexion de tout attribut de gestionnaire d'événements se trouvant à n'importe quelle autre position dans le balisage XAML. Le point de connexion des classes partielles définies par le balisage et le code-behind pour la compilation du balisage se trouve au niveau de l'élément racine.  
   
@@ -151,7 +151,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **API de service :** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> pour le chemin de chargement, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> pour le chemin d’enregistrement.  
   
- <xref:System.Xaml.IXamlNamespaceResolver> est un service qui peut retourner un identificateur d'espace de noms XAML/URI en fonction de son préfixe, tel qu'il est mappé dans le balisage XAML d'origine.  
+ <xref:System.Xaml.IXamlNamespaceResolver> est un service qui peut retourner un identificateur d’espace de noms XAML / URI en fonction de son préfixe mappé dans le balisage XAML d’origine.  
   
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Documentation de référence**: <xref:System.Windows.Markup.IProvideValueTarget>  
@@ -162,7 +162,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **API de service :**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
- <xref:System.Windows.Markup.IProvideValueTarget> permet à un convertisseur de type ou à une extension de balisage d'obtenir le contexte concernant l'emplacement d'action lors du chargement. Les implémentations peuvent utiliser ce contexte pour invalider une utilisation. Par exemple, certaines des extensions de balisage de WPF telles que <xref:System.Windows.DynamicResourceExtension>utilisent une logique. Celle-ci vérifie la propriété <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> pour s'assurer que l'extension est utilisée uniquement pour définir des propriétés de dépendance (ou une courte liste propriétés autres que celles de dépendance).  
+ <xref:System.Windows.Markup.IProvideValueTarget> permet à une extension de balisage ou de convertisseur de type obtenir le contexte concernant l’emplacement d’action au moment du chargement. Les implémentations peuvent utiliser ce contexte pour invalider une utilisation. Par exemple, certaines des extensions de balisage de WPF telles que <xref:System.Windows.DynamicResourceExtension>utilisent une logique. Celle-ci vérifie la propriété <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> pour s'assurer que l'extension est utilisée uniquement pour définir des propriétés de dépendance (ou une courte liste propriétés autres que celles de dépendance).  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Documentation de référence**: <xref:System.Xaml.IXamlNameResolver>  
@@ -182,12 +182,13 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Pertinent pour :** Chemin d’accès résolution de chargement d’informations indirectes de type CLR.  
   
- **API de service :** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
+ **API de service :** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
  Pour plus d'informations, consultez <xref:System.Xaml.IDestinationTypeProvider>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Vue d’ensemble des extensions de balisage pour XAML](markup-extensions-for-xaml-overview.md)
+- [Vue d'ensemble des extensions de balisage pour XAML](markup-extensions-for-xaml-overview.md)
 - [Vue d'ensemble des convertisseurs de types pour XAML](type-converters-for-xaml-overview.md)

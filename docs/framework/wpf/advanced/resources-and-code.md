@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137707"
 ---
 # <a name="resources-and-code"></a>Ressources et code
 Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ou les créer à l’aide de code au lieu de la syntaxe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pour plus d’informations sur l’utilisation générale des ressources et sur les ressources du point de vue de la syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Ressources XAML](xaml-resources.md).  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Accès aux ressources à partir du code  
  Les clés qui identifient les ressources, si elles sont définies en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sont également utilisées pour récupérer des ressources spécifiques si vous demandez la ressource dans le code. Pour récupérer une ressource à partir du code le plus simple consiste à appeler le <xref:System.Windows.FrameworkElement.FindResource%2A> ou <xref:System.Windows.FrameworkElement.TryFindResource%2A> (méthode) à partir d’objets d’infrastructure dans votre application. La différence entre ces méthodes se situe au niveau de leur comportement quand la clé demandée est introuvable. <xref:System.Windows.FrameworkElement.FindResource%2A> lève une exception ; <xref:System.Windows.FrameworkElement.TryFindResource%2A> ne génère pas d’exception mais retourne `null`. Chaque méthode prend la clé de ressource comme paramètre d’entrée et retourne un objet faiblement typé. Une clé de ressource est généralement une chaîne, mais il arrive que ce ne soit pas le cas. Pour plus d’informations, consultez la section [Utilisation d’objets comme clés](#objectaskey). En principe, vous castez l’objet retourné en type nécessaire pour la propriété que vous définissez quand vous demandez la ressource. La logique de recherche pour la résolution d’une ressource de code est la même que pour une référence de ressource dynamique [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. La recherche de ressources commence dans l’élément appelant, puis se poursuit dans les éléments parents successifs de l’arborescence logique. La recherche se poursuit dans les ressources d’application, les thèmes et les ressources système, si nécessaire. Une demande de code pour une ressource tient compte des changements d’exécution dans les dictionnaires de ressources qui ont pu avoir lieu à la suite du chargement du dictionnaire de ressources par [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ainsi que des changements des ressources système en temps réel.  
@@ -47,5 +45,6 @@ Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_wi
  Dans la plupart des cas d’utilisation de ressources, la clé de la ressource est une chaîne. Toutefois, diverses fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’utilisent pas délibérément le type chaîne pour spécifier des clés, mais définissent ce paramètre sur un objet. Vous avez la possibilité d’indexer une ressource à l’aide d’un objet grâce à la prise en charge des thèmes et des styles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les styles des thèmes qui deviennent le style par défaut pour un contrôle sans style sont indexés chacun par le <xref:System.Type> du contrôle auquel ils doivent s’appliquer à. L’indexation par le type est un mécanisme de recherche fiable qui fonctionne sur les instances par défaut de chaque type de contrôle, et le type peut être détecté par réflexion et utilisé pour appliquer un style aux classes dérivées, même si le type dérivé n’a aucun style par défaut. Vous pouvez spécifier un <xref:System.Type> clés pour une ressource définie dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à l’aide de la [x : Type Markup Extension](../../xaml-services/x-type-markup-extension.md). Des extensions similaires dans d’autres cas d’utilisation de clé non-chaîne prennent en charge des fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], comme l’[extension de balisage ComponentResourceKey](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Ressources XAML](xaml-resources.md)
-- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../controls/styling-and-templating.md)

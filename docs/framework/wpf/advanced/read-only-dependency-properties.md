@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162421"
 ---
 # <a name="read-only-dependency-properties"></a>Propriétés de dépendance en lecture seule
 Cette rubrique décrit les propriétés de dépendance en lecture seule, y compris les propriétés de dépendance en lecture seule existantes, et les scénarios et techniques de création d’une propriété de dépendance en lecture seule personnalisée.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique part du principe que vous comprenez les scénarios de base de l’implémentation d’une propriété de dépendance et que vous savez comment les métadonnées sont appliquées à une propriété de dépendance personnalisée. Pour plus d’informations sur le contexte, consultez [Propriétés de dépendance personnalisées](custom-dependency-properties.md) et [Métadonnées de propriété de dépendance](dependency-property-metadata.md).  
@@ -44,6 +42,7 @@ Cette rubrique décrit les propriétés de dépendance en lecture seule, y compr
  Étant donné que le <xref:System.Windows.DependencyPropertyKey> est privé et n’est pas propagé par le système de propriétés en dehors de votre code, une propriété de dépendance en lecture seule a de mieux de la sécurité de paramétrage qu’une propriété de dépendance en lecture-écriture. Pour une propriété de dépendance en lecture-écriture, le champ d’identification est explicitement ou implicitement public et la propriété est donc largement définissable. Pour plus d’informations, consultez [Sécurité de propriété de dépendance](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
-- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../controls/styling-and-templating.md)

@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172105"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marquage des événements routés comme étant gérés et gestion de classe
 Les gestionnaires d’un événement routé peuvent marquer l’événement comme étant géré dans les données d’événement. La gestion de l’événement a pour effet de raccourcir efficacement l’itinéraire. La gestion de classe est un concept de programmation pris en charge par les événements routés. Un gestionnaire de classe peut gérer un événement routé particulier au niveau d’une classe à l’aide d’un gestionnaire appelé avant tout gestionnaire d’instance sur une instance de la classe.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique décrit plus en détail les concepts introduits dans [Vue d’ensemble des événements routés](routed-events-overview.md).  
@@ -99,7 +97,8 @@ Les gestionnaires d’un événement routé peuvent marquer l’événement comm
  La deuxième technique vaut uniquement pour les événements d’entrée où les versions de tunneling et de propagation de l’événement routé sont associées. Pour ces événements routés, vous pouvez plutôt ajouter des gestionnaires à l’événement routé équivalent preview/tunneling équivalent. Cet événement routé crée un tunnel le long de l’itinéraire en partant de la racine, si bien que le code de gestion de classe Button ne l’intercepte pas, présumant que vous avez joint le gestionnaire Preview au niveau d’un élément ancêtre dans l’arborescence d’éléments de l’application. Si vous utilisez cette approche, faites attention quand il s’agit de marquer un événement Preview comment étant géré. Dans l’exemple donné avec <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> géré à l’élément racine, si vous marquiez l’événement <xref:System.Windows.RoutedEventArgs.Handled%2A> dans l’implémentation du gestionnaire, vous supprimeriez de fait le <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement. Ce comportement n’est généralement pas souhaitable.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.EventManager>
-- [Événements Preview](preview-events.md)
+- [Aperçu des événements](preview-events.md)
 - [Créer un événement routé personnalisé](how-to-create-a-custom-routed-event.md)
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
+- [Vue d'ensemble des événements routés](routed-events-overview.md)

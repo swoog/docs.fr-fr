@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], ColorConvertedBitmap markup extension
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
-ms.openlocfilehash: e51a39b6516d88f53b54f8ab7c1c0d1ad4c025e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172937"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap, extension de balisage
 Fournit un moyen de spécifier une image bitmap source qui n’a pas de profil incorporé. Contextes de couleur / profils sont spécifiées par [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], comme l’image source [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
@@ -37,6 +37,7 @@ Fournit un moyen de spécifier une image bitmap source qui n’a pas de profil i
  `ColorConvertedBitmap` est une extension de balisage. Les extensions de balisage sont généralement implémentées pour éviter que les valeurs d’attribut ne soient autre chose que des valeurs littérales ou des noms de gestionnaire et lorsque l’exigence dépasse le cadre de la définition de convertisseurs de type sur certains types ou propriétés. Toutes les extensions de balisage [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilisent les caractères { et } dans leur syntaxe d’attribut, convention selon laquelle un processeur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconnaît qu’une extension de balisage doit traiter l’attribut. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>
 - [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Vue d’ensemble de la création d’images](../graphics-multimedia/imaging-overview.md)
+- [Vue d'ensemble de la création d'images](../graphics-multimedia/imaging-overview.md)

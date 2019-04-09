@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 79ef272e0c8afa0cd1942416c3a5eb9b825c2e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145143"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer, méthode
 Détermine la mémoire tampon pour la section de code spécifié.  
@@ -49,14 +49,15 @@ HRESULT ComputePointer (
  `lpBuffer`  
  [out] Pointeur vers la mémoire tampon retournée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [ICeeGen, interface](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132291"
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] styles et modèles font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et concepteurs pour créer des effets visuellement attrayants et une apparence cohérente pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055324"
  Si vous créez un thème pour votre contrôle personnalisé, consultez la section relative aux bibliothèques de contrôles externes de la page [Vue d'ensemble de la création de contrôles](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [URI à en-tête pack dans WPF](../app-development/pack-uris-in-wpf.md)
 - [Procédure : rechercher des éléments générés par ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Rechercher des éléments générés par DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

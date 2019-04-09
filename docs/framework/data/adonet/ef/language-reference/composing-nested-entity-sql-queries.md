@@ -2,18 +2,18 @@
 title: Composition de requêtes Entity SQL imbriquées
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137980"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composition de requêtes Entity SQL imbriquées
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est un langage fonctionnel riche. Le bloc de construction [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est une expression. Contrairement au langage SQL classique, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] n’est pas limité à un jeu de résultats tabulaire : [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge la composition d’expressions complexes pouvant contenir des littéraux, des paramètres ou des expressions imbriquées. Une valeur dans l’expression peut être paramétrée ou composée d’une autre expression.  
   
 ## <a name="nested-expressions"></a>Expressions imbriquées  
- Une expression imbriquée peut être placée partout où une valeur du type qu'elle retourne est acceptée. Par exemple :  
+ Une expression imbriquée peut être placée partout où une valeur du type qu'elle retourne est acceptée. Exemple :  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- Une requête imbriquée peut être placée dans une clause de projection. Par exemple :  
+ Une requête imbriquée peut être placée dans une clause de projection. Exemple :  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -76,4 +76,5 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

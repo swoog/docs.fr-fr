@@ -2,15 +2,15 @@
 title: Sécurisation des applications de canal homologue
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: d6dd6d95fb151a4f06dc4f632465b38b07720a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146240"
 ---
 # <a name="securing-peer-channel-applications"></a>Sécurisation des applications de canal homologue
-Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` a la sécurité activée par défaut et offre les sécurités de transport et de message. Cette rubrique traite de ces deux types de sécurité. Le type de sécurité est spécifié par l’étiquette de mode de sécurité dans la spécification de liaison (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` a la sécurité activée par défaut et offre les sécurités de transport et de message. Cette rubrique traite de ces deux types de sécurité. Le type de sécurité est spécifié par la balise de mode de sécurité dans la spécification de liaison (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Sécurité basée sur le transport  
  Le canal homologue prend en charge deux types d'informations d'identification pour l'authentification en vue de sécuriser le transport. Les deux impliquent la définition de la propriété `ClientCredentialSettings.Peer` sur la `ChannelFactory` associée :  
@@ -27,7 +27,7 @@ Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstec
 -   Cette section présente les meilleures pratiques pour sécuriser les applications de canal homologue.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Activer la sécurité avec les applications de canal homologue  
- En raison de la nature distribuée des protocoles de canal homologue, il est difficile d'appliquer l'appartenance de maille et la confidentialité dans une maille non protégée. Il convient également de penser à sécuriser la communication entre les clients et le service de résolution. Sous le protocole PNRP (Peer Name Resolution Protocol), utilisez des noms sécurisés afin d'éviter l'usurpation et autres attaques courantes. Sécurisez un service de résolution personnalisé en activant la sécurité sur les clients de connexion utilisés pour contacter le service de résolution, avec à la fois la sécurité de message et la sécurité de transport.  
+ En raison de la nature distribuée des protocoles de canal homologue, il est difficile d'appliquer l'appartenance de maille et la confidentialité dans une maille non protégée. Il convient également de penser à sécuriser la communication entre les clients et le service de résolution. Sous le protocole PNRP (Peer Name Resolution Protocol), utilisez des noms sécurisés afin d’éviter l’usurpation et autres attaques courantes. Sécurisez un service de résolution personnalisé en activant la sécurité sur les clients de connexion utilisés pour contacter le service de résolution, avec à la fois la sécurité de message et la sécurité de transport.  
   
 ### <a name="use-the-strongest-possible-security-model"></a>Utiliser le modèle de sécurité le plus fort possible  
  Par exemple, si chaque membre de la maille doit être identifié individuellement, utilisez un modèle d'authentification basé les certificats. Si cela est impossible, utilisez l'authentification basée sur mot de passe et suivez les recommandations actuelles afin d'assurer leur sécurité. Cela implique le partage des mots de passe uniquement avec des correspondants de confiance, la transmission des mots de passe à l'aide d'un support sécurisé, la modification fréquente des mots de passe et la garantie que les mots de passe sont forts (longueur d'au moins huit caractères, au moins une lettre de chaque casse, un chiffre et un caractère spécial).  
@@ -42,5 +42,6 @@ Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstec
  [Scénarios de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Création d'une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

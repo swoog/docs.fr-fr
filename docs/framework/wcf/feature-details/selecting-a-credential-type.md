@@ -2,12 +2,12 @@
 title: Sélection d'un type d'informations d'identification
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167841"
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données de Windows Communication Foundation (WCF) utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans WCF, les informations d’identification peuvent prendre différentes formes, telles que les jetons de nom d’utilisateur et les certificats X.509. Cette rubrique traite des informations d’identification, comment ils sont utilisés dans WCF et comment sélectionner les informations d’identification appropriées pour votre application.  
@@ -21,11 +21,11 @@ ms.locfileid: "54577111"
  Avec une information d’identification du certificat X.509, nom d’objet, autre nom du sujet ou des champs spécifiques inclus dans le certificat peuvent être utilisés en tant que revendications d’identité, tandis que d’autres champs, tels que le `Valid From` et `Valid To` champs, spécifient la validité de la certificat.  
   
 ## <a name="transport-credential-types"></a>Types d'informations d'identification  
- Le tableau suivant affiche les types possibles d'informations d'identification du client qui peuvent être utilisés par une liaison en mode de sécurité de transport. Lorsque vous créez un service, affectez à la propriété `ClientCredentialType` une de ces valeurs pour spécifier le type d'information d'identification que le client doit fournir pour communiquer avec votre service. Vous pouvez définir les types dans les fichiers de code ou de configuration.  
+ Le tableau suivant affiche les types possibles d’informations d’identification du client qui peuvent être utilisés par une liaison en mode de sécurité de transport. Lorsque vous créez un service, affectez à la propriété `ClientCredentialType` une de ces valeurs pour spécifier le type d'information d'identification que le client doit fournir pour communiquer avec votre service. Vous pouvez définir les types dans les fichiers de code ou de configuration.  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Spécifie l'authentification de base pour le client. Pour plus d’informations, consultez RFC2617 —[l’authentification HTTP : Authentification de base et authentification Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Digest|Spécifie l’authentification Digest pour le client. Pour plus d’informations, consultez RFC2617 —[l’authentification HTTP : Authentification de base et authentification Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Ntlm|Spécifie l'authentification NTLM (NT LAN Manager). S'utilise si pour une raison quelconque vous ne pouvez pas utiliser l'authentification Kerberos. Vous pouvez également désactiver son utilisation comme solution de secours en définissant le <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriété `false`, ce qui entraîne de WCF rendre un meilleur effort pour lever une exception si NTLM est utilisé. Notez que l'affectation de la valeur `false` à cette propriété peut ne pas empêcher la transmission des informations d'identification NTLM.|  
@@ -38,9 +38,9 @@ ms.locfileid: "54577111"
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Windows|Permet les échanges de messages SOAP dans le contexte de sécurité établi avec des informations d'identification Windows.|  
-|Nom d'utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que WCF n’autorise pas les opérations de chiffrement avec les noms d’utilisateur, telles que la génération d’une signature ou chiffrement des données. WCF permet de s’assurer que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
+|Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que WCF n’autorise pas les opérations de chiffrement avec les noms d’utilisateur, telles que la génération d’une signature ou chiffrement des données. WCF permet de s’assurer que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger que le client soit authentifié à l'aide d'un certificat X.509.|  
 |Jeton émis|Type de jeton personnalisé configuré en fonction d'une stratégie de sécurité. Le type de jeton par défaut est le jeton SAML (Security Assertions Markup Language). Le jeton est émis par un service de jetons sécurisé. Pour plus d’informations, consultez [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
@@ -98,6 +98,7 @@ ms.locfileid: "54577111"
  Pour plus d’informations sur les informations d’identification et des sessions sécurisées, consultez [considérations de sécurité pour les Sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>

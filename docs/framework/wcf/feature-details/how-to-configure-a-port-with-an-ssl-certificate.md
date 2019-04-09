@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Configurer un Port avec un certificat SSL'
+title: 'Procédure : configurer un port avec un certificat SSL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139813"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procédure : Configurer un Port avec un certificat SSL
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procédure : configurer un port avec un certificat SSL
 Lors de la création d’un service auto-hébergé de Windows Communication Foundation (WCF) avec le <xref:System.ServiceModel.WSHttpBinding> ce transport utilise la sécurité de classe, vous devez également configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Pour configurer un port, l'outil que vous utilisez dépend du système d'exploitation qui s'exécute sur votre ordinateur.  
@@ -31,11 +31,11 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
 -   Obtention de l'empreinte numérique d'un certificat (nécessaire pour les deux procédures suivantes).  
   
--   Liaison d'un certificat SSL à une configuration de port.  
+-   Liaison d’un certificat SSL à une configuration de port.  
   
 -   Liaison d'un certificat SSL à une configuration de port et prise en charge des certificats clients.  
   
--   Suppression d'un certificat SSL d'un numéro de port.  
+-   Suppression d’un certificat SSL d’un numéro de port.  
   
  Notez que la modification des certificats stockés sur l'ordinateur requiert des privilèges d'administrateur.  
   
@@ -61,7 +61,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
 3.  Copiez l'empreinte numérique du certificat dans un éditeur de texte, tel que le Bloc-notes.  
   
-4.  Supprimez tous les espaces entre les caractères hexadécimaux. Pour ce faire, vous pouvez utiliser la fonctionnalité rechercher et remplacer de l'éditeur de texte pour remplacer chaque espace par un caractère Null.  
+4.  Supprimez tous les espaces entre les caractères hexadécimaux. Pour ce faire, vous pouvez utiliser la fonctionnalité rechercher et remplacer de l’éditeur de texte pour remplacer chaque espace par un caractère Null.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Pour lier un certificat SSL à un numéro de port  
   
@@ -103,9 +103,9 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
-### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Pour supprimer un certificat SSL d'un numéro de port  
+### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Pour supprimer un certificat SSL d’un numéro de port  
   
-1.  Utilisez l'outil HttpCfg.exe ou Netsh.exe pour consulter les ports et les empreintes numériques de toutes les liaisons sur l'ordinateur. Pour imprimer les informations sur le disque, utilisez le caractère de redirection « > », comme indiqué dans l'exemple suivant.  
+1.  Utilisez l’outil HttpCfg.exe ou Netsh.exe pour consulter les ports et les empreintes numériques de toutes les liaisons sur l’ordinateur. Pour imprimer les informations sur le disque, utilisez le caractère de redirection « > », comme illustré dans l’exemple suivant.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
@@ -130,4 +130,5 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité de transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

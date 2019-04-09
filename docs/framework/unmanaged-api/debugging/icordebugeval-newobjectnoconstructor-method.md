@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162304"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor, méthode
 Alloue une nouvelle instance d’objet du type spécifié, sans tenter d’appeler une méthode de constructeur.  
@@ -41,7 +41,7 @@ HRESULT NewObjectNoConstructor (
  `pClass`  
  [in] Pointeur vers un objet ICorDebugClass qui représente le type d’objet à instancier.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
@@ -51,4 +51,5 @@ HRESULT NewObjectNoConstructor (
  **Versions du .NET framework :** 1.1, 1.0  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [NewParameterizedObjectNoConstructor, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
