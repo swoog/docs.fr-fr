@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074649"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304556"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procédure : lier des contrôles Windows Forms au composant BindingSource à l’aide du concepteur
 Après avoir ajouté des contrôles à votre formulaire et de déterminer l’interface utilisateur pour votre application, vous pouvez lier les contrôles à une source de données, afin que, au moment de l’exécution, les utilisateurs peuvent modifier et enregistrer des données relatives à l’application.  
@@ -27,9 +27,9 @@ Après avoir ajouté des contrôles à votre formulaire et de déterminer l’in
   
 ### <a name="to-bind-a-control-at-design-time"></a>Pour lier un contrôle au moment du design  
   
-1.  Faites glisser un <xref:System.Windows.Forms.TextBox> contrôle au formulaire.  
+1. Faites glisser un <xref:System.Windows.Forms.TextBox> contrôle au formulaire.  
   
-2.  Dans le **propriétés** fenêtre :  
+2. Dans le **propriétés** fenêtre :  
   
     1.  Développez le **(DataBindings)** nœud.  
   
@@ -39,17 +39,17 @@ Après avoir ajouté des contrôles à votre formulaire et de déterminer l’in
   
          Si une source de données a été précédemment configurée pour le projet ou d’un formulaire, il apparaît.  
   
-3.  Cliquez sur **Ajouter la source de données du projet** pour vous connecter aux données et créer une source de données.  
+3. Cliquez sur **Ajouter la source de données du projet** pour vous connecter aux données et créer une source de données.  
   
-4.  Sur la page d’accueil de l’**Assistant Configuration de source de données**, cliquez sur **Suivant**.  
+4. Sur la page d’accueil de l’**Assistant Configuration de source de données**, cliquez sur **Suivant**.  
   
-5.  Sur le **choisir un Type de Source de données** page, sélectionnez **base de données**.  
+5. Sur le **choisir un Type de Source de données** page, sélectionnez **base de données**.  
   
-6.  Sur le **choisir votre connexion de données** , sélectionnez une connexion de données à partir de la liste des connexions disponibles. Si votre connexion de données souhaitée n’est pas disponible select **nouvelle connexion** pour créer une connexion de données.  
+6. Sur le **choisir votre connexion de données** , sélectionnez une connexion de données à partir de la liste des connexions disponibles. Si votre connexion de données souhaitée n’est pas disponible select **nouvelle connexion** pour créer une connexion de données.  
   
-7.  Sélectionnez **Oui, enregistrer la connexion** pour enregistrer la chaîne de connexion dans le fichier de configuration d’application.  
+7. Sélectionnez **Oui, enregistrer la connexion** pour enregistrer la chaîne de connexion dans le fichier de configuration d’application.  
   
-8.  Sélectionnez les objets de base de données à mettre dans votre application. Dans ce cas, sélectionnez un champ dans une table que vous souhaitez que le <xref:System.Windows.Forms.TextBox> à afficher.  
+8. Sélectionnez les objets de base de données à mettre dans votre application. Dans ce cas, sélectionnez un champ dans une table que vous souhaitez que le <xref:System.Windows.Forms.TextBox> à afficher.  
   
 9. Remplacez le nom du jeu de données par défaut, si vous le souhaitez.  
   

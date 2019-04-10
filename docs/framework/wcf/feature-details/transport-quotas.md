@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299304"
 ---
 # <a name="transport-quotas"></a>Quotas de transport
 Les quotas de transport sont un mécanisme stratégique permettant de déterminer lorsqu'une connexion consomme trop de ressources. Un quota est une limite imposée qui empêche l'utilisation de ressources supplémentaires une fois la valeur du quota dépassée. Les quotas de transport permettent de lutter contre les attaques par déni de service malveillantes ou non intentionnelles.  
@@ -30,7 +30,7 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
   
  Chaque paramètre de quota possède un type, une valeur minimale et une valeur par défaut. La valeur maximale d'un quota est limitée par son type. En raison des limites de l'ordinateur, il n'est pas toujours possible d'affecter à un quota sa valeur maximale.  
   
-|Nom|Type|Valeur<br /><br /> valeur|Par défaut<br /><br /> valeur|Description|  
+|Nom|Type|Valeur<br /><br /> par défaut|Par défaut<br /><br /> par défaut|Description|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 graduation|5 s|Durée maximale à attendre pour qu'une connexion envoie le préambule pendant la lecture initiale. Ces données sont reçues avant que l'authentification ait lieu. Ce paramètre est généralement bien inférieur à la valeur de quota `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une connexion se ferme avant que le transport ne lève une exception.|  
@@ -100,9 +100,9 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  Le quota de transport `MaxBufferSize` est uniquement disponible sur la liaison `BasicHttp`. Les liaisons `WSHttp` sont destinées aux scénarios qui ne prennent pas en charge les modes de transport diffusés en continu.  
+1. Le quota de transport `MaxBufferSize` est uniquement disponible sur la liaison `BasicHttp`. Les liaisons `WSHttp` sont destinées aux scénarios qui ne prennent pas en charge les modes de transport diffusés en continu.  
   
-2.  Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections`.  
+2. Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Contrôle des quotas de transport depuis la configuration  
  La configuration de l’application peut définir les mêmes quotas de transport qu’en accédant directement aux propriétés d’une liaison. Dans les fichiers de configuration, le nom d'un quota de transport commence toujours par une minuscule. Par exemple, la propriété `CloseTimeout` d’une liaison correspond au paramètre `closeTimeout` dans la configuration et la propriété `MaxConnections` d’une liaison correspond au paramètre `maxConnections` dans la configuration.  

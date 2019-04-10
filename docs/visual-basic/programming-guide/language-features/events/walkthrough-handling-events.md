@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308560"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procédure pas à pas : Gestion des événements (Visual Basic)
 Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des événements. La première rubrique [procédure pas à pas : Déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), montre comment déclarer et déclencher des événements. Cette section utilise le formulaire et la classe à partir de cette procédure pas à pas pour montrer comment gérer des événements lorsqu’elles ont lieu.  
@@ -23,7 +23,7 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Pour gérer l’événement PercentDone de la classe Widget  
   
-1.  Placez le code suivant dans `Form1`:  
+1. Placez le code suivant dans `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
   
 #### <a name="to-handle-an-event"></a>Pour gérer un événement  
   
-1.  Sélectionnez `mWidget` dans la liste déroulante de gauche dans le **éditeur de Code**.  
+1. Sélectionnez `mWidget` dans la liste déroulante de gauche dans le **éditeur de Code**.  
   
-2.  Sélectionnez le `PercentDone` événement dans la liste déroulante droite. Le **éditeur de Code** ouvre le `mWidget_PercentDone` procédure événementielle.  
+2. Sélectionnez le `PercentDone` événement dans la liste déroulante droite. Le **éditeur de Code** ouvre le `mWidget_PercentDone` procédure événementielle.  
   
     > [!NOTE]
     >  Le **éditeur de Code** est utile, mais pas obligatoire, pour l’insertion de nouveaux gestionnaires d’événements. Dans cette procédure pas à pas, il est plus rapide de copier simplement les gestionnaires d’événements directement dans votre code.  
   
-3.  Ajoutez le code suivant au gestionnaire d'événements `mWidget_PercentDone` :  
+3. Ajoutez le code suivant au gestionnaire d'événements `mWidget_PercentDone` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Chaque fois que le `PercentDone` événement est déclenché, la procédure événementielle affiche le pourcentage d’achèvement dans un `Label` contrôle. Le `DoEvents` méthode permet de l’étiquette à repeindre et donne également à l’utilisateur la possibilité de cliquer sur le **Annuler** bouton.  
   
-4.  Ajoutez le code suivant pour le `Button2_Click` Gestionnaire d’événements :  
+4. Ajoutez le code suivant pour le `Button2_Click` Gestionnaire d’événements :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Pour créer un objet et affecter une référence à celui-ci  
   
-1.  Sélectionnez **(Form1 Events)** dans la liste déroulante de gauche dans le **éditeur de Code**.  
+1. Sélectionnez **(Form1 Events)** dans la liste déroulante de gauche dans le **éditeur de Code**.  
   
-2.  Sélectionnez le `Load` événement dans la liste déroulante droite. Le **éditeur de Code** ouvre le `Form1_Load` procédure événementielle.  
+2. Sélectionnez le `Load` événement dans la liste déroulante droite. Le **éditeur de Code** ouvre le `Form1_Load` procédure événementielle.  
   
-3.  Ajoutez le code suivant pour le `Form1_Load` procédure événementielle à créer le `Widget`:  
+3. Ajoutez le code suivant pour le `Form1_Load` procédure événementielle à créer le `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
   
 #### <a name="to-run-the-program"></a>Pour exécuter le programme  
   
-1.  Appuyez sur F5 pour configurer le projet en mode exécution.  
+1. Appuyez sur F5 pour configurer le projet en mode exécution.  
   
-2.  Cliquez sur le **démarrer une tâche** bouton. Chaque fois que le `PercentDone` événement est déclenché, l’étiquette est mise à jour avec le pourcentage de la tâche est terminée.  
+2. Cliquez sur le **démarrer une tâche** bouton. Chaque fois que le `PercentDone` événement est déclenché, l’étiquette est mise à jour avec le pourcentage de la tâche est terminée.  
   
-3.  Cliquez sur le **Annuler** bouton Arrêter la tâche. Notez que l’apparence de la **Annuler** bouton ne change pas immédiatement lorsque vous cliquez dessus. Le `Click` événement ne peut pas se produire jusqu'à ce que le `My.Application.DoEvents` instruction permet le traitement des événements.  
+3. Cliquez sur le **Annuler** bouton Arrêter la tâche. Notez que l’apparence de la **Annuler** bouton ne change pas immédiatement lorsque vous cliquez dessus. Le `Click` événement ne peut pas se produire jusqu'à ce que le `My.Application.DoEvents` instruction permet le traitement des événements.  
   
     > [!NOTE]
     >  Le `My.Application.DoEvents` méthode ne traite pas les événements de la même façon que le formulaire. Par exemple, dans cette procédure pas à pas, vous devez cliquer sur le **Annuler** bouton à deux reprises. Pour permettre au formulaire gérer les événements directement, vous pouvez utiliser le multithreading. Pour plus d’informations, consultez [Managed Threading](../../../../standard/threading/index.md).

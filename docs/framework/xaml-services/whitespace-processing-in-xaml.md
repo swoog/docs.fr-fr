@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102230"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294923"
 ---
 # <a name="white-space-processing-in-xaml"></a>Traitement des espaces blancs en XAML
 Les règles de langage pour XAML d’état que l’espace blanc significatif doit être traité par un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implémentation du processeur. Cette rubrique documente ces règles de langage XAML. Il traite également de la gestion des espaces blancs supplémentaires définie par le [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implémentation du processeur XAML et le writer XAML pour la sérialisation.  
@@ -25,15 +25,15 @@ Les règles de langage pour XAML d’état que l’espace blanc significatif doi
 ## <a name="white-space-normalization"></a>Normalisation des espaces blancs  
  Par défaut la normalisation des espaces blancs suivante se produit lorsqu’un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processus du processeur une [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] fichier :  
   
-1.  Les caractères de saut de ligne entre les caractères d'Extrême-Orient sont supprimés. Consultez la section « Caractères d'Extrême-Orient », plus loin dans cette rubrique, pour obtenir une définition de ce terme.  
+1. Les caractères de saut de ligne entre les caractères d'Extrême-Orient sont supprimés. Consultez la section « Caractères d'Extrême-Orient », plus loin dans cette rubrique, pour obtenir une définition de ce terme.  
   
-2.  Tous les caractères d’espace blanc (espace, saut de ligne, onglet) sont convertis en espaces.  
+2. Tous les caractères d’espace blanc (espace, saut de ligne, onglet) sont convertis en espaces.  
   
-3.  Tous les espaces consécutifs sont supprimés et remplacés par un espace.  
+3. Tous les espaces consécutifs sont supprimés et remplacés par un espace.  
   
-4.  Un espace qui suit immédiatement la balise de début est supprimé.  
+4. Un espace qui suit immédiatement la balise de début est supprimé.  
   
-5.  Un espace qui précède immédiatement la balise de fin est supprimé.  
+5. Un espace qui précède immédiatement la balise de fin est supprimé.  
   
  La « valeur par défaut » correspond à l'état désigné par la valeur par défaut de l'attribut [xml:space](xml-space-handling-in-xaml.md) .  
   

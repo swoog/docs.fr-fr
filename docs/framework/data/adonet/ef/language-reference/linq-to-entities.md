@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304575"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities assure une prise en charge de la technologie LINQ (Language Integrated Query), ce qui permet aux développeurs d'écrire des requêtes par rapport au modèle conceptuel Entity Framework à l'aide du langage Visual Basic ou Visual C#. Les requêtes exécutées avec Entity Framework sont représentées par des requêtes d'arborescence de commandes, lesquelles s'exécutent par rapport au contexte de l'objet. LINQ to Entities convertit les requêtes LINQ (Language-Integrated Query) en requêtes d'arborescence de commandes, exécute les requêtes avec Entity Framework, puis retourne les objets qui peuvent être utilisés aussi bien par Entity Framework que par LINQ. Voici le processus de création et d'exécution d'une requête LINQ to Entities :  
   
-1.  Construisez une instance de l'objet <xref:System.Data.Objects.ObjectQuery%601> à partir de l'objet <xref:System.Data.Objects.ObjectContext>.  
+1. Construisez une instance de l'objet <xref:System.Data.Objects.ObjectQuery%601> à partir de l'objet <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Composez une requête LINQ to Entities en C# ou en Visual Basic en utilisant l'instance de l'objet <xref:System.Data.Objects.ObjectQuery%601>.  
+2. Composez une requête LINQ to Entities en C# ou en Visual Basic en utilisant l'instance de l'objet <xref:System.Data.Objects.ObjectQuery%601>.  
   
-3.  Convertissez les expressions et opérateurs de requête standard LINQ en arborescences de commandes.  
+3. Convertissez les expressions et opérateurs de requête standard LINQ en arborescences de commandes.  
   
-4.  Exécutez la requête dans l'arborescence des commandes sur la source de données. Toutes les exceptions levées sur la source de données pendant l'exécution sont passées directement au client.  
+4. Exécutez la requête dans l'arborescence des commandes sur la source de données. Toutes les exceptions levées sur la source de données pendant l'exécution sont passées directement au client.  
   
-5.  Retournez les résultats de la requête au client.  
+5. Retournez les résultats de la requête au client.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Construction d'une instance d'ObjectQuery  
  La classe générique <xref:System.Data.Objects.ObjectQuery%601> représente une requête qui retourne une collection de zéro ou plusieurs entités typées. Une requête d'objet est généralement construite à partir d'un contexte d'objet existant, au lieu d'être construite manuellement, et appartient toujours à ce contexte d'objet. Ce contexte fournit les informations relatives à la connexion et aux métadonnées qui sont requises pour composer et exécuter la requête. La classe générique <xref:System.Data.Objects.ObjectQuery%601> implémente l'interface générique <xref:System.Linq.IQueryable%601>, dont les méthodes de générateur permettent la construction incrémentielle de requêtes LINQ. Vous pouvez également permettre au compilateur de déduire le type des entités à l'aide du mot clé C# `var` (`Dim` en Visual Basic, avec l'inférence de type local activée).  

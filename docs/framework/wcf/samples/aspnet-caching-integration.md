@@ -2,12 +2,12 @@
 title: ASP.NET Caching Integration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309470"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Caching Integration
 Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  
@@ -34,31 +34,31 @@ Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle d
 ## <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
  Cet exemple est composé de trois projets :  
   
--   **Service**: projet d’Application Web qui inclut un service HTTP WCF hébergé dans ASP.NET.  
+-   **Service** : Un projet d’Application Web qui inclut un service HTTP WCF hébergé dans ASP.NET.  
   
--   **Client**: un projet d’application console qui effectue des appels au service.  
+-   **Client**: Projet d'application console qui passe des appels au service.  
   
--   **Common**: une bibliothèque partagée qui contient le type de client utilisé par le client et le service.  
+-   **Common**: Une bibliothèque partagée qui contient le type de client utilisé par le client et le service.  
   
  Lorsque l'application console Client s'exécute, le client adresse des requêtes au service et affiche les informations pertinentes des réponses dans la fenêtre de console.  
   
 #### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   
-1.  Ouvrez la solution de l'exemple ASP.NET Caching Integration.  
+1. Ouvrez la solution de l'exemple ASP.NET Caching Integration.  
   
-2.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
+2. Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
-3.  Si le **l’Explorateur de solutions** fenêtre n’est pas déjà ouverte, appuyez sur CTRL + W + S.  
+3. Si le **l’Explorateur de solutions** fenêtre n’est pas déjà ouverte, appuyez sur CTRL + W + S.  
   
-4.  À partir de la **l’Explorateur de solutions** fenêtre, le bouton droit sur le **Service** de projet et sélectionnez **démarrer une nouvelle Instance**. Cette opération lance le serveur de développement ASP.NET, qui héberge le service.  
+4. À partir de la **l’Explorateur de solutions** fenêtre, le bouton droit sur le **Service** de projet et sélectionnez **démarrer une nouvelle Instance**. Cette opération lance le serveur de développement ASP.NET, qui héberge le service.  
   
-5.  À partir de la **l’Explorateur de solutions** fenêtre, le bouton droit sur le **Client** de projet et sélectionnez **démarrer une nouvelle Instance**.  
+5. À partir de la **l’Explorateur de solutions** fenêtre, le bouton droit sur le **Client** de projet et sélectionnez **démarrer une nouvelle Instance**.  
   
-6.  La fenêtre de console du client apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur.  
+6. La fenêtre de console du client apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur.  
   
-7.  Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
+7. Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
   
-8.  Appuyez sur une touche quelconque pour arrêter l'application console Client.  
+8. Appuyez sur une touche quelconque pour arrêter l'application console Client.  
   
 9. Appuyez sur MAJ+F5 pour arrêter le débogage du service.  
   

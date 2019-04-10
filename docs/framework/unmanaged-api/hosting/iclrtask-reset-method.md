@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198801"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300305"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset, méthode
 Informe le common language runtime (CLR) que l’hôte a terminé une tâche et permet au Runtime de réutiliser actuel [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance pour représenter une autre tâche.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Notes  
  Le CLR peut être recyclés précédemment créé `ICLRTask` instances afin d’éviter la surcharge liée à la création répétée d’instances chaque fois qu’il a besoin d’une nouvelle tâche. L’hôte active cette fonctionnalité en appelant `ICLRTask::Reset` au lieu de [ICLRTask::ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) lorsqu’il a terminé une tâche. La liste suivante résume le cycle de vie normal d’un `ICLRTask` instance :  
   
-1.  Le runtime crée un nouveau `ICLRTask` instance.  
+1. Le runtime crée un nouveau `ICLRTask` instance.  
   
-2.  Le runtime appelle [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) pour obtenir une référence à la tâche hôte actuelle.  
+2. Le runtime appelle [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) pour obtenir une référence à la tâche hôte actuelle.  
   
-3.  Le runtime appelle [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) à associer la nouvelle instance de la tâche de l’hôte.  
+3. Le runtime appelle [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) à associer la nouvelle instance de la tâche de l’hôte.  
   
-4.  La tâche s’exécute et se termine.  
+4. La tâche s’exécute et se termine.  
   
-5.  L’hôte détruit la tâche en appelant `ICLRTask::ExitTask`.  
+5. L’hôte détruit la tâche en appelant `ICLRTask::ExitTask`.  
   
  `Reset` modifie ce scénario de deux manières. À l’étape 5 ci-dessus, l’hôte appelle `Reset` pour réinitialiser la tâche à un état propre, puis découple le `ICLRTask` instance à partir de son associé [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance. Si vous le souhaitez, l’hôte peut également mettre en cache le `IHostTask` instance pour une réutilisation. À l’étape 1 ci-dessus, le runtime extrait un recyclage `ICLRTask` à partir du cache au lieu de créer une nouvelle instance.  
   

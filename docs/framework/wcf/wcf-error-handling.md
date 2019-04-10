@@ -2,21 +2,21 @@
 title: Gestion des erreurs WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306285"
 ---
 # <a name="wcf-error-handling"></a>Gestion des erreurs WCF
 Les erreurs rencontrées par une application WCF appartiennent à l'un de ces trois groupes :  
   
-1.  Erreurs de communication  
+1. Erreurs de communication  
   
-2.  Erreurs de proxy/canal  
+2. Erreurs de proxy/canal  
   
-3.  Erreurs d'application  
+3. Erreurs d'application  
   
  Les erreurs de communication se produisent lorsqu'un réseau n'est pas disponible, lorsqu'un client utilise une adresse incorrecte ou lorsque l'hôte de service n'écoute pas les messages entrants. Des erreurs de ce type sont retournées au client comme classes dérivées <xref:System.ServiceModel.CommunicationException> ou <xref:System.ServiceModel.CommunicationException>.  
   

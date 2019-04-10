@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303087"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procédure : Assigner un tableau à un autre tableau (Visual Basic)
 Étant donné que les tableaux sont des objets, vous pouvez les utiliser dans les instructions d’assignation, comme d’autres types d’objets. Une variable de tableau conserve un pointeur vers les données constituant les éléments du tableau et les informations de classement et de longueur et une attribution de copie uniquement ce pointeur.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Pour assigner un tableau à un autre tableau  
   
-1.  Assurez-vous que les deux tableaux ont le même rang (nombre de dimensions) et les types de données d’élément compatibles.  
+1. Assurez-vous que les deux tableaux ont le même rang (nombre de dimensions) et les types de données d’élément compatibles.  
   
-2.  Utilisez une instruction d’assignation standard pour assigner le tableau source vers le tableau de destination. Ne suivez pas les noms du tableau de parenthèses.  
+2. Utilisez une instruction d’assignation standard pour assigner le tableau source vers le tableau de destination. Ne suivez pas les noms du tableau de parenthèses.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -45,6 +45,6 @@ ms.locfileid: "58835282"
 ## <a name="see-also"></a>Voir aussi
 
 - [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
-- [Enum (instruction)](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Conversions de tableau](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Résolution des problèmes de tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Enum, instruction](../../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Conversion des tableaux](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

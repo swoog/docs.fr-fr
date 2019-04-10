@@ -2,12 +2,12 @@
 title: Utilisation de la portée d'édition
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308625"
 ---
 # <a name="using-editing-scope"></a>Utilisation de la portée d'édition
 Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'elles puissent être annulées dans une unité atomique unique. Par défaut, les actions effectuées par un auteur de concepteur d'activités sont automatiquement intégrées dans le système d'annulation/de rétablissement.  
@@ -24,15 +24,15 @@ Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Générez et exécutez l'exemple, puis utilisez les boutons situés à gauche pour modifier le workflow.  
+1. Générez et exécutez l'exemple, puis utilisez les boutons situés à gauche pour modifier le workflow.  
   
-2.  Cliquez sur **ouvrir la portée d’édition**.  
+2. Cliquez sur **ouvrir la portée d’édition**.  
   
     1.  Cette commande appelle <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> qui crée une portée d'édition et le place sur la pile d'édition.  
   
     2.  Trois activités sont ensuite ajoutées au <xref:System.Activities.Presentation.Model.ModelItem> sélectionné. Notez que si la portée d'édition n'avait pas été ouverte avec <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trois nouvelles activités apparaitraient sur la zone de conception. Étant donné que cette opération est toujours en attente dans <xref:System.Activities.Presentation.Model.EditingScope>, le concepteur n'est pas encore mis à jour.  
   
-3.  Appuyez sur **fermer portée d’édition** pour valider la portée d’édition. Trois activités apparaissent dans le concepteur.  
+3. Appuyez sur **fermer portée d’édition** pour valider la portée d’édition. Trois activités apparaissent dans le concepteur.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

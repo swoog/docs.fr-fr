@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300019"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Styles de cellules dans le contrôle DataGridView Windows Forms
 Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut avoir son propre style, telles que le format de texte, couleur d’arrière-plan, couleur de premier plan et police. En général, toutefois, plusieurs cellules partagent les caractéristiques de style particulier.  
@@ -65,25 +65,25 @@ Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut a
 ## <a name="style-inheritance"></a>Héritage de style  
  Chaque <xref:System.Windows.Forms.DataGridViewCell> obtient son apparence à partir de son <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> propriété. Le <xref:System.Windows.Forms.DataGridViewCellStyle> objet retourné par cette propriété hérite ses valeurs d’une hiérarchie de propriétés de type <xref:System.Windows.Forms.DataGridViewCellStyle>. Ces propriétés sont répertoriées ci-dessous dans l’ordre dans lequel le <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> pour les cellules d’en-tête obtient ses valeurs.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (uniquement pour les cellules des lignes avec des numéros d’index impairs)  
+3. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (uniquement pour les cellules des lignes avec des numéros d’index impairs)  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+5. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+6. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Pour les cellules d’en-tête de ligne et de colonne, le <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> propriété est remplie par les valeurs de la liste suivante des propriétés de source dans l’ordre indiqué.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Le diagramme suivant illustre ce processus.  
   
@@ -91,19 +91,19 @@ Chaque cellule dans le <xref:System.Windows.Forms.DataGridView> contrôle peut a
   
  Vous pouvez également accéder styles hérités par des colonnes et des lignes spécifiques. La colonne <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> propriété hérite ses valeurs des propriétés suivantes.  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  La ligne <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> propriété hérite ses valeurs des propriétés suivantes.  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (uniquement pour les cellules des lignes avec des numéros d’index impairs)  
+2. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (uniquement pour les cellules des lignes avec des numéros d’index impairs)  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Pour chaque propriété dans un <xref:System.Windows.Forms.DataGridViewCellStyle> objet retourné par une `InheritedStyle` propriété, la valeur de propriété est obtenue à partir du premier style de cellule dans la liste appropriée qui possède la propriété correspondante définie sur une valeur autre que la <xref:System.Windows.Forms.DataGridViewCellStyle> classe les valeurs par défaut.  
   

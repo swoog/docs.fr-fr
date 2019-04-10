@@ -2,12 +2,12 @@
 title: Utilisation de DataContractSerializer et DataContractResolver pour fournir les fonctionnalités de NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 455ffe936373525f574d4401412c099d41d45f66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295144"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Utilisation de DataContractSerializer et DataContractResolver pour fournir les fonctionnalités de NetDataContractSerializer
 Cet exemple montre comment l'utilisation de <xref:System.Runtime.Serialization.DataContractSerializer> avec un <xref:System.Runtime.Serialization.DataContractResolver> approprié fournit les mêmes fonctionnalités que <xref:System.Runtime.Serialization.NetDataContractSerializer>. Cet exemple montre comment créer le <xref:System.Runtime.Serialization.DataContractResolver> approprié et comment l'ajouter au <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2012, ouvrez le fichier solution DCRSample.sln.
+1. À l’aide de Visual Studio 2012, ouvrez le fichier solution DCRSample.sln.
 
-2.  Cliquez sur le fichier de solution et choisissez **propriétés**.
+2. Cliquez sur le fichier de solution et choisissez **propriétés**.
 
-3.  Dans le **Pages de propriétés de Solution** boîte de dialogue, sous **propriétés communes**, **projet de démarrage**, sélectionnez **plusieurs projets de démarrage :**.
+3. Dans le **Pages de propriétés de Solution** boîte de dialogue, sous **propriétés communes**, **projet de démarrage**, sélectionnez **plusieurs projets de démarrage :**.
 
-4.  À côté du **DCSwithDCR** projet, sélectionnez **Démarrer** à partir de la **Action** liste déroulante.
+4. À côté du **DCSwithDCR** projet, sélectionnez **Démarrer** à partir de la **Action** liste déroulante.
 
-5.  À côté du **NetDCS** projet, sélectionnez **Démarrer** à partir de la **Action** liste déroulante.
+5. À côté du **NetDCS** projet, sélectionnez **Démarrer** à partir de la **Action** liste déroulante.
 
-6.  Cliquez sur **OK** pour fermer la boîte de dialogue.
+6. Cliquez sur **OK** pour fermer la boîte de dialogue.
 
-7.  Pour générer la solution, appuyez sur Ctrl+Maj+B.
+7. Pour générer la solution, appuyez sur Ctrl+Maj+B.
 
-8.  Pour exécuter la solution, appuyez sur Ctrl+F5.
+8. Pour exécuter la solution, appuyez sur Ctrl+F5.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

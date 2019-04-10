@@ -2,12 +2,12 @@
 title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310419"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -31,11 +31,11 @@ ms.locfileid: "59089885"
 > [!NOTE]
 >  Toutes ces tâches sont effectuées automatiquement lorsque vous utilisez les outils Entity Data Model à partir de Visual Studio 2008. Pour plus d'informations, voir [Procédure : Utilisez l’Assistant Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
-1.  Mettez à niveau l'application.  
+1. Mettez à niveau l'application.  
   
      Un projet créé à l’aide d’une version antérieure de Visual Studio et le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] doit être mis à niveau pour utiliser Visual Studio 2008 SP1 et le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depuis la version 3.5 SP1.  
   
-2.  Définissez les modèles et le mappage.  
+2. Définissez les modèles et le mappage.  
   
      Les fichiers de modèle et de mappage définissent des entités dans le modèle conceptuel, des structures dans la source de données (telles que des tables, des procédures stockées et des vues), ainsi que le mappage entre les entités et les structures de la source de données. Pour plus d'informations, voir [Procédure : Définir le modèle manuellement et de fichiers de mappage](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59089885"
     > [!NOTE]
     >  Entity Data Model Designer peut être utilisé pour renommer des entités du modèle conceptuel afin qu'elles correspondent à des objets existants. Pour plus d’informations, consultez [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
-3.  Définissez la chaîne de connexion.  
+3. Définissez la chaîne de connexion.  
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise une chaîne de connexion spécialement mise en forme lors de l'exécution de requêtes sur un modèle conceptuel. Cette chaîne de connexion encapsule des informations relatives aux fichiers de modèle et de mappage et à la connexion à la source de données. Pour plus d'informations, voir [Procédure : Définir la chaîne de connexion](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
-4.  Configurer le projet Visual Studio.  
+4. Configurer le projet Visual Studio.  
   
      Références à [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblys et le modèle et le mappage de fichiers doivent être ajoutés au projet Visual Studio. Vous pouvez ajouter ces fichiers de mappage au projet pour garantir qu'ils sont déployés avec l'application dans l'emplacement indiqué dans la chaîne de connexion. Pour plus d'informations, voir [Procédure : Configurer manuellement un projet Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   

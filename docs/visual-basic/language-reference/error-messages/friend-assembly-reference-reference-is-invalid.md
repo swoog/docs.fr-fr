@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0966cea26c5dde8f116081c7a6411b4275e50f40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298992"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Référence d’assembly friend \<référence > n’est pas valide
 Référence d’assembly friend \<référence > n’est pas valide. Les assemblys signés avec un nom fort doivent spécifier une clé publique dans leurs déclarations InternalsVisibleTo.  
@@ -23,7 +23,7 @@ Référence d’assembly friend \<référence > n’est pas valide. Les assembly
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Déterminer la clé publique pour l’assembly friend avec nom fort. Inclure la clé publique comme partie du nom d’assembly passé à la <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> constructeur d’attribut à l’aide de la `PublicKey` attribut.  
+1. Déterminer la clé publique pour l’assembly friend avec nom fort. Inclure la clé publique comme partie du nom d’assembly passé à la <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> constructeur d’attribut à l’aide de la `PublicKey` attribut.  
   
 ## <a name="see-also"></a>Voir aussi
 

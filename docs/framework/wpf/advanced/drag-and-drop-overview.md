@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301397"
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
 Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplacer dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le glisser-déplacer fait généralement référence à une méthode de transfert de données qui implique l'utilisation d'une souris (ou d'un autre dispositif de pointage) pour sélectionner un ou plusieurs objets, les faire glisser vers une cible de déplacement souhaitée dans l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] et les y déplacer.  
@@ -181,11 +181,11 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> ou <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> ou <xref:System.Windows.DragDrop.Drop>  
   
  L'événement <xref:System.Windows.DragDrop.DragEnter> se produit quand les données sont glissées dans les limites de la cible de déplacement. En général, la gestion de cet événement vous permet d’obtenir un aperçu des effets de l’opération de glisser-déplacer, si cela est adapté à votre application. Ne définissez pas la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> dans l'événement <xref:System.Windows.DragDrop.DragEnter>, car elle sera remplacée dans l'événement <xref:System.Windows.DragDrop.DragOver>.  
   

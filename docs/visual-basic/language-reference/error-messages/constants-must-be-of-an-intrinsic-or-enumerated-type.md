@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299109"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Les constantes doivent être de type intrinsèque ou énuméré, et non de type classe, structure, paramètre de type ou tableau
 Vous avez tenté de déclarer une constante comme une classe, une structure ou un type de tableau, ou comme un paramètre de type défini par un type générique conteneur.  
@@ -23,9 +23,9 @@ Vous avez tenté de déclarer une constante comme une classe, une structure ou u
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Déclarez la constante comme intrinsèque ou `Enum` type.  
+1. Déclarez la constante comme intrinsèque ou `Enum` type.  
   
-2.  Une constante peut également être une valeur spéciale, tel que `True`, `False`, ou `Nothing`. Le compilateur considère ces valeurs prédéfinies sont du type intrinsèque approprié.  
+2. Une constante peut également être une valeur spéciale, tel que `True`, `False`, ou `Nothing`. Le compilateur considère ces valeurs prédéfinies sont du type intrinsèque approprié.  
   
 ## <a name="see-also"></a>Voir aussi
 

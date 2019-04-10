@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295794"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procédure pas à pas : création d’un formulaire maître/détails qui utilise deux contrôles DataGridView Windows Forms
 Un des scénarios plus courants pour l’utilisation de la <xref:System.Windows.Forms.DataGridView> contrôle est le *maître/détail* formulaire, dans lequel une relation parent/enfant entre deux tables de base de données est affichée. Sélection de lignes dans la table maîtresse provoque la table secondaire pour mettre à jour avec les données enfants correspondantes.  
@@ -33,14 +33,14 @@ Un des scénarios plus courants pour l’utilisation de la <xref:System.Windows.
   
 #### <a name="to-create-a-masterdetail-form"></a>Pour créer un formulaire maître/détail  
   
-1.  Créez une classe qui dérive de <xref:System.Windows.Forms.Form> et contient deux <xref:System.Windows.Forms.DataGridView> contrôles et deux <xref:System.Windows.Forms.BindingSource> composants. Le code suivant fournit l’initialisation de base et inclut un `Main` (méthode). Si vous utilisez le concepteur Visual Studio pour créer votre formulaire, vous pouvez utiliser le code concepteur généré au lieu de ce code, mais veillez à utiliser les noms indiqués dans les déclarations de variable.  
+1. Créez une classe qui dérive de <xref:System.Windows.Forms.Form> et contient deux <xref:System.Windows.Forms.DataGridView> contrôles et deux <xref:System.Windows.Forms.BindingSource> composants. Le code suivant fournit l’initialisation de base et inclut un `Main` (méthode). Si vous utilisez le concepteur Visual Studio pour créer votre formulaire, vous pouvez utiliser le code concepteur généré au lieu de ce code, mais veillez à utiliser les noms indiqués dans les déclarations de variable.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Implémenter une méthode dans la définition de classe de votre formulaire pour gérer les détails de la connexion à la base de données. Cet exemple utilise un `GetData` méthode qui remplit une <xref:System.Data.DataSet> d’objet, ajoute un <xref:System.Data.DataRelation> objet au jeu de données et lie le <xref:System.Windows.Forms.BindingSource> composants. Veillez à définir la variable `connectionString` avec une valeur appropriée pour votre base de données.  
+2. Implémenter une méthode dans la définition de classe de votre formulaire pour gérer les détails de la connexion à la base de données. Cet exemple utilise un `GetData` méthode qui remplit une <xref:System.Data.DataSet> d’objet, ajoute un <xref:System.Data.DataRelation> objet au jeu de données et lie le <xref:System.Windows.Forms.BindingSource> composants. Veillez à définir la variable `connectionString` avec une valeur appropriée pour votre base de données.  
   
     > [!IMPORTANT]
     >  Le stockage d'informations sensibles (telles qu'un mot de passe) dans la chaîne de connexion peut affecter la sécurité de votre application. L'utilisation de l'authentification Windows (également appelée sécurité intégrée) offre un moyen plus sûr de contrôler l'accès à une base de données. Pour plus d’informations, consultez [Protection des informations de connexion](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Un des scénarios plus courants pour l’utilisation de la <xref:System.Windows.
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Implémenter un gestionnaire pour votre formulaire <xref:System.Windows.Forms.Form.Load> les événements qui lie la <xref:System.Windows.Forms.DataGridView> de contrôles à la <xref:System.Windows.Forms.BindingSource> composants et appelle le `GetData` (méthode). L’exemple suivant inclut le code qui redimensionne <xref:System.Windows.Forms.DataGridView> colonnes pour correspondre les données affichées.  
+3. Implémenter un gestionnaire pour votre formulaire <xref:System.Windows.Forms.Form.Load> les événements qui lie la <xref:System.Windows.Forms.DataGridView> de contrôles à la <xref:System.Windows.Forms.BindingSource> composants et appelle le `GetData` (méthode). L’exemple suivant inclut le code qui redimensionne <xref:System.Windows.Forms.DataGridView> colonnes pour correspondre les données affichées.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

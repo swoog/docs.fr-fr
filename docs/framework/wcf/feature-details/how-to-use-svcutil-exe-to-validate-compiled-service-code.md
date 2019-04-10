@@ -2,23 +2,23 @@
 title: 'Procédure : utiliser Svcutil.exe pour valider le code de service compilé'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196409"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312421"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procédure : utiliser Svcutil.exe pour valider le code de service compilé
 Vous pouvez utiliser la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour détecter les erreurs dans les configurations et les implémentations de service sans héberger le service.  
   
 ### <a name="to-validate-a-service"></a>Pour valider un service  
   
-1.  Compilez votre service dans un fichier exécutable et un ou plusieurs assemblys dépendants.  
+1. Compilez votre service dans un fichier exécutable et un ou plusieurs assemblys dépendants.  
   
-2.  Ouvrez une invite de commandes du Kit de développement SDK.  
+2. Ouvrez une invite de commandes du Kit de développement SDK.  
   
-3.  À l'invite de commandes, lancez l'outil Svcutil.exe à l'aide du format suivant. Pour plus d’informations sur les différents paramètres, consultez la section de validation de Service de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) rubrique.  
+3. À l'invite de commandes, lancez l'outil Svcutil.exe à l'aide du format suivant. Pour plus d’informations sur les différents paramètres, consultez la section de validation de Service de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) rubrique.  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  

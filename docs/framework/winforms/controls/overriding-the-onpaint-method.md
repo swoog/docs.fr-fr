@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302188"
 ---
 # <a name="overriding-the-onpaint-method"></a>Substitution de la méthode OnPaint
 Les étapes de base pour la substitution d’un événement défini dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont identiques et sont résumés dans la liste suivante.  
   
 #### <a name="to-override-an-inherited-event"></a>Pour remplacer un événement hérité  
   
-1.  Remplacer l’élément protégé `On` *EventName* (méthode).  
+1. Remplacer l’élément protégé `On` *EventName* (méthode).  
   
-2.  Appeler le `On` *EventName* méthode de la classe de base à partir de l’élément substitué `On` *EventName* (méthode), afin que les délégués inscrits reçoivent l’événement.  
+2. Appeler le `On` *EventName* méthode de la classe de base à partir de l’élément substitué `On` *EventName* (méthode), afin que les délégués inscrits reçoivent l’événement.  
   
  Le <xref:System.Windows.Forms.Control.Paint> événement est décrit en détail ici, car tous les contrôles Windows Forms doivent substituer la <xref:System.Windows.Forms.Control.Paint> événement qu’il hérite <xref:System.Windows.Forms.Control>. La base de <xref:System.Windows.Forms.Control> classe ne sait pas comment un contrôle dérivé doit être dessiné et ne fournit pas de logique de peinture dans le <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode). Le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode de <xref:System.Windows.Forms.Control> distribue simplement le <xref:System.Windows.Forms.Control.Paint> événement aux récepteurs d’événements inscrits.  
   

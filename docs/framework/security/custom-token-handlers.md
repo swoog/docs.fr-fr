@@ -3,12 +3,12 @@ title: Gestionnaires de jetons personnalisés
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312109"
 ---
 # <a name="custom-token-handlers"></a>Gestionnaires de jetons personnalisés
 Cette rubrique traite des gestionnaires de jetons dans WIF et de la façon dont ils sont utilisés pour traiter les jetons. Elle décrit également ce qui est nécessaire pour créer des gestionnaires de jetons personnalisés pour les types de jetons qui ne sont pas pris en charge par défaut dans WIF.  
@@ -42,9 +42,9 @@ Cette rubrique traite des gestionnaires de jetons dans WIF et de la façon dont 
   
 #### <a name="adding-a-custom-token-handler"></a>Ajout d’un gestionnaire de jetons personnalisé  
   
-1.  Créez une classe dérivée de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. Créez une classe dérivée de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Substituez les méthodes suivantes et fournissez votre propre implémentation :  
+2. Substituez les méthodes suivantes et fournissez votre propre implémentation :  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ Cette rubrique traite des gestionnaires de jetons dans WIF et de la façon dont 
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Ajoutez une référence au nouveau gestionnaire de jetons personnalisé dans le fichier *Web.config* ou *App.config*, dans la section **\<system.identityModel>** qui s’applique à WIF. Par exemple, le balisage de configuration suivant spécifie un nouveau gestionnaire de jetons nommé **MyCustomTokenHandler** qui se trouve dans l’espace de noms **CustomToken**.  
+3. Ajoutez une référence au nouveau gestionnaire de jetons personnalisé dans le fichier *Web.config* ou *App.config*, dans la section **\<system.identityModel>** qui s’applique à WIF. Par exemple, le balisage de configuration suivant spécifie un nouveau gestionnaire de jetons nommé **MyCustomTokenHandler** qui se trouve dans l’espace de noms **CustomToken**.  
   
     ```xml  
     <system.identityModel>  

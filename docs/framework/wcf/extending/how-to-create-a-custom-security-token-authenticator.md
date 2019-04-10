@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 7cd1cd22a216458add2cef97e45ce2daef3f9f9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304185"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jeton de sécurité personnalisé
 Cette rubrique indique comment créer un authentificateur de jetons de sécurité personnalisé et comment l'intégrer à un gestionnaire de jetons de sécurité personnalisé. Un authentificateur de jetons de sécurité valide le contenu du jeton de sécurité fourni par le message entrant. Lorsque le processus de validation réussit, l’authentificateur retourne une collection d’instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui, après évaluation, retourne un ensemble de revendications.  
@@ -23,11 +23,11 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
   
 #### <a name="to-create-a-custom-security-token-authenticator"></a>Pour créer un authentificateur de jetons de sécurité personnalisé  
   
-1.  Définissez une nouvelle classe dérivée de la classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>.  
+1. Définissez une nouvelle classe dérivée de la classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>.  
   
-2.  Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> . La méthode retourne la valeur `true` ou `false` selon si l'authentificateur personnalisé peut ou non valider le type de jeton entrant.  
+2. Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> . La méthode retourne la valeur `true` ou `false` selon si l'authentificateur personnalisé peut ou non valider le type de jeton entrant.  
   
-3.  Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> . Cette méthode doit valider le contenu des jetons de manière adéquate. Si le jeton passe l'étape de validation, il retourne une collection d'instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. L'exemple suivant utilise une implémentation de la stratégie d'autorisation personnalisée, laquelle sera créée au cours de la procédure suivante.  
+3. Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> . Cette méthode doit valider le contenu des jetons de manière adéquate. Si le jeton passe l'étape de validation, il retourne une collection d'instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. L'exemple suivant utilise une implémentation de la stratégie d'autorisation personnalisée, laquelle sera créée au cours de la procédure suivante.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
@@ -36,13 +36,13 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Pour créer une stratégie d'autorisation personnalisée  
   
-1.  Définissez une nouvelle classe qui implémente l'interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1. Définissez une nouvelle classe qui implémente l'interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
-2.  Implémentez la propriété en lecture seule <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A>. L'une des solutions permettant d'implémenter cette propriété consiste à générer un identificateur global unique (Globally Unique Identifier, GUID) dans le constructeur de classe, puis de retourner cette propriété à chaque fois que sa valeur est demandée.  
+2. Implémentez la propriété en lecture seule <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A>. L'une des solutions permettant d'implémenter cette propriété consiste à générer un identificateur global unique (Globally Unique Identifier, GUID) dans le constructeur de classe, puis de retourner cette propriété à chaque fois que sa valeur est demandée.  
   
-3.  Implémentez la propriété en lecture seule <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>. Cette propriété doit retourner l'émetteur correspondant à tous les ensembles de revendications obtenus à partir du jeton. Cet émetteur doit correspondre à l'émetteur du jeton ou à une autorité chargée de valider le contenu des jetons. L'exemple suivant utilise la revendication d'émetteur passée à cette classe à partir de l'authentificateur de jetons de sécurité personnalisé créé au cours de la procédure précédente. L'authentificateur de jetons de sécurité personnalisé utilise l'ensemble des revendications fournies par le système (ensemble retourné par la propriété <xref:System.IdentityModel.Claims.ClaimSet.System%2A>) pour représenter l'émetteur de jeton de nom d'utilisateur.  
+3. Implémentez la propriété en lecture seule <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>. Cette propriété doit retourner l'émetteur correspondant à tous les ensembles de revendications obtenus à partir du jeton. Cet émetteur doit correspondre à l'émetteur du jeton ou à une autorité chargée de valider le contenu des jetons. L'exemple suivant utilise la revendication d'émetteur passée à cette classe à partir de l'authentificateur de jetons de sécurité personnalisé créé au cours de la procédure précédente. L'authentificateur de jetons de sécurité personnalisé utilise l'ensemble des revendications fournies par le système (ensemble retourné par la propriété <xref:System.IdentityModel.Claims.ClaimSet.System%2A>) pour représenter l'émetteur de jeton de nom d'utilisateur.  
   
-4.  Implémentez la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Cette méthode remplit une instance de la classe <xref:System.IdentityModel.Policy.EvaluationContext> (passée sous forme d’argument) avec les revendications basées sur le contenu des jetons de sécurité entrants. Cette méthode retourne la valeur `true` lorsque ce processus se déroule dans le cadre d'une évaluation. Lorsque l'implémentation s'appuie sur des stratégies d'autorisation fournissant des informations supplémentaires au contexte d'évaluation, cette méthode peut retourner la valeur `false` si les informations requises ne figurent pas encore dans le contexte d'évaluation. Dans ce cas, WCF appelle la méthode à nouveau après l’évaluation de toutes les autres stratégies d’autorisation générés pour le message entrant si au moins un de ces stratégies d’autorisation modifié le contexte d’évaluation.  
+4. Implémentez la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Cette méthode remplit une instance de la classe <xref:System.IdentityModel.Policy.EvaluationContext> (passée sous forme d’argument) avec les revendications basées sur le contenu des jetons de sécurité entrants. Cette méthode retourne la valeur `true` lorsque ce processus se déroule dans le cadre d'une évaluation. Lorsque l'implémentation s'appuie sur des stratégies d'autorisation fournissant des informations supplémentaires au contexte d'évaluation, cette méthode peut retourner la valeur `false` si les informations requises ne figurent pas encore dans le contexte d'évaluation. Dans ce cas, WCF appelle la méthode à nouveau après l’évaluation de toutes les autres stratégies d’autorisation générés pour le message entrant si au moins un de ces stratégies d’autorisation modifié le contexte d’évaluation.  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
@@ -51,9 +51,9 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Pour intégrer un authentificateur de jetons de sécurité personnalisés à un gestionnaire de jetons de sécurité personnalisés  
   
-1.  Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> dans votre implémentation de gestionnaire de jetons de sécurité personnalisés.  
+1. Remplacez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> dans votre implémentation de gestionnaire de jetons de sécurité personnalisés.  
   
-2.  Ajoutez de la logique à la méthode pour lui permettre de retourner votre authentificateur de jetons de sécurité personnalisés basée sur le paramètre <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. L’exemple suivant retourne un authentificateur de jetons de sécurité personnalisé si le type du jeton correspond à un nom d’utilisateur (représenté par la propriété <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>) et si la direction de message pour laquelle l’authentificateur de jetons de sécurité est demandé correspond à entrée (représentée par le champ <xref:System.ServiceModel.Description.MessageDirection.Input> ).  
+2. Ajoutez de la logique à la méthode pour lui permettre de retourner votre authentificateur de jetons de sécurité personnalisés basée sur le paramètre <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. L’exemple suivant retourne un authentificateur de jetons de sécurité personnalisé si le type du jeton correspond à un nom d’utilisateur (représenté par la propriété <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>) et si la direction de message pour laquelle l’authentificateur de jetons de sécurité est demandé correspond à entrée (représentée par le champ <xref:System.ServiceModel.Description.MessageDirection.Input> ).  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

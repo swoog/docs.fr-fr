@@ -2,12 +2,12 @@
 title: Création d'un service de workflow de longue durée
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301345"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Création d'un service de workflow de longue durée
 Cette rubrique décrit comment créer un service de workflow de longue durée. Les services de workflow de longue durée peuvent s'exécuter sur de longues périodes. À un certain stade, le workflow peut devenir inactif en attendant des informations supplémentaires. Lorsque cela se produit, le workflow est rendu persistant dans une base de données SQL et supprimé de la mémoire. Une fois que les informations supplémentaires sont disponibles, l'instance de workflow est à nouveau chargée dans la mémoire et continue de s'exécuter.  Dans ce scénario, vous implémentez un système de commande très simplifié.  Le client envoie un message initial au service de workflow pour commencer la commande. Un ID de commande est retourné au client. À ce stade, le service de workflow attend un autre message du client, passe à l'état inactif et est rendu persistant dans une base de données SQL Server.  Lorsque le client envoie le message suivant pour commander un article, le service de workflow est à nouveau chargé dans la mémoire et termine le traitement de la commande. Dans l'exemple de code, il retourne une chaîne indiquant que l'article a été ajouté à la commande. L'exemple de code n'est pas censé refléter une application réelle de la technologie mais plutôt un exemple simple illustrant des services de workflow de longue durée. Cette rubrique suppose que vous savez comment créer des solutions et projets de Visual Studio 2012.
@@ -15,33 +15,33 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 ## <a name="prerequisites"></a>Prérequis
  Les logiciels suivants doivent être installés pour suivre cette procédure pas à pas :
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  Vous êtes familiarisé avec WCF et Visual Studio 2012 et que vous savez comment créer des projets et des solutions.
+4. Vous êtes familiarisé avec WCF et Visual Studio 2012 et que vous savez comment créer des projets et des solutions.
 
 ### <a name="to-setup-the-sql-database"></a>Pour configurer la base de données SQL
 
-1.  Pour que les instances du service de workflow soient persistantes, Microsoft SQL Server doit être installé et vous devez configurer une base de données pour stocker les instances de workflow persistantes. Exécutez Microsoft SQL Management Studio en cliquant sur le **Démarrer** bouton, en sélectionnant **tous les programmes**, **Microsoft SQL Server 2008**, et **Microsoft SQL Management Studio**.
+1. Pour que les instances du service de workflow soient persistantes, Microsoft SQL Server doit être installé et vous devez configurer une base de données pour stocker les instances de workflow persistantes. Exécutez Microsoft SQL Management Studio en cliquant sur le **Démarrer** bouton, en sélectionnant **tous les programmes**, **Microsoft SQL Server 2008**, et **Microsoft SQL Management Studio**.
 
-2.  Cliquez sur le **Connect** bouton pour ouvrir une session l’instance de SQL Server
+2. Cliquez sur le **Connect** bouton pour ouvrir une session l’instance de SQL Server
 
-3.  Bouton droit sur **bases de données** dans l’arborescence, puis sélectionnez **nouvelle base de données...** Pour créer une nouvelle base de données appelée `SQLPersistenceStore`.
+3. Bouton droit sur **bases de données** dans l’arborescence, puis sélectionnez **nouvelle base de données...** Pour créer une nouvelle base de données appelée `SQLPersistenceStore`.
 
-4.  Exécutez le fichier de script SqlWorkflowInstanceStoreSchema.sql situé dans le répertoire C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en dans la base de données SQLPersistenceStore pour configurer les schémas de base de données requis.
+4. Exécutez le fichier de script SqlWorkflowInstanceStoreSchema.sql situé dans le répertoire C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en dans la base de données SQLPersistenceStore pour configurer les schémas de base de données requis.
 
-5.  Exécutez le fichier de script SqlWorkflowInstanceStoreLogic.sql situé dans le répertoire C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en dans la base de données SQLPersistenceStore pour configurer la logique de base de données requise.
+5. Exécutez le fichier de script SqlWorkflowInstanceStoreLogic.sql situé dans le répertoire C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en dans la base de données SQLPersistenceStore pour configurer la logique de base de données requise.
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>Pour créer le service de workflow hébergé sur le Web
 
-1.  Créer une solution Visual Studio 2012 vide, nommez-le `OrderProcessing`.
+1. Créer une solution Visual Studio 2012 vide, nommez-le `OrderProcessing`.
 
-2.  Ajoutez à la solution un nouveau projet d'application de service de workflow WCF appelée `OrderService`.
+2. Ajoutez à la solution un nouveau projet d'application de service de workflow WCF appelée `OrderService`.
 
-3.  Dans la boîte de dialogue Propriétés du projet, sélectionnez le **Web** onglet.
+3. Dans la boîte de dialogue Propriétés du projet, sélectionnez le **Web** onglet.
 
     1.  Sous **Action de démarrage** sélectionnez **Page spécifique** et spécifiez `Service1.xamlx`.
 
@@ -56,16 +56,16 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
          Ces deux étapes configurent le projet du service de workflow pour qu'il soit hébergé par IIS.
 
-4.  Ouvrez `Service1.xamlx` si elle n’est pas déjà ouvert et supprimez les **ReceiveRequest** et **SendResponse** activités.
+4. Ouvrez `Service1.xamlx` si elle n’est pas déjà ouvert et supprimez les **ReceiveRequest** et **SendResponse** activités.
 
-5.  Sélectionnez le **Service séquentiel** activité et cliquez sur le **Variables** lier et ajoutez les variables affichées dans l’illustration suivante. Cette action permet d'ajouter des variables qui seront utilisées ultérieurement dans le service de workflow.
+5. Sélectionnez le **Service séquentiel** activité et cliquez sur le **Variables** lier et ajoutez les variables affichées dans l’illustration suivante. Cette action permet d'ajouter des variables qui seront utilisées ultérieurement dans le service de workflow.
 
     > [!NOTE]
     >  Si CorrelationHandle ne figure pas dans la liste déroulante Type de Variable, sélectionnez **rechercher des types** à partir de la liste déroulante. Tapez CorrelationHandle dans la **nom de Type** zone, sélectionnez CorrelationHandle dans la zone de liste et cliquez sur **OK**.
 
      ![Ajouter des Variables](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "ajouter des variables à l’activité de Service séquentiel.")
 
-6.  Faites glisser et déposez un **ReceiveAndSendReply** modèle d’activité dans le **Service séquentiel** activité. Cet ensemble d'activités recevra un message d'un client et enverra une réponse en retour.
+6. Faites glisser et déposez un **ReceiveAndSendReply** modèle d’activité dans le **Service séquentiel** activité. Cet ensemble d'activités recevra un message d'un client et enverra une réponse en retour.
 
     1.  Sélectionnez le **réception** activité et définir les propriétés de mise en surbrillance dans l’illustration suivante.
 
@@ -95,7 +95,7 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
          ![Ajout d’un initialiseur de corrélation](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "ajouter un initialiseur de corrélation.")
 
-7.  Faites glisser et déposez une autre **ReceiveAndSendReply** activité à la fin du flux de travail (en dehors de la **séquence** contenant la première **réception** et  **SendReply** activités). Le second message envoyé par le client sera alors reçu et une réponse sera renvoyée.
+7. Faites glisser et déposez une autre **ReceiveAndSendReply** activité à la fin du flux de travail (en dehors de la **séquence** contenant la première **réception** et  **SendReply** activités). Le second message envoyé par le client sera alors reçu et une réponse sera renvoyée.
 
     1.  Sélectionnez le **séquence** contenant récemment ajouté **réception** et **SendReply** activités et cliquez sur le **Variables** bouton. Ajoutez la variable mise en surbrillance dans l'illustration suivante :
 
@@ -131,7 +131,7 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
              ![Définition de la liaison de données pour l’activité SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "définir la propriété pour l’activité de SendReplyToAddItem.")
 
-8.  Ouvrez le fichier web.config et ajoutez les éléments suivants dans le \<comportement > section pour activer la persistance de workflow.
+8. Ouvrez le fichier web.config et ajoutez les éléments suivants dans le \<comportement > section pour activer la persistance de workflow.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>Pour créer une application cliente pour appeler le service de workflow
 
-1.  Ajoutez à la solution un nouveau projet d'application console nommé `OrderClient`.
+1. Ajoutez à la solution un nouveau projet d'application console nommé `OrderClient`.
 
-2.  Ajoutez les références aux assemblys suivantes au projet `OrderClient` :
+2. Ajoutez les références aux assemblys suivantes au projet `OrderClient` :
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  Ajoutez une référence de service au service de workflow et spécifiez `OrderService` comme espace de noms.
+3. Ajoutez une référence de service au service de workflow et spécifiez `OrderService` comme espace de noms.
 
-4.  Dans la méthode `Main()` du projet client, ajoutez le code suivant :
+4. Dans la méthode `Main()` du projet client, ajoutez le code suivant :
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
     }
     ```
 
-5.  Générez la solution et exécutez l'application `OrderClient`. Le client affiche le texte suivant :
+5. Générez la solution et exécutez l'application `OrderClient`. Le client affiche le texte suivant :
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  Pour vérifier que le service de workflow a été rendue persistante, démarrez SQL Server Management Studio en accédant à la **Démarrer** menu, sélection **tous les programmes**, **deMicrosoftSQLServer2008**, **SQL Server Management Studio**.
+6. Pour vérifier que le service de workflow a été rendue persistante, démarrez SQL Server Management Studio en accédant à la **Démarrer** menu, sélection **tous les programmes**, **deMicrosoftSQLServer2008**, **SQL Server Management Studio**.
 
     1.  Dans le volet gauche, développez, **bases de données**, **SQLPersistenceStore**, **vues** avec le bouton droit sur **System.Activities.DurableInstancing.Instances**  et sélectionnez **sélectionner les 1000 premières lignes**. Dans le **résultats** volet Vérifiez que vous voyez au moins une instance est listée. D'autres instances d'exécutions précédentes peuvent également être présentes si une exception s'est produite pendant l'exécution. Vous pouvez supprimer des lignes existantes en double-cliquant sur **System.Activities.DurableInstancing.Instances** et en sélectionnant **modifier les 200 lignes du haut**, en cliquant sur le **Execute** bouton, Sélectionnez toutes les lignes dans le volet de résultats, cliquez sur **supprimer**.  Pour vous assurer que l'instance affichée dans la base de données est bien l'instance créée par votre application, vérifiez que la vue Instances est vide avant d'exécuter le client. Une fois que le client est en cours d'exécution, réexécutez la requête (Sélectionner les 1000 lignes du haut) et assurez-vous qu'une nouvelle instance a été ajoutée.
 
-7.  Appuyez sur Entrée pour envoyer le message d'ajout d'élément au service de workflow. Le client affiche le texte suivant :
+7. Appuyez sur Entrée pour envoyer le message d'ajout d'élément au service de workflow. Le client affiche le texte suivant :
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

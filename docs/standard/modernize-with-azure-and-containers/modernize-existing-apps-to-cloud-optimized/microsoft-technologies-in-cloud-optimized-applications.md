@@ -4,12 +4,12 @@ description: Moderniser des applications .NET existantes avec des conteneurs de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296249"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Technologies Microsoft dans les applications optimisé pour le cloud
 
@@ -25,9 +25,9 @@ La liste suivante décrit les outils, les technologies et les solutions qui sont
 
 -   **Analyse des données de télémétrie, journalisation et audit**: La possibilité pour la surveillez et auditez les applications et les conteneurs qui sont exécutent dans le cloud est essentielle pour n’importe quelle application optimisé pour le Cloud. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) et [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) sont les principaux outils de Microsoft qui fournissent une surveillance et d’audit pour les applications optimisé pour le Cloud.
 
--   **Approvisionnement**: Outils d’automatisation vous permettent de configurer l’infrastructure et de déployer une application sur plusieurs environnements (production, test, de préproduction). Vous pouvez utiliser des outils tels que Chef et Puppet pour gérer la configuration d’une application et l’environnement. Cette couche peut également être implémentée à l’aide des approches plus simples et plus directes. Par exemple, vous pouvez déployer directement à l’aide d’interface de ligne de commande Azure (Azure CLI) des outils, puis utiliser le déploiement continu et mise en production des pipelines de gestion dans [Azure DevOps Services](https://visualstudio.microsoft.com/team-services/).
+-   **Approvisionnement**: Outils d’automatisation vous permettent de configurer l’infrastructure et de déployer une application sur plusieurs environnements (production, test, de préproduction). Vous pouvez utiliser des outils tels que Chef et Puppet pour gérer la configuration d’une application et l’environnement. Cette couche peut également être implémentée à l’aide des approches plus simples et plus directes. Par exemple, vous pouvez déployer directement à l’aide d’interface de ligne de commande Azure (Azure CLI) des outils, puis utiliser le déploiement continu et mise en production des pipelines de gestion dans [Azure DevOps Services](https://azure.microsoft.com/services/devops/).
 
--   **Cycle de vie des applications**: [Les Services Azure DevOps](https://visualstudio.microsoft.com/team-services/) et autres outils, tels que Jenkins, sont des serveurs automation intégrées qui vous aident à mettre en œuvre les pipelines CI/CD, y compris la gestion de version.
+-   **Cycle de vie des applications**: [Les Services Azure DevOps](https://azure.microsoft.com/services/devops/) et autres outils, tels que Jenkins, sont des serveurs automation intégrées qui vous aident à mettre en œuvre les pipelines CI/CD, y compris la gestion de version.
 
 Les sections suivantes de ce chapitre et les procédures pas à pas connexes, traitent spécifiquement de plus d’informations sur la couche d’exécution (conteneurs Windows). Le guide décrit les méthodes que vous pouvez déployer des machines virtuelles de conteneurs Windows sur Windows Server 2016 (et versions ultérieures) et Azure Container Instances. Il couvre également les plateformes PaaS plus avancés tels que Azure App Service et orchestrateur comme Azure Service Fabric et Azure Kubernetes Service.
 

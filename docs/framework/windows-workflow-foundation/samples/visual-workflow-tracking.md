@@ -2,12 +2,12 @@
 title: Suivi de workflow visuel
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703580"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296457"
 ---
 # <a name="visual-workflow-tracking"></a>Suivi de workflow visuel
 Cet exemple montre comment écrire une application de suivi de workflow visuel à l'aide des fonctionnalités de débogage disponibles via le [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
@@ -19,17 +19,17 @@ Cet exemple montre comment écrire une application de suivi de workflow visuel �
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  Ouvrez le fichier WorkflowSimulator.sln à partir du répertoire d’exemple dans Visual Studio 2010.
+1. Ouvrez le fichier WorkflowSimulator.sln à partir du répertoire d’exemple dans Visual Studio 2010.
 
-2.  Appuyez sur Ctrl+Maj+B pour générer la solution.
+2. Appuyez sur Ctrl+Maj+B pour générer la solution.
 
-3.  Appuyez sur CTRL+F5 pour exécuter l'exemple. Cela affiche le fichier Workflow.xaml dans une fenêtre de concepteur de workflow réhébergé.
+3. Appuyez sur CTRL+F5 pour exécuter l'exemple. Cela affiche le fichier Workflow.xaml dans une fenêtre de concepteur de workflow réhébergé.
 
-4.  Cliquez sur le **fichier** menu et sélectionnez **exécuter le flux de travail...** .
+4. Cliquez sur le **fichier** menu et sélectionnez **exécuter le flux de travail...** .
 
-5.  Notez que l'activité en cours d'exécution est mise en surbrillance comme décrit précédemment et que les enregistrements de suivi sont affichés à le côté droit de la fenêtre d'application.
+5. Notez que l'activité en cours d'exécution est mise en surbrillance comme décrit précédemment et que les enregistrements de suivi sont affichés à le côté droit de la fenêtre d'application.
 
-6.  Lorsque le workflow est terminé, vous pouvez cliquer sur l'un des enregistrements de suivi pour vérifier à quelle activité il correspond.
+6. Lorsque le workflow est terminé, vous pouvez cliquer sur l'un des enregistrements de suivi pour vérifier à quelle activité il correspond.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302710"
 ---
 # <a name="determining-object-type-visual-basic"></a>Détermination du type Object (Visual Basic)
 Variables de l’objet générique (autrement dit, les variables que vous déclarez comme `Object`) peut contenir des objets à partir de n’importe quelle classe. Lors de l’utilisation de variables de type `Object`, vous devrez peut-être prendre des mesures différentes selon la classe de l’objet ; par exemple, certains objets ne peuvent pas en charge une propriété ou méthode particulière. Visual Basic fournit deux moyens de déterminer quel type d’objet est stocké dans une variable objet : le `TypeName` (fonction) et le `TypeOf...Is` opérateur.  
@@ -36,19 +36,19 @@ Variables de l’objet générique (autrement dit, les variables que vous décla
   
 #### <a name="to-run-the-example"></a>Pour exécuter l'exemple  
   
-1.  Créez un nouveau projet d’Application de Windows et ajoutez un <xref:System.Windows.Forms.Button> contrôle, un <xref:System.Windows.Forms.CheckBox> contrôle et un <xref:System.Windows.Forms.RadioButton> contrôle au formulaire.  
+1. Créez un nouveau projet d’Application de Windows et ajoutez un <xref:System.Windows.Forms.Button> contrôle, un <xref:System.Windows.Forms.CheckBox> contrôle et un <xref:System.Windows.Forms.RadioButton> contrôle au formulaire.  
   
-2.  À partir du bouton sur votre formulaire, appelez le `TestObject` procédure.  
+2. À partir du bouton sur votre formulaire, appelez le `TestObject` procédure.  
   
-3.  Ajoutez le code suivant à votre formulaire :  
+3. Ajoutez le code suivant à votre formulaire :  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
-- [Appel d’une propriété ou méthode à l’aide d’un nom de chaîne](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [If...Then...Else (instruction)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String (type de données)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer (type de données)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Appel d'une propriété ou méthode à l'aide d'un nom de chaîne](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [If...Then...Else, instruction](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [String, type de données](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer, type de données](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

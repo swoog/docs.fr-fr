@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310185"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limite les conversions de type de données implicites aux seules conversions étendues, interdit les liaisons tardives et interdit le typage implicite qui aboutit à un `Object` type.  
@@ -31,8 +31,8 @@ Option Strict { On | Off }
   
 |Terme|Définition|  
 |---|---|  
-|`On`|Facultatif. Permet de `Option Strict` la vérification.|  
-|`Off`|Facultatif. Désactive `Option Strict` la vérification.|  
+|`On`|Optionnel. Permet de `Option Strict` la vérification.|  
+|`Off`|Optionnel. Désactive `Option Strict` la vérification.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque `Option Strict On` ou `Option Strict` apparaît dans un fichier, les conditions suivantes provoquent une erreur de compilation :  
@@ -67,13 +67,13 @@ Option Strict { On | Off }
   
 -   [+, opérateur](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= (opérateur)](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+-   [+=, opérateur](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ =, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/=, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char (type de données)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Char, type de données](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Lorsque vous concaténez des chaînes à l’aide de la [& opérateur](../../../visual-basic/language-reference/operators/concatenation-operator.md), toutes les conversions pour les chaînes sont considérées comme des étendues. Pour ces conversions ne génèrent pas d’une erreur de conversion restrictive implicite, même `Option Strict` se trouve sur.  
   
@@ -109,18 +109,18 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Pour définir Option Strict dans l’IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
+1. Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
   
-2.  Sur le **compiler** onglet, définissez la valeur dans le **Option Strict** boîte.  
+2. Sur le **compiler** onglet, définissez la valeur dans le **Option Strict** boîte.  
   
 ### <a name="conditions"></a> Pour définir les configurations des avertissements dans l’IDE  
  Lorsque vous utilisez le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) au lieu d’un `Option Strict` instruction, vous avez un contrôle supplémentaire sur les conditions qui génèrent des erreurs. Le **configurations des avertissements** section de la **Page Compiler** possède des paramètres qui correspondent aux trois conditions qui provoquent une erreur de compilation lorsque `Option Strict` est sur. Voici ces paramètres :  
   
 -   **Conversion implicite**  
   
--   **Liaison tardive ; l’appel peut échouer au moment de l’exécution**  
+-   **Liaison tardive ; l'appel peut échouer au moment de l'exécution**  
   
--   **Type implicite ; objet pris par défaut**  
+-   **Type implicite ; objet pris par défaut**  
   
  Quand vous affectez la valeur **On** à **Option Strict**, chacun de ces trois paramètres de configuration d’avertissement prend la valeur **Erreur**. Quand vous affectez la valeur **Off** à **Option Strict**, chacun des trois paramètres prend la valeur **Aucun**.  
   
@@ -153,14 +153,14 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversions implicites et explicites](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Page Compiler, Concepteur de projet (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [Option Explicit (instruction)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Guide pratique pour Accéder aux membres d’un objet](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Option Explicit, instruction](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Procédure : accéder aux membres d’un objet](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Expressions incorporées en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Conversion simplifiée des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Liaison tardive dans les solutions Office](/visualstudio/vsto/late-binding-in-office-solutions)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Valeurs par défaut Visual Basic, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Valeurs par défaut VB, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

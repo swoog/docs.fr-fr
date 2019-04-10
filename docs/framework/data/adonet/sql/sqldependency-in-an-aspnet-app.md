@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313591"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency dans une application ASP.NET
 L'exemple de cette section montre comment utiliser <xref:System.Data.SqlClient.SqlDependency> indirectement en tirant parti de l'objet <xref:System.Web.Caching.SqlCacheDependency> ASP.NET. L'objet <xref:System.Web.Caching.SqlCacheDependency> utilise un objet <xref:System.Data.SqlClient.SqlDependency> pour écouter les notifications et mettre correctement à jour le cache.  
@@ -24,11 +24,11 @@ L'exemple de cette section montre comment utiliser <xref:System.Data.SqlClient.S
 ## <a name="creating-the-sample-application"></a>Création de l'exemple d'application  
  Procédez comme suit pour créer et exécuter l'exemple d'application :  
   
-1.  Créez un site Web ASP.NET.  
+1. Créez un site Web ASP.NET.  
   
-2.  Ajoutez un contrôle <xref:System.Web.UI.WebControls.Label> et un contrôle <xref:System.Web.UI.WebControls.GridView> à la page Default.aspx.  
+2. Ajoutez un contrôle <xref:System.Web.UI.WebControls.Label> et un contrôle <xref:System.Web.UI.WebControls.GridView> à la page Default.aspx.  
   
-3.  Ouvrez le module de classe de la page et ajoutez les directives suivantes :  
+3. Ouvrez le module de classe de la page et ajoutez les directives suivantes :  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ L'exemple de cette section montre comment utiliser <xref:System.Data.SqlClient.S
     using System.Web.Caching;  
     ```  
   
-4.  Ajoutez le code suivant dans l'événement `Page_Load` de la page :  
+4. Ajoutez le code suivant dans l'événement `Page_Load` de la page :  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Ajoutez deux méthodes d'assistance, `GetConnectionString` et `GetSQL`. La chaîne de connexion définie utilise une sécurité intégrée. Vous devez vérifier que le compte que vous utilisez dispose les autorisations de base de données nécessaires et que la base de données exemple **AdventureWorks**, notifications sont activées.
+5. Ajoutez deux méthodes d'assistance, `GetConnectionString` et `GetSQL`. La chaîne de connexion définie utilise une sécurité intégrée. Vous devez vérifier que le compte que vous utilisez dispose les autorisations de base de données nécessaires et que la base de données exemple **AdventureWorks**, notifications sont activées.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

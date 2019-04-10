@@ -3,12 +3,12 @@ title: Autorisation basée sur les revendications utilisant WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312174"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorisation basée sur les revendications utilisant WIF
 Dans une application de partie de confiance, une autorisation détermine les ressources auxquelles une identité authentifié est autorisé à accéder et les opérations qu'elle est autorisée à exécuter sur ces ressources. Une autorisation incorrecte ou faible entraîne la divulgation d'informations et la falsification de données. Cette rubrique présente les méthodes disponibles pour implémenter une autorisation pour les applications Web ASP.NET qui prennent en charge les revendications et les services qui utilisent Windows Identity Foundation (WIF) et le service d'émission de jetons de sécurité (STS), par exemple, le service de contrôle d'accès (ACS) Microsoft Azure.  
@@ -42,7 +42,7 @@ Dans une application de partie de confiance, une autorisation détermine les res
   
 -   **Lors de l’émission de jeton**. Quand un utilisateur est authentifié, la revendication de rôle peut être émise par le STS du fournisseur d’identité ou par un fournisseur de fédération tel que le service de contrôle d’accès (ACS) Microsoft Azure.  
   
--   **Transformation des revendications aléatoires en type de rôle de revendications à l’aide de ClaimsAuthenticationManager**. ClaimsAuthorizationManager est un composant qui fournit une partie du WIF. Il permet aux demandes d'être interceptées lorsqu'elles lancent une application, en inspectant des jetons et en les transformant par l'ajout, la modification, ou la suppression de revendications. Pour plus d’informations sur l’utilisation de ClaimsAuthenticationManager pour transformer les revendications, consultez [Comment : implémenter rôle basé contrôle d’accès (RBAC) dans un revendications prenant en charge ASP.NET Application à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+-   **Transformation des revendications aléatoires en type de rôle de revendications à l’aide de ClaimsAuthenticationManager**. ClaimsAuthorizationManager est un composant qui fournit une partie du WIF. Il permet aux demandes d'être interceptées lorsqu'elles lancent une application, en inspectant des jetons et en les transformant par l'ajout, la modification, ou la suppression de revendications. Pour plus d’informations sur l’utilisation de ClaimsAuthenticationManager pour transformer les revendications, consultez [How To : Contrôle d’accès (RBAC) en fonction du rôle de l’implémenter dans une Application ASP.NET prenant en charge de revendications à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
 -   **Mappage des revendications arbitraires à un type de rôle à l’aide de la section de configuration samlSecurityTokenRequirement** : une approche déclarative dans laquelle la transformation des revendications est effectuée à l’aide de la configuration et aucun codage n’est nécessaire.  
   
@@ -50,14 +50,14 @@ Dans une application de partie de confiance, une autorisation détermine les res
 ## <a name="claims-based-authorization"></a>Autorisation basée sur des revendications  
  L'autorisation basée sur des revendications est une approche dans laquelle la décision d'accorder ou de refuser l'accès est basée sur la logique arbitraire qui utilise des données disponibles dans les revendications pour permettre la prise de décision. N'oubliez pas que dans le cas de RBAC, la seule revendication utilisée était la revendication du type de rôle. Une revendication du type de rôle a été utilisée pour vérifier si l'utilisateur appartient au rôle spécifique ou non. Pour illustrer le processus de prise de décision à propos des autorisations à l'aide de l'approche basée sur les revendications, tenez-compte des étapes suivantes :  
   
-1.  L'application reçoit une demande qui requiert que l'utilisateur soit authentifié.  
+1. L'application reçoit une demande qui requiert que l'utilisateur soit authentifié.  
   
-2.  WIF redirige l'utilisateur vers son fournisseur d'identité, une fois qu'il est authentifié, la demande d'application est effectuée avec un jeton de sécurité associé qui représente l'utilisateur contenant les revendications associées. WIF associe ces revendications avec l'entité qui représente l'utilisateur.  
+2. WIF redirige l'utilisateur vers son fournisseur d'identité, une fois qu'il est authentifié, la demande d'application est effectuée avec un jeton de sécurité associé qui représente l'utilisateur contenant les revendications associées. WIF associe ces revendications avec l'entité qui représente l'utilisateur.  
   
-3.  L'application transmet les revendications au mécanisme de logique de décision. Il peut s'agir d'un code en mémoire, d'un appel à un service Web, d'une requête à une base de données, d'un moteur de règles complexe ou de l'utilisation de ClaimsAuthorizationManager.  
+3. L'application transmet les revendications au mécanisme de logique de décision. Il peut s'agir d'un code en mémoire, d'un appel à un service Web, d'une requête à une base de données, d'un moteur de règles complexe ou de l'utilisation de ClaimsAuthorizationManager.  
   
-4.  Le mécanisme de décision calcule les résultats en fonction des revendications.  
+4. Le mécanisme de décision calcule les résultats en fonction des revendications.  
   
-5.  L'accès est accordé si la valeur des résultats est true et refusé si la valeur est false. Par exemple, la règle peut indiquer que l'utilisateur est âgé de plus de 21 ans et habite dans l'état de Washington.  
+5. L'accès est accordé si la valeur des résultats est true et refusé si la valeur est false. Par exemple, la règle peut indiquer que l'utilisateur est âgé de plus de 21 ans et habite dans l'état de Washington.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> est utile pour extérioriser la logique de décision pour l'autorisation basée sur les revendications dans vos applications. ClaimsAuthorizationManager est un composant WIF fourni dans le cadre de .NET 4.5. ClaimsAuthorizationManager vous permet d'intercepter des requêtes entrantes et d'implémenter toute logique de votre choix pour prendre des décisions d'autorisation basées sur les revendications entrantes. Cela devient important lorsque la logique d'autorisation doit être modifiée. Dans ce cas, l'utilisation de ClaimsAuthorizationManager n'affecte pas l'intégrité de l'application, réduisant ainsi la probabilité d'une erreur d'application suite à la modification. Pour en savoir plus sur l’utilisation de ClaimsAuthorizationManager pour implémenter le contrôle d’accès basé sur les revendications, consultez [Guide pratique pour implémenter une autorisation de revendication dans une application ASP. NET prenant en charge les revendications à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> est utile pour extérioriser la logique de décision d’autorisation basée sur les revendications dans vos applications. ClaimsAuthorizationManager est un composant WIF fourni dans le cadre de .NET 4.5. ClaimsAuthorizationManager vous permet d'intercepter des requêtes entrantes et d'implémenter toute logique de votre choix pour prendre des décisions d'autorisation basées sur les revendications entrantes. Cela devient important lorsque la logique d'autorisation doit être modifiée. Dans ce cas, l'utilisation de ClaimsAuthorizationManager n'affecte pas l'intégrité de l'application, réduisant ainsi la probabilité d'une erreur d'application suite à la modification. Pour en savoir plus sur l’utilisation de ClaimsAuthorizationManager pour implémenter le contrôle d’accès basé sur les revendications, consultez [How To : Implémentez des revendications d’autorisation dans une Application ASP.NET prenant en charge de revendications à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

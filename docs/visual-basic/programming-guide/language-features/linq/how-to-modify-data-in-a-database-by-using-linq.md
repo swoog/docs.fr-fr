@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: c92a94cd6223aad8e4ea3da86a8dd37bd71aad2c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304894"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procédure : Modifier des données dans une base de données à l’aide de LINQ (Visual Basic)
 Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux informations de base de données et modifier les valeurs dans la base de données.  
@@ -28,39 +28,39 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
   
 ### <a name="to-create-a-connection-to-a-database"></a>Pour créer une connexion à une base de données  
   
-1.  Dans Visual Studio, ouvrez **Explorateur de serveurs**/**Database Explorer** en cliquant sur le **vue** menu, puis sélectionnez **Explorateur de serveurs** / **Explorateur de base de données**.  
+1. Dans Visual Studio, ouvrez **Explorateur de serveurs**/**Database Explorer** en cliquant sur le **vue** menu, puis sélectionnez **Explorateur de serveurs** / **Explorateur de base de données**.  
   
-2.  Avec le bouton droit **des connexions de données** dans **Explorateur de serveurs**/**Database Explorer**, puis cliquez sur **ajouter une connexion**.  
+2. Avec le bouton droit **des connexions de données** dans **Explorateur de serveurs**/**Database Explorer**, puis cliquez sur **ajouter une connexion**.  
   
-3.  Spécifiez une connexion valide à la base de données Northwind.  
+3. Spécifiez une connexion valide à la base de données Northwind.  
   
 ### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Pour ajouter un projet avec un LINQ vers le fichier SQL  
   
-1.  Dans Visual Studio, dans le menu **Fichier**,pointez sur **Nouveau**, puis cliquez sur **Projet**. Sélectionnez Visual Basic **Windows Forms Application** comme type de projet.  
+1. Dans Visual Studio, dans le menu **Fichier**,pointez sur **Nouveau**, puis cliquez sur **Projet**. Sélectionnez Visual Basic **Windows Forms Application** comme type de projet.  
   
-2.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez le **Classes LINQ to SQL** modèle d’élément.  
+2. Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez le **Classes LINQ to SQL** modèle d’élément.  
   
-3.  Nommez le fichier `northwind.dbml`. Cliquez sur **Ajouter**. Le Concepteur Objet/Relationnel (Concepteur O/R) est ouvert pour la `northwind.dbml` fichier.  
+3. Nommez le fichier `northwind.dbml`. Cliquez sur **Ajouter**. Le Concepteur Objet/Relationnel (Concepteur O/R) est ouvert pour la `northwind.dbml` fichier.  
   
 ### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Pour ajouter des tables pour interroger et modifier dans le Concepteur  
   
-1.  Dans **Explorateur de serveurs**/**Database Explorer**, développez la connexion à la base de données Northwind. Développez le **Tables** dossier.  
+1. Dans **Explorateur de serveurs**/**Database Explorer**, développez la connexion à la base de données Northwind. Développez le **Tables** dossier.  
   
      Si vous avez fermé le Concepteur O/R, vous pouvez le rouvrir en double-cliquant sur le `northwind.dbml` fichier que vous avez ajouté précédemment.  
   
-2.  Cliquez sur la table Customers et faites-le glisser vers le volet gauche du concepteur.  
+2. Cliquez sur la table Customers et faites-le glisser vers le volet gauche du concepteur.  
   
      Le concepteur crée un nouvel objet Customer pour votre projet.  
   
-3.  Enregistrez vos modifications et fermez le concepteur.  
+3. Enregistrez vos modifications et fermez le concepteur.  
   
-4.  Enregistrez votre projet.  
+4. Enregistrez votre projet.  
   
 ### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Pour ajouter du code pour modifier la base de données et afficher les résultats  
   
-1.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.DataGridView> contrôle sur le formulaire de Windows par défaut pour votre projet, Form1.  
+1. À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.DataGridView> contrôle sur le formulaire de Windows par défaut pour votre projet, Form1.  
   
-2.  Lorsque vous avez ajouté des tables au Concepteur O/R, le concepteur a ajouté un <xref:System.Data.Linq.DataContext> objet à votre projet. Cet objet contient le code que vous pouvez utiliser pour accéder à la table Customers. Il contient également le code qui définit un objet de client local et une collection de clients pour la table. Le <xref:System.Data.Linq.DataContext> objet pour votre projet est nommé d’après le nom de votre fichier .dbml. Pour ce projet, le <xref:System.Data.Linq.DataContext> objet est nommé `northwindDataContext`.  
+2. Lorsque vous avez ajouté des tables au Concepteur O/R, le concepteur a ajouté un <xref:System.Data.Linq.DataContext> objet à votre projet. Cet objet contient le code que vous pouvez utiliser pour accéder à la table Customers. Il contient également le code qui définit un objet de client local et une collection de clients pour la table. Le <xref:System.Data.Linq.DataContext> objet pour votre projet est nommé d’après le nom de votre fichier .dbml. Pour ce projet, le <xref:System.Data.Linq.DataContext> objet est nommé `northwindDataContext`.  
   
      Vous pouvez créer une instance de la <xref:System.Data.Linq.DataContext> de l’objet dans votre code et les interroger et modifier la collection de clients spécifiée par le Concepteur O/R. Les modifications que vous apportez à la collection des clients ne sont pas répercutées dans la base de données jusqu'à ce que vous les envoyez en appelant le <xref:System.Data.Linq.DataContext.SubmitChanges%2A> méthode de la <xref:System.Data.Linq.DataContext> objet.  
   
@@ -86,9 +86,9 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
     End Sub  
     ```  
   
-3.  À partir de la **boîte à outils**, faites glisser trois <xref:System.Windows.Forms.Button> contrôles vers le formulaire. Sélectionnez le premier `Button` contrôle. Dans le **propriétés** fenêtre, définissez la `Name` de la `Button` le contrôle à `AddButton` et `Text` à `Add`. Sélectionnez le deuxième bouton et définissez le `Name` propriété `UpdateButton` et `Text` propriété `Update`. Sélectionnez le troisième bouton et définissez le `Name` propriété `DeleteButton` et `Text` propriété `Delete`.  
+3. À partir de la **boîte à outils**, faites glisser trois <xref:System.Windows.Forms.Button> contrôles vers le formulaire. Sélectionnez le premier `Button` contrôle. Dans le **propriétés** fenêtre, définissez la `Name` de la `Button` le contrôle à `AddButton` et `Text` à `Add`. Sélectionnez le deuxième bouton et définissez le `Name` propriété `UpdateButton` et `Text` propriété `Update`. Sélectionnez le troisième bouton et définissez le `Name` propriété `DeleteButton` et `Text` propriété `Delete`.  
   
-4.  Double-cliquez sur le **ajouter** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
+4. Double-cliquez sur le **ajouter** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
   
     ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
@@ -113,7 +113,7 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
     End Sub  
     ```  
   
-5.  Double-cliquez sur le **mise à jour** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
+5. Double-cliquez sur le **mise à jour** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
   
     ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
@@ -137,7 +137,7 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
     End Sub  
     ```  
   
-6.  Double-cliquez sur le **supprimer** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
+6. Double-cliquez sur le **supprimer** pour ajouter du code à son `Click` événement. Ajoutez le code suivant :  
   
     ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
@@ -158,7 +158,7 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
     End Sub  
     ```  
   
-7.  Appuyez sur F5 pour exécuter votre projet. Cliquez sur **ajouter** pour ajouter un nouvel enregistrement. Cliquez sur **mise à jour** pour modifier le nouvel enregistrement. Cliquez sur **supprimer** pour supprimer le nouvel enregistrement.  
+7. Appuyez sur F5 pour exécuter votre projet. Cliquez sur **ajouter** pour ajouter un nouvel enregistrement. Cliquez sur **mise à jour** pour modifier le nouvel enregistrement. Cliquez sur **supprimer** pour supprimer le nouvel enregistrement.  
   
 ## <a name="see-also"></a>Voir aussi
 
@@ -166,4 +166,4 @@ Language-Integrated des requêtes de requête (LINQ) facilitent l’accès aux i
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Guide pratique pour affecter des procédures stockées pour effectuer des mises à jour, des insertions et des suppressions (Concepteur O/R)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [Procédure : affecter des procédures stockées pour effectuer des mises à jour, des insertions et des suppressions (Concepteur O/R)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

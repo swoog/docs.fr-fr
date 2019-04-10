@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307897"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Procédure : Activer la saisie semi-automatique dans les contrôles ToolStrip dans les Windows Forms
 La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> avec un <xref:System.Windows.Forms.ToolStripComboBox> qui peut être déplacé vers le bas pour afficher une liste d’éléments, tels que récemment visité les sites Web. Si l’utilisateur tape un caractère qui correspond au premier caractère d’un des éléments dans la liste, l’élément est immédiatement affiché.  
@@ -27,7 +27,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>Pour activer la saisie semi-automatique dans un contrôle ToolStrip  
   
-1.  Créer un <xref:System.Windows.Forms.ToolStrip> contrôler et ajouter des éléments.  
+1. Créer un <xref:System.Windows.Forms.ToolStrip> contrôler et ajouter des éléments.  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  Définir le <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> propriété de l’étiquette et la zone de liste déroulante <xref:System.Windows.Forms.ToolStripItemOverflow.Never> afin que la liste soit toujours disponible, quel que soit la taille du formulaire.  
+2. Définir le <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> propriété de l’étiquette et la zone de liste déroulante <xref:System.Windows.Forms.ToolStripItemOverflow.Never> afin que la liste soit toujours disponible, quel que soit la taille du formulaire.  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3.  Ajouter des mots à la collection d’éléments de la <xref:System.Windows.Forms.ToolStripComboBox> contrôle.  
+3. Ajouter des mots à la collection d’éléments de la <xref:System.Windows.Forms.ToolStripComboBox> contrôle.  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  Définir le <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> propriété de la zone de liste déroulante <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
+4. Définir le <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> propriété de la zone de liste déroulante <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ La procédure suivante combine un <xref:System.Windows.Forms.ToolStripLabel> ave
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  Définir le <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> propriété de la zone de liste déroulante <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
+5. Définir le <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> propriété de la zone de liste déroulante <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

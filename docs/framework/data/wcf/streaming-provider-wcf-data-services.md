@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298875"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et de sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
@@ -28,15 +28,15 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  La configuration d'un service de données afin de prendre en charge la diffusion en continu de données binaires requiert les étapes suivantes :  
   
-1.  Attribuer une ou plusieurs entités dans le modèle de données comme entrées de lien média. Ces entités ne doivent pas inclure les données binaires à transmettre en continu. Les propriétés binaires d'une entité sont toujours retournées dans l'entrée comme des données binaires encodées Base 64.  
+1. Attribuer une ou plusieurs entités dans le modèle de données comme entrées de lien média. Ces entités ne doivent pas inclure les données binaires à transmettre en continu. Les propriétés binaires d'une entité sont toujours retournées dans l'entrée comme des données binaires encodées Base 64.  
   
-2.  Implémentation de l'interface T:System.Data.Services.Providers.IDataServiceStreamProvider  
+2. Implémentation de l'interface T:System.Data.Services.Providers.IDataServiceStreamProvider  
   
-3.  Définir un service de données qui implémente l'interface <xref:System.IServiceProvider>. Le service de données utilise l'implémentation <xref:System.IServiceProvider.GetService%2A> pour accéder à l'implémentation du fournisseur de données en continu. Cette méthode retourne l'implémentation de fournisseur de données en continu appropriée.  
+3. Définir un service de données qui implémente l'interface <xref:System.IServiceProvider>. Le service de données utilise l'implémentation <xref:System.IServiceProvider.GetService%2A> pour accéder à l'implémentation du fournisseur de données en continu. Cette méthode retourne l'implémentation de fournisseur de données en continu appropriée.  
   
-4.  Autoriser des flux de messages volumineux dans la configuration de l'application Web.  
+4. Autoriser des flux de messages volumineux dans la configuration de l'application Web.  
   
-5.  Activer l'accès aux ressources binaires sur le serveur ou dans une source de données.  
+5. Activer l'accès aux ressources binaires sur le serveur ou dans une source de données.  
   
  Les exemples de cette rubrique sont basés sur un exemple de diffusion en continu de service de photos, qui est décrit en détail dans l’article [série fournisseur de Services de diffusion en continu de données : Implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Le code source pour cet exemple de service est disponible sur le [page exemple de diffusion en continu de Service des données de Photo](https://go.microsoft.com/fwlink/?LinkID=198988) dans MSDN Code Gallery.  
   

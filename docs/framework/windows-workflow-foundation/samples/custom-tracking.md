@@ -2,12 +2,12 @@
 title: Suivi personnalisé
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307616"
 ---
 # <a name="custom-tracking"></a>Suivi personnalisé
 Cet exemple montre comment créer un participant de suivi personnalisé et écrire le contenu des données de suivi sur la console. De plus, il montre comment émettre des objets <xref:System.Activities.Tracking.CustomTrackingRecord> remplis avec des données définies par l'utilisateur. Le participant de suivi basé sur la console filtre les objets <xref:System.Activities.Tracking.TrackingRecord> émis par le workflow à l'aide d'un objet de modèle de suivi créé dans le code.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2010, ouvrez le fichier solution CustomTrackingSample.sln.
+1. À l’aide de Visual Studio 2010, ouvrez le fichier solution CustomTrackingSample.sln.
 
-2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.
+2. Pour générer la solution, appuyez sur Ctrl+Maj+B.
 
-3.  Pour exécuter la solution, appuyez sur Ctrl+F5.
+3. Pour exécuter la solution, appuyez sur Ctrl+F5.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

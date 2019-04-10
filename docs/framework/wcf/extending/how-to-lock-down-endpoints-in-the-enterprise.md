@@ -2,12 +2,12 @@
 title: 'Procédure : verrouiller des points de terminaison dans l’entreprise'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181340"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305953"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procédure : verrouiller des points de terminaison dans l’entreprise
 Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  
@@ -25,23 +25,23 @@ Les entreprises de grande taille exigent souvent que les applications soient dé
   
 ### <a name="to-create-the-endpoint-validator"></a>Pour créer le validateur de point de terminaison  
   
-1.  Créez un objet <xref:System.ServiceModel.Description.IEndpointBehavior> avec les étapes de validation souhaitées dans la méthode <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. Le code suivant fournit un exemple. (Le `InternetClientValidatorBehavior` provient de la [Validation de la sécurité](../../../../docs/framework/wcf/samples/security-validation.md) exemple.)  
+1. Créez un objet <xref:System.ServiceModel.Description.IEndpointBehavior> avec les étapes de validation souhaitées dans la méthode <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. Le code suivant fournit un exemple. (Le `InternetClientValidatorBehavior` provient de la [Validation de la sécurité](../../../../docs/framework/wcf/samples/security-validation.md) exemple.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Créez un objet <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> qui enregistre le validateur de point de terminaison créé à l'étape 1. L'exemple de code suivant illustre ce point. (Le code d’origine pour cet exemple se trouve dans le [Validation de la sécurité](../../../../docs/framework/wcf/samples/security-validation.md) exemple.)  
+2. Créez un objet <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> qui enregistre le validateur de point de terminaison créé à l'étape 1. L'exemple de code suivant illustre ce point. (Le code d’origine pour cet exemple se trouve dans le [Validation de la sécurité](../../../../docs/framework/wcf/samples/security-validation.md) exemple.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Assurez-vous que l'assembly compilé est signé avec un nom fort. Pour plus d’informations, consultez le [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) et les commandes du compilateur pour votre langue.  
+3. Assurez-vous que l'assembly compilé est signé avec un nom fort. Pour plus d’informations, consultez le [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) et les commandes du compilateur pour votre langue.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Pour installer le validateur dans l'ordinateur cible  
   
-1.  Installez le validateur de point de terminaison à l'aide du mécanisme approprié. Dans une entreprise, cela peut s'effectuer en utilisant la stratégie de groupe ou SMS (Systems Management Server).  
+1. Installez le validateur de point de terminaison à l'aide du mécanisme approprié. Dans une entreprise, cela peut s'effectuer en utilisant la stratégie de groupe ou SMS (Systems Management Server).  
   
-2.  Installer l’assembly avec nom fort dans le global assembly cache en utilisant le [Gacutil.exe (outil Global Assembly Cache)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Installer l’assembly avec nom fort dans le global assembly cache en utilisant le [Gacutil.exe (outil Global Assembly Cache)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Utilisez les types d'espaces de noms <xref:System.Configuration?displayProperty=nameWithType> pour :  
+3. Utilisez les types d'espaces de noms <xref:System.Configuration?displayProperty=nameWithType> pour :  
   
     1.  Ajoutez l’extension à la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) section à l’aide d’un nom de type qualifié complet et verrouillez l’élément.  
   

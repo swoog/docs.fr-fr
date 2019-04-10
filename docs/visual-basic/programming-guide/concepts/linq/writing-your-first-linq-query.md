@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295872"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développées pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Cela rend nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  
@@ -21,11 +21,11 @@ Une *requête* est une expression qui récupère des données d’une source de 
 ## <a name="three-stages-of-a-query-operation"></a>Trois phases d’une opération de requête  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] opérations de requête se composent de trois actions :  
   
-1.  Obtenir la source de données ou des sources.  
+1. Obtenir la source de données ou des sources.  
   
-2.  Création de la requête  
+2. Création de la requête  
   
-3.  Exécution de la requête  
+3. Exécution de la requête  
   
  Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], l’exécution d’une requête est distincte de la création de la requête. Vous ne récupérez pas toutes les données simplement en créant une requête. Ce point est abordé en détail plus loin dans cette rubrique.  
   
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Bien démarrer avec LINQ en Visual Basic](getting-started-with-linq.md)
+- [Mise en route de LINQ dans Visual Basic](getting-started-with-linq.md)
 - [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](standard-query-operators-overview.md)
-- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction à LINQ dans Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)

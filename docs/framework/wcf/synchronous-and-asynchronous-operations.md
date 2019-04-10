@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297705"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Opérations synchrones et asynchrones
 Cette rubrique traite de l'implémentation et de l'appel des opérations de service asynchrones.  
@@ -49,11 +49,11 @@ Cette rubrique traite de l'implémentation et de l'appel des opérations de serv
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implémentation d'une opération de service asynchrone  
  Les opérations asynchrones peuvent être implémentées à l'aide d'une des trois méthodes suivantes :  
   
-1.  Modèle asynchrone basé sur des tâches  
+1. Modèle asynchrone basé sur des tâches  
   
-2.  Modèle asynchrone basé sur des événements  
+2. Modèle asynchrone basé sur des événements  
   
-3.  Modèle asynchrone IAsyncResult  
+3. Modèle asynchrone IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)  
  Le modèle asynchrone basé sur des tâches constitue le meilleur moyen d’implémenter des opérations asynchrones, car il est le plus facile et le plus simple. Pour utiliser cette méthode, implémentez simplement votre opération de service et spécifiez un type de retour Task\<T>, où T est le type retourné par l'opération logique. Exemple :  

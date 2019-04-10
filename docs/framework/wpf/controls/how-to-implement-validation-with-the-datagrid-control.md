@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305948"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procédure : implémenter la validation avec le contrôle DataGrid
 Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’effectuer la validation au niveau de la cellule et la ligne. La validation au niveau de la cellule vous valider les propriétés individuelles d’un objet de données liées quand un utilisateur met à jour une valeur. La validation au niveau des lignes, vous validez les objets de données entier lorsqu’un utilisateur valide des modifications apportées à une ligne. Vous pouvez également fournir une rétroaction visuelle personnalisée pour les erreurs de validation, ou utiliser la rétroaction visuelle par défaut qui le <xref:System.Windows.Controls.DataGrid> fournit du contrôle.  
@@ -42,14 +42,14 @@ Le <xref:System.Windows.Controls.DataGrid> contrôle vous permet d’effectuer l
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Pour valider les valeurs multiples dans une seule ligne  
   
-1.  Implémentez un <xref:System.Windows.Controls.ValidationRule> sous-classe qui vérifie plusieurs propriétés de l’objet de données liées. Dans votre <xref:System.Windows.Controls.ValidationRule.Validate%2A> effectuer un cast de l’implémentation de méthode, le `value` valeur de paramètre à un <xref:System.Windows.Data.BindingGroup> instance. Vous pouvez ensuite accéder à l’objet de données via le <xref:System.Windows.Data.BindingGroup.Items%2A> propriété.  
+1. Implémentez un <xref:System.Windows.Controls.ValidationRule> sous-classe qui vérifie plusieurs propriétés de l’objet de données liées. Dans votre <xref:System.Windows.Controls.ValidationRule.Validate%2A> effectuer un cast de l’implémentation de méthode, le `value` valeur de paramètre à un <xref:System.Windows.Data.BindingGroup> instance. Vous pouvez ensuite accéder à l’objet de données via le <xref:System.Windows.Data.BindingGroup.Items%2A> propriété.  
   
      L’exemple suivant montre le processus permettant de valider si la `StartDate` valeur de propriété pour un `Course` objet est antérieur à son `EndDate` valeur de propriété.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Ajouter la règle de validation pour le <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> collection. Le <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriété offre un accès direct à la <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propriété d’un <xref:System.Windows.Data.BindingGroup> instance qui regroupe toutes les liaisons utilisées par le contrôle.  
+2. Ajouter la règle de validation pour le <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> collection. Le <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriété offre un accès direct à la <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propriété d’un <xref:System.Windows.Data.BindingGroup> instance qui regroupe toutes les liaisons utilisées par le contrôle.  
   
      L’exemple suivant définit le <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriété dans XAML. Le <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> propriété est définie sur <xref:System.Windows.Controls.ValidationStep.UpdatedValue> afin que la validation se produit uniquement après que l’objet de données liées est mis à jour.  
   

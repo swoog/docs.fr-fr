@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832279"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312239"
 ---
 # <a name="overload-resolution-visual-basic"></a>Résolution de surcharge (Visual Basic)
 Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est défini dans plusieurs versions surchargées, le compilateur doit décider de la surcharge à appeler. Il effectue cela en effectuant les étapes suivantes :  
   
-1.  **Accessibilité.** Il élimine toute surcharge avec un niveau d’accès qui empêche le code appelant de l’appeler.  
+1. **Accessibilité.** Il élimine toute surcharge avec un niveau d’accès qui empêche le code appelant de l’appeler.  
   
-2.  **Nombre de paramètres.** Il élimine les surcharges qui définit un nombre différent de paramètres que ceux spécifiés dans l’appel.  
+2. **Nombre de paramètres.** Il élimine les surcharges qui définit un nombre différent de paramètres que ceux spécifiés dans l’appel.  
   
-3.  **Types de données de paramètre.** Le compilateur donne la préférence de méthodes d’instance sur les méthodes d’extension. Si n’importe quelle méthode d’instance est trouvée qui nécessite uniquement des conversions pour faire correspondre l’appel de procédure étendues, toutes les méthodes d’extension sont supprimées et le compilateur continue avec uniquement les candidats de méthode d’instance. Si aucune méthode d’instance de ce type n’est trouvé, il continue avec l’instance et de méthodes d’extension.  
+3. **Types de données de paramètre.** Le compilateur donne la préférence de méthodes d’instance sur les méthodes d’extension. Si n’importe quelle méthode d’instance est trouvée qui nécessite uniquement des conversions pour faire correspondre l’appel de procédure étendues, toutes les méthodes d’extension sont supprimées et le compilateur continue avec uniquement les candidats de méthode d’instance. Si aucune méthode d’instance de ce type n’est trouvé, il continue avec l’instance et de méthodes d’extension.  
   
      Dans cette étape, il élimine toute surcharge pour lequel les types de données des arguments appelantes ne peut pas être convertis pour les types de paramètres définis dans la surcharge.  
   
-4.  **Conversions restrictives.** Il élimine les surcharges qui requiert une conversion restrictive à partir des types d’argument appelant pour les types de paramètres définies. Cela est vrai si le type commutateur de vérification ([Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) est `On` ou `Off`.  
+4. **Conversions restrictives.** Il élimine les surcharges qui requiert une conversion restrictive à partir des types d’argument appelant pour les types de paramètres définies. Cela est vrai si le type commutateur de vérification ([Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) est `On` ou `Off`.  
   
-5.  **Moindre extension.** Le compilateur considère les surcharges restantes par paires. Pour chaque paire, il compare les types de données des paramètres définis. Si les types dans une des surcharges de tous les s’étend à des types correspondants dans l’autre, le compilateur élimine ce dernier. Autrement dit, il conserve la surcharge qui nécessite le moins importante.  
+5. **Moindre extension.** Le compilateur considère les surcharges restantes par paires. Pour chaque paire, il compare les types de données des paramètres définis. Si les types dans une des surcharges de tous les s’étend à des types correspondants dans l’autre, le compilateur élimine ce dernier. Autrement dit, il conserve la surcharge qui nécessite le moins importante.  
   
-6.  **Candidat unique.** Il continue à rassembler les surcharges par paires jusqu'à ce que la seule surcharge et il résout l’appel à cette surcharge. Si le compilateur ne peut pas réduire la surcharge à un seul candidat, il génère une erreur.  
+6. **Candidat unique.** Il continue à rassembler les surcharges par paires jusqu'à ce que la seule surcharge et il résout l’appel à cette surcharge. Si le compilateur ne peut pas réduire la surcharge à un seul candidat, il génère une erreur.  
   
  L’illustration suivante montre le processus qui détermine un ensemble de versions surchargées à appeler.  
   
@@ -61,13 +61,13 @@ Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est
 ## <a name="see-also"></a>Voir aussi
 
 - [Paramètres facultatifs](./optional-parameters.md)
-- [tableaux de paramètres](./parameter-arrays.md)
+- [Tableaux de paramètres](./parameter-arrays.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
-- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)
+- [Procédure : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procédure : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Procédure : surcharger une procédure qui accepte des paramètres facultatifs](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considérations liées à la surcharge des procédures](./considerations-in-overloading-procedures.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Méthodes d’extension](./extension-methods.md)

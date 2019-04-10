@@ -2,12 +2,12 @@
 title: Résolution de surcharge des fonctions (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: e7e80704da9657dccfbfea548df074a95327cdc1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0248fdd3f3ba6afb5c7edca740d9aad3ca74bd03
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082034"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302515"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Résolution de surcharge des fonctions (Entity SQL)
 Cette rubrique décrit comment résoudre les fonctions [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -16,13 +16,13 @@ Cette rubrique décrit comment résoudre les fonctions [!INCLUDE[esql](../../../
   
  Lorsque cela est le cas, les critères suivants doivent être appliqués pour déterminer quelle fonction est référencée par une expression donnée. Ces critères sont appliqués dans l'ordre donné. Le premier critère qui s'applique uniquement à une fonction unique est la fonction résolue.  
   
-1.  **Numéro du paramètre**. La fonction a le même nombre de paramètres spécifiés dans l'expression.  
+1. **Numéro du paramètre**. La fonction a le même nombre de paramètres spécifiés dans l'expression.  
   
-2.  **Correspondance exacte sur le type**. Chaque type d’argument de la fonction correspond exactement au type de paramètre ou correspond au littéral Null.  
+2. **Correspondance exacte sur le type**. Chaque type d’argument de la fonction correspond exactement au type de paramètre ou correspond au littéral Null.  
   
-3.  **Concordance sur le sous-type**. Chaque type d'argument de la fonction correspond exactement au type de paramètre ou en est un sous-type, ou l'argument correspond au littéral Null. Au cas où plusieurs fonctions diffèrent uniquement par le nombre de conversions de sous-types requis, la fonction avec le moins de conversions de sous-types est la fonction résolue.  
+3. **Concordance sur le sous-type**. Chaque type d'argument de la fonction correspond exactement au type de paramètre ou en est un sous-type, ou l'argument correspond au littéral Null. Au cas où plusieurs fonctions diffèrent uniquement par le nombre de conversions de sous-types requis, la fonction avec le moins de conversions de sous-types est la fonction résolue.  
   
-4.  **Correspondance sur la promotion de type ou sous-type**. Chaque type d'argument de la fonction correspond exactement au type de paramètre, en est un sous-type ou peut être converti dans le type de paramètre, ou l'argument correspond au littéral Null. Encore une fois, au cas où plusieurs fonctions diffèrent uniquement par le nombre de promotions et de conversions de sous-types, la fonction avec le moins de promotions et de conversions de sous-types est la fonction résolue.  
+4. **Correspondance sur la promotion de type ou sous-type**. Chaque type d'argument de la fonction correspond exactement au type de paramètre, en est un sous-type ou peut être converti dans le type de paramètre, ou l'argument correspond au littéral Null. Encore une fois, au cas où plusieurs fonctions diffèrent uniquement par le nombre de promotions et de conversions de sous-types, la fonction avec le moins de promotions et de conversions de sous-types est la fonction résolue.  
   
  Si aucun de ces critères ne permet la sélection d'une fonction unique, l'expression d'appel de la fonction est ambiguë.  
   

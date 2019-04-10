@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301033"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espaces de noms XAML et mappage d'espace de noms pour XAML WPF
 Cette rubrique explique plus en détail la présence et la finalité des deux mappages d’espace de noms XAML qui figurent souvent dans la balise racine de chaque fichier XAML WPF. Elle décrit également comment produire des mappages similaires pour utiliser des éléments définis dans votre propre code et/ou dans des assemblys distincts.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF et chargement des assemblys  
  Le contexte de schéma XAML pour WPF s’intègre avec le modèle d’application WPF, qui à son tour utilise le concept défini par le CLR de <xref:System.AppDomain>. La séquence suivante décrit comment le contexte de schéma XAML interprète comment charger les assemblys ou rechercher des types au moment de l’exécution ou au moment du design, en fonction de l’utilisation WPF de <xref:System.AppDomain> et d’autres facteurs.  
   
-1.  Effectuer une itération dans le <xref:System.AppDomain>, recherchez un assembly déjà chargé qui correspond à tous les aspects du nom, depuis le dernier assembly chargé.  
+1. Effectuer une itération dans le <xref:System.AppDomain>, recherchez un assembly déjà chargé qui correspond à tous les aspects du nom, depuis le dernier assembly chargé.  
   
-2.  Si le nom est qualifié, appelez <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
+2. Si le nom est qualifié, appelez <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
   
-3.  Si combinaison nom court + jeton de clé publique d’un nom qualifié correspond à l’assembly à partir duquel le balisage a été chargé, retournez cet assembly.  
+3. Si combinaison nom court + jeton de clé publique d’un nom qualifié correspond à l’assembly à partir duquel le balisage a été chargé, retournez cet assembly.  
   
-4.  Utilisez le nom court + jeton de clé publique pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Utilisez le nom court + jeton de clé publique pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Si le nom est non qualifié, appelez <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Si le nom est non qualifié, appelez <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Le XAML libre n’utilise pas l’étape 3 ; il n’y a pas de chargement à partir de l’assembly.  
   

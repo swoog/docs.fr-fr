@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Requête et modèle objet simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309457"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procédure pas à pas : Requête et modèle objet simples (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel de complexité minimale. Vous allez créer une classe d'entité qui modélise la table Customers dans l'exemple de base de données Northwind. Vous créerez ensuite une requête simple pour répertorier les clients localisés à Londres.  
@@ -44,30 +44,30 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Pour créer une solution LINQ to SQL  
   
-1.  Dans Visual Studio **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
+1. Dans Visual Studio **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
   
-2.  Dans le **types de projets** volet de la **nouveau projet** boîte de dialogue, cliquez sur **Visual C#** .  
+2. Dans le **types de projets** volet de la **nouveau projet** boîte de dialogue, cliquez sur **Visual C#** .  
   
-3.  Dans le volet **Modèles**, cliquez sur **Application console**.  
+3. Dans le volet **Modèles**, cliquez sur **Application console**.  
   
-4.  Dans le **nom** , tapez **LinqConsoleApp**.  
+4. Dans le **nom** , tapez **LinqConsoleApp**.  
   
-5.  Dans le **emplacement** , vérifiez où vous souhaitez stocker vos fichiers projet.  
+5. Dans le **emplacement** , vérifiez où vous souhaitez stocker vos fichiers projet.  
   
-6.  Cliquez sur **OK**.  
+6. Cliquez sur **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Ajout de références et de directives LINQ  
  Cette procédure pas à pas utilise des assemblys qui ne sont pas nécessairement installés par défaut dans votre projet. Si System.Data.Linq n’est pas répertorié en tant que référence dans votre projet (développez le **références** nœud **l’Explorateur de solutions**), ajoutez-le comme expliqué dans les étapes suivantes.  
   
 #### <a name="to-add-systemdatalinq"></a>Pour ajouter System.Data.Linq  
   
-1.  Dans **l’Explorateur de solutions**, avec le bouton droit **références**, puis cliquez sur **ajouter une référence**.  
+1. Dans **l’Explorateur de solutions**, avec le bouton droit **références**, puis cliquez sur **ajouter une référence**.  
   
-2.  Dans le **ajouter une référence** boîte de dialogue, cliquez sur **.NET**et cliquez sur l’assembly System.Data.Linq, puis cliquez sur **OK**.  
+2. Dans le **ajouter une référence** boîte de dialogue, cliquez sur **.NET**et cliquez sur l’assembly System.Data.Linq, puis cliquez sur **OK**.  
   
      L'assembly est ajouté au projet.  
   
-3.  Ajoutez les directives suivantes en haut de **Program.cs**:  
+3. Ajoutez les directives suivantes en haut de **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-execute-the-query"></a>Pour exécuter la requête  
   
-1.  Tapez ou collez le code suivant à la fin de la méthode `Main` (après la description de la requête).  
+1. Tapez ou collez le code suivant à la fin de la méthode `Main` (après la description de la requête).  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  Appuyez sur F5 pour déboguer l'application.  
+2. Appuyez sur F5 pour déboguer l'application.  
   
     > [!NOTE]
     >  Si votre application génère une erreur d’exécution, consultez la section de résolution des problèmes de [apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
@@ -147,7 +147,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
      `ID=SEVES, City=London`  
   
-3.  Appuyez sur Entrée dans la fenêtre de console pour fermer l'application.  
+3. Appuyez sur Entrée dans la fenêtre de console pour fermer l'application.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Le [procédure pas à pas : Interrogation de relations (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) rubrique continue où cette procédure pas à pas se termine. La procédure pas à pas interrogation de relations montre comment [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut interroger des tables, similaire à *jointures* dans une base de données relationnelle.  

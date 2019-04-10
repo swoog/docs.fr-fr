@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 6e0d453903b817e9acd743e835f4d466e3565271
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c84d260783e3a511b5ef6a651c71f1ee55acffe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295339"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Procédure : Supprimer un ToolStripMenuItem d’un Menu du menu déroulant MDI (Windows Forms)
 Dans certaines applications, le type d'une fenêtre enfant d'interface multidocument (MDI) peut être différent de celui de la fenêtre parente MDI. Par exemple, le parent MDI peut être une feuille de calcul et l'enfant MDI un graphique. Dans ce cas, vous souhaitez mettre à jour le contenu du menu du parent MDI avec le contenu du menu de l'enfant MDI à mesure que des fenêtres enfants MDI de types différents sont activées.  
@@ -24,21 +24,21 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
   
 ### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Pour supprimer un MenuStrip dans le menu déroulant MDI  
   
-1.  Créez un formulaire et affectez la valeur `true` à sa propriété <xref:System.Windows.Forms.Form.IsMdiContainer%2A>.  
+1. Créez un formulaire et affectez la valeur `true` à sa propriété <xref:System.Windows.Forms.Form.IsMdiContainer%2A>.  
   
-2.  Ajoutez un <xref:System.Windows.Forms.MenuStrip> à `Form1` et affectez la valeur `true` à la propriété <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> du <xref:System.Windows.Forms.MenuStrip>.  
+2. Ajoutez un <xref:System.Windows.Forms.MenuStrip> à `Form1` et affectez la valeur `true` à la propriété <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> du <xref:System.Windows.Forms.MenuStrip>.  
   
-3.  Ajoutez un élément de menu de niveau supérieur à la `Form1`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.Control.Text%2A> propriété `&File`.  
+3. Ajoutez un élément de menu de niveau supérieur à la `Form1`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.Control.Text%2A> propriété `&File`.  
   
-4.  Ajoutez trois éléments de sous-menu à la `&File` élément de menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Open`, `&Import from`, et `E&xit`.  
+4. Ajoutez trois éléments de sous-menu à la `&File` élément de menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Open`, `&Import from`, et `E&xit`.  
   
-5.  Ajoutez deux éléments de sous-menu à la `&Import from` élément de sous-menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Word` et `&Excel`.  
+5. Ajoutez deux éléments de sous-menu à la `&Import from` élément de sous-menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Word` et `&Excel`.  
   
-6.  Ajoutez un formulaire au projet, ajoutez un <xref:System.Windows.Forms.MenuStrip> au formulaire et affectez le <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriété de la `Form2`<xref:System.Windows.Forms.MenuStrip> à `true`.  
+6. Ajoutez un formulaire au projet, ajoutez un <xref:System.Windows.Forms.MenuStrip> au formulaire et affectez le <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriété de la `Form2`<xref:System.Windows.Forms.MenuStrip> à `true`.  
   
-7.  Ajoutez un élément de menu de niveau supérieur à la `Form2`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriété `&File`.  
+7. Ajoutez un élément de menu de niveau supérieur à la `Form2`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriété `&File`.  
   
-8.  Ajouter un `&Import from` élément de sous-menu à la `&File` menu de `Form2`et ajoutez un `&Word` élément de sous-menu à le `&File` menu.  
+8. Ajouter un `&Import from` élément de sous-menu à la `&File` menu de `Form2`et ajoutez un `&Word` élément de sous-menu à le `&File` menu.  
   
 9. Définir le <xref:System.Windows.Forms.MergeAction> et <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriétés de la `Form2` les éléments de menu comme indiqué dans le tableau suivant.  
   

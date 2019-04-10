@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311524"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procédure : Contrôler la disponibilité d’une Variable (Visual Basic)
 Vous pouvez contrôler la disponibilité d’une variable en spécifiant son *niveau d’accès*. Le niveau d’accès détermine quel code est autorisé à lire ou écrire dans la variable.  
@@ -31,25 +31,25 @@ Vous pouvez contrôler la disponibilité d’une variable en spécifiant son *ni
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Pour rendre une variable accessible uniquement à partir de son module, une classe ou une structure  
   
-1.  Place le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
+1. Place le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
   
-2.  Inclure le [privé](../../../../visual-basic/language-reference/modifiers/private.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [privé](../../../../visual-basic/language-reference/modifiers/private.md) mot clé dans la `Dim` instruction.  
   
      Vous pouvez lire ou écrire dans la variable à partir de n’importe où dans le module, une classe ou une structure, mais pas d’à l’extérieur.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Pour rendre une variable accessible à partir de n’importe quel code qui peut le consulter  
   
-1.  Pour une variable membre, placez la `Dim` instruction pour la variable à l’intérieur d’un module, une classe ou une structure, mais en dehors de toute procédure.  
+1. Pour une variable membre, placez la `Dim` instruction pour la variable à l’intérieur d’un module, une classe ou une structure, mais en dehors de toute procédure.  
   
-2.  Inclure le [Public](../../../../visual-basic/language-reference/modifiers/public.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [Public](../../../../visual-basic/language-reference/modifiers/public.md) mot clé dans la `Dim` instruction.  
   
      Vous pouvez lire ou écrire dans la variable à partir de n’importe quel code qui interagit avec votre assembly.  
   
  - ou -  
   
-1.  Pour une variable locale, placez la `Dim` instruction pour la variable à l’intérieur d’une procédure.  
+1. Pour une variable locale, placez la `Dim` instruction pour la variable à l’intérieur d’une procédure.  
   
-2.  N’incluez pas le `Public` mot clé dans la `Dim` instruction.  
+2. N’incluez pas le `Public` mot clé dans la `Dim` instruction.  
   
      Vous pouvez lire ou écrire dans la variable à partir de n’importe où dans la procédure, mais pas d’à l’extérieur.  
   
@@ -58,17 +58,17 @@ Vous pouvez contrôler la disponibilité d’une variable en spécifiant son *ni
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Pour rendre une variable accessible uniquement à partir de sa classe et toutes les classes dérivées  
   
-1.  Place le `Dim` instruction pour la variable à l’intérieur d’une classe, mais en dehors de toute procédure.  
+1. Place le `Dim` instruction pour la variable à l’intérieur d’une classe, mais en dehors de toute procédure.  
   
-2.  Inclure le [protégé](../../../../visual-basic/language-reference/modifiers/protected.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [protégé](../../../../visual-basic/language-reference/modifiers/protected.md) mot clé dans la `Dim` instruction.  
   
      Vous pouvez lire ou écrire dans la variable à partir de n’importe où dans la classe, ainsi que depuis n’importe quelle classe dérivée à partir de celui-ci, mais pas d’en dehors de toute classe dans la chaîne de dérivation.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Pour rendre une variable accessible uniquement à partir du même assembly  
   
-1.  Place le `Dim` instruction pour la variable à l’intérieur d’un module, une classe ou une structure, mais en dehors de toute procédure.  
+1. Place le `Dim` instruction pour la variable à l’intérieur d’un module, une classe ou une structure, mais en dehors de toute procédure.  
   
-2.  Inclure le [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) mot clé dans la `Dim` instruction.  
   
      Vous pouvez lire ou écrire dans la variable à partir de n’importe où dans le module, une classe ou une structure, ainsi qu’à partir de n’importe quel code dans le même assembly, mais pas de l’extérieur de l’assembly.  
   
@@ -89,7 +89,7 @@ Private numberForMeOnly As Integer
 ## <a name="see-also"></a>Voir aussi
 
 - [Niveaux d’accès dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Dim (instruction)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim, instruction](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)

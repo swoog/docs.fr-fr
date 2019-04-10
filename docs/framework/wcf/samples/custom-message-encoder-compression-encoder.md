@@ -2,12 +2,12 @@
 title: 'Encodeur de message personnalisé : Encodeur de compression'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310497"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Encodeur de message personnalisé : Encodeur de compression
 Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de la plateforme Windows Communication Foundation (WCF).  
@@ -39,9 +39,9 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
   
  Comme indiqué précédemment, plusieurs couches sont implémentées dans un encodeur personnalisé. Pour mieux illustrer la relation entre chacune d'elles, la liste suivante présente un ordre simplifié des événements de démarrage du service :  
   
-1.  Le serveur démarre.  
+1. Le serveur démarre.  
   
-2.  Les informations de configuration sont lues.  
+2. Les informations de configuration sont lues.  
   
     1.  La configuration du service enregistre le gestionnaire de configuration personnalisé.  
   
@@ -51,11 +51,11 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
   
     4.  L’élément de liaison personnalisé crée et retourne une fabrique d’encodeur de message.  
   
-3.  Un message est reçu.  
+3. Un message est reçu.  
   
-4.  La fabrique retourne un encodeur de message permettant de lire dans le message et d'écrire la réponse.  
+4. La fabrique retourne un encodeur de message permettant de lire dans le message et d'écrire la réponse.  
   
-5.  La couche d'encodeur est implémentée sous forme de fabrique de classe. Seule la fabrique de classe d'encodeur doit être exposée publiquement pour l'encodeur personnalisé. L’objet de fabrique est retourné par l’élément de liaison lorsque l’objet <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> est créé. Les encodeurs de message peuvent fonctionner en mode de mise en mémoire tampon ou en mode de diffusion en continu. Cet exemple présente ces deux modes.  
+5. La couche d'encodeur est implémentée sous forme de fabrique de classe. Seule la fabrique de classe d'encodeur doit être exposée publiquement pour l'encodeur personnalisé. L’objet de fabrique est retourné par l’élément de liaison lorsque l’objet <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> est créé. Les encodeurs de message peuvent fonctionner en mode de mise en mémoire tampon ou en mode de diffusion en continu. Cet exemple présente ces deux modes.  
   
  Chaque mode est associée à une méthode `ReadMessage` et `WriteMessage` sur la classe abstraite `MessageEncoder`. La majeure partie de l'encodage a lieu dans ces méthodes. L'exemple encapsule les encodeurs de message texte et binaire existants. Cela permet à l'exemple de déléguer la lecture et l'écriture de la représentation de câble des messages à l'encodeur interne, et à l'encodeur de compression de compresser ou décompresser les résultats. Car il n’existe aucun pipeline pour l’encodage de message, il s’agit du seul modèle pour l’utilisation de plusieurs encodeurs dans WCF. Une fois que le message a été décompressé, le message résultant est passé en haut de la pile pour être géré par la pile de canaux. Pendant la compression, le message compressé résultant est écrit directement dans le flux fourni.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante :  
+1. Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante :  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

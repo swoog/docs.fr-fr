@@ -2,12 +2,12 @@
 title: Persistance d’un objet dans Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303347"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procédure pas à pas : Persistance d’un objet dans Visual Studio (Visual Basic)
 Bien qu’il soit possible de définir des valeur par défaut pour les propriétés d’un objet au moment du design, les valeurs entrées lors de l’exécution sont perdues en cas de destruction de l’objet. Vous pouvez utiliser la sérialisation pour rendre les données d’un objet persistantes entre les instances, ce qui vous permet de stocker des valeurs et de les récupérer lors de la prochaine instanciation de l’objet.  
@@ -31,11 +31,11 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-create-the-loan-class"></a>Pour créer la classe Loan  
   
-1.  Créez un projet Bibliothèque de classes et nommez-le « LoanClass ». Pour plus d’informations, consultez [Création de solutions et de projets](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Créez un projet Bibliothèque de classes et nommez-le « LoanClass ». Pour plus d’informations, consultez [Création de solutions et de projets](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2.  Dans l’**Explorateur de solutions**, ouvrez le menu contextuel pour le fichier Class1, puis choisissez **Renommer**. Renommez le fichier `Loan` et appuyez sur Entrée. Quand vous renommez le fichier, la classe est également renommée `Loan`.  
+2. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel pour le fichier Class1, puis choisissez **Renommer**. Renommez le fichier `Loan` et appuyez sur Entrée. Quand vous renommez le fichier, la classe est également renommée `Loan`.  
   
-3.  Ajoutez les membres publics suivants à la classe :  
+3. Ajoutez les membres publics suivants à la classe :  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-create-a-test-application"></a>Pour créer une application de test  
   
-1.  Pour ajouter un projet d’application Windows Forms à votre solution, dans le menu **Fichier**, choisissez **Ajouter**, **Nouveau projet**.  
+1. Pour ajouter un projet d’application Windows Forms à votre solution, dans le menu **Fichier**, choisissez **Ajouter**, **Nouveau projet**.  
   
-2.  Dans la boîte de dialogue **Ajouter un nouveau projet**, choisissez **Application Windows Forms** et entrez `LoanApp` comme nom du projet, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
+2. Dans la boîte de dialogue **Ajouter un nouveau projet**, choisissez **Application Windows Forms** et entrez `LoanApp` comme nom du projet, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-3.  Dans l’**Explorateur de solutions**, choisissez le projet LoanApp.  
+3. Dans l’**Explorateur de solutions**, choisissez le projet LoanApp.  
   
-4.  Dans le menu **Projet**, choisissez **Définir comme projet de démarrage**.  
+4. Dans le menu **Projet**, choisissez **Définir comme projet de démarrage**.  
   
-5.  Dans le menu **Projet** , choisissez **Ajouter une référence**.  
+5. Dans le menu **Projet** , choisissez **Ajouter une référence**.  
   
-6.  Dans la boîte de dialogue **Ajouter une référence**, choisissez l’onglet **Projets**, puis le projet LoanClass.  
+6. Dans la boîte de dialogue **Ajouter une référence**, choisissez l’onglet **Projets**, puis le projet LoanClass.  
   
-7.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
+7. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-8.  Dans le concepteur, ajoutez quatre contrôles <xref:System.Windows.Forms.TextBox> au formulaire.  
+8. Dans le concepteur, ajoutez quatre contrôles <xref:System.Windows.Forms.TextBox> au formulaire.  
   
 9. Dans l'éditeur de code, ajoutez le code suivant :  
   
@@ -163,13 +163,13 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-deserialize-an-object"></a>Pour désérialiser un objet  
   
-1.  Ajoutez une constante à la classe pour le nom de fichier des données sérialisées.  
+1. Ajoutez une constante à la classe pour le nom de fichier des données sérialisées.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  Modifiez le code de la procédure événementielle `Form1_Load` de la façon suivante :  
+2. Modifiez le code de la procédure événementielle `Form1_Load` de la façon suivante :  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  

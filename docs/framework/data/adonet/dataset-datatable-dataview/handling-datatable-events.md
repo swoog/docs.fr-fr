@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312824"
 ---
 # <a name="handling-datatable-events"></a>Gestion des événements de DataTable
 L'objet <xref:System.Data.DataTable> fournit une série d'événements pouvant être traités par une application. Le tableau ci-dessous décrit les événements `DataTable`.  
@@ -47,21 +47,21 @@ L'objet <xref:System.Data.DataTable> fournit une série d'événements pouvant �
 ## <a name="sequence-of-operations"></a>Ordre des opérations  
  Voici l'ordre des opérations qui se produisent lorsqu'un `DataRow` est ajouté, modifié ou supprimé :  
   
-1.  Créez l'enregistrement proposé et appliquez les modifications éventuelles.  
+1. Créez l'enregistrement proposé et appliquez les modifications éventuelles.  
   
-2.  Vérifiez les contraintes pour les colonnes autres que les colonnes d'expression.  
+2. Vérifiez les contraintes pour les colonnes autres que les colonnes d'expression.  
   
-3.  Déclenchez les événements `RowChanging` ou `RowDeleting` selon les besoins.  
+3. Déclenchez les événements `RowChanging` ou `RowDeleting` selon les besoins.  
   
-4.  Définissez l'enregistrement proposé comme enregistrement en cours.  
+4. Définissez l'enregistrement proposé comme enregistrement en cours.  
   
-5.  Mettez à jour les index associés éventuels.  
+5. Mettez à jour les index associés éventuels.  
   
-6.  Déclenchez les événements `ListChanged` pour les objets `DataView` associés et les événements `PropertyChanged` pour les objets `DataRowView` associés.  
+6. Déclenchez les événements `ListChanged` pour les objets `DataView` associés et les événements `PropertyChanged` pour les objets `DataRowView` associés.  
   
-7.  Évaluez toutes les colonnes d'expression, mais retardez la vérification des contraintes éventuelles sur ces colonnes.  
+7. Évaluez toutes les colonnes d'expression, mais retardez la vérification des contraintes éventuelles sur ces colonnes.  
   
-8.  Déclenchez les événements `ListChanged` pour les objets `DataView` associés et les événements `PropertyChanged` pour les objets `DataRowView` associés affectés par les évaluations des colonnes d'expression.  
+8. Déclenchez les événements `ListChanged` pour les objets `DataView` associés et les événements `PropertyChanged` pour les objets `DataRowView` associés affectés par les évaluations des colonnes d'expression.  
   
 9. Déclenchez les événements `RowChanged` ou `RowDeleted` selon les besoins.  
   

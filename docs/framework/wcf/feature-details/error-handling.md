@@ -2,12 +2,12 @@
 title: Gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300279"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestion des erreurs dans Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136433"
   
  Avec un IErrorHandler, vous pouvez explicitement contrôler le comportement de votre application lorsqu'une exception est levée. Vous pouvez :  
   
-1.  Déterminer s'il faut ou non envoyer une erreur au client  
+1. Déterminer s'il faut ou non envoyer une erreur au client  
   
-2.  Remplacer une exception par une erreur  
+2. Remplacer une exception par une erreur  
   
-3.  Remplacer une erreur par une autre  
+3. Remplacer une erreur par une autre  
   
-4.  Effectuer l'enregistrement ou le suivi  
+4. Effectuer l'enregistrement ou le suivi  
   
-5.  Exécuter d'autres activités personnalisées  
+5. Exécuter d'autres activités personnalisées  
   
  Pour installer un gestionnaire d'erreurs personnalisé, ajoutez-le à la propriété ErrorHandlers des répartiteurs de canal de votre service.  Il est possible d’avoir plusieurs gestionnaire d’erreurs et ils sont appelés dans l’ordre où ils sont ajoutés à cette collection.  
   

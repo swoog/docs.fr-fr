@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091614"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304803"
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le .NET Framework inclut un modèle de complément, qui permet aux développeurs de créer des applications qui prennent en charge d’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les interfaces utilisateur qui sont fournies par des compléments. Cette rubrique montre comment WPF étend le modèle de complément .NET Framework pour activer ces scénarios, l’architecture sous-jacente, ses avantages et ses limitations.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091614"
 ## <a name="wpf-add-ins"></a>Compléments WPF  
  WPF, conjointement avec le .NET Framework-modèle de complément, vous permet de résoudre un large éventail de scénarios qui requièrent des applications hôtes doivent afficher des interfaces utilisateur à partir de compléments. En particulier, ces scénarios sont traités par WPF avec les deux modèles de programmation suivantes :  
   
-1.  **Le complément retourne une IU (interface utilisateur)**. Un complément retourne une interface utilisateur à l’application hôte via un appel de méthode, tel que défini par le contrat. Ce scénario est utilisé dans les cas suivants :  
+1. **Le complément retourne une IU (interface utilisateur)**. Un complément retourne une interface utilisateur à l’application hôte via un appel de méthode, tel que défini par le contrat. Ce scénario est utilisé dans les cas suivants :  
   
     -   L’apparence d’une interface utilisateur qui est retournée par un complément est dépend des données ou les conditions qui n’existent qu’au moment de l’exécution, telles que dynamiquement les rapports générés.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091614"
   
     -   Principalement le complément exécute un service pour l’application hôte et signale l’état à l’application hôte avec une interface utilisateur.  
   
-2.  **Le complément est une interface utilisateur**. Un complément est une interface utilisateur, tel que défini par le contrat. Ce scénario est utilisé dans les cas suivants :  
+2. **Le complément est une interface utilisateur**. Un complément est une interface utilisateur, tel que défini par le contrat. Ce scénario est utilisé dans les cas suivants :  
   
     -   Un complément ne fournit pas d’autres services que celui d’être affiché, par exemple une publicité.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091614"
   
  Les types WPF UI ne sont pas accessibles à distance. Pour résoudre ce problème, WPF étend le modèle de complément .NET Framework pour activer UI WPF créés par des compléments à afficher à partir d’applications hôtes. Cette prise en charge est fournie par WPF par deux types : les <xref:System.AddIn.Contract.INativeHandleContract> interface et deux méthodes statiques implémentées par le <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe : <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. À un niveau élevé, ces types et méthodes sont utilisés de la manière suivante :  
   
-1.  WPF nécessite que les interfaces utilisateur fournies par les compléments sont des classes qui dérivent directement ou indirectement de <xref:System.Windows.FrameworkElement>, tels que des formes, des contrôles, des contrôles utilisateur, des panneaux de disposition et des pages.  
+1. WPF nécessite que les interfaces utilisateur fournies par les compléments sont des classes qui dérivent directement ou indirectement de <xref:System.Windows.FrameworkElement>, tels que des formes, des contrôles, des contrôles utilisateur, des panneaux de disposition et des pages.  
   
-2.  Chaque fois que le contrat déclare qu’une interface utilisateur sera transmise entre le complément et l’application hôte, elle doit être déclarée comme un <xref:System.AddIn.Contract.INativeHandleContract> (pas un <xref:System.Windows.FrameworkElement>) ; <xref:System.AddIn.Contract.INativeHandleContract> est une représentation accessible à distance de l’ajouter dans l’interface utilisateur qui peut être passée au-delà des limites d’isolation.  
+2. Chaque fois que le contrat déclare qu’une interface utilisateur sera transmise entre le complément et l’application hôte, elle doit être déclarée comme un <xref:System.AddIn.Contract.INativeHandleContract> (pas un <xref:System.Windows.FrameworkElement>) ; <xref:System.AddIn.Contract.INativeHandleContract> est une représentation accessible à distance de l’ajouter dans l’interface utilisateur qui peut être passée au-delà des limites d’isolation.  
   
-3.  Avant d’être passée à partir de domaine d’application de la macro complémentaire, un <xref:System.Windows.FrameworkElement> est empaqueté comme un <xref:System.AddIn.Contract.INativeHandleContract> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Avant d’être passée à partir de domaine d’application de la macro complémentaire, un <xref:System.Windows.FrameworkElement> est empaqueté comme un <xref:System.AddIn.Contract.INativeHandleContract> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Après avoir été transmis au domaine d’application de l’application hôte, le <xref:System.AddIn.Contract.INativeHandleContract> doivent être transformées en un <xref:System.Windows.FrameworkElement> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Après avoir été transmis au domaine d’application de l’application hôte, le <xref:System.AddIn.Contract.INativeHandleContract> doivent être transformées en un <xref:System.Windows.FrameworkElement> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Comment <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> sont utilisés dépend du scénario spécifique. Les sections suivantes fournissent des détails sur chaque modèle de programmation.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091614"
 ## <a name="add-in-returns-a-user-interface"></a>Le complément retourne une interface utilisateur  
  Pour un complément retourner une interface utilisateur à une application hôte, les éléments suivants sont requis :  
   
-1.  L’application hôte, d’un complément et d’un pipeline doivent être créés, comme décrit par le .NET Framework [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentation.  
+1. L’application hôte, d’un complément et d’un pipeline doivent être créés, comme décrit par le .NET Framework [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentation.  
   
-2.  Le contrat doit implémenter <xref:System.AddIn.Contract.IContract> et, pour retourner une interface utilisateur, le contrat doit déclarer une méthode avec une valeur de retour de type <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Le contrat doit implémenter <xref:System.AddIn.Contract.IContract> et, pour retourner une interface utilisateur, le contrat doit déclarer une méthode avec une valeur de retour de type <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  L’interface utilisateur qui est transmise entre le complément et l’application hôte doit dériver directement ou indirectement de <xref:System.Windows.FrameworkElement>.  
+3. L’interface utilisateur qui est transmise entre le complément et l’application hôte doit dériver directement ou indirectement de <xref:System.Windows.FrameworkElement>.  
   
-4.  L’interface utilisateur qui est retourné par le complément doit être converti à partir d’un <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> avant de traverser la limite d’isolation.  
+4. L’interface utilisateur qui est retourné par le complément doit être converti à partir d’un <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> avant de traverser la limite d’isolation.  
   
-5.  L’interface utilisateur qui est retourné doit être converti à partir d’un <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> après avoir traversé la limite d’isolation.  
+5. L’interface utilisateur qui est retourné doit être converti à partir d’un <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> après avoir traversé la limite d’isolation.  
   
-6.  L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
+6. L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
   
  Pour obtenir un exemple qui montre comment implémenter un complément qui retourne une interface utilisateur, consultez [créer un complément qui retourne une interface utilisateur](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091614"
 ## <a name="add-in-is-a-user-interface"></a>Le complément est une interface utilisateur  
  Lorsqu’un complément est une interface utilisateur, les éléments suivants sont requis :  
   
-1.  L’application hôte, d’un complément et d’un pipeline doivent être créés, comme décrit par le .NET Framework [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentation.  
+1. L’application hôte, d’un complément et d’un pipeline doivent être créés, comme décrit par le .NET Framework [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentation.  
   
-2.  L’interface de contrat pour le complément doit implémenter <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. L’interface de contrat pour le complément doit implémenter <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Le complément, qui est passé à l’application hôte doit dériver directement ou indirectement de <xref:System.Windows.FrameworkElement>.  
+3. Le complément, qui est passé à l’application hôte doit dériver directement ou indirectement de <xref:System.Windows.FrameworkElement>.  
   
-4.  Le complément doit être converti à partir d’un <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> avant de traverser la limite d’isolation.  
+4. Le complément doit être converti à partir d’un <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> avant de traverser la limite d’isolation.  
   
-5.  Le complément doit être converti à partir d’un <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> après avoir traversé la limite d’isolation.  
+5. Le complément doit être converti à partir d’un <xref:System.AddIn.Contract.INativeHandleContract> à un <xref:System.Windows.FrameworkElement> après avoir traversé la limite d’isolation.  
   
-6.  L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
+6. L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
   
  Pour obtenir un exemple qui montre comment implémenter un complément qui est une interface utilisateur, consultez [créer un complément qui est une interface utilisateur](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091614"
   
  L’étape suivante consiste à spécifier les assemblys de pipeline et l’assembly de complément en tant que fichiers de contenu [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] en effectuant les opérations ci-dessous :  
   
-1.  Ajoutez l’assembly de pipeline et de complément au projet en cliquant avec le bouton droit sur chaque dossier de pipeline dans l’Explorateur de solutions, puis choisissez **Inclure dans le projet**.  
+1. Ajoutez l’assembly de pipeline et de complément au projet en cliquant avec le bouton droit sur chaque dossier de pipeline dans l’Explorateur de solutions, puis choisissez **Inclure dans le projet**.  
   
-2.  Affectez à l’**Action de génération** de chaque assembly de pipeline et de complément le **Contenu** de la fenêtre **Propriétés**.  
+2. Affectez à l’**Action de génération** de chaque assembly de pipeline et de complément le **Contenu** de la fenêtre **Propriétés**.  
   
  La dernière étape consiste à configurer le manifeste de l’application pour inclure les fichiers d’assembly de pipeline et de complément à télécharger. Les fichiers doivent se trouver dans des dossiers situés à la racine du dossier du cache [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] occupé par l’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Vous pouvez procéder à la configuration dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] en effectuant les opérations suivantes :  
   
-1.  Cliquez avec le bouton droit sur le projet [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], cliquez sur **Propriétés**, sur **Publier**, puis sur le bouton **Fichiers d’application**.  
+1. Cliquez avec le bouton droit sur le projet [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], cliquez sur **Propriétés**, sur **Publier**, puis sur le bouton **Fichiers d’application**.  
   
-2.  Dans la boîte de dialogue **Fichiers d’application**, affectez à l’**État de la publication** de chaque DLL de pipeline et de complément la valeur **Inclure (automatique)**, puis affectez au **Groupe de téléchargement** de chaque DLL de pipeline et de complément la valeur **(Requis)**.  
+2. Dans la boîte de dialogue **Fichiers d’application**, affectez à l’**État de la publication** de chaque DLL de pipeline et de complément la valeur **Inclure (automatique)**, puis affectez au **Groupe de téléchargement** de chaque DLL de pipeline et de complément la valeur **(Requis)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Utilisation du pipeline et du complément à partir de la base de l’application  
  Quand le pipeline et le complément sont configurés pour le déploiement [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], ils sont téléchargés dans le même dossier de cache [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que l’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Pour permettre l’utilisation du pipeline et du complément à partir de l’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], le code de l’application [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] doit les obtenir à partir de la base de l’application. Les différents types et membres du modèle de complément .NET Framework pour l’utilisation des pipelines et des compléments fournissent une prise en charge spéciale pour ce scénario. Tout d’abord, le chemin d’accès est identifié par le <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valeur d’énumération. Vous utilisez cette valeur avec les surcharges des membres de complément adéquats pour utiliser des pipelines incluant les éléments suivants :  

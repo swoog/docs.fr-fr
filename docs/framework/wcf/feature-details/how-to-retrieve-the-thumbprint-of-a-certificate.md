@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 751c75a69fb93e1ff0ba30dd3b2cfbcea0b94824
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307754"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procédure : récupérer l’empreinte d’un certificat
 Lorsque vous écrivez une application Windows Communication Foundation (WCF) qui utilise un certificat X.509 pour l’authentification, il est souvent nécessaire de spécifier les revendications incluses dans le certificat. Par exemple, vous devez fournir une revendication d'empreinte numérique lors de l'utilisation de l'énumération <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> dans la méthode <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . La recherche de la valeur de revendication s'effectue en deux étapes. En premier lieu, ouvrez le composant logiciel enfichable MMC (Microsoft Management Console) pour les certificats. (Consultez [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Ensuite, comme décrit ici, recherchez un certificat approprié et copiez son empreinte numérique (ou d'autres valeurs de revendication).  
@@ -20,21 +20,21 @@ Lorsque vous écrivez une application Windows Communication Foundation (WCF) qui
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Pour récupérer l'empreinte numérique d'un certificat  
   
-1.  Ouvrez le composant logiciel enfichable MMC (Microsoft Management Console) pour les certificats. (Consultez [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
+1. Ouvrez le composant logiciel enfichable MMC (Microsoft Management Console) pour les certificats. (Consultez [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
   
-2.  Dans le volet gauche de la fenêtre **Racine de la console** , cliquez sur **Certificats (ordinateur local)**.  
+2. Dans le volet gauche de la fenêtre **Racine de la console** , cliquez sur **Certificats (ordinateur local)**.  
   
-3.  Cliquez sur le dossier **Personnel** pour le développer.  
+3. Cliquez sur le dossier **Personnel** pour le développer.  
   
-4.  Cliquez sur le dossier **Certificats** pour le développer.  
+4. Cliquez sur le dossier **Certificats** pour le développer.  
   
-5.  Dans la liste de certificats, notez le titre **Rôles prévus** . Recherchez un certificat qui répertorie **Authentification du client** comme rôle prévu.  
+5. Dans la liste de certificats, notez le titre **Rôles prévus** . Recherchez un certificat qui répertorie **Authentification du client** comme rôle prévu.  
   
-6.  Double-cliquez sur le certificat.  
+6. Double-cliquez sur le certificat.  
   
-7.  Dans la boîte de dialogue **Certificat** , cliquez sur l'onglet **Détails** .  
+7. Dans la boîte de dialogue **Certificat** , cliquez sur l'onglet **Détails** .  
   
-8.  Faites défiler la liste de champs et cliquez sur **Empreinte numérique**.  
+8. Faites défiler la liste de champs et cliquez sur **Empreinte numérique**.  
   
 9. Copiez les caractères hexadécimaux de la zone. Si cette empreinte numérique est utilisée dans le code pour `X509FindType`, supprimez les espaces entre les nombres hexadécimaux. Par exemple, l'empreinte numérique "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" doit être spécifiée sous la forme "a909502dd82ae41433e6f83886b00d4277a32a7b" dans le code.  
   

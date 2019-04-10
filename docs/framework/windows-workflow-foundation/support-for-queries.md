@@ -2,25 +2,25 @@
 title: Prise en charge des requêtes
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307949"
 ---
 # <a name="support-for-queries"></a>Prise en charge des requêtes
 Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues dans le magasin. Les utilisateurs peuvent demander des instances à partir de ces propriétés. La liste suivante comprend quelques-unes de ces propriétés connues :  
   
 -   **Nom du site.** Nom du site Web qui contient le service.  
   
--   **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site Web.  
+-   **Chemin d'accès à l'application relatif.** Chemin d’accès à l’application relatif au site Web.  
   
--   **Chemin d’accès relatif de Service.** Chemin d’accès au service relatif à l’application.  
+-   **Chemin d'accès au service relatif.** Chemin d’accès au service relatif à l’application.  
   
 -   **Nom du service.** Nom du service.  
   
--   **Service Namespace.** Nom de l'espace de noms que le service utilise.  
+-   **Espace de noms du service.** Nom de l'espace de noms que le service utilise.  
   
 -   **Ordinateur actuel.**  
   
@@ -39,21 +39,21 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
 ### <a name="the-instances-view"></a>Vue Instances  
  La vue Instances contient les champs suivants :  
   
-1.  **Id**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
 ### <a name="the-servicedeployments-view"></a>Vue ServiceDeployments  
  La vue ServiceDeployments contient les champs suivants :  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Vue InstancePromotedProperties  
  La vue InstancePromotedProperties contient les champs suivants. Pour plus d’informations sur les propriétés promues, consultez le [Store extensibilité](store-extensibility.md) rubrique.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Valeur #** (une plage de champs à partir de **Value1** à **Value64**).
+4. **Valeur #** (une plage de champs à partir de **Value1** à **Value64**).

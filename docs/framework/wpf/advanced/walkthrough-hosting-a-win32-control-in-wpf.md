@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307702"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procédure pas à pas : hébergement d’un contrôle Win32 dans WPF
 Windows Presentation Foundation (WPF) fournit un environnement riche pour la création d’applications. Toutefois, lorsque vous avez beaucoup investi dans du code Win32, il peut être plus efficace de réutiliser au moins une partie de ce code dans votre application WPF plutôt que de réécrire entièrement. WPF fournit un mécanisme simple pour héberger une fenêtre Win32, sur une page WPF.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) fournit un environnement riche pour la cr�
   
  La procédure d’hébergement de base est la suivante :  
   
-1.  Implémenter une page WPF pour héberger la fenêtre. Une technique consiste à créer un <xref:System.Windows.Controls.Border> élément pour réserver une section de la page pour la fenêtre hébergée.  
+1. Implémenter une page WPF pour héberger la fenêtre. Une technique consiste à créer un <xref:System.Windows.Controls.Border> élément pour réserver une section de la page pour la fenêtre hébergée.  
   
-2.  Implémenter une classe pour héberger le contrôle qui hérite de <xref:System.Windows.Interop.HwndHost>.  
+2. Implémenter une classe pour héberger le contrôle qui hérite de <xref:System.Windows.Interop.HwndHost>.  
   
-3.  Dans cette classe, substituez le <xref:System.Windows.Interop.HwndHost> membre de classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. Dans cette classe, substituez le <xref:System.Windows.Interop.HwndHost> membre de classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Créer la fenêtre hébergée en tant qu’enfant de la fenêtre qui contient la page WPF. Bien que la programmation conventionnelle WPF n’a pas besoin rendre de manière explicite l’utiliser, la page d’hébergement est une fenêtre avec un handle (HWND). Vous recevez la page HWND via le `hwndParent` paramètre de la <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> (méthode). La fenêtre hébergée doit être créée comme un enfant de ce HWND.  
+4. Créer la fenêtre hébergée en tant qu’enfant de la fenêtre qui contient la page WPF. Bien que la programmation conventionnelle WPF n’a pas besoin rendre de manière explicite l’utiliser, la page d’hébergement est une fenêtre avec un handle (HWND). Vous recevez la page HWND via le `hwndParent` paramètre de la <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> (méthode). La fenêtre hébergée doit être créée comme un enfant de ce HWND.  
   
-5.  Une fois que vous avez créé la fenêtre hôte, retournez le HWND de la fenêtre hébergée. Si vous souhaitez héberger un ou plusieurs contrôles Win32, vous en général, créez une fenêtre hôte en tant qu’enfant du HWND et rendre les contrôles enfants de cette fenêtre hôte. Encapsulation des contrôles dans une fenêtre hôte offre un moyen simple pour votre page WPF recevoir des notifications des contrôles, qui aborde certains problèmes Win32 particuliers avec les notifications sur la limite du HWND.  
+5. Une fois que vous avez créé la fenêtre hôte, retournez le HWND de la fenêtre hébergée. Si vous souhaitez héberger un ou plusieurs contrôles Win32, vous en général, créez une fenêtre hôte en tant qu’enfant du HWND et rendre les contrôles enfants de cette fenêtre hôte. Encapsulation des contrôles dans une fenêtre hôte offre un moyen simple pour votre page WPF recevoir des notifications des contrôles, qui aborde certains problèmes Win32 particuliers avec les notifications sur la limite du HWND.  
   
-6.  Gérez les messages sélectionnés envoyés à la fenêtre hôte, comme les notifications des contrôles enfants. Il existe deux manières de procéder.  
+6. Gérez les messages sélectionnés envoyés à la fenêtre hôte, comme les notifications des contrôles enfants. Il existe deux manières de procéder.  
   
     -   Si vous préférez gérer des messages dans votre classe d’hébergement, substituez le <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthode de la <xref:System.Windows.Interop.HwndHost> classe.  
   
     -   Si vous préférez que WPF gère les messages, gérer la <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> événement dans votre code-behind. Cet événement se produit pour chaque message reçu par la fenêtre hébergée. Si vous choisissez cette option, vous devez encore substituer <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mais vous devez uniquement une implémentation minime.  
   
-7.  Remplacer le <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> et <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthodes de <xref:System.Windows.Interop.HwndHost>. Vous devez substituer ces méthodes pour satisfaire le <xref:System.Windows.Interop.HwndHost> contrat, mais vous devrez peut-être uniquement fournir une implémentation minimale.  
+7. Remplacer le <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> et <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthodes de <xref:System.Windows.Interop.HwndHost>. Vous devez substituer ces méthodes pour satisfaire le <xref:System.Windows.Interop.HwndHost> contrat, mais vous devrez peut-être uniquement fournir une implémentation minimale.  
   
-8.  Dans votre fichier code-behind, créez une instance de la classe d’hébergement de contrôle et définissez-la comme enfant de le <xref:System.Windows.Controls.Border> élément qui est destiné à héberger la fenêtre.  
+8. Dans votre fichier code-behind, créez une instance de la classe d’hébergement de contrôle et définissez-la comme enfant de le <xref:System.Windows.Controls.Border> élément qui est destiné à héberger la fenêtre.  
   
 9. Communiquer avec la fenêtre hébergée en lui envoyant [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] messages et gestion des messages à partir de ses fenêtres enfants, comme les notifications envoyées par les contrôles.  
   

@@ -2,12 +2,12 @@
 title: Points de terminaison SOAP et HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307442"
 ---
 # <a name="soap-and-http-endpoints"></a>Points de terminaison SOAP et HTTP
 Cet exemple montre comment implémenter un service RPC et l’exposer aux formats SOAP et le format « Plain Old XML » (POX) à l’aide du modèle de programmation Web WCF. Consultez le [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) exemple pour plus d’informations sur la liaison HTTP pour le service. Cet exemple se concentre sur les détails ayant trait à l’exposition du même service sur SOAP et HTTP au moyen de différentes liaisons.  
@@ -24,11 +24,11 @@ Cet exemple montre comment implémenter un service RPC et l’exposer aux format
   
 -   le point de terminaison ~/service.svc/mex qui expose les métadonnées du service pour l'accès des clients SOAP ;  
   
--   le point de terminaison ~/service.svc/http qui permet aux clients d'accéder au service en utilisant la liaison HTTP ;  
+-   le point de terminaison ~/service.svc/http qui permet aux clients d’accéder au service en utilisant la liaison HTTP ;  
   
--   le point de terminaison ~/service.svc/soap qui permet aux clients d'accéder au service en utilisant la liaison SOAP sur HTTP.  
+-   le point de terminaison ~/service.svc/soap qui permet aux clients d’accéder au service en utilisant la liaison SOAP sur HTTP.  
   
- Le point de terminaison HTTP est configuré avec un point de terminaison <`webHttp`> standard où `helpEnabled` a la valeur `true`. Par conséquent, le service expose sous ~/service.svc/http/help une page d'aide XHTML que les clients HTTP peuvent utiliser pour accéder au service.  
+ Le point de terminaison HTTP est configuré avec un <`webHttp`> point de terminaison standard qui a `helpEnabled` défini sur `true`. Par conséquent, le service expose sous ~/service.svc/http/help une page d'aide XHTML que les clients HTTP peuvent utiliser pour accéder au service.  
   
  Le projet client illustre l’accès au service à l’aide d’un proxy SOAP (généré par le biais **ajouter une référence de Service**) et à l’aide <xref:System.Net.WebClient>.  
   
@@ -36,21 +36,21 @@ Cet exemple montre comment implémenter un service RPC et l’exposer aux format
   
 #### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   
-1.  Ouvrez la solution de l'exemple des points de terminaison SOAP et HTTP.  
+1. Ouvrez la solution de l'exemple des points de terminaison SOAP et HTTP.  
   
-2.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
+2. Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
-3.  Si elle n’est pas déjà ouverte, appuyez sur CTRL + W, S pour ouvrir le **l’Explorateur de solutions** fenêtre.  
+3. Si elle n’est pas déjà ouverte, appuyez sur CTRL + W, S pour ouvrir le **l’Explorateur de solutions** fenêtre.  
   
-4.  À partir de la **l’Explorateur de solutions** fenêtre, avec le bouton droit le **Service** de projet et placez le curseur sur le **déboguer** option de menu contextuel afin que le **démarrer une nouvelle Instance** menu contextuel s’affiche. Cliquez sur **démarrer une nouvelle Instance**. Cette opération lance le serveur de développement ASP.NET, qui héberge le service.  
+4. À partir de la **l’Explorateur de solutions** fenêtre, avec le bouton droit le **Service** de projet et placez le curseur sur le **déboguer** option de menu contextuel afin que le **démarrer une nouvelle Instance** menu contextuel s’affiche. Cliquez sur **démarrer une nouvelle Instance**. Cette opération lance le serveur de développement ASP.NET, qui héberge le service.  
   
-5.  À partir des fenêtres de l’Explorateur de solutions, cliquez sur le projet Client et placez le curseur sur le **déboguer** option de menu contextuel afin que le **démarrer une nouvelle Instance** menu contextuel s’affiche. Cliquez sur **démarrer une nouvelle Instance**.  
+5. À partir des fenêtres de l’Explorateur de solutions, cliquez sur le projet Client et placez le curseur sur le **déboguer** option de menu contextuel afin que le **démarrer une nouvelle Instance** menu contextuel s’affiche. Cliquez sur **démarrer une nouvelle Instance**.  
   
-6.  La fenêtre de console du client apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur.  
+6. La fenêtre de console du client apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur.  
   
-7.  Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
+7. Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
   
-8.  Appuyez sur une touche quelconque pour arrêter l'application console Client.  
+8. Appuyez sur une touche quelconque pour arrêter l'application console Client.  
   
 9. Appuyez sur MAJ+F5 pour arrêter le débogage du service.  
   

@@ -2,12 +2,12 @@
 title: Types de retour Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838350"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313279"
 ---
 # <a name="async-return-types-visual-basic"></a>Types de retour Async (Visual Basic)
 Les méthodes async ont trois types de retour possibles : <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> et void. En Visual Basic, le type de retour void est écrit sous forme de procédure [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Pour plus d’informations sur les méthodes async, consultez [programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` est appelé et attendu à l’aide d’une instruction await et non d’une expression await, à l’instar de l’instruction d’appel d’une méthode `Sub` synchrone ou d’une méthode qui retourne une valeur void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
+ `Task_MethodAsync` est appelé et attendu à l’aide d’une instruction await au lieu d’une expression await, similaire à l’instruction d’appel d’une commande synchrone `Sub` ou méthode retournant void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
   
  Le code suivant appelle et attend la méthode `Task_MethodAsync`.  
   
@@ -150,23 +150,23 @@ End Sub
   
  Pour exécuter le projet, procédez comme suit :  
   
-1.  Démarrez Visual Studio.  
+1. Démarrez Visual Studio.  
   
-2.  Dans la barre de menus, sélectionnez **Fichier**, **Nouveau**, **Projet**.  
+2. Dans la barre de menus, sélectionnez **Fichier**, **Nouveau**, **Projet**.  
   
      La boîte de dialogue **Nouveau projet** s'affiche.  
   
-3.  Dans le **installé**, **modèles** catégorie, choisissez **Visual Basic**, puis choisissez **Windows**. Choisissez **Application WPF** dans la liste des types de projets.  
+3. Dans le **installé**, **modèles** catégorie, choisissez **Visual Basic**, puis choisissez **Windows**. Choisissez **Application WPF** dans la liste des types de projets.  
   
-4.  Entrez `AsyncReturnTypes` comme nom de projet, puis cliquez sur le bouton **OK**.  
+4. Entrez `AsyncReturnTypes` comme nom de projet, puis cliquez sur le bouton **OK**.  
   
      Le nouveau projet s’affiche dans l’**Explorateur de solutions**.  
   
-5.  Dans l'éditeur de code Visual Studio, choisissez l'onglet **MainWindow.xaml** .  
+5. Dans l'éditeur de code Visual Studio, choisissez l'onglet **MainWindow.xaml** .  
   
      Si l’onglet n’est pas visible, ouvrez le menu contextuel pour MainWindow.xaml dans l’**Explorateur de solutions**, puis choisissez **Ouvrir**.  
   
-6.  Dans la fenêtre **XAML** de MainWindow.xaml, remplacez le code existant par le code suivant.  
+6. Dans la fenêtre **XAML** de MainWindow.xaml, remplacez le code existant par le code suivant.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Une fenêtre simple contenant une zone de texte et un bouton apparaît dans la fenêtre **Design** de MainWindow.xaml.  
   
-7.  Dans **l’Explorateur de solutions**, ouvrez le menu contextuel pour MainWindow.xaml.vb, puis choisissez **afficher le Code**.  
+7. Dans **l’Explorateur de solutions**, ouvrez le menu contextuel pour MainWindow.xaml.vb, puis choisissez **afficher le Code**.  
   
-8.  Remplacez le code situé dans MainWindow.xaml.vb par le code suivant.  
+8. Remplacez le code situé dans MainWindow.xaml.vb par le code suivant.  
   
     ```vb  
     Class MainWindow  
@@ -298,4 +298,4 @@ End Sub
 - [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Flux de contrôle dans les programmes Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await, opérateur](../../../../visual-basic/language-reference/operators/await-operator.md)

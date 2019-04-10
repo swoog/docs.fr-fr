@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309639"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Types énumération dans les contrats de données
 Les énumérations peuvent être exprimées dans le modèle de contrat de données. Cette rubrique décrit plusieurs exemples qui expliquent le modèle de programmation.  
@@ -79,11 +79,11 @@ Les énumérations peuvent être exprimées dans le modèle de contrat de donné
   
  Les étapes suivantes s'appliquent à l'envoi de la valeur d'énumération d'un indicateur :  
   
-1.  Essayez de rechercher un membre de l'énumération (auquel est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspond à la valeur numérique. Une fois trouvé, envoyez une liste qui contient seulement ce membre.  
+1. Essayez de rechercher un membre de l'énumération (auquel est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspond à la valeur numérique. Une fois trouvé, envoyez une liste qui contient seulement ce membre.  
   
-2.  Essayez de décomposer la valeur numérique en une somme de manière à obtenir des membres de l'énumération (à chacun desquels est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspondent à chaque partie de la somme. Envoyez la liste de tous ces membres. Notez que le *algorithme gourmand* est utilisé pour rechercher cette somme, et il n’y a donc aucune garantie que cette somme est trouvée, même si elle est présente. Pour éviter ce problème, assurez-vous que les valeurs numériques des membres de l'énumération sont à la puissance de deux.  
+2. Essayez de décomposer la valeur numérique en une somme de manière à obtenir des membres de l'énumération (à chacun desquels est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspondent à chaque partie de la somme. Envoyez la liste de tous ces membres. Notez que le *algorithme gourmand* est utilisé pour rechercher cette somme, et il n’y a donc aucune garantie que cette somme est trouvée, même si elle est présente. Pour éviter ce problème, assurez-vous que les valeurs numériques des membres de l'énumération sont à la puissance de deux.  
   
-3.  Si les deux étapes précédentes échouent et que la valeur numérique est différente de zéro, levez une <xref:System.Runtime.Serialization.SerializationException>. Si la valeur numérique est égale à zéro, envoyez la liste vide.  
+3. Si les deux étapes précédentes échouent et que la valeur numérique est différente de zéro, levez une <xref:System.Runtime.Serialization.SerializationException>. Si la valeur numérique est égale à zéro, envoyez la liste vide.  
   
 ### <a name="example"></a>Exemple  
  L'exemple d'énumération suivant peut être utilisé dans une opération d'indicateur.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311642"
 ---
 # <a name="type-typename-has-no-constructors"></a>Type '\<nom_type >' n’a aucun constructeur
 Un type ne prend pas en charge un appel à `Sub New()`. L'une des causes probables est un fichier compilateur ou binaire endommagé.  
@@ -21,13 +21,13 @@ Un type ne prend pas en charge un appel à `Sub New()`. L'une des causes probabl
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Si le type se trouve dans un projet différent ou dans un fichier référencé, réinstallez le projet ou le fichier.  
+1. Si le type se trouve dans un projet différent ou dans un fichier référencé, réinstallez le projet ou le fichier.  
   
-2.  Si le type se trouve dans le même projet, recompilez l'assembly contenant le type.  
+2. Si le type se trouve dans le même projet, recompilez l'assembly contenant le type.  
   
-3.  Si l’erreur se reproduit, réinstallez le compilateur Visual Basic.  
+3. Si l’erreur se reproduit, réinstallez le compilateur Visual Basic.  
   
-4.  Si l'erreur persiste, rassemblez des informations sur ses circonstances et avertissez les services de support technique Microsoft.  
+4. Si l'erreur persiste, rassemblez des informations sur ses circonstances et avertissez les services de support technique Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi
 

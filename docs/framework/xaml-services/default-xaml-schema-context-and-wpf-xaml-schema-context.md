@@ -2,12 +2,12 @@
 title: Contexte de schéma XAML par défaut et contexte de schéma XAML WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295599"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexte de schéma XAML par défaut et contexte de schéma XAML WPF
 Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon dont une production XAML qui utilise un vocabulaire XAML particulier interagit avec l’objet de comportement, y compris le mappage de type est résolu, comment les assemblys sont chargés, comment certains lecteur et enregistreur d’écriture les paramètres sont interprétés. Cette rubrique décrit les fonctionnalités des Services XAML .NET Framework et le contexte de schéma XAML par défaut associé, qui est basé sur le système de type CLR. Cette rubrique décrit également le contexte de schéma XAML utilisé pour WPF.  
@@ -46,9 +46,9 @@ Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon 
   
 #### <a name="xaml-reader-input-loose-xaml"></a>Entrée de lecteur XAML (XAML libre)  
   
-1.  Le contexte de schéma XAML effectue une itération dans le <xref:System.AppDomain> de l’application, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
+1. Le contexte de schéma XAML effectue une itération dans le <xref:System.AppDomain> de l’application, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
   
-2.  Sinon, une des techniques suivantes basée sur le CLR <xref:System.Reflection.Assembly> API sont utilisées pour charger un assembly :  
+2. Sinon, une des techniques suivantes basée sur le CLR <xref:System.Reflection.Assembly> API sont utilisées pour charger un assembly :  
   
     -   Si le nom est qualifié dans le mappage, appelez <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
   
@@ -61,9 +61,9 @@ Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon 
   
  Notez que les références d’assembly via `XamlBuildTask` sont toujours entièrement qualifiés.  
   
-1.  Appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
+1. Appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
   
-2.  Si l’étape précédente échoue, utilisez le nom court (et le jeton de clé publique le cas échéant) pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Si l’étape précédente échoue, utilisez le nom court (et le jeton de clé publique le cas échéant) pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (intermédiaire de PresentationBuildTask)  
  Il existe deux aspects de chargement d’assemblys pour BAML : chargement de l’assembly initial qui contient le BAML en tant que composant et le chargement des assemblys de stockage de type pour tous les types référencés par la production BAML.  
@@ -71,16 +71,16 @@ Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon 
 ##### <a name="assembly-load-for-initial-markup"></a>Chargement d’assembly pour le balisage initial :  
  La référence à l’assembly à charger le balisage d’est toujours non qualifiée.  
   
-1.  Le contexte de schéma WPF XAML effectue une itération dans le <xref:System.AppDomain> de l’application WPF, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
+1. Le contexte de schéma WPF XAML effectue une itération dans le <xref:System.AppDomain> de l’application WPF, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
   
-2.  Si l’étape précédente échoue, utilisez le nom court (et le jeton de clé publique le cas échéant) pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Si l’étape précédente échoue, utilisez le nom court (et le jeton de clé publique le cas échéant) pour appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Références d’assembly par types BAML :  
  Références d’assembly pour les types utilisés dans la production BAML sont toujours entièrement qualifiés en tant que sortie de la tâche de génération.  
   
-1.  Le contexte de schéma WPF XAML effectue une itération dans le <xref:System.AppDomain> de l’application WPF, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
+1. Le contexte de schéma WPF XAML effectue une itération dans le <xref:System.AppDomain> de l’application WPF, en recherchant un assembly déjà chargé qui correspond à tous les aspects du nom, à partir de la plus récemment assembly chargé. Si une correspondance est trouvée, cet assembly est utilisé pour la résolution.  
   
-2.  Sinon, une des techniques suivantes est utilisée pour charger un assembly :  
+2. Sinon, une des techniques suivantes est utilisée pour charger un assembly :  
   
     -   Appeler <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> sur le nom qualifié.  
   

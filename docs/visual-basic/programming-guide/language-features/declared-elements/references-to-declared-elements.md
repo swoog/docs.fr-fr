@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296704"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Références aux éléments déclarés (Visual Basic)
 Lorsque votre code fait référence à un élément déclaré, le compilateur Visual Basic correspond au nom dans votre référence et la déclaration appropriée de ce nom. Si plus d’un élément est déclaré avec le même nom, vous pouvez contrôler lequel de ces éléments doit être référencé par *éligibles* son nom.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Accéder à un élément déclaré à qualifier son nom  
   
-1.  Déterminer l’emplacement dans lequel l’élément a été défini. Cela peut inclure un espace de noms, ou même d’une hiérarchie d’espaces de noms. Dans l’espace de noms le plus bas niveau, l’élément doit être contenu dans un module, une classe ou une structure.  
+1. Déterminer l’emplacement dans lequel l’élément a été défini. Cela peut inclure un espace de noms, ou même d’une hiérarchie d’espaces de noms. Dans l’espace de noms le plus bas niveau, l’élément doit être contenu dans un module, une classe ou une structure.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Déterminer un chemin d’accès de qualification selon l’emplacement de l’élément cible. Démarrer avec l’espace de noms plus élevé, passez à l’espace de noms de niveau le plus bas et se terminer par le module, une classe ou une structure qui contient l’élément cible. Chaque élément dans le chemin d’accès doit contenir l’élément qui le suit.  
+2. Déterminer un chemin d’accès de qualification selon l’emplacement de l’élément cible. Démarrer avec l’espace de noms plus élevé, passez à l’espace de noms de niveau le plus bas et se terminer par le module, une classe ou une structure qui contient l’élément cible. Chaque élément dans le chemin d’accès doit contenir l’élément qui le suit.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Préparer la chaîne de qualification pour l’élément cible. Placez un point (`.`) après chaque élément dans le chemin d’accès. Votre application doit avoir accès à chaque élément dans votre chaîne de qualification.  
+3. Préparer la chaîne de qualification pour l’élément cible. Placez un point (`.`) après chaque élément dans le chemin d’accès. Votre application doit avoir accès à chaque élément dans votre chaîne de qualification.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Écrire l’expression ou une instruction d’assignation qui fait référence à l’élément cible de façon normale.  
+4. Écrire l’expression ou une instruction d’assignation qui fait référence à l’élément cible de façon normale.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Faites précéder le nom d’élément cible avec la chaîne de qualification. Le nom doit suivre immédiatement le point (`.`) qui suit le module, une classe ou une structure qui contient l’élément.  
+5. Faites précéder le nom d’élément cible avec la chaîne de qualification. Le nom doit suivre immédiatement le point (`.`) qui suit le module, une classe ou une structure qui contient l’élément.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Le compilateur utilise la chaîne de qualification pour rechercher une déclaration claire et non équivoque à laquelle elle peut correspondre à la référence d’élément cible.  
+6. Le compilateur utilise la chaîne de qualification pour rechercher une déclaration claire et non équivoque à laquelle elle peut correspondre à la référence d’élément cible.  
   
  Vous devrez peut-être également qualifier une référence de nom si votre application a accès à plus d’un élément de programmation qui porte le même nom. Par exemple, le <xref:System.Windows.Forms> et <xref:System.Web.UI.WebControls> contiennent des espaces de noms à la fois un `Label` classe (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> et <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Si votre application utilise à la fois, ou si elle définit sa propre `Label` (classe), vous devez distinguer les différentes `Label` objets. Inclure l’alias d’espace de noms ou d’une importation dans la déclaration de variable. L’exemple suivant utilise l’alias d’importation.  
   
@@ -195,10 +195,10 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Caractéristiques d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Caractéristiques des éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports (instruction) (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New (opérateur)](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Imports, instruction (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New, opérateur](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)

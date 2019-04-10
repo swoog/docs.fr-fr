@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294663"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Regroupement de messages mis en file d'attente dans une session
 Windows Communication Foundation (WCF) fournit une session qui vous permet de regrouper un ensemble de messages connexes à traiter par une application réceptrice unique. Les messages qui font partie d’une session doivent faire partie de la même transaction. Étant donné que tous les messages font partie de la même transaction, si un message n’est pas traité, la session entière est restaurée. Les sessions ont des comportements semblables en ce qui concerne les files d'attente de lettres mortes et les files d'attente de messages incohérents. La propriété Durée de vie (Time to Live ou TTL) définie sur une liaison mise en file d'attente configurée pour les sessions est appliquée à la session dans son ensemble. Si seulement quelques-uns des messages de la session sont envoyés avant l'expiration de la durée de vie, la session entière est placée dans la file d'attente de lettres mortes. De même, lorsque les messages d'une session ne parviennent pas à être envoyés à une application depuis la file d'attente de l'application, la session entière est placée dans la file d'attente de messages incohérents (si disponible).  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) fournit une session qui vous permet de re
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Pour paramétrer un contrat de service pour qu'il utilise des sessions  
   
-1.  Définissez un contrat de service qui requiert une session. Faites ceci avec l'attribut <xref:System.ServiceModel.OperationContractAttribute> et en spécifiant :  
+1. Définissez un contrat de service qui requiert une session. Faites ceci avec l'attribut <xref:System.ServiceModel.OperationContractAttribute> et en spécifiant :  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Marquez les opérations du contrat comme étant unidirectionnelles, parce que ces méthodes ne retournent rien. Faites ceci avec l'attribut <xref:System.ServiceModel.OperationContractAttribute> et en spécifiant :  
+2. Marquez les opérations du contrat comme étant unidirectionnelles, parce que ces méthodes ne retournent rien. Faites ceci avec l'attribut <xref:System.ServiceModel.OperationContractAttribute> et en spécifiant :  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implémentez le contrat de service et spécifiez un `InstanceContextMode` de `PerSession`. Cela instancie le service une seule fois pour chaque session.  
+3. Implémentez le contrat de service et spécifiez un `InstanceContextMode` de `PerSession`. Cela instancie le service une seule fois pour chaque session.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Chaque opération de service requiert une transaction. Spécifiez ceci avec l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute>. L’opération qui complète la transaction doit également affecter à `TransactionAutoComplete` la valeur `true`.  
+4. Chaque opération de service requiert une transaction. Spécifiez ceci avec l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute>. L’opération qui complète la transaction doit également affecter à `TransactionAutoComplete` la valeur `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Configurez un point de terminaison qui utilise la liaison `NetMsmqBinding` fournie par le système.  
+5. Configurez un point de terminaison qui utilise la liaison `NetMsmqBinding` fournie par le système.  
   
-6.  Créez une file d'attente transactionnelle en utilisant <xref:System.Messaging>. Vous pouvez également créer la file d'attente en utilisant Message Queuing (MSMQ) ou MMC. Dans ce cas, créez une file d’attente transactionnelle.  
+6. Créez une file d'attente transactionnelle en utilisant <xref:System.Messaging>. Vous pouvez également créer la file d'attente en utilisant Message Queuing (MSMQ) ou MMC. Dans ce cas, créez une file d’attente transactionnelle.  
   
-7.  Créez un hôte de service pour le service en utilisant <xref:System.ServiceModel.ServiceHost>.  
+7. Créez un hôte de service pour le service en utilisant <xref:System.ServiceModel.ServiceHost>.  
   
-8.  Ouvrez l'hôte de service pour rendre le service disponible.  
+8. Ouvrez l'hôte de service pour rendre le service disponible.  
   
 9. Fermez l'hôte de service.  
   
 #### <a name="to-set-up-a-client"></a>Pour installer un client  
   
-1.  Créez une étendue de transaction pour écrire dans la file d’attente transactionnelle.  
+1. Créez une étendue de transaction pour écrire dans la file d’attente transactionnelle.  
   
-2.  Créer le client WCF à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil.  
+2. Créer le client WCF à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil.  
   
-3.  Passez la commande.  
+3. Passez la commande.  
   
-4.  Fermez le client WCF.  
+4. Fermez le client WCF.  
   
 ## <a name="example"></a>Exemple  
   

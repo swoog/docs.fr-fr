@@ -2,12 +2,12 @@
 title: 'Tâche 3 : créer les volets Toolbox et PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306004"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tâche 3 : créer les volets Toolbox et PropertyGrid
 Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid** volets et les ajouter à la réhébergé [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Pour créer la boîte à outils et l'ajouter à la grille  
   
-1.  Ouvrez le projet hostingapplication que vous avez obtenu en suivant la procédure décrite dans [tâche 2 : Héberger le Concepteur de flux de travail](task-2-host-the-workflow-designer.md).  
+1. Ouvrez le projet hostingapplication que vous avez obtenu en suivant la procédure décrite dans [tâche 2 : Héberger le Concepteur de flux de travail](task-2-host-the-workflow-designer.md).  
   
-2.  Dans le **l’Explorateur de solutions** volet, cliquez sur le fichier MainWindow.xaml et sélectionnez **afficher le Code**.  
+2. Dans le **l’Explorateur de solutions** volet, cliquez sur le fichier MainWindow.xaml et sélectionnez **afficher le Code**.  
   
-3.  Ajouter un `GetToolboxControl` méthode à la `MainWindow` classe qui crée un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, ajoute un nouveau **boîte à outils** catégorie à la **boîte à outils**et assigne le <xref:System.Activities.Statements.Assign> et <xref:System.Activities.Statements.Sequence> types d’activités à cette catégorie.  
+3. Ajouter un `GetToolboxControl` méthode à la `MainWindow` classe qui crée un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, ajoute un nouveau **boîte à outils** catégorie à la **boîte à outils**et assigne le <xref:System.Activities.Statements.Assign> et <xref:System.Activities.Statements.Sequence> types d’activités à cette catégorie.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
     }  
     ```  
   
-4.  Ajouter une privée `AddToolbox` méthode à la `MainWindow` classe place le **boîte à outils** dans la colonne de gauche sur la grille.  
+4. Ajouter une privée `AddToolbox` méthode à la `MainWindow` classe place le **boîte à outils** dans la colonne de gauche sur la grille.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
     }  
     ```  
   
-5.  Ajoutez un appel à la méthode `AddToolBox` dans le constructeur de classe `MainWindow()`, comme illustré dans le code suivant.  
+5. Ajoutez un appel à la méthode `AddToolBox` dans le constructeur de classe `MainWindow()`, comme illustré dans le code suivant.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
     }  
     ```  
   
-6.  Appuyez sur F5 pour générer et exécuter votre solution. Le **boîte à outils** contenant le <xref:System.Activities.Statements.Assign> et <xref:System.Activities.Statements.Sequence> activités doivent être affichées.  
+6. Appuyez sur F5 pour générer et exécuter votre solution. Le **boîte à outils** contenant le <xref:System.Activities.Statements.Assign> et <xref:System.Activities.Statements.Sequence> activités doivent être affichées.  
   
 ### <a name="to-create-the-propertygrid"></a>Pour créer PropertyGrid  
   
-1.  Dans le **l’Explorateur de solutions** volet, cliquez sur le fichier MainWindow.xaml et sélectionnez **afficher le Code**.  
+1. Dans le **l’Explorateur de solutions** volet, cliquez sur le fichier MainWindow.xaml et sélectionnez **afficher le Code**.  
   
-2.  Ajouter le `AddPropertyInspector` méthode à la `MainWindow` classe pour placer le **PropertyGrid** volet dans la colonne la plus à droite sur la grille.  
+2. Ajouter le `AddPropertyInspector` méthode à la `MainWindow` classe pour placer le **PropertyGrid** volet dans la colonne la plus à droite sur la grille.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
     }  
     ```  
   
-3.  Ajoutez un appel à la méthode `AddPropertyInspector` dans le constructeur de classe `MainWindow()`, comme illustré dans le code suivant.  
+3. Ajoutez un appel à la méthode `AddPropertyInspector` dans le constructeur de classe `MainWindow()`, comme illustré dans le code suivant.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid**
     }  
     ```  
   
-4.  Pour générer et exécuter la solution, appuyez sur F5. Le **boîte à outils**, zone de conception de flux de travail, et **PropertyGrid** volets doivent tous être affichés, et lorsque vous faites glisser un <xref:System.Activities.Statements.Assign> activité ou un <xref:System.Activities.Statements.Sequence> activité sur la zone de conception, le grille des propriétés doit mettre à jour en fonction de l’activité en surbrillance.  
+4. Pour générer et exécuter la solution, appuyez sur F5. Le **boîte à outils**, zone de conception de flux de travail, et **PropertyGrid** volets doivent tous être affichés, et lorsque vous faites glisser un <xref:System.Activities.Statements.Assign> activité ou un <xref:System.Activities.Statements.Sequence> activité sur la zone de conception, le grille des propriétés doit mettre à jour en fonction de l’activité en surbrillance.  
   
 ## <a name="example"></a>Exemple  
  Le fichier MainWindow.xaml.cs doit maintenant contenir le code suivant.  

@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081487"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298472"
 ---
 # <a name="getting-started-with-net-native"></a>Prise en main de .NET Native
 Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous migriez une application du Windows Store existante, vous pouvez suivre le même ensemble de procédures. Pour créer une application [!INCLUDE[net_native](../../../includes/net-native-md.md)] , procédez comme suit :  
   
-1.  [Développez une application de la plateforme Windows universelle (UWP) qui cible Windows 10](#Step1), puis testez les versions Debug de votre application pour vous assurer qu’elle fonctionne correctement.  
+1. [Développez une application de la plateforme Windows universelle (UWP) qui cible Windows 10](#Step1), puis testez les versions Debug de votre application pour vous assurer qu’elle fonctionne correctement.  
   
-2.  [Gérez l'utilisation de réflexion et de sérialisation supplémentaire](#Step2).  
+2. [Gérez l'utilisation de réflexion et de sérialisation supplémentaire](#Step2).  
   
-3.  [Déployez et testez les builds de mise en production de votre application](#Step3).  
+3. [Déployez et testez les builds de mise en production de votre application](#Step3).  
   
-4.  [Résolvez manuellement les métadonnées manquantes](#Step4) et répétez l’[étape 3](#Step3) jusqu’à ce que tous les problèmes soient résolus.  
+4. [Résolvez manuellement les métadonnées manquantes](#Step4) et répétez l’[étape 3](#Step3) jusqu’à ce que tous les problèmes soient résolus.  
   
 > [!NOTE]
 >  Si vous migrez une application du Windows Store existante vers [!INCLUDE[net_native](../../../includes/net-native-md.md)], veillez à consulter [Migration de votre application du Windows Store vers .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous 
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Étape 1 : Développer et tester les versions debug de votre application UWP  
  Que vous développiez une nouvelle application ou que vous migriez une application existante, vous devez suivre la même procédure que pour n'importe quelle application Windows.  
   
-1.  Créez un nouveau projet UWP dans Visual Studio à l’aide du modèle d’application Windows universelle pour Visual C# ou Visual Basic. Par défaut, toutes les applications UWP ciblent CoreCLR et leurs versions de mise en production sont compilées à l’aide de la chaîne de l’outil .NET Native.  
+1. Créez un nouveau projet UWP dans Visual Studio à l’aide du modèle d’application Windows universelle pour Visual C# ou Visual Basic. Par défaut, toutes les applications UWP ciblent CoreCLR et leurs versions de mise en production sont compilées à l’aide de la chaîne de l’outil .NET Native.  
   
-2.  Notez qu’il existe certains problèmes de compatibilité connus entre la compilation des projets d’application UWP avec la chaîne de l’outil .NET Native et sans elle. Pour plus d'informations, consultez le [guide de migration](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .  
+2. Notez qu’il existe certains problèmes de compatibilité connus entre la compilation des projets d’application UWP avec la chaîne de l’outil .NET Native et sans elle. Pour plus d'informations, consultez le [guide de migration](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .  
   
  Vous pouvez maintenant écrire du code C# ou Visual Basic par rapport à la surface [!INCLUDE[net_native](../../../includes/net-native-md.md)] qui s'exécute sur le système local (ou dans le simulateur).  
   

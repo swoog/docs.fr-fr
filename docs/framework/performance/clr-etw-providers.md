@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302619"
 ---
 # <a name="clr-etw-providers"></a>Fournisseurs ETW du CLR
 Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtime et le fournisseur d’arrêt.  
@@ -58,7 +58,7 @@ Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtim
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Collecte de données ETW à l’aide des fournisseurs de runtime et d’arrêt  
  L’exemple suivant montre comment utiliser le fournisseur d’arrêt du CLR d’une façon qui autorise la résolution des symboles des processus managés avec un impact minimal, indépendamment du fait que les processus démarrent ou se terminent à l’intérieur ou à l’extérieur de la fenêtre profilée.  
   
-1.  Activez la journalisation ETW à l’aide du fournisseur de runtime du CLR :  
+1. Activez la journalisation ETW à l’aide du fournisseur de runtime du CLR :  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtim
   
      Le journal sera enregistré dans le fichier clr1.etl.  
   
-2.  Pour arrêter le profilage alors que le processus continue à s’exécuter, démarrez le fournisseur d’arrêt pour capturer les événements `DCEnd` :  
+2. Pour arrêter le profilage alors que le processus continue à s’exécuter, démarrez le fournisseur d’arrêt pour capturer les événements `DCEnd` :  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtim
   
      Cela permet à la collecte d’événements `DCEnd` de démarrer une session d’arrêt. Vous devrez peut-être patienter 30 à 60 secondes pour que tous les événements soient collectés. Le journal sera enregistré dans le fichier clr1.et2.  
   
-3.  Désactivez tout le profilage ETW :  
+3. Désactivez tout le profilage ETW :  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Fusionnez les profils pour créer un fichier journal :  
+4. Fusionnez les profils pour créer un fichier journal :  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

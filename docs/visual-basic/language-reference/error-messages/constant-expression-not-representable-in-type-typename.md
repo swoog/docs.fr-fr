@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: aac53960cf22737cab0f48a51bccdfcba9f9f459
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836335"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307663"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>Expression constante n’est pas représentable dans le type '\<nom_type >'
 Vous essayez d’évaluer une constante qui ne tient pas dans le type cible, généralement car elle dépasse la plage.  
@@ -21,7 +21,7 @@ Vous essayez d’évaluer une constante qui ne tient pas dans le type cible, gé
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Modifier le type de cible pour qu’il peut gérer la constante.  
+1. Modifier le type de cible pour qu’il peut gérer la constante.  
   
 ## <a name="see-also"></a>Voir aussi
 

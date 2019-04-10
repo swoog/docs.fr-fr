@@ -2,12 +2,12 @@
 title: Utilisation d'actions pour implémenter le comportement côté serveur
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294936"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilisation d'actions pour implémenter le comportement côté serveur
 
@@ -40,11 +40,11 @@ Les actions OData permettent d'implémenter un comportement qui agit sur une res
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Cette interface offre un moyen d'exécuter une action de service de données WCF. Lorsque vous implémentez IDataServiceInvokable, vous êtes chargé de trois opérations :  
   
-1.  capture et marshaling potentiel des paramètres ;  
+1. capture et marshaling potentiel des paramètres ;  
   
-2.  distribution des paramètres dans le code qui implémente réellement l'action lorsque la méthode Invoke() est appelée ;  
+2. distribution des paramètres dans le code qui implémente réellement l'action lorsque la méthode Invoke() est appelée ;  
   
-3.  stockage des résultats de la méthode Invoke() de façon à ce qu'ils puissent être récupérés en utilisant la méthode GetResult().  
+3. stockage des résultats de la méthode Invoke() de façon à ce qu'ils puissent être récupérés en utilisant la méthode GetResult().  
   
  Les paramètres peuvent être passés en tant que jetons. En effet, il est possible d’écrire un fournisseur de services de données qui fonctionne avec des jetons qui représentent des ressources ; le cas échéant, vous devrez peut-être convertir (marshaler) ces jetons en ressources réelles avant de les distribuer à l’action réelle. Une fois le paramètre marshalé, il doit être dans un état modifiable de façon à ce que les modifications apportées à la ressource lorsque l’action est appelée soient enregistrées et écrites sur le disque.  
   

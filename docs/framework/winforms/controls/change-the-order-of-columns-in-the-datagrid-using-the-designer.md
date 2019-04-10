@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: 131ef2a04caa17aa268c0e8d229a1070061c4373
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb8aeb30e12f7af18b475fd7707fa9d2ede6a299
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311511"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : modifier l’ordre des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur
 Lorsque vous liez un formulaire Windows <xref:System.Windows.Forms.DataGridView> contrôle à une source de données, l’ordre d’affichage des colonnes générées automatiquement est dicté par la source de données. Si cette commande n’est pas ce que vous préférez, vous pouvez modifier l’ordre des colonnes à l’aide du concepteur. Vous pouvez également ajouter des colonnes indépendantes au contrôle et modifier leur ordre d’affichage. Pour plus d’informations sur la façon de modifier l’ordre des colonnes par programmation, consultez [Comment : Modifier l’ordre des colonnes dans le contrôle de DataGridView Windows Forms](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
@@ -24,11 +24,11 @@ Lorsque vous liez un formulaire Windows <xref:System.Windows.Forms.DataGridView>
   
 ### <a name="to-change-the-column-order-using-the-designer"></a>Pour modifier l’ordre des colonnes à l’aide du Concepteur  
   
-1.  Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **modifier les colonnes**.  
+1. Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **modifier les colonnes**.  
   
-2.  Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
+2. Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
   
-3.  Cliquez sur le haut ou bas à droite de la **colonnes sélectionnées** liste jusqu'à ce que la colonne sélectionnée soit dans la position souhaitée.  
+3. Cliquez sur le haut ou bas à droite de la **colonnes sélectionnées** liste jusqu'à ce que la colonne sélectionnée soit dans la position souhaitée.  
   
 ## <a name="see-also"></a>Voir aussi
 

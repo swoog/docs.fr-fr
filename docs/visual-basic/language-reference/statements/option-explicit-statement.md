@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841451"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308612"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit, instruction (Visual Basic)
 Force la déclaration explicite de toutes les variables dans un fichier, ou permet les déclarations implicites de variables.  
@@ -29,7 +29,7 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Composants  
  `On`  
- Optionnel. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
+ Facultatif. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
   
  `Off`  
  Optionnel. Désactive `Option Explicit` la vérification.  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Pour définir Option Explicit dans l’IDE  
   
-1.  Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
+1. Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
   
-2.  Cliquez sur l’onglet **Compiler**.  
+2. Cliquez sur l’onglet **Compiler**.  
   
-3.  Définissez la valeur dans le **Option Explicit** boîte.  
+3. Définissez la valeur dans le **Option Explicit** boîte.  
   
  Lorsque vous créez un nouveau projet, le **Option Explicit** définition sur le **compiler** onglet est définie sur le **Option Explicit** définition dans le **devaleurspardéfautVB**boîte de dialogue. Pour accéder à la **valeurs par défaut VB** boîte de dialogue le **outils** menu, cliquez sur **Options**. Dans la boîte de dialogue **Options**, développez **Projets et solutions**, puis cliquez sur **Valeurs par défaut VB**. Le paramètre par défaut initial dans **valeurs par défaut VB** est `On`.  
   
@@ -68,11 +68,11 @@ Option Explicit { On | Off }
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ReDim (instruction)](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Dim, instruction](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [ReDim, instruction](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [Option Compare, instruction](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Valeurs par défaut Visual Basic, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Valeurs par défaut VB, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

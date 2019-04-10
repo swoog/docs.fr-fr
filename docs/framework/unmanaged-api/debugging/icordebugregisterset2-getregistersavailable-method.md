@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309418"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable, méthode
 Obtient un tableau d’octets qui fournit une image bitmap des registres disponibles.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Notes  
  Les valeurs de l’énumération CorDebugRegister spécifient les registres de différents microprocesseurs. Les cinq bits de chaque valeur supérieures sont l’index dans le `availableRegChunks` tableau d’octets. Les trois derniers bits de chaque valeur identifier la position de bit dans l’octet indexé. Étant donné un `CorDebugRegister` valeur qui spécifie un registre particulier, la position du Registre dans le masque est déterminée comme suit :  
   
-1.  Extrayez l’index nécessaire pour accéder à l’octet correct dans le `availableRegChunks` tableau :  
+1. Extrayez l’index nécessaire pour accéder à l’octet correct dans le `availableRegChunks` tableau :  
   
      `CorDebugRegister` valeur >> 3  
   
-2.  Extrayez la position de bit dans l’octet indexé, où le bit zéro est le bit le moins significatif :  
+2. Extrayez la position de bit dans l’octet indexé, où le bit zéro est le bit le moins significatif :  
   
      `CorDebugRegister` valeur & 7  
   

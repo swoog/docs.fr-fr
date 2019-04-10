@@ -2,12 +2,12 @@
 title: Transférer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311017"
 ---
 # <a name="transfer"></a>Transférer
 Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windows Communication Foundation (WCF).  
@@ -42,21 +42,21 @@ Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windo
 ## <a name="activity-transfer-sequence"></a>Séquence de transfert d'activité  
  Une séquence de transfert d'activité bien formée comprend les étapes suivantes.  
   
-1.  Commencer une nouvelle activité, qui consiste à sélectionner un nouveau gAId  
+1. Commencer une nouvelle activité, qui consiste à sélectionner un nouveau gAId  
   
-2.  Émettre un suivi de transfert vers ce nouveau gAId à partir de l'ID d'activité actuel  
+2. Émettre un suivi de transfert vers ce nouveau gAId à partir de l'ID d'activité actuel  
   
-3.  Définir le nouvel ID dans le stockage local des threads (TLS)  
+3. Définir le nouvel ID dans le stockage local des threads (TLS)  
   
-4.  Émettre un suivi de démarrage pour indiquer le début de la nouvelle activité  
+4. Émettre un suivi de démarrage pour indiquer le début de la nouvelle activité  
   
-5.  Retourner à l'activité d'origine implique les étapes suivantes :  
+5. Retourner à l'activité d'origine implique les étapes suivantes :  
   
-6.  Émettre un suivi de transfert vers le gAId d'origine  
+6. Émettre un suivi de transfert vers le gAId d'origine  
   
-7.  Émettre un suivi d'arrêt pour indiquer la fin de la nouvelle activité  
+7. Émettre un suivi d'arrêt pour indiquer la fin de la nouvelle activité  
   
-8.  Affecter au TLS l'ancien gAId  
+8. Affecter au TLS l'ancien gAId  
   
  L'exemple de code suivant montre comment procéder. Cet exemple suppose qu'un appel bloquant est effectué lors du transfert vers la nouvelle activité, et inclut des suivis de suspension/reprise.  
   

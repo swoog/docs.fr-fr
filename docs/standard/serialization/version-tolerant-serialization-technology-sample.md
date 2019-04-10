@@ -2,43 +2,43 @@
 title: Sérialisation avec tolérance de version, exemple de technologie
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: b874a347924f6d15e2e6164092b819321384ca3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308358"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Sérialisation avec tolérance de version, exemple de technologie
-[Télécharger l’exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[Télécharger l'exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  Cet exemple illustre les fonctionnalités de tolérance de version de la sérialisation .NET. L'exemple génère des applications qui utilisent différentes versions de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> pour sérialiser et désérialiser des données. En dépit de la présence de versions de type différent, les applications communiquent de façon transparente. Pour plus d’informations, consultez [Sérialisation avec tolérance de version](../../../docs/standard/serialization/version-tolerant-serialization.md).  
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Pour générer l'exemple à partir de l'invite de commandes :  
   
-1.  Ouvrez une fenêtre d'invite de commandes et accédez à l'un des sous-répertoires spécifiques au langage (sous l'application V1 ou l'application V2) pour l'exemple.  
+1. Ouvrez une fenêtre d'invite de commandes et accédez à l'un des sous-répertoires spécifiques au langage (sous l'application V1 ou l'application V2) pour l'exemple.  
   
-2.  Tapez **msbuild.exe \<ver> application.sln** sur la ligne de commande (où \<ver> est v1 ou v2).  
+2. Tapez **msbuild.exe \<ver> application.sln** sur la ligne de commande (où \<ver> est v1 ou v2).  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Pour générer l'exemple à l'aide de Visual Studio  
   
-1.  Ouvrez l'[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] et accédez à l'un des sous-répertoires spécifiques aux différents langages de l'exemple.  
+1. Ouvrez l'[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] et accédez à l'un des sous-répertoires spécifiques aux différents langages de l'exemple.  
   
-2.  Accédez au sous-répertoire de l'application V1 du répertoire sélectionné à l'étape précédente.  
+2. Accédez au sous-répertoire de l'application V1 du répertoire sélectionné à l'étape précédente.  
   
-3.  Double-cliquez sur l'icône de V1 Application.sln pour ouvrir le fichier dans Visual Studio.  
+3. Double-cliquez sur l'icône de V1 Application.sln pour ouvrir le fichier dans Visual Studio.  
   
-4.  Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+4. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-5.  Accédez au sous-répertoire de l'application V2 et répétez les deux étapes précédentes pour générer l'application V2.  
+5. Accédez au sous-répertoire de l'application V2 et répétez les deux étapes précédentes pour générer l'application V2.  
   
  Les applications seront générées dans le sous-répertoire \bin ou \bin\Debug par défaut de leur projet respectif.  
   
 ### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   
-1.  Dans la fenêtre d'invite de commandes, accédez au sous-répertoire spécifique au langage que vous avez sélectionné lors de la création des exemples d'applications.  
+1. Dans la fenêtre d'invite de commandes, accédez au sous-répertoire spécifique au langage que vous avez sélectionné lors de la création des exemples d'applications.  
   
-2.  Tapez **runme.cmd** sur la ligne de commande pour exécuter en même temps les deux applications.  
+2. Tapez **runme.cmd** sur la ligne de commande pour exécuter en même temps les deux applications.  
   
  Vous pouvez aussi accéder aux répertoires qui contiennent les nouveaux fichiers exécutables et les exécuter séquentiellement.  
   

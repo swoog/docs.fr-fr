@@ -2,12 +2,12 @@
 title: Publication du service WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299720"
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
 
@@ -35,13 +35,13 @@ Le service peut être publié aux emplacements cibles suivants.
 
 Pour déployer une implémentation de service, procédez comme suit :
 
-1.  Ouvrez Visual Studio avec des privilèges élevés (cliquez sur le fichier exécutable et choisissez **exécuter en tant qu’administrateur** pour l’ouvrir).  Si vous utilisez IIS 7.0 ou version ultérieure, assurez-vous que vous avez installé le composant « La métabase et IIS6 Configuration compatibilité IIS » à l’aide de « Windows d’activer ou désactiver des fonctionnalités » dans le panneau de configuration.
+1. Ouvrez Visual Studio avec des privilèges élevés (cliquez sur le fichier exécutable et choisissez **exécuter en tant qu’administrateur** pour l’ouvrir).  Si vous utilisez IIS 7.0 ou version ultérieure, assurez-vous que vous avez installé le composant « La métabase et IIS6 Configuration compatibilité IIS » à l’aide de « Windows d’activer ou désactiver des fonctionnalités » dans le panneau de configuration.
 
-2.  Ouvrez un projet de service, sélectionnez **Build** > **publier \<nom_projet >** dans le menu principal, ou cliquez sur le projet dans **l’Explorateur de solutions**et cliquez sur **publier**.
+2. Ouvrez un projet de service, sélectionnez **Build** > **publier \<nom_projet >** dans le menu principal, ou cliquez sur le projet dans **l’Explorateur de solutions**et cliquez sur **publier**.
 
-3.  Le **publier** fenêtre s’affiche. Cliquez sur le **...** . pour spécifier l'emplacement cible où doit être déployé le service. Vous pouvez sélectionner pour déployer l’application à local IIS, un système de fichiers ou un FTP Site. Si vous déployez l’application sur l’IIS local, vous pouvez sélectionner votre site Web et créez votre application web en cours, en cliquant sur le **créer une Application Web** icône dans l’angle supérieur droit.
+3. Le **publier** fenêtre s’affiche. Cliquez sur le **...** . pour spécifier l'emplacement cible où doit être déployé le service. Vous pouvez sélectionner pour déployer l’application à local IIS, un système de fichiers ou un FTP Site. Si vous déployez l’application sur l’IIS local, vous pouvez sélectionner votre site Web et créez votre application web en cours, en cliquant sur le **créer une Application Web** icône dans l’angle supérieur droit.
 
-4.  Après avoir cliqué sur **publier** dans la fenêtre principale, Visual Studio déploie l’application à l’emplacement cible indiqué et copie les fichiers Web.config, .svc et l’assembly dans le répertoire cible. . Le nom du fichier .svc sera « ProjectName.ServiceName.svc ». Une fois que le service est publié avec succès, vous trouverez un lien est disponible dans la fenêtre Sortie de Visual Studio, qui est similaire à « connexion à `http://localhost/WebApplicationFolderName...`». Vous pouvez appuyer sur Ctrl et cliquer sur le lien pour ouvrir une page du navigateur dans Visual Studio afin d'afficher la structure des répertoires du service.
+4. Après avoir cliqué sur **publier** dans la fenêtre principale, Visual Studio déploie l’application à l’emplacement cible indiqué et copie les fichiers Web.config, .svc et l’assembly dans le répertoire cible. . Le nom du fichier .svc sera « ProjectName.ServiceName.svc ». Une fois que le service est publié avec succès, vous trouverez un lien est disponible dans la fenêtre Sortie de Visual Studio, qui est similaire à « connexion à `http://localhost/WebApplicationFolderName...`». Vous pouvez appuyer sur Ctrl et cliquer sur le lien pour ouvrir une page du navigateur dans Visual Studio afin d'afficher la structure des répertoires du service.
 
      S'il est impossible de visiter le site, l'explorateur de répertoires n'est peut-être pas activé dans IIS. Suivez les conseils fournis dans la section « Choses à essayer » pour l’activer. Ou bien, vous pouvez taper directement `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` pour afficher la page de votre service.
 
@@ -76,5 +76,5 @@ Si vous choisissez de déployer votre application sur le serveur IIS local, vous
 ## <a name="see-also"></a>Voir aussi
 
 - [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Hôte de service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

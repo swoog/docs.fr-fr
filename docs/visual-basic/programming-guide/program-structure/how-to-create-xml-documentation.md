@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 2f32847c1b3a0fdf1892d6b423bb33783b6bdfe3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814586"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294482"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procédure : Créer une Documentation XML en Visual Basic
 Cet exemple montre comment ajouter des commentaires de documentation XML à votre code.  
@@ -19,22 +19,22 @@ Cet exemple montre comment ajouter des commentaires de documentation XML à votr
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Pour créer une documentation XML pour un type ou membre  
   
-1.  Dans le **éditeur de Code**, positionnez votre curseur sur la ligne au-dessus du type ou le membre pour lequel vous souhaitez créer la documentation.  
+1. Dans le **éditeur de Code**, positionnez votre curseur sur la ligne au-dessus du type ou le membre pour lequel vous souhaitez créer la documentation.  
   
-2.  Type `'''` (trois guillemets simples).  
+2. Type `'''` (trois guillemets simples).  
   
      Une structure XML pour le type ou le membre est ajoutée dans le **éditeur de Code**.  
   
-3.  Ajouter des informations descriptives entre les balises appropriées.  
+3. Ajouter des informations descriptives entre les balises appropriées.  
   
     > [!NOTE]
     >  Si vous ajoutez des lignes supplémentaires dans le bloc de documentation XML, chaque ligne doit commencer par `'''`.  
   
-4.  Ajouter du code qui utilise le type ou le membre avec les nouveaux commentaires de documentation XML.  
+4. Ajouter du code qui utilise le type ou le membre avec les nouveaux commentaires de documentation XML.  
   
      IntelliSense affiche le texte à partir de la \<Résumé > balise pour le type ou membre.  
   
-5.  Compilez le code pour générer un fichier XML contenant les commentaires de documentation. Pour plus d’informations, consultez [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5. Compilez le code pour générer un fichier XML contenant les commentaires de documentation. Pour plus d’informations, consultez [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

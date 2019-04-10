@@ -2,12 +2,12 @@
 title: 'Procédure : Partitionnement des données du service'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300383"
 ---
 # <a name="how-to-service-data-partitioning"></a>Procédure : Partitionnement des données du service
 Cette rubrique présente les étapes de base requises pour partitionner des messages entre plusieurs instances du même service de destination. Le partitionnement des données du service est en général utilisé pour faire évoluer un service vers une meilleure qualité ou pour gérer les demandes de différents clients de manière spécifique. Par exemple, les messages à partir de valeur élevée ou les clients « Gold » devront peut-être être traités avec une priorité plus élevée que les messages à partir d’un client standard.  
@@ -21,7 +21,7 @@ Cette rubrique présente les étapes de base requises pour partitionner des mess
   
 ### <a name="implement-service-data-partitioning"></a>Implémenter le partitionnement des données du service  
   
-1.  Créez la configuration de base du service de routage en spécifiant les points de terminaison de service exposés par le service. L'exemple suivant définit deux points de terminaison qui serviront à recevoir des messages. Il définit également les points de terminaison clients, utilisés pour envoyer des messages aux instances du service regularCalc.  
+1. Créez la configuration de base du service de routage en spécifiant les points de terminaison de service exposés par le service. L'exemple suivant définit deux points de terminaison qui serviront à recevoir des messages. Il définit également les points de terminaison clients, utilisés pour envoyer des messages aux instances du service regularCalc.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Cette rubrique présente les étapes de base requises pour partitionner des mess
      </client>  
     ```  
   
-2.  Définissez les filtres utilisés pour router les messages vers les points de terminaison de destination.  Dans cet exemple, le filtre EndpointName permet de déterminer quel point de terminaison de service a reçu le message. L'exemple suivant définit la section et les filtres de routage nécessaires.  
+2. Définissez les filtres utilisés pour router les messages vers les points de terminaison de destination.  Dans cet exemple, le filtre EndpointName permet de déterminer quel point de terminaison de service a reçu le message. L'exemple suivant définit la section et les filtres de routage nécessaires.  
   
     ```xml  
     <filters>  
@@ -71,7 +71,7 @@ Cette rubrique présente les étapes de base requises pour partitionner des mess
     </filters>  
     ```  
   
-3.  Définissez la table de filtres, qui associe chaque filtre à un point de terminaison client. Dans cet exemple, le message sera routé en fonction du point de terminaison spécifique qui l'a reçu. Puisque le message ne peut correspondre qu'à un seul des deux filtres possibles, il n'est pas nécessaire d'utiliser une priorité de filtre pour contrôler l'ordre dans lequel les filtres sont évalués.  
+3. Définissez la table de filtres, qui associe chaque filtre à un point de terminaison client. Dans cet exemple, le message sera routé en fonction du point de terminaison spécifique qui l'a reçu. Puisque le message ne peut correspondre qu'à un seul des deux filtres possibles, il n'est pas nécessaire d'utiliser une priorité de filtre pour contrôler l'ordre dans lequel les filtres sont évalués.  
   
      Les éléments suivants définissent la table de filtres et ajoutent les filtres définis précédemment.  
   
@@ -85,7 +85,7 @@ Cette rubrique présente les étapes de base requises pour partitionner des mess
     </filterTables>  
     ```  
   
-4.  Pour évaluer les messages entrants en fonction des filtres contenus dans la table, vous devez associer la table de filtres aux points de terminaison de service à l'aide du comportement de routage. L’exemple suivant illustre l’association de « filterTable1 » aux points de terminaison de service :  
+4. Pour évaluer les messages entrants en fonction des filtres contenus dans la table, vous devez associer la table de filtres aux points de terminaison de service à l'aide du comportement de routage. L’exemple suivant illustre l’association de « filterTable1 » aux points de terminaison de service :  
   
     ```xml  
     <behaviors>  

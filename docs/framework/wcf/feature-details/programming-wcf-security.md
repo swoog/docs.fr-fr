@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313318"
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
 Cette rubrique décrit les tâches de programmation fondamentales utilisées pour créer une application Windows Communication Foundation (WCF) sécurisé. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, collectivement appelées *sécurité de transfert*. Cette rubrique ne couvre pas l’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -25,11 +25,11 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
 ## <a name="setting-the-security-mode"></a>Définition du mode de sécurité  
  La section suivante présente les étapes générales pour la programmation avec le mode de sécurité dans WCF :  
   
-1.  Sélectionnez une liaison prédéfinie adaptée aux exigences de votre application. Pour obtenir la liste des liaisons, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Par défaut, la sécurité de pratiquement toutes les liaisons est activée. La seule exception concerne le <xref:System.ServiceModel.BasicHttpBinding> classe (à l’aide de la configuration, le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Sélectionnez une liaison prédéfinie adaptée aux exigences de votre application. Pour obtenir la liste des liaisons, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Par défaut, la sécurité de pratiquement toutes les liaisons est activée. La seule exception concerne le <xref:System.ServiceModel.BasicHttpBinding> classe (à l’aide de la configuration, le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      Le transport dépend de la liaison sélectionnée. Par exemple, <xref:System.ServiceModel.WSHttpBinding> utilise le transport HTTP tandis que <xref:System.ServiceModel.NetTcpBinding> utilise le transport TCP.  
   
-2.  Sélectionnez l'un des modes de sécurité disponibles pour la liaison. Remarque : les modes de sécurité disponibles dépendent de la liaison sélectionnée. Par exemple, la liaison <xref:System.ServiceModel.WSDualHttpBinding> ne permet pas de définir le niveau transport comme mode de sécurité (ce mode n'est pas disponible pour cette liaison). De la même façon, les liaisons <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> et <xref:System.ServiceModel.NetNamedPipeBinding> ne permettent pas de définir le niveau message comme mode de sécurité.  
+2. Sélectionnez l'un des modes de sécurité disponibles pour la liaison. Remarque : les modes de sécurité disponibles dépendent de la liaison sélectionnée. Par exemple, la liaison <xref:System.ServiceModel.WSDualHttpBinding> ne permet pas de définir le niveau transport comme mode de sécurité (ce mode n'est pas disponible pour cette liaison). De la même façon, les liaisons <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> et <xref:System.ServiceModel.NetNamedPipeBinding> ne permettent pas de définir le niveau message comme mode de sécurité.  
   
      Trois choix sont possibles :  
   
@@ -47,9 +47,9 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
   
          Ce mode utilise la couche de transport pour sécuriser le transfert des messages, tandis que chaque message inclut l'ensemble des informations d'identification requises par les autres services. Ce mode allie les avantages de la sécurité de niveau transport aux avantages présentés par la sécurité de niveau message, notamment celui d'utiliser un nombre illimité d'informations d'identification. Ce mode est disponible avec les liaisons suivantes : <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> et <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Si vous choisissez d’utiliser la sécurité de transport pour HTTP, c’est-à-dire HTTPS, vous devez également configurer l’hôte avec un certificat SSL et activer ce certificat sur l’un des ports de votre ordinateur. Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Si vous choisissez d’utiliser la sécurité de transport pour HTTP, c’est-à-dire HTTPS, vous devez également configurer l’hôte avec un certificat SSL et activer ce certificat sur l’un des ports de votre ordinateur. Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4.  Si vous utilisez la liaison <xref:System.ServiceModel.WSHttpBinding> et que vous n'avez pas besoin d'établir une session sécurisée, affectez à la propriété <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> la valeur `false`.  
+4. Si vous utilisez la liaison <xref:System.ServiceModel.WSHttpBinding> et que vous n'avez pas besoin d'établir une session sécurisée, affectez à la propriété <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> la valeur `false`.  
   
      Une session sécurisée intervient lorsqu'un client et un service créent un canal à l'aide d'une clé symétrique (le client et le serveur utilisent la même clé pendant toute la durée de la conversation, jusqu'au terme de celle-ci).  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301332"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procédure : définir des info-bulles pour des contrôles dans un formulaire Windows au moment du design
 Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code ou dans le Concepteur de formulaires Windows. Pour plus d’informations sur la <xref:System.Windows.Forms.ToolTip> composant, consultez [vue d’ensemble du composant ToolTip](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Pour définir une info-bulle par programmation  
   
-1.  Ajoutez le contrôle qui affiche l’info-bulle.  
+1. Ajoutez le contrôle qui affiche l’info-bulle.  
   
-2.  Utilisez le <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> méthode de la <xref:System.Windows.Forms.ToolTip> composant.  
+2. Utilisez le <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> méthode de la <xref:System.Windows.Forms.ToolTip> composant.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Pour définir une info-bulle dans le Concepteur  
   
-1.  Ajoutez un composant <xref:System.Windows.Forms.ToolTip> au formulaire.  
+1. Ajoutez un composant <xref:System.Windows.Forms.ToolTip> au formulaire.  
   
-2.  Sélectionnez le contrôle qui affiche l’info-bulle, ou ajoutez-le au formulaire.  
+2. Sélectionnez le contrôle qui affiche l’info-bulle, ou ajoutez-le au formulaire.  
   
-3.  Dans le **propriétés** fenêtre, définissez la **info-bulle sur ToolTip1** valeur à une chaîne de texte appropriée.  
+3. Dans le **propriétés** fenêtre, définissez la **info-bulle sur ToolTip1** valeur à une chaîne de texte appropriée.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Pour supprimer une info-bulle par programme  
   
-1.  Utilisez le <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> méthode de la <xref:System.Windows.Forms.ToolTip> composant.  
+1. Utilisez le <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> méthode de la <xref:System.Windows.Forms.ToolTip> composant.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ Vous pouvez définir un <xref:System.Windows.Forms.ToolTip> chaîne dans le code
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Pour supprimer une info-bulle dans le Concepteur  
   
-1.  Sélectionnez le contrôle qui affiche l’info-bulle.  
+1. Sélectionnez le contrôle qui affiche l’info-bulle.  
   
-2.  Dans le **propriétés** fenêtre, supprimez le texte dans le **info-bulle sur ToolTip1**.  
+2. Dans le **propriétés** fenêtre, supprimez le texte dans le **info-bulle sur ToolTip1**.  
 
 ## <a name="see-also"></a>Voir aussi
 

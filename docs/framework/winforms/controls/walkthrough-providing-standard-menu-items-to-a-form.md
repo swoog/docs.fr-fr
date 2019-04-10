@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296392"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : fourniture d’éléments de menu standard à un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
@@ -47,53 +47,53 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
-1.  Créez un projet d’application Windows appelé **StandardMenuForm** (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
+1. Créez un projet d’application Windows appelé **StandardMenuForm** (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
   
-2.  Dans le Concepteur Windows Forms, sélectionnez le formulaire.  
+2. Dans le Concepteur Windows Forms, sélectionnez le formulaire.  
   
 ## <a name="creating-a-standard-menu"></a>Création d’un Menu Standard  
  Le Concepteur de formulaires Windows peut remplir automatiquement un <xref:System.Windows.Forms.MenuStrip> contrôle avec les éléments de menu standard.  
   
 #### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard  
   
-1.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.MenuStrip> contrôle vers votre formulaire.  
+1. À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.MenuStrip> contrôle vers votre formulaire.  
   
-2.  Cliquez sur le <xref:System.Windows.Forms.MenuStrip> glyphe de balise active du contrôle (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) et sélectionnez **insérer des éléments Standard**.  
+2. Cliquez sur le <xref:System.Windows.Forms.MenuStrip> glyphe de balise active du contrôle (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) et sélectionnez **insérer des éléments Standard**.  
   
      Le <xref:System.Windows.Forms.MenuStrip> contrôle soit rempli avec les éléments de menu standard.  
   
-3.  Cliquez sur le **fichier** élément de menu pour afficher ses éléments de menu par défaut et les icônes correspondantes.  
+3. Cliquez sur le **fichier** élément de menu pour afficher ses éléments de menu par défaut et les icônes correspondantes.  
   
 ## <a name="creating-a-statusstrip-control"></a>Création d’un contrôle StatusStrip  
  Utilisez le <xref:System.Windows.Forms.StatusStrip> contrôle pour afficher l’état de vos applications Windows Forms. Dans l’exemple actuel, les éléments de menu sélectionnés par l’utilisateur sont affichés dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
 #### <a name="to-create-a-statusstrip-control"></a>Pour créer un contrôle StatusStrip  
   
-1.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.StatusStrip> contrôle vers votre formulaire.  
+1. À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.StatusStrip> contrôle vers votre formulaire.  
   
      Le <xref:System.Windows.Forms.StatusStrip> contrôle s’ancre automatiquement vers le bas du formulaire.  
   
-2.  Cliquez sur le <xref:System.Windows.Forms.StatusStrip> du contrôle bouton de liste déroulante et sélectionnez **StatusLabel** pour ajouter un <xref:System.Windows.Forms.ToolStripStatusLabel> le contrôle à la <xref:System.Windows.Forms.StatusStrip> contrôle.  
+2. Cliquez sur le <xref:System.Windows.Forms.StatusStrip> du contrôle bouton de liste déroulante et sélectionnez **StatusLabel** pour ajouter un <xref:System.Windows.Forms.ToolStripStatusLabel> le contrôle à la <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
 ## <a name="handling-item-selection"></a>Sélection d’éléments de gestion  
  Gérer le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement répondre quand l’utilisateur sélectionne un élément de menu.  
   
 #### <a name="to-handle-item-selection"></a>Pour gérer la sélection d’éléments  
   
-1.  Cliquez sur le **fichier** élément de menu que vous avez créé dans la création une section de Menu Standard.  
+1. Cliquez sur le **fichier** élément de menu que vous avez créé dans la création une section de Menu Standard.  
   
-2.  Dans la fenêtre **Propriétés**, cliquez sur **Événements**.  
+2. Dans la fenêtre **Propriétés**, cliquez sur **Événements**.  
   
-3.  Double-cliquez sur le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
+3. Double-cliquez sur le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
   
      Le Concepteur de formulaires Windows génère un gestionnaire d’événements pour le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
   
-4.  Insérez le code suivant dans le Gestionnaire d’événements.  
+4. Insérez le code suivant dans le Gestionnaire d’événements.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Insérer le `UpdateStatus` définition de méthode d’utilitaire dans le formulaire.  
+5. Insérer le `UpdateStatus` définition de méthode d’utilitaire dans le formulaire.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 #### <a name="to-test-your-form"></a>Pour tester votre formulaire  
   
-1.  Appuyez sur F5 pour compiler et exécuter votre formulaire.  
+1. Appuyez sur F5 pour compiler et exécuter votre formulaire.  
   
-2.  Cliquez sur le **fichier** élément de menu pour ouvrir le menu.  
+2. Cliquez sur le **fichier** élément de menu pour ouvrir le menu.  
   
-3.  Sur le **fichier** menu, cliquez sur un des éléments pour le sélectionner.  
+3. Sur le **fichier** menu, cliquez sur un des éléments pour le sélectionner.  
   
      Le <xref:System.Windows.Forms.StatusStrip> contrôle affiche l’élément sélectionné.  
   

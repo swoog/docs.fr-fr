@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300955"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
 Applications Windows Presentation Foundation (WPF) peuvent être construites comme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exécutables (.exe), des bibliothèques (.dll), ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  
@@ -57,11 +57,11 @@ Applications Windows Presentation Foundation (WPF) peuvent être construites com
   
  Pendant cette étape, les activités suivantes ont lieu pour chaque fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] qui est un élément de génération `Page` :  
   
-1.  Le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est analysé par le compilateur de balisage.  
+1. Le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est analysé par le compilateur de balisage.  
   
-2.  Une représentation compilée est créée pour ce fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] et copiée dans le dossier obj\Release.  
+2. Une représentation compilée est créée pour ce fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] et copiée dans le dossier obj\Release.  
   
-3.  Une représentation CodeDOM d’une nouvelle classe partielle est créée et copiée dans le dossier obj\Release.  
+3. Une représentation CodeDOM d’une nouvelle classe partielle est créée et copiée dans le dossier obj\Release.  
   
  En outre, un fichier de code spécifique au langage est généré pour chaque fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Par exemple, pour une page Page1.xaml dans un projet Visual Basic, un fichier Page1.g.vb est généré ; pour une page Page1.xaml dans un projet c#, un fichier Page1.g.cs est généré. Le « .g » dans le nom de fichier indique que le fichier est du code généré qui a une déclaration de classe partielle pour l’élément de niveau supérieur du fichier de balisage (tel que `Page` ou `Window`). La classe est déclarée avec le `partial` modificateur en c# (`Extends` en Visual Basic) pour indiquer qu’une autre déclaration pour la classe ailleurs, généralement dans le code-behind Page1.xaml.cs de fichiers.  
   

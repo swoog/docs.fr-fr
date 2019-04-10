@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302801"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procédure : Appeler le compilateur de ligne de commande (Visual Basic)
 Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son fichier exécutable dans la ligne de commande, également appelée invite de commande MS-DOS. Si vous compilez à partir de l’invite de commandes de Windows par défaut, vous devez taper le chemin d’accès complet au fichier exécutable. Pour remplacer ce comportement par défaut, vous pouvez utiliser l’invite de commandes développeur pour Visual Studio, ou modifier la variable d’environnement PATH. Les deux permettent de compiler à partir de n’importe quel répertoire il suffit de taper le nom du compilateur.  
@@ -21,39 +21,39 @@ Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son 
   
 ### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Pour appeler le compilateur à l’aide de l’invite de commandes développeur pour Visual Studio  
   
-1.  Ouvrez le dossier de programme Visual Studio Tools dans le groupe de programmes de Microsoft Visual Studio.  
+1. Ouvrez le dossier de programme Visual Studio Tools dans le groupe de programmes de Microsoft Visual Studio.  
   
-2.  Vous pouvez utiliser l’invite de commandes développeur pour Visual Studio pour accéder au compilateur à partir de n’importe quel répertoire sur votre ordinateur, si Visual Studio est installé.  
+2. Vous pouvez utiliser l’invite de commandes développeur pour Visual Studio pour accéder au compilateur à partir de n’importe quel répertoire sur votre ordinateur, si Visual Studio est installé.  
   
-3.  Appeler l’invite de commandes développeur pour Visual Studio.  
+3. Appeler l’invite de commandes développeur pour Visual Studio.  
   
-4.  À la ligne de commande, tapez `vbc.exe` *sourceFileName* puis appuyez sur ENTRÉE.  
+4. À la ligne de commande, tapez `vbc.exe` *sourceFileName* puis appuyez sur ENTRÉE.  
   
      Par exemple, si vous avez stocké votre code source dans un répertoire appelé `SourceFiles`, vous ouvririez l’invite de commandes et le type `cd SourceFiles` pour accéder à ce répertoire. Si le répertoire contenait un fichier source nommé `Source.vb`, vous pouvez le compiler en tapant `vbc.exe Source.vb`.  
   
 ### <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Pour définir la variable d’environnement de chemin d’accès au compilateur pour l’invite de commandes Windows.  
   
-1.  Utilisez la fonctionnalité de Windows Search pour rechercher Vbc.exe sur votre disque local.  
+1. Utilisez la fonctionnalité de Windows Search pour rechercher Vbc.exe sur votre disque local.  
   
      Le nom exact du répertoire où se trouve le compilateur dépend de l’emplacement du répertoire Windows et la version de « Installé le .NET Framework ». Si vous avez plusieurs versions de « .NET Framework » installé, vous devez déterminer quelle version utiliser (généralement la dernière version).  
   
-2.  À partir de votre **Démarrer** Menu, avec le bouton droit **poste de travail**, puis cliquez sur **propriétés** dans le menu contextuel.  
+2. À partir de votre **Démarrer** Menu, avec le bouton droit **poste de travail**, puis cliquez sur **propriétés** dans le menu contextuel.  
   
-3.  Cliquez sur le **avancé** onglet, puis cliquez sur **Variables d’environnement**.  
+3. Cliquez sur le **avancé** onglet, puis cliquez sur **Variables d’environnement**.  
   
-4.  Dans le **système** volet variables, sélectionnez **chemin d’accès** à partir de la liste et cliquez **modifier**.  
+4. Dans le **système** volet variables, sélectionnez **chemin d’accès** à partir de la liste et cliquez **modifier**.  
   
-5.  Dans le **système modifier** boîte de dialogue Variable déplacer le point d’insertion à la fin de la chaîne dans le **valeur de la Variable** champ et tapez un point-virgule ( ;) suivi du nom complet du répertoire trouvé à l’étape 1.  
+5. Dans le **système modifier** boîte de dialogue Variable déplacer le point d’insertion à la fin de la chaîne dans le **valeur de la Variable** champ et tapez un point-virgule ( ;) suivi du nom complet du répertoire trouvé à l’étape 1.  
   
-6.  Cliquez sur **OK** pour confirmer vos modifications et fermer les boîtes de dialogue.  
+6. Cliquez sur **OK** pour confirmer vos modifications et fermer les boîtes de dialogue.  
   
      Après avoir modifié la variable d’environnement PATH, vous pouvez exécuter le compilateur Visual Basic à l’invite de commandes Windows à partir de n’importe quel répertoire sur l’ordinateur.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Pour appeler le compilateur à l’aide de l’invite de commandes Windows  
   
-1.  À partir de la **Démarrer** menu, cliquez sur le **Accessoires** , puis ouvrez le **invite de commandes Windows**.  
+1. À partir de la **Démarrer** menu, cliquez sur le **Accessoires** , puis ouvrez le **invite de commandes Windows**.  
   
-2.  À la ligne de commande, tapez `vbc.exe` *sourceFileName* puis appuyez sur ENTRÉE.  
+2. À la ligne de commande, tapez `vbc.exe` *sourceFileName* puis appuyez sur ENTRÉE.  
   
      Par exemple, si vous avez stocké votre code source dans un répertoire appelé `SourceFiles`, vous ouvririez l’invite de commandes et le type `cd SourceFiles` pour accéder à ce répertoire. Si le répertoire contenait un fichier source nommé `Source.vb`, vous pouvez le compiler en tapant `vbc.exe Source.vb`.  
   

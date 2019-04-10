@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313084"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procédure : simuler des événements de souris et de clavier dans le code
 Windows Forms fournit plusieurs options pour simuler par programmation l'entrée de souris et de clavier. Cette rubrique offre une vue d'ensemble de ces options.  
@@ -27,9 +27,9 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>Pour cliquer sur le bouton droit de la souris par programmation  
   
-1.  Créez un <xref:System.Windows.Forms.MouseEventArgs> dont la propriété <xref:System.Windows.Forms.MouseEventArgs.Button%2A> a la valeur <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType>.  
+1. Créez un <xref:System.Windows.Forms.MouseEventArgs> dont la propriété <xref:System.Windows.Forms.MouseEventArgs.Button%2A> a la valeur <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType>.  
   
-2.  Appelez la méthode <xref:System.Windows.Forms.Control.OnMouseClick%2A> avec ce <xref:System.Windows.Forms.MouseEventArgs> comme argument.  
+2. Appelez la méthode <xref:System.Windows.Forms.Control.OnMouseClick%2A> avec ce <xref:System.Windows.Forms.MouseEventArgs> comme argument.  
   
  Pour plus d’informations sur les contrôles personnalisés, consultez [Développement de contrôles Windows Forms au moment du design](./controls/developing-windows-forms-controls-at-design-time.md).  
   
@@ -58,7 +58,7 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>Pour envoyer une séquence de touches à la même application  
   
-1.  Appelez la méthode <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> de la classe <xref:System.Windows.Forms.SendKeys> . Les séquences de touches spécifiées seront reçues par le contrôle actif de l'application. L'exemple de code suivant utilise <xref:System.Windows.Forms.SendKeys.Send%2A> pour simuler une pression sur la touche Entrée quand l'utilisateur double-clique sur la surface du formulaire. Cet exemple suppose que l'on a un <xref:System.Windows.Forms.Form> avec un seul contrôle <xref:System.Windows.Forms.Button> ayant un index de tabulation de 0.  
+1. Appelez la méthode <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> de la classe <xref:System.Windows.Forms.SendKeys> . Les séquences de touches spécifiées seront reçues par le contrôle actif de l'application. L'exemple de code suivant utilise <xref:System.Windows.Forms.SendKeys.Send%2A> pour simuler une pression sur la touche Entrée quand l'utilisateur double-clique sur la surface du formulaire. Cet exemple suppose que l'on a un <xref:System.Windows.Forms.Form> avec un seul contrôle <xref:System.Windows.Forms.Button> ayant un index de tabulation de 0.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>Pour envoyer une séquence de touches vers une autre application  
   
-1.  Activez la fenêtre d'application qui recevra les séquences de touches, puis appelez la méthode <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> . Comme il n'existe aucune méthode managée permettant d'activer une autre application, vous devez utiliser des méthodes Windows natives pour forcer le focus sur d'autres applications. L'exemple de code suivant utilise l'appel de code non managé pour appeler les méthodes `FindWindow` et `SetForegroundWindow` pour activer la fenêtre de l'application Calculatrice, puis appelle <xref:System.Windows.Forms.SendKeys.SendWait%2A> pour émettre une série de calculs vers l'application Calculatrice.  
+1. Activez la fenêtre d'application qui recevra les séquences de touches, puis appelez la méthode <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> . Comme il n'existe aucune méthode managée permettant d'activer une autre application, vous devez utiliser des méthodes Windows natives pour forcer le focus sur d'autres applications. L'exemple de code suivant utilise l'appel de code non managé pour appeler les méthodes `FindWindow` et `SetForegroundWindow` pour activer la fenêtre de l'application Calculatrice, puis appelle <xref:System.Windows.Forms.SendKeys.SendWait%2A> pour émettre une série de calculs vers l'application Calculatrice.  
   
     > [!NOTE]
     >  Les paramètres corrects de l'appel `FindWindow` qui recherche l'application Calculatrice varient en fonction de votre version de Windows.  Le code suivant recherche l'application Calculatrice sur [!INCLUDE[win7](../../../includes/win7-md.md)]. Sur [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], remplacez le premier paramètre par « SciCalc ». Vous pouvez utiliser l'outil Spy++, fourni avec Visual Studio, pour déterminer les paramètres corrects.  

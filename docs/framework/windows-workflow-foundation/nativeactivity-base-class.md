@@ -2,23 +2,23 @@
 title: Classe de base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296587"
 ---
 # <a name="nativeactivity-base-class"></a>Classe de base NativeActivity
 
-<xref:System.Activities.NativeActivity> est une classe abstraite avec un constructeur protégé. Comme l'objet <xref:System.Activities.CodeActivity>, la classe <xref:System.Activities.NativeActivity> sert à écrire le comportement impératif en implémentant une méthode <xref:System.Activities.NativeActivity.Execute%2A>. Contrairement à l'objet <xref:System.Activities.CodeActivity>, la classe <xref:System.Activities.NativeActivity> a accès à toutes les fonctionnalités exposées de l'exécution du workflow, via l'objet <xref:System.Activities.NativeActivityContext> passé à la méthode <xref:System.Activities.NativeActivity.Execute%2A>.
+<xref:System.Activities.NativeActivity> est une classe abstraite avec un constructeur protégé. Comme l'objet <xref:System.Activities.CodeActivity>, la classe <xref:System.Activities.NativeActivity> sert à écrire le comportement impératif en implémentant une méthode <xref:System.Activities.NativeActivity.Execute%2A>. Contrairement à l’objet <xref:System.Activities.CodeActivity>, la classe <xref:System.Activities.NativeActivity> a accès à toutes les fonctionnalités exposées de l’exécution du workflow, via l’objet <xref:System.Activities.NativeActivityContext> passé à la méthode <xref:System.Activities.NativeActivity.Execute%2A>.
 
 ## <a name="using-nativeactivitycontext"></a>Utilisation de NativeActivityContext
  Les fonctionnalités de l'exécution du workflow sont accessibles à partir de la méthode <xref:System.Activities.NativeActivity.Execute%2A> en utilisant les membres du paramètre `context`, de type <xref:System.Activities.NativeActivityContext>. Les fonctionnalités disponibles via <xref:System.Activities.NativeActivityContext> sont notamment :
 
--   obtention et définition d'arguments et de variables ;
+-   obtention et définition d’arguments et de variables ;
 
--   planification d'activités enfants à l'aide de la méthode <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> ;
+-   Planification d’activités enfants avec <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
 -   abandon de l'exécution de l'activité à l'aide de la méthode <xref:System.Activities.NativeActivityContext.Abort%2A> ;
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842033"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Pour créer une activité personnalisée qui hérite de NativeActivity
 
-1.  Ouvrez Visual Studio 2010.
+1. Ouvrez Visual Studio 2010.
 
-2.  Sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **bibliothèque d’activités** dans le **modèles** fenêtre. Nommez le nouveau projet HelloActivity.
+2. Sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **bibliothèque d’activités** dans le **modèles** fenêtre. Nommez le nouveau projet HelloActivity.
 
-3.  Cliquez sur Activity1.xaml dans le projet HelloActivity et sélectionnez **supprimer**.
+3. Cliquez sur Activity1.xaml dans le projet HelloActivity et sélectionnez **supprimer**.
 
-4.  Cliquez sur le projet HelloActivity et sélectionnez **ajouter**, puis **classe**. Nommez la nouvelle classe HelloActivity.cs.
+4. Cliquez sur le projet HelloActivity et sélectionnez **ajouter**, puis **classe**. Nommez la nouvelle classe HelloActivity.cs.
 
-5.  Dans le fichier HelloActivity.cs, ajoutez les directives `using` suivantes.
+5. Dans le fichier HelloActivity.cs, ajoutez les directives `using` suivantes.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Faites en sorte que la nouvelle classe hérite de <xref:System.Activities.NativeActivity> en ajoutant une classe de base à la déclaration de classe.
+6. Faites en sorte que la nouvelle classe hérite de <xref:System.Activities.NativeActivity> en ajoutant une classe de base à la déclaration de classe.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Ajoutez des fonctionnalités à la classe en ajoutant une méthode <xref:System.Activities.NativeActivity.Execute%2A>.
+7. Ajoutez des fonctionnalités à la classe en ajoutant une méthode <xref:System.Activities.NativeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842033"
     }
     ```
 
-8.  Substituez la méthode <xref:System.Activities.NativeActivity.CacheMetadata%2A> et appelez la méthode Add appropriée pour permettre au runtime du workflow de connaître les variables, les arguments, les enfants et les délégués de l'activité personnalisée. Pour plus d'informations, consultez la classe <xref:System.Activities.NativeActivityMetadata>.
+8. Substituez la méthode <xref:System.Activities.NativeActivity.CacheMetadata%2A> et appelez la méthode Add appropriée pour permettre au runtime du workflow de connaître les variables, les arguments, les enfants et les délégués de l'activité personnalisée. Pour plus d'informations, consultez la classe <xref:System.Activities.NativeActivityMetadata>.
 
 9. Utilisez l'objet <xref:System.Activities.NativeActivityContext> pour planifier un signet. Pour plus d'informations sur la création, la planification et la reprise d'un signet, consultez <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 

@@ -2,19 +2,19 @@
 title: 'Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306303"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)
 Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un ensemble de fichiers qui organisent les données d’une nouvelle façon.  
   
 ### <a name="to-create-the-data-files"></a>Pour créer les fichiers de données  
   
-1.  Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :  
+1. Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un
     Garcia, Debra  
     ```  
   
-2.  Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.  
+2. Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.  
   
     ```  
     Liu, Jinghao  

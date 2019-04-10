@@ -2,12 +2,12 @@
 title: Enregistrements de suivi
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298355"
 ---
 # <a name="tracking-records"></a>Enregistrements de suivi
 L'exécution du flux de travail est instrumentée pour émettre des enregistrements de suivi pour suivre l'exécution d'une instance de workflow.  
@@ -50,15 +50,15 @@ L'exécution du flux de travail est instrumentée pour émettre des enregistreme
   
  Par exemple, il pourrait y avoir une activité <xref:System.Activities.Statements.Sequence> simple qui contient une opération <xref:System.Activities.Statements.WriteLine> avec les enregistrements de suivi émis dans l'ordre suivant :  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail démarre.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail démarre.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Indique qu’une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> Indique qu’une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> représente le <xref:System.Activities.Statements.WriteLine> activité.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> représente le <xref:System.Activities.Statements.WriteLine> activité.  
   
-4.  Il y a deux enregistrements <xref:System.Activities.Tracking.ActivityStateRecord> qui représentent les deux activités en cours.  
+4. Il y a deux enregistrements <xref:System.Activities.Tracking.ActivityStateRecord> qui représentent les deux activités en cours.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail se termine.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail se termine.  
   
 ## <a name="see-also"></a>Voir aussi
 

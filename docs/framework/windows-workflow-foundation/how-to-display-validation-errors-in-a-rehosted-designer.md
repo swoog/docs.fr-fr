@@ -2,12 +2,12 @@
 title: 'Procédure : afficher les erreurs de validation dans un concepteur réhébergé'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310198"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Procédure : afficher les erreurs de validation dans un concepteur réhébergé
 Cette rubrique explique comment récupérer et publier des erreurs de validation dans un [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] réhébergé. Cette opération fournit une procédure permettant de confirmer la validité d'un workflow dans un concepteur réhébergé.  
@@ -16,7 +16,7 @@ Cette rubrique explique comment récupérer et publier des erreurs de validation
   
 ### <a name="implement-the-ivalidationerrorservice-interface"></a>Implémenter l'interface IValidationErrorService  
   
-1.  Voici un exemple de code pour une implémentation simple qui écrira les erreurs de validation dans le journal de débogage.  
+1. Voici un exemple de code pour une implémentation simple qui écrira les erreurs de validation dans le journal de débogage.  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -38,7 +38,7 @@ Cette rubrique explique comment récupérer et publier des erreurs de validation
   
 ### <a name="publishing-to-the-editing-context"></a>Publication dans le contexte d'édition  
   
-1.  Voici le code qui publiera cette implémentation dans le contexte d'édition.  
+1. Voici le code qui publiera cette implémentation dans le contexte d'édition.  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

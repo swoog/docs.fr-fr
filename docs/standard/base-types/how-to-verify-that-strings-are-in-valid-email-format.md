@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236646"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890499"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procédure : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
@@ -50,17 +50,17 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
  [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
  [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]  
   
- Dans cet exemple, le modèle d'expression régulière ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` est interprété de la manière indiquée dans le tableau ci-dessous. Notez que l'expression régulière est compilée à l'aide de l'indicateur <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.  
+ Dans cet exemple, le modèle d’expression régulière ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` est interprété de la manière indiquée dans le tableau ci-dessous. Notez que l'expression régulière est compilée à l'aide de l'indicateur <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .  
   
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commence la recherche de correspondance au début de la chaîne.|  
-|`(?(")`|Détermine si le premier caractère est un guillemet. `(?(")` est le début d'une construction d'alternative.|  
-|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d'une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
+|`(?(")`|Détermine si le premier caractère est un guillemet. `(?(")` est le début d’une construction d’alternative.|  
+|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d’une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
 |<code>&#124;(([0-9a-z]</code>|Si le premier caractère n'est pas un guillemet, établit une correspondance avec un caractère alphabétique de a à z ou de A à Z (la comparaison ne respecte pas la casse) ou un chiffre (de 0 à 9).|  
-|`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche deux points consécutifs de s'afficher dans la partie locale d'une adresse de messagerie.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou avec un des caractères suivants : -!#$%'*+=?^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Établit une correspondance avec le modèle d'alternative (un point suivi d'un autre caractère qu'un point, ou l'un des caractères) zéro, une ou plusieurs fois.|  
+|`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche que deux points consécutifs apparaissent dans la partie locale d’une adresse de messagerie.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou l’un des caractères suivants : -!#$%’*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Établit une correspondance avec le modèle d’alternative (un point suivi d’autre chose qu’un point ou l’un des caractères numériques) zéro, une ou plusieurs fois.|  
 |`@`|Correspond à l'arobase (@).|  
 |`(?<=[0-9a-z])`|Continue la recherche de correspondances si le caractère qui précède le caractère @ est compris entre A et Z, a et z, ou 0 et 9. La construction `(?<=[0-9a-z])` définit une assertion de postanalyse positive de largeur nulle.|  
 |`(?(\[)`|Vérifie si le caractère qui suit @ est un crochet ouvrant.|  
@@ -105,4 +105,4 @@ vbc /t:library RegexUtilities.vb
   
 ## <a name="see-also"></a>Voir aussi
 
-- [.NET Framework (expressions régulières)](../../../docs/standard/base-types/regular-expressions.md)
+- [Expressions régulières du .NET Framework](../../../docs/standard/base-types/regular-expressions.md)

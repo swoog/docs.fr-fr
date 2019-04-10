@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Désérialiser un objet'
+title: 'Procédure : désérialiser un objet'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583309"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298134"
 ---
-# <a name="how-to-deserialize-an-object"></a>Procédure : Désérialiser un objet
+# <a name="how-to-deserialize-an-object"></a>Procédure : désérialiser un objet
 Lorsque vous désérialisez un objet, le format de transport vous permet de déterminer si vous créez un flux de données ou un objet de fichier. Après avoir déterminé le format de transport, vous pouvez appeler la méthode <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, si nécessaire.  
   
 ### <a name="to-deserialize-an-object"></a>Pour désérialiser un objet  
   
-1.  Construisez un <xref:System.Xml.Serialization.XmlSerializer> à l'aide du type d'objet à désérialiser.  
+1. Construisez un <xref:System.Xml.Serialization.XmlSerializer> à l'aide du type d'objet à désérialiser.  
   
-2.  Appelez la méthode <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> pour produire un réplica de l'objet. Lorsque vous effectuez une désérialisation, vous devez exécuter un transtypage de l'objet retourné au type d'origine (comme illustré dans l'exemple suivant). Celui-ci désérialise l'objet dans un fichier (bien qu'il puisse également être désérialisé dans un flux de données).  
+2. Appelez la méthode <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> pour produire un réplica de l'objet. Lorsque vous effectuez une désérialisation, vous devez exécuter un transtypage de l'objet retourné au type d'origine (comme illustré dans l'exemple suivant). Celui-ci désérialise l'objet dans un fichier (bien qu'il puisse également être désérialisé dans un flux de données).  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -54,4 +54,4 @@ Lorsque vous désérialisez un objet, le format de transport vous permet de dét
 ## <a name="see-also"></a>Voir aussi
 
 - [Introduction à la sérialisation XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procédure : sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)

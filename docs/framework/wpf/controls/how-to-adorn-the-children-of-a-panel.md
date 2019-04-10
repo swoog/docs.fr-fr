@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299811"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Procédure : Orner les enfants d’un panneau
 Cet exemple montre comment lier par programmation un ornement aux enfants d’une certaine <xref:System.Windows.Controls.Panel>.  
@@ -21,9 +21,9 @@ Cet exemple montre comment lier par programmation un ornement aux enfants d’un
 ## <a name="example"></a>Exemple  
  Pour lier un ornement aux enfants d’un <xref:System.Windows.Controls.Panel>, procédez comme suit :  
   
-1.  Déclarez un nouveau <xref:System.Windows.Documents.AdornerLayer> objet et appelez le `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> méthode pour rechercher une couche d’ornement pour l’élément dont les enfants doivent être ornés.  
+1. Déclarez un nouveau <xref:System.Windows.Documents.AdornerLayer> objet et appelez le `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> méthode pour rechercher une couche d’ornement pour l’élément dont les enfants doivent être ornés.  
   
-2.  Énumérez les enfants de l’élément parent et appelez le <xref:System.Windows.Documents.AdornerLayer.Add%2A> méthode pour lier un ornement à chaque élément enfant.  
+2. Énumérez les enfants de l’élément parent et appelez le <xref:System.Windows.Documents.AdornerLayer.Add%2A> méthode pour lier un ornement à chaque élément enfant.  
   
  L’exemple suivant lie un SimpleCircleAdorner (illustré ci-dessus) aux enfants d’un <xref:System.Windows.Controls.StackPanel> nommé *myStackPanel*.  
   

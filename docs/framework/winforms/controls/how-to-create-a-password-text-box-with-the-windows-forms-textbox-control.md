@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300981"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Procédure : créer une zone de texte pour un mot de passe avec le contrôle TextBox Windows Forms
 Une zone de mot de passe est une zone de texte Windows Forms qui affiche les caractères d’espace réservé pendant qu’un utilisateur tape une chaîne.  
   
 ### <a name="to-create-a-password-text-box"></a>Pour créer une zone de texte mot de passe  
   
-1.  Définir le <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriété de la <xref:System.Windows.Forms.TextBox> contrôle à un caractère spécifique.  
+1. Définir le <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriété de la <xref:System.Windows.Forms.TextBox> contrôle à un caractère spécifique.  
   
      Le <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriété spécifie le caractère affiché dans la zone de texte. Par exemple, si vous souhaitez que des astérisques s’affichent dans la zone de mot de passe, spécifiez * pour le <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriété dans la fenêtre Propriétés. Ensuite, indépendamment du caractère qu’un utilisateur tape dans la zone de texte, un astérisque est affiché.  
   
-2.  (Facultatif) Définir le <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propriété. La propriété détermine le nombre de caractères peut être tapé dans la zone de texte. Si la longueur maximale est dépassée, le système émet un signal sonore et la zone de texte n’accepte pas plus de caractères. Notez que vous ne pouvez pas effectuer cette opération car la longueur maximale d’un mot de passe peut-être être utiles aux pirates informatiques qui tentent de deviner le mot de passe.  
+2. (Facultatif) Définir le <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propriété. La propriété détermine le nombre de caractères peut être tapé dans la zone de texte. Si la longueur maximale est dépassée, le système émet un signal sonore et la zone de texte n’accepte pas plus de caractères. Notez que vous ne pouvez pas effectuer cette opération car la longueur maximale d’un mot de passe peut-être être utiles aux pirates informatiques qui tentent de deviner le mot de passe.  
   
      L’exemple de code suivant montre comment initialiser une zone de texte qui acceptent une chaîne de 14 caractères au maximum et affichera des astérisques à la place de la chaîne. Le `InitializeMyControl` procédure s’exécutera pas automatiquement ; il doit être appelé.  
   

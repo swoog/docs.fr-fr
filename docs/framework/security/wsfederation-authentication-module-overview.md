@@ -3,12 +3,12 @@ title: Vue d’ensemble du module d’authentification WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310250"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Vue d’ensemble du module d’authentification WSFederation
 Windows Identity Foundation (WIF) prend en charge l’authentification fédérée dans les applications ASP.NET par le biais du module WS-FAM (WS-Federated Authentication Module). Cette rubrique explique le fonctionnement et l’utilisation de l’authentification fédérée.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
   
  ![Scénario d’authentification fédérée](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Un client situé dans le domaine d’approbation Fabrikam envoie une demande à une application par partie de confiance qui se trouve dans le domaine d’approbation Contoso.  
+1. Un client situé dans le domaine d’approbation Fabrikam envoie une demande à une application par partie de confiance qui se trouve dans le domaine d’approbation Contoso.  
   
-2.  La partie de confiance redirige le client vers un STS du domaine d’approbation Contoso. Ce STS ne connaît pas le client.  
+2. La partie de confiance redirige le client vers un STS du domaine d’approbation Contoso. Ce STS ne connaît pas le client.  
   
-3.  Le STS Contoso redirige le client vers un STS situé dans le domaine d’approbation Fabrikam, avec lequel le domaine d’approbation Contoso a une relation d’approbation.  
+3. Le STS Contoso redirige le client vers un STS situé dans le domaine d’approbation Fabrikam, avec lequel le domaine d’approbation Contoso a une relation d’approbation.  
   
-4.  Le STS Fabrikam vérifie l’identité du client et envoie un jeton de sécurité au STS Contoso.  
+4. Le STS Fabrikam vérifie l’identité du client et envoie un jeton de sécurité au STS Contoso.  
   
-5.  Le STS Contoso utilise le jeton Fabrikam pour créer son propre jeton utilisable par la partie de confiance et l’envoie à celle-ci.  
+5. Le STS Contoso utilise le jeton Fabrikam pour créer son propre jeton utilisable par la partie de confiance et l’envoie à celle-ci.  
   
-6.  La partie de confiance extrait les revendications du client à partir du jeton de sécurité et rend une décision d’autorisation.  
+6. La partie de confiance extrait les revendications du client à partir du jeton de sécurité et rend une décision d’autorisation.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Utilisation du module d’authentification fédérée avec ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) est un module HTTP qui vous permet d’ajouter l’authentification fédérée pour une [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] application. Grâce à l’authentification fédérée, la logique d’authentification est gérée par le STS. Vous pouvez ainsi vous concentrer sur le travail d’écriture de la logique métier.  
   
  Vous configurez le module WS-FAM pour spécifier le STS vers lequel les demandes non authentifiées doivent être redirigées. WIF vous permet d’authentifier un utilisateur selon deux méthodes :  
   
-1.  Redirection passive : Lorsqu’un utilisateur non authentifié tente d’accéder à une ressource protégée, et que vous souhaitez simplement les rediriger vers un service STS sans nécessiter une page de connexion, il s’agit de la bonne approche. Le STS vérifie l’identité de l’utilisateur et émet un jeton de sécurité qui contient les revendications appropriées pour cet utilisateur. Cette méthode nécessite l’ajout du module WS-FAM dans le pipeline des modules HTTP. L’outil Identity and Access pour Visual Studio 2012 vous permet de modifier le fichier de configuration de votre application afin d’utiliser le module WS-FAM et la fédération avec un STS. Pour plus d’informations, consultez [Identity and Access Tool pour Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Redirection passive : Lorsqu’un utilisateur non authentifié tente d’accéder à une ressource protégée, et que vous souhaitez simplement les rediriger vers un service STS sans nécessiter une page de connexion, il s’agit de la bonne approche. Le STS vérifie l’identité de l’utilisateur et émet un jeton de sécurité qui contient les revendications appropriées pour cet utilisateur. Cette méthode nécessite l’ajout du module WS-FAM dans le pipeline des modules HTTP. L’outil Identity and Access pour Visual Studio 2012 vous permet de modifier le fichier de configuration de votre application afin d’utiliser le module WS-FAM et la fédération avec un STS. Pour plus d’informations, consultez [Identity and Access Tool pour Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Vous pouvez appeler la méthode <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou la méthode <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> à partir du code-behind pour afficher une page de connexion dans votre application par partie de confiance.  
+2. Vous pouvez appeler la méthode <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou la méthode <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> à partir du code-behind pour afficher une page de connexion dans votre application par partie de confiance.  
   
  Avec la redirection passive, toutes les communications sont effectuées par réponse/redirection du client (en général, un navigateur). Vous pouvez ajouter le module WS-FAM au pipeline HTTP de votre application, où il surveille les demandes d’utilisateurs non authentifiés et redirige ces utilisateurs vers le STS que vous spécifiez.  
   

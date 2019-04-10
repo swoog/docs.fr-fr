@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302397"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procédure : créer des listes maître/détails avec le contrôle DataGrid Windows Forms
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094981"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Pour définir une relation maître/détail par programmation  
   
-1.  Créez deux nouveaux <xref:System.Windows.Forms.DataGrid> contrôle et définir leurs propriétés.  
+1. Créez deux nouveaux <xref:System.Windows.Forms.DataGrid> contrôle et définir leurs propriétés.  
   
-2.  Ajouter des tables au jeu de données.  
+2. Ajouter des tables au jeu de données.  
   
-3.  Déclarez une variable de type <xref:System.Data.DataRelation> pour représenter la relation que vous souhaitez créer.  
+3. Déclarez une variable de type <xref:System.Data.DataRelation> pour représenter la relation que vous souhaitez créer.  
   
-4.  Instanciez la relation en spécifiant un nom pour la relation et la table, une colonne et un élément qui lie les deux tables.  
+4. Instanciez la relation en spécifiant un nom pour la relation et la table, une colonne et un élément qui lie les deux tables.  
   
-5.  Ajouter la relation à la <xref:System.Data.DataSet> l’objet <xref:System.Data.DataSet.Relations%2A> collection.  
+5. Ajouter la relation à la <xref:System.Data.DataSet> l’objet <xref:System.Data.DataSet.Relations%2A> collection.  
   
-6.  Utilisez le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode de la <xref:System.Windows.Forms.DataGrid> pour chacune des grilles pour lier le <xref:System.Data.DataSet>.  
+6. Utilisez le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode de la <xref:System.Windows.Forms.DataGrid> pour chacune des grilles pour lier le <xref:System.Data.DataSet>.  
   
      L’exemple suivant montre comment définir une relation maître/détail entre les tables Customers et Orders dans généré précédemment <xref:System.Data.DataSet> (`ds`).  
   

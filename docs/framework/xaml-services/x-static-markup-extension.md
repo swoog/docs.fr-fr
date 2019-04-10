@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295703"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static, extension de balisage
 Fait référence à une entité de code par valeur statique qui est définie dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– manière conforme. La propriété statique qui est référencée peut être utilisée pour fournir la valeur d’une propriété dans XAML.  
@@ -55,13 +55,13 @@ La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette e
 
 Il existe deux autres utilisations de XAML qui sont techniquement possibles. Toutefois, ces utilisations sont moins courantes, car elles sont inutilement détaillés :  
 
-1.  Syntaxe d’élément objet.
+1. Syntaxe d’élément objet.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Syntaxe d’attribut avec propriété de membre explicite pour la chaîne d’initialisation.
+2. Syntaxe d’attribut avec propriété de membre explicite pour la chaîne d’initialisation.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

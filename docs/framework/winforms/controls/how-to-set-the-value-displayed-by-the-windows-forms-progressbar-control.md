@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300474"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procédure : définir la valeur affichée par le contrôle ProgressBar Windows Forms
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "59196877"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>Pour définir la valeur du contrôle ProgressBar directement  
   
-1.  Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
+1. Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
   
-2.  Dans le code, définissez le contrôle <xref:System.Windows.Forms.ProgressBar.Value%2A> propriété à un entier compris entre les valeurs minimales et maximales que vous avez établi.  
+2. Dans le code, définissez le contrôle <xref:System.Windows.Forms.ProgressBar.Value%2A> propriété à un entier compris entre les valeurs minimales et maximales que vous avez établi.  
   
     > [!NOTE]
     >  Si vous définissez la <xref:System.Windows.Forms.ProgressBar.Value%2A> propriété à l’extérieur des limites établies par le <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriétés, le contrôle lève une <xref:System.ArgumentException> exception.  
@@ -87,11 +87,11 @@ ms.locfileid: "59196877"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Pour augmenter la barre de progression d’une valeur fixe  
   
-1.  Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
+1. Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
   
-2.  Définir le contrôle <xref:System.Windows.Forms.ProgressBar.Step%2A> propriété sur un entier représentant la quantité pour augmenter la barre de progression affiche la valeur.  
+2. Définir le contrôle <xref:System.Windows.Forms.ProgressBar.Step%2A> propriété sur un entier représentant la quantité pour augmenter la barre de progression affiche la valeur.  
   
-3.  Appelez le <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> méthode pour modifier la valeur affichée par le nombre défini dans le <xref:System.Windows.Forms.ProgressBar.Step%2A> propriété.  
+3. Appelez le <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> méthode pour modifier la valeur affichée par le nombre défini dans le <xref:System.Windows.Forms.ProgressBar.Step%2A> propriété.  
   
      L’exemple de code suivant illustre comment une barre de progression peut conserver un nombre de fichiers dans une opération de copie.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "59196877"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Pour augmenter la barre de progression d’une valeur dynamique  
   
-1.  Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
+1. Définir le <xref:System.Windows.Forms.ProgressBar> du contrôle <xref:System.Windows.Forms.ProgressBar.Minimum%2A> et <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valeurs.  
   
-2.  Appelez le <xref:System.Windows.Forms.ProgressBar.Increment%2A> méthode pour modifier la valeur affichée par un entier que vous spécifiez.  
+2. Appelez le <xref:System.Windows.Forms.ProgressBar.Increment%2A> méthode pour modifier la valeur affichée par un entier que vous spécifiez.  
   
      L’exemple de code suivant montre comment une barre de progression calcule la quantité d’espace disque a été utilisé pendant une opération de copie.  
   

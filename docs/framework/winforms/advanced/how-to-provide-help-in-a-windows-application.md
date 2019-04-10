@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312712"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : fournir de l’aide dans une application Windows
 Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant pour attacher des rubriques d’aide d’un fichier d’aide à des contrôles spécifiques sur les Windows Forms. Le fichier d’aide peut être au format HTML, ou HTMLHelp 1.x ou ultérieur.  
@@ -23,24 +23,24 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
   
 ### <a name="to-provide-help"></a>Pour fournir une aide  
   
-1.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.HelpProvider> à votre formulaire.  
+1. À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.HelpProvider> à votre formulaire.  
   
      Le composant sera placé dans la barre d’état en bas du Concepteur Windows Forms.  
   
-2.  Dans le **propriétés** fenêtre, définissez le <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété au fichier d’aide .chm, .col ou .htm.  
+2. Dans le **propriétés** fenêtre, définissez le <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété au fichier d’aide .chm, .col ou .htm.  
   
-3.  Sélectionnez un autre contrôle dans votre formulaire, puis, dans le **propriétés** fenêtre, définissez le <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propriété.  
+3. Sélectionnez un autre contrôle dans votre formulaire, puis, dans le **propriétés** fenêtre, définissez le <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propriété.  
   
      Il s’agit la chaîne passée via le <xref:System.Windows.Forms.HelpProvider> composant à votre fichier d’aide pour appeler la rubrique d’aide appropriée.  
   
-4.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> propriété une valeur de la <xref:System.Windows.Forms.HelpNavigator> énumération.  
+4. Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> propriété une valeur de la <xref:System.Windows.Forms.HelpNavigator> énumération.  
   
      Ceci détermine la façon dont la propriété **HelpKeyword** est passée au système d’aide. Le tableau suivant montre les paramètres possibles et leur description.  
   
     |Nom du membre|Description|  
     |-----------------|-----------------|  
     |AssociateIndex|Spécifie que l’index d’une rubrique spécifiée est exécuté dans l’URL spécifiée.|  
-    |Rechercher|Spécifie que la page de recherche d’une URL spécifiée est affichée.|  
+    |Find|Spécifie que la page de recherche d’une URL spécifiée est affichée.|  
     |Index|Spécifie que l’index d’une URL spécifiée est affiché.|  
     |KeywordIndex|Spécifie un mot clé à rechercher et l’action à effectuer dans l’URL spécifiée.|  
     |TableOfContents|Spécifie que la table des matières du fichier d’aide HTML 1.0 est affiché.|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306389"
 ---
 # <a name="runtime-profiling"></a>Génération de profils d'exécution
 Le profilage est une méthode de collecte de données de performance dans le cadre d’un scénario de développement ou de déploiement. Cette section s’adresse aux développeurs et administrateurs système qui souhaitent recueillir des informations sur les performances d’une application.  
@@ -28,19 +28,19 @@ Le profilage est une méthode de collecte de données de performance dans le cad
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Pour exécuter Perfmon.exe sur Windows Vista et les versions ultérieures  
   
-1.  À l'invite de commandes, entrez **perfmon**. La console **Analyseur de performances** apparaît.  
+1. À l'invite de commandes, entrez **perfmon**. La console **Analyseur de performances** apparaît.  
   
-2.  Dans le dossier **Outils d’analyse** , cliquez sur **Analyseur de performances**.  
+2. Dans le dossier **Outils d’analyse** , cliquez sur **Analyseur de performances**.  
   
-3.  Dans la barre d’outils de l’analyseur de performances, cliquez sur l’icône **Ajouter** (signe plus), si elle est présente. À défaut, cliquez avec le bouton droit dans la fenêtre de l’analyseur et sélectionnez l’option **Ajouter des compteurs** .  
+3. Dans la barre d’outils de l’analyseur de performances, cliquez sur l’icône **Ajouter** (signe plus), si elle est présente. À défaut, cliquez avec le bouton droit dans la fenêtre de l’analyseur et sélectionnez l’option **Ajouter des compteurs** .  
   
      La boîte de dialogue **Ajouter des compteurs** s’ouvre. La zone de liste **Compteurs disponibles** présente les objets de performance disponibles. Il existe plusieurs objets prédéfinis pour les applications .NET Framework, notamment ceux qui touchent à la gestion de la mémoire (**.NET CLR Memory**), à l’interopérabilité (**.NET CLR Interop**), à la gestion des exceptions (**.NET CLR Exceptions**) et au multithreading (**.NET CLR LocksAndThreads**). Chaque objet de performance comprend un certain nombre de compteurs de performances individuels. Pour obtenir la liste des compteurs de performances disponibles dans l’analyseur de performances, consultez [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-4.  Cochez la case en regard du nom d’un objet de performance pour afficher la liste des compteurs de performances individuels qu’il prend en charge.  
+4. Cochez la case en regard du nom d’un objet de performance pour afficher la liste des compteurs de performances individuels qu’il prend en charge.  
   
-5.  Cliquez sur le compteur de performances que vous voulez afficher.  
+5. Cliquez sur le compteur de performances que vous voulez afficher.  
   
-6.  Dans la zone de liste **Instances de l’objet sélectionné**, cliquez sur **\<Toutes les instances>** pour spécifier que vous voulez analyser le compteur de performances pour le Common Language Runtime dans sa globalité (c’est-à-dire à l’échelle du système).  
+6. Dans la zone de liste **Instances de l’objet sélectionné**, cliquez sur **\<Toutes les instances>** pour spécifier que vous voulez analyser le compteur de performances pour le Common Language Runtime dans sa globalité (c’est-à-dire à l’échelle du système).  
   
      - ou -  
   

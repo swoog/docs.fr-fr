@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294676"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub ou Function non défini (Visual Basic)
 Un `Sub` ou `Function` doit être défini pour pouvoir être appelés. Cette erreur peut avoir plusieurs causes :  
@@ -24,15 +24,15 @@ Un `Sub` ou `Function` doit être défini pour pouvoir être appelés. Cette err
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Assurez-vous que le nom de la procédure est correctement orthographié.  
+1. Assurez-vous que le nom de la procédure est correctement orthographié.  
   
-2.  Rechercher le nom du projet contenant la procédure que vous souhaitez appeler le **références** boîte de dialogue. Si elle n’apparaît pas, cliquez sur le **Parcourir** bouton pour le rechercher. Cochez la case située à gauche du nom du projet, puis cliquez sur **OK**.  
+2. Rechercher le nom du projet contenant la procédure que vous souhaitez appeler le **références** boîte de dialogue. Si elle n’apparaît pas, cliquez sur le **Parcourir** bouton pour le rechercher. Cochez la case située à gauche du nom du projet, puis cliquez sur **OK**.  
   
-3.  Vérifiez le nom de la routine.  
+3. Vérifiez le nom de la routine.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Types d’erreurs](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Types d'erreurs](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
-- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instruction](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md)

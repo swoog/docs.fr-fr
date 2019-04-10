@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199321"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307728"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interopérabilité WPF et Direct3D9
 Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentation Foundation (WPF). Cette rubrique décrit la procédure créer un contenu Direct3D9 afin qu’il interagit efficacement avec WPF.  
@@ -112,13 +112,13 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
   
  Pour éviter la baisse des performances, écrivez du code spécifiquement pour le cas de plusieurs écran. La liste suivante montre une façon d’écrire du code de plusieurs écran.  
   
-1.  Rechercher un point de la <xref:System.Windows.Interop.D3DImage> dans l’espace d’écran avec la `Visual.ProjectToScreen` (méthode).  
+1. Rechercher un point de la <xref:System.Windows.Interop.D3DImage> dans l’espace d’écran avec la `Visual.ProjectToScreen` (méthode).  
   
-2.  Utilisez le `MonitorFromPoint` méthode GDI pour rechercher le moniteur qui affiche le point.  
+2. Utilisez le `MonitorFromPoint` méthode GDI pour rechercher le moniteur qui affiche le point.  
   
-3.  Utilisez le `IDirect3D9::GetAdapterMonitor` méthode pour déterminer quelle carte Direct3D9 le moniteur se trouve sur.  
+3. Utilisez le `IDirect3D9::GetAdapterMonitor` méthode pour déterminer quelle carte Direct3D9 le moniteur se trouve sur.  
   
-4.  Si l’adaptateur n’est pas le même que l’adaptateur avec la mémoire tampon d’arrière-plan, créez une nouvelle mémoire tampon d’arrière-plan sur le nouveau moniteur et assignez-la à la <xref:System.Windows.Interop.D3DImage> mémoire tampon d’arrière-plan.  
+4. Si l’adaptateur n’est pas le même que l’adaptateur avec la mémoire tampon d’arrière-plan, créez une nouvelle mémoire tampon d’arrière-plan sur le nouveau moniteur et assignez-la à la <xref:System.Windows.Interop.D3DImage> mémoire tampon d’arrière-plan.  
   
 > [!NOTE]
 >  Si le <xref:System.Windows.Interop.D3DImage> chevauche moniteurs, les performances seront lentes, sauf dans le cas du WDDM et `IDirect3D9Ex` sur la même carte. Il n’existe aucun moyen pour améliorer les performances dans ce cas.  

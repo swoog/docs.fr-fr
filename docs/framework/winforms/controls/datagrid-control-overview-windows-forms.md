@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189311"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304730"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGrid (Windows Forms)
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189311"
   
  Si l'objet <xref:System.Windows.Forms.DataGrid> est lié à des données avec plusieurs tables associées et que la navigation est activée dans la grille, celle-ci affiche des expanders sur chaque ligne. Avec un expander, l’utilisateur peut passer d’une table parente à une table enfant. Un clic sur un nœud affiche la table enfant et un clic sur un bouton Précédent affiche la table parente d'origine. De cette manière, la grille affiche les relations hiérarchiques entre les tables.  
   
- La capture d’écran suivante montre qu'un contrôle DataGrid lié aux données avec plusieurs tables.  
+ La capture d’écran suivante montre qu'un contrôle DataGrid lié aux données avec plusieurs tables :  
   
- ![Un contrôle DataGrid lié aux données avec plusieurs tables](./media/vbcontrol1.gif "vbControl1")  
-Contrôle DataGrid lié aux données par plusieurs tables  
+ ![Une application WinForms affichant un contrôle DataGrid lié aux données avec plusieurs tables.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  Le <xref:System.Windows.Forms.DataGrid> peut fournir une interface utilisateur pour un dataset, la navigation entre des tables associées et des fonctionnalités de mise en forme et d'édition enrichies.  
   
@@ -94,15 +93,16 @@ Contrôle DataGrid lié aux données par plusieurs tables
   
  Quand le contrôle <xref:System.Windows.Forms.DataGrid> affiche une table et que la propriété <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> a la valeur `true`, vous pouvez retrier les données en cliquant sur les en-têtes de colonnes. L'utilisateur peut aussi ajouter des lignes et modifier des cellules.  
   
- Les relations entre un ensemble de tables sont présentées aux utilisateurs à l'aide d'une structure de navigation parent/enfant. Les tables parentes constituent le niveau de données le plus élevé et les tables enfants sont celles qui sont dérivées des différentes entrées dans les tables parentes. Des expanders sont affichés sur chaque ligne parente qui contient une table enfant. Un clic sur un expander génère une liste de liens web vers les tables enfants. Quand l'utilisateur sélectionne un lien, la table enfant est affichée. Un clic sur l'icône Afficher/Masquer les lignes parentes (![Icône Afficher/Masquer les lignes parentes](./media/vbicon.gif "vbIcon")) permet de masquer les informations concernant la table parente ou de les réafficher si l'utilisateur les a précédemment masquées. L'utilisateur peut cliquer sur un bouton Précédent pour revenir à la table affichée précédemment.  
+ Les relations entre un ensemble de tables sont présentées aux utilisateurs à l'aide d'une structure de navigation parent/enfant. Les tables parentes constituent le niveau de données le plus élevé et les tables enfants sont celles qui sont dérivées des différentes entrées dans les tables parentes. Des expanders sont affichés sur chaque ligne parente qui contient une table enfant. Un clic sur un expander génère une liste de liens web vers les tables enfants. Quand l'utilisateur sélectionne un lien, la table enfant est affichée. En cliquant sur l’icône (lignes) pour afficher/masquer le parent![Icône Afficher/masquer les lignes parentes](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) permet de masquer les informations sur la table parente ou de réafficher si l’utilisateur a précédemment masquées. L'utilisateur peut cliquer sur un bouton Précédent pour revenir à la table affichée précédemment.  
   
 ## <a name="columns-and-rows"></a>Colonnes et lignes  
  Le <xref:System.Windows.Forms.DataGrid> se compose d’une collection d’objets <xref:System.Windows.Forms.DataGridTableStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGrid.TableStyles%2A> du contrôle <xref:System.Windows.Forms.DataGrid>. Un style de table peut contenir une collection d'objets <xref:System.Windows.Forms.DataGridColumnStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> du <xref:System.Windows.Forms.DataGridTableStyle>. Vous pouvez modifier le <xref:System.Windows.Forms.DataGrid.TableStyles%2A> et <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriétés à l’aide d’éditeurs de collections accédés via la **propriétés** fenêtre.  
   
  Tout <xref:System.Windows.Forms.DataGridTableStyle> associé au contrôle <xref:System.Windows.Forms.DataGrid> est accessible via <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> peut être modifié dans le concepteur avec l’éditeur de collection <xref:System.Windows.Forms.DataGridTableStyle> ou par programmation via la propriété <xref:System.Windows.Forms.DataGrid.TableStyles%2A> du contrôle <xref:System.Windows.Forms.DataGrid>.  
-  
- ![Objets inclus dans le contrôle DataGrid](./media/vbcolumns1.gif "vbColumns1")  
-L'illustration suivante montre les objets inclus dans le contrôle DataGrid.  
+
+ L’illustration suivante montre les objets inclus dans le contrôle DataGrid :
+
+ ![Diagramme illustrant les objets inclus dans le contrôle DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  Vous pouvez synchroniser les styles de table et de colonne avec les objets <xref:System.Data.DataTable> et <xref:System.Data.DataColumn> en définissant leurs propriétés `MappingName` sur les propriétés <xref:System.Data.DataTable.TableName%2A> et <xref:System.Data.DataColumn.ColumnName%2A> appropriées. Quand un <xref:System.Windows.Forms.DataGridTableStyle> qui n’a aucun style de colonne est ajouté à un contrôle <xref:System.Windows.Forms.DataGrid> lié à une source de données valide et que la propriété <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de ce style de table est définie sur une propriété <xref:System.Data.DataTable.TableName%2A> valide, une collection d’objets <xref:System.Windows.Forms.DataGridColumnStyle> est créée pour ce style de table. Pour chaque <xref:System.Data.DataColumn> trouvé dans la collection <xref:System.Data.DataTable.Columns%2A> du <xref:System.Data.DataTable>, un <xref:System.Windows.Forms.DataGridColumnStyle> correspondant est ajouté à <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> est accessible via la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriété de la <xref:System.Windows.Forms.DataGridTableStyle>. Vous pouvez ajouter ou supprimer des colonnes dans la grille en exécutant la méthode <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> sur le <xref:System.Windows.Forms.GridColumnStylesCollection>. Pour plus d'informations, voir [Procédure : Ajouter des Tables et des colonnes pour les Windows Forms contrôle DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) et [Comment : Supprimer ou masquer des colonnes dans les Windows Forms contrôle DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   

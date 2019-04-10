@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304985"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Procédure : Effectuer une liaison à un service Web
 Cet exemple montre comment lier des objets retournés par les appels de méthode de service Web.  
@@ -24,13 +24,13 @@ Cet exemple montre comment lier des objets retournés par les appels de méthode
   
  Avant d’appeler un service Web, vous devez créer une référence à celui-ci. Pour créer une référence Web au service MTPS en utilisant [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], suivez les étapes suivantes :  
   
-1.  Ouvrez votre projet dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1. Ouvrez votre projet dans [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
   
-2.  À partir de la **projet** menu, cliquez sur **ajouter une référence Web**.  
+2. À partir de la **projet** menu, cliquez sur **ajouter une référence Web**.  
   
-3.  Dans la boîte de dialogue, définissez la **URL** à [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. Dans la boîte de dialogue, définissez la **URL** à [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Appuyez sur **accédez** , puis **ajouter une référence**.  
+4. Appuyez sur **accédez** , puis **ajouter une référence**.  
   
  Ensuite, vous appelez la méthode de service Web et définir le <xref:System.Windows.FrameworkElement.DataContext%2A> de la fenêtre à l’objet retourné ou le contrôle approprié. Le **GetContent** méthode du service MTPS accepte une référence à la **getContentRequest** objet. Par conséquent, l’exemple suivant définit tout d’abord un objet de demande :  
   

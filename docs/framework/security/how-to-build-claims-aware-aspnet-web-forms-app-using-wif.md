@@ -1,16 +1,16 @@
 ---
-title: 'Comment : générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF'
+title: 'Procédure : Générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302268"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Comment : générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Procédure : Générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF
 ## <a name="applies-to"></a>S'applique à  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -51,18 +51,18 @@ ms.locfileid: "47207152"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Pour créer une simple application ASP.NET  
   
-1.  Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
+1. Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
   
-2.  Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
+2. Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
   
-3.  Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
+3. Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Étape 2 : configurer l’application Web Forms ASP.NET pour l’authentification basée sur les revendications  
  Dans cette étape, vous allez ajouter des entrées de configuration au fichier de configuration *Web.config* de votre application Web Forms ASP.NET pour qu’elle prenne en charge les revendications.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Pour configurer une application ASP.NET pour l’authentification basée sur les revendications  
   
-1.  Ajoutez les entrées des sections de configuration suivantes au fichier de configuration *Web.config* immédiatement après l’élément d’ouverture **\<configuration>**  :  
+1. Ajoutez les entrées des sections de configuration suivantes au fichier de configuration *Web.config* immédiatement après l’élément d’ouverture **\<configuration>**  :  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207152"
     </configSections>  
     ```  
   
-2.  Ajoutez un élément **\<location>** qui permet d’accéder aux métadonnées de fédération de l’application :  
+2. Ajoutez un élément **\<location>** qui permet d’accéder aux métadonnées de fédération de l’application :  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207152"
     </location>  
     ```  
   
-3.  Ajoutez les entrées de configuration suivantes dans les éléments **\<system.web>** pour refuser des utilisateurs, désactiver l’authentification native et activer WIF afin de gérer l’authentification.  
+3. Ajoutez les entrées de configuration suivantes dans les éléments **\<system.web>** pour refuser des utilisateurs, désactiver l’authentification native et activer WIF afin de gérer l’authentification.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207152"
     <authentication mode="None" />  
     ```  
   
-4.  Ajoutez un élément **\<system.webServer>** qui définit les modules pour l’authentification fédérée. Notez que l’attribut*PublicKeyToken* doit être le même que l’attribut *PublicKeyToken* pour les entrées **\<configSections>** ajoutées précédemment :  
+4. Ajoutez un élément **\<system.webServer>** qui définit les modules pour l’authentification fédérée. Notez que l’attribut*PublicKeyToken* doit être le même que l’attribut *PublicKeyToken* pour les entrées **\<configSections>** ajoutées précédemment :  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207152"
     </system.webServer>  
     ```  
   
-5.  Ajoutez les entrées de configuration liées à Windows Identity Foundation suivantes et vérifiez que l’URL et le numéro de port de votre application ASP.NET correspondent aux valeurs dans l’entrée **\<audienceUris>**, l’attribut **realm** de l’élément **\<wsFederation>** et l’attribut **reply** de l’élément **\<wsFederation>**. Vérifiez également que la valeur **issuer** correspond à l’URL de votre service d’émission de jeton de sécurité (STS).  
+5. Ajoutez les entrées de configuration liées à Windows Identity Foundation suivantes et vérifiez que l’URL et le numéro de port de votre application ASP.NET correspondent aux valeurs dans l’entrée **\<audienceUris>**, l’attribut **realm** de l’élément **\<wsFederation>** et l’attribut **reply** de l’élément **\<wsFederation>**. Vérifiez également que la valeur **issuer** correspond à l’URL de votre service d’émission de jeton de sécurité (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207152"
     </system.identityModel.services>  
     ```  
   
-6.  Ajoutez une référence à l’assembly <xref:System.IdentityModel>.  
+6. Ajoutez une référence à l’assembly <xref:System.IdentityModel>.  
   
-7.  Compilez la solution pour vérifier l’absence d’erreurs.  
+7. Compilez la solution pour vérifier l’absence d’erreurs.  
   
 ## <a name="step-3--test-your-solution"></a>Étape 3 : tester votre solution  
  Dans cette étape, vous allez tester votre application Web Forms ASP.NET configurée pour l’authentification basée sur les revendications. Pour effectuer un test de base, vous allez ajouter le code qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité (STS).  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Pour tester votre application Web Forms ASP.NET pour l’authentification basée sur les revendications  
   
-1.  Ouvrez le fichier **Default.aspx** sous le projet **TestApp** et remplacez le balisage existant par le suivant :  
+1. Ouvrez le fichier **Default.aspx** sous le projet **TestApp** et remplacez le balisage existant par le suivant :  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207152"
     </html>  
     ```  
   
-2.  Enregistrez **Default.aspx**, puis ouvrez son fichier code-behind nommé **Default.aspx.cs**.  
+2. Enregistrez **Default.aspx**, puis ouvrez son fichier code-behind nommé **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** peut être masqué sous **Default.aspx** dans l’Explorateur de solutions. Si **Default.aspx.cs** n’est pas visible, développez **Default.aspx** en cliquant sur le triangle en regard de celui-ci.  
   
-3.  Remplacez le code existant dans la méthode **Page_Load** de **Default.aspx.cs** par le code suivant :  
+3. Remplacez le code existant dans la méthode **Page_Load** de **Default.aspx.cs** par le code suivant :  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207152"
     }  
     ```  
   
-4.  Enregistrez **Default.aspx.cs** et générez la solution.  
+4. Enregistrez **Default.aspx.cs** et générez la solution.  
   
-5.  Exécutez la solution en appuyant sur la touche **F5**.  
+5. Exécutez la solution en appuyant sur la touche **F5**.  
   
-6.  La page qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité doit s’afficher.
+6. La page qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité doit s’afficher.

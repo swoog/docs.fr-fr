@@ -2,12 +2,12 @@
 title: Architecture et conception
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307572"
 ---
 # <a name="architecture-and-design"></a>Architecture et conception
 Le module de génération SQL dans le [exemple de fournisseur](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) est implémenté en tant que visiteur sur l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l'arborescence de l'expression.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  La visite de ces nœuds suit le modèle suivant :  
   
-1.  Visitez l'entrée relationnelle et obtenez le SqlSelectStatement qui en résulte. L'entrée à un nœud relationnel peut être l'un des éléments suivants :  
+1. Visitez l'entrée relationnelle et obtenez le SqlSelectStatement qui en résulte. L'entrée à un nœud relationnel peut être l'un des éléments suivants :  
   
     -   Un nœud relationnel, notamment une étendue (DbScanExpression, par exemple). La visite d'un tel nœud retourne un SqlSelectStatement.  
   
     -   Une expression d'opération Set (UNION ALL, par exemple). Le résultat doit être mis entre parenthèses et placé dans la clause FROM d'un nouveau SqlSelectStatement.  
   
-2.  Vérifiez si le nœud actuel peut être ajouté au SqlSelectStatement produit par l'entrée. La section intitulée Regroupement d'expressions dans des instructions SQL décrit ceci. Dans le cas contraire,  
+2. Vérifiez si le nœud actuel peut être ajouté au SqlSelectStatement produit par l'entrée. La section intitulée Regroupement d'expressions dans des instructions SQL décrit ceci. Dans le cas contraire,  
   
     -   Dépilez l'objet SqlSelectStatement actuel.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Mettez le nouvel objet sur la pile.  
   
-3.  Redirigez la liaison de l’expression d’entrée vers le symbole correct de l’entrée. Ces informations sont maintenues dans l'objet SqlSelectStatement.  
+3. Redirigez la liaison de l’expression d’entrée vers le symbole correct de l’entrée. Ces informations sont maintenues dans l'objet SqlSelectStatement.  
   
-4.  Ajoutez une nouvelle étendue SymbolTable.  
+4. Ajoutez une nouvelle étendue SymbolTable.  
   
-5.  Visitez la partie non-entrée de l’expression (par exemple, projection et prédicat).  
+5. Visitez la partie non-entrée de l’expression (par exemple, projection et prédicat).  
   
-6.  Dépilez tous les objets ajoutés aux piles globales.  
+6. Dépilez tous les objets ajoutés aux piles globales.  
   
  DbSkipExpression n'a pas d'équivalent direct dans SQL. Logiquement, il est traduit par :  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  Deuxièmement, traitez les entrées une par une. Pour chaque entrée :  
   
-1.  Visitez l'entrée.  
+1. Visitez l'entrée.  
   
-2.  Post-traitez le résultat de la visite de l'entrée en appelant ProcessJoinInputResult qui doit maintenir la table de symboles après avoir visité un enfant d'une expression de jointure et peut terminer le SqlSelectStatement produit par l'enfant. Le résultat de l'enfant peut être l'un des éléments suivants :  
+2. Post-traitez le résultat de la visite de l'entrée en appelant ProcessJoinInputResult qui doit maintenir la table de symboles après avoir visité un enfant d'une expression de jointure et peut terminer le SqlSelectStatement produit par l'enfant. Le résultat de l'enfant peut être l'un des éléments suivants :  
   
     -   Un SqlSelectStatement différent de celui auquel le parent est ajouté. Dans ce cas, il peut devoir être complété en ajoutant des colonnes par défaut. Si l'entrée est une jointure, vous devez créer un symbole de jointure. Dans le cas contraire, créez un symbole normal.  
   

@@ -2,19 +2,19 @@
 title: 'Procédure : configurer les services WCF pour interagir avec des clients WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303893"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Procédure : configurer les services WCF pour interagir avec des clients WSE 3.0
 Services Windows Communication Foundation (WCF) sont compatible au niveau câble avec Web Services Enhancements 3.0 pour les clients Microsoft .NET (WSE) lorsque les services WCF sont configurés pour utiliser la version d’août 2004 de la spécification WS-Addressing.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>Pour permettre à un service WCF d'interagir avec les clients WSE 3.0  
   
-1.  Définissez une liaison personnalisée pour le service WCF.  
+1. Définissez une liaison personnalisée pour le service WCF.  
   
      Pour indiquer que la version d'août 2004 de la spécification WS-Addressing est utilisée pour l'encodage des messages, il est nécessaire de créer une liaison personnalisée.  
   
@@ -44,7 +44,7 @@ Services Windows Communication Foundation (WCF) sont compatible au niveau câble
         > [!NOTE]
         >  Lorsque vous utilisez SOAP 1.2, affectez à l'attribut `messageVersion` la valeur <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Spécifiez que le service utilise la liaison personnalisée.  
+2. Spécifiez que le service utilise la liaison personnalisée.  
   
     1.  Définir le `binding` attribut de la [ \<point de terminaison >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) élément à `customBinding`.  
   

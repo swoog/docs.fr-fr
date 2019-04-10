@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303139"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procédure : vérifier que la ligne sélectionnée dans une table enfant reste à la bonne position
 Souvent, lors de l’utilisation de la liaison de données dans des Windows Forms, vous affichez des données dans ce que l’on appelle une vue parent/enfant ou maître/détails. Cela fait référence à un scénario de liaison de données où les données de la même source sont affichées dans deux contrôles. La modification de la sélection dans un contrôle entraîne la modification des données affichées dans le deuxième contrôle. Par exemple, le premier contrôle peut contenir une liste de clients et le second une liste de commandes associées au client sélectionné dans le premier contrôle.  
@@ -30,28 +30,28 @@ Souvent, lors de l’utilisation de la liaison de données dans des Windows Form
   
 ### <a name="to-cache-the-current-child-position"></a>Pour mettre en cache la position actuelle de l'enfant  
   
-1.  Déclarez une variable entière pour stocker la position de liste de l'enfant et une variable booléenne pour stocker une valeur indiquant s'il faut mettre en cache la position de l'enfant.  
+1. Déclarez une variable entière pour stocker la position de liste de l'enfant et une variable booléenne pour stocker une valeur indiquant s'il faut mettre en cache la position de l'enfant.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Gérez l’événement <xref:System.Windows.Forms.CurrencyManager.ListChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison et vérifiez s’il y a un <xref:System.ComponentModel.ListChangedType> égal à <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Gérez l’événement <xref:System.Windows.Forms.CurrencyManager.ListChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison et vérifiez s’il y a un <xref:System.ComponentModel.ListChangedType> égal à <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Vérifiez la position actuelle du <xref:System.Windows.Forms.CurrencyManager>. Si elle est supérieure à la première entrée de la liste (en général 0), enregistrez-la dans une variable.  
+3. Vérifiez la position actuelle du <xref:System.Windows.Forms.CurrencyManager>. Si elle est supérieure à la première entrée de la liste (en général 0), enregistrez-la dans une variable.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Gérez l'événement <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> de la liste parente pour le gestionnaire de devise parent. Dans le gestionnaire, définissez la valeur booléenne pour indiquer qu'il ne s'agit pas d'un scénario de mise en cache. Si l'événement <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> se produit, la modification du parent est une modification de position dans la liste et non une modification de valeur d'élément.  
+4. Gérez l'événement <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> de la liste parente pour le gestionnaire de devise parent. Dans le gestionnaire, définissez la valeur booléenne pour indiquer qu'il ne s'agit pas d'un scénario de mise en cache. Si l'événement <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> se produit, la modification du parent est une modification de position dans la liste et non une modification de valeur d'élément.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Pour réinitialiser la position de l'enfant  
   
-1.  Gérez l'événement <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison enfant.  
+1. Gérez l'événement <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison enfant.  
   
-2.  Réinitialisez la position de la table enfant à la position mise en cache enregistrée lors de la procédure précédente.  
+2. Réinitialisez la position de la table enfant à la position mise en cache enregistrée lors de la procédure précédente.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ Souvent, lors de l’utilisation de la liaison de données dans des Windows Form
   
  Pour tester l'exemple de code, procédez comme suit :  
   
-1.  Exécutez l'exemple.  
+1. Exécutez l'exemple.  
   
-2.  Assurez-vous que la case **Cache et réinitialisation de position** est cochée.  
+2. Assurez-vous que la case **Cache et réinitialisation de position** est cochée.  
   
-3.  Cliquez sur le bouton **Effacer le champ parent** pour provoquer une modification dans un champ de la table parent. Notez que la ligne sélectionnée dans la table enfant ne change pas.  
+3. Cliquez sur le bouton **Effacer le champ parent** pour provoquer une modification dans un champ de la table parent. Notez que la ligne sélectionnée dans la table enfant ne change pas.  
   
-4.  Fermez puis réexécutez l'exemple. Cette opération est nécessaire car le comportement de réinitialisation se produit uniquement lors de la première modification sur la ligne parente.  
+4. Fermez puis réexécutez l'exemple. Cette opération est nécessaire car le comportement de réinitialisation se produit uniquement lors de la première modification sur la ligne parente.  
   
-5.  Décochez la case **Cache et réinitialisation de position**.  
+5. Décochez la case **Cache et réinitialisation de position**.  
   
-6.  Cliquez sur le bouton **Effacer le champ parent**. Notez que la ligne sélectionnée dans la table enfant passe en première ligne.  
+6. Cliquez sur le bouton **Effacer le champ parent**. Notez que la ligne sélectionnée dans la table enfant passe en première ligne.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  

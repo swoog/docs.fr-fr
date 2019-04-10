@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298888"
 ---
 # <a name="xaml-syntax-in-detail"></a>Syntaxe XAML en détail
 Cette rubrique définit les termes qui sont utilisés pour décrire les éléments de syntaxe XAML. Ces termes sont utilisés fréquemment dans le reste de cette documentation, à la fois pour la documentation WPF spécifiquement et pour les autres infrastructures qui utilisent XAML ou les concepts XAML de base activées par la prise en charge du langage XAML au niveau de System.Xaml. Cette rubrique s’appuie sur la terminologie de base introduite dans la rubrique [vue d’ensemble de XAML (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
  La valeur d’attribut est renseignée par l’une des opérations suivantes, à l’aide de cet ordre de traitement :  
   
-1.  Si le processeur XAML rencontre une accolade, ou un élément objet qui dérive de <xref:System.Windows.Markup.MarkupExtension>, puis l’extension de balisage référencée est évaluée en premier au lieu de la valeur sous forme de chaîne de traitement et l’objet retourné par l’extension de balisage est utilisé comme le valeur. Dans de nombreux cas, l’objet retourné par une extension de balisage sera une référence à un objet existant, ou une expression qui diffère l’évaluation jusqu’au moment de l’exécution et n’est pas un objet qui vient d’être instancié.  
+1. Si le processeur XAML rencontre une accolade, ou un élément objet qui dérive de <xref:System.Windows.Markup.MarkupExtension>, puis l’extension de balisage référencée est évaluée en premier au lieu de la valeur sous forme de chaîne de traitement et l’objet retourné par l’extension de balisage est utilisé comme le valeur. Dans de nombreux cas, l’objet retourné par une extension de balisage sera une référence à un objet existant, ou une expression qui diffère l’évaluation jusqu’au moment de l’exécution et n’est pas un objet qui vient d’être instancié.  
   
-2.  Si la propriété est déclarée avec un <xref:System.ComponentModel.TypeConverter>, ou le type de valeur de cette propriété est déclaré avec un <xref:System.ComponentModel.TypeConverter>, la valeur de chaîne de l’attribut est envoyée au convertisseur de type en tant qu’entrée de conversion et le convertisseur retourne un nouvelle instance d’objet.  
+2. Si la propriété est déclarée avec un <xref:System.ComponentModel.TypeConverter>, ou le type de valeur de cette propriété est déclaré avec un <xref:System.ComponentModel.TypeConverter>, la valeur de chaîne de l’attribut est envoyée au convertisseur de type en tant qu’entrée de conversion et le convertisseur retourne un nouvelle instance d’objet.  
   
-3.  S’il existe aucune <xref:System.ComponentModel.TypeConverter>, une conversion directe pour le type de propriété est tentée. Ce dernier niveau est une conversion directe à la valeur de l’analyseur natif entre les types primitifs du langage XAML, ou d’une vérification pour les noms de constantes nommées dans une énumération (l’analyseur accède ensuite aux valeurs correspondantes).  
+3. S’il existe aucune <xref:System.ComponentModel.TypeConverter>, une conversion directe pour le type de propriété est tentée. Ce dernier niveau est une conversion directe à la valeur de l’analyseur natif entre les types primitifs du langage XAML, ou d’une vérification pour les noms de constantes nommées dans une énumération (l’analyseur accède ensuite aux valeurs correspondantes).  
   
 #### <a name="enumeration-attribute-values"></a>Valeurs d’attribut énumération  
  Énumérations dans XAML sont traitées intrinsèquement par les analyseurs XAML, et les membres d’une énumération doivent être spécifiés en spécifiant le nom de chaîne de l’une des constantes nommées de l’énumération.  

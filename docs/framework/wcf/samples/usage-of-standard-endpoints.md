@@ -2,20 +2,20 @@
 title: Utilisation de points de terminaison standard
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304608"
 ---
 # <a name="usage-of-standard-endpoints"></a>Utilisation de points de terminaison standard
 
-Cet exemple montre comment utiliser des points de terminaison standard dans des fichiers de configuration de service. Un point de terminaison standard permet à l'utilisateur de simplifier des définitions de point de terminaison en utilisant une propriété unique pour décrire une combinaison adresse, liaison et contrat avec les propriétés supplémentaires qui lui sont associées. Cet exemple montre comment définir et implémenter un point de terminaison standard personnalisé et comment définir des propriétés spécifiques dans le point de terminaison.
+Cet exemple montre comment utiliser des points de terminaison standard dans des fichiers de configuration de service. Un point de terminaison standard permet à l’utilisateur de simplifier des définitions de point de terminaison en utilisant une propriété unique pour décrire une combinaison adresse, liaison et contrat avec les propriétés supplémentaires qui lui sont associées. Cet exemple montre comment définir et implémenter un point de terminaison standard personnalisé et comment définir des propriétés spécifiques dans le point de terminaison.
 
 ## <a name="sample-details"></a>Détails de l'exemple
 
-Les points de terminaison de service peuvent être spécifiés en fournissant trois paramètres : adresse, liaison et contrat. D'autres paramètres peuvent être fournis : configuration du comportement, en-têtes, URI d'écoute, et ainsi de suite. Il peut arriver que certains ou l'ensemble des adresses, liaisons et contrats aient des valeurs qui ne peuvent pas changer. C'est pourquoi il est possible d'utiliser des points de terminaison standard. Les points de terminaison d'échange de métadonnées et de découverte en sont des exemples. Les points de terminaison standard facilitent également l'utilisation en autorisant la configuration de points de terminaison de service sans avoir à fournir des informations d'une nature fixe ou à créer leurs propres points de terminaison standard, afin, par exemple, de faciliter l'utilisation en fournissant un jeu raisonnable de valeurs par défaut, ce qui réduit les commentaires des fichiers de configuration.
+Les points de terminaison de service peuvent être spécifiés en fournissant trois paramètres : adresse, liaison et contrat. D'autres paramètres peuvent être fournis : configuration du comportement, en-têtes, URI d'écoute, et ainsi de suite. Il peut arriver que certains ou l’ensemble des adresses, liaisons et contrats aient des valeurs qui ne peuvent pas changer. C'est pourquoi il est possible d'utiliser des points de terminaison standard. Les points de terminaison d'échange de métadonnées et de découverte en sont des exemples. Les points de terminaison standard facilitent également l'utilisation en autorisant la configuration de points de terminaison de service sans avoir à fournir des informations d'une nature fixe ou à créer leurs propres points de terminaison standard, afin, par exemple, de faciliter l'utilisation en fournissant un jeu raisonnable de valeurs par défaut, ce qui réduit les commentaires des fichiers de configuration.
 
 Cet exemple se compose de deux projets : le service qui définit deux points de terminaison standard et le client qui communique avec ce service. La façon dont les points de terminaison standard du service sont définis dans le fichier de configuration est illustrée dans l'exemple suivant.
 
@@ -50,7 +50,7 @@ Cet exemple se compose de deux projets : le service qui définit deux points de
 </configuration>
 ```
 
-Le premier point de terminaison défini pour le service est du genre `customEndpoint` (dont la définition est visible dans la section `<standardEndpoints>`) où la valeur `property` est affectée à la propriété `true`. C'est le cas d'un point de terminaison personnalisé avec une nouvelle propriété. Le deuxième point de terminaison correspond à un point de terminaison de métadonnées, où les valeurs d'adresse, de liaison et de contrat sont fixes.
+Le premier point de terminaison défini pour le service est du genre `customEndpoint` (dont la définition est visible dans la section `<standardEndpoints>`) où la valeur `property` est affectée à la propriété `true`. C'est le cas d'un point de terminaison personnalisé avec une nouvelle propriété. Le deuxième point de terminaison correspond à un point de terminaison de métadonnées, où les valeurs d’adresse, de liaison et de contrat sont fixes.
 
 Pour définir l'élément du point de terminaison standard, une classe qui dérive de `StandardEndpointElement` doit être créée. Dans le cas de cet exemple, la classe `CustomEndpointElement` a été définie comme indiqué dans l'exemple suivant.
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2012, ouvrez le fichier StandardEndpoints.sln.
+1. À l’aide de Visual Studio 2012, ouvrez le fichier StandardEndpoints.sln.
 
-2.  Permettez à plusieurs projets de démarrer.
+2. Permettez à plusieurs projets de démarrer.
 
     1.  Dans **l’Explorateur de solutions**, avec le bouton droit de la solution de points de terminaison Standard, puis sélectionnez **propriétés**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          De cette façon, le projet Client est exécuté après le projet Service.
 
-3.  Pour exécuter la solution, appuyez sur F5.
+3. Pour exécuter la solution, appuyez sur F5.
 
 > [!NOTE]
 > Si ces étapes ne fonctionnent pas, assurez-vous que votre environnement a été correctement configuré, en procédant comme suit :

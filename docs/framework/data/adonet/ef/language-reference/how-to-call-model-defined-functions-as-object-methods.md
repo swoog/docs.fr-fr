@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151227"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304829"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procédure : Appeler des fonctions définies par modèle comme méthodes d’objet
 Cette rubrique décrit comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée. Un *fonction définie par modèle* est une fonction qui est définie dans le modèle conceptuel. Les procédures décrites dans cette rubrique montrent comment appeler directement ces fonctions au lieu de les appeler à partir de requêtes LINQ to Entities. Pour plus d’informations sur l’appel des fonctions définies par le modèle dans LINQ aux requêtes d’entités, consultez [Comment : Appeler des fonctions définies par le modèle dans les requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Pour appeler une fonction définie par modèle comme une méthode sur un objet ObjectContext  
   
-1.  Ajoutez un fichier source pour étendre la classe partielle dérivée de la classe <xref:System.Data.Objects.ObjectContext>, générée automatiquement par les outils Entity Framework. La définition du stub de CLR dans un fichier source distinct empêche la perte des modifications lorsque le fichier est régénéré.  
+1. Ajoutez un fichier source pour étendre la classe partielle dérivée de la classe <xref:System.Data.Objects.ObjectContext>, générée automatiquement par les outils Entity Framework. La définition du stub de CLR dans un fichier source distinct empêche la perte des modifications lorsque le fichier est régénéré.  
   
-2.  Ajoutez une méthode CLR (Common Language Runtime) à votre classe <xref:System.Data.Objects.ObjectContext> qui effectue les opérations suivantes :  
+2. Ajoutez une méthode CLR (Common Language Runtime) à votre classe <xref:System.Data.Objects.ObjectContext> qui effectue les opérations suivantes :  
   
     -   Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement. La résolution des noms de fonctions pour LINQ respecte la casse.  
   
     -   Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
-3.  Appelez la méthode en tant que membre sur une instance de la classe <xref:System.Data.Objects.ObjectContext>.  
+3. Appelez la méthode en tant que membre sur une instance de la classe <xref:System.Data.Objects.ObjectContext>.  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>Pour appeler une fonction définie par modèle comme une méthode statique sur une classe personnalisée  
   
-1.  Ajoutez une classe à votre application avec une méthode statique qui effectue les opérations suivantes :  
+1. Ajoutez une classe à votre application avec une méthode statique qui effectue les opérations suivantes :  
   
     -   Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement.  
   
@@ -41,7 +41,7 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
   
     -   Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Linq.IQueryable.Provider%2A>.  
   
-2.  Appelez la méthode comme méthode statique sur la classe personnalisée.  
+2. Appelez la méthode comme méthode statique sur la classe personnalisée.  
   
 ## <a name="example"></a>Exemple  
  **Appel d'une fonction définie par modèle comme une méthode sur un objet ObjectContext**  

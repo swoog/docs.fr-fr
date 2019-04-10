@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294910"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Procédure : exposer des propriétés de contrôles constitutifs
 Les contrôles qui composent un contrôle composite sont appelés *contrôles constitutifs*. Ces contrôles sont normalement déclarés privés et est donc pas accessible par le développeur. Si vous souhaitez rendre les propriétés de ces contrôles accessibles aux utilisateurs de futures, vous devez les exposer à l’utilisateur. Pour exposer une propriété d’un contrôle qui le composent en créant une propriété dans le contrôle utilisateur et à l’aide de la `get` et `set` accesseurs pour répercuter la modification dans la propriété privée du contrôle constitutif.  
@@ -51,11 +51,11 @@ public Color ButtonColor
   
 ### <a name="to-expose-a-property-of-a-constituent-control"></a>Pour exposer une propriété de contrôle constitutif  
   
-1.  Créez une propriété publique pour votre contrôle utilisateur.  
+1. Créez une propriété publique pour votre contrôle utilisateur.  
   
-2.  Dans la `get` section de la propriété, écrivez du code qui Récupère la valeur de la propriété que vous souhaitez exposer.  
+2. Dans la `get` section de la propriété, écrivez du code qui Récupère la valeur de la propriété que vous souhaitez exposer.  
   
-3.  Dans la `set` section de la propriété, écrivez du code qui transmet la valeur de la propriété à la propriété exposée du contrôle constitutif.  
+3. Dans la `set` section de la propriété, écrivez du code qui transmet la valeur de la propriété à la propriété exposée du contrôle constitutif.  
   
 ## <a name="see-also"></a>Voir aussi
 

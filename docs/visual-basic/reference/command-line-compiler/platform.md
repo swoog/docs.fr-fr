@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301163"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut exécuter le fichier de sortie.  
@@ -68,9 +68,9 @@ Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut ex�
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>Définir - plateforme dans l’IDE Visual Studio  
   
-1.  Dans **l’Explorateur de solutions**, choisissez le projet, ouvrez le **projet** menu, puis sur **propriétés**.  
+1. Dans **l’Explorateur de solutions**, choisissez le projet, ouvrez le **projet** menu, puis sur **propriétés**.  
   
-2.  Sur le **compiler** onglet, activez ou désactivez le **préférer 32 bits** case à cocher, ou, dans le **unité centrale cible** , choisissez une valeur.  
+2. Sur le **compiler** onglet, activez ou désactivez le **préférer 32 bits** case à cocher, ou, dans le **unité centrale cible** , choisissez une valeur.  
   
      Pour plus d’informations, consultez [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   

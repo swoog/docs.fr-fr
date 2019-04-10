@@ -2,12 +2,12 @@
 title: 'Transport : Transactions personnalisées sur UDP exemple'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310120"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport : Transactions personnalisées sur UDP exemple
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple dans Windows Communication Foundation (WCF)[extensibilité du Transport](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l’exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l’utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -176,11 +176,11 @@ if (transaction != null)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  L’exemple actuel doit être exécutée de façon similaire à la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. Pour l'exécuter, démarrez le service avec UdpTestService.exe. Si vous exécutez [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], vous devez démarrer le service avec des privilèges élevés. Pour ce faire, cliquez sur UdpTestService.exe dans [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] et cliquez sur **exécuter en tant qu’administrateur**.  
+2. L’exemple actuel doit être exécutée de façon similaire à la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. Pour l'exécuter, démarrez le service avec UdpTestService.exe. Si vous exécutez [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], vous devez démarrer le service avec des privilèges élevés. Pour ce faire, cliquez sur UdpTestService.exe dans [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] et cliquez sur **exécuter en tant qu’administrateur**.  
   
-3.  La sortie suivante est alors générée.  
+3. La sortie suivante est alors générée.  
   
     ```  
     Testing Udp From Code.  
@@ -188,7 +188,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4.  À ce stade, vous pouvez démarrer le client en exécutant UdpTestClient.exe. La sortie générée par le client se présente comme suit.  
+4. À ce stade, vous pouvez démarrer le client en exécutant UdpTestClient.exe. La sortie générée par le client se présente comme suit.  
   
     ```  
     0  
@@ -199,7 +199,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5.  La sortie du service se présente comme suit.  
+5. La sortie du service se présente comme suit.  
   
     ```  
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  L’application de service affiche le message `The client transaction has flowed to the service` si elle peut faire correspondre l’identificateur de transaction envoyé par le client (dans le paramètre `clientTransactionId` de l’opération `CalculatorService.Add()`) à l’identificateur de la transaction de service. Une correspondance est obtenue uniquement si la transaction cliente est transmise au service.  
+6. L’application de service affiche le message `The client transaction has flowed to the service` si elle peut faire correspondre l’identificateur de transaction envoyé par le client (dans le paramètre `clientTransactionId` de l’opération `CalculatorService.Add()`) à l’identificateur de la transaction de service. Une correspondance est obtenue uniquement si la transaction cliente est transmise au service.  
   
-7.  Pour exécuter l'application cliente sur des points de terminaison publiés à l'aide de la configuration, appuyez sur ENTRÉE dans la fenêtre d'application de service, puis réexécutez le client test. La sortie suivante doit s'afficher sur le service.  
+7. Pour exécuter l'application cliente sur des points de terminaison publiés à l'aide de la configuration, appuyez sur ENTRÉE dans la fenêtre d'application de service, puis réexécutez le client test. La sortie suivante doit s'afficher sur le service.  
   
     ```  
     Testing Udp From Config.  
@@ -229,7 +229,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8.  L'exécution du client sur le service génère maintenant une sortie similaire à la précédente.  
+8. L'exécution du client sur le service génère maintenant une sortie similaire à la précédente.  
   
 9. Pour régénérer la configuration et le code client à l'aide de Svcutil.exe, démarrez l'application de service, puis exécutez la commande Svcutil.exe suivante à partir du répertoire racine de l'exemple.  
   

@@ -2,12 +2,12 @@
 title: Appel de fonctions dans les requêtes LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312083"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Appel de fonctions dans les requêtes LINQ to Entities
 Les rubriques de cette section expliquent comment appeler des fonctions dans les requêtes LINQ to Entities.  
@@ -16,11 +16,11 @@ Les rubriques de cette section expliquent comment appeler des fonctions dans les
   
  L'appel d'une fonction personnalisée passe par trois étapes de base obligatoires :  
   
-1.  Définissez une fonction dans votre modèle conceptuel ou déclarez-la dans votre modèle de stockage.  
+1. Définissez une fonction dans votre modèle conceptuel ou déclarez-la dans votre modèle de stockage.  
   
-2.  Ajoutez une méthode à votre application et mappez-la à la fonction du modèle avec un objet <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
+2. Ajoutez une méthode à votre application et mappez-la à la fonction du modèle avec un objet <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
   
-3.  Appelez la fonction dans une requête LINQ to Entities.  
+3. Appelez la fonction dans une requête LINQ to Entities.  
   
  Pour plus d'informations, consultez les rubriques de cette section.  
   

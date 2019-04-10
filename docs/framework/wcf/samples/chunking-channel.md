@@ -2,12 +2,12 @@
 title: Canal de segmentation
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302697"
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
 Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  Au niveau inférieur suivant, le canal `ChunkingChannel` s'appuie sur plusieurs composants afin d'implémenter le protocole de segmentation. Du côté expéditeur, ce canal utilise un <xref:System.Xml.XmlDictionaryWriter> personnalisé appelé `ChunkingWriter` qui procède à la segmentation effective des messages. `ChunkingWriter` utilise le canal interne directement pour envoyer les segments. L'utilisation d'un `XmlDictionaryWriter` personnalisé nous permet d'envoyer les segments pendant l'écriture du corps des messages initiaux de grande taille. Cela signifie que nous ne mettons pas en mémoire tampon l'intégralité des messages initiaux.  
   
- ![Canal de segmentation](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Diagramme illustrant le canal de segmentation envoyer architecture.](./media/chunking-channel/chunking-channel-send.gif)  
   
  Côté destinataire, `ChunkingChannel` extrait les messages du canal interne, puis les remet à un <xref:System.Xml.XmlDictionaryReader> personnalisé appelé `ChunkingReader`, qui reconstitue les messages initiaux à partir des segments entrants. `ChunkingChannel` encapsule ce `ChunkingReader` personnalisé `Message` implémentation appelée `ChunkingMessage` et retourne ce message pour la couche supérieure. Cette combinaison de `ChunkingReader` et `ChunkingMessage` nous permet de désegmenter le corps des messages initiaux pendant leur lecture par la couche supérieure, nous évitant ainsi d'avoir à mettre la totalité de leur corps en mémoire tampon. `ChunkingReader` a une file d’attente où met en mémoire tampon entrantes blocs jusqu'à un nombre configurable maximal de segments mis en mémoire tampon. Cette limite atteinte, le lecteur patiente jusqu'à ce que les messages soient extraits de la file d'attente par la couche supérieure (c'est-à-dire par simple lecture de leur corps) ou jusqu'à ce que le délai de réception arrive à échéance.  
   
- ![Canal de segmentation](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Architecture de réception du diagramme qui montre le canal de segmentation.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Modèle de programmation de segmentation  
  Les développeurs de service peuvent spécifier quels messages doivent être segmentés en appliquant l'attribut `ChunkingBehavior` aux opérations du contrat. Cet attribut expose une propriété `AppliesTo` qui permet aux développeurs de préciser si la segmentation doit être appliquée aux messages entrants, aux messages sortants ou aux deux. L'exemple suivant illustre la manière dont l'attribut `ChunkingBehavior` est utilisé :  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante.  
+1. Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Exécutez en premier Service.exe, puis Client.exe. Regardez ensuite leurs fenêtres de console respectives pour connaître leur résultat.  
+5. Exécutez en premier Service.exe, puis Client.exe. Regardez ensuite leurs fenêtres de console respectives pour connaître leur résultat.  
   
  L'exécution de l'exemple est censée donner le résultat suivant.  
   

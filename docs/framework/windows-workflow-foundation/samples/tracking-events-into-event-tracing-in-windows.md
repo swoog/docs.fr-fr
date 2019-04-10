@@ -2,12 +2,12 @@
 title: Événements de suivi dans Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300643"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Événements de suivi dans Event Tracing for Windows
 Cet exemple montre comment activer le suivi des modifications sur un service de flux de travail Windows Workflow Foundation (WF) et émettre les événements de suivi dans Event Tracing pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -39,33 +39,33 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2010, ouvrez le fichier solution EtwTrackingParticipantSample.sln.
+1. À l’aide de Visual Studio 2010, ouvrez le fichier solution EtwTrackingParticipantSample.sln.
 
-2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.
+2. Pour générer la solution, appuyez sur Ctrl+Maj+B.
 
-3.  Pour exécuter la solution, appuyez sur F5.
+3. Pour exécuter la solution, appuyez sur F5.
 
      Par défaut, le service écoute sur le port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  À l'aide de l'[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ouvrez le client de test WCF.
+4. À l'aide de l'[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ouvrez le client de test WCF.
 
      Le client de test WCF (WcfTestClient.exe) se trouve dans le \<dossier d’installation de Visual Studio 2010 > \Common7\IDE\ dossier.
 
      Le dossier d’installation de Visual Studio 2010 par défaut est C:\Program Files\Microsoft Visual Studio 10.0.
 
-5.  Dans le client test WCF, sélectionnez **ajouter un Service** à partir de la **fichier** menu.
+5. Dans le client test WCF, sélectionnez **ajouter un Service** à partir de la **fichier** menu.
 
      Ajoutez l'adresse du point de terminaison dans la zone d'entrée. La valeur par défaut est `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Ouvrez l'application Observateur d'événements.
+6. Ouvrez l'application Observateur d'événements.
 
      Avant d’appeler le service, démarrez l’Observateur d’événements à partir de la **Démarrer** menu, sélectionnez **exécuter** et tapez `eventvwr.exe`. Vérifiez que le journal des événements écoute les événements de suivi émis à partir du service de workflow.
 
-7.  Dans l’arborescence de l’Observateur d’événements, accédez à **Observateur d’événements**, **journaux des Applications et Services**, et **Microsoft**. Avec le bouton droit **Microsoft** et sélectionnez **vue** , puis **afficher les journaux d’analyse et de débogage** pour activer l’analyse et les journaux de débogage
+7. Dans l’arborescence de l’Observateur d’événements, accédez à **Observateur d’événements**, **journaux des Applications et Services**, et **Microsoft**. Avec le bouton droit **Microsoft** et sélectionnez **vue** , puis **afficher les journaux d’analyse et de débogage** pour activer l’analyse et les journaux de débogage
 
      Vérifiez que le **afficher les journaux d’analyse et de débogage** option est activée.
 
-8.  Dans l’arborescence de commandes dans l’Observateur d’événements, accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **activer le journal** pour activer la **analyse** journal.
+8. Dans l’arborescence de commandes dans l’Observateur d’événements, accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **activer le journal** pour activer la **analyse** journal.
 
 9. Testez le service à l'aide du client test WCF en double-cliquant sur `GetData`.
 
@@ -123,13 +123,13 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 
 #### <a name="to-clean-up-optional"></a>Pour nettoyer (facultatif)
 
-1.  Ouvrez l'observateur d'événements.
+1. Ouvrez l'observateur d'événements.
 
-2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.
+2. Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.
 
-3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.
+3. Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.
 
-4.  Choisissez le **effacer** option pour effacer les événements.
+4. Choisissez le **effacer** option pour effacer les événements.
 
 ## <a name="known-issue"></a>Problème connu
 

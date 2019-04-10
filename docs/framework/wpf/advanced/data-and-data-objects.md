@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312057"
 ---
 # <a name="data-and-data-objects"></a>Données et objets de données
 Les données transférées en tant que partie d’une opération de glisser-déplacer sont stockées dans un objet de données.  Conceptuellement, un objet de données se compose d’un ou plusieurs des paires suivantes :  
@@ -87,11 +87,11 @@ Les données transférées en tant que partie d’une opération de glisser-dép
 ### <a name="removing-data-from-a-data-object"></a>Suppression des données à partir d’un objet de données  
  Impossible de supprimer directement des données à partir d’un objet de données.  Pour supprimer efficacement des données à partir d’un objet de données, procédez comme suit :  
   
-1.  Créer un nouvel objet de données qui contiendra uniquement les données que vous souhaitez conserver.  
+1. Créer un nouvel objet de données qui contiendra uniquement les données que vous souhaitez conserver.  
   
-2.  « Copier » les données souhaitées à partir de l’ancien objet de données vers le nouvel objet de données.  Pour copier les données, utilisez une de la <xref:System.Windows.DataObject.GetData%2A> méthodes pour récupérer un <xref:System.Object> qui contient les données brutes, puis utilisez une de le <xref:System.Windows.DataObject.SetData%2A> méthodes pour ajouter les données vers le nouvel objet de données.  
+2. « Copier » les données souhaitées à partir de l’ancien objet de données vers le nouvel objet de données.  Pour copier les données, utilisez une de la <xref:System.Windows.DataObject.GetData%2A> méthodes pour récupérer un <xref:System.Object> qui contient les données brutes, puis utilisez une de le <xref:System.Windows.DataObject.SetData%2A> méthodes pour ajouter les données vers le nouvel objet de données.  
   
-3.  Remplacez l’ancien objet de données par le nouveau.  
+3. Remplacez l’ancien objet de données par le nouveau.  
   
 > [!NOTE]
 >  Le <xref:System.Windows.DataObject.SetData%2A> méthodes ajoutent uniquement des données à un objet de données ; ils ne remplacent pas les données, même si les données et le format de données sont exactement les mêmes qu’un appel précédent. Appel de <xref:System.Windows.DataObject.SetData%2A> deux fois pour les données et les données même, format entraîne le format de données/données en double dans l’objet de données.

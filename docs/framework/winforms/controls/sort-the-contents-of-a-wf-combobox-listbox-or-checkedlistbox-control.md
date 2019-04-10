@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312577"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : trier le contenu d’un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Contrôles Windows Forms ne pas trier lorsqu’ils sont liés aux données. Pour afficher les données triées, utilisez une source de données qui prend en charge le tri et puis ont la source de données à trier. Les sources de données qui prennent en charge le tri sont les vues de données, les gestionnaires de vues de données et les tableaux triés.  
@@ -22,7 +22,7 @@ Contrôles Windows Forms ne pas trier lorsqu’ils sont liés aux données. Pour
   
 ### <a name="to-sort-the-list"></a>Pour trier la liste  
   
-1.  Affectez à la propriété `Sorted` la valeur `true`.  
+1. Affectez à la propriété `Sorted` la valeur `true`.  
   
      Ce paramètre repositionne tous les éléments de liste existants dans un ordre trié.  
   

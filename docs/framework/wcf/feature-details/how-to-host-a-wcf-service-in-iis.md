@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309678"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procédure : héberger un service WCF dans IIS
 Cette rubrique décrit les étapes de base requises pour créer un service Windows Communication Foundation (WCF) qui est hébergé dans Internet Information Services (IIS). Dans cette rubrique, on suppose que vous connaissez IIS et que vous comprenez la manière d'utiliser l'outil d'administration IIS pour créer et gérer des applications IIS. Pour plus d’informations sur IIS, consultez [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un service WCF qui s’exécute dans l’environnement IIS tire pleinement parti des fonctionnalités IIS, telles que le recyclage de processus, arrêt sur inactivité, processus sur l’intégrité et l’activation basée sur le message. Cette option d'hébergement requiert que les services IIS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. Vous pouvez utiliser l'hébergement IIS uniquement avec un transport HTTP.  
@@ -21,28 +21,28 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Pour créer un service hébergé par IIS  
   
-1.  Vérifiez que les services IIS sont installés et s'exécutent sur votre ordinateur. Pour plus d’informations sur l’installation et configuration d’IIS, consultez [installation et configuration d’IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. Vérifiez que les services IIS sont installés et s'exécutent sur votre ordinateur. Pour plus d’informations sur l’installation et configuration d’IIS, consultez [installation et configuration d’IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Créez un dossier pour vos fichiers d’application, appelé « IISHostedCalcService », assurez-vous que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] a accès au contenu du dossier et utilisez l’outil d’administration IIS pour créer une application IIS située physiquement dans ce répertoire d’application. Lors de la création d'un alias pour le répertoire de l'application, utilisez « IISHostedCalc ».  
+2. Créez un dossier pour vos fichiers d’application, appelé « IISHostedCalcService », assurez-vous que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] a accès au contenu du dossier et utilisez l’outil d’administration IIS pour créer une application IIS située physiquement dans ce répertoire d’application. Lors de la création d'un alias pour le répertoire de l'application, utilisez « IISHostedCalc ».  
   
-3.  Créez un fichier appelé « service.svc » dans le répertoire de l'application. Modifiez ce fichier en ajoutant le code suivant @ServiceHost élément.  
+3. Créez un fichier appelé « service.svc » dans le répertoire de l'application. Modifiez ce fichier en ajoutant le code suivant @ServiceHost élément.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  Créez un sous-répertoire App_Code dans le répertoire de l'application.  
+4. Créez un sous-répertoire App_Code dans le répertoire de l'application.  
   
-5.  Créez un fichier de code nommé Service.cs dans le sous-répertoire App_Code.  
+5. Créez un fichier de code nommé Service.cs dans le sous-répertoire App_Code.  
   
-6.  Ajoutez les instructions using suivantes en tête du fichier Service.cs.  
+6. Ajoutez les instructions using suivantes en tête du fichier Service.cs.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Ajoutez la déclaration d'espace de noms suivante à la suite des instructions using.  
+7. Ajoutez la déclaration d'espace de noms suivante à la suite des instructions using.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
     }  
     ```  
   
-8.  Définissez le contrat de service à l'intérieur de la déclaration d'espace de noms, tel qu'indiqué dans le code suivant.  
+8. Définissez le contrat de service à l'intérieur de la déclaration d'espace de noms, tel qu'indiqué dans le code suivant.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

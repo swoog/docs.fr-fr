@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309444"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procédure : ajouter des contrôles ou en supprimer dans une collection de contrôles au moment de l’exécution
 Tâches courantes dans le développement d’applications sont l’ajout et la suppression de contrôles à partir de n’importe quel contrôle conteneur sur vos formulaires (comme le <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> contrôle, ou même le formulaire lui-même). Au moment de la conception, vous pouvez faire glisser les contrôles directement vers un panneau ou une zone de groupe. Au moment de l’exécution, ces contrôles gèrent une collection `Controls`, qui assure le suivi des contrôles qui y sont placés.  
@@ -27,11 +27,11 @@ Tâches courantes dans le développement d’applications sont l’ajout et la s
   
 ### <a name="to-add-a-control-to-a-collection-programmatically"></a>Pour ajouter un contrôle à une collection par programme  
   
-1.  Créez une instance du contrôle à ajouter.  
+1. Créez une instance du contrôle à ajouter.  
   
-2.  Définissez les propriétés du nouveau contrôle.  
+2. Définissez les propriétés du nouveau contrôle.  
   
-3.  Ajoutez le contrôle à la collection `Controls` du contrôle parent.  
+3. Ajoutez le contrôle à la collection `Controls` du contrôle parent.  
   
      L’exemple de code suivant montre comment créer une instance de la <xref:System.Windows.Forms.Button> contrôle. Il nécessite un formulaire avec un <xref:System.Windows.Forms.Panel> contrôle et que la méthode de gestion d’événements pour le bouton en cours de création, `NewPanelButton_Click`, existe déjà.  
   
@@ -66,11 +66,11 @@ Tâches courantes dans le développement d’applications sont l’ajout et la s
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Pour supprimer des contrôles d’une collection par programme  
   
-1.  Supprimez le gestionnaire d’événements de l’événement. Dans Visual Basic, utilisez la [RemoveHandler, instruction](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) mot clé ; dans Visual C#, utilisez le [-= opérateur (C# référence)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1. Supprimez le gestionnaire d’événements de l’événement. Dans Visual Basic, utilisez la [RemoveHandler, instruction](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) mot clé ; dans Visual C#, utilisez le [-= opérateur (C# référence)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
-2.  Utilisez la méthode `Remove` pour supprimer le contrôle souhaité dans la collection `Controls` du panneau.  
+2. Utilisez la méthode `Remove` pour supprimer le contrôle souhaité dans la collection `Controls` du panneau.  
   
-3.  Appelez le <xref:System.Windows.Forms.Control.Dispose%2A> méthode pour libérer toutes les ressources utilisées par le contrôle.  
+3. Appelez le <xref:System.Windows.Forms.Control.Dispose%2A> méthode pour libérer toutes les ressources utilisées par le contrôle.  
   
     ```vb  
     Public Sub RemoveControl()  

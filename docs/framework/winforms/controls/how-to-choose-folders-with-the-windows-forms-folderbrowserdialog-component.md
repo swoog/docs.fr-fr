@@ -12,23 +12,23 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306182"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Procédure : choisir des dossiers avec le composant FolderBrowserDialog Windows Forms
 Souvent, dans les applications Windows que vous créez, vous devez demander aux utilisateurs de sélectionner un dossier, le plus souvent pour enregistrer un ensemble de fichiers. Les formulaires Windows <xref:System.Windows.Forms.FolderBrowserDialog> composant vous permet d’effectuer rapidement cette tâche.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Pour sélectionner des dossiers avec le composant FolderBrowserDialog  
   
-1.  Dans une procédure, vérifiez le <xref:System.Windows.Forms.FolderBrowserDialog> du composant <xref:System.Windows.Forms.Form.DialogResult%2A> propriété pour déterminer comment la boîte de dialogue a été fermée et obtenir la valeur de la <xref:System.Windows.Forms.FolderBrowserDialog> du composant <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriété.  
+1. Dans une procédure, vérifiez le <xref:System.Windows.Forms.FolderBrowserDialog> du composant <xref:System.Windows.Forms.Form.DialogResult%2A> propriété pour déterminer comment la boîte de dialogue a été fermée et obtenir la valeur de la <xref:System.Windows.Forms.FolderBrowserDialog> du composant <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriété.  
   
-2.  Si vous avez besoin au dossier de l’ensemble le plus élevé qui s’affichent dans l’arborescence de la boîte de dialogue, définissez la <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriété, qui utilise un membre de la <xref:System.Environment.SpecialFolder> énumération.  
+2. Si vous avez besoin au dossier de l’ensemble le plus élevé qui s’affichent dans l’arborescence de la boîte de dialogue, définissez la <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriété, qui utilise un membre de la <xref:System.Environment.SpecialFolder> énumération.  
   
-3.  En outre, vous pouvez définir le <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriété qui spécifie la chaîne de texte qui apparaît en haut de l’arborescence de l’Explorateur de dossiers.  
+3. En outre, vous pouvez définir le <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriété qui spécifie la chaîne de texte qui apparaît en haut de l’arborescence de l’Explorateur de dossiers.  
   
      Dans l’exemple ci-dessous, le <xref:System.Windows.Forms.FolderBrowserDialog> composant est utilisé pour sélectionner un dossier, similaire à lorsque vous créez un projet dans Visual Studio et que vous êtes invité à sélectionner un dossier pour l’enregistrer. Dans cet exemple, le nom du dossier est ensuite affiché dans un <xref:System.Windows.Forms.TextBox> contrôle sur le formulaire. Il est judicieux de placer l’emplacement dans une zone modifiable, comme un <xref:System.Windows.Forms.TextBox> contrôler, afin que les utilisateurs puissent modifier leur sélection en cas d’erreur ou d’autres problèmes. Cet exemple suppose un formulaire avec un <xref:System.Windows.Forms.FolderBrowserDialog> composant et un <xref:System.Windows.Forms.TextBox> contrôle.  
   

@@ -2,12 +2,12 @@
 title: Utilisation de Windows Management Instrumentation pour les diagnostics
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308586"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 Windows Communication Foundation (WCF) expose des données d’inspection d’un service lors de l’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI).  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
   
  Pour modifier des niveaux de privilège utilisateur, utilisez les étapes suivantes.  
   
-1.  Cliquez sur Démarrer puis sur Exécuter et tapez **compmgmt.msc**.  
+1. Cliquez sur Démarrer puis sur Exécuter et tapez **compmgmt.msc**.  
   
-2.  Avec le bouton droit **Services et applications/contrôle WMI** pour sélectionner **propriétés**.  
+2. Avec le bouton droit **Services et applications/contrôle WMI** pour sélectionner **propriétés**.  
   
-3.  Sélectionnez le **sécurité** onglet et accédez à la **Root/ServiceModel** espace de noms. Cliquez sur le **sécurité** bouton.  
+3. Sélectionnez le **sécurité** onglet et accédez à la **Root/ServiceModel** espace de noms. Cliquez sur le **sécurité** bouton.  
   
-4.  Sélectionnez le groupe ou utilisateur spécifique que vous souhaitez contrôler l’accès et utiliser le **autoriser** ou **Deny** case à cocher pour configurer les autorisations.  
+4. Sélectionnez le groupe ou utilisateur spécifique que vous souhaitez contrôler l’accès et utiliser le **autoriser** ou **Deny** case à cocher pour configurer les autorisations.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Octroi d'autorisations d'inscription WCF WMI à des utilisateurs supplémentaires  
  WCF expose des données de gestion à WMI. Il le fait en hébergeant un fournisseur WMI in-process, parfois appelé « fournisseur découplé ». Pour que les données de gestion soient exposées, le compte qui inscrit ce fournisseur doit disposer des autorisations appropriées. Dans Windows, seul un petit ensemble de comptes privilégiés peuvent inscrire des fournisseurs découplés par défaut. Cela pose problème car les utilisateurs souhaitent généralement exposer des données WMI à partir d'un service WCF s'exécutant sous un compte qui ne figure pas dans l'ensemble par défaut.  
   
  Pour fournir cet accès, un administrateur doit octroyer les autorisations suivantes au compte supplémentaire dans l'ordre suivant :  
   
-1.  Autorisation pour accéder à l'espace de noms WCF WMI.  
+1. Autorisation pour accéder à l'espace de noms WCF WMI.  
   
-2.  Autorisation d'inscrire le fournisseur WMI découplé WCF.  
+2. Autorisation d'inscrire le fournisseur WMI découplé WCF.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>Pour octroyer l'autorisation d'accès à l'espace de noms WMI  
   
-1.  Exécutez le script PowerShell suivant.  
+1. Exécutez le script PowerShell suivant.  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
   
 #### <a name="to-grant-provider-registration-access"></a>Pour octroyer l'accès d'inscription du fournisseur  
   
-1.  Exécutez le script PowerShell suivant.  
+1. Exécutez le script PowerShell suivant.  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **Outils de Files\WMI %windir%\Program\\**  
   
-1.  Dans le **se connecter à l’espace de noms :** fenêtre, tapez **root\ServiceModel** et cliquez sur **OK.**  
+1. Dans le **se connecter à l’espace de noms :** fenêtre, tapez **root\ServiceModel** et cliquez sur **OK.**  
   
-2.  Dans le **WMI CIM Studio Login** fenêtre, cliquez sur le **Options >>** bouton pour développer la fenêtre. Sélectionnez **confidentialité du paquet** pour **niveau d’authentification**, puis cliquez sur **OK**.  
+2. Dans le **WMI CIM Studio Login** fenêtre, cliquez sur le **Options >>** bouton pour développer la fenêtre. Sélectionnez **confidentialité du paquet** pour **niveau d’authentification**, puis cliquez sur **OK**.  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation Tester  
  Cet outil est installé par Windows. Pour l’exécuter, lancez une console de commande en tapant **cmd.exe** dans le **démarrer/exécuter** boîte de dialogue et cliquez sur **OK**. Ensuite, tapez **wbemtest.exe** dans la fenêtre de commande. Puis l'outil Windows Management Instrumentation Tester est lancé.  
   
-1.  Cliquez sur le **Connect** bouton dans l’angle supérieur droit de la fenêtre.  
+1. Cliquez sur le **Connect** bouton dans l’angle supérieur droit de la fenêtre.  
   
-2.  Dans la nouvelle fenêtre, entrez **root\ServiceModel** pour le **Namespace** champ, puis sélectionnez **confidentialité du paquet** pour **niveau d’authentification**. Cliquez sur **Connexion**.  
+2. Dans la nouvelle fenêtre, entrez **root\ServiceModel** pour le **Namespace** champ, puis sélectionnez **confidentialité du paquet** pour **niveau d’authentification**. Cliquez sur **Connexion**.  
   
 ### <a name="using-managed-code"></a>Utilisation du code managé  
  Vous pouvez aussi accéder par programme aux instances WMI distantes en utilisant des classes fournies par l'espace de noms <xref:System.Management>. L'exemple de code suivant montre comment procéder.  

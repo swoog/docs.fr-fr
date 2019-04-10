@@ -1,36 +1,36 @@
 ---
-title: 'Procédure : Accéder à un Service à partir d’une Application de Workflow'
+title: 'Procédure : accéder à un service à partir d’une application de workflow'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309314"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Procédure : Accéder à un Service à partir d’une Application de Workflow
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Procédure : accéder à un service à partir d’une application de workflow
 Cette rubrique décrit comment appeler un service de workflow à partir d'une application console de workflow. Cela dépend à la fin de la [Comment : Créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) rubrique. Bien que cette rubrique décrit comment appeler un service de workflow à partir d’une application de workflow, les mêmes méthodes peuvent servir à appeler n’importe quel service Windows Communication Foundation (WCF) à partir d’une application de workflow.
 
 ### <a name="create-a-workflow-console-application-project"></a>Créer un projet d'application console de workflow.
 
-1.  Démarrez Visual Studio 2012.
+1. Démarrez Visual Studio 2012.
 
-2.  Charger le projet mywfservice que vous avez créé dans le [Comment : Créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) rubrique.
+2. Charger le projet mywfservice que vous avez créé dans le [Comment : Créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) rubrique.
 
-3.  Bouton droit sur le **MyWFService** solution dans le **l’Explorateur de solutions** et sélectionnez **ajouter**, **nouveau projet**. Sélectionnez **Workflow** dans le **modèles installés** et **Application Console de Workflow** dans la liste des types de projets. Nommez le projet MyWFClient et utilisez l'emplacement par défaut, comme indiqué dans l'illustration suivante.
+3. Bouton droit sur le **MyWFService** solution dans le **l’Explorateur de solutions** et sélectionnez **ajouter**, **nouveau projet**. Sélectionnez **Workflow** dans le **modèles installés** et **Application Console de Workflow** dans la liste des types de projets. Nommez le projet MyWFClient et utilisez l'emplacement par défaut, comme indiqué dans l'illustration suivante.
 
      ![Ajouter une nouvelle boîte de dialogue Nouveau projet](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Cliquez sur le **OK** bouton pour fermer la **nouveau projet boîte de dialogue Ajouter**.
 
-4.  Après avoir créé le projet, le fichier Workflow1.xaml s'ouvre dans le concepteur. Cliquez sur le **boîte à outils** onglet pour ouvrir la boîte à outils si elle n’est pas déjà ouvert puis cliquez sur la punaise pour garder la fenêtre Boîte à outils ouverte.
+4. Après avoir créé le projet, le fichier Workflow1.xaml s'ouvre dans le concepteur. Cliquez sur le **boîte à outils** onglet pour ouvrir la boîte à outils si elle n’est pas déjà ouvert puis cliquez sur la punaise pour garder la fenêtre Boîte à outils ouverte.
 
-5.  Appuyez sur **Ctrl**+**F5** pour générer et lancer le service. Comme auparavant, le Serveur de développement ASP.NET se lance et Internet Explorer affiche la page d'aide WCF. Notez l'URI de cette page, car vous devez l'utiliser dans l'étape suivante.
+5. Appuyez sur **Ctrl**+**F5** pour générer et lancer le service. Comme auparavant, le Serveur de développement ASP.NET se lance et Internet Explorer affiche la page d'aide WCF. Notez l'URI de cette page, car vous devez l'utiliser dans l'étape suivante.
 
      ![IE affichant la page d’aide WCF et URI](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6.  Bouton droit sur le **MyWFClient** de projet dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **une référence de Service**. Cliquez sur le **Discover** bouton pour rechercher la solution actuelle pour tous les services. Cliquez sur le triangle à côté de Service1.xamlx dans la liste des services. Cliquez sur le triangle à côté de Service1 pour répertorier les contrats implémentés par le service Service1. Développez le **Service1** nœud dans le **Services** liste. L’opération Echo est affichée dans le **opérations** liste comme indiqué dans l’illustration suivante.
+6. Bouton droit sur le **MyWFClient** de projet dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **une référence de Service**. Cliquez sur le **Discover** bouton pour rechercher la solution actuelle pour tous les services. Cliquez sur le triangle à côté de Service1.xamlx dans la liste des services. Cliquez sur le triangle à côté de Service1 pour répertorier les contrats implémentés par le service Service1. Développez le **Service1** nœud dans le **Services** liste. L’opération Echo est affichée dans le **opérations** liste comme indiqué dans l’illustration suivante.
 
      ![Boîte de dialogue Ajouter une référence de service](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -42,9 +42,9 @@ Cette rubrique décrit comment appeler un service de workflow à partir d'une ap
 
      ![Activité Echo dans la boîte à outils](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7.  Faites glisser une activité <xref:System.Activities.Statements.Sequence> sur l'aire du concepteur. Il se trouve sous le **flux de contrôle** section de la boîte à outils.
+7. Faites glisser une activité <xref:System.Activities.Statements.Sequence> sur l'aire du concepteur. Il se trouve sous le **flux de contrôle** section de la boîte à outils.
 
-8.  Avec le <xref:System.Activities.Statements.Sequence> activité en mode focus, cliquez sur le **Variables** lier et ajoutez une variable de chaîne nommée `inString`. Affectez la valeur par défaut à la variable `"Hello, world"` ainsi que d’une variable chaîne nommée `outString` comme indiqué dans le diagramme suivant.
+8. Avec le <xref:System.Activities.Statements.Sequence> activité en mode focus, cliquez sur le **Variables** lier et ajoutez une variable de chaîne nommée `inString`. Affectez la valeur par défaut à la variable `"Hello, world"` ainsi que d’une variable chaîne nommée `outString` comme indiqué dans le diagramme suivant.
 
      ![Ajout d’une variable inString](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
@@ -65,5 +65,5 @@ Cette rubrique décrit comment appeler un service de workflow à partir d'une ap
 ## <a name="see-also"></a>Voir aussi
 
 - [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Guide pratique pour Créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Utilisation d’un Service WCF à partir d’un flux de travail dans un projet Web](https://go.microsoft.com/fwlink/?LinkId=207725)
+- [Procédure : créer un service de workflow avec des activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Consommer un service WCF à partir d'un workflow dans un projet Web](https://go.microsoft.com/fwlink/?LinkId=207725)

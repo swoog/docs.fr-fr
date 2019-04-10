@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298576"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procédure : Effectuer une compilation conditionnelle avec Trace et Debug
 Quand vous déboguez une application pendant le développement, les sorties de débogage et de traçage sont dirigées vers la fenêtre de sortie dans Visual Studio. Toutefois, pour inclure les fonctionnalités de suivi dans une application déployée, vous devez compiler vos applications instrumentées en activant la directive de compilateur **TRACE**. De cette façon, le code de traçage peut être compilé dans la version commerciale de votre application. Si vous n’activez pas la directive **TRACE**, tout le code de suivi est ignoré pendant la compilation et n’est pas inclus dans le code exécutable que vous déployez.  
@@ -36,9 +36,9 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Pour modifier les paramètres de compilation dans la boîte de dialogue des pages de propriétés  
   
-1.  Cliquez avec le bouton droit sur le nœud du projet dans l’**Explorateur de solutions**.  
+1. Cliquez avec le bouton droit sur le nœud du projet dans l’**Explorateur de solutions**.  
   
-2.  Choisissez **Propriétés** dans le menu contextuel.  
+2. Choisissez **Propriétés** dans le menu contextuel.  
   
     -   En Visual Basic, cliquez sur l’onglet **Compiler** dans le volet gauche de la page de propriétés, puis sur le bouton **Options avancées de compilation** pour afficher la boîte de dialogue **Paramètres avancés du compilateur**. Cochez les cases des paramètres du compilateur que vous voulez activer. Décochez les cases des paramètres que vous voulez désactiver.  
   
@@ -46,7 +46,7 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Pour compiler du code instrumenté à l'aide de la ligne de commande  
   
-1.  Définissez un commutateur de compilateur conditionnel sur la ligne de commande. Le compilateur devra contenir du code de traçage ou de débogage dans l'exécutable.  
+1. Définissez un commutateur de compilateur conditionnel sur la ligne de commande. Le compilateur devra contenir du code de traçage ou de débogage dans l'exécutable.  
   
      Par exemple, l'instruction de compilateur suivante entrée sur la ligne de commande inclut le code de traçage dans un fichier exécutable compilé :  
   
@@ -71,7 +71,7 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Pour effectuer une compilation conditionnelle à l'aide de #CONST ou #define  
   
-1.  Tapez l'instruction appropriée pour votre langage de programmation en haut du fichier de code source.  
+1. Tapez l'instruction appropriée pour votre langage de programmation en haut du fichier de code source.  
   
     |Langue|Instruction|Résultat|  
     |--------------|---------------|------------|  

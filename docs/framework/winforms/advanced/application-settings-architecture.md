@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099779"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312564"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -100,11 +100,11 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
 ### <a name="settings-serialization"></a>Sérialisation de paramètres  
  Lorsque <xref:System.Configuration.LocalFileSettingsProvider> doit enregistrer les paramètres sur le disque, il effectue les actions suivantes :  
   
-1.  Utilise la réflexion pour examiner toutes les propriétés définies sur votre <xref:System.Configuration.ApplicationSettingsBase> classe dérivée, recherche de ceux qui s’appliquent avec <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Utilise la réflexion pour examiner toutes les propriétés définies sur votre <xref:System.Configuration.ApplicationSettingsBase> classe dérivée, recherche de ceux qui s’appliquent avec <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Sérialise la propriété sur le disque. Il tente d’appeler le <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> ou <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> sur le type associé au <xref:System.ComponentModel.TypeConverter>. Si cela ne réussit pas, la sérialisation XML est utilisée à la place.  
+2. Sérialise la propriété sur le disque. Il tente d’appeler le <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> ou <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> sur le type associé au <xref:System.ComponentModel.TypeConverter>. Si cela ne réussit pas, la sérialisation XML est utilisée à la place.  
   
-3.  Détermine quels paramètres vont dans quels fichiers, selon l’attribut du paramètre.  
+3. Détermine quels paramètres vont dans quels fichiers, selon l’attribut du paramètre.  
   
  Si vous implémentez votre propre classe de paramètres, vous pouvez utiliser la <xref:System.Configuration.SettingsSerializeAsAttribute> pour marquer un paramètre pour la sérialisation binaire ou personnalisée à l’aide du <xref:System.Configuration.SettingsSerializeAs> énumération. Pour plus d’informations sur la création de votre propre classe de paramètres dans le code, consultez [Comment : Créer des paramètres de l’Application](how-to-create-application-settings.md).  
   

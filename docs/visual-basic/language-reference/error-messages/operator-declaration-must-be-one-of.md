@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299187"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Déclaration d’opérateur doit être une des : +,-, *,\,/, ^, &amp;, Like, Mod et, Or, Xor, pas, \< \<, >>...
 Vous pouvez déclarer uniquement un opérateur qui est éligible pour la surcharge. Le tableau suivant répertorie les opérateurs que vous pouvez déclarer.  
@@ -29,14 +29,14 @@ Vous pouvez déclarer uniquement un opérateur qui est éligible pour la surchar
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Sélectionnez un opérateur dans le jeu d’opérateurs surchargeables.  
+1. Sélectionnez un opérateur dans le jeu d’opérateurs surchargeables.  
   
-2.  Si vous avez besoin des fonctionnalités de surcharge d’un opérateur que vous ne pouvez pas surcharger directement, créez une procédure `Function` qui accepte les paramètres appropriés et retourne la valeur adéquate.  
+2. Si vous avez besoin des fonctionnalités de surcharge d’un opérateur que vous ne pouvez pas surcharger directement, créez une procédure `Function` qui accepte les paramètres appropriés et retourne la valeur adéquate.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Guide pratique pour Définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Guide pratique pour Définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Procédures d'opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Procédure : définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Procédure : définir un opérateur de conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md)

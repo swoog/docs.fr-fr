@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310523"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Traitement par lots des messages dans une transaction
 Les applications en file d’attente utilisent des transactions pour garantir l’exactitude et la remise fiable des messages. Toutefois, les transactions sont des opérations coûteuses et peuvent réduire considérablement le débit de message. L’une des méthodes utilisées pour améliorer le débit de message est de disposer d’une application capable de lire et de traiter plusieurs messages dans une transaction unique. Le compromis réside entre la performance et la récupération : à mesure que le nombre de messages dans un lot augmente, la quantité de travail de récupération nécessaire en cas de restauration des transactions augmente également. Il est important de noter la différence entre le traitement par lot des messages dans une transaction et dans des sessions. Un *session* est un regroupement de messages associés qui sont traités par une application unique et validée comme une seule unité. Les sessions sont en général utilisées lorsqu'un groupe de messages du même type doivent être traités ensemble. Un site Web d'achat en ligne en est un exemple. *Lots* servent à traiter plusieurs, les messages d’une manière qui augmente le débit de message de type différent. Pour plus d’informations sur les sessions, consultez [regrouper en file d’attente des Messages dans une Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Les messages d’un lot sont également traités par une application unique et sont validés en tant qu’unité unique, mais il peut n’y avoir aucune relation entre eux. Le traitement par lot des messages dans une transaction est une optimisation qui ne modifie pas la manière dont l’application s’exécute.  
@@ -31,11 +31,11 @@ Les applications en file d’attente utilisent des transactions pour garantir l�
 ## <a name="leaving-batching-mode"></a>Conservation du mode de traitement par lot  
  Si un message dans un lot provoque l’abandon de la transaction, les étapes suivantes se produisent :  
   
-1.  L'ensemble du lot de messages est restauré.  
+1. L'ensemble du lot de messages est restauré.  
   
-2.  Les messages sont lus un par un jusqu'à ce que le nombre de messages lus dépasse le double de la taille de lot maximale.  
+2. Les messages sont lus un par un jusqu'à ce que le nombre de messages lus dépasse le double de la taille de lot maximale.  
   
-3.  Le mode de traitement par lot est réactivé.  
+3. Le mode de traitement par lot est réactivé.  
   
 ## <a name="choosing-the-batch-size"></a>Sélection de la taille de lot  
  La taille d'un lot varie en fonction de l'application. La méthode empirique s'avère être la meilleure pour arriver à une taille de lot optimale pour l'application. Sélectionnez la taille de lot en fonction du modèle de déploiement réel de votre application. Par exemple, lors du déploiement de l’application, si un serveur SQL doit être installé sur un ordinateur distant et qu’une transaction doit couvrir la file d’attente et le serveur SQL, la taille de lot sera déterminée de manière optimale en exécutant cette configuration exacte.  

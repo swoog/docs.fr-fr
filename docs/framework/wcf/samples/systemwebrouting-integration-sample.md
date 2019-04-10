@@ -2,12 +2,12 @@
 title: Exemple SystemWebRouting Integration
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302235"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemple SystemWebRouting Integration
 Cet exemple illustre l'intégration de la couche d'hébergement avec les classes de l'espace de noms <xref:System.Web.Routing>. Les classes de l'espace de noms <xref:System.Web.Routing> permettent à une application d'utiliser des URL qui ne correspondent pas directement à une ressource physique. L’utilisation du routage Web permet au développeur de créer des adresses virtuelles pour le protocole HTTP qui sont ensuite remappées aux véritables services WCF. Cela peut être utile lorsqu'un service WCF doit être hébergé sans requérir de fichier ou ressource physique, ou lorsque des services doivent être accessibles via des URL qui ne contiennent pas de fichiers tels que .html ou .aspx. Cet exemple montre comment utiliser la classe <xref:System.Web.Routing.RouteTable> pour créer des URI virtuels qui mappent aux services en cours d'exécution définis dans global.asax. 
@@ -32,31 +32,31 @@ Cet exemple peut déjà être installé sur votre ordinateur. Recherchez le rép
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  À l’aide de Visual Studio, ouvrez le fichier WebRoutingIntegration.sln.  
+1. À l’aide de Visual Studio, ouvrez le fichier WebRoutingIntegration.sln.  
   
-2.  Pour exécuter la solution et démarrer le serveur de développement Web, appuyez sur F5.  
+2. Pour exécuter la solution et démarrer le serveur de développement Web, appuyez sur F5.  
   
      Une liste des répertoires de l'exemple s'affiche. Notez l'absence de fichiers ayant l'extension .svc.  
   
-3.  Dans la barre d’adresses, ajoutez `movies` à l’URL, par conséquent, qu’il lit `http://localhost:[port]/movies` et appuyez sur ENTRÉE.  
+3. Dans la barre d’adresses, ajoutez `movies` à l’URL, par conséquent, qu’il lit `http://localhost:[port]/movies` et appuyez sur ENTRÉE.  
   
      Le flux movies s'affiche dans le navigateur.  
   
-4.  Dans la barre d’adresses, ajoutez `channels` à l’URL, c’est donc lectures `http://localhost:[port]/channels` et appuyez sur ENTRÉE.  
+4. Dans la barre d’adresses, ajoutez `channels` à l’URL, c’est donc lectures `http://localhost:[port]/channels` et appuyez sur ENTRÉE.  
   
      Le flux channels s'affiche dans le navigateur.  
   
-5.  Fermez le navigateur Web en appuyant sur ALT+F4.  
+5. Fermez le navigateur Web en appuyant sur ALT+F4.  
   
      Si le serveur de développement ne se n'est pas arrêté, cliquez sur l’icône de zone de notification et sélectionnez **arrêter**.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Pour utiliser cet exemple avec hébergement dans IIS  
   
-1.  À l’aide de Visual Studio, ouvrez le fichier WebRoutingIntegration.sln.  
+1. À l’aide de Visual Studio, ouvrez le fichier WebRoutingIntegration.sln.  
   
-2.  Générez le projet en appuyant sur Ctrl+Maj+B.  
+2. Générez le projet en appuyant sur Ctrl+Maj+B.  
   
-3.  Créez une application Web dans le Gestionnaire des services Internet (IIS).  
+3. Créez une application Web dans le Gestionnaire des services Internet (IIS).  
   
     1.  Dans le Gestionnaire des services Internet, cliquez avec le bouton droit sur le **Site Web par défaut** et sélectionnez **ajouter une Application**.  
   
@@ -66,17 +66,17 @@ Cet exemple peut déjà être installé sur votre ordinateur. Recherchez le rép
   
     4.  Appuyez sur **OK**.  
   
-4.  Démarrer l’application, en double-cliquant sur l’application Web et en sélectionnant **gérer l’Application** , puis **Parcourir**.  
+4. Démarrer l’application, en double-cliquant sur l’application Web et en sélectionnant **gérer l’Application** , puis **Parcourir**.  
   
-5.  Dans la barre d’adresses, ajoutez `movies` à l’URL, c’est donc lectures `http://localhost:[port]/movies` et appuyez sur ENTRÉE.  
+5. Dans la barre d’adresses, ajoutez `movies` à l’URL, c’est donc lectures `http://localhost:[port]/movies` et appuyez sur ENTRÉE.  
   
      Le flux movies s'affiche dans le navigateur.  
   
-6.  Dans la barre d’adresses, ajoutez `channels` à l’URL, c’est donc lectures `http://localhost:[port]/channels` et appuyez sur ENTRÉE.  
+6. Dans la barre d’adresses, ajoutez `channels` à l’URL, c’est donc lectures `http://localhost:[port]/channels` et appuyez sur ENTRÉE.  
   
      Le flux channels s'affiche dans le navigateur.  
   
-7.  Fermez le navigateur Web en appuyant sur ALT+F4.  
+7. Fermez le navigateur Web en appuyant sur ALT+F4.  
   
  Cet exemple montre que la couche d'hébergement est capable de composer avec les classes de l'espace de noms <xref:System.Web.Routing> pour router les requêtes de services hébergés sur HTTP.  
   

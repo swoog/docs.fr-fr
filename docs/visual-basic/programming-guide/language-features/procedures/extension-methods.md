@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822074"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296236"
 ---
 # <a name="extension-methods-visual-basic"></a>Méthodes d'extension (Visual Basic)
 Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnalités personnalisées aux types de données qui sont déjà définis sans créer un nouveau type dérivé. Méthodes d’extension permettent d’écrire une méthode qui peut être appelée comme s’il s’agissait d’une méthode d’instance du type existant.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Priorité de méthode d’extension  
  Deux méthodes d’extension qui ont des signatures identiques sont dans la portée et accessibles, celui avec une priorité plus élevée est appelé. Priorité d’une méthode d’extension est basée sur le mécanisme utilisé pour placer la méthode dans la portée. La liste suivante montre la hiérarchie des priorités, du plus élevé au plus bas.  
   
-1.  Méthodes d’extension définies dans le module actuel.  
+1. Méthodes d’extension définies dans le module actuel.  
   
-2.  Méthodes d’extension définies à l’intérieur des données de types dans l’espace de noms actuel ou l’un de ses parents, avec des espaces de noms enfants étant prioritaires sur les espaces de noms parent.  
+2. Méthodes d’extension définies à l’intérieur des données de types dans l’espace de noms actuel ou l’un de ses parents, avec des espaces de noms enfants étant prioritaires sur les espaces de noms parent.  
   
-3.  Méthodes d’extension définies dans les importations de type dans le fichier actuel.  
+3. Méthodes d’extension définies dans les importations de type dans le fichier actuel.  
   
-4.  Méthodes d’extension définies dans les importations d’espace de noms dans le fichier actuel.  
+4. Méthodes d’extension définies dans les importations d’espace de noms dans le fichier actuel.  
   
-5.  Méthodes d’extension définies dans les importations de type au niveau du projet.  
+5. Méthodes d’extension définies dans les importations de type au niveau du projet.  
   
-6.  Méthodes d’extension définies dans les importations d’espace de noms au niveau du projet.  
+6. Méthodes d’extension définies dans les importations d’espace de noms au niveau du projet.  
   
  Si la priorité ne résout pas l’ambiguïté, vous pouvez utiliser le nom qualifié complet pour spécifier la méthode que vous appelez. Si le `Print` méthode dans l’exemple précédent est définie dans un module nommé `StringExtensions`, le nom qualifié complet est `StringExtensions.Print(example)` au lieu de `example.Print()`.  
   
@@ -179,9 +179,9 @@ End Module
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [Module (instruction)](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module, instruction](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Paramètres facultatifs](./optional-parameters.md)
-- [tableaux de paramètres](./parameter-arrays.md)
+- [Tableaux de paramètres](./parameter-arrays.md)
 - [Vue d’ensemble des attributs](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

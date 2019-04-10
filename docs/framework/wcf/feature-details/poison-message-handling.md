@@ -2,12 +2,12 @@
 title: Gestion des messages incohérents
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305024"
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
 Un *message incohérent* est un message qui a dépassé le nombre maximal de tentatives de remise à l’application. Cette situation peut survenir lorsqu'une application basée sur file d'attente ne peut pas traiter un message car des erreurs se sont produites. Pour faire face aux demandes de fiabilité, une application en file d’attente reçoit des messages sous une transaction. L’abandon de la transaction dans laquelle un message en file d’attente a été reçu laisse le message dans la file d’attente afin qu’une nouvelle tentative de remise puisse être effectuée sous une nouvelle transaction. Si le problème qui a provoqué l'abandon de la transaction n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
@@ -66,17 +66,17 @@ Un *message incohérent* est un message qui a dépassé le nombre maximal de ten
   
  Il est possible que l'application requière un système de gestion automatisée des messages empoisonnés qui déplace ceux-ci vers une file d'attente de messages empoisonnés afin que le service puisse accéder au reste des messages dans la file d'attente. Le seul scénario dans lequel on utilise le mécanisme de gestionnaire d'erreurs pour écouter les exceptions de message incohérent est lorsque le paramètre <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> a la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. L'exemple de message empoisonné pour Message Queuing 3.0 illustre ce comportement. La section suivante décrit les étapes à suivre pour gérer des messages incohérents et fournit quelques recommandations :  
   
-1.  Assurez-vous que vos paramètres de messages empoisonnés reflètent les besoins de votre application. Lors de l'utilisation des paramètres, assurez-vous de bien comprendre les différences entre les fonctions de Message Queuing sur [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Assurez-vous que vos paramètres de messages empoisonnés reflètent les besoins de votre application. Lors de l'utilisation des paramètres, assurez-vous de bien comprendre les différences entre les fonctions de Message Queuing sur [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-2.  Si nécessaire, implémentez le `IErrorHandler` pour gérer les erreurs de message incohérent. Étant donné que l'affectation de la valeur `ReceiveErrorHandling` à `Fault` nécessite un mécanisme manuel pour déplacer le message empoisonné hors de la file d'attente ou pour corriger un problème dépendant externe, l'utilisation typique consiste à implémenter `IErrorHandler` lorsque `ReceiveErrorHandling` a la valeur `Fault`, comme illustré dans le code suivant.  
+2. Si nécessaire, implémentez le `IErrorHandler` pour gérer les erreurs de message incohérent. Étant donné que l'affectation de la valeur `ReceiveErrorHandling` à `Fault` nécessite un mécanisme manuel pour déplacer le message empoisonné hors de la file d'attente ou pour corriger un problème dépendant externe, l'utilisation typique consiste à implémenter `IErrorHandler` lorsque `ReceiveErrorHandling` a la valeur `Fault`, comme illustré dans le code suivant.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Créez un `PoisonBehaviorAttribute` que le comportement de service peut utiliser. Le comportement installe le `IErrorHandler` sur le répartiteur. Voir l'exemple de code suivant.  
+3. Créez un `PoisonBehaviorAttribute` que le comportement de service peut utiliser. Le comportement installe le `IErrorHandler` sur le répartiteur. Voir l'exemple de code suivant.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Assurez-vous que votre service est annoté avec l’attribut de comportement d’incohérence.  
+4. Assurez-vous que votre service est annoté avec l’attribut de comportement d’incohérence.  
 
  De plus, si `ReceiveErrorHandling` a la valeur `Fault`, `ServiceHost` renverra une erreur s'il rencontre le message empoisonné. Vous pouvez vous raccorder à l’événement d’erreur et arrêter le service, appliquer des actions correctives, puis redémarrer. Par exemple, `LookupId` dans le <xref:System.ServiceModel.MsmqPoisonMessageException> propagé au `IErrorHandler` peut être noté, et lorsque l'hôte de service renvoie une erreur, vous pouvez utiliser l'API `System.Messaging` pour recevoir le message de la file d'attente à l'aide de `LookupId`, supprimer le message de la file d'attente, puis stocker le message dans un magasin externe ou une autre file d'attente. Vous pouvez ensuite redémarrer `ServiceHost` pour continuer le traitement normal. Le [des messages incohérents dans MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) illustre ce comportement.  
   

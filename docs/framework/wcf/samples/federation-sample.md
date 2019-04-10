@@ -2,12 +2,12 @@
 title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155205"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311459"
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  
@@ -67,17 +67,17 @@ Cet exemple présente la sécurité fédérée :
   
  La séquence des événements lors de l'accès à l'opération `BuyBook` est la suivante :  
   
-1.  Le client s'authentifie auprès du STS HomeRealm à l'aide d'informations d'identification Windows.  
+1. Le client s'authentifie auprès du STS HomeRealm à l'aide d'informations d'identification Windows.  
   
-2.  Le STS HomeRealm émet un jeton qui peut être utilisé pour s'authentifier auprès du STS BookStore.  
+2. Le STS HomeRealm émet un jeton qui peut être utilisé pour s'authentifier auprès du STS BookStore.  
   
-3.  Le client s'authentifie auprès du STS BookStore à l'aide du jeton émis par le STS HomeRealm.  
+3. Le client s'authentifie auprès du STS BookStore à l'aide du jeton émis par le STS HomeRealm.  
   
-4.  Le STS BookStore émet un jeton qui peut être utilisé pour s'authentifier auprès du service BookStore.  
+4. Le STS BookStore émet un jeton qui peut être utilisé pour s'authentifier auprès du service BookStore.  
   
-5.  Le client s'authentifie auprès du service BookStore à l'aide du jeton émis par le STS BookStore.  
+5. Le client s'authentifie auprès du service BookStore à l'aide du jeton émis par le STS BookStore.  
   
-6.  Le client accède à l'opération `BuyBook`.  
+6. Le client accède à l'opération `BuyBook`.  
   
  Suivez les instructions suivantes sur la configuration et l'exécution de cet exemple.  
   
@@ -86,18 +86,18 @@ Cet exemple présente la sécurité fédérée :
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Ouvrez la fenêtre de commande de Kit de développement SDK. Dans le chemin d’accès de l’exemple, exécutez Setup.bat. Cette opération crée les répertoires virtuels requis pour l'exemple et installe les certificats requis avec les autorisations appropriées.  
+1. Ouvrez la fenêtre de commande de Kit de développement SDK. Dans le chemin d’accès de l’exemple, exécutez Setup.bat. Cette opération crée les répertoires virtuels requis pour l'exemple et installe les certificats requis avec les autorisations appropriées.  
   
     > [!NOTE]
     >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes du Kit de développement Windows SDK. La variable d'environnement du Kit de développement MS SDK doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes du Kit de développement logiciel Windows. Sur [!INCLUDE[wv](../../../../includes/wv-md.md)], vous devez vous assurer que la compatibilité avec la gestion IIS 6 est installée, car le programme d'installation utilise des scripts d'administrateur IIS. L'exécution du script installation sur [!INCLUDE[wv](../../../../includes/wv-md.md)] requiert des privilèges d'administrateur.  
   
-2.  Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **Build** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l’application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
+2. Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **Build** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l’application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
   
-3.  Double-cliquez sur BookStoreClient.exe. La fenêtre BookStoreClient s'affiche.  
+3. Double-cliquez sur BookStoreClient.exe. La fenêtre BookStoreClient s'affiche.  
   
-4.  Vous pouvez parcourir les livres disponibles dans la librairie en cliquant sur **Browse Books**.  
+4. Vous pouvez parcourir les livres disponibles dans la librairie en cliquant sur **Browse Books**.  
   
-5.  Pour acheter un livre en particulier, sélectionnez-le dans la liste et cliquez sur **Buy Book**. L'application démarre et s'authentifie à l'aide de l'authentification Windows avec le STS HomeRealm.  
+5. Pour acheter un livre en particulier, sélectionnez-le dans la liste et cliquez sur **Buy Book**. L'application démarre et s'authentifie à l'aide de l'authentification Windows avec le STS HomeRealm.  
   
      L'exemple est configuré pour permettre aux utilisateurs d'acheter des livres pour un montant égal ou inférieur à 15 dollars. Si un client tente d'acheter des livres pour un montant supérieur à 15 dollars, il reçoit un message du service BookStore indiquant que l'accès est refusé.  
   
@@ -106,7 +106,7 @@ Cet exemple présente la sécurité fédérée :
   
 #### <a name="to-clean-up"></a>Pour nettoyer  
   
-1.  Exécutez Cleanup.bat. Cette opération supprime les répertoires virtuels créés pendant l'installation ainsi que les certificats installés pendant l'installation.  
+1. Exécutez Cleanup.bat. Cette opération supprime les répertoires virtuels créés pendant l'installation ainsi que les certificats installés pendant l'installation.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
