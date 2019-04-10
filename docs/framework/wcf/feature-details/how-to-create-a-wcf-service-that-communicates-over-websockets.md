@@ -2,19 +2,19 @@
 title: 'Procédure : créer un service WCF qui communique sur WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346364"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procédure : créer un service WCF qui communique sur WebSockets
 Les services et les clients WCF peuvent utiliser la liaison <xref:System.ServiceModel.NetHttpBinding> pour communiquer sur WebSockets.  WebSockets est utilisé lorsque <xref:System.ServiceModel.NetHttpBinding> détermine que le contrat de service définit un contrat de rappel. Cette rubrique décrit comment implémenter un service WCF et un client qui utilise <xref:System.ServiceModel.NetHttpBinding> pour communiquer sur WebSockets.  
   
 ### <a name="define-the-service"></a>Définir le service  
   
-1.  Définir un contrat de rappel  
+1. Définir un contrat de rappel  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
   
      Ce contrat sera implémenté par l'application cliente pour permettre au service de renvoyer des messages au client.  
   
-2.  Définissez le contrat de service et spécifiez l'interface `IStockQuoteCallback` comme contrat de rappel.  
+2. Définissez le contrat de service et spécifiez l'interface `IStockQuoteCallback` comme contrat de rappel.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
         }  
     ```  
   
-3.  Implémentez le contrat de service.  
+3. Implémentez le contrat de service.  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
   
      L'opération de service `StartSendingQuotes` est implémentée comme un appel asynchrone. Nous récupérons le canal de rappel à l'aide de `OperationContext` et si le canal est ouvert, nous faisons un appel asynchrone sur le canal de rappel.  
   
-4.  Configurer le service  
+4. Configurer le service  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
   
 ### <a name="define-the-client"></a>Définir le client  
   
-1.  Implémentez le contrat de rappel.  
+1. Implémentez le contrat de rappel.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

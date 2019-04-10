@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365566"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343589"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Bien démarrer avec l’encre dans WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) possède une fonctionnalité de l’encre 
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour utiliser les exemples suivants, tout d’abord [installer Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Cela permet également de savoir comment écrire des applications WPF de base. Pour bien démarrer avec WPF, consultez [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Pour utiliser les exemples suivants, tout d’abord installer [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Cela permet également de savoir comment écrire des applications WPF de base. Pour bien démarrer avec WPF, consultez [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Guide de démarrage rapide
 
@@ -113,4 +113,4 @@ Vous pouvez accéder à toutes les fonctionnalités WPF à partir de code procé
 - [Encre numérique](digital-ink.md)
 - [Collecte d'encre](collecting-ink.md)
 - [Reconnaissance d'écriture manuscrite](handwriting-recognition.md)
-- [Stockage de l’encre](storing-ink.md)
+- [Stockage de l'encre](storing-ink.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344661"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procédure : Créer une stratégie d’éditeur
 Les fournisseurs d’assemblys peuvent indiquer que les applications doivent utiliser une version plus récente d’un assembly en incluant un fichier de stratégie de serveur de publication avec l’assembly mis à niveau. Le fichier de stratégie d’éditeur spécifie la redirection d’assembly et les paramètres de base de code et utilise le même format qu’un fichier de configuration d’application. Le fichier de stratégie d’éditeur est compilé dans un assembly et placé dans le global assembly cache.  
   
  Il existe trois étapes impliquées dans la création d’une stratégie d’éditeur :  
   
-1.  Créez un fichier de stratégie de serveur de publication.  
+1. Créez un fichier de stratégie de serveur de publication.  
   
-2.  Créer un assembly de stratégie de serveur de publication.  
+2. Créer un assembly de stratégie de serveur de publication.  
   
-3.  Ajoutez l’assembly de stratégie de serveur de publication dans le global assembly cache.  
+3. Ajoutez l’assembly de stratégie de serveur de publication dans le global assembly cache.  
   
  Le schéma pour la stratégie d’éditeur est décrit dans [redirection des Versions d’Assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md). L’exemple suivant montre un serveur de publication des fichiers de stratégie qui redirige une version de `myAssembly` vers un autre.  
   
@@ -51,7 +51,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Pour créer un assembly de stratégie de serveur de publication  
   
-1.  Tapez la commande suivante à l’invite de commandes :  
+1. Tapez la commande suivante à l’invite de commandes :  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Pour ajouter l’assembly de stratégie de serveur de publication dans le global assembly cache  
   
-1.  Tapez la commande suivante à l’invite de commandes :  
+1. Tapez la commande suivante à l’invite de commandes :  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

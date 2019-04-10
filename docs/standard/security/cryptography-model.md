@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343868"
 ---
 # <a name="net-framework-cryptography-model"></a>Modèle de chiffrement de .NET Framework
 .NET Framework fournit des implémentations de nombreux algorithmes de chiffrement standard. Ces algorithmes sont faciles à utiliser et leurs propriétés par défaut sont les plus sûres possible. En outre, le modèle de chiffrement .NET Framework de l'héritage d'objets, de la conception orientée flux et de la configuration, est très extensible.  
   
 ## <a name="object-inheritance"></a>Héritage d'objets  
- Le système de sécurité .NET Framework implémente un modèle extensible d'héritage de classes dérivées. Cette hiérarchie se présente comme suit :  
+ Le système de sécurité .NET Framework implémente un modèle extensible d’héritage de classes dérivées. Cette hiérarchie se présente comme suit :  
   
 -   Classe de type algorithme, telle que <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> ou <xref:System.Security.Cryptography.HashAlgorithm>. Ce niveau est abstrait.  
   
@@ -27,20 +27,20 @@ ms.locfileid: "54499575"
   
 -   Implémentation d'une classe d'algorithme qui hérite d'une classe d'algorithme, par exemple, <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider> ou <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Ce niveau est totalement implémenté.  
   
- À l'aide de ce modèle de classes dérivées, il est facile d'ajouter un nouvel algorithme ou la nouvelle implémentation d'un algorithme existant. Par exemple, pour créer un algorithme de clé publique, vous devez hériter de la classe <xref:System.Security.Cryptography.AsymmetricAlgorithm>. Pour créer une nouvelle implémentation d'un algorithme spécifique, vous devez créer une classe non abstraite dérivée de cet algorithme.  
+ À l’aide de ce modèle de classes dérivées, il est facile d’ajouter un nouvel algorithme ou la nouvelle implémentation d’un algorithme existant. Par exemple, pour créer un algorithme de clé publique, vous devez hériter de la classe <xref:System.Security.Cryptography.AsymmetricAlgorithm>. Pour créer une nouvelle implémentation d'un algorithme spécifique, vous devez créer une classe non abstraite dérivée de cet algorithme.  
   
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Comment les algorithmes sont implémentés dans .NET Framework  
  Prenez comme exemple d'implémentation les algorithmes symétriques. La base de tous les algorithmes symétriques est <xref:System.Security.Cryptography.SymmetricAlgorithm>, qui est hérité par les algorithmes suivants :  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
  <xref:System.Security.Cryptography.Aes> est hérité par deux classes : <xref:System.Security.Cryptography.AesCryptoServiceProvider> et <xref:System.Security.Cryptography.AesManaged>. La classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> est un wrapper pour l'implémentation de l'API de chiffrement Windows (CAPI) d'AES. La classe <xref:System.Security.Cryptography.AesManaged> est écrite entièrement en code managé. Il existe également l'implémentation Cryptography Next Generation (CNG), en plus des implémentations CAPI et managées. <xref:System.Security.Cryptography.ECDiffieHellmanCng> est un exemple d'algorithme CNG. Les algorithmes CNG sont disponibles sur Windows Vista et versions ultérieures.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499575"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [services de chiffrement](../../../docs/standard/security/cryptographic-services.md)

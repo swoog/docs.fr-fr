@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122237"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345519"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Délégation et emprunt d'identité avec WCF
 L'*emprunt d'identité* est une technique courante utilisée par les services pour restreindre l'accès du client aux ressources d'un domaine de service. Les ressources de domaine de service peuvent être des ressources d'ordinateur, telles que des fichiers locaux (emprunt d'identité), ou une ressource sur un autre ordinateur, tel qu'un partage de fichiers (délégation). Pour obtenir un exemple d'application, consultez [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour obtenir un exemple montrant comment utiliser l’emprunt d’identité, consultez [Comment : Emprunter l’identité d’un Client sur un Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -111,7 +111,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
   
  Le tableau suivant spécifie le niveau d'emprunt d'identité que le service obtient lors de l'emprunt d'identité à partir d'un jeton mis en cache.  
   
-|`AllowedImpersonationLevel` valeur|Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton mis en cache `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` par défaut|Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton mis en cache `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|Oui|N/A|Emprunt d'identité|  
 |Anonymous|Aucune|N/A|Identification|  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Comment configurer une Application pour utiliser la délégation contrainte  
  Avant de pouvoir utiliser la délégation contrainte, l'expéditeur, le destinataire et le contrôleur de domaine doivent être configurés en conséquence. La procédure suivante répertorie les étapes qui permettent d'activer la délégation contrainte. Pour des informations sur les différences entre la délégation et la délégation contrainte, consultez la section [Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) (Kerberos dans Windows Server 2003) qui traite de la délégation contrainte.  
   
-1.  Dans le contrôleur de domaine, désactivez la case à cocher **Le compte est sensible et ne peut pas être délégué** pour le compte sous lequel s'exécute l'application cliente.  
+1. Dans le contrôleur de domaine, désactivez la case à cocher **Le compte est sensible et ne peut pas être délégué** pour le compte sous lequel s'exécute l'application cliente.  
   
-2.  Dans le contrôleur de domaine, activez la case à cocher **Le compte est approuvé pour la délégation** pour le compte sous lequel s'exécute l'application cliente.  
+2. Dans le contrôleur de domaine, activez la case à cocher **Le compte est approuvé pour la délégation** pour le compte sous lequel s'exécute l'application cliente.  
   
-3.  Dans le contrôleur de domaine, configurez l'ordinateur intermédiaire pour qu'il soit approuvé pour la délégation en cliquant sur l'option **Approuver l'ordinateur pour la délégation** .  
+3. Dans le contrôleur de domaine, configurez l'ordinateur intermédiaire pour qu'il soit approuvé pour la délégation en cliquant sur l'option **Approuver l'ordinateur pour la délégation** .  
   
-4.  Dans le contrôleur de domaine, configurez l'ordinateur intermédiaire pour utiliser la délégation contrainte en cliquant sur l'option **N'approuver cet ordinateur que pour la délégation aux services spécifiés** .  
+4. Dans le contrôleur de domaine, configurez l'ordinateur intermédiaire pour utiliser la délégation contrainte en cliquant sur l'option **N'approuver cet ordinateur que pour la délégation aux services spécifiés** .  
   
  Pour des instructions plus détaillées sur la configuration de la délégation contrainte, consultez les rubriques suivantes sur MSDN :  
   

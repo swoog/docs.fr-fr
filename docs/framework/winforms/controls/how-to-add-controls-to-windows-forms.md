@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343582"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procédure : ajouter des contrôles à des Windows Forms
 La plupart des formulaires sont conçus en ajoutant des contrôles à la surface du formulaire pour définir une interface utilisateur (IU). Un *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](index.md).  
@@ -24,11 +24,11 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-draw-a-control-on-a-form"></a>Pour dessiner un contrôle sur un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Dans le **boîte à outils**, cliquez sur le contrôle que vous souhaitez ajouter à votre formulaire.  
+2. Dans le **boîte à outils**, cliquez sur le contrôle que vous souhaitez ajouter à votre formulaire.  
   
-3.  Dans le formulaire, cliquez sur l’emplacement du coin supérieur gauche du contrôle à localiser et faites glisser vers l’emplacement de l’angle inférieur droit du contrôle à localiser.  
+3. Dans le formulaire, cliquez sur l’emplacement du coin supérieur gauche du contrôle à localiser et faites glisser vers l’emplacement de l’angle inférieur droit du contrôle à localiser.  
   
      Le contrôle est ajouté au formulaire avec la taille et l’emplacement spécifié.  
   
@@ -37,9 +37,9 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-drag-a-control-to-a-form"></a>Pour faire glisser un contrôle à un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Dans le **boîte à outils**, cliquez sur le contrôle souhaité et faites-le glisser vers votre formulaire.  
+2. Dans le **boîte à outils**, cliquez sur le contrôle souhaité et faites-le glisser vers votre formulaire.  
   
      Le contrôle est ajouté au formulaire à l’emplacement spécifié dans sa taille par défaut.  
   
@@ -53,7 +53,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Pour ajouter un contrôle à un formulaire par programmation  
   
-1.  Dans la méthode qui gère le bouton `Click` événement au sein de la classe de votre formulaire, insertion code similaire à ce qui suit pour ajouter une référence à votre variable de contrôle, définissez le contrôle `Location`et ajouter le contrôle.  
+1. Dans la méthode qui gère le bouton `Click` événement au sein de la classe de votre formulaire, insertion code similaire à ce qui suit pour ajouter une référence à votre variable de contrôle, définissez le contrôle `Location`et ajouter le contrôle.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

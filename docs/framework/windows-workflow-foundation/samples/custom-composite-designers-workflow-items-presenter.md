@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344869"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Concepteurs composites personnalisés - Présentateur d'éléments de workflow
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> est un type de clé dans le modèle de programmation de concepteur WF qui permet la modification d’une collection d’éléments contenus. Cet exemple montre comment générer un concepteur d'activités qui expose une telle collection modifiable.
@@ -25,9 +25,9 @@ ms.locfileid: "59118103"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
-1.  Ouvrez le **UsingWorkflowItemsPresenter.sln** exemple de solution pour c# ou Visual Basic dans Visual Studio 2010.
+1. Ouvrez le **UsingWorkflowItemsPresenter.sln** exemple de solution pour c# ou Visual Basic dans Visual Studio 2010.
 
-2.  Générez et exécutez la solution. Une application de concepteur de workflow réhébergée doit s'ouvrir, et vous pouvez faire glisser des activités sur la zone de dessin.
+2. Générez et exécutez la solution. Une application de concepteur de workflow réhébergée doit s'ouvrir, et vous pouvez faire glisser des activités sur la zone de dessin.
 
 ## <a name="sample-highlights"></a>Points clés de l'exemple
  Le code de cet exemple illustre les points suivants :

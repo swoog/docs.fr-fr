@@ -5,27 +5,27 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841418"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344544"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Procédure : Créer une Expression Lambda (Visual Basic)
 Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom. Une expression lambda peut être utilisée partout où un type délégué est valide.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Pour créer une fonction d’expression lambda sur une ligne  
   
-1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme dans l’exemple suivant :  
+1. Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme dans l’exemple suivant :  
   
      `Dim add1 =`   `Function`  
   
-2.  Entre parenthèses, directement après `Function`, tapez les paramètres de la fonction. Notez que vous ne spécifiez pas de nom après `Function`.  
+2. Entre parenthèses, directement après `Function`, tapez les paramètres de la fonction. Notez que vous ne spécifiez pas de nom après `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  Après la liste de paramètres, tapez une expression unique comme corps de la fonction. La valeur que prend l’expression est la valeur retournée par la fonction. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
+3. Après la liste de paramètres, tapez une expression unique comme corps de la fonction. La valeur que prend l’expression est la valeur retournée par la fonction. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -33,21 +33,21 @@ Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4.  Vous pouvez également le même résultat s’effectue par l’exemple suivant :  
+4. Vous pouvez également le même résultat s’effectue par l’exemple suivant :  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Pour créer une sous-routine d’expression lambda sur une ligne  
   
-1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant.  
+1. Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant.  
   
      `Dim add1 =`   `Sub`  
   
-2.  Entre parenthèses, directement après `Sub`, tapez les paramètres de la sous-routine. Notez que vous ne spécifiez pas de nom après `Sub`.  
+2. Entre parenthèses, directement après `Sub`, tapez les paramètres de la sous-routine. Notez que vous ne spécifiez pas de nom après `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3.  À la suite de la liste de paramètres, tapez une instruction unique comme corps de la sous-routine.  
+3. À la suite de la liste de paramètres, tapez une instruction unique comme corps de la sous-routine.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
@@ -57,17 +57,17 @@ Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Pour créer une fonction d’expression lambda multiligne  
   
-1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme illustré dans l’exemple suivant.  
+1. Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme illustré dans l’exemple suivant.  
   
      `Dim add1 =`   `Function`  
   
-2.  Entre parenthèses, directement après `Function`, tapez les paramètres de la fonction. Notez que vous ne spécifiez pas de nom après `Function`.  
+2. Entre parenthèses, directement après `Function`, tapez les paramètres de la fonction. Notez que vous ne spécifiez pas de nom après `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3.  Appuyez sur Entrée. La `End Function` instruction est automatiquement ajoutée.  
+3. Appuyez sur Entrée. La `End Function` instruction est automatiquement ajoutée.  
   
-4.  Dans le corps de la fonction, ajoutez le code suivant pour créer une expression et la valeur de retour. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
+4. Dans le corps de la fonction, ajoutez le code suivant pour créer une expression et la valeur de retour. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
@@ -77,17 +77,17 @@ Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Pour créer une sous-routine d’expression lambda multiligne  
   
-1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant :  
+1. Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant :  
   
      `Dim add1 =`   `Sub`  
   
-2.  Entre parenthèses, directement après `Sub`, tapez les paramètres de la sous-routine. Notez que vous ne spécifiez pas de nom après `Sub`.  
+2. Entre parenthèses, directement après `Sub`, tapez les paramètres de la sous-routine. Notez que vous ne spécifiez pas de nom après `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  Appuyez sur Entrée. La `End Sub` instruction est automatiquement ajoutée.  
+3. Appuyez sur Entrée. La `End Sub` instruction est automatiquement ajoutée.  
   
-4.  Dans le corps de la fonction, ajoutez le code suivant à exécuter lorsque la sous-routine est appelée.  
+4. Dans le corps de la fonction, ajoutez le code suivant à exécuter lorsque la sous-routine est appelée.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
@@ -108,9 +108,9 @@ Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom
 
 - <xref:System.Linq.Enumerable>
 - [Expressions lambda](./lambda-expressions.md)
-- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub (instruction)](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function, instruction](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instruction](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Délégués](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Guide pratique pour Passer des procédures à une autre procédure en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Procédure : Passer des procédures à une autre procédure en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate, instruction](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Introduction à LINQ dans Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

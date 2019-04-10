@@ -2,12 +2,12 @@
 title: Mises à niveau de flux personnalisées
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345246"
 ---
 # <a name="custom-stream-upgrades"></a>Mises à niveau de flux personnalisées
 Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur un flux continu d'octets entre le client et le serveur. Ce flux est réalisé par un objet <xref:System.IO.Stream>. Dans une mise à niveau de flux, le client souhaite ajouter une couche de protocole facultative à la pile de canaux et demande à l'autre extrémité du canal de communication de le faire. La mise à niveau de flux consiste à remplacer l'objet <xref:System.IO.Stream> d'origine par une version mise à niveau.  
@@ -19,13 +19,13 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
 ## <a name="how-stream-upgrades-work"></a>Fonctionnement des mises à niveau de flux  
  Le processus de mise à niveau de flux comporte quatre composants.  
   
-1.  Un flux de mise à niveau *initiateur* commence le processus : au moment de l’exécution, il peut initier une demande à l’autre extrémité de sa connexion pour mettre à niveau de la couche de transport de canal.  
+1. Un flux de mise à niveau *initiateur* commence le processus : au moment de l’exécution, il peut initier une demande à l’autre extrémité de sa connexion pour mettre à niveau de la couche de transport de canal.  
   
-2.  Un flux de mise à niveau *accepteur* effectue la mise à niveau : au moment de l’exécution qu’il reçoit la demande de mise à niveau à partir de l’autre ordinateur et si possible, accepte la mise à niveau.  
+2. Un flux de mise à niveau *accepteur* effectue la mise à niveau : au moment de l’exécution qu’il reçoit la demande de mise à niveau à partir de l’autre ordinateur et si possible, accepte la mise à niveau.  
   
-3.  Une mise à niveau *fournisseur* crée le *initiateur* sur le client et le *accepteur* sur le serveur.  
+3. Une mise à niveau *fournisseur* crée le *initiateur* sur le client et le *accepteur* sur le serveur.  
   
-4.  Une mise à niveau de flux *élément de liaison* est ajouté aux liaisons sur le service et le client et crée le fournisseur lors de l’exécution.  
+4. Une mise à niveau de flux *élément de liaison* est ajouté aux liaisons sur le service et le client et crée le fournisseur lors de l’exécution.  
   
  Notez que dans le cas de plusieurs mises à niveau, l'initiateur et l'accepteur encapsulent des ordinateurs d'état pour appliquer les transitions de mise à niveau valides pour chaque initiation.  
   
@@ -42,27 +42,27 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
   
  Pour implémenter une mise à niveau de flux personnalisée, procédez comme suit. Cette procédure implémente un processus de mise à niveau de flux minimal sur les ordinateurs client et serveur.  
   
-1.  Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
     1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour initier la mise à niveau de façon asynchrone.  
   
     2.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> pour rechercher des mises à niveau supplémentaires.  
   
-2.  Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
     1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour accepter la mise à niveau de façon asynchrone.  
   
     2.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> pour déterminer si la mise à niveau demandée est prise en charge, à ce stade, par cet accepteur de mise à niveau, lors du processus de mise à niveau.  
   
-3.  Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Substituez les méthodes <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> et <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> pour retourner des instances de l'accepteur et de l'initiateur définies aux étapes 2 et 1.  
+3. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Substituez les méthodes <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> et <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> pour retourner des instances de l'accepteur et de l'initiateur définies aux étapes 2 et 1.  
   
-4.  Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
     1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sur le service.  
   
     2.  Substituez la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sur le service pour ajouter l'élément de liaison de mise à niveau à <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
-5.  Ajoutez le nouvel élément de liaison de mise à niveau de flux aux liaisons sur les ordinateurs serveur et client.  
+5. Ajoutez le nouvel élément de liaison de mise à niveau de flux aux liaisons sur les ordinateurs serveur et client.  
   
 ## <a name="security-upgrades"></a>Mises à niveau de sécurité  
  L'ajout d'une mise à niveau de sécurité est une version spécialisée du processus de mise à niveau de flux général.  
@@ -71,11 +71,11 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
   
  Pour les scénarios de sécurité incompatibles avec les deux éléments de liaison précités, trois classes `abstract` relatives à la sécurité sont dérivées des classes de base d’initiateur, d’accepteur et de fournisseur précitées :  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
+2. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
+3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
  Le processus d'implémentation d'une mise à niveau de flux de sécurité est le même que précédemment, à ceci près que vous dérivez les données de ces trois classes. Substituez les propriétés supplémentaires dans ces classes pour fournir des informations de sécurité au runtime.  
   
@@ -84,13 +84,13 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
   
  Un fournisseur de mise à niveau peut également prendre en charge plusieurs mises à niveau. Par exemple, vous pouvez souhaiter implémenter un fournisseur de mise à niveau de flux personnalisé qui prend en charge à la fois la sécurité et la compression. Procédez comme suit :  
   
-1.  Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> pour écrire la classe de fournisseur qui crée l'initiateur et l'accepteur.  
+1. Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> pour écrire la classe de fournisseur qui crée l'initiateur et l'accepteur.  
   
-2.  Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> en veillant à substituer la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> pour retourner les types de contenu pour le flux de compression et le flux sécurisé dans l'ordre.  
+2. Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> en veillant à substituer la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> pour retourner les types de contenu pour le flux de compression et le flux sécurisé dans l'ordre.  
   
-3.  Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> qui reconnaît les types de contenu personnalisés dans sa méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+3. Sous-classez <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> qui reconnaît les types de contenu personnalisés dans sa méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-4.  Le flux sera mis à niveau après chaque appel à <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> et <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4. Le flux sera mis à niveau après chaque appel à <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> et <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
 

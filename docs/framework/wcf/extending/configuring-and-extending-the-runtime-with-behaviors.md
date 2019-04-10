@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200057"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344245"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configuration et extension de l'exécution à l'aide de comportements
 Comportements permettent de modifier le comportement par défaut et ajouter des extensions personnalisées qui inspectent et de valider la configuration de service ou de modifient le comportement d’exécution dans les applications client et le service Windows Communication Foundation (WCF). Cette rubrique décrit les interfaces de comportement, la méthode utilisée pour les implémenter, et comment les ajouter par programme à la description de service (dans une application de service), au point de terminaison (dans une application cliente) ou dans un fichier de configuration. Pour plus d’informations sur l’utilisation des comportements fournis par le système, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) et [comportement d’exécution Client spécifiant](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -18,18 +18,18 @@ Comportements permettent de modifier le comportement par défaut et ajouter des 
  Types de comportement sont ajoutés au service ou des objets de description de point de terminaison de service (sur le service ou le client, respectivement) avant que ces objets sont utilisés par Windows Communication Foundation (WCF) pour créer un runtime qui exécute un service WCF ou un client WCF. Lorsque ces comportements sont appelés pendant le processus de construction d’exécution, ils sont ensuite capables d’accéder aux méthodes et propriétés d’exécution qui modifient l’exécution construite par le contrat, les liaisons et les adresses.  
   
 ### <a name="behavior-methods"></a>Méthodes de comportement  
- Tous les comportements ont une méthode `AddBindingParameters`, une méthode `ApplyDispatchBehavior`, une méthode `Validate` et une méthode `ApplyClientBehavior` avec une exception : <xref:System.ServiceModel.Description.IServiceBehavior> ne pouvant pas s'exécuter dans un client, il n'implémente pas `ApplyClientBehavior`.  
+ Tous les comportements ont une `AddBindingParameters` (méthode), un `ApplyDispatchBehavior` (méthode), un `Validate` (méthode) et un `ApplyClientBehavior` méthode à une exception près : Étant donné que <xref:System.ServiceModel.Description.IServiceBehavior> Impossible d’exécuter dans un client, il n’implémente pas `ApplyClientBehavior`.  
   
--   Utilisez la méthode `AddBindingParameters` pour modifier ou ajouter des objets personnalisés à une collection à laquelle les liaisons personnalisées peuvent accéder lorsque l’exécution est construite. Par exemple, la méthode utilisée pour spécifier les spécifications de protection affecte la façon dont le canal est construit, mais n'est pas connue par le développeur de canal.  
+-   Utilisez la méthode `AddBindingParameters` pour modifier ou ajouter des objets personnalisés à une collection à laquelle les liaisons personnalisées peuvent accéder lorsque l'exécution est construite. Par exemple, la méthode utilisée pour spécifier les exigences de protection affecte la façon dont le canal est construit, mais n’est pas connue par le développeur de canal.  
   
--   Utilisez la méthode `Validate` pour examiner l’arborescence de description et l’objet d’exécution correspondant afin de s’assurer qu’elle est conforme à certains critères.  
+-   Utilisez la méthode `Validate` pour examiner l'arborescence de description et l'objet d'exécution correspondant afin de s'assurer qu'elle est conforme à certains critères.  
   
--   Utilisez les méthodes `ApplyDispatchBehavior` et `ApplyClientBehavior` pour examiner l’arborescence de description et modifier l’exécution pour une portée spécifique sur le service ou le client. Vous pouvez également insérer des objets d'extension.  
+-   Utilisez les méthodes `ApplyDispatchBehavior` et `ApplyClientBehavior` pour examiner l’arborescence de description et modifier l’exécution pour une portée spécifique sur le service ou le client. Vous pouvez également insérer des objets d’extension.  
   
     > [!NOTE]
-    >  Bien qu'une arborescence de description soit fournie dans ces méthodes, elle l'est uniquement à des fins d'examen. Si une arborescence de description est modifiée, le comportement n'est pas défini.  
+    >  Bien qu'une arborescence de description soit fournie dans ces méthodes, elle l'est uniquement à des fins d'examen. Si une arborescence de description est modifiée, le comportement n’est pas défini.  
   
- Les propriétés que vous pouvez modifier et les interfaces de personnalisation que vous pouvez implémenter sont accessibles via les classes d'exécution de service et de client. Les types de services sont les classes <xref:System.ServiceModel.Dispatcher.DispatchRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchOperation>. Les types de client sont les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.ClientOperation>. Les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sont les points d’entrée d’extensibilité pour accéder aux propriétés d’exécution à l’échelle du service et du client et aux collections d’extensions, respectivement. De la même façon, les classes <xref:System.ServiceModel.Dispatcher.ClientOperation> et <xref:System.ServiceModel.Dispatcher.DispatchOperation> exposent les propriétés d'exécution d'opération de service et de client et les collections d'extensions, respectivement. Toutefois, vous pouvez accéder à l'objet d'exécution de portée plus large à partir de l'objet d'exécution d'opération et vice versa, si nécessaire.  
+ Les propriétés que vous pouvez modifier et les interfaces de personnalisation que vous pouvez implémenter sont accessibles via les classes d'exécution de service et de client. Les types de services sont les classes <xref:System.ServiceModel.Dispatcher.DispatchRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchOperation>. Les types de client sont les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.ClientOperation>. Les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sont les points d'entrée d'extensibilité pour accéder aux propriétés d'exécution à l'échelle du service et du client et aux collections d'extensions, respectivement. De la même façon, les classes <xref:System.ServiceModel.Dispatcher.ClientOperation> et <xref:System.ServiceModel.Dispatcher.DispatchOperation> exposent les propriétés d’exécution d’opération de service et de client et les collections d’extensions, respectivement. Toutefois, vous pouvez accéder à l'objet d'exécution de portée plus large à partir de l'objet d'exécution d'opération et vice versa, si nécessaire.  
   
 > [!NOTE]
 >  Pour une discussion sur les propriétés d’exécution et les types d’extensions que vous pouvez utiliser pour modifier le comportement d’exécution d’un client, consultez [Clients extension](../../../../docs/framework/wcf/extending/extending-clients.md). Pour une discussion sur les propriétés d’exécution et les types d’extensions que vous pouvez utiliser pour modifier le comportement d’exécution d’un répartiteur de service, consultez [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
@@ -46,7 +46,7 @@ Comportements permettent de modifier le comportement par défaut et ajouter des 
   
 -   Les comportements d'opération (types <xref:System.ServiceModel.Description.IOperationBehavior>) activent la personnalisation des classes <xref:System.ServiceModel.Dispatcher.ClientOperation> et <xref:System.ServiceModel.Dispatcher.DispatchOperation> à nouveau sur le client et le service.  
   
- Vous pouvez ajouter ces comportements aux divers objets de description en implémentant des attributs personnalisés, à l’aide de fichiers de configuration d’application, ou en les ajoutant directement à la collection de comportements sur l’objet de description approprié. Cependant, ils doivent être ajoutés à un objet de description de service ou de description de point de terminaison de service avant d'appeler <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sur le <xref:System.ServiceModel.ServiceHost> ou un <xref:System.ServiceModel.ChannelFactory%601>.  
+ Vous pouvez ajouter ces comportements aux divers objets de description en implémentant des attributs personnalisés, à l'aide de fichiers de configuration d'application, ou en les ajoutant directement à la collection de comportements sur l'objet de description approprié. Cependant, ils doivent être ajoutés à un objet de description de service ou de description de point de terminaison de service avant d'appeler <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sur le <xref:System.ServiceModel.ServiceHost> ou un <xref:System.ServiceModel.ChannelFactory%601>.  
   
 ### <a name="behavior-scopes"></a>Portées de comportement  
  Il existe quatre types de comportement, chacun d'entre eux correspondant à une portée spécifique d'accès d'exécution.  
@@ -54,16 +54,16 @@ Comportements permettent de modifier le comportement par défaut et ajouter des 
 #### <a name="service-behaviors"></a>Comportements de service  
  Les comportements de service, qui implémentent <xref:System.ServiceModel.Description.IServiceBehavior>, constituent le mécanisme principal vous permettant de modifier l'ensemble de l'exécution du service. Il existe trois mécanismes d'ajout de comportements de service à un service.  
   
-1.  En utilisant un attribut sur la classe de service.  Lorsque <xref:System.ServiceModel.ServiceHost> est construit, l'implémentation <xref:System.ServiceModel.ServiceHost> utilise la réflexion pour découvrir l'ensemble d'attributs sur le type du service. Si ces attributs sont des implémentations de <xref:System.ServiceModel.Description.IServiceBehavior>, ils sont ajoutés à la collection de comportements sur <xref:System.ServiceModel.Description.ServiceDescription>. Cela permet à ces comportements de participer à la construction de l'exécution du service.  
+1. En utilisant un attribut sur la classe de service.  Lorsque <xref:System.ServiceModel.ServiceHost> est construit, l'implémentation <xref:System.ServiceModel.ServiceHost> utilise la réflexion pour découvrir l'ensemble d'attributs sur le type du service. Si ces attributs sont des implémentations de <xref:System.ServiceModel.Description.IServiceBehavior>, ils sont ajoutés à la collection de comportements sur <xref:System.ServiceModel.Description.ServiceDescription>. Cela permet à ces comportements de participer à la construction de l'exécution du service.  
   
-2.  En ajoutant par programme le comportement à la collection de comportements sur <xref:System.ServiceModel.Description.ServiceDescription>. Pour ce faire, utilisez les lignes de code suivantes :  
+2. En ajoutant par programme le comportement à la collection de comportements sur <xref:System.ServiceModel.Description.ServiceDescription>. Pour ce faire, utilisez les lignes de code suivantes :  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  En implémentant un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé qui étend la configuration. Cela active l'utilisation du comportement de service à partir des fichiers de configuration d'application.  
+3. En implémentant un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé qui étend la configuration. Cela active l'utilisation du comportement de service à partir des fichiers de configuration d'application.  
   
  Exemples de comportements de service dans WCF le <xref:System.ServiceModel.ServiceBehaviorAttribute> attribut, le <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>et le <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportement.  
   
@@ -89,9 +89,9 @@ Comportements permettent de modifier le comportement par défaut et ajouter des 
   
  Il existe deux mécanismes d'ajout de comportements de point de terminaison à un service.  
   
-1.  Ajoutez le comportement à la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>.  
+1. Ajoutez le comportement à la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>.  
   
-2.  Implémentez un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé qui étend la configuration.  
+2. Implémentez un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé qui étend la configuration.  
   
  Pour plus d'informations et obtenir un exemple, consultez la rubrique de référence.  
   
@@ -107,10 +107,10 @@ Comportements permettent de modifier le comportement par défaut et ajouter des 
  Pour plus d'informations et obtenir un exemple, consultez la rubrique de référence.  
   
 ### <a name="using-configuration-to-create-behaviors"></a>Création de comportements à l'aide de la configuration  
- Les comportements de service, de point de terminaison et de contrat peuvent, de par leur conception, être spécifiés dans le code ou à l'aide d'attributs ; seuls les comportements de service et de point de terminaison peuvent être configurés à l'aide de fichiers d'application ou de configuration Web. L'exposition des comportements à l'aide d'attributs permet aux développeurs de spécifier un comportement au moment de la compilation qui ne peut pas être ajouté, supprimé ou modifié pendant l'exécution. Cela s'avère souvent approprié pour les comportements qui sont systématiquement requis pour l'opération correcte d'un service (par exemple, les paramètres associés à la transaction de l'attribut <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>). L'exposition des comportements à l'aide de la configuration permet aux développeurs de laisser la spécification et la configuration de ces comportements à ceux qui déploient le service. Cela s'avère approprié pour les comportements qui sont des composants facultatifs ou qui représentent une autre configuration spécifique au déploiement, dans le cas par exemple de l'exposition des métadonnées pour le service ou de la configuration d'autorisation spécifique d'un service.  
+ Les comportements de service, de point de terminaison et de contrat peuvent, de par leur conception, être spécifiés dans le code ou à l'aide d'attributs ; seuls les comportements de service et de point de terminaison peuvent être configurés à l'aide de fichiers d'application ou de configuration Web. L'exposition des comportements à l'aide d'attributs permet aux développeurs de spécifier un comportement au moment de la compilation qui ne peut pas être ajouté, supprimé ou modifié pendant l'exécution. Cela s’avère souvent approprié pour les comportements qui sont systématiquement requis pour l’opération correcte d’un service (par exemple, les paramètres associés à la transaction de l’attribut <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>). L'exposition des comportements à l'aide de la configuration permet aux développeurs de laisser la spécification et la configuration de ces comportements à ceux qui déploient le service. Cela s'avère approprié pour les comportements qui sont des composants facultatifs ou qui représentent une autre configuration spécifique au déploiement, dans le cas par exemple de l'exposition des métadonnées pour le service ou de la configuration d'autorisation spécifique d'un service.  
   
 > [!NOTE]
->  Vous pouvez également utiliser des comportements qui prennent en charge la configuration afin d'appliquer les stratégies d'application de la société en les insérant dans le fichier de configuration machine.config et en verrouillant ces éléments. Pour obtenir une description et un exemple, consultez [Comment : Lock Down Endpoints dans l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+>  Vous pouvez également utiliser des comportements qui prennent en charge la configuration afin d'appliquer les stratégies d'application de la société en les insérant dans le fichier de configuration machine.config et en verrouillant ces éléments. Pour obtenir une description et un exemple, consultez [Comment : Verrouiller des points de terminaison dans l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Pour exposer un comportement à l’aide de la configuration, un développeur doit créer une classe dérivée de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, puis enregistrer cette extension avec la configuration.  
   
@@ -129,7 +129,7 @@ protected override object CreateBehavior()
 }  
 ```  
   
- Pour que le système de configuration charge un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé, il doit être enregistré en tant qu'extension. L'exemple de code suivant présente le fichier de configuration du comportement de point de terminaison précédent :  
+ Pour que le système de configuration charge un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé, il doit être enregistré en tant qu’extension. L'exemple de code suivant présente le fichier de configuration du comportement de point de terminaison précédent :  
   
 ```xml  
 <configuration>  
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  <xref:System.ServiceModel.ServiceHost> applique les comportements dans l'ordre suivant :  
   
-1.  Service  
+1. Service  
   
-2.  Contrat  
+2. Contrat  
   
-3.  Point de terminaison  
+3. Point de terminaison  
   
-4.  Opération  
+4. Opération  
   
  Dans une collection de comportements, aucun ordre n’est garanti.  
   
  <xref:System.ServiceModel.ChannelFactory%601> applique les comportements dans l'ordre suivant :  
   
-1.  Contrat  
+1. Contrat  
   
-2.  Point de terminaison  
+2. Point de terminaison  
   
-3.  Opération  
+3. Opération  
   
  Dans une collection de comportements, à nouveau aucun ordre n’est garanti.  
   

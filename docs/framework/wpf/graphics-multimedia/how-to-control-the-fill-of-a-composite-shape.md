@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427472"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Procédure : Contrôler le remplissage d’une forme composite
 Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xref:System.Windows.Media.GeometryGroup> ou un <xref:System.Windows.Media.PathGeometry>, spécifie une « règle » que la forme composite utilise pour déterminer si un point donné fait partie de la géométrie. Il existe deux valeurs possibles pour <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> et <xref:System.Windows.Media.FillRule.Nonzero>. Les sections suivantes décrivent comment utiliser ces deux règles.  
@@ -25,23 +25,23 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  L’illustration suivante montre la forme créée dans l’exemple précédent.  
   
- ![Capture d’écran : Propriété FillRule de EvenOdd](./media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
+ ![Un cercle est constitué d’un anneaux concentriques série avec des couleurs alternées.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-property.png)  
   
- Dans l’illustration ci-dessus, notez que le centre et le 3e anneau ne sont pas remplis. En effet, un rayon dessiné à partir de n’importe quel point dans un de ces deux anneaux traverse un nombre pair de segments. Voir l’illustration ci-dessous :  
+ Dans l’illustration précédente, notez que le centre et le troisième anneau ne sont pas remplis. En effet, un rayon dessiné à partir de n’importe quel point dans un de ces deux anneaux traverse un nombre pair de segments. Consultez l’illustration suivante :  
   
- ![Diagramme : Valeur de propriété FillRule de EvenOdd](./media/fillruleevenodd2.png "FillRuleEvenOdd2")  
+ ![Diagramme montrant les rayons EvenOdd dessinés dans le cercle.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-rays.png)  
   
  **Différent de zéro :** Cette règle détermine si un point est dans la région de remplissage du tracé en dessinant un rayon à partir de ce point vers l’infini dans n’importe quelle direction et en examinant ensuite les emplacements où un segment de la forme coupe le rayon. En commençant à zéro, comptez un point chaque fois qu’un segment coupe le rayon de gauche à droite, et soustrayez un point chaque fois qu’un segment de tracé traverse le rayon de droite à gauche. Comptez ensuite le nombre d’intersections : si le résultat est égal à zéro, le point est à l’extérieur du tracé. Sinon, il est à l’intérieur.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- À l’aide de l’exemple ci-dessus, la valeur <xref:System.Windows.Media.FillRule.Nonzero> pour <xref:System.Windows.Media.GeometryGroup.FillRule%2A> donne par conséquent de l’illustration suivante :  
+ À l’aide de l’exemple précédent, la valeur <xref:System.Windows.Media.FillRule.Nonzero> pour <xref:System.Windows.Media.GeometryGroup.FillRule%2A> donne par conséquent de l’illustration suivante :  
   
- ![Capture d’écran : Valeur FillRule de NonZero](./media/fillrulenonzero1.png "FillRuleNonZero1")  
+ ![Un cercle est constitué d’une série anneaux concentriques tous les rempli avec la même couleur.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-nonzero.png)  
   
- Comme vous pouvez le voir, tous les anneaux sont remplis. En effet, tous les segments s’étendent dans la même direction, ce qui signifie qu’un rayon dessiné à partir de n’importe quel point traversera un ou plusieurs segments et que la somme des intersections ne sera pas égale à zéro. Par exemple, dans l’illustration ci-dessous, les flèches rouges représentent la direction et les flèches blanches représentent un rayon arbitraire à partir d’un point situé dans l’anneau intérieur. En commençant par une valeur égale à zéro, pour chaque segment que le rayon traverse, une valeur de un est ajoutée car le segment traverse le rayon de gauche à droite.  
+ Comme vous pouvez le voir, tous les anneaux sont remplis. En effet, tous les segments s’étendent dans la même direction, ce qui signifie qu’un rayon dessiné à partir de n’importe quel point traversera un ou plusieurs segments et que la somme des intersections ne sera pas égale à zéro. Par exemple, dans l’illustration suivante, les flèches rouges représentent la direction que les segments sont dessinés et les flèches blanches représentent un rayon arbitraire à partir d’un point dans l’anneau intérieur. En commençant par une valeur égale à zéro, pour chaque segment que le rayon traverse, une valeur de un est ajoutée car le segment traverse le rayon de gauche à droite.  
   
- ![Diagramme : Valeur de propriété FillRule égale à NonZero](./media/fillrulenonzero2.png "FillRuleNonZero2")  
+ ![Schéma montrant la valeur de propriété FillRule égale à Nonzero.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-equal-nonzero.png)  
   
  Pour mieux illustrer le comportement de <xref:System.Windows.Media.FillRule.Nonzero> règle une forme plus complexe avec des segments en cours d’exécution dans différentes directions est requise. Le code XAML ci-dessous crée une forme semblable que l’exemple précédent, à ceci près qu’elle est créée avec un <xref:System.Windows.Media.PathGeometry> puis plutôt un <xref:System.Windows.Media.EllipseGeometry> cercles concentriques plutôt puis qui crée quatre cercles concentriques complètement fermés.  
   
@@ -49,15 +49,15 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  L’illustration suivante montre la forme créée dans l’exemple précédent.  
   
- ![Capture d’écran : Valeur de propriété FillRule de NonZero](./media/fillrulenonzero3.png "FillRuleNonZero3")  
+ ![Un cercle est constitué d’un anneaux concentriques série avec des couleurs alternées avec le troisième arc ne pas rempli.](./media/how-to-control-the-fill-of-a-composite-shape/pathgeometry-concentric-arcs.png)  
   
- Notez que le troisième arc partant du centre n’est pas rempli. L’illustration ci-dessous en explique les raisons. Dans l’illustration, les flèches rouges représentent la direction dans laquelle les segments sont dessinés. Les deux flèches blanches représentent deux rayons arbitraires qui partent d’un point dans la région « non remplie ». Comme le montre l’illustration, la somme des valeurs d’un rayon donné qui traverse les segments dans son tracé est égale à zéro. Comme indiqué ci-dessus, une somme égale à zéro signifie que le point ne fait pas partie de la géométrie (il ne fait pas partie du remplissage) tandis qu’une somme qui n’est *pas* égale à zéro, y compris une valeur négative, fait partie de la géométrie.  
+ Notez que le troisième arc partant du centre n’est pas rempli. L’illustration suivante montre pourquoi il s’agit. Dans l’illustration, les flèches rouges représentent la direction dans laquelle les segments sont dessinés. Les deux flèches blanches représentent deux rayons arbitraires qui partent d’un point dans la région « non remplie ». Comme le montre l’illustration, la somme des valeurs d’un rayon donné qui traverse les segments dans son tracé est égale à zéro. Comme indiqué ci-dessus, une somme égale à zéro signifie que le point ne fait pas partie de la géométrie (il ne fait pas partie du remplissage) tandis qu’une somme qui n’est *pas* égale à zéro, y compris une valeur négative, fait partie de la géométrie.  
   
- ![Diagramme : Valeur de propriété FillRule de NonZero](./media/fillrulenonzero4.png "FillRuleNonZero4")  
+ ![Diagramme montrant des segments de traversée de rayons arbitraires.](./media/how-to-control-the-fill-of-a-composite-shape/arbitrary-ray-cross-segment.png)  
   
  **Remarque :** Dans le cadre de <xref:System.Windows.Media.FillRule>, toutes les formes sont considérées comme fermées. S’il y a un écart dans un segment, dessinez une ligne imaginaire pour le fermer. Dans l’exemple ci-dessus, on observe existe de petits écarts au niveau des anneaux. On peut donc s’attendre à ce qu’un rayon qui traverse cet écart produise un résultat différent de celui d’un rayon qui s’étend dans une autre direction. Voici une illustration agrandie d’un de ces écarts et du « segment imaginaire » (segment dessiné afin d’appliquer le <xref:System.Windows.Media.FillRule>) qui le referme.  
   
- ![Diagramme : Pour FillRule, les segments sont toujours fermés](./media/fillruleclosedshapes.png "FillRuleClosedShapes")  
+ ![Diagramme montrant les segments FillRule qui sont toujours fermés.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-closed-segments.png)  
   
 ## <a name="example"></a>Exemple  
   

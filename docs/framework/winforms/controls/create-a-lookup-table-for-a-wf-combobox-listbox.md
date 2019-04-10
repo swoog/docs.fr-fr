@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344102"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : créer une table de choix pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Il est parfois utile d'afficher les données dans un format convivial dans un Windows Form, mais de les stocker dans un format plus pertinent pour votre programme. Par exemple, un formulaire de commande de produits alimentaires peut présenter les éléments de menu par leur nom dans une zone de liste. Toutefois, la table de données dans laquelle la commande est enregistrée contient alors les numéros d'ID uniques représentant les produits alimentaires. Les tableaux ci-dessous montrent un exemple de stockage et d’affichage des données du formulaire de commande des produits alimentaires.  
@@ -46,13 +46,13 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
   
 ### <a name="to-create-a-lookup-table"></a>Pour créer une table de choix  
   
-1.  Ajoutez un contrôle <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> ou <xref:System.Windows.Forms.CheckedListBox> au formulaire.  
+1. Ajoutez un contrôle <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> ou <xref:System.Windows.Forms.CheckedListBox> au formulaire.  
   
-2.  Connectez-vous à la source de données.  
+2. Connectez-vous à la source de données.  
   
-3.  Établissez une relation de données entre les deux tables. Consultez [Introduction aux objets DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
+3. Établissez une relation de données entre les deux tables. Consultez [Introduction aux objets DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
   
-4.  Définissez les propriétés ci-dessous. Elles peuvent être définies dans le code ou dans le concepteur.  
+4. Définissez les propriétés ci-dessous. Elles peuvent être définies dans le code ou dans le concepteur.  
   
     |Propriété|Paramètre|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Colonne de la table de source de données que vous souhaitez afficher dans le contrôle. Dans le scénario précédent, il s’agit de `"Name"` (pour la définir dans le code, utilisez des guillemets).|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Colonne de la table de source de données qui contient les informations stockées. Dans le scénario précédent, il s’agit de `"ID"` (pour la définir dans le code, utilisez des guillemets).|  
   
-5.  Dans une procédure, appelez la méthode <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la classe <xref:System.Windows.Forms.ControlBindingsCollection> pour lier la ppropriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> du contrôle à la table d'enregistrement de l'entrée du formulaire. Vous pouvez également effectuer cela dans le concepteur plutôt que dans le code, en accédant à du contrôle <xref:System.Windows.Forms.Control.DataBindings%2A> propriété dans le **propriétés** fenêtre. Dans le scénario précédent, il s’agit de `OrderDetailsTable`, et la colonne est `"ItemID"`.  
+5. Dans une procédure, appelez la méthode <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la classe <xref:System.Windows.Forms.ControlBindingsCollection> pour lier la ppropriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> du contrôle à la table d'enregistrement de l'entrée du formulaire. Vous pouvez également effectuer cela dans le concepteur plutôt que dans le code, en accédant à du contrôle <xref:System.Windows.Forms.Control.DataBindings%2A> propriété dans le **propriétés** fenêtre. Dans le scénario précédent, il s’agit de `OrderDetailsTable`, et la colonne est `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

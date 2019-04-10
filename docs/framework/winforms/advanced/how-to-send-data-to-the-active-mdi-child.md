@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343712"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Procédure : envoyer des données à l’enfant MDI actif
 Souvent, dans le contexte de [Applications d’Interface multidocument (MDI)](multiple-document-interface-mdi-applications.md), vous devez envoyer des données à la fenêtre enfant active, par exemple lorsque l’utilisateur colle des données à partir du Presse-papiers dans une application MDI.  
@@ -25,7 +25,7 @@ Souvent, dans le contexte de [Applications d’Interface multidocument (MDI)](mu
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Pour envoyer des données à la fenêtre MDI enfant active à partir du Presse-papiers  
   
-1.  Dans une méthode, copiez le texte du Presse-papiers dans le contrôle actif du formulaire enfant actif.  
+1. Dans une méthode, copiez le texte du Presse-papiers dans le contrôle actif du formulaire enfant actif.  
   
     > [!NOTE]
     >  Cet exemple suppose il existe un formulaire MDI parent (`Form1`) qui a une ou plusieurs fenêtres MDI enfants contenant un <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [création de formulaires MDI parents](how-to-create-mdi-parent-forms.md).  

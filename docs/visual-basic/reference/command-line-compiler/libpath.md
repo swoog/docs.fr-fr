@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344206"
 ---
 # <a name="-libpath"></a>-libpath
 Spécifie l’emplacement des assemblys référencés.  
@@ -33,13 +33,13 @@ Spécifie l’emplacement des assemblys référencés.
   
  Le compilateur recherche les références d’assembly qui ne sont pas complètes dans l’ordre suivant :  
   
-1.  Répertoire de travail actuel. Il s’agit du répertoire à partir duquel le compilateur est appelé.  
+1. Répertoire de travail actuel. Il s’agit du répertoire à partir duquel le compilateur est appelé.  
   
-2.  Répertoire système du common language runtime.  
+2. Répertoire système du common language runtime.  
   
-3.  Répertoires spécifiés par `/libpath`.  
+3. Répertoires spécifiés par `/libpath`.  
   
-4.  Répertoires spécifiés par la variable d’environnement LIB.  
+4. Répertoires spécifiés par la variable d’environnement LIB.  
   
  Le `-libpath` option est additif ; en spécifiant davantage qu’une seule fois ajoute aux valeurs précédentes.  
   

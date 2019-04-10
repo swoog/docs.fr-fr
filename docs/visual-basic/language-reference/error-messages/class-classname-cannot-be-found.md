@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346312"
 ---
 # <a name="class-classname-cannot-be-found"></a>La classe\<nom_classe >' est introuvable
 La classe\<nom_classe >' est introuvable. Cette condition est généralement le résultat d'un 'Microsoft.VisualBasic.dll' incompatible.  
@@ -23,13 +23,13 @@ La classe\<nom_classe >' est introuvable. Cette condition est généralement le 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Recompilez le programme pour voir si l'erreur se produit à nouveau.  
+1. Recompilez le programme pour voir si l'erreur se produit à nouveau.  
   
-2.  Si l’erreur se reproduit, enregistrez votre travail et redémarrez Visual Studio.  
+2. Si l’erreur se reproduit, enregistrez votre travail et redémarrez Visual Studio.  
   
-3.  Si l’erreur persiste, réinstallez Visual Basic.  
+3. Si l’erreur persiste, réinstallez Visual Basic.  
   
-4.  Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
+4. Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -2,12 +2,12 @@
 title: Utilisation d'ExpressionTextBox dans un concepteur d'activités personnalisées
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229379"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344973"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Utilisation d'ExpressionTextBox dans un concepteur d'activités personnalisées
 Cet exemple montre comment utiliser le <xref:System.Activities.Presentation.View.ExpressionTextBox> dans un concepteur d'activités personnalisées. L'activité personnalisée, `MultiAssign`, assigne deux valeurs de chaîne à deux variables String. Certains contrôles <xref:System.Activities.Presentation.View.ExpressionTextBox> sont liés à <xref:System.Activities.InArgument>s et d'autres à <xref:System.Activities.OutArgument>s.
@@ -23,19 +23,19 @@ Cet exemple montre comment utiliser le <xref:System.Activities.Presentation.View
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2010, ouvrez le fichier ExpressionTextBoxSample.sln.
+1. À l’aide de Visual Studio 2010, ouvrez le fichier ExpressionTextBoxSample.sln.
 
-2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.
+2. Pour générer la solution, appuyez sur Ctrl+Maj+B.
 
 #### <a name="to-run-this-sample"></a>Pour exécuter cet exemple
 
-1.  Ajoutez une nouvelle application console de workflow à la solution.
+1. Ajoutez une nouvelle application console de workflow à la solution.
 
-2.  Ajoutez une référence à la **ExpressionTextBoxSample** projet à partir de la nouvelle Application Console de Workflow.
+2. Ajoutez une référence à la **ExpressionTextBoxSample** projet à partir de la nouvelle Application Console de Workflow.
 
-3.  Générez la solution.
+3. Générez la solution.
 
-4.  Faites glisser le **MultiAssign** activité à partir de la boîte à outils et déposez-la dans le flux de travail.
+4. Faites glisser le **MultiAssign** activité à partir de la boîte à outils et déposez-la dans le flux de travail.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427303"
 ---
 # <a name="federation"></a>Fédération
 Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour le déploiement d’architectures de sécurité fédérée. Pour un exemple d’application présentant la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -33,9 +33,9 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 |Service d'émission de jeton de sécurité (STS, Security Token Service)|Service Web qui émet des jetons de sécurité ; autrement dit, fait des assertions en fonction de la preuve qu'il approuve, à quiconque l'approuve. Il constitue la base de l'échange de confiance entre les domaines.|  
   
 ### <a name="example-scenario"></a>Exemple de scénario  
- L'illustration suivante présente un exemple de sécurité fédérée.  
+ L’illustration suivante montre un exemple de sécurité fédérée :  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Diagramme montrant un scénario classique de sécurité fédérée.](./media/federation/typical-federated-security-scenario.gif)  
   
  Ce scénario inclut deux organisations : A et B. l’organisation B a une ressource Web (un service Web) que certains utilisateurs de l’organisation A trouvent utiles.  
   
@@ -90,12 +90,12 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 ## <a name="sample-implementation-using-wcf"></a>Exemple d'implémentation à l'aide de WCF  
  L’illustration suivante montre un exemple d’implémentation pour une architecture de sécurité fédérée à l’aide de la prise en charge native de WCF.  
   
- ![Sécurité de la fédération dans WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Diagramme montrant un exemple d’implémentation sécurité fédération.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Exemple MyService  
  Le service `MyService` expose un point de terminaison unique via `MyServiceEndpoint`. L'illustration suivante présente l'adresse, la liaison et le contrat associés au point de terminaison.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![Diagramme montrant les détails MyServiceEndpoint.](./media/federation/myserviceendpoint-details.gif)  
   
  Le point de terminaison de service `MyServiceEndpoint` utilise le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) et requiert un jeton Security Assertions Markup Language (SAML) valide avec un `accessAuthorized` revendication émise par STS B. Cela est spécifié de façon déclarative dans la configuration du service.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  L'illustration suivante présente le STS B. Comme indiqué précédemment, un service d'émission de jeton de sécurité (STS) est également un service Web et peut avoir ses points de terminaison associés, sa stratégie, etc.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Diagramme montrant le service de jeton de sécurité B.](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B expose un point de terminaison unique appelé `STSEndpoint` qui permet de demander des jetons de sécurité. Plus précisément, le STS B émet des jetons SAML avec la revendication `accessAuthorized`, qui peuvent être présentés au niveau du site de service `MyService` permettant d'accéder au service. Toutefois, le STS B requiert que les utilisateurs présentent un jeton SAML valide émis par le STS A qui contient la revendication `userAuthenticated`. Cela est spécifié de façon déclarative dans la configuration de STS.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Client au niveau de l'organisation A  
  L'illustration suivante présente le client au niveau de l'organisation A, ainsi que les étapes impliquées dans le lancement d'un appel de service `MyService`. Les autres composants fonctionnels sont également inclus par souci d'exhaustivité.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Les étapes décrites dans un appel de service MyService de diagramme showwing.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Récapitulatif  
  La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. En tant que plateforme pour la création et déploiement d’applications distribuées, WCF fournit la prise en charge native pour implémenter la sécurité fédérée.  

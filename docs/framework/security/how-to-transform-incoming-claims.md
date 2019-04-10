@@ -1,16 +1,16 @@
 ---
-title: 'Comment : transformer les revendications entrantes'
+title: 'Procédure : Transformer les revendications entrantes'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344635"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Comment : transformer les revendications entrantes
+# <a name="how-to-transform-incoming-claims"></a>Procédure : Transformer les revendications entrantes
 ## <a name="applies-to"></a>S'applique à  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,19 +58,19 @@ ms.locfileid: "50181629"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Pour créer une application ASP.NET simple  
   
-1.  Démarrez Visual Studio en mode élevé en tant qu’administrateur.  
+1. Démarrez Visual Studio en mode élevé en tant qu’administrateur.  
   
-2.  Dans Visual Studio, cliquez sur **Fichier**, sur **Nouveau**, puis sur **Projet**.  
+2. Dans Visual Studio, cliquez sur **Fichier**, sur **Nouveau**, puis sur **Projet**.  
   
-3.  Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
+3. Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
   
-4.  Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
+4. Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
   
-5.  Cliquez avec le bouton droit sur le projet **TestApp** sous l’**Explorateur de solutions**, puis sélectionnez **Identity and Access** (Identity and Access Tool).  
+5. Cliquez avec le bouton droit sur le projet **TestApp** sous l’**Explorateur de solutions**, puis sélectionnez **Identity and Access** (Identity and Access Tool).  
   
-6.  La fenêtre **Identity and Access** (Identity and Access Tool) s’affiche. Sous **Fournisseurs**, sélectionnez **Test your application with the Local Development STS** (Tester votre application avec le service STS de développement local), puis cliquez sur **Appliquer**.  
+6. La fenêtre **Identity and Access** (Identity and Access Tool) s’affiche. Sous **Fournisseurs**, sélectionnez **Test your application with the Local Development STS** (Tester votre application avec le service STS de développement local), puis cliquez sur **Appliquer**.  
   
-7.  Dans le fichier *Default.aspx*, remplacez le balisage existant par le code suivant, puis enregistrez le fichier :  
+7. Dans le fichier *Default.aspx*, remplacez le balisage existant par le code suivant, puis enregistrez le fichier :  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181629"
     </asp:Content>  
     ```  
   
-8.  Ouvrez le fichier code-behind nommé *Default.aspx.cs*. Remplacez le code existant par celui qui suit, puis enregistrez le fichier :  
+8. Ouvrez le fichier code-behind nommé *Default.aspx.cs*. Remplacez le code existant par celui qui suit, puis enregistrez le fichier :  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181629"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Pour implémenter la transformation des revendications à l’aide d’un ClaimsAuthenticationManager personnalisé  
   
-1.  Dans Visual Studio, cliquez avec le bouton droit sur la solution, cliquez sur **Ajouter**, puis cliquez sur **Nouveau projet**.  
+1. Dans Visual Studio, cliquez avec le bouton droit sur la solution, cliquez sur **Ajouter**, puis cliquez sur **Nouveau projet**.  
   
-2.  Dans la fenêtre **Ajouter un nouveau projet**, sélectionnez **Bibliothèque de classes** dans la liste de modèles **Visual C#**, entrez `ClaimsTransformation`, puis appuyez sur **OK**. Le nouveau projet est créé dans votre dossier de solutions.  
+2. Dans la fenêtre **Ajouter un nouveau projet**, sélectionnez **Bibliothèque de classes** dans la liste de modèles **Visual C#**, entrez `ClaimsTransformation`, puis appuyez sur **OK**. Le nouveau projet est créé dans votre dossier de solutions.  
   
-3.  Cliquez avec le bouton droit sur **Références** sous le projet **ClaimsTransformation**, puis cliquez sur **Ajouter une référence**.  
+3. Cliquez avec le bouton droit sur **Références** sous le projet **ClaimsTransformation**, puis cliquez sur **Ajouter une référence**.  
   
-4.  Dans la fenêtre **Gestionnaire de références**, sélectionnez **System.IdentityModel**, puis cliquez sur **OK**.  
+4. Dans la fenêtre **Gestionnaire de références**, sélectionnez **System.IdentityModel**, puis cliquez sur **OK**.  
   
-5.  Ouvrez **Class1.cs**. Si cette classe n’existe pas, cliquez avec le bouton droit sur **ClaimsTransformation**, cliquez sur **Ajouter** et cliquez sur **Classe...**  
+5. Ouvrez **Class1.cs**. Si cette classe n’existe pas, cliquez avec le bouton droit sur **ClaimsTransformation**, cliquez sur **Ajouter** et cliquez sur **Classe...**  
   
-6.  Ajoutez le code suivant à l’aide de directives dans le fichier de code :  
+6. Ajoutez le code suivant à l’aide de directives dans le fichier de code :  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Ajoutez la classe et la méthode suivantes dans le fichier de code.  
+7. Ajoutez la classe et la méthode suivantes dans le fichier de code.  
   
     > [!WARNING]
     >  Le code suivant est fourni à titre de démonstration uniquement. Vérifiez les autorisations prévues dans votre code de production.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181629"
     }  
     ```  
   
-8.  Enregistrez le fichier et générez le projet **ClaimsTransformation**.  
+8. Enregistrez le fichier et générez le projet **ClaimsTransformation**.  
   
 9. Dans votre projet **TestApp** ASP.NET, cliquez avec le bouton droit sur Références, puis cliquez sur **Ajouter une référence**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181629"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Pour tester votre application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire  
   
-1.  Appuyez sur **F5** pour générer et exécuter l’application. La page *Default.aspx* doit s’afficher.  
+1. Appuyez sur **F5** pour générer et exécuter l’application. La page *Default.aspx* doit s’afficher.  
   
-2.  Dans la page *Default.aspx*, sous l’en-tête **Your Claims** (Vos revendications), vous voyez normalement un tableau qui affiche ces informations sur les revendications associées à votre compte : **Issuer**, **OriginalIssuer**, **Type**, **Value** et **ValueType**. La dernière ligne doit se présenter de cette façon :  
+2. Dans la page *Default.aspx*, sous l’en-tête **Your Claims** (Vos revendications), vous voyez normalement un tableau qui affiche ces informations sur les revendications associées à votre compte : **Issuer**, **OriginalIssuer**, **Type**, **Value** et **ValueType**. La dernière ligne doit se présenter de cette façon :  
   
     ||||||  
     |-|-|-|-|-|  

@@ -3,12 +3,12 @@ title: Modèle d’identité basée sur les revendications
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345870"
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
 Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, un autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
@@ -27,9 +27,9 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
   
  Cette rubrique fournit les informations suivantes :  
   
--   [Présentation de l’identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+-   [Présentation de l'identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Scénario de base pour un modèle d’identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+-   [Scénario de base pour un modèle d'identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Présentation de l'identité basée sur les revendications  
@@ -73,10 +73,10 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
   
  Ce diagramme illustre un site web (l’application de la partie de confiance) configuré pour utiliser WIF pour l’authentification et un client, un navigateur Web, qui veut utiliser ce site.  
   
-1.  Lorsqu’un utilisateur non authentifié demande une page, son navigateur est redirigé vers les pages de fournisseur (IdP) d’identité.  
+1. Lorsqu’un utilisateur non authentifié demande une page, son navigateur est redirigé vers les pages de fournisseur (IdP) d’identité.  
   
-2.  Le fournisseur d’identité oblige l’utilisateur à présenter leurs informations d’identification, telles que le nom d’utilisateur/mot de passe ou l’authentification Kerberos.  
+2. Le fournisseur d’identité oblige l’utilisateur à présenter leurs informations d’identification, telles que le nom d’utilisateur/mot de passe ou l’authentification Kerberos.  
   
-3.  Les problèmes de fournisseur d’identité un jeton qui est renvoyé au navigateur.  
+3. Les problèmes de fournisseur d’identité un jeton qui est renvoyé au navigateur.  
   
-4.  Le navigateur est à présent redirigé vers la page demandée à l'origine où WIF détermine si le jeton répond aux besoins pour accéder à la page. Si c'est le cas, un cookie est publié pour établir une session afin que l'authentification ne se produise qu'une fois et que le contrôle soit transmis à l'application.
+4. Le navigateur est à présent redirigé vers la page demandée à l'origine où WIF détermine si le jeton répond aux besoins pour accéder à la page. Si c'est le cas, un cookie est publié pour établir une session afin que l'authentification ne se produise qu'une fois et que le contrôle soit transmis à l'application.
