@@ -2,12 +2,12 @@
 title: Prise en charge de l'héritage
 ms.date: 03/30/2017
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
-ms.openlocfilehash: 791cc68ce89ad8e56b8feeebe6bf84434c3e89c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 668f4f1dd284550e644ce6b8a4491ca47105575e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230913"
 ---
 # <a name="inheritance-support"></a>Prise en charge de l'héritage
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge *mappage de table unique*. En d'autres termes, une hiérarchie d'héritage complète est stockée dans une seule table de base de données. La table contient l'union au format à plat de toutes les colonnes de données possibles pour l'ensemble de la hiérarchie. Une union est le résultat de la combinaison de deux tables en une table contenant les lignes de l'une ou l'autre des tables d'origine. Chaque ligne comporte des valeurs null dans les colonnes qui ne s'appliquent pas au type de l'instance représenté par la ligne.  
@@ -19,4 +19,5 @@ ms.locfileid: "54692676"
  Les développeurs à l’aide de Visual Studio peuvent également utiliser le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] pour mapper des hiérarchies d’héritage.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

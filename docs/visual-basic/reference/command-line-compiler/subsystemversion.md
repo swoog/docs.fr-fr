@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 5254907147444f7c02b2bf0141af02d0efd4159b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c9920869a660bc6144749cc7584275be4608a7c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228807"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 Spécifie la version minimale du sous-système sur lequel le fichier exécutable généré peut s’exécuter, déterminant ainsi les versions de Windows sur lesquelles le fichier exécutable peut s’exécuter. En règle générale, cette option garantit que le fichier exécutable peut tirer parti de fonctionnalités de sécurité particulières qui ne sont pas disponibles avec des versions antérieures de Windows.  
@@ -49,9 +49,9 @@ Spécifie la version minimale du sous-système sur lequel le fichier exécutable
   
 -   La valeur par défaut est 6.02 si l’une quelconque des options du compilateur de la liste suivante est définie :  
   
-    -   [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
     -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
@@ -61,9 +61,7 @@ Spécifie la version minimale du sous-système sur lequel le fichier exécutable
   
 ## <a name="setting-this-option"></a>Définition de cette option  
  Pour définir le **- subsystemversion** option du compilateur dans Visual Studio, vous devez ouvrir le fichier .vbproj et spécifiez une valeur pour le `SubsystemVersion` propriété dans le XML de MSBuild. Vous ne pouvez pas définir cette option dans l’environnement IDE de Visual Studio. Pour plus d’informations, consultez « Valeurs par défaut » plus haut dans cette rubrique ou [Propriétés communes des projets MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
-  
 
-  
 ## <a name="see-also"></a>Voir aussi
 
 - [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

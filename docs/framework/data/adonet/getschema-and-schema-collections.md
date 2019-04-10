@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230172"
 ---
 # <a name="getschema-and-schema-collections"></a>Collections GetSchema et Schema
 Le **connexion** classes dans chacun de l’implémentation de fournisseurs managés .NET Framework un **GetSchema** méthode qui est utilisée pour récupérer des informations de schéma sur la base de données qui est actuellement connecté, et les informations de schéma retournées par la **GetSchema** méthode est fourni sous la forme d’un <xref:System.Data.DataTable>. Le **GetSchema** méthode est une méthode surchargée qui fournit des paramètres facultatifs pour spécifier la collection de schémas à retourner et restreindre la quantité d’informations retournées.  
@@ -20,7 +20,7 @@ Le **connexion** classes dans chacun de l’implémentation de fournisseurs mana
   
  Vous pouvez interroger un fournisseur .NET Framework managé afin de déterminer la liste des collections de schémas prises en charge en appelant le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu’elles prennent en charge et le nombre d’éléments d’identification qu’elles utilisent.  
   
-### <a name="retrieving-schema-collections-example"></a>Exemple d’extraction de collections de schémas  
+### <a name="retrieving-schema-collections-example"></a>Exemple d'extraction de collections de schémas  
  Les exemples suivants montrent comment utiliser le <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> méthode du fournisseur de données .NET Framework pour SQL Server <xref:System.Data.SqlClient.SqlConnection> classe à récupérer les informations de schéma sur toutes les tables contenues dans le **AdventureWorks**base de données exemple :  
   
 ```vb  
@@ -105,5 +105,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+
+- [Extraction des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

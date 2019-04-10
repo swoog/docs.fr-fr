@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230094"
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
 Cette rubrique fournit des pratiques recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
@@ -26,10 +26,10 @@ Cette rubrique fournit des pratiques recommandées pour la communication en file
  Les sections suivantes décrivent des méthodes recommandées pour les scénarios qui requièrent une messagerie fiable de bout en bout.  
   
 ### <a name="basic-reliable-transfer"></a>Transfert fiable de base  
- Pour une fiabilité de bout en bout, affectez à la propriété <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> la valeur `true` pour garantir le transfert. La propriété <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> peut avoir la valeur `true` ou `false` selon vos spécifications (la valeur par défaut est `true`). En général, la propriété <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> a la valeur `true` dans le cadre de la fiabilité de bout en bout. Ce compromis est a une incidence sur la performance, mais rend le message durable afin qu'il ne soit pas perdu si un gestionnaire de files d'attente tombe en panne.  
+ Pour une fiabilité de bout en bout, affectez à la propriété <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> la valeur `true` pour garantir le transfert. La propriété <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> peut avoir la valeur `true` ou `false` selon vos exigences (la valeur par défaut est `true`). En général, la propriété <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> a la valeur `true` dans le cadre de la fiabilité de bout en bout. Ce compromis est a une incidence sur la performance, mais rend le message durable afin qu'il ne soit pas perdu si un gestionnaire de files d'attente tombe en panne.  
   
 ### <a name="use-of-transactions"></a>Utilisation des transactions  
- Vous devez utiliser des transactions pour garantir la fiabilité de bout en bout. `ExactlyOnce` garantit seulement que les messages sont remis à la file d'attente cible. Pour vous assurer que le message est reçu, utilisez des transactions. Sans transactions, si le service tombe en panne, vous perdez le message en cours de livraison qui est en fait remis à l’application.  
+ Vous devez utiliser des transactions pour garantir la fiabilité de bout en bout. `ExactlyOnce` garantit seulement que les messages sont remis à la file d’attente cible. Pour vous assurer que le message est reçu, utilisez des transactions. Sans transactions, si le service tombe en panne, vous perdez le message en cours de livraison qui est en fait remis à l'application.  
   
 ### <a name="use-of-dead-letter-queues"></a>Utilisation des files d'attente de lettres mortes  
  Les files d'attente de lettres mortes vous permettre d'être averti si un message n'est pas remis à la file d'attente cible. Vous pouvez utiliser la file d'attente de lettres mortes fournie par le système ou une file d'attente de lettres mortes personnalisée. En général, il est préférable d'utiliser une file d'attente de lettres mortes personnalisée car elle vous permet d'envoyer des messages de lettres mortes d'une application à une file d'attente de lettres mortes unique. Sinon, tous les messages de lettres mortes qui se produisent pour toutes les applications qui s'exécutent sur le système sont remis à une file d'attente unique. Chaque application doit ensuite parcourir la file d'attente de lettres mortes pour rechercher les messages de lettres mortes qui sont pertinents pour cette application. Parfois, l'utilisation d'une file d'attente de lettres mortes personnalisée n'est pas possible, lors de l'utilisation de MSMQ 3.0. par exemple.  
@@ -41,7 +41,7 @@ Cette rubrique fournit des pratiques recommandées pour la communication en file
 ### <a name="use-of-poison-message-handling"></a>Utilisation de la gestion des messages incohérents  
  La gestion des messages empoisonnés permet de reprendre le traitement des messages après une défaillance.  
   
- Lorsque vous utilisez la fonctionnalité de gestion des messages incohérents, vérifiez que la propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> a la valeur appropriée. Lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Drop> signifie que les données sont perdues. En revanche, lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Fault> entraîne la défaillance de l'hôte de service lorsqu'il détecte un message incohérent. Avec MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> est la meilleure option pour éviter la perte de données et se débarrasser du message incohérent. Avec MSMQ 4.5, <xref:System.ServiceModel.ReceiveErrorHandling.Move> est l'approche recommandée. <xref:System.ServiceModel.ReceiveErrorHandling.Move> déplace un message incohérent hors de la file d'attente afin que le service puisse continuer à traiter de nouveaux messages. Le service des messages incohérents peut ensuite traiter séparément le message incohérent.  
+ Lorsque vous utilisez la fonctionnalité de gestion des messages incohérents, vérifiez que la propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> a la valeur appropriée. Lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Drop> signifie que les données sont perdues. En revanche, lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Fault> entraîne la défaillance de l'hôte de service lorsqu'il détecte un message incohérent. Avec MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> est la meilleure option pour éviter la perte de données et se débarrasser du message incohérent. Avec MSMQ 4.5, <xref:System.ServiceModel.ReceiveErrorHandling.Move> est l'approche recommandée. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Déplace un message incohérent hors de la file d’attente pour le service puisse continuer à traiter de nouveaux messages. Le service des messages incohérents peut ensuite traiter séparément le message incohérent.  
   
  Pour plus d’informations, consultez [des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
@@ -82,14 +82,15 @@ Cette rubrique fournit des pratiques recommandées pour la communication en file
 -   Avec la sérialisation XML, vous pouvez spécifier le type connu à l’aide de la `KnownTypes` d’attribut sur le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément qui est ensuite utilisé pour déterminer comment désérialiser le message XML.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Regroupement de messages mis en file d’attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
+
+- [Mise en file d'attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Procédure : échanger des messages mis en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procédure : échanger des messages avec des points de terminaison WCF et des applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Regroupement de messages mis en file d'attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [Traitement par lots des messages dans une transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Sécurisation des messages à l’aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Sécurisation des messages à l’aide de la sécurité de message](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
-- [Résolution des problèmes de messagerie en file d’attente](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Sécurisation des messages à l'aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Sécurisation des messages à l'aide de la sécurité de message](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Résolution des problèmes de messagerie en file d'attente](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

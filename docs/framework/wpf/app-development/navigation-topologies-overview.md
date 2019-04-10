@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230861"
 ---
 # <a name="navigation-topologies-overview"></a>Vue d'ensemble des topologies de navigation
 <a name="introduction"></a> Cette présentation fournit une introduction aux topologies de navigation dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trois topologies de navigation courantes, avec des exemples, sont abordées dans cet article.  
@@ -141,7 +141,8 @@ ms.locfileid: "58819591"
 -   Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Vue d’ensemble de la navigation structurée](structured-navigation-overview.md)
+- [Vue d'ensemble de la navigation structurée](structured-navigation-overview.md)

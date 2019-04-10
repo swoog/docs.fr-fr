@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231121"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
@@ -149,8 +149,9 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
  Pour bien comprendre en quoi consiste la disposition, il convient dans un premier temps de comprendre comment les éléments sont mesurés et organisés. Pour plus d’informations sur la disposition <xref:System.Windows.Controls.Panel> éléments, consultez [vue d’ensemble de panneaux](../controls/panels-overview.md). Pour mieux comprendre les différentes propriétés de positionnement qui peuvent affecter la disposition, consultez [Vue d’ensemble de l’alignement, des marges et du remplissage](alignment-margins-and-padding-overview.md). Pour obtenir un exemple de personnalisé <xref:System.Windows.Controls.Panel> élément, consultez [exemple de panneau Radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982). Lorsque vous êtes prêt à tout mettre ensemble dans une application légère, consultez [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Vue d’ensemble de Panel](../controls/panels-overview.md)
+- [Vue d'ensemble de Panel](../controls/panels-overview.md)
 - [Vue d'ensemble de l'alignement, des marges et du remplissage](alignment-margins-and-padding-overview.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)

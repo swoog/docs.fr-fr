@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227689"
 ---
 # <a name="adorners-overview"></a>Vue d'ensemble des ornements
 Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, utilisé pour fournir des signaux visuels à un utilisateur. Les ornements permettent notamment d’ajouter des descripteurs fonctionnels à des éléments ou de fournir des informations d’état sur un contrôle.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>À propos des ornements  
  Un <xref:System.Windows.Documents.Adorner> personnalisé <xref:System.Windows.FrameworkElement> qui est lié à un <xref:System.Windows.UIElement>. Les ornements sont restitués dans un <xref:System.Windows.Documents.AdornerLayer>, qui est une surface de rendu qui est toujours au-dessus de l’élément orné ou une collection d’éléments ornés. Rendu d’un ornement est indépendant du rendu de la <xref:System.Windows.UIElement> qui l’ornement est lié. Un ornement est généralement positionné par rapport à l’élément auquel il est lié, au moyen de l’origine des coordonnées 2D standard située dans le coin supérieur gauche de l’élément orné.  
@@ -33,7 +31,7 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
   
 -   Masquage visuel ou remplacement de tout ou partie d’un <xref:System.Windows.UIElement>.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit une infrastructure de base pour orner des éléments visuels. Le tableau suivant répertorie les principaux types utilisés pour orner des objets et leur but. Plusieurs exemples d’utilisation suivent.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit une infrastructure de base pour orner des éléments visuels. Le tableau suivant répertorie les principaux types utilisés pour orner des objets et leur but. Plusieurs exemples d’utilisation suivent.  
   
 |||  
 |-|-|  
@@ -102,8 +100,9 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [Vue d’ensemble des formes et dessins de base dans WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Peinture avec des images, des dessins et des objets visuels](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Vue d’ensemble des objets de dessin](../graphics-multimedia/drawing-objects-overview.md)
-- [Rubriques de guide pratique](adorners-how-to-topics.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Peinture avec des objets d'image, de dessin et visuels](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Vue d'ensemble des objets Drawing](../graphics-multimedia/drawing-objects-overview.md)
+- [Rubriques Comment](adorners-how-to-topics.md)

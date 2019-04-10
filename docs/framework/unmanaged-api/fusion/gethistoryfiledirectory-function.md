@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21742881c5aef7384be318297aa3432411c3d57c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b60dde31707175a27d2dc6c50484d6089adaeaa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229616"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory, fonction
 Récupère le chemin d’accès du répertoire de l’historique de l’application.  
@@ -53,16 +53,17 @@ HRESULT GetHistoryFileDirectory (
 ## <a name="remarks"></a>Notes  
  Opération réussie, le `pdwSize` argument est défini sur la longueur de la chaîne de chemin d’accès.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
  **Bibliothèque :** Le fichier fusion.dll et Mscorwks.dll. Utilisez le fichier Fusion.dll plutôt que Mscorwks.dll pour vous assurer que vous ciblez la version correcte du .NET Framework.  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [CreateHistoryReader, fonction](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
 - [NukeDownloadedCache, fonction](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Fonctions statiques globales de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fonctions statiques globales de la fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

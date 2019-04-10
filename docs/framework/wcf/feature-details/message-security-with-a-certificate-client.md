@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1393879c58609c501da5b2d413073328bee6d05d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227703"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sécurité de message avec un client de certificat
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et un service sécurisé à l’aide du mode de sécurité de message. Le client et le service sont tous les deux authentifiés à l'aide de certificats. Pour plus d’informations, consultez [sécurité des applications distribuées](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
@@ -18,8 +18,7 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
  ![Capture d’écran montrant un client avec certificat.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  Pour un exemple d’application, consultez [certificat de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
-  
-  
+
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Message|  
@@ -145,7 +144,8 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

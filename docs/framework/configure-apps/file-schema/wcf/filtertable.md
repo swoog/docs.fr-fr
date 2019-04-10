@@ -2,12 +2,12 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: ba65d3858cdbdf6b49c50e60f4e3cc9624fef136
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e5c7d56e35afe3001f4c70064adbfef7702c720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229275"
 ---
 # <a name="filtertable"></a>\<filterTable>
 Représente une table de routage qui contient une liste de filtres pour évaluer des messages et router les messages vers le point de terminaison client si le filtre a la valeur true.  
@@ -47,7 +47,7 @@ Représente une table de routage qui contient une liste de filtres pour évaluer
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<filtres>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mappages entre les filtres de routage et les points de terminaison cibles auxquels envoyer des messages lorsque le filtre correspond.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mappages entre les filtres de routage et les points de terminaison cibles auxquels envoyer des messages lorsque le filtre correspond.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -56,4 +56,5 @@ Représente une table de routage qui contient une liste de filtres pour évaluer
 |[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Section de configuration qui contient des tables de routage.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

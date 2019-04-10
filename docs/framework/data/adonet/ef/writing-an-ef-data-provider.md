@@ -1,21 +1,21 @@
 ---
-title: Écriture d’un fournisseur de données Entity Framework
+title: Écriture d'un fournisseur de données Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 254207b9c3f5edd55fff867b784d71359f6c94c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228742"
 ---
-# <a name="writing-an-entity-framework-data-provider"></a>Écriture d’un fournisseur de données Entity Framework
+# <a name="writing-an-entity-framework-data-provider"></a>Écriture d'un fournisseur de données Entity Framework
 Cette section explique comment écrire un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournisseur pour prendre en charge d’une source de données autres que SQL Server. Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un fournisseur qui prend en charge de SQL Server.  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Présentation du modèle de fournisseur Entity Framework  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est une base de données indépendante et il est possible d'écrire un fournisseur à l'aide du modèle de fournisseur ADO.NET pour se connecter à un jeu divers de sources de données.  
   
- Le fournisseur de données Entity Framework (construit à l'aide du modèle de fournisseur de données ADO.NET) effectue les fonctions suivantes :  
+ Le fournisseur de données Entity Framework (construit à l’aide du modèle de fournisseur de données ADO.NET) effectue les fonctions suivantes :  
   
 -   Mappe des types primitifs d'Entity Data Model (EDM) aux types de fournisseurs.  
   
@@ -42,4 +42,5 @@ Cette section explique comment écrire un [!INCLUDE[adonet_ef](../../../../../in
  [Spécification de manifeste du fournisseur](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation des fournisseurs de données](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

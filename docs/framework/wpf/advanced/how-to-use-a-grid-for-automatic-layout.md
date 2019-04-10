@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227116"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Procédure : Utiliser une grille pour la disposition automatique
 Cet exemple décrit comment utiliser une grille quand vous tirez parti de la disposition automatique pour créer une application localisable.  
@@ -30,5 +30,6 @@ Cet exemple décrit comment utiliser une grille quand vous tirez parti de la dis
 Grille  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’utilisation de la disposition automatique](use-automatic-layout-overview.md)
+
+- [Vue d'ensemble de l'utilisation de la disposition automatique](use-automatic-layout-overview.md)
 - [Utiliser la disposition automatique pour créer un bouton](how-to-use-automatic-layout-to-create-a-button.md)

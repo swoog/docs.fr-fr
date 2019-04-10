@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Résoudre les conflits en conservant des valeurs de la base de données'
+title: 'Procédure : Résoudre des conflits en conservant des valeurs de bases de données'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: f647dad951acfbc309257212018db32e655169df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230107"
 ---
-# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procédure : Résoudre les conflits en conservant des valeurs de la base de données
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procédure : Résoudre des conflits en conservant des valeurs de bases de données
 Pour rapprocher les différences entre les valeurs de base de données attendues et réelles avant d’essayer de renvoyer vos modifications, vous pouvez utiliser <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> pour conserver les valeurs trouvées dans la base de données. Les valeurs actuelles dans le modèle objet sont alors remplacées. Pour plus d’informations, consultez [d’accès concurrentiel optimiste : Vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -21,7 +21,7 @@ Pour rapprocher les différences entre les valeurs de base de données attendues
 ## <a name="example"></a>Exemple  
  Dans ce scénario, une exception <xref:System.Data.Linq.ChangeConflictException> est levée lorsque User1 tente de soumettre des modifications car User2 a modifié entre-temps les colonnes Assistant et Department. Le tableau suivant présente la situation.  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |État de la base de données d'origine lors d'une interrogation par User1 et User2.|Alfreds|Maria|Sales|  
 |User1 s'apprête à soumettre ces modifications.|Alfred||Marketing|  
@@ -31,7 +31,7 @@ Pour rapprocher les différences entre les valeurs de base de données attendues
   
  Lorsque User1 résout le conflit à l'aide de <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, le résultat dans la base de données se présente comme dans le tableau suivant :  
   
-||Manager|Assistant|Department|  
+||Responsable|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |Nouvel état après résolution du conflit.|Alfreds<br /><br /> (d'origine)|Mary<br /><br /> (de User2)|Service<br /><br /> (de User2)|  
   
@@ -41,4 +41,5 @@ Pour rapprocher les différences entre les valeurs de base de données attendues
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

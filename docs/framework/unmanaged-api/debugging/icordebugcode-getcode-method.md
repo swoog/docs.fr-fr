@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228534"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode, méthode
 Obtient tout le code pour la fonction spécifiée, la mise en forme pour le code machine. Cette méthode a été déconseillée dans le .NET Framework version 2.0. Utilisez [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) à la place.  
@@ -59,7 +59,7 @@ HRESULT GetCode (
 ## <a name="remarks"></a>Notes  
  Si le code de fonction a été divisé en plusieurs segments, elles sont concaténées par ordre croissant d’offset natif. Limites d’instruction ne sont pas vérifiées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
@@ -69,5 +69,5 @@ HRESULT GetCode (
  **Versions du .NET framework :** 1.1, 1.0  
   
 ## <a name="see-also"></a>Voir aussi
-- [GetCodeChunks, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 
+- [GetCodeChunks, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)

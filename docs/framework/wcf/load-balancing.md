@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228631"
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
 Une pour augmenter la capacité d’applications Windows Communication Foundation (WCF) consiste à les mettre à l’échelle en les déployant dans une batterie de serveurs avec équilibrage de charge. Les applications WCF peuvent être à charge équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de charge en fonction du matériel.  
@@ -80,9 +80,9 @@ Une pour augmenter la capacité d’applications Windows Communication Foundatio
  Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Équilibrage de charge avec les liaisons WSHttp et WSDualHttp  
- <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> peuvent tous deux faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge HTTP sous réserve que plusieurs modifications soient apportées à la configuration de liaison par défaut.  
+ <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> peuvent tous deux faire l’objet d’un équilibrage de charge à l’aide des techniques d’équilibrage de charge HTTP sous réserve que plusieurs modifications soient apportées à la configuration de liaison par défaut.  
   
--   Désactivez l'établissement du contexte de sécurité : pour ce faire, affectez <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> a la propriété <xref:System.ServiceModel.WSHttpBinding> de `false`. Si les sessions de sécurité sont nécessaires, il est également possible d’utiliser des sessions de sécurité avec état, comme décrit dans la [Sessions sécurisées](../../../docs/framework/wcf/feature-details/secure-sessions.md) rubrique. Les sessions de sécurité avec état permettent au service de rester sans état car l’ensemble de l’état de la session de sécurité est transmis avec chaque demande dans le cadre du jeton de sécurité de protection. Notez que pour activer une session de sécurité avec état, il est nécessaire d'utiliser <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l'utilisateur car les paramètres de configuration requis ne sont pas exposés sur <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> qui sont fournis par le système.  
+-   Désactivez l'établissement du contexte de sécurité : pour ce faire, affectez <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> a la propriété <xref:System.ServiceModel.WSHttpBinding> de `false`. Si les sessions de sécurité sont nécessaires, il est également possible d’utiliser des sessions de sécurité avec état, comme décrit dans la [Sessions sécurisées](../../../docs/framework/wcf/feature-details/secure-sessions.md) rubrique. Les sessions de sécurité avec état permettent au service de rester sans état car l’ensemble de l’état de la session de sécurité est transmis avec chaque demande dans le cadre du jeton de sécurité de protection. Notez que pour activer une session de sécurité avec état, il est nécessaire d’utiliser <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l’utilisateur car les paramètres de configuration requis ne sont pas exposés sur <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> qui sont fournis par le système.  
   
 -   N'utilisez pas de session fiable. Cette fonctionnalité est désactivée par défaut.  
   
@@ -92,4 +92,5 @@ Une pour augmenter la capacité d’applications Windows Communication Foundatio
  Pour de meilleures performances dans les scénarios à charge équilibrée, utilisez <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> ou <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+
+- [Meilleures pratiques pour l'hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

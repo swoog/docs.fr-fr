@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231290"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Mise à jour du service de données (services de données WCF)
 Lorsque vous utilisez le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cliente pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux, la bibliothèque traduit les entrées dans le flux en instances des classes de service de données client. Ces classes de service de données sont suivies à l'aide de l'objet <xref:System.Data.Services.Client.DataServiceContext> auquel <xref:System.Data.Services.Client.DataServiceQuery%601> appartient. Le client suit les modifications apportées aux entités que vous signalez à l'aide des méthodes sur <xref:System.Data.Services.Client.DataServiceContext>. Ces méthodes permettent au client de suivre les entités ajoutées et supprimées, ainsi que les modifications que vous apportez aux valeurs de propriété ou aux relations entre les instances d'entités. Ces modifications suivies sont renvoyées au service de données sous forme d'opérations REST lorsque vous appelez la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -73,7 +73,7 @@ Lorsque vous utilisez le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Crée un lien entre deux objets entité connexes. L'appel de cette méthode revient à appeler <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> et <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> pour créer le nouvel objet et définir la relation avec un objet existant.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Crée un lien entre deux objets entité connexes.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Met à jour un lien existant entre deux objets entité associés. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> est également utilisé pour supprimer des liens avec une cardinalité de zéro-ou-un (`0..1:1`) et un-à-un (`1:1`). Pour ce faire, vous pouvez définir l'objet lié sur `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Met à jour un lien existant entre deux objets entité associés. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> est également utilisé pour supprimer des liens avec une cardinalité de zéro-ou-un-à-un (`0..1:1`) et un à un (`1:1`). Pour ce faire, vous pouvez définir l'objet lié sur `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Marque un lien que le contexte suit pour la suppression lorsque la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> est appelée. Utilisez cette méthode lorsque vous supprimez un objet connexe ou modifiez une relation en supprimant en premier le lien vers un objet existant et en ajoutant ensuite un lien au nouvel objet connexe.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Notifie le contexte d'un lien existant entre deux objets entité. Le contexte suppose que cette relation existe déjà dans le service de données et ne cherche pas à créer le lien lorsque vous appelez la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Utilisez cette méthode lorsque vous joignez des objets à un contexte et devez joindre également le lien entre les deux. Si vous définissez une nouvelle relation, vous devez utiliser à la place <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Arrête le suivi du lien spécifié dans le contexte. Cette méthode est utilisée pour supprimer les relations un-à-plusieurs (`*:*`). Pour les liens de relation avec une cardinalité de un, vous devez utiliser <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> à la place.|  
@@ -94,9 +94,10 @@ Lorsque vous utilisez le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
  Les modifications sont suivies dans l'instance <xref:System.Data.Services.Client.DataServiceContext> mais ne sont pas envoyées au serveur immédiatement. Une fois que vous avez terminé d'effectuer les modifications requises pour une activité spécifiée, appelez <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> afin de soumettre toutes les modifications au service de données. Pour plus d’informations, consultez [gérer le contexte de Service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Vous pouvez également enregistrer des modifications de façon asynchrone à l'aide des méthodes <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> et <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Pour plus d’informations, consultez [opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [Opérations de traitement par lots](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
-- [Matérialisation d’objet](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Matérialisation d'objet](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
 - [Gestion du contexte du service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)

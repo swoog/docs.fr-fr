@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: ed151f998ed7d28ba7ae170839ce2fa3a1ee6135
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 128af261c429228c97d952f1f8d382f46306f711
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229314"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData (méthode)
 
@@ -45,19 +45,18 @@ HRESULT GetModuleData(
 `data`\
 [out] Le [DacpModuleData structure](dacpmoduledata-structure.md) pour contenir les informations du module chargé.
 
-
 ## <a name="remarks"></a>Notes
 
 La méthode fournie fait partie de la `ISOSDacInterface` interface et correspond à l’emplacement de 13 de la table de la méthode virtuelle.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  
 **Bibliothèque :** Aucun.  
-**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Débogage](index.md)
-- [Interface de ISOSDacInterface](isosdacinterface-interface.md)
+- [ISOSDacInterface, interface](isosdacinterface-interface.md)

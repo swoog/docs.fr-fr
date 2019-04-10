@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227481"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Nouveautés de WPF version 4.5
 <a name="introduction"></a> Cette rubrique contient des informations sur les fonctionnalités nouvelles et améliorées dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.  
@@ -126,4 +126,5 @@ ms.locfileid: "57368166"
  WPF 4.5 prend en charge les extensions de balisage pour les événements.  Bien que WPF ne définisse pas d’extension de balisage à utiliser pour les événements, des tiers sont en mesure de créer une extension de balisage qui peut être utilisée avec les événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Nouveautés dans le .NET Framework](../../whats-new/index.md)

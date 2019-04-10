@@ -1,15 +1,15 @@
 ---
-title: < Thread_UseAllCpuGroups > élément
+title: <Thread_UseAllCpuGroups>, élément
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95411f5adde07c0d00124b2793b495c7ed8f49ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 236953cc1a430a1dd2a2fbb633c7ef06e6ba200f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230835"
 ---
 # <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > élément
 Indique si le runtime distribue les threads managés entre tous les groupes de processeurs.  
@@ -36,7 +36,7 @@ Indique si le runtime distribue les threads managés entre tous les groupes de p
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`false`|Le runtime ne distribue pas les threads managés entre plusieurs groupes d’UC. Il s'agit de la valeur par défaut.|  
 |`true`|Le runtime distribue les threads managés entre plusieurs groupes d’UC, si l’ordinateur dispose de plusieurs groupes d’UC et le [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) élément est activé.|  
@@ -68,6 +68,7 @@ Indique si le runtime distribue les threads managés entre tous les groupes de p
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+
+- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<GCCpuGroup > élément](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

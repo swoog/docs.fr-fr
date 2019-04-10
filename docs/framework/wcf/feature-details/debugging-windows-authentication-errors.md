@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228254"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Débogage d'erreurs d'authentification Windows
 Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurité, l'interface SSPI (Security Support Provider Interface) gère les processus de sécurité. En cas d’erreur de sécurité au niveau de la couche SSPI, elles sont signalées par Windows Communication Foundation (WCF). Cette rubrique fournit une infrastructure et un ensemble de questions permettant de diagnostiquer les erreurs.  
@@ -91,7 +91,7 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
   
 3.  Requérez que la négociation SSPI utilise Kerberos en interdisant l'utilisation de NTLM :  
   
-    1.  Effectuez cette opération dans le code, à l'aide de l'instruction suivante : `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  Cela dans le code, avec l’instruction suivante : `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  Vous pouvez également effectuer cette opération dans le fichier de configuration en affectant `allowNtlm` à l'attribut `false`. Cet attribut est contenu dans le [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
@@ -142,9 +142,10 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
  Les systèmes d’exploitation suivants ne prennent pas en charge l’authentification Windows lorsqu’il est utilisé en tant que serveur : [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, et [!INCLUDE[wv](../../../../includes/wv-md.md)]Édition familiale.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Développement et déploiement avec des identités différentes  
- Si vous développez votre application sur un ordinateur, la déployez sur un autre et utilisez différents types de compte pour vous authentifier sur chaque ordinateur, vous pouvez observer un comportement différent. Par exemple, supposons que vous développiez votre application sur un ordinateur Windows XP Professionnel à l'aide du mode d'authentification `SSPI Negotiated`. Si vous utilisez un compte d'utilisateur local pour vous authentifier, le protocole NTLM sera alors utilisé. Une fois que l'application est développée, vous déployez le service sur un ordinateur Windows Server 2003 où il s'exécute sous un compte de domaine. À ce stade, le client ne sera pas en mesure d'authentifier le service car il utilisera Kerberos et un contrôleur de domaine.  
+ Si vous développez votre application sur un ordinateur, la déployez sur un autre et utilisez différents types de compte pour vous authentifier sur chaque ordinateur, vous pouvez observer un comportement différent. Par exemple, supposons que vous développiez votre application sur un ordinateur Windows XP Professionnel à l’aide du mode d’authentification `SSPI Negotiated`. Si vous utilisez un compte d'utilisateur local pour vous authentifier, le protocole NTLM sera alors utilisé. Une fois que l'application est développée, vous déployez le service sur un ordinateur Windows Server 2003 où il s'exécute sous un compte de domaine. À ce stade, le client ne sera pas en mesure d'authentifier le service car il utilisera Kerberos et un contrôleur de domaine.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

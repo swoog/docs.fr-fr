@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 3b9e8835c50ea6c1795fc33aa46bac51cd77defc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230627"
 ---
 # <a name="defining-primary-keys"></a>Définition des clés primaires
 Une table de base de données a généralement une colonne ou un groupe de colonnes identifiant de façon unique chaque ligne de la table. Cette colonne ou ce groupe de colonnes d'identification s'appelle la clé primaire.  
@@ -66,6 +66,7 @@ workTable.PrimaryKey = keyColumn;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Data.DataTable>
 - [Définition de schéma de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)

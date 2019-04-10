@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229412"
 ---
 # <a name="scrollviewer-how-to-topics"></a>Rubriques "Comment utiliser le ScrollViewer"
 Les rubriques de cette section montrent comment utiliser le <xref:System.Windows.Controls.ScrollViewer> élément à créer des régions déroulantes dans vos applications.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Gérer l’événement ScrollChanged](how-to-handle-the-scrollchanged-event.md)  
- [Faire défiler le contenu à l'aide de l'interface IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [Faire défiler le contenu à l’aide de l’interface IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
  [Utiliser les méthodes de défilement du contenu de ScrollViewer](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>Référence  
@@ -28,5 +28,6 @@ Les rubriques de cette section montrent comment utiliser le <xref:System.Windows
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de Panel](panels-overview.md)
-- [Disposition](../advanced/layout.md)
+
+- [Vue d'ensemble de Panel](panels-overview.md)
+- [Mise en page](../advanced/layout.md)

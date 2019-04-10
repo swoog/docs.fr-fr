@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f256195a4cd5b18f568e05156db867aa5dba9161
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229821"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType, énumération
 Contient des valeurs qui indiquent le type de tâche est représentée par un [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.  
@@ -60,14 +60,15 @@ typedef enum ETaskType {
 |`TT_UNKNOWN`|La tâche est inconnue.|  
 |`TT_USER`|L’interface représente une tâche utilisateur.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+
+- [Énumérations d'hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

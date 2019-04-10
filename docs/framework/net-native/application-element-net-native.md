@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228300"
 ---
 # <a name="application-element-net-native"></a>\<Application >, élément (.NET Native)
 Sert de conteneur pour les types à l'échelle de l'application et pour les membres de type dont les métadonnées sont disponibles pour la réflexion au moment de l'exécution, et applique la stratégie de réflexion runtime à tous les éléments de programme dans une application.  
@@ -52,7 +52,7 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
   
 ## <a name="all-attributes"></a>Tous les attributs  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*paramètre_stratégie*|Paramètre de cette stratégie à appliquer aux types dans l'application. Les valeurs possibles sont `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` et `Required All`. Pour plus d’informations, consultez [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -61,14 +61,14 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applique la stratégie à tous les types d'un assembly particulier.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie à tous les types d'un espace de noms particulier.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie à tous les types d'un espace de noms particulier.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applique la stratégie à un type particulier, tel qu'une classe ou une structure.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applique la stratégie à un type générique construit. Par exemple, vous pouvez utiliser un élément [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) afin de définir une stratégie pour un type `List<String>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie à une méthode sur un type particulier.|  
+|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie à une méthode sur un type particulier.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applique la stratégie à une méthode générique construite.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie à une propriété sur un type particulier.|  
+|[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie à une propriété sur un type particulier.|  
 |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applique la stratégie à un champ sur un type particulier.|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie à un événement sur un type particulier.|  
+|[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie à un événement sur un type particulier.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -86,7 +86,8 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
 -   En tant qu'élément qui définit la stratégie à l'échelle de l'application pour la réflexion, la sérialisation et l'interopérabilité. Les attributs de l’élément `<Application>` définissent la stratégie à l’échelle de l’application, qui peut être substituée par les éléments enfants définis par l’élément `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [\<Bibliothèque > élément](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)
+
+- [\<Library>, élément](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives>, élément](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser l’anticrénelage avec du texte'
+title: 'Procédure : utiliser l’anticrénelage avec du texte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227611"
 ---
-# <a name="how-to-use-antialiasing-with-text"></a>Procédure : Utiliser l’anticrénelage avec du texte
+# <a name="how-to-use-antialiasing-with-text"></a>Procédure : utiliser l’anticrénelage avec du texte
 *Anticrénelage* fait référence au lissage de bords dentelés des graphiques dessinés et du texte pour améliorer leur apparence ou la lisibilité. Avec managé [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes, vous pouvez afficher le texte non crénelé haute qualité, ainsi que le texte de qualité inférieure. En règle générale, un rendu de qualité supérieur prend plus de temps de traitement que le rendu de qualité inférieure. Pour définir le niveau de qualité de texte, définissez la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriété d’un <xref:System.Drawing.Graphics> à un des éléments de la <xref:System.Drawing.Text.TextRenderingHint> énumération  
   
 ## <a name="example"></a>Exemple  
@@ -35,4 +35,5 @@ ms.locfileid: "58464721"
  L’exemple de code précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de polices et de texte](using-fonts-and-text.md)

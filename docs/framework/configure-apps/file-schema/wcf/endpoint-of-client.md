@@ -2,12 +2,12 @@
 title: <endpoint> de <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231199"
 ---
 # <a name="endpoint-of-client"></a>\<point de terminaison > de \<client >
 Spécifie les propriétés du contrat, de la liaison et de l’adresse du point de terminaison du canal employées par les clients pour se connecter aux points de terminaison de service sur le serveur.  
@@ -37,14 +37,14 @@ Spécifie les propriétés du contrat, de la liaison et de l’adresse du point 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|address|Attribut de chaîne requis.<br /><br /> Spécifie l'adresse du point de terminaison. La valeur par défaut est une chaîne vide. L'adresse doit être un URI absolu.|  
+|adresse|Attribut de chaîne requis.<br /><br /> Spécifie l'adresse du point de terminaison. La valeur par défaut est une chaîne vide. L'adresse doit être un URI absolu.|  
 |behaviorConfiguration|Chaîne qui contient le nom de comportement du comportement à utiliser pour instancier le point de terminaison. Le nom du comportement doit être dans la portée, au niveau où le service est défini. La valeur par défaut est une chaîne vide.|  
 |liaison|Attribut de chaîne requis.<br /><br /> Chaîne qui indique le type de liaison à utiliser. Ce type doit posséder une section de configuration inscrite pour pouvoir être référencé. Il est inscrit en fonction du nom de la section et non en fonction du nom du type de la liaison.|  
-|bindingConfiguration|Facultatif. Chaîne qui contient le nom de la configuration de liaison à utiliser lorsque le point de terminaison est instancié. La configuration de la liaison doit être dans la portée, au niveau où le point de terminaison est défini. La valeur par défaut est une chaîne vide.<br /><br /> Cet attribut est utilisé conjointement à `binding` pour référencer une configuration de liaison spécifique dans le fichier de configuration. Définissez cet attribut si vous essayez d'utiliser une liaison personnalisée. Sinon, une exception peut être levée.|  
+|bindingConfiguration|Optionnel. Chaîne qui contient le nom de la configuration de liaison à utiliser lorsque le point de terminaison est instancié. La configuration de la liaison doit être dans la portée, au niveau où le point de terminaison est défini. La valeur par défaut est une chaîne vide.<br /><br /> Cet attribut est utilisé conjointement à `binding` pour référencer une configuration de liaison spécifique dans le fichier de configuration. Définissez cet attribut si vous essayez d’utiliser une liaison personnalisée. Sinon, une exception peut être levée.|  
 |contrat|Attribut de chaîne requis.<br /><br /> Chaîne qui indique le contrat exposé par ce point de terminaison. L'assembly doit implémenter le type de contrat.|  
 |endpointConfiguration|Chaîne qui spécifie le nom du point de terminaison standard défini par l'attribut `kind`, qui fait référence aux informations de configuration supplémentaires de ce point de terminaison standard. Le même nom doit être défini dans la section `<standardEndpoints>`.|  
 |kind|Chaîne qui spécifie le type de point de terminaison standard appliqué. Le type doit être inscrit dans la section `<extensions>` ou dans machine.config. Si rien n'est spécifié, un point de terminaison de canal commun est créé.|  
-|name|Attribut de chaîne facultatif. Cet attribut identifie uniquement un point de terminaison pour un contrat donné. Vous pouvez définir plusieurs clients pour un type de contrat donné. Chaque définition doit être différenciée par un nom de configuration unique. Si cet attribut est omis, le point de terminaison correspondant est utilisé comme point de terminaison par défaut associé au type de contrat spécifié. La valeur par défaut est une chaîne vide.<br /><br /> L’attribut `name` d’une liaison est utilisé pour l’exportation de définition à travers WSDL.|  
+|name|Attribut de chaîne facultatif. Cet attribut identifie uniquement un point de terminaison pour un contrat donné. Vous pouvez définir plusieurs clients pour un type de contrat donné. Chaque définition doit être différenciée par un nom de configuration unique. Si cet attribut est omis, le point de terminaison correspondant est utilisé comme point de terminaison par défaut associé au type de contrat spécifié. La valeur par défaut est une chaîne vide.<br /><br /> L'attribut `name` d'une liaison est utilisé pour l'exportation de définition à travers WSDL.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -72,6 +72,7 @@ Spécifie les propriétés du contrat, de la liaison et de l’adresse du point 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>

@@ -1,5 +1,5 @@
 ---
-title: Élément <providerOption>
+title: <providerOption> Élément
 ms.date: 03/30/2017
 f1_keywords:
 - provideroption
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: bb29ba8721c3aa13fad4410208b1276bdfa761c1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229782"
 ---
 # <a name="provideroption-element"></a>\<providerOption > élément
 Spécifie les attributs de version du compilateur pour un fournisseur de langage.  
@@ -50,22 +50,22 @@ Spécifie les attributs de version du compilateur pour un fournisseur de langage
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<configuration>, élément](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Élément racine dans chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
+|[\<configuration > élément](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Élément racine dans chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
 |[\<System.CodeDom > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Spécifie les paramètres de configuration du compilateur pour les fournisseurs de langages disponibles.|  
 |[\<compilateurs > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Conteneur pour les éléments de configuration de compilateur ; contient zéro ou plusieurs `<compiler>` éléments.|  
-|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Spécifie les attributs de configuration du compilateur pour un fournisseur de langage.|  
+|[\<compilateur > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Spécifie les attributs de configuration du compilateur pour un fournisseur de langage.|  
   
 ## <a name="remarks"></a>Notes  
  Dans le .NET Framework version 3.5, les fournisseurs de code Code Document Object Model (CodeDOM) peuvent prendre en charge les options spécifiques au fournisseur à l’aide de la `<providerOption>` élément.  
   
- Le .NET Framework 3.5 inclut des assemblys .NET Framework 2.0 mis à jour et fournit des assemblys 3.5 qui contiennent de nouveaux types. Les fournisseurs de code Microsoft C# et Visual Basic sont contenus dans les assemblys .NET Framework 2.0, mais ont été mis à jour pour prendre en charge les compilateurs de la version 3.5. Par défaut, les fournisseurs de code mis à jour génèrent du code pour les compilateurs de la version 2.0. Vous pouvez utiliser le `<providerOption>` élément pour modifier la version de compilateur cible en 3.5. Pour ce faire, spécifiez « CompilerVersion » pour le `name` attribut et « v3.5 » pour le `value` attribut. Vous devez faire précéder le numéro de version avec un « v » en minuscules.  
+ Le .NET Framework 3.5 inclut des assemblys .NET Framework 2.0 mis à jour et fournit des assemblys 3.5 qui contiennent de nouveaux types. Les fournisseurs de code Microsoft c# et Visual Basic sont contenus dans les assemblys .NET Framework 2.0, mais ont été mis à jour pour prendre en charge les compilateurs de la version 3.5. Par défaut, les fournisseurs de code mis à jour génèrent du code pour les compilateurs de la version 2.0. Vous pouvez utiliser le `<providerOption>` élément pour modifier la version de compilateur cible en 3.5. Pour ce faire, spécifiez « CompilerVersion » pour le `name` attribut et « v3.5 » pour le `value` attribut. Vous devez faire précéder le numéro de version avec un « v » en minuscules.  
   
  Vous pouvez rendre la spécification de version global en ajoutant le `<providerOption>` élément au fichier racine Web.config ou Machine.config de .NET Framework 2.0. Si vous mettez à jour la version de compilateur par défaut à 3.5 dans le fichier Machine.config, vous pouvez le modifier à 2.0 sur chaque application à l’aide de la `<providerOption>` élément dans le fichier de configuration d’application.  
   
  Les implémenteurs de fournisseur de code codeDOM peuvent traiter des options personnalisées en fournissant un constructeur qui accepte un `providerOptions` paramètre de type <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier la version 3.5 du fournisseur de code C# doit être utilisée.  
+ L’exemple suivant montre comment spécifier la version 3.5 du fournisseur de code c# doit être utilisée.  
   
 ```xml  
 <configuration>  
@@ -90,9 +90,10 @@ Spécifie les attributs de version du compilateur pour un fournisseur de langage
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compilateurs > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [Spécification des noms de types complets](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [compiler, élément de compilers pour compilation (schéma des paramètres ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [Spécification des noms de types qualifiés complets](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [compiler, élément de compilers pour compilation (Schéma des paramètres ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

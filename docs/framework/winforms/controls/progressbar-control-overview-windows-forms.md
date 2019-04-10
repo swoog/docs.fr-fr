@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227494"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ProgressBar (Windows Forms)
 > [!IMPORTANT]
@@ -36,5 +36,6 @@ ms.locfileid: "57707939"
 >  Le <xref:System.Windows.Forms.StatusStrip> et <xref:System.Windows.Forms.ToolStripStatusLabel> contrôles remplacent et ajoutent des fonctionnalités à la <xref:System.Windows.Forms.StatusBar> et <xref:System.Windows.Forms.StatusBarPanel> contrôle ; Toutefois, le <xref:System.Windows.Forms.StatusBar> et <xref:System.Windows.Forms.StatusBarPanel> contrôles ont été conservés pour la compatibilité descendante et une utilisation ultérieure, si vous Choisissez.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar, contrôle](progressbar-control-windows-forms.md)

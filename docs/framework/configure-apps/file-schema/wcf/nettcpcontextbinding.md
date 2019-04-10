@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 35a7f322a38135ae2f728993f29b570c1fa94e8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228443"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requiert la signature du niveau de protection. Le contextExchangeMechanism pour NetTcpContextBinding est SOAPHeader.  
@@ -67,8 +67,7 @@ Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requier
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|closeTimeout|
-  <xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de fermeture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
+|closeTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de fermeture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |contextProtectionLevel|Valeur <xref:System.Net.Security.ProtectionLevel> valide indiquant le niveau de protection souhaité pour l'en-tête SOAP qui est utilisé pour propager les informations de contexte.  La valeur par défaut est <xref:System.Net.Security.ProtectionLevel.Sign>.|  
 |hostnameComparisonMode|Spécifie le mode de comparaison du nom d'hôte HTTP utilisé pour analyser des URI. Cet attribut est de type <xref:System.ServiceModel.HostNameComparisonMode>, ce qui indique si le nom d'hôte est utilisé pour atteindre le service en cas de correspondance sur l'URI. La valeur par défaut est <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, qui ignore le nom d'hôte dans la correspondance.|  
 |listenBacklog|Entier positif qui spécifie le nombre maximal des canaux en attente d'être acceptés sur l'écouteur. Les connexions dépassant cette limite sont mises en file d'attente jusqu'à ce que de l'espace soit disponible en dessous cette limite. L'attribut `connectionTimeout` limite le temps que devra attendre un client pour être connecté avant de lever une exception de connexion. La valeur par défaut est 10.|  
@@ -80,8 +79,7 @@ Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requier
 |openTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |portSharingEnabled|Valeur booléenne qui spécifie si le partage de port TCP est activé pour cette connexion. Si elle est définie à `false`, chaque de liaison utilise son propre port exclusif. Ce paramètre est uniquement pertinent aux services, du fait que les clients ne sont pas affectés.|  
 |receiveTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:10:00.|  
-|sendTimeout|
-  <xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
+|sendTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |transactionFlow|Valeur booléenne qui spécifie si la liaison prend en charge le flux WS-Transactions. La valeur par défaut est `false`.|  
 |transactionProtocol|Spécifie le protocole de transaction à utiliser avec cette liaison. Les valeurs valides sont les suivantes :<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> La valeur par défaut est OleTransactions. Cet attribut est de type <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|Valeur <xref:System.ServiceModel.TransferMode> qui spécifie si les messages sont mis en mémoire tampon ou transmis en continu ou s'il s'agit d'une demande ou d'une réponse.|  
@@ -101,6 +99,7 @@ Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requier
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>

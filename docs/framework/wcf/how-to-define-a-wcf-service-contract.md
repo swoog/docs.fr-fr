@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228391"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutoriel : Définir un contrat de service Windows Communication Foundation
 
@@ -29,10 +29,9 @@ Dans ce didacticiel, vous apprendrez à :
 > - Créer un **bibliothèque du Service WCF** projet.
 > - Définir une interface de contrat de service.
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Créez un projet de bibliothèque du Service WCF et définir une interface de contrat de service
 
-1. Ouvrez Visual Studio en tant qu’administrateur. Pour ce faire, sélectionnez le programme Visual Studio dans le **Démarrer** menu, puis sélectionnez **plus** > **exécuter en tant qu’administrateur** dans le menu contextuel.
+1. Ouvrez Visual Studio en tant qu’administrateur. Pour ce faire, sélectionnez le programme Visual Studio dans le **Démarrer** menu, puis sélectionnez **plus** > **exécuter en tant qu’administrateur** dans le menu contextuel.
 
 2. Créer un **bibliothèque du Service WCF** projet.
 
@@ -54,7 +53,6 @@ Dans ce didacticiel, vous apprendrez à :
 
       > [!NOTE]
       > Si vous avez installé Visual Studio avec des paramètres d’environnement de développement de Visual Basic, la solution peut être masquée. Si c’est le cas, sélectionnez **Options** à partir de la **outils** menu, puis sélectionnez **projets et Solutions** > **général** dans le **Options** fenêtre. Sélectionnez **toujours afficher la solution**. En outre, vérifiez que **enregistrer les nouveaux projets lors de la création** est sélectionné.
-
 
 3. À partir de **l’Explorateur de solutions**, ouvrez le **IService1.cs** ou **IService1.vb** , puis remplacez son code avec le code suivant :
 

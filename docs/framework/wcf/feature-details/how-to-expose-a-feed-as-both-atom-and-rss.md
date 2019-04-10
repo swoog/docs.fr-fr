@@ -1,23 +1,23 @@
 ---
-title: 'Procédure : Exposer un flux en tant qu’Atom et RSS'
+title: 'Procédure : exposer un flux en tant que flux Atom et RSS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228404"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procédure : Exposer un flux en tant qu’Atom et RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procédure : exposer un flux en tant que flux Atom et RSS
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication à l'aide d'Atom 1.0 et de RSS 2.0. Ce service expose un point de terminaison qui peut retourner l'un ou l'autre format de syndication. Pour simplifier, le service utilisé dans cet exemple est auto-hébergé. Dans un environnement de production, un service de ce type est hébergé sous IIS ou WAS. Pour plus d’informations sur WCF différentes options d’hébergement, consultez [hébergement](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Pour créer un service de syndication de base  
   
-1.  Définissez un contrat de service utilisant une interface marquée avec l'attribut <xref:System.ServiceModel.Web.WebGetAttribute>. Chaque opération exposée comme un flux de syndication retourne un objet <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Notez les paramètres de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` spécifie l'URL utilisée pour appeler cette opération de service. La chaîne pour ce paramètre contient des littéraux et une variable entre accolades ({*format*}). Cette variable correspond au paramètre `format` de l'opération de service. Pour plus d'informations, consultez <xref:System.UriTemplate>. `BodyStyle` affecte la façon dont les messages que cette opération de service envoie et reçoit sont écrits. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> spécifie que les données envoyées vers et depuis cette opération de service ne sont pas renvoyées à la ligne par les éléments XML définis dans l'infrastructure. Pour plus d'informations, consultez <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Définissez un contrat de service utilisant une interface marquée avec l'attribut <xref:System.ServiceModel.Web.WebGetAttribute>. Chaque opération exposée comme un flux de syndication retourne un objet <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Notez les paramètres de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Spécifie l’URL utilisée pour appeler cette opération de service. La chaîne pour ce paramètre contient des littéraux et une variable entre accolades ({*format*}). Cette variable correspond au paramètre `format` de l'opération de service. Pour plus d'informations, consultez <xref:System.UriTemplate>. `BodyStyle` affecte la façon dont les messages que cette opération de service envoie et reçoit sont écrits. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Spécifie que les données envoyées vers et à partir de cette opération de service ne sont pas encapsulées par les éléments XML définis dans l’infrastructure. Pour plus d'informations, consultez <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -96,5 +96,6 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
  Lors de la compilation du code précédent, référencez System.ServiceModel.dll et System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

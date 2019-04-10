@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: ad5f2211319599dbc29055b9f04b547f84f7b9fd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c5668bd056c180f2cdf9b6160aa4d96e2ac2f5f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228599"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual C\#
 Avec [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], vous pouvez créer des contrôles personnalisés puissants grâce à *l’héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton héritera des fonctionnalités des formulaires Windows standard <xref:System.Windows.Forms.Button> contrôler et exposera une propriété personnalisée nommée `ButtonValue`.  
@@ -142,5 +142,6 @@ Avec [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], vous pouvez 
      Le chiffre « 5 » s’affiche dans `label1`, ce qui prouve que la propriété `ButtonValue` de votre contrôle hérité a été définie sur `label1` via la méthode `valueButton1_Click`. Par conséquent, votre contrôle `ValueButton` hérite de toutes les fonctionnalités du bouton Windows Forms standard, mais expose en outre une propriété personnalisée supplémentaire.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Afficher un contrôle dans la boîte de dialogue de boîte à outils éléments choisir](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Procédure pas à pas : Création d’un contrôle Composite avec VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+
+- [Procédure : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procédure pas à pas : Création d'un contrôle composite à l'aide de Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

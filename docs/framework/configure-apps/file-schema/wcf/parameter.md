@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230796"
 ---
 # <a name="parameter"></a>\<parameter>
 Indique le paramètre générique lorsqu'un type déclaré est générique.  
@@ -38,7 +38,7 @@ Indique le paramètre générique lorsqu'un type déclaré est générique.
   
 ## <a name="index-attribute"></a>Indexer l'Attribut  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |"0"|Premier paramètre du type générique. Par exemple, <xref:System.Collections.Generic.List%601> dispose d'un seul paramètre. S'il est utilisé comme type déclaré, l'index a la valeur « 0 ».|  
 |"1"|Second paramètre d'un type générique. Par exemple, <xref:System.Collections.Generic.Dictionary%602> dispose de deux paramètres. Si le type connu est renvoyé par le second paramètre, affectez à l'attribut d'index la valeur « 1 ».|  
@@ -60,6 +60,7 @@ Indique le paramètre générique lorsqu'un type déclaré est générique.
  Cet élément de configuration ne peut pas contenir les deux attributs simultanément. Si c'est le cas, un <xref:System.Configuration.ConfigurationErrorsException> survient.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

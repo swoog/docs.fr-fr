@@ -2,12 +2,12 @@
 title: WindowsStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4b0508c5-669c-4fe3-9225-8a10f8ee3be4
-ms.openlocfilehash: abe5bc7e72daea7c10824e3e07167e96bd12a334
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 556df52011ced0bcad9ac2bf15b9570ce2ac7d14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229873"
 ---
 # <a name="windowsstreamsecuritybindingelement"></a>WindowsStreamSecurityBindingElement
 WindowsStreamSecurityBindingElement  
@@ -34,11 +34,12 @@ class WindowsStreamSecurityBindingElement : BindingElement
   
  Niveau de protection pour le flux TCP.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

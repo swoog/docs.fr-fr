@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Gestion des erreurs qui se produisent lors de la saisie de données dans le contrôle de DataGridView Windows Forms'
+title: 'Procédure pas à pas : gestion des erreurs qui se produisent lors de l’entrée de données dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230471"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Procédure pas à pas : Gestion des erreurs qui se produisent lors de la saisie de données dans le contrôle de DataGridView Windows Forms
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Procédure pas à pas : gestion des erreurs qui se produisent lors de l’entrée de données dans le contrôle DataGridView Windows Forms
 Gestion des erreurs dans le magasin de données sous-jacent sont une fonctionnalité requise pour une application de saisie de données. Les formulaires Windows <xref:System.Windows.Forms.DataGridView> contrôle facilite cette procédure en exposant les <xref:System.Windows.Forms.DataGridView.DataError> événement, qui est déclenché lorsque le magasin de données détecte une violation de contrainte ou une règle métier.  
   
  Dans cette procédure pas à pas, vous allez récupérer des lignes à partir de la `Customers` table dans la base de données Northwind et les afficher dans un <xref:System.Windows.Forms.DataGridView> contrôle. Lorsqu’un doublon `CustomerID` est détectée dans une nouvelle ligne ou une ligne existante modifiée, le <xref:System.Windows.Forms.DataGridView.DataError> événement se produit, et sera géré en affichant un <xref:System.Windows.Forms.MessageBox> qui décrit l’exception.  
@@ -89,9 +89,10 @@ Gestion des erreurs dans le magasin de données sous-jacent sont une fonctionnal
 -   Personnaliser l’apparence des cellules. Pour plus d'informations, voir [Procédure : Personnaliser l’apparence des cellules dans le contrôle de DataGridView Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) et [Comment : Définir des Styles de cellules par défaut pour les Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Saisie de données dans le contrôle DataGridView Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Gérer les erreurs qui se produisent lors de la saisie de données dans le contrôle de DataGridView Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Procédure pas à pas : Validation des données dans le contrôle DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Procédure : gérer les erreurs qui se produisent lors de l’entrée de données dans le contrôle DataGridView Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Procédure pas à pas : validation des données dans le contrôle DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Protection des informations de connexion](../../data/adonet/protecting-connection-information.md)

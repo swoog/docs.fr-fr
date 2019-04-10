@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Ancrer des contrôles aux Windows Forms'
+title: 'Procédure : arrimer des contrôles dans des Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], docking
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 4acda9149dd147a823eb42d3962a22b75df93802
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231524"
 ---
-# <a name="how-to-dock-controls-on-windows-forms"></a>Procédure : Ancrer des contrôles aux Windows Forms
+# <a name="how-to-dock-controls-on-windows-forms"></a>Procédure : arrimer des contrôles dans des Windows Forms
 Vous pouvez ancrer des contrôles sur les bords de votre formulaire ou demander qu’ils remplissent le conteneur du contrôle (un formulaire ou un contrôle conteneur). Par exemple, l’Explorateur Windows ancre son <xref:System.Windows.Forms.TreeView> contrôle vers le côté gauche de la fenêtre et son <xref:System.Windows.Forms.ListView> contrôle sur le côté droit de la fenêtre. Utilisez le <xref:System.Windows.Forms.Control.Dock%2A> propriété pour tous les contrôles Windows Forms visibles définir le mode d’ancrage.  
   
 > [!NOTE]
@@ -37,12 +37,13 @@ Vous pouvez ancrer des contrôles sur les bords de votre formulaire ou demander 
     >  Les contrôles hérités doivent être `Protected` pour pouvoir être ancrée. Pour modifier le niveau d’accès d’un contrôle, définissez son **modificateur** propriété dans la fenêtre Propriétés.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles Windows Forms](index.md)
+
+- [contrôles Windows Forms](index.md)
 - [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
 - [Création d'étiquettes et de raccourcis pour les contrôles Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)
 - [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md)
-- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)
-- [Guide pratique pour Ancrer les contrôles aux Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Vue d'ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Procédure : ancrer des contrôles dans des Windows Forms](how-to-anchor-controls-on-windows-forms.md)

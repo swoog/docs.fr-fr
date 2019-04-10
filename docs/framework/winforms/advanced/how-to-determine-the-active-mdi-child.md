@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déterminer l’enfant MDI actif'
+title: 'Procédure : déterminer l’enfant MDI actif'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229470"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Procédure : Déterminer l’enfant MDI actif
+# <a name="how-to-determine-the-active-mdi-child"></a>Procédure : déterminer l’enfant MDI actif
 Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a le focus sur le formulaire enfant actif. Par exemple, supposons que vous souhaitez copier le texte sélectionné dans le Presse-papiers à partir de la zone de texte du formulaire enfant. Vous devez créer une procédure qui copie le texte sélectionné dans le Presse-papiers à l’aide de la <xref:System.Windows.Forms.Control.Click> événements de l’élément de menu Copier dans le menu Edition standard.  
   
  Comme une application MDI peut avoir plusieurs instances de la même forme enfant, la procédure doit connaître le formulaire à utiliser. Pour spécifier la forme correcte, utilisez le <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> propriété, qui retourne le formulaire enfant qui a le focus ou qui a été actif récemment.  
@@ -84,8 +84,9 @@ Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a l
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Applications d’interface multidocument (MDI, Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
-- [Guide pratique pour Créer des formulaires MDI parents](how-to-create-mdi-parent-forms.md)
-- [Guide pratique pour Créer des formulaires MDI enfants](how-to-create-mdi-child-forms.md)
-- [Guide pratique pour Envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)
-- [Guide pratique pour Réorganiser des formulaires MDI enfants](how-to-arrange-mdi-child-forms.md)
+
+- [Applications d'interface multidocument (MDI, Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Procédure : créer des formulaires parents MDI](how-to-create-mdi-parent-forms.md)
+- [Procédure : créer des formulaires enfants MDI](how-to-create-mdi-child-forms.md)
+- [Procédure : envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)
+- [Procédure : organiser les formulaires enfants MDI](how-to-arrange-mdi-child-forms.md)

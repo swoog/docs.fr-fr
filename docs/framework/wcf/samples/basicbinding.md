@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 6a929c3bff9f6b2602a78775cdd5020220dc1f9b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 9b9e8b2d07ecfb02f10762cf07dd5e42dd5891bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228255"
 ---
 # <a name="basicbinding"></a>BasicBinding
 Cet exemple montre l'utilisation de `basicHttpBinding` qui fournit la communication HTTP et l'interopérabilité maximale avec les services Web de première et seconde générations.  
@@ -93,4 +93,3 @@ Press <ENTER> to terminate client.
 3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

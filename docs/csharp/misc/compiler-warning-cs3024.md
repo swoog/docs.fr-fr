@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: e49c131328f132ae6372167818d084df51ef6c78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "56798332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297291"
 ---
 # <a name="compiler-warning-cs3024"></a>Avertissement du compilateur CS3024
 Le type de contrainte 'type' n’est pas conforme CLS  
@@ -20,7 +20,7 @@ Le type de contrainte 'type' n’est pas conforme CLS
   
 ### <a name="to-eliminate-this-warning"></a>Pour supprimer cet avertissement  
   
-1.  Utilisez un type conforme CLS pour la contrainte de type.  
+1. Utilisez un type conforme CLS pour la contrainte de type.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’avertissement CS3024 à plusieurs emplacements :  

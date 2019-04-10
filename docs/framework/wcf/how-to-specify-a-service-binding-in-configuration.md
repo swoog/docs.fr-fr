@@ -1,21 +1,21 @@
 ---
-title: 'Procédure : Spécifier une liaison de Service dans la Configuration'
+title: 'Procédure : spécifier une liaison de service dans la configuration'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229860"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Procédure : Spécifier une liaison de Service dans la Configuration
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Procédure : spécifier une liaison de service dans la configuration
 Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice de base, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est configuré dans le fichier Web.config, où il est spécifié que le service utilise <xref:System.ServiceModel.BasicHttpBinding>. Pour obtenir une description de la configuration de ce service à l’aide de code au lieu d’une configuration, consultez [Comment : Spécifier une liaison de Service dans le Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
   
- Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d’adresse dans la configuration plutôt que de manière impérative dans le code. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.  
+ Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d'adresse dans la configuration plutôt que de manière impérative dans le code. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.  
   
  Toutes les étapes de configuration suivantes peuvent être entreprises à l’aide de la [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
@@ -34,7 +34,7 @@ Dans cet exemple, un contrat `ICalculator` est défini pour un service de calcul
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    >  Les informations de liaison ou d’adresse ne sont pas spécifiées dans l’implémentation du service. De plus, il n'est pas nécessaire d'écrire du code pour extraire ces informations du fichier de configuration.  
+    >  Les informations de liaison ou d'adresse ne sont pas spécifiées dans l'implémentation du service. De plus, il n'est pas nécessaire d'écrire du code pour extraire ces informations du fichier de configuration.  
   
 3.  Créez un fichier Web.config pour configurer un point de terminaison pour le `CalculatorService` qui utilise le <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -93,5 +93,6 @@ Dans cet exemple, un contrat `ICalculator` est défini pour un service de calcul
     ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Spécification d'une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

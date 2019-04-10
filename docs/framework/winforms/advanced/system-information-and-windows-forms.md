@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228898"
 ---
 # <a name="system-information-and-windows-forms"></a>Informations système et Windows Forms
 Il est parfois nécessaire de rassembler des informations sur l’ordinateur de votre application est exécuté afin de prendre des décisions dans votre code. Par exemple, vous pouvez avoir une fonction qui est uniquement applicable lorsque connecté à un domaine de réseau particulier ; Dans ce cas, vous devez permettent de déterminer le domaine et de désactiver la fonction si le domaine n’est pas présent.  
@@ -43,5 +43,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
  Membres les plus utiles de la <xref:System.Windows.Forms.SystemInformation> classe inclure <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, et <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SystemInformation>
 - [Gestion de l'alimentation dans Windows Forms](power-management-in-windows-forms.md)
