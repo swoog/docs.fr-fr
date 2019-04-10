@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229412"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="e8e6d-102">Rubriques "Comment utiliser le ScrollViewer"</span><span class="sxs-lookup"><span data-stu-id="e8e6d-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="e8e6d-103">Les rubriques de cette section montrent comment utiliser le <xref:System.Windows.Controls.ScrollViewer> élément à créer des régions déroulantes dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="e8e6d-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="8cddd-102">Rubriques "Comment utiliser le ScrollViewer"</span><span class="sxs-lookup"><span data-stu-id="8cddd-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="8cddd-103">Les rubriques de cette section montrent comment utiliser le <xref:System.Windows.Controls.ScrollViewer> élément à créer des régions déroulantes dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="8cddd-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e8e6d-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="e8e6d-104">In This Section</span></span>  
- [<span data-ttu-id="e8e6d-105">Gérer l’événement ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="e8e6d-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="e8e6d-106">Faire défiler le contenu à l'aide de l'interface IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="e8e6d-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="e8e6d-107">Utiliser les méthodes de défilement du contenu de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e8e6d-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8cddd-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="8cddd-104">In This Section</span></span>  
+ [<span data-ttu-id="8cddd-105">Gérer l’événement ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="8cddd-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="8cddd-106">Faire défiler le contenu à l’aide de l’interface IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="8cddd-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="8cddd-107">Utiliser les méthodes de défilement du contenu de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="8cddd-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="e8e6d-108">Référence</span><span class="sxs-lookup"><span data-stu-id="e8e6d-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8cddd-108">Référence</span><span class="sxs-lookup"><span data-stu-id="8cddd-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="e8e6d-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e8e6d-109">See also</span></span>
-- [<span data-ttu-id="e8e6d-110">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="e8e6d-110">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="e8e6d-111">Disposition</span><span class="sxs-lookup"><span data-stu-id="e8e6d-111">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="8cddd-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8cddd-109">See also</span></span>
+
+- [<span data-ttu-id="8cddd-110">Vue d'ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="8cddd-110">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="8cddd-111">Mise en page</span><span class="sxs-lookup"><span data-stu-id="8cddd-111">Layout</span></span>](../advanced/layout.md)
