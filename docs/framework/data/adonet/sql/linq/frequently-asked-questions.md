@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323243"
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 Les sections suivantes fournissent des réponses à quelques problèmes courants que vous êtes susceptible de rencontrer lors de l'implémentation de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  Un fichier . Effectuez la procédure suivante pour ce scénario avancé :  
   
-1.  Dans le fichier .dbml, modifiez la propriété en changeant l'indicateur <xref:System.Data.Linq.ITable.IsReadOnly%2A> en `True`.  
+1. Dans le fichier .dbml, modifiez la propriété en changeant l'indicateur <xref:System.Data.Linq.ITable.IsReadOnly%2A> en `True`.  
   
-2.  Ajoutez une classe partielle. Créez un constructeur avec des paramètres pour les membres en lecture seule.  
+2. Ajoutez une classe partielle. Créez un constructeur avec des paramètres pour les membres en lecture seule.  
   
-3.  Vérifiez la valeur par défaut de <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) pour déterminer si elle convient pour votre application.  
+3. Vérifiez la valeur par défaut de <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) pour déterminer si elle convient pour votre application.  
   
     > [!CAUTION]
     >  Si vous utilisez le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] dans Visual Studio, vos modifications peuvent être remplacées.  

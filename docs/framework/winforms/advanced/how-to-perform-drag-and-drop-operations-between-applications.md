@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327527"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procédure : exécuter des opérations glisser-déplacer entre des applications
 L’exécution d’opérations de glisser-déposer entre applications revient à activer cette action dans une application, du moment que les deux applications concernées respectent le "contrat" établi entre les propriétés <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> et <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
@@ -18,21 +18,21 @@ L’exécution d’opérations de glisser-déposer entre applications revient à
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>Pour effectuer une opération de glisser-déplacer entre applications  
   
-1.  Créez une application Windows Forms.  
+1. Créez une application Windows Forms.  
   
-2.  Ajoutez un contrôle <xref:System.Windows.Forms.TextBox> à votre formulaire.  
+2. Ajoutez un contrôle <xref:System.Windows.Forms.TextBox> à votre formulaire.  
   
-3.  Configurez le contrôle <xref:System.Windows.Forms.TextBox> pour recevoir les données déposées.  
+3. Configurez le contrôle <xref:System.Windows.Forms.TextBox> pour recevoir les données déposées.  
   
      Pour plus d’informations, consultez [Procédure pas à pas : Exécution d’une opération de glisser-déplacer dans les Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
-4.  Exécutez votre application Windows et pendant que celle-ci s'exécute, exécutez WordPad.  
+4. Exécutez votre application Windows et pendant que celle-ci s'exécute, exécutez WordPad.  
   
      WordPad est un éditeur de texte installé par Windows qui permet les opérations de glisser-déplacer. Il est accessible en appuyant sur la **Démarrer** bouton, en sélectionnant **exécuter**, puis en tapant `WordPad` dans la zone de texte de la **exécuter** boîte de dialogue et en cliquant sur **OK**.  
   
-5.  Une fois que WordPad est ouvert, tapez une chaîne de texte.  
+5. Une fois que WordPad est ouvert, tapez une chaîne de texte.  
   
-6.  À l'aide de la souris, sélectionnez le texte, puis faites glisser le texte sélectionné vers le contrôle <xref:System.Windows.Forms.TextBox> dans votre application Windows.  
+6. À l'aide de la souris, sélectionnez le texte, puis faites glisser le texte sélectionné vers le contrôle <xref:System.Windows.Forms.TextBox> dans votre application Windows.  
   
      Notez que quand vous placez la souris sur le contrôle <xref:System.Windows.Forms.TextBox> (et déclenchez donc l'événement <xref:System.Windows.Forms.Control.DragEnter>), le curseur se transforme et vous pouvez placer le texte sélectionné dans le contrôle <xref:System.Windows.Forms.TextBox>.  
   

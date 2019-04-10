@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331860"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Procédure : aligner un contrôle sur les bords des formulaires au moment du design
 Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant le <xref:System.Windows.Forms.Control.Dock%2A>. Cette propriété désigne l’emplacement de votre contrôle dans le formulaire. La propriété <xref:System.Windows.Forms.Control.Dock%2A> peut avoir les valeurs suivantes :  
@@ -31,15 +31,15 @@ Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant 
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Pour définir la propriété Dock de votre contrôle au moment du design  
   
-1.  Dans le Concepteur Windows Forms, sélectionnez votre contrôle.  
+1. Dans le Concepteur Windows Forms, sélectionnez votre contrôle.  
   
-2.  Dans le **propriétés** , cliquez sur la liste déroulante située en regard du <xref:System.Windows.Forms.Control.Dock%2A> propriété.  
+2. Dans le **propriétés** , cliquez sur la liste déroulante située en regard du <xref:System.Windows.Forms.Control.Dock%2A> propriété.  
   
      Une interface graphique représentant les six possibles <xref:System.Windows.Forms.Control.Dock%2A> paramètres s’affiche.  
   
-3.  Choisissez le paramètre approprié.  
+3. Choisissez le paramètre approprié.  
   
-4.  Votre contrôle s’ancre maintenant de la manière spécifiée par le paramètre.  
+4. Votre contrôle s’ancre maintenant de la manière spécifiée par le paramètre.  
   
 ## <a name="see-also"></a>Voir aussi
 

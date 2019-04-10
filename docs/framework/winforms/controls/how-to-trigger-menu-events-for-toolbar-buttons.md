@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228345"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303984"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Procédure : déclencher des événements de menu pour des boutons de barre d’outils
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228345"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Pour gérer l’événement de clic sur une barre d’outils  
   
-1.  Dans une procédure, ajoutez des boutons de barre d’outils à la <xref:System.Windows.Forms.ToolBar> contrôle.  
+1. Dans une procédure, ajoutez des boutons de barre d’outils à la <xref:System.Windows.Forms.ToolBar> contrôle.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228345"
        }  
     ```  
   
-2.  Ajouter un gestionnaire d’événements pour le <xref:System.Windows.Forms.ToolBar> du contrôle <xref:System.Windows.Forms.ToolBar.ButtonClick> événement. Utilisez une instruction switch case et la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe pour déterminer le bouton de barre d’outils qui a été cliqué. Sur cette base, affichez une boîte de message appropriée.  
+2. Ajouter un gestionnaire d’événements pour le <xref:System.Windows.Forms.ToolBar> du contrôle <xref:System.Windows.Forms.ToolBar.ButtonClick> événement. Utilisez une instruction switch case et la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe pour déterminer le bouton de barre d’outils qui a été cliqué. Sur cette base, affichez une boîte de message appropriée.  
   
     > [!NOTE]
     >  Dans cet exemple, une boîte de message est utilisée seulement en tant qu’espace réservé. Vous pouvez ajouter tout autre code à exécuter quand l’utilisateur clique sur les boutons de la barre d’outils.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331674"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procédure : Supprimer des lignes de la base de données
 Vous pouvez supprimer des lignes dans une base de données en supprimant le correspondantes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objets à partir de leur collection liée à des tables. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit vos modifications à la requête SQL appropriée `DELETE` commandes.  
@@ -32,11 +32,11 @@ Vous pouvez supprimer des lignes dans une base de données en supprimant le corr
   
 ### <a name="to-delete-a-row-in-the-database"></a>Pour supprimer une ligne de la base de données  
   
-1.  Interrogez la base de données concernant la ligne à supprimer.  
+1. Interrogez la base de données concernant la ligne à supprimer.  
   
-2.  Appelez la méthode <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+2. Appelez la méthode <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
   
-3.  Soumettez la modification à la base de données.  
+3. Soumettez la modification à la base de données.  
   
 ## <a name="example"></a>Exemple  
  Le premier exemple de code interroge la base de données à propos de détails de commande concernant la commande 11000, marque ces détails de commande pour suppression, et soumet ces modifications à la base de données.  

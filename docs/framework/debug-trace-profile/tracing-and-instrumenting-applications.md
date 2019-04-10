@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298904"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traçage et instrumentation d'applications
 Le traçage vous permet de surveiller le fonctionnement de votre application pendant son exécution. Vous pouvez ajouter l'instrumentation de traçage et de débogage à votre application .NET Framework au moment du développement, et utiliser cette instrumentation pendant le développement de l'application et après son déploiement. Utilisez les classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> pour enregistrer les informations relatives aux erreurs et à l'exécution de l'application dans des journaux, des fichiers texte ou d'autres appareils en vue d'une analyse ultérieure.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Phases du traçage de code  
  Le traçage de code comprend les trois phases suivantes :  
   
-1.  **Instrumentation** : vous ajoutez le code de suivi à votre application.  
+1. **Instrumentation** : vous ajoutez le code de suivi à votre application.  
   
-2.  **Suivi** : le code de suivi écrit les informations vers la cible spécifiée.  
+2. **Suivi** : le code de suivi écrit les informations vers la cible spécifiée.  
   
-3.  **Analyse** : vous évaluez les informations de suivi pour identifier et comprendre les problèmes potentiels dans l’application.  
+3. **Analyse** : vous évaluez les informations de suivi pour identifier et comprendre les problèmes potentiels dans l’application.  
   
  Durant le développement, toutes les méthodes de sortie de débogage et de traçage écrivent les informations par défaut dans la fenêtre Sortie de Visual Studio. Dans une application déployée, les méthodes écrivent les informations de traçage vers les cibles de votre choix. Pour plus d’informations sur la spécification d’une cible de sortie pour le suivi ou le débogage, consultez [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Pour utiliser le traçage dans une application  
   
-1.  Déterminez la sortie de traçage que vous souhaitez obtenir sur place après avoir déployé l'application.  
+1. Déterminez la sortie de traçage que vous souhaitez obtenir sur place après avoir déployé l'application.  
   
-2.  Créez un jeu de commutateurs. Pour plus d'informations, voir [Procédure : Configurer des commutateurs de Trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Créez un jeu de commutateurs. Pour plus d'informations, voir [Procédure : Configurer des commutateurs de Trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Ajoutez les instructions de trace au code de l'application.  
+3. Ajoutez les instructions de trace au code de l'application.  
   
-4.  Déterminez l'emplacement d'affichage de la sortie de traçage et ajoutez les écouteurs appropriés. Pour plus d’informations, consultez [Création et initialisation d’écouteurs de suivi](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Déterminez l'emplacement d'affichage de la sortie de traçage et ajoutez les écouteurs appropriés. Pour plus d’informations, consultez [Création et initialisation d’écouteurs de suivi](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Testez et déboguez votre application ainsi que le code de trace qu'elle contient.  
+5. Testez et déboguez votre application ainsi que le code de trace qu'elle contient.  
   
-6.  Compilez l'application en code exécutable, en suivant l'une des procédures ci-dessous :  
+6. Compilez l'application en code exécutable, en suivant l'une des procédures ci-dessous :  
   
     -   Utilisez le menu **Générer** et la page **Déboguer** de la boîte de dialogue **Pages de propriétés** dans l’**Explorateur de solutions**. Procédez ainsi pour compiler votre application dans Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Utilisez les directives du compilateur **Trace** et **Debug** pour la méthode de ligne de commande de compilation. Pour plus d’informations, consultez [Compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Procédez ainsi pour compiler votre application à partir d'une ligne de commande.  
   
-7.  Si un problème survient au moment de l'exécution, activez le commutateur de trace approprié. Pour plus d’informations, consultez [Configuration des commutateurs de suivi](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Si un problème survient au moment de l'exécution, activez le commutateur de trace approprié. Pour plus d’informations, consultez [Configuration des commutateurs de suivi](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      Le code de trace écrit les messages de traçage vers la cible spécifiée (par exemple, un écran, un fichier texte ou un journal des événements). Cette cible est déterminée par le type d’écouteur que vous avez inclus dans la collection **Trace.Listeners**.  
   
-8.  Analysez les messages de traçage pour identifier et comprendre les problèmes potentiels dans l'application.  
+8. Analysez les messages de traçage pour identifier et comprendre les problèmes potentiels dans l'application.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentation de traçage pour les applications distribuées  
  Pendant la phase de création d'une application distribuée, il peut être difficile de tester l'application dans des conditions d'utilisation réelles. Les équipes de développement ont rarement la possibilité de tester toutes les combinaisons de systèmes d'exploitation ou de navigateurs web (y compris toutes les versions localisées) ou de simuler un nombre élevé d'utilisateurs qui accéderont simultanément à l'application. Vous ne pouvez donc pas tester la manière dont une application distribuée répondra à un fort trafic, à des configurations différentes et aux comportements propres à chaque utilisateur final. Par ailleurs, vous ne pouvez pas interagir directement avec toutes les parties de l'application distribuée, ni afficher leur activité, car beaucoup d'entre elles ne possèdent pas l'interface utilisateur nécessaire.  

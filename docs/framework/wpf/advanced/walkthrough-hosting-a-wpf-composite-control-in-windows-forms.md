@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219601"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322834"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un environnement riche pour la création d’applications. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace d’étendre votre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plutôt que de réécrire de zéro. Un scénario courant est lorsque vous souhaitez incorporer un ou plusieurs contrôles implémentés avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] au sein de votre application Windows Forms. Pour plus d’informations sur la personnalisation des contrôles WPF, consultez [personnalisation des contrôles](../controls/control-customization.md).  
@@ -40,17 +40,17 @@ Cette procédure pas à pas nécessite Visual Studio.
 ### <a name="creating-the-project"></a>Création du projet  
  Pour démarrer le projet :  
   
-1.  Lancez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
+1. Lancez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
   
-2.  Dans Visual c# et la catégorie Windows, sélectionnez le **bibliothèque de contrôles utilisateur WPF** modèle.  
+2. Dans Visual c# et la catégorie Windows, sélectionnez le **bibliothèque de contrôles utilisateur WPF** modèle.  
   
-3.  Nommez le nouveau projet `MyControls`.  
+3. Nommez le nouveau projet `MyControls`.  
   
-4.  Pour l’emplacement, spécifiez un dossier à la racine, tel que `WindowsFormsHostingWpfControl`. Plus tard, vous placerez l’application hôte dans ce dossier.  
+4. Pour l’emplacement, spécifiez un dossier à la racine, tel que `WindowsFormsHostingWpfControl`. Plus tard, vous placerez l’application hôte dans ce dossier.  
   
-5.  Cliquez sur **OK** pour créer le projet. Le projet par défaut contienne un seul contrôle nommé `UserControl1`.  
+5. Cliquez sur **OK** pour créer le projet. Le projet par défaut contienne un seul contrôle nommé `UserControl1`.  
   
-6.  Dans l’Explorateur de solutions, renommez `UserControl1` à `MyControl1`.  
+6. Dans l’Explorateur de solutions, renommez `UserControl1` à `MyControl1`.  
   
  Votre projet doit comporter des références aux DLL système suivantes. Si l’une de ces DLL n’est pas incluse par défaut, ajoutez-la à votre projet.  
   
@@ -105,11 +105,11 @@ Cette procédure pas à pas nécessite Visual Studio.
 ### <a name="implementing-the-code-behind-file"></a>Implémentation du fichier code-behind  
  Le fichier code-behind, MyControl1.xaml.cs, implémente trois tâches essentielles :
   
-1.  La gestion de l’événement qui se produit lorsque l’utilisateur clique sur l’un des boutons  
+1. La gestion de l’événement qui se produit lorsque l’utilisateur clique sur l’un des boutons  
   
-2.  Récupère les données à partir de la <xref:System.Windows.Controls.TextBox> éléments et les empaquette dans un objet d’argument d’événement personnalisé.  
+2. Récupère les données à partir de la <xref:System.Windows.Controls.TextBox> éléments et les empaquette dans un objet d’argument d’événement personnalisé.  
   
-3.  Déclenche personnalisé `OnButtonClick` événement, qui avertit l’hôte que l’utilisateur est terminé et transmet les données à l’hôte.  
+3. Déclenche personnalisé `OnButtonClick` événement, qui avertit l’hôte que l’utilisateur est terminé et transmet les données à l’hôte.  
   
  Le contrôle expose également plusieurs propriétés de couleur et de police qui vous permettent de modifier l’apparence. Contrairement à la <xref:System.Windows.Forms.Integration.WindowsFormsHost> (classe), qui est utilisé pour héberger un contrôle Windows Forms, le <xref:System.Windows.Forms.Integration.ElementHost> classe expose le contrôle <xref:System.Windows.Controls.Panel.Background%2A> propriété uniquement. Pour conserver les similarités entre cet exemple de code et l’exemple abordé dans [procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), le contrôle expose les propriétés restantes directement.  
   
@@ -189,25 +189,25 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
 ### <a name="creating-the-project"></a>Création du projet  
  Pour démarrer le projet :  
   
-1.  Lancez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
+1. Lancez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], puis ouvrez le **nouveau projet** boîte de dialogue.  
   
-2.  Dans Visual c# et la catégorie Windows, sélectionnez le **Windows Forms Application** modèle.  
+2. Dans Visual c# et la catégorie Windows, sélectionnez le **Windows Forms Application** modèle.  
   
-3.  Nommez le nouveau projet `WFHost`.  
+3. Nommez le nouveau projet `WFHost`.  
   
-4.  Pour l’emplacement, spécifiez le même dossier de premier niveau qui contient le projet MyControls.  
+4. Pour l’emplacement, spécifiez le même dossier de premier niveau qui contient le projet MyControls.  
   
-5.  Cliquez sur **OK** pour créer le projet.  
+5. Cliquez sur **OK** pour créer le projet.  
   
  Vous devez également ajouter des références à la DLL qui contient `MyControl1` et d’autres assemblys.  
   
-1.  Cliquez sur le nom du projet dans l’Explorateur de solutions, puis sélectionnez **ajouter une référence**.  
+1. Cliquez sur le nom du projet dans l’Explorateur de solutions, puis sélectionnez **ajouter une référence**.  
   
-2.  Cliquez sur le **Parcourir** onglet et accédez au dossier qui contient MyControls.dll. Pour cette procédure pas à pas, il s’agit du dossier MyControls\bin\Debug.  
+2. Cliquez sur le **Parcourir** onglet et accédez au dossier qui contient MyControls.dll. Pour cette procédure pas à pas, il s’agit du dossier MyControls\bin\Debug.  
   
-3.  Sélectionnez MyControls.dll, puis cliquez sur **OK**.  
+3. Sélectionnez MyControls.dll, puis cliquez sur **OK**.  
   
-4.  Ajoutez les références aux assemblys suivants.  
+4. Ajoutez les références aux assemblys suivants.  
   
     -   PresentationCore  
   
@@ -222,13 +222,13 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
 ### <a name="implementing-the-user-interface-for-the-application"></a>Implémentation de l’interface utilisateur de l’application  
  L’interface utilisateur de l’application Windows Forms contient plusieurs contrôles permettant d’interagir avec le contrôle composite WPF.  
   
-1.  Ouvrez Form1 dans le Concepteur Windows Forms.  
+1. Ouvrez Form1 dans le Concepteur Windows Forms.  
   
-2.  Agrandissez le formulaire pour qu’il puisse contenir tous les contrôles.  
+2. Agrandissez le formulaire pour qu’il puisse contenir tous les contrôles.  
   
-3.  Dans le coin supérieur droit du formulaire, ajoutez un <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> contrôle pour contenir le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite.  
+3. Dans le coin supérieur droit du formulaire, ajoutez un <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> contrôle pour contenir le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite.  
   
-4.  Ajoutez le code suivant <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles au formulaire.  
+4. Ajoutez le code suivant <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles au formulaire.  
   
     |Nom|Texte|  
     |----------|----------|  
@@ -240,7 +240,7 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
     |groupBox6|Épaisseur de police|  
     |groupBox7|Données du contrôle|  
   
-5.  Ajoutez le code suivant <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> de contrôles à la <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles.  
+5. Ajoutez le code suivant <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> de contrôles à la <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> contrôles.  
   
     |GroupBox|Nom|Texte|  
     |--------------|----------|----------|  
@@ -261,7 +261,7 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
     |groupBox6|radioWeightOriginal|D'origine|  
     |groupBox6|radioWeightBold|Gras|  
   
-6.  Ajoutez le code suivant <xref:System.Windows.Forms.Label?displayProperty=nameWithType> contrôle au dernier <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Ces contrôles affichent les données retournées par la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite.  
+6. Ajoutez le code suivant <xref:System.Windows.Forms.Label?displayProperty=nameWithType> contrôle au dernier <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Ces contrôles affichent les données retournées par la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite.  
   
     |GroupBox|Nom|Texte|  
     |--------------|----------|----------|  
@@ -284,15 +284,15 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
   
  Le `Form1_Load` méthode dans le code précédent montre la procédure générale pour héberger un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle :  
   
-1.  Créer un nouveau <xref:System.Windows.Forms.Integration.ElementHost> objet.  
+1. Créer un nouveau <xref:System.Windows.Forms.Integration.ElementHost> objet.  
   
-2.  Définir le contrôle <xref:System.Windows.Forms.Control.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.  
+2. Définir le contrôle <xref:System.Windows.Forms.Control.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.  
   
-3.  Ajouter le <xref:System.Windows.Forms.Integration.ElementHost> le contrôle à la <xref:System.Windows.Forms.Panel> du contrôle <xref:System.Windows.Forms.Control.Controls%2A> collection.  
+3. Ajouter le <xref:System.Windows.Forms.Integration.ElementHost> le contrôle à la <xref:System.Windows.Forms.Panel> du contrôle <xref:System.Windows.Forms.Control.Controls%2A> collection.  
   
-4.  Créez une instance de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle.  
+4. Créez une instance de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle.  
   
-5.  Héberger le contrôle composite sur le formulaire en assignant le contrôle à la <xref:System.Windows.Forms.Integration.ElementHost> du contrôle <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> propriété.  
+5. Héberger le contrôle composite sur le formulaire en assignant le contrôle à la <xref:System.Windows.Forms.Integration.ElementHost> du contrôle <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> propriété.  
   
  Les deux lignes restantes dans le `Form1_Load` méthode joindre des gestionnaires à deux événements de contrôle :  
   

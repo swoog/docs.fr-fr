@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314657"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procédure pas à pas : Interrogation entre relations (Visual Basic)
 Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* pour représenter les relations de clé étrangère dans la base de données.  
@@ -53,15 +53,15 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Pour accéder aux objets Order à l'aide d'objets Customer  
   
-1.  Modifiez la méthode `Sub Main` en tapant ou en collant le code suivant dans la méthode :  
+1. Modifiez la méthode `Sub Main` en tapant ou en collant le code suivant dans la méthode :  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Appuyez sur F5 pour déboguer l'application.  
+2. Appuyez sur F5 pour déboguer l'application.  
   
      Deux noms apparaissent dans le message et la fenêtre de console affiche le code SQL généré.  
   
-3.  Fermez le message pour arrêter le débogage.  
+3. Fermez le message pour arrêter le débogage.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Création d'une vue fortement typée de votre base de données  
  Il est beaucoup plus facile de démarrer avec une vue fortement typée de votre base de données. En effectuant un typage fort de l'objet <xref:System.Data.Linq.DataContext>, vous n'avez pas besoin d'effectuer des appels à <xref:System.Data.Linq.DataContext.GetTable%2A>. Vous pouvez utiliser des tables fortement typées dans toutes vos requêtes lorsque vous utilisez l'objet <xref:System.Data.Linq.DataContext> fortement typé.  
@@ -70,23 +70,23 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Pour effectuer un typage fort de l'objet DataContext  
   
-1.  Ajoutez le code suivant au-dessus de la déclaration de classe `Customer`.  
+1. Ajoutez le code suivant au-dessus de la déclaration de classe `Customer`.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Modifiez `Sub Main` pour utiliser le <xref:System.Data.Linq.DataContext> fortement typé comme suit :  
+2. Modifiez `Sub Main` pour utiliser le <xref:System.Data.Linq.DataContext> fortement typé comme suit :  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Appuyez sur F5 pour déboguer l'application.  
+3. Appuyez sur F5 pour déboguer l'application.  
   
      La sortie de la fenêtre de console est :  
   
      `ID=WHITC`  
   
-4.  Appuyez sur Entrée dans la fenêtre de console pour fermer l'application.  
+4. Appuyez sur Entrée dans la fenêtre de console pour fermer l'application.  
   
-5.  Sur le **fichier** menu, cliquez sur **Enregistrer tout** si vous souhaitez enregistrer cette application.  
+5. Sur le **fichier** menu, cliquez sur **Enregistrer tout** si vous souhaitez enregistrer cette application.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  La procédure pas à pas suivante ([procédure pas à pas : Manipulation de données (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) montre comment manipuler des données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  

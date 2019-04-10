@@ -2,12 +2,12 @@
 title: traçage analytique [WCF]
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229171"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332311"
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
 Cet exemple montre comment ajouter vos propres événements de traçage dans le flux de traces analytiques que Windows Communication Foundation (WCF) écrit dans ETW dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser le <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API pour écrire des événements qui s’intègrent avec les services WCF.  
@@ -43,31 +43,31 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  À l’aide de Visual Studio 2012, ouvrez le fichier solution WCFAnalyticTracingExtensibility.sln.  
+1. À l’aide de Visual Studio 2012, ouvrez le fichier solution WCFAnalyticTracingExtensibility.sln.  
   
-2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.  
+2. Pour générer la solution, appuyez sur Ctrl+Maj+B.  
   
-3.  Pour exécuter la solution, appuyez sur Ctrl+F5.  
+3. Pour exécuter la solution, appuyez sur Ctrl+F5.  
   
      Dans le navigateur Web, cliquez sur **Calculator.svc**. L'URI du document WSDL du service doit s'afficher dans le navigateur. Copiez cet URI.  
   
-4.  Exécutez le client de test WCF (WcfTestClient.exe).  
+4. Exécutez le client de test WCF (WcfTestClient.exe).  
   
      Le client de test WCF (WcfTestClient.exe) se trouve dans `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Le répertoire d’installation de Visual Studio 2012 par défaut est `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
+5. Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
   
      Ajoutez l'adresse du point de terminaison dans la zone d'entrée.  
   
-6.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
+6. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
      Le service ICalculator est ajouté dans le volet gauche sous **Mes projets de Service**.  
   
-7.  Ouvrez l'application Observateur d'événements.  
+7. Ouvrez l'application Observateur d'événements.  
   
      Avant d’appeler le service, démarrez l’Observateur d’événements et vérifiez que le journal des événements écoute les événements de suivi émis à partir du service WCF.  
   
-8.  À partir de la **Démarrer** menu, sélectionnez **outils d’administration**, puis **Observateur d’événements**. Activer la **analyse** et **déboguer** journaux.  
+8. À partir de la **Démarrer** menu, sélectionnez **outils d’administration**, puis **Observateur d’événements**. Activer la **analyse** et **déboguer** journaux.  
   
 9. Dans l’arborescence de commandes dans l’Observateur d’événements, accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, puis **Serveur d’applications-Applications**. Avec le bouton droit **serveur d’applications-Applications**, sélectionnez **vue**, puis **afficher les journaux d’analyse et de débogage**.  
   
@@ -97,13 +97,13 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
   
 #### <a name="to-clean-up-optional"></a>Pour nettoyer (facultatif)  
   
-1.  Ouvrez **Observateur d’événements**.  
+1. Ouvrez **Observateur d’événements**.  
   
-2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, puis  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
+2. Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, puis  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
   
-3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**, puis **analytiques**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
+3. Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**, puis **analytiques**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
   
-4.  Cliquez sur **effacer** pour effacer les événements.  
+4. Cliquez sur **effacer** pour effacer les événements.  
   
 ## <a name="known-issue"></a>Problème connu  
  Il existe un problème connu dans le **Observateur d’événements** où il risque d’échouer à décoder des événements ETW. Vous pouvez voir un message d’erreur indiquant que : « La description de l’ID d’événement \<id > à partir de la source Microsoft-Windows-Application Server-Applications est introuvable. Le composant qui a déclenché cet événement n'est pas installé sur l'ordinateur local ou l'installation est endommagée. Vous pouvez installer ou réparer le composant sur l’ordinateur local. » Si vous rencontrez cette erreur, sélectionnez **Actualiser** à partir de la **Actions** menu. Le décodage de l'événement doit ensuite s'effectuer correctement.  

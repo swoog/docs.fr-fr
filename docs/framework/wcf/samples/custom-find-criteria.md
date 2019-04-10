@@ -2,21 +2,21 @@
 title: Custom Find Criteria
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332532"
 ---
 # <a name="custom-find-criteria"></a>Custom Find Criteria
 Cet exemple montre comment créer une correspondance de portée personnalisée à l'aide de la logique et comment implémenter un service de découverte personnalisé. Les clients utilisent la fonctionnalité de correspondance de portée personnalisée pour affiner et mieux tirer parti de la fonctionnalité de recherche système de la découverte WCF. Le scénario couvert par cet exemple est le suivant :  
   
-1.  Un client recherche un service de calculatrice.  
+1. Un client recherche un service de calculatrice.  
   
-2.  Pour affiner sa recherche, le client doit utiliser une règle de correspondance de portée personnalisée.  
+2. Pour affiner sa recherche, le client doit utiliser une règle de correspondance de portée personnalisée.  
   
-3.  D'après cette règle, un service répond au client si son point de terminaison correspond à l'une quelconque des portées spécifiées par le client.  
+3. D'après cette règle, un service répond au client si son point de terminaison correspond à l'une quelconque des portées spécifiées par le client.  
   
 ## <a name="demonstrates"></a>Démonstrations  
   
@@ -27,11 +27,11 @@ Cet exemple montre comment créer une correspondance de portée personnalisée �
 ## <a name="discussion"></a>Discussion  
  Le client pour le type « Ou » correspondant aux critères de recherche. Un service répond si les portées de ses points de terminaison correspondent à l'une des portées fournies par le client. Dans ce cas, le client recherche un service de calculatrice dont la portée figure dans la liste suivante :  
   
-1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
+1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
-2.  `net.tcp://Microsoft.Samples.Discovery/SeattleLocation`  
+2. `net.tcp://Microsoft.Samples.Discovery/SeattleLocation`  
   
-3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
+3. `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
  Pour cela, le client indique aux services d'utiliser une règle de correspondance de portée personnalisée en passant une correspondance de portée personnalisée par URI. Pour faciliter la mise en correspondance de portée personnalisée, le service doit utiliser un service de découverte personnalisé qui comprend la règle de correspondance de portée personnalisée et implémente la logique associée.  
   
@@ -39,13 +39,13 @@ Cet exemple montre comment créer une correspondance de portée personnalisée �
   
  Ouvrez le projet de service. L'implémentation du service de découverte personnalisé utilise trois fichiers :  
   
-1.  **AsyncResult.cs**: il s’agit de l’implémentation de la `AsyncResult` qui est requis par les méthodes de découverte.  
+1. **AsyncResult.cs**: Voici l’implémentation de la `AsyncResult` qui est requis par les méthodes de découverte.  
   
-2.  **CustomDiscoveryService.cs**: ce fichier implémente le service de découverte personnalisé. L'implémentation étend la classe <xref:System.ServiceModel.Discovery.DiscoveryService> et substitue les méthodes nécessaires. Notez l'implémentation de la méthode <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Cette méthode vérifie si la règle de correspondance de portée personnalisée a été spécifiée par le client. Il s'agit de l'URI personnalisé que le client a spécifié précédemment. Si la règle personnalisée n’est spécifiée, le chemin d’accès du code qui implémente la logique de correspondance « Ou » est suivi.  
+2. **CustomDiscoveryService.cs**: Ce fichier implémente le service de découverte personnalisé. L'implémentation étend la classe <xref:System.ServiceModel.Discovery.DiscoveryService> et substitue les méthodes nécessaires. Notez l'implémentation de la méthode <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Cette méthode vérifie si la règle de correspondance de portée personnalisée a été spécifiée par le client. Il s'agit de l'URI personnalisé que le client a spécifié précédemment. Si la règle personnalisée n’est spécifiée, le chemin d’accès du code qui implémente la logique de correspondance « Ou » est suivi.  
   
      Cette logique personnalisée parcourt toutes les portées sur chacun des points de terminaison dont le service dispose. Si l'une des portées du point de terminaison correspond à l'une des portées fournies par le client, le service de découverte ajoute ce point de terminaison à la réponse renvoyée au client.  
   
-3.  **CustomDiscoveryExtension.cs**: la dernière étape pour implémenter le service de découverte consiste à connecter cette implémentation de la personnalisation détection du service de l’hôte de service. La classe d'assistance utilisée ici est la classe `CustomDiscoveryExtension`. Cette classe étend la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. L'utilisateur doit substituer la méthode <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. Dans ce cas, la méthode retourne une instance du service de découverte personnalisé créé auparavant. `PublishedEndpoints` est un <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> qui contient tous les points de terminaison d'application qui sont ajoutés à <xref:System.ServiceModel.ServiceHost>. Le service de découverte personnalisé l'utilise pour remplir sa liste interne. Un utilisateur peut aussi ajouter d'autres métadonnées de points de terminaison.  
+3. **CustomDiscoveryExtension.cs**: La dernière étape pour implémenter le service de découverte consiste à connecter cette implémentation de la personnalisation détection du service de l’hôte de service. La classe d'assistance utilisée ici est la classe `CustomDiscoveryExtension`. Cette classe étend la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. L'utilisateur doit substituer la méthode <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. Dans ce cas, la méthode retourne une instance du service de découverte personnalisé créé auparavant. `PublishedEndpoints` est un <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> qui contient tous les points de terminaison d’application qui sont ajoutés à la <xref:System.ServiceModel.ServiceHost>. Le service de découverte personnalisé l'utilise pour remplir sa liste interne. Un utilisateur peut aussi ajouter d'autres métadonnées de points de terminaison.  
   
  Enfin, ouvrez Program.cs. Notez que <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> et `CustomDiscoveryExtension` sont tous deux ajoutés à l'hôte. Lorsque cette opération a été effectuée et que l'hôte dispose d'un point de terminaison sur lequel recevoir des messages de découverte, l'application peut utiliser le service de découverte personnalisé.  
   
@@ -53,13 +53,13 @@ Cet exemple montre comment créer une correspondance de portée personnalisée �
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Ouvrez la solution qui contient le projet.  
+1. Ouvrez la solution qui contient le projet.  
   
-2.  Générez le projet.  
+2. Générez le projet.  
   
-3.  Exécutez l'application de service.  
+3. Exécutez l'application de service.  
   
-4.  Exécutez l'application cliente.  
+4. Exécutez l'application cliente.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

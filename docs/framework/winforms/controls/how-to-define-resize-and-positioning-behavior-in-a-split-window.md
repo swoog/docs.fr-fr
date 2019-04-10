@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328671"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procédure : définir le comportement de redimensionnement et de positionnement dans une fenêtre fractionnée
 Les panneaux de la <xref:System.Windows.Forms.SplitContainer> contrôle se prêtent bien au redimensionnement et manipulées par les utilisateurs. Toutefois, il peut arriver lorsque vous souhaitez contrôler par programme le séparateur, où il est positionné, et dans quelle mesure il peut être déplacé.  
@@ -31,7 +31,7 @@ Les panneaux de la <xref:System.Windows.Forms.SplitContainer> contrôle se prêt
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>Pour définir le comportement de redimensionnement SplitContainer  
   
-1.  Dans une procédure, définissez le <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriété à la taille souhaitée, afin que le comportement « alignement » du séparateur s’exécute.  
+1. Dans une procédure, définissez le <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriété à la taille souhaitée, afin que le comportement « alignement » du séparateur s’exécute.  
   
      Dans l’exemple de code suivant, dans le formulaire <xref:System.Windows.Forms.Form.Load> événement, le séparateur dans le <xref:System.Windows.Forms.SplitContainer> contrôle est défini sur le saut de 10 pixels lorsque vous faites glisser.  
   

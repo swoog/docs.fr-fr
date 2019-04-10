@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300604"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procédure : déterminer l’enfant MDI actif
 Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a le focus sur le formulaire enfant actif. Par exemple, supposons que vous souhaitez copier le texte sélectionné dans le Presse-papiers à partir de la zone de texte du formulaire enfant. Vous devez créer une procédure qui copie le texte sélectionné dans le Presse-papiers à l’aide de la <xref:System.Windows.Forms.Control.Click> événements de l’élément de menu Copier dans le menu Edition standard.  
@@ -27,7 +27,7 @@ Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a l
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Pour déterminer l’enfant MDI actif (pour copier son texte dans le Presse-papiers)  
   
-1.  Dans une méthode, copiez le texte du contrôle actif du formulaire enfant active dans le Presse-papiers.  
+1. Dans une méthode, copiez le texte du contrôle actif du formulaire enfant active dans le Presse-papiers.  
   
     > [!NOTE]
     >  Cet exemple suppose il existe un formulaire MDI parent (`Form1`) qui a une ou plusieurs fenêtres MDI enfants contenant un <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [création de formulaires MDI parents](how-to-create-mdi-parent-forms.md).  

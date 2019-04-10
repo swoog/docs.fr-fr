@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 002c94f2cb69e330e8d2796a9f93d977b10f53f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078165"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332129"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Procédure : créer un contrat duplex
 Cette rubrique décrit les étapes de base pour créer des méthodes qui utilisent un contrat duplex (bidirectionnel). Un contrat duplex autorise les clients et les serveurs à communiquer entre eux indépendamment de sorte que l'un puisse initier des appels à l'autre. Le contrat duplex est un des trois modèles de message disponibles aux services Windows Communication Foundation (WCF). Les deux autres modèles de message sont unidirectionnels et demande/réponse. Un contrat duplex se compose de deux contrats unidirectionnels entre le client et le serveur et ne requiert pas que les appels de méthode soient corrélés. Utilisez ce type de contrat lorsque votre service doit demander au client plus d'informations ou déclencher explicitement des événements sur le client. Pour plus d’informations sur la création d’une application cliente pour un contrat duplex, consultez [Comment : Accéder aux Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Pour obtenir un exemple fonctionnel, consultez le [Duplex](../../../../docs/framework/wcf/samples/duplex.md) exemple.  
   
 ### <a name="to-create-a-duplex-contract"></a>Pour créer un contrat duplex  
   
-1.  Créez l'interface constitutive du côté serveur du contrat duplex.  
+1. Créez l'interface constitutive du côté serveur du contrat duplex.  
   
-2.  Appliquez la classe <xref:System.ServiceModel.ServiceContractAttribute> à l'interface.  
+2. Appliquez la classe <xref:System.ServiceModel.ServiceContractAttribute> à l'interface.  
   
      [!code-csharp[S_WS_DualHttp#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#3)]
      [!code-vb[S_WS_DualHttp#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#3)]  
   
-3.  Déclarez les signatures de méthode dans l'interface.  
+3. Déclarez les signatures de méthode dans l'interface.  
   
-4.  Appliquez la classe <xref:System.ServiceModel.OperationContractAttribute> à chaque signature de méthode qui doit faire partie du contrat public.  
+4. Appliquez la classe <xref:System.ServiceModel.OperationContractAttribute> à chaque signature de méthode qui doit faire partie du contrat public.  
   
-5.  Créez l'interface de rappel qui définit le jeu des opérations que le service peut appeler sur le client.  
+5. Créez l'interface de rappel qui définit le jeu des opérations que le service peut appeler sur le client.  
   
      [!code-csharp[S_WS_DualHttp#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#4)]
      [!code-vb[S_WS_DualHttp#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#4)]  
   
-6.  Déclarez les signatures de méthode dans l'interface de rappel.  
+6. Déclarez les signatures de méthode dans l'interface de rappel.  
   
-7.  Appliquez la classe <xref:System.ServiceModel.OperationContractAttribute> à chaque signature de méthode qui doit faire partie du contrat public.  
+7. Appliquez la classe <xref:System.ServiceModel.OperationContractAttribute> à chaque signature de méthode qui doit faire partie du contrat public.  
   
-8.  Liez les deux interfaces dans un contrat duplex en affectant à la propriété <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> dans l'interface primaire le type de l'interface de rappel.  
+8. Liez les deux interfaces dans un contrat duplex en affectant à la propriété <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> dans l'interface primaire le type de l'interface de rappel.  
   
 ### <a name="to-call-methods-on-the-client"></a>Pour appeler des méthodes sur le client  
   
-1.  Dans l'implémentation de service du contrat principal, déclarez une variable pour l'interface de rappel.  
+1. Dans l'implémentation de service du contrat principal, déclarez une variable pour l'interface de rappel.  
   
-2.  Affectez à la variable la référence d'objet retournée par la méthode <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> de la classe <xref:System.ServiceModel.OperationContext>.  
+2. Affectez à la variable la référence d'objet retournée par la méthode <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> de la classe <xref:System.ServiceModel.OperationContext>.  
   
      [!code-csharp[S_WS_DualHttp#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#1)]
      [!code-vb[S_WS_DualHttp#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#1)]  
@@ -53,7 +53,7 @@ Cette rubrique décrit les étapes de base pour créer des méthodes qui utilise
      [!code-csharp[S_WS_DualHttp#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#2)]
      [!code-vb[S_WS_DualHttp#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#2)]  
   
-3.  Appelez les méthodes définies par l'interface de rappel.  
+3. Appelez les méthodes définies par l'interface de rappel.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant illustre la communication duplex. Le contrat du service contient des opérations de service pour avancer et reculer. Le contrat du client contient une opération de service pour indiquer sa position.  

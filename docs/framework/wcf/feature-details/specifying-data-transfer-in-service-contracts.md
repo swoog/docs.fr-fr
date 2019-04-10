@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331518"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Spécification du transfert de données dans des contrats de service
 Windows Communication Foundation (WCF) peut être considéré comme une infrastructure de messagerie. Les opérations de service peuvent recevoir des messages, les traiter et leur envoyer des messages. Les messages sont décrits à l'aide de contrats d'opérations. Par exemple, considérons le contrat suivant.  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Les trois cas précédents (conservation de type .NET, conservation des graphiques d'objets et sérialisation `XmlObjectSerializer` complètement personnalisée) requièrent tous le branchement d'un sérialiseur personnalisé. Pour ce faire, procédez comme suit :  
   
-1.  Écrivez votre propre comportement dérivant du <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
+1. Écrivez votre propre comportement dérivant du <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
   
-2.  Substituez les deux méthodes `CreateSerializer` pour retourner votre propre sérialiseur (le <xref:System.Runtime.Serialization.NetDataContractSerializer>, le <xref:System.Runtime.Serialization.DataContractSerializer> avec `preserveObjectReferences` défini à `true`, ou votre propre <xref:System.Runtime.Serialization.XmlObjectSerializer> personnalisé).  
+2. Substituez les deux méthodes `CreateSerializer` pour retourner votre propre sérialiseur (le <xref:System.Runtime.Serialization.NetDataContractSerializer>, le <xref:System.Runtime.Serialization.DataContractSerializer> avec `preserveObjectReferences` défini à `true`, ou votre propre <xref:System.Runtime.Serialization.XmlObjectSerializer> personnalisé).  
   
-3.  Avant d'ouvrir l'hôte de service ou de créer un canal client, supprimez le comportement <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> existant et branchez la classe dérivée personnalisée que vous avez créée aux étapes précédentes.  
+3. Avant d'ouvrir l'hôte de service ou de créer un canal client, supprimez le comportement <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> existant et branchez la classe dérivée personnalisée que vous avez créée aux étapes précédentes.  
   
  Pour plus d’informations sur les concepts de sérialisation avancés, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331076"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procédure : rendre des certificats X.509 accessibles à WCF
 Pour rendre un certificat X.509 accessible à Windows Communication Foundation (WCF), le code d’application doit spécifier le nom de magasin de certificat et l’emplacement. Dans certains cas, l'identité du processus doit avoir accès au fichier contenant la clé privée associée au certificat X.509. Pour obtenir la clé privée associée à un certificat X.509 dans un magasin de certificats, WCF devez être autorisé à le faire. Par défaut, seuls le propriétaire et le compte système peuvent accéder à la clé privée d'un certificat.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Pour rendre des certificats X.509 accessibles à WCF  
   
-1.  Accordez au compte sous le WCF est en cours d’exécution un accès en lecture au fichier qui contient la clé privée associée au certificat X.509.  
+1. Accordez au compte sous le WCF est en cours d’exécution un accès en lecture au fichier qui contient la clé privée associée au certificat X.509.  
   
     1.  Déterminez si WCF requiert un accès en lecture à la clé privée pour le certificat X.509.  
   

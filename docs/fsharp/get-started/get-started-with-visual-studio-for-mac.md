@@ -2,12 +2,12 @@
 title: Prise en main F# dans Visual Studio pour Mac
 description: Découvrez comment utiliser F# avec Visual Studio pour Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604161"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331861"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Prise en main F# dans Visual Studio pour Mac
 
@@ -19,7 +19,7 @@ Un des projets plus simples dans Visual Studio pour Mac est l’Application de C
 
 1. Sur le **fichier** menu, pointez sur **nouvelle Solution**.
 
-2.  Dans la boîte de dialogue Nouveau projet, il existe 2 différents modèles d’Application de Console.  Il y a un sous autre -> .NET qui cible le .NET Framework.  L’autre modèle est sous .NET Core -> application qui cible .NET Core.  Un modèle doit fonctionner pour les besoins de cet article.
+2. Dans la boîte de dialogue Nouveau projet, il existe 2 différents modèles d’Application de Console.  Il y a un sous autre -> .NET qui cible le .NET Framework.  L’autre modèle est sous .NET Core -> application qui cible .NET Core.  Un modèle doit fonctionner pour les besoins de cet article.
 
 3. Sous l’application de console, modifiez C# à F# si nécessaire.  Choisissez le **suivant** bouton Déplacer vers l’avant !  
 
@@ -115,8 +115,8 @@ Si vous n’avez pas déjà, consultez le [visite guidée de F# ](../tour.md), q
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Visual F#](../index.md)
-- [Présentation de F#](../tour.md)
+- [Visual F#](../index.md)
+- [Visite guidée de F#](../tour.md)
 - [F#référence du langage](../language-reference/index.md)
 - [Inférence de type](../language-reference/type-inference.md)
 - [Référence des symboles et d’opérateur](../language-reference/symbol-and-operator-reference/index.md)

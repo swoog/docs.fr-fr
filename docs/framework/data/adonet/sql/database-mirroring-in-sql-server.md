@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325694"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mise en miroir de bases de données dans SQL Server
 La mise en miroir des bases de données dans SQL Server vous permet de conserver une copie, ou miroir, d'une base de données SQL Server sur un serveur en veille. La mise en miroir garantit que deux copies distinctes des données existent en permanence, en offrant une haute disponibilité et une redondance complète des données. Le fournisseur de données .NET pour SQL Server offre une prise en charge implicite de la mise en miroir de base de données, de façon à ce que le développeur ne doive pas exécuter d'action ni écrire de code une fois qu'il a été configuré pour une base de données SQL Server. En outre, l'objet <xref:System.Data.SqlClient.SqlConnection> prend en charge un mode de connexion explicite qui permet la fourniture du nom d'un serveur partenaire de basculement dans la propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  La séquence d'événements simplifiée suivante se produit pour un objet <xref:System.Data.SqlClient.SqlConnection> qui vise une base de données configurée pour la mise en miroir :  
   
-1.  L'application cliente se connecte avec succès à la base de données principale et le serveur renvoie le nom du serveur partenaire, qui est ensuite mis en cache sur le client.  
+1. L'application cliente se connecte avec succès à la base de données principale et le serveur renvoie le nom du serveur partenaire, qui est ensuite mis en cache sur le client.  
   
-2.  En cas d’échec du serveur contenant la base de données principale ou d’interruption de la connectivité, l’état de la connexion et de la transaction est perdu. L'application cliente tente de rétablir une connexion à la base de données principale et échoue.  
+2. En cas d’échec du serveur contenant la base de données principale ou d’interruption de la connectivité, l’état de la connexion et de la transaction est perdu. L'application cliente tente de rétablir une connexion à la base de données principale et échoue.  
   
-3.  L'application cliente tente ensuite de façon transparente d'établir une connexion avec la base de données miroir sur le serveur partenaire. Si elle réussit, la connexion est redirigée vers la base de données miroir qui devient alors la nouvelle base de données principale.  
+3. L'application cliente tente ensuite de façon transparente d'établir une connexion avec la base de données miroir sur le serveur partenaire. Si elle réussit, la connexion est redirigée vers la base de données miroir qui devient alors la nouvelle base de données principale.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Spécification du partenaire de basculement dans la chaîne de connexion  
  Si vous fournissez le nom d'un serveur partenaire de basculement dans la chaîne de connexion, le client essaie d'établir de façon transparente une connexion avec ce partenaire si la base de données principale est indisponible lors de la première connexion de l'application cliente.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331804"
 ---
 # <a name="securing-clients"></a>Sécurisation des clients
 Dans Windows Communication Foundation (WCF), le service dicte les exigences de sécurité pour les clients. Autrement dit, le service spécifie quel mode de sécurité utiliser, et si le client doit fournir ou non une information d'identification. Le processus de la sécurisation d'un client, par conséquent, est simple : utilisez les métadonnées obtenues depuis le service (s'il est publié) et générez un client. Les métadonnées spécifient comment configurer le client. Si le service exige que le client fournisse une information d'identification, vous devez obtenir une information d'identification qui correspond à la spécification. Cette rubrique décrit en détail le processus. Pour plus d’informations sur la création d’un service sécurisé, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ Dans Windows Communication Foundation (WCF), le service dicte les exigences de s
 ## <a name="setting-a-client-credential"></a>Définition de l'information d'identification d'un client  
  La définition de l'information d'identification d'un client s'effectue en deux étapes :  
   
-1.  Déterminer le *type d’informations d’identification du client* nécessite le service. Pour cela, vous avez le choix entre deux méthodes. En premier lieu, si vous disposez de la documentation du créateur du service, celle-ci doit spécifier le type d'information d'identification du client (le cas échéant) que le service requiert. En second lieu, si vous disposez uniquement d'un fichier de configuration généré par l'outil Svcutil.exe, vous pouvez examiner les liaisons individuelles pour déterminer quel type d'information d'identification est requis.  
+1. Déterminer le *type d’informations d’identification du client* nécessite le service. Pour cela, vous avez le choix entre deux méthodes. En premier lieu, si vous disposez de la documentation du créateur du service, celle-ci doit spécifier le type d'information d'identification du client (le cas échéant) que le service requiert. En second lieu, si vous disposez uniquement d'un fichier de configuration généré par l'outil Svcutil.exe, vous pouvez examiner les liaisons individuelles pour déterminer quel type d'information d'identification est requis.  
   
-2.  Spécifiez l'information d'identification effective du client. Les informations d’identification effective du client sont appelée un *valeur des informations d’identification de client* pour le distinguer du type. Par exemple, si le type d'information d'identification du client spécifie un certificat, vous devez fournir un certificat X.509 publié par une autorité de certification que le service approuve.  
+2. Spécifiez l'information d'identification effective du client. Les informations d’identification effective du client sont appelée un *valeur des informations d’identification de client* pour le distinguer du type. Par exemple, si le type d'information d'identification du client spécifie un certificat, vous devez fournir un certificat X.509 publié par une autorité de certification que le service approuve.  
   
 ### <a name="determining-the-client-credential-type"></a>Détermination du type d'information d'identification du client  
  Si vous disposez de la configuration de l’outil Svcutil.exe a généré de fichier, examinez le [ \<liaisons >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) section afin de déterminer quel type d’informations d’identification de client est requis. Dans la section, des éléments de liaison spécifient les conditions de sécurité. Examinez en particulier le \<sécurité > élément de chaque liaison. Cet élément inclut l'attribut `mode`, auquel vous pouvez affecter l'une de trois valeurs possibles (`Message`, `Transport` ou `TransportWithMessageCredential`). La valeur de l'attribut détermine le mode, et le mode détermine quel élément enfant est significatif.  

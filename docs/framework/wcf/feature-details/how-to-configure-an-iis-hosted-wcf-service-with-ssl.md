@@ -2,27 +2,27 @@
 title: 'Procédure : configurer un service WCF hébergé par IIS avec SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326448"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procédure : configurer un service WCF hébergé par IIS avec SSL
 Cette rubrique décrit comment installer un service WCF hébergé par IIS pour utiliser la sécurité de transport HTTP. La sécurité de transport HTTP requiert un certificat SSL à enregistrer avec IIS. Si vous n’avez pas de certificat SSL, vous pouvez utiliser IIS pour générer un certificat de test. Vous devez ensuite ajouter une liaison SSL au site web et configurer les propriétés d’authentification du site web. Enfin, vous devez configurer le service WCF pour utiliser HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Création d'un certificat auto-signé  
   
-1.  Ouvrez le Gestionnaire des services IIS (inetmgr.exe), puis choisissez le nom de votre ordinateur dans l’arborescence à gauche. Du côté droit de l'écran, sélectionnez Certificats de serveur.  
+1. Ouvrez le Gestionnaire des services IIS (inetmgr.exe), puis choisissez le nom de votre ordinateur dans l’arborescence à gauche. Du côté droit de l'écran, sélectionnez Certificats de serveur.  
   
      ![Écran d’accueil IIS Manager](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  Dans la fenêtre certificats de serveur, cliquez sur le **créer un certificat auto-signé...** Lien.  
+2. Dans la fenêtre certificats de serveur, cliquez sur le **créer un certificat auto-signé...** Lien.  
   
      ![Création d’un libre-service&#45;signé le certificat avec IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3.  Entrez un nom convivial pour le certificat auto-signé et cliquez sur **OK**.  
+3. Entrez un nom convivial pour le certificat auto-signé et cliquez sur **OK**.  
   
      ![Créer ses enregistrements&#45;boîte de dialogue certificat signé](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
@@ -34,35 +34,35 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
   
 ### <a name="add-ssl-binding"></a>Ajouter une liaison SSL  
   
-1.  Toujours dans le Gestionnaire des Services Internet, développez le **Sites** dossier, puis le **Site Web par défaut** dossier dans l’arborescence sur le côté gauche de l’écran.  
+1. Toujours dans le Gestionnaire des Services Internet, développez le **Sites** dossier, puis le **Site Web par défaut** dossier dans l’arborescence sur le côté gauche de l’écran.  
   
-2.  Cliquez sur le **liaisons...** Lien dans le **Actions** section dans la partie supérieure droite de la fenêtre.  
+2. Cliquez sur le **liaisons...** Lien dans le **Actions** section dans la partie supérieure droite de la fenêtre.  
   
      ![Ajout d’une liaison SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3.  Dans la fenêtre liaisons de Site, cliquez sur le **ajouter** bouton.  
+3. Dans la fenêtre liaisons de Site, cliquez sur le **ajouter** bouton.  
   
      ![Boîte de dialogue liaisons de site](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  Dans le **ajouter la liaison de Site** boîte de dialogue, sélectionnez le protocole https pour le type et le nom convivial du certificat auto-signé que vous avez créé.  
+4. Dans le **ajouter la liaison de Site** boîte de dialogue, sélectionnez le protocole https pour le type et le nom convivial du certificat auto-signé que vous avez créé.  
   
      ![Exemple de liaison de site](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
 ### <a name="configure-virtual-directory-for-ssl"></a>Configurer le répertoire virtuel pour SSL  
   
-1.  Toujours dans le Gestionnaire des services IIS, sélectionnez le répertoire virtuel qui contient votre service sécurisé WCF.  
+1. Toujours dans le Gestionnaire des services IIS, sélectionnez le répertoire virtuel qui contient votre service sécurisé WCF.  
   
-2.  Dans le volet central de la fenêtre, sélectionnez **paramètres SSL** dans la section IIS.  
+2. Dans le volet central de la fenêtre, sélectionnez **paramètres SSL** dans la section IIS.  
   
      ![Paramètres SSL pour le répertoire virtuel](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  Dans le volet Paramètres SSL, sélectionnez le **exiger SSL** case à cocher et cliquez sur le **appliquer** lien dans le **Actions** section sur le côté droit de l’écran.  
+3. Dans le volet Paramètres SSL, sélectionnez le **exiger SSL** case à cocher et cliquez sur le **appliquer** lien dans le **Actions** section sur le côté droit de l’écran.  
   
      ![Paramètres de répertoire virtuel SSL](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
 ### <a name="configure-wcf-service-for-http-transport-security"></a>Configurer le service WCF pour la sécurité de transport HTTP  
   
-1.  Dans le fichier web.config du service WCF, configurez la liaison HTTP pour utiliser la sécurité de transport, comme indiqué dans le code XML suivant.  
+1. Dans le fichier web.config du service WCF, configurez la liaison HTTP pour utiliser la sécurité de transport, comme indiqué dans le code XML suivant.  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
     </bindings>  
     ```  
   
-2.  Spécifiez votre service et point de terminaison de service comme indiqué dans le code XML suivant.  
+2. Spécifiez votre service et point de terminaison de service comme indiqué dans le code XML suivant.  
   
     ```xml  
     <services>  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332506"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procédure : Lier des données à l’aide d’une Source de données de projet (WCF Data Services)
 
@@ -23,11 +23,11 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Utiliser une source de données de projet dans une fenêtre WPF
 
-1.  Dans Visual Studio, dans un projet WPF, ajoutez une référence au service de données Northwind. Pour plus d'informations, voir [Procédure : Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. Dans Visual Studio, dans un projet WPF, ajoutez une référence au service de données Northwind. Pour plus d'informations, voir [Procédure : Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
-2.  Dans le **des Sources de données** fenêtre, développez le `Customers` nœud dans le **NorthwindEntities** source de données de projet.
+2. Dans le **des Sources de données** fenêtre, développez le `Customers` nœud dans le **NorthwindEntities** source de données de projet.
 
-3.  Cliquez sur le **CustomerID** élément, puis sélectionnez **ComboBox** à partir de la liste, puis faites glisser le **CustomerID** d’élément à partir de la **clients** nœud à la concepteur.
+3. Cliquez sur le **CustomerID** élément, puis sélectionnez **ComboBox** à partir de la liste, puis faites glisser le **CustomerID** d’élément à partir de la **clients** nœud à la concepteur.
 
      Cela crée les éléments objet suivants dans le fichier XAML pour la fenêtre :
 
@@ -37,7 +37,7 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
     -   <xref:System.Windows.Controls.Label>
 
-4.  Faites glisser le **commandes** propriété de navigation vers le concepteur.
+4. Faites glisser le **commandes** propriété de navigation vers le concepteur.
 
      Cela crée les éléments objet supplémentaires suivants dans le fichier XAML pour la fenêtre :
 
@@ -45,18 +45,18 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
     -   Un contrôle <xref:System.Windows.Controls.DataGrid> lié aux données nommé  `ordersDataGrid`.
 
-5.  (Facultatif) Faites glisser des éléments supplémentaires à partir de la **clients** nœud vers le concepteur.
+5. (Facultatif) Faites glisser des éléments supplémentaires à partir de la **clients** nœud vers le concepteur.
 
-6.  Ouvrez la page de codes du formulaire et ajoutez les instructions `using` (`Imports` en Visual Basic) suivantes :
+6. Ouvrez la page de codes du formulaire et ajoutez les instructions `using` (`Imports` en Visual Basic) suivantes :
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  Dans la classe partielle qui définit le formulaire, ajoutez le code suivant, qui crée une instance d'<xref:System.Data.Objects.ObjectContext> et définit la constante `customerID`.
+7. Dans la classe partielle qui définit le formulaire, ajoutez le code suivant, qui crée une instance d'<xref:System.Data.Objects.ObjectContext> et définit la constante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  Dans le concepteur, sélectionnez la fenêtre.
+8. Dans le concepteur, sélectionnez la fenêtre.
 
     > [!NOTE]
     > Assurez-vous que vous sélectionnez la fenêtre elle-même, plutôt que de sélectionner le contenu qui est dans la fenêtre. Si la fenêtre est sélectionnée, le **nom** zone de texte au début de la **propriétés** fenêtre doit contenir le nom de la fenêtre.
@@ -76,9 +76,9 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Utiliser une source de données de projet dans un formulaire Windows
 
-1.  Dans le **des Sources de données** fenêtre, développez le **clients** nœud dans le **NorthwindEntities** source de données de projet.
+1. Dans le **des Sources de données** fenêtre, développez le **clients** nœud dans le **NorthwindEntities** source de données de projet.
 
-2.  Cliquez sur le **CustomerID** élément, puis sélectionnez **ComboBox** à partir de la liste, puis faites glisser le **CustomerID** d’élément à partir de la **clients** nœud à la concepteur.
+2. Cliquez sur le **CustomerID** élément, puis sélectionnez **ComboBox** à partir de la liste, puis faites glisser le **CustomerID** d’élément à partir de la **clients** nœud à la concepteur.
 
      Cette opération crée les contrôles suivants dans le formulaire :
 
@@ -90,23 +90,23 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
     -   <xref:System.Windows.Forms.Label>
 
-3.  Faites glisser le **commandes** propriété de navigation vers le formulaire.
+3. Faites glisser le **commandes** propriété de navigation vers le formulaire.
 
-4.  Cette opération crée le contrôle `ordersBindingSource` dont la propriété <xref:System.Windows.Forms.BindingSource.DataSource%2A> a la valeur `customersBindingSource` et la propriété <xref:System.Windows.Forms.BindingSource.DataMember%2A> la valeur `Customers`. Elle crée également dans le formulaire le contrôle lié aux données `ordersDataGridView` et son contrôle label avec le titre approprié.
+4. Cette opération crée le contrôle `ordersBindingSource` dont la propriété <xref:System.Windows.Forms.BindingSource.DataSource%2A> a la valeur `customersBindingSource` et la propriété <xref:System.Windows.Forms.BindingSource.DataMember%2A> la valeur `Customers`. Elle crée également dans le formulaire le contrôle lié aux données `ordersDataGridView` et son contrôle label avec le titre approprié.
 
-5.  (Facultatif) Faites glisser des éléments supplémentaires à partir de la **clients** nœud vers le concepteur.
+5. (Facultatif) Faites glisser des éléments supplémentaires à partir de la **clients** nœud vers le concepteur.
 
-6.  Ouvrez la page de codes du formulaire et ajoutez les instructions `using` (`Imports` en Visual Basic) suivantes :
+6. Ouvrez la page de codes du formulaire et ajoutez les instructions `using` (`Imports` en Visual Basic) suivantes :
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  Dans la classe partielle qui définit le formulaire, ajoutez le code suivant, qui crée une instance d'<xref:System.Data.Objects.ObjectContext> et définit la constante `customerID`.
+7. Dans la classe partielle qui définit le formulaire, ajoutez le code suivant, qui crée une instance d'<xref:System.Data.Objects.ObjectContext> et définit la constante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  Dans le concepteur de formulaires, double-cliquez sur le formulaire.
+8. Dans le concepteur de formulaires, double-cliquez sur le formulaire.
 
      La page de codes du formulaire s'ouvre et la méthode qui gère l'événement `Load` du formulaire est créée.
 
@@ -119,5 +119,5 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Guide pratique pour Lier des données aux éléments Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Procédure : Lier des données aux éléments Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

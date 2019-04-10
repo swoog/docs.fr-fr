@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321053"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procédure : Créer et initialiser les écouteurs de trace
 Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envoient des messages à des objets appelés écouteurs qui reçoivent et traitent ces messages. L'un de ces écouteurs, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, est automatiquement créé et initialisé lors de l'activation du traçage ou du débogage. Si vous voulez que la sortie de <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> soit dirigée vers d'autres sources, créez et initialisez des écouteurs de suivi supplémentaires.  
@@ -29,7 +29,7 @@ Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xre
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Pour créer et utiliser un écouteur de suivi à l'aide d'un fichier de configuration  
   
-1.  Déclarez votre écouteur de suivi dans le fichier de configuration de votre application. Si l'écouteur que vous créez requiert d'autres objets, déclarez-les aussi. L'exemple suivant montre comment créer un écouteur appelé `myListener`, qui écrit dans le fichier texte `TextWriterOutput.log`.  
+1. Déclarez votre écouteur de suivi dans le fichier de configuration de votre application. Si l'écouteur que vous créez requiert d'autres objets, déclarez-les aussi. L'exemple suivant montre comment créer un écouteur appelé `myListener`, qui écrit dans le fichier texte `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xre
     </configuration>  
     ```  
   
-2.  Utilisez la classe <xref:System.Diagnostics.Trace> dans votre code pour écrire un message dans les écouteurs de suivi.  
+2. Utilisez la classe <xref:System.Diagnostics.Trace> dans votre code pour écrire un message dans les écouteurs de suivi.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

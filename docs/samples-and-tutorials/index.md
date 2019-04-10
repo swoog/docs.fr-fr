@@ -4,12 +4,12 @@ description: Informations sur les exemples et les didacticiels pour .NET Core, A
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558947"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330816"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemples et tutoriels .NET
 
@@ -19,7 +19,7 @@ La documentation .NET contient un ensemble d’exemples et de didacticiels qui v
 
 ### <a name="samples"></a>Exemples
 
-**[Tests unitaires dans .NET Core à l’aide de dotnet test](../core/testing/unit-testing-with-dotnet-test.md)**
+**[Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test](../core/testing/unit-testing-with-dotnet-test.md)**
 
 Ce guide montre comment créer une application web ASP.NET Core et les tests unitaires associés. Il commence par créer une application de service web simple, puis il ajoute des tests. Ensuite, il crée d’autres tests pour guider l’implémentation de nouvelles fonctionnalités. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) est disponible dans le référentiel dotnet/samples sur GitHub.
 
@@ -41,7 +41,7 @@ Consultez les [didacticiels ASP.NET Core](/aspnet/core/tutorials/). De nombreux 
 
 ### <a name="samples"></a>Exemples
 
-**[Itérateurs](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 Cet exemple illustre la syntaxe et les fonctionnalités permettant de créer et d’utiliser des itérateurs C#. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/iterators) est disponible dans le référentiel dotnet/samples sur GitHub.
 
@@ -53,7 +53,7 @@ Cet exemple illustre la syntaxe et les fonctionnalités liées aux indexeurs C#.
 
 Cet exemple illustre la syntaxe et les fonctionnalités liées aux délégués et événements C#. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) est disponible dans le référentiel dotnet/samples sur GitHub. Un [deuxième exemple](https://github.com/dotnet/samples/tree/master/csharp/events), axé sur les événements, est également disponible dans le même dépôt.
 
-**[Arborescences d’expression](../csharp/expression-trees.md)**
+**[Arborescences de l’expression](../csharp/expression-trees.md)**
 
 Cet exemple illustre de nombreux problèmes pouvant être résolus à l’aide des arborescences d’expression. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) est disponible dans le référentiel dotnet/samples sur GitHub.
 
@@ -112,6 +112,6 @@ De nombreuses rubriques montrent le code source et les exemples qu’il est poss
 1. Naviguez dans les dossiers du référentiel jusqu’à l’emplacement de l’exemple. Le chemin d’accès relatif de l’emplacement de l’exemple s’affiche dans la barre d’adresse de votre navigateur lorsque vous suivez le lien de l’exemple.
 1. Pour exécuter un exemple, vous avez plusieurs possibilités :
    * Utilisez les [outils de l’interface CLI dotnet](../core/tools/index.md) : dans une fenêtre de console, accédez au dossier de l’exemple et utilisez les commandes de la CLI dotnet.
-   * Utilisez [Visual Studio](https://visualstudio.microsoft.com/) ou [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir > Projet / solution** dans la barre de menus, accédez au dossier de l’exemple de projet et sélectionnez le fichier projet (*.csproj* ou *.fsproj*).
+   * Utilisez [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ou [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir > Projet / solution** dans la barre de menus, accédez au dossier de l’exemple de projet et sélectionnez le fichier projet (*.csproj* ou *.fsproj*).
    * Utilisez [Visual Studio Code](https://code.visualstudio.com/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir le dossier** dans la barre de menus et en sélectionnant le dossier de l’exemple de projet.
    * Utiliser un autre IDE qui prend en charge les projets .NET Core.

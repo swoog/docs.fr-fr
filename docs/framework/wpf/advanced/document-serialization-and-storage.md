@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295898"
 ---
 # <a name="document-serialization-and-storage"></a>Sérialisation et stockage de documents
 Microsoft .NET Framework fournit un environnement puissant pour créer et afficher des documents de haute qualité.  Les fonctionnalités améliorées qui prennent en charge les documents fixes et des documents dynamiques, advanced contrôles d’affichage associé à 2D puissantes et des capacités graphiques 3D prennent des applications .NET Framework d’un nouveau niveau de qualité et l’expérience utilisateur.  En mesure de gérer de manière flexible une représentation en mémoire d’un document est une fonctionnalité clé de .NET Framework, et pouvoir enregistrer et charger des documents à partir d’un magasin de données efficacement est nécessaire de presque toutes les applications.  Le processus de conversion d’un document d’une représentation en mémoire interne en magasin de données externe est appelé sérialisation.  Le processus inverse consistant à lire un magasin de données et à recréer l’instance en mémoire d’origine est appelé désérialisation.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework fournit un environnement puissant pour créer et affich
 ### <a name="creating-a-plug-in-serializer"></a>Création d’un sérialiseur de plug-ins  
  Les sérialiseurs de plug-ins et les sérialiseurs liés utilisent les mêmes méthodes et événements publics exposés, et sont conçus pour un fonctionnement synchrone ou asynchrone.  La création d’un sérialiseur de plug-ins se déroule généralement en trois étapes principales :  
   
-1.  La première étape consiste à implémenter et à déboguer le sérialiseur comme sérialiseur lié.  Le fait de créer un sérialiseur compilé et lié directement dans une application de test permet d’accéder aux points d’arrêt et autres services de débogage utiles lors du test.  
+1. La première étape consiste à implémenter et à déboguer le sérialiseur comme sérialiseur lié.  Le fait de créer un sérialiseur compilé et lié directement dans une application de test permet d’accéder aux points d’arrêt et autres services de débogage utiles lors du test.  
   
-2.  Une fois le sérialiseur intégralement testé, un <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface est ajoutée pour créer un plug-in.  Le <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface permet un accès total à tous les objets de .NET Framework qui inclut l’arborescence logique, <xref:System.Windows.UIElement> objets, <xref:System.Windows.Documents.IDocumentPaginatorSource>, et <xref:System.Windows.Media.Visual> éléments.  En outre <xref:System.Windows.Documents.Serialization.ISerializerFactory> fournit les mêmes méthodes synchrones et asynchrones et les événements utilisés par les sérialiseurs liés.  La sortie des documents volumineux pouvant prendre un certain temps, un fonctionnement asynchrone est recommandé de sorte à maintenir la réactivité de l’intervention de l’utilisateur tout en offrant une option « Annuler » en cas de problème avec le magasin de données.  
+2. Une fois le sérialiseur intégralement testé, un <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface est ajoutée pour créer un plug-in.  Le <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface permet un accès total à tous les objets de .NET Framework qui inclut l’arborescence logique, <xref:System.Windows.UIElement> objets, <xref:System.Windows.Documents.IDocumentPaginatorSource>, et <xref:System.Windows.Media.Visual> éléments.  En outre <xref:System.Windows.Documents.Serialization.ISerializerFactory> fournit les mêmes méthodes synchrones et asynchrones et les événements utilisés par les sérialiseurs liés.  La sortie des documents volumineux pouvant prendre un certain temps, un fonctionnement asynchrone est recommandé de sorte à maintenir la réactivité de l’intervention de l’utilisateur tout en offrant une option « Annuler » en cas de problème avec le magasin de données.  
   
-3.  Une fois le sérialiseur de plug-ins créé, un script d’installation est implémenté pour distribuer et installer (ou désinstaller) le plug-in (voir la section ci-dessus intitulée "[Installation de sérialiseurs de plug-ins](#InstallingPluginSerializers)).  
+3. Une fois le sérialiseur de plug-ins créé, un script d’installation est implémenté pour distribuer et installer (ou désinstaller) le plug-in (voir la section ci-dessus intitulée "[Installation de sérialiseurs de plug-ins](#InstallingPluginSerializers)).  
   
 ## <a name="see-also"></a>Voir aussi
 

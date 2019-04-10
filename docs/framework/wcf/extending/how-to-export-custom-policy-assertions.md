@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306220"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procédure : exporter des assertions de stratégie personnalisées
 Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l'application cliente. Vous pouvez utiliser Windows Communication Foundation (WCF) pour exporter des assertions dans les expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, opération ou aux objets de message, selon les conditions de que communication ou de fonctionnalités.  
@@ -23,28 +23,28 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 ### <a name="to-export-custom-policy-assertions"></a>Pour exporter des assertions de stratégie personnalisées  
   
-1.  Implémentez l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur un <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. L'exemple de code ci-dessous montre l'implémentation d'une assertion de stratégie personnalisée au niveau de la liaison.  
+1. Implémentez l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur un <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. L'exemple de code ci-dessous montre l'implémentation d'une assertion de stratégie personnalisée au niveau de la liaison.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Insérez l’élément de liaison dans la liaison de point de terminaison par programme ou à l’aide d’un fichier de configuration d’application. Reportez-vous aux procédures ci-dessous.  
+2. Insérez l’élément de liaison dans la liaison de point de terminaison par programme ou à l’aide d’un fichier de configuration d’application. Reportez-vous aux procédures ci-dessous.  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Pour insérer un élément de liaison à l'aide d'un fichier de configuration d'application  
   
-1.  Implémentez <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> pour l’élément de liaison de l’assertion de stratégie personnalisée.  
+1. Implémentez <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> pour l’élément de liaison de l’assertion de stratégie personnalisée.  
   
-2.  Ajouter l’extension d’élément de liaison pour le fichier de configuration à l’aide de la [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) élément.  
+2. Ajouter l’extension d’élément de liaison pour le fichier de configuration à l’aide de la [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) élément.  
   
-3.  Créez une liaison personnalisée à l’aide de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+3. Créez une liaison personnalisée à l’aide de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>Pour insérer un élément de liaison par programme  
   
-1.  Créez un nouveau <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> et ajoutez-le à un <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Créez un nouveau <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> et ajoutez-le à un <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Ajoutez la liaison personnalisée de l’étape 1. à un nouveau point de terminaison et ajoutez ce nouveau point de terminaison de service au <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> en appelant la méthode <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+2. Ajoutez la liaison personnalisée de l’étape 1. à un nouveau point de terminaison et ajoutez ce nouveau point de terminaison de service au <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> en appelant la méthode <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
-3.  Ouvrez la <xref:System.ServiceModel.ServiceHost>. L'exemple de code ci-dessous montre la création d'une liaison personnalisée et l'insertion par programme d'éléments de liaison.  
+3. Ouvrez la <xref:System.ServiceModel.ServiceHost>. L'exemple de code ci-dessous montre la création d'une liaison personnalisée et l'insertion par programme d'éléments de liaison.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325057"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -50,9 +50,9 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 ## <a name="using-bindings"></a>Utilisation des liaisons  
  L’utilisation des liaisons implique deux étapes simples :  
   
-1.  Sélectionner ou définir une liaison. La méthode la plus simple consiste à choisir une des liaisons fournies par le système incluses avec WCF et l’utiliser avec ses paramètres par défaut. Vous pouvez également choisir une liaison fournie par le système et réinitialiser ses valeurs de propriété en fonction de vos spécifications. En guise d’alternative, vous pouvez créer une liaison personnalisée ou une liaison définie par l’utilisateur afin de disposer d’un degré de contrôle et de personnalisation plus élevé.  
+1. Sélectionner ou définir une liaison. La méthode la plus simple consiste à choisir une des liaisons fournies par le système incluses avec WCF et l’utiliser avec ses paramètres par défaut. Vous pouvez également choisir une liaison fournie par le système et réinitialiser ses valeurs de propriété en fonction de vos spécifications. En guise d’alternative, vous pouvez créer une liaison personnalisée ou une liaison définie par l’utilisateur afin de disposer d’un degré de contrôle et de personnalisation plus élevé.  
   
-2.  Créer un point de terminaison qui utilise la liaison sélectionnée ou définie.  
+2. Créer un point de terminaison qui utilise la liaison sélectionnée ou définie.  
   
 ## <a name="code-and-configuration"></a>Code et configuration  
  Vous pouvez définir des liaisons de deux manières : par le biais de code ou par configuration. Ces deux approches ne dépendent pas du fait que vous utilisez une liaison fournie par le système ou une liaison personnalisée. En général, l’utilisation de code procure un contrôle total sur la définition d’une liaison au moment du design. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou le client pour modifier les paramètres d’une liaison sans devoir recompiler l’application de service. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir les exigences spécifiques du matériel sur lequel une application WCF doit être déployée. Le fait de conserver les informations de liaison (et d’adressage) hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application. Notez que les liaisons définies dans le code sont créées après les liaisons spécifiées dans la configuration, ce qui permet aux liaisons définies dans le code de remplacer celles définies par configuration.  

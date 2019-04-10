@@ -2,12 +2,12 @@
 title: Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307594"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
@@ -27,9 +27,9 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Vous pouvez modifier par programmation ces mots clés de chaîne de connexion avec :  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  Paramètre `MultiSubnetFailover` à `true` n’est pas nécessaire avec [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] ou versions ultérieures.
@@ -59,9 +59,9 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Si le routage en lecture seule n'est pas appliqué, la connexion à un emplacement de réplica secondaire échoue dans les situations suivantes :  
   
-1.  Si l'emplacement de réplica secondaire n'est pas configuré pour recevoir des connexions.  
+1. Si l'emplacement de réplica secondaire n'est pas configuré pour recevoir des connexions.  
   
-2.  Si une application utilise `ApplicationIntent=ReadWrite` (voir ci-dessous) et l'emplacement de réplica secondaire est configuré pour l'accès en lecture seule.  
+2. Si une application utilise `ApplicationIntent=ReadWrite` (voir ci-dessous) et l'emplacement de réplica secondaire est configuré pour l'accès en lecture seule.  
   
  <xref:System.Data.SqlClient.SqlDependency> n’est pas pris en charge sur les réplicas secondaires en lecture seule.  
   
@@ -86,11 +86,11 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
 ## <a name="read-only-routing"></a>Routage en lecture seule  
  Le routage en lecture seule est une fonctionnalité qui garantit la disponibilité d'un réplica en lecture seule d'une base de données. Pour activer le routage en lecture seule :  
   
-1.  Vous devez vous connecter à un écouteur du groupe de disponibilité Groupe de disponibilité AlwaysOn.  
+1. Vous devez vous connecter à un écouteur du groupe de disponibilité Groupe de disponibilité AlwaysOn.  
   
-2.  Le mot clé de chaîne de connexion `ApplicationIntent` doit avoir la valeur `ReadOnly`.  
+2. Le mot clé de chaîne de connexion `ApplicationIntent` doit avoir la valeur `ReadOnly`.  
   
-3.  Le groupe de disponibilité doit être configuré par l'administrateur de base de données pour permettre le routage en lecture seule.  
+3. Le groupe de disponibilité doit être configuré par l'administrateur de base de données pour permettre le routage en lecture seule.  
   
  Il est possible que plusieurs connexions utilisant le routage en lecture seule ne se connectent pas au même réplica en lecture seule. Les modifications de la synchronisation de base de données ou les modifications de la configuration du routage du serveur peuvent entraîner des connexions clientes à des réplicas en lecture seule. Pour vous assurer que toutes les demandes en lecture seule se connectent au même réplica en lecture seule, ne passez pas un écouteur du groupe de disponibilité au mot clé de chaîne de connexion `Data Source`. À la place, spécifiez le nom de l'instance en lecture seule.  
   

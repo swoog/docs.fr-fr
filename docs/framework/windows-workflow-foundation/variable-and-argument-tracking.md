@@ -2,12 +2,12 @@
 title: Suivi de variables et arguments
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300890"
 ---
 # <a name="variable-and-argument-tracking"></a>Suivi de variables et arguments
 Lors du suivi de l'exécution d'un workflow, il est souvent utile d'extraire des données. Vous obtenez ainsi un contexte supplémentaire lors de l'accès à une post-exécution d'enregistrement de suivi. Dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], vous pouvez extraire toute variable ou argument visible dans l’étendue de toute activité d’un flux de travail utilisant le suivi. Les profils de suivi facilitent l'extraction de données.  
@@ -40,11 +40,11 @@ Lors du suivi de l'exécution d'un workflow, il est souvent utile d'extraire des
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Protection des informations stockées dans les variables et arguments  
  Par défaut, une variable ou un argument suivi est rendu visible par le runtime WF. Un développeur de workflow peut les protéger contre tout accès en procédant comme suit :  
   
-1.  Chiffrez la valeur d'une variable.  
+1. Chiffrez la valeur d'une variable.  
   
-2.  Contrôlez la création d’un modèle de suivi pour éviter l’extraction de variable ou d’argument.  
+2. Contrôlez la création d’un modèle de suivi pour éviter l’extraction de variable ou d’argument.  
   
-3.  Pour les participants au suivi personnalisé, vérifiez que le code WF ne divulgue pas les informations sensibles stockées dans les variables ou les arguments.  
+3. Pour les participants au suivi personnalisé, vérifiez que le code WF ne divulgue pas les informations sensibles stockées dans les variables ou les arguments.  
   
 ## <a name="see-also"></a>Voir aussi
 

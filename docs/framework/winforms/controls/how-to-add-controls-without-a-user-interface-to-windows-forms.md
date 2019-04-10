@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330101"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procédure : ajouter des contrôles sans interface utilisateur à des Windows Forms
 Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre application. Contrairement à d’autres contrôles, composants ne fournissent pas d’une interface utilisateur à l’utilisateur et n’avez donc pas besoin doit être affiché sur l’aire du Concepteur de formulaires Windows. Lorsqu’un composant est ajouté à un formulaire, le Concepteur de formulaires Windows affiche une barre d’état redimensionnable en bas de l’écran où tous les composants sont affichés. Une fois qu’un contrôle a été ajouté à la barre d’état du composant, vous pouvez sélectionner le composant et définissez ses propriétés comme vous le feriez pour tout autre contrôle sur le formulaire.  
@@ -29,9 +29,9 @@ Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre 
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Pour ajouter un composant à un formulaire Windows  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Guide pratique pour Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Ouvrez le formulaire. Pour plus d’informations, consultez [Guide pratique pour Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Dans le **boîte à outils**, cliquez sur un composant et faites-le glisser vers votre formulaire.  
+2. Dans le **boîte à outils**, cliquez sur un composant et faites-le glisser vers votre formulaire.  
   
      Votre composant s’affiche dans la barre d’état du composant.  
   
@@ -42,11 +42,11 @@ Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre 
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Pour ajouter un composant à un formulaire Windows par programmation  
   
-1.  Créez une instance de la <xref:System.Windows.Forms.Timer> classe dans le code.  
+1. Créez une instance de la <xref:System.Windows.Forms.Timer> classe dans le code.  
   
-2.  Définir le `Interval` propriété afin de déterminer la durée séparant les graduations de la minuterie.  
+2. Définir le `Interval` propriété afin de déterminer la durée séparant les graduations de la minuterie.  
   
-3.  Configurer toutes les propriétés nécessaires pour votre composant.  
+3. Configurer toutes les propriétés nécessaires pour votre composant.  
   
      Le code suivant illustre la création d’un <xref:System.Windows.Forms.Timer> avec son `Interval` jeu de propriétés.  
   

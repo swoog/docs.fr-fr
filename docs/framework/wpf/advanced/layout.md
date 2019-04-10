@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330491"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
@@ -64,17 +64,17 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
  Chaque fois qu’enfant <xref:System.Windows.UIElement> change de position, il a la possibilité de déclencher une nouvelle passe par le système de disposition. Par conséquent, il est important de comprendre quels sont les événements qui peuvent appeler le système de disposition, car un appel inutile peut nuire aux performances de l’application. Le processus suivant décrit ce qui se produit quand le système de disposition est appelé.  
   
-1.  Un enfant <xref:System.Windows.UIElement> commence le processus de disposition en faisant d’abord ses propriétés principales mesurées.  
+1. Un enfant <xref:System.Windows.UIElement> commence le processus de disposition en faisant d’abord ses propriétés principales mesurées.  
   
-2.  Propriétés de dimensionnement définies sur <xref:System.Windows.FrameworkElement> sont évaluées, telles que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Propriétés de dimensionnement définies sur <xref:System.Windows.FrameworkElement> sont évaluées, telles que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, tel que <xref:System.Windows.Controls.Dock> direction ou empilement <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, tel que <xref:System.Windows.Controls.Dock> direction ou empilement <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Le contenu est réorganisé après que tous les enfants ont été mesurés.  
+4. Le contenu est réorganisé après que tous les enfants ont été mesurés.  
   
-5.  Le <xref:System.Windows.Controls.Panel.Children%2A> collection est dessinée à l’écran.  
+5. Le <xref:System.Windows.Controls.Panel.Children%2A> collection est dessinée à l’écran.  
   
-6.  Le processus est encore appelé si supplémentaires <xref:System.Windows.Controls.Panel.Children%2A> sont ajoutés à la collection, un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué, ou la <xref:System.Windows.UIElement.UpdateLayout%2A> méthode est appelée.  
+6. Le processus est encore appelé si supplémentaires <xref:System.Windows.Controls.Panel.Children%2A> sont ajoutés à la collection, un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué, ou la <xref:System.Windows.UIElement.UpdateLayout%2A> méthode est appelée.  
   
  Ce processus et la façon dont il est appelé sont décrits plus en détail dans les sections suivantes.  
   

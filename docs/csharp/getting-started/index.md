@@ -6,17 +6,18 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130964"
 ---
 # <a name="get-started-with-c"></a>Bien démarrer avec C\#
 
-Cette section fournit des didacticiels courts et simples qui permettent de créer rapidement une application avec C# et .NET Core. Ces rubriques de prise en main concernent Visual Studio 2017 et Visual Studio Code. Vous pouvez créer une application Hello World simple ou, si vous avez Visual Studio 2017, une bibliothèque de classes simple et utilisable par d’autres applications.
+Cette section fournit des didacticiels courts et simples qui permettent de créer rapidement une application avec C# et .NET Core. Ces rubriques de prise en main concernent Visual Studio 2017 et Visual Studio Code. Ces articles supposent une expérience en programmation. Si vous êtes novice en programmation, essayez nos tutoriels interactifs de [présentation de C# ](../tutorials/intro-to-csharp/index.md).
 
 Les rubriques suivantes sont disponibles :
 
@@ -24,7 +25,7 @@ Les rubriques suivantes sont disponibles :
 
      Fournit une vue d’ensemble du langage C# et de .NET.
 
-* [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
+* [Génération d’une application C# Hello World avec .NET Core dans Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, la dernière version de Visual Studio, permet de coder, compiler, exécuter, déboguer, profiler et publier des applications à partir d’un environnement de développement intégré pour Windows.
 
@@ -50,10 +51,10 @@ Les rubriques suivantes sont disponibles :
 
     Fournit des informations de référence détaillées sur les mots clés C#, les opérateurs, les directives de préprocesseur, les options du compilateur, et les erreurs et avertissements du compilateur.
 
-* [Procédures pas à pas](../../csharp/walkthroughs.md)
+* [Procédures pas à pas](../../csharp/walkthroughs.md)
 
     Fournit des liens vers des procédures pas-à-pas de programmation qui utilisent C# et une brève description de chaque procédure pas-à-pas.
 
 ## <a name="see-also"></a>Voir aussi
 
-- * [Développement C# avec Visual Studio](/visualstudio/get-started/csharp/)
+- * [Développement en C# avec Visual Studio](/visualstudio/get-started/csharp/)

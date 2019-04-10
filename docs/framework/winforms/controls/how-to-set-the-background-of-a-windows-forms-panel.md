@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 289a91481c832a36b4b77d56ba6b18921ef02d5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300400"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Procédure : Définir l’arrière-plan d’un contrôle Panel Windows Forms
 Un formulaire Windows <xref:System.Windows.Forms.Panel> contrôle peut afficher une couleur d’arrière-plan et une image d’arrière-plan. Le <xref:System.Windows.Forms.Control.BackColor%2A> propriété définit la couleur d’arrière-plan pour les contrôles de relation contenant-contenus, tels que des étiquettes et des cases d’option. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété n’est pas définie, la <xref:System.Windows.Forms.Control.BackColor%2A> sélection remplira du panneau tout entier. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété est définie, l’image est affichée derrière les contrôles contenus.  
   
 ### <a name="to-set-the-background-programmatically"></a>Pour définir l’arrière-plan par programmation  
   
-1.  Définir le panneau <xref:System.Windows.Forms.Control.BackColor%2A> propriété une valeur de type <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Définir le panneau <xref:System.Windows.Forms.Control.BackColor%2A> propriété une valeur de type <xref:System.Drawing.Color?displayProperty=nameWithType>.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Un formulaire Windows <xref:System.Windows.Forms.Panel> contrôle peut afficher 
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  Définir le panneau <xref:System.Windows.Forms.Control.BackgroundImage%2A> à l’aide de la propriété le <xref:System.Drawing.Image.FromFile%2A> méthode de la <xref:System.Drawing.Image?displayProperty=nameWithType> classe.  
+2. Définir le panneau <xref:System.Windows.Forms.Control.BackgroundImage%2A> à l’aide de la propriété le <xref:System.Drawing.Image.FromFile%2A> méthode de la <xref:System.Drawing.Image?displayProperty=nameWithType> classe.  
   
     ```vb  
     ' You should replace the bolded image   

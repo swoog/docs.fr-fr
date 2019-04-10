@@ -2,12 +2,12 @@
 title: 'Tâche 2 : héberger le concepteur de flux de travail'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299265"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le concepteur de flux de travail
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
@@ -16,19 +16,19 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
 ### <a name="to-host-the-workflow-designer"></a>Pour héberger le concepteur de workflow  
   
-1.  Ouvrez le projet hostingapplication que vous avez créé dans [tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
+1. Ouvrez le projet hostingapplication que vous avez créé dans [tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
-2.  Pour faciliter l'utilisation du [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ajustez la taille de la fenêtre. Pour ce faire, sélectionnez **MainWindow** dans le concepteur, appuyez sur F4 pour afficher la **propriétés** fenêtre, puis, dans le **disposition** section il, définissez le **delalargeur** à une valeur de 600 et la **hauteur** à une valeur de 350.  
+2. Pour faciliter l'utilisation du [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ajustez la taille de la fenêtre. Pour ce faire, sélectionnez **MainWindow** dans le concepteur, appuyez sur F4 pour afficher la **propriétés** fenêtre, puis, dans le **disposition** section il, définissez le **delalargeur** à une valeur de 600 et la **hauteur** à une valeur de 350.  
   
-3.  Définir le nom de la grille en sélectionnant le **grille** panneau dans le concepteur (cliquez sur la zone à l’intérieur de la **MainWindow**) et en définissant le **nom** propriété en haut de la  **Propriétés** fenêtre valeur « grid1 ».  
+3. Définir le nom de la grille en sélectionnant le **grille** panneau dans le concepteur (cliquez sur la zone à l’intérieur de la **MainWindow**) et en définissant le **nom** propriété en haut de la  **Propriétés** fenêtre valeur « grid1 ».  
   
-4.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté du `ColumnDefinitions` propriété pour ouvrir le **éditeur de collections** boîte de dialogue.  
+4. Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté du `ColumnDefinitions` propriété pour ouvrir le **éditeur de collections** boîte de dialogue.  
   
-5.  Dans le **éditeur de collections** boîte de dialogue, cliquez sur le **ajouter** bouton trois fois pour insérer trois colonnes dans la disposition. La première colonne contiendra la **boîte à outils**, la deuxième colonne hébergera le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], et la troisième colonne sera utilisée pour l’inspecteur de propriété.  
+5. Dans le **éditeur de collections** boîte de dialogue, cliquez sur le **ajouter** bouton trois fois pour insérer trois colonnes dans la disposition. La première colonne contiendra la **boîte à outils**, la deuxième colonne hébergera le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], et la troisième colonne sera utilisée pour l’inspecteur de propriété.  
   
-6.  Définir le `Width` propriété de la colonne du milieu à la valeur « 4 * ».  
+6. Définir le `Width` propriété de la colonne du milieu à la valeur « 4 * ».  
   
-7.  Cliquez sur **OK** pour enregistrer les modifications. Le XAML suivant est ajouté à votre fichier MainWindow.xaml :  
+7. Cliquez sur **OK** pour enregistrer les modifications. Le XAML suivant est ajouté à votre fichier MainWindow.xaml :  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
     </Grid>  
     ```  
   
-8.  Dans **l’Explorateur de solutions**, cliquez sur MainWindow.xaml et sélectionnez **afficher le Code**. Modifiez le code en procédant comme suit :  
+8. Dans **l’Explorateur de solutions**, cliquez sur MainWindow.xaml et sélectionnez **afficher le Code**. Modifiez le code en procédant comme suit :  
   
     1.  Ajoutez les espaces de noms suivants :  
   

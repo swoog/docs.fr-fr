@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331700"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Procédure : Masquer une Variable héritée (Visual Basic)
 Une classe dérivée hérite de toutes les définitions de sa classe de base. Si vous souhaitez définir une variable en utilisant le même nom qu’un élément de la classe de base, vous pouvez masquer, ou *ombre*, cet élément de classe de base lorsque vous définissez votre variable dans la classe dérivée. Si vous procédez ainsi, le code dans la classe dérivée accède à votre variable, sauf si elle ignore explicitement le mécanisme d’occultation.  
@@ -25,11 +25,11 @@ Une classe dérivée hérite de toutes les définitions de sa classe de base. Si
   
 ### <a name="to-hide-an-inherited-variable"></a>Pour masquer une variable héritée  
   
-1.  Assurez-vous que la variable que vous souhaitez masquer est déclarée au niveau de la classe (en dehors de toute procédure). Sinon, vous n’avez pas besoin pour le masquer.  
+1. Assurez-vous que la variable que vous souhaitez masquer est déclarée au niveau de la classe (en dehors de toute procédure). Sinon, vous n’avez pas besoin pour le masquer.  
   
-2.  À l’intérieur de votre classe dérivée, écrivez une [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) déclarer votre variable. Utiliser le même nom que celui de la variable héritée.  
+2. À l’intérieur de votre classe dérivée, écrivez une [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) déclarer votre variable. Utiliser le même nom que celui de la variable héritée.  
   
-3.  Inclure le [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) mot clé dans la déclaration.  
+3. Inclure le [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) mot clé dans la déclaration.  
   
      En cas de code dans la classe dérivée fait référence au nom de variable, le compilateur résout la référence à votre variable.  
   
@@ -57,11 +57,11 @@ Une classe dérivée hérite de toutes les définitions de sa classe de base. Si
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Différences entre l'occultation et la substitution](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Guide pratique pour Masquer une Variable portant le même nom que votre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Guide pratique pour Accéder à une Variable masquée par une classe dérivée](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Différences entre la copie shadow et la substitution](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [Procédure : masquer une variable portant le même nom que votre variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Procédure : accéder à une variable masquée par une classe dérivée](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase et MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Éléments fondamentaux de l’héritage](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

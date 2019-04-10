@@ -11,12 +11,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: f6b6fa0c111783dcdad0387aed7d40fb54fa7b26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331479"
 ---
 # <a name="how-to-display-pop-up-help"></a>Procédure : afficher l’aide contextuelle
 Pour afficher l’aide dans les Windows Forms offre un moyen du **aide** bouton situé sur le côté droit de la barre de titre, accessible via la <xref:System.Windows.Forms.Form.HelpButton%2A> propriété. Ce type d’affichage de l’aide convient parfaitement aux boîtes de dialogue. Les boîtes de dialogue modales (affichées avec la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A>) ont des difficultés à afficher les systèmes d'aide externes, car elles doivent être fermées pour que le focus puisse basculer vers une autre fenêtre. En outre, à l’aide de la **aide** bouton requiert l’existence aucun **réduire** bouton ou **agrandir** affiché dans la barre de titre. Il s’agit une convention de boîte de dialogue standard, tandis que les formulaires possèdent généralement **réduire** et **agrandir** boutons.  
@@ -28,19 +28,19 @@ Pour afficher l’aide dans les Windows Forms offre un moyen du **aide** bouton 
   
 ### <a name="to-display-pop-up-help"></a>Pour afficher une aide contextuelle  
   
-1.  Faites glisser un [HelpProvider](../controls/helpprovider-component-windows-forms.md) composant à partir de la boîte à outils à votre formulaire.  
+1. Faites glisser un [HelpProvider](../controls/helpprovider-component-windows-forms.md) composant à partir de la boîte à outils à votre formulaire.  
   
      Il sera placé dans la barre d'état en bas du Concepteur Windows Forms.  
   
-2.  Dans la fenêtre Propriétés, affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Form.HelpButton%2A>. Ceci affichera un bouton avec un point d'interrogation sur le côté droit de la barre de titre du formulaire.  
+2. Dans la fenêtre Propriétés, affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Form.HelpButton%2A>. Ceci affichera un bouton avec un point d'interrogation sur le côté droit de la barre de titre du formulaire.  
   
-3.  Pour que le <xref:System.Windows.Forms.Form.HelpButton%2A> soit affiché, il faut que les propriétés <xref:System.Windows.Forms.Form.MinimizeBox%2A> et <xref:System.Windows.Forms.Form.MaximizeBox%2A>  du formulaire aient la valeur `false`, que la propriété <xref:System.Windows.Forms.Form.ControlBox%2A> ait la valeur `true` et que la propriété <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ait l'une des valeurs suivantes : <xref:System.Windows.Forms.FormBorderStyle.FixedSingle>, <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> ou <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
+3. Pour que le <xref:System.Windows.Forms.Form.HelpButton%2A> soit affiché, il faut que les propriétés <xref:System.Windows.Forms.Form.MinimizeBox%2A> et <xref:System.Windows.Forms.Form.MaximizeBox%2A>  du formulaire aient la valeur `false`, que la propriété <xref:System.Windows.Forms.Form.ControlBox%2A> ait la valeur `true` et que la propriété <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ait l'une des valeurs suivantes : <xref:System.Windows.Forms.FormBorderStyle.FixedSingle>, <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> ou <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
   
-4.  Sélectionnez le contrôle pour lequel vous souhaitez afficher l'aide sur votre formulaire et définissez la chaîne d'aide dans la fenêtre Propriétés. C’est la chaîne de texte qui s’affichera dans une fenêtre similaire à un [info-bulle](../controls/tooltip-component-windows-forms.md).  
+4. Sélectionnez le contrôle pour lequel vous souhaitez afficher l'aide sur votre formulaire et définissez la chaîne d'aide dans la fenêtre Propriétés. C’est la chaîne de texte qui s’affichera dans une fenêtre similaire à un [info-bulle](../controls/tooltip-component-windows-forms.md).  
   
-5.  Appuyez sur **F5**.  
+5. Appuyez sur **F5**.  
   
-6.  Appuyez sur la **aide** sur la barre de titre, puis cliquez sur le contrôle sur lequel vous avez défini la chaîne d’aide.  
+6. Appuyez sur la **aide** sur la barre de titre, puis cliquez sur le contrôle sur lequel vous avez défini la chaîne d’aide.  
   
 ## <a name="see-also"></a>Voir aussi
 

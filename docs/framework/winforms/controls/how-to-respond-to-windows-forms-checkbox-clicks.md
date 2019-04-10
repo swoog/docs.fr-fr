@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319896"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procédure : répondre aux clics sur des contrôles Checkbox Windows Forms
 Chaque fois qu’un utilisateur clique sur un formulaire Windows <xref:System.Windows.Forms.CheckBox> contrôle, le <xref:System.Windows.Forms.Control.Click> événement se produit. Vous pouvez programmer votre application pour effectuer une action en fonction de l’état de la case à cocher.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Pour répondre à un clic du contrôle CheckBox  
   
-1.  Dans le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements, utilisez le <xref:System.Windows.Forms.CheckBox.Checked%2A> propriété pour déterminer l’état du contrôle et effectuer toute action requise.  
+1. Dans le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements, utilisez le <xref:System.Windows.Forms.CheckBox.Checked%2A> propriété pour déterminer l’état du contrôle et effectuer toute action requise.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ Chaque fois qu’un utilisateur clique sur un formulaire Windows <xref:System.Wi
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Pour déterminer l’action quand une case à cocher est cliqué.  
   
-1.  Utilisez une instruction case pour interroger la valeur de la <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriété afin de déterminer un plan d’action. Lorsque le <xref:System.Windows.Forms.CheckBox.ThreeState%2A> propriété est définie sur `true`, le <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriété peut retourner trois valeurs possibles, qui représentent la case est cochée, la case désactivée ou un troisième état indéterminé dans lequel la zone est affichée avec un texte estompé apparence pour indiquer l’option n’est pas disponible.  
+1. Utilisez une instruction case pour interroger la valeur de la <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriété afin de déterminer un plan d’action. Lorsque le <xref:System.Windows.Forms.CheckBox.ThreeState%2A> propriété est définie sur `true`, le <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriété peut retourner trois valeurs possibles, qui représentent la case est cochée, la case désactivée ou un troisième état indéterminé dans lequel la zone est affichée avec un texte estompé apparence pour indiquer l’option n’est pas disponible.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

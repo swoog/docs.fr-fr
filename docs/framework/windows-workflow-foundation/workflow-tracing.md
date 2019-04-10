@@ -2,12 +2,12 @@
 title: Suivi de workflow
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321664"
 ---
 # <a name="workflow-tracing"></a>Suivi de workflow
 Le suivi de workflow offre une méthode de capture des informations de diagnostic à l'aide d'écouteurs de suivi .NET Framework. Le suivi peut être activé si un problème a été détecté dans l'application, puis désactivé de nouveau une fois le problème résolu. Deux méthodes s'offrent à vous pour activer le suivi de débogage pour les flux de travail. Vous pouvez le configurer à l'aide de la visionneuse de suivi d'événements ou bien utiliser l'objet <xref:System.Diagnostics> pour envoyer des événements de suivi à un fichier.  
@@ -15,13 +15,13 @@ Le suivi de workflow offre une méthode de capture des informations de diagnosti
 ## <a name="enabling-debug-tracing-in-etw"></a>Activation du suivi de débogage dans ETW  
  Pour activer le suivi à l'aide d'ETW, activez le canal de débogage dans l'Observateur d'événements :  
   
-1.  Dans l'Observateur d'événements, naviguez vers le nœud des journaux d'analyse et de débogage.  
+1. Dans l'Observateur d'événements, naviguez vers le nœud des journaux d'analyse et de débogage.  
   
-2.  Dans l’arborescence de commandes dans l’Observateur d’événements, accédez à **Observateur d’événements -> Applications et journaux des Services -> Microsoft -> Windows -> serveur d’applications-Applications**. Avec le bouton droit **serveur d’applications-Applications** et sélectionnez **Affichage -> Afficher les journaux d’analyse et de débogage**. Avec le bouton droit **déboguer** et sélectionnez **activer le journal**.  
+2. Dans l’arborescence de commandes dans l’Observateur d’événements, accédez à **Observateur d’événements -> Applications et journaux des Services -> Microsoft -> Windows -> serveur d’applications-Applications**. Avec le bouton droit **serveur d’applications-Applications** et sélectionnez **Affichage -> Afficher les journaux d’analyse et de débogage**. Avec le bouton droit **déboguer** et sélectionnez **activer le journal**.  
   
-3.  Lorsqu'un flux de travail exécute le débogage et qu'un suivi est émis vers le canal de débogage ETW, le suivi peut être affiché dans l'Observateur d'événements. Accédez à **Observateur d’événements -> Applications et journaux des Services -> Microsoft -> Windows -> serveur d’applications-Applications**. Avec le bouton droit **déboguer** et sélectionnez **Actualiser**.  
+3. Lorsqu'un flux de travail exécute le débogage et qu'un suivi est émis vers le canal de débogage ETW, le suivi peut être affiché dans l'Observateur d'événements. Accédez à **Observateur d’événements -> Applications et journaux des Services -> Microsoft -> Windows -> serveur d’applications-Applications**. Avec le bouton droit **déboguer** et sélectionnez **Actualiser**.  
   
-4.  La taille de la mémoire tampon de trace analytique par défaut est de 4 kilo-octet (Ko) seulement. Il est recommandé d'augmenter la taille à 32 Ko. Pour ce faire, effectuez les étapes suivantes.  
+4. La taille de la mémoire tampon de trace analytique par défaut est de 4 kilo-octet (Ko) seulement. Il est recommandé d'augmenter la taille à 32 Ko. Pour ce faire, effectuez les étapes suivantes.  
   
     1.  Exécutez la commande suivante dans le répertoire framework actuel (par exemple, C:\Windows\Microsoft.NET\Framework\v4.0.21203) : `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   

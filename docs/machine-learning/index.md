@@ -1,14 +1,14 @@
 ---
 title: Guide de contenu de ML.NET
 description: Découvrez comment créer des solutions IA personnalisées et les intégrer à vos applications .NET à l’aide de ML.NET.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231329"
 ---
 # <a name="mlnet-content-guide"></a>Guide de contenu de ML.NET
 
@@ -33,7 +33,11 @@ Pour comprendre les principes de base, consultez [Concepts de base pour l’appr
 
 [Prédire les prix à l’aide d’un modèle de régression](./tutorials/taxi-fare.md) vous montre comment créer une application prédictive qui utilise de nombreux facteurs à partir de données historiques pour déterminer la réponse.
 
-[Classer les iris par caractéristiques](./tutorials/iris-clustering.md) vous montre comment utiliser un modèle de clustering pour analyser un jeu de données d’iris. 
+[Classer les iris par caractéristiques](./tutorials/iris-clustering.md) vous montre comment utiliser un modèle de clustering pour analyser un jeu de données d’iris.
+
+[Créer une application de recommandation de films avec ML.NET](./tutorials/movie-recommmendation.md) vous montre comment créer une application de recommandation pour recommander des films aux utilisateurs en fonction de leur historique.
+
+[Créer un classifieur d’images personnalisées ML.NET avec TensorFlow](./tutorials/image-classification.md) : montre comment réentraîner un modèle Tensorflow existant pour créer un classifieur d’images personnalisées à l’aide de ML.NET.
 
 ## <a name="how-to-guide"></a>Guide
 
@@ -46,7 +50,6 @@ Pour comprendre les principes de base, consultez [Concepts de base pour l’appr
 [Tâches d’apprentissage automatique](./resources/tasks.md) décrit des tâches comme la classification et la détection des anomalies. 
 
 [Transformations de données](./resources/transforms.md) décrit les fonctionnalités de préparation des données dans ML.NET.
-
 
 ## <a name="api-reference"></a>Informations de référence sur les API
 

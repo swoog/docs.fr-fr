@@ -2,12 +2,12 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331570"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 Cet exemple montre comment composer WCF et [Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Cet exemple illustre l’implémentation d’un [Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) canal qui peut être combiné avec Reliable Messaging et éventuellement un canal sécurisé pour créer une liaison sécurisée fiable basé sur la spécification RSP.  
@@ -26,16 +26,16 @@ Cet exemple montre comment composer WCF et [Reliable Secure Profile](https://go.
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Ouvrez le **ReliableSecureProfile** solution.  
+1. Ouvrez le **ReliableSecureProfile** solution.  
   
-2.  Bouton droit sur le **Service** projet **l’Explorateur de solutions**, sélectionnez **déboguer**, **démarrer une nouvelle instance** dans le menu contextuel. Cela démarre l'hôte de service.  
+2. Bouton droit sur le **Service** projet **l’Explorateur de solutions**, sélectionnez **déboguer**, **démarrer une nouvelle instance** dans le menu contextuel. Cela démarre l'hôte de service.  
   
-3.  Bouton droit sur le **Client** projet **l’Explorateur de solutions**, sélectionnez **déboguer**, **démarrer une nouvelle instance** dans le menu contextuel. Cela démarre le client.  
+3. Bouton droit sur le **Client** projet **l’Explorateur de solutions**, sélectionnez **déboguer**, **démarrer une nouvelle instance** dans le menu contextuel. Cela démarre le client.  
   
-4.  Tapez une chaîne quelconque dans l'invite de la fenêtre de console du client et appuyez sur ENTRÉE. Cela envoie la chaîne entrée au service, qui calcule un hachage de cette chaîne.  
+4. Tapez une chaîne quelconque dans l'invite de la fenêtre de console du client et appuyez sur ENTRÉE. Cela envoie la chaîne entrée au service, qui calcule un hachage de cette chaîne.  
   
-5.  Examinez le résultat sur les fenêtres du client lorsque le service rappelle l'opération de contrat de rappel duplex pour afficher le résultat dans la fenêtre de console du client. Un délai intentionnel est appliqué au service pour simuler une longue opération de traitement des données.  
+5. Examinez le résultat sur les fenêtres du client lorsque le service rappelle l'opération de contrat de rappel duplex pour afficher le résultat dans la fenêtre de console du client. Un délai intentionnel est appliqué au service pour simuler une longue opération de traitement des données.  
   
-6.  La surveillance du trafic HTTP (par l'un des outils d'analyse de réseau en ligne, comme le Moniteur réseau, Fiddler, etc.) montre qu'une séquence de communication est établie entre le client et le service comme stipulé par Reliable Secure Profile, et comment le client interroge le service avec des demandes « Make Connection ». Lorsque le service est prêt à renvoyer la réponse traitée, il utilise le canal arrière de la dernière demande « Make Connection » pour renvoyer les résultats.  
+6. La surveillance du trafic HTTP (par l'un des outils d'analyse de réseau en ligne, comme le Moniteur réseau, Fiddler, etc.) montre qu'une séquence de communication est établie entre le client et le service comme stipulé par Reliable Secure Profile, et comment le client interroge le service avec des demandes « Make Connection ». Lorsque le service est prêt à renvoyer la réponse traitée, il utilise le canal arrière de la dernière demande « Make Connection » pour renvoyer les résultats.  
   
-7.  Appuyez sur ENTRÉE dans la fenêtre de console du service pour le fermer. Appuyez sur ENTRÉE dans la fenêtre de console du client pour le fermer.
+7. Appuyez sur ENTRÉE dans la fenêtre de console du service pour le fermer. Appuyez sur ENTRÉE dans la fenêtre de console du client pour le fermer.

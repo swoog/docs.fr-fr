@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332558"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procédure : utiliser des certificats X.509 distincts pour les signatures et le chiffrement
 Cette rubrique montre comment configurer Windows Communication Foundation (WCF) pour utiliser différents certificats pour la signature des messages et le chiffrement sur le client et le service.  
@@ -47,34 +47,34 @@ Cette rubrique montre comment configurer Windows Communication Foundation (WCF) 
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Pour utiliser différents certificats dans les signatures et le chiffrement  
   
-1.  Définissez une nouvelle classe d'informations d'identification client qui hérite de la classe <xref:System.ServiceModel.Description.ClientCredentials>. Implémentez quatre nouvelles propriétés pour autoriser la spécification de plusieurs certificats : `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` et `ServiceEncryptingCertificate`. Substituez également la méthode <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> pour retourner une instance de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> personnalisée définie à l'étape suivante.  
+1. Définissez une nouvelle classe d'informations d'identification client qui hérite de la classe <xref:System.ServiceModel.Description.ClientCredentials>. Implémentez quatre nouvelles propriétés pour autoriser la spécification de plusieurs certificats : `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` et `ServiceEncryptingCertificate`. Substituez également la méthode <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> pour retourner une instance de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> personnalisée définie à l'étape suivante.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Définissez un nouveau gestionnaire de jetons de sécurité client qui hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Remplacez la méthode <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> pour créer un fournisseur de jetons de sécurité approprié. Le paramètre `requirement`, qui correspond à un type <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, indique la direction des messages et spécifie les paramètres d'utilisation des clés.  
+2. Définissez un nouveau gestionnaire de jetons de sécurité client qui hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Remplacez la méthode <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> pour créer un fournisseur de jetons de sécurité approprié. Le paramètre `requirement`, qui correspond à un type <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, indique la direction des messages et spécifie les paramètres d'utilisation des clés.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Définissez une nouvelle classe d'informations d'identification de service qui hérite de la classe <xref:System.ServiceModel.Description.ServiceCredentials>. Implémentez quatre nouvelles propriétés pour autoriser la spécification de plusieurs certificats : `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` et `ServiceEncryptingCertificate`. Substituez également la méthode <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> pour retourner une instance de la classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> personnalisée définie à l'étape suivante.  
+3. Définissez une nouvelle classe d'informations d'identification de service qui hérite de la classe <xref:System.ServiceModel.Description.ServiceCredentials>. Implémentez quatre nouvelles propriétés pour autoriser la spécification de plusieurs certificats : `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` et `ServiceEncryptingCertificate`. Substituez également la méthode <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> pour retourner une instance de la classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> personnalisée définie à l'étape suivante.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Définissez un nouveau gestionnaire de jetons de sécurité service qui hérite de la classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Remplacez la méthode <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> pour créer un fournisseur de jetons de sécurité qui convienne à la direction passée des messages et aux paramètres d'utilisation des clés.  
+4. Définissez un nouveau gestionnaire de jetons de sécurité service qui hérite de la classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Remplacez la méthode <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> pour créer un fournisseur de jetons de sécurité qui convienne à la direction passée des messages et aux paramètres d'utilisation des clés.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>Pour utiliser plusieurs certificats sur le client  
   
-1.  Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Pour ce faire, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Liez le <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé défini à l’étape suivante à l’élément de liaison de sécurité. Remplacez les informations d'identification du client par défaut par les informations d'identification du client personnalisées créées précédemment.  
+1. Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Pour ce faire, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Liez le <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé défini à l’étape suivante à l’élément de liaison de sécurité. Remplacez les informations d'identification du client par défaut par les informations d'identification du client personnalisées créées précédemment.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Définissez un <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé. Le service dispose de plusieurs identités, différents certificats étant utilisés pour chiffrer la demande et signer la réponse.  
+2. Définissez un <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé. Le service dispose de plusieurs identités, différents certificats étant utilisés pour chiffrer la demande et signer la réponse.  
   
     > [!NOTE]
     >  Dans l'exemple suivant, le vérificateur d'identité personnalisé spécifié n'effectue pas de contrôle d'identité de point de terminaison à des fins d'authentification. Cette pratique est déconseillée lors de la rédaction d'un code de production.  
@@ -84,7 +84,7 @@ Cette rubrique montre comment configurer Windows Communication Foundation (WCF) 
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>Pour utiliser plusieurs certificats sur le service  
   
-1.  Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Comme pour le client, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Remplacez les informations d'identification du service par défaut par les informations d'identification du service personnalisées créées précédemment.  
+1. Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Comme pour le client, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Remplacez les informations d'identification du service par défaut par les informations d'identification du service personnalisées créées précédemment.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

@@ -2,12 +2,12 @@
 title: InstallerF#
 description: Découvrez comment installer F# en fonction de votre environnement.
 ms.date: 08/28/2018
-ms.openlocfilehash: 873d3021ba884ec81992469e5d0f3b7c18b1e0f4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331973"
 ---
 # <a name="install-f"></a>Installer F\#
 
@@ -15,7 +15,7 @@ Vous pouvez installer F# de plusieurs façons, selon votre environnement.
 
 ## <a name="install-f-with-visual-studio"></a>Installer F# avec Visual Studio
 
-Si vous effectuez un téléchargement [Visual Studio](https://visualstudio.microsoft.com/) pour la première fois, il installera d’abord le programme d’installation de Visual Studio. Installez la référence SKU appropriée de Visual Studio à partir du programme d’installation. Si vous avez déjà installé, cliquez sur **modifier**.
+Si vous effectuez un téléchargement [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) pour la première fois, il installera d’abord le programme d’installation de Visual Studio. Installez la référence SKU appropriée de Visual Studio à partir du programme d’installation. Si vous avez déjà installé, cliquez sur **modifier**.
 
 Vous verrez ensuite une liste de charges de travail. Sélectionnez **ASP.NET et développement web** qui installera F# prise en charge et .NET Core prend en charge pour les projets ASP.NET Core.
 
@@ -23,7 +23,7 @@ Ensuite, cliquez sur **modifier** dans l’angle inférieur droit.  Cela install
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>Installer F# avec Visual Studio pour Mac
 
-F#est installé par défaut dans [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/), quelle que soit la configuration que vous choisissez.
+F#est installé par défaut dans [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), quelle que soit la configuration que vous choisissez.
 
 Une fois l’installation terminée, cliquez sur « Démarrer Visual Studio ». Vous pouvez également la lancer via Finder sur macOS.
 
@@ -31,7 +31,7 @@ Une fois l’installation terminée, cliquez sur « Démarrer Visual Studio »
 
 Vous devez avoir [git installé](https://git-scm.com/download) et disponible sur votre chemin d’accès s’utiliser des modèles de projet. Vous pouvez vérifier qu’il est correctement installé en tapant `git --version` à l’invite de commandes et en appuyant sur **entrée**.
 
-### <a name="macostabmacos"></a>[macOS](#tab/macos)
+### [<a name="macos"></a>macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) est utilisé pour [ F# Interactive](../tutorials/fsharp-interactive/index.md) prennent en charge. Le moyen le plus simple pour installer Mono sur macOS est via Homebrew. Tapez simplement la commande suivante dans votre terminal :
 
@@ -41,7 +41,7 @@ brew install mono
 
 Installez également le [du SDK .NET Core](https://www.microsoft.com/net/download).
 
-### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+### [<a name="linux"></a>Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) est utilisé pour [ F# Interactive](../tutorials/fsharp-interactive/index.md) prennent en charge. Si vous êtes sur Debian ou Ubuntu, vous pouvez utiliser les éléments suivants :
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Installez également le [du SDK .NET Core](https://www.microsoft.com/net/download).
 
-### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+### [<a name="windows"></a>Windows](#tab/windows)
 
 Installer [Visual Studio avec F# prennent en charge](#install-f-with-visual-studio). Cette opération installe tous les composants nécessaires pour écrire, compiler et exécuter F# code.
 

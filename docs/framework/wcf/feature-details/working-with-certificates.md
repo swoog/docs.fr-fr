@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331713"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -90,13 +90,13 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Pour construire une chaîne d’approbation avec l’applet de commande New-SelfSignedCertificate  
   
-1.  Créez un certificat (auto-signé) d’autorité racine temporaire à l’aide de l’applet de commande New-SelfSignedCertificate. Enregistrez la clé privée sur le disque.  
+1. Créez un certificat (auto-signé) d’autorité racine temporaire à l’aide de l’applet de commande New-SelfSignedCertificate. Enregistrez la clé privée sur le disque.  
   
-2.  Utilisez ce nouveau certificat pour émettre un autre certificat contenant la clé publique.  
+2. Utilisez ce nouveau certificat pour émettre un autre certificat contenant la clé publique.  
   
-3.  Importez le certificat d'autorité racine dans le magasin Autorités de certification racine approuvées.  
+3. Importez le certificat d'autorité racine dans le magasin Autorités de certification racine approuvées.  
   
-4.  Pour obtenir des instructions détaillées, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Pour obtenir des instructions détaillées, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Quel certificat utiliser ?  
  Parmi les questions les plus fréquemment posées concernant les certificats figurent notamment : quel certificat choisir et pourquoi ? La réponse à ces questions n'est pas la même que vous programmiez un service ou un client. Les informations ci-dessous contiennent des directives générales et n'offrent pas une réponse exhaustive à ces questions.  

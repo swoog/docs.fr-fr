@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332259"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procédure : Stocker plusieurs valeurs dans une Variable (Visual Basic)
 Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *type de données composite*.  
@@ -25,9 +25,9 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Pour stocker plusieurs valeurs dans une variable  
   
-1.  Déterminer le type de données composites que vous souhaitez utiliser pour votre variable.  
+1. Déterminer le type de données composites que vous souhaitez utiliser pour votre variable.  
   
-2.  Si le type de données composite n’est pas déjà défini, définissez-le afin que votre variable puisse l’utiliser.  
+2. Si le type de données composite n’est pas déjà défini, définissez-le afin que votre variable puisse l’utiliser.  
   
     -   Définir une structure avec un [instruction Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
@@ -35,11 +35,11 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
   
     -   Définir une classe avec un [Class, instruction](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Déclarez votre variable avec un `Dim` instruction.  
+3. Déclarez votre variable avec un `Dim` instruction.  
   
-4.  Suivez le nom de variable avec une `As` clause.  
+4. Suivez le nom de variable avec une `As` clause.  
   
-5.  Suivez le `As` mot clé par le nom du type de données composite approprié.  
+5. Suivez le `As` mot clé par le nom du type de données composite approprié.  
   
 ## <a name="see-also"></a>Voir aussi
 
@@ -49,4 +49,4 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
 - [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
