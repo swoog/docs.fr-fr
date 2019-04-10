@@ -2,47 +2,47 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: c3bb22badcfadb92c8687a4eff3a5c7aad1ff1ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330660"
 ---
-# <a name="ref-entity-sql"></a><span data-ttu-id="a2009-102">REF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a2009-102">REF (Entity SQL)</span></span>
-<span data-ttu-id="a2009-103">Retourne une référence à une instance d'entité.</span><span class="sxs-lookup"><span data-stu-id="a2009-103">Returns a reference to an entity instance.</span></span>  
+# <a name="ref-entity-sql"></a><span data-ttu-id="ccc33-102">REF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ccc33-102">REF (Entity SQL)</span></span>
+<span data-ttu-id="ccc33-103">Retourne une référence à une instance d'entité.</span><span class="sxs-lookup"><span data-stu-id="ccc33-103">Returns a reference to an entity instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2009-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a2009-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccc33-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ccc33-104">Syntax</span></span>  
   
 ```  
 REF( expression )   
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a2009-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="a2009-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ccc33-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="ccc33-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="a2009-106">Toute expression valide qui produit une instance d'un type d'entité.</span><span class="sxs-lookup"><span data-stu-id="a2009-106">Any valid expression that yields an instance of an entity type.</span></span>  
+ <span data-ttu-id="ccc33-106">Toute expression valide qui produit une instance d'un type d'entité.</span><span class="sxs-lookup"><span data-stu-id="ccc33-106">Any valid expression that yields an instance of an entity type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a2009-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="a2009-107">Return Value</span></span>  
- <span data-ttu-id="a2009-108">Référence à l'instance d'entité spécifiée.</span><span class="sxs-lookup"><span data-stu-id="a2009-108">A reference to the specified entity instance.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ccc33-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ccc33-107">Return Value</span></span>  
+ <span data-ttu-id="ccc33-108">Référence à l'instance d'entité spécifiée.</span><span class="sxs-lookup"><span data-stu-id="ccc33-108">A reference to the specified entity instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2009-109">Notes</span><span class="sxs-lookup"><span data-stu-id="a2009-109">Remarks</span></span>  
- <span data-ttu-id="a2009-110">Une référence d'entité se compose de la clé d'entité et d'un nom de jeu d'entités.</span><span class="sxs-lookup"><span data-stu-id="a2009-110">An entity reference consists of the entity key and an entity set name.</span></span> <span data-ttu-id="a2009-111">Des jeux d'entités différents pouvant être basés sur le même type d'entité, une clé d'entité particulière peut apparaître dans plusieurs jeux d'entités.</span><span class="sxs-lookup"><span data-stu-id="a2009-111">Because different entity sets can be based on the same entity type, a particular entity key can appear in multiple entity sets.</span></span> <span data-ttu-id="a2009-112">Toutefois, une référence d'entité est toujours unique.</span><span class="sxs-lookup"><span data-stu-id="a2009-112">However, an entity reference is always unique.</span></span> <span data-ttu-id="a2009-113">Si l'expression d'entrée représente une entité rendue persistante, une référence à cette entité est retournée.</span><span class="sxs-lookup"><span data-stu-id="a2009-113">If the input expression represents a persisted entity, a reference to this entity will be returned.</span></span> <span data-ttu-id="a2009-114">Si l'expression d'entrée n'est pas une entité rendue persistante, une référence Null à cette entité est retournée.</span><span class="sxs-lookup"><span data-stu-id="a2009-114">If the input expression is not a persisted entity, a null reference will be returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ccc33-109">Notes</span><span class="sxs-lookup"><span data-stu-id="ccc33-109">Remarks</span></span>  
+ <span data-ttu-id="ccc33-110">Une référence d'entité se compose de la clé d'entité et d'un nom de jeu d'entités.</span><span class="sxs-lookup"><span data-stu-id="ccc33-110">An entity reference consists of the entity key and an entity set name.</span></span> <span data-ttu-id="ccc33-111">Des jeux d'entités différents pouvant être basés sur le même type d'entité, une clé d'entité particulière peut apparaître dans plusieurs jeux d'entités.</span><span class="sxs-lookup"><span data-stu-id="ccc33-111">Because different entity sets can be based on the same entity type, a particular entity key can appear in multiple entity sets.</span></span> <span data-ttu-id="ccc33-112">Toutefois, une référence d'entité est toujours unique.</span><span class="sxs-lookup"><span data-stu-id="ccc33-112">However, an entity reference is always unique.</span></span> <span data-ttu-id="ccc33-113">Si l'expression d'entrée représente une entité rendue persistante, une référence à cette entité est retournée.</span><span class="sxs-lookup"><span data-stu-id="ccc33-113">If the input expression represents a persisted entity, a reference to this entity will be returned.</span></span> <span data-ttu-id="ccc33-114">Si l'expression d'entrée n'est pas une entité rendue persistante, une référence Null à cette entité est retournée.</span><span class="sxs-lookup"><span data-stu-id="ccc33-114">If the input expression is not a persisted entity, a null reference will be returned.</span></span>  
   
- <span data-ttu-id="a2009-115">Si l'opérateur d'extraction de propriété (.) est utilisé pour accéder à une propriété d'une entité, la référence est automatiquement supprimée.</span><span class="sxs-lookup"><span data-stu-id="a2009-115">If the property extraction operator (.) is used to access a property of an entity, the reference is automatically dereferenced.</span></span>  
+ <span data-ttu-id="ccc33-115">Si l'opérateur d'extraction de propriété (.) est utilisé pour accéder à une propriété d'une entité, la référence est automatiquement supprimée.</span><span class="sxs-lookup"><span data-stu-id="ccc33-115">If the property extraction operator (.) is used to access a property of an entity, the reference is automatically dereferenced.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2009-116">Exemple</span><span class="sxs-lookup"><span data-stu-id="a2009-116">Example</span></span>  
- <span data-ttu-id="a2009-117">La requête Entity SQL suivante utilise l'opérateur REF pour retourner la référence d'un argument d'entité d'entrée.</span><span class="sxs-lookup"><span data-stu-id="a2009-117">The following Entity SQL query uses the REF operator to return the reference for an input entity argument.</span></span> <span data-ttu-id="a2009-118">La même requête supprime la référence car nous utilisons une opération d'extraction de propriété (.) pour accéder à une propriété de l'entité Product.</span><span class="sxs-lookup"><span data-stu-id="a2009-118">The same query dereferences the reference because we are using a property extraction operation (.) to access a property of the Product entity.</span></span> <span data-ttu-id="a2009-119">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="a2009-119">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="a2009-120">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="a2009-120">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="ccc33-116">Exemple</span><span class="sxs-lookup"><span data-stu-id="ccc33-116">Example</span></span>  
+ <span data-ttu-id="ccc33-117">La requête Entity SQL suivante utilise l'opérateur REF pour retourner la référence d'un argument d'entité d'entrée.</span><span class="sxs-lookup"><span data-stu-id="ccc33-117">The following Entity SQL query uses the REF operator to return the reference for an input entity argument.</span></span> <span data-ttu-id="ccc33-118">La même requête supprime la référence car nous utilisons une opération d'extraction de propriété (.) pour accéder à une propriété de l'entité Product.</span><span class="sxs-lookup"><span data-stu-id="ccc33-118">The same query dereferences the reference because we are using a property extraction operation (.) to access a property of the Product entity.</span></span> <span data-ttu-id="ccc33-119">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="ccc33-119">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="ccc33-120">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="ccc33-120">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="a2009-121">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne les résultats PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="a2009-121">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="ccc33-121">Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne les résultats PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="ccc33-121">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2.  <span data-ttu-id="a2009-122">Transmettez à la méthode `ExecutePrimitiveTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="a2009-122">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
+2. <span data-ttu-id="ccc33-122">Transmettez à la méthode `ExecutePrimitiveTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="ccc33-122">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   
-## <a name="see-also"></a><span data-ttu-id="a2009-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a2009-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccc33-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ccc33-123">See also</span></span>
 
-- [<span data-ttu-id="a2009-124">DEREF</span><span class="sxs-lookup"><span data-stu-id="a2009-124">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
-- [<span data-ttu-id="a2009-125">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="a2009-125">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [<span data-ttu-id="a2009-126">KEY</span><span class="sxs-lookup"><span data-stu-id="a2009-126">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [<span data-ttu-id="a2009-127">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="a2009-127">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="a2009-128">Définitions de types</span><span class="sxs-lookup"><span data-stu-id="a2009-128">Type Definitions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [<span data-ttu-id="ccc33-124">DEREF</span><span class="sxs-lookup"><span data-stu-id="ccc33-124">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [<span data-ttu-id="ccc33-125">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="ccc33-125">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
+- [<span data-ttu-id="ccc33-126">KEY</span><span class="sxs-lookup"><span data-stu-id="ccc33-126">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
+- [<span data-ttu-id="ccc33-127">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ccc33-127">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="ccc33-128">Définitions de types</span><span class="sxs-lookup"><span data-stu-id="ccc33-128">Type Definitions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
