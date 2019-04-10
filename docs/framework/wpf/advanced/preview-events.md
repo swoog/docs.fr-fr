@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211390"
 ---
 # <a name="preview-events"></a>Aperçu des événements
 Événements d’aperçu, également appelés événements de tunneling, sont des événements routés où la direction de l’itinéraire sont transmises à partir de la racine de l’application vers l’élément qui a déclenché l’événement et est signalé comme étant la source de données d’événement. Pas tous les scénarios d’événements prend en charge ou exiger des événements d’aperçu. Cette rubrique décrit les situations où les événements d’aperçu existent, comment les applications ou composants doivent les gérer et les cas où la création d’événements de la version préliminaire dans des composants personnalisés ou des classes peut être approprié.  
@@ -30,5 +30,6 @@ ms.locfileid: "57356336"
  Chacune de ces techniques a des effets secondaires ou des limitations. L’effet secondaire de la gestion de l’événement d’aperçu est que gérant l’événement à ce stade peut désactiver les gestionnaires qui vous attendre à gérer l’événement de propagation, et par conséquent, la limitation est qu’il n’est généralement pas une bonne idée pour marquer l’événement géré alors qu’il est toujours sur le Previ partie Nouv de l’itinéraire. La limitation de la `handledEventsToo` technique est que vous ne pouvez pas spécifier un `handledEventsToo` gestionnaire dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en tant qu’attribut, vous devez inscrire le Gestionnaire d’événements dans le code après avoir obtenu une référence d’objet à l’élément où le gestionnaire doit être attaché.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
+
+- [Marquage des événements routés comme étant gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Vue d'ensemble des événements routés](routed-events-overview.md)

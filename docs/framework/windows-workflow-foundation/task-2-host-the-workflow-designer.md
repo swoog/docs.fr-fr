@@ -1,15 +1,15 @@
 ---
-title: 'Tâche 2 : Héberger le Concepteur de flux de travail'
+title: 'Tâche 2 : héberger le concepteur de flux de travail'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218704"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : Héberger le Concepteur de flux de travail
+# <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le concepteur de flux de travail
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
   
  La procédure configure le **grille** contrôle qui contient le concepteur, crée par programmation une instance de la <xref:System.Activities.Presentation.WorkflowDesigner> qui contient une valeur par défaut <xref:System.Activities.Statements.Sequence> activité, enregistre les métadonnées de concepteur pour fournir prise en charge de concepteur pour des hôtes et des activités intégrées tout le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] dans le [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.  
@@ -122,6 +122,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
 10. Consultez [tâche 3 : Créer les volets Toolbox et PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md) pour savoir comment ajouter **boîte à outils** et **PropertyGrid** prennent en charge à votre Concepteur de workflow réhébergé.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Réhébergement du concepteur de flux de travail](rehosting-the-workflow-designer.md)
-- [Tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tâche 3 : Créer les volets Toolbox et PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)
+
+- [Réhébergement du Workflow Designer](rehosting-the-workflow-designer.md)
+- [Tâche 1 : créer une application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tâche 3 : créer les volets Toolbox et PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

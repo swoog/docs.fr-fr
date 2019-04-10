@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221275"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890291"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, de structures, et d'unions
 Les classes et les structures sont similaires dans .NET Framework. Elles peuvent toutes deux posséder des champs, des propriétés et des événements. Elles peuvent également posséder des méthodes statiques et non statiques. Une différence notable existe toutefois : les structures sont des types valeur et les classes sont des types référence.  
@@ -68,7 +68,7 @@ Les classes et les structures sont similaires dans .NET Framework. Elles peuvent
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) est une bibliothèque non managée personnalisée qui contient des implémentations des fonctions précédemment listées et quatre structures : **MYPERSON**, **MYPERSON2**, **MYPERSON3** et **MYARRAYSTRUCT**. Ces structures contiennent les éléments suivants :  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) est une bibliothèque non managée personnalisée qui contient des implémentations des fonctions précédemment listées et quatre structures : **MYPERSON**, **MYPERSON2**, **MYPERSON3** et **MYARRAYSTRUCT**. Ces structures contiennent les éléments suivants :  
   
 ```  
 typedef struct _MYPERSON  
@@ -102,19 +102,19 @@ typedef struct _MYARRAYSTRUCT
   
 -   `MyPerson2` contient un **IntPtr** vers la structure `MyPerson`. Le type **IntPtr** remplace le pointeur d’origine vers la structure non managée, car les applications .NET Framework n’utilisent pas de pointeurs, sauf si le code est marqué comme étant **unsafe**.  
   
--   `MyPerson3` contient `MyPerson` comme structure incorporée. Une structure incorporée dans une autre structure peut être aplatie en plaçant les éléments de la structure incorporée directement dans la structure principale. Elle peut également être conservée comme une structure incorporée, comme dans cet exemple.  
+-   `MyPerson3` contient `MyPerson` sous forme de structure incorporée. Une structure incorporée dans une autre structure peut être aplatie en plaçant les éléments de la structure incorporée directement dans la structure principale. Elle peut également être conservée comme une structure incorporée, comme dans cet exemple.  
   
--   `MyArrayStruct` contient un tableau d'entiers. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> définit la valeur d’énumération <xref:System.Runtime.InteropServices.UnmanagedType> sur **ByValArray**, qui est utilisée pour indiquer le nombre d’éléments du tableau.  
+-   `MyArrayStruct` contient un tableau d’entiers. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> définit la valeur d’énumération <xref:System.Runtime.InteropServices.UnmanagedType> sur **ByValArray**, qui est utilisée pour indiquer le nombre d’éléments du tableau.  
   
  Pour toutes les structures de cet exemple, l'attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> est appliqué pour garantir que les membres soient classés de manière séquentielle dans la mémoire, dans l'ordre dans lequel ils apparaissent.  
   
  La classe `LibWrap` contient des prototypes managés pour les méthodes `TestStructInStruct`, `TestStructInStruct3` et `TestArrayInStruct` appelées par la classe `App`. Chaque prototype déclare un seul paramètre de la manière suivante :  
   
--   `TestStructInStruct` déclare une référence au type `MyPerson2` comme son paramètre.  
+-   `TestStructInStruct` déclare une référence au type `MyPerson2` comme paramètre.  
   
--   `TestStructInStruct3` déclare le type `MyPerson3` en tant que paramètre et passe le paramètre par valeur.  
+-   `TestStructInStruct3` déclare le type `MyPerson3` comme paramètre et le passe en valeur.  
   
--   `TestArrayInStruct` déclare une référence au type `MyArrayStruct` comme son paramètre.  
+-   `TestArrayInStruct` déclare une référence au type `MyArrayStruct` comme paramètre.  
   
  Les structures en tant qu’arguments de méthodes sont passées par valeur, sauf si le paramètre contient le mot clé **ref** (**ByRef** dans Visual Basic). Par exemple, la méthode `TestStructInStruct` passe une référence (la valeur d'une adresse) à un objet de type `MyPerson2` au code non managé. Pour manipuler la structure vers laquelle pointe `MyPerson2`, l'exemple crée une mémoire tampon d'une taille spécifiée et retourne son adresse en combinant les méthodes <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> et <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>. Ensuite, l'exemple copie le contenu de la structure managée vers la mémoire tampon non managée. Enfin, l'exemple utilise la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> pour marshaler des données à partir de la mémoire tampon non managée vers un objet managé, ainsi que la méthode <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> pour libérer le bloc de mémoire non managé.  
   
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) est une bibliothèque non managée personnalisée qui contient une implémentation de la fonction précédemment répertoriée, ainsi que deux unions, **MYUNION** et **MYUNION2**. Les unions peuvent contenir les éléments suivants :  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) est une bibliothèque non managée personnalisée qui contient une implémentation de la fonction précédemment répertoriée, ainsi que deux unions, **MYUNION** et **MYUNION2**. Les unions peuvent contenir les éléments suivants :  
   
 ```  
 union MYUNION  
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1` et `MyUnion2_2` contiennent respectivement un type valeur (entier) et une chaîne. Dans du code managé, les types valeur et les types référence ne sont pas autorisés à se chevaucher. Cet exemple utilise la surcharge de méthode pour permettre à l'appelant d'utiliser les deux types quand il appelle la même fonction non managée. La disposition de `MyUnion2_1` est explicite et possède une valeur de décalage précise. En revanche, `MyUnion2_2` possède une disposition séquentielle, car les dispositions explicites ne sont pas autorisées avec les types référence. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> définit l’énumération <xref:System.Runtime.InteropServices.UnmanagedType> sur **ByValTStr**, qui est utilisé pour les tableaux de caractères de longueur fixe inline qui apparaissent au sein de la représentation non managée de l’union.  
   
- La classe `LibWrap` contient les prototypes des méthodes `TestUnion` et `TestUnion2`. `TestUnion2` est surchargée pour déclarer `MyUnion2_1` ou `MyUnion2_2` en tant que paramètres.  
+ La classe `LibWrap` contient les prototypes des méthodes `TestUnion` et `TestUnion2`. `TestUnion2` est surchargée pour déclarer `MyUnion2_1` ou `MyUnion2_2` comme paramètres.  
   
 ### <a name="declaring-prototypes"></a>Déclaration de prototypes  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  Cet exemple montre comment appeler une fonction native à l'aide de la classe <xref:System.Runtime.InteropServices.Marshal> et à l'aide de code unsafe.  
   
- Cet exemple utilise des fonctions wrapper et des appels de code non managé définis dans [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)), également fournis dans les fichiers sources. Il utilise la fonction `TestOutArrayOfStructs` et la structure `MYSTRSTRUCT2`. La structure contient les éléments suivants :  
+ Cet exemple utilise des fonctions wrapper et des appels de code non managé définis dans [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll), également fournis dans les fichiers sources. Il utilise la fonction `TestOutArrayOfStructs` et la structure `MYSTRSTRUCT2`. La structure contient les éléments suivants :  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -264,13 +264,13 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La classe `MyStruct` contient un objet chaîne composé de caractères ANSI. Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> spécifie le format ANSI. `MyUnsafeStruct` est une structure contenant un type <xref:System.IntPtr> plutôt qu'une chaîne.  
+ La classe `MyStruct` contient un objet chaîne composé de caractères ANSI. Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> spécifie le format ANSI. `MyUnsafeStruct`est une structure contenant un type <xref:System.IntPtr> plutôt qu’une chaîne.  
   
  La classe `LibWrap` contient la méthode de prototype surchargée `TestOutArrayOfStructs`. Si une méthode déclare un pointeur en tant que paramètre, la classe doit être marquée avec le mot clé `unsafe`. Étant donné que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ne peut pas utiliser de code unsafe, la méthode surchargée, le modificateur unsafe et la structure `MyUnsafeStruct` ne sont pas nécessaires.  
   
  La classe `App` implémente la méthode `UsingMarshaling` qui effectue toutes les tâches nécessaires au passage du tableau. Le tableau est marqué avec le mot clé `out` (`ByRef` en Visual Basic) pour indiquer que les données passent de l'appelé à l'appelant. L'implémentation utilise les méthodes de la classe <xref:System.Runtime.InteropServices.Marshal> suivantes :  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> pour marshaler des données à partir de la mémoire tampon non managée vers un objet managé.  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> pour marshaler des données de la mémoire tampon non gérée à un objet géré.  
   
 -   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> pour libérer la mémoire réservée aux chaînes de la structure.  
   
@@ -290,5 +290,5 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Voir aussi
 - [Marshaling de données à l’aide de l’appel de code managé](marshaling-data-with-platform-invoke.md)
-- [Marshaling des chaînes](marshaling-strings.md)
+- [Marshaling de chaînes](marshaling-strings.md)
 - [Marshaling de différents types de tableaux](marshaling-different-types-of-arrays.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354828"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839637"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Utilisation des journaux des applications dans Visual Basic
 
@@ -23,11 +23,11 @@ Tout d’abord, la gravité du message est vérifiée avec la propriété <xref:
 
 Le diagramme suivant montre comment un message écrit dans la méthode `WriteEntry` est passé aux méthodes `WriteLine` des écouteurs de suivi du journal :
 
-![Appel de My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Diagramme illustrant l’appel de Mon journal.](./media/working-with-application-logs/my-log-call-messages.png)
 
 Vous pouvez changer le comportement du journal et des écouteurs de suivi en modifiant le fichier de configuration de l’application. Le diagramme suivant montre la correspondance entre les parties du journal et le fichier de configuration.
 
-![Configuration de My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Diagramme illustrant la configuration de Mon journal.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Emplacement d’enregistrement des messages
 

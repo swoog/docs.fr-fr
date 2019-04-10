@@ -1,30 +1,28 @@
 ---
-title: 'Procédure pas à pas : Hébergement de contenu WPF dans Win32'
+title: 'Procédure pas à pas : hébergement de contenu WPF dans Win32'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166645"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Procédure pas à pas : Hébergement de contenu WPF dans Win32
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Cependant, si vous avez écrit une bonne partie du code [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], il est peut-être plus judicieux d'ajouter la fonctionnalité [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à votre application plutôt que de réécrire le code d'origine. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit un mécanisme simple pour l’hébergement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu dans un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] fenêtre.  
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Procédure pas à pas : hébergement de contenu WPF dans Win32
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un environnement riche pour la création d’applications. Cependant, si vous avez écrit une bonne partie du code [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], il est peut-être plus judicieux d'ajouter la fonctionnalité [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à votre application plutôt que de réécrire le code d'origine. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit un mécanisme simple pour l’hébergement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu dans un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] fenêtre.  
   
  Ce didacticiel explique comment écrire un exemple d’application, [hébergement de contenu WPF dans un exemple de fenêtre Win32](https://go.microsoft.com/fwlink/?LinkID=160004), qui héberge [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu dans un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] fenêtre. Vous pouvez étendre cet exemple pour héberger n'importe quelle fenêtre [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Compte tenu de la présence de code managé et non managé dans l'application, celle-ci est écrite en [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
-  
- 
-  
+
 <a name="requirements"></a>   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Ce didacticiel suppose que vous avez des connaissances de base en matière de programmation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Pour obtenir une présentation générale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programmation, consultez [mise en route](../getting-started/index.md). Pour une introduction aux [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de programmation, vous devez référencer un des nombreux ouvrages sur le sujet, en particulier *Windows programmation* de Charles Petzold.  
   
- Étant donné que l’exemple qui accompagne ce didacticiel est implémenté dans [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], ce didacticiel suppose que vous êtes familiarisé avec l’utilisation de [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] au programme le [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ainsi que d’une compréhension de la programmation de code managé. Il est également souhaitable de connaître [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], même si cela n'est pas indispensable.  
+ Étant donné que l’exemple qui accompagne ce didacticiel est implémenté dans [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], ce didacticiel suppose que vous êtes familiarisé avec l’utilisation de [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] au programme le [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ainsi que d’une compréhension de la programmation de code managé. Il est également souhaitable de connaître [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], même si cela n'est pas indispensable.  
   
 > [!NOTE]
 >  Ce didacticiel comprend plusieurs exemples de code tirés de l'exemple associé. Cependant, pour une meilleure lecture, il n'inclut pas la totalité de l'exemple de code. Pour l’exemple de code complet, consultez [hébergement de contenu WPF dans un exemple de fenêtre Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
@@ -71,7 +69,7 @@ ms.locfileid: "57363161"
 
 -   [Hébergement du contenu WPF](#hosting_the_wpf_page)
 
--   [Stockage d’une référence au contenu WPF](#holding_a_reference)
+-   [Stockage d'une référence au contenu WPF](#holding_a_reference)
 
 -   [Communication avec le contenu WPF](#communicating_with_the_page)
 
@@ -89,7 +87,7 @@ ms.locfileid: "57363161"
 
  Le modèle crée une application [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de base avec les éléments suivants :
 
--   un point d'entrée pour l'application ;
+-   Un point d'entrée pour l'application
 
 -   Une fenêtre avec une procédure de fenêtre associée (WndProc)
 
@@ -110,7 +108,7 @@ ms.locfileid: "57363161"
 > [!NOTE]
 >  L'indicateur de ce compilateur vous permet d'utiliser du code managé dans votre application, mais la compilation de votre code non managé se fera toujours comme avant.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise le modèle de thread unique cloisonné (STA). Pour pouvoir fonctionner correctement avec le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] code de contenu, vous devez définir le modèle d’application thread STA en appliquant un attribut au point d’entrée.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise le cloisonnement monothread (STA) modèle de thread. Pour pouvoir fonctionner correctement avec le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] code de contenu, vous devez définir le modèle d’application thread STA en appliquant un attribut au point d’entrée.
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
@@ -172,7 +170,7 @@ ms.locfileid: "57363161"
  Vous pouvez héberger et utiliser le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu sans aucune connaissance de l’implémentation réelle. Si le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu avait été empaqueté dans une fonction [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], il aurait pu être créé dans les [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] langage. Voici une brève procédure pas à pas de l'implémentation [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] utilisée dans l'exemple. Cette section comprend les sous-sections suivantes.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [Disposition](#page_layout)
+-   [Mise en page](#page_layout)
 
 -   [Retour des données à la fenêtre hôte](#returning_data_to_window)
 
@@ -192,7 +190,7 @@ ms.locfileid: "57363161"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
- La ligne suivante contient le contrôle <xref:System.Windows.Controls.Label> Name (nom) et le contrôle <xref:System.Windows.Controls.TextBox> qui lui est associé. Comme le même code est utilisé pour chaque paire label/textbox, il est placé dans une paire de méthodes privées et est utilisé pour les cinq paires label/textbox. Les méthodes créent le contrôle approprié et appellent les méthodes statiques <xref:System.Windows.Controls.Grid.SetColumn%2A> et <xref:System.Windows.Controls.Grid.SetRow%2A> de la classe <xref:System.Windows.Controls.Grid> pour placer les contrôles dans la bonne cellule. Une fois le contrôle créé, l'exemple appelle la méthode <xref:System.Windows.Controls.UIElementCollection.Add%2A> sur la propriété <xref:System.Windows.Controls.Panel.Children%2A> du <xref:System.Windows.Controls.Grid> pour ajouter le contrôle à la grille. Le code permettant d'ajouter les paires label/texbox restantes est similaire. Consultez l'exemple de code pour plus d'informations.
+ La ligne suivante contient le contrôle <xref:System.Windows.Controls.Label> Name (nom) et le contrôle <xref:System.Windows.Controls.TextBox> qui lui est associé. Comme le même code est utilisé pour chaque paire label/textbox, il est placé dans une paire de méthodes privées et est utilisé pour les cinq paires label/textbox. Les méthodes créent le contrôle approprié et appellent les méthodes statiques <xref:System.Windows.Controls.Grid> et <xref:System.Windows.Controls.Grid.SetColumn%2A> de la classe <xref:System.Windows.Controls.Grid.SetRow%2A> pour placer les contrôles dans la bonne cellule. Une fois le contrôle créé, l'exemple appelle la méthode <xref:System.Windows.Controls.UIElementCollection.Add%2A> sur la propriété <xref:System.Windows.Controls.Panel.Children%2A> du <xref:System.Windows.Controls.Grid> pour ajouter le contrôle à la grille. Le code permettant d'ajouter les paires label/texbox restantes est similaire. Consultez l'exemple de code pour plus d'informations.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 

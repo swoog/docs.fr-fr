@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Valider les paramètres d’Application'
+title: 'Procédure : valider les paramètres d’application'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212087"
 ---
-# <a name="how-to-validate-application-settings"></a>Procédure : Valider les paramètres d’Application
+# <a name="how-to-validate-application-settings"></a>Procédure : valider les paramètres d’application
 Cette rubrique illustre la validation des paramètres d’application avant qu’ils ne soient rendus persistants.  
   
  Les paramètres d’application fortement typés empêchent les utilisateurs d’affecter les données d’un type incorrect pour un paramètre donné. Toutefois, un utilisateur peut essayer d’assigner une valeur à un paramètre qui se situe en dehors des limites acceptables, par exemple en fournissant une date de naissance future. <xref:System.Configuration.ApplicationSettingsBase>, la classe parente de toutes les classes de paramètres d’application, expose quatre événements permettant d’activer la vérification de ces limites. La gestion de ces événements place la totalité de votre code de validation dans un emplacement unique, plutôt que de le répartir dans votre projet.  
@@ -58,11 +58,11 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
         MySettings.Default   
         ```  
   
-         ou  
+         - ou -  
   
     -   Si vous êtes un développeur Visual Basic et si vous avez créé vos paramètres d’application à l’aide du Concepteur de projet, vous pouvez récupérer vos paramètres à l’aide de l’[objet My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         ou  
+         - ou -  
   
     -   Si vous avez créé vos paramètres en dérivant de <xref:System.Configuration.ApplicationSettingsBase> directement, vous devez instancier votre classe manuellement.  
   
@@ -80,7 +80,7 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
 1.  Si vous êtes un C# developer, dans votre formulaire ou le contrôle `Load` événement, ajouter un gestionnaire d’événements pour le <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> événement.  
   
-     ou  
+     - ou -  
   
      Si vous êtes un développeur Visual Basic, vous devez déclarer la variable `Settings` à l’aide du mot clé`WithEvents`.  
   
@@ -161,5 +161,6 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](../creating-event-handlers-in-windows-forms.md)
-- [Guide pratique pour Créer des paramètres d’Application](how-to-create-application-settings.md)
+
+- [Création de gestionnaires d'événements dans les Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Procédure : créer des paramètres d’application](how-to-create-application-settings.md)

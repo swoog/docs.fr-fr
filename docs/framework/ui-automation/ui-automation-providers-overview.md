@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: d1209580070c628b8756d01e940a956060223d16
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222742"
 ---
 # <a name="ui-automation-providers-overview"></a>Vue d'ensemble des fournisseurs UI Automation
 > [!NOTE]
@@ -41,10 +41,10 @@ ms.locfileid: "57680145"
  Cette section fournit de brèves explications sur certains concepts clés que vous devez comprendre pour pouvoir implémenter des fournisseurs UI Automation.  
   
 ### <a name="elements"></a>Éléments  
- Les éléments[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sont des éléments de l’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] visibles par les clients UI Automation. Les fenêtres d’application, les volets, les boutons, les info-bulles, les zones de liste et les éléments de liste en sont des exemples.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] éléments sont des éléments de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] qui sont visibles par les clients UI Automation. Les fenêtres d’application, les volets, les boutons, les info-bulles, les zones de liste et les éléments de liste en sont des exemples.  
   
 ### <a name="navigation"></a>Navigation  
- Les éléments[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sont exposés aux clients sous la forme d’une arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] construit l’arborescence en naviguant d’un élément à l’autre. La navigation est activée par les fournisseurs pour chaque élément, chacun pouvant pointer vers un parent, des frères ou des enfants.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] éléments sont exposés aux clients comme un [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] arborescence. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] construit l’arborescence en naviguant d’un élément à un autre. La navigation est activée par les fournisseurs pour chaque élément, chacun pouvant pointer vers un parent, des frères ou des enfants.  
   
  Pour plus d’informations sur la vue client de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , consultez [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "57680145"
 ### <a name="frameworks"></a>Infrastructures  
  Une infrastructure est un composant qui gère les contrôles enfants, les tests de positionnement et le rendu dans une zone de l’écran. Par exemple, une fenêtre [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , souvent appelée HWND, peut servir d’infrastructure contenant plusieurs éléments [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , tels qu’une barre de menus, une barre d’état et des boutons.  
   
- Les contrôles conteneurs[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , tels que les zones de liste et les arborescences, sont considérés comme des infrastructures, car ils contiennent leur propre code pour restituer des éléments enfants et effectuer des tests de positionnement sur ces derniers. En revanche, une zone de liste [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] n’est pas une infrastructure, car le rendu et les tests de positionnement sont gérés par la fenêtre [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] contenante.  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] conteneur des contrôles tels que les zones de liste et les vues de l’arborescence sont considérés comme frameworks, car ils contiennent leur propre code pour restituer les éléments enfants et effectuer le test d’atteinte sur ces derniers. En revanche, une zone de liste [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] n’est pas une infrastructure, car le rendu et les tests de positionnement sont gérés par la fenêtre [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] contenante.  
   
  L’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] d’une application peut être composée de différentes infrastructures. Par exemple, une fenêtre d’application HWND peut contenir un contrôle [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] contenant à son tour un composant tel qu’une zone de liste déroulante dans un HWND.  
   
@@ -77,4 +77,5 @@ ms.locfileid: "57680145"
  L’hôte d’un fragment joue un rôle important dans l’offre des services [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Il permet la navigation vers la racine de fragment et fournit des propriétés par défaut afin que le fournisseur personnalisé n’ait pas à les implémenter.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Implémentation de fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

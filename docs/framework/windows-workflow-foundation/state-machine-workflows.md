@@ -2,12 +2,12 @@
 title: Workflows d'ordinateur d'état
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222989"
 ---
 # <a name="state-machine-workflows"></a>Workflows d'ordinateur d'état
 Une machine à états représente un paradigme connu pour développer des programmes. L'activité <xref:System.Activities.Statements.StateMachine>, avec <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, et d'autres activités peut être utilisée pour générer des programmes de workflow de machine à états. Cette rubrique fournit une vue d'ensemble de la création des workflows de machine à états.  
@@ -47,7 +47,7 @@ Une machine à états représente un paradigme connu pour développer des progra
   
  Pour ajouter un <xref:System.Activities.Statements.State> et créer une transition en une seule étape, faites glisser un **état** activité à partir de la **Machine à états** section de la **boîte à outils** et placez-la sur un autre état dans le Concepteur de workflow. Lorsque le <xref:System.Activities.Statements.State> est déplacé vers un autre <xref:System.Activities.Statements.State>, quatre triangles apparaissent autour de l'autre <xref:System.Activities.Statements.State>. Si <xref:System.Activities.Statements.State> est déposé sur un des quatre triangles, il est ajouté à la machine à états et une transition est créée à partir du <xref:System.Activities.Statements.State> source vers le <xref:System.Activities.Statements.State> de destination de dépôt. Pour plus d’informations, consultez [Concepteur d’activités Transition](/visualstudio/workflow-designer/transition-activity-designer).  
   
- Pour créer une transition après ajout d'un état, il existe deux options. La première option consiste à faire glisser l'état depuis l'aire du concepteur de workflow et à le placer sur un état existant, puis à le déposer sur l'un des points de dépôt. Elle est très similaire à la méthode décrite dans la section précédente. Vous pouvez également pointer la souris sur l'état source souhaité, et faire glisser une ligne vers l'état de destination souhaité.  
+ Pour créer une transition après ajout d'un état, il existe deux options. La première option consiste à faire glisser l’état depuis l’aire du concepteur de workflow et à le placer sur un état existant, puis à le déposer sur l’un des points de dépôt. Elle est très similaire à la méthode décrite dans la section précédente. Vous pouvez également pointer la souris sur l'état source souhaité, et faire glisser une ligne vers l'état de destination souhaité.  
   
 > [!NOTE]
 >  Un seul état dans une machine à états peut contenir jusqu'à 76 transitions créées à l'aide du concepteur de workflow. Le nombre maximal de transitions d'un état pour les workflows créés en dehors du concepteur est limité uniquement par les ressources système.  
@@ -101,8 +101,9 @@ Une machine à états représente un paradigme connu pour développer des progra
  État qui représente l'achèvement de la machine à états.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un Workflow d’ordinateur d’état](how-to-create-a-state-machine-workflow.md)
-- [Concepteur d’activités StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [Concepteur d’activités State](/visualstudio/workflow-designer/state-activity-designer)
-- [Concepteur d’activités FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Concepteur d’activités Transition](/visualstudio/workflow-designer/transition-activity-designer)
+
+- [Procédure : Créer un workflow d'ordinateur d'état](how-to-create-a-state-machine-workflow.md)
+- [Concepteur d'activités StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Concepteur d'activités d'état](/visualstudio/workflow-designer/state-activity-designer)
+- [Concepteur d'activités FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [Concepteur d'activités de transition](/visualstudio/workflow-designer/transition-activity-designer)

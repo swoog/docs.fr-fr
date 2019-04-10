@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb7e64da5002f438198a8389d2d8385d7a4210a4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8a35f5ff62ca37337b7becb023f2328cbe05aea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216039"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Méthode ICoreClrDebugTarget::EnumProcesses
 Énumère les processus en cours d'exécution sur un ordinateur distant.  
@@ -58,7 +58,7 @@ HRESULT EnumProcesses (
 ## <a name="remarks"></a>Notes  
  Pour libérer la mémoire allouée par cette méthode, appelez le [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) (méthode).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CoreClrRemoteDebuggingInterfaces.h  
@@ -68,4 +68,5 @@ HRESULT EnumProcesses (
  **Versions du .NET framework :** 3.5 SP1  
   
 ## <a name="see-also"></a>Voir aussi
-- [ICoreClrDebugTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+
+- [Interface ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

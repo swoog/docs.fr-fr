@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220563"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach, interface
 Définit l’interface pour l’attachement automatique du débogueur appelé par serveur.  
@@ -32,8 +32,9 @@ Définit l’interface pour l’attachement automatique du débogueur appelé pa
 |------------|-----------------|  
 |[AutoAttach, méthode](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Effectue automatique du débogueur appelé serveur attacher.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** DbgAutoAttach.idl  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

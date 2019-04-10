@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Diagnostiquer un travail d'impression problématique"
+title: 'Procédure : Diagnostiquer un travail d’impression problématique'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211035"
 ---
-# <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d'impression problématique
+# <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d’impression problématique
 Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs concernant des travaux d’impression qui échouent ou s’impriment lentement. L’ensemble des propriétés du travail d’impression exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen pour effectuer un diagnostic rapide et à distance des travaux d’impression.  
   
 ## <a name="example"></a>Exemple  
@@ -82,10 +82,11 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [&, opérateur (référence C#)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Vue d'ensemble de l'impression](printing-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222300"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Procédure : Spécifier la source de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez vos données. Cette rubrique décrit les différentes façons de spécifier la source de liaison.  
@@ -44,9 +44,10 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Vous spécifiez une chaîne qui représente l’élément que vous voulez lier. Cela est utile lorsque vous souhaitez effectuer une liaison à la propriété d’un autre élément sur votre application. Par exemple, si vous souhaitez utiliser un <xref:System.Windows.Controls.Slider> pour contrôler la hauteur d’un autre contrôle dans votre application, ou si vous souhaitez lier le <xref:System.Windows.Controls.ContentControl.Content%2A> de votre contrôle à la <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriété de votre <xref:System.Windows.Controls.ListBox> contrôle. Pour plus d'informations, consultez <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Héritage de la valeur de propriété](../advanced/property-value-inheritance.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
 - [Vue d'ensemble des déclarations de liaison](binding-declarations-overview.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

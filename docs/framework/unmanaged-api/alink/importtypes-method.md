@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 622e57aedf6c49e95dc2d7e40ba598361b3e6a26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222859"
 ---
 # <a name="importtypes-method"></a>ImportTypes, méthode
 Lance l’importation de types de chaque portée importée par [ImportFile, méthode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -61,10 +61,11 @@ HRESULT ImportTypes(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Nécessite alink.h  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

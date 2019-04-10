@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712472"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826598"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Notions de base du garbage collection
 <a name="top"></a> Dans le Common Language Runtime (CLR), le garbage collector a un rôle de gestionnaire de mémoire automatique. Il fournit les avantages suivants :  
@@ -261,21 +261,19 @@ Garbage collection simultané
   
  Le garbage collection d'arrière-plan supprime les restrictions d'allocation imposées par le garbage collection simultané, car des opérations garbage collection éphémères peuvent se produire pendant le garbage collection d'arrière-plan. Cela signifie que le garbage collection d'arrière-plan peut supprimer des objets morts dans les générations éphémères et peut également développer le tas si nécessaire pendant un garbage collection de génération 1.  
   
- L'illustration suivante montre le garbage collection en arrière-plan exécuté sur un thread dédié distinct, sur une station de travail.  
+L’illustration suivante montre le nettoyage de la mémoire en arrière-plan effectué sur un thread dédié distinct, sur une station de travail :
   
- ![Nettoyage de la mémoire de la station de travail en arrière-plan](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Nettoyage de la mémoire de la station de travail en arrière-plan  
-  
+ ![Diagramme illustrant le nettoyage de la mémoire d’une station de travail en arrière-plan.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Retour au début](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Nettoyage de la mémoire du serveur en arrière-plan  
  Depuis .NET Framework 4.5, le garbage collection de serveur en arrière-plan est le mode par défaut pour le garbage collection de serveur. Pour choisir ce mode, affectez à l'attribut `enabled` de l'[\<élément <gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) la valeur `true` dans le schéma de configuration d'exécution. Ce mode fonctionne de la même façon que le garbage collection de station de travail en arrière-plan, décrit dans la section précédente, mais il existe quelques différences. Le garbage collection de station de travail en arrière-plan utilise un thread de garbage collection en arrière-plan dédié, tandis que le garbage collection de serveur en arrière-plan utilise plusieurs threads : généralement un thread dédié pour chaque processeur logique. Contrairement au thread du garbage collection de station de travail en arrière-plan, ces threads n'expirent pas.  
   
- L'illustration suivante montre le garbage collection en arrière-plan exécuté sur un thread dédié distinct sur un serveur.  
+ L’illustration suivante montre le nettoyage de la mémoire en arrière-plan effectué sur un thread dédié distinct, sur un serveur :  
   
- ![Nettoyage de la mémoire du serveur en arrière-plan](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Nettoyage de la mémoire du serveur en arrière-plan  
+ ![Diagramme illustrant le nettoyage de la mémoire d’un serveur en arrière-plan.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Voir aussi
 

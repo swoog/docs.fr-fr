@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter des contrôles sans Interface utilisateur à des Windows Forms'
+title: 'Procédure : ajouter des contrôles sans interface utilisateur à des Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223691"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procédure : Ajouter des contrôles sans Interface utilisateur à des Windows Forms
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procédure : ajouter des contrôles sans interface utilisateur à des Windows Forms
 Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre application. Contrairement à d’autres contrôles, composants ne fournissent pas d’une interface utilisateur à l’utilisateur et n’avez donc pas besoin doit être affiché sur l’aire du Concepteur de formulaires Windows. Lorsqu’un composant est ajouté à un formulaire, le Concepteur de formulaires Windows affiche une barre d’état redimensionnable en bas de l’écran où tous les composants sont affichés. Une fois qu’un contrôle a été ajouté à la barre d’état du composant, vous pouvez sélectionner le composant et définissez ses propriétés comme vous le feriez pour tout autre contrôle sur le formulaire.  
   
 > [!NOTE]
@@ -80,10 +80,11 @@ Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre 
     >  Vous pouvez exposer votre ordinateur local à un risque de sécurité via le réseau en référençant un UserControl malveillant. Il s’agit uniquement d’un problème dans le cas d’une personne malveillante, création d’un contrôle personnalisé causer des dommages, que vous suivi par inadvertance l’ajout à votre projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles Windows Forms](index.md)
-- [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Guide pratique pour Ajouter des contrôles ActiveX aux Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [Guide pratique pour Copier des contrôles entre des Windows Forms](how-to-copy-controls-between-windows-forms.md)
+
+- [contrôles Windows Forms](index.md)
+- [Procédure : ajouter des contrôles à des Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procédure : ajouter des contrôles ActiveX à des Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Procédure : copier des contrôles entre des Windows Forms](how-to-copy-controls-between-windows-forms.md)
 - [Placement de contrôles dans les Windows Forms](putting-controls-on-windows-forms.md)
 - [Création d'étiquettes et de raccourcis pour les contrôles Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

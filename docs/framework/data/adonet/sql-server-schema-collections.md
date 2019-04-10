@@ -2,12 +2,12 @@
 title: Collections de schémas SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224556"
 ---
 # <a name="sql-server-schema-collections"></a>Collections de schémas SQL Server
 Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en charge d’autres collections de schémas en plus des collections de schémas courantes. Les collections de schémas varient légèrement selon la version de SQL Server que vous utilisez. Pour déterminer la liste des collections de schémas prises en charge, appelez le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu’elles prennent en charge et le nombre d’éléments d’identification qu’elles utilisent.  
@@ -65,7 +65,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |table_name|Chaîne|Nom de table.|  
 |column_name|Chaîne|Nom de la colonne à laquelle l'index est associé.|  
 |ordinal_position|Int32|Position du numéro de colonne.|  
-|KeyType|Byte|Type d’objet.|  
+|KeyType|Byte|Type d'objet.|  
 |index_name|Chaîne|Nom de l’index.|  
   
 ## <a name="procedures"></a>Procédures  
@@ -119,7 +119,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |TABLE_NAME|Chaîne|Nom de la table.|  
 |TABLE_TYPE|Chaîne|Type de table. Peut être VIEW ou BASE TABLE.|  
   
-## <a name="columns"></a>Columns  
+## <a name="columns"></a>Colonnes  
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
@@ -216,7 +216,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |createdate|DateTime|Date d'ajout du compte.|  
 |updatedate|DateTime|Date à laquelle le compte a été modifié pour la dernière fois.|  
   
-## <a name="views"></a>Vues  
+## <a name="views"></a>Affichages  
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
@@ -244,10 +244,10 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |----------------|--------------|-----------------|  
 |assembly_name|Chaîne|Nom du fichier pour l'assembly.|  
 |udt_name|Chaîne|Nom de la classe pour l'assembly.|  
-|version_major|Objet|Numéro de version principale.|  
-|version_minor|Objet|Numéro de version secondaire.|  
-|version_build|Objet|Numéro de build.|  
-|version_revision|Objet|Numéro de révision.|  
+|version_major|Object|Numéro de version principale.|  
+|version_minor|Object|Numéro de version secondaire.|  
+|version_build|Object|Numéro de build.|  
+|version_revision|Object|Numéro de révision.|  
 |culture_info|Object|Informations de culture associées à cet UDT.|  
 |public_key|Object|Clé publique utilisée par cet assembly.|  
 |is_fixed_length|Booléen|Indique si la longueur du type est toujours identique à max_length.|  
@@ -256,5 +256,6 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |Permission_set_desc|Chaîne|Nom convivial de l'ensemble d'autorisations/niveau de sécurité pour l'assembly.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+
+- [Extraction des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

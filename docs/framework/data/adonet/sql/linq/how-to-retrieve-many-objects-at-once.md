@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-ms.openlocfilehash: 31091b6634c9d95c008929680620fb66d95d473c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd53c2fd16a82ce0f69a33e0b7d7ffef7815b91b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220524"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>Procédure : Récupérer plusieurs objets à la fois
 Vous pouvez récupérer plusieurs objets dans une requête en utilisant <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
@@ -22,4 +22,5 @@ Vous pouvez récupérer plusieurs objets dans une requête en utilisant <xref:Sy
  [!code-vb[DLinqQueryConcepts#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#9)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

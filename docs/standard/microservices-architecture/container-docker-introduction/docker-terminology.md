@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479995"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920972"
 ---
 # <a name="docker-terminology"></a>Terminologie Docker
 
@@ -27,13 +27,13 @@ Cette section liste les termes et les définitions que vous devez connaître ava
 
 **Étiquette** : marque ou intitulé que vous pouvez appliquer aux images pour identifier les différentes images ou versions de l’image initiale (selon le numéro de version de l’environnement cible).
 
-**Build multi-étape** : fonctionnalité, depuis Docker 17.05 ou une version ultérieure, qui permet de réduire la taille des images finales. En quelques phrases, avec une build multi-étape, vous pouvez utiliser, par exemple, une grande image de base, qui contient le SDK pour compiler et publier l’application, puis utilisez le dossier de publication avec une petite image de base runtime uniquement, pour produire une image finale beaucoup plus petite.
+**Build multi-étape** : fonctionnalité, depuis Docker 17.05 ou une version ultérieure, qui permet de réduire la taille des images finales. En quelques phrases, avec un build en plusieurs étapes vous pouvez utiliser, par exemple, une grande image de base, qui contient le SDK pour compiler et publier l’application, puis utilisez le dossier de publication avec une petite image de base runtime uniquement, pour produire une image finale beaucoup plus petite
 
 **Dépôt** : collection d’images Docker associées, identifiées par une étiquette qui indique la version de chaque image. Certains dépôts contiennent plusieurs variantes d’une image spécifique, par exemple une image contenant des SDK (plus lourde), une image contenant uniquement des runtimes (plus légère), etc. Ces variantes peuvent être identifiées par des balises. Un dépôt peut contenir des variantes de plateforme, comme une image Linux et une image Windows.
 
 **Registre** : service qui fournit l’accès aux dépôts. Le registre par défaut utilisé pour la plupart des images publiques est [Docker Hub](https://hub.docker.com/) (propriété de l’organisation Docker). Un registre contient généralement des dépôts de plusieurs équipes. Les entreprises utilisent souvent des registres privés pour stocker et gérer les images qu’elles ont créées. Azure Container Registry est un autre exemple de registre.
 
-**Image multi-arch** : pour la multi-architecture, est une fonctionnalité qui simplifie la sélection de l’image appropriée, en fonction de la plateforme où Docker est en cours d’exécution, par exemple, quand un fichier Docker demande une image de base **FROM microsoft/dotnet:2.2-sdk** à partir du Registre, il obtient en fait **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** ou **2.2-sdk-alpine**, selon le système d’exploitation et la version où Docker est en cours d’exécution.
+**Image multi-arch** : (pour « image multi-architecture ») fonctionnalité qui simplifie la sélection de l’image adaptée à la plateforme d’exécution de Docker ; par exemple, quand un Dockerfile demande une image de base **FROM mcr.microsoft.com/dotnet/core/sdk:2.2** au registre, il obtient en pratique **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** ou **2.2-sdk-stretch**, selon le système d’exploitation et la version sur lesquels Docker s’exécute.
 
 **Docker Hub** : registre public dans lequel vous pouvez charger et manipuler des images. Docker Hub fournit un hébergement d’images Docker, des registres publics ou privés, des déclencheurs de build et des webhooks, et l’intégration avec GitHub et Bitbucket.
 

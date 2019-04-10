@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer des Figures à partir de lignes, courbes et formes'
+title: 'Procédure : créer des figures à partir de lignes, courbes et formes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224908"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procédure : Créer des Figures à partir de lignes, courbes et formes
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procédure : créer des figures à partir de lignes, courbes et formes
 Pour créer une figure, construisez un <xref:System.Drawing.Drawing2D.GraphicsPath>, puis appeler les méthodes, telles que <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> et <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, pour ajouter des primitives pour le chemin d’accès.  
   
 ## <a name="example"></a>Exemple  
@@ -35,6 +35,7 @@ Pour créer une figure, construisez un <xref:System.Drawing.Drawing2D.GraphicsPa
  Les exemples précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Génération et dessin de tracés](constructing-and-drawing-paths.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)

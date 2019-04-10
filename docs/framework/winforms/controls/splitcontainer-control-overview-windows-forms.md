@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219419"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Vue d'ensemble du contrôle SplitContainer (Windows Forms)
 Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  
@@ -38,18 +38,19 @@ Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Propriétés, méthodes et événements couramment utilisés  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Détermine le panneau qui restera la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Détermine si le séparateur peut être déplacé par le clavier ou la souris.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Détermine si le séparateur est disposé verticalement ou horizontalement.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Détermine l’épaisseur, en pixels, du séparateur.|  
-|Événement<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Se produit lorsque le séparateur se déplace.|  
-|Événement<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Se produit lorsque le séparateur a été déplacé.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propriété|Détermine le panneau qui restera la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété|Détermine si le séparateur peut être déplacé par le clavier ou la souris.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété|Détermine si le séparateur est disposé verticalement ou horizontalement.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriété|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriété|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> propriété|Détermine l’épaisseur, en pixels, du séparateur.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> événement|Se produit lorsque le séparateur se déplace.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> événement|Se produit lorsque le séparateur a été déplacé.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer, contrôle](splitcontainer-control-windows-forms.md)
 - [Exemple de contrôle SplitContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

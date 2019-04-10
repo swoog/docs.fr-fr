@@ -2,12 +2,12 @@
 title: Protocole d'échange de contexte
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217001"
 ---
 # <a name="context-exchange-protocol"></a>Protocole d'échange de contexte
 Cette section décrit le protocole d’échange de contexte introduit dans Windows Communication Foundation (WCF) version .NET Framework version 3.5. Ce protocole permet au canal client d'accepter un contexte fourni par un service et de l'appliquer à toutes les demandes ultérieures à ce service envoyées sur la même instance de canal client. L’implémentation de protocole d’échange de contexte peut utiliser une des deux mécanismes suivants pour propager le contexte entre le serveur et le client : Les cookies HTTP ou un en-tête SOAP.  
@@ -49,9 +49,9 @@ Cette section décrit le protocole d’échange de contexte introduit dans Windo
   
  En mode `HttpCookie`, les cookies sont définis à l'aide de l'en-tête `SetCookie`. Le nom du cookie est `WscContext`. La valeur du cookie est l'encodage Base64 de l'en-tête `wsc:Context`. Cette valeur est mise entre guillemets.  
   
- La valeur du contexte doit être protégée des changements au cours du transit pour les mêmes raisons  que les en-têtes WS-Addressing sont protégés. L'en-tête est utilisé pour déterminer vers où distribuer la demande sur le service. L'en-tête `wsc:Context` est requis par conséquent pour être signé numériquement ou signé et chiffré au niveau du transport ou de SOAP lorsque la liaison offre une fonction de protection des messages. Lorsque les cookies HTTP sont utilisés pour propager le contexte, ils doivent être protégés à l'aide de la sécurité de transport.  
+ La valeur du contexte doit être protégée des changements au cours du transit pour les mêmes raisons  que les en-têtes WS-Addressing sont protégés. L'en-tête est utilisé pour déterminer vers où distribuer la demande sur le service. L’en-tête `wsc:Context` est requis par conséquent pour être signé numériquement ou signé et chiffré au niveau du transport ou de SOAP lorsque la liaison offre une fonction de protection des messages. Lorsque les cookies HTTP sont utilisés pour propager le contexte, ils doivent être protégés à l'aide de la sécurité de transport.  
   
- Les points de terminaison de service qui requièrent la prise en charge du protocole de l'échange de contexte peuvent l'indiquer explicitement dans la stratégie publiée. Deux nouvelles assertions de stratégie ont été introduites pour représenter l’exigence de la prise en charge du protocole d’échange de contexte par le client au niveau de SOAP ou pour activer la prise en charge des cookies HTTP. La génération de ces assertions dans la stratégie sur le service est contrôlée par la valeur de la propriété <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> de la façon suivante :  
+ Les points de terminaison de service qui requièrent la prise en charge du protocole de l'échange de contexte peuvent l'indiquer explicitement dans la stratégie publiée. Deux nouvelles assertions de stratégie ont été introduites pour représenter la spécification de la prise en charge du protocole d'échange de contexte par le client au niveau de SOAP ou pour activer la prise en charge des cookies HTTP. La génération de ces assertions dans la stratégie sur le service est contrôlée par la valeur de la propriété <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> de la façon suivante :  
   
 -   Pour <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, l'assertion suivante est générée :  
   
@@ -68,4 +68,5 @@ Cette section décrit le protocole d’échange de contexte introduit dans Windo
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide de l’interopérabilité des protocoles de services web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+
+- [Guide de l'interopérabilité des protocoles de services Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

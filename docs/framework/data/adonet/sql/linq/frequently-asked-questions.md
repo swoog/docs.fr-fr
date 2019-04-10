@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223978"
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 Les sections suivantes fournissent des réponses à quelques problèmes courants que vous êtes susceptible de rencontrer lors de l'implémentation de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -50,12 +50,12 @@ Les sections suivantes fournissent des réponses à quelques problèmes courants
 ## <a name="unexpected-query-results"></a>Résultats de requête inattendus  
  Q. Ma requête retourne des résultats inattendus. Comment vérifier ce qui se produit ?  
   
- Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit plusieurs outils permettant d'inspecter le code SQL qu'il génère. L'un des plus importants est <xref:System.Data.Linq.DataContext.Log%2A>. Pour plus d’informations, consultez [prise en charge de débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit plusieurs outils permettant d’inspecter le code SQL généré. L'un des plus importants est <xref:System.Data.Linq.DataContext.Log%2A>. Pour plus d’informations, consultez [prise en charge de débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Résultats de procédure stockée inattendus  
  Q. J'ai une procédure stockée dont la valeur de retour est calculée par `MAX()`. Lorsque je fais glisser la procédure stockée vers la surface [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)], la valeur de retour n'est pas correcte.  
   
- Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit deux manières de retourner des valeurs générées par la base de données au moyen de procédures stockées :  
+ Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit deux manières de retourner des valeurs générées par une base de données au moyen de procédures stockées :  
   
 -   en nommant le résultat de sortie ;  
   
@@ -112,7 +112,7 @@ Les sections suivantes fournissent des réponses à quelques problèmes courants
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Éviter la définition explicite des valeurs générées par une base de données pour l'insertion ou la mise à jour  
  Q. J'ai une table de base de données comportant une colonne `DateCreated` qui a comme valeur par défaut SQL `Getdate()`. Lorsque j'essaie d'insérer un nouvel enregistrement à l'aide de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la valeur devient `NULL`. Il me semble qu'elle devrait être la valeur par défaut de la base de données.  
   
- Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gère automatiquement cette situation pour les colonnes identity (incrémentation automatique), rowguidcol (GUID généré par la base de données) et timestamp. Dans d’autres cas, vous devez définir manuellement <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` et <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> propriétés.  
+ Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gère automatiquement cette situation pour identity (incrémentation automatique) et rowguidcol (GUID généré par la base de données) et les colonnes timestamp. Dans d’autres cas, vous devez définir manuellement <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` et <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> propriétés.  
   
 ## <a name="multiple-dataloadoptions"></a>Plusieurs options de chargement de données  
  Q. Puis-je spécifier des options de chargement supplémentaires sans remplacer la première ?  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>Mappage de données à partir de plusieurs tables  
  Q. Les données de mon entité proviennent de plusieurs tables. Comment faire pour les mapper ?  
   
- Un fichier . Vous pouvez créer une vue dans une base de données et mapper l'entité à la vue. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] génère pour les vues le même SQL que pour les tables.  
+ Un fichier . Vous pouvez créer une vue dans une base de données et mapper l'entité à la vue. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] génère le même SQL pour les vues comme il le fait pour les tables.  
   
 > [!NOTE]
 >  L'utilisation des vues dans ce scénario comporte des limitations. Cette technique est plus sûre lorsque les opérations exécutées sur <xref:System.Data.Linq.Table%601> sont prises en charge par la vue sous-jacente. Vous êtes le seul à connaître les opérations prévues. Par exemple, la plupart des applications sont en lecture seule, et effectuer un autre nombre important `Create` / `Update` / `Delete` opérations uniquement à l’aide des procédures stockées sur des vues.  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>Le second DataContext n'est pas mis à jour  
  Q. J'ai utilisé une instance de <xref:System.Data.Linq.DataContext> pour stocker des valeurs dans la base de données. Toutefois, un second <xref:System.Data.Linq.DataContext> sur la même base de données ne reflète pas les valeurs mises à jour. La seconde instance <xref:System.Data.Linq.DataContext> paraît retourner des valeurs mises en cache.  
   
- Un fichier . Ce comportement est inhérent à la conception. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continue à retourner les mêmes instances/valeurs que vous avez vues dans la première instance. Lorsque vous effectuez des mises à jour, vous utilisez l'accès concurrentiel optimiste. Les données d'origine sont utilisées pour effectuer la comparaison avec l'état actuel de la base de données afin de vérifier qu'il n'a en fait pas été modifié. S'il a été modifié, un conflit se produit et votre application doit le résoudre. L'une des options de votre application consiste à réinitialiser l'état d'origine à l'état actuel de la base de données et à retenter la mise à jour. Pour plus d'informations, voir [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Un fichier . Ce comportement est inhérent à la conception. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continue à renvoyer les mêmes instances/valeurs que vous avez vu dans la première instance. Lorsque vous effectuez des mises à jour, vous utilisez l'accès concurrentiel optimiste. Les données d'origine sont utilisées pour effectuer la comparaison avec l'état actuel de la base de données afin de vérifier qu'il n'a en fait pas été modifié. S'il a été modifié, un conflit se produit et votre application doit le résoudre. L'une des options de votre application consiste à réinitialiser l'état d'origine à l'état actuel de la base de données et à retenter la mise à jour. Pour plus d'informations, voir [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Vous pouvez également attribuer à <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> la valeur false, ce qui désactive la mise en cache et le suivi des modifications. Vous pouvez ensuite extraire les valeurs les plus récentes chaque fois que vous exécutez une requête.  
   
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  Un fichier . Le mode lecture seule désactive la capacité du contexte à suivre les modifications.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Résolution des problèmes](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [Sécurité dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

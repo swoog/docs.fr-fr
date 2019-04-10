@@ -4,12 +4,12 @@ description: Découvrez comment créer et déboguer votre première application 
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788334"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890551"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Prise en main de C# et Visual Studio Code
 
@@ -91,14 +91,14 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 ## <a name="add-a-class"></a>Ajouter une classe
 
 1. Pour ajouter une nouvelle classe, cliquez avec le bouton droit dans l’Explorateur VS Code et sélectionnez **Nouveau fichier**. Un nouveau fichier est ajouté au dossier ouvert dans VS Code.
-2. Nommez votre fichier `Class1.cs`. Vous devez l’enregistrer avec l’extension `.cs` à la fin pour qu’il soit reconnu comme fichier C#.
+2. Nommez votre fichier `MyClass.cs`. Vous devez l’enregistrer avec l’extension `.cs` à la fin pour qu’il soit reconnu comme fichier C#.
 3. Ajoutez le code ci-dessous pour créer votre première classe. Veillez à inclure le bon espace de noms pour pouvoir y faire référence dans votre fichier `Program.cs`.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ L’extension Visual Studio Code C# peut générer automatiquement les ressource
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Configuration de Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Configurer Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Débogage dans Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

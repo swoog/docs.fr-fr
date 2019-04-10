@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une Collection de polices privées'
+title: 'Procédure : créer une collection de polices privée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210685"
 ---
-# <a name="how-to-create-a-private-font-collection"></a>Procédure : Créer une Collection de polices privées
+# <a name="how-to-create-a-private-font-collection"></a>Procédure : créer une collection de polices privée
 Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:System.Drawing.Text.FontCollection> classe de base abstraite. Vous pouvez utiliser un <xref:System.Drawing.Text.PrivateFontCollection> objet pour maintenir un ensemble de polices spécifiquement pour votre application. Une collection de polices privées peut inclure des polices système installés, ainsi que des polices qui n’ont pas été installés sur l’ordinateur. Pour ajouter un fichier de polices à une collection de polices privées, appelez le <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> méthode d’un <xref:System.Drawing.Text.PrivateFontCollection> objet.  
   
  Le <xref:System.Drawing.Text.FontCollection.Families%2A> propriété d’un <xref:System.Drawing.Text.PrivateFontCollection> objet contient un tableau de <xref:System.Drawing.FontFamily> objets.  
@@ -37,9 +37,9 @@ Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:S
   
  Si une combinaison famille/style donnée est disponible, un <xref:System.Drawing.Font> objet est construit à l’aide de cette famille et le style. Le premier argument passé à la <xref:System.Drawing.Font.%23ctor%2A> constructeur est le nom de famille de polices (pas un <xref:System.Drawing.FontFamily> comme c’est le cas pour d’autres variantes de l’objet le <xref:System.Drawing.Font.%23ctor%2A> constructeur). Après le <xref:System.Drawing.Font> objet est construit, il est passé à la <xref:System.Drawing.Graphics.DrawString%2A> méthode de la <xref:System.Drawing.Graphics> classe pour afficher le nom de famille, ainsi que le nom du style.  
   
- La sortie du code suivant est similaire à la sortie illustrée dans l’illustration suivante.  
+ La sortie du code suivant est similaire à la sortie illustrée dans l’illustration suivante :  
   
- ![Polices du texte](./media/csfontstext7.png "csfontstext7")  
+ ![Capture d’écran qui affiche le texte dans des polices différentes.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  Arial.tff (qui a été ajouté à la collection de polices privées dans l’exemple de code suivant) est le fichier de police pour le style Arial regular. Toutefois, notez que la sortie du programme montre plusieurs styles disponibles autres que standard pour la famille de polices Arial. C’est parce que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut simuler les styles italique, gras et italiques et gras depuis le style Normal. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut également produire des soulignements et des barrés depuis le style Normal.  
   
@@ -49,8 +49,9 @@ Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:S
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
 - [Utilisation de polices et de texte](using-fonts-and-text.md)

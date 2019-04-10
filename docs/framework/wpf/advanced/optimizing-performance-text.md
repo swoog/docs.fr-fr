@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225961"
 ---
 # <a name="optimizing-performance-text"></a>Optimisation des performances : Texte
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge la présentation de contenu de texte par le biais de l’utilisation de contrôles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] avec de nombreuses fonctionnalités. En général, vous pouvez diviser le rendu du texte en trois couches :  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut la prise en charge pour la présentation de contenu de texte via l’utilisation de riches en fonctionnalités [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] contrôles. En général, vous pouvez diviser le rendu du texte en trois couches :  
   
 1.  À l’aide de la <xref:System.Windows.Documents.Glyphs> et <xref:System.Windows.Media.GlyphRun> objets directement.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409404"
 3.  À l’aide de contrôles de niveau supérieur, tels que le <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets.  
   
  Cette rubrique fournit des recommandations relatives aux performances de rendu de texte.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Rendu de texte au niveau du glyphe  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit la prise en charge de texte avancée, y compris le balisage au niveau du glyphe avec accès direct à <xref:System.Windows.Documents.Glyphs> pour les clients qui souhaitent intercepter et rendre le texte persistant après la mise en forme. Ces fonctionnalités assurent une prise en charge critique pour les différentes spécifications de rendu de texte propres à chacun des scénarios suivants.  
@@ -38,7 +37,7 @@ ms.locfileid: "58409404"
   
 -   Scénarios d’impression.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] comme langage d’imprimante.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en tant que langage d’imprimante.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -98,7 +97,7 @@ ms.locfileid: "58409404"
   
  Le tableau suivant montre le coût de l’affichage de 1000 <xref:System.Windows.Controls.TextBlock> objets avec et sans explicite <xref:System.Windows.Documents.Run>.  
   
-|**Type de TextBlock**|**Durée de création (ms)**|**Durée d’affichage (ms)**|  
+|**Type de TextBlock**|**Heure de création (ms)**|**Durée (ms) de rendu**|  
 |------------------------|------------------------------|----------------------------|  
 |Utilisation de Run pour définir des propriétés de texte|146|540|  
 |Utilisation de TextBlock pour définir des propriétés de texte|43|453|  
@@ -108,7 +107,7 @@ ms.locfileid: "58409404"
   
  La solution à ce problème est simple. Si le <xref:System.Windows.Controls.Label> n’est pas défini sur un personnalisé <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> , remplacez le <xref:System.Windows.Controls.Label> avec un <xref:System.Windows.Controls.TextBlock> et lier les données son <xref:System.Windows.Controls.TextBlock.Text%2A> propriété à la chaîne source.  
   
-|**Propriété liée aux données**|**Durée de la mise à jour (ms)**|  
+|**Propriété liée aux données**|**Heure de mise à jour (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -143,14 +142,14 @@ ms.locfileid: "58409404"
   
  Le tableau suivant montre le coût de performances de l’affichage de 1000 <xref:System.Windows.Documents.Hyperlink> éléments avec et sans soulignement.  
   
-|**Lien hypertexte**|**Durée de création (ms)**|**Durée d’affichage (ms)**|  
+|**Lien hypertexte**|**Heure de création (ms)**|**Durée (ms) de rendu**|  
 |-------------------|------------------------------|----------------------------|  
 |Avec soulignement|289|1130|  
 |Sans soulignement|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Fonctionnalités de mise en forme du texte  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit des services de mise en forme de texte enrichi, comme la coupure de mots automatique. Ces services peuvent affecter les performances de l’application et doivent être utilisés uniquement si nécessaire.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit des services, tels que la coupure de mots automatique de mise en forme. Ces services peuvent affecter les performances de l’application et doivent être utilisés uniquement si nécessaire.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Éviter l’utilisation inutile de la coupure de mots  
  Coupure de mots automatique recherche des points d’arrêt de trait d’union pour des lignes de texte et autorise des positions d’arrêt supplémentaires pour les lignes de <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets. Par défaut, la fonctionnalité de coupure de mots automatique est désactivée dans ces objets. Vous pouvez activer cette fonctionnalité en définissant la propriété IsHyphenationEnabled de l’objet sur `true`. Toutefois, si vous activez cette fonctionnalité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lance l’interopérabilité [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], ce qui peut affecter les performances de l’application. Nous vous recommandons de ne pas utiliser la coupure de mots automatique, sauf si vous en avez besoin.  
@@ -162,12 +161,13 @@ ms.locfileid: "58409404"
  La fonctionnalité de paragraphe optimal de la <xref:System.Windows.Documents.FlowDocument> objet dispose les paragraphes afin que les blancs soient distribués de manière aussi égale que possible. Par défaut, la fonctionnalité de paragraphe optimal est désactivée. Vous pouvez activer cette fonctionnalité en définissant l’objet <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> propriété `true`. Toutefois, l’activation de cette fonctionnalité affecte les performances de l’application. Nous vous recommandons de ne pas utiliser la fonctionnalité de paragraphe optimal, sauf si vous en avez besoin.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Ressources d’application](optimizing-performance-application-resources.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226662"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Liaison des données aux contrôles (services de données WCF)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez lier des contrôles tels que les contrôles `ComboBox` et `ListView` à une instance de la classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Cette collection, qui hérite de la classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contient les données d'un flux [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Cette classe représente une collection de données dynamique qui fournit des notifications lorsque des éléments sont ajoutés ou supprimés. Lorsque vous utilisez une instance de <xref:System.Data.Services.Client.DataServiceCollection%601> pour la liaison de données, le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèques clientes gèrent ces événements pour vous assurer que les objets suivis par le <xref:System.Data.Services.Client.DataServiceContext> restent synchronisés avec les données dans l’élément d’interface utilisateur relié.  
@@ -33,7 +33,7 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez li
  [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Liaison de données aux éléments Windows Presentation Foundation  
- Étant donné que la classe <xref:System.Data.Services.Client.DataServiceCollection%601> hérite de la classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, vous pouvez lier des objets à un élément ou un contrôle dans une application WPF (Windows Presentation Foundation) comme vous le feriez lorsque vous utilisez la classe <xref:System.Collections.ObjectModel.ObservableCollection%601> pour la liaison. Pour plus d’informations, consultez [(Windows Presentation Foundation) de liaison de données](../../../../docs/framework/wpf/data/data-binding-wpf.md). Une façon de lier des données du service des données aux contrôles WPF est de définir la propriété `DataContext` de l'élément sur l'instance de la classe <xref:System.Data.Services.Client.DataServiceCollection%601> qui contient le résultat de la requête. Dans ce cas, utilisez la propriété <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> pour définir la source de l'objet pour le contrôle. Utilisez la propriété <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> pour spécifier quelle propriété de l'objet lié afficher. Si vous liez un élément à un objet connexe retourné par une propriété de navigation, incluez le chemin d'accès dans la liaison définie pour la propriété <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Ce chemin d'accès est relatif à l'objet racine défini par la propriété <xref:System.Windows.FrameworkElement.DataContext%2A> du contrôle parent. L'exemple suivant définit la propriété <xref:System.Windows.FrameworkElement.DataContext%2A> d'un élément <xref:System.Windows.Controls.StackPanel> pour qu'elle lie le contrôle parent à une <xref:System.Data.Services.Client.DataServiceCollection%601> d'objets de client :  
+ Étant donné que la classe <xref:System.Data.Services.Client.DataServiceCollection%601> hérite de la classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, vous pouvez lier des objets à un élément ou un contrôle dans une application WPF (Windows Presentation Foundation) comme vous le feriez lorsque vous utilisez la classe <xref:System.Collections.ObjectModel.ObservableCollection%601> pour la liaison. Pour plus d’informations, consultez [(Windows Presentation Foundation) de liaison de données](../../../../docs/framework/wpf/data/data-binding-wpf.md). Une façon de lier des données du service des données aux contrôles WPF est de définir la propriété `DataContext` de l'élément sur l'instance de la classe <xref:System.Data.Services.Client.DataServiceCollection%601> qui contient le résultat de la requête. Dans ce cas, utilisez la propriété <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> pour définir la source de l'objet pour le contrôle. Utilisez la propriété <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> pour spécifier quelle propriété de l'objet lié afficher. Si vous liez un élément à un objet connexe retourné par une propriété de navigation, incluez le chemin d’accès dans la liaison définie pour la propriété <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Ce chemin d’accès est relatif à l’objet racine défini par la propriété <xref:System.Windows.FrameworkElement.DataContext%2A> du contrôle parent. L'exemple suivant définit la propriété <xref:System.Windows.FrameworkElement.DataContext%2A> d'un élément <xref:System.Windows.Controls.StackPanel> pour qu'elle lie le contrôle parent à une <xref:System.Data.Services.Client.DataServiceCollection%601> d'objets de client :  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
@@ -71,7 +71,7 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez li
  Les objets connexes sont chargés de façon semblable. Pour plus d'informations, voir [Procédure : Lier des données aux éléments Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
   
 ## <a name="customizing-data-binding-behaviors"></a>Personnalisation des comportements de liaison de données  
- La classe <xref:System.Data.Services.Client.DataServiceCollection%601> vous permet d'intercepter les événements déclenchés lorsque des modifications sont apportées à la collection, telles que l'ajout ou la suppression d'un objet, et lorsque les modifications sont apportées aux propriétés d'objet dans une collection. Vous pouvez modifier les événements de liaison de données pour remplacer le comportement par défaut qui inclut les contraintes suivantes :  
+ La classe <xref:System.Data.Services.Client.DataServiceCollection%601> vous permet d’intercepter les événements déclenchés lorsque des modifications sont apportées à la collection, telles que l’ajout ou la suppression d’un objet, et lorsque les modifications sont apportées aux propriétés d’objet dans une collection. Vous pouvez modifier les événements de liaison de données pour remplacer le comportement par défaut qui inclut les contraintes suivantes :  
   
 -   Aucune validation n'est effectuée dans les délégués.  
   
@@ -81,12 +81,12 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez li
   
  Lorsque vous créez une nouvelle instance de <xref:System.Data.Services.Client.DataServiceCollection%601>, vous avez l'option de spécifier les paramètres suivants qui définissent des délégués aux méthodes qui gèrent les événements déclenchés lorsque les objets liés sont modifiés :  
   
--   `entityChanged` - méthode appelée lors de la modification de la propriété d'un objet lié. Ce délégué <xref:System.Func%602> accepte un objet <xref:System.Data.Services.Client.EntityChangedParams> et retourne une valeur booléenne qui indique si le comportement par défaut, appeler <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> sur le <xref:System.Data.Services.Client.DataServiceContext>, doit encore se produire.  
+-   `entityChanged` -une méthode qui est appelée lorsque la propriété d’un objet lié est modifiée. Ce délégué <xref:System.Func%602> accepte un objet <xref:System.Data.Services.Client.EntityChangedParams> et retourne une valeur booléenne qui indique si le comportement par défaut, appeler <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> sur le <xref:System.Data.Services.Client.DataServiceContext>, doit encore se produire.  
   
--   `entityCollectionChanged`- méthode appelée lorsqu'un objet est ajouté ou supprimé de la collection de liaisons. Ce délégué <xref:System.Func%602> accepte un objet <xref:System.Data.Services.Client.EntityCollectionChangedParams> et retourne une valeur booléenne qui indique si le comportement par défaut, appeler <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> pour une action <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> ou <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> pour une action <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> sur <xref:System.Data.Services.Client.DataServiceContext>, doit encore se produire.  
+-   `entityCollectionChanged` -une méthode qui est appelée lorsqu’un objet est ajouté ou supprimé de la collection de liaisons. Ce délégué <xref:System.Func%602> accepte un objet <xref:System.Data.Services.Client.EntityCollectionChangedParams> et retourne une valeur booléenne qui indique si le comportement par défaut, appeler <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> pour une action <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> ou <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> pour une action <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> sur <xref:System.Data.Services.Client.DataServiceContext>, doit encore se produire.  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] n'effectue aucune validation des comportements personnalisés que vous implémentez dans ces délégués.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] n’effectue aucune validation des comportements personnalisés que vous implémentez dans ces délégués.  
   
  Dans l'exemple suivant, l'action <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> est personnalisée pour appeler la méthode <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> et <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> pour supprimer des entités `Orders_Details` qui appartiennent à une entité `Orders` supprimée. Cette action personnalisée est effectuée parce que les entités dépendantes ne sont pas supprimées automatiquement lorsque l'entité parente est supprimée.  
   
@@ -101,18 +101,19 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez li
 ## <a name="data-binding-with-custom-client-data-classes"></a>Liaison de données avec les classes de données de client personnalisées  
  Pour pouvoir charger des objets dans <xref:System.Data.Services.Client.DataServiceCollection%601>, les objets eux-mêmes doivent implémenter l'interface <xref:System.ComponentModel.INotifyPropertyChanged>. Service de données de classes de client qui sont générés lorsque vous utilisez le **ajouter une référence de Service** boîte de dialogue ou la [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) outil implémentent cette interface. Si vous fournissez vos propres classes de données clientes, vous devez utiliser un autre type de collection pour la liaison de données. Lorsque les objets changent, vous devez gérer des événements dans les contrôles liés aux données pour appeler les méthodes suivantes de la classe <xref:System.Data.Services.Client.DataServiceContext> :  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>- lorsqu'un nouvel objet est ajouté à la collection.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -Lorsqu’un nouvel objet est ajouté à la collection.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - lorsqu'un objet est supprimé de la collection.  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -Quand un objet est supprimé de la collection.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>- lorsqu'une propriété est modifiée sur un objet dans la collection.  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> -Quand une propriété est modifiée sur un objet dans la collection.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>- lorsqu'un objet est ajouté à une collection d'objets connexes.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -Lorsqu’un objet est ajouté à une collection d’objets connexes.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>- lorsqu'un objet est ajouté à une collection d'objets connexes.  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -Lorsqu’un objet est ajouté à une collection d’objets connexes.  
   
  Pour plus d’informations, consultez [la mise à jour le Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Générer manuellement les Classes de Service de données Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
-- [Guide pratique pour Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+
+- [Procédure : Générer manuellement les classes du service de données client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [Procédure : Ajouter une référence de service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

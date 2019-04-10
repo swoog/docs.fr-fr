@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-ms.openlocfilehash: 9ce4375d9e89e829349a2088daf4556fb05e9e94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211476"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Liaisons Windows Communication Foundation
 Les liaisons spécifient la façon dont un point de terminaison de service Windows Communication Foundation (WCF) communique avec les autres points de terminaison. Au minimum, une liaison doit spécifier le transport (par exemple HTTP ou TCP) à utiliser. Vous pouvez également définir d’autres caractéristiques, telles que la sécurité et la prise en charge des transactions, par le biais des liaisons.  
@@ -36,4 +36,5 @@ Les liaisons spécifient la façon dont un point de terminaison de service Windo
  [Liaisons](../../../docs/framework/wcf/feature-details/bindings.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md)

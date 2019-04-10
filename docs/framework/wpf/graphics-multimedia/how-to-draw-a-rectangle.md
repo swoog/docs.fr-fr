@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217352"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Procédure : Dessiner un rectangle
 Cet exemple montre comment dessiner un rectangle à l’aide de la <xref:System.Windows.Shapes.Rectangle> élément.  
@@ -30,7 +30,8 @@ Cet exemple montre comment dessiner un rectangle à l’aide de la <xref:System.
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Shapes.Rectangle>
 - [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Vue d’ensemble de Table](../advanced/table-overview.md)
+- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d'ensemble de Table](../advanced/table-overview.md)

@@ -3,12 +3,12 @@ title: Branches et boucles – Tutoriel d’introduction à C#
 description: Dans ce tutoriel sur les branches et les boucles, vous allez écrire du code en C# pour explorer la syntaxe du langage qui gère les branches et les boucles conditionnelles permettant d’exécuter des instructions de manière répétée.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677784"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920946"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Découvrir la logique conditionnelle avec des instructions de branches et de boucles
 
@@ -249,7 +249,7 @@ Essayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme 
 
 Vous avez terminé le didacticiel « Branches et boucles ».
 
-Vous pouvez maintenant suivre le tutoriel [Interpolation de chaînes](interpolated-strings-local.md) dans votre propre environnement de développement.
+Vous pouvez passer au tutoriel [Tableaux et collections](arrays-and-collections.md) dans votre propre environnement de développement.
 
 Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
 

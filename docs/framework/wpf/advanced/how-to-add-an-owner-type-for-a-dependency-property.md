@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Ajouter un type propriétaire d'une propriété de dépendance"
+title: 'Procédure : Ajouter un type propriétaire d’une propriété de dépendance'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 03ffec87c98c88452aa8fde89c64646eaf48a8da
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217092"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Procédure : Ajouter un type propriétaire d'une propriété de dépendance
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Procédure : Ajouter un type propriétaire d’une propriété de dépendance
 Cet exemple montre comment ajouter une classe en tant que propriétaire d’une propriété de dépendance inscrite pour un type différent. En procédant ainsi, le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lecteur et système de propriétés sont en mesure de reconnaître la classe en tant que propriétaire de la propriété supplémentaire. Ajout en tant que propriétaire éventuellement permet à la classe d’ajout fournir les métadonnées spécifiques au type.  
   
  Dans l’exemple suivant, `StateProperty` est une propriété inscrite par la `MyStateControl` classe. La classe `UnrelatedStateControl` ajoute lui-même en tant que propriétaire de la `StateProperty` à l’aide de la <xref:System.Windows.DependencyProperty.AddOwner%2A> méthode, en particulier à l’aide de la signature qui permet de nouvelles métadonnées pour la propriété de dépendance telle qu’elle existe sur le type d’ajout. Notez que vous devez fournir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] accesseurs pour la propriété similaire à l’exemple présenté dans le [implémenter une propriété de dépendance](how-to-implement-a-dependency-property.md) exemple, ainsi que de nouveau exposer l’identificateur de propriété de dépendance sur la classe en cours d’ajout en tant que propriétaire.  
@@ -31,5 +31,6 @@ Cet exemple montre comment ajouter une classe en tant que propriétaire d’une 
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)

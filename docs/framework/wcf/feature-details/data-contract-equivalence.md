@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214934"
 ---
 # <a name="data-contract-equivalence"></a>Équivalence de contrats de données
 Pour qu'un client puisse envoyer des données d'un certain type à un service ou pour qu'un service puisse envoyer des données à un client, le type des données envoyées n'a pas nécessairement besoin d'exister à l'extrémité de réception. La seule exigence est que les contrats de données des deux types soient équivalents. (Parfois, une équivalence stricte n’est pas obligatoire, comme indiqué dans [concernant les contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,6 +61,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
  Lors du passage des paramètres et des valeurs de retour entre des applications, si le type attendu est une interface, il est équivalent au type attendu de type <xref:System.Object>. Dans la mesure où chaque type dérive en dernier lieu de <xref:System.Object>, chaque contrat de données dérive en dernier lieu du contrat de données pour <xref:System.Object>. De ce fait, tout type de contrat de données peut être passé lorsqu'une interface est attendue. Étapes supplémentaires sont nécessaires pour fonctionner correctement avec les interfaces ; Pour plus d’informations, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)

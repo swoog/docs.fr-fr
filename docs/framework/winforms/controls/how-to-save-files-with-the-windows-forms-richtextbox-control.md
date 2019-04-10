@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Enregistrer des fichiers avec le contrôle RichTextBox Windows Forms'
+title: 'Procédure : enregistrer des fichiers avec le contrôle RichTextBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213530"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procédure : Enregistrer des fichiers avec le contrôle RichTextBox Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procédure : enregistrer des fichiers avec le contrôle RichTextBox Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle peut écrire les informations affichées dans un des formats suivants :  
   
 -   Texte brut  
@@ -88,6 +88,7 @@ Les formulaires Windows <xref:System.Windows.Forms.RichTextBox> contrôle peut �
     >  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application a besoin créer un fichier, cette application a besoin d’accéder de créer pour le dossier. Les autorisations sont définies à l’aide des listes de contrôle d’accès. Si le fichier existe déjà, l’application doit uniquement un accès en écriture, un privilège inférieur. Si possible, il est plus sûr de créer le fichier pendant le déploiement et uniquement accorder l’accès en lecture à un seul fichier, au lieu de créer l’accès pour un dossier. En outre, il est plus sûr d’écrire les données dans des dossiers utilisateur que dans le dossier racine ou le dossier Program Files.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, contrôle](richtextbox-control-windows-forms.md)

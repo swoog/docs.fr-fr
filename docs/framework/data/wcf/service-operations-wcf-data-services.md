@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211970"
 ---
 # <a name="service-operations-wcf-data-services"></a>Opérations de service (services de données WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de définir des opérations de service sur un service de données pour exposer des méthodes sur le serveur. Comme d'autres ressources du service des données, les opérations de service sont adressées par les URI. Les opérations de service vous permettent d’exposer la logique métier dans un service de données, comme d’implémenter la logique de validation, pour appliquer la sécurité basée sur les rôles, ou exposer des fonctions d’interrogation spécialisées. Les opérations de service sont des méthodes ajoutées à la classe de service de données dérivée de <xref:System.Data.Services.DataService%601>. Comme pour toutes les autres ressources du service de données, vous pouvez fournir des paramètres à la méthode d'opération de service. Par exemple, ce qui suit l’opération URI de service (selon la [Guide de démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) service de données) passe la valeur `London` à la `city` paramètre :  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de définir des opérations de service sur un service de données pour exposer des méthodes sur le serveur. Comme d'autres ressources du service des données, les opérations de service sont adressées par les URI. Les opérations de service vous permettent d'exposer la logique métier dans un service de données, comme d'implémenter la logique de validation, pour appliquer la sécurité basée sur les rôles, ou exposer des fonctions d'interrogation spécialisées. Les opérations de service sont des méthodes ajoutées à la classe de service de données dérivée de <xref:System.Data.Services.DataService%601>. Comme pour toutes les autres ressources du service de données, vous pouvez fournir des paramètres à la méthode d'opération de service. Par exemple, ce qui suit l’opération URI de service (selon la [Guide de démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) service de données) passe la valeur `London` à la `city` paramètre :  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -31,7 +31,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  Pour plus d’informations sur la façon d’appeler une opération de service à partir d’une application cliente .NET Framework, consultez [appelant les opérations de Service](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
   
-## <a name="service-operation-requirements"></a>Exigences des opérations de service  
+## <a name="service-operation-requirements"></a>Spécifications des opérations de service  
  Les spécifications suivantes s'appliquent lors de la définition d'opérations de service sur le service de données. Si une méthode ne respecte pas ces spécifications définies, elle ne sera pas exposée en tant qu'opération de service pour le service de données.  
   
 -   L'opération doit être une méthode d'instance publique qui est un membre de la classe du service des données.  
@@ -56,16 +56,16 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Afin de prendre en charge l'accès aux entités connexes à l'aide de propriétés de navigation, l'opération de service doit retourner <xref:System.Linq.IQueryable%601>.  
   
--   La méthode doit être annotée avec l'attribut `[WebGet]` ou `[WebInvoke]`.  
+-   La méthode doit être annotée avec l’attribut `[WebGet]` ou `[WebInvoke]`.  
   
-    -   `[WebGet]` permet d'appeler la méthode à l'aide d'une demande GET.  
+    -   `[WebGet]` permet à la méthode à appeler à l’aide d’une requête GET.  
   
-    -   `[WebInvoke(Method = "POST")]` permet d'appeler la méthode à l'aide d'une demande POST. Les autres méthodes <xref:System.ServiceModel.Web.WebInvokeAttribute> ne sont pas prises en charge.  
+    -   `[WebInvoke(Method = "POST")]` permet à la méthode à appeler à l’aide d’une demande POST. Les autres méthodes <xref:System.ServiceModel.Web.WebInvokeAttribute> ne sont pas prises en charge.  
   
 -   Une opération de service peut être annotée avec le <xref:System.Data.Services.SingleResultAttribute>, qui spécifie que la valeur de retour de la méthode est une entité unique plutôt qu'une collection d'entités. Cette distinction détermine la sérialisation résultante de la réponse et le mode de représentation des parcours de propriété de navigation supplémentaires dans l'URI. Par exemple, lors de l'utilisation de la sérialisation AtomPub, une instance de type de ressource unique est représentée en tant qu'élément d'entrée et un jeu d'instances est représenté en tant qu'élément « feed ».  
   
 ## <a name="addressing-service-operations"></a>Adressage d'opérations de service  
- Vous pouvez adresser des opérations de service en plaçant le nom de la méthode dans le premier segment de chemin d'accès d'un URI. Par exemple, l'URI suivant accède à une opération `GetOrdersByState` qui retourne une collection <xref:System.Linq.IQueryable%601> d'objets `Orders`.  
+ Vous pouvez adresser des opérations de service en plaçant le nom de la méthode dans le premier segment de chemin d’accès d’un URI. Par exemple, l'URI suivant accède à une opération `GetOrdersByState` qui retourne une collection <xref:System.Linq.IQueryable%601> d'objets `Orders`.  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true  
@@ -77,11 +77,11 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |Types de retour valides|Règles d'URI|  
 |------------------------|---------------|  
-|`void` (`Nothing` en Visual Basic)<br /><br /> ou<br /><br /> Types d'entité<br /><br /> ou<br /><br /> Types primitifs|L'URI doit être un segment de chemin d'accès unique qui est le nom de l'opération de service. Les options de requête ne sont pas autorisées.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|L'URI doit être un segment de chemin d'accès unique qui est le nom de l'opération de service. Comme le type de résultat n'est pas un type <xref:System.Linq.IQueryable%601>, les options de requête ne sont pas autorisées.|  
-|<xref:System.Linq.IQueryable%601>|Les segments de chemin d'accès, en plus du chemin d'accès qui est le nom de l'opération de service, sont autorisés. Les options de requête sont aussi autorisées.|  
+|`void` (`Nothing` en Visual Basic)<br /><br /> - ou -<br /><br /> Types d'entité<br /><br /> - ou -<br /><br /> Types primitifs|L’URI doit être un segment de chemin d’accès unique qui est le nom de l’opération de service. Les options de requête ne sont pas autorisées.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|L’URI doit être un segment de chemin d’accès unique qui est le nom de l’opération de service. Comme le type de résultat n'est pas un type <xref:System.Linq.IQueryable%601>, les options de requête ne sont pas autorisées.|  
+|<xref:System.Linq.IQueryable%601>|Les segments de chemin d’accès, en plus du chemin d’accès qui est le nom de l’opération de service, sont autorisés. Les options de requête sont aussi autorisées.|  
   
- Des segments de chemin d'accès ou des options de requêtes supplémentaires peuvent être ajoutés à l'URI en fonction du type de retour de l'opération de service. Par exemple, l'URI suivant accède à une opération `GetOrdersByCity` qui retourne une collection <xref:System.Linq.IQueryable%601> d'objets `Orders`, classée par `RequiredDate` dans l'ordre décroissant, avec les objets `Order_Details` connexes :  
+ Des segments de chemin d'accès ou des options de requêtes supplémentaires peuvent être ajoutés à l'URI en fonction du type de retour de l'opération de service. Par exemple, l’URI suivant accède à une opération `GetOrdersByCity` qui retourne une collection <xref:System.Linq.IQueryable%601> d’objets `Orders`, classée par `RequiredDate` dans l’ordre décroissant, avec les objets `Order_Details` connexes :  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc  
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Intercepteurs](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

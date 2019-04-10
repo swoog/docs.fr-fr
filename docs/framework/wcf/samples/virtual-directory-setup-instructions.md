@@ -2,12 +2,12 @@
 title: Instructions d'installation du répertoire virtuel
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225584"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instructions d'installation du répertoire virtuel
 Les exemples Windows Communication Foundation (WCF) sont destinées à partager un répertoire virtuel commun nommé servicemodelsamples est mappé au dossier %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -59,9 +59,9 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 7.  Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **Read**  
+    -   **Lecture**  
   
-    -   **Exécuter des scripts (tels que ASP)**  
+    -   **Exécuter les scripts (tels que ASP)**  
   
 8.  Cliquez sur **suivant**, puis cliquez sur **Terminer** pour terminer l’Assistant.  
   
@@ -76,7 +76,7 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 3.  Dans le volet Actions, sélectionnez le **activer** option. Cela permet d'accéder au répertoire du répertoire à l'aide d'Internet Explorer, ce qui est utile lors du débogage d'un service.  
   
- Enfin, vous devez définir les propriétés de sécurité du dossier servicemodelsamples afin d'autoriser son accès. Pour plus d'informations, consultez ce qui suit.  
+ Enfin, vous devez définir les propriétés de sécurité du dossier servicemodelsamples afin d’autoriser son accès. Pour plus d'informations, consultez ce qui suit.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Pour définir des propriétés de répertoire virtuel supplémentaires dans IIS 5.1 ou 6.0  
   
@@ -84,7 +84,7 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 2.  Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **Read**  
+    -   **Lecture**  
   
     -   **Accès au journal**  
   
@@ -191,4 +191,5 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
     3.  Dans le **groupe** colonne, vérifiez que la valeur de **ASPNET** est « Utilisateurs ».  
   
 ## <a name="see-also"></a>Voir aussi
-- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+
+- [Instructions relatives à l'hébergement dans les Services Internet (IIS)](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

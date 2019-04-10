@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212282"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : hériter de formulaires à l’aide de la boîte de dialogue Sélecteur d’héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
@@ -57,7 +57,8 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
     >  Quand vous combinez des contrôles et des composants hérités avec des contrôles et des composants standard sur des Windows Forms, vous pouvez rencontrer des conflits avec l'ordre de plan. Vous pouvez corriger ce problème en modifiant l’ordre de plan. Pour cela, cliquez dans le menu **Format**, pointez sur **Ordre**, puis cliquez sur **Mettre au premier plan** ou **Mettre à l’arrière-plan**. Pour plus d’informations sur l’ordre de plan des contrôles, consultez [Comment : Superposer des objets dans les Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Inherits (instruction)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Conséquences de la modification de l’aspect d’un formulaire de base](effects-of-modifying-base-form-appearance.md)
+- [Conséquences de la modification de l'aspect d'un formulaire de base](effects-of-modifying-base-form-appearance.md)
 - [Héritage visuel des Windows Forms](windows-forms-visual-inheritance.md)

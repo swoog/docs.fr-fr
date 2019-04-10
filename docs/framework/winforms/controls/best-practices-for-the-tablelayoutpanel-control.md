@@ -14,12 +14,12 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222326"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Meilleures pratiques pour le contrôle TableLayoutPanel
 Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit des fonctionnalités de disposition puissants, vous devez bien réfléchir avant d’utiliser sur vos formulaires Windows.  
@@ -56,5 +56,6 @@ Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit des fonctionna
  Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle ne prend pas en charge l’héritage visuel dans le Concepteur de formulaires Windows. Un <xref:System.Windows.Forms.TableLayoutPanel> contrôle dans une classe dérivée apparaît comme « verrouillé » au moment du design.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

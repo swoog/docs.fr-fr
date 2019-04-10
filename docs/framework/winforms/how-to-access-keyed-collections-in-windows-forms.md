@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Accès indexé Collections dans les Windows Forms'
+title: 'Procédure : accéder à des collections à clé dans Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: af398e8ac051bfc89c532fe5dc216e9cfbfdc4b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214038"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procédure : Accès indexé Collections dans les Windows Forms
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procédure : accéder à des collections à clé dans Windows Forms
 -   Vous pouvez accéder à des éléments de collection individuels par clé. Cette fonctionnalité a été ajoutée à de nombreuses classes de collection sont généralement utilisées par les applications Windows Forms. La liste suivante présente certaines des classes de collection qui ont des collections à clé accessibles :  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -52,5 +52,6 @@ ms.locfileid: "57709614"
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bien démarrer avec Windows Forms](getting-started-with-windows-forms.md)
-- [Guide pratique pour Ajouter ou supprimer des Images avec le composant ImageList Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+
+- [Mise en route des Windows Forms](getting-started-with-windows-forms.md)
+- [Procédure : ajouter ou supprimer des images avec le composant ImageList Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

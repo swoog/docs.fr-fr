@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un Service de jeton de sécurité'
+title: 'Procédure : créer un service d’émission de jeton de sécurité'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212477"
 ---
-# <a name="how-to-create-a-security-token-service"></a>Procédure : Créer un Service de jeton de sécurité
-Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d'échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
+# <a name="how-to-create-a-security-token-service"></a>Procédure : créer un service d’émission de jeton de sécurité
+Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d’échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
   
 ## <a name="issuing-tokens"></a>Émission de jetons  
  La spécification WS-Trust définit des formats de message, basés sur l'élément de schéma XSD (XML Schema Definition) `RequestSecurityToken` et sur l'élément de schéma XSD `RequestSecurityTokenResponse` pour réaliser une émission de jetons. De plus, elle définit les URI (Uniform Resource Identifier) d'action associés. L’action associé à un URI le `RequestSecurityToken` message est `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. L’action associé à un URI le `RequestSecurityTokenResponse` message est `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
@@ -124,6 +124,7 @@ Un service de jeton de sécurité implémente le protocole défini dans la spéc
  Pour le code complet pour un service de jeton de sécurité, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.IdentityModel.Tokens.SigningCredentials>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
@@ -131,4 +132,4 @@ Un service de jeton de sécurité implémente le protocole défini dans la spéc
 - <xref:System.IdentityModel.Tokens.SamlAssertion>
 - <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
-- [Exemple de fédération](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md)

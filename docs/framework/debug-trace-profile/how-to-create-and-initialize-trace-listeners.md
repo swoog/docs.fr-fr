@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer et initialiser des écouteurs de Trace'
+title: 'Procédure : Créer et initialiser les écouteurs de trace'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222716"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Procédure : Créer et initialiser des écouteurs de Trace
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Procédure : Créer et initialiser les écouteurs de trace
 Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envoient des messages à des objets appelés écouteurs qui reçoivent et traitent ces messages. L'un de ces écouteurs, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, est automatiquement créé et initialisé lors de l'activation du traçage ou du débogage. Si vous voulez que la sortie de <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> soit dirigée vers d'autres sources, créez et initialisez des écouteurs de suivi supplémentaires.  
   
  Les écouteurs que vous créez doivent refléter les besoins de l'application. Par exemple, si vous voulez un enregistrement textuel de toutes les sorties de trace, créez un écouteur <xref:System.Diagnostics.TextWriterTraceListener>, qui écrit toutes les sorties dans un nouveau fichier texte quand il est activé. D'un autre côté, si vous voulez afficher la sortie uniquement pendant l'exécution de l'application, créez un écouteur <xref:System.Diagnostics.ConsoleTraceListener>, qui dirige toutes les sorties vers une fenêtre de console. <xref:System.Diagnostics.EventLogTraceListener> peut diriger la sortie de trace vers un journal d'événements. Pour plus d’informations, consultez [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -78,7 +78,7 @@ Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xre
   
      - ou  
   
--   Si vous ne voulez pas que votre écouteur reçoive la sortie de trace, ne l’ajoutez pas à la collection <xref:System.Diagnostics.Trace.Listeners%2A>. Vous pouvez émettre la sortie via un écouteur indépendant de la collection <xref:System.Diagnostics.Trace.Listeners%2A> en appelant les méthodes de sortie propres à l'écouteur. L’exemple suivant montre comment écrire une ligne dans un écouteur qui n’est pas dans la collection <xref:System.Diagnostics.Trace.Listeners%2A>.  
+-   Si vous ne voulez pas que votre écouteur reçoive la sortie de trace, ne l'ajoutez pas à la collection <xref:System.Diagnostics.Trace.Listeners%2A>. Vous pouvez émettre la sortie via un écouteur indépendant de la collection <xref:System.Diagnostics.Trace.Listeners%2A> en appelant les méthodes de sortie propres à l’écouteur. L'exemple suivant montre comment écrire une ligne dans un écouteur qui n'est pas dans la collection <xref:System.Diagnostics.Trace.Listeners%2A>.  
   
     ```vb  
     Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")  
@@ -95,7 +95,8 @@ Les classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xre
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Commutateurs de suivi](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Guide pratique pour Ajouter des instructions de traçage au Code d’Application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+
+- [Écouteurs de la trace](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Commutateurs de traçage](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Procédure : Ajouter des instructions de trace dans le code d’une application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Traçage et instrumentation d'applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

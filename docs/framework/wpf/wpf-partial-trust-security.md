@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218379"
 ---
 # <a name="wpf-partial-trust-security"></a>Sécurité de confiance partielle de WPF
 <a name="introduction"></a> En général, les applications Internet doivent disposer d’un accès direct limité aux ressources système critiques, afin d’éviter des dommages dus à des actes de malveillance. Par défaut, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] et langages de script côté client ne sont pas en mesure d’accéder aux ressources système critiques. Étant donné que les applications hébergées par un navigateur Windows Presentation Foundation (WPF) peuvent être lancées à partir du navigateur, elles doivent se conformer à un jeu de restrictions similaires. Pour appliquer ces restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] s’appuie sur les deux [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] et [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consultez [stratégie de sécurité de WPF - sécurité de la plateforme](wpf-security-strategy-platform-security.md)). Par défaut, les applications hébergées par un navigateur demandent la zone Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jeu d’autorisations, quelle que soit la si elles sont lancées à partir d’Internet, intranet local ou l’ordinateur local. Les applications qui sont exécutées sans jeu d’autorisations complet sont exécutées avec une confiance dite partielle.  
@@ -130,20 +130,20 @@ ms.locfileid: "57371630"
   
 |Autorisation|Attribut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Serveurs d’accès DNS|Oui|Aucune|  
-|Variables d’environnement|Lecture|Oui|Aucune|  
+|DNS|Serveurs d’accès DNS|Oui|Non|  
+|Variables d’environnement|Lecture|Oui|Non|  
 |Boîtes de dialogue de fichiers|Ouvrir|Oui|Oui|  
-|Boîtes de dialogue de fichiers|Non restreint|Oui|Aucune|  
-|Stockage isolé|Isolement de l’assembly par utilisateur|Oui|Aucune|  
+|Boîtes de dialogue de fichiers|Non restreint|Oui|Non|  
+|Stockage isolé|Isolement de l’assembly par utilisateur|Oui|Non|  
 |Stockage isolé|Isolement inconnu|Oui|Oui|  
-|Stockage isolé|Quota utilisateur illimité|Oui|Aucune|  
+|Stockage isolé|Quota utilisateur illimité|Oui|Non|  
 |Médias|Images, vidéo et audio sécurisés|Oui|Oui|  
-|Impression|Impression par défaut|Oui|Aucune|  
+|Impression|Impression par défaut|Oui|Non|  
 |Impression|Impression sécurisée|Oui|Oui|  
-|Réflexion|Émission|Oui|Aucune|  
+|Réflexion|Émission|Oui|Non|  
 |Sécurité|Exécution du code managé|Oui|Oui|  
-|Sécurité|Déclarer des autorisations accordées|Oui|Aucune|  
-|Interface utilisateur|Non restreint|Oui|Aucune|  
+|Sécurité|Déclarer des autorisations accordées|Oui|Non|  
+|Interface utilisateur|Non restreint|Oui|Non|  
 |Interface utilisateur|Fenêtres de niveau supérieur sécurisées|Oui|Oui|  
 |Interface utilisateur|Presse-papiers personnel|Oui|Oui|  
 |Navigateur web|Navigation de frame sécurisée vers HTML|Oui|Oui|  
@@ -164,6 +164,7 @@ ms.locfileid: "57371630"
  Vous pouvez également utiliser le modèle de déploiement approuvé ClickOnce pour le déploiement en mode confiance totale à partir de toute zone de sécurité. Pour plus d’informations, consultez [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) et [sécurité](security-wpf.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité](security-wpf.md)
 - [Stratégie de sécurité de WPF - sécurité de la plateforme](wpf-security-strategy-platform-security.md)
 - [Stratégie de sécurité de WPF - ingénierie de sécurité](wpf-security-strategy-security-engineering.md)

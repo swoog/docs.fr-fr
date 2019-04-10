@@ -2,12 +2,12 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213387"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d’analyser des traces de diagnostic sont générées par WCF. Service Trace Viewer permet facilement de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
@@ -456,6 +456,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
  Si vous ouvrez un journal des suivis créé à l'aide d'un système d'exploitation arabe, vous pouvez remarquer que le filtre temporel ne fonctionne pas. Par exemple, l'année 2005 correspond à année 1427 dans le calendrier arabe. Toutefois, la plage temporelle prise en charge par le filtre de l'outil Service Trace Viewer ne prend pas en charge de date antérieure à 1752. Cela peut vous empêcher de sélectionner une date correcte dans le filtre. Pour résoudre ce problème, vous pouvez créer un filtre personnalisé (**affichage/filtres personnalisés**) à l’aide d’une expression XPath pour inclure un intervalle de temps spécifique.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Configuration du suivi](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Configuration du traçage](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Suivi de bout en bout](./diagnostics/tracing/end-to-end-tracing.md)

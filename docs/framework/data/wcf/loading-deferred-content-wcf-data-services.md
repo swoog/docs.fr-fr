@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227169"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Chargement de contenu différé (services de données WCF)
 Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite la quantité de données retournées par une requête. Toutefois, vous pouvez charger explicitement des données supplémentaires, notamment les entités connexes, les données de réponse paginées et les flux de données binaires, à partir du service de données si nécessaire. Cette rubrique décrit comment charger un contenu différé dans votre application.  
@@ -27,7 +27,7 @@ Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite 
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite à 12 le nombre de jeux d'entités pouvant être inclus dans une requête unique à l'aide de l'option de requête `$expand`.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite à 12 le nombre de jeux d’entités qui peut être inclus dans une requête unique à l’aide de la `$expand` option de requête.  
   
 -   **Chargement explicite**: Vous pouvez appeler la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> méthode sur le <xref:System.Data.Services.Client.DataServiceContext> instance pour charger explicitement des entités associées. Chaque appel à la méthode <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crée une demande séparée au service de données. L'exemple suivant charge explicitement `Order_Details` pour une entité `Orders` :  
   
@@ -55,8 +55,9 @@ Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite 
  Pour plus d'informations, voir [Procédure : Charger des résultats paginés](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>Flux de données binaires  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet d'accéder à des données d'objet BLOB (binary large object) comme un flux de données. La diffusion en continu diffère le chargement des données binaires tant qu'elles ne sont pas nécessaires, et le client peut traiter ces données plus efficacement. Pour tirer parti de ces fonctionnalités, le service de données doit implémenter le fournisseur <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Pour plus d’informations, consultez [fournisseur de diffusion en continu](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Lorsque la diffusion en continu est activée, les types d'entité sont retournés sans les données binaires associées. Dans ce cas, vous devez utiliser le <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> méthode de la <xref:System.Data.Services.Client.DataServiceContext> classe pour accéder au flux de données pour les données binaires à partir du service. De la même façon, utilisez la méthode <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> pour ajouter ou modifier les données binaires pour une entité comme un flux de données. Pour plus d’informations, consultez [utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet d’accéder aux données d’objet binaire volumineux (BLOB) comme un flux de données. La diffusion en continu diffère le chargement des données binaires tant qu'elles ne sont pas nécessaires, et le client peut traiter ces données plus efficacement. Pour tirer parti de ces fonctionnalités, le service de données doit implémenter le fournisseur <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Pour plus d’informations, consultez [fournisseur de diffusion en continu](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Lorsque la diffusion en continu est activée, les types d'entité sont retournés sans les données binaires associées. Dans ce cas, vous devez utiliser le <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> méthode de la <xref:System.Data.Services.Client.DataServiceContext> classe pour accéder au flux de données pour les données binaires à partir du service. De la même façon, utilisez la méthode <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> pour ajouter ou modifier les données binaires pour une entité comme un flux de données. Pour plus d’informations, consultez [utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

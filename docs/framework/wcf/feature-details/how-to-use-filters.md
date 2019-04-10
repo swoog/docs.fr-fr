@@ -1,24 +1,24 @@
 ---
-title: 'Procédure : Utiliser des filtres'
+title: 'Procédure : utiliser des filtres'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216195"
 ---
-# <a name="how-to-use-filters"></a>Procédure : Utiliser des filtres
+# <a name="how-to-use-filters"></a>Procédure : utiliser des filtres
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage qui utilise plusieurs filtres. Dans cet exemple, les messages sont routés vers deux implémentations d'un service de calculatrice, regularCalc et roundingCalc. Les deux implémentations prennent en charge les mêmes opérations ; toutefois, l'un des services arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser la version arrondie de ce service ; si aucune préférence de service n'est exprimée, le message est équilibré entre les deux services. Les opérations exposées par les deux services sont :  
   
 -   Ajouter  
   
--   Soustraction  
+-   Soustraire  
   
 -   Multiplication  
   
--   Division  
+-   Diviser  
   
  Étant donné que les deux services implémentent les mêmes opérations, vous ne pouvez pas utiliser le filtre Action, car l'action spécifiée dans le message ne sera pas unique. Vous devez plutôt effectuer un travail supplémentaire pour vérifier que les messages sont routés vers les points de terminaison appropriés.  
   
@@ -93,7 +93,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
   
 ### <a name="define-filters"></a>Définir les filtres  
   
-1.  Pour router des messages en fonction de l’en-tête personnalisé « RoundingCalculator » que l’application cliente ajoute au message, définissez un filtre qui utilise une requête XPath pour vérifier la présence de cet en-tête. Étant donné que cet en-tête est défini à l’aide d’un espace de noms personnalisé, également ajouter une entrée de l’espace de noms qui définit un préfixe d’espace de noms personnalisé de « custom » est utilisé dans la requête XPath. L’exemple suivant définit la section de routage nécessaire, la table d’espace de noms et le filtre XPath.  
+1.  Pour router des messages en fonction de l’en-tête personnalisé « RoundingCalculator » que l’application cliente ajoute au message, définissez un filtre qui utilise une requête XPath pour vérifier la présence de cet en-tête. Étant donné que cet en-tête est défini à l’aide d’un espace de noms personnalisé, également ajouter une entrée de l’espace de noms qui définit un préfixe d’espace de noms personnalisé de « custom » est utilisé dans la requête XPath. L'exemple suivant définit la section de routage nécessaire, la table d'espace de noms et le filtre XPath.  
   
     ```xml  
     <routing>  
@@ -326,4 +326,5 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Services de routage](../../../../docs/framework/wcf/samples/routing-services.md)

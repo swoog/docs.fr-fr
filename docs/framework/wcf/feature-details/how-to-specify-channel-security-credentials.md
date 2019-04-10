@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Spécifiez les informations d’identification de sécurité de canal'
+title: 'Procédure : spécifier des informations d’identification de sécurité de canal'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222599"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Procédure : Spécifiez les informations d’identification de sécurité de canal
+# <a name="how-to-specify-channel-security-credentials"></a>Procédure : spécifier des informations d’identification de sécurité de canal
 Le Moniker de Service Windows Communication Foundation (WCF) permet aux applications COM d’appeler les services WCF. La plupart des services WCF requiert que le client spécifier les informations d’identification pour l’authentification et l’autorisation. Lorsque vous appelez un service WCF à partir d’un client WCF, vous pouvez spécifier ces informations d’identification dans le code managé ou dans un fichier de configuration d’application. Lorsque vous appelez un service WCF à partir d’une application COM, vous pouvez utiliser le <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface pour spécifier les informations d’identification. Cette rubrique illustre diverses méthodes pour spécifier des informations d'identification à l'aide de l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> est une interface basée sur IDispatch et vous ne rencontrerez pas de fonctionnalités IntelliSense dans l'environnement Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> est une interface IDispatch et vous n’obtiendrez pas les fonctionnalités IntelliSense dans l’environnement Visual Studio.  
   
  Cet article utilise le service WCF défini dans le [Message Security, exemple](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
@@ -50,7 +50,7 @@ Le Moniker de Service Windows Communication Foundation (WCF) permet aux applicat
   
 7.  Exécutez l'application Visual Basic et vérifiez les résultats.  
   
-     L'application Visual Basic affiche un message contenant le résultat de l'appel Add(3, 4). l'<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> peut également être utilisé à la place de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> pour définir le certificat client :  
+     L'application Visual Basic affiche un message contenant le résultat de l'appel Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> peut également être utilisé à la place de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> pour définir le certificat Client :  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -64,14 +64,10 @@ Le Moniker de Service Windows Communication Foundation (WCF) permet aux applicat
   
 ### <a name="to-specify-user-name-and-password"></a>Pour spécifier un nom d'utilisateur et un mot de passe  
   
-1.  Modifiez le fichier App.config du service pour utiliser `wsHttpBinding`. Il est requis pour la validation du nom d'utilisateur et du mot de passe :  
-  
-  
-  
+1.  Modifiez le fichier App.config du service pour utiliser `wsHttpBinding`. Il est requis pour la validation du nom d’utilisateur et du mot de passe :  
+
 2.  Affectez `clientCredentialType` à UserName :  
-  
-  
-  
+
 3.  Ouvrez Visual Basic 6.0 et créez un nouveau fichier .exe standard. Ajoutez un bouton au formulaire et double-cliquez dessus pour ajouter le code suivant au gestionnaire Click :  
   
     ```  
@@ -96,9 +92,7 @@ Le Moniker de Service Windows Communication Foundation (WCF) permet aux applicat
 ### <a name="to-specify-windows-credentials"></a>Pour spécifier des informations d'identification Windows  
   
 1.  Affectez `clientCredentialType` à Windows dans le fichier App.config de service :  
-  
-  
-  
+
 2.  Ouvrez Visual Basic 6.0 et créez un nouveau fichier .exe standard. Ajoutez un bouton au formulaire et double-cliquez dessus pour ajouter le code suivant au gestionnaire Click :  
   
     ```  
@@ -138,8 +132,9 @@ Le Moniker de Service Windows Communication Foundation (WCF) permet aux applicat
      Pour plus d'informations sur les paramètres de cette méthode, consultez <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fédération](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Guide pratique pour Créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Sécurité de message](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Procédure : configurer des informations d’identification sur un service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Procédure : créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Sécurité des messages](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

@@ -2,12 +2,12 @@
 title: Configuration de services WCF dans le code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: d55c4994dfa322619f7e5e5911c23d68b439646a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225701"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configuration de services WCF dans le code
 Windows Communication Foundation (WCF) permet aux développeurs de configurer les services à l’aide de fichiers de configuration ou de code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. WCF vous permet également de configurer les services dans le code. Dans les versions antérieures de configuration des services WCF (4.0 et versions antérieures) dans le code était simple dans les scénarios auto-hébergés, la <xref:System.ServiceModel.ServiceHost> classe autorisés vous permettent de configurer des points de terminaison et les comportements avant d’appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès direct à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. À compter de .NET 4.5, WCF offre un moyen plus simple pour configurer les deux auto-hébergé et services dans le code hébergé sur le web.  
@@ -94,14 +94,15 @@ public class Service1 : IService1
 >  Notez que <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignore <`host`> paramètres dans le <`service`> balise de <`system.serviceModel`>. Conceptuellement, <`host`> concerne la configuration de l’hôte, pas la configuration du service et il obtient chargé avant l’exécution de la méthode Configure.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+
+- [Configuration des services à l'aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Configuration des comportements clients](../../../docs/framework/wcf/configuring-client-behaviors.md)
 - [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)
 - [Configuration](../../../docs/framework/wcf/samples/configuration-sample.md)
 - [Activation basée sur la configuration dans les services IIS et WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [Prise en charge de la configuration et des métadonnées](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [Configuration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Guide pratique pour Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Guide pratique pour Créer un point de terminaison de Service dans la Configuration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Guide pratique pour Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Guide pratique pour Spécifier une liaison Client dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Procédure : spécifier une liaison de service dans la configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Procédure : créer un point de terminaison de service dans la configuration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Procédure : publier des métadonnées pour un service à l’aide d’un fichier de configuration](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procédure : spécifier une liaison de client dans la configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

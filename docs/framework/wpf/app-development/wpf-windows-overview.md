@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166931"
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
 Les utilisateurs interagissent avec les applications Windows Presentation Foundation (WPF) autonome via windows. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente <xref:System.Windows.Window> avant d’aborder les principes fondamentaux de la création et la gestion des fenêtres dans des applications autonomes.  
   
 > [!NOTE]
 >  Hébergées par un navigateur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications, y compris [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] et libre [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pages, ne fournissent pas leurs propres fenêtres. Au lieu de cela, ils sont hébergés dans des fenêtres fournies par [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Consultez [vue d’ensemble des Applications de navigateur XAML de WPF](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window, classe  
  L’exemple suivant illustre les éléments constitutifs d’une fenêtre :  
@@ -109,9 +108,9 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configuration d’une définition de fenêtre pour MSBuild  
  Façon dont vous implémentez votre fenêtre détermine la façon dont il est configuré pour [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Pour une fenêtre qui est définie en utilisant les deux [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] balisage et code-behind :  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichiers de balisage sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` éléments.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichiers de balisage sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` éléments.  
   
--   Fichiers code-behind sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` éléments.  
+-   Fichiers code-behind sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` éléments.  
   
  Cela est illustré dans l’exemple suivant [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] fichier projet.  
   
@@ -130,8 +129,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Durée de vie d'une fenêtre  
  Comme pour toute classe, une fenêtre a une durée de vie qui commence quand elle est instanciée pour la première fois. Elle est ensuite ouverte, activée et désactivée, et finalement fermée.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Ouverture d’une fenêtre  
  Pour ouvrir une fenêtre, commencez par créer une instance de celle-ci, comme le montre l’exemple suivant.  
@@ -258,9 +256,8 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- Le <xref:System.Windows.Window.Closing> est transmis au gestionnaire d’événements un <xref:System.ComponentModel.CancelEventArgs>, qui implémente le `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété que vous définissez à `true` pour empêcher la fermeture d’une fenêtre.  
+
+ Le <xref:System.Windows.Window.Closing> est transmis au gestionnaire d’événements un <xref:System.ComponentModel.CancelEventArgs>, qui implémente le `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété que vous définissez à `true` pour empêcher la fermeture d’une fenêtre.  
   
  Si <xref:System.Windows.Window.Closing> n’est pas géré, ou il est géré mais pas annulé, la fenêtre se fermera. Juste avant la fermeture d’une fenêtre en fait, <xref:System.Windows.Window.Closed> est déclenché. À ce stade, il est impossible d’empêcher une fenêtre de se fermer.  
   
@@ -275,7 +272,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 -   La fenêtre principale de l’application est fermée et <xref:System.Windows.Application.ShutdownMode%2A> est <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   La méthode <xref:System.Windows.Application.Shutdown%2A> est appelée.  
+-   <xref:System.Windows.Application.Shutdown%2A> est appelée.  
   
 > [!NOTE]
 >  Une fenêtre ne peut pas être rouverte après sa fermeture.  
@@ -359,7 +356,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **Pour les propriétés de largeur :**  
+ **Pour les propriétés de la largeur :**  
   
 1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -401,8 +398,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
  Vous pouvez changer l’apparence de la zone cliente d’une fenêtre en lui ajoutant un contenu spécifique, par exemple des boutons, des étiquettes et des zones de texte. Pour configurer la zone non cliente, <xref:System.Windows.Window> fournit plusieurs propriétés, notamment <xref:System.Windows.Window.Icon%2A> pour définir une icône de fenêtre et <xref:System.Windows.Window.Title%2A> pour définir son titre.  
   
  Vous pouvez également changer l’apparence et le comportement d’une bordure de zone non cliente en configurant le mode de redimensionnement d’une fenêtre, le style de fenêtre, ainsi que son affichage ou non sous forme de bouton dans la barre des tâches du Bureau.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Mode de redimensionnement  
  Selon le <xref:System.Windows.Window.WindowStyle%2A> propriété, vous pouvez contrôler comment (et si) les utilisateurs peuvent redimensionner la fenêtre. Le choix du style de fenêtre affecte si un utilisateur peut redimensionner la fenêtre en faisant glisser sa bordure avec la souris, si le **réduire**, **agrandir**, et **redimensionner** boutons s’affichent dans la zone non cliente, et, le cas échéant, s’ils sont activés.  
@@ -484,9 +480,10 @@ L’apparence par défaut d’une fenêtre inclut un bouton de barre des tâches
  Les boîtes de dialogue sont des fenêtres souvent utilisées pour rassembler des informations fournies par un utilisateur afin d’exécuter une fonction. Par exemple, lorsqu’un utilisateur veut ouvrir un fichier, le **ouvrir un fichier** boîte de dialogue s’affiche généralement par une application pour obtenir le nom de fichier à partir de l’utilisateur. Pour plus d’informations, consultez [Vue d’ensemble des boîtes de dialogue](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Vue d’ensemble des boîtes de dialogue](dialog-boxes-overview.md)
-- [Génération d’une application WPF](building-a-wpf-application-wpf.md)
+- [Vue d'ensemble des boîtes de dialogue](dialog-boxes-overview.md)
+- [Génération d'une application WPF](building-a-wpf-application-wpf.md)

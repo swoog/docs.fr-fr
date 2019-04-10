@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Obtenir les propriétés de l'objet de système d'impression sans réflexion"
+title: 'Procédure : Obtenir les propriétés de l’objet de système d’impression sans réflexion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215272"
 ---
-# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procédure : Obtenir les propriétés de l'objet de système d'impression sans réflexion
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procédure : Obtenir les propriétés de l’objet de système d’impression sans réflexion
 À l’aide de la réflexion pour détailler les propriétés (et les types de ces propriétés) sur un objet peut ralentir les performances de l’application. Le <xref:System.Printing.IndexedProperties> espace de noms fournit un moyen d’obtenir ces informations à l’aide de la réflexion.  
   
 ## <a name="example"></a>Exemple  
@@ -34,6 +34,7 @@ ms.locfileid: "57367581"
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Printing.IndexedProperties.PrintProperty>
 - <xref:System.Printing.PrintSystemObject>
 - <xref:System.Printing.IndexedProperties>
@@ -42,4 +43,4 @@ ms.locfileid: "57367581"
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Vue d'ensemble de l'impression](printing-overview.md)

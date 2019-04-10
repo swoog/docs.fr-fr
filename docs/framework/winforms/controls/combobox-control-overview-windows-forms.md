@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
-ms.openlocfilehash: b20c3a5009367d807f548d93b7c1dfb50e5a7d8a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211571"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ComboBox (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.ComboBox> contrôle est utilisé pour afficher des données dans une zone de liste déroulante modifiable. Par défaut, le <xref:System.Windows.Forms.ComboBox> contrôle s’affiche en deux parties : la partie supérieure est une zone de texte qui permet à l’utilisateur à entrer un élément de liste. La deuxième partie est une zone de liste qui affiche une liste d’éléments à partir de laquelle l’utilisateur peut sélectionner une. Pour plus d’informations sur d’autres styles de zone de liste déroulante, consultez [quand utiliser un contrôle ComboBox Instead of un contrôle ListBox Windows Forms](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  
@@ -24,12 +24,13 @@ Les formulaires Windows <xref:System.Windows.Forms.ComboBox> contrôle est utili
  Pour ajouter ou supprimer des éléments dans un <xref:System.Windows.Forms.ComboBox> contrôler, utilisez le <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> ou <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> (méthode). Vous pouvez également ajouter des éléments à la liste à l’aide de la <xref:System.Windows.Forms.ComboBox.Items%2A> propriété dans le concepteur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ComboBox>
-- [Vue d'ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
 - [Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Guide pratique pour Ajouter et supprimer des éléments d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](add-and-remove-items-from-a-wf-combobox.md)
-- [Guide pratique pour Trier le contenu d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Guide pratique pour Accès spécifique des éléments dans un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [Guide pratique pour Lier un contrôle ComboBox de Windows Forms ou d’un contrôle ListBox à des données](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)
-- [Guide pratique pour Créer une Table de recherche pour un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Procédure : trier le contenu d’un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procédure : accéder à des éléments spécifiques dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [Procédure : lier un contrôle ComboBox ou ListBox Windows Forms à des données](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Contrôles Windows Forms utilisés pour l'affichage de listes d'options](windows-forms-controls-used-to-list-options.md)
+- [Procédure : créer une table de choix pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)

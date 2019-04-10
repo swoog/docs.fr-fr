@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224921"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Vue d'ensemble des extensions de balisage pour XAML
 Les extensions de balisage constituent une technique XAML permettant d'obtenir une valeur qui n'est ni une primitive ni un type XAML spécifique. Pour l'utilisation d'attributs, les extensions de balisage utilisent la séquence de caractères connue d'une accolade ouvrante `{` pour entrer la portée d'extension de balisage et d'une accolade fermante `}` pour quitter. Lors de l'utilisation des services XAML .NET Framework, vous pouvez utiliser certaines des extensions de balisage prédéfinies du langage XAML à partir de l'assembly System.Xaml. Vous pouvez également créer une sous-classe à partir de la classe <xref:System.Windows.Markup.MarkupExtension> , définie dans System.Xaml, et définir vos propres extensions de balisage. Vous pouvez également utiliser des extensions de balisage définies par une infrastructure particulière, si vous référencez déjà cette infrastructure.  
@@ -25,19 +25,19 @@ Les extensions de balisage constituent une technique XAML permettant d'obtenir u
 >  Le préfixe `x:` est utilisé pour le mappage d'espace de noms XAML standard de l'espace de noms du langage XAML, dans l'élément racine d'une production XAML. Par exemple, les modèles de projet et de page de Visual Studio de différentes infrastructures spécifiques initialisent un fichier XAML que l’utilisation de cette `x:` mappage. Vous pouvez choisir un autre jeton de préfixe pour votre propre mappage d'espace de noms XAML. Toutefois, dans cette documentation, le mappage `x:` par défaut est considéré comme un moyen d'identification des entités qui représentent une partie définie de l'espace de noms XAML du langage XAML, par opposition à l'espace de noms XAML par défaut d'une infrastructure spécifique ou à d'autres espaces de noms CLR ou XML arbitraires.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` fournit l'objet <xref:System.Type> pour le type nommé. Cette fonctionnalité est le plus souvent utilisée dans des mécanismes de différé qui utilisent le type CLR sous-jacent et la dérivation de type comme identificateur ou moniker de regroupement. Les styles et modèles WPF, ainsi que leur utilisation des propriétés `TargetType` , en sont un exemple spécifique. Pour plus d'informations, consultez [x:Type Markup Extension](x-type-markup-extension.md).  
+ `x:Type` fournit le <xref:System.Type> objet pour le type nommé. Cette fonctionnalité est le plus souvent utilisée dans des mécanismes de différé qui utilisent le type CLR sous-jacent et la dérivation de type comme identificateur ou moniker de regroupement. Les styles et modèles WPF, ainsi que leur utilisation des propriétés `TargetType` , en sont un exemple spécifique. Pour plus d'informations, consultez [x:Type Markup Extension](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` produit des valeurs statiques à partir des entités de code de type de valeur qui ne désignent pas directement le type de la valeur d'une propriété, mais qui peuvent être évaluées en ce type. Ce mécanisme s'avère utile pour la spécification de valeurs qui existent déjà en tant que constantes connues dans une définition de type. Pour plus d'informations, consultez [x:Static Markup Extension](x-static-markup-extension.md).  
+ `x:Static` produit des valeurs statiques à partir des entités de code de type valeur qui ne sont pas directement le type de valeur d’une propriété, mais peuvent être évaluées à ce type. Ce mécanisme s'avère utile pour la spécification de valeurs qui existent déjà en tant que constantes connues dans une définition de type. Pour plus d'informations, consultez [x:Static Markup Extension](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` spécifie `null` en tant que valeur d'un membre XAML. Selon la conception de types spécifiques ou les concepts d'infrastructure à plus grande échelle, `null` n'est pas toujours la valeur par défaut d'une propriété ni la valeur implicite d'un attribut de chaîne vide. Pour plus d'informations, consultez [x:Null Markup Extension](x-null-markup-extension.md).  
+ `x:Null` Spécifie `null` en tant que valeur pour un membre XAML. Selon la conception de types spécifiques ou les concepts d'infrastructure à plus grande échelle, `null` n'est pas toujours la valeur par défaut d'une propriété ni la valeur implicite d'un attribut de chaîne vide. Pour plus d'informations, consultez [x:Null Markup Extension](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` prend en charge la création de tableaux généraux dans la syntaxe XAML dans le cas où la prise en charge des collections assurée par les éléments de base et les modèles de contrôle n'est délibérément pas utilisée. Pour plus d'informations, consultez [x:Array Markup Extension](x-array-markup-extension.md). Dans le cas de XAML 2009 en particulier, les tableaux sont accessibles en tant que primitives de langage et en tant qu'extension. Pour plus d'informations, consultez [XAML 2009 Language Features](xaml-2009-language-features.md).  
+ `x:Array` prend en charge la création de tableaux généraux dans la syntaxe XAML dans les cas où la prise en charge de la collection qui est fournie par les éléments de base et les modèles de contrôle n’est délibérément pas utilisée. Pour plus d'informations, consultez [x:Array Markup Extension](x-array-markup-extension.md). Dans le cas de XAML 2009 en particulier, les tableaux sont accessibles en tant que primitives de langage et en tant qu'extension. Pour plus d'informations, consultez [XAML 2009 Language Features](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` fait partie de XAML 2009, qui est une extension de l'ensemble de langages (2006) d'origine. `x:Reference` représente une référence à un autre objet existant dans un graphique d'objets. Cet objet est identifié par son `x:Name`. Pour plus d'informations, consultez [x:Reference Markup Extension](x-reference-markup-extension.md).  
+ `x:Reference` fait partie de XAML 2009, une extension de l’ensemble de langages (2006) d’origine. `x:Reference` représente une référence à un autre objet existant dans un graphique d’objet. Cet objet est identifié par son `x:Name`. Pour plus d'informations, consultez [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Autres x: Constructions  
  Il existe d'autres constructions `x:` permettant de prendre en charge des fonctionnalités de langage XAML, mais elles ne sont pas implémentées en tant qu'extensions de balisage. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage](xaml-namespace-x-language-features.md).  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Association d'attributs à une extension de balisage personnalisée  
  Pour prendre en charge des environnements de conception et certains scénarios de writer d'objet XAML, vous devez associer plusieurs attributs CLR à votre type de prise en charge d'extension de balisage. Ces attributs signalent l'utilisation prévue pour une extension de balisage.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> signale les informations <xref:System.Type> pour le type d'objet que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne. Par sa simple signature <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne <xref:System.Object>. Toutefois, divers consommateurs peuvent souhaiter obtenir des informations de type de retour plus précises. Cela inclut :  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> rapports le <xref:System.Type> informations pour l’objet type <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne. Par sa simple signature <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne <xref:System.Object>. Toutefois, divers consommateurs peuvent souhaiter obtenir des informations de type de retour plus précises. Cela inclut :  
   
 -   des concepteurs et IDE qui peuvent être en mesure de fournir une prise en charge tenant compte du type pour les utilisations d'extensions de balisage ;  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Si l'utilisation d'une extension de balisage fait appel à des arguments de position, elle est représentée sous la forme d'un objet de début avec une valeur d'initialisation. Selon une représentation textuelle approximative, le flux de nœud a l'apparence suivante :  
   
- `StartObject` (<xref:System.Xaml.XamlType> est le type de définition de l'extension de balisage, et non pas son type de retour)  
+ `StartObject` (<xref:System.Xaml.XamlType> n’est pas son type de retour, type de définition de l’extension de balisage)  
   
- `StartMember` (le nom de <xref:System.Xaml.XamlMember> est `_InitializationText`)  
+ `StartMember` (nom de la <xref:System.Xaml.XamlMember> est `_InitializationText`)  
   
- `Value` (la valeur correspond aux arguments de position spécifiés sous forme de chaîne, y compris les délimiteurs intermédiaires)  
+ `Value` (valeur correspond aux arguments positionnels sous forme de chaîne, y compris les délimiteurs intermédiaires)  
   
  `EndMember`  
   
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  Si vous travaillez avec un flux de nœud XAML dans le chemin d'enregistrement, la représentation du graphique d'objets ne contient généralement aucun élément pouvant vous indiquer que l'objet à sérialiser a été initialement fourni par une utilisation d'extension de balisage et un résultat `ProvideValue` . Les scénarios qui doivent rendre persistantes les utilisations des extensions de balisage pour les allers-retours tout en capturant d'autres modifications dans le graphique d'objets requièrent la conception de techniques spécifiques pour conserver les informations d'utilisation des extensions de balisage de l'entrée XAML d'origine. Par exemple, pour restaurer les utilisations d'extensions de balisage, vous devrez peut-être travailler avec le flux de nœud dans le chemin d'enregistrement ou effectuer un certain type de fusion entre le code XAML d'origine et le code XAML faisant l'objet d'allers-retours. Certaines infrastructures d'implémentation en XAML telles que WPF utilisent des types intermédiaires (expressions) pour faciliter la représentation des cas où les utilisations d'extensions de balisage ont fourni les valeurs.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [Convertisseurs de types et extensions de balisage pour XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

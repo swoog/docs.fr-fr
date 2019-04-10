@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: a3a53cb26ffb0e5934982c1c9f367115177b9b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216767"
 ---
 # <a name="reliable-services"></a>Services fiables
 Files d’attente et sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Cette rubrique décrit les fonctionnalités de messagerie fiables de WCF.  
@@ -45,5 +45,6 @@ Files d’attente et sessions fiables sont les fonctionnalités de Windows Commu
  La séparation, associée aux transferts fiables de messages entre les files d'attente, permet aux applications faiblement couplées de communiquer de manière fiable. À la différence des sessions fiables, dans le cadre d'une séparation, la source et la destination n'ont pas besoin de s'exécuter simultanément. Cela permet, de manière indirecte, d'utiliser les files d'attente comme dispositif de régulation de la charge lorsqu'il y a un écart entre le taux de production de messages de la source et le taux de réception de messages de la destination. Pour plus d’informations sur les files d’attente, consultez [files d’attente dans WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
-- [Mise en file d’attente dans WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+
+- [Vue d'ensemble des sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Mise en file d'attente dans WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225792"
 ---
 # <a name="wpf-xaml-namescopes"></a>Portées de nom XAML WPF
 Les portées de nom XAML correspondent à un concept qui identifie des objets définis en XAML. Les noms dans une portée de nom XAML peuvent être utilisés pour établir des relations entre les noms définis en XAML des objets et leurs instances équivalentes dans une arborescence d’objets. En règle générale, les portées de nom XAML dans du code managé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont créées lors du chargement des racines d’une page XAML spécifique pour une application XAML. Portées de nom XAML en tant qu’objet de programmation sont définies par le <xref:System.Windows.Markup.INameScope> interface et sont également implémentées par la classe pratique <xref:System.Windows.NameScope>.  
-  
-  
-  
+
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## <a name="namescopes-in-loaded-xaml-applications"></a>Portées de nom dans les applications XAML chargées  
  Dans un contexte plus large de programmation ou d’informatique, les concepts de programmation incluent souvent le principe d’un identificateur ou d’un nom unique, qui peut être utilisé pour accéder à un objet. Pour les systèmes qui utilisent des identificateurs ou des noms, la portée de nom définit les limites à l’intérieur desquelles un processus ou une technique recherche si un objet de ce nom est demandé, ou les limites dans lesquelles l’unicité des noms qui identifient est appliquée. Ces principes généraux sont vrais pour les portées de nom XAML. Dans WPF, les portées de nom XAML sont créées sur l’élément racine d’une page XAML quand la page est chargée. Chaque nom spécifié dans la page XAML en commençant à la racine de la page est ajouté à une portée de nom XAML pertinente.  
@@ -97,5 +95,6 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Espaces de noms XAML et mappage d'espace de noms pour XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name, directive](../../xaml-services/x-name-directive.md)

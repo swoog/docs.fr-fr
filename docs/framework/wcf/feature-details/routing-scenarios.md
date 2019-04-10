@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223825"
 ---
 # <a name="routing-scenarios"></a>Scénarios de routage
 Bien que le service de routage soit entièrement personnalisable, concevoir une logique de routage efficace lors de la création d'une configuration à partir de zéro peut s'avérer difficile.  Toutefois, il existe plusieurs scénarios courants que suivent la plupart des configurations de service de routage. Bien que ces scénarios puissent ne pas s'appliquer directement à votre configuration spécifique, comprendre comment configurer le service de routage en vue de gérer ces scénarios vous permet de mieux maîtriser le fonctionnement du service de routage.  
   
 ## <a name="common-scenarios"></a>Scénarios courants  
- L'utilisation de base du service de routage consiste à agréger plusieurs points de terminaison de destination de façon à réduire le nombre de points de terminaison exposés aux applications clientes, puis à utiliser des filtres de message pour router chaque message vers sa destination appropriée. Les messages peuvent être routés en fonction d'exigences de traitement logique ou physique, par exemple un type de message doit être traité par un service spécifique, ou en fonction d'exigences professionnelles arbitraires, comme offrir un traitement prioritaire aux messages provenant d'une source spécifique. Le tableau suivant répertorie des scénarios courants et indique dans quels cas les utiliser :  
+ L'utilisation de base du service de routage consiste à agréger plusieurs points de terminaison de destination de façon à réduire le nombre de points de terminaison exposés aux applications clientes, puis à utiliser des filtres de message pour router chaque message vers sa destination appropriée. Les messages peuvent être routés en fonction d’exigences de traitement logique ou physique, par exemple un type de message doit être traité par un service spécifique, ou en fonction d’exigences professionnelles arbitraires, comme offrir un traitement prioritaire aux messages provenant d’une source spécifique. Le tableau suivant répertorie des scénarios courants et indique dans quels cas les utiliser :  
   
 |Scénario|Cas d'utilisation|  
 |--------------|--------------|  
@@ -37,7 +37,7 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
  Pour connaître les étapes permettant de créer une configuration de contrôle de version de service, consultez [How To : Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Partitionnement des données du service  
- Lors de la conception d'un environnement distribué, il est souvent préférable de répartir la charge de traitement entre plusieurs ordinateurs, afin d'assurer un haut niveau de disponibilité, de diminuer la charge de traitement sur les ordinateurs individuels, ou de fournir des ressources dédiées à un sous-ensemble spécifique de messages. Bien que le service de routage ne remplace pas une solution d'équilibrage de charge dédiée, sa capacité à effectuer des routages basés sur le contenu peut être utilisée pour router vers des destinations spécifiques des messages qui par ailleurs sont semblables. Par exemple, vous pouvez avoir besoin de traiter les messages d’un client spécifique séparément de ceux d’autres clients.  
+ Lors de la conception d'un environnement distribué, il est souvent préférable de répartir la charge de traitement entre plusieurs ordinateurs, afin d'assurer un haut niveau de disponibilité, de diminuer la charge de traitement sur les ordinateurs individuels, ou de fournir des ressources dédiées à un sous-ensemble spécifique de messages. Bien que le service de routage ne remplace pas une solution d'équilibrage de charge dédiée, sa capacité à effectuer des routages basés sur le contenu peut être utilisée pour router vers des destinations spécifiques des messages qui par ailleurs sont semblables. Par exemple, vous pouvez avoir besoin de traiter les messages d'un client spécifique séparément de ceux d'autres clients.  
   
  Pour connaître les étapes permettant de créer une configuration de partitionnement des données de service, consultez [How To : Partitionnement des données de service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
@@ -66,13 +66,14 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
  Pour connaître les étapes permettant de configurer la gestion des erreurs, consultez [How To : Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Procédure : Contrôle des versions du service](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Guide pratique pour Partitionnement des données de service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Procédure : Partitionnement des données du service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Guide pratique pour Mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Procédure : Mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Guide pratique pour Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Procédure : Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction au routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

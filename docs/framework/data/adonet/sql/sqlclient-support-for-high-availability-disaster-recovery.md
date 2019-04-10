@@ -2,12 +2,12 @@
 title: Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213790"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
@@ -63,7 +63,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
 2.  Si une application utilise `ApplicationIntent=ReadWrite` (voir ci-dessous) et l'emplacement de réplica secondaire est configuré pour l'accès en lecture seule.  
   
- <xref:System.Data.SqlClient.SqlDependency> n'est pas pris en charge sur des réplicas secondaires en lecture seule.  
+ <xref:System.Data.SqlClient.SqlDependency> n’est pas pris en charge sur les réplicas secondaires en lecture seule.  
   
  Une connexion échoue si un réplica principal est configuré pour rejeter les charges de travail en lecture seule et la chaîne de connexion contient `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Le mot clé `ApplicationIntent` ne fonctionne pas avec les bases de données en lecture seule héritées.  
   
- Une base de données peut autoriser ou interdire les charges de travail de lecture sur la base de données ciblée AlwaysOn. (Faites ceci avec la clause `ALLOW_CONNECTIONS` des instructions `PRIMARY_ROLE` et `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ Une base de données peut autoriser ou interdire les charges de travail de lecture sur la base de données ciblée AlwaysOn. (Cette opération est effectuée avec la `ALLOW_CONNECTIONS` clause de le `PRIMARY_ROLE` et `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instructions.)  
   
  Le mot clé `ApplicationIntent` est utilisé pour permettre le routage en lecture seule.  
   
@@ -97,5 +97,6 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
  Le routage en lecture seule peut prendre plus longtemps que la connexion au principal, car il se connecte d'abord au principal, puis recherche le meilleur réplica secondaire lisible disponible. De ce fait, vous devez augmenter le délai d'attente de connexion.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

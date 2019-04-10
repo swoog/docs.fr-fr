@@ -2,12 +2,12 @@
 title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654573"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920673"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -106,7 +106,7 @@ Les règles de l’opérateur `?.` garantissent que la partie gauche de l’op�
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Le fait de vérifier que le côté gauche n’est évalué qu’une seule fois vous permet également d’utiliser n’importe quelle expression, notamment des appels de méthode, à gauche du `?.`
+Le fait de vérifier que le côté gauche n’est évalué qu’une seule fois permet également d’utiliser n’importe quelle expression, notamment des appels de méthode, à gauche de `?.`
 
 ## <a name="string-interpolation"></a>Interpolation de chaîne
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Pour bien démarrer avec l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaîne en C#](../tutorials/intro-to-csharp/interpolated-strings.yml), l’article [Interpolation de chaîne](../language-reference/tokens/interpolated.md) et le tutoriel [Interpolation de chaîne en C#](../tutorials/string-interpolation.md).
+Pour bien démarrer avec l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaîne en C#](../tutorials/exploration/interpolated-strings.yml), l’article [Interpolation de chaîne](../language-reference/tokens/interpolated.md) et le tutoriel [Interpolation de chaîne en C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtres d’exceptions
 

@@ -2,12 +2,12 @@
 title: Conversations sécurisées et sessions sécurisées
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-ms.openlocfilehash: 6b57f1b9511ef3751fd1f9e5c41d0a0c648972f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224401"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Conversations sécurisées et sessions sécurisées
 Une fonctionnalité de Windows Communication Foundation (WCF) est la capacité d’établir des sessions sécurisées entre deux points de terminaison qui s’authentifient mutuellement et mettez-vous d’accord à un processus de signature numérique et le chiffrement. Par exemple, le point de terminaison de service peut demander qu'un point de terminaison de client envoie un jeton de sécurité basé sur un certificat X.509 pour l'authentification. Une fois que le client est authentifié, le point de terminaison de service renvoie un jeton de contexte de sécurité (SCT) au client, utilisé ensuite pour sécuriser tous les messages suivants dans la session. L'établissement de cette session sécurisée permet d'améliorer l'ensemble des messages échangés entre les deux points de terminaison, parce que le SCT a une clé symétrique. Les clés asymétriques, sur lesquelles les certificats X.509 sont basés, requièrent beaucoup plus de puissance de calcul que les clés symétriques pour générer une signature numérique ou chiffrer un jeu de données.  
@@ -17,5 +17,6 @@ Une fonctionnalité de Windows Communication Foundation (WCF) est la capacité d
  Pour plus d’informations sur les sessions, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sessions, instanciation et accès concurrentiel](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
-- [Guide pratique pour Créer un Service qui requiert des Sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Procédure : créer un service qui exige des sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

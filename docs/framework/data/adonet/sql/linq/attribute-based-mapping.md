@@ -2,12 +2,12 @@
 title: Mappage basé sur les attributs
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223561"
 ---
 # <a name="attribute-based-mapping"></a>Mappage basé sur les attributs
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe une base de données SQL Server à un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modèle objet en appliquant des attributs ou en utilisant un fichier de mappage externe. Cette rubrique présente l'approche basée sur les attributs.  
@@ -52,11 +52,11 @@ ms.locfileid: "54713900"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Booléen|`true`|Indique qu'une colonne peut contenir des valeurs null.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Chaîne|Type déduit de colonne de base de données|Utilise des types et des modificateurs de base de données pour spécifier le type de la colonne de base de données.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Chaîne|Empty|Définit une colonne calculée dans une base de données.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Indique qu'une colonne contient des valeurs générées automatiquement par la base de données.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Indique que la colonne contient une valeur de discriminateur pour une hiérarchie d'héritage [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Spécifie que ce membre de classe représente une colonne qui est une clé primaire ou fait partie des clés primaire de la table.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Identifie le type de colonne du membre comme horodatage ou numéro de version de base de données.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, à moins que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> ait la valeur `true` pour un membre|Spécifie l'approche de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] concernant la détection de conflits d'accès concurrentiel optimiste.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Booléen|`false`|Indique qu'une colonne contient des valeurs générées automatiquement par la base de données.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Booléen|`false`|Indique que la colonne contient une valeur de discriminateur pour une hiérarchie d'héritage [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Booléen|`false`|Spécifie que ce membre de classe représente une colonne qui est une clé primaire ou fait partie des clés primaire de la table.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Booléen|`false`|Identifie le type de colonne du membre comme horodatage ou numéro de version de base de données.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, à moins que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> est `true` pour un membre|Spécifie l'approche de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] concernant la détection de conflits d'accès concurrentiel optimiste.|  
   
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "54713900"
   
 |Propriété|Type|Par défaut|Description|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|Placé sur une association dont tous les membres de clé étrangère sont non Nullable, supprime l'objet lorsque l'association a la valeur Null.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Chaîne|None|Ajoute le comportement de suppression à une association.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|Si la valeur est true, désigne le membre comme clé étrangère dans une association qui représente une relation de base de données.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|Si la valeur est true, indique une contrainte d'unicité sur la clé étrangère.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Booléen|`false`|Placé sur une association dont tous les membres de clé étrangère sont non Nullable, supprime l'objet lorsque l'association a la valeur Null.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Chaîne|Aucun.|Ajoute le comportement de suppression à une association.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Booléen|`false`|Si la valeur est true, désigne le membre comme clé étrangère dans une association qui représente une relation de base de données.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Booléen|`false`|Si la valeur est true, indique une contrainte d'unicité sur la clé étrangère.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Chaîne|ID de la classe connexe|Désigne un ou plusieurs membres de la classe d'entité cible comme valeurs de clés de l'autre côté de l'association.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|Chaîne|ID de la classe conteneur|Désigne des membres de cette classe d'entité comme représentant les valeurs de clés sur ce côté de l'association.|  
   
@@ -89,9 +89,9 @@ ms.locfileid: "54713900"
   
 |Propriété|Type|Par défaut|Description|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Chaîne|Aucun La valeur doit être fournie.|Spécifie la valeur de code du discriminateur.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|Si la valeur est true, instancie un objet de ce type lorsqu'aucune valeur de discriminateur du magasin ne correspond à l'une des valeurs spécifiées.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Type|Aucun La valeur doit être fournie.|Spécifie le type de la classe dans la hiérarchie.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Chaîne|Aucun. La valeur doit être fournie.|Spécifie la valeur de code du discriminateur.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Booléen|`false`|Si la valeur est true, instancie un objet de ce type lorsqu'aucune valeur de discriminateur du magasin ne correspond à l'une des valeurs spécifiées.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Type|Aucun. La valeur doit être fournie.|Spécifie le type de la classe dans la hiérarchie.|  
   
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54713900"
   
 |Propriété|Type|Par défaut|Description|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Si la valeur est false, indique le mappage à une procédure stockée. Si la valeur est true, indique le mappage à une fonction définie par l'utilisateur.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Booléen|`false`|Si la valeur est false, indique le mappage à une procédure stockée. Si la valeur est true, indique le mappage à une fonction définie par l'utilisateur.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|Chaîne|Même chaîne que le nom dans la base de données|Spécifie le nom de la procédure stockée ou de la fonction définie par l'utilisateur.|  
   
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.FunctionAttribute>.  
@@ -114,7 +114,7 @@ ms.locfileid: "54713900"
   
 |Propriété|Type|Par défaut|Description|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Chaîne|None|Spécifie le type de base de données.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Chaîne|Aucun.|Spécifie le type de base de données.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Chaîne|Même chaîne qu'un nom de paramètre dans la base de données|Spécifie un nom pour le paramètre.|  
   
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
@@ -143,4 +143,5 @@ ms.locfileid: "54713900"
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

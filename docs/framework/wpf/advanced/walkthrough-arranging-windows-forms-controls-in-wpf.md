@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Organisation des Windows Forms contrôles dans WPF'
+title: 'Procédure pas à pas : organisation des contrôles Windows Forms dans WPF'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: bfb0aba2798179c31674377104bbff633b6f48fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d2bd3a7d4b8e84542f1c5fa3dbb15f1a9753a180
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168582"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procédure pas à pas : Organisation des Windows Forms contrôles dans WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procédure pas à pas : organisation des contrôles Windows Forms dans WPF
 Cette procédure pas à pas vous montre comment utiliser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] des fonctionnalités de disposition pour réorganiser [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles dans une application hybride.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
@@ -91,7 +91,7 @@ Cette procédure pas à pas nécessite Visual Studio.
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Appuyez sur F5 pour générer et exécuter l'application. Le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> contrôle s’affiche dans le <xref:System.Windows.Controls.Canvas>. Le contrôle hébergé est dimensionné selon son contenu et le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément est dimensionné selon le contrôle hébergé.  
+2.  Appuyez sur F5 pour générer et exécuter l'application. Le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> contrôle s’affiche dans le <xref:System.Windows.Controls.Canvas>. Le contrôle hébergé est dimensionné selon son contenu et le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément est dimensionné selon le contrôle hébergé.  
   
 ## <a name="sizing-to-content"></a>Dimensionnement en fonction du contenu  
  Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément garantit que le contrôle hébergé est dimensionné pour afficher correctement son contenu.  
@@ -156,7 +156,6 @@ Cette procédure pas à pas nécessite Visual Studio.
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
 2.  Appuyez sur F5 pour générer et exécuter l'application. Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément est peint sur l’élément label.
-
 
 ## <a name="docking"></a>Ancrage
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> prend en charge de l’élément [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] d’ancrage. Définir le <xref:System.Windows.Controls.DockPanel.Dock%2A> propriété jointe pour ancrer le contrôle hébergé dans un <xref:System.Windows.Controls.DockPanel> élément.
@@ -224,7 +223,6 @@ Cette procédure pas à pas nécessite Visual Studio.
 
 2.  Appuyez sur F5 pour générer et exécuter l'application. Le contrôle hébergé ne pivote pas, mais ses éléments voisins subissent une rotation de 180 degrés. Vous devrez peut-être redimensionner la fenêtre pour apercevoir les éléments.
 
-
 ## <a name="setting-padding-and-margins"></a>Définition d’une marge intérieure et de marges
  Marge intérieure et marges dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont semblables aux marge intérieure et marges dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Il suffit de définir la <xref:System.Windows.Controls.Control.Padding%2A> et <xref:System.Windows.FrameworkElement.Margin%2A> propriétés sur le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément.
 
@@ -259,10 +257,11 @@ Cette procédure pas à pas nécessite Visual Studio.
 4.  Appuyez sur F5 pour générer et exécuter l'application. Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément remplit la <xref:System.Windows.Controls.DockPanel>, et <xref:System.Windows.Forms.FlowLayoutPanel> réorganise ses contrôles enfants dans la valeur par défaut <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Considérations sur la disposition de l’élément WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Considérations sur la disposition de l'élément WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Organisation des Windows Forms contrôles dans WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Procédure pas à pas : hébergement d’un contrôle composite Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

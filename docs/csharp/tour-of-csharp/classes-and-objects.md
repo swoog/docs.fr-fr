@@ -3,12 +3,12 @@ title: Classes et objets dans C# - Visite guidée du langage C#
 description: Novice en matière de langage C# ? Lisez cette présentation des classes, des objets et de l’héritage
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466256"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921245"
 ---
 # <a name="classes-and-objects"></a>Classes et objets
 
@@ -18,11 +18,11 @@ Les nouvelles classes sont créées à l’aide des déclarations de classe. Une
 
 Voici une déclaration d’une classe simple nommée `Point` :
 
-[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
+[!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
 Les instances de classes sont créées à l’aide de l’opérateur `new`, qui alloue la mémoire pour une nouvelle instance, appelle un constructeur pour initialiser l’instance et retourne une référence à l’instance. Les instructions suivantes créent deux objets Point et stockent les références à ces objets dans les deux variables :
 
-[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
+[!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
 La mémoire occupée par un objet est automatiquement libérée lorsque l’objet n’est plus accessible. Il n’est ni possible ni nécessaire de libérer explicitement des objets dans C#.
 
@@ -74,12 +74,12 @@ Chaque membre d’une classe a une accessibilité associée, qui contrôle les r
 
 Une définition de classe peut spécifier un jeu de paramètres de type en faisant suivre le nom de classe par une liste de noms de paramètre de type entre crochets. Les paramètres de type peuvent ensuite être utilisés dans le corps des déclarations de classe pour définir les membres de la classe. Dans l’exemple suivant, les paramètres de type de `Pair` sont `TFirst` et `TSecond` :
 
-[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
+[!code-csharp[Pair](~/samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
 Un type de classe déclaré pour prendre des paramètres de type est appelé un *type de classe générique*. Les types struct, interface et délégué peuvent également être génériques.
 Lorsque la classe générique est utilisée, des arguments de type doivent être fournis pour chacun des paramètres de type :
 
-[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
+[!code-csharp[PairExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
 
 Un type générique avec des arguments de type fournis, comme `Pair<int,string>` ci-dessus, est appelé un *type construit*.
 
@@ -87,13 +87,13 @@ Un type générique avec des arguments de type fournis, comme `Pair<int,string>`
 
 Une déclaration de classe peut spécifier une classe de base en faisant suivre les paramètres de nom et de type de classe par un signe deux-points et le nom de la classe de base. L’omission d’une spécification de classe de base revient à dériver du type `object`. Dans l'exemple suivant, la classe de base de `Point3D` est `Point`, et la classe de base de `Point` est `object` :
 
-[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
+[!code-csharp[Point3DClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
 Une classe hérite des membres de sa classe de base. L’héritage signifie qu’une classe contient implicitement tous les membres de sa classe de base, à l’exception des constructeurs d’instance et statiques et des finaliseurs de la classe de base. Une classe dérivée peut ajouter des membres hérités, mais ne peut pas supprimer la définition d’un membre hérité. Dans l’exemple précédent, `Point3D` hérite des champs `x` et `y` de `Point`, et chaque instance de `Point3D` contient trois champs, `x`, `y` et `z`.
 
 Il existe une conversion implicite d’un type de classe vers un de ses types de classe de base. Par conséquent, une variable d’un type de classe peut référencer une instance de cette classe ou une instance d’une classe dérivée. Par exemple, pour les déclarations de classe précédentes, une variable de type `Point` peut faire référence à un objet `Point` ou `Point3D` :
 
-[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
+[!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
 ## <a name="fields"></a>Champs
 
@@ -105,7 +105,7 @@ Un champ déclaré sans le modificateur static définit un champ d’instance. C
 
 Dans l’exemple suivant, chaque instance de la classe `Color` possède une copie distincte des champs d’instance `r`, `g` et `b`, mais il existe une seule copie des champs statiques `Black`, `White`, `Red`, `Green` et `Blue` :
 
-[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
+[!code-csharp[ColorClass](~/samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
 
 Comme indiqué dans l’exemple précédent, les *champs en lecture seule* peuvent être déclarés avec un modificateur `readonly`. L’affectation à un champ `readonly` peut survenir uniquement dans le cadre de la déclaration du champ ou dans un constructeur de la même classe.
 
@@ -129,23 +129,23 @@ Les paramètres de valeur peuvent être facultatifs, en spécifiant une valeur p
 
 Un *paramètre de référence* est utilisé pour passer des arguments par référence. L’argument passé pour un paramètre de référence doit être une variable avec une valeur définie et, pendant l’exécution de la méthode, le paramètre de référence représente le même emplacement de stockage que la variable d’argument. Un paramètre de référence est déclaré avec le modificateur `ref`. L'exemple suivant illustre l'utilisation des paramètres `ref`.
 
-[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
+[!code-csharp[swapExample](~/samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
 Un *paramètre de sortie* est utilisé pour passer des arguments par référence. Il est similaire à un paramètre de référence, sauf qu’il ne nécessite pas d’affecter explicitement une valeur à l’argument fourni par l’appelant. Un paramètre de sortie est déclaré avec le modificateur `out`. L’exemple suivant montre l’utilisation de paramètres `out` à l’aide de la syntaxe introduite dans C# 7.
 
-[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
+[!code-csharp[OutExample](~/samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
 Un *tableau de paramètres* autorise le passage d’un nombre variable d’arguments à une méthode. Un tableau de paramètres est déclaré avec le modificateur `params`. Seul le dernier paramètre d’une méthode peut être un tableau de paramètres, et le type d’un tableau de paramètres doit être un type tableau unidimensionnel. Les méthodes Write et WriteLine de la classe <xref:System.Console?displayProperty=nameWithType> sont de bons exemples d’utilisation des tableaux de paramètres. Vous les déclarez de la façon suivante.
 
-[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
+[!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
 Dans une méthode qui utilise un tableau de paramètres, le tableau de paramètres se comporte exactement comme un paramètre ordinaire de type tableau. Toutefois, dans un appel à une méthode avec un tableau de paramètres, il est possible de passer un argument unique de type tableau de paramètres ou n’importe quel nombre d’arguments du type d’élément du tableau de paramètres. Dans ce cas, une instance de tableau est automatiquement créée et initialisée avec les arguments donnés. Cet exemple
 
-[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
+[!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
 revient à écrire ce qui suit.
 
-[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
+[!code-csharp[StringFormat2](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
 ### <a name="method-body-and-local-variables"></a>Corps de la méthode et variables locales
 
@@ -153,7 +153,7 @@ Le corps d’une méthode spécifie les instructions à exécuter lorsque la mé
 
 Un corps de méthode peut déclarer des variables qui sont spécifiques à l’appel de la méthode. Ces variables sont appelées *variables locales*. Une déclaration de variable locale spécifie un nom de type, un nom de variable et éventuellement une valeur initiale. L’exemple suivant déclare une variable locale `i` avec une valeur initiale de zéro et une variable locale `j` sans valeur initiale.
 
-[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
+[!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
 C# requiert qu’une variable locale soit *assignée de manière définitive* avant de pouvoir obtenir sa valeur. Par exemple, si la déclaration du `i` précédent n’inclut pas de valeur initiale, le compilateur signale une erreur pour les utilisations ultérieures de `i`, car `i` ne serait pas assigné de manière définitive à ces points dans le programme.
 
@@ -167,7 +167,7 @@ Une méthode déclarée sans un modificateur statique est une *méthode d’inst
 
 La classe `Entity` suivante a à la fois des statiques et des membres d’instance.
 
-[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
+[!code-csharp[Entity](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
 Chaque instance `Entity` contient un numéro de série (et probablement d’autres informations qui ne sont pas indiquées ici). Le constructeur `Entity` (qui est similaire à une méthode d’instance) initialise la nouvelle instance avec le numéro de série suivant. Étant donné que le constructeur est un membre d’instance, il est autorisé à accéder à la fois au champ d’instance `serialNo` et au champ statique `nextSerialNo`.
 
@@ -175,7 +175,7 @@ Les méthodes statiques `GetNextSerialNo` et `SetNextSerialNo` peuvent accéder 
 
 L’exemple suivant illustre l’utilisation de la classe d’entité.
 
-[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
+[!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
 Notez que les méthodes statiques `SetNextSerialNo` et `GetNextSerialNo` sont appelées sur la classe alors que la méthode d’instance `GetSerialNo` est appelée sur les instances de la classe.
 
@@ -191,11 +191,11 @@ Une *méthode abstraite* est une méthode virtuelle sans implémentation. Une m�
 
 L’exemple suivant déclare une classe abstraite, `Expression`, qui représente un nœud d’arborescence de l’expression et trois classes dérivées, `Constant`, `VariableReference` et `Operation`, qui implémentent des nœuds d’arborescence de l’expression pour les références variables, les constantes et les opérations arithmétiques. (Cela est similaire aux types arborescence de l’expression, mais ne les confondez pas).
 
-[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
+[!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
 Les quatre classes précédentes permet de modéliser des expressions arithmétiques. Par exemple, en utilisant des instances de ces classes, l’expression `x + 3` peut être représentée comme suit.
 
-[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
+[!code-csharp[ExpressionExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
 La méthode `Evaluate` d’une instance `Expression` est appelée pour évaluer l’expression donnée et produire une valeur `double`. La méthode prend un argument `Dictionary` qui contient des noms de variables (comme clés des entrées) et des valeurs (comme valeurs des entrées). Comme `Evaluate` est une méthode abstraite, les classes non abstraites dérivées de `Expression` doivent remplacer `Evaluate`.
 
@@ -203,13 +203,13 @@ Une implémentation de `Constant` de `Evaluate` renvoie simplement la constante 
 
 Le programme suivant utilise les classes `Expression` pour évaluer l’expression `x * (y + 2)` pour différentes valeurs de `x` et `y`.
 
-[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
+[!code-csharp[ExpressionUsage](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
 ### <a name="method-overloading"></a>Surcharge de méthode
 
 La *surcharge* de méthode permet d’avoir plusieurs méthodes dans la même classe avec le même nom, tant qu’elles ont des signatures uniques. Lors de la compilation d’un appel à une méthode surchargée, le compilateur utilise *la résolution de surcharge* pour déterminer la méthode spécifique à appeler. La résolution de surcharge trouve la méthode qui correspond le mieux aux arguments ou signale une erreur si aucune meilleure correspondance ne peut être trouvée. L’exemple suivant montre la résolution de surcharge en action. Le commentaire pour chaque appel de la méthode `UsageExample` affiche une méthode qui est réellement appelée.
 
-[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
+[!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
 Comme le montre l’exemple, une méthode particulière peut toujours être sélectionnée en effectuant un cast explicite des arguments aux types de paramètres exacts et/ou en fournissant explicitement les arguments de type.
 
@@ -217,9 +217,12 @@ Comme le montre l’exemple, une méthode particulière peut toujours être sél
 
 Les membres qui contiennent du code exécutable sont collectivement regroupés sous les *membres de fonction* d’une classe. La section précédente décrit les méthodes qui sont du type principal des fonctions membres. Cette section décrit les autres types de fonctions membres pris en charge par C# : constructeurs, propriétés, indexeurs, événements, opérateurs et finaliseurs.
 
-L’exemple suivant montre une classe générique appelée List\<T>, qui implémente une liste d’objets évolutive. La classe contient plusieurs exemples des types les plus courants de membres de fonction.
+L’exemple suivant représente une classe générique nommée `MyList<T>`, qui implémente une liste d’objets évolutive. La classe contient plusieurs exemples des types les plus courants de membres de fonction.
 
-[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
+> [!NOTE]
+> Cet exemple crée une classe `MyList`, ce qui n’est pas la même chose que la classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> standard .NET. S’il ne permet pas de remplacer cette classe, il illustre en revanche les concepts nécessaires à cette visite guidée.
+
+[!code-csharp[ListClass](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -227,9 +230,9 @@ C# prend en charge les constructeurs statiques et d’instance. Un *constructeur
 
 Un constructeur est déclaré comme une méthode sans aucun type de retour et le même nom que la classe contenante. Si une déclaration de constructeur comprend un modificateur static, elle déclare un constructeur statique. Dans le cas contraire, elle déclare un constructeur d’instance.
 
-Les constructeurs d’instance peuvent être surchargés et avoir des paramètres facultatifs. Par exemple, la classe `List<T>` déclare deux constructeurs d’instance, un sans paramètres et une fonction qui accepte un paramètre `int`. Les constructeurs d’instance sont appelés en utilisant l’opérateur `new`. Les instructions suivantes allouent deux instances `List<string>` à l’aide du constructeur de la classe `List` avec et sans l’argument facultatif.
+Les constructeurs d’instance peuvent être surchargés et avoir des paramètres facultatifs. Par exemple, la classe `MyList<T>` déclare deux constructeurs d’instance, un sans paramètres et une fonction qui accepte un paramètre `int`. Les constructeurs d’instance sont appelés en utilisant l’opérateur `new`. Les instructions suivantes allouent deux instances `MyList<string>` à l’aide du constructeur de la classe `MyList` avec et sans l’argument facultatif.
 
-[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
+[!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
 Contrairement aux autres membres, les constructeurs d’instance ne sont pas hérités, et une classe n’a aucun constructeur d’instance autre que ceux réellement déclarés dans la classe. Si aucun constructeur d’instance n’est fourni pour une classe, un constructeur vide sans paramètre est fourni automatiquement.
 
@@ -243,9 +246,9 @@ Un accesseur get correspond à une méthode sans paramètre avec une valeur de r
 
 Un accesseur set correspond à une méthode avec un paramètre unique nommé valeur et aucun type de retour. Lorsqu’une propriété est référencée en tant que cible d’une assignation ou qu’opérande de ++ ou --, l’accesseur set est appelé avec un argument qui fournit la nouvelle valeur.
 
-La classe `List<T>` déclare deux propriétés, Count et Capacity, qui sont en lecture seule et en lecture-écriture, respectivement. Voici un exemple d’utilisation de ces propriétés.
+La classe `MyList<T>` déclare deux propriétés, `Count` et `Capacity`, qui sont respectivement en lecture seule et en lecture-écriture. En voici un exemple d’utilisation :
 
-[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
+[!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
 C# prend en charge les propriétés d’instance et les propriétés statiques, similaires aux champs et aux méthodes. Les propriétés statiques sont déclarées avec le modificateur static, et les propriétés d’instance sont déclarées sans.
 
@@ -255,9 +258,9 @@ Le ou les accesseurs d’une propriété peuvent être virtuels. Lorsqu’une d�
 
 Un *indexeur* est un membre qui permet l’indexation des objets de la même façon en tant que tableau. Un indexeur est déclaré comme une propriété, sauf que le nom du membre est suivi d’une liste de paramètres entre les délimiteurs `[` et `]`. Les paramètres sont disponibles dans le ou les accesseurs de l’indexeur. Similaires aux propriétés, les indexeurs peuvent être en lecture-écriture, en lecture seule et en écriture seule, et les accesseurs d’un indexeur peuvent être virtuels.
 
-La classe `List` déclare un indexeur en lecture-écriture unique qui prend un paramètre `int`. L’indexeur rend possible l’indexation des instances `List` avec des valeurs `int`. Exemple :
+La classe `MyList<T>` déclare un indexeur en lecture-écriture unique qui prend un paramètre `int`. L’indexeur rend possible l’indexation des instances `MyList<T>` avec des valeurs `int`. Exemple :
 
-[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
+[!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
 Les indexeurs peuvent être surchargés, ce qui signifie qu’une classe peut déclarer plusieurs indexeurs tant que le nombre ou les types de leurs paramètres diffèrent.
 
@@ -267,11 +270,11 @@ Un *événement* est un membre qui permet à une classe ou un objet de fournir d
 
 Dans une classe qui déclare un membre d’événement, l’événement se comporte comme un champ d’un type délégué (à condition que l’événement n’est pas abstrait et ne déclare pas d’accesseurs). Le champ stocke une référence à un délégué qui représente les gestionnaires d’événements qui ont été ajoutés à l’événement. Si aucun gestionnaire d’événements n’est présent, le champ est `null`.
 
-La classe `List<T>` déclare un membre d’événement unique appelé `Changed`, qui indique qu’un nouvel élément a été ajouté à la liste. L’événement Changed est déclenché par la méthode virtuelle `OnChanged`, qui vérifie si l’événement est `null` (ce qui signifie qu’aucun gestionnaire n’est présent). La notion de déclenchement d’un événement est équivalente à l’appel de délégué représenté par l’événement. Par conséquent, il n’existe aucune construction de langage particulière pour déclencher des événements.
+La classe `MyList<T>` déclare un membre d’événement unique appelé `Changed`, qui indique qu’un nouvel élément a été ajouté à la liste. L’événement Changed est déclenché par la méthode virtuelle `OnChanged`, qui vérifie si l’événement est `null` (ce qui signifie qu’aucun gestionnaire n’est présent). La notion de déclenchement d’un événement est équivalente à l’appel de délégué représenté par l’événement. Par conséquent, il n’existe aucune construction de langage particulière pour déclencher des événements.
 
-Les clients réagissent aux événements via les *gestionnaires d’événements*. Les gestionnaires d’événements sont joints à l’aide de l’opérateur `+=` et supprimés à l’aide de l’opérateur `-=`. L'exemple suivant joint un gestionnaire d'événements à l'événement `Changed` d’un `List<string>`.
+Les clients réagissent aux événements via les *gestionnaires d’événements*. Les gestionnaires d’événements sont joints à l’aide de l’opérateur `+=` et supprimés à l’aide de l’opérateur `-=`. L'exemple suivant joint un gestionnaire d'événements à l'événement `Changed` d’un `MyList<string>`.
 
-[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
+[!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
 Pour les scénarios avancés où le contrôle du stockage sous-jacent d’un événement est souhaité, une déclaration d’événement peut fournir explicitement des accesseurs `add` et `remove`, qui sont plutôt similaires à l’accesseur `set` d’une propriété.
 
@@ -279,11 +282,11 @@ Pour les scénarios avancés où le contrôle du stockage sous-jacent d’un év
 
 Un *opérateur* est un membre qui définit la signification de l’application d’un opérateur d’expression particulière aux instances d’une classe. Trois types d’opérateurs peuvent être définis : les opérateurs unaires, les opérateurs binaires et les opérateurs de conversion. Tous les opérateurs doivent être déclarés comme `public` et `static`.
 
-La classe `List<T>` déclare deux opérateurs, `operator ==` et `operator !=`, et donne donc une nouvelle signification aux expressions qui appliquent ces opérateurs aux instances `List`. Plus précisément, les opérateurs définissent l’égalité de deux instances `List<T>` comme la comparaison de chacun des objets contenus à l’aide de leurs méthodes Equals. L’exemple suivant utilise l’opérateur `==` pour comparer deux instances de `List<int>`.
+La classe `MyList<T>` déclare deux opérateurs, `operator ==` et `operator !=`, et donne donc une nouvelle signification aux expressions qui appliquent ces opérateurs aux instances `MyList`. Plus précisément, les opérateurs définissent l’égalité de deux instances `MyList<T>` comme la comparaison de chacun des objets contenus à l’aide de leurs méthodes Equals. L’exemple suivant utilise l’opérateur `==` pour comparer deux instances de `MyList<int>`.
 
-[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
+[!code-csharp[OperatorExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
 
-La première `Console.WriteLine` génère `True`, car les deux listes contiennent le même nombre d’objets avec les mêmes valeurs dans le même ordre. Si `List<T>` n’avait pas défini `operator ==`, la première `Console.WriteLine` aurait affiché `False`, car `a` et `b` référencent des instances `List<int>` différentes.
+La première `Console.WriteLine` génère `True`, car les deux listes contiennent le même nombre d’objets avec les mêmes valeurs dans le même ordre. Si `MyList<T>` n’avait pas défini `operator ==`, la première `Console.WriteLine` aurait affiché `False`, car `a` et `b` référencent des instances `MyList<int>` différentes.
 
 ### <a name="finalizers"></a>Finaliseurs
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224284"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimisation des performances : Autres recommandations
 <a name="introduction"></a> Cette rubrique fournit des recommandations pour améliorer les performances en plus de celles abordées dans les rubriques de la section [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "57358936"
   
 -   [Navigation vers un objet](#Navigation_Objects)  
   
--   [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
+-   [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
   
 -   [Événement CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
@@ -73,12 +73,13 @@ ms.locfileid: "57358936"
  Le service de mise en cache de polices [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] partage les données de police entre les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La première application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que vous exécutez démarre ce service s’il n’est pas déjà en cours d’exécution. Si vous utilisez [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], vous pouvez définir le service « Windows Presentation Foundation (WPF) Font Cache 3.0.0.0 » à partir de « Manuel » (la valeur par défaut) sur « Automatique (début différé) » afin de réduire le temps de démarrage initial [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d'application](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Ressources d’application](optimizing-performance-application-resources.md)
+- [Texte](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Conseils et astuces sur les animations](../graphics-multimedia/animation-tips-and-tricks.md)

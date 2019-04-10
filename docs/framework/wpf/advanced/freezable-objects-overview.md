@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224258"
 ---
 # <a name="freezable-objects-overview"></a>Vue d'ensemble des objets Freezable
 Cette rubrique explique comment utiliser efficacement et créer <xref:System.Windows.Freezable> objets, qui offrent des fonctionnalités spéciales qui peuvent aider à améliorer les performances de l’application. Pinceaux, les stylets, les transformations, les géométries et les animations sont des exemples d’objets freezable.  
@@ -162,7 +162,8 @@ mc:Ignorable="PresentationOptions"
  Pour obtenir un exemple de personnalisé <xref:System.Windows.Freezable> de classe, consultez le [Animation personnalisée, exemple](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Freezable>
-- [Exemple d’animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Exemple d’Animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
 - [Propriétés de dépendance personnalisées](custom-dependency-properties.md)

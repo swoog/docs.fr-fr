@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Ajouter la gestion de classe d'un événement routé"
+title: 'Procédure : Ajouter la gestion de classe d’un événement routé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224267"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>Procédure : Ajouter la gestion de classe d'un événement routé
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Procédure : Ajouter la gestion de classe d’un événement routé
 Les événements routés peuvent être gérés par les gestionnaires de classe ou gestionnaires d’instance sur n’importe quel nœud donné dans l’itinéraire. Gestionnaires de classe sont effectués en premier et utilisable par les implémentations de classe pour supprimer des événements de gestion d’instances ou d’introduire d’autres comportements spécifiques des événements sur les événements qui sont détenus par les classes de base. Cet exemple illustre deux techniques étroitement liées pour l’implémentation des gestionnaires de classe.  
   
 ## <a name="example"></a>Exemple  
@@ -33,7 +33,8 @@ Les événements routés peuvent être gérés par les gestionnaires de classe o
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.EventManager>
-- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Marquage des événements routés comme étant gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
 - [Gérer un événement routé](how-to-handle-a-routed-event.md)
-- [Vue d’ensemble des événements routés](routed-events-overview.md)
+- [Vue d'ensemble des événements routés](routed-events-overview.md)

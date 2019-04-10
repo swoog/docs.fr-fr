@@ -1,23 +1,23 @@
 ---
-title: 'Procédure : Spécifier une liaison Client dans le Code'
+title: 'Procédure : spécifier une liaison de client dans le code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218600"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Procédure : Spécifier une liaison Client dans le Code
+# <a name="how-to-specify-a-client-binding-in-code"></a>Procédure : spécifier une liaison de client dans le code
 Dans cet exemple, un client est créé afin d’utiliser un service de calculatrice et la liaison du client est spécifiée de manière impérative dans le code. Le client accède au service `CalculatorService`, lequel implémente l'interface `ICalculator`. Le service et le client utilisent la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Cette procédure part du principe que le service de calculatrice est en cours d'exécution. Pour plus d’informations sur la création du service, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Il utilise également le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) fournit pour générer automatiquement les composants du client. Cet outil génère le code client permettant d'accéder au service.  
   
- La construction du client se divise en deux parties. L'outil Svcutil.exe génère la calculatrice `ClientCalculator` qui implémente l'interface `ICalculator`. Cette application cliente est ensuite créée en construisant une instance de `ClientCalculator`, puis en spécifiant la liaison et l’adresse du service dans le code.  
+ La construction du client se divise en deux parties. L'outil Svcutil.exe génère la calculatrice `ClientCalculator` qui implémente l'interface `ICalculator`. Cette application cliente est ensuite créée en construisant une instance de `ClientCalculator`, puis en spécifiant la liaison et l'adresse du service dans le code.  
   
  Pour la copie de la source de cet exemple, consultez le [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) exemple.  
   
@@ -47,4 +47,5 @@ Dans cet exemple, un client est créé afin d’utiliser un service de calculatr
 5.  Compilez, puis exécutez le client.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

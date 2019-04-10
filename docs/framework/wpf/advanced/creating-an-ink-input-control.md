@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219666"
 ---
 # <a name="creating-an-ink-input-control"></a>Création d'un contrôle d'entrée d'encre
 Vous pouvez créer un contrôle personnalisé qui dynamiquement et restitue l’encre de manière statique. Autrement dit, afficher l’encre lorsqu’un utilisateur trace un trait, à l’origine de l’encre semble « couler » du stylet et d’afficher l’encre après lui est ajouté au contrôle, soit via le stylet, collé à partir du Presse-papiers ou chargé à partir d’un fichier. Pour restituer l’encre de manière dynamique, votre contrôle doit utiliser un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Pour restituer l’encre de façon statique, vous devez substituer les méthodes d’événement de stylet (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, et <xref:System.Windows.UIElement.OnStylusUp%2A>) pour collecter <xref:System.Windows.Input.StylusPoint> données, créer des traits et les ajouter à un <xref:System.Windows.Controls.InkPresenter> (qui restitue l’encre sur le contrôle).  
   
  Cette rubrique contient les sous-sections suivantes :  
   
--   [Guide pratique pour Collecter des données de Point de stylet et créer des traits d’encre](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Procédure : Collecter des données de Point de stylet et créer des traits d’encre](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Guide pratique pour Activer votre contrôle d’accepter l’entrée à partir de la souris](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Procédure : Activer votre contrôle d’accepter l’entrée à partir de la souris](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Assemblage](#PuttingItTogether)  
   
@@ -99,5 +99,6 @@ Vous pouvez créer un contrôle personnalisé qui dynamiquement et restitue l’
  Vous pouvez créer un contrôle qui collecte et restitue l’encre en substituant les méthodes d’événement de stylet. En créant votre propre contrôle, en dérivant vos propres <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes et en les insérant le dans <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, vous pouvez implémenter virtuellement tout comportement imaginable avec l’encre numérique. Vous avez accès à la <xref:System.Windows.Input.StylusPoint> données tel qu’il sont générées, ce qui vous donne la possibilité de personnaliser <xref:System.Windows.Input.Stylus> d’entrée et de restituer sur l’écran en fonction de votre application. Étant donné que vous avez un accès de bas niveau pour le <xref:System.Windows.Input.StylusPoint> données, vous pouvez implémenter la collecte d’encre et restituer avec des performances optimales pour votre application.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Gestion avancée de l’encre](advanced-ink-handling.md)
+
+- [Gestion avancée de l'encre](advanced-ink-handling.md)
 - [Accéder et manipuler l’entrée du stylet](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

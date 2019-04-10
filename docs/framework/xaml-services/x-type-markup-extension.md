@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042095"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211632"
 ---
 # <a name="xtype-markup-extension"></a>x:Type, extension de balisage
 Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type XAML spécifié.  
@@ -44,7 +44,7 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
 |`typeNameValue`|Obligatoire. Un nom de type peut être résolu à l’espace de noms XAML par défaut actuel ; ou spécifié préfixe mappé si `prefix` est fourni.|  
   
 ## <a name="remarks"></a>Notes  
- Le `x:Type` extension de balisage possède une fonction similaire à la `typeof()` opérateur en C# ou le `GetType` opérateur dans Microsoft Visual Basic.  
+ Le `x:Type` extension de balisage possède une fonction similaire à la `typeof()` opérateur en c# ou le `GetType` opérateur dans Microsoft Visual Basic.  
   
  Le `x:Type` extension de balisage fournisse un comportement de conversion de chaîne pour les propriétés qui prennent le type <xref:System.Type>. L’entrée est un type XAML. La relation entre le type XAML d’entrée et la sortie CLR <xref:System.Type> est que la sortie <xref:System.Type> est la <xref:System.Xaml.XamlType.UnderlyingType%2A> de l’entrée <xref:System.Xaml.XamlType>, après avoir recherché le nécessaire <xref:System.Xaml.XamlType> selon le contexte de schéma XAML et le <xref:System.Windows.Markup.IXamlTypeResolver>fournit le contexte de service.  
   
@@ -80,7 +80,8 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
  Dans WPF, vous pouvez utiliser les fonctionnalités XAML 2009, mais uniquement pour XAML libre (XAML non compilé par balisage). Le code XAML compilé par balisage pour WPF et la forme BAML du code XAML ne prennent actuellement pas en charge les mots clés et les fonctionnalités XAML 2009.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Style>
-- [Application d’un style et création de modèles](../wpf/controls/styling-and-templating.md)
+- [Application d'un style et création de modèles](../wpf/controls/styling-and-templating.md)
 - [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

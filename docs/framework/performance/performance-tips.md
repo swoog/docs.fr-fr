@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216468"
 ---
 # <a name="net-performance-tips"></a>Conseils relatifs aux performances .NET
 Le terme *performances* désigne généralement la vitesse d’exécution d’un programme. Vous pouvez parfois augmenter la vitesse d’exécution en suivant certaines règles de base dans votre code source. Dans certains programmes, il est important d’examiner attentivement le code et d’utiliser des profileurs pour garantir que le programme s’exécute aussi rapidement que possible. Dans d’autres programmes, vous n’avez pas à effectuer une telle optimisation, car le code, tel qu’il est écrit, est suffisamment rapide. Cet article répertorie les zones dont les performances sont fréquemment impactées, et fournit des conseils d’amélioration, ainsi que des liens vers d’autres rubriques relatives aux performances. Pour plus d’informations sur la planification et la mesure des performances, consultez [Performances](../../../docs/framework/performance/index.md)  
@@ -34,15 +34,16 @@ Le terme *performances* désigne généralement la vitesse d’exécution d’un
   
 -   [Écriture de hautes performances des Applications managées : Notions fondamentales](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Le Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Trucs et astuces dans les Applications .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani’s Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Blog de Rico Mariani sur les performances)  
+-   [Performance Tidbits de Rico Mariani](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Blog de Vance](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Performances](../../../docs/framework/performance/index.md)
 - [Guide de programmation Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Guide de programmation C#](../../csharp/programming-guide/index.md)

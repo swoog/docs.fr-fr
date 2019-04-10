@@ -2,12 +2,12 @@
 title: Gestion de l'accès concurrentiel avec DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216299"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Gestion de l'accès concurrentiel avec DependentTransaction
 L'objet <xref:System.Transactions.Transaction> est créé à l'aide de la méthode <xref:System.Transactions.Transaction.DependentClone%2A>. Il garantit que la transaction n'est pas validée tant que d'autres parties de code (par exemple, un thread de travail) travaillent encore sur la transaction. Une fois le travail sur la transaction clonée effectué et prêt pour validation, il peut informer le créateur de la transaction à l'aide de la méthode <xref:System.Transactions.DependentTransaction.Complete%2A>. Cela vous permet de conserver la cohérence et l'exactitude des données.  
@@ -17,9 +17,9 @@ L'objet <xref:System.Transactions.Transaction> est créé à l'aide de la métho
 ## <a name="creating-a-dependent-clone"></a>Création d'un clone dépendant  
  Pour créer une transaction dépendante, appelez la méthode <xref:System.Transactions.Transaction.DependentClone%2A> et passez l'énumération <xref:System.Transactions.DependentCloneOption> en tant que paramètre. Ce paramètre définit le comportement de la transaction lorsque `Commit` est appelé sur la transaction parent avant que le clone dépendant n'indique qu'il est prêt pour validation de la transaction (par appel à la méthode <xref:System.Transactions.DependentTransaction.Complete%2A>). Les valeurs valides pour ce paramètre sont les suivantes :  
   
--   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> crée une transaction dépendante qui bloque le processus de validation de la transaction parent jusqu'à ce que celle-ci expire ou que <xref:System.Transactions.DependentTransaction.Complete%2A> soit appelée sur tous les clones dépendants indiquant la fin de leur travail. Cela est utile lorsque le client ne souhaite pas valider la transaction parent avant la fin des transactions dépendantes. Si la transaction parent termine son travail avant les transactions dépendantes et qu'elle appelle <xref:System.Transactions.CommittableTransaction.Commit%2A> sur la transaction, le processus de validation est bloqué à un état permettant un travail supplémentaire sur la transaction et la création d'inscriptions jusqu'à ce que tous les clones dépendants aient appelé <xref:System.Transactions.DependentTransaction.Complete%2A>. Une fois qu'ils ont tous terminé leur travail et appelé <xref:System.Transactions.DependentTransaction.Complete%2A>, le processus de validation de la transaction démarre.  
+-   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> Crée une transaction dépendante qui bloque le processus de validation de la transaction parent jusqu'à ce que les heures de la transaction parent expire ou que <xref:System.Transactions.DependentTransaction.Complete%2A> est appelée sur tous les dépendants indiquant leur achèvement. Cela est utile lorsque le client ne souhaite pas valider la transaction parent avant la fin des transactions dépendantes. Si la transaction parent termine son travail avant les transactions dépendantes et qu'elle appelle <xref:System.Transactions.CommittableTransaction.Commit%2A> sur la transaction, le processus de validation est bloqué à un état permettant un travail supplémentaire sur la transaction et la création d'inscriptions jusqu'à ce que tous les clones dépendants aient appelé <xref:System.Transactions.DependentTransaction.Complete%2A>. Une fois qu'ils ont tous terminé leur travail et appelé <xref:System.Transactions.DependentTransaction.Complete%2A>, le processus de validation de la transaction démarre.  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> crée une transaction dépendante qui est automatiquement abandonnée si <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelée sur la transaction parent avant l'appel à <xref:System.Transactions.DependentTransaction.Complete%2A>. Dans ce cas, l'ensemble du travail effectué dans la transaction dépendante reste intact au cours d'une transaction et personne ne peut en valider une seule partie.  
+-   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, quant à eux, crée une transaction dépendante abandonne automatiquement si <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelée sur la transaction parent avant <xref:System.Transactions.DependentTransaction.Complete%2A> est appelée. Dans ce cas, l'ensemble du travail effectué dans la transaction dépendante reste intact au cours d'une transaction et personne ne peut en valider une seule partie.  
   
  La méthode <xref:System.Transactions.DependentTransaction.Complete%2A> ne doit être appelée qu'une fois lorsque votre application termine son travail sur la transaction dépendante ; sinon, une <xref:System.InvalidOperationException> est levée. Après cet appel, ne tentez pas d'effectuer un travail supplémentaire sur la transaction sous peine de lever une exception.  
   
@@ -82,4 +82,5 @@ using(TransactionScope scope = new TransactionScope())
 -   Si le thread de travail génère un autre thread de travail, créez un clone dépendant à partir du clone dépendant et passez-le au nouveau thread.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Transactions.DependentTransaction>

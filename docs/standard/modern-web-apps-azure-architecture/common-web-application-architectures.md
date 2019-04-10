@@ -4,17 +4,17 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826731"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921102"
 ---
 # <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
 > « Si vous pensez qu’une bonne architecture est coûteuse, faites l’expérience d’une mauvaise architecture. »  
-> _- Brian Foote et Joseph Yoder_
+> _– Brian Foote and Joseph Yoder_
 
 La plupart des applications .NET conventionnelles sont déployées sous forme d’unités individuelles qui correspondent à un exécutable ou à une application web unique s’exécutant dans un seul domaine d’application IIS. C’est le modèle de déploiement le plus simple, qui convient parfaitement à beaucoup d’applications internes et applications publiques de petite taille. Toutefois, même avec ce déploiement en unités individuelles, la majorité des applications métier non triviales tirent avantage à avoir leur logique séparée en plusieurs couches.
 
@@ -122,7 +122,7 @@ La figure 5-9 est une représentation plus détaillée de l’architecture d’u
 
 ![Architecture ASPNET Core](./media/image5-9.png)
 
-**Figure 5-9**. Diagramme d’une architecture ASP.NET Core propre.
+**Figure 5-9.** Diagramme d’une architecture ASP.NET Core propre.
 
 Comme la couche Noyau de l’application ne dépend pas de la couche Infrastructure, il est très facile d’écrire des tests unitaires automatisés pour cette couche. Les figures 5-10 et 5-11 montrent comment les tests s’intègrent à cette architecture.
 
@@ -263,7 +263,7 @@ networks:
 Le fichier `docker-compose.yml` référence le `Dockerfile` dans le projet `Web`. Le `Dockerfile` sert à spécifier le conteneur de base qui sera utilisé et la façon dont l’application sera configurée dans ce dernier. Voici le `Dockerfile` de `Web` :
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -292,13 +292,13 @@ Notez que les conteneurs Docker en cours d’exécution peuvent être liés à d
 Si vous voulez ajouter la prise en charge de Docker à votre application à l’aide de Visual Studio, veillez à ce que Docker Desktop s’exécute pendant l’opération. L’Assistant ne fonctionnera pas correctement si Docker Desktop n’est pas en cours d’exécution lorsque vous démarrez l’Assistant. Par ailleurs, l’Assistant examine votre choix de conteneur actuel pour ajouter la prise en charge appropriée de Docker. Si vous voulez ajouter la prise en charge des conteneurs Windows, vous devez exécuter l’Assistant pendant que Docker Desktop s’exécute avec les conteneurs Windows configurés. Si vous voulez ajouter la prise en charge des conteneurs Linux, exécutez l’Assistant pendant que Docker s’exécute avec les conteneurs Linux configurés.
 
 ### <a name="references--common-web-architectures"></a>Informations de référence sur les architectures web courantes
-> - **L’architecture propre**  
+> - **The Clean Architecture**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **L’architecture en oignon**  
+> - **The Onion Architecture**  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Le modèle référentiel**  
+> - **The Repository Pattern**  
 >   <https://deviq.com/repository-pattern/>
-> - **Exemple d’une solution d’architecture propre**  
+> - **Clean Architecture (exemple de solution)**  
 >   <https://github.com/ardalis/cleanarchitecture>
 > - **Architecting Microservices (livre électronique)**  
 >   <https://aka.ms/MicroservicesEbook>

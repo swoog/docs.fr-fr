@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Exporter des Assertions de stratégie personnalisées'
+title: 'Procédure : exporter des assertions de stratégie personnalisées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213607"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Procédure : Exporter des Assertions de stratégie personnalisées
-Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l’application cliente. Vous pouvez utiliser Windows Communication Foundation (WCF) pour exporter des assertions dans les expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, opération ou aux objets de message, selon les conditions de que communication ou de fonctionnalités.  
+# <a name="how-to-export-custom-policy-assertions"></a>Procédure : exporter des assertions de stratégie personnalisées
+Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l'application cliente. Vous pouvez utiliser Windows Communication Foundation (WCF) pour exporter des assertions dans les expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, opération ou aux objets de message, selon les conditions de que communication ou de fonctionnalités.  
   
  Les assertions de stratégie personnalisées sont exportées en implémentant l’interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> et en insérant directement l’élément de liaison dans la liaison du point de terminaison de service ou en inscrivant l’élément de liaison dans le fichier de configuration de l’application. Votre implémentation de l'exportation de la stratégie doit ajouter votre assertion de stratégie personnalisée comme une instance <xref:System.Xml.XmlElement?displayProperty=nameWithType> au <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> approprié sur le <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> qui est passé dans la méthode <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   
@@ -23,14 +23,14 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 ### <a name="to-export-custom-policy-assertions"></a>Pour exporter des assertions de stratégie personnalisées  
   
-1.  Implémentez l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur un <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. L’exemple de code ci-dessous montre l’implémentation d’une assertion de stratégie personnalisée au niveau de la liaison.  
+1.  Implémentez l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur un <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. L'exemple de code ci-dessous montre l'implémentation d'une assertion de stratégie personnalisée au niveau de la liaison.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
 2.  Insérez l’élément de liaison dans la liaison de point de terminaison par programme ou à l’aide d’un fichier de configuration d’application. Reportez-vous aux procédures ci-dessous.  
   
-### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Pour insérer un élément de liaison à l’aide d’un fichier de configuration d’application  
+### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Pour insérer un élément de liaison à l'aide d'un fichier de configuration d'application  
   
 1.  Implémentez <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> pour l’élément de liaison de l’assertion de stratégie personnalisée.  
   
@@ -44,12 +44,13 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 2.  Ajoutez la liaison personnalisée de l’étape 1. à un nouveau point de terminaison et ajoutez ce nouveau point de terminaison de service au <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> en appelant la méthode <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
-3.  Ouvrez la <xref:System.ServiceModel.ServiceHost>. L’exemple de code ci-dessous montre la création d’une liaison personnalisée et l’insertion par programme d’éléments de liaison.  
+3.  Ouvrez la <xref:System.ServiceModel.ServiceHost>. L'exemple de code ci-dessous montre la création d'une liaison personnalisée et l'insertion par programme d'éléments de liaison.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Guide pratique pour Importer des Assertions de stratégie personnalisée](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procédure : importer des assertions de stratégie personnalisées](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

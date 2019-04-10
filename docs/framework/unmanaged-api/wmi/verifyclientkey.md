@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214713"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey (fonction)
 Garantit que la clé du client offre une sécurité correcte.  
@@ -40,12 +40,13 @@ Si la fonction réussit, la valeur de retour est `ERROR_SUCCESS` (0).
 
 Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans *WinError.h*.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.def  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

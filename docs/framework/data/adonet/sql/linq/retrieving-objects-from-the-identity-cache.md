@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211229"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Récupération d'objets du cache d'identité
 Cette rubrique décrit les types des requêtes LINQ to SQL qui retournent un objet à partir du cache d'identité qui est géré par le <xref:System.Data.Linq.DataContext>.  
@@ -30,7 +30,7 @@ Cette rubrique décrit les types des requêtes LINQ to SQL qui retournent un obj
   
  Dans ces formes générales, `Function1`, `Function2` et `predicate` sont définis comme suit.  
   
- `Function1` peut être l'une des fonctions suivantes :  
+ `Function1` peut être une des opérations suivantes :  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ Cette rubrique décrit les types des requêtes LINQ to SQL qui retournent un obj
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` peut être l'une des fonctions suivantes :  
+ `Function2` peut être une des opérations suivantes :  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ Cette rubrique décrit les types des requêtes LINQ to SQL qui retournent un obj
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` doit être une expression dans laquelle la propriété de la clé primaire de l'objet est définie sur une valeur constante. Si la clé primaire d'un objet est définie par plusieurs propriétés, chaque propriété de clé primaire doit être définie sur une valeur constante. Vous trouverez ci-dessous des exemples de formes requises pour `predicate` :  
+ `predicate` doit être une expression dans laquelle la propriété de clé primaire de l’objet est définie sur une valeur constante. Si la clé primaire d'un objet est définie par plusieurs propriétés, chaque propriété de clé primaire doit être définie sur une valeur constante. Vous trouverez ci-dessous des exemples de formes requises pour `predicate` :  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,7 +65,8 @@ Cette rubrique décrit les types des requêtes LINQ to SQL qui retournent un obj
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Identité d’un objet](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Identité d'un objet](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Identité d’un objet](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Identité d'un objet](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

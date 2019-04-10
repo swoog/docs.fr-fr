@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 298bf27b171772bb039b11b5e5de70e7d45b061d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226870"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 Élément de configuration utilisé pour spécifier des paramètres WebSocket.  
@@ -51,7 +51,7 @@ ms.locfileid: "55258440"
   
 ## <a name="transportusage-attribute"></a>Attribut transportUsage  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |WhenDuplex|Utilisez le protocole WebSocket lorsque le contrat est en duplex.|  
 |Always|Utilisez toujours le protocole WebSocket indépendamment du contrat.|  
@@ -85,6 +85,7 @@ ms.locfileid: "55258440"
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

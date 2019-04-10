@@ -1,17 +1,17 @@
 ---
-title: Déployer des applications .NET existantes en tant que conteneurs de Windows
+title: Déployer des applications .NET existantes en tant que conteneurs Windows
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Déployer des applications .NET existantes en tant que conteneurs de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216663"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Déployer des applications .NET existantes en tant que conteneurs de Windows
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Déployer des applications .NET existantes en tant que conteneurs Windows
 
 Les déploiements qui sont basées sur les conteneurs Windows sont appliquent aux applications optimisé pour le Cloud et applications Cloud natives.
 
@@ -95,7 +95,7 @@ Lorsque vous ajoutez le nom de l’image à votre fichier Dockerfile, vous pouve
 
 > | **Balise** | **Version du système et** |
 > |---|---|
-> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x sur Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x sur Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x avec une personnalisation supplémentaire ASP.NET, sur Windows Server Core |
 
 Pour .NET Core (multiplateforme pour Linux et Windows), les balises seraient présente comme suit :
@@ -103,7 +103,7 @@ Pour .NET Core (multiplateforme pour Linux et Windows), les balises seraient pr�
 > | **Balise** | **Version du système et**
 > |---|---|
 > | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 runtime uniquement sur Linux |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 runtime uniquement sur Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 runtime uniquement sur Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Images multi-arch
 
@@ -134,7 +134,6 @@ Exécution d’un conteneur sur Windows avec ou sans isolation Hyper-V est une d
 -   **Infographie : Microsoft et les conteneurs**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>L’écosystème de conteneurs dans Azure
 

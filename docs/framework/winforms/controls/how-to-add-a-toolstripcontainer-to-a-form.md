@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Ajouter un ToolStripContainer à un formulaire'
+title: 'Procédure : ajouter un ToolStripContainer à un formulaire'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216208"
 ---
-# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procédure : Ajouter un ToolStripContainer à un formulaire
+# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procédure : ajouter un ToolStripContainer à un formulaire
 Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripContainer> à un Windows Form et le remplir avec des contrôles.  
   
 ## <a name="example"></a>Exemple  
@@ -33,6 +33,7 @@ Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripCon
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer, contrôle](toolstripcontainer-control.md)
-- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)

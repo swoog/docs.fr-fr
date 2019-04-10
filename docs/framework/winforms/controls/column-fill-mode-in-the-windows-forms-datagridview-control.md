@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214726"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms
 En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataGridView> redimensionne automatiquement ses colonnes pour qu'elles remplissent la largeur de la zone d'affichage disponible. Le contrôle n'affiche pas de barre de défilement horizontale, sauf quand cela est nécessaire pour faire en sorte que la largeur de chaque colonne soit supérieure ou égale à la valeur de sa propriété <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -63,6 +63,7 @@ En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataG
 -   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>

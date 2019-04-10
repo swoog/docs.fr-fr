@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding'
+title: 'Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 809626d0d6d69d22f09b0f10210cfda7a033ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211801"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procédure : Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding
 Certains services peuvent requérir des informations d'identification fédérées mais ne prennent pas en charge les sessions sécurisées. Dans ce cas, vous devez désactiver la fonctionnalité de session sécurisée. Contrairement à <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> n'offre aucun moyen de désactiver les sessions sécurisées lors de la communication avec un service. À la place, vous devez créer une liaison personnalisée qui remplace les paramètres de session sécurisée par un démarrage.  
   
  Cette rubrique montre comment modifier les éléments de liaison contenus dans une <xref:System.ServiceModel.WSFederationHttpBinding> pour créer une liaison personnalisée. Le résultat est identique à <xref:System.ServiceModel.WSFederationHttpBinding> mais n'utilise pas de sessions sécurisées.  
@@ -33,7 +33,7 @@ Certains services peuvent requérir des informations d'identification fédérée
 5.  Remplacez le <xref:System.ServiceModel.Channels.SecurityBindingElement> d’origine par l’élément de liaison de sécurité de démarrage des <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant permet de créer une liaison fédérée personnalisée sans session sécurisée.  
+ L'exemple suivant permet de créer une liaison fédérée personnalisée sans session sécurisée.  
   
  [!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
  [!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]  
@@ -43,4 +43,5 @@ Certains services peuvent requérir des informations d'identification fédérée
 -   Pour compiler l'exemple de code, créez un projet qui référence l'assembly System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

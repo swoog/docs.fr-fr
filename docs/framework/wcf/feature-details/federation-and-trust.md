@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225337"
 ---
 # <a name="federation-and-trust"></a>Fédération et confiance
 Cette rubrique couvre divers aspects relatifs aux applications fédérées, des limites d’approbation et la configuration et utilisation de jetons émis dans Windows Communication Foundation (WCF).  
@@ -38,7 +38,8 @@ Cette rubrique couvre divers aspects relatifs aux applications fédérées, des 
  Qu'un jeton émis soit ou non sérialisé dans un message envoyé d'un client vers un point de terminaison fédéré, il est contrôlé en définissant la propriété <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> de la classe <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>. Cette propriété peut prendre l'une des valeurs de l'énumération <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>, mais ce n'est pas utile dans la plupart des scénarios fédérés. Les valeurs `SecurityTokenInclusionMode.Never` et `SecurityTokenInclusionMode.AlwaysToInitiator` provoquent l'envoi par le client d'une référence au jeton émis par le service d'émission de jeton de sécurité à la partie de confiance. Sauf si la partie de confiance possède une copie du jeton émis, l'authentification échouera car la référence du jeton ne peut pas être résolue. WCF traite `SecurityTokenInclusionMode.Once` comme équivalent à `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Guide pratique pour Créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Procédure : créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procédure : configurer des informations d’identification sur un service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Procédure : créer un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

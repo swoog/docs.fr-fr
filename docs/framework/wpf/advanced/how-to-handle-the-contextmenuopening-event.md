@@ -1,17 +1,17 @@
 ---
-title: "Procédure : Gérer l'événement ContextMenuOpening"
+title: 'Procédure : Gérer l’événement ContextMenuOpening'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219627"
 ---
-# <a name="how-to-handle-the-contextmenuopening-event"></a>Procédure : Gérer l'événement ContextMenuOpening
+# <a name="how-to-handle-the-contextmenuopening-event"></a>Procédure : Gérer l’événement ContextMenuOpening
 Le <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement peut être géré dans une application pour ajuster un menu contextuel existant avant son pour afficher ou pour supprimer un menu qui serait affiché en définissant le <xref:System.Windows.RoutedEventArgs.Handled%2A> propriété `true` dans les données d’événement. La justification habituelle d’un paramètre <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true` de l’événement données consiste à remplacer le menu entièrement par un nouveau <xref:System.Windows.Controls.ContextMenu> de l’objet, qui requiert parfois l’annulation de l’opération et le démarrage d’un nouveau ouvert. Si vous écrivez des gestionnaires pour les <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement, vous devez être conscient des problèmes de synchronisation entre un <xref:System.Windows.Controls.ContextMenu> contrôle et le service qui est chargé d’ouvrir et de positionner des menus contextuels pour les contrôles en général. Cette rubrique illustre quelques-unes des techniques de codage pour le menu contextuel de différents scénarios d’ouverture et illustre un cas où le problème de synchronisation entre en jeu.  
   
  Il existe plusieurs scénarios pour gérer la <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement :  
@@ -56,7 +56,8 @@ Le <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement peut ê
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
-- [Vue d’ensemble des éléments de base](base-elements-overview.md)
-- [Vue d’ensemble de ContextMenu](../controls/contextmenu-overview.md)
+- [Vue d'ensemble des éléments de base](base-elements-overview.md)
+- [Vue d'ensemble de ContextMenu](../controls/contextmenu-overview.md)

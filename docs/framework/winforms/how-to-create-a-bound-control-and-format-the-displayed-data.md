@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Créer un contrôle dépendant et mettre en forme les données affichées'
+title: 'Procédure : créer un contrôle lié et mettre en forme les données affichées'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225532"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procédure : Créer un contrôle dépendant et mettre en forme les données affichées
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procédure : créer un contrôle lié et mettre en forme les données affichées
 Avec la liaison de données Windows Forms, vous pouvez mettre en forme les données affichées dans un contrôle lié aux données à l’aide de la **mise en forme et liaison avancée** boîte de dialogue.  
   
 > [!NOTE]
@@ -33,7 +33,7 @@ Avec la liaison de données Windows Forms, vous pouvez mettre en forme les donn�
   
      Une liste des sources de données disponibles s'affiche.  
   
-5.  Développez la source de données avec laquelle vous voulez établir une liaison jusqu'à trouver l'élément de données souhaité.  
+5.  Développez la source de données avec laquelle vous voulez établir une liaison jusqu’à trouver l’élément de données souhaité.  
   
      Par exemple, si vous établissez une liaison à une valeur de colonne dans une table de dataset, développez le nom du dataset, puis développez le nom de la table pour afficher les noms des colonnes.  
   
@@ -55,6 +55,7 @@ Avec la liaison de données Windows Forms, vous pouvez mettre en forme les donn�
 8.  Cliquez sur **OK** pour fermer la **mise en forme et liaison avancée** boîte de dialogue et revenir à la fenêtre Propriétés.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un contrôle de liaison Simple dans un formulaire Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [Procédure : créer un contrôle à liaison simple dans un formulaire Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Validation des entrées d’utilisateur dans les Windows Forms](user-input-validation-in-windows-forms.md)
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un pinceau uni'
+title: 'Procédure : créer un pinceau uni'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213439"
 ---
-# <a name="how-to-create-a-solid-brush"></a>Procédure : Créer un pinceau uni
+# <a name="how-to-create-a-solid-brush"></a>Procédure : créer un pinceau uni
 Cet exemple crée un <xref:System.Drawing.SolidBrush> objet qui peut être utilisé par un <xref:System.Drawing.Graphics> objet pour remplir des formes.  
   
 ## <a name="example"></a>Exemple  
@@ -29,6 +29,7 @@ Cet exemple crée un <xref:System.Drawing.SolidBrush> objet qui peut être utili
  Une fois que vous avez terminé, vous devez appeler <xref:System.IDisposable.Dispose%2A> sur les objets qui consomment des ressources système, tels que les objets de pinceau.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)

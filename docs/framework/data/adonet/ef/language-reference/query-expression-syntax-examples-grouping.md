@@ -1,18 +1,18 @@
 ---
-title: 'Exemples de syntaxe d’Expression de requête : Regroupement'
+title: 'Exemples de syntaxe d’expression de requête : Regroupement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: 7992cd5a0f76f303018591b9dadd8173be3bd27f
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0a4aa57ba709852c30223598b9d1af146eaf6013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211996"
 ---
-# <a name="query-expression-syntax-examples-grouping"></a>Exemples de syntaxe d’Expression de requête : Regroupement
+# <a name="query-expression-syntax-examples-grouping"></a>Exemples de syntaxe d’expression de requête : Regroupement
 Les exemples de cette rubrique montrent comment utiliser le `GroupBy` méthode pour interroger le [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
@@ -39,4 +39,5 @@ Les exemples de cette rubrique montrent comment utiliser le `GroupBy` méthode p
  [!code-vb[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

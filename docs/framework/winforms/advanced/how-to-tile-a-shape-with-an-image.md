@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Remplir une forme avec une Image'
+title: 'Procédure : disposer une forme en mosaïque avec une image'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221536"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Procédure : Remplir une forme avec une Image
+# <a name="how-to-tile-a-shape-with-an-image"></a>Procédure : disposer une forme en mosaïque avec une image
 Tout comme les vignettes peuvent être placés à côté des autres pour couvrir un étage, rectangulaires images peuvent être placés en regard de chacun des autres sur fill (mosaïque) une forme. Pour disposer en mosaïque à l’intérieur d’une forme, utilisez un pinceau de la texture. Lorsque vous construisez un <xref:System.Drawing.TextureBrush> de l’objet, un des arguments que vous passez au constructeur est un <xref:System.Drawing.Image> objet. Lorsque vous utilisez le pinceau de texture pour peindre l’intérieur d’une forme, la forme est remplie avec les copies répétées de cette image.  
   
  La propriété de mode de retour à la ligne de la <xref:System.Drawing.TextureBrush> objet détermine comment l’image est orienté comme il est répété dans une grille rectangulaire. Vous pouvez effectuer toutes les vignettes dans la grille ont la même orientation, ou vous pouvez rendre une image de retournement d’une position à l’autre. La rotation peut être horizontale, verticale ou les deux. Les exemples suivants illustrent une mosaïque avec différents types de rotation.  
@@ -61,4 +61,5 @@ Tout comme les vignettes peuvent être placés à côté des autres pour couvrir
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation d'un pinceau pour remplir des formes](using-a-brush-to-fill-shapes.md)

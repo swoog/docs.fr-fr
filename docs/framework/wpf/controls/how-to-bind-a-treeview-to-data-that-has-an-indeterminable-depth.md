@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214856"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procédure : Lier un TreeView à des données dont la profondeur ne peut pas être déterminée
 Il peut arriver lorsque vous souhaitez lier un <xref:System.Windows.Controls.TreeView> à une source de données dont la profondeur n’est pas connue.  Cela peut se produire lorsque les données sont récursifs par nature, par exemple un système de fichiers, dont les dossiers peuvent contenir des dossiers, ou de la structure organisationnelle d’une entreprise, où les employés ont les collaborateurs directs d’autres employés.  
@@ -26,5 +26,6 @@ Il peut arriver lorsque vous souhaitez lier un <xref:System.Windows.Controls.Tre
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
-- [Vue d’ensemble des modèles de données](../data/data-templating-overview.md)
+- [Vue d'ensemble des modèles de données](../data/data-templating-overview.md)

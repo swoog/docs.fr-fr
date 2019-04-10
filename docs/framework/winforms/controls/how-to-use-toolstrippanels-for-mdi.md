@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser des contrôles ToolStripPanel pour MDI'
+title: 'Procédure : utiliser des contrôles ToolStripPanel pour MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219874"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>Procédure : Utiliser des contrôles ToolStripPanel pour MDI
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>Procédure : utiliser des contrôles ToolStripPanel pour MDI
 <xref:System.Windows.Forms.ToolStripPanel> fournit une flexibilité pour les applications d'interface multidocument (MDI) à l'aide de la méthode <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Exemple  
@@ -33,5 +33,6 @@ ms.locfileid: "57722059"
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Guide pratique pour Joindre des contrôles ToolStripPanel](how-to-join-toolstrippanels.md)
+- [Procédure : joindre des contrôles ToolStripPanel](how-to-join-toolstrippanels.md)

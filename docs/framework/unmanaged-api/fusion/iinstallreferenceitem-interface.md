@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214752"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem, interface
 Représente un élément installé dans le global assembly cache.  
@@ -32,13 +32,14 @@ Représente un élément installé dans le global assembly cache.
 |------------|-----------------|  
 |[GetReference, méthode](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Obtient un pointeur vers le `FUSION_INSTALL_REFERENCE` structure représentée par ce `IInstallReferenceItem`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions de .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [FUSION_INSTALL_REFERENCE, structure](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

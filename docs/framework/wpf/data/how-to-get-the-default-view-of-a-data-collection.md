@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Obtenir la vue par défaut d'une collection de données"
+title: 'Procédure : Obtenir la vue par défaut d’une collection de données'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222105"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procédure : Obtenir la vue par défaut d'une collection de données
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procédure : Obtenir la vue par défaut d’une collection de données
 Les vues permettent à la même collection de données de différentes façons, en fonction de tri, filtrage ou des critères de regroupement. Chaque collection a un affichage par défaut partagé, qui est utilisé comme source de liaison réelle lorsqu’une liaison spécifie une collection comme source. Cet exemple montre comment obtenir la vue par défaut d’une collection.  
   
 ## <a name="example"></a>Exemple  
@@ -33,5 +33,6 @@ Les vues permettent à la même collection de données de différentes façons, 
  Pour obtenir des exemples des fonctionnalités fournies par une vue de collection, consultez [trier des données dans une vue](how-to-sort-data-in-a-view.md), [filtrer des données dans une vue](how-to-filter-data-in-a-view.md), et [naviguer dans les objets d’un CollectionView de données](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Trier et grouper des données à l'aide d'une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+
+- [Trier et grouper des données à l’aide d’une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Rubriques Comment](data-binding-how-to-topics.md)

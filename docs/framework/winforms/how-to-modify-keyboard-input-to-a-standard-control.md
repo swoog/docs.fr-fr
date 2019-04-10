@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modifier l’entrée de clavier pour un contrôle Standard'
+title: 'Procédure : changer l’entrée de clavier en contrôle standard'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 41071efad50d42c873410420c850a7800b41008d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225779"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procédure : Modifier l’entrée de clavier pour un contrôle Standard
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procédure : changer l’entrée de clavier en contrôle standard
 Windows Forms offre la possibilité de consommer et de modifier l'entrée au clavier. Consommer une touche signifie gérer une touche dans une méthode ou un gestionnaire d'événements pour que d'autres méthodes et événements plus loin dans la file d'attente de messages ne reçoivent pas la valeur de la touche. Modifier une touche signifie modifier sa valeur pour que les méthodes et les gestionnaires d'événements plus loin dans la file d'attente de messages reçoivent une valeur de touche différente. Cette rubrique montre comment accomplir ces tâches.  
   
 ### <a name="to-consume-a-key"></a>Pour consommer une touche  
@@ -68,6 +68,7 @@ Windows Forms offre la possibilité de consommer et de modifier l'entrée au cla
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Entrée au clavier dans une application Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entrée d’utilisateur dans une application Windows Forms](user-input-in-a-windows-forms-application.md)
-- [Fonctionnement de l’entrée au clavier](how-keyboard-input-works.md)
+- [Entrée d'utilisateur dans une application Windows Forms](user-input-in-a-windows-forms-application.md)
+- [Fonctionnement de l'entrée au clavier](how-keyboard-input-works.md)

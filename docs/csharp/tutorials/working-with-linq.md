@@ -3,12 +3,12 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815581"
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -115,7 +115,7 @@ Le compilateur traduit les instructions LINQ écrites avec la syntaxe de requêt
 
 Ensuite, exécutez l’exemple que vous avez commencé à élaborer. Il affiche les 52 cartes du jeu. Il peut être très utile d’exécuter cet exemple avec un débogueur pour observer la façon dont les méthodes `Suits()` et `Ranks()` s’exécutent. Vous pouvez clairement voir que chaque chaîne de chaque séquence est générée uniquement au moment requis.
 
-![Fenêtre console montrant l’application produisant les 52 cartes](./media/working-with-linq/console.png)
+![Fenêtre console montrant l’application produisant 52 cartes.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Manipulation de l’ordre
 

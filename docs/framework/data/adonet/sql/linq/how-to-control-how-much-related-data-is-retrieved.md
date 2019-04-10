@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Contrôler la quantité de données liée récupérée'
+title: 'Procédure : Contrôler la quantité de données associées récupérées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215441"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procédure : Contrôler la quantité de données liée récupérée
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procédure : Contrôler la quantité de données associées récupérées
 Utilisez la méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour spécifier quelles données associées à votre cible principale doivent être récupérées simultanément. Par exemple, si vous savez que vous aurez besoin d'informations relatives aux commandes des clients, vous pouvez utiliser <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour vous assurer que les informations relatives aux commandes sont récupérées en même temps que les informations relatives au client. Cette approche permet de ne provoquer qu'un seul envoi à la base de données pour les deux ensembles d'informations.  
   
 > [!NOTE]
@@ -25,4 +25,5 @@ Utilisez la méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour sp
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
