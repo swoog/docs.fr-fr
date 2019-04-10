@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340787"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Procédure : Observer à distance l’état d’imprimantes
 Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plusieurs imprimantes ne fonctionnent pas en raison d’un bourrage papier, d’un manque de papier ou d’un autre problème. L’ensemble des propriétés de l’imprimante exposé dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen de mener une enquête rapide de l’état des imprimantes.  
@@ -24,11 +24,11 @@ Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plu
 ## <a name="example"></a>Exemple  
  Voici les principales étapes à suivre pour créer ce type d’utilitaire.  
   
-1.  Répertoriez l’ensemble des serveurs d’impression.  
+1. Répertoriez l’ensemble des serveurs d’impression.  
   
-2.  Parcourez les serveurs en boucle pour interroger leurs files d’attente à l’impression.  
+2. Parcourez les serveurs en boucle pour interroger leurs files d’attente à l’impression.  
   
-3.  À chaque étape de la boucle de serveur, parcourez en boucle toutes les files d’attente du serveur et lisez chaque propriété pouvant indiquer que la file d’attente ne fonctionne pas actuellement.  
+3. À chaque étape de la boucle de serveur, parcourez en boucle toutes les files d’attente du serveur et lisez chaque propriété pouvant indiquer que la file d’attente ne fonctionne pas actuellement.  
   
  Le code ci-dessous est une série d’extraits de code. Pour plus de simplicité, cet exemple suppose qu’il existe une liste de serveurs d’impression délimitée par des caractères CRLF (retour chariot-saut de ligne). La variable `fileOfPrintServers` est un <xref:System.IO.StreamReader> objet pour ce fichier. Étant donné que chaque nom de serveur est sur sa propre ligne, tout appel de <xref:System.IO.StreamReader.ReadLine%2A> Obtient le nom du serveur suivant et déplace le <xref:System.IO.StreamReader>du curseur au début de la ligne suivante.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339149"
 ---
 # <a name="local-transactions"></a>Transactions locales
 Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez utiliser des transactions lorsque vous souhaitez lier plusieurs tâches entre elles afin qu'elles s'exécutent comme une seule unité de travail. Par exemple, imaginez qu'une application effectue deux tâches. Premièrement, elle met à jour une table avec des informations de commande. Deuxièmement, elle met à jour une table qui contient des informations de stock, en débitant les articles commandés. Si des tâches échoue, puis les deux mises à jour sont annulées.  
@@ -34,13 +34,13 @@ Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez util
 ## <a name="example"></a>Exemple  
  Procédez comme suit pour effectuer une transaction.  
   
-1.  Appelez la méthode <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> de l’objet <xref:System.Data.SqlClient.SqlConnection> pour marquer le début de la transaction. La méthode <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> retourne une référence à la transaction. Cette référence est affectée aux objets <xref:System.Data.SqlClient.SqlCommand> inscrits dans la transaction.  
+1. Appelez la méthode <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> de l’objet <xref:System.Data.SqlClient.SqlConnection> pour marquer le début de la transaction. La méthode <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> retourne une référence à la transaction. Cette référence est affectée aux objets <xref:System.Data.SqlClient.SqlCommand> inscrits dans la transaction.  
   
-2.  Assignez l'objet `Transaction` à la propriété <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> de l'objet <xref:System.Data.SqlClient.SqlCommand> à exécuter. Si une commande est exécutée sur une connexion sur laquelle une transaction est active et si l’objet `Transaction` n’a pas été affecté à la propriété `Transaction` de l’objet `Command`, une exception est levée.  
+2. Assignez l'objet `Transaction` à la propriété <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> de l'objet <xref:System.Data.SqlClient.SqlCommand> à exécuter. Si une commande est exécutée sur une connexion sur laquelle une transaction est active et si l’objet `Transaction` n’a pas été affecté à la propriété `Transaction` de l’objet `Command`, une exception est levée.  
   
-3.  Exécutez les commandes requises.  
+3. Exécutez les commandes requises.  
   
-4.  Appelez la méthode <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> de l'objet <xref:System.Data.SqlClient.SqlTransaction> pour effectuer la transaction ou la méthode <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> pour y mettre fin. Si la connexion est fermée ou libérée avant que l’une des méthodes <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> ou <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> ait été exécutée, la transaction est annulée.  
+4. Appelez la méthode <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> de l'objet <xref:System.Data.SqlClient.SqlTransaction> pour effectuer la transaction ou la méthode <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> pour y mettre fin. Si la connexion est fermée ou libérée avant que l’une des méthodes <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> ou <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> ait été exécutée, la transaction est annulée.  
   
  L’exemple de code suivant illustre la logique transactionnelle utilisant [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] avec Microsoft SQL Server.  
   

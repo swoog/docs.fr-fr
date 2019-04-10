@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Messages Exchange au sein d’une Session fiable'
+title: 'Procédure : échanger des messages au sein d’une session fiable'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342984"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procédure : Messages Exchange au sein d’une Session fiable
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procédure : échanger des messages au sein d’une session fiable
 
 Cette rubrique décrit les étapes requises pour activer une session fiable utilisant l’une des liaisons fournies par le système qui prennent en charge une telle session, mais pas par défaut. Vous activez une session fiable de façon impérative à l’aide de code ou de façon déclarative dans votre fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et pour stipuler que les messages arrivent dans le même ordre que celui dans lequel ils ont été envoyés.
 
@@ -37,7 +37,7 @@ Pour la copie de la source de cet exemple, consultez [Session fiable WS](../../.
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Place le *Service.svc* fichier dans votre répertoire virtuel Internet Information Services (IIS).
+1. Place le *Service.svc* fichier dans votre répertoire virtuel Internet Information Services (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurer le client avec une liaison WSHttpBinding afin d’utiliser une session fiable
 

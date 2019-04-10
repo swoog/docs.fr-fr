@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335314"
 ---
 # <a name="the-ink-threading-model"></a>Modèle de thread de l'encre
 Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écriture avec un crayon régulière et du papier.  Pour ce faire, le stylet collecte les données d’entrée à un rythme beaucoup plus élevée que la souris et restitue l’encre lorsque l’utilisateur écrit.  Thread d’interface (UI) de l’application utilisateur n’est pas suffisant pour collecter les données de stylet et encre de rendu, car il peut se bloquer.  Pour y remédier, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application utilise deux threads supplémentaires lorsqu’un utilisateur écrit l’encre.  
@@ -38,7 +38,7 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
  ![Modèle de thread lors du dessin d’un trait. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Actions qui se produisent pendant que l’utilisateur dessine le trait  
+1. Actions qui se produisent pendant que l’utilisateur dessine le trait  
   
     1.  Lorsque l’utilisateur dessine un trait, les points du stylet arrivent sur le thread de stylet.  Plug-ins du stylet, y compris le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acceptez les points du stylet sur le thread de stylet et ont la possibilité de les modifier avant du <xref:System.Windows.Controls.InkCanvas> les reçoit.  
   
@@ -46,7 +46,7 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
     3.  Le <xref:System.Windows.Controls.InkCanvas> reçoit les points du stylet sur le thread d’interface utilisateur.  
   
-2.  Actions qui se produisent une fois que l’utilisateur termine le trait  
+2. Actions qui se produisent une fois que l’utilisateur termine le trait  
   
     1.  Lorsque l’utilisateur termine le trait, la <xref:System.Windows.Controls.InkCanvas> crée un <xref:System.Windows.Ink.Stroke> de l’objet et l’ajoute à la <xref:System.Windows.Controls.InkPresenter>, qui le restitue de manière statique.  
   
@@ -61,13 +61,13 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
  Dans le diagramme précédent, le comportement suivant se produit :  
   
-1.  `StylusPlugin1` Modifie les valeurs de x et y.  
+1. `StylusPlugin1` Modifie les valeurs de x et y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> reçoit les points du stylet modifié et les affiche sur le thread de rendu dynamique.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> reçoit les points du stylet modifié et les affiche sur le thread de rendu dynamique.  
   
-3.  `StylusPlugin2` reçoit les points du stylet modifié, puis modifie les valeurs de x et y.  
+3. `StylusPlugin2` reçoit les points du stylet modifié, puis modifie les valeurs de x et y.  
   
-4.  L’application collecte les points du stylet et, lorsque l’utilisateur termine le trait, restitue le trait de manière statique.  
+4. L’application collecte les points du stylet et, lorsque l’utilisateur termine le trait, restitue le trait de manière statique.  
   
  Supposons que `stylusPlugin1` restreint les points du stylet à un rectangle et `stylusPlugin2` traduit les points du stylet vers la droite.  Dans le scénario précédent, le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> reçoit les points du stylet restreints, mais pas les points du stylet traduits.  Lorsque l’utilisateur dessine le trait, le trait est affiché dans les limites du rectangle, mais le trait ne semble pas être traduit jusqu'à ce que l’utilisateur soulève le stylet.  
   
@@ -83,15 +83,15 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
  ![Diagramme des threads de l’encre](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  L’utilisateur commence le trait.  
+1. L’utilisateur commence le trait.  
   
     1.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crée l’arborescence visuelle.  
   
-2.  L’utilisateur est le trait.  
+2. L’utilisateur est le trait.  
   
     1.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> génère l’arborescence visuelle.  
   
-3.  L’utilisateur termine le trait.  
+3. L’utilisateur termine le trait.  
   
     1.  Le <xref:System.Windows.Controls.InkPresenter> ajoute le trait à son arborescence d’éléments visuels.  
   

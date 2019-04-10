@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336380"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procédure : Charger une image à l’aide du concepteur (Windows Forms)
 Avec les formulaires Windows <xref:System.Windows.Forms.PictureBox> contrôle, vous pouvez charger et afficher une image sur un formulaire au moment du design en définissant le <xref:System.Windows.Forms.PictureBox.Image%2A> propriété à une image valide. Le tableau suivant présente les types de fichier acceptables.  
@@ -31,17 +31,17 @@ Avec les formulaires Windows <xref:System.Windows.Forms.PictureBox> contrôle, v
   
 ### <a name="to-display-a-picture-at-design-time"></a>Pour afficher une image au moment du design  
   
-1.  Dessiner un <xref:System.Windows.Forms.PictureBox> contrôle sur un formulaire.  
+1. Dessiner un <xref:System.Windows.Forms.PictureBox> contrôle sur un formulaire.  
   
-2.  Dans la fenêtre Propriétés, sélectionnez le <xref:System.Windows.Forms.PictureBox.Image%2A> propriété, puis cliquez sur le bouton de sélection pour afficher la **Open** boîte de dialogue.  
+2. Dans la fenêtre Propriétés, sélectionnez le <xref:System.Windows.Forms.PictureBox.Image%2A> propriété, puis cliquez sur le bouton de sélection pour afficher la **Open** boîte de dialogue.  
   
-3.  Si vous recherchez un type de fichier spécifique (par exemple, des fichiers .gif), sélectionnez-le dans la **fichiers de type** boîte.  
+3. Si vous recherchez un type de fichier spécifique (par exemple, des fichiers .gif), sélectionnez-le dans la **fichiers de type** boîte.  
   
-4.  Sélectionnez le fichier que vous souhaitez afficher.  
+4. Sélectionnez le fichier que vous souhaitez afficher.  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>Pour effacer l’image au moment du design  
   
-1.  Sur le **propriétés** fenêtre, sélectionnez le <xref:System.Windows.Forms.PictureBox.Image%2A> propriété et clic droit de l’image miniature qui s’affiche à gauche du nom de l’objet image. Choisissez **réinitialiser**.  
+1. Sur le **propriétés** fenêtre, sélectionnez le <xref:System.Windows.Forms.PictureBox.Image%2A> propriété et clic droit de l’image miniature qui s’affiche à gauche du nom de l’objet image. Choisissez **réinitialiser**.  
   
 ## <a name="see-also"></a>Voir aussi
 

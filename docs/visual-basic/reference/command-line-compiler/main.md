@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337238"
 ---
 # <a name="-main"></a>-main
 Spécifie la classe ou le module qui contient la procédure `Sub Main`.  
@@ -37,13 +37,13 @@ Spécifie la classe ou le module qui contient la procédure `Sub Main`.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Pour définir - main dans l’environnement de développement intégré Visual Studio  
   
-1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**.  
+1. Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**.  
   
-2.  Cliquez sur l’onglet **Application** .  
+2. Cliquez sur l’onglet **Application** .  
   
-3.  Assurez-vous que le **activer l’infrastructure application** case à cocher n’est pas activée.  
+3. Assurez-vous que le **activer l’infrastructure application** case à cocher n’est pas activée.  
   
-4.  Modifiez la valeur dans le **objet de démarrage** boîte.  
+4. Modifiez la valeur dans le **objet de démarrage** boîte.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `T2.vb` et `T3.vb`, en spécifiant que le `Sub Main` procédure se trouve dans le `Test2` classe.  

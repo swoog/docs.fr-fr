@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : gestion des erreurs'
+title: 'Procédure : Gestion des erreurs'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334989"
 ---
-# <a name="how-to-error-handling"></a>Procédure : gestion des erreurs
+# <a name="how-to-error-handling"></a>Procédure : Gestion des erreurs
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage utilisant la gestion des erreurs. Dans cet exemple, les messages sont routés vers un point de terminaison de destination. Si un message ne peut pas être remis en raison d'une panne réseau ou d'une défaillance liée aux communications (<xref:System.ServiceModel.CommunicationException>), le message est renvoyé à un autre point de terminaison.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
   
 ### <a name="implement-error-handling"></a>Implémenter la gestion des erreurs  
   
-1.  Créez la configuration du service de routage de base, en spécifiant le point de terminaison de service exposé par le service. L'exemple suivant définit un point de terminaison de service unique, utilisé pour recevoir des messages. Il définit également les points de terminaison clients utilisés pour envoyer des messages ; deadDestination et realDestination. Le point de terminaison deadDestination contient une adresse qui ne référence aucun service en cours d'exécution et qui est utilisée pour simuler une panne réseau lors de l'envoi de messages à ce point de terminaison.  
+1. Créez la configuration du service de routage de base, en spécifiant le point de terminaison de service exposé par le service. L'exemple suivant définit un point de terminaison de service unique, utilisé pour recevoir des messages. Il définit également les points de terminaison clients utilisés pour envoyer des messages ; deadDestination et realDestination. Le point de terminaison deadDestination contient une adresse qui ne référence aucun service en cours d'exécution et qui est utilisée pour simuler une panne réseau lors de l'envoi de messages à ce point de terminaison.  
   
     ```xml  
     <services>  
@@ -57,7 +57,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
     </client>  
     ```  
   
-2.  Définissez les filtres utilisés pour router les messages vers les points de terminaison de destination.  Pour cet exemple, un filtre MatchAll est utilisé pour correspondre à tous les messages reçus par le service de routage.  
+2. Définissez les filtres utilisés pour router les messages vers les points de terminaison de destination.  Pour cet exemple, un filtre MatchAll est utilisé pour correspondre à tous les messages reçus par le service de routage.  
   
     ```xml  
     <filters>  
@@ -66,7 +66,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
     </filters>  
     ```  
   
-3.  Définissez la liste de points de terminaison de sauvegarde. Elle contient les points de terminaison auxquels un message est envoyé en cas de panne réseau ou d'échec de communication lors de l'envoi au point de terminaison de destination primaire. L'exemple suivant définit une liste de sauvegarde contenant un point de terminaison ; toutefois, plusieurs points de terminaison peuvent être spécifiés dans une liste de sauvegarde.  
+3. Définissez la liste de points de terminaison de sauvegarde. Elle contient les points de terminaison auxquels un message est envoyé en cas de panne réseau ou d'échec de communication lors de l'envoi au point de terminaison de destination primaire. L'exemple suivant définit une liste de sauvegarde contenant un point de terminaison ; toutefois, plusieurs points de terminaison peuvent être spécifiés dans une liste de sauvegarde.  
   
      Si la liste de sauvegarde contient plusieurs points de terminaison, lorsqu'une panne réseau ou un échec de communication se produit, le service de routage essaie d'envoyer le message au premier point de terminaison de la liste. Si une panne réseau ou un échec de communication se produit lors de l'envoi à ce point de terminaison, le service de routage essaie d'envoyer le message au point de terminaison suivant dans la liste. Le service continue à envoyer le message à chaque point de terminaison de la liste de sauvegarde jusqu'à ce que le message soit envoyé avec succès, que tous les points de terminaison de sauvegarde retournent une erreur liée au réseau ou aux communications, ou que le message soit envoyé et que le point de terminaison retourne une erreur non liée au réseau ou aux communications.  
   
@@ -78,7 +78,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
     </backupLists>  
     ```  
   
-4.  Définissez la table de filtres, qui associe le filtre au point de terminaison deadDestination, et la liste de points de terminaison de sauvegarde.  Le service de routage essaie d'abord d'envoyer le message au point de terminaison de destination associé au filtre. Puisque deadDestination contient une adresse qui ne fait référence à aucun service en cours d'exécution, cela provoque une erreur réseau. Le Service de routage essaie ensuite d'envoyer le message au point de terminaison spécifié dans le backupEndpointlist.  
+4. Définissez la table de filtres, qui associe le filtre au point de terminaison deadDestination, et la liste de points de terminaison de sauvegarde.  Le service de routage essaie d'abord d'envoyer le message au point de terminaison de destination associé au filtre. Puisque deadDestination contient une adresse qui ne fait référence à aucun service en cours d'exécution, cela provoque une erreur réseau. Le Service de routage essaie ensuite d'envoyer le message au point de terminaison spécifié dans le backupEndpointlist.  
   
     ```xml  
     <filterTables>  
@@ -92,7 +92,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
           </filterTables>  
     ```  
   
-5.  Pour évaluer les messages entrants en fonction du filtre contenu dans la table de filtres, vous devez associer la table de filtres aux points de terminaison de service, à l'aide du comportement de routage.  L’exemple suivant illustre l’association de « filterTable1 » aux points de terminaison de service.  
+5. Pour évaluer les messages entrants en fonction du filtre contenu dans la table de filtres, vous devez associer la table de filtres aux points de terminaison de service, à l'aide du comportement de routage.  L’exemple suivant illustre l’association de « filterTable1 » aux points de terminaison de service.  
   
     ```xml  
     <behaviors>  

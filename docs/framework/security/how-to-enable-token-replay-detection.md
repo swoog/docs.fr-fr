@@ -1,16 +1,16 @@
 ---
-title: Guide pratique pour activer la détection de relecture de jetons
+title: 'Procédure : Activer la détection de relecture des jetons'
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336523"
 ---
-# <a name="how-to-enable-token-replay-detection"></a>Guide pratique pour activer la détection de relecture de jetons
+# <a name="how-to-enable-token-replay-detection"></a>Procédure : Activer la détection de relecture des jetons
 ## <a name="applies-to"></a>S'applique à  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -54,17 +54,17 @@ ms.locfileid: "47236002"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Pour créer une application ASP.NET simple  
   
-1.  Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
+1. Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
   
-2.  Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
+2. Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
   
-3.  Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
+3. Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
   
-4.  Cliquez avec le bouton droit sur le projet **TestApp** sous l’**Explorateur de solutions**, puis sélectionnez **Identity and Access** (Identity and Access Tool).  
+4. Cliquez avec le bouton droit sur le projet **TestApp** sous l’**Explorateur de solutions**, puis sélectionnez **Identity and Access** (Identity and Access Tool).  
   
-5.  La fenêtre **Identity and Access** (Identity and Access Tool) s’affiche. Sous **Fournisseurs**, sélectionnez **Test your application with the Local Development STS** (Tester votre application avec le service STS de développement local), puis cliquez sur **Appliquer**.  
+5. La fenêtre **Identity and Access** (Identity and Access Tool) s’affiche. Sous **Fournisseurs**, sélectionnez **Test your application with the Local Development STS** (Tester votre application avec le service STS de développement local), puis cliquez sur **Appliquer**.  
   
-6.  Ajoutez l’élément **\<tokenReplayDetection>** suivant au fichier de configuration *Web.config* immédiatement après les éléments **\<system.identityModel>** et **\<identityConfiguration>**, comme illustré ci-dessous :  
+6. Ajoutez l’élément **\<tokenReplayDetection>** suivant au fichier de configuration *Web.config* immédiatement après les éléments **\<system.identityModel>** et **\<identityConfiguration>**, comme illustré ci-dessous :  
   
     ```xml  
     <system.identityModel>  
@@ -77,8 +77,8 @@ ms.locfileid: "47236002"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>Pour tester votre application ASP.NET WIF pour la détection de relecture  
   
-1.  Exécutez la solution en appuyant sur la touche **F5**. La page d’accueil ASP.NET par défaut doit s’afficher et vous devez être automatiquement authentifié avec le nom d’utilisateur *Terry*, qui est l’utilisateur par défaut retourné par le service STS de développement.  
+1. Exécutez la solution en appuyant sur la touche **F5**. La page d’accueil ASP.NET par défaut doit s’afficher et vous devez être automatiquement authentifié avec le nom d’utilisateur *Terry*, qui est l’utilisateur par défaut retourné par le service STS de développement.  
   
-2.  Appuyez sur le bouton **Précédent** du navigateur. Une page **Erreur du serveur dans l’application ‘/’** doit s’afficher avec la description suivante : *ID1062 : relecture détectée pour : Jeton : 'System.IdentityModel.Tokens.SamlSecurityToken'*, suivie des éléments *AssertionId* et *Émetteur*.  
+2. Appuyez sur le bouton **Précédent** du navigateur. Vous devez voir apparaître un **erreur de serveur dans l’Application '/'** page avec la description suivante : *ID1062 : Relecture a été détectée pour : Jeton : 'System.IdentityModel.Tokens.SamlSecurityToken'*, suivi par un *AssertionId* et un *émetteur*.  
   
      Vous voyez cette page d’erreur, car une exception de type <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> a été levée lors de la détection de la relecture de jetons. Cette erreur se produit parce que vous essayez d’envoyer à nouveau la requête POST initiale où le jeton est apparu la première fois. Le bouton **Précédent** n’entraîne pas ce comportement pour les demandes suivantes au serveur.

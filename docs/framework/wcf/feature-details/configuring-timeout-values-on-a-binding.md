@@ -1,27 +1,27 @@
 ---
-title: configuration de valeurs du délai d’attente sur une liaison
+title: configuration de valeurs du délai d'attente sur une liaison
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 21d99ad2ce092db738469f93e80c39380acabd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339760"
 ---
-# <a name="configuring-timeout-values-on-a-binding"></a>configuration de valeurs du délai d’attente sur une liaison
-Il existe plusieurs paramètres de délai d’attente disponibles dans les liaisons WCF. Définir ces paramètres de délai d'attente correctement peut non seulement améliorer les performances de votre service, mais également jouer un rôle dans la facilité d'utilisation et la sécurité de ce dernier. Les délais d'attente suivants sont disponibles sur les liaisons WCF :  
+# <a name="configuring-timeout-values-on-a-binding"></a>configuration de valeurs du délai d'attente sur une liaison
+Il existe plusieurs paramètres de délai d'attente disponibles dans les liaisons WCF. Définir ces paramètres de délai d'attente correctement peut non seulement améliorer les performances de votre service, mais également jouer un rôle dans la facilité d'utilisation et la sécurité de ce dernier. Les délais d'attente suivants sont disponibles sur les liaisons WCF :  
   
-1.  OpenTimeout  
+1. OpenTimeout  
   
-2.  CloseTimeout  
+2. CloseTimeout  
   
-3.  SendTimeout  
+3. SendTimeout  
   
-4.  ReceiveTimeout  
+4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>Délais d'attente de liaison WCF  
- Chacun des paramètres décrits dans cette rubrique sont créés sur la liaison elle-même, dans le code ou la configuration. Le code suivant montre comment définir des délais d'attente par programme sur une liaison WCF dans le contexte d'un service auto-hébergé.  
+ Chacun des paramètres décrits dans cette rubrique sont créés sur la liaison elle-même, dans le code ou la configuration. Le code suivant montre comment définir des délais d’attente par programme sur une liaison WCF dans le contexte d’un service auto-hébergé.  
   
 ```csharp  
 public static void Main()
@@ -54,7 +54,7 @@ public static void Main()
 }
 ```  
   
- L'exemple suivant montre comment configurer des délais d'attente sur une liaison dans un fichier de configuration.  
+ L’exemple suivant montre comment configurer des délais d’attente sur une liaison dans un fichier de configuration.  
   
 ```xml  
 <configuration>
@@ -77,17 +77,17 @@ public static void Main()
 ### <a name="client-side-timeouts"></a>Délais d'attente côté client  
  Du côté client :  
   
-1.  SendTimeout – utilisé pour initialiser OperationTimeout, qui détermine le processus entier pour envoyer un message, y compris recevoir un message de réponse pour une opération de service de demande/réponse. Ce délai d'attente s'applique également lors de l'envoi des messages de réponse d'une méthode du contrat de rappel.  
+1. SendTimeout – utilisé pour initialiser OperationTimeout, qui détermine le processus entier pour envoyer un message, y compris recevoir un message de réponse pour une opération de service de demande/réponse. Ce délai d'attente s'applique également lors de l'envoi des messages de réponse d'une méthode du contrat de rappel.  
   
-2.  OpenTimeout – utilisé lors de l’ouverture de canaux lorsqu’aucune valeur de délai d’attente explicite est spécifiée.  
+2. OpenTimeout – utilisé lors de l’ouverture de canaux lorsqu’aucune valeur de délai d’attente explicite est spécifiée.  
   
-3.  CloseTimeout – utilisé lors de la fermeture des canaux lorsqu’aucune valeur de délai d’attente explicite est spécifiée.  
+3. CloseTimeout – utilisé lors de la fermeture des canaux lorsqu’aucune valeur de délai d’attente explicite est spécifiée.  
   
-4.  ReceiveTimeout-n’est pas utilisé.  
+4. ReceiveTimeout-n’est pas utilisé.  
   
-### <a name="service-side-timeouts"></a>Délais d’expiration côté service  
+### <a name="service-side-timeouts"></a>Délais d’attente côté service  
  Du côté service :  
   
-1.  SendTimeout, OpenTimeout, CloseTimeout sont les mêmes que sur le client.  
+1. SendTimeout, OpenTimeout, CloseTimeout sont les mêmes que sur le client.  
   
-2.  ReceiveTimeout – utilisé par la couche d'infrastructure de service pour initialiser le délai d'inactivité de session qui contrôle la durée pendant laquelle une session peut être inactive avant expiration.
+2. ReceiveTimeout – utilisé par la couche d'infrastructure de service pour initialiser le délai d'inactivité de session qui contrôle la durée pendant laquelle une session peut être inactive avant expiration.

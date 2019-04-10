@@ -2,12 +2,12 @@
 title: Importation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339968"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), importation de métadonnées est le processus de génération d’une représentation abstraite d’un service ou ses composants à partir de ses métadonnées. Par exemple, WCF peut importer <xref:System.ServiceModel.Description.ServiceEndpoint> instances, <xref:System.ServiceModel.Channels.Binding> instances ou <xref:System.ServiceModel.Description.ContractDescription> document des instances à partir d’un fichier WSDL pour un service. Pour importer les métadonnées de service dans WCF, utilisez une implémentation de la <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstraite. Les types qui dérivent de la <xref:System.ServiceModel.Description.MetadataImporter> classe implémenter la prise en charge pour l’importation des formats de métadonnées qui tirent parti de la stratégie de WS-importer logique dans WCF.  
@@ -21,9 +21,9 @@ Dans Windows Communication Foundation (WCF), importation de métadonnées est le
   
  Cette section décrit :  
   
-1.  Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, qui expose les données WSDL aux importateurs personnalisés avant la génération des descriptions et la génération du code. Vous pouvez utiliser cette interface pour examiner ou modifier les types de description et la compilation de code effectuée à l'aide d'un ensemble donné de métadonnées.  
+1. Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, qui expose les données WSDL aux importateurs personnalisés avant la génération des descriptions et la génération du code. Vous pouvez utiliser cette interface pour examiner ou modifier les types de description et la compilation de code effectuée à l'aide d'un ensemble donné de métadonnées.  
   
-2.  Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>, qui expose des assertions de stratégie aux importateurs avant la génération d'objets de description. Vous pouvez utiliser cette interface pour examiner ou modifier la liaison ou le contrat selon les stratégies téléchargées.  
+2. Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>, qui expose des assertions de stratégie aux importateurs avant la génération d'objets de description. Vous pouvez utiliser cette interface pour examiner ou modifier la liaison ou le contrat selon les stratégies téléchargées.  
   
  Pour plus d’informations sur l’exportation WSDL personnalisée et les assertions de stratégie, consultez [exportation des métadonnées personnalisées pour une Extension WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   

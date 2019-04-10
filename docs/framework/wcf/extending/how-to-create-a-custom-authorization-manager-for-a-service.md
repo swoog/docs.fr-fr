@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337836"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procédure : créer un gestionnaire d’autorisations personnalisé pour un service
 L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle extensible d’autorisation basée sur les revendications. Les revendications sont extraites de jetons et sont éventuellement traitées par les stratégies d'autorisation personnalisées puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>. Un gestionnaire d'autorisations examine les revendications dans le <xref:System.IdentityModel.Policy.AuthorizationContext> pour prendre des décisions concernant les autorisations.  
@@ -28,12 +28,12 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 ### <a name="to-create-a-custom-authorization-manager"></a>Pour créer un gestionnaire d'autorisations personnalisé  
   
-1.  Dérivez une classe d'une classe de la classe <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1. Dérivez une classe d'une classe de la classe <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Remplacez la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
+2. Remplacez la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
   
      Utilisez le <xref:System.ServiceModel.OperationContext> passé à la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> pour prendre des décisions concernant les autorisations.  
   
@@ -44,7 +44,7 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Pour enregistrer un gestionnaire d'autorisations personnalisé à l'aide de code  
   
-1.  Créez une instance du gestionnaire d'autorisations personnalisé et assignez-la à la propriété <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
+1. Créez une instance du gestionnaire d'autorisations personnalisé et assignez-la à la propriété <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> est accessible à l'aide de la propriété <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>.  
   
@@ -55,17 +55,17 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Pour enregistrer un gestionnaire d'autorisations personnalisé à l'aide d'une configuration  
   
-1.  Ouvrez le fichier de configuration pour le service.  
+1. Ouvrez le fichier de configuration pour le service.  
   
-2.  Ajouter un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) à la [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2. Ajouter un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) à la [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
      Pour le [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), ajouter un `serviceAuthorizationManagerType` d’attribut et définissez sa valeur sur le type qui représente le Gestionnaire d’autorisations personnalisé.  
   
-3.  Ajoutez une liaison qui sécurise la communication entre le client et le service.  
+3. Ajoutez une liaison qui sécurise la communication entre le client et le service.  
   
      La liaison choisie pour cette communication détermine les revendications ajoutées au <xref:System.IdentityModel.Policy.AuthorizationContext>, que le gestionnaire d'autorisations personnalisé utilise pour prendre des décisions concernant les autorisations. Pour plus d’informations sur les liaisons fournies par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Associez le comportement à un point de terminaison de service, en ajoutant un [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément et définissez la valeur de la `behaviorConfiguration` avec la valeur de l’attribut de nom pour le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément.  
+4. Associez le comportement à un point de terminaison de service, en ajoutant un [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément et définissez la valeur de la `behaviorConfiguration` avec la valeur de l’attribut de nom pour le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément.  
   
      Pour plus d’informations sur la configuration d’un point de terminaison de service, consultez [Comment : Créer un point de terminaison de Service dans la Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   

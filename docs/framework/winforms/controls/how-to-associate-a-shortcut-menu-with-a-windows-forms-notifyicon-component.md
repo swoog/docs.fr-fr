@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337056"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procédure : associer un menu contextuel à un composant NotifyIcon Windows Forms
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097988"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Pour associer un menu contextuel avec le composant NotifyIcon au moment du design  
   
-1.  Ajouter un <xref:System.Windows.Forms.NotifyIcon> à votre formulaire et définissez les propriétés importantes, telles que la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> et <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriétés.  
+1. Ajouter un <xref:System.Windows.Forms.NotifyIcon> à votre formulaire et définissez les propriétés importantes, telles que la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> et <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriétés.  
   
      Pour plus d'informations, voir [Procédure : Ajouter des icônes d’Application à la barre des tâches avec les Windows Forms du composant NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2.  Ajouter un <xref:System.Windows.Forms.ContextMenu> à votre formulaire Windows.  
+2. Ajouter un <xref:System.Windows.Forms.ContextMenu> à votre formulaire Windows.  
   
      Ajouter des éléments de menu au menu contextuel qui représente les commandes que vous souhaitez rendre disponible au moment de l’exécution. C’est également un bon moment pour ajouter des améliorations à ces éléments de menu, tels que les clés d’accès.  
   
-3.  Définir le <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriété de la <xref:System.Windows.Forms.NotifyIcon> composant au menu contextuel que vous avez ajouté.  
+3. Définir le <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriété de la <xref:System.Windows.Forms.NotifyIcon> composant au menu contextuel que vous avez ajouté.  
   
      Avec cette propriété est définie, le menu contextuel s’affichera lorsque l’utilisateur clique sur l’icône dans la barre des tâches.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Pour associer un menu contextuel au composant NotifyIcon par programme  
   
-1.  Créez une instance de la <xref:System.Windows.Forms.NotifyIcon> classe et un <xref:System.Windows.Forms.ContextMenu> (classe), avec les paramètres de propriété sont nécessaires pour l’application (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> et <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriétés pour le <xref:System.Windows.Forms.NotifyIcon> composant, les éléments de menu pour le <xref:System.Windows.Forms.ContextMenu> composant).  
+1. Créez une instance de la <xref:System.Windows.Forms.NotifyIcon> classe et un <xref:System.Windows.Forms.ContextMenu> (classe), avec les paramètres de propriété sont nécessaires pour l’application (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> et <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriétés pour le <xref:System.Windows.Forms.NotifyIcon> composant, les éléments de menu pour le <xref:System.Windows.Forms.ContextMenu> composant).  
   
-2.  Définir le <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriété de la <xref:System.Windows.Forms.NotifyIcon> composant au menu contextuel que vous avez ajouté.  
+2. Définir le <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriété de la <xref:System.Windows.Forms.NotifyIcon> composant au menu contextuel que vous avez ajouté.  
   
      Avec cette propriété est définie, le menu contextuel s’affichera lorsque l’utilisateur clique sur l’icône dans la barre des tâches.  
   

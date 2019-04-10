@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340020"
 ---
 # <a name="control-authoring-overview"></a>Vue d’ensemble de la création de contrôles
 L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] réduit grandement la nécessité de créer un contrôle. Vous pouvez toutefois être amené, dans certains cas, à créer un contrôle personnalisé. Cette rubrique aborde les fonctionnalités qui limitent la nécessité de créer un contrôle personnalisé et les différents modèles de création de contrôles dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique montre également comment créer un contrôle.  
@@ -191,15 +191,15 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
   
  Quand une application recherche une ressource, elle examine trois niveaux dans l’ordre suivant :  
   
-1.  Niveau de l’élément.  
+1. Niveau de l’élément.  
   
      Le système commence par l’élément qui référence la ressource, puis passe en revue les ressources du parent logique, et ainsi de suite, jusqu’à atteindre l’élément racine.  
   
-2.  Niveau de l’application.  
+2. Niveau de l’application.  
   
      Ressources définies par le <xref:System.Windows.Application> objet.  
   
-3.  Niveau du thème.  
+3. Niveau du thème.  
   
      Les dictionnaires au niveau du thème sont enregistrés dans un sous-dossier nommé Themes.  Les fichiers contenus dans ce dossier correspondent aux thèmes.  Par exemple, vous pouvez avoir Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml, etc.  Vous pouvez également avoir un fichier nommé generic.xaml.  Quand le système recherche une ressource au niveau des thèmes, il la cherche en premier lieu dans le fichier spécifique au thème, puis dans generic.xaml.  
   

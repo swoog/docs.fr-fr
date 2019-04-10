@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334001"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Procédure : positionner des contrôles dans des Windows Forms
 Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows ou spécifiez le <xref:System.Windows.Forms.Control.Location%2A> propriété.  
@@ -37,9 +37,9 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Pour positionner un contrôle à l’aide de la fenêtre Propriétés  
   
-1.  Cliquez sur le contrôle que vous souhaitez positionner.  
+1. Cliquez sur le contrôle que vous souhaitez positionner.  
   
-2.  Dans le **propriétés** fenêtre, les valeurs de type pour le <xref:System.Windows.Forms.Control.Location%2A> propriété séparés par une virgule, pour positionner le contrôle dans son conteneur.  
+2. Dans le **propriétés** fenêtre, les valeurs de type pour le <xref:System.Windows.Forms.Control.Location%2A> propriété séparés par une virgule, pour positionner le contrôle dans son conteneur.  
   
      Le premier nombre (X) est la distance entre la bordure gauche du conteneur ; le deuxième nombre (Y) est la distance entre la bordure supérieure de la zone conteneur, en pixels.  
   
@@ -48,7 +48,7 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
   
 ### <a name="to-position-a-control-programmatically"></a>Pour positionner un contrôle par programmation  
   
-1.  Définir le <xref:System.Windows.Forms.Control.Location%2A> propriété du contrôle à un <xref:System.Drawing.Point>.  
+1. Définir le <xref:System.Windows.Forms.Control.Location%2A> propriété du contrôle à un <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Modifiez la coordonnée X de l’emplacement du contrôle à l’aide de la <xref:System.Windows.Forms.Control.Left%2A> sous-propriété.  
+2. Modifiez la coordonnée X de l’emplacement du contrôle à l’aide de la <xref:System.Windows.Forms.Control.Left%2A> sous-propriété.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Pour incrémenter l’emplacement d’un contrôle par programmation  
   
-1.  Définir le <xref:System.Windows.Forms.Control.Left%2A> sous-propriété pour incrémenter la coordonnée X du contrôle.  
+1. Définir le <xref:System.Windows.Forms.Control.Left%2A> sous-propriété pour incrémenter la coordonnée X du contrôle.  
   
     ```vb  
     Button1.Left += 200  

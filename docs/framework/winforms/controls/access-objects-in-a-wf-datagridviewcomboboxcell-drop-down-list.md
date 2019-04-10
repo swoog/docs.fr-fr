@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334274"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procédure : accéder à des objets dans une liste déroulante DataGridViewComboBoxCell Windows Forms
 Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows.Forms.DataGridViewComboBoxColumn> et <xref:System.Windows.Forms.DataGridViewComboBoxCell> types permettent d’ajouter des objets arbitraires à leurs listes déroulantes. Avec cette fonctionnalité, vous pouvez représenter des États complexes dans une liste déroulante, sans avoir à stocker des objets correspondants dans une collection distincte.  
@@ -27,17 +27,17 @@ Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>Pour ajouter des objets métier à la liste déroulante  
   
-1.  Créer un nouveau <xref:System.Windows.Forms.DataGridViewComboBoxColumn> et remplir ses <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> collection. Vous pouvez également définir la colonne <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propriété à la collection d’objets métier. Dans ce cas, toutefois, vous ne pouvez pas ajouter « non attribués » à la liste déroulante sans provoquer la création d’un objet métier correspondant dans votre collection.  
+1. Créer un nouveau <xref:System.Windows.Forms.DataGridViewComboBoxColumn> et remplir ses <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> collection. Vous pouvez également définir la colonne <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propriété à la collection d’objets métier. Dans ce cas, toutefois, vous ne pouvez pas ajouter « non attribués » à la liste déroulante sans provoquer la création d’un objet métier correspondant dans votre collection.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  Définissez les propriétés <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> et <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> Indique la propriété de l’objet métier à afficher dans la liste déroulante. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Indique la propriété qui retourne une référence à l’objet métier.  
+2. Définissez les propriétés <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> et <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> Indique la propriété de l’objet métier à afficher dans la liste déroulante. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Indique la propriété qui retourne une référence à l’objet métier.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  Assurez-vous que votre type d’objet métier contienne une propriété qui retourne une référence à l’instance actuelle. Cette propriété doit être nommée avec la valeur affectée à <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> à l’étape précédente.  
+3. Assurez-vous que votre type d’objet métier contienne une propriété qui retourne une référence à l’instance actuelle. Cette propriété doit être nommée avec la valeur affectée à <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> à l’étape précédente.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows
   
  Pour afficher le comportement de cet exemple, procédez comme suit :  
   
-1.  Modifier les affectations dans les `Assigned To` colonne en sélectionnant des valeurs différentes dans les listes déroulantes ou en appuyant sur CTRL + 0 dans une cellule de zone de liste déroulante.  
+1. Modifier les affectations dans les `Assigned To` colonne en sélectionnant des valeurs différentes dans les listes déroulantes ou en appuyant sur CTRL + 0 dans une cellule de zone de liste déroulante.  
   
-2.  Cliquez sur `Generate Report` pour afficher les affectations actuelles. Cette procédure montre qu’une modification dans le `Assigned To` colonne met automatiquement à jour le `tasks` collection.  
+2. Cliquez sur `Generate Report` pour afficher les affectations actuelles. Cette procédure montre qu’une modification dans le `Assigned To` colonne met automatiquement à jour le `tasks` collection.  
   
-3.  Cliquez sur un `Request Status` bouton pour appeler le `RequestStatus` méthode du courant `Employee` objet pour cette ligne. Cet exemple montre que l’objet sélectionné a été récupéré avec succès.  
+3. Cliquez sur un `Request Status` bouton pour appeler le `RequestStatus` méthode du courant `Employee` objet pour cette ligne. Cet exemple montre que l’objet sélectionné a été récupéré avec succès.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

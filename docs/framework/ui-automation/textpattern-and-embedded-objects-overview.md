@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342516"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
@@ -43,13 +43,13 @@ Exemple de flux de texte avec des objets incorporés et leurs amplitudes
   
  Quand il est nécessaire de parcourir le contenu d'une plage de texte, il faut effectuer une série d'étapes en arrière-plan pour assurer la bonne exécution de la méthode <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, `{The URL https://www.microsoft.com is embedded in text` où « { » et «} » est des points de terminaison de plage de texte.  
+1. La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, `{The URL https://www.microsoft.com is embedded in text` où « { » et «} » est des points de terminaison de plage de texte.  
   
-2.  La plage obtenue est déplacée vers l'arrière dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> au début de la limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
+2. La plage obtenue est déplacée vers l'arrière dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> au début de la limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
   
-3.  La plage est avancée ou reculée dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> du nombre demandé de limites <xref:System.Windows.Automation.Text.TextUnit> .  
+3. La plage est avancée ou reculée dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> du nombre demandé de limites <xref:System.Windows.Automation.Text.TextUnit> .  
   
-4.  La plage est ensuite étendue à partir d'un état de plage dégénérée en déplaçant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> d'une limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
+4. La plage est ensuite étendue à partir d'un état de plage dégénérée en déplaçant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> d'une limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
   
  ![Ajustements de plage par Move & ExpandToEnclosingUnit](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Exemples de la façon dont une plage de texte est ajustée pour Move() et ExpandToEnclosingUnit()  

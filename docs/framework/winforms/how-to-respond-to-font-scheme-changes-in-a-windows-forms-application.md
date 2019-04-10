@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339045"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procédure : répondre aux modifications du jeu de polices dans une application Windows Forms
 Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les paramètres de police de l’échelle du système pour afficher la police par défaut supérieure ou inférieure. Modification de ces paramètres de police est essentiel pour les utilisateurs malvoyants et nécessitent un type plus grand lire le texte sur leurs écrans. Vous pouvez ajuster votre application Windows Forms de réagir à ces modifications en augmentant ou diminuant la taille du formulaire et tous ses texte chaque fois que le jeu de polices change. Si vous souhaitez que votre formulaire pour prendre en compte les modifications dans les tailles de police dynamiquement, vous pouvez ajouter le code à votre formulaire.  
@@ -21,24 +21,24 @@ Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les pa
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Pour utiliser la police de bureau et répondre aux modifications de schéma de polices  
   
-1.  Créez votre formulaire et ajouter les contrôles que vous souhaitez lui. Pour plus d'informations, voir [Procédure : Créer une Application de formulaires Windows à partir de la ligne de commande](how-to-create-a-windows-forms-application-from-the-command-line.md) et [contrôles à utiliser dans les Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
+1. Créez votre formulaire et ajouter les contrôles que vous souhaitez lui. Pour plus d'informations, voir [Procédure : Créer une Application de formulaires Windows à partir de la ligne de commande](how-to-create-a-windows-forms-application-from-the-command-line.md) et [contrôles à utiliser dans les Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
-2.  Ajoutez une référence à la <xref:Microsoft.Win32> espace de noms à votre code.  
+2. Ajoutez une référence à la <xref:Microsoft.Win32> espace de noms à votre code.  
   
      [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3.  Ajoutez le code suivant au constructeur de votre formulaire pour raccorder des gestionnaires d’événements requis et pour modifier la police par défaut en cours d’utilisation pour le formulaire.  
+3. Ajoutez le code suivant au constructeur de votre formulaire pour raccorder des gestionnaires d’événements requis et pour modifier la police par défaut en cours d’utilisation pour le formulaire.  
   
      [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4.  Implémenter un gestionnaire pour le <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> événement qui provoque le formulaire à l’échelle automatiquement lorsque la <xref:Microsoft.Win32.UserPreferenceCategory.Window> les modifications de catégorie.  
+4. Implémenter un gestionnaire pour le <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> événement qui provoque le formulaire à l’échelle automatiquement lorsque la <xref:Microsoft.Win32.UserPreferenceCategory.Window> les modifications de catégorie.  
   
      [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5.  Enfin, implémentez un gestionnaire pour le <xref:System.Windows.Forms.Form.FormClosing> événement détache le <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Gestionnaire d’événements.  
+5. Enfin, implémentez un gestionnaire pour le <xref:System.Windows.Forms.Form.FormClosing> événement détache le <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Gestionnaire d’événements.  
   
      > [!IMPORTANT]
      > Inclure ce code provoquera une fuite de mémoire votre application.  
@@ -46,15 +46,15 @@ Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les pa
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-6.  Compilez, puis exécutez le code.  
+6. Compilez, puis exécutez le code.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Pour modifier manuellement le jeu de polices dans Windows XP  
   
-1.  Pendant l’exécution de votre application Windows Forms, cliquez sur le bureau Windows et choisissez **propriétés** dans le menu contextuel.  
+1. Pendant l’exécution de votre application Windows Forms, cliquez sur le bureau Windows et choisissez **propriétés** dans le menu contextuel.  
   
-2.  Dans le **propriétés d’affichage** boîte de dialogue, cliquez sur le **apparence** onglet.  
+2. Dans le **propriétés d’affichage** boîte de dialogue, cliquez sur le **apparence** onglet.  
   
-3.  À partir de la **la taille de police** liste déroulante, sélectionnez une nouvelle taille de police.  
+3. À partir de la **la taille de police** liste déroulante, sélectionnez une nouvelle taille de police.  
   
      Vous remarquerez que le formulaire est maintenant réagit aux modifications d’exécution dans le jeu de polices de bureau. Quand l’utilisateur change entre **Normal**, **grandes polices**, et **très grands caractères**, le formulaire modifie la police et s’adapte correctement.  
   

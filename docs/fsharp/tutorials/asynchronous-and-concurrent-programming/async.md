@@ -2,12 +2,12 @@
 title: Programmation asynchrone
 description: Découvrez comment F# programmation asynchrone est effectuée via un modèle de programmation au niveau du langage qui est facile à utiliser et plus naturel pour la langue.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343452"
 ---
 # <a name="async-programming-in-f"></a>Programmation asynchrone en F\#
 
@@ -57,7 +57,7 @@ En outre, normal `let`, `use`, et `do` mots clés peuvent être utilisés avec l
 
 Comme mentionné précédemment, le code asynchrone est une spécification de travail à faire dans un autre contexte qui doit être démarrée explicitement. Voici deux méthodes principales pour y parvenir :
 
-1.  `Async.RunSynchronously` démarre un flux de travail asynchrone sur un autre thread et attend son résultat.
+1. `Async.RunSynchronously` démarre un flux de travail asynchrone sur un autre thread et attend son résultat.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` démarre un flux de travail asynchrone sur un autre thread et sera **pas** attend son résultat.
+2. `Async.Start` démarre un flux de travail asynchrone sur un autre thread et sera **pas** attend son résultat.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Il existe quelques autres similitudes et différences à noter.
 
 En revanche, F# les workflows asynchrones sont plus naturellement pouvant être annulés. L’annulation est un processus en trois étapes simples.
 
-1.  Créez un `CancellationTokenSource`.
-2.  Transmettre une fonction de départ.
-3.  Appeler `Cancel` sur le jeton.
+1. Créez un `CancellationTokenSource`.
+2. Transmettre une fonction de départ.
+3. Appeler `Cancel` sur le jeton.
 
 Exemple :
 

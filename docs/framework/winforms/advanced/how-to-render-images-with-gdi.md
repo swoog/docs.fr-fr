@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: cb43536f941ea7a6e1a48e78046089636360eef5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342543"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procédure : afficher des images avec GDI+
 Vous pouvez utiliser [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour afficher des images qui existent en tant que fichiers dans vos applications. Ce faire, vous devez créer un nouvel objet d’une <xref:System.Drawing.Image> classe (tels que <xref:System.Drawing.Bitmap>), en créant un <xref:System.Drawing.Graphics> de l’objet qui fait référence à la surface de dessin que vous souhaitez utiliser et en appelant le <xref:System.Drawing.Graphics.DrawImage%2A> méthode du <xref:System.Drawing.Graphics> objet. L’image est peinte sur la surface de dessin représentée par la classe graphics. Vous pouvez utiliser l’éditeur d’images pour créer et modifier des fichiers image au moment du design et les afficher avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] au moment de l’exécution. Pour plus d’informations, consultez [Éditeur d’images pour les icônes](/cpp/windows/image-editor-for-icons).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Pour afficher une image avec GDI+  
   
-1.  Créez un objet qui représente l’image à afficher. Cet objet doit être un membre d’une classe qui hérite de <xref:System.Drawing.Image>, tel que <xref:System.Drawing.Bitmap> ou <xref:System.Drawing.Imaging.Metafile>. Voici un exemple :  
+1. Créez un objet qui représente l’image à afficher. Cet objet doit être un membre d’une classe qui hérite de <xref:System.Drawing.Image>, tel que <xref:System.Drawing.Bitmap> ou <xref:System.Drawing.Imaging.Metafile>. Voici un exemple :  
   
     ```vb  
     ' Uses the System.Environment.GetFolderPath to get the path to the   
@@ -47,7 +47,7 @@ Vous pouvez utiliser [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  Créer un <xref:System.Drawing.Graphics> objet qui représente la surface de dessin que vous souhaitez utiliser. Pour plus d'informations, voir [Procédure : Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md).  
+2. Créer un <xref:System.Drawing.Graphics> objet qui représente la surface de dessin que vous souhaitez utiliser. Pour plus d'informations, voir [Procédure : Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -67,7 +67,7 @@ Vous pouvez utiliser [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus
     Graphics^ g = button1->CreateGraphics();  
     ```  
   
-3.  Appelez le <xref:System.Drawing.Graphics.DrawImage%2A> de l’objet graphics pour afficher l’image. Vous devez spécifier l’image à dessiner et ses coordonnées.  
+3. Appelez le <xref:System.Drawing.Graphics.DrawImage%2A> de l’objet graphics pour afficher l’image. Vous devez spécifier l’image à dessiner et ses coordonnées.  
   
     ```vb  
     g.DrawImage(myBitmap, 1, 1)  

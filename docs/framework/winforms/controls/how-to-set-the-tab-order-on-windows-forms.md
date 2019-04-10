@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339903"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procédure : définir l’ordre de tabulation dans des Windows Forms
 L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le focus d’un contrôle à un autre en appuyant sur la touche TAB. Chaque écran a son propre ordre de tabulation. Par défaut, l’ordre de tabulation est identique à l’ordre dans lequel vous avez créé les contrôles. Ordre de tabulation la numérotation commence à zéro.  
@@ -25,16 +25,16 @@ L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le foc
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Pour définir l’ordre de tabulation d’un contrôle  
   
-1.  Sur le **vue** menu, cliquez sur **l’ordre de tabulation**.  
+1. Sur le **vue** menu, cliquez sur **l’ordre de tabulation**.  
   
      Cela permet d’activer le mode de sélection d’ordre de tabulation sur le formulaire. Un nombre (représentant le <xref:System.Windows.Forms.Control.TabIndex%2A> propriété) apparaît dans le coin supérieur gauche de chaque contrôle.  
   
-2.  Cliquez sur les contrôles de manière séquentielle pour établir l’ordre de tabulation.  
+2. Cliquez sur les contrôles de manière séquentielle pour établir l’ordre de tabulation.  
   
     > [!NOTE]
     >  Place d’un contrôle dans l’ordre de tabulation peut être définie à n’importe quelle valeur supérieure ou égale à 0. En cas de doublons, l’ordre de plan des contrôles est évaluée et le contrôle supérieur est avec onglets en premier. (L’ordre de plan est la superposition visuelle des contrôles sur un formulaire sur l’axe z [profondeur]. L’ordre de plan détermine quels contrôles sont devant les autres contrôles.) Pour plus d’informations sur l’ordre de plan, consultez [superposition d’objets dans les Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
-3.  Lorsque vous avez terminé, cliquez sur **l’ordre de tabulation** sur le **vue** menu pour quitter le mode d’ordre de tabulation.  
+3. Lorsque vous avez terminé, cliquez sur **l’ordre de tabulation** sur le **vue** menu pour quitter le mode d’ordre de tabulation.  
   
     > [!NOTE]
     >  Les contrôles qui ne peut pas obtenir le focus, ainsi que les contrôles désactivés et invisibles, n’ont pas un <xref:System.Windows.Forms.Control.TabIndex%2A> propriété et le sont pas inclus dans l’ordre de tabulation. Comme un utilisateur appuie sur la touche TAB, ces contrôles sont ignorés.  
@@ -47,7 +47,7 @@ L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le foc
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>Pour supprimer un contrôle à partir de l’ordre de tabulation  
   
-1.  Définir le contrôle <xref:System.Windows.Forms.Control.TabStop%2A> propriété `false` dans la fenêtre Propriétés.  
+1. Définir le contrôle <xref:System.Windows.Forms.Control.TabStop%2A> propriété `false` dans la fenêtre Propriétés.  
   
      Un contrôle dont <xref:System.Windows.Forms.Control.TabStop%2A> propriété a été définie sur `false` conserve sa position dans l’ordre de tabulation, même si le contrôle est ignoré lorsque vous faites défiler les contrôles avec la touche TAB.  
   

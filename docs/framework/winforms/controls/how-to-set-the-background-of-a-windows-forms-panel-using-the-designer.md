@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334352"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Procédure : définir l’arrière-plan d’un panneau Windows Forms à l’aide du concepteur
 Un formulaire Windows <xref:System.Windows.Forms.Panel> contrôle peut afficher une couleur d’arrière-plan et une image d’arrière-plan. Le <xref:System.Windows.Forms.Control.BackColor%2A> propriété définit la couleur d’arrière-plan pour les contrôles qui sont contenus dans le panneau de configuration, tels que des étiquettes et cases d’option. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété n’est pas définie, le <xref:System.Windows.Forms.Control.BackColor%2A> sélectionnée remplit tout le panneau. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété est définie, l’image est affichée derrière les contrôles qui sont contenus dans le panneau de configuration.  
@@ -24,17 +24,17 @@ Un formulaire Windows <xref:System.Windows.Forms.Panel> contrôle peut afficher 
   
 ### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Pour définir l’arrière-plan dans le Concepteur de formulaires Windows  
   
-1.  Sélectionnez le contrôle <xref:System.Windows.Forms.Panel>.  
+1. Sélectionnez le contrôle <xref:System.Windows.Forms.Panel>.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackColor%2A> propriété pour afficher une fenêtre avec trois onglets.  
+2. Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackColor%2A> propriété pour afficher une fenêtre avec trois onglets.  
   
-3.  Sélectionnez le **personnalisé** onglet pour afficher une palette de couleurs.  
+3. Sélectionnez le **personnalisé** onglet pour afficher une palette de couleurs.  
   
-4.  Sélectionnez le **Web** ou **système** onglet pour afficher une liste de noms de couleurs prédéfinis, puis sélectionnez une couleur.  
+4. Sélectionnez le **Web** ou **système** onglet pour afficher une liste de noms de couleurs prédéfinis, puis sélectionnez une couleur.  
   
-5.  Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété.  
+5. Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété.  
   
-6.  Dans le **Open** boîte de dialogue, sélectionnez le fichier que vous souhaitez afficher.  
+6. Dans le **Open** boîte de dialogue, sélectionnez le fichier que vous souhaitez afficher.  
   
 ## <a name="see-also"></a>Voir aussi
 

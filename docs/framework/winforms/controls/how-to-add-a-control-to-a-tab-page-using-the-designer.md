@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340969"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procédure : ajouter un contrôle à un onglet à l’aide du concepteur
 L’utilisation des formulaires Windows <xref:System.Windows.Forms.TabControl> consiste à afficher d’autres contrôles dans une structure organisée. Vous pouvez utiliser ces instructions pour afficher une image sur la partie principale d’une page d’onglets. Pour plus d’informations sur l’ajout d’une icône dans la partie de l’étiquette d’une page d’onglet, consultez [Comment : Modifier l’apparence du contrôle TabControl Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
@@ -23,9 +23,9 @@ L’utilisation des formulaires Windows <xref:System.Windows.Forms.TabControl> c
   
 ### <a name="to-add-a-control-using-the-designer"></a>Pour ajouter un contrôle à l’aide du Concepteur  
   
-1.  Cliquez sur la page d’onglets appropriées afin qu’il apparaisse en haut.  
+1. Cliquez sur la page d’onglets appropriées afin qu’il apparaisse en haut.  
   
-2.  Dessiner le contrôle sur la page d’onglets.  
+2. Dessiner le contrôle sur la page d’onglets.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343261"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procédure : créer des gestionnaires d’événements au moment de l’exécution pour Windows Forms
 Outre la création d’événements à l’aide du Concepteur Windows Forms, vous pouvez créer un gestionnaire d’événements au moment de l’exécution. Cette action vous permet de connecter des gestionnaires d’événements en fonction de conditions spécifiées dans le code lors de l’exécution au lieu de les connecter au premier démarrage du programme.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Pour créer un gestionnaire d’événements au moment de l’exécution  
   
-1.  Ouvrez le formulaire auquel vous souhaitez ajouter un gestionnaire d’événements dans l’éditeur de code.  
+1. Ouvrez le formulaire auquel vous souhaitez ajouter un gestionnaire d’événements dans l’éditeur de code.  
   
-2.  Ajoutez une méthode à votre formulaire avec la signature de méthode pour l’événement que vous souhaitez gérer.  
+2. Ajoutez une méthode à votre formulaire avec la signature de méthode pour l’événement que vous souhaitez gérer.  
   
      Par exemple, si vous gérez le <xref:System.Windows.Forms.Control.Click> événement d’un <xref:System.Windows.Forms.Button> contrôle, vous pouvez créer une méthode telle que la suivante :  
   
@@ -52,11 +52,11 @@ Outre la création d’événements à l’aide du Concepteur Windows Forms, vou
        }  
     ```  
   
-3.  Ajoutez le code au gestionnaire d’événements en fonction de votre application.  
+3. Ajoutez le code au gestionnaire d’événements en fonction de votre application.  
   
-4.  Déterminez le formulaire ou le contrôle pour lequel vous souhaitez créer un gestionnaire d’événements.  
+4. Déterminez le formulaire ou le contrôle pour lequel vous souhaitez créer un gestionnaire d’événements.  
   
-5.  Dans une méthode de classe de votre formulaire, ajoutez le code qui spécifie au gestionnaire d’événements de gérer l’événement. Par exemple, le code suivant spécifie le Gestionnaire d’événements `button1_Click` gère la <xref:System.Windows.Forms.Control.Click> événement d’un <xref:System.Windows.Forms.Button> contrôle :  
+5. Dans une méthode de classe de votre formulaire, ajoutez le code qui spécifie au gestionnaire d’événements de gérer l’événement. Par exemple, le code suivant spécifie le Gestionnaire d’événements `button1_Click` gère la <xref:System.Windows.Forms.Control.Click> événement d’un <xref:System.Windows.Forms.Button> contrôle :  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

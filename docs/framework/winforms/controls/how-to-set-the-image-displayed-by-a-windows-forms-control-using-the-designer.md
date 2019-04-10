@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339669"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Procédure : définir l’image affichée par un contrôle Windows Forms à l’aide du concepteur
 Plusieurs contrôles Windows Forms peuvent afficher des images. L’image peut être une icône qui clarifie l’objectif du contrôle, par exemple une icône de disque sur un bouton qui dénote le **enregistrer** commande. L’icône peut également être une image d’arrière-plan pour donner le contrôle l’apparence souhaitée.  
@@ -24,13 +24,13 @@ Plusieurs contrôles Windows Forms peuvent afficher des images. L’image peut �
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Pour définir l’image affichée par un contrôle  
   
-1.  Dans le **propriétés** fenêtre, sélectionnez le **Image** ou **BackgroundImage** propriété du contrôle, puis cliquez sur le bouton de sélection ()  
+1. Dans le **propriétés** fenêtre, sélectionnez le **Image** ou **BackgroundImage** propriété du contrôle, puis cliquez sur le bouton de sélection ()  
   
      ![Capture d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) pour afficher le **sélectionner une ressource** boîte de dialogue.  
   
-2.  Sélectionnez l’image que vous souhaitez afficher.  
+2. Sélectionnez l’image que vous souhaitez afficher.  
   
 ## <a name="see-also"></a>Voir aussi
 

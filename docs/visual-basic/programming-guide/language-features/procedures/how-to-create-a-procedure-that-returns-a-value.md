@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335496"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Procédure : Créer une procédure qui retourne une valeur (Visual Basic)
 Vous utilisez un `Function` procédure pour retourner une valeur au code appelant.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Pour créer une procédure qui retourne une valeur  
   
-1.  En dehors de toute autre procédure, utilisez un `Function` instruction, suivie d’un `End Function` instruction.  
+1. En dehors de toute autre procédure, utilisez un `Function` instruction, suivie d’un `End Function` instruction.  
   
-2.  Dans le `Function` instruction, suivez le `Function` mot clé par le nom de la procédure, puis la liste de paramètres entre parenthèses.  
+2. Dans le `Function` instruction, suivez le `Function` mot clé par le nom de la procédure, puis la liste de paramètres entre parenthèses.  
   
-3.  Suivez les parenthèses d’une `As` clause pour spécifier le type de données de la valeur retournée.  
+3. Suivez les parenthèses d’une `As` clause pour spécifier le type de données de la valeur retournée.  
   
-4.  Placez les instructions de procédure code entre la `Function` et `End Function` instructions.  
+4. Placez les instructions de procédure code entre la `Function` et `End Function` instructions.  
   
-5.  Utilisez un `Return` instruction pour retourner la valeur au code appelant.  
+5. Utilisez un `Return` instruction pour retourner la valeur au code appelant.  
   
      Ce qui suit `Function` procédure calcule le côté le plus long, ou hypoténuse, d’un triangle rectangle, d’après les valeurs pour les deux côtés.  
   
@@ -40,9 +40,9 @@ Vous utilisez un `Function` procédure pour retourner une valeur au code appelan
 
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
-- [Procédures de propriété](./property-procedures.md)
-- [Procédures d’opérateur](./operator-procedures.md)
+- [Procédures Property](./property-procedures.md)
+- [Procédures d'opérateur](./operator-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Guide pratique pour Retourner une valeur à partir d’une procédure](./how-to-return-a-value-from-a-procedure.md)
-- [Guide pratique pour Appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Function, instruction](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Procédure : retourner une valeur à partir d’une procédure](./how-to-return-a-value-from-a-procedure.md)
+- [Procédure : appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)

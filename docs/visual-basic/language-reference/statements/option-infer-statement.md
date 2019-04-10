@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823491"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338564"
 ---
 # <a name="option-infer-statement"></a>Instruction Option Infer
 Permet l'utilisation de l'inférence de type de variable locale dans les variables déclaratives.  
@@ -31,7 +31,7 @@ Option Infer { On | Off }
   
 |Terme|Définition|  
 |---|---|  
-|`On`|Optionnel. Active l'inférence de type de variable locale.|  
+|`On`|Facultatif. Active l'inférence de type de variable locale.|  
 |`Off`|Optionnel. Désactive l'inférence de type de variable locale.|  
   
 ## <a name="remarks"></a>Notes  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Pour définir Option Infer dans l'IDE  
   
-1.  Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
+1. Dans l’**Explorateur de solutions**, sélectionnez un projet. Dans le menu **Projet**, cliquez sur **Propriétés**.  
   
-2.  Cliquez sur l’onglet **Compiler**.  
+2. Cliquez sur l’onglet **Compiler**.  
   
-3.  Définissez la valeur dans le **Option infer** boîte.  
+3. Définissez la valeur dans le **Option infer** boîte.  
   
  Lorsque vous créez un nouveau projet, le **Option Infer** définition sur le **compiler** onglet est définie sur le **Option Infer** définition dans le **valeurs par défaut VB** boîte de dialogue. Pour accéder à la **valeurs par défaut VB** boîte de dialogue le **outils** menu, cliquez sur **Options**. Dans la boîte de dialogue **Options**, développez **Projets et solutions**, puis cliquez sur **Valeurs par défaut VB**. Le paramètre par défaut initial dans **valeurs par défaut VB** est `On`.  
   
@@ -97,11 +97,11 @@ Option Infer { On | Off }
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim, instruction](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Inférence de type local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Explicit (instruction)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Valeurs par défaut Visual Basic, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Option Compare, instruction](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Explicit, instruction](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Valeurs par défaut VB, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Conversion boxing et unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

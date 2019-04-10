@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342087"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : hériter de formulaires à l’aide de la boîte de dialogue Sélecteur d’héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
@@ -23,23 +23,23 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Pour créer un formulaire Windows hérité d'un formulaire existant à l'aide du Sélecteur d'héritage  
   
-1.  Dans le menu **Projet**, choisissez **Ajouter un formulaire Windows**.  
+1. Dans le menu **Projet**, choisissez **Ajouter un formulaire Windows**.  
   
      La boîte de dialogue **Ajouter un nouvel élément** s’ouvre.  
   
-2.  Recherche le **formulaire hérité** modèle dans le contrôle searchbox ou en cliquant sur le **Windows Forms** catégorie, sélectionnez-le et nommez-le dans la **nom** boîte. Cliquez sur le bouton **Ajouter** pour continuer.  
+2. Recherche le **formulaire hérité** modèle dans le contrôle searchbox ou en cliquant sur le **Windows Forms** catégorie, sélectionnez-le et nommez-le dans la **nom** boîte. Cliquez sur le bouton **Ajouter** pour continuer.  
   
      La boîte de dialogue **Sélecteur d’héritage** s’ouvre. Si le projet actuel contient déjà des formulaires, ces derniers sont affichés dans la boîte de dialogue **Sélecteur d’héritage**.  
   
-3.  Pour hériter d’un formulaire dans un autre assembly, cliquez sur le bouton **Parcourir**.  
+3. Pour hériter d’un formulaire dans un autre assembly, cliquez sur le bouton **Parcourir**.  
   
-4.  Dans la boîte de dialogue **Sélectionner un fichier qui contient un composant duquel hériter**, naviguez jusqu’au projet contenant le formulaire ou le module souhaité.  
+4. Dans la boîte de dialogue **Sélectionner un fichier qui contient un composant duquel hériter**, naviguez jusqu’au projet contenant le formulaire ou le module souhaité.  
   
-5.  Cliquez sur le nom du fichier .exe ou .dll pour le sélectionner, puis cliquez sur le bouton **Ouvrir**.  
+5. Cliquez sur le nom du fichier .exe ou .dll pour le sélectionner, puis cliquez sur le bouton **Ouvrir**.  
   
      Cela vous ramène à la boîte de dialogue **Sélecteur d’héritage**, où figure désormais le composant à côté du projet dans lequel il se trouve.  
   
-6.  Sélectionnez le composant.  
+6. Sélectionnez le composant.  
   
      Dans l’**Explorateur de solutions**, le composant est ajouté à votre projet. S’il possède une interface utilisateur, les contrôles qui font partie du formulaire hérité sont marqués d’un glyphe (![capture d’écran du symbole de l’héritage Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) et, lorsque sélectionné, d’une bordure indiquant le niveau de sécurité dont dispose le contrôle sur le formulaire de superclasse. Les comportements qui correspondent aux différents niveaux de sécurité sont répertoriés dans le tableau ci-dessous.  
   

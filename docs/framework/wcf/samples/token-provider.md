@@ -2,12 +2,12 @@
 title: Token Provider
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085755"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336289"
 ---
 # <a name="token-provider"></a>Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :
@@ -109,7 +109,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
 
  Les étapes suivantes montrent comment développer un fournisseur de jetons personnalisé et l’intégrer à l’infrastructure de sécurité WCF :
 
-1.  Écrivez un fournisseur de jetons personnalisé.
+1. Écrivez un fournisseur de jetons personnalisé.
 
      L'exemple implémente un fournisseur de jetons personnalisé qui obtient le nom d'utilisateur et le mot de passe. Le mot de passe doit correspondre à ce nom d'utilisateur. Ce fournisseur de jetons personnalisé est uniquement fourni à des fins de démonstration et son utilisation n'est pas recommandée en cas de déploiement réel.
 
@@ -128,7 +128,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
     }
     ```
 
-2.  Écrivez un gestionnaire de jetons de sécurité personnalisé.
+2. Écrivez un gestionnaire de jetons de sécurité personnalisé.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour le <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et un sérialiseur de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons de nom d'utilisateur personnalisé lorsque les spécifications du jeton passé indiquent qu'un fournisseur de noms d'utilisateur est demandé.
 
@@ -159,7 +159,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
     }
     ```
 
-3.  Écrivez une information d'identification client personnalisée.
+3. Écrivez une information d'identification client personnalisée.
 
      La classe d'informations d'identification client permet de représenter les informations d'identification qui sont configurées pour le proxy client et crée le gestionnaire de jetons de sécurité utilisé pour obtenir des authentificateurs, des fournisseurs et un sérialiseur de jeton.
 
@@ -184,7 +184,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. 
     }
     ```
 
-4.  Configurez le client pour qu'il utilise les informations d'identification du client personnalisées.
+4. Configurez le client pour qu'il utilise les informations d'identification du client personnalisées.
 
      Pour que le client puisse utiliser les informations d'identification client personnalisées, l'exemple supprime la classe d'informations d'identification client par défaut et fournit la nouvelle.
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple
 
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Exécutez Setup.bat à partir du dossier d’installation exemple à l’intérieur d’une invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
+1. Exécutez Setup.bat à partir du dossier d’installation exemple à l’intérieur d’une invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
 
     > [!NOTE]
     >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’un Visual Studio 2012 invite de commandes. La variable d’environnement PATH définie dans les points de l’invite de commandes de Visual Studio 2012 sur le répertoire qui contient les exécutables requis par le script Setup.bat.  
   
-2.  Lancez service.exe à partir de service\bin.  
+2. Lancez service.exe à partir de service\bin.  
   
-3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
+3. Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  À l'invite de nom d'utilisateur, tapez un nom d'utilisateur.  
+4. À l'invite de nom d'utilisateur, tapez un nom d'utilisateur.  
   
-5.  À l'invite de mot de passe, utilisez la même chaîne tapée pour l'invite de nom d'utilisateur.  
+5. À l'invite de mot de passe, utilisez la même chaîne tapée pour l'invite de nom d'utilisateur.  
   
-6.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
-1.  Créez un répertoire sur l'ordinateur de service pour les fichiers binaires du service.  
+1. Créez un répertoire sur l'ordinateur de service pour les fichiers binaires du service.  
   
-2.  Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
+2. Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier Service.exe.config doit être mis à jour pour refléter ce nouveau nom de certificat. Vous pouvez créer le certificat de serveur en modifiant le fichier de commandes Setup.bat. Notez que le fichier setup.bat doit être exécuté à partir d’une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. Vous devez affecter à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur utilisé pour héberger le service.  
+3. Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier Service.exe.config doit être mis à jour pour refléter ce nouveau nom de certificat. Vous pouvez créer le certificat de serveur en modifiant le fichier de commandes Setup.bat. Notez que le fichier setup.bat doit être exécuté à partir d’une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. Vous devez affecter à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur utilisé pour héberger le service.  
   
-4.  Copiez le certificat de serveur dans le magasin CurrentUser-TrustedPeople du client. Cette opération n'est pas nécessaire lorsque le certificat de serveur est émis par un émetteur approuvé du client.  
+4. Copiez le certificat de serveur dans le magasin CurrentUser-TrustedPeople du client. Cette opération n'est pas nécessaire lorsque le certificat de serveur est émis par un émetteur approuvé du client.  
   
-5.  Dans le fichier Service.exe.config sur l'ordinateur de service, modifiez la valeur de l'adresse de base pour spécifier le nom de l'ordinateur complet au lieu de localhost.  
+5. Dans le fichier Service.exe.config sur l'ordinateur de service, modifiez la valeur de l'adresse de base pour spécifier le nom de l'ordinateur complet au lieu de localhost.  
   
-6.  Sur l'ordinateur de service, exécutez Service.exe à partir d'une invite de commandes.  
+6. Sur l'ordinateur de service, exécutez Service.exe à partir d'une invite de commandes.  
   
-7.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
+7. Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
   
-8.  Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service.  
+8. Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service.  
   
 9. Sur l'ordinateur client, lancez `Client.exe` à partir d'une invite de commandes.  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
-1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
+1. Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  

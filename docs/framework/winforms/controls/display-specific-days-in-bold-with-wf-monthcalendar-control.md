@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343262"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procédure : afficher des jours spécifiques en gras avec le contrôle MonthCalendar Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher les jours en gras, en tant que dates au singulier ou répétitive. Vous pouvez procéder ainsi pour attirer l’attention sur des dates particulières, telles que les week-ends et jours fériés.  
@@ -25,7 +25,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>Pour afficher une date en gras  
   
-1.  Créer le <xref:System.DateTime> objets.  
+1. Créer le <xref:System.DateTime> objets.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Afficher une seule date en gras en appelant le <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, ou <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> méthode de la <xref:System.Windows.Forms.MonthCalendar> contrôle.  
+2. Afficher une seule date en gras en appelant le <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, ou <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> méthode de la <xref:System.Windows.Forms.MonthCalendar> contrôle.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -59,7 +59,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     - ou -  
+     – ou –  
   
      Afficher un ensemble de dates en gras à la fois en créant un tableau de <xref:System.DateTime> objets et l’affecter à une des propriétés.  
   
@@ -80,7 +80,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>Pour afficher une date dans la police normale  
   
-1.  Afficher une date dans la police normale en appelant le <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, ou <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> (méthode).  
+1. Afficher une date dans la police normale en appelant le <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, ou <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> (méthode).  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -97,7 +97,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     - ou -  
+     – ou –  
   
      Supprimer toutes les dates en gras de l’une des trois listes en appelant le <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, ou <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> (méthode).  
   
@@ -113,7 +113,7 @@ Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Mettre à jour l’apparence de la police en appelant le <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> (méthode).  
+2. Mettre à jour l’apparence de la police en appelant le <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> (méthode).  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  

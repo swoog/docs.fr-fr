@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339838"
 ---
 # <a name="saml-tokens-and-claims"></a>Jetons SAML et revendications
 Security Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML Windows Communication Foundation (WCF) utilise dans les scénarios de sécurité fédérée sont *jetons émis*.  
   
  Les jetons SAML comportent des instructions qui sont des ensembles de revendications générées par une entité au sujet d'une autre entité. Par exemple, dans des scénarios de sécurité fédérée, les instructions sont générées par un service de jeton de sécurité au sujet d'un utilisateur dans le système. Le service de jeton de sécurité signe le jeton SAML pour indiquer la véracité des instructions incluses dans le jeton. De plus, le jeton SAML est associé à du matériel de clé de chiffrement dont l'utilisateur du jeton SAML prouve la connaissance. Cette preuve satisfait la partie de confiance que le jeton SAML a été émis, en fait, pour cet utilisateur. Par exemple, dans un scénario classique :  
   
-1.  Un client demande un jeton SAML à un service de jeton de sécurité en s'authentifiant auprès de ce service à l'aide des informations d'identification Windows.  
+1. Un client demande un jeton SAML à un service de jeton de sécurité en s'authentifiant auprès de ce service à l'aide des informations d'identification Windows.  
   
-2.  Le service de jeton de sécurité émet un jeton SAML pour le client. Le jeton SAML est signé avec un certificat associé au service de jeton de sécurité et contient une clé de vérification chiffrée pour le service cible.  
+2. Le service de jeton de sécurité émet un jeton SAML pour le client. Le jeton SAML est signé avec un certificat associé au service de jeton de sécurité et contient une clé de vérification chiffrée pour le service cible.  
   
-3.  Le client reçoit également une copie de la *clé de vérification*. Le client présente alors le jeton SAML au service d’application (le *confiance*) et signe le message avec cette clé de vérification.  
+3. Le client reçoit également une copie de la *clé de vérification*. Le client présente alors le jeton SAML au service d’application (le *confiance*) et signe le message avec cette clé de vérification.  
   
-4.  La signature sur le jeton SAML indique à la partie de confiance que le service de jeton de sécurité a émis le jeton. La signature de message créée avec la clé de vérification indique à la partie de confiance que le jeton a été émis pour le client.  
+4. La signature sur le jeton SAML indique à la partie de confiance que le service de jeton de sécurité a émis le jeton. La signature de message créée avec la clé de vérification indique à la partie de confiance que le jeton a été émis pour le client.  
   
 ## <a name="from-claims-to-samlattributes"></a>Des revendications aux éléments SamlAttributes  
  Dans WCF, les instructions dans les jetons SAML sont modélisées en tant que <xref:System.IdentityModel.Tokens.SamlAttribute> objets qui peuvent être remplis directement à partir de <xref:System.IdentityModel.Claims.Claim> objets, fournis le <xref:System.IdentityModel.Claims.Claim> objet a un <xref:System.IdentityModel.Claims.Claim.Right%2A> propriété de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et le <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriété est de type <xref:System.String>. Exemple :  

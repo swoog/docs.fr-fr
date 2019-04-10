@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343413"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Dépannage de la création de contrôles et de composants
 Cette rubrique répertorie les problèmes courants suivants qui surviennent lors du développement de composants et de contrôles. Pour plus d’informations, consultez l’article [Programmation à l’aide de composants](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Pour ajouter un contrôle à la boîte à outils  
   
-1.  Cliquez avec le bouton droit sur la **boîte à outils** et sélectionnez **Choisir les éléments** dans le menu contextuel.  
+1. Cliquez avec le bouton droit sur la **boîte à outils** et sélectionnez **Choisir les éléments** dans le menu contextuel.  
   
-2.  Dans la boîte de dialogue **Choisir des éléments de boîte à outils**, ajoutez le composant :  
+2. Dans la boîte de dialogue **Choisir des éléments de boîte à outils**, ajoutez le composant :  
   
     -   Si vous souhaitez ajouter un contrôle ou un composant .NET Framework, cliquez sur l’onglet **Composants .NET Framework**.  
   
@@ -48,11 +48,11 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
     -   Si vous souhaitez ajouter un composant COM ou un contrôle ActiveX, cliquez sur l’onglet **Composants COM**.  
   
-3.  Si votre contrôle est répertorié dans la boîte de dialogue, vérifiez qu’il est sélectionné, puis cliquez sur **OK**.  
+3. Si votre contrôle est répertorié dans la boîte de dialogue, vérifiez qu’il est sélectionné, puis cliquez sur **OK**.  
   
      Le contrôle est ajouté à la **boîte à outils**.  
   
-4.  Si votre contrôle n’est pas répertorié dans la boîte de dialogue, procédez comme suit :  
+4. Si votre contrôle n’est pas répertorié dans la boîte de dialogue, procédez comme suit :  
   
     1.  Cliquez sur le bouton **Parcourir**.  
   
@@ -73,15 +73,15 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
 #### <a name="to-debug-a-control-or-component"></a>Pour déboguer un contrôle ou un composant  
   
-1.  Dans le menu **Générer**, cliquez sur **Générer la solution** pour générer votre solution.  
+1. Dans le menu **Générer**, cliquez sur **Générer la solution** pour générer votre solution.  
   
-2.  Dans le menu **Fichier**, choisissez **Ajouter**, puis **Nouveau projet** pour ajouter un projet de test à votre application.  
+2. Dans le menu **Fichier**, choisissez **Ajouter**, puis **Nouveau projet** pour ajouter un projet de test à votre application.  
   
-3.  Dans la boîte de dialogue **Ajouter un nouveau projet**, sélectionnez **Application Windows** comme type de projet.  
+3. Dans la boîte de dialogue **Ajouter un nouveau projet**, sélectionnez **Application Windows** comme type de projet.  
   
-4.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références** de votre nouveau projet. Dans le menu contextuel, cliquez sur **Ajouter une référence** pour ajouter une référence au projet contenant le contrôle ou le composant.  
+4. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références** de votre nouveau projet. Dans le menu contextuel, cliquez sur **Ajouter une référence** pour ajouter une référence au projet contenant le contrôle ou le composant.  
   
-5.  Créez une instance de votre contrôle ou composant dans le projet de test. Si votre composant se trouve dans la **boîte à outils**, vous pouvez le faire glisser vers votre aire de concepteur, ou vous pouvez créer l’instance par programmation, comme illustré dans l’exemple de code suivant.  
+5. Créez une instance de votre contrôle ou composant dans le projet de test. Si votre composant se trouve dans la **boîte à outils**, vous pouvez le faire glisser vers votre aire de concepteur, ou vous pouvez créer l’instance par programmation, comme illustré dans l’exemple de code suivant.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

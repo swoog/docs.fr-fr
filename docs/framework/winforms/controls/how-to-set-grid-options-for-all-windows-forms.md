@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336055"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procédure : définir les options de grille pour tous les Windows Forms
 Comme vous deviennent habitué à utiliser dans l’environnement de développement Visual Studio, vous pouvez définir les préférences pour tous les formulaires et les projets que vous utilisez dans le Concepteur de formulaires Windows.  
@@ -23,9 +23,9 @@ Comme vous deviennent habitué à utiliser dans l’environnement de développem
   
 ### <a name="to-set-global-windows-forms-options"></a>Pour définir les options globales de Windows Forms  
   
-1.  À partir de la **outils** menu, sélectionnez **Options**.  
+1. À partir de la **outils** menu, sélectionnez **Options**.  
   
-2.  Dans le volet gauche de la **Options** boîte de dialogue, cliquez sur **Windows Forms Designer**.  
+2. Dans le volet gauche de la **Options** boîte de dialogue, cliquez sur **Windows Forms Designer**.  
   
      Dans le volet droit, sous le **paramètres de disposition** titre, vous pouvez définir la valeur par défaut des paramètres de grille pour tous les formulaires que vous créez. Ces paramètres incluent la taille de la grille, si les contrôles s’aligner à celui-ci, et si elle est activée par défaut. En outre, vous pouvez choisir entre **SnapToGrid** et **les lignes d’alignement** modes de disposition. Pour plus d’informations sur les lignes d’alignement, consultez [procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

@@ -2,23 +2,23 @@
 title: 'Procédure : Générer du code personnalisé en modifiant un fichier DBML'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338421"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Procédure : Générer du code personnalisé en modifiant un fichier DBML
 Vous pouvez générer Visual Basic ou C# code source à partir d’un fichier de métadonnées de base de données markup language (.dbml). Cette approche permet de personnaliser le fichier .dbml par défaut avant de générer le code de mappage de l’application. Il s'agit d'une fonctionnalité avancée.  
   
  Les étapes de ce processus sont les suivantes :  
   
-1.  Générez un fichier .dbml.  
+1. Générez un fichier .dbml.  
   
-2.  Utilisez un éditeur pour modifier le fichier .dbml. Notez que le fichier .dbml doit valider le fichier de définition (.xsd) de schéma pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fichiers .dbml. Pour plus d’informations, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Utilisez un éditeur pour modifier le fichier .dbml. Notez que le fichier .dbml doit valider le fichier de définition (.xsd) de schéma pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fichiers .dbml. Pour plus d’informations, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Générer le Visual Basic ou C# code source.  
+3. Générer le Visual Basic ou C# code source.  
   
  Les exemples suivants utilisent l'outil en ligne de commande SQLMetal. Pour plus d’informations, consultez [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

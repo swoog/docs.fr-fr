@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid'
+title: 'Procédure pas à pas : afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 022be17c946529583694afc0fe1c61b832aa03e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336107"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid
 
@@ -29,27 +29,27 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 ## <a name="create-entity-classes"></a>Créer des classes d’entité
 
-1.  Créez un nouveau projet d’Application WPF en Visual Basic ou c# et nommez-le `DataGridSQLExample`.
+1. Créez un nouveau projet d’Application WPF en Visual Basic ou c# et nommez-le `DataGridSQLExample`.
 
-2.  Dans l’Explorateur de solutions, cliquez sur votre projet, pointez sur **ajouter**, puis sélectionnez **un nouvel élément**.
+2. Dans l’Explorateur de solutions, cliquez sur votre projet, pointez sur **ajouter**, puis sélectionnez **un nouvel élément**.
 
      La boîte de dialogue Ajouter un nouvel élément s’affiche.
 
-3.  Dans le volet Modèles installés, sélectionnez **données** et dans la liste des modèles, sélectionnez **ADO.NET Entity Data Model**.
+3. Dans le volet Modèles installés, sélectionnez **données** et dans la liste des modèles, sélectionnez **ADO.NET Entity Data Model**.
 
      ![Modèle d’élément ADO.NET Entity Data Model](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
-4.  Nommez le fichier `AdventureWorksModel.edmx` puis cliquez sur **ajouter**.
+4. Nommez le fichier `AdventureWorksModel.edmx` puis cliquez sur **ajouter**.
 
      L'Assistant Entity Data Model s'affiche.
 
-5.  Dans l’écran Choisir le contenu du modèle, sélectionnez **Entity Framework Designer à partir de la base de données** puis cliquez sur **suivant**.
+5. Dans l’écran Choisir le contenu du modèle, sélectionnez **Entity Framework Designer à partir de la base de données** puis cliquez sur **suivant**.
 
-6.  Dans l’écran Choisir votre connexion de données, fournissez la connexion à votre base de données AdventureWorksLT2008. Pour plus d’informations, consultez [boîte de dialogue Choisir votre connexion de données](https://go.microsoft.com/fwlink/?LinkId=160190).
+6. Dans l’écran Choisir votre connexion de données, fournissez la connexion à votre base de données AdventureWorksLT2008. Pour plus d’informations, consultez [boîte de dialogue Choisir votre connexion de données](https://go.microsoft.com/fwlink/?LinkId=160190).
 
     Assurez-vous que le nom est `AdventureWorksLT2008Entities` et que le **enregistrer des paramètres de connexion entity dans App.Config en tant que** case à cocher est sélectionnée, puis cliquez sur **suivant**.
 
-7.  Dans l’écran Choisir vos objets de base de données, développez le nœud Tables, puis sélectionnez le **produit** et **ProductCategory** tables.
+7. Dans l’écran Choisir vos objets de base de données, développez le nœud Tables, puis sélectionnez le **produit** et **ProductCategory** tables.
 
      Vous pouvez générer des classes d’entités pour toutes les tables ; Toutefois, dans cet exemple vous uniquement récupérer des données à partir de ces deux tables.
 
@@ -63,19 +63,19 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 ## <a name="retrieve-and-present-the-data"></a>Récupérer et de présenter les données
 
-1.  Ouvrez le fichier MainWindow.xaml.
+1. Ouvrez le fichier MainWindow.xaml.
 
-2.  Définir le <xref:System.Windows.FrameworkElement.Width%2A> propriété sur le <xref:System.Windows.Window> à 450.
+2. Définir le <xref:System.Windows.FrameworkElement.Width%2A> propriété sur le <xref:System.Windows.Window> à 450.
 
-3.  Dans l’éditeur XAML, ajoutez le code suivant <xref:System.Windows.Controls.DataGrid> balise entre les `<Grid>` et `</Grid>` balises pour ajouter un <xref:System.Windows.Controls.DataGrid> nommé `dataGrid1`.
+3. Dans l’éditeur XAML, ajoutez le code suivant <xref:System.Windows.Controls.DataGrid> balise entre les `<Grid>` et `</Grid>` balises pour ajouter un <xref:System.Windows.Controls.DataGrid> nommé `dataGrid1`.
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
      ![Fenêtre avec DataGrid](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4.  Sélectionnez le contrôle <xref:System.Windows.Window>.
+4. Sélectionnez le contrôle <xref:System.Windows.Window>.
 
-5.  À l’aide de la fenêtre Propriétés ou l’éditeur XAML, créez un gestionnaire d’événements pour le <xref:System.Windows.Window> nommé `Window_Loaded` pour le <xref:System.Windows.FrameworkElement.Loaded> événement. Pour plus d'informations, voir [Procédure : Créez un gestionnaire d’événements Simple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
+5. À l’aide de la fenêtre Propriétés ou l’éditeur XAML, créez un gestionnaire d’événements pour le <xref:System.Windows.Window> nommé `Window_Loaded` pour le <xref:System.Windows.FrameworkElement.Loaded> événement. Pour plus d'informations, voir [Procédure : Créez un gestionnaire d’événements Simple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      L’exemple suivant montre le XAML pour MainWindow.xaml.
 
@@ -84,14 +84,14 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
-6.  Ouvrez le fichier code-behind (MainWindow.xaml.vb ou MainWindow.xaml.cs) pour le <xref:System.Windows.Window>.
+6. Ouvrez le fichier code-behind (MainWindow.xaml.vb ou MainWindow.xaml.cs) pour le <xref:System.Windows.Window>.
 
-7.  Ajoutez le code suivant pour récupérer uniquement les valeurs spécifiques des tables jointes et définir le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété de la <xref:System.Windows.Controls.DataGrid> aux résultats de la requête.
+7. Ajoutez le code suivant pour récupérer uniquement les valeurs spécifiques des tables jointes et définir le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété de la <xref:System.Windows.Controls.DataGrid> aux résultats de la requête.
 
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
-8.  Exécutez l'exemple.
+8. Exécutez l'exemple.
 
      Vous devez voir un <xref:System.Windows.Controls.DataGrid> qui affiche des données.
 

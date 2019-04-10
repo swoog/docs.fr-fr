@@ -2,12 +2,12 @@
 title: Service HTTP de base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337108"
 ---
 # <a name="basic-http-service"></a>Service HTTP de base
 Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RPC ce concept est communément appelé service « POX » (Plain Old XML) – à l’aide du modèle de programmation REST Windows Communication Foundation (WCF). Cet exemple se compose de deux composants : un service HTTP WCF auto-hébergé (Service.cs) et une application de console (Program.cs) qui crée le service et effectue des appels à ce dernier.  
@@ -17,7 +17,7 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
   
  L’opération `EchoWithGet` est annotée avec <xref:System.ServiceModel.Web.WebGetAttribute>, ce qui indique que l’opération traite des requêtes HTTP `GET`. Comme le <xref:System.ServiceModel.Web.WebGetAttribute> ne spécifie pas explicitement d'<xref:System.UriTemplate>, l'opération attend le passage de la chaîne d'entrée à l'aide d'un paramètre de chaîne de requête mentionnant le nom `s`. Notez que le format de l'URI attendu par le service peut être personnalisé à l'aide de la propriété <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A>.  
   
- L'opération `EchoWithPost` est annotée avec <xref:System.ServiceModel.Web.WebInvokeAttribute>, ce qui indique qu'il ne s'agit pas d'une opération `GET` (elle a des effets secondaires). Comme le <xref:System.ServiceModel.Web.WebInvokeAttribute> ne spécifie pas explicitement de `Method`, l'opération traite les requêtes HTTP `POST` dont le corps contient la chaîne (au format XML, par exemple). Notez que la méthode HTTP et le format de l'URI de la requête peuvent être personnalisés à l'aide des propriétés <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>, respectivement.  
+ L’opération `EchoWithPost` est annotée avec <xref:System.ServiceModel.Web.WebInvokeAttribute>, ce qui indique qu’il ne s’agit pas d’une opération `GET` (elle a des effets secondaires). Comme le <xref:System.ServiceModel.Web.WebInvokeAttribute> ne spécifie pas explicitement de `Method`, l'opération traite les requêtes HTTP `POST` dont le corps contient la chaîne (au format XML, par exemple). Notez que la méthode HTTP et le format de l'URI de la requête peuvent être personnalisés à l'aide des propriétés <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>, respectivement.  
   
  Le fichier App.config configure le service WCF avec un <xref:System.ServiceModel.Description.WebHttpEndpoint> par défaut dont la propriété <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> a la valeur `true`. Par conséquent, l’infrastructure WCF crée une page d’aide HTML automatique à `http://localhost:8000/Customers/help` qui fournit des informations sur comment construire des requêtes HTTP au service et comment utiliser la réponse du service HTTP.  
   
@@ -27,11 +27,11 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Ouvrez la solution de l'exemple Basic HTTP Service. Lors du lancement de Visual Studio 2012, vous devez exécuter en tant qu’administrateur de l’exemple s’exécute correctement. Cela en double-cliquant sur l’icône de Visual Studio 2012 et en sélectionnant **exécuter en tant qu’administrateur** dans le menu contextuel.  
+1. Ouvrez la solution de l'exemple Basic HTTP Service. Lors du lancement de Visual Studio 2012, vous devez exécuter en tant qu’administrateur de l’exemple s’exécute correctement. Cela en double-cliquant sur l’icône de Visual Studio 2012 et en sélectionnant **exécuter en tant qu’administrateur** dans le menu contextuel.  
   
-2.  Appuyez sur CTRL+MAJ+B pour générer la solution, puis appuyez sur Ctrl+F5 pour exécuter l'application console sans débogage. La fenêtre de console apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur. Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
+2. Appuyez sur CTRL+MAJ+B pour générer la solution, puis appuyez sur Ctrl+F5 pour exécuter l'application console sans débogage. La fenêtre de console apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur. Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
   
-3.  Appuyez sur une touche quelconque pour arrêter l'exemple.  
+3. Appuyez sur une touche quelconque pour arrêter l'exemple.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

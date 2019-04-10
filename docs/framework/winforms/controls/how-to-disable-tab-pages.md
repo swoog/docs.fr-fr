@@ -9,28 +9,28 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336068"
 ---
 # <a name="how-to-disable-tab-pages"></a>Procédure : désactiver des onglets
 Dans certains cas, vous souhaitez restreindre l’accès aux données qui sont disponibles dans votre application Windows Forms. Un exemple de ce pourrait être lorsque vous avez des données affichées dans les pages d’onglets d’un contrôle onglet. les administrateurs peut avoir plus d’informations sur une page d’onglets que vous souhaitez restreindre l’invité ou des utilisateurs de niveau inférieur.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Pour désactiver les pages d’onglets par programmation  
   
-1.  Écrire du code pour gérer le contrôle onglet <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> événement. Il s’agit de l’événement est déclenché lorsque l’utilisateur bascule d’un onglet à l’autre.  
+1. Écrire du code pour gérer le contrôle onglet <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> événement. Il s’agit de l’événement est déclenché lorsque l’utilisateur bascule d’un onglet à l’autre.  
   
-2.  Vérifiez les informations d’identification. Selon les informations présentées, vous voudrez vérifier l’utilisateur a ouvert une session avec le nom d’utilisateur ou une autre forme d’informations d’identification avant d’autoriser l’utilisateur d’afficher l’onglet.  
+2. Vérifiez les informations d’identification. Selon les informations présentées, vous voudrez vérifier l’utilisateur a ouvert une session avec le nom d’utilisateur ou une autre forme d’informations d’identification avant d’autoriser l’utilisateur d’afficher l’onglet.  
   
-3.  Si l’utilisateur dispose des informations d’identification appropriées, afficher l’onglet qui a été cliqué. Si l’utilisateur n’a pas d’informations d’identification appropriées, afficher une boîte de message ou certains autres interface utilisateur indiquant qu’ils ne pas avoir accès et revenir à l’onglet initial.  
+3. Si l’utilisateur dispose des informations d’identification appropriées, afficher l’onglet qui a été cliqué. Si l’utilisateur n’a pas d’informations d’identification appropriées, afficher une boîte de message ou certains autres interface utilisateur indiquant qu’ils ne pas avoir accès et revenir à l’onglet initial.  
   
     > [!NOTE]
     >  Lorsque vous implémentez cette fonctionnalité dans vos applications de production, vous pouvez effectuer cette vérification des informations d’identification au cours du formulaire <xref:System.Windows.Forms.Form.Load> événement. Cela vous permettra de masquer l’onglet avant l’affichage de n’importe quelle interface utilisateur, ce qui constitue une approche beaucoup plus propre de la programmation. La méthodologie utilisée ci-dessous (vérification des informations d’identification et la désactivation de l’onglet pendant la <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> événement) est à titre d’illustration.  
   
-4.  Si vous le souhaitez, si vous avez plus de deux pages d’onglets, afficher une page différente de la version d’origine.  
+4. Si vous le souhaitez, si vous avez plus de deux pages d’onglets, afficher une page différente de la version d’origine.  
   
      Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.CheckBox> contrôle est utilisé à la place de la vérification les informations d’identification, comme critère pour l’accès à l’onglet varie par application. Lorsque le <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> événement est déclenché si la vérification des informations d’identification a la valeur true (autrement dit, la case à cocher est activée) et l’onglet sélectionné est `TabPage2` (l’onglet avec les informations confidentielles, dans cet exemple), puis `TabPage2` s’affiche. Sinon, `TabPage3` s’affiche et une boîte de message est affichée à l’utilisateur, indiquant qu’ils ne disposait pas des privilèges d’accès appropriés. Le code ci-dessous illustre un formulaire avec un <xref:System.Windows.Forms.CheckBox> contrôle (`CredentialCheck`) et un <xref:System.Windows.Forms.TabControl> contrôle avec trois pages d’onglets.  
   

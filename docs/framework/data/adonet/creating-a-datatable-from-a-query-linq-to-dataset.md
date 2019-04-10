@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342529"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Création d'un DataTable à partir d'une requête (LINQ to DataSet)
 La liaison de données est une utilisation courante de l’objet <xref:System.Data.DataTable>. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> prend les résultats d'une requête et copie les données dans un objet <xref:System.Data.DataTable> qui peut ensuite être utilisé pour la liaison de données. Une fois les opérations de données effectuées, le nouveau <xref:System.Data.DataTable> est refusionné dans le <xref:System.Data.DataTable> source.  
   
  La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> utilise le processus suivant pour créer un <xref:System.Data.DataTable> à partir d'une requête :  
   
-1.  La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clone une <xref:System.Data.DataTable> de la table source (un objet <xref:System.Data.DataTable> qui implémente l'interface <xref:System.Linq.IQueryable%601>). La source <xref:System.Collections.IEnumerable> provient généralement d'une requête d'expression ou de méthode [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
+1. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clone une <xref:System.Data.DataTable> de la table source (un objet <xref:System.Data.DataTable> qui implémente l'interface <xref:System.Linq.IQueryable%601>). La source <xref:System.Collections.IEnumerable> provient généralement d'une requête d'expression ou de méthode [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
-2.  Le schéma de la <xref:System.Data.DataTable> clonée est créé à partir des colonnes du premier objet <xref:System.Data.DataRow> énuméré dans la table source et le nom de la table clonée est celui de la table source auquel le mot « query » est accolé.  
+2. Le schéma de la <xref:System.Data.DataTable> clonée est créé à partir des colonnes du premier objet <xref:System.Data.DataRow> énuméré dans la table source et le nom de la table clonée est celui de la table source auquel le mot « query » est accolé.  
   
-3.  Pour chaque ligne de la table source, le contenu de la ligne est copié dans un nouvel objet <xref:System.Data.DataRow> qui est ensuite inséré dans la table clonée. Les propriétés <xref:System.Data.DataRow.RowState%2A> et <xref:System.Data.DataRow.RowError%2A> sont conservées dans toute l'opération de copie. Une <xref:System.ArgumentException> est levée si les objets <xref:System.Data.DataRow> dans la source proviennent de différentes tables.  
+3. Pour chaque ligne de la table source, le contenu de la ligne est copié dans un nouvel objet <xref:System.Data.DataRow> qui est ensuite inséré dans la table clonée. Les propriétés <xref:System.Data.DataRow.RowState%2A> et <xref:System.Data.DataRow.RowError%2A> sont conservées dans toute l'opération de copie. Une <xref:System.ArgumentException> est levée si les objets <xref:System.Data.DataRow> dans la source proviennent de différentes tables.  
   
-4.  Le <xref:System.Data.DataTable> cloné est retourné une fois que tous les objets <xref:System.Data.DataRow> de la table d'entrée interrogeable ont été copiés. Si la séquence source ne contient aucun objet <xref:System.Data.DataRow>, la méthode retourne un <xref:System.Data.DataTable> vide.  
+4. Le <xref:System.Data.DataTable> cloné est retourné une fois que tous les objets <xref:System.Data.DataRow> de la table d'entrée interrogeable ont été copiés. Si la séquence source ne contient aucun objet <xref:System.Data.DataRow>, la méthode retourne un <xref:System.Data.DataTable> vide.  
   
  Notez que l'appel de la méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> entraîne l'exécution de la requête liée à la table source.  
   

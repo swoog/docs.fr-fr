@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342932"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procédure : Créer une Variable qui ne Change pas de valeur (Visual Basic)
 La notion d’une variable qui ne change pas sa valeur peut sembler contradictoire. Mais il existe des situations lors d’une constante n’est pas possible et il est utile de disposer d’une variable avec une valeur fixe. Dans ce cas, vous pouvez définir une variable membre avec le [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) mot clé.  
@@ -25,7 +25,7 @@ La notion d’une variable qui ne change pas sa valeur peut sembler contradictoi
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Pour créer une variable qui ne change pas de valeur  
   
-1.  Au niveau du module, déclarez une variable de membre avec le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)et incluent la [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) mot clé.  
+1. Au niveau du module, déclarez une variable de membre avec le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)et incluent la [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) mot clé.  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ La notion d’une variable qui ne change pas sa valeur peut sembler contradictoi
   
      Vous pouvez spécifier `ReadOnly` uniquement sur une variable membre. Cela signifie que vous devez définir la variable au niveau du module, en dehors de toute procédure.  
   
-2.  Si vous pouvez calculer la valeur dans une seule instruction au moment de la compilation, utilisez une clause d’initialisation dans le `Dim` instruction. Suivez le [comme](../../../../visual-basic/language-reference/statements/as-clause.md) clause avec un signe égal (`=`), suivi par une expression. Assurez-vous que le compilateur peut évaluer cette expression à une valeur constante.  
+2. Si vous pouvez calculer la valeur dans une seule instruction au moment de la compilation, utilisez une clause d’initialisation dans le `Dim` instruction. Suivez le [comme](../../../../visual-basic/language-reference/statements/as-clause.md) clause avec un signe égal (`=`), suivi par une expression. Assurez-vous que le compilateur peut évaluer cette expression à une valeur constante.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  
@@ -46,4 +46,4 @@ La notion d’une variable qui ne change pas sa valeur peut sembler contradictoi
 ## <a name="see-also"></a>Voir aussi
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [Const (instruction)](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const, instruction](../../../../visual-basic/language-reference/statements/const-statement.md)

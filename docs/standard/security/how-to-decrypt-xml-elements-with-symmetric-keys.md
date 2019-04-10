@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déchiffrer des éléments XML avec des clés symétriques'
+title: 'Procédure : déchiffrer des éléments XML avec des clés symétriques'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334625"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procédure : Déchiffrer des éléments XML avec des clés symétriques
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procédure : déchiffrer des éléments XML avec des clés symétriques
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer un élément d'un document XML.  Le chiffrement XML vous permet de stocker et de transporter du code XML sensible, en empêchant qu'il soit facilement lu.  Cet exemple de code déchiffre un élément XML à l'aide de l'algorithme AES (Advanced Encryption Standard), également appelé Rijndael.  
   
  Pour plus d’informations sur la façon de chiffrer un élément XML à l’aide de cette procédure, consultez [Comment : Chiffrer des éléments XML avec des clés symétriques](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
@@ -33,24 +33,24 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Pour déchiffrer un élément XML avec une clé symétrique  
   
-1.  Chiffrer un élément XML avec la clé générée précédemment à l’aide des techniques décrites dans [Comment : Chiffrer des éléments XML avec des clés symétriques](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. Chiffrer un élément XML avec la clé générée précédemment à l’aide des techniques décrites dans [Comment : Chiffrer des éléments XML avec des clés symétriques](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
-2.  Recherchez l'élément <`EncryptedData`> (défini par la norme de chiffrement XML) dans un objet <xref:System.Xml.XmlDocument> qui contient le code XML chiffré, puis créez un objet <xref:System.Xml.XmlElement> pour représenter cet élément.  
+2. Rechercher le <`EncryptedData`> élément (défini par la norme de chiffrement XML) dans un <xref:System.Xml.XmlDocument> de l’objet qui contient le code XML chiffré et créez un nouveau <xref:System.Xml.XmlElement> objet pour représenter cet élément.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  Créez un objet <xref:System.Security.Cryptography.Xml.EncryptedData> en chargeant les données XML brutes à partir de l'objet <xref:System.Xml.XmlElement> créé précédemment.  
+3. Créez un objet <xref:System.Security.Cryptography.Xml.EncryptedData> en chargeant les données XML brutes à partir de l'objet <xref:System.Xml.XmlElement> créé précédemment.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  Créez un objet <xref:System.Security.Cryptography.Xml.EncryptedXml> et utilisez-le pour déchiffrer les données XML à l'aide de la même clé que celle utilisée pour le chiffrement.  
+4. Créez un objet <xref:System.Security.Cryptography.Xml.EncryptedXml> et utilisez-le pour déchiffrer les données XML à l'aide de la même clé que celle utilisée pour le chiffrement.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  Remplacez l'élément chiffré par l'élément de texte brut dernièrement déchiffré dans le document XML.  
+5. Remplacez l'élément chiffré par l'élément de texte brut dernièrement déchiffré dans le document XML.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
@@ -84,4 +84,4 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Security.Cryptography.Xml>
-- [Guide pratique pour Chiffrer des éléments XML avec des clés symétriques](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [Procédure : chiffrer des éléments XML avec des clés symétriques](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

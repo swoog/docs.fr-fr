@@ -2,12 +2,12 @@
 title: Activité de stratégie externalisée dans .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338278"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Activité de stratégie externalisée dans .NET Framework 4.5
 
@@ -44,20 +44,19 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 |Propriété|Description|
 |-|-|
-|RuleSetFilePath|Chemin d'accès au fichier <xref:System.Workflow.Activities.Rules.RuleSet> de .NET Framework 3.5 à évaluer lorsque l'activité est exécutée.|
+|RuleSetFilePath|Chemin d’accès au fichier <xref:System.Workflow.Activities.Rules.RuleSet> de .NET Framework 3.5 à évaluer lorsque l’activité est exécutée.|
 |RuleSetName|Nom du <xref:System.Workflow.Activities.Rules.RuleSet> à utiliser dans le fichier .rules.|
 |TargetObject|Objet sur lequel les objets <xref:System.Workflow.Activities.Rules.Rule> de <xref:System.Workflow.Activities.Rules.RuleSet> sont évalués.|
-|ResultObject|Objet qui en résulte une fois les règles appliquées (par exemple, les règles sont appliquées sur l'argument Input et le résultat est stocké dans l'argument Result).|
-|ValidationError|Liste des erreurs de validation retournées par le moteur de règles WF 3.5 lors de la validation de <xref:System.Workflow.Activities.Rules.RuleSet> sur l'objet cible avant l'exécution.|
+|ResultObject|Objet qui en résulte une fois les règles appliquées (par exemple, les règles sont appliquées sur l’argument Input et le résultat est stocké dans l’argument Result).|
+|ValidationError|Liste des erreurs de validation retournées par le moteur de règles WF 3.5 lors de la validation de <xref:System.Workflow.Activities.Rules.RuleSet> sur l’objet cible avant l’exécution.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>Concepteur de l'activité ExternalizedPolicy4
 
-Le concepteur d'ExternalizedPolicy4 vous permet de configurer une activité pour utiliser un ensemble de règles (RuleSet) existant sans écrire de code. Définissez simplement le chemin d'accès de l'emplacement où se trouve le fichier .rules et spécifiez le nom du <xref:System.Workflow.Activities.Rules.RuleSet> que vous voulez utiliser. Il vous permet également de modifier <xref:System.Workflow.Activities.Rules.RuleSet>. Après avoir généré la solution, il se trouve dans la boîte à outils, dans la section Microsoft.Samples.Activities.Rules. Le concepteur vous permet de sélectionner un fichier .rules et un <xref:System.Workflow.Activities.Rules.RuleSet>. Lorsque le **modifier le RuleSet** bouton est activé, le WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> s’affiche. Cette boîte de dialogue, qui est l'éditeur de règles WF 3.5 réhébergé, est utilisée pour afficher et modifier les règles que l'activité ExternalizedPolicy4 exécute.
+Le concepteur d'ExternalizedPolicy4 vous permet de configurer une activité pour utiliser un ensemble de règles (RuleSet) existant sans écrire de code. Définissez simplement le chemin d’accès de l’emplacement où se trouve le fichier .rules et spécifiez le nom du <xref:System.Workflow.Activities.Rules.RuleSet> que vous voulez utiliser. Il vous permet également de modifier <xref:System.Workflow.Activities.Rules.RuleSet>. Après avoir généré la solution, il se trouve dans la boîte à outils, dans la section Microsoft.Samples.Activities.Rules. Le concepteur vous permet de sélectionner un fichier .rules et un <xref:System.Workflow.Activities.Rules.RuleSet>. Lorsque le **modifier le RuleSet** bouton est activé, le WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> s’affiche. Cette boîte de dialogue, qui est l'éditeur de règles WF 3.5 réhébergé, est utilisée pour afficher et modifier les règles que l'activité ExternalizedPolicy4 exécute.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 et ExternalPolicy4
 
-L’activité de stratégie vous permet de créer et exécuter un ensemble de règles de .NET Framework 3.5 dans un flux de travail WF 4.5. 
-  <xref:System.Workflow.Activities.Rules.RuleSet> est sérialisé inline dans la définition XAML de l'activité Policy4. L'exemple ExternalizedPolicy4 montre comment utiliser un <xref:System.Workflow.Activities.Rules.RuleSet> externe existant (contenu dans un fichier .rules).
+L’activité de stratégie vous permet de créer et exécuter un ensemble de règles de .NET Framework 3.5 dans un flux de travail WF 4.5. <xref:System.Workflow.Activities.Rules.RuleSet> est sérialisé inline dans la définition XAML de l'activité Policy4. L'exemple ExternalizedPolicy4 montre comment utiliser un <xref:System.Workflow.Activities.Rules.RuleSet> externe existant (contenu dans un fichier .rules).
 
 ## <a name="use-this-sample"></a>Utilisez cet exemple
 
@@ -67,21 +66,21 @@ Cet exemple contient deux applications clientes : ImperativeCodeClientSample et
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Exécuter l’application ImperativeCodeClientSample
 
-1.  À l’aide de Visual Studio, ouvrez le *Policy4sample.sln* fichier solution.
+1. À l’aide de Visual Studio, ouvrez le *Policy4sample.sln* fichier solution.
 
-2.  Dans **l’Explorateur de solutions**, avec le bouton droit le **ImperativeCodeClientSample** de projet, puis sélectionnez **définir comme projet de démarrage**.
+2. Dans **l’Explorateur de solutions**, avec le bouton droit le **ImperativeCodeClientSample** de projet, puis sélectionnez **définir comme projet de démarrage**.
 
-3.  Pour exécuter le projet, appuyez sur **Ctrl**+**F5**.
+3. Pour exécuter le projet, appuyez sur **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Exécutez l’application DesignerClientSample
 
-1.  À l’aide de Visual Studio, ouvrez le *Policy4sample.sln* fichier solution.
+1. À l’aide de Visual Studio, ouvrez le *Policy4sample.sln* fichier solution.
 
-2.  Dans **l’Explorateur de solutions**, avec le bouton droit le **DesignerClientSample** de projet, puis sélectionnez **définir comme projet de démarrage**.
+2. Dans **l’Explorateur de solutions**, avec le bouton droit le **DesignerClientSample** de projet, puis sélectionnez **définir comme projet de démarrage**.
 
-3.  Appuyez sur **Ctrl**+**MAJ**+**B** pour compiler le projet.
+3. Appuyez sur **Ctrl**+**MAJ**+**B** pour compiler le projet.
 
-4.  Appuyez sur **Ctrl**+**F5** pour exécuter le projet.
+4. Appuyez sur **Ctrl**+**F5** pour exécuter le projet.
 
 > [!IMPORTANT]
 > Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb906dafd98e75708764b5f0f009900719f6a475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335197"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procédure : Obtenir les propriétés de l’objet de système d’impression sans réflexion
 À l’aide de la réflexion pour détailler les propriétés (et les types de ces propriétés) sur un objet peut ralentir les performances de l’application. Le <xref:System.Printing.IndexedProperties> espace de noms fournit un moyen d’obtenir ces informations à l’aide de la réflexion.  
@@ -20,15 +20,15 @@ ms.locfileid: "59215272"
 ## <a name="example"></a>Exemple  
  Voici les étapes pour y parvenir.  
   
-1.  Créez une instance du type. Dans l’exemple ci-dessous, le type est le <xref:System.Printing.PrintQueue> type qui est fourni avec Microsoft .NET Framework, mais un code presque identique doit fonctionner pour les types que vous dérivez de <xref:System.Printing.PrintSystemObject>.  
+1. Créez une instance du type. Dans l’exemple ci-dessous, le type est le <xref:System.Printing.PrintQueue> type qui est fourni avec Microsoft .NET Framework, mais un code presque identique doit fonctionner pour les types que vous dérivez de <xref:System.Printing.PrintSystemObject>.  
   
-2.  Créer un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> à partir du type <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. Le <xref:System.Collections.DictionaryEntry.Value%2A> propriété de chaque entrée dans ce dictionnaire est un objet d’un des types dérivés de <xref:System.Printing.IndexedProperties.PrintProperty>.  
+2. Créer un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> à partir du type <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. Le <xref:System.Collections.DictionaryEntry.Value%2A> propriété de chaque entrée dans ce dictionnaire est un objet d’un des types dérivés de <xref:System.Printing.IndexedProperties.PrintProperty>.  
   
-3.  Énumérer les membres du dictionnaire. Pour chacun d’eux, procédez comme suit.  
+3. Énumérer les membres du dictionnaire. Pour chacun d’eux, procédez comme suit.  
   
-4.  Cast haut de la valeur de chaque entrée à <xref:System.Printing.IndexedProperties.PrintProperty> et utilisez-le pour créer un <xref:System.Printing.IndexedProperties.PrintProperty> objet.  
+4. Cast haut de la valeur de chaque entrée à <xref:System.Printing.IndexedProperties.PrintProperty> et utilisez-le pour créer un <xref:System.Printing.IndexedProperties.PrintProperty> objet.  
   
-5.  Obtenir le type de la <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> de chacune de la <xref:System.Printing.IndexedProperties.PrintProperty> objet.  
+5. Obtenir le type de la <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> de chacune de la <xref:System.Printing.IndexedProperties.PrintProperty> objet.  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  

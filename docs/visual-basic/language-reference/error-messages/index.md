@@ -7,26 +7,26 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338135"
 ---
 # <a name="error-messages-visual-basic"></a>Messages d'erreur (Visual Basic)
 Lorsque vous écrivez, compilez ou exécutez une application Visual Basic, les types d’erreurs suivants peuvent se produire :  
   
-1.  Erreurs au moment du design, qui se produisent lors de l’écriture d’une application dans Visual Studio.  
+1. Erreurs au moment du design, qui se produisent lors de l’écriture d’une application dans Visual Studio.  
   
-2.  Erreurs de compilation qui se produisent lors de la compilation d’une application dans Visual Studio ou une invite de commandes.  
+2. Erreurs de compilation qui se produisent lors de la compilation d’une application dans Visual Studio ou une invite de commandes.  
   
-3.  Erreurs d’exécution, qui se produisent lors de l’exécution d’une application dans Visual Studio ou en tant que fichier exécutable autonome.  
+3. Erreurs d’exécution, qui se produisent lors de l’exécution d’une application dans Visual Studio ou en tant que fichier exécutable autonome.  
   
  Pour plus d’informations sur la résolution d’une erreur spécifique, consultez la page [Ressources supplémentaires pour les programmeurs Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Erreurs d’exécution  
- Si une application Visual Basic essaie d’effectuer une action que le système ne peut pas exécuter, une erreur d’exécution se produit, et Visual Basic lève une `Exception` objet. Visual Basic peuvent générer des erreurs personnalisées de toutes les données de type, y compris `Exception` objets, à l’aide de la `Throw` instruction. Une application peut identifier l’erreur en affichant le numéro d’erreur et le message d’une exception interceptée. Si l’erreur n’est pas interceptée, l’application se termine.  
+ Si une application Visual Basic essaie d’effectuer une action que le système ne peut pas exécuter, une erreur d’exécution se produit, et Visual Basic lève une `Exception` objet. Visual Basic peut générer des erreurs personnalisées de toutes les données type, y compris `Exception` objets, à l’aide de la `Throw` instruction. Une application peut identifier l’erreur en affichant le numéro d’erreur et le message d’une exception interceptée. Si l’erreur n’est pas interceptée, l’application se termine.  
   
  Le code peut intercepter et examiner les erreurs d’exécution. Si vous placez le code qui génère l’erreur dans un bloc `Try`, vous pouvez intercepter toute erreur levée dans un bloc `Catch` correspondant. Pour plus d’informations sur la façon d’intercepter les erreurs à l’exécution et d’y répondre dans votre code, consultez la page [Instruction Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

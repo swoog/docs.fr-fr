@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144012"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341489"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Procédure : créer des images miniatures
 Une image miniature est une version réduite d’une image. Vous pouvez créer une image miniature en appelant le <xref:System.Drawing.Image.GetThumbnailImage%2A> méthode d’un <xref:System.Drawing.Image> objet.  
@@ -34,19 +34,19 @@ Une image miniature est une version réduite d’une image. Vous pouvez créer u
 ## <a name="compiling-the-code"></a>Compilation du code  
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Pour exécuter l’exemple, procédez comme suit :  
   
-1.  Créez une application Windows Forms.  
+1. Créez une application Windows Forms.  
   
-2.  Ajoutez l’exemple de code au formulaire.  
+2. Ajoutez l’exemple de code au formulaire.  
   
-3.  Créez un gestionnaire pour le formulaire <xref:System.Windows.Forms.Control.Paint> événement  
+3. Créez un gestionnaire pour le formulaire <xref:System.Windows.Forms.Control.Paint> événement  
   
-4.  Dans le <xref:System.Windows.Forms.Control.Paint> gestionnaire, appelez le `GetThumbnail` (méthode) et passez `e` pour <xref:System.Windows.Forms.PaintEventArgs>.  
+4. Dans le <xref:System.Windows.Forms.Control.Paint> gestionnaire, appelez le `GetThumbnail` (méthode) et passez `e` pour <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Rechercher un fichier image que vous souhaitez faire une miniature.  
+5. Rechercher un fichier image que vous souhaitez faire une miniature.  
   
-6.  Dans le `GetThumbnail` (méthode), spécifiez le chemin d’accès et le nom à votre image de fichier.  
+6. Dans le `GetThumbnail` (méthode), spécifiez le chemin d’accès et le nom à votre image de fichier.  
   
-7.  Appuyez sur F5 pour exécuter l’exemple.  
+7. Appuyez sur F5 pour exécuter l’exemple.  
   
      Une image miniature de 100 par 100 s’affiche sur le formulaire.  
   

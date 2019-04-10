@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124525"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342460"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procédure : créer des formulaires enfants MDI
 Formulaires MDI enfants constituent un élément essentiel de [Applications d’Interface multidocument (MDI)](multiple-document-interface-mdi-applications.md), car ils représentent le centre d’intervention de l’utilisateur.  
@@ -26,17 +26,17 @@ Formulaires MDI enfants constituent un élément essentiel de [Applications d’
   
 ### <a name="to-create-mdi-child-forms"></a>Pour créer des formulaires MDI enfants  
   
-1.  Créez un projet Windows Forms. Dans **les propriétés Windows** pour le formulaire, définissez son <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriété `true`et son `WindowsState` propriété `Maximized`.  
+1. Créez un projet Windows Forms. Dans **les propriétés Windows** pour le formulaire, définissez son <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriété `true`et son `WindowsState` propriété `Maximized`.  
   
      Ainsi, vous désignez le formulaire comme le conteneur MDI des fenêtres enfants.  
   
-2.  Faites glisser un contrôle <xref:System.Windows.Forms.MenuStrip> de la `Toolbox` vers le formulaire. Définissez ses `Text` propriété **fichier**.  
+2. Faites glisser un contrôle <xref:System.Windows.Forms.MenuStrip> de la `Toolbox` vers le formulaire. Définissez ses `Text` propriété **fichier**.  
   
-3.  Cliquez sur les points de suspension (...) à côté du **éléments** propriété, puis cliquez sur **ajouter** pour ajouter deux éléments de menu ToolStrip enfants outil. Définir le `Text` propriété de ces éléments **New** et **fenêtre**.  
+3. Cliquez sur les points de suspension (...) à côté du **éléments** propriété, puis cliquez sur **ajouter** pour ajouter deux éléments de menu ToolStrip enfants outil. Définir le `Text` propriété de ces éléments **New** et **fenêtre**.  
   
-4.  Dans **l’Explorateur de solutions**, cliquez sur le projet, pointez sur **ajouter**, puis sélectionnez **ajouter un nouvel élément**.  
+4. Dans **l’Explorateur de solutions**, cliquez sur le projet, pointez sur **ajouter**, puis sélectionnez **ajouter un nouvel élément**.  
   
-5.  Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **Windows Form** (en Visual Basic ou Visual c#) ou **Windows Forms Application (.NET)** (dans [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) à partir de la  **Modèles** volet. Dans le **nom** boîte, nommez le formulaire **Form2**. Cliquez sur le **Open** pour ajouter le formulaire au projet.  
+5. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **Windows Form** (en Visual Basic ou Visual c#) ou **Windows Forms Application (.NET)** (dans [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) à partir de la  **Modèles** volet. Dans le **nom** boîte, nommez le formulaire **Form2**. Cliquez sur le **Open** pour ajouter le formulaire au projet.  
   
     > [!NOTE]
     >  Le formulaire MDI enfant que vous avez créé lors de cette étape est un Windows Form standard. Il a donc une propriété <xref:System.Windows.Forms.Form.Opacity%2A>, ce qui vous permet de contrôler la transparence du formulaire. Cependant, la propriété <xref:System.Windows.Forms.Form.Opacity%2A> a été conçue pour les fenêtres de niveau supérieur. Ne l'utilisez pas avec des formulaires MDI enfants, car des problèmes de peinture peuvent survenir.  
@@ -45,13 +45,13 @@ Formulaires MDI enfants constituent un élément essentiel de [Applications d’
   
      Le **Windows Forms Designer** s’ouvre et affiche **Form2**.  
   
-6.  À partir de la **boîte à outils**, faites glisser un **RichTextBox** contrôle au formulaire.  
+6. À partir de la **boîte à outils**, faites glisser un **RichTextBox** contrôle au formulaire.  
   
-7.  Dans le **propriétés** fenêtre, définissez le `Anchor` propriété **supérieure, gauche** et `Dock` propriété **remplir**.  
+7. Dans le **propriétés** fenêtre, définissez le `Anchor` propriété **supérieure, gauche** et `Dock` propriété **remplir**.  
   
      Ainsi, le contrôle <xref:System.Windows.Forms.RichTextBox> remplit complètement la zone de formulaire MDI enfant, même quand le formulaire est redimensionné.  
   
-8.  Double-cliquez sur le **New** élément de menu pour créer un <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour celle-ci.  
+8. Double-cliquez sur le **New** élément de menu pour créer un <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour celle-ci.  
   
 9. Insérez du code semblable à ce qui suit pour créer un nouveau formulaire MDI enfant lorsque l’utilisateur clique sur le **New** élément de menu.  
   

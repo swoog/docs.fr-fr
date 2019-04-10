@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333676"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Événements liés à la souris dans les Windows Forms
 Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître l'emplacement du pointeur de la souris et l'état de ses boutons. Cette rubrique fournit des détails sur la façon d'obtenir des informations à partir des événements de souris et explique l'ordre dans lequel les événements de clic de souris sont déclenchés dans les contrôles Windows Forms. Pour une liste et une description de tous les événements de souris, consultez [souris entrée fonctionnement dans les Windows Forms](how-mouse-input-works-in-windows-forms.md).  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](event-handlers-overview-windows-forms.md) et [vue d’ensemble des événements (Windows Forms)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître 
 ## <a name="standard-click-event-behavior"></a>Comportement d'événement de clic standard  
  Si vous souhaitez gérer les événements de clic de souris dans l'ordre approprié, vous devez connaître l'ordre dans lequel les événements de clic sont déclenchés dans les contrôles Windows Forms. Tous les contrôles Windows Forms déclenchent les événements de clic dans le même ordre quand un bouton de souris est enfoncé et relâché (quel que soit le bouton), sauf indication contraire mentionnée dans la liste suivante pour un contrôle spécifique. La liste ci-dessous indique l'ordre des événements déclenchés pour un clic sur un bouton de souris :  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Voici l'ordre des événements déclenchés pour un double clic sur un bouton de souris :  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> .  
+5. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> . (Cela peut varier, selon que le contrôle en question a la valeur <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> définie comme bit de style `true`. Pour plus d'informations sur la façon de définir un bit <xref:System.Windows.Forms.ControlStyles>, consultez la méthode <xref:System.Windows.Forms.Control.SetStyle%2A>.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> . (Cela peut varier, selon que le contrôle en question a la valeur <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> définie comme bit de style `true`. Pour plus d'informations sur la façon de définir un bit <xref:System.Windows.Forms.ControlStyles>, consultez la méthode <xref:System.Windows.Forms.Control.SetStyle%2A>.)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> .  
+8. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Pour obtenir un exemple de code qui illustre l’ordre de la souris, cliquez sur les événements, consultez [Comment : Utilisateur de handle d’entrée d’événements dans les Windows Forms contrôles](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître 
 ### <a name="painting-behavior-of-toggle-controls"></a>Comportement de peinture des contrôles de basculement  
  Les contrôles de basculement, tels que ceux dérivant de la classe <xref:System.Windows.Forms.ButtonBase>, présentent le comportement de peinture distinctif suivant en cas de combinaison avec des événements de clic de souris :  
   
-1.  L'utilisateur appuie sur le bouton de la souris.  
+1. L'utilisateur appuie sur le bouton de la souris.  
   
-2.  Le contrôle est peint à l'état enfoncé.  
+2. Le contrôle est peint à l'état enfoncé.  
   
-3.  L'événement <xref:System.Windows.Forms.Control.MouseDown> est déclenché.  
+3. L'événement <xref:System.Windows.Forms.Control.MouseDown> est déclenché.  
   
-4.  L’utilisateur relâche le bouton de la souris.  
+4. L’utilisateur relâche le bouton de la souris.  
   
-5.  Le contrôle est peint à l'état déclenché.  
+5. Le contrôle est peint à l'état déclenché.  
   
-6.  L'événement <xref:System.Windows.Forms.Control.Click> est déclenché.  
+6. L'événement <xref:System.Windows.Forms.Control.Click> est déclenché.  
   
-7.  L'événement <xref:System.Windows.Forms.Control.MouseClick> est déclenché.  
+7. L'événement <xref:System.Windows.Forms.Control.MouseClick> est déclenché.  
   
-8.  L'événement <xref:System.Windows.Forms.Control.MouseUp> est déclenché.  
+8. L'événement <xref:System.Windows.Forms.Control.MouseUp> est déclenché.  
   
     > [!NOTE]
     >  Si l'utilisateur déplace le pointeur hors du contrôle de basculement alors que le bouton de la souris est enfoncé (par exemple en cas de déplacement de la souris hors du contrôle <xref:System.Windows.Forms.Button> pendant qu'il est enfoncé), le contrôle de basculement est peint à l'état déclenché et seul l'événement <xref:System.Windows.Forms.Control.MouseUp> se produit. L'événement <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> ne se produira pas dans cette situation.  

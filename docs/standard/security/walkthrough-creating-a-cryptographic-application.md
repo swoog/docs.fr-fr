@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : création d'une application de chiffrement"
+title: 'Procédure pas à pas : création d’une application de chiffrement'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341762"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Procédure pas à pas : création d'une application de chiffrement
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Procédure pas à pas : création d’une application de chiffrement
 Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. Les exemples de code sont conçus pour une application Windows Forms. Cette application ne montre pas de scénarios du monde réel, tels que l'utilisation de cartes à puce. Elle montre les principes fondamentaux du chiffrement et du déchiffrement.  
   
  Cette procédure pas à pas utilise les indications suivantes pour le chiffrement :  
@@ -50,10 +50,10 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
   
 -   Références aux espaces de noms <xref:System.IO> et <xref:System.Security.Cryptography>.  
   
-## <a name="creating-a-windows-forms-application"></a>Création d'une application Windows Forms  
+## <a name="creating-a-windows-forms-application"></a>Création d’une application Windows Forms  
  La plupart des exemples de code de cette procédure pas à pas sont conçus pour être des gestionnaires d'événements pour des contrôles de bouton. Le tableau suivant répertorie les contrôles requis par l'exemple d'application, ainsi que leur nom pour correspondre aux exemples de code.  
   
-|Contrôle|Name|Propriété Text (si nécessaire)|  
+|Contrôle|Nom|Propriété Text (si nécessaire)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Chiffrer le fichier|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Déchiffrer le fichier|  
@@ -88,15 +88,15 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
   
  La méthode `EncryptFile` effectue les opérations suivantes :  
   
-1.  Elle crée un algorithme symétrique <xref:System.Security.Cryptography.RijndaelManaged> pour chiffrer le contenu.  
+1. Elle crée un algorithme symétrique <xref:System.Security.Cryptography.RijndaelManaged> pour chiffrer le contenu.  
   
-2.  Elle crée un objet <xref:System.Security.Cryptography.RSACryptoServiceProvider> pour chiffrer la clé <xref:System.Security.Cryptography.RijndaelManaged>.  
+2. Elle crée un objet <xref:System.Security.Cryptography.RSACryptoServiceProvider> pour chiffrer la clé <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-3.  Elle utilise un objet <xref:System.Security.Cryptography.CryptoStream> pour lire et chiffrer le <xref:System.IO.FileStream> du fichier source (par blocs d'octets) dans un objet <xref:System.IO.FileStream> de destination pour le fichier chiffré.  
+3. Elle utilise un objet <xref:System.Security.Cryptography.CryptoStream> pour lire et chiffrer le <xref:System.IO.FileStream> du fichier source (par blocs d'octets) dans un objet <xref:System.IO.FileStream> de destination pour le fichier chiffré.  
   
-4.  Détermine la longueur de la clé chiffrée et du vecteur d'initialisation, puis crée des tableaux d'octets à partir de leurs valeurs de longueur.  
+4. Détermine la longueur de la clé chiffrée et du vecteur d'initialisation, puis crée des tableaux d'octets à partir de leurs valeurs de longueur.  
   
-5.  Écrit la clé, le vecteur d'initialisation et leurs valeurs de longueur dans le package chiffré.  
+5. Écrit la clé, le vecteur d'initialisation et leurs valeurs de longueur dans le package chiffré.  
   
  Le package chiffré utilise le format suivant :  
   
@@ -123,19 +123,19 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>Déchiffrement d'un fichier  
- Cette tâche inclut deux méthodes : la méthode de gestionnaire d'événements pour le bouton `Decrypt File` (`buttonDecryptFile_Click`) et la méthode `DecryptFile`. La première méthode affiche une boîte de dialogue permettant de sélectionner un fichier, puis passe le nom du fichier à la deuxième méthode qui effectue le déchiffrement.  
+ Cette tâche inclut deux méthodes : la méthode de gestionnaire d’événements pour le bouton `Decrypt File` (`buttonDecryptFile_Click`) et la méthode `DecryptFile`. La première méthode affiche une boîte de dialogue permettant de sélectionner un fichier, puis passe le nom du fichier à la deuxième méthode qui effectue le déchiffrement.  
   
  La méthode `Decrypt` effectue les opérations suivantes :  
   
-1.  Elle crée un algorithme symétrique <xref:System.Security.Cryptography.RijndaelManaged> pour déchiffrer le contenu.  
+1. Elle crée un algorithme symétrique <xref:System.Security.Cryptography.RijndaelManaged> pour déchiffrer le contenu.  
   
-2.  Elle lit les huit premiers octets du <xref:System.IO.FileStream> du package chiffré dans les tableaux d'octets pour obtenir la longueur de la clé et du vecteur d'initialisation.  
+2. Elle lit les huit premiers octets du <xref:System.IO.FileStream> du package chiffré dans les tableaux d'octets pour obtenir la longueur de la clé et du vecteur d'initialisation.  
   
-3.  Elle extrait la clé et le vecteur d'initialisation du package de chiffrement dans des tableaux d'octets.  
+3. Elle extrait la clé et le vecteur d'initialisation du package de chiffrement dans des tableaux d'octets.  
   
-4.  Elle crée un objet <xref:System.Security.Cryptography.RSACryptoServiceProvider> pour déchiffrer la clé <xref:System.Security.Cryptography.RijndaelManaged>.  
+4. Elle crée un objet <xref:System.Security.Cryptography.RSACryptoServiceProvider> pour déchiffrer la clé <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-5.  Elle utilise un objet <xref:System.Security.Cryptography.CryptoStream> pour lire et déchiffrer la section de texte chiffré du package de chiffrement <xref:System.IO.FileStream> (par blocs d'octets) dans l'objet <xref:System.IO.FileStream> pour le fichier déchiffré. Quand cette étape est terminée, le déchiffrement est terminé.  
+5. Elle utilise un objet <xref:System.Security.Cryptography.CryptoStream> pour lire et déchiffrer la section de texte chiffré du package de chiffrement <xref:System.IO.FileStream> (par blocs d'octets) dans l'objet <xref:System.IO.FileStream> pour le fichier déchiffré. Quand cette étape est terminée, le déchiffrement est terminé.  
   
  Ajoutez le code suivant en tant que gestionnaire d'événements `Click` pour le bouton `Decrypt File`.  
   
@@ -150,7 +150,7 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
 ## <a name="exporting-a-public-key"></a>Exportation d'une clé publique  
  Cette tâche enregistre la clé créée par le bouton `Create Keys` dans un fichier. Elle exporte uniquement les paramètres publics.  
   
- Cette tâche décrit le scénario dans lequel Alice confie à Bob sa clé publique pour qu'il puisse chiffrer des fichiers pour elle. Bob et les autres utilisateurs de cette clé publique ne pourront pas les déchiffrer, car ils ne disposent pas de la paire de clés complète avec les paramètres privés.  
+ Cette tâche décrit le scénario dans lequel Alice confie à Bob sa clé publique pour qu’il puisse chiffrer des fichiers pour elle. Bob et les autres utilisateurs de cette clé publique ne pourront pas les déchiffrer, car ils ne disposent pas de la paire de clés complète avec les paramètres privés.  
   
  Ajoutez le code suivant en tant que gestionnaire d'événements `Click` pour le bouton `Export Public Key` (`buttonExportPublicKey_Click`).  
   
@@ -160,7 +160,7 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
 ## <a name="importing-a-public-key"></a>Importation d'une clé publique  
  Cette tâche charge la clé avec les paramètres publics uniquement, tels que créés par le bouton `Export Public Key`, et la définit comme le nom du conteneur de clé.  
   
- Cette tâche simule le scénario dans lequel Bob charge la clé d'Alice avec les paramètres publics uniquement pour chiffrer ses fichiers.  
+ Cette tâche simule le scénario dans lequel Bob charge la clé d’Alice avec les paramètres publics uniquement pour chiffrer ses fichiers.  
   
  Ajoutez le code suivant en tant que gestionnaire d'événements `Click` pour le bouton `Import Public Key` (`buttonImportPublicKey_Click`).  
   
@@ -182,34 +182,34 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Pour créer, chiffrer et déchiffrer des clés  
   
-1.  Cliquez sur le bouton `Create Keys`. L'étiquette affiche le nom de la clé et montre qu'il s'agit d'une paire de clés complète.  
+1. Cliquez sur le bouton `Create Keys`. L'étiquette affiche le nom de la clé et montre qu'il s'agit d'une paire de clés complète.  
   
-2.  Cliquez sur le bouton `Export Public Key`. Notez que l'exportation des paramètres de la clé publique ne modifie pas la clé actuelle.  
+2. Cliquez sur le bouton `Export Public Key`. Notez que l'exportation des paramètres de la clé publique ne modifie pas la clé actuelle.  
   
-3.  Cliquez sur le bouton `Encrypt File`, puis sélectionnez un fichier.  
+3. Cliquez sur le bouton `Encrypt File`, puis sélectionnez un fichier.  
   
-4.  Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré.  
+4. Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré.  
   
-5.  Examinez le fichier déchiffré.  
+5. Examinez le fichier déchiffré.  
   
-6.  Fermez l'application, puis redémarrez-la pour tester la récupération des conteneurs de clé persistants dans le scénario suivant.  
+6. Fermez l'application, puis redémarrez-la pour tester la récupération des conteneurs de clé persistants dans le scénario suivant.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Pour chiffrer à l'aide de la clé publique  
   
-1.  Cliquez sur le bouton `Import Public Key`. L'étiquette affiche le nom de la clé et montre qu'il s'agit d'une clé publique uniquement.  
+1. Cliquez sur le bouton `Import Public Key`. L'étiquette affiche le nom de la clé et montre qu'il s'agit d'une clé publique uniquement.  
   
-2.  Cliquez sur le bouton `Encrypt File`, puis sélectionnez un fichier.  
+2. Cliquez sur le bouton `Encrypt File`, puis sélectionnez un fichier.  
   
-3.  Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré. Le processus échouera, car vous devez disposer de la clé privée pour effectuer le déchiffrement.  
+3. Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré. Le processus échouera, car vous devez disposer de la clé privée pour effectuer le déchiffrement.  
   
  Dans ce scénario, un utilisateur dispose uniquement de la clé publique pour chiffrer le fichier d'un autre utilisateur. En général, l'utilisateur donne uniquement la clé publique et conserve la clé privée pour le déchiffrement.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Pour déchiffrer à l'aide de la clé privée  
   
-1.  Cliquez sur le bouton `Get Private Key`. L'étiquette affiche le nom de la clé et montre s'il s'agit d'une paire de clés complète.  
+1. Cliquez sur le bouton `Get Private Key`. L'étiquette affiche le nom de la clé et montre s'il s'agit d'une paire de clés complète.  
   
-2.  Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré. Cette opération réussira, car vous disposez de la paire de clés complète pour le déchiffrement.  
+2. Cliquez sur le bouton `Decrypt File`, puis sélectionnez le fichier chiffré. Cette opération réussira, car vous disposez de la paire de clés complète pour le déchiffrement.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [services de chiffrement](../../../docs/standard/security/cryptographic-services.md)

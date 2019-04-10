@@ -2,12 +2,12 @@
 title: 'Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337420"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF
 Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJAX à un service compatible AJAX Windows Communication Foundation (WCF) équivalente. Il montre comment créer une version WCF fonctionnellement équivalente d’un service ASP.NET AJAX. Les deux services peuvent ensuite servir côte à côte, ou le service WCF peut être utilisé pour remplacer le service ASP.NET AJAX.
@@ -26,21 +26,21 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Pour créer et tester l'application de service Web ASP.NET
 
-1.  Ouvrez Visual Studio 2012.
+1. Ouvrez Visual Studio 2012.
 
-2.  À partir de la **fichier** menu, sélectionnez **New**, puis **projet**, puis **Web**, puis sélectionnez **Application de Service Web ASP.NET** .
+2. À partir de la **fichier** menu, sélectionnez **New**, puis **projet**, puis **Web**, puis sélectionnez **Application de Service Web ASP.NET** .
 
-3.  Nommez le projet `ASPHello` et cliquez sur **OK**.
+3. Nommez le projet `ASPHello` et cliquez sur **OK**.
 
-4.  Supprimez les marques de commentaire dans la ligne du fichier Service1.asmx.cs qui contient `System.Web.Script.Services.ScriptService]` pour rendre ce service compatible avec AJAX.
+4. Supprimez les marques de commentaire dans la ligne du fichier Service1.asmx.cs qui contient `System.Web.Script.Services.ScriptService]` pour rendre ce service compatible avec AJAX.
 
-5.  À partir de la **Build** menu, sélectionnez **générer la Solution**.
+5. À partir de la **Build** menu, sélectionnez **générer la Solution**.
 
-6.  Dans le menu **Déboguer**, sélectionnez **Exécuter sans débogage**.
+6. Dans le menu **Déboguer**, sélectionnez **Exécuter sans débogage**.
 
-7.  Sur la page web générée, sélectionnez l’opération `HelloWorld`.
+7. Sur la page web générée, sélectionnez l’opération `HelloWorld`.
 
-8.  Cliquez sur le **Invoke** bouton sur le `HelloWorld` page de test. Vous recevez alors la réponse XML suivante.
+8. Cliquez sur le **Invoke** bouton sur le `HelloWorld` page de test. Vous recevez alors la réponse XML suivante.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Pour créer une application de service AJAX WCF équivalente
 
-1.  Avec le bouton droit le **ASPHello** de projet et sélectionnez **ajouter**, puis **un nouvel élément**, puis **Service WCF compatible AJAX**.
+1. Avec le bouton droit le **ASPHello** de projet et sélectionnez **ajouter**, puis **un nouvel élément**, puis **Service WCF compatible AJAX**.
 
-2.  Nommez le service `WCFHello` et cliquez sur **ajouter**.
+2. Nommez le service `WCFHello` et cliquez sur **ajouter**.
 
-3.  Ouvrez le fichier WCFHello.svc.cs.
+3. Ouvrez le fichier WCFHello.svc.cs.
 
-4.  À partir de Service1.asmx.cs, copiez l’implémentation suivante de la `HelloWorld` opération.
+4. À partir de Service1.asmx.cs, copiez l’implémentation suivante de la `HelloWorld` opération.
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     }
     ```
 
-5.  Coller dans une implémentation copiée de le `HelloWorld` opération dans le fichier WCFHello.svc.cs à la place le code suivant.
+5. Coller dans une implémentation copiée de le `HelloWorld` opération dans le fichier WCFHello.svc.cs à la place le code suivant.
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     }
     ```
 
-6.  Spécifiez le `Namespace` attribut <xref:System.ServiceModel.ServiceContractAttribute> comme `WCFHello`.
+6. Spécifiez le `Namespace` attribut <xref:System.ServiceModel.ServiceContractAttribute> comme `WCFHello`.
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     { … }
     ```
 
-7.  Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n'est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n'est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     }
     ```
 
-8.  À partir de la **Build** menu, sélectionnez **générer la Solution**.
+8. À partir de la **Build** menu, sélectionnez **générer la Solution**.
 
 9. Ouvrez le fichier WCFHello.svc et à partir de la **déboguer** menu, sélectionnez **démarrer sans débogage**.
 
@@ -203,7 +203,7 @@ d.Add("two", 2);
 
 |Catégorie de différences|DataContractJsonSerializer|JavaScriptSerializer ASP.NET AJAX|
 |-----------------------------|--------------------------------|---------------------------------------|
-|Désérialisation de la mémoire tampon vide (nouvel octet [0]) dans <xref:System.Object> (ou <xref:System.Uri> ou d'autres classes).|SerializationException|Null|
+|Désérialisation de la mémoire tampon vide (nouvel octet [0]) dans <xref:System.Object> (ou <xref:System.Uri> ou d'autres classes).|SerializationException|null|
 |Sérialisation de <xref:System.DBNull.Value>|{} (ou {« __type » : « #System »})|Null|
 |Sérialisation des membres privés de types [Sérialisable].|sérialisée|n'est pas sérialisé|
 |Sérialisation des propriétés publiques de types <xref:System.Runtime.Serialization.ISerializable>.|n'est pas sérialisé|sérialisée|

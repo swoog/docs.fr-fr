@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342167"
 ---
 # <a name="how-keyboard-input-works"></a>Fonctionnement de l'entrée au clavier
 Windows Forms traite l’entrée au clavier en déclenchant des événements de clavier en réponse aux messages de Windows. La plupart des applications Windows Forms traitent l’entrée au clavier exclusivement en gérant les événements de clavier. Toutefois, vous devez comprendre le fonctionnement des messages de clavier pour pouvoir implémenter des scénarios d’entrée au clavier plus avancés, comme l’interception des touches avant qu’elles n’atteignent un contrôle. Cette rubrique décrit les types de données de touches que Windows Forms reconnaît et fournit une vue d’ensemble du routage des messages de clavier. Pour plus d’informations sur les événements de clavier, consultez [Utilisation des événements de clavier](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Windows Forms traite l’entrée au clavier en déclenchant des événements de 
 ## <a name="order-of-keyboard-events"></a>Ordre des événements de clavier  
  Comme indiqué précédemment, il existe 3 événements liés au clavier qui peuvent se produire sur un contrôle. La séquence suivante montre l’ordre général des événements :  
   
-1.  L’utilisateur enfonce la touche « a », la touche est prétraitée, distribuée et un <xref:System.Windows.Forms.Control.KeyDown> événement se produit.  
+1. L’utilisateur enfonce la touche « a », la touche est prétraitée, distribuée et un <xref:System.Windows.Forms.Control.KeyDown> événement se produit.  
   
-2.  L’utilisateur appuie sur la touche « a », la touche est prétraitée, distribuée et un <xref:System.Windows.Forms.Control.KeyPress> événement se produit.  
+2. L’utilisateur appuie sur la touche « a », la touche est prétraitée, distribuée et un <xref:System.Windows.Forms.Control.KeyPress> événement se produit.  
   
      Cet événement se produit plusieurs fois lorsque l’utilisateur maintient une touche enfoncée.  
   
-3.  L’utilisateur relâche la touche « a », la touche est prétraitée, distribués et un <xref:System.Windows.Forms.Control.KeyUp> événement se produit.  
+3. L’utilisateur relâche la touche « a », la touche est prétraitée, distribués et un <xref:System.Windows.Forms.Control.KeyUp> événement se produit.  
   
 ## <a name="preprocessing-keys"></a>Prétraitement des touches  
  Comme d’autres messages, les messages de clavier sont traités dans le <xref:System.Windows.Forms.Control.WndProc%2A> méthode d’un formulaire ou contrôle. Toutefois, avant de clavier messages sont traités, le <xref:System.Windows.Forms.Control.PreProcessMessage%2A> méthode appelle une ou plusieurs méthodes qui peuvent être substituées pour gérer les touches de caractère spécial et des touches physiques. Vous pouvez substituer ces méthodes pour détecter et filtrer certaines touches avant que les messages ne soient traités par le contrôle. Le tableau suivant présente l’action exécutée et la méthode associée qui se produit, dans l’ordre où la méthode se produit.  

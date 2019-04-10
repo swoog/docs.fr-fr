@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340306"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valeur de checksum erronée, pas de chiffre hexadécimal ou de nombre impair de chiffres hexadécimaux
 Une valeur de checksum contient des chiffres hexadécimaux non valides ou comporte un nombre impair de chiffres.  
@@ -25,13 +25,13 @@ Une valeur de checksum contient des chiffres hexadécimaux non valides ou compor
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Si ASP.NET génère le fichier source Visual Basic, redémarrez la génération du projet.  
+1. Si ASP.NET génère le fichier source Visual Basic, redémarrez la génération du projet.  
   
-2.  Si l'avertissement persiste après le redémarrage, réinstallez ASP.NET, puis réessayez la génération.  
+2. Si l'avertissement persiste après le redémarrage, réinstallez ASP.NET, puis réessayez la génération.  
   
-3.  Si l'avertissement n'est toujours pas résolu, ou si vous n'utilisez pas ASP.NET, rassemblez des informations sur ses circonstances et avertissez les services de support technique Microsoft.  
+3. Si l'avertissement n'est toujours pas résolu, ou si vous n'utilisez pas ASP.NET, rassemblez des informations sur ses circonstances et avertissez les services de support technique Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [ASP.NET Overview](/aspnet/overview) (Vue d’ensemble d’ASP.NET)
+- [Vue d’ensemble d’ASP.NET](/aspnet/overview)
 - [Nous contacter](/visualstudio/ide/talk-to-us)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338473"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d’impression problématique
 Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs concernant des travaux d’impression qui échouent ou s’impriment lentement. L’ensemble des propriétés du travail d’impression exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen pour effectuer un diagnostic rapide et à distance des travaux d’impression.  
@@ -23,7 +23,7 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
 ## <a name="example"></a>Exemple  
  Voici les principales étapes à suivre pour créer ce type d’utilitaire.  
   
-1.  Identifiez le travail d’impression à l’origine de la plainte de l’utilisateur. Les utilisateurs sont rarement en mesure de l’identifier avec précision. Ils peuvent par exemple ne pas connaître les noms des serveurs d’impression ou des imprimantes. Ils peuvent décrire l’emplacement de l’imprimante avec une terminologie différente de celle utilisée dans le paramètre son <xref:System.Printing.PrintQueue.Location%2A> propriété. Par conséquent, il est judicieux de générer une liste des travaux envoyés par l’utilisateur. S’il y en a plusieurs, l’utilisateur peut contacter l’administrateur du système d’impression pour identifier le travail qui pose problème. La procédure est la suivante.  
+1. Identifiez le travail d’impression à l’origine de la plainte de l’utilisateur. Les utilisateurs sont rarement en mesure de l’identifier avec précision. Ils peuvent par exemple ne pas connaître les noms des serveurs d’impression ou des imprimantes. Ils peuvent décrire l’emplacement de l’imprimante avec une terminologie différente de celle utilisée dans le paramètre son <xref:System.Printing.PrintQueue.Location%2A> propriété. Par conséquent, il est judicieux de générer une liste des travaux envoyés par l’utilisateur. S’il y en a plusieurs, l’utilisateur peut contacter l’administrateur du système d’impression pour identifier le travail qui pose problème. La procédure est la suivante.  
   
     1.  Répertoriez l’ensemble des serveurs d’impression.  
   
@@ -33,7 +33,7 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
   
     4.  À chaque étape de la boucle de file d’attente, parcourez les travaux associés et collectez les informations d’identification des travaux ayant été envoyés par l’utilisateur à l’origine de la plainte.  
   
-2.  Une fois le travail d’impression problématique identifié, examinez les propriétés pertinentes pour tenter de trouver ce qui pose problème. Le travail affiche-t-il un état d’erreur ou l’imprimante qui traite la file d’attente a-t-elle été déconnectée avant l’impression du travail ?  
+2. Une fois le travail d’impression problématique identifié, examinez les propriétés pertinentes pour tenter de trouver ce qui pose problème. Le travail affiche-t-il un état d’erreur ou l’imprimante qui traite la file d’attente a-t-elle été déconnectée avant l’impression du travail ?  
   
  Le code ci-dessous constitue une série d’exemples de code. Le premier exemple de code contient la boucle d’exécution des files d’attente à l’impression. (Étape 1c ci-dessus.) La variable `myPrintQueues` est le <xref:System.Printing.PrintQueueCollection> objet pour le serveur d’impression en cours.  
   

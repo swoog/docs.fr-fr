@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334144"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procédure pas à pas : Implémentation de l’héritage avec les objets COM (Visual Basic)
 Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être substituées ou surchargés. L’héritage d’objets COM est utile lorsque vous avez une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
@@ -23,26 +23,26 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 ### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Pour créer l’objet COM qui est utilisé dans cette procédure pas à pas  
   
-1.  Dans Visual Basic 6.0, ouvrez un nouveau projet de DLL ActiveX. Un projet nommé `Project1` est créé. Il a une classe nommée `Class1`.  
+1. Dans Visual Basic 6.0, ouvrez un nouveau projet de DLL ActiveX. Un projet nommé `Project1` est créé. Il a une classe nommée `Class1`.  
   
-2.  Dans le **Explorateur de projets**, avec le bouton droit **Project1**, puis cliquez sur **Propriétés Projet1**. Le **propriétés du projet** boîte de dialogue s’affiche.  
+2. Dans le **Explorateur de projets**, avec le bouton droit **Project1**, puis cliquez sur **Propriétés Projet1**. Le **propriétés du projet** boîte de dialogue s’affiche.  
   
-3.  Sur le **général** onglet de la **propriétés du projet** boîte de dialogue, changez le nom du projet en tapant `ComObject1` dans le **nom_projet** champ.  
+3. Sur le **général** onglet de la **propriétés du projet** boîte de dialogue, changez le nom du projet en tapant `ComObject1` dans le **nom_projet** champ.  
   
-4.  Dans le **Explorateur de projets**, avec le bouton droit `Class1`, puis cliquez sur **propriétés**. Le **propriétés** fenêtre de la classe s’affiche.  
+4. Dans le **Explorateur de projets**, avec le bouton droit `Class1`, puis cliquez sur **propriétés**. Le **propriétés** fenêtre de la classe s’affiche.  
   
-5.  Modifier le `Name` propriété `MathFunctions`.  
+5. Modifier le `Name` propriété `MathFunctions`.  
   
-6.  Dans le **Explorateur de projets**, avec le bouton droit `MathFunctions`, puis cliquez sur **afficher le Code**. Le **éditeur de Code** s’affiche.  
+6. Dans le **Explorateur de projets**, avec le bouton droit `MathFunctions`, puis cliquez sur **afficher le Code**. Le **éditeur de Code** s’affiche.  
   
-7.  Ajoutez une variable locale pour contenir la valeur de propriété :  
+7. Ajoutez une variable locale pour contenir la valeur de propriété :  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  Ajouter une propriété `Let` et propriété `Get` procédures de propriété :  
+8. Ajouter une propriété `Let` et propriété `Get` procédures de propriété :  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -76,31 +76,31 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Pour utiliser un objet COM avec Visual Basic 2005 et versions ultérieures  
   
-1.  Ouvrez un nouveau projet d’application Windows Visual Basic.  
+1. Ouvrez un nouveau projet d’application Windows Visual Basic.  
   
-2.  Dans le menu **Projet**, cliquez sur **Ajouter une référence**.  
+2. Dans le menu **Projet**, cliquez sur **Ajouter une référence**.  
   
      La boîte de dialogue **Ajouter une référence** s’affiche.  
   
-3.  Sur le **COM** onglet, double-cliquez sur `ComObject1` dans le **nom du composant** liste et cliquez sur **OK**.  
+3. Sur le **COM** onglet, double-cliquez sur `ComObject1` dans le **nom du composant** liste et cliquez sur **OK**.  
   
-4.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**.  
+4. Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**.  
   
      La boîte de dialogue **Ajouter un nouvel élément** s’affiche.  
   
-5.  Dans le **modèles** volet, cliquez sur **classe**.  
+5. Dans le **modèles** volet, cliquez sur **classe**.  
   
      Le nom de fichier par défaut, `Class1.vb`, apparaît dans le **nom** champ. Modifiez ce champ à MathClass.vb et cliquez sur **ajouter**. Cette opération crée une classe nommée `MathClass`et affiche son code.  
   
-6.  Ajoutez le code suivant au début du `MathClass` d’hériter de la classe COM.  
+6. Ajoutez le code suivant au début du `MathClass` d’hériter de la classe COM.  
   
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
-7.  Surcharger la méthode publique de la classe de base en ajoutant le code suivant à `MathClass`:  
+7. Surcharger la méthode publique de la classe de base en ajoutant le code suivant à `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
-8.  Étendez la classe héritée en ajoutant le code suivant à `MathClass`:  
+8. Étendez la classe héritée en ajoutant le code suivant à `MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
@@ -108,13 +108,13 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 #### <a name="to-test-the-inherited-class"></a>Pour tester la classe héritée  
   
-1.  Ajouter un bouton à votre formulaire de démarrage, puis double-cliquez dessus pour afficher son code.  
+1. Ajouter un bouton à votre formulaire de démarrage, puis double-cliquez dessus pour afficher son code.  
   
-2.  Dans le bouton `Click` procédure de gestionnaire d’événements, ajoutez le code suivant pour créer une instance de `MathClass` et appeler les méthodes surchargées :  
+2. Dans le bouton `Click` procédure de gestionnaire d’événements, ajoutez le code suivant pour créer une instance de `MathClass` et appeler les méthodes surchargées :  
   
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
-3.  Exécutez le projet en appuyant sur F5.  
+3. Exécutez le projet en appuyant sur F5.  
   
  Lorsque vous cliquez sur le bouton sur le formulaire, le `AddNumbers` méthode est appelée tout d’abord avec `Short` numéros, de type de données et Visual Basic choisit la méthode appropriée à partir de la classe de base. Le deuxième appel à `AddNumbers` est dirigé vers la méthode de surcharge à partir de `MathClass`. Le troisième appel appelle le `SubtractNumbers` (méthode), qui étend la classe. La propriété dans la classe de base est définie, et la valeur est affichée.  
   
@@ -132,5 +132,5 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
 ## <a name="see-also"></a>Voir aussi
 
 - [Interopérabilité COM dans les applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Inherits (instruction)](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Short (type de données)](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Short, type de données](../../../visual-basic/language-reference/data-types/short-data-type.md)

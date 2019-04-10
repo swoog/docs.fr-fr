@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225766"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333312"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Procédure pas à pas : mise à jour des informations de barre d’état au moment de l’exécution
 > [!IMPORTANT]
@@ -28,29 +28,29 @@ ms.locfileid: "59225766"
   
 ### <a name="to-get-the-status-bar-ready-for-updating"></a>Pour préparer la mise à jour de la barre d’état  
   
-1.  Créez un nouveau Windows Form.  
+1. Créez un nouveau Windows Form.  
   
-2.  Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md).  
+2. Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
-3.  Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez [Guide pratique pour Ajouter des panneaux à un contrôle StatusBar](how-to-add-panels-to-a-statusbar-control.md).  
+3. Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez [Guide pratique pour Ajouter des panneaux à un contrôle StatusBar](how-to-add-panels-to-a-statusbar-control.md).  
   
-4.  Pour le <xref:System.Windows.Forms.StatusBar> contrôle que vous avez ajouté à votre formulaire, définissez la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriété `true`.  
+4. Pour le <xref:System.Windows.Forms.StatusBar> contrôle que vous avez ajouté à votre formulaire, définissez la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriété `true`.  
   
-5.  Ajouter un formulaire Windows <xref:System.Windows.Forms.Timer> composant au formulaire.  
+5. Ajouter un formulaire Windows <xref:System.Windows.Forms.Timer> composant au formulaire.  
   
     > [!NOTE]
     >  Les formulaires Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> composant est conçu pour un environnement Windows Forms. Si vous avez besoin d’un minuteur adapté à un environnement de serveur, consultez l’article [Introduction aux minuteurs serveur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
-6.  Affectez à la propriété <xref:System.Windows.Forms.Timer.Enabled%2A> la valeur `true`.  
+6. Affectez à la propriété <xref:System.Windows.Forms.Timer.Enabled%2A> la valeur `true`.  
   
-7.  Définir le <xref:System.Windows.Forms.Timer.Interval%2A> propriété de la <xref:System.Windows.Forms.Timer> à 30000.  
+7. Définir le <xref:System.Windows.Forms.Timer.Interval%2A> propriété de la <xref:System.Windows.Forms.Timer> à 30000.  
   
     > [!NOTE]
     >  Le <xref:System.Windows.Forms.Timer.Interval%2A> propriété de la <xref:System.Windows.Forms.Timer> composant est défini sur 30 secondes (30 000 millisecondes) pour garantir qu’une heure précise de l’heure affichée.  
   
 ### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Pour implémenter la minuterie afin de mettre à jour la barre d’état  
   
-1.  Insérez le code suivant dans le Gestionnaire d’événements de la <xref:System.Windows.Forms.Timer> composant à mettre à jour le panneau de la <xref:System.Windows.Forms.StatusBar> contrôle.  
+1. Insérez le code suivant dans le Gestionnaire d’événements de la <xref:System.Windows.Forms.Timer> composant à mettre à jour le panneau de la <xref:System.Windows.Forms.StatusBar> contrôle.  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -79,7 +79,7 @@ ms.locfileid: "59225766"
   
 ### <a name="to-test-the-application"></a>Pour tester l'application  
   
-1.  Déboguez l’application et appuyez sur la touche F5 pour l’exécuter. Pour plus d’informations sur le débogage, consultez l’article [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
+1. Déboguez l’application et appuyez sur la touche F5 pour l’exécuter. Pour plus d’informations sur le débogage, consultez l’article [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
     > [!NOTE]
     >  L’horloge apparaîtra dans la barre d’état au bout de 30 secondes environ. Cela permet d’obtenir l’heure la plus précise possible. À l’inverse, pour que l’horloge s’affiche plus vite, vous pouvez réduire la valeur de la <xref:System.Windows.Forms.Timer.Interval%2A> propriété définie à l’étape 7 de la procédure précédente.  

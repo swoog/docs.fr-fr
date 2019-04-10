@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341190"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Dépannage des problèmes liés à l'interopérabilité (Visual Basic)
 Lorsque vous interagissez entre COM et le code managé de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], vous pouvez rencontrer un ou plusieurs des problèmes courants suivants.  
@@ -42,9 +42,9 @@ Lorsque vous interagissez entre COM et le code managé de la [!INCLUDE[dnprdnsho
   
  Le changement de nom peut provoquer deux problèmes pour les consommateurs de l’objet COM.  
   
-1.  Les clients ne l’espériez les noms de méthode générée.  
+1. Les clients ne l’espériez les noms de méthode générée.  
   
-2.  Les noms de méthode générée dans la classe exposée comme un objet COM peuvent changer lorsque de nouvelles surcharges sont ajoutées à la classe ou de sa classe de base. Cela peut entraîner des problèmes de versioning.  
+2. Les noms de méthode générée dans la classe exposée comme un objet COM peuvent changer lorsque de nouvelles surcharges sont ajoutées à la classe ou de sa classe de base. Cela peut entraîner des problèmes de versioning.  
   
  Pour résoudre les problèmes, attribuez un nom unique, au lieu d’utiliser la surcharge, lorsque vous développez des objets qui seront exposées en tant qu’objets COM à chaque méthode.  
   
@@ -130,8 +130,8 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Tlbimp.exe (importateur de bibliothèques de types)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (Type Library Importer)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (exportateur de bibliothèques de types)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Procédure pas à pas : Implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits (instruction)](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Global Assembly Cache](../../../framework/app-domains/gac.md)

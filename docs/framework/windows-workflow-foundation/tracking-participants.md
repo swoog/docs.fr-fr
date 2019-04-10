@@ -2,12 +2,12 @@
 title: Participants de suivi
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340176"
 ---
 # <a name="tracking-participants"></a>Participants de suivi
 Les participants de traçage sont des points d'extensibilité qui permettent à un développeur de workflow d'accéder aux objets <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> et de les traiter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclut un participant de suivi standard qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé.  
@@ -81,13 +81,13 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Pour activer l'affichage des enregistrements de suivi dans l'observateur d'événements  
   
-1.  Démarrez l'observateur d'événements (EVENTVWR.EXE).  
+1. Démarrez l'observateur d'événements (EVENTVWR.EXE).  
   
-2.  Sélectionnez **Observateur d’événements, journaux Applications et Services, Microsoft, Windows, serveur d’applications-Applications**.  
+2. Sélectionnez **Observateur d’événements, journaux Applications et Services, Microsoft, Windows, serveur d’applications-Applications**.  
   
-3.  Avec le bouton droit et vérifiez que **vue d’analyse et de journaux de débogage** est sélectionné. Si tel n'est pas le cas, activez cette case à cocher de façon à ce que la coche apparaisse en regard de celle-ci. Cela permet d’afficher le **analyse**, **Perf**, et **déboguer** journaux.  
+3. Avec le bouton droit et vérifiez que **vue d’analyse et de journaux de débogage** est sélectionné. Si tel n'est pas le cas, activez cette case à cocher de façon à ce que la coche apparaisse en regard de celle-ci. Cela permet d’afficher le **analyse**, **Perf**, et **déboguer** journaux.  
   
-4.  Avec le bouton droit le **analyse** et sélectionnez **activer le journal**. Le journal existera dans le fichier %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4. Avec le bouton droit le **analyse** et sélectionnez **activer le journal**. Le journal existera dans le fichier %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participant de suivi personnalisé  
  L’API de participant de suivi permet l’extension de l’exécution du suivi avec un participant de suivi fourni par l’utilisateur, qui peut inclure une logique personnalisée permettant de gérer les enregistrements de suivi émis par l’exécution du workflow. Pour écrire un participant de suivi personnalisé, le développeur doit implémenter la méthode `Track` sur la classe <xref:System.Activities.Tracking.TrackingParticipant>. Cette méthode est appelée lorsqu'un enregistrement de suivi est émis par l'exécution du workflow.  

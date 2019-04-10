@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modifier des Styles d’un élément dans le modèle d’objet de Document HTML managé'
+title: 'Procédure : modifier des styles dans un élément du modèle objet de document HTML managé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333663"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Procédure : Modifier des Styles d’un élément dans le modèle d’objet de Document HTML managé
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Procédure : modifier des styles dans un élément du modèle objet de document HTML managé
 
 Vous pouvez utiliser des styles HTML pour contrôler l’apparence d’un document et ses éléments. <xref:System.Windows.Forms.HtmlDocument> et <xref:System.Windows.Forms.HtmlElement> prennent en charge <xref:System.Windows.Forms.HtmlElement.Style%2A> propriétés qui acceptent des chaînes de style au format suivant :
 
@@ -68,7 +68,7 @@ La procédure suivante contient le code que vous pouvez utiliser pour manipuler 
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  Exécuter le projet. Exécutez votre curseur sur la première `DIV` pour observer les effets du code.  
+7. Exécuter le projet. Exécutez votre curseur sur la première `DIV` pour observer les effets du code.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre le code complet pour le `StyleGenerator` (classe), qui analyse une valeur de style existante, prend en charge l’ajout, modification et suppression de styles et retourne une nouvelle valeur de style avec les modifications demandées.  

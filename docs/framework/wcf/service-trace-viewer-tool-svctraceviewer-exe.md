@@ -2,12 +2,12 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341099"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d’analyser des traces de diagnostic sont générées par WCF. Service Trace Viewer permet facilement de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
 ##### <a name="to-open-a-trace-file"></a>Pour ouvrir un fichier de suivi  
   
-1.  Démarrez Service Trace Viewer à l’aide d’une fenêtre de commande et accédez à votre emplacement d’installation de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), puis tapez `SvcTraceViewer.exe`.  
+1. Démarrez Service Trace Viewer à l’aide d’une fenêtre de commande et accédez à votre emplacement d’installation de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), puis tapez `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  L'outil Service Trace Viewer peut être associé à deux types de fichier : .svclog et .stvproj. Vous pouvez utiliser deux paramètres dans la ligne de commande pour inscrire et supprimer l’inscription des extensions de fichier.  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 >   
 >  /unregister : supprimer l'inscription de l'association des extensions de fichier .svclog et .stvproj avec SvcTraceViewer.exe  
   
-1.  Démarrage du Service Trace Viewer, cliquez sur **fichier** , puis pointez sur **Open**. Naviguez jusqu'à l'emplacement où vos fichiers de suivi sont stockés.  
+1. Démarrage du Service Trace Viewer, cliquez sur **fichier** , puis pointez sur **Open**. Naviguez jusqu'à l'emplacement où vos fichiers de suivi sont stockés.  
   
-2.  Double-cliquez sur le fichier de suivi que vous souhaitez ouvrir.  
+2. Double-cliquez sur le fichier de suivi que vous souhaitez ouvrir.  
   
     > [!NOTE]
     >  Appuyez sur MAJ en cliquant sur plusieurs fichiers de suivi pour sélectionner et ouvrir simultanément plusieurs fichiers. Service Trace Viewer fusionne le contenu de tous les fichiers et les affiche. Par exemple, vous pouvez ouvrir des fichiers à la fois de clients et de services. Cela est utile lorsque vous avez activé l'enregistrement de message et la propagation d'activité dans la configuration. Ainsi, vous pouvez consulter l'échange de messages entre le client et le service. Vous pouvez également faire glisser plusieurs fichiers dans la visionneuse, ou utiliser le **projet** onglet. Pour plus d'informations, voir la section Gestion de projet.  
   
-3.  Pour ajouter des fichiers de suivi supplémentaires à la collection qui est ouverte, cliquez sur **fichier** , puis pointez sur **ajouter**. Dans la fenêtre qui s'affiche, naviguez jusqu'à l'emplacement des fichiers de suivi et double-cliquez sur le fichier que vous souhaitez ajouter.  
+3. Pour ajouter des fichiers de suivi supplémentaires à la collection qui est ouverte, cliquez sur **fichier** , puis pointez sur **ajouter**. Dans la fenêtre qui s'affiche, naviguez jusqu'à l'emplacement des fichiers de suivi et double-cliquez sur le fichier que vous souhaitez ajouter.  
   
 > [!CAUTION]
 >  Il n'est pas recommandé de charger un fichier journal de suivi dont la taille est supérieure à 200 Mo. Si vous essayez de charger un fichier plus volumineux, le processus de chargement peut durer longtemps, selon vos ressources informatiques. L'outil Service Trace Viewer peut ne peut pas être réactif pendant une longue période, ou épuiser la mémoire de l'ordinateur. Pour éviter cela, il est recommandé de configurer un chargement partiel. Pour plus d'informations sur la méthode à utiliser, consultez la section consacrée au chargement des fichiers de suivi volumineux.  
@@ -154,24 +154,24 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
 ###### <a name="selecting-traces-in-the-graph"></a>Sélection de suivis dans le graphique  
   
-1.  Cliquez sur un bloc dans le graphique.  
+1. Cliquez sur un bloc dans le graphique.  
   
-2.  Utilisez les touches haut et bas pour sélectionner les suivis précédents et suivants.  
+2. Utilisez les touches haut et bas pour sélectionner les suivis précédents et suivants.  
   
-3.  Observez les informations de suivi dans le volet Suivi et le volet Détail.  
+3. Observez les informations de suivi dans le volet Suivi et le volet Détail.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Développement ou réduction de transferts d’activité  
  Vous pouvez développer les transferts d’activité lors du transfert de l’activité sélectionnée vers une autre activité. Cela vous permet de suivre les transferts.  
   
  Pour développer ou réduire des transferts d‘activité  
   
-1.  Localisez le suivi de transfert avec un signe « + » sur la gauche de l’icône de transfert.  
+1. Localisez le suivi de transfert avec un signe « + » sur la gauche de l’icône de transfert.  
   
-2.  Cliquez sur « + », ou appuyez sur **Ctrl** et « + » à l’aide du clavier.  
+2. Cliquez sur « + », ou appuyez sur **Ctrl** et « + » à l’aide du clavier.  
   
-3.  L'activité suivante apparaît dans le graphique.  
+3. L'activité suivante apparaît dans le graphique.  
   
-4.  Un «- » apparaît à gauche de l’icône de transfert. Cliquez sur le «- » signer ou appuyez sur Ctrl et «- », le transfert d’activité est réduit.  
+4. Un «- » apparaît à gauche de l’icône de transfert. Cliquez sur le «- » signer ou appuyez sur Ctrl et «- », le transfert d’activité est réduit.  
   
 > [!NOTE]
 >   Lorsqu'une activité se compose de plusieurs transferts et que vous développez l'un des transferts, les activités entre l'activité racine et la nouvelle activité s'affichent. Ces nouvelles activités apparaissent sous forme réduite. Si vous souhaitez consulter les détails de ces activités, développez-les verticalement en cliquant sur l’icône de développement dans l’en-tête du graphique.  
@@ -181,13 +181,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
  Pour développer ou réduire verticalement des activités :  
   
-1.  Cliquez sur l’icône « + » dans l’en-tête d’activité pour développer l’activité verticalement.  
+1. Cliquez sur l’icône « + » dans l’en-tête d’activité pour développer l’activité verticalement.  
   
-2.  Remarquez que tous les suivis sont affichés dans le graphique.  
+2. Remarquez que tous les suivis sont affichés dans le graphique.  
   
-3.  Cliquez sur le «- » icône dans l’en-tête d’activité pour réduire verticalement l’activité.  
+3. Cliquez sur le «- » icône dans l’en-tête d’activité pour réduire verticalement l’activité.  
   
-4.  Remarquez que seuls les transferts, journaux de messages, suivis d'avertissement et d'exception importants sont affichés dans l'activité.  
+4. Remarquez que seuls les transferts, journaux de messages, suivis d'avertissement et d'exception importants sont affichés dans l'activité.  
   
 ###### <a name="options"></a>Options  
  Vous pouvez sélectionner deux options à partir de la **Option** menu dans la vue du graphique.  
@@ -259,17 +259,17 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Création d'un filtre personnalisé à l'aide de l'Assistant Modèle  
  Vous pouvez cliquer sur un suivi existant et créer un filtre en fonction de la structure du suivi. Cet exemple permet de créer un filtre personnalisé en fonction de l'ID de thread.  
   
-1.  Dans le volet de suivi, dans la zone supérieure droite de Trace Viewer, sélectionnez un suivi qui inclut l'élément que vous souhaitez filtrer.  
+1. Dans le volet de suivi, dans la zone supérieure droite de Trace Viewer, sélectionnez un suivi qui inclut l'élément que vous souhaitez filtrer.  
   
-2.  Cliquez sur le **créer un filtre personnalisé** bouton situé en haut du volet trace.  
+2. Cliquez sur le **créer un filtre personnalisé** bouton situé en haut du volet trace.  
   
-3.  Dans la boîte de dialogue qui s'affiche, entrez un nom pour votre filtre. Dans cet exemple, entrez `Thread ID`. Vous pouvez également fournir une description de votre filtre.  
+3. Dans la boîte de dialogue qui s'affiche, entrez un nom pour votre filtre. Dans cet exemple, entrez `Thread ID`. Vous pouvez également fournir une description de votre filtre.  
   
-4.  L’arborescence sur la gauche affiche la structure de l’enregistrement de suivi que vous avez sélectionné lors de la première étape. Naviguez jusqu'à l'élément pour lequel vous souhaitez créer une condition. Dans cet exemple, naviguez jusqu’au ThreadID se trouver dans le XPath : /E2ETraceEvent/System/Execution/@ThreadID nœud. Double-cliquez sur l'attribut ThreadID dans l'arborescence. Cela crée à droite de la boîte de dialogue une expression pour l'attribut.  
+4. L’arborescence sur la gauche affiche la structure de l’enregistrement de suivi que vous avez sélectionné lors de la première étape. Naviguez jusqu'à l'élément pour lequel vous souhaitez créer une condition. Dans cet exemple, naviguez jusqu’au ThreadID se trouver dans le XPath : /E2ETraceEvent/System/Execution/@ThreadID nœud. Double-cliquez sur l'attribut ThreadID dans l'arborescence. Cela crée à droite de la boîte de dialogue une expression pour l'attribut.  
   
-5.  Modifiez le champ de paramètre pour la condition ThreadID d’aucun à '{0}'. Cette étape permet de configurer la valeur de ThreadID lorsque le filtre est appliqué (voir la section Comment appliquer un filtre). Vous pouvez définir jusqu'à quatre paramètres. Les conditions sont associées à l'aide de l'opérateur OR.  
+5. Modifiez le champ de paramètre pour la condition ThreadID d’aucun à '{0}'. Cette étape permet de configurer la valeur de ThreadID lorsque le filtre est appliqué (voir la section Comment appliquer un filtre). Vous pouvez définir jusqu'à quatre paramètres. Les conditions sont associées à l'aide de l'opérateur OR.  
   
-6.  Cliquez sur **Ok** pour créer le filtre.  
+6. Cliquez sur **Ok** pour créer le filtre.  
   
 > [!NOTE]
 >  Une fois qu'un filtre a été créé à l'aide de l'Assistant Modèle, il peut être modifié uniquement manuellement. Il n'est pas possible d'activer l'Assistant pour un filtre qui a été créé précédemment. De plus, les conditions d'un filtre XPath créé dans l'Assistant Modèle sont associées à l'aide de l'opérateur OR. Si vous avez besoin d'une opération AND, vous pouvez modifier l'expression de filtre une fois qu'elle a été créée.  
@@ -277,20 +277,20 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ###### <a name="creating-a-custom-filter-manually"></a>Création manuelle d'un filtre personnalisé  
  Le menu Filtres personnalisés vous permet d’entrer des filtres XPath manuellement.  
   
-1.  Dans le menu Affichage, cliquez sur le **filtres personnalisés** élément de menu.  
+1. Dans le menu Affichage, cliquez sur le **filtres personnalisés** élément de menu.  
   
-2.  Dans la boîte de dialogue qui s’affiche, cliquez sur **nouveau.**  
+2. Dans la boîte de dialogue qui s’affiche, cliquez sur **nouveau.**  
   
-3.  Au minimum, précisez un nom de filtre et une expression XPath.  
+3. Au minimum, précisez un nom de filtre et une expression XPath.  
   
-4.  Cliquez sur **OK**.  
+4. Cliquez sur **OK**.  
   
 ###### <a name="applying-a-custom-filter"></a>Application d'un filtre personnalisé  
  Une fois qu'un filtre personnalisé a été créé, il est accessible via la barre d'outils de filtre. Sélectionnez le filtre que vous souhaitez appliquer dans le **recherche dans** champ de la barre d’outils de filtre. Pour l'exemple précédent, sélectionnez 'ID Thread'.  
   
-1.  Spécifiez la valeur que vous recherchez dans le **rechercher** champ. Dans notre exemple, entrez l'ID du thread pour lequel vous souhaitez effectuer une recherche.  
+1. Spécifiez la valeur que vous recherchez dans le **rechercher** champ. Dans notre exemple, entrez l'ID du thread pour lequel vous souhaitez effectuer une recherche.  
   
-2.  Cliquez sur **filtrer maintenant**, puis observez le résultat de l’opération.  
+2. Cliquez sur **filtrer maintenant**, puis observez le résultat de l’opération.  
   
  Si votre filtre utilise plusieurs paramètres, entrez-les à l’aide de « ; » comme séparateur dans le **rechercher** champ. Par exemple, la chaîne suivante définit des 3 paramètres : ‘1;findValue;text’. La visionneuse s’applique à « 1 » à la {0} paramètre du filtre. 'findValue' et 'text' sont appliqués aux {1} et {2} respectivement.  
   
@@ -299,21 +299,21 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
  Pour importer un filtre personnalisé :  
   
-1.  Dans le **vue** menu, cliquez sur **filtres personnalisés**.  
+1. Dans le **vue** menu, cliquez sur **filtres personnalisés**.  
   
-2.  Dans la boîte de dialogue qui s’ouvre, cliquez sur le **importation** bouton.  
+2. Dans la boîte de dialogue qui s’ouvre, cliquez sur le **importation** bouton.  
   
-3.  Accédez au fichier de filtre personnalisé (.stvcf), cliquez sur le fichier, puis cliquez sur le **Open** bouton.  
+3. Accédez au fichier de filtre personnalisé (.stvcf), cliquez sur le fichier, puis cliquez sur le **Open** bouton.  
   
  Pour exporter un filtre personnalisé :  
   
-1.  Dans le menu Affichage, cliquez sur **filtres personnalisés**.  
+1. Dans le menu Affichage, cliquez sur **filtres personnalisés**.  
   
-2.  Dans la boîte de dialogue qui s'affiche, sélectionnez le filtre que vous souhaitez exporter.  
+2. Dans la boîte de dialogue qui s'affiche, sélectionnez le filtre que vous souhaitez exporter.  
   
-3.  Cliquez sur le **exporter** bouton.  
+3. Cliquez sur le **exporter** bouton.  
   
-4.  Spécifiez le nom et l’emplacement du fichier de définition de filtre personnalisé (.stvcf), puis cliquez sur le **enregistrer** bouton.  
+4. Spécifiez le nom et l’emplacement du fichier de définition de filtre personnalisé (.stvcf), puis cliquez sur le **enregistrer** bouton.  
   
 > [!NOTE]
 >  Ces filtres personnalisés peuvent uniquement être importés et exportés à partir de Service Trace Viewer. Ils ne peuvent pas être lus par d'autres outils.  
@@ -396,9 +396,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 #### <a name="adjusting-partial-loading"></a>Ajuster le chargement partiel  
  Une fois que vous avez chargé partiellement le fichier de suivi, vous pouvez modifier le groupe de données en cours de chargement. Vous pouvez l'effectuer en ajustant la barre d'outils Chargement partiel dans la partie supérieure de Viewer.  
   
-1.  Déplacez la barre d'outils à l'aide de la souris ou indiquez le début et la fin du chargement partiel.  
+1. Déplacez la barre d'outils à l'aide de la souris ou indiquez le début et la fin du chargement partiel.  
   
-2.  Cliquez sur le **Adjust** bouton.  
+2. Cliquez sur le **Adjust** bouton.  
   
 ## <a name="understanding-trace-icons"></a>Fonctionnement des icônes de suivi  
  Voici une liste d’icônes que l’outil Service Trace Viewer utilise dans le **activité** vue, **Graph** vue et **Trace** volet pour représenter différents éléments.  

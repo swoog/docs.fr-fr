@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: 6a0e24743c861ba92fc284a84fa4ef26e2ee48a8
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ecbed5b59d36b1984c0b0ae161821ea99d28e090
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334638"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>Impossible d’obtenir le nom complet du système d’exploitation en raison d’une erreur interne
 Impossible d’obtenir le nom complet du système d’exploitation en raison d’une erreur interne. Ceci peut être dû au fait que WMI est absent de l’ordinateur actuel.  
@@ -18,12 +18,12 @@ Impossible d’obtenir le nom complet du système d’exploitation en raison d�
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Ajoutez un bloc `Try...Catch` autour de l’appel à la propriété `My.Computer.Info.OSFullName` .  
+1. Ajoutez un bloc `Try...Catch` autour de l’appel à la propriété `My.Computer.Info.OSFullName` .  
   
-2.  Pour plus d’informations sur WMI et comment l’installer, accédez à et recherchez « Windows Management Instrumentation Core ».  
+2. Pour plus d’informations sur WMI et comment l’installer, accédez à et recherchez « Windows Management Instrumentation Core ».  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [My.Computer.Info.OSFullName](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)
 - [Gestion et levée d’exceptions dans .NET](../../standard/exceptions/index.md)
-- [Try...Catch...Finally (instruction)](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally, instruction](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

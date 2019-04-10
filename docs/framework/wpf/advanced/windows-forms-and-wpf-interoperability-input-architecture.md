@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335717"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF
 Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nécessite que les deux technologies disposent du traitement d’entrée au clavier approprié. Cette rubrique décrit comment ces technologies implémentent le clavier et traitement pour permettre l’interopérabilité régulière dans des applications hybrides du message.  
@@ -57,13 +57,13 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ### <a name="surrogate-windows-forms-message-loop"></a>Boucle de Message de remplacement Windows Forms  
  Par défaut, le <xref:System.Windows.Forms.Application?displayProperty=nameWithType> classe contient la boucle de message principale pour [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] applications. Lors de l’interopérabilité, la [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] message boucle ne traite pas les messages. Par conséquent, cette logique doit être reproduite. Le gestionnaire pour le <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> événement effectue les étapes suivantes :  
   
-1.  Filtre le message à l’aide de la <xref:System.Windows.Forms.IMessageFilter> interface.  
+1. Filtre le message à l’aide de la <xref:System.Windows.Forms.IMessageFilter> interface.  
   
-2.  Appelle le <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> (méthode).  
+2. Appelle le <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> (méthode).  
   
-3.  Traduit et distribue le message, si nécessaire.  
+3. Traduit et distribue le message, si nécessaire.  
   
-4.  Transmet le message au contrôle d’hébergement, si aucun des autres contrôles ne traitement le message.  
+4. Transmet le message au contrôle d’hébergement, si aucun des autres contrôles ne traitement le message.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Implémentation IKeyboardInputSink  
  La boucle de message de substitut gère la gestion du clavier. Par conséquent, le <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> méthode est le seul <xref:System.Windows.Interop.IKeyboardInputSink> membre qui nécessite une implémentation dans la <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe.  
@@ -72,11 +72,11 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> implémentation de la <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> méthode effectue les étapes suivantes :  
   
-1.  Recherche le premier ou dernier [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle contenu par le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle et qui peut recevoir le focus. Le choix de contrôle dépend des informations de parcours.  
+1. Recherche le premier ou dernier [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle contenu par le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle et qui peut recevoir le focus. Le choix de contrôle dépend des informations de parcours.  
   
-2.  Définit le focus au contrôle et retourne `true`.  
+2. Définit le focus au contrôle et retourne `true`.  
   
-3.  Si aucun contrôle ne peut recevoir le focus, retourne `false`.  
+3. Si aucun contrôle ne peut recevoir le focus, retourne `false`.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost Registration  
  Lorsque le handle de fenêtre pour un <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle est créé, le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle appelle une méthode statique interne qui enregistre sa présence pour la boucle de message.  

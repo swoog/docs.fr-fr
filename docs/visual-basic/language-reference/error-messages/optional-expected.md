@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: d70a71f8b5f72edbd7f3e50bc099360d02e95389
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341879"
 ---
 # <a name="optional-expected"></a>'Optional' attendu
 Un argument facultatif dans une déclaration de procédure est suivi d’un argument obligatoire. Tous les arguments qui suivent un argument facultatif doivent également être facultatifs.  
@@ -21,9 +21,9 @@ Un argument facultatif dans une déclaration de procédure est suivi d’un argu
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Si l’argument est destiné à être requis, déplacez-le à faire précéder le premier argument facultatif dans la liste d’arguments.  
+1. Si l’argument est destiné à être requis, déplacez-le à faire précéder le premier argument facultatif dans la liste d’arguments.  
   
-2.  Si l’argument est destiné à être facultatif, utilisez le `Optional` mot clé.  
+2. Si l’argument est destiné à être facultatif, utilisez le `Optional` mot clé.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333611"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : définir des styles de cellules par défaut et des formats de données pour le contrôle DataGridView Windows Forms à l’aide du concepteur
 Le <xref:System.Windows.Forms.DataGridView> contrôle vous permet de spécifier des styles de cellules par défaut et les formats de données pour l’ensemble du contrôle pour des colonnes spécifiques, pour les en-têtes de lignes et de colonnes et de lignes pour créer un effet de livre de remplacement de la cellule. Les styles par défaut définie pour l’ensemble du contrôle sont remplacées par les styles par défaut définis pour les colonnes et lignes en alternance. En outre, les styles que vous définissez dans le code des lignes individuelles et des cellules remplacent les styles par défaut.  
@@ -28,11 +28,11 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle vous permet de spécifier 
   
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Pour définir des styles par défaut pour toutes les cellules dans le contrôle  
   
-1.  Sélectionnez le <xref:System.Windows.Forms.DataGridView> contrôle dans le concepteur.  
+1. Sélectionnez le <xref:System.Windows.Forms.DataGridView> contrôle dans le concepteur.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, ou <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> propriété. Le **Générateur CellStyle** boîte de dialogue s’affiche.  
+2. Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, ou <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> propriété. Le **Générateur CellStyle** boîte de dialogue s’affiche.  
   
-3.  Définir le style en définissant les propriétés, à l’aide de la **aperçu** volet pour confirmer votre choix.  
+3. Définir le style en définissant les propriétés, à l’aide de la **aperçu** volet pour confirmer votre choix.  
   
 > [!NOTE]
 >  Si les styles visuels sont activés, les en-têtes de lignes et de colonnes (à l’exception de la <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) sont automatiquement un style du thème actuel, remplaçant la <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> et <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> les valeurs de propriété.  
@@ -41,23 +41,23 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle vous permet de spécifier 
   
 ### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>Pour définir des styles par défaut de cellules dans les colonnes individuelles  
   
-1.  Cliquez sur le <xref:System.Windows.Forms.DataGridView> contrôler dans le concepteur et choisissez **modifier les colonnes**.  
+1. Cliquez sur le <xref:System.Windows.Forms.DataGridView> contrôler dans le concepteur et choisissez **modifier les colonnes**.  
   
-2.  Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
+2. Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
   
-3.  Dans le **propriétés de la colonne** grille, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> propriété. Le **Générateur CellStyle** boîte de dialogue s’affiche.  
+3. Dans le **propriétés de la colonne** grille, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> propriété. Le **Générateur CellStyle** boîte de dialogue s’affiche.  
   
-4.  Définir le style en définissant les propriétés, à l’aide de la **aperçu** volet pour confirmer votre choix.  
+4. Définir le style en définissant les propriétés, à l’aide de la **aperçu** volet pour confirmer votre choix.  
   
 ### <a name="to-format-data-in-cells"></a>Mettre en forme les données dans les cellules  
   
-1.  Utilisez une des procédures précédentes pour afficher un **Générateur CellStyle** boîte de dialogue liés à une propriété de style de cellule par défaut.  
+1. Utilisez une des procédures précédentes pour afficher un **Générateur CellStyle** boîte de dialogue liés à une propriété de style de cellule par défaut.  
   
-2.  Dans le **Générateur CellStyle** boîte de dialogue, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> propriété. Le **chaîne de Format** boîte de dialogue s’affiche.  
+2. Dans le **Générateur CellStyle** boîte de dialogue, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> propriété. Le **chaîne de Format** boîte de dialogue s’affiche.  
   
-3.  Sélectionnez un type de format, puis modifier les détails du type (par exemple, le nombre de décimales à afficher), à l’aide de la **exemple** case pour confirmer votre choix.  
+3. Sélectionnez un type de format, puis modifier les détails du type (par exemple, le nombre de décimales à afficher), à l’aide de la **exemple** case pour confirmer votre choix.  
   
-4.  Si vous liez le <xref:System.Windows.Forms.DataGridView> contrôle à une source de données qui est susceptible de contenir des valeurs null, renseignez le **valeur Null** zone de texte. Cette valeur est affichée lorsque la valeur de cellule est égale à une référence null (`Nothing` en Visual Basic) ou <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+4. Si vous liez le <xref:System.Windows.Forms.DataGridView> contrôle à une source de données qui est susceptible de contenir des valeurs null, renseignez le **valeur Null** zone de texte. Cette valeur est affichée lorsque la valeur de cellule est égale à une référence null (`Nothing` en Visual Basic) ou <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

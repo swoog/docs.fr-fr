@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830368"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334599"
 ---
 # <a name="-delaysign"></a>-delaysign
 Spécifie si l'assembly sera complètement ou partiellement signé.  
@@ -37,11 +37,11 @@ Spécifie si l'assembly sera complètement ou partiellement signé.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Pour définir delaysign - dans l’environnement de développement intégré Visual Studio  
   
-1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**.   
+1. Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**.   
   
-2.  Cliquez sur l’onglet **Signature**.  
+2. Cliquez sur l’onglet **Signature**.  
   
-3.  Définissez la valeur dans le **différer la signature uniquement** boîte.  
+3. Définissez la valeur dans le **différer la signature uniquement** boîte.  
   
 ## <a name="see-also"></a>Voir aussi
 

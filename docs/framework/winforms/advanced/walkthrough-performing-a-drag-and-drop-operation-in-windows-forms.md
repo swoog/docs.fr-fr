@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340722"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procédure pas à pas : exécution d’une opération glisser-déplacer dans Windows Forms
 Pour effectuer des opérations de glisser-déplacer dans des applications Windows vous devez gérer une série d’événements, plus particulièrement la <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, et <xref:System.Windows.Forms.Control.DragDrop> événements. En utilisant les informations disponibles dans les arguments de ces événements, vous pouvez faciliter les opérations de glisser-déplacer.  
@@ -28,7 +28,7 @@ Pour effectuer des opérations de glisser-déplacer dans des applications Window
   
 #### <a name="to-start-a-drag-operation"></a>Pour démarrer une opération de glisser  
   
-1.  Dans le <xref:System.Windows.Forms.Control.MouseDown> événement pour le contrôle où l’opération glisser commence, utilisez le `DoDragDrop` auront de méthode pour définir les données à faire glisser et l’effet autorisé du glissement. Pour plus d’informations, consultez <xref:System.Windows.Forms.DragEventArgs.Data%2A> et <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. Dans le <xref:System.Windows.Forms.Control.MouseDown> événement pour le contrôle où l’opération glisser commence, utilisez le `DoDragDrop` auront de méthode pour définir les données à faire glisser et l’effet autorisé du glissement. Pour plus d’informations, consultez <xref:System.Windows.Forms.DragEventArgs.Data%2A> et <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
      L’exemple suivant montre comment initier une opération glisser. Le contrôle où l’opération glisser commence est un <xref:System.Windows.Forms.Button> contrôle, les données glissées est la chaîne qui représente le <xref:System.Windows.Forms.Control.Text%2A> propriété de la <xref:System.Windows.Forms.Button> contrôle et les effets autorisés soit copie ou de déplacement.  
   
@@ -57,9 +57,9 @@ Pour effectuer des opérations de glisser-déplacer dans des applications Window
   
 #### <a name="to-perform-a-drop"></a>Pour effectuer un dépôt  
   
-1.  Définir le <xref:System.Windows.Forms.Control.AllowDrop%2A> true à la propriété.  
+1. Définir le <xref:System.Windows.Forms.Control.AllowDrop%2A> true à la propriété.  
   
-2.  Dans le `DragEnter` événement pour le contrôle où le déplacement se produira, assurez-vous que les données glissées sont d’un type acceptable (dans ce cas, <xref:System.Windows.Forms.Control.Text%2A>). Le code définit ensuite l’effet produit lorsque le déplacement se produit sur une valeur dans la <xref:System.Windows.Forms.DragDropEffects> énumération. Pour plus d'informations, consultez <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. Dans le `DragEnter` événement pour le contrôle où le déplacement se produira, assurez-vous que les données glissées sont d’un type acceptable (dans ce cas, <xref:System.Windows.Forms.Control.Text%2A>). Le code définit ensuite l’effet produit lorsque le déplacement se produit sur une valeur dans la <xref:System.Windows.Forms.DragDropEffects> énumération. Pour plus d'informations, consultez <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Pour effectuer des opérations de glisser-déplacer dans des applications Window
     > [!NOTE]
     >  Vous pouvez définir vos propres <xref:System.Windows.Forms.DataFormats> en spécifiant votre propre objet en tant que le <xref:System.Object> paramètre de la <xref:System.Windows.Forms.DataObject.SetData%2A> (méthode). Pour cela, vérifiez que l’objet spécifié est sérialisable. Pour plus d'informations, consultez <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  Dans le <xref:System.Windows.Forms.Control.DragDrop> événement pour le contrôle où le déplacement se produira, utilisez la <xref:System.Windows.Forms.DataObject.GetData%2A> méthode pour récupérer les données glissées. Pour plus d'informations, consultez <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. Dans le <xref:System.Windows.Forms.Control.DragDrop> événement pour le contrôle où le déplacement se produira, utilisez la <xref:System.Windows.Forms.DataObject.GetData%2A> méthode pour récupérer les données glissées. Pour plus d'informations, consultez <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.TextBox> contrôle est le contrôle de destination du glisser (où le dépôt sera effectué). Le code définit le <xref:System.Windows.Forms.Control.Text%2A> propriété de la <xref:System.Windows.Forms.TextBox> contrôler égale aux données glissées.  
   

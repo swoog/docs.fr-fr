@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: c7aede448fa0a759035380c533f2a9457a534bd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338993"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Procédure : créer un vérificateur d’identité du client personnalisé
 Le *identité* fonctionnalité de Windows Communication Foundation (WCF) permet à un client spécifier à l’avance l’identité attendue du service. Lorsqu'un serveur s'authentifie auprès du client, l'identité est vérifiée par rapport à l'identité attendue. (Pour obtenir une explication de l’identité et de son fonctionnement, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -19,23 +19,23 @@ Le *identité* fonctionnalité de Windows Communication Foundation (WCF) permet 
   
 ### <a name="to-extend-the-endpointidentity-class"></a>Pour étendre la classe EndpointIdentity  
   
-1.  Définissez une nouvelle classe dérivée de la classe <xref:System.ServiceModel.EndpointIdentity>. Cet exemple nomme l'extension `OrgEndpointIdentity`.  
+1. Définissez une nouvelle classe dérivée de la classe <xref:System.ServiceModel.EndpointIdentity>. Cet exemple nomme l'extension `OrgEndpointIdentity`.  
   
-2.  Ajoutez les membres privés avec les propriétés qui seront utilisées par la classe <xref:System.ServiceModel.Security.IdentityVerifier> étendue pour exécuter le contrôle d'identité par rapport aux revendications dans le jeton de sécurité retourné par le service. Cet exemple définit une propriété : la propriété `OrganizationClaim`.  
+2. Ajoutez les membres privés avec les propriétés qui seront utilisées par la classe <xref:System.ServiceModel.Security.IdentityVerifier> étendue pour exécuter le contrôle d'identité par rapport aux revendications dans le jeton de sécurité retourné par le service. Cet exemple définit une propriété : la propriété `OrganizationClaim`.  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
      [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
 ### <a name="to-extend-the-identityverifier-class"></a>Pour étendre la classe IdentityVerifier  
   
-1.  Définissez une nouvelle classe dérivée de <xref:System.ServiceModel.Security.IdentityVerifier>. Cet exemple nomme l'extension `CustomIdentityVerifier`.  
+1. Définissez une nouvelle classe dérivée de <xref:System.ServiceModel.Security.IdentityVerifier>. Cet exemple nomme l'extension `CustomIdentityVerifier`.  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#7)]
      [!code-vb[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#7)]  
   
-2.  Remplacez la méthode <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A> . La méthode détermine si le contrôle d'identité a réussi ou a échoué.  
+2. Remplacez la méthode <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A> . La méthode détermine si le contrôle d'identité a réussi ou a échoué.  
   
-3.  La méthode `CheckAccess` possède deux paramètres. Le premier est une instance de la classe <xref:System.ServiceModel.EndpointIdentity>. Le second est une instance de la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+3. La méthode `CheckAccess` possède deux paramètres. Le premier est une instance de la classe <xref:System.ServiceModel.EndpointIdentity>. Le second est une instance de la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
      Dans l'implémentation de méthode, examinez la collection de revendications retournée par la propriété <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de la classe <xref:System.IdentityModel.Policy.AuthorizationContext> et exécutez des contrôles d'authentification selon les besoins. Cet exemple commence par rechercher les revendications de type « Distinguished Name » puis compare le nom à l’extension du <xref:System.ServiceModel.EndpointIdentity> (`OrgEndpointIdentity`).  
   
@@ -44,27 +44,27 @@ Le *identité* fonctionnalité de Windows Communication Foundation (WCF) permet 
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Pour implémenter la méthode TryGetIdentity  
   
-1.  Implémentez la méthode <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> qui détermine si une instance de la classe <xref:System.ServiceModel.EndpointIdentity> peut être retournée par le client. L’infrastructure WCF appelle l’implémentation de la `TryGetIdentity` méthode pour récupérer l’identité du service à partir du message. Ensuite, l'infrastructure appelle l'implémentation `CheckAccess` avec les `EndpointIdentity` et <xref:System.IdentityModel.Policy.AuthorizationContext> retournés.  
+1. Implémentez la méthode <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> qui détermine si une instance de la classe <xref:System.ServiceModel.EndpointIdentity> peut être retournée par le client. L’infrastructure WCF appelle l’implémentation de la `TryGetIdentity` méthode pour récupérer l’identité du service à partir du message. Ensuite, l'infrastructure appelle l'implémentation `CheckAccess` avec les `EndpointIdentity` et <xref:System.IdentityModel.Policy.AuthorizationContext> retournés.  
   
-2.  Dans la méthode `TryGetIdentity`, insérez le code suivant :  
+2. Dans la méthode `TryGetIdentity`, insérez le code suivant :  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#2)]
      [!code-vb[c_HowToSetCustomClientIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#2)]  
   
 ### <a name="to-implement-a-custom-binding-and-set-the-custom-identityverifier"></a>Pour implémenter une liaison personnalisée et définir l'IdentityVerifier personnalisé  
   
-1.  Créez une méthode qui retourne un objet <xref:System.ServiceModel.Channels.Binding>. Cet exemple commence par créer une instance de la classe <xref:System.ServiceModel.WSHttpBinding> et affecte à son mode de sécurité la valeur <xref:System.ServiceModel.SecurityMode.Message>, et à son <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> la valeur <xref:System.ServiceModel.MessageCredentialType.None>.  
+1. Créez une méthode qui retourne un objet <xref:System.ServiceModel.Channels.Binding>. Cet exemple commence par créer une instance de la classe <xref:System.ServiceModel.WSHttpBinding> et affecte à son mode de sécurité la valeur <xref:System.ServiceModel.SecurityMode.Message>, et à son <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> la valeur <xref:System.ServiceModel.MessageCredentialType.None>.  
   
-2.  Créez un <xref:System.ServiceModel.Channels.BindingElementCollection> à l'aide de la méthode <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.  
+2. Créez un <xref:System.ServiceModel.Channels.BindingElementCollection> à l'aide de la méthode <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.  
   
-3.  Retournez le <xref:System.ServiceModel.Channels.SecurityBindingElement> de la collection et effectuez un cast en une variable <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+3. Retournez le <xref:System.ServiceModel.Channels.SecurityBindingElement> de la collection et effectuez un cast en une variable <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
-4.  Affectez à la propriété <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.IdentityVerifier%2A> de la classe <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> une nouvelle instance de la classe `CustomIdentityVerifier` créée précédemment.  
+4. Affectez à la propriété <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.IdentityVerifier%2A> de la classe <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> une nouvelle instance de la classe `CustomIdentityVerifier` créée précédemment.  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#3)]
      [!code-vb[c_HowToSetCustomClientIdentity#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#3)]  
   
-5.  La liaison personnalisée retournée est utilisée pour créer une instance du client et de la classe. Le client peut effectuer ensuite une vérification personnalisée de l'identité du service comme indiqué dans le code suivant.  
+5. La liaison personnalisée retournée est utilisée pour créer une instance du client et de la classe. Le client peut effectuer ensuite une vérification personnalisée de l'identité du service comme indiqué dans le code suivant.  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#4)]
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  

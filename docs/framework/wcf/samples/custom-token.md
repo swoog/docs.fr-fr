@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334443"
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l’en-tête de message WS-Security. Il est signé et chiffré à l’aide de l’élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -588,38 +588,38 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple
 
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Ouvrez une fenêtre d’invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis pour l'exécution de l'exemple sont ainsi installés. Assurez-vous que le chemin d'accès inclut le dossier dans lequel Makecert.exe se trouve.
+1. Ouvrez une fenêtre d’invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis pour l'exécution de l'exemple sont ainsi installés. Assurez-vous que le chemin d'accès inclut le dossier dans lequel Makecert.exe se trouve.
 
 > [!NOTE]
 >  Assurez-vous de supprimer les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
   
-1.  Lancez Client.exe à partir du répertoire \client\bin. L'activité du client s'affiche sur son application de console.  
+1. Lancez Client.exe à partir du répertoire \client\bin. L'activité du client s'affiche sur son application de console.  
   
-2.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+2. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
-1.  Créez un répertoire sur l'ordinateur de service pour les fichiers binaires du service.  
+1. Créez un répertoire sur l'ordinateur de service pour les fichiers binaires du service.  
   
-2.  Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. N'oubliez pas de copier le fichier CreditCardFile.txt, sinon l'authentificateur de carte de crédit ne pourra pas valider les informations de carte de crédit envoyées depuis le client. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
+2. Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. N'oubliez pas de copier le fichier CreditCardFile.txt, sinon l'authentificateur de carte de crédit ne pourra pas valider les informations de carte de crédit envoyées depuis le client. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Pour en créer un à l'aide de Setup.bat, il vous suffit de remplacer la variable `%SERVER_NAME%` par le nom complet de l'ordinateur où le service est hébergé. Notez que le fichier Setup.bat doit être exécuté dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.  
+3. Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Pour en créer un à l'aide de Setup.bat, il vous suffit de remplacer la variable `%SERVER_NAME%` par le nom complet de l'ordinateur où le service est hébergé. Notez que le fichier Setup.bat doit être exécuté dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.  
   
-4.  Copiez le certificat du serveur dans le magasin CurrentUser-TrustedPeople du client. Cette tâche est requise uniquement si le certificat du serveur n'est pas publié par un émetteur approuvé.  
+4. Copiez le certificat du serveur dans le magasin CurrentUser-TrustedPeople du client. Cette tâche est requise uniquement si le certificat du serveur n'est pas publié par un émetteur approuvé.  
   
-5.  Dans le fichier EchoServiceHost.cs, remplacez la valeur localhost du nom du sujet du certificat par le nom complet de l'ordinateur.  
+5. Dans le fichier EchoServiceHost.cs, remplacez la valeur localhost du nom du sujet du certificat par le nom complet de l'ordinateur.  
   
-6.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
+6. Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
   
-7.  Dans le fichier Client.cs, modifiez l'adresse du point de terminaison en fonction de la nouvelle adresse de votre service.  
+7. Dans le fichier Client.cs, modifiez l'adresse du point de terminaison en fonction de la nouvelle adresse de votre service.  
   
-8.  Dans le fichier Client.cs, modifiez le nom du sujet du certificat X.509 de service en remplaçant la valeur localhost par le nom complet de l'ordinateur.  
+8. Dans le fichier Client.cs, modifiez le nom du sujet du certificat X.509 de service en remplaçant la valeur localhost par le nom complet de l'ordinateur.  
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.  
   
@@ -627,4 +627,4 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
-1.  Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
+1. Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  

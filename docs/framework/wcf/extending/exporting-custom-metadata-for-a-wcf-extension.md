@@ -2,12 +2,12 @@
 title: Exportation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334508"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), exportation de métadonnées est le processus de décrire des points de terminaison de service et les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour comprendre comment utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
@@ -19,9 +19,9 @@ Dans Windows Communication Foundation (WCF), exportation de métadonnées est le
   
  Cette section décrit :  
   
-1.  Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>, laquelle vous expose les données de génération WSDL avant de publier le WSDL.  
+1. Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>, laquelle vous expose les données de génération WSDL avant de publier le WSDL.  
   
-2.  Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>, laquelle vous expose les données de stratégie avant d'exporter les assertions de stratégie dans les données WSDL.  
+2. Comment implémenter et utiliser l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>, laquelle vous expose les données de stratégie avant d'exporter les assertions de stratégie dans les données WSDL.  
   
  Pour plus d’informations sur l’importation WSDL personnalisée et les assertions de stratégie, consultez [l’importation de métadonnées personnalisées pour une Extension WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).  
   

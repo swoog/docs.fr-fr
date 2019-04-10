@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338096"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procédure pas à pas : remplissage automatique de la boîte à outils avec des composants personnalisés
 Si vos composants sont définis par un projet dans la solution actuellement ouverte, ils apparaissent automatiquement dans le **boîte à outils**, sans qu’aucune action requise par vous. Vous pouvez également remplir manuellement la **boîte à outils** avec vos composants personnalisés à l’aide de la [boîte à outils éléments de boîte de dialogue Choisir (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mais la **boîte à outils** tient compte d’éléments dans de votre solution générer les sorties avec toutes les caractéristiques suivantes :  
@@ -45,31 +45,31 @@ Si vos composants sont définis par un projet dans la solution actuellement ouve
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
-1.  Créer un projet d’application Windows appelé `ToolboxExample` (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
+1. Créer un projet d’application Windows appelé `ToolboxExample` (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
   
-2.  Ajouter un nouveau composant au projet. Appelez-le `DemoComponent`.  
+2. Ajouter un nouveau composant au projet. Appelez-le `DemoComponent`.  
   
      Pour plus d'informations, voir [Procédure : Ajouter de nouveaux éléments de projet](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
-3.  Générez le projet.  
+3. Générez le projet.  
   
-4.  À partir de la **outils** menu, cliquez sur le **Options** élément. Cliquez sur **général** sous le **Windows Forms Designer** d’élément et vérifiez que le **AutoToolboxPopulate a** option est définie sur **True**.  
+4. À partir de la **outils** menu, cliquez sur le **Options** élément. Cliquez sur **général** sous le **Windows Forms Designer** d’élément et vérifiez que le **AutoToolboxPopulate a** option est définie sur **True**.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>Création d’une Instance d’un composant personnalisé  
  L’étape suivante consiste à créer une instance du composant personnalisé sur le formulaire. Étant donné que le **boîte à outils** automatiquement des comptes pour le nouveau composant, il s’agit aussi simple que la création de tout autre composant ou contrôle.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Pour créer une instance d’un composant personnalisé  
   
-1.  Ouvrez le formulaire du projet dans le **Concepteur Forms**.  
+1. Ouvrez le formulaire du projet dans le **Concepteur Forms**.  
   
-2.  Dans le **boîte à outils**, cliquez sur le nouvel onglet appelé **Composants ToolboxExample**.  
+2. Dans le **boîte à outils**, cliquez sur le nouvel onglet appelé **Composants ToolboxExample**.  
   
      Une fois que vous cliquez sur l’onglet, vous verrez **DemoComponent**.  
   
     > [!NOTE]
     >  Pour des raisons de performances, les composants dans la zone rempli automatiquement de la **boîte à outils** n’affichent pas de bitmaps personnalisées et le <xref:System.Drawing.ToolboxBitmapAttribute> n’est pas pris en charge. Pour afficher une icône pour un composant personnalisé dans le **boîte à outils**, utilisez le **Choose Toolbox Items** boîte de dialogue charger votre composant.  
   
-3.  Faites glisser votre composant sur votre formulaire.  
+3. Faites glisser votre composant sur votre formulaire.  
   
      Une instance du composant est créée et ajoutée à la **barre d’état du composant**.  
   
@@ -78,15 +78,15 @@ Si vos composants sont définis par un projet dans la solution actuellement ouve
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Pour tester l’effet sur la boîte à outils de déchargement et rechargement des composants  
   
-1.  Décharger le projet à partir de la solution.  
+1. Décharger le projet à partir de la solution.  
   
      Pour plus d’informations sur le déchargement de projets, consultez [Comment : Décharger et recharger des projets](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Si vous êtes invité à enregistrer, choisissez **Oui**.  
   
-2.  Ajouter un nouveau **Windows Application** projet à la solution. Ouvrez le formulaire dans le **concepteur**.  
+2. Ajouter un nouveau **Windows Application** projet à la solution. Ouvrez le formulaire dans le **concepteur**.  
   
      Le **Composants ToolboxExample** onglet à partir du projet précédent est désormais disparu.  
   
-3.  Recharger la `ToolboxExample` projet.  
+3. Recharger la `ToolboxExample` projet.  
   
      Le **Composants ToolboxExample** onglet maintenant s’affiche de nouveau.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : accéder aux périphériques de chiffrement du matériel'
+title: 'Procédure : accéder aux appareils de chiffrement matériel'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,35 +15,35 @@ helpviewer_keywords:
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0d5b72e9067a5a6304d88d1e09716088637cbfd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334612"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Comment : accéder aux périphériques de chiffrement du matériel
+# <a name="how-to-access-hardware-encryption-devices"></a>Procédure : accéder aux appareils de chiffrement matériel
 Vous pouvez utiliser la classe <xref:System.Security.Cryptography.CspParameters> pour accéder aux périphériques de chiffrement matériel. Par exemple, vous pouvez utiliser cette classe pour intégrer votre application à une carte à puce, à un générateur matériel de nombres aléatoires ou à une implémentation matérielle d'un algorithme de chiffrement.  
   
- La classe <xref:System.Security.Cryptography.CspParameters> crée un fournisseur de services de chiffrement (CSP) qui accède à un périphérique de chiffrement matériel correctement installé.  Vous pouvez vérifier la disponibilité d'un fournisseur de services de chiffrement en inspectant la clé de Registre suivante à l'aide de l'Éditeur du Registre (Regedit.exe) : HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ La classe <xref:System.Security.Cryptography.CspParameters> crée un fournisseur de services de chiffrement (CSP) qui accède à un périphérique de chiffrement matériel correctement installé.  Vous pouvez vérifier la disponibilité d’un CSP en inspectant la clé de Registre suivante à l’aide de l’Éditeur du Registre (Regedit.exe) :  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Pour signer des données à l'aide d'une carte de clé  
   
-1.  Créez une instance de la classe <xref:System.Security.Cryptography.CspParameters>, en passant le type de fournisseur entier et le nom du fournisseur au constructeur.  
+1. Créez une instance de la classe <xref:System.Security.Cryptography.CspParameters>, en passant le type de fournisseur entier et le nom du fournisseur au constructeur.  
   
-2.  Passez les indicateurs appropriés à la propriété <xref:System.Security.Cryptography.CspParameters.Flags%2A> du nouvel objet <xref:System.Security.Cryptography.CspParameters>.  Par exemple, passez l'indicateur <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer>.  
+2. Passez les indicateurs appropriés à la propriété <xref:System.Security.Cryptography.CspParameters.Flags%2A> du nouvel objet <xref:System.Security.Cryptography.CspParameters>.  Par exemple, passez l'indicateur <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer>.  
   
-3.  Créez une instance d'une classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> (par exemple, la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>), en passant l'objet <xref:System.Security.Cryptography.CspParameters> au constructeur.  
+3. Créez une instance d'une classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> (par exemple, la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>), en passant l'objet <xref:System.Security.Cryptography.CspParameters> au constructeur.  
   
-4.  Signez vos données à l'aide de l'une des méthodes `Sign`, puis vérifiez vos données à l'aide de l'une des méthodes `Verify`.  
+4. Signez vos données à l'aide de l'une des méthodes `Sign`, puis vérifiez vos données à l'aide de l'une des méthodes `Verify`.  
   
 ### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Pour générer un nombre aléatoire à l'aide d'un générateur matériel de nombres aléatoires  
   
-1.  Créez une instance de la classe <xref:System.Security.Cryptography.CspParameters>, en passant le type de fournisseur entier et le nom du fournisseur au constructeur.  
+1. Créez une instance de la classe <xref:System.Security.Cryptography.CspParameters>, en passant le type de fournisseur entier et le nom du fournisseur au constructeur.  
   
-2.  Créez une instance de <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, en passant l'objet <xref:System.Security.Cryptography.CspParameters> au constructeur.  
+2. Créez une instance de <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, en passant l'objet <xref:System.Security.Cryptography.CspParameters> au constructeur.  
   
-3.  Créez une valeur aléatoire à l'aide de la méthode <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> ou <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.  
+3. Créez une valeur aléatoire à l'aide de la méthode <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> ou <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment signer des données à l'aide d'une carte à puce.  L'exemple de code crée un objet <xref:System.Security.Cryptography.CspParameters> qui expose une carte à puce, puis initialise un objet <xref:System.Security.Cryptography.RSACryptoServiceProvider> à l'aide du fournisseur de services de chiffrement.  L'exemple de code signe et vérifie certaines données.  

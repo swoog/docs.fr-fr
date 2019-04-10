@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Sérialiser un objet'
+title: 'Procédure : sérialiser un objet'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336315"
 ---
-# <a name="how-to-serialize-an-object"></a>Procédure : Sérialiser un objet
+# <a name="how-to-serialize-an-object"></a>Procédure : sérialiser un objet
 Pour sérialiser un objet, créez tout d'abord l'objet à sérialiser et définissez ses propriétés et champs publics. Pour ce faire, vous devez déterminer le format de transport dans lequel le flux de données XML sera stocké, sous forme de flux de données ou de fichier. Par exemple, si le flux de données XML doit être enregistré dans un formulaire permanent, créez un objet <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -23,11 +23,11 @@ Pour sérialiser un objet, créez tout d'abord l'objet à sérialiser et défini
   
 ### <a name="to-serialize-an-object"></a>Pour sérialiser un objet  
   
-1.  Créez l'objet et définissez ses champs et propriétés publics.  
+1. Créez l'objet et définissez ses champs et propriétés publics.  
   
-2.  Construisez un <xref:System.Xml.Serialization.XmlSerializer> à l'aide du type de l'objet. Pour plus d'informations, consultez les constructeurs de classe <xref:System.Xml.Serialization.XmlSerializer>.  
+2. Construisez un <xref:System.Xml.Serialization.XmlSerializer> à l'aide du type de l'objet. Pour plus d'informations, consultez les constructeurs de classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
-3.  Appelez la méthode <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> pour générer un flux de données XML ou une représentation de fichier des propriétés et des champs publics de l'objet. L'exemple suivant illustre la création d'un fichier.  
+3. Appelez la méthode <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> pour générer un flux de données XML ou une représentation de fichier des propriétés et des champs publics de l'objet. L'exemple suivant illustre la création d'un fichier.  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -53,4 +53,4 @@ Pour sérialiser un objet, créez tout d'abord l'objet à sérialiser et défini
 ## <a name="see-also"></a>Voir aussi
 
 - [Introduction à la sérialisation XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procédure : désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

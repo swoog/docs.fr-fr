@@ -2,12 +2,12 @@
 title: Exemple Announcements
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333975"
 ---
 # <a name="announcements-sample"></a>Exemple Announcements
 Cet exemple montre comment utiliser les fonctionnalités d’annonce de la découverte. Les annonces permettent aux services d'envoyer des messages d'annonce qui contiennent des métadonnées relatives au service. Par défaut, une annonce de type Hello est envoyée lorsque le service démarre et une annonce de type Bye est envoyée lorsque le service s'arrête. Ces annonces peuvent être envoyées en mode multidiffusion ou de point à point. Cet exemple se compose de deux projets : service et client.  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, bon ACL URL doit être ajouté voir [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d’utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, bon ACL URL doit être ajouté voir [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d’utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Générez la solution.  
+2. Générez la solution.  
   
-3.  Exécutez l'application client.exe.  
+3. Exécutez l'application client.exe.  
   
-4.  Exécutez l'application service.exe. Notez que le client reçoit une annonce en ligne.  
+4. Exécutez l'application service.exe. Notez que le client reçoit une annonce en ligne.  
   
-5.  Fermez l'application service.exe. Notez que le client reçoit une annonce hors connexion.  
+5. Fermez l'application service.exe. Notez que le client reçoit une annonce hors connexion.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

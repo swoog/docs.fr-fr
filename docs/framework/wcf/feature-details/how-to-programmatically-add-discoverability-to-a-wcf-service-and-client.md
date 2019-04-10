@@ -2,29 +2,29 @@
 title: 'Procédure : ajouter par programmation la détectabilité à un service et un client WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336588"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter par programmation la détectabilité à un service et un client WCF
 Cette rubrique explique comment rendre un service Windows Communication Foundation (WCF) détectable. Il est basé sur le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Pour configurer l'exemple existant de service Self-Host pour la découverte  
   
-1.  Ouvrez la solution Self-Host dans Visual Studio 2012. L'exemple se trouve dans le répertoire TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Ouvrez la solution Self-Host dans Visual Studio 2012. L'exemple se trouve dans le répertoire TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Ajoutez au projet du service une référence à `System.ServiceModel.Discovery.dll`. Vous pouvez voir un message d’erreur indiquant « System. ServiceModel.Discovery.dll ou une de ses dépendances requiert une version ultérieure de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] à celle spécifiée dans le projet... » Si vous voyez ce message, cliquez sur le projet dans l’Explorateur de solutions et choisissez **propriétés**. Dans le **propriétés du projet** fenêtre, assurez-vous que le **Framework cible** est [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Ajoutez au projet du service une référence à `System.ServiceModel.Discovery.dll`. Vous pouvez voir un message d’erreur indiquant « System. ServiceModel.Discovery.dll ou une de ses dépendances requiert une version ultérieure de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] à celle spécifiée dans le projet... » Si vous voyez ce message, cliquez sur le projet dans l’Explorateur de solutions et choisissez **propriétés**. Dans le **propriétés du projet** fenêtre, assurez-vous que le **Framework cible** est [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3.  Ouvrez le fichier Service.cs et ajoutez l'instruction `using` suivante.  
+3. Ouvrez le fichier Service.cs et ajoutez l'instruction `using` suivante.  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  Dans la méthode `Main()`, à l'intérieur de l'instruction `using`, ajoutez une instance <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> à l'hôte du service.  
+4. Dans la méthode `Main()`, à l'intérieur de l'instruction `using`, ajoutez une instance <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> à l'hôte du service.  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
      L'instance <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> spécifie que le service auquel elle s'applique est détectable.  
   
-5.  Ajoutez un objet <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> à l'hôte du service, juste après le code qui ajoute l'instance <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5. Ajoutez un objet <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> à l'hôte du service, juste après le code qui ajoute l'instance <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Pour créer une application cliente utilisant la découverte pour appeler le service  
   
-1.  Ajoutez à la solution une nouvelle application console nommée `DiscoveryClientApp`.  
+1. Ajoutez à la solution une nouvelle application console nommée `DiscoveryClientApp`.  
   
-2.  Ajoutez une référence à `System.ServiceModel.dll` et `System.ServiceModel.Discovery.dll`  
+2. Ajoutez une référence à `System.ServiceModel.dll` et `System.ServiceModel.Discovery.dll`  
   
-3.  Copiez les fichiers GeneratedClient.cs et App.config du projet client existant dans le nouveau projet DiscoveryClientApp. Pour ce faire, cliquez sur les fichiers dans le **l’Explorateur de solutions**, sélectionnez **copie**, puis sélectionnez le **DiscoveryClientApp** de projet, avec le bouton droit et sélectionnez **Coller**.  
+3. Copiez les fichiers GeneratedClient.cs et App.config du projet client existant dans le nouveau projet DiscoveryClientApp. Pour ce faire, cliquez sur les fichiers dans le **l’Explorateur de solutions**, sélectionnez **copie**, puis sélectionnez le **DiscoveryClientApp** de projet, avec le bouton droit et sélectionnez **Coller**.  
   
-4.  Ouvrez Program.cs.  
+4. Ouvrez Program.cs.  
   
-5.  Ajoutez les instructions `using` suivantes.  
+5. Ajoutez les instructions `using` suivantes.  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  Ajoutez une méthode statique nommée `FindCalculatorServiceAddress()` à la classe `Program`.  
+6. Ajoutez une méthode statique nommée `FindCalculatorServiceAddress()` à la classe `Program`.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
      Cette méthode utilise la découverte pour rechercher le service `CalculatorService`.  
   
-7.  À l'intérieur de la méthode `FindCalculatorServiceAddress`, créez une instance <xref:System.ServiceModel.Discovery.DiscoveryClient>, en transmettant un objet <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> au constructeur.  
+7. À l'intérieur de la méthode `FindCalculatorServiceAddress`, créez une instance <xref:System.ServiceModel.Discovery.DiscoveryClient>, en transmettant un objet <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> au constructeur.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
      Cela indique à WCF qui le <xref:System.ServiceModel.Discovery.DiscoveryClient> classe doit utiliser le point de terminaison de découverte UDP standard pour envoyer et recevoir des messages de découverte.  
   
-8.  Sur la ligne suivante, appelez la méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> et spécifiez une instance <xref:System.ServiceModel.Discovery.FindCriteria> qui contient le contrat de service que vous souhaitez rechercher. Le contrat à spécifier dans le cas présent est `ICalculator`.  
+8. Sur la ligne suivante, appelez la méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> et spécifiez une instance <xref:System.ServiceModel.Discovery.FindCriteria> qui contient le contrat de service que vous souhaitez rechercher. Le contrat à spécifier dans le cas présent est `ICalculator`.  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
 ### <a name="to-test-the-application"></a>Pour tester l'application  
   
-1.  Ouvrez une invite de commandes avec élévation de privilèges et exécutez Service.exe.  
+1. Ouvrez une invite de commandes avec élévation de privilèges et exécutez Service.exe.  
   
-2.  Ouvrez une invite de commandes et exécutez Discoveryclientapp.exe.  
+2. Ouvrez une invite de commandes et exécutez Discoveryclientapp.exe.  
   
-3.  La sortie de service.exe doit ressembler à la sortie suivante.  
+3. La sortie de service.exe doit ressembler à la sortie suivante.  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
     Return: 6.25390869293308  
     ```  
   
-4.  La sortie de Discoveryclientapp.exe doit ressembler à la sortie suivante.  
+4. La sortie de Discoveryclientapp.exe doit ressembler à la sortie suivante.  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  

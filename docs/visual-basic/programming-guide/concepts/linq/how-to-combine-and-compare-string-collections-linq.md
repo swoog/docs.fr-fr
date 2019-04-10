@@ -2,19 +2,19 @@
 title: 'Procédure : Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341268"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procédure : Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)
 Cet exemple montre comment fusionner des fichiers qui contiennent des lignes de texte, puis comment trier les résultats. Il montre plus précisément comment effectuer une concaténation simple, une union et une intersection avec les deux ensembles de lignes de texte.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Pour configurer le projet et les fichiers texte  
   
-1.  Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :  
+1. Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Cet exemple montre comment fusionner des fichiers qui contiennent des lignes de 
     Garcia, Debra  
     ```  
   
-2.  Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.  
+2. Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.  
   
     ```  
     Liu, Jinghao  

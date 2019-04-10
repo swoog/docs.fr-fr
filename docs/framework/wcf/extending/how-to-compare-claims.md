@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343309"
 ---
 # <a name="how-to-compare-claims"></a>Procédure : comparer des revendications
 L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) est utilisé pour effectuer la vérification d’autorisation. L’une des tâches fréquentes de cette infrastructure de contrôle consiste notamment à comparer les revendications émises dans le cadre des autorisations à celles requises pour l’exécution des requêtes d’action ou des requêtes d’accès aux ressources. Cette rubrique contient des instructions qui permettent de comparer des revendications, notamment les types de revendication intégrés et personnalisés. Pour plus d’informations sur l’infrastructure de modèle d’identité, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -36,33 +36,33 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
   
 ### <a name="comparing-built-in-claims"></a>Comparaison des revendications intégrées  
   
-1.  Soit deux instances de la classe <xref:System.IdentityModel.Claims.Claim>, utilisez la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A> pour les comparer, tel qu'illustré dans le code suivant.  
+1. Soit deux instances de la classe <xref:System.IdentityModel.Claims.Claim>, utilisez la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A> pour les comparer, tel qu'illustré dans le code suivant.  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
 ### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Comparaison de revendications personnalisées dont les types de ressources sont primitifs  
   
-1.  Pour les revendications personnalisées dont les types de ressources sont primitifs, la comparaison peut s'effectuer de la même manière que dans le cadre de comparaisons intégrées, tel qu'illustré dans le code suivant.  
+1. Pour les revendications personnalisées dont les types de ressources sont primitifs, la comparaison peut s'effectuer de la même manière que dans le cadre de comparaisons intégrées, tel qu'illustré dans le code suivant.  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  Pour les revendications personnalisées dont les types de ressources sont basés sur une structure ou une classe, le type de ressource doit être substitué à la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
+2. Pour les revendications personnalisées dont les types de ressources sont basés sur une structure ou une classe, le type de ressource doit être substitué à la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
   
-3.  Vérifiez tout d'abord si le paramètre `obj` a la valeur `null`. Si tel est le cas, retournez la valeur `false`.  
+3. Vérifiez tout d'abord si le paramètre `obj` a la valeur `null`. Si tel est le cas, retournez la valeur `false`.  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  Appelez ensuite la méthode <xref:System.Object.ReferenceEquals%2A> et passez `this` et `obj` en tant que paramètres. Si la méthode appelée retourne la valeur `true`, retournez alors la valeur `true`.  
+4. Appelez ensuite la méthode <xref:System.Object.ReferenceEquals%2A> et passez `this` et `obj` en tant que paramètres. Si la méthode appelée retourne la valeur `true`, retournez alors la valeur `true`.  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Essayez ensuite d'affecter `obj` à une variable locale du type de classe. En cas d'échec, la référence est `null`. Dans ce cas, retournez la valeur `false`.  
+5. Essayez ensuite d'affecter `obj` à une variable locale du type de classe. En cas d'échec, la référence est `null`. Dans ce cas, retournez la valeur `false`.  
   
-6.  Effectuez la comparaison personnalisée nécessaire pour comparer de manière adéquate la revendication en cours à la revendication spécifiée.  
+6. Effectuez la comparaison personnalisée nécessaire pour comparer de manière adéquate la revendication en cours à la revendication spécifiée.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre le cas d'une comparaison où le type de ressource des revendications personnalisées comparées n'est pas primitif.  

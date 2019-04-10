@@ -2,12 +2,12 @@
 title: Création du Document Office Open XML Source (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333689"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Création du Document Office Open XML Source (Visual Basic)
 Cette rubrique montre comment créer le document WordprocessingML Office Open XML utilisé par les autres exemples de ce didacticiel. Si vous suivez ces instructions, votre sortie correspondra à la sortie fournie dans chaque exemple.  
@@ -20,9 +20,9 @@ Cette rubrique montre comment créer le document WordprocessingML Office Open XM
   
 #### <a name="to-create-the-wordprocessingml-document"></a>Pour créer le document WordprocessingML  
   
-1.  Créez un nouveau document Microsoft Word.  
+1. Créez un nouveau document Microsoft Word.  
   
-2.  Collez le texte suivant dans le nouveau document :  
+2. Collez le texte suivant dans le nouveau document :  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ Cette rubrique montre comment créer le document WordprocessingML Office Open XM
     Hello World  
     ```  
   
-3.  Mettez en forme la première ligne à l'aide du style « Titre 1 ».  
+3. Mettez en forme la première ligne à l'aide du style « Titre 1 ».  
   
-4.  Sélectionnez les lignes qui contiennent le code Visual Basic. La première ligne commence par le mot clé `Imports`. La dernière ligne est « End Class ». Mettez en forme les lignes avec la police Courrier. Mettez-les en forme avec un nouveau style et nommez le nouveau style « Code ».  
+4. Sélectionnez les lignes qui contiennent le code Visual Basic. La première ligne commence par le mot clé `Imports`. La dernière ligne est « End Class ». Mettez en forme les lignes avec la police Courrier. Mettez-les en forme avec un nouveau style et nommez le nouveau style « Code ».  
   
-5.  Pour finir, sélectionnez la ligne entière qui contient la sortie et mettez-la en forme avec le style `Code`.  
+5. Pour finir, sélectionnez la ligne entière qui contient la sortie et mettez-la en forme avec le style `Code`.  
   
-6.  Enregistrez le document et nommez-le SampleDoc.docx.  
+6. Enregistrez le document et nommez-le SampleDoc.docx.  
   
     > [!NOTE]
     >  Si vous utilisez Microsoft Word 2003, sélectionnez **Document Word 2007** dans la liste déroulante **Type de fichier**.  

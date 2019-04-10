@@ -2,12 +2,12 @@
 title: WCF et IDN (Internationalized Domain Names)
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335379"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF et IDN (Internationalized Domain Names)
 La prise en charge a été ajoutée pour tenir compte des services WCF avec des noms IDN (Internationalized Domain Names). Un nom de domaine international est un nom de domaine qui contient des caractères non ASCII. Cette prise en charge inclut la capacité d'héberger un service WCF avec un nom IDN et un client WCF pour parler à un service Web avec un nom IDN.  
@@ -27,11 +27,11 @@ La prise en charge a été ajoutée pour tenir compte des services WCF avec des 
   
  Le \<idn > élément contient l’attribut activé qui peut être définie à une des valeurs suivantes :  
   
-1.  « None »  
+1. « None »  
   
-2.  "AllExceptIntranet"  
+2. "AllExceptIntranet"  
   
-3.  « Tout »  
+3. « Tout »  
   
  Lorsque le paramètre IDN a la valeur « None », aucuns conversions ne sont effectuées par Uri.Host ou Uri.DnsSafeHost. Lorsque le paramètre IDN a la valeur « All », uri. Hôte reste Unicode et uri. DnsSafeHost est converti en Punycode. Lorsque le paramètre IDN a la valeur « AllExceptIntranet », les uri. DnsSafeHost est converti en Punycode pour les adresses internet et reste Unicode pour les adresses intranet. Ce paramètre est important pour la résolution de noms DNS correcte. Notez qu'il n'est pas nécessaire de configurer ce paramètres pour Windows 8 et les versions plus récentes.  
   

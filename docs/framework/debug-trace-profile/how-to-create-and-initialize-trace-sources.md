@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339435"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procédure : Créer et initialiser des sources de trace
 La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applications pour produire des traces qui peuvent être associées à l'application. <xref:System.Diagnostics.TraceSource> Fournit des méthodes de suivi qui vous permettent de tracer facilement des événements, données de trace et émettre des traces d’information. Il est possible de créer et d'initialiser une sortie de trace <xref:System.Diagnostics.TraceSource> en utilisant ou non les fichiers de configuration. Cette rubrique fournit des instructions pour les deux options. Toutefois, nous vous recommandons d'utiliser des fichiers de configuration pour simplifier la reconfiguration des traces produites par les sources de trace au moment de l'exécution.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Pour créer et initialiser une source de trace à l'aide d'un fichier de configuration  
   
-1.  Créez un projet d'application console Visual Studio et remplacez le code fourni par le code suivant. Ce code consigne les erreurs et les avertissements et renvoie certains d'entre eux vers la console et d'autres vers le fichier myListener créé par les entrées dans le fichier de configuration.  
+1. Créez un projet d'application console Visual Studio et remplacez le code fourni par le code suivant. Ce code consigne les erreurs et les avertissements et renvoie certains d'entre eux vers la console et d'autres vers le fichier myListener créé par les entrées dans le fichier de configuration.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Ajoutez un fichier de configuration d'application, s'il n'en existe pas encore, au projet pour initialiser la source de trace nommée `TraceSourceApp` dans l'exemple de code à l'étape 1.  
+2. Ajoutez un fichier de configuration d'application, s'il n'en existe pas encore, au projet pour initialiser la source de trace nommée `TraceSourceApp` dans l'exemple de code à l'étape 1.  
   
-3.  Remplacez le contenu du fichier de configuration par défaut par les paramètres suivants pour initialiser un écouteur de suivi de console et un écouteur de suivi de TextWriter pour la source de trace créée à l'étape 1.  
+3. Remplacez le contenu du fichier de configuration par défaut par les paramètres suivants pour initialiser un écouteur de suivi de console et un écouteur de suivi de TextWriter pour la source de trace créée à l'étape 1.  
   
     ```xml  
     <configuration>  
