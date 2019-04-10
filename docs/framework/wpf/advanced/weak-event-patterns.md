@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316165"
 ---
 # <a name="weak-event-patterns"></a>Modèles d'événement faible
 Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne seront pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut entraîner des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *modèle d’événement faible*.  
@@ -50,11 +50,11 @@ Dans les applications, il est possible que les gestionnaires qui sont attachés 
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>À l’aide d’une classe de gestionnaire d’événements faible existante  
   
-1.  Recherchez un événement existant de faible manager.  
+1. Recherchez un événement existant de faible manager.  
   
      Pour obtenir la liste des gestionnaires d’événements faible qui sont inclus avec WPF, consultez la hiérarchie d’héritage dans le <xref:System.Windows.WeakEventManager> classe.  
   
-2.  Utilisez le nouveau gestionnaire d’événements faible au lieu de la connexion d’événements normal.  
+2. Utilisez le nouveau gestionnaire d’événements faible au lieu de la connexion d’événements normal.  
   
      Par exemple, si votre code utilise le modèle suivant pour vous abonner à un événement :  
   
@@ -82,7 +82,7 @@ Dans les applications, il est possible que les gestionnaires qui sont attachés 
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>À l’aide de la classe de gestionnaire d’événements faible générique  
   
-1.  Utiliser le modèle générique <xref:System.Windows.WeakEventManager%602> classe au lieu de la connexion d’événements normal.  
+1. Utiliser le modèle générique <xref:System.Windows.WeakEventManager%602> classe au lieu de la connexion d’événements normal.  
   
      Lorsque vous utilisez <xref:System.Windows.WeakEventManager%602> pour inscrire les écouteurs d’événements, vous fournissez la source d’événements et <xref:System.EventArgs> type que les paramètres de type pour la classe et appelez <xref:System.Windows.WeakEventManager%602.AddHandler%2A> comme indiqué dans le code suivant :  
   
@@ -92,19 +92,19 @@ Dans les applications, il est possible que les gestionnaires qui sont attachés 
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Création d’une classe de gestionnaire d’événements faible personnalisée  
   
-1.  Copiez le modèle de classe suivant à votre projet.  
+1. Copiez le modèle de classe suivant à votre projet.  
   
      Cette classe hérite de la <xref:System.Windows.WeakEventManager> classe.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Remplacez le `SomeEventWeakEventManager` nom avec votre propre nom.  
+2. Remplacez le `SomeEventWeakEventManager` nom avec votre propre nom.  
   
-3.  Remplacez les trois noms décrits précédemment avec les noms correspondants pour votre événement. (`SomeEvent`, `EventSource`, et `SomeEventEventArgs`)  
+3. Remplacez les trois noms décrits précédemment avec les noms correspondants pour votre événement. (`SomeEvent`, `EventSource`, et `SomeEventEventArgs`)  
   
-4.  Définir la visibilité (publique / interne / privée) de la classe de gestionnaire d’événements faible pour la même visibilité que les événements qu’il gère.  
+4. Définir la visibilité (publique / interne / privée) de la classe de gestionnaire d’événements faible pour la même visibilité que les événements qu’il gère.  
   
-5.  Utilisez le nouveau gestionnaire d’événements faible au lieu de la connexion d’événements normal.  
+5. Utilisez le nouveau gestionnaire d’événements faible au lieu de la connexion d’événements normal.  
   
      Par exemple, si votre code utilise le modèle suivant pour vous abonner à un événement :  
   

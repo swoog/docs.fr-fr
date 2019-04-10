@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314215"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procédure : hériter de la classe Control
 Si vous souhaitez créer un contrôle entièrement personnalisé à utiliser sur un formulaire Windows, vous devez hériter de la <xref:System.Windows.Forms.Control> classe. Tout en héritant de la <xref:System.Windows.Forms.Control> classe nécessite que vous effectuer davantage de planification et de l’implémentation, il vous fournit également la plus grande plage d’options. Lorsque vous héritez de <xref:System.Windows.Forms.Control>, vous héritez des fonctionnalités très basique qui facilite le travail de contrôles. Les fonctionnalités inhérentes à la <xref:System.Windows.Forms.Control> classe gère l’entrée utilisateur via le clavier et de la souris, définissent les limites et la taille du contrôle, fournit un handle windows et fournit la gestion des messages et la sécurité. Elles n’intègrent pas la peinture, qui désigne ici le rendu réel de l’interface graphique du contrôle, ni les fonctionnalités d’interaction utilisateur spécifiques. Vous devez fournir tous ces aspects par le biais de code personnalisé.  
@@ -23,25 +23,25 @@ Si vous souhaitez créer un contrôle entièrement personnalisé à utiliser sur
   
 ### <a name="to-create-a-custom-control"></a>Pour créer un contrôle personnalisé  
   
-1.  Créez un projet d’**application Windows** ou de **bibliothèque de contrôles Windows**.  
+1. Créez un projet d’**application Windows** ou de **bibliothèque de contrôles Windows**.  
   
-2.  Dans le menu **Projet** , choisissez **Ajouter une classe**.  
+2. Dans le menu **Projet** , choisissez **Ajouter une classe**.  
   
-3.  Dans la boîte de dialogue **Ajouter un nouvel élément**, cliquez sur **Contrôle personnalisé**.  
+3. Dans la boîte de dialogue **Ajouter un nouvel élément**, cliquez sur **Contrôle personnalisé**.  
   
      Un nouveau contrôle personnalisé est ajouté à votre projet.  
   
-4.  Appuyez sur F7 pour ouvrir l’**éditeur de code** de votre contrôle personnalisé.  
+4. Appuyez sur F7 pour ouvrir l’**éditeur de code** de votre contrôle personnalisé.  
   
-5.  Recherchez le <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode), qui doit être vide à l’exception d’un appel à la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode de la classe de base.  
+5. Recherchez le <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode), qui doit être vide à l’exception d’un appel à la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode de la classe de base.  
   
-6.  Modifiez le code afin d’incorporer la peinture personnalisée pour votre contrôle.  
+6. Modifiez le code afin d’incorporer la peinture personnalisée pour votre contrôle.  
   
      Pour plus d’informations sur l’écriture de code permettant d’afficher des graphiques concernant les contrôles, consultez [Peinture et rendu personnalisés des contrôles](custom-control-painting-and-rendering.md).  
   
-7.  Implémentez les méthodes, les propriétés ou les événements personnalisés que votre contrôle intégrera.  
+7. Implémentez les méthodes, les propriétés ou les événements personnalisés que votre contrôle intégrera.  
   
-8.  Enregistrez et testez votre contrôle.  
+8. Enregistrez et testez votre contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
 

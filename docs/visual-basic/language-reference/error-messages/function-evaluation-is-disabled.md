@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315775"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>L'évaluation de la fonction est désactivée, car une évaluation de fonction précédente a expiré
 Évaluation de la fonction est désactivée, car une évaluation de fonction précédente a expiré. Pour réactiver l’évaluation de fonction, pas à pas, ou redémarrer le débogage.  
@@ -27,9 +27,9 @@ ms.locfileid: "58820735"
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Si possible, déterminez quel était l’évaluation de fonction précédente et la cause de son délai d’expiration. Sinon, vous pouvez rencontrer cette erreur à nouveau.  
+1. Si possible, déterminez quel était l’évaluation de fonction précédente et la cause de son délai d’expiration. Sinon, vous pouvez rencontrer cette erreur à nouveau.  
   
-2.  Soit à nouveau, l’étape du débogueur ou arrêter et redémarrer le débogage.  
+2. Soit à nouveau, l’étape du débogueur ou arrêter et redémarrer le débogage.  
   
 ## <a name="see-also"></a>Voir aussi
 

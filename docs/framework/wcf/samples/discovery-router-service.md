@@ -2,12 +2,12 @@
 title: Discovery Router Service
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318765"
 ---
 # <a name="discovery-router-service"></a>Discovery Router Service
 Cet exemple montre comment transférer des messages de découverte à un autre point de terminaison.  
@@ -22,13 +22,13 @@ Cet exemple montre comment transférer des messages de découverte à un autre p
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Créez un exemple.  
+1. Créez un exemple.  
   
-2.  Exécutez le fichier exécutable DiscoveryRouter.  
+2. Exécutez le fichier exécutable DiscoveryRouter.  
   
-3.  Exécutez le fichier exécutable du service à partir du répertoire de build.  
+3. Exécutez le fichier exécutable du service à partir du répertoire de build.  
   
-4.  Exécutez le fichier exécutable du client. Notez que le client trouve le service.  
+4. Exécutez le fichier exécutable du client. Notez que le client trouve le service.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

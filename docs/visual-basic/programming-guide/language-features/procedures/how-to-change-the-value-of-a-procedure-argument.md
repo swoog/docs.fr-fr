@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837485"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316620"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procédure : Modifiez la valeur d’un Argument de procédure (Visual Basic)
 Lorsque vous appelez une procédure, chaque argument que vous fournissez correspond à un des paramètres définis dans la procédure. Dans certains cas, le code de procédure peut modifier la valeur sous-jacente d’un argument dans le code appelant. Dans d’autres cas, la procédure peut modifier uniquement sa copie locale d’un argument.  
@@ -31,13 +31,13 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Pour modifier la valeur sous-jacente d’un argument de procédure dans le code appelant  
   
-1.  Dans la déclaration de procédure, spécifiez [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) pour le paramètre correspondant à l’argument.  
+1. Dans la déclaration de procédure, spécifiez [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) pour le paramètre correspondant à l’argument.  
   
-2.  Dans le code appelant, passez un élément de programmation modifiable comme argument.  
+2. Dans le code appelant, passez un élément de programmation modifiable comme argument.  
   
-3.  Dans le code appelant, ne placez pas l’argument entre parenthèses dans la liste d’arguments.  
+3. Dans le code appelant, ne placez pas l’argument entre parenthèses dans la liste d’arguments.  
   
-4.  Dans le code de procédure, utilisez le nom de paramètre pour affecter une valeur à l’élément sous-jacent dans le code appelant.  
+4. Dans le code de procédure, utilisez le nom de paramètre pour affecter une valeur à l’élément sous-jacent dans le code appelant.  
   
  Consultez l’exemple ci-dessous pour une démonstration.  
   
@@ -46,13 +46,13 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Pour modifier la copie d’un argument de procédure dans le code de procédure  
   
-1.  Dans la déclaration de procédure, spécifiez [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) pour le paramètre correspondant à l’argument.  
+1. Dans la déclaration de procédure, spécifiez [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) pour le paramètre correspondant à l’argument.  
   
      - ou -  
   
      Dans le code appelant, mettez l’argument entre parenthèses dans la liste d’arguments. Cela force Visual Basic pour passer l’argument par valeur, même si le paramètre correspondant spécifie `ByRef`.  
   
-2.  Dans le code de procédure, utilisez le nom de paramètre pour assigner une valeur à la copie locale de l’argument. La valeur sous-jacente dans le code appelant n’est pas modifiée.  
+2. Dans le code de procédure, utilisez le nom de paramètre pour assigner une valeur à la copie locale de l’argument. La valeur sous-jacente dans le code appelant n’est pas modifiée.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre deux procédures qui acceptent une variable tableau et opèrent sur ses éléments. Le `increase` procédure ajoute simplement 1 à chaque élément. Le `replace` procédure assigne un nouveau tableau au paramètre `a()` , puis ajoute 1 à chaque élément.  
@@ -81,11 +81,11 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
 
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
-- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Procédure : passer des arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
+- [Passage des arguments par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
 - [Différences entre les arguments modifiables et non modifiables](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Différences entre le passage d’un argument par valeur et par référence](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Guide pratique pour Protéger un Argument de procédure contre les modifications de valeur](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Guide pratique pour Forcer un Argument d’être passés par valeur](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Procédure : protéger un argument de procédure contre les modifications de valeur](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Procédure : forcer le passage par valeur d’un argument](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passage des arguments par position et par nom](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

@@ -2,12 +2,12 @@
 title: Utilisation d'un éditeur d'expressions personnalisé
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314085"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
@@ -18,11 +18,11 @@ Un éditeur d'expressions personnalisé peut être implémenté pour fournir une
   
  Trois étapes de base sont nécessaires pour implémenter un éditeur d'expressions personnalisé :  
   
-1.  Implémentez l'interface <xref:System.Activities.Presentation.View.IExpressionEditorService>. Cette interface gère la création et la destruction des éditeurs d'expression.  
+1. Implémentez l'interface <xref:System.Activities.Presentation.View.IExpressionEditorService>. Cette interface gère la création et la destruction des éditeurs d'expression.  
   
-2.  Implémentez l'interface <xref:System.Activities.Presentation.View.IExpressionEditorInstance>. Cette interface implémente l'interface utilisateur d'édition d'expressions.  
+2. Implémentez l'interface <xref:System.Activities.Presentation.View.IExpressionEditorInstance>. Cette interface implémente l'interface utilisateur d'édition d'expressions.  
   
-3.  Publiez <xref:System.Activities.Presentation.View.IExpressionEditorService> dans votre application de workflow réhébergée.  
+3. Publiez <xref:System.Activities.Presentation.View.IExpressionEditorService> dans votre application de workflow réhébergée.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implémentation d'un éditeur d'expressions personnalisé dans une bibliothèque de classes  
  Voici un exemple de code pour une classe `MyEditorService` (preuve de concept) qui implémente l'interface <xref:System.Activities.Presentation.View.IExpressionEditorService> contenue dans un projet de bibliothèque MyExpressionEditorService.  

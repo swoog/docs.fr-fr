@@ -2,19 +2,19 @@
 title: Poison Message Handling in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316464"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4,0
 Cet exemple montre comment assurer la gestion des messages incohérents dans un service. Cet exemple est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
 
  Dans le cadre d'une communication en file d'attente, le client communique avec le service à l'aide d'une file d'attente. Cela signifie que le client envoie ses messages à cette file d'attente. Le service reçoit des messages de la file d'attente. Par conséquent, dans le cadre d'une communication en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément.
 
- Un message incohérent est un message qui est lu à plusieurs reprises à partir d'une file d'attente lorsque le service qui le lit ne parvient pas à le traiter et met donc fin à la transaction sous laquelle le message est lu. Dans ce cas, le message est de nouveau réessayé. Cela peut théoriquement continuer indéfiniment en cas de problème avec le message. Notez que cela peut uniquement se produire lorsque vous utilisez des transactions pour lire à partir de la file d'attente et appeler l'opération de service.
+ Un message incohérent est un message qui est lu à plusieurs reprises à partir d’une file d’attente lorsque le service qui le lit ne parvient pas à le traiter et met donc fin à la transaction sous laquelle le message est lu. Dans ce cas, le message est de nouveau réessayé. Cela peut théoriquement continuer indéfiniment en cas de problème avec le message. Notez que cela peut uniquement se produire lorsque vous utilisez des transactions pour lire à partir de la file d'attente et appeler l'opération de service.
 
  Selon la version de MSMQ, NetMsmqBinding prend en charge la détection limitée ou complète des messages incohérents. Une fois que le message a été détecté comme étant incohérent, il est ensuite traité de plusieurs façons. À nouveau, NetMsmqBinding prend en charge la gestion limitée à la gestion complète de messages incohérents selon la version de MSMQ.
 
@@ -23,19 +23,19 @@ Cet exemple montre comment assurer la gestion des messages incohérents dans un 
 ## <a name="msmq-v40-poison-handling-sample"></a>Exemple de gestion de message incohérent dans MSMQ v4.0
  Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fournit une fonctionnalité de sous-file d'attente de messages incohérents qui peut être utilisée pour stocker des messages incohérents. Cet exemple montre la meilleure pratique de traitement des messages incohérents à l'aide de [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- La détection de messages incohérents dans [!INCLUDE[wv](../../../../includes/wv-md.md)] est sophistiquée. Il existe 3 propriétés qui aident à la détection. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est nombre de fois qu'un message donné est relu à partir de la file d'attente et est distribué à l'application pour traitement. Un message est relu à partir de la file d'attente lorsqu'il est remis dans celle-ci parce qu'il ne peut pas être distribué à l'application ou l'application restaure la transaction dans l'opération de service. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> est le nombre de fois où le message est déplacé vers la file d'attente des nouvelles tentatives. Lorsque <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est atteint, le message est déplacé dans la file d'attente des nouvelles tentatives. La propriété <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> correspond à l'intervalle après lequel le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale. La propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est réinitialisée à 0. Le message est réessayé. Si toutes les tentatives de lecture du message ont échoué, le message est alors marqué comme étant incohérent.
+ La détection de messages incohérents dans [!INCLUDE[wv](../../../../includes/wv-md.md)] est sophistiquée. Il existe 3 propriétés qui aident à la détection. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est nombre de fois qu'un message donné est relu à partir de la file d'attente et est distribué à l'application pour traitement. Un message est relu à partir de la file d'attente lorsqu'il est remis dans celle-ci parce qu'il ne peut pas être distribué à l'application ou l'application restaure la transaction dans l'opération de service. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> est le nombre de fois où que le message est déplacé vers la file d’attente de nouvelle tentative. Lorsque <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est atteint, le message est déplacé dans la file d'attente des nouvelles tentatives. La propriété <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> correspond à l'intervalle après lequel le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale. La propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est réinitialisée à 0. Le message est réessayé. Si toutes les tentatives de lecture du message ont échoué, le message est alors marqué comme étant incohérent.
 
  Une fois que le message est marqué comme étant incohérent, il est traité en fonction des paramètres dans l'énumération <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Pour rappeler les valeurs possibles :
 
--   Fault (valeur par défaut) : provoque l'échec de l'écouteur ainsi que de l'hôte de service.
+-   Erreur (par défaut) : Erreur de l’écouteur, ainsi que l’hôte de service.
 
--   Drop : permet de supprimer le message.
+-   DROP : Pour supprimer le message.
 
--   Move : permet de déplacer le message vers la sous-file d'attente de messages incohérents. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Déplacement : Pour déplacer le message vers la sous-file d’attente des messages incohérents. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reject : permet de rejeter le message en le renvoyant dans la file d'attente de lettres mortes de l'expéditeur. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Reject : Pour rejeter le message, envoyer le message en file d’attente de lettres mortes de l’expéditeur. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` permet de déplacer le message vers la sous-file d'attente de messages incohérents.
+ L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` provoque le message à déplacer vers la sous-file d’attente.
 
  Le contrat de service est `IOrderProcessor`, qui définit un service monodirectionnel qui peut être utilisé avec des files d'attente.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- L'opération de service affiche un message indiquant qu'elle traite la commande. Pour illustrer la fonctionnalité de message incohérent, l'opération de service `SubmitPurchaseOrder` lève une exception pour restaurer la transaction sur un appel aléatoire du service. Le message est alors remis dans la file d'attente. Le message est par la suite marqué comme étant incohérent. La configuration est définie pour déplacer le message incohérent vers  la sous-file d'attente de messages incohérents.
+ L'opération de service affiche un message indiquant qu'elle traite la commande. Pour illustrer la fonctionnalité de message incohérent, l’opération de service `SubmitPurchaseOrder` lève une exception pour restaurer la transaction sur un appel aléatoire du service. Le message est alors remis dans la file d'attente. Le message est par la suite marqué comme étant incohérent. La configuration est définie pour déplacer le message incohérent vers  la sous-file d'attente de messages incohérents.
 
 ```csharp
 // Service class that implements the service contract.
@@ -273,9 +273,9 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
+2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
 
     1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
 
@@ -287,15 +287,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
 
-3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, modifiez les noms de file d’attente pour refléter le nom d’hôte réel au lieu de localhost et suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, modifiez les noms de file d’attente pour refléter le nom d’hôte réel au lieu de localhost et suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Avec le transport de liaison `netMsmqBinding`, la sécurité est activée par défaut. Les propriétés `MsmqAuthenticationMode` et `MsmqProtectionLevel` déterminent toutes deux le type de sécurité du transport. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d'authentification et de signature, il doit faire partie d'un domaine. Si vous exécutez cet exemple sur un ordinateur ne faisant pas partie d'un domaine, vous recevez l'erreur suivante : "Le certificat Message Queuing interne pour l'utilisateur n'existe pas."
+ Avec le transport de liaison `netMsmqBinding`, la sécurité est activée par défaut. Les propriétés `MsmqAuthenticationMode` et `MsmqProtectionLevel` déterminent toutes deux le type de sécurité du transport. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d’authentification et de signature, il doit faire partie d’un domaine. Si vous exécutez cet exemple sur un ordinateur qui ne fait pas partie d’un domaine, vous recevez l’erreur suivante : « L’utilisateur interne message queuing certificat n’existe pas ».
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Pour exécuter l'exemple sur un ordinateur joint à un groupe de travail
 
-1.  Si votre ordinateur ne fait pas partie d'un domaine, désactivez la sécurité du transport en affectant `None` au mode d'authentification et au niveau de protection, tel qu'indiqué dans l'exemple de configuration suivant :
+1. Si votre ordinateur ne fait pas partie d'un domaine, désactivez la sécurité du transport en affectant `None` au mode d'authentification et au niveau de protection, tel qu'indiqué dans l'exemple de configuration suivant :
 
     ```xml
     <bindings>
@@ -309,12 +309,12 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Assurez-vous que le point de terminaison est associé à la liaison en définissant l'attribut bindingConfiguration du point de terminaison.
 
-2.  Assurez-vous de modifier la configuration sur PoisonMessageServer, le serveur et le client avant d'exécuter l'exemple.
+2. Assurez-vous de modifier la configuration sur PoisonMessageServer, le serveur et le client avant d'exécuter l'exemple.
 
     > [!NOTE]
     >  L'affectation de `security mode` à `None` revient à affecter `MsmqAuthenticationMode` à la sécurité `MsmqProtectionLevel`, `Message` et `None`.  
   
-3.  Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Sinon, vous obtenez une exception tels que : `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Sinon, vous obtenez une exception tels que : `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

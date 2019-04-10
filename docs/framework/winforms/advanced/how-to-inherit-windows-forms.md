@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314540"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procédure : hériter de Windows Forms
 Créer des Windows Forms en héritant de formulaires de base est un moyen pratique de dupliquer vos efforts sans avoir à recréer entièrement un formulaire chaque fois que vous en avez besoin.  
@@ -25,9 +25,9 @@ Créer des Windows Forms en héritant de formulaires de base est un moyen pratiq
   
 ### <a name="to-inherit-a-form-programmatically"></a>Pour hériter d'un formulaire par programmation  
   
-1.  Dans votre classe, ajoutez une référence à l'espace de noms contenant le formulaire dont vous voulez hériter.  
+1. Dans votre classe, ajoutez une référence à l'espace de noms contenant le formulaire dont vous voulez hériter.  
   
-2.  Dans la définition de classe, ajoutez une référence au formulaire à partir duquel hériter. Cette référence doit inclure l'espace de noms qui contient le formulaire, suivi d'un point, puis du nom du formulaire de base proprement dit.  
+2. Dans la définition de classe, ajoutez une référence au formulaire à partir duquel hériter. Cette référence doit inclure l'espace de noms qui contient le formulaire, suivi d'un point, puis du nom du formulaire de base proprement dit.  
   
     ```vb  
     Public Class Form2  

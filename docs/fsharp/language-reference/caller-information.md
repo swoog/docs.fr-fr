@@ -2,12 +2,12 @@
 title: Informations de l’appelant
 description: Décrit comment utiliser les attributs d’Argument appelant informations pour obtenir des informations de l’appelant à partir d’une méthode.
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316152"
 ---
 # <a name="caller-information"></a>Informations de l’appelant
 
@@ -28,24 +28,22 @@ L’exemple suivant montre comment vous pouvez utiliser ces attributs pour effec
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>Notes
 
-Attributs d’informations de l’appelant peuvent uniquement être appliqués aux paramètres facultatifs. Vous devez fournir une valeur explicite pour chaque paramètre facultatif. Les attributs d’informations d’appelant contraindre le compilateur à écrire la valeur appropriée pour chaque paramètre facultatif décoré avec un attribut d’informations de l’appelant.
+Attributs d’informations de l’appelant peuvent uniquement être appliqués aux paramètres facultatifs. Les attributs d’informations d’appelant contraindre le compilateur à écrire la valeur appropriée pour chaque paramètre facultatif décoré avec un attribut d’informations de l’appelant.
 
 Les valeurs d'informations de l'appelant sont émises en tant que littéraux en langage intermédiaire (IL) au moment de la compilation. Contrairement aux résultats de la [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propriété pour les exceptions, les résultats ne sont pas affectés par l’obfuscation.
 

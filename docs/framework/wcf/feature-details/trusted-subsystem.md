@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319363"
 ---
 # <a name="trusted-subsystem"></a>Sous-système approuvé
 Un client accède à un ou plusieurs services Web distribués sur un réseau. Les services Web sont conçus afin que l'accès aux ressources supplémentaires (telles que les bases de données ou autres services Web) soit encapsulé dans la logique métier du service Web. Ces ressources doivent être protégées contre tout accès non autorisé. L'illustration suivante présente un processus de sous-système approuvé.  
@@ -19,15 +19,15 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
   
  Les étapes suivantes décrivent le processus de sous-système approuvé tel qu'il est présenté :  
   
-1.  Le client envoie une demande au sous-système approuvé, accompagnée des informations d'identification.  
+1. Le client envoie une demande au sous-système approuvé, accompagnée des informations d'identification.  
   
-2.  Le sous-système approuvé authentifie et autorise l'utilisateur.  
+2. Le sous-système approuvé authentifie et autorise l'utilisateur.  
   
-3.  Le sous-système approuvé envoie un message de demande à la ressource distante. Cette demande est accompagnée des informations d'identification du sous-système approuvé (ou le compte de service sous lequel le processus de sous-système approuvé est exécuté).  
+3. Le sous-système approuvé envoie un message de demande à la ressource distante. Cette demande est accompagnée des informations d'identification du sous-système approuvé (ou le compte de service sous lequel le processus de sous-système approuvé est exécuté).  
   
-4.  La ressource principale authentifie et autorise le sous-système approuvé. Elle traite ensuite la demande et envoie une réponse au sous-système approuvé.  
+4. La ressource principale authentifie et autorise le sous-système approuvé. Elle traite ensuite la demande et envoie une réponse au sous-système approuvé.  
   
-5.  Le sous-système approuvé traite la réponse et envoie sa propre réponse au client.  
+5. Le sous-système approuvé traite la réponse et envoie sa propre réponse au client.  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  

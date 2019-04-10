@@ -2,12 +2,12 @@
 title: Signature de procédures stockées dans SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313916"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signature de procédures stockées dans SQL Server
  Une signature numérique est un condensat des données qui est chiffré avec la clé privée du signataire. La clé privée garantit que la signature numérique est unique à son porteur ou propriétaire. Vous pouvez signer les assemblys, les fonctions (à l’exception des fonctions table inline), les déclencheurs et les procédures stockées.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094617"
   
  Il existe deux étapes impliquées dans la signature d’un module :  
   
-1.  Créez un certificat à l'aide de l'instruction Transact-SQL `CREATE CERTIFICATE [certificateName]`. Cette instruction possède plusieurs options permettant de définir une date de début et de fin, de même qu'un mot de passe. La date d’expiration par défaut est un an.  
+1. Créez un certificat à l'aide de l'instruction Transact-SQL `CREATE CERTIFICATE [certificateName]`. Cette instruction possède plusieurs options permettant de définir une date de début et de fin, de même qu'un mot de passe. La date d’expiration par défaut est un an.  
   
-1.  Signez la procédure avec le certificat en utilisant l'instruction Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+1. Signez la procédure avec le certificat en utilisant l'instruction Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
 
 Une fois que le module a été signé, un ou plusieurs principaux doit être créé pour contenir les autorisations supplémentaires qui doivent être associées avec le certificat.  
 
 Si le module a besoin des autorisations de niveau de base de données supplémentaires :  
   
-1.  Créez un utilisateur de base de données associé à ce certificat à l'aide de l'instruction Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Cet utilisateur existe dans la base de données uniquement et n’est pas associé à un compte de connexion, sauf si une connexion a également été créée à partir de ce même certificat.  
+1. Créez un utilisateur de base de données associé à ce certificat à l'aide de l'instruction Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Cet utilisateur existe dans la base de données uniquement et n’est pas associé à un compte de connexion, sauf si une connexion a également été créée à partir de ce même certificat.  
   
-1.  Autorisez l’utilisateur du certificat requis au niveau de la base de données.  
+1. Autorisez l’utilisateur du certificat requis au niveau de la base de données.  
   
 Si le module a besoin des autorisations supplémentaires au niveau du serveur :  
   
-1.  Copiez le certificat à la `master` base de données.  
+1. Copiez le certificat à la `master` base de données.  
  
-1.  Créer une connexion associée à ce certificat à l’aide de l’instruction Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instruction.  
+1. Créer une connexion associée à ce certificat à l’aide de l’instruction Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instruction.  
   
-1.  Autorisez la connexion de certificat requis au niveau du serveur.  
+1. Autorisez la connexion de certificat requis au niveau du serveur.  
   
 > [!NOTE]  
 >  Un certificat ne permet pas d'accorder des autorisations à un utilisateur dont les autorisations ont été révoquées à l'aide de l'instruction DENY. L'instruction DENY a toujours priorité sur l'instruction GRANT, ce qui empêche l'appelant d'hériter des autorisations accordées à l'utilisateur du certificat.  

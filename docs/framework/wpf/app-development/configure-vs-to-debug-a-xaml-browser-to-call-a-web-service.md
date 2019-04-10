@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314371"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Procédure : Configurer Visual Studio pour déboguer une application de navigateur XAML et appeler un service web
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] s’exécutent dans un bac à sable de sécurité de confiance partielle qui est limité au jeu de la zone Internet d’autorisations. Ce jeu d’autorisations restreint les appels de service Web seulement services Web qui sont trouvent dans le [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] site de l’application d’origine. Quand un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] du débogage à partir de Visual Studio 2005, cependant, il n'est pas considérée comme ayant le même site d’origine que le service Web il références. Cette causes des exceptions de sécurité à déclencher lorsque la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] tente d’appeler le service Web. Toutefois, un Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] projet peut être configuré pour simuler le même site d’origine que le service Web qu’elle appelle pendant le débogage. Cela permet la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] à appeler en toute sécurité le service Web sans provoquer des exceptions de sécurité.
@@ -21,15 +21,15 @@ ms.locfileid: "59171838"
 ## <a name="configuring-visual-studio"></a>Configuration de Visual Studio
  Pour configurer Visual Studio 2005 pour déboguer un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] qui appelle un service Web :
 
-1.  Après avoir sélectionné un projet dans l’ **Explorateur de solutions**, dans le menu **Projet** , cliquez sur **Propriétés**.
+1. Après avoir sélectionné un projet dans l’ **Explorateur de solutions**, dans le menu **Projet** , cliquez sur **Propriétés**.
 
-2.  Dans le **Concepteur de projets**, cliquez sur le **déboguer** onglet.
+2. Dans le **Concepteur de projets**, cliquez sur le **déboguer** onglet.
 
-3.  Dans le **Action de démarrage** section, sélectionnez **démarrer le programme externe** et entrez les informations suivantes :
+3. Dans le **Action de démarrage** section, sélectionnez **démarrer le programme externe** et entrez les informations suivantes :
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4.  Dans le **Options de démarrage** section, entrez le texte suivant dans le **arguments de ligne de commande** zone de texte :
+4. Dans le **Options de démarrage** section, entrez le texte suivant dans le **arguments de ligne de commande** zone de texte :
 
      `-debug`  *filename*
 
@@ -40,11 +40,11 @@ ms.locfileid: "59171838"
 > [!NOTE]
 >  C’est la configuration par défaut pour les solutions qui sont créés avec Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] modèle de projet.
 
-1.  Après avoir sélectionné un projet dans l’ **Explorateur de solutions**, dans le menu **Projet** , cliquez sur **Propriétés**.
+1. Après avoir sélectionné un projet dans l’ **Explorateur de solutions**, dans le menu **Projet** , cliquez sur **Propriétés**.
 
-2.  Dans le **Concepteur de projets**, cliquez sur le **déboguer** onglet.
+2. Dans le **Concepteur de projets**, cliquez sur le **déboguer** onglet.
 
-3.  Dans le **Options de démarrage** , ajoutez le paramètre de ligne de commande suivant à la **arguments de ligne de commande** zone de texte :
+3. Dans le **Options de démarrage** , ajoutez le paramètre de ligne de commande suivant à la **arguments de ligne de commande** zone de texte :
 
      `-debugSecurityZoneURL`  *URL*
 

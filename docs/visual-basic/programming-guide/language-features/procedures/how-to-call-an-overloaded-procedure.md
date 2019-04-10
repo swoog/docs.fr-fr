@@ -8,23 +8,23 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: 9dda0fbc0cffe8904ab97c46cea40d5cf00c91e9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317804"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procédure : Appeler une procédure surchargée (Visual Basic)
 L’avantage de la surcharge d’une procédure est la flexibilité de l’appel. Le code appelant peut obtenir les informations que nécessaires pour passer à la procédure, puis appelez un seul nom de procédure, quel que soit les arguments, il a réussi.  
   
 ### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Pour appeler une procédure qui possède plusieurs versions définies  
   
-1.  Dans le code appelant, déterminez les données à transmettre à la procédure.  
+1. Dans le code appelant, déterminez les données à transmettre à la procédure.  
   
-2.  Écrire l’appel de procédure de façon normale, présenter les données dans la liste d’arguments. N’oubliez pas les arguments correspondent à la liste des paramètres dans une des versions définies pour la procédure.  
+2. Écrire l’appel de procédure de façon normale, présenter les données dans la liste d’arguments. N’oubliez pas les arguments correspondent à la liste des paramètres dans une des versions définies pour la procédure.  
   
-3.  Il est inutile déterminer la version de la procédure à appeler. Visual Basic passe le contrôle à la version correspondant à votre liste d’arguments.  
+3. Il est inutile déterminer la version de la procédure à appeler. Visual Basic passe le contrôle à la version correspondant à votre liste d’arguments.  
   
      L’exemple suivant appelle la `post` procédure déclarée dans [Comment : Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md). Il obtient l’identification de client, détermine s’il est un `String` ou un `Integer`, puis, dans les deux cas, appelle la même procédure.  
   
@@ -38,9 +38,9 @@ L’avantage de la surcharge d’une procédure est la flexibilité de l’appel
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)
+- [Procédure : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procédure : surcharger une procédure qui accepte des paramètres facultatifs](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considérations liées à la surcharge des procédures](./considerations-in-overloading-procedures.md)
 - [Résolution de surcharge](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

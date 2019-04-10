@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318197"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>Impossible de charger les informations pour la classe\<nom_classe >'
 Une référence a été faite à une classe qui n’est pas disponible.  
@@ -21,9 +21,9 @@ Une référence a été faite à une classe qui n’est pas disponible.
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Vérifiez que la classe est définie et que vous correctement orthographié le nom.  
+1. Vérifiez que la classe est définie et que vous correctement orthographié le nom.  
   
-2.  Essayez d’accéder à l’un des membres déclarés dans le module. Dans certains cas, l’environnement de débogage ne peut pas localiser les membres, car les modules dans lesquels ils sont déclarés n’ont pas encore été chargés.  
+2. Essayez d’accéder à l’un des membres déclarés dans le module. Dans certains cas, l’environnement de débogage ne peut pas localiser les membres, car les modules dans lesquels ils sont déclarés n’ont pas encore été chargés.  
   
 ## <a name="see-also"></a>Voir aussi
 

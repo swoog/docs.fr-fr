@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317660"
 ---
 # <a name="table-overview"></a>Vue d'ensemble de Table
 <xref:System.Windows.Documents.Table> est un élément de niveau bloc qui prend en charge sous forme de grille de présentation du contenu de document dynamique. La flexibilité de cet élément est très utile, mais rend plus difficiles sa compréhension et son utilisation.  
@@ -108,15 +108,15 @@ ms.locfileid: "59161432"
 ### <a name="background-rendering-precedence"></a>Priorité du rendu en arrière-plan  
  Les éléments de la table sont affichés dans l’ordre suivant (dans l’ordre de plan, du plus bas au plus haut). Cet ordre ne peut pas être modifié. Par exemple, il n’existe pas de propriété « Ordre de plan » que vous pourriez utiliser pour remplacer l’ordre établi.  
   
-1.  <xref:System.Windows.Documents.Table>  
+1. <xref:System.Windows.Documents.Table>  
   
-2.  <xref:System.Windows.Documents.TableColumn>  
+2. <xref:System.Windows.Documents.TableColumn>  
   
-3.  <xref:System.Windows.Documents.TableRowGroup>  
+3. <xref:System.Windows.Documents.TableRowGroup>  
   
-4.  <xref:System.Windows.Documents.TableRow>  
+4. <xref:System.Windows.Documents.TableRow>  
   
-5.  <xref:System.Windows.Documents.TableCell>  
+5. <xref:System.Windows.Documents.TableCell>  
   
  Prenons l’exemple suivant, qui définit des couleurs d’arrière-plan dans une table pour chacun de ces éléments.  
   

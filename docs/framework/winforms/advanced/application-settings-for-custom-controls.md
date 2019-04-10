@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317296"
 ---
 # <a name="application-settings-for-custom-controls"></a>Paramètres d'application pour les contrôles personnalisés
 Vous devez effectuer certaines tâches pour permettre à vos contrôles personnalisés pour conserver les paramètres de l’application lorsque les contrôles sont hébergés dans des applications tierces.  
@@ -22,9 +22,9 @@ Vous devez effectuer certaines tâches pour permettre à vos contrôles personna
   
  En outre, vous devez implémenter les éléments suivants dans l’ordre de paramètres d’application pour les contrôles personnalisés fonctionnent correctement dans les environnements de conception tel que Visual Studio :  
   
-1.  Une classe de paramètres d’application personnalisés avec un constructeur qui accepte un <xref:System.ComponentModel.IComponent> comme un paramètre unique. Utilisez cette classe pour enregistrer et charger tous les paramètres de votre application. Lorsque vous créez une nouvelle instance de cette classe, passez votre contrôle personnalisé à l’aide du constructeur.  
+1. Une classe de paramètres d’application personnalisés avec un constructeur qui accepte un <xref:System.ComponentModel.IComponent> comme un paramètre unique. Utilisez cette classe pour enregistrer et charger tous les paramètres de votre application. Lorsque vous créez une nouvelle instance de cette classe, passez votre contrôle personnalisé à l’aide du constructeur.  
   
-2.  Créez cette classe de paramètres personnalisés une fois que le contrôle a été créé et placé dans un formulaire, comme dans le formulaire <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.  
+2. Créez cette classe de paramètres personnalisés une fois que le contrôle a été créé et placé dans un formulaire, comme dans le formulaire <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.  
   
  Pour obtenir des instructions sur la création d’une classe de paramètres personnalisés, consultez [Comment : Créer des paramètres de l’Application](how-to-create-application-settings.md).  
   

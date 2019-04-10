@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser la Protection des données'
+title: 'Procédure : utiliser la protection des données'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,41 +18,41 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698389"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314454"
 ---
-# <a name="how-to-use-data-protection"></a>Procédure : Utiliser la Protection des données
+# <a name="how-to-use-data-protection"></a>Procédure : utiliser la protection des données
 .NET Framework fournit l'accès à l'API de protection des données (DPAPI), qui permet de chiffrer des données à l'aide des informations de compte de l'utilisateur ou de l'ordinateur actuel.  Quand vous utilisez l'API de protection des données, vous simplifiez le processus de génération et de stockage explicites de la clé de chiffrement.  
   
- Utilisez la classe <xref:System.Security.Cryptography.ProtectedMemory> pour chiffrer un tableau d'octets en mémoire.  Cette fonctionnalité est disponible dans Microsoft Windows XP et les systèmes d'exploitation ultérieurs.  Vous pouvez spécifier que la mémoire chiffrée par le processus actuel peut être déchiffrée par le processus actuel uniquement, par tous les processus ou dans le même contexte utilisateur.  Reportez-vous à l'énumération <xref:System.Security.Cryptography.MemoryProtectionScope> pour obtenir une description détaillée des options <xref:System.Security.Cryptography.ProtectedMemory>.  
+ Utilisez la classe <xref:System.Security.Cryptography.ProtectedMemory> pour chiffrer un tableau d'octets en mémoire.  Cette fonctionnalité est disponible dans Microsoft Windows XP et les systèmes d’exploitation ultérieurs.  Vous pouvez spécifier que la mémoire chiffrée par le processus actuel peut être déchiffrée par le processus actuel uniquement, par tous les processus ou dans le même contexte utilisateur.  Reportez-vous à l'énumération <xref:System.Security.Cryptography.MemoryProtectionScope> pour obtenir une description détaillée des options <xref:System.Security.Cryptography.ProtectedMemory>.  
   
  Utilisez la classe <xref:System.Security.Cryptography.ProtectedData> pour chiffrer une copie d'un tableau d'octets. Cette fonctionnalité est disponible dans Microsoft Windows 2000 et les systèmes d'exploitation ultérieurs.  Vous pouvez spécifier que les données chiffrées par le compte d'utilisateur actuel peuvent être déchiffrées uniquement par le même compte d'utilisateur, ou bien par n'importe quel compte de l'ordinateur.  Reportez-vous à l'énumération <xref:System.Security.Cryptography.DataProtectionScope> pour obtenir une description détaillée des options <xref:System.Security.Cryptography.ProtectedData>.  
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Pour chiffrer les données en mémoire à l'aide de la protection des données  
   
-1.  Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> en passant un tableau d'octets à chiffrer, l'entropie et la portée de protection de mémoire.  
+1. Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> en passant un tableau d'octets à chiffrer, l'entropie et la portée de protection de mémoire.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Pour déchiffrer les données en mémoire à l'aide de la protection des données  
   
-1.  Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> en passant un tableau d'octets à déchiffrer et la portée de protection de mémoire.  
+1. Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> en passant un tableau d'octets à déchiffrer et la portée de protection de mémoire.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Pour chiffrer les données d'un fichier ou d'un flux à l'aide de la protection des données  
   
-1.  Créez une entropie aléatoire.  
+1. Créez une entropie aléatoire.  
   
-2.  Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedData.Protect%2A> en passant un tableau d'octets à chiffrer, l'entropie et la portée de protection des données.  
+2. Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedData.Protect%2A> en passant un tableau d'octets à chiffrer, l'entropie et la portée de protection des données.  
   
-3.  Écrivez les données chiffrées dans un fichier ou un flux.  
+3. Écrivez les données chiffrées dans un fichier ou un flux.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Pour déchiffrer les données à partir d'un fichier ou d'un flux à l'aide de la protection des données  
   
-1.  Lisez les données chiffrées à partir d'un fichier ou d'un flux.  
+1. Lisez les données chiffrées à partir d'un fichier ou d'un flux.  
   
-2.  Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> en passant un tableau d'octets à déchiffrer et la portée de protection des données.  
+2. Appelez la méthode statique <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> en passant un tableau d'octets à déchiffrer et la portée de protection des données.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre deux formes de chiffrement et de déchiffrement.  Tout d'abord, l'exemple de code chiffre et déchiffre un tableau d'octets en mémoire.  Ensuite, l'exemple de code chiffre une copie d'un tableau d'octets, l'enregistre dans un fichier, charge les données à partir du fichier, puis déchiffre les données.  L'exemple affiche les données d'origine, les données chiffrées et les données déchiffrées.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315346"
 ---
 # <a name="data-contract-surrogates"></a>Substituts de contrats de données
 Le contrat de données *substitut* est une fonctionnalité avancée reposant sur le modèle de contrat de données. Cette fonctionnalité est destinée à la personnalisation et à la substitution de type dans les situations où les utilisateurs souhaitent changer la manière dont un type est sérialisé, désérialisé ou projeté dans des métadonnées. On peut par exemple utiliser un substitut lorsque aucun contrat de données n'a été spécifié pour le type, que les champs et propriétés ne sont pas marqués avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> ou que les utilisateurs souhaitent créer des variations de schéma de manière dynamique.  
@@ -141,15 +141,15 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Pour implémenter la sérialisation et la désérialisation  
   
-1.  Créez une instance du <xref:System.ServiceModel.ServiceHost> pour votre service. Pour obtenir des instructions complètes, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Créez une instance du <xref:System.ServiceModel.ServiceHost> pour votre service. Pour obtenir des instructions complètes, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  Pour chaque <xref:System.ServiceModel.Description.ServiceEndpoint> de l'hôte de service spécifié, recherchez son <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Pour chaque <xref:System.ServiceModel.Description.ServiceEndpoint> de l'hôte de service spécifié, recherchez son <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Parcourez les comportements d'opération pour déterminer si une instance du <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> est détectée.  
+3. Parcourez les comportements d'opération pour déterminer si une instance du <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> est détectée.  
   
-4.  Si un <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> est détecté, affectez à sa propriété <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> une nouvelle instance du substitut. Si aucun <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> n'est détecté, créez une instance et affectez au membre <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> du nouveau comportement une nouvelle instance du substitut.  
+4. Si un <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> est détecté, affectez à sa propriété <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> une nouvelle instance du substitut. Si aucun <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> n'est détecté, créez une instance et affectez au membre <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> du nouveau comportement une nouvelle instance du substitut.  
   
-5.  Pour finir, ajoutez ce nouveau comportement aux comportements d'opérations actuels, comme illustré dans l'exemple suivant :  
+5. Pour finir, ajoutez ce nouveau comportement aux comportements d'opérations actuels, comme illustré dans l'exemple suivant :  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Pour implémenter un substitut pour l'importation de métadonnées  
   
-1.  Importez les métadonnées à l'aide de la classe <xref:System.ServiceModel.Description.WsdlImporter>.  
+1. Importez les métadonnées à l'aide de la classe <xref:System.ServiceModel.Description.WsdlImporter>.  
   
-2.  Utilisez la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> pour vérifier si un <xref:System.Runtime.Serialization.XsdDataContractImporter> a été défini.  
+2. Utilisez la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> pour vérifier si un <xref:System.Runtime.Serialization.XsdDataContractImporter> a été défini.  
   
-3.  Si la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> retourne la valeur `false`, créez un <xref:System.Runtime.Serialization.XsdDataContractImporter> et affectez à sa propriété <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> une nouvelle instance de la classe <xref:System.Runtime.Serialization.ImportOptions>. Autrement, utilisez l'importateur retourné par le paramètre `out` de la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Si la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> retourne la valeur `false`, créez un <xref:System.Runtime.Serialization.XsdDataContractImporter> et affectez à sa propriété <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> une nouvelle instance de la classe <xref:System.Runtime.Serialization.ImportOptions>. Autrement, utilisez l'importateur retourné par le paramètre `out` de la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Si le <xref:System.Runtime.Serialization.XsdDataContractImporter> n'a aucun <xref:System.Runtime.Serialization.ImportOptions> défini, affectez à la propriété une nouvelle instance de la classe <xref:System.Runtime.Serialization.ImportOptions>.  
+4. Si le <xref:System.Runtime.Serialization.XsdDataContractImporter> n'a aucun <xref:System.Runtime.Serialization.ImportOptions> défini, affectez à la propriété une nouvelle instance de la classe <xref:System.Runtime.Serialization.ImportOptions>.  
   
-5.  Affectez à la propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> du <xref:System.Runtime.Serialization.ImportOptions> du <xref:System.Runtime.Serialization.XsdDataContractImporter> une nouvelle instance du substitut.  
+5. Affectez à la propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> du <xref:System.Runtime.Serialization.ImportOptions> du <xref:System.Runtime.Serialization.XsdDataContractImporter> une nouvelle instance du substitut.  
   
-6.  Ajoutez le <xref:System.Runtime.Serialization.XsdDataContractImporter> à la collection retournée par la propriété <xref:System.ServiceModel.Description.MetadataExporter.State%2A> du <xref:System.ServiceModel.Description.WsdlImporter> (héritée de la classe <xref:System.ServiceModel.Description.MetadataExporter>.)  
+6. Ajoutez le <xref:System.Runtime.Serialization.XsdDataContractImporter> à la collection retournée par la propriété <xref:System.ServiceModel.Description.MetadataExporter.State%2A> du <xref:System.ServiceModel.Description.WsdlImporter> (héritée de la classe <xref:System.ServiceModel.Description.MetadataExporter>.)  
   
-7.  Utilisez la méthode <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> du <xref:System.ServiceModel.Description.WsdlImporter> pour importer tous les contrats de données dans le schéma. Durant la dernière étape, le code est généré à partir des schémas chargés en appelant le substitut.  
+7. Utilisez la méthode <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> du <xref:System.ServiceModel.Description.WsdlImporter> pour importer tous les contrats de données dans le schéma. Durant la dernière étape, le code est généré à partir des schémas chargés en appelant le substitut.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Pour utiliser un substitut pour l'exportation de métadonnées  
   
-1.  Créez un <xref:System.ServiceModel.Description.WsdlExporter> ou utilisez le paramètre `wsdlExporter` passé à la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
+1. Créez un <xref:System.ServiceModel.Description.WsdlExporter> ou utilisez le paramètre `wsdlExporter` passé à la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
   
-2.  Utilisez la fonction <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> pour vérifier si un <xref:System.Runtime.Serialization.XsdDataContractExporter> a été défini.  
+2. Utilisez la fonction <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> pour vérifier si un <xref:System.Runtime.Serialization.XsdDataContractExporter> a été défini.  
   
-3.  Si <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> retourne la valeur `false`, créez un <xref:System.Runtime.Serialization.XsdDataContractExporter> avec les schémas XML générés à partir du <xref:System.ServiceModel.Description.WsdlExporter> et ajoutez-le à la collection retournée par la propriété <xref:System.ServiceModel.Description.MetadataExporter.State%2A> du <xref:System.ServiceModel.Description.WsdlExporter>. Autrement, utilisez l'exportateur retourné par le paramètre `out` de la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Si <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> retourne la valeur `false`, créez un <xref:System.Runtime.Serialization.XsdDataContractExporter> avec les schémas XML générés à partir du <xref:System.ServiceModel.Description.WsdlExporter> et ajoutez-le à la collection retournée par la propriété <xref:System.ServiceModel.Description.MetadataExporter.State%2A> du <xref:System.ServiceModel.Description.WsdlExporter>. Autrement, utilisez l'exportateur retourné par le paramètre `out` de la méthode <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Si le <xref:System.Runtime.Serialization.XsdDataContractExporter> n'a aucun <xref:System.Runtime.Serialization.ExportOptions> défini, affectez à la propriété <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> une nouvelle instance de la classe <xref:System.Runtime.Serialization.ExportOptions>.  
+4. Si le <xref:System.Runtime.Serialization.XsdDataContractExporter> n'a aucun <xref:System.Runtime.Serialization.ExportOptions> défini, affectez à la propriété <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> une nouvelle instance de la classe <xref:System.Runtime.Serialization.ExportOptions>.  
   
-5.  Affectez à la propriété <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> du <xref:System.Runtime.Serialization.ExportOptions> du <xref:System.Runtime.Serialization.XsdDataContractExporter> une nouvelle instance du substitut. Les étapes suivantes d'exportation des métadonnées ne requièrent pas de modifications.  
+5. Affectez à la propriété <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> du <xref:System.Runtime.Serialization.ExportOptions> du <xref:System.Runtime.Serialization.XsdDataContractExporter> une nouvelle instance du substitut. Les étapes suivantes d'exportation des métadonnées ne requièrent pas de modifications.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

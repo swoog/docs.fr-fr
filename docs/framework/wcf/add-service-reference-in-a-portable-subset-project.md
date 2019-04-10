@@ -2,12 +2,12 @@
 title: Ajouter une référence de service à un projet de sous-ensemble portable
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316724"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Ajouter une référence de service à un projet de sous-ensemble portable
 Projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs implémentations .NET (bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement des bibliothèques portables .NET qui sont un assemblage .NET framework qui peut être utilisé sur n’importe quelle implémentation .NET.  
@@ -15,21 +15,21 @@ Projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET
 ## <a name="add-service-reference-details"></a>Ajouter des détails de référence de service  
  Lors de l'ajout d'une référence de service dans un projet de sous-ensemble portable, les restrictions suivantes sont appliquées :  
   
-1.  Pour <xref:System.Xml.Serialization.XmlSerializer>, seuls les encodages littéraux sont autorisés. Les encodages SOAP génèrent une erreur lors de l'importation.  
+1. Pour <xref:System.Xml.Serialization.XmlSerializer>, seuls les encodages littéraux sont autorisés. Les encodages SOAP génèrent une erreur lors de l'importation.  
   
-2.  Pour les services qui utilisent des scénarios <xref:System.Runtime.Serialization.DataContractSerializer>, un substitut de contrat de données est fourni pour garantir que les types réutilisés proviennent uniquement du sous-ensemble portable.  
+2. Pour les services qui utilisent des scénarios <xref:System.Runtime.Serialization.DataContractSerializer>, un substitut de contrat de données est fourni pour garantir que les types réutilisés proviennent uniquement du sous-ensemble portable.  
   
-3.  Les points de terminaison qui reposent sur des liaisons non prises en charge dans les bibliothèques portables (toutes les liaisons sauf <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sans flux de transaction, sessions fiables ou encodage MTOM et liaisons personnalisées équivalentes) sont ignorés.  
+3. Les points de terminaison qui reposent sur des liaisons non prises en charge dans les bibliothèques portables (toutes les liaisons sauf <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sans flux de transaction, sessions fiables ou encodage MTOM et liaisons personnalisées équivalentes) sont ignorés.  
   
-4.  Les en-têtes de messages sont supprimés de toutes les descriptions des messages dans toutes les opérations avant importation.  
+4. Les en-têtes de messages sont supprimés de toutes les descriptions des messages dans toutes les opérations avant importation.  
   
-5.  Les attributs non portables <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> et <xref:System.ServiceModel.TransactionFlowAttribute> sont supprimés du code du proxy client généré.  
+5. Les attributs non portables <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> et <xref:System.ServiceModel.TransactionFlowAttribute> sont supprimés du code du proxy client généré.  
   
-6.  Les propriétés non portables ProtectionLevel, SessionMode, IsInitiating, IsTerminating sont supprimées de <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> et <xref:System.ServiceModel.FaultContractAttribute>.  
+6. Les propriétés non portables ProtectionLevel, SessionMode, IsInitiating, IsTerminating sont supprimées de <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> et <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Toutes les opérations de service sont générées comme des opérations asynchrones sur le proxy client.  
+7. Toutes les opérations de service sont générées comme des opérations asynchrones sur le proxy client.  
   
-8.  Les constructeurs clients générés qui utilisent des types non portables sont supprimés.  
+8. Les constructeurs clients générés qui utilisent des types non portables sont supprimés.  
   
 9. Une instance <xref:System.Net.CookieContainer> est exposée sur le client généré.  
   

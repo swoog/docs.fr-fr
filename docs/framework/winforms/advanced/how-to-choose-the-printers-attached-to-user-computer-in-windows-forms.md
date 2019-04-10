@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318804"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procédure : choisir les imprimantes connectées à l’ordinateur d’un utilisateur dans Windows Forms
 Souvent, les utilisateurs souhaitent choisir une imprimante autre que l’imprimante par défaut. Vous pouvez permettre aux utilisateurs de choisir une imprimante parmi celles installées actuellement à l’aide du composant <xref:System.Windows.Forms.PrintDialog> . Par le biais du composant <xref:System.Windows.Forms.PrintDialog> , le <xref:System.Windows.Forms.DialogResult> du composant <xref:System.Windows.Forms.PrintDialog> est capturé et utilisé pour sélectionner l’imprimante.  
@@ -23,7 +23,7 @@ Souvent, les utilisateurs souhaitent choisir une imprimante autre que l’imprim
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Pour choisir une imprimante, puis imprimer un fichier  
   
-1.  Sélectionnez l’imprimante à utiliser à l’aide de la <xref:System.Windows.Forms.PrintDialog> composant.  
+1. Sélectionnez l’imprimante à utiliser à l’aide de la <xref:System.Windows.Forms.PrintDialog> composant.  
   
      Dans l’exemple de code suivant, deux événements sont gérés. Dans le premier, un <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> événement, le <xref:System.Windows.Forms.PrintDialog> classe est instanciée et l’imprimante sélectionnée par l’utilisateur est capturée dans le <xref:System.Windows.Forms.DialogResult> propriété.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314020"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procédure : ajouter des fonctionnalités de recherche à un contrôle ListView
 Souvent, lorsque vous travaillez avec une longue liste d’éléments dans un <xref:System.Windows.Forms.ListView> contrôle, que vous souhaitez proposer des fonctionnalités de recherche à l’utilisateur. Le <xref:System.Windows.Forms.ListView> contrôle offre cette fonctionnalité de deux manières différentes : correspondance de texte et la recherche d’emplacement.  
@@ -25,11 +25,11 @@ Souvent, lorsque vous travaillez avec une longue liste d’éléments dans un <x
   
 ### <a name="to-find-an-item-using-text"></a>Pour rechercher un élément à l’aide de texte  
   
-1.  Créer un <xref:System.Windows.Forms.ListView> avec la <xref:System.Windows.Forms.ListView.View%2A> propriété définie sur <xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.List>, puis remplissez le <xref:System.Windows.Forms.ListView> avec des éléments.  
+1. Créer un <xref:System.Windows.Forms.ListView> avec la <xref:System.Windows.Forms.ListView.View%2A> propriété définie sur <xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.List>, puis remplissez le <xref:System.Windows.Forms.ListView> avec des éléments.  
   
-2.  Appelez le <xref:System.Windows.Forms.ListView.FindItemWithText%2A> méthode, en passant le texte de l’élément que vous souhaitez obtenir.  
+2. Appelez le <xref:System.Windows.Forms.ListView.FindItemWithText%2A> méthode, en passant le texte de l’élément que vous souhaitez obtenir.  
   
-3.  L’exemple de code suivant montre comment créer un base <xref:System.Windows.Forms.ListView>, remplir avec des éléments et utiliser la saisie de texte à partir de l’utilisateur pour rechercher un élément dans la liste.  
+3. L’exemple de code suivant montre comment créer un base <xref:System.Windows.Forms.ListView>, remplir avec des éléments et utiliser la saisie de texte à partir de l’utilisateur pour rechercher un élément dans la liste.  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
@@ -37,11 +37,11 @@ Souvent, lorsque vous travaillez avec une longue liste d’éléments dans un <x
   
 ### <a name="to-find-an-item-using-x--and-y-coordinates"></a>Pour rechercher un élément à l’aide des coordonnées x et y  
   
-1.  Créer un <xref:System.Windows.Forms.ListView> avec la <xref:System.Windows.Forms.View> propriété définie sur <xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>, puis remplissez le <xref:System.Windows.Forms.ListView> avec des éléments.  
+1. Créer un <xref:System.Windows.Forms.ListView> avec la <xref:System.Windows.Forms.View> propriété définie sur <xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>, puis remplissez le <xref:System.Windows.Forms.ListView> avec des éléments.  
   
-2.  Appelez le <xref:System.Windows.Forms.ListView.FindNearestItem%2A> méthode, en passant les coordonnées x - et y-souhaitée et la direction que vous souhaitez rechercher.  
+2. Appelez le <xref:System.Windows.Forms.ListView.FindNearestItem%2A> méthode, en passant les coordonnées x - et y-souhaitée et la direction que vous souhaitez rechercher.  
   
-3.  L’exemple de code suivant montre comment créer une icône de base <xref:System.Windows.Forms.ListView>, remplir avec des éléments, puis capturez la <xref:System.Windows.Forms.Control.MouseDown> événements pour rechercher l’élément le plus proche dans la direction verticale.  
+3. L’exemple de code suivant montre comment créer une icône de base <xref:System.Windows.Forms.ListView>, remplir avec des éléments, puis capturez la <xref:System.Windows.Forms.Control.MouseDown> événements pour rechercher l’élément le plus proche dans la direction verticale.  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]

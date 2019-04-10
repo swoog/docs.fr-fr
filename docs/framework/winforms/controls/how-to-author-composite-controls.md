@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2157ef85cb26ad422a8ff3ff5149af373be1c055
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317010"
 ---
 # <a name="how-to-author-composite-controls"></a>Procédure : créer des contrôles composites
 Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pouvez les créer dans le cadre d’un projet d’application de bureau Windows et les utiliser uniquement sur les formulaires du projet. Ou vous pouvez les créer dans un projet de bibliothèque de contrôles Windows, compiler le projet dans un assembly et utiliser les contrôles dans d’autres projets. Vous pouvez même hériter d’eux et utiliser l’héritage visuel pour les personnaliser rapidement à des fins spécifiques.  
@@ -24,21 +24,21 @@ Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pou
   
 ### <a name="to-author-a-composite-control"></a>Pour créer un contrôle composite  
   
-1.  Ouvrez un nouveau projet d’**application Windows** nommé `DemoControlHost`.  
+1. Ouvrez un nouveau projet d’**application Windows** nommé `DemoControlHost`.  
   
-2.  Dans le menu **Projet** , cliquez sur **Ajouter un contrôle utilisateur**.  
+2. Dans le menu **Projet** , cliquez sur **Ajouter un contrôle utilisateur**.  
   
-3.  Dans la boîte de dialogue **Ajouter un nouvel élément**, donnez au fichier de classe (fichier .vb ou .cs) le nom que vous souhaitez pour le contrôle composite.  
+3. Dans la boîte de dialogue **Ajouter un nouvel élément**, donnez au fichier de classe (fichier .vb ou .cs) le nom que vous souhaitez pour le contrôle composite.  
   
-4.  Sélectionnez le **ajouter** bouton pour créer le fichier de classe pour le contrôle composite.  
+4. Sélectionnez le **ajouter** bouton pour créer le fichier de classe pour le contrôle composite.  
   
-5.  Utilisez la **boîte à outils** pour ajouter des contrôles à la surface du contrôle composite.  
+5. Utilisez la **boîte à outils** pour ajouter des contrôles à la surface du contrôle composite.  
   
-6.  Placez le code dans des procédures événementielles afin de gérer les événements déclenchés par le contrôle composite ou par ses contrôles constitutifs.  
+6. Placez le code dans des procédures événementielles afin de gérer les événements déclenchés par le contrôle composite ou par ses contrôles constitutifs.  
   
-7.  Fermez le concepteur du contrôle composite et enregistrez le fichier lorsque vous y êtes invité.  
+7. Fermez le concepteur du contrôle composite et enregistrez le fichier lorsque vous y êtes invité.  
   
-8.  Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+8. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
      Le projet doit être généré de sorte que les contrôles personnalisés apparaissent dans la **boîte à outils**.  
   
@@ -46,35 +46,35 @@ Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pou
   
 ### <a name="to-author-a-control-class-library"></a>Pour créer une bibliothèque de classes de contrôle  
   
-1.  Ouvrez un nouveau projet de **bibliothèque de contrôles Windows**.  
+1. Ouvrez un nouveau projet de **bibliothèque de contrôles Windows**.  
   
      Par défaut, le projet contient un contrôle composite.  
   
-2.  Ajoutez des contrôles et du code, comme décrit dans la procédure ci-dessus.  
+2. Ajoutez des contrôles et du code, comme décrit dans la procédure ci-dessus.  
   
-3.  Sélectionnez un contrôle dont vous ne souhaitez pas modifier les classes qui héritent, puis définissez la propriété **Modifiers** de ce contrôle sur **Private**.  
+3. Sélectionnez un contrôle dont vous ne souhaitez pas modifier les classes qui héritent, puis définissez la propriété **Modifiers** de ce contrôle sur **Private**.  
   
-4.  Créez la DLL.  
+4. Créez la DLL.  
   
 ### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>Pour hériter d’un contrôle composite dans une bibliothèque de classes de contrôle  
   
-1.  Dans le menu **Fichier**, pointez sur **Ajouter** et sélectionnez **Nouveau projet** pour ajouter un nouveau projet d’**application Windows** à la solution.  
+1. Dans le menu **Fichier**, pointez sur **Ajouter** et sélectionnez **Nouveau projet** pour ajouter un nouveau projet d’**application Windows** à la solution.  
   
-2.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **References** du nouveau projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.  
+2. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **References** du nouveau projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.  
   
-3.  Sélectionnez l’onglet **Projets** et double-cliquez sur votre projet de bibliothèque de contrôles.  
+3. Sélectionnez l’onglet **Projets** et double-cliquez sur votre projet de bibliothèque de contrôles.  
   
-4.  Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+4. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-5.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet de bibliothèque de contrôles, puis sélectionnez **Ajouter un nouvel élément** dans le menu contextuel.  
+5. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet de bibliothèque de contrôles, puis sélectionnez **Ajouter un nouvel élément** dans le menu contextuel.  
   
-6.  Sélectionnez le modèle **Contrôle utilisateur hérité** dans la boîte de dialogue **Ajouter un nouvel élément**.  
+6. Sélectionnez le modèle **Contrôle utilisateur hérité** dans la boîte de dialogue **Ajouter un nouvel élément**.  
   
-7.  Dans la boîte de dialogue **Sélecteur d’héritage**, double-cliquez sur le contrôle dont vous voulez hériter.  
+7. Dans la boîte de dialogue **Sélecteur d’héritage**, double-cliquez sur le contrôle dont vous voulez hériter.  
   
      Un nouveau contrôle est ajouté à votre projet.  
   
-8.  Ouvrez le concepteur visuel du nouveau contrôle et ajoutez d’autres contrôles constitutifs.  
+8. Ouvrez le concepteur visuel du nouveau contrôle et ajoutez d’autres contrôles constitutifs.  
   
      Vous pouvez voir les contrôles constitutifs hérités du contrôle composite dans votre DLL, et vous pouvez modifier les propriétés des contrôles dont la propriété **Modifiers** est définie sur **Public**. Vous ne pouvez pas modifier les propriétés du contrôle dont la propriété **Modifiers** est définie sur **Private**.  
   

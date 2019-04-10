@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316269"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procédure : Faire correspondre une chaîne à un modèle (Visual Basic)
 Si vous souhaitez savoir si une expression de la [Type de données String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfait à un modèle, vous pouvez ensuite utiliser le [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -68,11 +68,11 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Pour mettre en correspondance un caractère dans l’expression de chaîne par rapport à une liste de caractères ou aucun caractère  
   
-1.  Appelez le `Like` opérateur deux fois sur la même expression de chaîne et connectez les deux appels avec la [ou opérateur](../../../../visual-basic/language-reference/operators/or-operator.md) ou le [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Appelez le `Like` opérateur deux fois sur la même expression de chaîne et connectez les deux appels avec la [ou opérateur](../../../../visual-basic/language-reference/operators/or-operator.md) ou le [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  Dans la chaîne de modèle pour la première `Like` clause, incluent la liste de caractères placés entourée crochets (`[ ]`).  
+2. Dans la chaîne de modèle pour la première `Like` clause, incluent la liste de caractères placés entourée crochets (`[ ]`).  
   
-3.  Dans la chaîne de modèle pour le deuxième `Like` clause, ne placez pas n’importe quel caractère à la position en question.  
+3. Dans la chaîne de modèle pour le deuxième `Like` clause, ne placez pas n’importe quel caractère à la position en question.  
   
      L’exemple suivant teste le numéro de téléphone à sept chiffres `phoneNum` pour exactement trois chiffres, suivis d’un espace, un trait d’union (`–`), une période (`.`), ou aucun caractère, ne suivi par exactement quatre chiffres.  
   
@@ -82,5 +82,5 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
 
 - [Opérateurs de comparaison](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Opérateurs et expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Like (opérateur)](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [String (type de données)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Like, opérateur](../../../../visual-basic/language-reference/operators/like-operator.md)
+- [String, type de données](../../../../visual-basic/language-reference/data-types/string-data-type.md)

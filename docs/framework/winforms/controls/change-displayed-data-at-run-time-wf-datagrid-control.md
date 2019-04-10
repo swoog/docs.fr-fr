@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315853"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175602"
   
 ### <a name="to-change-data-programmatically"></a>Pour modifier des données par programmation  
   
-1.  Spécifiez la table souhaitée à partir de la <xref:System.Data.DataSet> objet et la ligne et le champ dans la table et la cellule égale à la nouvelle valeur souhaitée.  
+1. Spécifiez la table souhaitée à partir de la <xref:System.Data.DataSet> objet et la ligne et le champ dans la table et la cellule égale à la nouvelle valeur souhaitée.  
   
     > [!NOTE]
     >  Pour spécifier la première table de la <xref:System.Data.DataSet> ou la première ligne de la table, utilisez la valeur 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175602"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Pour modifier la source de données par programmation  
   
-1.  Définir le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (méthode) sur le nom de la source de données et la table que vous souhaitez lier à.  
+1. Définir le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (méthode) sur le nom de la source de données et la table que vous souhaitez lier à.  
   
      L’exemple suivant montre comment modifier la source de la date en utilisant le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode à un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] contrôle de données (adoPubsAuthors) qui est connecté à la table Authors dans la base de données Pubs.  
   

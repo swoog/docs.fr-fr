@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175589"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316802"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement
 Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui peuvent être configurés mais ne fournissent pas une flexibilité totale lors de la configuration de toutes les options de sécurité WCF prend en charge. Cette rubrique montre comment créer une liaison personnalisée directement à partir d'éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d'une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Pour créer une liaison personnalisée qui utilise SymmetricSecurityBindingElement  
   
-1.  Créez une instance de la classe <xref:System.ServiceModel.Channels.BindingElementCollection> portant le nom `outputBec`.  
+1. Créez une instance de la classe <xref:System.ServiceModel.Channels.BindingElementCollection> portant le nom `outputBec`.  
   
-2.  Appelez la méthode statique `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, qui retourne une instance de la classe <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+2. Appelez la méthode statique `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, qui retourne une instance de la classe <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
-3.  Ajoutez <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à la collection (`outputBec`) en appelant la méthode `Add` de <xref:System.Collections.ObjectModel.Collection%601> de la classe <xref:System.ServiceModel.Channels.BindingElement>.  
+3. Ajoutez <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à la collection (`outputBec`) en appelant la méthode `Add` de <xref:System.Collections.ObjectModel.Collection%601> de la classe <xref:System.ServiceModel.Channels.BindingElement>.  
   
-4.  Créez une instance de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> et ajoutez-la à la collection (`outputBec`). Cela spécifie l’encodage utilisé par la liaison.  
+4. Créez une instance de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> et ajoutez-la à la collection (`outputBec`). Cela spécifie l’encodage utilisé par la liaison.  
   
-5.  Créez un <xref:System.ServiceModel.Channels.HttpTransportBindingElement> et ajoutez-le à la collection `outputBec`. Cela indique que la liaison utilise le transport HTTP.  
+5. Créez un <xref:System.ServiceModel.Channels.HttpTransportBindingElement> et ajoutez-le à la collection `outputBec`. Cela indique que la liaison utilise le transport HTTP.  
   
-6.  Créez une liaison personnalisée en créant une instance de la classe <xref:System.ServiceModel.Channels.CustomBinding> et en passant la collection `outputBec` au constructeur.  
+6. Créez une liaison personnalisée en créant une instance de la classe <xref:System.ServiceModel.Channels.CustomBinding> et en passant la collection `outputBec` au constructeur.  
   
-7.  La liaison personnalisée résultante partage un grand nombre des caractéristiques de <xref:System.ServiceModel.WSHttpBinding>. Elle spécifie la sécurité au niveau du message et les informations d'identification Windows, mais désactive les sessions sécurisées, requiert que les informations d'identification du service soient spécifiées hors bande, et ne chiffre pas de signature. La dernière ne peut être contrôlée que par la définition de la propriété <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, tel qu'indiqué à l'étape 4. Les deux autres peuvent être contrôlées à l'aide de paramètres sur la liaison standard.  
+7. La liaison personnalisée résultante partage un grand nombre des caractéristiques de <xref:System.ServiceModel.WSHttpBinding>. Elle spécifie la sécurité au niveau du message et les informations d'identification Windows, mais désactive les sessions sécurisées, requiert que les informations d'identification du service soient spécifiées hors bande, et ne chiffre pas de signature. La dernière ne peut être contrôlée que par la définition de la propriété <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, tel qu'indiqué à l'étape 4. Les deux autres peuvent être contrôlées à l'aide de paramètres sur la liaison standard.  
   
 ## <a name="example"></a>Exemple  
   

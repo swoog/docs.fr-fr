@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315684"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorité de la valeur de propriété de dépendance
 <a name="introduction"></a> Cette rubrique explique comment le fonctionnement du système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peut affecter la valeur d’une propriété de dépendance, et décrit la priorité selon laquelle les aspects du système de propriétés s’appliquent à la valeur effective d’une propriété.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117746"
 ## <a name="dependency-property-setting-precedence-list"></a>Liste de priorité de définition de propriété de dépendance  
  Voici l’ordre définitif suivi par le système de propriétés lors de l’affectation des valeurs d’exécution des propriétés de dépendance. La priorité la plus élevée est répertoriée en premier. Cette liste étend certaines des généralisations présentées dans la [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md).  
   
-1.  **Forçage du système de propriété.** Pour plus d’informations sur le forçage, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
+1. **Forçage du système de propriété.** Pour plus d’informations sur le forçage, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
   
-2.  **Animations actives ou animations avec un comportement de blocage.** Pour avoir un effet pratique, une animation d’une propriété doit pouvoir être prioritaire par rapport à la valeur de base (non animée), même si cette valeur a été définie localement. Pour plus d’informations, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
+2. **Animations actives ou animations avec un comportement de blocage.** Pour avoir un effet pratique, une animation d’une propriété doit pouvoir être prioritaire par rapport à la valeur de base (non animée), même si cette valeur a été définie localement. Pour plus d’informations, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
   
-3.  **Valeur locale.** Une valeur locale peut être définie par l’intermédiaire de la propriété « wrapper », ce qui équivaut également à paramètre comme un élément de propriété ou d’attribut dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou par un appel à la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] à l’aide d’une propriété d’une instance spécifique. Si vous définissez une valeur locale à l’aide d’une liaison ou d’une ressource, celles-ci se comportent chacune en termes de priorité comme si une valeur directe avait été définie.  
+3. **Valeur locale.** Une valeur locale peut être définie par l’intermédiaire de la propriété « wrapper », ce qui équivaut également à paramètre comme un élément de propriété ou d’attribut dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou par un appel à la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] à l’aide d’une propriété d’une instance spécifique. Si vous définissez une valeur locale à l’aide d’une liaison ou d’une ressource, celles-ci se comportent chacune en termes de priorité comme si une valeur directe avait été définie.  
   
-4.  **Propriétés de modèle TemplatedParent.** Un élément a un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si elle a été créée en tant que partie d’un modèle (un <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Pour plus d’informations sur les cas où ceci est applicable, consultez [TemplatedParent](#templatedparent) plus loin dans cette rubrique. Dans le modèle, la priorité suivante s’applique :  
+4. **Propriétés de modèle TemplatedParent.** Un élément a un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si elle a été créée en tant que partie d’un modèle (un <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Pour plus d’informations sur les cas où ceci est applicable, consultez [TemplatedParent](#templatedparent) plus loin dans cette rubrique. Dans le modèle, la priorité suivante s’applique :  
   
     1.  Se déclenche à partir du <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
   
     2.  Jeux de propriétés (généralement via [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributs) dans le <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
   
-5.  **Style implicite.** S’applique uniquement à la propriété `Style`. La propriété `Style` est renseignée par toute ressource de style avec une clé qui correspond au type de cet élément. Cette ressource de style doit exister dans la page ou dans l’application ; la recherche d’une ressource de style implicite ne se poursuit pas dans les thèmes.  
+5. **Style implicite.** S’applique uniquement à la propriété `Style`. La propriété `Style` est renseignée par toute ressource de style avec une clé qui correspond au type de cet élément. Cette ressource de style doit exister dans la page ou dans l’application ; la recherche d’une ressource de style implicite ne se poursuit pas dans les thèmes.  
   
-6.  **Déclencheurs de style.** Déclencheurs dans les styles de page ou d’application (ces styles peuvent être explicites ou implicites, mais pas issus des styles par défaut, qui ont une priorité inférieure).  
+6. **Déclencheurs de style.** Déclencheurs dans les styles de page ou d’application (ces styles peuvent être explicites ou implicites, mais pas issus des styles par défaut, qui ont une priorité inférieure).  
   
-7.  **Déclencheurs de modèle.** Tout déclencheur d’un modèle dans un style, ou un modèle appliqué directement.  
+7. **Déclencheurs de modèle.** Tout déclencheur d’un modèle dans un style, ou un modèle appliqué directement.  
   
-8.  **Accesseurs Set de style.** Valeurs à partir d’un <xref:System.Windows.Setter> dans les styles de page ou application.  
+8. **Accesseurs Set de style.** Valeurs à partir d’un <xref:System.Windows.Setter> dans les styles de page ou application.  
   
 9. **Style par défaut (thème).** Pour plus d’informations sur les cas où ceci est applicable, et sur la relation entre les styles de thème et les modèles dans les styles de thème, consultez [Style (de thème) par défaut](#themestyles) plus loin dans cette rubrique. Dans un style par défaut, l’ordre de priorité suivant s’applique :  
   

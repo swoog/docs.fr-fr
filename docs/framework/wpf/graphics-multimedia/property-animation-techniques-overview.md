@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317907"
 ---
 # <a name="property-animation-techniques-overview"></a>Vue d'ensemble des techniques d'animation de propriétés
 Cette rubrique décrit les différentes approches pour animer des propriétés : tables de montage séquentiel, animations locales, horloges et animations par image.  
@@ -42,13 +42,13 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Un <xref:System.Windows.Media.Animation.Storyboard> est un type spécial de conteneur <xref:System.Windows.Media.Animation.Timeline> qui fournit des informations de ciblage pour les animations qu’il contient. Pour animer avec un <xref:System.Windows.Media.Animation.Storyboard>, vous effectuez les trois étapes suivantes.  
   
-1.  Déclarez un <xref:System.Windows.Media.Animation.Storyboard> et une ou plusieurs animations.  
+1. Déclarez un <xref:System.Windows.Media.Animation.Storyboard> et une ou plusieurs animations.  
   
-2.  Utilisez le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> attaché des propriétés pour spécifier l’objet cible et la propriété de chaque animation.  
+2. Utilisez le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> attaché des propriétés pour spécifier l’objet cible et la propriété de chaque animation.  
   
-3.  (Code uniquement) Définir un <xref:System.Windows.NameScope> pour un <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Inscrire les noms des objets à animer avec <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
+3. (Code uniquement) Définir un <xref:System.Windows.NameScope> pour un <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Inscrire les noms des objets à animer avec <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
   
-4.  Commencer le <xref:System.Windows.Media.Animation.Storyboard>.  
+4. Commencer le <xref:System.Windows.Media.Animation.Storyboard>.  
   
  À compter un <xref:System.Windows.Media.Animation.Storyboard> applique des animations aux propriétés qu’elles animent et les démarre. Il existe deux façons pour commencer un <xref:System.Windows.Media.Animation.Storyboard>: vous pouvez utiliser la <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> méthode fournie par le <xref:System.Windows.Media.Animation.Storyboard> classe, ou vous pouvez utiliser un <xref:System.Windows.Media.Animation.BeginStoryboard> action. La seule façon d’animer dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consiste à utiliser un <xref:System.Windows.Media.Animation.BeginStoryboard> action. Un <xref:System.Windows.Media.Animation.BeginStoryboard> action peut être utilisée dans un <xref:System.Windows.EventTrigger>, propriété <xref:System.Windows.Trigger>, ou un <xref:System.Windows.DataTrigger>.  
   
@@ -70,9 +70,9 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Pour animer à l’aide d’une animation locale, procédez comme suit.  
   
-1.  Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> objet.  
+1. Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> objet.  
   
-2.  Utilisez le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationTimeline> à la propriété que vous spécifiez.  
+2. Utilisez le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationTimeline> à la propriété que vous spécifiez.  
   
  L’exemple suivant montre comment animer la couleur d’arrière-plan et de la largeur d’un <xref:System.Windows.Controls.Button>.  
   
@@ -87,11 +87,11 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Pour appliquer un seul <xref:System.Windows.Media.Animation.Clock> à une propriété, vous effectuez les étapes suivantes.  
   
-1.  Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> objet.  
+1. Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> objet.  
   
-2.  Utilisez le <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> méthode de la <xref:System.Windows.Media.Animation.AnimationTimeline> pour créer un <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. Utilisez le <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> méthode de la <xref:System.Windows.Media.Animation.AnimationTimeline> pour créer un <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-3.  Utilisez le <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationClock> à la propriété que vous spécifiez.  
+3. Utilisez le <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationClock> à la propriété que vous spécifiez.  
   
  L’exemple suivant montre comment créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à deux propriétés similaires.  
   
@@ -100,11 +100,11 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Pour créer une arborescence de minutage et l’utiliser pour animer des propriétés, effectuez les étapes suivantes.  
   
-1.  Utilisez <xref:System.Windows.Media.Animation.ParallelTimeline> et <xref:System.Windows.Media.Animation.AnimationTimeline> objets pour créer l’arborescence de minutage.  
+1. Utilisez <xref:System.Windows.Media.Animation.ParallelTimeline> et <xref:System.Windows.Media.Animation.AnimationTimeline> objets pour créer l’arborescence de minutage.  
   
-2.  Utilisez le <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> de la racine <xref:System.Windows.Media.Animation.ParallelTimeline> pour créer un <xref:System.Windows.Media.Animation.ClockGroup>.  
+2. Utilisez le <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> de la racine <xref:System.Windows.Media.Animation.ParallelTimeline> pour créer un <xref:System.Windows.Media.Animation.ClockGroup>.  
   
-3.  Effectuer une itération dans le <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> de la <xref:System.Windows.Media.Animation.ClockGroup> et appliquer ses enfants <xref:System.Windows.Media.Animation.Clock> objets. Pour chaque <xref:System.Windows.Media.Animation.AnimationClock> enfant, utilisez la <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationClock> à la propriété que vous spécifiez  
+3. Effectuer une itération dans le <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> de la <xref:System.Windows.Media.Animation.ClockGroup> et appliquer ses enfants <xref:System.Windows.Media.Animation.Clock> objets. Pour chaque <xref:System.Windows.Media.Animation.AnimationClock> enfant, utilisez la <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> méthode de l’objet que vous souhaitez animer pour appliquer le <xref:System.Windows.Media.Animation.AnimationClock> à la propriété que vous spécifiez  
   
  Pour plus d’informations sur les objets Clock, consultez [Vue d’ensemble de l’animation et du système de minutage](animation-and-timing-system-overview.md).  
   

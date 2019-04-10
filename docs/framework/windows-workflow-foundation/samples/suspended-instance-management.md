@@ -2,12 +2,12 @@
 title: Gestion de l'instance interrompue
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319558"
 ---
 # <a name="suspended-instance-management"></a>Gestion de l'instance interrompue
 Cet exemple montre comment gérer des instances de workflow qui ont été interrompues.  L'action par défaut pour <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> est `AbandonAndSuspend`. Cela signifie que, par défaut, les exceptions non gérées levées à partir d'une instance de workflow hébergée dans le <xref:System.ServiceModel.WorkflowServiceHost> provoqueront la suppression de l'instance de la mémoire (abandon), et la version durable/persistante de l'instance sera marquée comme interrompue. Une instance de workflow interrompue ne sera pas en mesure de fonctionner tant que l'interruption n'a pas été annulée.
@@ -24,13 +24,13 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
-1.  Cet exemple requiert que les composants Windows suivants soient activés :
+1. Cet exemple requiert que les composants Windows suivants soient activés :
 
     1.  Serveur de file d'attente Microsoft Message Queue (MSMQ)
 
     2.  SQL Server Express
 
-2.  Configurez la base de données SQL Server.
+2. Configurez la base de données SQL Server.
 
     1.  À partir d’une invite de commandes Visual Studio 2010, exécutez « setup.cmd » à partir de l’exemple suspendedinstancemanagement, qui effectue les opérations suivantes :
 
@@ -40,7 +40,7 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 
         3.  Ajoute IIS APPPOOL\DefaultAppPool et NT AUTHORITY\Network Service au rôle InstanceStoreUsers qui a été défini lors de la configuration de la base de données pour la persistance.
 
-3.  Configurez la file d'attente de service.
+3. Configurez la file d'attente de service.
 
     1.  Dans Visual Studio 2010, cliquez sur le **SampleWorkflowApp** projet puis cliquez sur **définir comme projet de démarrage**.
 
@@ -56,7 +56,7 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 
     7.  Sélectionnez le **sécurité** onglet et autoriser **tout le monde** disposer d’autorisations à **recevoir un Message**, **lire le Message**, et  **Envoyer le Message**.
 
-4.  Exécutez maintenant l'exemple.
+4. Exécutez maintenant l'exemple.
 
     1.  Dans Visual Studio 2010, réexécutez le projet SampleWorkflowApp sans déboguer en appuyant sur **Ctrl + F5**. Deux adresses de point de terminaison seront imprimées dans la fenêtre de console : une pour le point de terminaison d'application et l'autre pour le <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Une instance de workflow est ensuite créée et les enregistrements de suivi pour cette instance s'afficheront dans la fenêtre de console. L'instance de workflow lèvera une exception qui provoquera l'interruption et l'abandon de l'instance.
 
@@ -68,13 +68,13 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 
 #### <a name="to-cleanup-optional"></a>Pour effectuer un nettoyage (facultatif)
 
-1.  Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes `vs2010`.
+1. Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes `vs2010`.
 
-2.  Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.
+2. Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.
 
-3.  Supprimer le **ReceiveTx** file d’attente.
+3. Supprimer le **ReceiveTx** file d’attente.
 
-4.  Pour supprimer la base de données de persistance, exécutez cleanup.cmd.
+4. Pour supprimer la base de données de persistance, exécutez cleanup.cmd.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

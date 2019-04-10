@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315879"
 ---
 # <a name="data-transfer-architectural-overview"></a>Vue d'ensemble de l'architecture de transfert de données
 Windows Communication Foundation (WCF) peut être considéré comme une infrastructure de messagerie. Il peut recevoir des messages, les traiter et les distribuer au code utilisateur pour action ultérieure, ou il peut construire des messages à partir des données fournies par le code utilisateur et les transmettre vers une destination. Cette rubrique, conçue à l'attention des développeurs avancés, décrit l'architecture de gestion des messages et des données qu'ils contiennent. Pour une approche plus simple des tâches d’envoi et de réception des données, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) peut être considéré comme une infrastr
   
  Pour que cela soit possible, un mappage doit être défini entre l'instance `Message` entière et un ensemble d'informations XML. Il existe en fait, un tel mappage : WCF utilise le standard SOAP pour définir ce mappage. Lorsqu'une instance `Message` est écrite en tant qu'ensemble d'informations XML, l'ensemble d'informations résultant est l'enveloppe SOAP valide qui contient le message. Par conséquent, `WriteMessage` exécute normalement les étapes suivantes :  
   
-1.  Écrire la balise d'ouverture de l'élément d'enveloppe SOAP.  
+1. Écrire la balise d'ouverture de l'élément d'enveloppe SOAP.  
   
-2.  Écrire la balise d'ouverture de l'élément d'en-tête SOAP, écrire tous les en-têtes et fermer l'élément d'en-tête.  
+2. Écrire la balise d'ouverture de l'élément d'en-tête SOAP, écrire tous les en-têtes et fermer l'élément d'en-tête.  
   
-3.  Écrire la balise d'ouverture de l'élément de corps SOAP.  
+3. Écrire la balise d'ouverture de l'élément de corps SOAP.  
   
-4.  Appeler `WriteBodyContents` ou une méthode équivalente pour écrire le corps.  
+4. Appeler `WriteBodyContents` ou une méthode équivalente pour écrire le corps.  
   
-5.  Fermer les éléments de corps et d'enveloppe.  
+5. Fermer les éléments de corps et d'enveloppe.  
   
  Les étapes précédentes sont étroitement liées au standard SOAP. Cela est compliqué par le fait que plusieurs versions de SOAP existent ; à titre d'exemple, il est impossible d'écrire l'élément d'enveloppe SOAP correctement sans connaître la version SOAP utilisée. Par ailleurs, il peut dans certains cas s'avérer souhaitable de désactiver complètement ce mappage complexe spécifique à SOAP.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) peut être considéré comme une infrastr
   
  L'interface <xref:System.Xml.IStreamProvider> est utilisée à cette fin. Elle dispose d'une méthode <xref:System.Xml.IStreamProvider.GetStream> qui retourne le flux à écrire. Pour écrire un corps de message avec diffusion en continu dans <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> , procédez comme suit :  
   
-1.  Écrivez toutes les informations nécessaires précédant le flux (par exemple, la balise XML d'ouverture).  
+1. Écrivez toutes les informations nécessaires précédant le flux (par exemple, la balise XML d'ouverture).  
   
-2.  Appelez la surcharge `WriteValue` sur le <xref:System.Xml.XmlDictionaryWriter> qui accepte <xref:System.Xml.IStreamProvider>, avec une implémentation `IStreamProvider` qui retourne le flux à écrire.  
+2. Appelez la surcharge `WriteValue` sur le <xref:System.Xml.XmlDictionaryWriter> qui accepte <xref:System.Xml.IStreamProvider>, avec une implémentation `IStreamProvider` qui retourne le flux à écrire.  
   
-3.  Écrivez toutes les informations suivant le flux (par exemple, la balise XML de fermeture).  
+3. Écrivez toutes les informations suivant le flux (par exemple, la balise XML de fermeture).  
   
  Avec cette approche, l'enregistreur XML peut choisir à quel moment appeler <xref:System.Xml.IStreamProvider.GetStream> et écrire les données avec diffusion en continu. Par exemple, les enregistreurs XML textuels et binaires l'appellent immédiatement et écrivent le contenu avec diffusion en continu entre les balises de début et de fin. L'enregistreur MTOM peut décider d'appeler <xref:System.Xml.IStreamProvider.GetStream> ultérieurement, lorsqu'il est prêt à écrire la partie appropriée du message.  
   

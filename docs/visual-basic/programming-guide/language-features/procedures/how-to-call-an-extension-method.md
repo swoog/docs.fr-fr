@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313799"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Procédure : Appeler une méthode d’Extension (Visual Basic)
 Méthodes d’extension permettent d’ajouter des méthodes à une classe existante. Une fois une méthode d’extension est déclarée et mises dans la portée, vous pouvez l’appeler comme une méthode d’instance du type qu’il étend. Pour plus d’informations sur la façon d’écrire une méthode d’extension, consultez [Comment : Écrire une méthode d’Extension](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Pour appeler une méthode d’extension  
   
-1.  Déclarez une variable qui a le type de données du premier paramètre de la méthode d’extension. Pour `PrintAndPunctuate`, vous devez un <xref:System.String> variable :  
+1. Déclarez une variable qui a le type de données du premier paramètre de la méthode d’extension. Pour `PrintAndPunctuate`, vous devez un <xref:System.String> variable :  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Que la variable appellera la méthode d’extension, et sa valeur est liée au premier paramètre, `aString`. L’instruction d’appel suivante affichera `Ready?`.  
+2. Que la variable appellera la méthode d’extension, et sa valeur est liée au premier paramètre, `aString`. L’instruction d’appel suivante affichera `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Déclarer une autre variable de chaîne et appelez la méthode pour vérifier qu’elle fonctionne avec n’importe quelle chaîne.  
+3. Déclarer une autre variable de chaîne et appelez la méthode pour vérifier qu’elle fonctionne avec n’importe quelle chaîne.  
   
     ```  
     Dim example2 = " or not"  
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour Écrire une méthode d’Extension](./how-to-write-an-extension-method.md)
+- [Procédure : écrire une méthode d’extension](./how-to-write-an-extension-method.md)
 - [Méthodes d’extension](./extension-methods.md)
 - [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

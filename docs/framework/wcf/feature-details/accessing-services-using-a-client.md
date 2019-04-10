@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314878"
 ---
 # <a name="accessing-services-using-a-client"></a>Accès aux services à l'aide d'un client
 Les applications clientes doivent créer, configurer et utiliser des objets de client ou de canal WCF pour communiquer avec les services. Le [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) rubrique fournit une vue d’ensemble des objets et des étapes impliquées dans la création d’objets de client et le canal de base et leur utilisation.  
@@ -83,11 +83,11 @@ Les applications clientes doivent créer, configurer et utiliser des objets de c
   
  Lors de l'utilisation de l'approche explicite, l'application doit exécuter les étapes suivantes, dans l'ordre :  
   
-1.  Appelez <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou une version asynchrone).  
+1. Appelez <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou une version asynchrone).  
   
-2.  Lorsque les initialiseurs ont retourné, appelez la méthode <xref:System.ServiceModel.ICommunicationObject.Open%2A> sur l'objet <xref:System.ServiceModel.IClientChannel> ou sur l'objet <xref:System.ServiceModel.IClientChannel> retourné par la propriété <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
+2. Lorsque les initialiseurs ont retourné, appelez la méthode <xref:System.ServiceModel.ICommunicationObject.Open%2A> sur l'objet <xref:System.ServiceModel.IClientChannel> ou sur l'objet <xref:System.ServiceModel.IClientChannel> retourné par la propriété <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
   
-3.  Appelez les opérations.  
+3. Appelez les opérations.  
   
  Il est recommandé que les applications de qualité de production contrôlent le processus d'interface utilisateur en adoptant l'approche explicite.  
   

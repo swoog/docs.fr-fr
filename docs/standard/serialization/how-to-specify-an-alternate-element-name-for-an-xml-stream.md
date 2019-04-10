@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Spécifiez un nom d’élément différent pour un Stream XML'
+title: 'Procédure : spécifier un autre nom d’élément pour un flux XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465475"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317790"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procédure : Spécifiez un nom d’élément différent pour un Stream XML
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procédure : spécifier un autre nom d’élément pour un flux XML
   
 Via <xref:System.Xml.Serialization.XmlSerializer>, vous pouvez générer plusieurs flux de données XML avec un même ensemble de classes. Vous pouvez procéder ainsi car deux services Web XML différents nécessitent les mêmes informations de base, avec seulement de légères différences. Par exemple, imaginez deux services Web XML qui traitent des commandes de livres. Ils nécessitent donc tous les deux des numéros ISBN. Un service utilise la balise \<ISBN> tandis que l’autre utilise la balise \<BookID>. Vous disposez d'une classe nommée `Book` qui contient un champ nommé `ISBN`. Lorsqu'une instance de la classe `Book` est sérialisée, elle utilise par défaut le nom de membre (ISBN) comme nom d'élément de balise. Pour le premier service Web XML, c'est ce qui est prévu. Toutefois, pour envoyer le flux de données XML au deuxième service Web XML, vous devez substituer la sérialisation afin que le nom d'élément de la balise soit `BookID`.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Pour créer un flux de données XML avec un nom d'élément différent  
   
-1.  Créez une instance de la classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
+1. Créez une instance de la classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
-2.  Affectez "BookID" à <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> de <xref:System.Xml.Serialization.XmlElementAttribute>.  
+2. Affectez "BookID" à <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> de <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
-3.  Créez une instance de la classe <xref:System.Xml.Serialization.XmlAttributes>.  
+3. Créez une instance de la classe <xref:System.Xml.Serialization.XmlAttributes>.  
   
-4.  Ajoutez l'objet `XmlElementAttribute` à la collection accessible via la propriété <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> de <xref:System.Xml.Serialization.XmlAttributes>.  
+4. Ajoutez l'objet `XmlElementAttribute` à la collection accessible via la propriété <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> de <xref:System.Xml.Serialization.XmlAttributes>.  
   
-5.  Créez une instance de la classe <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
+5. Créez une instance de la classe <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
   
-6.  Ajoutez `XmlAttributes` à <xref:System.Xml.Serialization.XmlAttributeOverrides>, en passant le type de l'objet à substituer et le nom du membre substitué.  
+6. Ajoutez `XmlAttributes` à <xref:System.Xml.Serialization.XmlAttributeOverrides>, en passant le type de l'objet à substituer et le nom du membre substitué.  
   
-7.  Créez une instance de la classe `XmlSerializer` avec `XmlAttributeOverrides`.  
+7. Créez une instance de la classe `XmlSerializer` avec `XmlAttributeOverrides`.  
   
-8.  Créez une instance de la classe `Book` et sérialisez ou désérialisez-la.  
+8. Créez une instance de la classe `Book` et sérialisez ou désérialisez-la.  
   
 ## <a name="example"></a>Exemple  
   
@@ -98,5 +98,5 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procédure : sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procédure : désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

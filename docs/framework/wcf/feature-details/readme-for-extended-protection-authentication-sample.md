@@ -2,12 +2,12 @@
 title: ReadMe pour l'exemple d'authentification de protection étendue
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319350"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>ReadMe pour l'exemple d'authentification de protection étendue
 La Protection étendue est une initiative de sécurité pour vous protéger contre les attaques (d’intercepteur MITM) man-in-the-middle, dans lequel un attaquant (le « man-in-the-middle ») intercepte les informations d’identification d’un client et les utilise pour accéder aux ressources sécurisées sur le serveur du client prévue.  
@@ -19,25 +19,25 @@ La Protection étendue est une initiative de sécurité pour vous protéger cont
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Installez IIS sur l’ordinateur via Ajout/Suppression de programmes -> Fonctionnalités de Windows.  
+1. Installez IIS sur l’ordinateur à partir d’Ajout/Suppression de programmes -> fonctionnalités de Windows.  
   
-2.  Activez Authentification Windows dans les fonctionnalités de Windows : Internet Information Services -> Services World Wide Web -> Sécurité -> Authentification Windows.  
+2. Activer l’authentification Windows dans les fonctionnalités de Windows : Internet Information Services -> World Wide Web Services -> sécurité -> de l’authentification Windows.  
   
-3.  Activez Activation HTTP dans les fonctionnalités de Windows : Microsoft .NET Framework 3.5.1 -> Activation HTTP de Windows Communication Foundation.  
+3. Activez activation HTTP dans les fonctionnalités de Windows : Microsoft .NET Framework 3.5.1 -> Activation HTTP de Windows Communication Foundation.  
   
-4.  Cet exemple requiert l'établissement par le client d'un canal sécurisé avec le serveur et nécessite la présence d'un certificat de serveur qui peut être installé à partir du gestionnaire des services IIS (Internet Information Services).  
+4. Cet exemple requiert l'établissement par le client d'un canal sécurisé avec le serveur et nécessite la présence d'un certificat de serveur qui peut être installé à partir du gestionnaire des services IIS (Internet Information Services).  
   
-    1.  Ouvrez le gestionnaire des services IIS -> Certificats de serveur (à partir de l’onglet d’affichage des fonctionnalités).  
+    1.  Ouvrez le Gestionnaire des services Internet -> certificats de serveur (à partir de l’onglet de vue fonctionnalité).  
   
     2.  À des fins de test de cet exemple, vous pouvez créer un certificat auto-signé. (Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, vous pouvez l'installer dans la banque d'autorités racine approuvées de certificats).  
   
-5.  Accédez au volet Actions pour le site Web par défaut. Cliquez sur Modifier le site -> Liaisons. Ajoutez HTTPS comme type s’il ne l’est pas encore, avec le numéro de port 443, et affectez le certificat SSL créé à l’étape précédente.  
+5. Accédez au volet Actions pour le site web par défaut. Cliquez sur Modifier Site -> liaisons. Ajoutez HTTPS comme type s'il ne l'est pas encore, avec le numéro de port 443, et affectez le certificat SSL créé à l'étape précédente.  
   
-6.  Générez le service. Un répertoire virtuel est alors créé dans IIS (à partir de l'action post-build spécifiée dans les propriétés de projet) et les fichiers dll, .svc et de configuration sont copiés comme requis pour l'hébergement d'un service sur le Web.  
+6. Générez le service. Un répertoire virtuel est alors créé dans IIS (à partir de l'action post-build spécifiée dans les propriétés de projet) et les fichiers dll, .svc et de configuration sont copiés comme requis pour l'hébergement d'un service sur le Web.  
   
-7.  Ouvrez le gestionnaire des services IIS. Cliquez avec le bouton droit sur le répertoire virtuel (ExtendedProtection) que vous avez créé à l'étape précédente et sélectionnez Convertir en application.  
+7. Ouvrez le gestionnaire des services IIS. Cliquez avec le bouton droit sur le répertoire virtuel (ExtendedProtection) que vous avez créé à l'étape précédente et sélectionnez Convertir en application.  
   
-8.  Ouvrez le module Authentification dans le gestionnaire des services IIS de ce répertoire virtuel et activez l'authentification Windows.  
+8. Ouvrez le module Authentification dans le gestionnaire des services IIS de ce répertoire virtuel et activez l'authentification Windows.  
   
 9. Ouvrez les paramètres avancés de l'authentification Windows pour ce répertoire virtuel et définissez la valeur Requis, car, dans cet exemple, le paramètre ExtendedProtection correspondant est défini sur Toujours.  
   

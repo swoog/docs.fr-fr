@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188745"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314388"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procédure : Effectuer une liaison à une collection et afficher des informations basées sur la sélection
 Dans un scénario maître / détail simple, vous avez lié aux données <xref:System.Windows.Controls.ItemsControl> comme un <xref:System.Windows.Controls.ListBox>. En fonction de sélection de l’utilisateur, afficher plus d’informations sur l’élément sélectionné. Cet exemple montre comment implémenter ce scénario.  
@@ -36,9 +36,9 @@ Dans un scénario maître / détail simple, vous avez lié aux données <xref:Sy
   
  Les deux choses à noter dans cet exemple sont :  
   
-1.  Le <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ContentControl> lier à la même source. Le <xref:System.Windows.Data.Binding.Path%2A> propriétés des deux liaisons ne sont pas spécifiées, car les deux contrôles sont une liaison à l’objet d’ensemble de la collection.  
+1. Le <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ContentControl> lier à la même source. Le <xref:System.Windows.Data.Binding.Path%2A> propriétés des deux liaisons ne sont pas spécifiées, car les deux contrôles sont une liaison à l’objet d’ensemble de la collection.  
   
-2.  Vous devez définir le <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propriété `true` pour ce faire. Définition de cette propriété garantit que l’élément sélectionné est toujours défini en tant que le <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Ou bien, si le <xref:System.Windows.Controls.ListBox> obtient ses données à partir d’un <xref:System.Windows.Data.CollectionViewSource>, il synchronise automatiquement sélection et la devise.  
+2. Vous devez définir le <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propriété `true` pour ce faire. Définition de cette propriété garantit que l’élément sélectionné est toujours défini en tant que le <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Ou bien, si le <xref:System.Windows.Controls.ListBox> obtient ses données à partir d’un <xref:System.Windows.Data.CollectionViewSource>, il synchronise automatiquement sélection et la devise.  
   
  Notez que le `Person` substitue le `ToString` méthode la façon suivante. Par défaut, le <xref:System.Windows.Controls.ListBox> appels `ToString` et affiche une représentation sous forme de chaîne de chaque objet dans la collection liée. C’est pourquoi chaque `Person` apparaît sous la forme d’un prénom dans le <xref:System.Windows.Controls.ListBox>.  
   

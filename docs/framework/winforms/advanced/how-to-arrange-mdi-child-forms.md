@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317231"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Procédure : organiser les formulaires enfants MDI
 Les applications comportent souvent des commandes de menu qui permettent de disposer en mosaïque ou en cascade les formulaires MDI enfants ouverts, ou encore de les réorganiser. Vous pouvez utiliser la méthode <xref:System.Windows.Forms.Form.LayoutMdi%2A> avec l'une des valeurs de l'énumération <xref:System.Windows.Forms.MdiLayout> pour réorganiser les formulaires enfants dans un formulaire MDI parent.  
@@ -24,7 +24,7 @@ Les applications comportent souvent des commandes de menu qui permettent de disp
   
 ### <a name="to-arrange-child-forms"></a>Pour réorganiser les formulaires enfants  
   
-1.  Dans une méthode, utilisez la méthode <xref:System.Windows.Forms.Form.LayoutMdi%2A> pour définir l'énumération <xref:System.Windows.Forms.MdiLayout> pour le formulaire MDI parent. L'exemple ci-dessous utilise la valeur d'énumération <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> pour les fenêtres enfants du formulaire MDI parent (`Form1`). L’énumération est utilisée dans le code pendant le Gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> événements de la **Cascade Windows** élément de menu.  
+1. Dans une méthode, utilisez la méthode <xref:System.Windows.Forms.Form.LayoutMdi%2A> pour définir l'énumération <xref:System.Windows.Forms.MdiLayout> pour le formulaire MDI parent. L'exemple ci-dessous utilise la valeur d'énumération <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> pour les fenêtres enfants du formulaire MDI parent (`Form1`). L’énumération est utilisée dans le code pendant le Gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> événements de la **Cascade Windows** élément de menu.  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ Les applications comportent souvent des commandes de menu qui permettent de disp
     > [!NOTE]
     >  De la même façon, vous pouvez disposer les fenêtres en mosaïque et les afficher sous forme d'icônes en modifiant la valeur d'énumération <xref:System.Windows.Forms.MdiLayout> utilisée.  
   
-2.  Si vous utilisez Visual C#, placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d'événements.  
+2. Si vous utilisez Visual C#, placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d'événements.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

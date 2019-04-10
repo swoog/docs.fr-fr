@@ -1,5 +1,5 @@
 ---
-title: "Impossible d'écrire dans le fichier de sortie '<filename>' : <error>"
+title: "Impossible d’écrire dans le fichier de sortie '<filename>' : <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318219"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Impossible d’écrire dans le fichier de sortie '\<nom_fichier >': \<erreur >
 Un problème s'est produit pendant la création du fichier.  
@@ -31,31 +31,31 @@ Un problème s'est produit pendant la création du fichier.
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Recompilez le programme pour voir si l'erreur se produit à nouveau.  
+1. Recompilez le programme pour voir si l'erreur se produit à nouveau.  
   
-2.  Si l’erreur persiste, enregistrez votre travail et redémarrez Visual Studio.  
+2. Si l’erreur persiste, enregistrez votre travail et redémarrez Visual Studio.  
   
-3.  Si l'erreur continue, redémarrez l'ordinateur.  
+3. Si l'erreur continue, redémarrez l'ordinateur.  
   
-4.  Si l’erreur se reproduit, réinstallez Visual Basic.  
+4. Si l’erreur se reproduit, réinstallez Visual Basic.  
   
-5.  Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
+5. Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Pour vérifier les attributs de fichier dans l'Explorateur de fichiers  
   
-1.  Ouvrez le dossier qui vous intéresse.  
+1. Ouvrez le dossier qui vous intéresse.  
   
-2.  Cliquez sur le **vues** icône et choisissez **détails**.  
+2. Cliquez sur le **vues** icône et choisissez **détails**.  
   
-3.  Cliquez sur l’en-tête de colonne, puis choisissez **attributs** dans la liste déroulante.  
+3. Cliquez sur l’en-tête de colonne, puis choisissez **attributs** dans la liste déroulante.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Pour modifier les attributs d’un fichier ou d’un dossier  
   
-1.  Dans **Explorateur de fichiers**, cliquez sur le fichier ou dossier et choisissez **propriétés**.  
+1. Dans **Explorateur de fichiers**, cliquez sur le fichier ou dossier et choisissez **propriétés**.  
   
-2.  Dans le **attributs** section de la **général** onglet, désactivez le **en lecture seule** boîte.  
+2. Dans le **attributs** section de la **général** onglet, désactivez le **en lecture seule** boîte.  
   
-3.  Appuyez sur **OK**.  
+3. Appuyez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314696"
 ---
 # <a name="framework-property-metadata"></a>Métadonnées de propriété de framework
 Des options de métadonnées de propriété de framework sont signalées pour les propriétés des éléments objet considérés comme étant au niveau du framework WPF dans l’architecture [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En général, la désignation niveau de framework WPF implique la gestion de fonctionnalités telles que le rendu, la liaison de données et les ajustements du système de propriétés par les fichiers exécutables et [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de présentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les métadonnées de propriété de framework sont interrogées par ces systèmes afin d’identifier les caractéristiques spécifiques aux fonctionnalités de propriétés d’un élément particulier.  
@@ -48,9 +48,9 @@ Des options de métadonnées de propriété de framework sont signalées pour le
   
  Si vous créez un <xref:System.Windows.FrameworkPropertyMetadata> d’une instance, il existe deux manières de remplir ces métadonnées avec des valeurs pour les propriétés spécifiques qui communiquent les caractéristiques de propriété de framework :  
   
-1.  Utilisez le <xref:System.Windows.FrameworkPropertyMetadata> signature de constructeur qui autorise un `flags` paramètre. Ce paramètre doit être rempli avec souhaité de toutes les valeurs combinées de le <xref:System.Windows.FrameworkPropertyMetadataOptions> indicateurs d’énumération.  
+1. Utilisez le <xref:System.Windows.FrameworkPropertyMetadata> signature de constructeur qui autorise un `flags` paramètre. Ce paramètre doit être rempli avec souhaité de toutes les valeurs combinées de le <xref:System.Windows.FrameworkPropertyMetadataOptions> indicateurs d’énumération.  
   
-2.  Utilisez une des signatures sans un `flags` paramètre, puis définissez chaque propriété booléenne de création de rapports sur <xref:System.Windows.FrameworkPropertyMetadata> à `true` pour chaque modification de caractéristique souhaitée. Si vous optez pour cette solution, vous devez définir ces propriétés avant la construction de tout élément possédant cette propriété de dépendance ; les propriétés booléennes sont en lecture-écriture afin d’autoriser ce comportement d’évitement du paramètre `flags` tout en complétant les métadonnées. Les métadonnées doivent toutefois être sealed avant l’utilisation de la propriété. Par conséquent, toute tentative de définition des propriétés après l’envoi d’une demande de métadonnées est une opération incorrecte.  
+2. Utilisez une des signatures sans un `flags` paramètre, puis définissez chaque propriété booléenne de création de rapports sur <xref:System.Windows.FrameworkPropertyMetadata> à `true` pour chaque modification de caractéristique souhaitée. Si vous optez pour cette solution, vous devez définir ces propriétés avant la construction de tout élément possédant cette propriété de dépendance ; les propriétés booléennes sont en lecture-écriture afin d’autoriser ce comportement d’évitement du paramètre `flags` tout en complétant les métadonnées. Les métadonnées doivent toutefois être sealed avant l’utilisation de la propriété. Par conséquent, toute tentative de définition des propriétés après l’envoi d’une demande de métadonnées est une opération incorrecte.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportement de fusion des métadonnées de propriété de framework  

@@ -2,12 +2,12 @@
 title: Une source de ce nom a déjà été inscrite dans un autre journal des événements.
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314670"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Une source de ce nom a déjà été inscrite dans un autre journal des événements.
 Il a été tenté d’écrire une entrée dans un journal d’événements dans lequel la source spécifiée est inscrite dans un autre journal d’événements.  
@@ -16,9 +16,9 @@ Il a été tenté d’écrire une entrée dans un journal d’événements dans 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Supprimez l’association entre la source et le premier journal à l’aide de la méthode <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> ou <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> .  
+1. Supprimez l’association entre la source et le premier journal à l’aide de la méthode <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> ou <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> .  
   
-2.  Inscrivez la source dans le nouveau journal.  
+2. Inscrivez la source dans le nouveau journal.  
   
 ## <a name="see-also"></a>Voir aussi
 

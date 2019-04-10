@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318443"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procédure : Définissez une classe qui fournisse des fonctionnalités identiques pour différents Types de données (Visual Basic)
 Vous pouvez définir une classe à partir de laquelle vous créez des objets qui fournissent les mêmes fonctions pour des types de données différents. Pour cela, vous spécifiez un ou plusieurs *paramètres de type* dans la définition. La classe peut ensuite servir de modèle pour les objets qui utilisent différents types de données. Une classe définie de cette façon est appelée *classe générique*.  
@@ -42,13 +42,13 @@ Vous pouvez définir une classe à partir de laquelle vous créez des objets qui
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>Pour définir une classe avec un paramètre de type  
   
-1.  Définissez la classe comme vous le faites habituellement.  
+1. Définissez la classe comme vous le faites habituellement.  
   
-2.  Ajoutez `(Of` *typeparameter*`)` juste après le nom de classe pour spécifier un paramètre de type.  
+2. Ajoutez `(Of` *typeparameter*`)` juste après le nom de classe pour spécifier un paramètre de type.  
   
-3.  Si vous utilisez plusieurs paramètres de type, spécifiez-les dans une liste séparée par des virgules et mise entre parenthèses. Ne répétez pas le mot clé `Of` .  
+3. Si vous utilisez plusieurs paramètres de type, spécifiez-les dans une liste séparée par des virgules et mise entre parenthèses. Ne répétez pas le mot clé `Of` .  
   
-4.  Si votre code effectue des opérations sur un paramètre de type autre qu’une simple assignation, faites suivre ce paramètre de type d’une clause `As` pour ajouter une ou plusieurs *contraintes*. Une contrainte garantit que le type fourni pour ce paramètre de type remplit une exigence similaire aux exigences suivantes :  
+4. Si votre code effectue des opérations sur un paramètre de type autre qu’une simple assignation, faites suivre ce paramètre de type d’une clause `As` pour ajouter une ou plusieurs *contraintes*. Une contrainte garantit que le type fourni pour ce paramètre de type remplit une exigence similaire aux exigences suivantes :  
   
     -   Prend en charge une opération, par exemple `>`, que votre code exécute.  
   
@@ -58,9 +58,9 @@ Vous pouvez définir une classe à partir de laquelle vous créez des objets qui
   
      Si vous ne spécifiez pas de contraintes, votre code peut utiliser uniquement les opérations et membres qui sont pris en charge par [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Pour plus d'informations, consultez [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5.  Identifiez chaque membre de classe qui doit être déclaré avec un type fourni et déclarez-le dans `As` `typeparameter`. Cela s’applique au stockage interne, aux paramètres de procédure et aux valeurs renvoyées.  
+5. Identifiez chaque membre de classe qui doit être déclaré avec un type fourni et déclarez-le dans `As` `typeparameter`. Cela s’applique au stockage interne, aux paramètres de procédure et aux valeurs renvoyées.  
   
-6.  Vérifiez que votre code utilise uniquement des opérations et des méthodes qui sont prises en charge par tous les types de données qu’il peut fournir à `itemType`.  
+6. Vérifiez que votre code utilise uniquement des opérations et des méthodes qui sont prises en charge par tous les types de données qu’il peut fournir à `itemType`.  
   
      L’exemple suivant définit une classe qui gère une liste très simple. Cette liste est contenue dans le tableau interne `items`. Le code utilisé peut déclarer le type de données des éléments de la liste. Un constructeur paramétrable permet au code utilisé de définir la limite supérieure de `items`, et le constructeur par défaut définit cette limite à 9 (sur un total de 10 éléments).  
   
@@ -77,9 +77,9 @@ Vous pouvez définir une classe à partir de laquelle vous créez des objets qui
 ## <a name="see-also"></a>Voir aussi
 
 - [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Types génériques Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Indépendance du langage et composants indépendants du langage](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Liste de types](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Guide pratique pour utiliser une classe générique](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Procédure : Utiliser une classe générique](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

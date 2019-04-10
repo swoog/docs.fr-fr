@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315177"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuration de la prise en charge WS-Atomic Transaction
 Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransaction (WS-AT) à l'aide de l'utilitaire de configuration WS-AT.  
@@ -56,19 +56,19 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  Vous devez déjà posséder les certificats requis pour établir la confiance. Pour savoir comment créer et installer de nouveaux certificats avant les étapes suivantes, consultez [Comment : Créer et installer des certificats Client temporaires dans WCF pendant le développement](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  Sur l'ordinateur A, à l'aide du composant logiciel enfichable MMC Certificats, importez le certificat existant (certA) dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance). Pour importer un certificat à un nœud spécifique, cliquez sur le nœud et choisissez **toutes les tâches/importer**.  
+1. Sur l'ordinateur A, à l'aide du composant logiciel enfichable MMC Certificats, importez le certificat existant (certA) dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance). Pour importer un certificat à un nœud spécifique, cliquez sur le nœud et choisissez **toutes les tâches/importer**.  
   
-2.  Sur l'ordinateur B, à l'aide du composant logiciel enfichable MMC Certificats, créez ou obtenez un certificat certB avec une clé privée et importez-le dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance).  
+2. Sur l'ordinateur B, à l'aide du composant logiciel enfichable MMC Certificats, créez ou obtenez un certificat certB avec une clé privée et importez-le dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance).  
   
-3.  Exportez la clé publique de certA dans un fichier si cela n'a pas déjà été fait.  
+3. Exportez la clé publique de certA dans un fichier si cela n'a pas déjà été fait.  
   
-4.  Exportez la clé publique de certB dans un fichier si cela n'a pas déjà été fait.  
+4. Exportez la clé publique de certB dans un fichier si cela n'a pas déjà été fait.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>Établissement de la confiance mutuelle entre des ordinateurs  
   
-1.  Sur l'ordinateur A, importez la représentation de fichier de certB dans les magasins LocalMachine\MY et LocalMachine\ROOT. Cela déclare que l'ordinateur A approuve certB pour toute communication.  
+1. Sur l'ordinateur A, importez la représentation de fichier de certB dans les magasins LocalMachine\MY et LocalMachine\ROOT. Cela déclare que l'ordinateur A approuve certB pour toute communication.  
   
-2.  Sur l'ordinateur B, importez le fichier certA dans les magasins LocalMachine\MY et LocalMachine\ROOT. Cela implique que l'ordinateur B approuve certA pour toute communication.  
+2. Sur l'ordinateur B, importez le fichier certA dans les magasins LocalMachine\MY et LocalMachine\ROOT. Cela implique que l'ordinateur B approuve certA pour toute communication.  
   
  Après avoir effectué ces étapes, la confiance est établie entre les deux ordinateurs et ils peuvent être configurés pour communiquer l'un avec l'autre à l'aide de WS-AT.  
   
@@ -77,9 +77,9 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  Vous pouvez configurer cela à l'aide du composant logiciel enfichable MMC WS-AT. Pour plus d’informations sur cet outil, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) rubrique. Les étapes suivantes décrivent comment établir la confiance entre deux ordinateurs qui exécutent MSDTC.  
   
-1.  Configurez les paramètres de l'ordinateur A. Pour « Certificat de point de terminaison », sélectionnez certA. Pour « Certificats autorisés », sélectionnez certB.  
+1. Configurez les paramètres de l'ordinateur A. Pour « Certificat de point de terminaison », sélectionnez certA. Pour « Certificats autorisés », sélectionnez certB.  
   
-2.  Configurez les paramètres de l'ordinateur B. Pour « Certificat de point de terminaison », sélectionnez certB. Pour « Certificats autorisés », sélectionnez certA.  
+2. Configurez les paramètres de l'ordinateur B. Pour « Certificat de point de terminaison », sélectionnez certB. Pour « Certificats autorisés », sélectionnez certA.  
   
 > [!NOTE]
 >  Lorsqu'un ordinateur envoie un message à l'autre ordinateur, l'expéditeur essaie de vérifier que le nom du sujet du certificat du destinataire et le nom d'ordinateur du destinataire correspondent. S'ils ne correspondent pas, la vérification de certificat échoue et les deux ordinateurs ne peuvent pas communiquer.  
@@ -98,13 +98,13 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  Le service de protocole WS-AT prend en charge également le suivi ServiceModel intégré sur l'ensemble de la session de suivi ETW. Cela procure des suivis plus détaillés et spécifiques à la communication, en plus des suivis de transaction existants.  Pour activer ces suivis supplémentaires, procédez comme suit  
   
-1.  Ouvrez le **démarrer/exécuter** menu, tapez « regedit » dans la zone d’entrée et sélectionnez **OK**.  
+1. Ouvrez le **démarrer/exécuter** menu, tapez « regedit » dans la zone d’entrée et sélectionnez **OK**.  
   
-2.  Dans le **Éditeur du Registre**, accédez au dossier suivant sur le volet gauche, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2. Dans le **Éditeur du Registre**, accédez au dossier suivant sur le volet gauche, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  Bouton droit sur le `ServiceModelDiagnosticTracing` valeur dans le volet droit et sélectionnez **modifier**.  
+3. Bouton droit sur le `ServiceModelDiagnosticTracing` valeur dans le volet droit et sélectionnez **modifier**.  
   
-4.  Dans le **données de la valeur** zone d’entrée, entrez une des valeurs valides suivantes pour spécifier le niveau de trace que vous souhaitez activer.  
+4. Dans le **données de la valeur** zone d’entrée, entrez une des valeurs valides suivantes pour spécifier le niveau de trace que vous souhaitez activer.  
   
 -   0 : désactivé  
   

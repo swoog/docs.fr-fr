@@ -2,16 +2,16 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316789"
 ---
 # <a name="bindings"></a>\<bindings>
 
-Vous pouvez utiliser le `bindings` élément pour configurer une collection de liaisons standard et personnalisés pour Windows Communication Foundation (WCF). Chaque entrée est un élément de `binding` qui peut être identifié par son `name` unique. Les services utilisent les liaisons en les liant à l'aide de `name`. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+Vous pouvez utiliser le `bindings` élément pour configurer une collection de liaisons standard et personnalisés pour Windows Communication Foundation (WCF). Chaque entrée est un élément de `binding` qui peut être identifié par son `name` unique. Les services utilisent les liaisons en les liant à l’aide de `name`. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système
  
@@ -29,15 +29,15 @@ Vous pouvez utiliser le `bindings` élément pour configurer une collection de l
   
  L'ordre dans lequel les éléments apparaissent dans la pile est important car il s'agit de l'ordre dans lequel les opérations sont appliquées au message. Voici l'ordre requis des éléments de la pile :  
   
-1.  Transactions (facultatif)  
+1. Transactions (facultatif)  
   
-2.  Fiabilité de la messagerie (facultatif)  
+2. Fiabilité de la messagerie (facultatif)  
   
-3.  Sécurité (facultatif)  
+3. Sécurité (facultatif)  
   
-4.  Encodeur  
+4. Encodeur  
   
-5.  Transport  
+5. Transport  
   
  Les liaisons personnalisées sont identifiées par leur attribut `name`. Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316529"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procédure : Exécuter le Code de confiance partiel dans un bac à sable
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Pour exécuter une application dans un bac à sable (sandbox)  
   
-1.  Créez le jeu d'autorisations à accorder à l'application non fiable. L'autorisation minimale que vous pouvez accorder est l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Vous pouvez également accorder des autorisations supplémentaires que vous pensez sécurisées pour du code non fiable ; par exemple, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Le code suivant crée un jeu d'autorisations uniquement avec l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
+1. Créez le jeu d'autorisations à accorder à l'application non fiable. L'autorisation minimale que vous pouvez accorder est l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Vous pouvez également accorder des autorisations supplémentaires que vous pensez sécurisées pour du code non fiable ; par exemple, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Le code suivant crée un jeu d'autorisations uniquement avec l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      En fonction de la zone dans la preuve, la méthode <xref:System.Security.SecurityManager.GetStandardSandbox%2A> retourne un jeu d'autorisations `Internet` ou un jeu d'autorisations `LocalIntranet`. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> construit également des autorisations d’identité pour certains objets de preuve passés comme références.  
   
-2.  Signez l'assembly qui contient la classe d'hébergement (appelée `Sandboxer` dans cet exemple) qui appelle le code non fiable. Ajouter le <xref:System.Security.Policy.StrongName> utilisé pour signer l'assembly au tableau <xref:System.Security.Policy.StrongName> du paramètre `fullTrustAssemblies` paramètre de l'appel <xref:System.AppDomain.CreateDomain%2A>. La classe d'hébergement doit être exécutée avec un niveau de confiance totale pour permettre l'exécution du code de confiance partielle ou offrir des services à l'application de confiance partielle. Voici comment lire le <xref:System.Security.Policy.StrongName> d'un assembly :  
+2. Signez l'assembly qui contient la classe d'hébergement (appelée `Sandboxer` dans cet exemple) qui appelle le code non fiable. Ajouter le <xref:System.Security.Policy.StrongName> utilisé pour signer l'assembly au tableau <xref:System.Security.Policy.StrongName> du paramètre `fullTrustAssemblies` paramètre de l'appel <xref:System.AppDomain.CreateDomain%2A>. La classe d'hébergement doit être exécutée avec un niveau de confiance totale pour permettre l'exécution du code de confiance partielle ou offrir des services à l'application de confiance partielle. Voici comment lire le <xref:System.Security.Policy.StrongName> d'un assembly :  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      Les assemblys .NET Framework tels que mscorlib et System.dll n'ont pas à être ajoutés à la liste de confiance totale, car ils sont chargés avec un niveau de confiance totale à partir du Global Assembly Cache.  
   
-3.  Initialisez le paramètre <xref:System.AppDomainSetup> de la méthode <xref:System.AppDomain.CreateDomain%2A>. Ce paramètre vous permet de contrôler la plupart des paramètres du nouveau <xref:System.AppDomain>. La propriété <xref:System.AppDomainSetup.ApplicationBase%2A> est un paramètre important qui doit être différent de la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> pour le <xref:System.AppDomain> de l'application d'hébergement. Si les paramètres <xref:System.AppDomainSetup.ApplicationBase%2A> sont les mêmes, l'application de confiance partielle peut amener l'application d'hébergement à charger (avec un niveau de confiance totale) une exception définie par ses soins, et donc l'exploiter. Cela fait partie des raisons pour lesquelles un Catch (exception) n'est pas recommandé. En configurant la base d'application de l'hôte différemment de la base d'application de l'application bac à sable (sandbox), vous réduisez les risques d'attaques.  
+3. Initialisez le paramètre <xref:System.AppDomainSetup> de la méthode <xref:System.AppDomain.CreateDomain%2A>. Ce paramètre vous permet de contrôler la plupart des paramètres du nouveau <xref:System.AppDomain>. La propriété <xref:System.AppDomainSetup.ApplicationBase%2A> est un paramètre important qui doit être différent de la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> pour le <xref:System.AppDomain> de l'application d'hébergement. Si les paramètres <xref:System.AppDomainSetup.ApplicationBase%2A> sont les mêmes, l'application de confiance partielle peut amener l'application d'hébergement à charger (avec un niveau de confiance totale) une exception définie par ses soins, et donc l'exploiter. Cela fait partie des raisons pour lesquelles un Catch (exception) n'est pas recommandé. En configurant la base d'application de l'hôte différemment de la base d'application de l'application bac à sable (sandbox), vous réduisez les risques d'attaques.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  Appelez la surcharge de méthode <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> pour créer le domaine d'application à l'aide des paramètres spécifiés.  
+4. Appelez la surcharge de méthode <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> pour créer le domaine d'application à l'aide des paramètres spécifiés.  
   
      La signature de cette méthode est :  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  Chargez le code dans le <xref:System.AppDomain> bac à sable (sandbox) que vous avez créé. Vous pouvez le faire de deux façons :  
+5. Chargez le code dans le <xref:System.AppDomain> bac à sable (sandbox) que vous avez créé. Vous pouvez le faire de deux façons :  
   
     -   Appelez la méthode <xref:System.AppDomain.ExecuteAssembly%2A> pour l'assembly.  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  Désencapsulez la nouvelle instance de domaine dans une référence de ce domaine. Cette référence est utilisée pour exécuter le code non fiable.  
+6. Désencapsulez la nouvelle instance de domaine dans une référence de ce domaine. Cette référence est utilisée pour exécuter le code non fiable.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  Appelez la méthode `ExecuteUntrustedCode` dans l'instance de la classe `Sandboxer` que vous venez de créer.  
+7. Appelez la méthode `ExecuteUntrustedCode` dans l'instance de la classe `Sandboxer` que vous venez de créer.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

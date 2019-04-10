@@ -4,12 +4,12 @@ description: Découvrez les options d’outil de développement plus importantes
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318817"
 ---
 # <a name="development-environment-for-docker-apps"></a>Environnement de développement pour les applications Docker
 
@@ -33,7 +33,7 @@ Nous vous recommandons d’utiliser Visual Studio 2017 (ou version ultérieure) 
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio pour Mac (machine de développement Mac)
 
-Vous pouvez utiliser [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/) lors du développement d’applications basées sur Docker. Visual Studio pour Mac propose un IDE plus riche par rapport à Visual Studio Code pour Mac.
+Vous pouvez utiliser [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lors du développement d’applications basées sur Docker. Visual Studio pour Mac propose un IDE plus riche par rapport à Visual Studio Code pour Mac.
 
 ## <a name="language-and-framework-choices"></a>Choix de langage et de framework
 

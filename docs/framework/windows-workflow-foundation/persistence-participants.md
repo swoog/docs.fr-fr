@@ -2,31 +2,31 @@
 title: Participants de persistance
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316360"
 ---
 # <a name="persistence-participants"></a>Participants de persistance
 Un participant de persistance peut participer à une opération de persistance (enregistrement ou chargement) déclenchée par un hôte d'application. Le [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] est livré avec deux classes abstraites, **PersistenceParticipant** et **PersistenceIOParticipant**, que vous pouvez utiliser pour créer un participant de persistance. Un participant de persistance dérive de l’une de ces classes, implémente les méthodes qui l’intéressent, puis ajoute une instance de la classe à la collection <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> sur le <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L’hôte d’application peut rechercher de telles extensions de workflow lorsqu’il rend une instance de workflow persistante et appeler les méthodes appropriées sur les participants de persistance aux moments opportuns.  
   
  La liste suivante décrit les tâches effectuées par le sous-système de persistance lors des différentes étapes de l’opération de persistance (enregistrement). Les participants de persistance sont utilisés durant les troisième et quatrième étapes. Si le participant est un participant d’e/s (un participant de persistance qui participe également les opérations d’e/s), le participant est également utilisé dans la sixième étape.  
   
-1.  Recueille les valeurs intégrées, notamment l'état du workflow, les signets, les variables mappées et l'horodatage.  
+1. Recueille les valeurs intégrées, notamment l'état du workflow, les signets, les variables mappées et l'horodatage.  
   
-2.  Recueille tous les participants de persistance ajoutés à la collection d'extensions associée à l'instance de workflow.  
+2. Recueille tous les participants de persistance ajoutés à la collection d'extensions associée à l'instance de workflow.  
   
-3.  Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implémentée par tous les participants de persistance.  
+3. Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implémentée par tous les participants de persistance.  
   
-4.  Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implémentée par tous les participants de persistance.  
+4. Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implémentée par tous les participants de persistance.  
   
-5.  Rend le workflow persistant ou l'enregistre dans le magasin de persistances.  
+5. Rend le workflow persistant ou l'enregistre dans le magasin de persistances.  
   
-6.  Appelle le <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> méthode sur tous les participants de persistance d’e/s. Si le participant n’est pas un participant d’e/s, cette tâche est ignorée. Si l'épisode de persistance est transactionnel, la transaction est fournie dans la propriété Transaction.Current.  
+6. Appelle le <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> méthode sur tous les participants de persistance d’e/s. Si le participant n’est pas un participant d’e/s, cette tâche est ignorée. Si l'épisode de persistance est transactionnel, la transaction est fournie dans la propriété Transaction.Current.  
   
-7.  Attend que tous les participants de persistance soient terminés. Si tous les participants réussissent à rendre les données d'instance persistantes, valide la transaction.  
+7. Attend que tous les participants de persistance soient terminés. Si tous les participants réussissent à rendre les données d'instance persistantes, valide la transaction.  
   
  Un participant de persistance dérive le **PersistenceParticipant** classe et peut implémenter la **CollectValues** et **MapValues** méthodes. Un participant d’e/s de persistance dérive le **PersistenceIOParticipant** classe et peut implémenter la **BeginOnSave** méthode en plus d’implémenter le **CollectValues**et **MapValues** méthodes.  
   
@@ -34,15 +34,15 @@ Un participant de persistance peut participer à une opération de persistance (
   
  La liste suivante décrit les tâches effectuées par le sous-système de persistance lors des différentes étapes de l’opération de chargement. Les participants de persistance sont utilisés lors de la quatrième étape. Les participants d’e/s de persistance (participants de persistance qui participent également les opérations d’e/s) sont également utilisés dans la troisième étape.  
   
-1.  Recueille tous les participants de persistance ajoutés à la collection d'extensions associée à l'instance de workflow.  
+1. Recueille tous les participants de persistance ajoutés à la collection d'extensions associée à l'instance de workflow.  
   
-2.  Charge le workflow à partir du magasin de persistances.  
+2. Charge le workflow à partir du magasin de persistances.  
   
-3.  Appelle le <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> sur tous les participants de persistance d’e/s et attend que tous les participants de persistance terminer. Si l’épisode de persistance est transactionnel, la transaction est fournie dans la propriété Transaction.Current.  
+3. Appelle le <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> sur tous les participants de persistance d’e/s et attend que tous les participants de persistance terminer. Si l’épisode de persistance est transactionnel, la transaction est fournie dans la propriété Transaction.Current.  
   
-4.  Charge l'instance de workflow en mémoire selon les données récupérées dans le magasin de persistances.  
+4. Charge l'instance de workflow en mémoire selon les données récupérées dans le magasin de persistances.  
   
-5.  Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> sur chaque participant de persistance.  
+5. Appelle la méthode <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> sur chaque participant de persistance.  
   
  Un participant de persistance dérive le **PersistenceParticipant** classe et peut implémenter la **PublishValues** (méthode). Un participant d’e/s de persistance dérive le **PersistenceIOParticipant** classe et peut implémenter la **BeginOnLoad** méthode en plus d’implémenter le **PublishValues**(méthode).  
   

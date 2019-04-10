@@ -3,12 +3,12 @@ title: Création de ma première application web ASP.NET prenant en charge les r
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314553"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Création de ma première application web ASP.NET prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -21,13 +21,13 @@ ms.locfileid: "59151370"
   
  ![Diagramme montrant un composants WIF base Web App.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
-1.  L'application prenant en charge les revendications utilise WIF pour identifier des demandes non authentifiées et pour les rediriger vers STS.  
+1. L'application prenant en charge les revendications utilise WIF pour identifier des demandes non authentifiées et pour les rediriger vers STS.  
   
-2.  L'utilisateur final fournit les informations d'identification à STS et une fois qu'il est authentifié, un jeton est émis par STS pour l'utilisateur.  
+2. L'utilisateur final fournit les informations d'identification à STS et une fois qu'il est authentifié, un jeton est émis par STS pour l'utilisateur.  
   
-3.  L'utilisateur est redirigé à partir de STS vers l'application prenant en charge les revendications avec le jeton publié par STS dans la demande.  
+3. L'utilisateur est redirigé à partir de STS vers l'application prenant en charge les revendications avec le jeton publié par STS dans la demande.  
   
-4.  L'application qui prend en charge les revendications est configurée pour approuver STS et les jetons qu'il émet. L'application qui prend en charge les revendications utilise WIF pour valider le jeton et l'analyser. Les développeurs utilisent l’API WIF et les types appropriés (par exemple **ClaimsPrincpal**) pour les besoins de l’application, tels que l’implémentation de l’autorisation pour cette dernière.  
+4. L'application qui prend en charge les revendications est configurée pour approuver STS et les jetons qu'il émet. L'application qui prend en charge les revendications utilise WIF pour valider le jeton et l'analyser. Les développeurs utilisent l’API WIF et les types appropriés (par exemple **ClaimsPrincpal**) pour les besoins de l’application, tels que l’implémentation de l’autorisation pour cette dernière.  
   
  À partir de la version .NET 4.5, WIF fait partie du package .NET Framework. Le fait d’avoir les classes WIF directement disponibles dans l’infrastructure permet une intégration plus profonde de l’identité basée sur les revendications dans .NET, facilitant ainsi l’utilisation des revendications. Avec WIF 4.5, vous n'avez pas besoin d'installer de composant hors plage pour démarrer le développement d'applications Web qui prennent en charge les revendications. Les classes WIF sont maintenant réparties sur plusieurs assemblys, les principaux étant System.Security.Claims, System.IdentityModel et System.IdentityModel.Services.  
   

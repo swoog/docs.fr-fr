@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316737"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
 Cette rubrique présente les animations d’image clé. Les animations d’image clé vous permettent d’effectuer des animation en utilisant plus de deux valeurs cibles et de contrôler la méthode d’interpolation d’une animation.  
@@ -259,9 +259,9 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
  La section suivante décrit la procédure qui permet de résoudre les temps clés pour les images clés d’une animation d’image clé.  
   
-1.  Résoudre <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+1. Résoudre <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-2.  Déterminez le *temps total d’interpolation* de l’animation, c’est-à-dire la durée totale nécessaire à l’animation d’image clé pour exécuter une itération avancée.  
+2. Déterminez le *temps total d’interpolation* de l’animation, c’est-à-dire la durée totale nécessaire à l’animation d’image clé pour exécuter une itération avancée.  
   
     1.  Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> n’est pas <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, le temps total d’interpolation est la valeur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété.  
   
@@ -269,19 +269,19 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
     3.  Sinon, le temps total d’interpolation est de 1 seconde.  
   
-3.  Utiliser la valeur de temps total d’interpolation pour résoudre <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+3. Utiliser la valeur de temps total d’interpolation pour résoudre <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-4.  Résolvez la dernière image clé, si elle n’a pas déjà été résolue dans les étapes précédentes. Si le <xref:System.Windows.Media.Animation.KeyTime> de la dernière image clé est <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, son temps résolu sera égal au temps total d’interpolation.  
+4. Résolvez la dernière image clé, si elle n’a pas déjà été résolue dans les étapes précédentes. Si le <xref:System.Windows.Media.Animation.KeyTime> de la dernière image clé est <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, son temps résolu sera égal au temps total d’interpolation.  
   
      Si le <xref:System.Windows.Media.Animation.KeyTime> de la première image clé est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> et cette animation a plusieurs images clés, résolvez sa <xref:System.Windows.Media.Animation.KeyTime> valeur à zéro ; s’il n'existe qu’une seule image clé et ses <xref:System.Windows.Media.Animation.KeyTime> valeur est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, il est résolu au total heure de l’interpolation, comme décrit dans l’étape précédente.  
   
-5.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs : elles reçoivent chacune une part égale du temps disponible.  Pendant ce processus, non résolu <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs sont temporairement traitées comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs et obtenez une heure résolue temporaire.  
+5. Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs : elles reçoivent chacune une part égale du temps disponible.  Pendant ce processus, non résolu <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs sont temporairement traitées comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs et obtenez une heure résolue temporaire.  
   
-6.  Résoudre les <xref:System.Windows.Media.Animation.KeyTime> valeurs des images clés avec des temps clés non spécifiés à l’aide d’images clés déclarées les plus proches qui ont résolu <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+6. Résoudre les <xref:System.Windows.Media.Animation.KeyTime> valeurs des images clés avec des temps clés non spécifiés à l’aide d’images clés déclarées les plus proches qui ont résolu <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-7.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> utiliser le <xref:System.Windows.Media.Animation.KeyTime> valeurs d’avoisinantes clé images afin de déterminer leur temps résolu.  L’objectif est de vous assurer que la vitesse de l’animation reste constante autour du temps résolu de cette image clé.  
+7. Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> utiliser le <xref:System.Windows.Media.Animation.KeyTime> valeurs d’avoisinantes clé images afin de déterminer leur temps résolu.  L’objectif est de vous assurer que la vitesse de l’animation reste constante autour du temps résolu de cette image clé.  
   
-8.  Triez les images clés dans l’ordre de temps résolu (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+8. Triez les images clés dans l’ordre de temps résolu (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
 ## <a name="see-also"></a>Voir aussi
 

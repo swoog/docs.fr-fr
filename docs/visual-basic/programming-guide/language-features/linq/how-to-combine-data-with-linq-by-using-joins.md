@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319597"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Procédure : Combiner des données avec LINQ à l’aide de jointures (Visual Basic)
 Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de combiner le contenu de plusieurs collections basées sur des valeurs communes entre les collections de requête. Ces valeurs sont appelées *clé* valeurs. Les développeurs familiarisés avec les concepts de base de données relationnelle reconnaîtra le `Join` clause comme une jointure interne et le `Group Join` clause en tant que, en effet, une jointure externe gauche.  
@@ -25,9 +25,9 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Pour créer un projet qui contient des types et des exemples de données  
   
-1.  Pour exécuter les exemples dans cette rubrique, ouvrez Visual Studio et ajoutez un nouveau projet d’Application Console Visual Basic. Double-cliquez sur le fichier Module1.vb créé par Visual Basic.  
+1. Pour exécuter les exemples dans cette rubrique, ouvrez Visual Studio et ajoutez un nouveau projet d’Application Console Visual Basic. Double-cliquez sur le fichier Module1.vb créé par Visual Basic.  
   
-2.  Les exemples de cette rubrique utilisent le `Person` et `Pet` types et les données à partir de l’exemple de code suivant. Copiez ce code dans la valeur par défaut `Module1` module créé par Visual Basic.  
+2. Les exemples de cette rubrique utilisent le `Person` et `Pet` types et les données à partir de l’exemple de code suivant. Copiez ce code dans la valeur par défaut `Module1` module créé par Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Pour effectuer une jointure interne à l’aide de la clause de jointure  
   
-1.  Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples de jointure interne implicite et explicite.  
+1. Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples de jointure interne implicite et explicite.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Pour effectuer une jointure externe gauche en utilisant la clause Group Join  
   
-1.  Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples d’une jointure externe gauche groupée et une jointure externe gauche non groupée.  
+1. Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples d’une jointure externe gauche groupée et une jointure externe gauche non groupée.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Pour effectuer une jointure à l’aide d’une clé composite  
   
-1.  Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples d’une jointure qui utilise une clé composite.  
+1. Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples d’une jointure qui utilise une clé composite.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,19 +73,19 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
   
 #### <a name="to-add-code-to-run-the-examples"></a>Pour ajouter du code pour exécuter les exemples  
   
-1.  Remplacez le `Sub Main` dans le `Module1` module dans votre projet avec le code suivant pour exécuter les exemples dans cette rubrique.  
+1. Remplacez le `Sub Main` dans le `Module1` module dans votre projet avec le code suivant pour exécuter les exemples dans cette rubrique.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Appuyez sur F5 pour exécuter les exemples.  
+2. Appuyez sur F5 pour exécuter les exemples.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join (clause)](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join (clause)](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From (clause)](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where (clause)](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Introduction à LINQ dans Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join, clause](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join, clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From, clause](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where, clause](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
 - [Transformations de données avec LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

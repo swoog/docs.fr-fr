@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314228"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procédure : itérer au sein de tous les nœuds d’un contrôle TreeView Windows Forms
 Il est parfois utile d’examiner chaque nœud dans un formulaire Windows <xref:System.Windows.Forms.TreeView> contrôle afin d’effectuer des calculs sur les valeurs de nœud. Cette opération peut être effectuée à l’aide d’une procédure récursive (méthode récursive en C# et C++) qui procède à une itération au sein de chaque nœud dans chaque collection de l’arborescence.  
@@ -24,9 +24,9 @@ Il est parfois utile d’examiner chaque nœud dans un formulaire Windows <xref:
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Pour procéder à une itération au sein de tous les nœuds d’un contrôle TreeView  
   
-1.  Créez une procédure récursive (méthode récursive en C# et C++) pour tester chaque nœud.  
+1. Créez une procédure récursive (méthode récursive en C# et C++) pour tester chaque nœud.  
   
-2.  Appelez la procédure.  
+2. Appelez la procédure.  
   
      L’exemple suivant montre comment imprimer chaque <xref:System.Windows.Forms.TreeNode> l’objet <xref:System.Windows.Forms.TreeNode.Text%2A> propriété :  
   

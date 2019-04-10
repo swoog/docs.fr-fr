@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318427"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)
 Lorsque vous sérialisez des objets d'entité tels que Customers ou Orders vers un client sur un réseau, ces entités sont détachées de leur contexte de données. Le contexte de données ne suit plus leurs modifications ou leurs associations avec d'autres objets. Ceci ne constitue pas un problème tant que les clients lisent uniquement les données. Il est également relativement simple de permettre aux clients d'ajouter de nouvelles lignes à une base de données. Toutefois, si votre application nécessite que les clients puissent mettre à jour ou supprimer des données, vous devez attacher les entités à un nouveau contexte de données avant d'appeler <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. De plus, si vous utilisez un contrôle d'accès concurrentiel optimiste avec les valeurs d'origine, vous aurez également besoin de trouver une manière de fournir à la base de données à la fois l'entité d'origine et l'entité modifiée. Les méthodes `Attach` sont fournies pour vous permettre de placer des entités dans un nouveau contexte de données après qu'elles ont été détachées.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>État  
  Une fois qu'un objet d'entité est attaché à l'instance <xref:System.Data.Linq.DataContext>, l'objet est considéré comme étant dans l'état `PossiblyModified`. Vous pouvez imposer l'interprétation d'un objet attaché comme `Modified` de trois manières.  
   
-1.  Attachez l'objet comme non modifié, puis modifiez directement les champs.  
+1. Attachez l'objet comme non modifié, puis modifiez directement les champs.  
   
-2.  Attachez l'objet avec la surcharge <xref:System.Data.Linq.Table%601.Attach%2A> qui accepte les instances d'objet actuelles et initiales. Ceci fournit au dispositif de suivi des modifications les valeurs anciennes et nouvelles afin qu'il détermine automatiquement les champs qui ont été modifiés.  
+2. Attachez l'objet avec la surcharge <xref:System.Data.Linq.Table%601.Attach%2A> qui accepte les instances d'objet actuelles et initiales. Ceci fournit au dispositif de suivi des modifications les valeurs anciennes et nouvelles afin qu'il détermine automatiquement les champs qui ont été modifiés.  
   
-3.  Attachez l'objet avec la surcharge <xref:System.Data.Linq.Table%601.Attach%2A> qui accepte un deuxième paramètre Boolean (défini à true). Ceci donnera au dispositif de suivi des modifications l'indication de considérer l'objet modifié sans avoir à fournir de valeurs d'origine. Dans cette approche, l'objet doit avoir un champ de version/horodatage.  
+3. Attachez l'objet avec la surcharge <xref:System.Data.Linq.Table%601.Attach%2A> qui accepte un deuxième paramètre Boolean (défini à true). Ceci donnera au dispositif de suivi des modifications l'indication de considérer l'objet modifié sans avoir à fournir de valeurs d'origine. Dans cette approche, l'objet doit avoir un champ de version/horodatage.  
   
  Pour plus d’informations, consultez [États des objets et le suivi des modifications](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   
