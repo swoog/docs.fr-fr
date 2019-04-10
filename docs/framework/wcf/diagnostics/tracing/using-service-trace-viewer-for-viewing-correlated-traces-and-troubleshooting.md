@@ -2,12 +2,12 @@
 title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329048"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 Cette rubrique décrit le format des données de suivi, leur mode de consultation, et les approches qui utilisent Service Trace Viewer pour résoudre les problèmes posés par votre application.  
@@ -152,17 +152,17 @@ L’illustration suivante montre des activités clientes WCF répertoriées par 
   
  Sur le service, le modèle d’activité mappe aux concepts WCF comme suit :  
   
-1.  Nous construisons et ouvrons un ServiceHost (cela peut créer plusieurs activités associées à l'hôte, par exemple, dans le cas de la sécurité).  
+1. Nous construisons et ouvrons un ServiceHost (cela peut créer plusieurs activités associées à l'hôte, par exemple, dans le cas de la sécurité).  
   
-2.  Nous créons une activité Écouter à pour chaque écouteur dans le ServiceHost (avec des transferts en entrée et en sortie de l'activité Ouvrir ServiceHost).  
+2. Nous créons une activité Écouter à pour chaque écouteur dans le ServiceHost (avec des transferts en entrée et en sortie de l'activité Ouvrir ServiceHost).  
   
-3.  Lorsque l’écouteur détecte une demande de communication initiée par le client, elle transfère à une activité « Recevoir des octets », dans lequel tous les octets envoyés depuis le client sont traités. Dans cette activité, nous pouvons voir les erreurs de connexion qui se sont produites pendant l'interaction du service et du client.  
+3. Lorsque l’écouteur détecte une demande de communication initiée par le client, elle transfère à une activité « Recevoir des octets », dans lequel tous les octets envoyés depuis le client sont traités. Dans cette activité, nous pouvons voir les erreurs de connexion qui se sont produites pendant l'interaction du service et du client.  
   
-4.  Pour chaque ensemble d’octets reçu qui correspond à un message, nous traitons ces octets dans une activité « Traiter le Message », où nous créons l’objet Message WCF. Dans cette activité, nous constatons des erreurs dues à un message erroné ou à une enveloppe incorrecte.  
+4. Pour chaque ensemble d’octets reçu qui correspond à un message, nous traitons ces octets dans une activité « Traiter le Message », où nous créons l’objet Message WCF. Dans cette activité, nous constatons des erreurs dues à un message erroné ou à une enveloppe incorrecte.  
   
-5.  Une fois que le message est formé, nous transférons à une activité Traiter l'action. Si `propagateActivity` a la valeur `true` sur le client et le service, cette activité a le même identificateur que celui défini dans le client et décrit précédemment. À partir de cette étape nous commençons à bénéficier de la corrélation directe entre les points de terminaison, étant tous les suivis émis dans WCF qui sont liés à la demande à cette même activité, y compris le traitement de message de réponse.  
+5. Une fois que le message est formé, nous transférons à une activité Traiter l'action. Si `propagateActivity` a la valeur `true` sur le client et le service, cette activité a le même identificateur que celui défini dans le client et décrit précédemment. À partir de cette étape nous commençons à bénéficier de la corrélation directe entre les points de terminaison, étant tous les suivis émis dans WCF qui sont liés à la demande à cette même activité, y compris le traitement de message de réponse.  
   
-6.  Pour l’action out-of-process, nous créons une activité « Exécuter le code utilisateur » pour isoler les suivis émis dans le code utilisateur à partir de ceux émis dans WCF. Dans l’exemple précédent, le suivi de « Service envoie la réponse ajouter » est émis dans l’activité « Exécuter le code utilisateur », pas dans l’activité propagée par le client, le cas échéant.  
+6. Pour l’action out-of-process, nous créons une activité « Exécuter le code utilisateur » pour isoler les suivis émis dans le code utilisateur à partir de ceux émis dans WCF. Dans l’exemple précédent, le suivi de « Service envoie la réponse ajouter » est émis dans l’activité « Exécuter le code utilisateur », pas dans l’activité propagée par le client, le cas échéant.  
   
  Dans l'illustration suivante, la première activité à gauche est l'activité racine (0000), l'activité par défaut. Les trois activités suivantes consistent à ouvrir le ServiceHost. L'activité dans la colonne 5 est l'écouteur, et les activités restantes (6 à 8) décrivent le traitement WCF d'un message, du traitement des octets à l'activation du code utilisateur.  
 

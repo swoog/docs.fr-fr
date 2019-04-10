@@ -2,12 +2,12 @@
 title: Procédure d'installation unique pour les exemples Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326708"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procédure d'installation unique pour les exemples Windows Communication Foundation
 La plupart des exemples Windows Communication Foundation (WCF) sont hébergée dans Internet Information Services (IIS) et exécutez à partir d’un répertoire virtuel commun. Cette procédure d’installation unique crée un dossier sur le disque ; Il ajoute également un répertoire virtuel dans IIS nommé **ServiceModelSamples**.
@@ -19,13 +19,13 @@ La plupart des exemples Windows Communication Foundation (WCF) sont hébergée d
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procédure d'installation unique pour les exemples WCF  
   
-1.  Vérifiez que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est installé. Pour plus d’informations sur la configuration [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Vérifiez que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est installé. Pour plus d’informations sur la configuration [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2.  Vérifiez que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est installé. Rechercher les éléments suivants de répertoire pour la version 4.0 (ou version ultérieures) : **\Windows\Microsoft.NET\Framework**  
+2. Vérifiez que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est installé. Rechercher les éléments suivants de répertoire pour la version 4.0 (ou version ultérieures) : **\Windows\Microsoft.NET\Framework**  
   
-3.  Si Visual Studio 2012 n’est pas installé, et que votre système d’exploitation n’est pas Windows Server 2008 SP2 ou version ultérieure, installez [correctif logiciel 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3. Si Visual Studio 2012 n’est pas installé, et que votre système d’exploitation n’est pas Windows Server 2008 SP2 ou version ultérieure, installez [correctif logiciel 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Exécutez les commandes suivantes. Pour plus d’informations sur la raison pour laquelle ces commandes doivent être exécutées, consultez [échoue de Service hébergé IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
+4. Exécutez les commandes suivantes. Pour plus d’informations sur la raison pour laquelle ces commandes doivent être exécutées, consultez [échoue de Service hébergé IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Si vous avez réinstallé IIS, réexécutez les commandes suivantes.
@@ -38,13 +38,13 @@ La plupart des exemples Windows Communication Foundation (WCF) sont hébergée d
     > [!WARNING]
     >  Exécutant la commande `aspnet_regiis –i –enable` sera exécuter le Pool d’applications par défaut à l’aide de [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ce qui peut provoquer des problèmes d’incompatibilité pour d’autres applications sur le même ordinateur.  
   
-5.  Suivez le [pare-feu Instructions](../../../../docs/framework/wcf/samples/firewall-instructions.md) pour activer les ports utilisés par les exemples.  
+5. Suivez le [pare-feu Instructions](../../../../docs/framework/wcf/samples/firewall-instructions.md) pour activer les ports utilisés par les exemples.  
   
-6.  Recherchez le répertoire par défaut suivant : \<InstallDrive>:**\WF_WCF_Samples**. Si les exemples ont été installés précédemment, il s'agit du répertoire par défaut.  
+6. Recherchez le répertoire par défaut suivant : \<InstallDrive>:**\WF_WCF_Samples**. Si les exemples ont été installés précédemment, il s'agit du répertoire par défaut.  
   
-7.  Si les exemples ne sont pas installés, installez-les à partir de l’emplacement de téléchargement des exemples de [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) ou [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7. Si les exemples ne sont pas installés, installez-les à partir de l’emplacement de téléchargement des exemples de [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) ou [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Après avoir installé les exemples, accédez à : \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
+8. Après avoir installé les exemples, accédez à : \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Exécutez le **Setupvroot.bat** fichier de commandes. Les étapes suivantes sont exécutées :  
   

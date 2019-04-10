@@ -2,12 +2,12 @@
 title: Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330322"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
 
@@ -18,16 +18,16 @@ Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans 
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Pour demander le document de service par défaut à l'aide d'Internet Explorer
 
-1.  Dans Internet Explorer, à partir de la **outils** menu, sélectionnez **Options Internet**, cliquez sur le **contenu** , cliquez sur **paramètres**et désactivez  **Activer la lecture du flux**.
+1. Dans Internet Explorer, à partir de la **outils** menu, sélectionnez **Options Internet**, cliquez sur le **contenu** , cliquez sur **paramètres**et désactivez  **Activer la lecture du flux**.
 
      Cette opération garantit que la lecture de flux est désactivée. Si vous ne désactivez pas cette fonctionnalité, le navigateur Web traitera le document encodé AtomPub retourné comme un flux XML au lieu d'afficher les données XML brutes.
 
     > [!NOTE]
     > Si votre navigateur ne peut pas afficher le flux sous forme de données XML brutes, vous devriez encore être en mesure de voir le flux sous forme de code source de la page.
 
-2.  Dans Visual Studio, appuyez sur la **F5** touche pour démarrer le débogage de l’application.
+2. Dans Visual Studio, appuyez sur la **F5** touche pour démarrer le débogage de l’application.
 
-3.  Ouvrez un navigateur Web sur l'ordinateur local. Dans la barre d'adresses, entrez l'URI suivant :
+3. Ouvrez un navigateur Web sur l'ordinateur local. Dans la barre d'adresses, entrez l'URI suivant :
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans 
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Pour accéder aux ressources de jeu d'entités depuis un navigateur Web
 
-1.  Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
+1. Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans 
 
      Cette opération retourne un jeu de tous les clients dans l'exemple de base de données Northwind.
 
-2.  Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
+2. Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans 
 
      Cette opération retourne une instance d'entité pour le client spécifique, `ALFKI`.
 
-3.  Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
+3. Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans 
 
      Cette opération parcourt la relation entre les clients et les ordres pour retourner un jeu de tous les ordres pour le client `ALFKI` spécifique.
 
-4.  Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
+4. Dans la barre d'adresse de votre navigateur Web, entrez l'URI suivant :
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

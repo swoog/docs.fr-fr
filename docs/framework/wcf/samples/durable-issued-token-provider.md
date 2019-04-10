@@ -2,12 +2,12 @@
 title: Durable Issued Token Provider
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103257"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329750"
 ---
 # <a name="durable-issued-token-provider"></a>Durable Issued Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons émis client personnalisé.  
@@ -114,7 +114,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
   
 #### <a name="to-develop-a-custom-token-provider"></a>Pour développer un fournisseur de jetons personnalisé  
   
-1.  Écrivez un fournisseur de jetons personnalisé.  
+1. Écrivez un fournisseur de jetons personnalisé.  
   
      L'exemple implémente un fournisseur de jetons personnalisé qui retourne un jeton de sécurité récupéré d'un cache.  
   
@@ -133,7 +133,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
     }  
     ```  
   
-2.  Écrivez un gestionnaire de jetons de sécurité personnalisé.  
+2. Écrivez un gestionnaire de jetons de sécurité personnalisé.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et des sérialiseurs de jeton, mais ceux-là ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons personnalisé lorsque les exigences du jeton passé indiquent qu’un jeton émis est demandé.  
   
@@ -162,7 +162,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
     }  
     ```  
   
-3.  Écrivez une information d'identification client personnalisée.  
+3. Écrivez une information d'identification client personnalisée.  
   
      Une classe d'informations d'identification client permet de représenter les informations d'identification qui sont configurées pour le proxy client et crée le gestionnaire de jetons de sécurité utilisé pour obtenir des authentificateurs, des fournisseurs et des sérialiseurs de jeton.  
   
@@ -204,7 +204,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
     }  
     ```  
   
-4.  Implémentez le cache du jeton. L'exemple d'implémentation utilise une classe de base abstraite par l'intermédiaire de laquelle les consommateurs d'un cache de jeton donné interagissent avec le cache.  
+4. Implémentez le cache du jeton. L'exemple d'implémentation utilise une classe de base abstraite par l'intermédiaire de laquelle les consommateurs d'un cache de jeton donné interagissent avec le cache.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Exécutez le fichier Setup.cmd pour créer les certificats requis.  
+1. Exécutez le fichier Setup.cmd pour créer les certificats requis.  
   
-2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Assurez-vous que tous les projets de la solution sont générés (Shared, RSTRSTR, Service, SecurityTokenService et Client).  
+2. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Assurez-vous que tous les projets de la solution sont générés (Shared, RSTRSTR, Service, SecurityTokenService et Client).  
   
-3.  Veillez à ce que Service.exe et SecurityTokenService.exe s'exécutent tous deux avec des privilèges d'administrateur.  
+3. Veillez à ce que Service.exe et SecurityTokenService.exe s'exécutent tous deux avec des privilèges d'administrateur.  
   
-4.  Exécutez client.exe.  
+4. Exécutez client.exe.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
-1.  Exécutez Cleanup.cmd dans le dossier d’exemples après avoir exécuté l’exemple.  
+1. Exécutez Cleanup.cmd dans le dossier d’exemples après avoir exécuté l’exemple.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

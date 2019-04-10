@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328593"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Procédure : Insérer des lignes dans la base de données
 Insérer des lignes dans une base de données en ajoutant des objets à associé [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection et en soumettant les modifications apportées à la base de données. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit vos modifications dans la requête SQL appropriée `INSERT` commandes.  
@@ -24,11 +24,11 @@ Insérer des lignes dans une base de données en ajoutant des objets à associé
   
 ### <a name="to-insert-a-row-into-the-database"></a>Pour insérer une ligne dans la base de données  
   
-1.  Créez un objet qui inclut les données de colonne à soumettre.  
+1. Créez un objet qui inclut les données de colonne à soumettre.  
   
-2.  Ajouter le nouvel objet à la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` collection associée à la table cible dans la base de données.  
+2. Ajouter le nouvel objet à la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` collection associée à la table cible dans la base de données.  
   
-3.  Soumettez la modification à la base de données.  
+3. Soumettez la modification à la base de données.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant crée un objet de type `Order` et le remplit avec les valeurs appropriées. Il ajoute ensuite le nouvel objet à la collection `Order`. Enfin, il soumet la modification à la base de données comme une nouvelle ligne de la table `Orders`.  

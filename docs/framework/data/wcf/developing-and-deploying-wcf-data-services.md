@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329321"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Développer et déployer des Services de données WCF
 
@@ -22,15 +22,15 @@ Cette rubrique fournit des informations sur le développement et déploiement de
 
 Lorsque vous utilisez WCF Data Services pour créer un service de données qui prend en charge la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], vous devez effectuer les tâches suivantes au cours du développement :
 
-1.  **Définir le modèle de données**
+1. **Définir le modèle de données**
 
      WCF Data Services prend en charge une variété de fournisseurs de services de données qui vous permettent de définir un modèle de données basé sur les données à partir de diverses sources de données, à partir de bases de données relationnelles aux types de données de la liaison tardive. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
-2.  **Créer le service de données**
+2. **Créer le service de données**
 
      Le service de données le plus basique expose une classe qui hérite de la classe <xref:System.Data.Services.DataService%601> , avec un type `T` qui est le nom qualifié par l'espace de noms du conteneur d'entités. Pour plus d'informations, consultez [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
 
-3.  **Configurer le service de données**
+3. **Configurer le service de données**
 
      Par défaut, WCF Data Services désactive l’accès aux ressources qui sont exposées par un conteneur d’entités. Le <xref:System.Data.Services.DataServiceConfiguration> interface vous permet de configurer l’accès aux ressources et opérations de service, spécifiez la version prise en charge d’OData et définir d’autres comportements de service à l’échelle, telles que le traitement par lot des comportements ou le nombre maximal d’entités qui peuvent être retournées dans un flux de réponse unique. Pour plus d’informations, consultez [configuration du Service de données](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
 
@@ -40,14 +40,14 @@ Cette rubrique traite principalement du développement et déploiement de servic
 
 Lorsque vous développez un Service de données WCF comme une [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application ou [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site Web à l’aide de Visual Studio 2015, vous avez le choix entre plusieurs serveurs Web sur lequel exécuter le service de données pendant le développement. Les serveurs Web suivants s’intègrent avec Visual Studio pour le rendre plus facile à tester et déboguer vos services de données sur l’ordinateur local.
 
-1.  **Serveur IIS local**
+1. **Serveur IIS local**
 
      Lorsque vous créez un service de données qui est une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou un site Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] exécuté sur Internet Information Services (IIS), nous vous recommandons de développer et tester votre service de données à l'aide d'IIS sur l'ordinateur local. L'exécution du service de données sur IIS facilite le suivi des demandes HTTP pendant le débogage. Elle permet également de prédéfinir les droits requis par IIS pour accéder aux fichiers, aux bases de données et aux autres ressources requises par le service de données. Pour exécuter votre service de données sur IIS, vous devez vous assurer que IIS et Windows Communication Foundation (WCF) sont installés et configurés correctement et accorder l’accès aux comptes d’IIS dans le système de fichiers et les bases de données. Pour plus d'informations, voir [Procédure : Développer un Service de données WCF s’exécutant sur IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Vous devez exécuter Visual Studio avec des droits d’administrateur pour activer l’environnement de développement configurer le serveur IIS local.
 
-2.  **Serveur de développement Visual Studio**
+2. **Serveur de développement Visual Studio**
 
      Visual Studio inclut un serveur Web intégré, le serveur de développement Visual Studio, qui est le serveur Web par défaut [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projets. Ce serveur Web est conçu pour exécuter les projets [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sur l'ordinateur local pendant le développement. Le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) montre comment créer un service de données qui s’exécute dans le serveur de développement Visual Studio.
 
@@ -68,7 +68,7 @@ Lorsque vous développez un Service de données WCF comme une [!INCLUDE[vstecasp
     > [!TIP]
     > Bien que vous pouvez utiliser le serveur de développement Visual Studio pour tester vos services de données pendant le développement, vous devez les tester à nouveau après le déploiement sur un serveur Web qui exécute IIS.
 
-3.  **Environnement de développement Microsoft Azure**
+3. **Environnement de développement Microsoft Azure**
 
      Windows Azure Tools pour Visual Studio inclut un ensemble intégré d’outils pour développer des services Windows Azure dans Visual Studio. Avec ces outils, vous pouvez développer un service de données pouvant être déployé sur Microsoft Azure, et vous pouvez le tester sur l'ordinateur local avant son déploiement. Utilisez ces outils lorsque vous utilisez Visual Studio pour développer un service de données qui s’exécute sur la plateforme Windows Azure. Vous pouvez télécharger Windows Azure Tools pour Visual Studio à partir de la [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Pour plus d’informations sur le développement d’un service de données qui s’exécute sur Windows Azure, consultez le billet [déploiement d’un OData Service dans Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -90,21 +90,21 @@ Vous devez tenir compte de ce qui suit lorsque vous développez un service de do
 
 WCF Data Service permet de choisir le processus qui héberge le service de données. Vous pouvez utiliser Visual Studio pour déployer un service de données sur les plateformes suivantes :
 
--   **Serveur Web hébergé par IIS**
+-   **serveur web hébergé par IIS**
 
      Lorsqu'un service de données est développé en tant que projet [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , il peut être déployé sur un serveur Web IIS à l'aide des processus de déploiement standard [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  Visual Studio fournit les technologies de déploiement suivantes pour [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], selon le type de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet qui héberge le service de données que vous déployez.
 
     -   **Technologies de déploiement des applications Web ASP.NET**
 
-        -   [Guide pratique pour Créer un Package de déploiement Web dans Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+        -   [Procédure : Créer un Package de déploiement Web dans Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [Guide pratique pour Déployer un site Web publier le projet à l’aide d’un seul clic dans Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+        -   [Procédure : Déployer un site Web publier le projet à l’aide d’un seul clic dans Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
-    -   **Technologies de déploiement des sites Web ASP.NET**
+    -   **Technologies de déploiement des sites web ASP.NET**
 
-        -   [Guide pratique pour Copier des fichiers de Site Web avec l’outil Copier le Site Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+        -   [Procédure : Copier des fichiers de Site Web avec l’outil Copier le Site Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [Guide pratique pour Publier des Sites Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+        -   [Procédure : Publier des Sites Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
         -   [Procédure pas à pas : Déploiement d’une Application Web ASP.NET à l’aide de XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
@@ -113,7 +113,7 @@ WCF Data Service permet de choisir le processus qui héberge le service de donn�
     > [!TIP]
     > Avant de tenter de déployer le service de données sur IIS, testez le déploiement sur un serveur Web qui exécute IIS. Pour plus d'informations, voir [Procédure : Développer un Service de données WCF s’exécutant sur IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
--   **Windows Azure**
+-   **Microsoft Azure**
 
      Vous pouvez déployer un service de données vers Windows Azure à l’aide de Windows Azure Tools pour Visual Studio. Vous pouvez télécharger Windows Azure Tools pour Visual Studio à partir de la [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Pour plus d’informations sur le déploiement d’un service de données vers Windows Azure, consultez le billet [déploiement d’un OData Service dans Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -129,4 +129,4 @@ Vous devez tenir compte de ce qui suit lorsque vous déployez un service de donn
 
 - [Hébergement du service de données](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
 - [Sécurisation de WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

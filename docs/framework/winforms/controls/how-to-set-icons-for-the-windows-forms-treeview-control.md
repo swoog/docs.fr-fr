@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328411"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procédure : définir des icônes pour le contrôle TreeView Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle peut afficher des icônes en regard de chaque nœud. Les icônes sont positionnées à gauche du texte de nœud. Pour afficher ces icônes, vous devez associer l’arborescence avec un <xref:System.Windows.Forms.ImageList> contrôle. Pour plus d’informations sur les listes d’images, consultez [composant ImageList](imagelist-component-windows-forms.md) et [Comment : Ajouter ou supprimer des Images avec les Windows Forms composant ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
@@ -27,7 +27,7 @@ Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle peut affi
   
 ### <a name="to-display-images-in-a-tree-view"></a>Pour afficher des images dans une arborescence  
   
-1.  Définir le <xref:System.Windows.Forms.TreeView> du contrôle <xref:System.Windows.Forms.TreeView.ImageList%2A> propriété existant <xref:System.Windows.Forms.ImageList> contrôle que vous souhaitez utiliser.  
+1. Définir le <xref:System.Windows.Forms.TreeView> du contrôle <xref:System.Windows.Forms.TreeView.ImageList%2A> propriété existant <xref:System.Windows.Forms.ImageList> contrôle que vous souhaitez utiliser.  
   
      Ces propriétés peuvent être définies dans le concepteur avec la fenêtre Propriétés ou dans le code.  
   
@@ -43,7 +43,7 @@ Les formulaires Windows <xref:System.Windows.Forms.TreeView> contrôle peut affi
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  Définir le nœud <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> et <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> propriétés. Le <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> propriété détermine l’image affichée pour les États de normal et développé du nœud et le <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> propriété détermine l’image affichée pour l’état du nœud sélectionné.  
+2. Définir le nœud <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> et <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> propriétés. Le <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> propriété détermine l’image affichée pour les États de normal et développé du nœud et le <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> propriété détermine l’image affichée pour l’état du nœud sélectionné.  
   
      Ces propriétés peuvent être définies dans le code ou dans l’Éditeur TreeNode. Pour ouvrir l’Éditeur TreeNode, cliquez sur le bouton de sélection ( ![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.TreeView.Nodes%2A> propriété dans la fenêtre Propriétés.  
   

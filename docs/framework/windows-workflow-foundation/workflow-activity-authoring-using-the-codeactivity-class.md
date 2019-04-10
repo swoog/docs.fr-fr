@@ -2,12 +2,12 @@
 title: Création de l'activité de workflow à l'aide de la classe CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331284"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Création de l'activité de workflow à l'aide de la classe CodeActivity
 Les activités créées en héritant de <xref:System.Activities.CodeActivity> peuvent implémenter un comportement impératif de base en remplaçant la méthode <xref:System.Activities.CodeActivity.Execute%2A>.
@@ -15,7 +15,7 @@ Les activités créées en héritant de <xref:System.Activities.CodeActivity> pe
 ## <a name="using-codeactivitycontext"></a>Utilisation de CodeActivityContext
  Les fonctionnalités de l'exécution du workflow sont accessibles à partir de la méthode <xref:System.Activities.CodeActivity.Execute%2A> en utilisant les membres du paramètre `context`, de type <xref:System.Activities.CodeActivityContext>. Les fonctionnalités disponibles via <xref:System.Activities.CodeActivityContext> sont notamment :
 
--   Obtention et définition des valeurs de variables et d'arguments.
+-   Obtention et définition des valeurs de variables et d’arguments.
 
 -   Fonctionnalités de suivi personnalisées à l'aide de <xref:System.Activities.CodeActivityContext.Track%2A>.
 
@@ -23,28 +23,28 @@ Les activités créées en héritant de <xref:System.Activities.CodeActivity> pe
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Pour créer une activité personnalisée qui hérite de CodeActivity
 
-1.  Ouvrez Visual Studio 2010.
+1. Ouvrez Visual Studio 2010.
 
-2.  Sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **bibliothèque d’activités** dans le **modèles** fenêtre. Nommez le nouveau projet HelloActivity.
+2. Sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **bibliothèque d’activités** dans le **modèles** fenêtre. Nommez le nouveau projet HelloActivity.
 
-3.  Cliquez sur Activity1.xaml dans le projet HelloActivity et sélectionnez **supprimer**.
+3. Cliquez sur Activity1.xaml dans le projet HelloActivity et sélectionnez **supprimer**.
 
-4.  Cliquez sur le projet HelloActivity et sélectionnez **ajouter** , puis **classe**. Nommez la nouvelle classe HelloActivity.cs.
+4. Cliquez sur le projet HelloActivity et sélectionnez **ajouter** , puis **classe**. Nommez la nouvelle classe HelloActivity.cs.
 
-5.  Dans le fichier HelloActivity.cs, ajoutez les directives `using` suivantes.
+5. Dans le fichier HelloActivity.cs, ajoutez les directives `using` suivantes.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Faites en sorte que la nouvelle classe hérite de <xref:System.Activities.CodeActivity> en ajoutant une classe de base à la déclaration de classe.
+6. Faites en sorte que la nouvelle classe hérite de <xref:System.Activities.CodeActivity> en ajoutant une classe de base à la déclaration de classe.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  Ajoutez des fonctionnalités à la classe en ajoutant une méthode <xref:System.Activities.CodeActivity.Execute%2A>.
+7. Ajoutez des fonctionnalités à la classe en ajoutant une méthode <xref:System.Activities.CodeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ Les activités créées en héritant de <xref:System.Activities.CodeActivity> pe
     }
     ```
 
-8.  Utilisez le <xref:System.Activities.CodeActivityContext> pour créer un enregistrement de suivi.
+8. Utilisez le <xref:System.Activities.CodeActivityContext> pour créer un enregistrement de suivi.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

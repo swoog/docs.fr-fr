@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328060"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procédure : Placez des guillemets doubles dans une chaîne (Windows Forms)
 Il se peut que vous souhaitiez placer une chaîne de texte entre guillemets (« »). Exemple :  
@@ -26,7 +26,7 @@ Il se peut que vous souhaitiez placer une chaîne de texte entre guillemets («�
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Pour placer une chaîne entre guillemets dans votre code  
   
-1.  Dans Visual Basic, insérez deux guillemets sur une ligne comme un guillemet incorporé. Dans Visual C# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insérez la séquence d’échappement \\« comme un guillemet incorporé. Par exemple, pour créer la chaîne précédente, utilisez le code suivant.  
+1. Dans Visual Basic, insérez deux guillemets sur une ligne comme un guillemet incorporé. Dans Visual C# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insérez la séquence d’échappement \\« comme un guillemet incorporé. Par exemple, pour créer la chaîne précédente, utilisez le code suivant.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ Il se peut que vous souhaitiez placer une chaîne de texte entre guillemets («�
   
      - ou -  
   
-2.  Insérez le caractère ASCII ou Unicode d’un guillemet. Dans Visual Basic, utilisez le caractère ASCII (34). Dans Visual C#, utilisez le caractère Unicode (\u0022).  
+2. Insérez le caractère ASCII ou Unicode d’un guillemet. Dans Visual Basic, utilisez le caractère ASCII (34). Dans Visual C#, utilisez le caractère Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ Il se peut que vous souhaitiez placer une chaîne de texte entre guillemets («�
   
      - ou -  
   
-3.  Vous pouvez également définir une constante pour le caractère et l’utiliser lorsque cela est nécessaire.  
+3. Vous pouvez également définir une constante pour le caractère et l’utiliser lorsque cela est nécessaire.  
   
     ```vb  
     Const quote As String = """"  

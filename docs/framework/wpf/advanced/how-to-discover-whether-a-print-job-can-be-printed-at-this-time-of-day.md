@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099857"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326864"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procédure : Déterminer si un travail d’impression peut être imprimé à cette heure de la journée
 Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils ont des propriétés au moment de début et de fin qui peuvent être définies pour les rendre indisponibles à certains moments de la journée. Cette fonctionnalité peut être utilisée, par exemple, pour réserver une imprimante à l’usage exclusif d’un département après 17 h 00. Ce département aurait une autre file d’attente l’imprimante que les autres services à utiliser. La file d’attente pour les autres départements serait défini comme être indisponible après 17 h 00, tandis que la file d’attente pour le département privilégié peut être définie pour être disponible à tout moment.  
@@ -29,9 +29,9 @@ Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils
   
  Il existe deux principales étapes de ce type de fonction comme suit.  
   
-1.  Lecture la <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> et <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> propriétés de la <xref:System.Printing.PrintQueue> pour déterminer si l’heure actuelle est entre eux.  
+1. Lecture la <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> et <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> propriétés de la <xref:System.Printing.PrintQueue> pour déterminer si l’heure actuelle est entre eux.  
   
-2.  Lecture la <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> et <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> propriétés de la <xref:System.Printing.PrintSystemJobInfo> pour déterminer si l’heure actuelle est entre eux.  
+2. Lecture la <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> et <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> propriétés de la <xref:System.Printing.PrintSystemJobInfo> pour déterminer si l’heure actuelle est entre eux.  
   
  Mais les complications naissent du fait que ces propriétés ne sont pas <xref:System.DateTime> objets. Au lieu de cela, ils sont <xref:System.Int32> objets qui expriment l’heure du jour en tant que le nombre de minutes depuis minuit. En outre, cela n’est pas minuit dans le fuseau horaire actuel, mais minuit UTC (Coordinated Universal Time).  
   

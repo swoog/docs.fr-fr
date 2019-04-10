@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327982"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Procédure : installer et configurer des composants d’activation WCF
 Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
@@ -22,19 +22,19 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Pour installer les composants d'activation non HTTP WCF  
   
-1.  Cliquez sur le **Démarrer** bouton, puis cliquez sur **le panneau de configuration**.  
+1. Cliquez sur le **Démarrer** bouton, puis cliquez sur **le panneau de configuration**.  
   
-2.  Cliquez sur **programmes**, puis cliquez sur **programmes et fonctionnalités**.  
+2. Cliquez sur **programmes**, puis cliquez sur **programmes et fonctionnalités**.  
   
-3.  Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows activer**.  
+3. Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows activer**.  
   
-4.  Recherchez le noeud [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], sélectionnez-le puis développez-le.  
+4. Recherchez le noeud [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], sélectionnez-le puis développez-le.  
   
-5.  Sélectionnez le **les composants d’Activation Non-Http WCF** zone et d’enregistrer le paramètre.  
+5. Sélectionnez le **les composants d’Activation Non-Http WCF** zone et d’enregistrer le paramètre.  
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>Pour configurer le service WAS pour prendre en charge l'activation TCP  
   
-1.  Pour assurer la prise en charge de l'activation de net.tcp, le site Web par défaut doit d'abord être lié à un port net.tcp. Vous pouvez utiliser Appcmd.exe installé avec l'ensemble d'outils de gestion [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Dans une fenêtre d'invite de commandes au niveau de l'administrateur, exécutez la commande suivante.  
+1. Pour assurer la prise en charge de l'activation de net.tcp, le site Web par défaut doit d'abord être lié à un port net.tcp. Vous pouvez utiliser Appcmd.exe installé avec l'ensemble d'outils de gestion [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Dans une fenêtre d'invite de commandes au niveau de l'administrateur, exécutez la commande suivante.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
@@ -43,7 +43,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
     > [!NOTE]
     >  Cette commande est une ligne unique de texte. Cette commande ajoute une liaison de site net.tcp au site Web par défaut qui écoute sur le port TCP 808, quel que soit le nom d’hôte.  
   
-2.  Bien que toutes les applications d'un site partagent la même liaison net.tcp, chacune d'elle peut activer de manière individuelle la prise en charge net.pipe. Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.  
+2. Bien que toutes les applications d'un site partagent la même liaison net.tcp, chacune d'elle peut activer de manière individuelle la prise en charge net.pipe. Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -79,7 +79,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
   
 ### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a>Pour supprimer net.tcp de la liste des protocoles actifs  
   
-1.  Pour supprimer net.tcp de la liste des protocoles actifs, exécutez la commande suivante dans une invite de commandes au niveau de l'administrateur.  
+1. Pour supprimer net.tcp de la liste des protocoles actifs, exécutez la commande suivante dans une invite de commandes au niveau de l'administrateur.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
@@ -90,7 +90,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
   
 ### <a name="to-remove-the-nettcp-site-binding"></a>Pour supprimer la liaison de site net.tcp  
   
-1.  Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d’invite de commandes au niveau de l’administrateur.  
+1. Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d’invite de commandes au niveau de l’administrateur.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

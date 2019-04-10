@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: f04381bae2ebed5f0f65b4c6b4043c86ac7f63ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078380"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330764"
 ---
 # <a name="get-ui-automation-element-properties"></a>Obtenir les propriétés d'éléments UI Automation
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "59078380"
   
 ### <a name="get-a-current-property-value"></a>Obtenir une valeur de propriété actuelle  
   
-1.  Obtenir le <xref:System.Windows.Automation.AutomationElement> dont vous souhaitez obtenir la propriété.  
+1. Obtenir le <xref:System.Windows.Automation.AutomationElement> dont vous souhaitez obtenir la propriété.  
   
-2.  Appelez <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, ou récupérer le <xref:System.Windows.Automation.AutomationElement.Current%2A> structure de propriété et d’obtenir la valeur à partir d’un de ses membres.  
+2. Appelez <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, ou récupérer le <xref:System.Windows.Automation.AutomationElement.Current%2A> structure de propriété et d’obtenir la valeur à partir d’un de ses membres.  
   
 ### <a name="get-a-cached-property-value"></a>Obtenir une valeur de propriété mises en cache  
   
-1.  Obtenir le <xref:System.Windows.Automation.AutomationElement> dont vous souhaitez obtenir la propriété. La propriété doit avoir été spécifiée dans le <xref:System.Windows.Automation.CacheRequest>.  
+1. Obtenir le <xref:System.Windows.Automation.AutomationElement> dont vous souhaitez obtenir la propriété. La propriété doit avoir été spécifiée dans le <xref:System.Windows.Automation.CacheRequest>.  
   
-2.  Appelez <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, ou récupérer le <xref:System.Windows.Automation.AutomationElement.Cached%2A> structure de propriété et d’obtenir la valeur à partir d’un de ses membres.  
+2. Appelez <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, ou récupérer le <xref:System.Windows.Automation.AutomationElement.Cached%2A> structure de propriété et d’obtenir la valeur à partir d’un de ses membres.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre différentes façons de récupérer les propriétés actuelles d’un <xref:System.Windows.Automation.AutomationElement>.  

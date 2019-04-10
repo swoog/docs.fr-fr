@@ -2,11 +2,12 @@
 title: Usage of Serialization Binder
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329841"
 ---
 # <a name="usage-of-serialization-binder"></a>Usage of Serialization Binder
 Cet exemple montre comment utiliser le <xref:System.Runtime.Serialization.SerializationBinder> pour modifier la version d'un type générique lorsqu'il est sérialisé.  
@@ -23,10 +24,10 @@ Cet exemple montre comment utiliser le <xref:System.Runtime.Serialization.Serial
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Pour exécuter le client, cliquez sur la solution, SBGenericsVTS (6 projets), puis sélectionnez **propriétés**.  
+1. Pour exécuter le client, cliquez sur la solution, SBGenericsVTS (6 projets), puis sélectionnez **propriétés**.  
   
-2.  Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis sélectionnez **plusieurs projets de démarrage**.  
+2. Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis sélectionnez **plusieurs projets de démarrage**.  
   
-3.  Sélectionnez **Server** premier, puis **Client20** , puis **Client40**. Sélectionnez le **Démarrer** action de ces trois projets et laisser le reste de la valeur **aucun**.  
+3. Sélectionnez **Server** tout d’abord, puis **Client20** , puis **Client40**. Sélectionnez le **Démarrer** action à ces trois projets et laisser le reste défini sur **aucun**.  
   
-4.  Cliquez sur **OK** puis appuyez sur F5 pour exécuter l’exemple.
+4. Cliquez sur **OK** puis appuyez sur F5 pour exécuter l’exemple.

@@ -2,12 +2,12 @@
 title: Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326968"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server
 De nombreuses applications utilisent des procédures stockées pour accéder aux données, en se basant sur le chaînage des propriétés de manière à limiter l'accès aux tables de base. Vous pouvez accorder des autorisations EXECUTE sur les procédures stockées, en révoquant ou refusant des autorisations sur les tables de base. SQL Server ne vérifie pas les autorisations de l'appelant si la procédure stockée et les tables ont le même propriétaire. Toutefois, le chaînage des propriétés ne fonctionne pas si les objets ont des propriétaires différents ou dans le cas d'instructions SQL dynamiques.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Pour utiliser la clause EXECUTE AS dans une procédure, les trois étapes suivantes sont nécessaires :  
   
-1.  Dans la base de données, créez un utilisateur proxy qui n'est pas mappé à une connexion. Cette étape n'est pas obligatoire, mais elle s'avère utile lors de la gestion des autorisations.  
+1. Dans la base de données, créez un utilisateur proxy qui n'est pas mappé à une connexion. Cette étape n'est pas obligatoire, mais elle s'avère utile lors de la gestion des autorisations.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Accordez les autorisations nécessaires à l'utilisateur proxy.  
+1. Accordez les autorisations nécessaires à l'utilisateur proxy.  
   
-2.  Ajoutez la clause EXECUTE AS à la procédure stockée ou à la fonction définie par l'utilisateur.  
+2. Ajoutez la clause EXECUTE AS à la procédure stockée ou à la fonction définie par l'utilisateur.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

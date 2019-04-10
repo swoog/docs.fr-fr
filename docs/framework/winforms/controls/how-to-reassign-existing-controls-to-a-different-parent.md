@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328216"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procédure : réattribuer des contrôles existants à un autre parent
 Vous pouvez affecter des contrôles qui existent sur votre formulaire à un nouveau contrôle de conteneur.  
@@ -21,25 +21,25 @@ Vous pouvez affecter des contrôles qui existent sur votre formulaire à un nouv
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>Pour réaffecter des contrôles existants à un autre parent  
   
-1.  Faites glisser trois contrôles <xref:System.Windows.Forms.Button> de la **Boîte à outils** vers le formulaire.  
+1. Faites glisser trois contrôles <xref:System.Windows.Forms.Button> de la **Boîte à outils** vers le formulaire.  
   
      Disposez-les près les uns des autres en les laissant non alignés.  
   
-2.  Dans la **Boîte à outils**, cliquez sur l’icône de contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2. Dans la **Boîte à outils**, cliquez sur l’icône de contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
      Ne faites pas glisser l’icône vers le formulaire.  
   
-3.  Déplacez le pointeur de la souris près des trois contrôles <xref:System.Windows.Forms.Button> .  
+3. Déplacez le pointeur de la souris près des trois contrôles <xref:System.Windows.Forms.Button> .  
   
      Le pointeur devient une croix à laquelle est attachée l’icône de contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-4.  Cliquez et maintenez le bouton de la souris enfoncé.  
+4. Cliquez et maintenez le bouton de la souris enfoncé.  
   
-5.  Faites glisser le pointeur de la souris pour tracer le contour du contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
+5. Faites glisser le pointeur de la souris pour tracer le contour du contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-6.  Tracez le contour des trois contrôles <xref:System.Windows.Forms.Button> .  
+6. Tracez le contour des trois contrôles <xref:System.Windows.Forms.Button> .  
   
-7.  Relâchez le bouton de la souris.  
+7. Relâchez le bouton de la souris.  
   
      Les trois contrôles <xref:System.Windows.Forms.Button> sont maintenant insérés dans le contrôle <xref:System.Windows.Forms.FlowLayoutPanel> .  
   

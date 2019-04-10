@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330452"
 ---
 # <a name="routed-events-overview"></a>Vue d'ensemble des événements routés
 Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Elle définit les termes utilisés pour les événements routés, elle explique comment ces événements sont routés via une arborescence d’éléments, elle résume la façon dont sont gérés les événements routés et elle explique comment créer ses propres événements routés personnalisés.
@@ -204,17 +204,17 @@ Propagation et tunneling des événements d’entrée
   
  L’ordre de traitement des événements est le suivant :  
   
-1.  `PreviewMouseDown` (tunneling) sur l’élément racine.  
+1. `PreviewMouseDown` (tunneling) sur l’élément racine.  
   
-2.  `PreviewMouseDown` (tunneling) sur l’élément intermédiaire #1.  
+2. `PreviewMouseDown` (tunneling) sur l’élément intermédiaire #1.  
   
-3.  `PreviewMouseDown` (tunneling) sur l’élément source #2.  
+3. `PreviewMouseDown` (tunneling) sur l’élément source #2.  
   
-4.  `MouseDown` (propagation) sur l’élément source #2.  
+4. `MouseDown` (propagation) sur l’élément source #2.  
   
-5.  `MouseDown` (propagation) sur l’élément intermédiaire #1.  
+5. `MouseDown` (propagation) sur l’élément intermédiaire #1.  
   
-6.  `MouseDown` (propagation) sur l’élément racine.  
+6. `MouseDown` (propagation) sur l’élément racine.  
   
  Un délégué de gestionnaire d’événements routés fournit des références à deux objets : l’objet qui a déclenché l’événement et l’objet à partir duquel le gestionnaire a été appelé. L’objet à partir duquel le gestionnaire a été appelé est celui signalé par le paramètre `sender`. L’objet où l’événement a été déclenché pour la première est signalée par le <xref:System.Windows.RoutedEventArgs.Source%2A> propriété dans les données d’événement. Un événement routé peut toujours être déclenché et géré par le même objet, auquel cas `sender` et <xref:System.Windows.RoutedEventArgs.Source%2A> sont identiques (ce qui est le cas avec les étapes 3 et 4 de l’événement de traitement d’exemple de liste).  
   

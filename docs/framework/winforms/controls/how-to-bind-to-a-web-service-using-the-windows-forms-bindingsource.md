@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lier à un Service Web à l’aide du BindingSource Windows Forms'
+title: 'Procédure : lier un service web à l’aide du composant BindingSource de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 597ffbfb44430379e1ca3709aa88e25fc2f22d46
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330998"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procédure : Lier à un Service Web à l’aide du BindingSource Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procédure : lier un service web à l’aide du composant BindingSource de Windows Forms
 Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir d'un appel à un service web XML, vous pouvez utiliser un composant <xref:System.Windows.Forms.BindingSource>. Cette procédure est similaire à celle d'une liaison d'un composant <xref:System.Windows.Forms.BindingSource> à un type. Vous devez créer un proxy côté client qui contienne les méthodes et les types exposés par le service web. Vous générez un proxy côté client à partir du service web (.asmx) lui-même ou à partir de son fichier WSDL. En outre, votre proxy côté client doit exposer les champs de types complexes utilisés par le service web en tant que propriétés publiques. Vous pouvez ensuite lier la <xref:System.Windows.Forms.BindingSource> à l'un des types exposés dans le proxy du service web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Pour créer un proxy côté client et créer des liaisons à celui-ci  
   
-1.  Créez un formulaire Windows dans le répertoire de votre choix, avec un espace de noms approprié.  
+1. Créez un formulaire Windows dans le répertoire de votre choix, avec un espace de noms approprié.  
   
-2.  Ajoutez un composant <xref:System.Windows.Forms.BindingSource> au formulaire.  
+2. Ajoutez un composant <xref:System.Windows.Forms.BindingSource> au formulaire.  
   
-3.  Ouvrez l'invite de commandes [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)], puis accédez au répertoire où se trouve votre formulaire.  
+3. Ouvrez l'invite de commandes [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)], puis accédez au répertoire où se trouve votre formulaire.  
   
-4.  À l’aide de l’outil WSDL, entrez `wsdl` et l’URL du fichier .asmx ou WSDL du service web, suivi de l’espace de noms de votre application, et éventuellement le langage utilisé.  
+4. À l’aide de l’outil WSDL, entrez `wsdl` et l’URL du fichier .asmx ou WSDL du service web, suivi de l’espace de noms de votre application, et éventuellement le langage utilisé.  
   
      L’exemple de code suivant utilise le service Web situé à `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Par exemple, pour un type C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` ou pour un type Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Le fait de passer le chemin d’accès en tant qu’argument à l’outil WSDL génère un proxy côté client dans le même répertoire et le même espace de noms que votre application, dans le langage spécifié. Si vous utilisez Visual Studio, ajoutez le fichier à votre projet.  
   
-5.  Sélectionnez un type dans le proxy côté client avec lequel créer une liaison.  
+5. Sélectionnez un type dans le proxy côté client avec lequel créer une liaison.  
   
      Il s'agit généralement d'un type retourné par une méthode fournie par le service web. Les champs du type choisi doivent être exposés en tant que propriétés publiques pour la liaison.  
   
@@ -42,7 +42,7 @@ Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir 
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  Définissez la propriété <xref:System.Windows.Forms.BindingSource.DataSource%2A> de <xref:System.Windows.Forms.BindingSource> sur le type contenu dans le proxy côté client du service web.  
+6. Définissez la propriété <xref:System.Windows.Forms.BindingSource.DataSource%2A> de <xref:System.Windows.Forms.BindingSource> sur le type contenu dans le proxy côté client du service web.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]
@@ -73,5 +73,6 @@ Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir 
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [BindingSource, composant](bindingsource-component.md)
-- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)
+
+- [Composant BindingSource](bindingsource-component.md)
+- [Procédure : lier un contrôle Windows Forms à un type](how-to-bind-a-windows-forms-control-to-a-type.md)

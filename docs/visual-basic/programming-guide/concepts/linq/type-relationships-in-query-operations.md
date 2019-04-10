@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822334"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327631"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relations des types dans des opérations de requête (Visual Basic)
 Variables utilisées dans [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] requête opérations sont fortement typées et doivent être compatibles entre eux. Un typage fort est utilisé dans la source de données, dans la requête elle-même et dans l’exécution des requêtes. L’illustration suivante identifie les termes utilisés pour décrire un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requête. Pour plus d’informations sur les parties d’une requête, consultez [opérations de requête de base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Variables utilisées dans [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)
   
  Les relations suivantes existent dans les deux exemples de code précédents, si les types sont déterminés implicitement ou explicitement.  
   
-1.  Le type des éléments dans la source de données `names`, est le type de la variable de portée, `name`, dans la requête.  
+1. Le type des éléments dans la source de données `names`, est le type de la variable de portée, `name`, dans la requête.  
   
-2.  Le type de l’objet qui est sélectionnée, `name`, détermine le type de la variable de requête, `mNames`. Ici `name` est une chaîne, par conséquent, la variable de requête est IEnumerable (Of String) en Visual Basic.  
+2. Le type de l’objet qui est sélectionnée, `name`, détermine le type de la variable de requête, `mNames`. Ici `name` est une chaîne, par conséquent, la variable de requête est IEnumerable (Of String) en Visual Basic.  
   
-3.  La requête définie dans `mNames` est exécutée dans le `For Each` boucle. La boucle effectue une itération sur le résultat de l’exécution de la requête. Étant donné que `mNames`, lorsqu’elle est exécutée, retourne une séquence de chaînes, la variable d’itération de boucle, `nm`, est une chaîne.  
+3. La requête définie dans `mNames` est exécutée dans le `For Each` boucle. La boucle effectue une itération sur le résultat de l’exécution de la requête. Étant donné que `mNames`, lorsqu’elle est exécutée, retourne une séquence de chaînes, la variable d’itération de boucle, `nm`, est une chaîne.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Requêtes qui retournent un champ à partir des éléments sélectionnés  
  L’exemple suivant montre un [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] opération qui retourne une séquence qui contient uniquement une partie de chaque élément sélectionné à partir de la source de données de requête. La requête prend une collection de `Customer` objets comme sa source de données et de projets uniquement le `Name` propriété dans le résultat. Étant donné que le nom du client est une chaîne, la requête produit une séquence de chaînes en tant que sortie.  
@@ -72,11 +72,11 @@ Next
   
  Les relations entre les variables sont similaires à ceux dans l’exemple plus simple.  
   
-1.  Le type des éléments dans la source de données `customers`, est le type de la variable de portée, `cust`, dans la requête. Dans cet exemple, ce qui est de type `Customer`.  
+1. Le type des éléments dans la source de données `customers`, est le type de la variable de portée, `cust`, dans la requête. Dans cet exemple, ce qui est de type `Customer`.  
   
-2.  Le `Select` instruction retourne le `Name` propriété de chaque `Customer` objet au lieu de l’objet entier. Étant donné que `Name` est une chaîne, la variable de requête, `custNames`, seront encore IEnumerable (Of String), pas de `Customer`.  
+2. Le `Select` instruction retourne le `Name` propriété de chaque `Customer` objet au lieu de l’objet entier. Étant donné que `Name` est une chaîne, la variable de requête, `custNames`, seront encore IEnumerable (Of String), pas de `Customer`.  
   
-3.  Étant donné que `custNames` représente une séquence de chaînes, la `For Each` variable d’itération de la boucle, `custName`, doit être une chaîne.  
+3. Étant donné que `custNames` représente une séquence de chaînes, la `For Each` variable d’itération de la boucle, `custName`, doit être une chaîne.  
   
  Sans inférence de type local, l’exemple précédent serait plus fastidieux à écrire et à comprendre, comme le montre l’exemple suivant.  
   
@@ -110,17 +110,17 @@ Next
   
  Bien qu’il n’est pas possible de spécifier des types pour toutes les variables dans l’exemple précédent, les relations restent les mêmes.  
   
-1.  Le type des éléments dans la source de données est à nouveau le type de la variable de portée dans la requête. Dans cet exemple, `cust` est une instance de `Customer`.  
+1. Le type des éléments dans la source de données est à nouveau le type de la variable de portée dans la requête. Dans cet exemple, `cust` est une instance de `Customer`.  
   
-2.  Étant donné que le `Select` instruction produit un type anonyme, la variable de requête, `nameCityQuery`, doit être implicitement typée comme un type anonyme. Un type anonyme n’a aucun nom utilisable et ne peut donc pas être spécifié explicitement.  
+2. Étant donné que le `Select` instruction produit un type anonyme, la variable de requête, `nameCityQuery`, doit être implicitement typée comme un type anonyme. Un type anonyme n’a aucun nom utilisable et ne peut donc pas être spécifié explicitement.  
   
-3.  Le type de la variable d’itération dans le `For Each` boucle est le type anonyme créé à l’étape 2. Étant donné que le type n’a aucun nom utilisable, le type de la variable d’itération de boucle doit être déterminé implicitement.  
+3. Le type de la variable d’itération dans le `For Each` boucle est le type anonyme créé à l’étape 2. Étant donné que le type n’a aucun nom utilisable, le type de la variable d’itération de boucle doit être déterminé implicitement.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Bien démarrer avec LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Mise en route de LINQ dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction à LINQ dans Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)

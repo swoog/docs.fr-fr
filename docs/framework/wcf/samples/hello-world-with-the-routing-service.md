@@ -2,21 +2,21 @@
 title: Hello World avec le service de routage
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: b84d4dc17db5bb422ba86fbab9c25d3348be7488
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329737"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World avec le service de routage
 Cet exemple montre le Service de routage de Windows Communication Foundation (WCF). Le Service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le Service de routage. Dans cet exemple, le client Calculator est configuré pour envoyer des messages à un point de terminaison exposé par le routeur. Le service de routage (Routing Service) est configuré de façon à accepter tous les messages qui lui sont envoyés et les transférer à un point de terminaison qui correspond au service Calculator. Les messages envoyés à partir du client sont donc reçus par le routeur et reroutés au véritable service Calculator. Les messages du service Calculator sont renvoyés au routeur, qui à son tour les retransmet au client Calculator.
 
 ### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2012, ouvrez HelloRoutingService.sln.
+1. À l’aide de Visual Studio 2012, ouvrez HelloRoutingService.sln.
 
-2.  Appuyez sur F5 ou CTRL+MAJ+B.
+2. Appuyez sur F5 ou CTRL+MAJ+B.
 
     > [!NOTE]
     >  Si vous appuyez sur F5, le client Calculator démarre automatiquement. Si vous appuyez sur CTRL+MAJ+B (génération), vous devez démarrer vous-même les applications suivantes.
@@ -25,7 +25,7 @@ Cet exemple montre le Service de routage de Windows Communication Foundation (WC
     > 2.  Service Calculator (./CalculatorService/bin/service.exe)
     > 3.  Routing service (./RoutingService/bin/RoutingService.exe)
 
-3.  Appuyez sur ENTRÉE pour démarrer le client.
+3. Appuyez sur ENTRÉE pour démarrer le client.
 
      Vous devez voir la sortie suivante :
 

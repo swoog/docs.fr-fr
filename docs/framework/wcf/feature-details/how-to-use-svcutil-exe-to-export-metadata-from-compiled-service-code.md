@@ -2,12 +2,12 @@
 title: 'Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329386"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé
 Svcutil.exe peut exporter les métadonnées pour des services, des contrats et des types de données dans des assemblys compilés, comme suit :  
@@ -23,9 +23,9 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Pour exporter les métadonnées pour des contrats de service compilés  
   
-1.  Compilez les implémentations de vos contrats de service dans une ou plusieurs bibliothèques de classes.1  
+1. Compilez les implémentations de vos contrats de service dans une ou plusieurs bibliothèques de classes.1  
   
-2.  Exécutez Svcutil.exe sur les assemblys compilés.  
+2. Exécutez Svcutil.exe sur les assemblys compilés.  
   
     > [!NOTE]
     >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  
@@ -36,9 +36,9 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>Pour exporter les métadonnées pour un service compilé  
   
-1.  Compilez votre implémentation de service dans un assembly exécutable.  
+1. Compilez votre implémentation de service dans un assembly exécutable.  
   
-2.  Créez un fichier de configuration pour l'exécutable de votre service et ajoutez une configuration de service.  
+2. Créez un fichier de configuration pour l'exécutable de votre service et ajoutez une configuration de service.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
     </configuration>  
     ```  
   
-3.  Exécutez Svcutil.exe sur l'exécutable du service compilé en utilisant le commutateur `/serviceName` pour spécifier le nom de configuration du service.  
+3. Exécutez Svcutil.exe sur l'exécutable du service compilé en utilisant le commutateur `/serviceName` pour spécifier le nom de configuration du service.  
   
     > [!NOTE]
     >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  
@@ -64,9 +64,9 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>Pour exporter les métadonnées pour des contrats de données compilés  
   
-1.  Compilez les implémentations de vos contrats de données dans une ou plusieurs bibliothèques de classes.  
+1. Compilez les implémentations de vos contrats de données dans une ou plusieurs bibliothèques de classes.  
   
-2.  Exécutez Svcutil.exe sur les assemblys compilés en utilisant le commutateur `/dataContract` pour spécifier que seules les métadonnées pour les contrats de données doivent être générées.  
+2. Exécutez Svcutil.exe sur les assemblys compilés en utilisant le commutateur `/dataContract` pour spécifier que seules les métadonnées pour les contrats de données doivent être générées.  
   
     > [!NOTE]
     >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  

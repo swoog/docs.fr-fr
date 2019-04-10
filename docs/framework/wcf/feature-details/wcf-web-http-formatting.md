@@ -2,12 +2,12 @@
 title: Mise en forme de HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331037"
 ---
 # <a name="wcf-web-http-formatting"></a>Mise en forme de HTTP Web WCF
 Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquement le format le plus approprié pour permettre à une opération de service de retourner sa réponse. Deux méthodes pour déterminer le format approprié sont prises en charge : automatique et explicite.  
@@ -15,13 +15,13 @@ Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquemen
 ## <a name="automatic-formatting"></a>Mise en forme automatique  
  Lorsqu'elle est activée, la mise en forme automatique choisit le meilleur format dans lequel retourner la réponse. Elle détermine le meilleur format en vérifiant dans l'ordre les éléments suivants :  
   
-1.  Types de médias dans l'en-tête Accept du message de demande.  
+1. Types de médias dans l'en-tête Accept du message de demande.  
   
-2.  Type de contenu du message de demande.  
+2. Type de contenu du message de demande.  
   
-3.  Paramètre de format par défaut dans l'opération.  
+3. Paramètre de format par défaut dans l'opération.  
   
-4.  Paramètre de format par défaut dans le WebHttpBehavior.  
+4. Paramètre de format par défaut dans le WebHttpBehavior.  
   
  Si le message de demande contient un en-tête Accept l’infrastructure Windows Communication Foundation (WCF) recherche un type pris en charge. Si l'en-tête `Accept` spécifie des priorités pour ses types de médias, elles sont respectées. Si aucun format approprié ne se trouve dans l'en-tête `Accept`, le type de contenu du message de demande est utilisé. Si aucun type de contenu approprié n'est spécifié, le paramètre de format par défaut de l'opération est utilisé. Le format par défaut est défini par le paramètre `ResponseFormat` des attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute>. Si aucun format par défaut n'est spécifié sur l'opération, la valeur de la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> est utilisée. La mise en forme automatique s'appuie sur la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Lorsque cette propriété a la valeur `true`, l'infrastructure WCF détermine le meilleur format à utiliser. La sélection automatique du format est désactivée par défaut à des fins de compatibilité descendante. La sélection automatique du format peut être activée par programme ou par configuration. L'exemple suivant montre comment activer la sélection automatique du format dans le code.  
   

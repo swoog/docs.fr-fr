@@ -2,12 +2,12 @@
 title: 'Procédure : utiliser Svcutil.exe pour télécharger des documents de métadonnées'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328346"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Procédure : utiliser Svcutil.exe pour télécharger des documents de métadonnées
 Svcutil.exe vous permet de télécharger des métadonnées à partir de systèmes en cours d'exécution et de les enregistrer dans des fichiers locaux. Pour les schémas d’URL HTTP et HTTPS, Svcutil.exe tente de récupérer les métadonnées à l’aide de WS-MetadataExchange et [découverte de Service Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Pour tous les autres schémas d'URL, Svcutil.exe utilise uniquement WS-MetadataExchange.  
@@ -23,11 +23,11 @@ Svcutil.exe vous permet de télécharger des métadonnées à partir de système
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>Pour télécharger les métadonnées à l'aide de Svcutil.exe  
   
-1.  Localisez l'outil Svcutil.exe à l'emplacement suivant :  
+1. Localisez l'outil Svcutil.exe à l'emplacement suivant :  
   
      C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  À l'invite de commandes, lancez l'outil en utilisant le format suivant.  
+2. À l'invite de commandes, lancez l'outil en utilisant le format suivant.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ Svcutil.exe vous permet de télécharger des métadonnées à partir de système
   
      Vous devez spécifier l'option `/t:metadata` pour télécharger les métadonnées. Sinon, la configuration et le code client seront générés.  
   
-3.  Le <`url`> argument spécifie l’URL à un point de terminaison de service qui fournit des métadonnées ou à un document de métadonnées hébergé en ligne. Le <`epr`> argument spécifie le chemin d’accès dans un fichier XML qui contient un WS-Addressing `EndpointAddress` pour un point de terminaison de service qui prend en charge de WS-MetadataExchange.  
+3. Le <`url`> argument spécifie l’URL à un point de terminaison de service qui fournit des métadonnées ou à un document de métadonnées hébergé en ligne. Le <`epr`> argument spécifie le chemin d’accès dans un fichier XML qui contient un WS-Addressing `EndpointAddress` pour un point de terminaison de service qui prend en charge de WS-MetadataExchange.  
   
  Pour plus d’options sur l’utilisation de cet outil pour le téléchargement de métadonnées, consultez [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
