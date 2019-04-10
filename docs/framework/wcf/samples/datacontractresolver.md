@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325174"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 Cet exemple montre comment les processus de sérialisation et de désérialisation peuvent être personnalisés à l'aide de la classe <xref:System.Runtime.Serialization.DataContractResolver>. Cet exemple illustre comment utiliser DataContractResolver pour mapper les types CLR vers et depuis une représentation xsi:type pendant la sérialisation et la désérialisation.
@@ -152,9 +152,9 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  À l’aide de Visual Studio 2012, ouvrez le fichier solution DCRSample.sln.
+1. À l’aide de Visual Studio 2012, ouvrez le fichier solution DCRSample.sln.
 
-2.  Pour exécuter la solution, appuyez sur F5.
+2. Pour exécuter la solution, appuyez sur F5.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

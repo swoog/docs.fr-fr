@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326253"
 ---
 # <a name="interceptors-wcf-data-services"></a>Intercepteurs (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permet à une application d’intercepter les messages de demande afin que vous pouvez ajouter une logique personnalisée à une opération. Vous pouvez utiliser cette logique personnalisée pour valider les données dans les messages entrants. Vous pouvez également l'utiliser pour restreindre davantage l'étendue d'une requête d'interrogation, comme l'insertion d'une stratégie d'autorisation personnalisée sur la base de chaque demande.  
@@ -27,9 +27,9 @@ ms.locfileid: "59192854"
   
  Les intercepteurs de modification, appelés lors du traitement d'opérations de non-requête, doivent retourner `void` (`Nothing` en Visual Basic). Les méthodes d'intercepteur de requête doivent accepter les deux paramètres suivants :  
   
-1.  Un paramètre d'un type qui est compatible avec le type d'entité du jeu d'entités. Lorsque le service de données appelle l'intercepteur de modification, la valeur de ce paramètre reflétera les informations d'entité envoyées par la demande.  
+1. Un paramètre d'un type qui est compatible avec le type d'entité du jeu d'entités. Lorsque le service de données appelle l'intercepteur de modification, la valeur de ce paramètre reflétera les informations d'entité envoyées par la demande.  
   
-2.  Un paramètre de type <xref:System.Data.Services.UpdateOperations>. Lorsque le service de données appelle l'intercepteur de modification, la valeur de ce paramètre reflétera l'opération que tente d'effectuer la demande.  
+2. Un paramètre de type <xref:System.Data.Services.UpdateOperations>. Lorsque le service de données appelle l'intercepteur de modification, la valeur de ce paramètre reflétera l'opération que tente d'effectuer la demande.  
   
  L'exemple suivant illustre la définition d'un intercepteur de modification.  
   

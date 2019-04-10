@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 070d641d5a8b683ddfe06039117cc4a8507102df
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320225"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procédure : Surcharger une procédure qui accepte des paramètres optionnels (Visual Basic)
 Si une procédure possède un ou plusieurs [facultatif](../../../../visual-basic/language-reference/modifiers/optional.md) paramètres, vous ne pouvez pas définir une version surchargée corresponde à l’un de ses surcharges implicites. Pour plus d’informations, consultez « Implicite des surcharges pour les paramètres facultatifs » dans [considérations dans les procédures de surcharge](./considerations-in-overloading-procedures.md).  
@@ -24,17 +24,17 @@ Si une procédure possède un ou plusieurs [facultatif](../../../../visual-basic
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Pour surcharger une procédure qui accepte un paramètre facultatif  
   
-1.  Écrire un `Sub` ou `Function` instruction de déclaration qui inclut le paramètre facultatif dans la liste de paramètres. N’utilisez pas le `Optional` mot clé dans la version surchargée.  
+1. Écrire un `Sub` ou `Function` instruction de déclaration qui inclut le paramètre facultatif dans la liste de paramètres. N’utilisez pas le `Optional` mot clé dans la version surchargée.  
   
-2.  Faites précéder le `Sub` ou `Function` mot clé avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé.  
+2. Faites précéder le `Sub` ou `Function` mot clé avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé.  
   
-3.  Écrivez le code de procédure à exécuter lorsque le code appelant fournit l’argument facultatif.  
+3. Écrivez le code de procédure à exécuter lorsque le code appelant fournit l’argument facultatif.  
   
-4.  Terminez la procédure par le `End Sub` ou `End Function` instruction comme il convient.  
+4. Terminez la procédure par le `End Sub` ou `End Function` instruction comme il convient.  
   
-5.  Écrire une deuxième instruction de déclaration est identique à la première déclaration, sauf qu’elle n’inclut pas le paramètre facultatif dans la liste de paramètres.  
+5. Écrire une deuxième instruction de déclaration est identique à la première déclaration, sauf qu’elle n’inclut pas le paramètre facultatif dans la liste de paramètres.  
   
-6.  Écrivez le code de procédure qui doit s’exécuter lorsque le code appelant ne fournit pas l’argument facultatif. Terminez la procédure par le `End Sub` ou `End Function` instruction comme il convient.  
+6. Écrivez le code de procédure qui doit s’exécuter lorsque le code appelant ne fournit pas l’argument facultatif. Terminez la procédure par le `End Sub` ou `End Function` instruction comme il convient.  
   
      L’exemple suivant montre une procédure définie avec un paramètre facultatif, un ensemble équivalent de deux procédures surchargées et enfin des exemples de versions surchargées à la fois valides et non valides.  
   
@@ -51,25 +51,25 @@ Si une procédure possède un ou plusieurs [facultatif](../../../../visual-basic
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Surcharger une procédure qui accepte plusieurs paramètres facultatifs  
   
-1.  Déterminer quelles combinaisons d’arguments facultatifs fournis sont acceptables pour la logique de la procédure. Une combinaison inacceptable peut survenir si un paramètre facultatif dépend d’une autre. Par exemple, si un paramètre accepte le nom de l’époux et un autre accepte âge le son, une combinaison d’arguments fournissant l’âge mais en omettant le nom est inacceptable.  
+1. Déterminer quelles combinaisons d’arguments facultatifs fournis sont acceptables pour la logique de la procédure. Une combinaison inacceptable peut survenir si un paramètre facultatif dépend d’une autre. Par exemple, si un paramètre accepte le nom de l’époux et un autre accepte âge le son, une combinaison d’arguments fournissant l’âge mais en omettant le nom est inacceptable.  
   
-2.  Pour chaque combinaison acceptable d’arguments facultatifs fournis, écrivez un `Sub` ou `Function` instruction de déclaration qui définit la liste des paramètres correspondants. N’utilisez pas le `Optional` mot clé.  
+2. Pour chaque combinaison acceptable d’arguments facultatifs fournis, écrivez un `Sub` ou `Function` instruction de déclaration qui définit la liste des paramètres correspondants. N’utilisez pas le `Optional` mot clé.  
   
-3.  Dans chaque déclaration, faites précéder le `Sub` ou `Function` mot clé avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé.  
+3. Dans chaque déclaration, faites précéder le `Sub` ou `Function` mot clé avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé.  
   
-4.  Après chaque déclaration, écrivez le code de procédure à exécuter lorsque le code appelant fournit une liste d’arguments correspondant à la liste des paramètres de cette déclaration.  
+4. Après chaque déclaration, écrivez le code de procédure à exécuter lorsque le code appelant fournit une liste d’arguments correspondant à la liste des paramètres de cette déclaration.  
   
-5.  Terminez chaque procédure par le `End Sub` ou `End Function` instruction comme il convient.  
+5. Terminez chaque procédure par le `End Sub` ou `End Function` instruction comme il convient.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Paramètres facultatifs](./optional-parameters.md)
-- [tableaux de paramètres](./parameter-arrays.md)
+- [Tableaux de paramètres](./parameter-arrays.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
-- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Procédure : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procédure : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Résolution de surcharge](./overload-resolution.md)

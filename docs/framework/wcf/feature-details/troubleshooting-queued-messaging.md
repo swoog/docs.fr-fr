@@ -2,12 +2,12 @@
 title: Résolution des problèmes de messagerie en file d'attente
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322041"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Résolution des problèmes de messagerie en file d'attente
 Cette section contient des questions et résolution des problèmes d’aide pour l’utilisation de files d’attente dans Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ Cette section contient des questions et résolution des problèmes d’aide pour
   
  **R :** La raison la plus courante est d’autorisations.  
   
-1.  Vérifiez que le processus `NetMsmqActivator` s'exécute et que des autorisations de lecture et de recherche sont attribuées à l'identité du processus `NetMsmqActivator` sur la file d'attente.  
+1. Vérifiez que le processus `NetMsmqActivator` s'exécute et que des autorisations de lecture et de recherche sont attribuées à l'identité du processus `NetMsmqActivator` sur la file d'attente.  
   
-2.  Si `NetMsmqActivator` surveille les files d'attente sur un ordinateur distant, assurez-vous que `NetMsmqActivator` ne s'exécute pas sous un jeton restreint. Pour exécuter `NetMsmqActivator` avec un jeton non restreint :  
+2. Si `NetMsmqActivator` surveille les files d'attente sur un ordinateur distant, assurez-vous que `NetMsmqActivator` ne s'exécute pas sous un jeton restreint. Pour exécuter `NetMsmqActivator` avec un jeton non restreint :  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R :** Vous ne pouvez pas utiliser un magasin de certificats ordinateur local avec le mode de certificat. Vous devez copier le certificat du magasin de certificats de l'ordinateur vers le magasin de l'utilisateur actuel à l'aide du composant logiciel enfichable Certificat. Pour obtenir le composant logiciel enfichable Certificat :  
   
-1.  Cliquez sur **Démarrer**, sélectionnez **exécuter**, type `mmc`, puis cliquez sur **OK**.  
+1. Cliquez sur **Démarrer**, sélectionnez **exécuter**, type `mmc`, puis cliquez sur **OK**.  
   
-2.  Dans le **Microsoft Management Console**, ouvrez le **fichier** menu et sélectionnez **ajouter/supprimer un composant logiciel enfichable**.  
+2. Dans le **Microsoft Management Console**, ouvrez le **fichier** menu et sélectionnez **ajouter/supprimer un composant logiciel enfichable**.  
   
-3.  Dans le **ajouter/supprimer un composant logiciel enfichable** boîte de dialogue, cliquez sur le **ajouter** bouton.  
+3. Dans le **ajouter/supprimer un composant logiciel enfichable** boîte de dialogue, cliquez sur le **ajouter** bouton.  
   
-4.  Dans le **ajouter Standalone Snap-in** boîte de dialogue, sélectionnez certificats et cliquez sur **ajouter**.  
+4. Dans le **ajouter Standalone Snap-in** boîte de dialogue, sélectionnez certificats et cliquez sur **ajouter**.  
   
-5.  Dans le **certificats** boîte de dialogue composant logiciel enfichable, sélectionnez **mon compte d’utilisateur,** et cliquez sur **Terminer**.  
+5. Dans le **certificats** boîte de dialogue composant logiciel enfichable, sélectionnez **mon compte d’utilisateur,** et cliquez sur **Terminer**.  
   
-6.  Ensuite, ajoutez une seconde certificats composant logiciel enfichable à l’aide des étapes précédentes, mais cette fois-ci, sélectionnez **compte d’ordinateur** et cliquez sur **suivant**.  
+6. Ensuite, ajoutez une seconde certificats composant logiciel enfichable à l’aide des étapes précédentes, mais cette fois-ci, sélectionnez **compte d’ordinateur** et cliquez sur **suivant**.  
   
-7.  Sélectionnez **ordinateur Local** et cliquez sur **Terminer**. Vous pouvez à présent glisser et déposer des certificats depuis le magasin de certificats de l’ordinateur vers le magasin de l’utilisateur actuel.  
+7. Sélectionnez **ordinateur Local** et cliquez sur **Terminer**. Vous pouvez à présent glisser et déposer des certificats depuis le magasin de certificats de l’ordinateur vers le magasin de l’utilisateur actuel.  
   
  **Q :** Lorsque mon service lit à partir d’une file d’attente sur un autre ordinateur en mode de groupe de travail, j’obtiens une exception « accès refusé ».  
   

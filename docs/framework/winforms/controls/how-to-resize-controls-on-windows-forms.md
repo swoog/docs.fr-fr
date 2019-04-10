@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 598d3a6ea7f7cf6dc19cae5f55f49243d5d3ba31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321599"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procédure : redimensionner des contrôles dans des Windows Forms
 Vous pouvez redimensionner des contrôles individuels, et vous pouvez redimensionner plusieurs contrôles du genre identique ou différent, tel que <xref:System.Windows.Forms.Button> et <xref:System.Windows.Forms.GroupBox> contrôles.  
   
 ### <a name="to-resize-a-control"></a>Pour redimensionner un contrôle  
   
-1.  Cliquez sur le contrôle pour redimensionner et faites glisser une des huit poignées de redimensionnement.  
+1. Cliquez sur le contrôle pour redimensionner et faites glisser une des huit poignées de redimensionnement.  
   
     > [!NOTE]
     >  Sélectionnez le contrôle et appuyez sur les touches de direction tout en maintenant enfoncée la touche MAJ pour redimensionner le contrôle un pixel à la fois. Tout en maintenant les touches MAJ et CTRL pour redimensionner le contrôle par grands incréments, appuyez sur les touches de direction bas ou de droite.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>Pour redimensionner plusieurs contrôles sur un formulaire  
   
-1.  Maintenez la touche CTRL ou la touche MAJ ENFONCÉE et sélectionnez les contrôles que vous voulez redimensionner. La taille du premier contrôle que vous sélectionnez est utilisée pour les autres contrôles.  
+1. Maintenez la touche CTRL ou la touche MAJ ENFONCÉE et sélectionnez les contrôles que vous voulez redimensionner. La taille du premier contrôle que vous sélectionnez est utilisée pour les autres contrôles.  
   
-2.  Sur le **Format** menu, choisissez **Uniformiser la taille**, sélectionnez une des quatre options. Les trois premières commandes modifient les dimensions des contrôles du contrôle sélectionné en premier.  
+2. Sur le **Format** menu, choisissez **Uniformiser la taille**, sélectionnez une des quatre options. Les trois premières commandes modifient les dimensions des contrôles du contrôle sélectionné en premier.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -2,12 +2,12 @@
 title: 'Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: dfc3dc8247a25442511d422192fea4f49bee5d92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326422"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer
 Les applications clientes et de services qui utilisent des types de données sérialisables à l'aide de <xref:System.Xml.Serialization.XmlSerializer> génèrent et compilent le code de sérialisation de ces types de données lors de l'exécution, ce qui peut provoquer des performances de démarrage lentes.  
@@ -19,11 +19,11 @@ Les applications clientes et de services qui utilisent des types de données sé
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>Pour générer du code de sérialisation XmlSerializer.  
   
-1.  Compilez votre code de service ou client dans un ou plusieurs assemblys.  
+1. Compilez votre code de service ou client dans un ou plusieurs assemblys.  
   
-2.  Ouvrez une invite de commandes du Kit de développement SDK.  
+2. Ouvrez une invite de commandes du Kit de développement SDK.  
   
-3.  À l'invite de commandes, lancez l'outil Svcutil.exe à l'aide du format suivant.  
+3. À l'invite de commandes, lancez l'outil Svcutil.exe à l'aide du format suivant.  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -35,7 +35,7 @@ Les applications clientes et de services qui utilisent des types de données sé
   
      Pour spécifier le chemin d’accès aux assemblys dépendants, utilisez le **/reference** option.  
   
-4.  Rendez le code de sérialisation généré disponible pour votre application en utilisant l'une des options suivantes :  
+4. Rendez le code de sérialisation généré disponible pour votre application en utilisant l'une des options suivantes :  
   
     1.  Compilez le code de sérialisation généré dans un assembly séparé portant le nom [*assembly d’origine*]. XmlSerializers.dll (par exemple, MyApp.XmlSerializers.dll). Votre application doit être en mesure de charger l'assembly, qui doit être signé avec la même clé que l'assembly d'origine. Si vous recompilez l'assembly d'origine, vous devez régénérer l'assembly de sérialisation.  
   
@@ -45,13 +45,13 @@ Les applications clientes et de services qui utilisent des types de données sé
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Pour générer le code de sérialisation XmlSerializer dans Visual Studio  
   
-1.  Créer le service WCF et le client projets dans Visual Studio. Ensuite, ajoutez une référence de service au projet client.  
+1. Créer le service WCF et le client projets dans Visual Studio. Ensuite, ajoutez une référence de service au projet client.  
   
-2.  Ajouter un <xref:System.ServiceModel.XmlSerializerFormatAttribute> au contrat de service dans le *reference.cs* fichier dans le projet d’application cliente sous **serviceReference** -> **reference.svcmap** . Notez que vous devez afficher tous les fichiers dans **l’Explorateur de solutions** pour afficher ces fichiers.  
+2. Ajouter un <xref:System.ServiceModel.XmlSerializerFormatAttribute> au contrat de service dans le *reference.cs* fichier dans le projet d’application cliente sous **serviceReference** -> **reference.svcmap** . Notez que vous devez afficher tous les fichiers dans **l’Explorateur de solutions** pour afficher ces fichiers.  
   
-3.  Générez l’application client.  
+3. Générez l’application client.  
   
-4.  Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer un sérialiseur prégénéré *.cs* fichier à l’aide de la commande :  
+4. Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer un sérialiseur prégénéré *.cs* fichier à l’aide de la commande :  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -67,7 +67,7 @@ Les applications clientes et de services qui utilisent des types de données sé
   
      Le *WCFClient.XmlSerializers.dll.cs* fichier sera généré.  
   
-5.  Compilez l’assembly de sérialisation prégénéré.  
+5. Compilez l’assembly de sérialisation prégénéré.  
   
      Selon l’exemple à l’étape précédente, la commande de compilation serait le suivant :  
   
@@ -77,7 +77,7 @@ Les applications clientes et de services qui utilisent des types de données sé
   
      Assurez-vous que le texte généré *WCFClient.XmlSerializers.dll* est dans le même répertoire que l’application cliente, c'est-à-dire *WCFClient.exe* dans ce cas.  
   
-6.  Exécutez l’application cliente comme d’habitude. L’assembly de sérialisation prégénéré servira.  
+6. Exécutez l’application cliente comme d’habitude. L’assembly de sérialisation prégénéré servira.  
   
 ## <a name="example"></a>Exemple  
  La commande suivante génère des types de sérialisation pour les types `XmlSerializer` que les contrats de service de l'assembly utilisent.  

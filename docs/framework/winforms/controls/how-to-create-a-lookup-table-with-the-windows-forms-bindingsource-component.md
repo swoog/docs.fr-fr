@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321898"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : créer une table de choix avec le composant BindingSource de Windows Forms
 Une table de choix est une table de données ayant une colonne qui affiche les données des enregistrements situés dans une table liée. Dans les procédures suivantes, un contrôle <xref:System.Windows.Forms.ComboBox> permet d'afficher le champ avec la relation de clé étrangère entre la table parent et la table enfant.  
@@ -49,21 +49,21 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
 ### <a name="to-create-the-user-interface"></a>Pour créer l'interface utilisateur  
   
-1.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.ComboBox> contrôle vers le formulaire.  
+1. À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.ComboBox> contrôle vers le formulaire.  
   
      Ce contrôle affiche la colonne de la table parent.  
   
-2.  Faites glisser d'autres contrôles pour afficher les détails de la table enfant. Le format des données de la table doit déterminer votre choix des contrôles. Pour plus d’informations, consultez [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md).  
+2. Faites glisser d'autres contrôles pour afficher les détails de la table enfant. Le format des données de la table doit déterminer votre choix des contrôles. Pour plus d’informations, consultez [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md).  
   
-3.  Faites glisser un contrôle <xref:System.Windows.Forms.BindingNavigator> vers le formulaire. Cela vous permettra de naviguer parmi les données de la table enfant.  
+3. Faites glisser un contrôle <xref:System.Windows.Forms.BindingNavigator> vers le formulaire. Cela vous permettra de naviguer parmi les données de la table enfant.  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Pour se connecter aux données et les lier aux contrôles  
   
-1.  Sélectionnez <xref:System.Windows.Forms.ComboBox>, puis cliquez sur le glyphe Tâche guidée pour afficher la boîte de dialogue Tâche guidée.  
+1. Sélectionnez <xref:System.Windows.Forms.ComboBox>, puis cliquez sur le glyphe Tâche guidée pour afficher la boîte de dialogue Tâche guidée.  
   
-2.  Sélectionnez **Utilisez des éléments liés aux données**.  
+2. Sélectionnez **Utilisez des éléments liés aux données**.  
   
-3.  Cliquez sur la flèche à côté de la zone de liste déroulante **Source de données**. Si une source de données a déjà été configurée pour le projet ou le formulaire, elle s'affiche. Sinon, procédez comme suit (cet exemple utilise les tables Customers et Orders de l'exemple de base de données Northwind et fait référence à celles-ci entre parenthèses).  
+3. Cliquez sur la flèche à côté de la zone de liste déroulante **Source de données**. Si une source de données a déjà été configurée pour le projet ou le formulaire, elle s'affiche. Sinon, procédez comme suit (cet exemple utilise les tables Customers et Orders de l'exemple de base de données Northwind et fait référence à celles-ci entre parenthèses).  
   
     1.  Cliquez sur **Ajouter la source de données du projet** pour vous connecter aux données et créer une source de données.  
   
@@ -81,15 +81,15 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
     8.  Cliquez sur **Terminer**.  
   
-4.  Dans la zone de liste déroulante **Afficher le membre**, sélectionnez le nom de la colonne (par exemple ContactName) à afficher dans la zone de liste modifiable.  
+4. Dans la zone de liste déroulante **Afficher le membre**, sélectionnez le nom de la colonne (par exemple ContactName) à afficher dans la zone de liste modifiable.  
   
-5.  Dans la zone de liste déroulante **Membre Value**, sélectionnez la colonne (par exemple, CustomerID) pour effectuer l’opération de recherche dans la table enfant.  
+5. Dans la zone de liste déroulante **Membre Value**, sélectionnez la colonne (par exemple, CustomerID) pour effectuer l’opération de recherche dans la table enfant.  
   
-6.  Dans la zone de liste déroulante **Valeur sélectionnée**, accédez à **Sources de données du projet** ainsi qu’au jeu de données que vous venez de créer et qui contient les tables parents et les tables enfants. Sélectionnez la même propriété de la table enfant qui représente le membre Value de la table parent (par exemple Orders.CustomerID). Les composants appropriés de <xref:System.Windows.Forms.BindingSource>, de jeu de données et d'adaptateur de table sont créés et ajoutés au formulaire.  
+6. Dans la zone de liste déroulante **Valeur sélectionnée**, accédez à **Sources de données du projet** ainsi qu’au jeu de données que vous venez de créer et qui contient les tables parents et les tables enfants. Sélectionnez la même propriété de la table enfant qui représente le membre Value de la table parent (par exemple Orders.CustomerID). Les composants appropriés de <xref:System.Windows.Forms.BindingSource>, de jeu de données et d'adaptateur de table sont créés et ajoutés au formulaire.  
   
-7.  Liez le contrôle <xref:System.Windows.Forms.BindingNavigator> au <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`).  
+7. Liez le contrôle <xref:System.Windows.Forms.BindingNavigator> au <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`).  
   
-8.  Liez les contrôles autres que <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.BindingNavigator> aux champs de détails du <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`) à afficher.  
+8. Liez les contrôles autres que <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.BindingNavigator> aux champs de détails du <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`) à afficher.  
   
 ## <a name="see-also"></a>Voir aussi
 

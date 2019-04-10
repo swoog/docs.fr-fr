@@ -5,20 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079992"
 ---
 # <a name="cleartype-registry-settings"></a>Paramètres du Registre ClearType
-Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] des paramètres de Registre qui sont utilisés par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
-  
-  
+Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] des paramètres de Registre qui sont utilisés par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Vue d’ensemble de la technologie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les applications qui restituent le texte à un périphérique d’affichage utilisent [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fonctionnalités pour fournir une expérience de lecture améliorée. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] est une technologie logicielle développée par [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] qui améliore la lisibilité du texte sur les écrans LCD existants, tels que les écrans d’ordinateurs portables, les écrans de Pocket PC et les écrans plats. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fonctionne en accédant aux éléments individuels de la bande de couleur verticale dans chaque pixel d’un écran LCD. Pour plus d’informations sur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consultez [vue d’ensemble de ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les applications qui restituent le texte à un périphérique d’affichage utilisent [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fonctionnalités pour fournir une expérience de lecture améliorée. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] est une technologie logicielle développée par [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] qui améliore la lisibilité du texte sur LCD existants (affichages à cristaux liquides), tels que les écrans d’ordinateurs portables, les écrans de Pocket PC et les écrans plats. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fonctionne en accédant aux éléments individuels de verticale couleur stripe dans chaque pixel d’un écran LCD. Pour plus d’informations sur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consultez [vue d’ensemble de ClearType](cleartype-overview.md).  
   
  Texte restitué avec [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] peut apparaître considérablement différent lorsqu’ils sont affichés sur différents périphériques d’affichage. Par exemple, un petit nombre de moniteurs implémente les éléments de bande de couleur dans l’ordre bleu, vert, rouge plutôt que du plus courant rouge, vert, bleu ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) ordre.  
   
@@ -32,17 +31,17 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Niveau [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Décrit le niveau de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] plus de clarté des couleurs.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|Décrit le niveau de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] plus de clarté des couleurs.|  
 |Niveau gamma|Décrit le niveau du composant de couleur des pixels d’un écran d’affichage.|  
 |Structure des pixels|Décrit la disposition des pixels d’un écran d’affichage.|  
 |Niveau de contraste du texte|Décrit le niveau de contraste du texte affiché.|  
   
- Ces paramètres sont accessibles par un utilitaire de configuration externe capable de référencer l’identifié [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] paramètres du Registre. Ces paramètres peuvent également être créés ou modifiés en accédant directement aux valeurs à l’aide de l’Éditeur du Registre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Ces paramètres sont accessibles par un utilitaire de configuration externe capable de référencer l’identifié [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] paramètres du Registre. Ces paramètres peuvent également être créés ou modifiés en accédant directement aux valeurs à l’aide de l’Éditeur du Registre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
- Si le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] paramètres du Registre ne sont pas définies (c'est-à-dire l’état par défaut), le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] requêtes d’application le [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informations relatives aux paramètres système pour les paramètres de lissage des polices.  
+ Si le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] paramètres du Registre ne sont pas définies (c'est-à-dire l’état par défaut), le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] requêtes d’application le [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informations relatives aux paramètres système pour les paramètres de lissage des polices.  
   
 > [!NOTE]
->  Pour plus d’informations sur l’énumération des noms de périphérique d’affichage, consultez le `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (fonction).  
+>  Pour plus d’informations sur l’énumération des noms de périphérique d’affichage, consultez le `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (fonction).  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Niveau ClearType  
@@ -90,7 +89,7 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
  La structure du pixel correspond à une valeur entière comprise entre 0 et 2. Le niveau par défaut est 0, qui représente une structure de pixel plate.  
   
 > [!NOTE]
->  Pour plus d’informations sur l’énumération des noms de périphérique d’affichage, consultez le `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (fonction).  
+>  Pour plus d’informations sur l’énumération des noms de périphérique d’affichage, consultez le `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (fonction).  
   
 ### <a name="registry-setting"></a>Paramètre du Registre  
  Le paramètre du Registre de la structure des pixels se trouve dans un paramètre d’ordinateur local correspondant à un nom d’écran d’affichage spécifique :  
@@ -115,5 +114,6 @@ Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](
  ![Paramètres ClearType dans l’Éditeur du Registre.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble ClearType](cleartype-overview.md)
+
+- [Vue d'ensemble de ClearType](cleartype-overview.md)
 - [Anticrénelage ClearType](/windows/desktop/gdi/cleartype-antialiasing)

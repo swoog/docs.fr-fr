@@ -2,21 +2,21 @@
 title: 'Procédure : Créer des assemblys Friend signés (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324667"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procédure : Créer des assemblys Friend signés (Visual Basic)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayant des noms forts. Les deux assemblys doivent avoir des noms forts. Bien que les deux assemblys dans cet exemple utilisent les mêmes clés, vous pouvez utiliser des clés différentes pour deux assemblys.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Pour créer un assembly signé et un assembly friend  
   
-1.  Ouvrez une invite de commandes.  
+1. Ouvrez une invite de commandes.  
   
-2.  Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2. Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
   
@@ -30,7 +30,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Créez un fichier Visual Basic nommé `friend_signed_A` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_signed_B comme assembly friend.  
+3. Créez un fichier Visual Basic nommé `friend_signed_A` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_signed_B comme assembly friend.  
   
      L’outil Strong Name Tool génère une nouvelle clé publique chaque fois qu’il s’exécute. Vous devez donc remplacer la clé publique dans le code suivant par la clé publique que vous venez de générer, comme illustré dans l’exemple suivant.  
   
@@ -49,13 +49,13 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
     End Class  
     ```  
   
-4.  Compilez et signez friend_signed_A à l’aide de la commande suivante.  
+4. Compilez et signez friend_signed_A à l’aide de la commande suivante.  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Créez un fichier Visual Basic nommé `friend_signed_B` et contient le code suivant. Étant donné que friend_signed_A spécifie friend_signed_B comme assembly friend, le code de friend_signed_B peut accéder aux membres et aux types `Friend` de friend_signed_A. Le fichier contient le code suivant.  
+5. Créez un fichier Visual Basic nommé `friend_signed_B` et contient le code suivant. Étant donné que friend_signed_A spécifie friend_signed_B comme assembly friend, le code de friend_signed_B peut accéder aux membres et aux types `Friend` de friend_signed_A. Le fichier contient le code suivant.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
     End Module  
     ```  
   
-6.  Compilez et signez friend_signed_B à l’aide de la commande suivante.  
+6. Compilez et signez friend_signed_B à l’aide de la commande suivante.  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
   
      Le nom de l’assembly généré par le compilateur doit correspondre au nom de l’assembly friend passé à l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Vous pouvez définir explicitement l’assembly à l’aide de la `-out` option du compilateur. Pour plus d’informations, consultez [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
-7.  Exécutez le fichier friend_signed_B.exe.  
+7. Exécutez le fichier friend_signed_B.exe.  
   
      Le programme affiche la chaîne « Class1.Test ».  
   
@@ -89,8 +89,8 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblys dans .NET](../../../../standard/assembly/index.md)
 - [Assemblys friend](../../../../standard/assembly/friend-assemblies.md)
-- [Guide pratique pour Créer des assemblys Friend non signés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Procédure : Créer des assemblys Friend non signés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md))
-- [Création et utilisation d’assemblys avec nom fort](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Création et utilisation d'assemblys avec nom fort](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)

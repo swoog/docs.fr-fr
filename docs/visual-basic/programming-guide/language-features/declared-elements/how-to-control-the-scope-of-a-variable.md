@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324316"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procédure : Contrôler la portée d’une Variable (Visual Basic)
 Normalement, une variable est dans *étendue*, ou est visible par référence, tout au long de la région dans laquelle vous la déclarez. Dans de certains cas, la variable *niveau d’accès* peut influencer sa portée.  
@@ -43,19 +43,19 @@ Normalement, une variable est dans *étendue*, ou est visible par référence, t
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Pour rendre une variable visible dans l’ensemble d’un module, une classe ou une structure  
   
-1.  Place le `Dim` instruction pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
+1. Place le `Dim` instruction pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
   
-2.  Inclure le [privé](../../../../visual-basic/language-reference/modifiers/private.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [privé](../../../../visual-basic/language-reference/modifiers/private.md) mot clé dans la `Dim` instruction.  
   
-3.  Vous pouvez faire référence à la variable à partir de n’importe où dans le module, une classe ou une structure, mais pas d’à l’extérieur.  
+3. Vous pouvez faire référence à la variable à partir de n’importe où dans le module, une classe ou une structure, mais pas d’à l’extérieur.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Pour rendre une variable visible dans l’ensemble d’un espace de noms  
   
-1.  Place le `Dim` instruction pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
+1. Place le `Dim` instruction pour la variable à l’intérieur du module, une classe ou une structure, mais en dehors de toute procédure.  
   
-2.  Inclure le [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ou [Public](../../../../visual-basic/language-reference/modifiers/public.md) mot clé dans la `Dim` instruction.  
+2. Inclure le [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ou [Public](../../../../visual-basic/language-reference/modifiers/public.md) mot clé dans la `Dim` instruction.  
   
-3.  Vous pouvez faire référence à la variable à partir de n’importe où dans l’espace de noms contenant le module, une classe ou une structure.  
+3. Vous pouvez faire référence à la variable à partir de n’importe où dans l’espace de noms contenant le module, une classe ou une structure.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant déclare une variable au niveau du module et limite sa visibilité au code dans le module.  
@@ -89,8 +89,8 @@ Public strMsg As String
 ## <a name="see-also"></a>Voir aussi
 
 - [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Durée de vie en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Durée de vie dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Niveaux d’accès dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Déclaration de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim (instruction)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim, instruction](../../../../visual-basic/language-reference/statements/dim-statement.md)

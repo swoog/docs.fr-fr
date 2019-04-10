@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325583"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procédure : Ajouter des instructions de trace dans le code d’une application
 Les méthodes utilisées le plus souvent pour le suivi sont les méthodes pour écrire la sortie dans des écouteurs : **Écrire**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, et **échouer**. Ces méthodes peuvent être réparties en deux catégories : **Écrire**, **WriteLine**, et **échouer** émettent toutes la sortie de manière inconditionnelle, tandis que **WriteIf**, **WriteLineIf**et  **Assert** testent une condition booléenne et écrivent ou n’écrivent pas en fonction de la valeur de la condition. **WriteIf** et **WriteLineIf** émettent une sortie si la condition est `true` et **Assert** émet une sortie si la condition est `false`.  
@@ -29,7 +29,7 @@ Les méthodes utilisées le plus souvent pour le suivi sont les méthodes pour �
   
 ### <a name="to-write-a-complete-line"></a>Pour écrire une ligne complète  
   
-1.  Appelez la méthode <xref:System.Diagnostics.Trace.WriteLine%2A> ou <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+1. Appelez la méthode <xref:System.Diagnostics.Trace.WriteLine%2A> ou <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
   
      Un retour chariot est ajouté à la fin du message que cette méthode retourne, afin que le prochain message retourné par **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** commence à la ligne suivante :  
   
@@ -48,7 +48,7 @@ Les méthodes utilisées le plus souvent pour le suivi sont les méthodes pour �
   
 ### <a name="to-write-a-partial-line"></a>Pour écrire une ligne partielle  
   
-1.  Appelez la méthode <xref:System.Diagnostics.Trace.Write%2A> ou <xref:System.Diagnostics.Trace.WriteIf%2A>.  
+1. Appelez la méthode <xref:System.Diagnostics.Trace.Write%2A> ou <xref:System.Diagnostics.Trace.WriteIf%2A>.  
   
      Le prochain message émis par une instruction **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** commence sur la même ligne que le message émis par l’instruction **Write** ou **WriteIf** :  
   
@@ -69,7 +69,7 @@ Les méthodes utilisées le plus souvent pour le suivi sont les méthodes pour �
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Pour vérifier que certaines conditions sont réunies avant ou après l'exécution d'une méthode  
   
-1.  Appelez la méthode <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Appelez la méthode <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  

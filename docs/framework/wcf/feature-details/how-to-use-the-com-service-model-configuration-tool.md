@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322587"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procédure : utiliser l’outil de configuration de modèle de service COM+
 Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez l'outil en ligne de commande de configuration de modèle de service COM+ (ComSvcConfig.exe) pour configurer les interfaces d'application qui seront exposées en tant que services Web.  
@@ -19,11 +19,11 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
  Lorsque vous utilisez ComSvcConfig.exe sur un ordinateur Windows 7 pour configurer un service Web de façon à utiliser la dernière version de modèle de service (v4.5), exécutez les étapes suivantes :  
   
-1.  Définissez la clé de Registre `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` une valeur DWORD 0 x 00000001  
+1. Définissez la clé de Registre `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` une valeur DWORD 0 x 00000001  
   
-2.  Exécutez comsvcconfig.exe.  
+2. Exécutez comsvcconfig.exe.  
   
-3.  Rétablissez la valeur par défaut de la clé de Registre ajoutée à l'étape 1, ou supprimez -la si elle n'existait pas.  
+3. Rétablissez la valeur par défaut de la clé de Registre ajoutée à l'étape 1, ou supprimez -la si elle n'existait pas.  
   
 > [!IMPORTANT]
 >  Il est important de rétablir cette clé de Registre. Il s'agit d'une clé de compatibilité. Le fait de ne pas rétablir cette modification peut provoquer des problèmes avec d'autres applications .NET en cours de exécution sur l'ordinateur.  

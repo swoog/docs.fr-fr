@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200231"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321846"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : lier des données au contrôle DataGridView Windows Forms à l’aide du concepteur
 Vous pouvez utiliser le concepteur pour connecter un <xref:System.Windows.Forms.DataGridView> contrôle aux sources de données de plusieurs types différents, y compris les bases de données, les objets métier ou les services Web. Lorsque vous liez le contrôle à une source de données à l’aide du concepteur, le contrôle est automatiquement lié à un <xref:System.Windows.Forms.BindingSource> composant qui représente la source de données. En outre, les colonnes sont générées automatiquement dans le contrôle pour faire correspondre les informations de schéma fournies par la source de données.  
@@ -27,19 +27,19 @@ Vous pouvez utiliser le concepteur pour connecter un <xref:System.Windows.Forms.
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Pour lier le contrôle à une source de données  
   
-1.  Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôle.  
+1. Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôle.  
   
-2.  Cliquez sur la flèche déroulante correspondant à l’option **Choisir la Source de données**.  
+2. Cliquez sur la flèche déroulante correspondant à l’option **Choisir la Source de données**.  
   
-3.  Si votre projet ne dispose pas déjà d’une source de données, cliquez **Ajouter la source de données projet** et suivez les étapes indiquées par l’Assistant.  
+3. Si votre projet ne dispose pas déjà d’une source de données, cliquez **Ajouter la source de données projet** et suivez les étapes indiquées par l’Assistant.  
   
      Pour plus d’informations, consultez la page [Assistant Configuration de source de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Votre nouvelle source de données s’affiche dans la liste déroulante **Choisir la source de données**. Si votre nouvelle source de données contient un seul membre, comme une table de base de données unique, le contrôle est automatiquement lié à ce membre. Sinon, passez à l'étape suivante.  
   
-4.  Développez les nœuds **Autres sources de données** et **Sources de données du projet** si cela n’est pas déjà fait, puis sélectionnez la source de données à laquelle lier le contrôle.  
+4. Développez les nœuds **Autres sources de données** et **Sources de données du projet** si cela n’est pas déjà fait, puis sélectionnez la source de données à laquelle lier le contrôle.  
   
-5.  Si votre source de données contient plusieurs membres, par exemple si vous avez créé un <xref:System.Data.DataSet?displayProperty=nameWithType> qui contient plusieurs tables, développez la source de données, puis sélectionnez le membre spécifique à lier.  
+5. Si votre source de données contient plusieurs membres, par exemple si vous avez créé un <xref:System.Data.DataSet?displayProperty=nameWithType> qui contient plusieurs tables, développez la source de données, puis sélectionnez le membre spécifique à lier.  
   
-6.  Pour créer une relation maître/détail, dans le **choisir la Source de données** fenêtre de liste déroulante pour un deuxième <xref:System.Windows.Forms.DataGridView> contrôler, développez le <xref:System.Windows.Forms.BindingSource> créé pour la table parent, puis sélectionnez la table enfant connexe dans la liste indiqué.  
+6. Pour créer une relation maître/détail, dans le **choisir la Source de données** fenêtre de liste déroulante pour un deuxième <xref:System.Windows.Forms.DataGridView> contrôler, développez le <xref:System.Windows.Forms.BindingSource> créé pour la table parent, puis sélectionnez la table enfant connexe dans la liste indiqué.  
   
     > [!NOTE]
     >  Si votre projet a déjà une source de données, vous pouvez également utiliser la fenêtre **Sources de données** pour créer un formulaire de données. Pour plus d’informations, consultez la page [Fenêtre Sources de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  

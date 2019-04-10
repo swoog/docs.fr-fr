@@ -9,30 +9,28 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085725"
 ---
 # <a name="advanced-text-formatting"></a>Mise en forme de texte avancée
-Windows Presentation Foundation (WPF) fournit un ensemble robust de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] pour inclure du texte dans votre application. Mise en page et [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Controls.TextBlock>, fournir les plus courantes et éléments d’usage général pour la présentation de texte. Dessin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Media.GlyphRunDrawing> et <xref:System.Windows.Media.FormattedText>, fournissent un moyen pour inclure le texte mis en forme dans des dessins. Au niveau le plus avancé, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un moteur pour contrôler chaque aspect de la présentation de texte, telles que la gestion du magasin de texte, la gestion de mise en forme de séquence de texte et gestion de l’objet incorporé de mise en forme du texte extensible.  
+Windows Presentation Foundation (WPF) fournit un ensemble robust de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] pour inclure du texte dans votre application. Mise en page et [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Controls.TextBlock>, fournir les plus courantes et éléments d’usage général pour la présentation de texte. Dessin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Media.GlyphRunDrawing> et <xref:System.Windows.Media.FormattedText>, fournissent un moyen pour inclure le texte mis en forme dans des dessins. Au niveau le plus avancé, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un moteur pour contrôler chaque aspect de la présentation de texte, telles que la gestion du magasin de texte, la gestion de mise en forme de séquence de texte et gestion de l’objet incorporé de mise en forme du texte extensible.  
   
  Cette rubrique fournit une introduction à [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mise en forme du texte. Il se concentre sur l’implémentation cliente et l’utilisation de la [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] du moteur de mise en forme de texte.  
   
 > [!NOTE]
 >  Vous trouverez tous les exemples de code dans ce document dans le [mise en forme de texte avancée, exemple](https://go.microsoft.com/fwlink/?LinkID=159965).  
-  
 
-  
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique suppose que vous êtes familiarisé avec le niveau supérieur [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] utilisé pour la présentation de texte. La plupart des scénarios utilisateur ne nécessitent pas la mise en forme de texte avancée [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] décrits dans cette rubrique. Pour une introduction à l’autre texte [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], consultez [Documents dans WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Mise en forme de texte avancée  
- La disposition de texte et [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] des contrôles dans des [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournissent des propriétés de mise en forme qui vous permettent de facilement inclure le texte mis en forme dans votre application. Ces contrôles exposent un certain nombre de propriétés permettant de gérer la présentation du texte, ce qui inclut sa police, sa taille et sa couleur. Normalement, ces contrôles peuvent gérer la majorité de la présentation du texte dans votre application. Toutefois, certains scénarios avancés nécessitent le contrôle du stockage de texte, ainsi que sa présentation. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un moteur de mise en forme du texte extensible dans ce but.  
+ La disposition de texte et [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] des contrôles dans des [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournissent des propriétés de mise en forme qui vous permettent de facilement inclure le texte mis en forme dans votre application. Ces contrôles exposent un certain nombre de propriétés permettant de gérer la présentation du texte, ce qui inclut sa police, sa taille et sa couleur. Normalement, ces contrôles peuvent gérer la majorité de la présentation du texte dans votre application. Toutefois, certains scénarios avancés nécessitent le contrôle du stockage de texte, ainsi que sa présentation. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un moteur à cet effet de la mise en forme du texte extensible.  
   
  Le fonctionnalités de mise en forme de texte avancée trouvé dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se composent d’un texte mise en forme du moteur, un magasin de texte, les exécutions de texte et de mise en forme de propriétés. Le moteur, la mise en forme de texte <xref:System.Windows.Media.TextFormatting.TextFormatter>, crée des lignes de texte à utiliser pour la présentation. Pour cela, l’initialisation du processus de mise en forme de ligne et en appelant le formateur de texte <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>. Le formateur de texte récupère les séquences de texte à partir de votre magasin de texte en appelant le magasin <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> (méthode). Le <xref:System.Windows.Media.TextFormatting.TextRun> objets sont transformés en <xref:System.Windows.Media.TextFormatting.TextLine> les objets par le formateur de texte et transmis à votre application pour l’inspection ou affichage.  
   
@@ -42,8 +40,7 @@ Windows Presentation Foundation (WPF) fournit un ensemble robust de [!INCLUDE[TL
   
  Contrairement à un texte traditionnelle [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], le <xref:System.Windows.Media.TextFormatting.TextFormatter> interagit avec un client de disposition de texte via un ensemble de méthodes de rappel. Il nécessite le client fournisse ces méthodes dans une implémentation de la <xref:System.Windows.Media.TextFormatting.TextSource> classe. Le diagramme suivant illustre l’interaction de mise en page de texte entre l’application cliente et <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagramme du client de disposition de texte et TextFormatter](./media/textformatter01.png "TextFormatter01")  
-Interaction entre l’application et TextFormatter  
+ ![Diagramme du client de disposition du texte et TextFormatter](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
  Le formateur de texte est utilisé pour récupérer des lignes de texte mis en forme dans le magasin de texte, qui est une implémentation de <xref:System.Windows.Media.TextFormatting.TextSource>. Cela en créant une instance du formateur de texte à l’aide de la <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> (méthode). Cette méthode crée une instance du formateur de texte et définit la hauteur et la largeur de ligne maximales. Dès qu’une instance du formateur de texte est créée, le processus de création de ligne est lancé en appelant le <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> (méthode). <xref:System.Windows.Media.TextFormatting.TextFormatter> rappelle la source de texte pour récupérer le texte et les paramètres de mise en forme pour les exécutions de texte qui forment une ligne.  
   
@@ -95,5 +92,6 @@ Interaction entre l’application et TextFormatter
  <xref:System.Windows.Media.TextFormatting.TextRun> objets sont mis en forme à l’aide des propriétés fournies par le magasin de texte. Ces propriétés sont de deux types, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> et <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> gérer les propriétés de paragraphe, tels que <xref:System.Windows.TextAlignment> et <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> sont des propriétés qui peuvent être différentes pour chaque exécution dans un paragraphe, telles que le pinceau de premier plan, de texte <xref:System.Windows.Media.Typeface>et la taille de police. Pour implémenter le paragraphe personnalisé et les types de propriétés de séquence de texte personnalisée, votre application doit créer des classes qui dérivent <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> et <xref:System.Windows.Media.TextFormatting.TextRunProperties> respectivement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Typographie dans WPF](typography-in-wpf.md)
 - [Documents dans WPF](documents-in-wpf.md)

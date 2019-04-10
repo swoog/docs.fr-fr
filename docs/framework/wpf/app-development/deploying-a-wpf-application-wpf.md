@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320650"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Déploiement d'une application WPF (WPF)
 Une fois que les applications de Windows Presentation Foundation (WPF) sont créées, elles doivent être déployées. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et le .NET Framework inclut plusieurs technologies de déploiement. La technologie de déploiement utilisée pour déployer une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dépend du type d’application. Cette rubrique fournit une vue d’ensemble des différentes technologies de déploiement et explique leur utilisation avec les spécifications de déploiement de chaque type d’application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -102,9 +102,9 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] peut être déployé à l’aide d’une des techniques de déploiement. Toutefois, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] est recommandé puisqu’il fournit les fonctions suivantes :  
   
-1.  Mises à jour automatiques quand une nouvelle version est publiée.  
+1. Mises à jour automatiques quand une nouvelle version est publiée.  
   
-2.  Privilèges d’élévation pour l’[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] en cours d’exécution avec une confiance totale.  
+2. Privilèges d’élévation pour l’[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] en cours d’exécution avec une confiance totale.  
   
  Par défaut, ClickOnce publie les fichiers d’application avec l’extension .deploy. Cela peut s’avérer problématique, mais peut être désactivé. Pour plus d’informations, consultez [Problèmes de configuration de serveur et de client lors de déploiements ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   

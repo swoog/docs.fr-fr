@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320069"
 ---
 # <a name="structured-navigation-overview"></a>Vue d'ensemble de la navigation structurée
 Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, ou un <xref:System.Windows.Navigation.NavigationWindow> est composé de pages qui peuvent être identifiés par le pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] et navigation en liens hypertexte. La structure des pages et comment elles sont accessibles, tel que défini par des liens hypertexte, porte le nom de topologie de navigation. Une telle topologie convient à différents types d’applications, notamment celles permettant de parcourir des documents. Pour de telles applications, l’utilisateur peut naviguer d’une page à une autre page sans qu’une page ait besoin de savoir quoi que ce soit sur l’autre page.  
@@ -134,9 +134,9 @@ Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../incl
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Retour de résultat de tâche et de données de tâche à une page appelante  
  Une fois que l’utilisateur a fini d’utiliser la page appelée, ce qui est indiqué dans cet exemple par un appui sur le bouton Annuler ou OK, la page appelée doit retourner. Étant donné que la page appelante a utilisé la page appelée pour recueillir des données auprès de l’utilisateur, la page appelante nécessite deux types d’informations :  
   
-1.  Si l’utilisateur a annulé la page appelée (en appuyant sur le bouton OK ou Annuler dans cet exemple). Cela permet à la page appelante de déterminer s’il faut traiter les données recueillies auprès de l’utilisateur par la page appelée.  
+1. Si l’utilisateur a annulé la page appelée (en appuyant sur le bouton OK ou Annuler dans cet exemple). Cela permet à la page appelante de déterminer s’il faut traiter les données recueillies auprès de l’utilisateur par la page appelée.  
   
-2.  Les données qui ont été fournies par l’utilisateur.  
+2. Les données qui ont été fournies par l’utilisateur.  
   
  Pour retourner des informations, <xref:System.Windows.Navigation.PageFunction%601> implémente le <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> (méthode). L’exemple de code suivant montre comment l’appeler.  
   

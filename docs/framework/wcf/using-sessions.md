@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320923"
 ---
 # <a name="using-sessions"></a>Utilisation de sessions
 Dans les applications Windows Communication Foundation (WCF), un *session* met en corrélation d’un groupe de messages dans une conversation. Sessions WCF diffèrent de celles disponibles dans l’objet de session [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications prennent en charge des comportements différents et sont contrôlées de différentes façons. Cette rubrique décrit les fonctionnalités qui permettent de sessions dans WCF des applications et comment les utiliser.  
@@ -53,9 +53,9 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
  Lorsqu’un service WCF accepte une session cliente, les fonctionnalités suivantes sont activées par défaut :  
   
-1.  Tous les appels entre un objet de client WCF sont gérées par la même instance de service.  
+1. Tous les appels entre un objet de client WCF sont gérées par la même instance de service.  
   
-2.  Différentes liaisons basées sur les sessions fournissent des fonctionnalités supplémentaires.  
+2. Différentes liaisons basées sur les sessions fournissent des fonctionnalités supplémentaires.  
   
 ## <a name="system-provided-session-types"></a>Types de sessions fournis par le système  
  Une liaison basée sur session prend en charge l'association par défaut d'une instance de service avec une session donnée. Toutefois, différentes liaisons basées sur session prennent en charge des fonctionnalités différentes en plus d'activer le contrôle d'instanciation basé sur session précédemment décrit.  

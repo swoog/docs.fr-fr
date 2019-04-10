@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 61a234a679d9937cb38a753a3d73f2ecc9ec891a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 10554145de9725bb4cfc655ed88195dce28d739c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321612"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Procédure pas à pas : hébergement d’un contrôle Windows Forms dans WPF à l’aide de XAML
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit de nombreux contrôles avec un ensemble complet de fonctionnalités. Toutefois, vous souhaiterez parfois utiliser [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle sur votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pages. Par exemple, avoir un investissement substantiel dans existant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles, ou vous pouvez avoir un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle qui fournit des fonctionnalités uniques.  
@@ -26,29 +26,29 @@ Cette procédure pas à pas nécessite Visual Studio.
   
 #### <a name="to-host-the-maskedtextbox-control"></a>Pour héberger le contrôle MaskedTextBox  
   
-1.  Créez un projet d’Application WPF nommé `HostingWfInWpfWithXaml`.  
+1. Créez un projet d’Application WPF nommé `HostingWfInWpfWithXaml`.  
   
-2.  Ajoutez les références aux assemblys suivants.  
+2. Ajoutez les références aux assemblys suivants.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  Ouvrez MainWindow.xaml dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3. Ouvrez MainWindow.xaml dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  Dans le <xref:System.Windows.Window> élément, ajoutez le mappage d’espace de noms suivant. Le `wf` mappage d’espace de noms établit une référence à l’assembly qui contient le contrôle Windows Forms.  
+4. Dans le <xref:System.Windows.Window> élément, ajoutez le mappage d’espace de noms suivant. Le `wf` mappage d’espace de noms établit une référence à l’assembly qui contient le contrôle Windows Forms.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Dans le <xref:System.Windows.Controls.Grid> élément ajoutez le XAML suivant.  
+5. Dans le <xref:System.Windows.Controls.Grid> élément ajoutez le XAML suivant.  
   
      Le <xref:System.Windows.Forms.MaskedTextBox> contrôle est créé en tant qu’enfant de le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôle.  
   
      [!code-xaml[HostingWfInWpfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6.  Appuyez sur F5 pour générer et exécuter l'application.  
+6. Appuyez sur F5 pour générer et exécuter l'application.  
   
 ## <a name="see-also"></a>Voir aussi
 

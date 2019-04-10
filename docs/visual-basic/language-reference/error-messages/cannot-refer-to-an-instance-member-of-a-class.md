@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322691"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Impossible de faire référence à un membre instance d'une classe à partir d'une méthode partagée ou d'un initialiseur de membre partagé sans une instance explicite de la classe
 Vous avez essayé de faire référence à un membre non partagé d’une classe à partir d’une procédure partagée. L’exemple suivant illustre une telle situation.  
@@ -37,11 +37,11 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Décidez si vous souhaitez que le membre doit être partagé entre toutes les instances de la classe, ou conservées individuels pour chaque instance.  
+1. Décidez si vous souhaitez que le membre doit être partagé entre toutes les instances de la classe, ou conservées individuels pour chaque instance.  
   
-2.  Si vous souhaitez une copie unique du membre à partager entre toutes les instances, ajoutez le `Shared` mot clé à la déclaration de membre. Conserver le `Shared` mot clé dans la déclaration de procédure.  
+2. Si vous souhaitez une copie unique du membre à partager entre toutes les instances, ajoutez le `Shared` mot clé à la déclaration de membre. Conserver le `Shared` mot clé dans la déclaration de procédure.  
   
-3.  Si vous souhaitez que chaque instance possède sa propre copie individuelle du membre, ne spécifiez pas `Shared` pour la déclaration de membre. Supprimer le `Shared` mot clé à partir de la déclaration de procédure.  
+3. Si vous souhaitez que chaque instance possède sa propre copie individuelle du membre, ne spécifiez pas `Shared` pour la déclaration de membre. Supprimer le `Shared` mot clé à partir de la déclaration de procédure.  
   
 ## <a name="see-also"></a>Voir aussi
 

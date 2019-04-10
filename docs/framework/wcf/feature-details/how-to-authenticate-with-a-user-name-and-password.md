@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321032"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procédure : s’authentifier avec un nom d’utilisateur et un mot de passe
 
@@ -21,7 +21,7 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Pour configurer un service WCF pour s’authentifier à l’aide du mot de passe et nom d’utilisateur de domaine Windows
   
-1.  Créez une instance de <xref:System.ServiceModel.WSHttpBinding>, définissez le mode de sécurité de liaison à <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, définissez le `ClientCredentialType` de liaison à <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>, et ajoutez un point de terminaison de service à l'aide de la liaison configurée à l'hôte de service comme indiqué dans le code suivant :  
+1. Créez une instance de <xref:System.ServiceModel.WSHttpBinding>, définissez le mode de sécurité de liaison à <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, définissez le `ClientCredentialType` de liaison à <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>, et ajoutez un point de terminaison de service à l'aide de la liaison configurée à l'hôte de service comme indiqué dans le code suivant :  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
     // ...  
     ```  
   
-2.  Spécifiez le certificat de serveur utilisé pour chiffrer les informations de nom d'utilisateur et mot de passe envoyées sur le réseau. Ce code doit suivre immédiatement le code ci-dessus. L’exemple suivant utilise le certificat qui est créé par le fichier setup.bat à partir de la [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md) exemple :  
+2. Spécifiez le certificat de serveur utilisé pour chiffrer les informations de nom d'utilisateur et mot de passe envoyées sur le réseau. Ce code doit suivre immédiatement le code ci-dessus. L’exemple suivant utilise le certificat qui est créé par le fichier setup.bat à partir de la [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md) exemple :  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Pour appeler le service en passant le nom d'utilisateur et le mot de passe  
   
-1.  L'application cliente doit demander à l'utilisateur d'entrer son nom d'utilisateur et son mot de passe. Le code suivant demande à l'utilisateur le nom d'utilisateur et le mot de passe.  
+1. L'application cliente doit demander à l'utilisateur d'entrer son nom d'utilisateur et son mot de passe. Le code suivant demande à l'utilisateur le nom d'utilisateur et le mot de passe.  
   
     > [!WARNING]
     >  Ce code ne doit pas être utilisé en production, car le mot de passe s'affiche lorsqu'il est entré.  
@@ -61,7 +61,7 @@ Cette rubrique montre comment activer un service Windows Communication Foundatio
             }  
     ```  
   
-2.  Créez une instance du proxy client spécifiant les informations d'authentification du client comme indiqué dans le code suivant :  
+2. Créez une instance du proxy client spécifiant les informations d'authentification du client comme indiqué dans le code suivant :  
   
     ```  
     string username;  

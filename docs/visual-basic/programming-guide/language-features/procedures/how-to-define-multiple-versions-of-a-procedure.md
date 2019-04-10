@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324030"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procédure : Définir plusieurs Versions d’une procédure (Visual Basic)
 Vous pouvez définir une procédure dans plusieurs versions par *surcharge* il, à l’aide du même nom mais une liste de paramètres différente pour chaque version. L’objectif de la surcharge consiste à définir plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom.  
@@ -22,13 +22,13 @@ Vous pouvez définir une procédure dans plusieurs versions par *surcharge* il, 
   
 ### <a name="to-define-multiple-versions-of-a-procedure"></a>Pour définir plusieurs versions d’une procédure  
   
-1.  Écrire un `Sub` ou `Function` instruction de déclaration pour chaque version de la procédure que vous souhaitez définir. Utilisez le même nom de procédure dans chaque déclaration.  
+1. Écrire un `Sub` ou `Function` instruction de déclaration pour chaque version de la procédure que vous souhaitez définir. Utilisez le même nom de procédure dans chaque déclaration.  
   
-2.  Faites précéder le `Sub` ou `Function` mot clé dans chaque déclaration avec la [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé. Vous pouvez omettre `Overloads` dans les déclarations, mais si vous l’incluez dans une des déclarations, vous devez l’inclure dans toutes les déclarations.  
+2. Faites précéder le `Sub` ou `Function` mot clé dans chaque déclaration avec la [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé. Vous pouvez omettre `Overloads` dans les déclarations, mais si vous l’incluez dans une des déclarations, vous devez l’inclure dans toutes les déclarations.  
   
-3.  Après chaque instruction de déclaration, écrire du code de procédure pour gérer le cas spécifique où le code appelant fournit des arguments de liste de paramètres de cette version de mise en correspondance. Vous n’avez pas à tester pour quels paramètres le code appelant a fourni. Visual Basic passe le contrôle à la version correspondante de votre procédure.  
+3. Après chaque instruction de déclaration, écrire du code de procédure pour gérer le cas spécifique où le code appelant fournit des arguments de liste de paramètres de cette version de mise en correspondance. Vous n’avez pas à tester pour quels paramètres le code appelant a fourni. Visual Basic passe le contrôle à la version correspondante de votre procédure.  
   
-4.  Mettre fin à chaque version de la procédure avec le `End Sub` ou `End Function` instruction comme il convient.  
+4. Mettre fin à chaque version de la procédure avec le `End Sub` ou `End Function` instruction comme il convient.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant définit un `Sub` procédure pour publier une transaction de solde d’un client. Il utilise le `Overloads` mot clé pour définir deux versions de la procédure, un autre qui accepte le client par nom et l’autre par numéro de compte.  
@@ -47,7 +47,7 @@ Vous pouvez définir une procédure dans plusieurs versions par *surcharge* il, 
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)
+- [Procédure : surcharger une procédure qui accepte des paramètres facultatifs](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considérations liées à la surcharge des procédures](./considerations-in-overloading-procedures.md)
 - [Résolution de surcharge](./overload-resolution.md)

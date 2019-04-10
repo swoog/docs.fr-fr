@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323367"
 ---
 # <a name="single-bulk-copy-operations"></a>Opérations uniques de copie en bloc
 L'approche la plus simple de l'exécution d'une opération de copie en bloc SQL Server consiste à exécuter une opération unique sur une base de données. Par défaut, une opération de copie en bloc s'effectue comme une opération isolée : l'opération de copie se produit de façon non traitée, sans possibilité de restauration.  
@@ -22,19 +22,19 @@ L'approche la plus simple de l'exécution d'une opération de copie en bloc SQL 
   
  Les étapes générales pour l'exécution d'une opération de copie en bloc sont les suivantes :  
   
-1.  Connectez-vous au serveur source et obtenez les données à copier. Les données peuvent également provenir d'autres sources si elles peuvent être extraites d'un objet <xref:System.Data.IDataReader> ou <xref:System.Data.DataTable>.  
+1. Connectez-vous au serveur source et obtenez les données à copier. Les données peuvent également provenir d'autres sources si elles peuvent être extraites d'un objet <xref:System.Data.IDataReader> ou <xref:System.Data.DataTable>.  
   
-2.  Se connecter au serveur de destination (à moins que vous souhaitiez **SqlBulkCopy** pour établir une connexion pour vous).  
+2. Se connecter au serveur de destination (à moins que vous souhaitiez **SqlBulkCopy** pour établir une connexion pour vous).  
   
-3.  Créez un objet <xref:System.Data.SqlClient.SqlBulkCopy> en définissant toutes les propriétés nécessaires.  
+3. Créez un objet <xref:System.Data.SqlClient.SqlBulkCopy> en définissant toutes les propriétés nécessaires.  
   
-4.  Définir le **DestinationTableName** propriété pour indiquer la table cible pour la majeure partie l’opération d’insertion.  
+4. Définir le **DestinationTableName** propriété pour indiquer la table cible pour la majeure partie l’opération d’insertion.  
   
-5.  Appelez une de la **WriteToServer** méthodes.  
+5. Appelez une de la **WriteToServer** méthodes.  
   
-6.  Si vous le souhaitez, mettez à jour des propriétés et appelez **WriteToServer** si nécessaire.  
+6. Si vous le souhaitez, mettez à jour des propriétés et appelez **WriteToServer** si nécessaire.  
   
-7.  Appelez <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> ou enveloppez les opérations de copie en bloc dans une instruction `Using`.  
+7. Appelez <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> ou enveloppez les opérations de copie en bloc dans une instruction `Using`.  
   
 > [!CAUTION]
 >  Il est recommandé que les types de données des colonnes source et cible correspondent. Si les types de données ne correspondent pas, **SqlBulkCopy** tente de convertir chaque valeur source du type de données cible, en utilisant les règles employées par <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Les conversions peuvent affecter les performances et générer des erreurs inattendues. Par exemple, un type de données `Double` peut généralement être converti en un type de données `Decimal`, mais pas toujours.  

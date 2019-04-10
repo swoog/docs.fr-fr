@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324524"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : accéder à des éléments spécifiques dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Accès aux éléments d’une zone de liste déroulante Windows Forms, la zone de liste ou la zone de liste vérifiés est une tâche essentielle. Il vous permet de déterminer par programme les nouveautés dans la liste, à n’importe quelle position donnée.  
   
 ### <a name="to-access-a-specific-item"></a>Pour accéder à un élément spécifique  
   
-1.  Requête la `Items` collection à l’aide de l’index de l’élément spécifique :  
+1. Requête la `Items` collection à l’aide de l’index de l’élément spécifique :  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

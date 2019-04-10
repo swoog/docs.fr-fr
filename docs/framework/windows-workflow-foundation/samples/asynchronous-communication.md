@@ -2,12 +2,12 @@
 title: Communication asynchrone
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593905"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323653"
 ---
 # <a name="asynchronous-communication"></a>Communication asynchrone
 Cet exemple montre comment la communication entre deux services Windows Workflow Foundation (WF) s’effectue de façon asynchrone par défaut.  
@@ -31,13 +31,13 @@ Cet exemple montre comment la communication entre deux services Windows Workflow
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Cliquez sur le **AsynchronousCommunication** solution, puis sélectionnez **propriétés**.  
+1. Cliquez sur le **AsynchronousCommunication** solution, puis sélectionnez **propriétés**.  
   
-2.  Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis sélectionnez **plusieurs projets de démarrage**.  
+2. Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis sélectionnez **plusieurs projets de démarrage**.  
   
-3.  Déplacer **RentalApprovalService** pour la première position dans la liste, suivi de **CreditCheckService**, suivie **Client**. Définir le **Démarrer** action sur toutes les trois projets.  
+3. Déplacer **RentalApprovalService** pour la première position dans la liste, suivi de **CreditCheckService**, suivie **Client**. Définir le **Démarrer** action sur toutes les trois projets.  
   
-4.  Cliquez sur **OK**, et appuyez sur F5 pour exécuter l’exemple.  
+4. Cliquez sur **OK**, et appuyez sur F5 pour exécuter l’exemple.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

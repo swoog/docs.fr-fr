@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211919"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Fichiers de ressources, de contenu et de données d'une application WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] applications dépendent souvent de fichiers qui contiennent des données non exécutables, tels que [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], images, vidéo et audio. Windows Presentation Foundation (WPF) offre une prise en charge spéciale pour la configuration, l’identification et l’utilisation de ces types de fichiers de données, appelés fichiers de données d’application. Cette prise en charge repose sur un ensemble spécifique de types de fichier de données d’application, notamment :  
@@ -38,8 +38,7 @@ ms.locfileid: "57379196"
  Pour référencer les fichiers de données d’application, Windows Presentation Foundation (WPF) utilise le Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] schéma, qui est décrite en détail dans [URI à en-tête Pack dans WPF](pack-uris-in-wpf.md)).  
   
  Cette rubrique décrit comment configurer et utiliser des fichiers de données d’application.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Fichiers de ressources  
  Si un fichier de données d’application doit toujours être disponible pour une application, le seul moyen de garantir cette disponibilité est de le compiler en un assembly exécutable principal d’une application ou en l’un de ses assemblys référencés. Ce type de fichier de données d’application est connu comme un *fichier de ressources*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379196"
  Vous devez utiliser des fichiers de contenu quand votre application nécessite un ensemble spécifique de fichiers de données d’application, que vous souhaitez pouvoir mettre à jour sans recompiler l’assembly qui les consomme.  
   
 ### <a name="configuring-content-files"></a>Configuration des fichiers de contenu  
- Pour ajouter un fichier de contenu à un projet, un fichier de données d’application doit être inclus en tant qu’un `Content` élément. En outre, comme un fichier de contenu n’est pas compilé directement dans l’assembly, vous devez définir le [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` élément de métadonnées pour spécifier que le fichier de contenu est copié vers un emplacement qui est relatif à l’assembly généré. Si vous souhaitez que la ressource à copier dans le dossier de sortie de génération chaque fois qu’un projet est généré, vous définissez le `CopyToOutputDirectory` élément de métadonnées avec le `Always` valeur. Sinon, vous pouvez vous assurer que seule la version la plus récente de la ressource est copiée dans le dossier de sortie de génération à l’aide de la `PreserveNewest` valeur.  
+ Pour ajouter un fichier de contenu à un projet, un fichier de données d’application doit être inclus en tant qu’un `Content` élément. En outre, comme un fichier de contenu n’est pas compilé directement dans l’assembly, vous devez définir le [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` élément de métadonnées pour spécifier que le fichier de contenu est copié vers un emplacement qui est relatif à l’assembly généré. Si vous souhaitez que la ressource à copier dans le dossier de sortie de génération chaque fois qu’un projet est généré, vous définissez le `CopyToOutputDirectory` élément de métadonnées avec le `Always` valeur. Sinon, vous pouvez vous assurer que seule la version la plus récente de la ressource est copiée dans le dossier de sortie de génération à l’aide de la `PreserveNewest` valeur.  
   
  L’exemple ci-dessous illustre un fichier configuré en tant que fichier de contenu copié dans le dossier de sortie de build uniquement quand une nouvelle version de la ressource est ajoutée au projet.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379196"
 ### <a name="configuring-site-of-origin-files"></a>Configuration des fichiers du site d’origine  
  Si vos fichiers du site d’origine est inexistants ou inconnus au moment de la compilation, vous devez utiliser le déploiement traditionnel mécanismes pour garantir que les fichiers requis sont disponibles au moment de l’exécution, notamment en utilisant soit le `XCopy` programme de ligne de commande ou le [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Si vous connaissez au moment de la compilation, les fichiers que vous aimeriez voir situés sur le site d’origine, mais toujours vouloir éviter une dépendance explicite, vous pouvez ajouter ces fichiers à un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] de projet comme `None` élément. Comme avec les fichiers de contenu, vous devez définir le [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` attribut pour spécifier que le fichier du site d’origine est copié vers un emplacement qui est relatif à l’assembly généré, en spécifiant soit le `Always` valeur ou la `PreserveNewest` valeur.  
+ Si vous connaissez au moment de la compilation, les fichiers que vous aimeriez voir situés sur le site d’origine, mais toujours vouloir éviter une dépendance explicite, vous pouvez ajouter ces fichiers à un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] de projet comme `None` élément. Comme avec les fichiers de contenu, vous devez définir le [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` attribut pour spécifier que le fichier du site d’origine est copié vers un emplacement qui est relatif à l’assembly généré, en spécifiant soit le `Always` valeur ou la `PreserveNewest` valeur.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379196"
  Après avoir changé le type de build d’un fichier de données d’application, vous devez regénérer l’application entière pour vérifier que ces changements sont bien appliqués. Si vous générez uniquement l’application, les changements ne sont pas appliqués.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [URI à en-tête pack dans WPF](pack-uris-in-wpf.md)

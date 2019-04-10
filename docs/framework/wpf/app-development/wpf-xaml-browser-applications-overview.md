@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320130"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Vue d'ensemble des applications de navigateur XAML
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194810"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Débogage des applications XBAP qui utilisent HostScript  
  Si votre application XBAP utilise le <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> objet pour communiquer avec la fenêtre HTML, il existe deux paramètres que vous devez spécifier pour exécuter et déboguer l’application dans Visual Studio. L’application doit avoir accès à son site d’origine et vous devez démarrer l’application avec la page HTML qui contient l’application XBAP. Les étapes suivantes décrivent comment vérifier ces deux paramètres :  
   
-1.  Dans Visual Studio, ouvrez les propriétés du projet.  
+1. Dans Visual Studio, ouvrez les propriétés du projet.  
   
-2.  Dans l’onglet **Sécurité**, cliquez sur **Avancé**.  
+2. Dans l’onglet **Sécurité**, cliquez sur **Avancé**.  
   
      La boîte de dialogue Paramètres de sécurité avancés apparaît.  
   
-3.  Assurez-vous que la case **Autoriser l’application à accéder à son site d’origine** est cochée, puis cliquez sur **OK**.  
+3. Assurez-vous que la case **Autoriser l’application à accéder à son site d’origine** est cochée, puis cliquez sur **OK**.  
   
-4.  Dans l’onglet **Déboguer**, sélectionnez l’option **Démarrer le navigateur avec l’URL** et spécifiez l’URL de la page HTML qui contient l’application XBAP.  
+4. Dans l’onglet **Déboguer**, sélectionnez l’option **Démarrer le navigateur avec l’URL** et spécifiez l’URL de la page HTML qui contient l’application XBAP.  
   
-5.  Dans Internet Explorer, cliquez sur le bouton **Outils**, puis sélectionnez **Options Internet**.  
+5. Dans Internet Explorer, cliquez sur le bouton **Outils**, puis sélectionnez **Options Internet**.  
   
      La boîte de dialogue Options Internet apparaît.  
   
-6.  Cliquez sur l’onglet **Avancé**.  
+6. Cliquez sur l’onglet **Avancé**.  
   
-7.  Dans la liste des **paramètres** sous **Sécurité**, cochez la case **Autoriser l’exécution du contenu actif dans les fichiers de mon ordinateur**.  
+7. Dans la liste des **paramètres** sous **Sécurité**, cochez la case **Autoriser l’exécution du contenu actif dans les fichiers de mon ordinateur**.  
   
-8.  Cliquez sur **OK**.  
+8. Cliquez sur **OK**.  
   
      Les modifications prendront effet après le redémarrage d’Internet Explorer.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194810"
 ### <a name="creating-a-full-trust-xbap"></a>Création d’une application XBAP de confiance totale  
  Si votre application XBAP requiert une confiance totale, vous pouvez modifier votre projet pour activer cette autorisation. Les étapes suivantes décrivent comment activer la confiance totale :  
   
-1.  Dans Visual Studio, ouvrez les propriétés du projet.  
+1. Dans Visual Studio, ouvrez les propriétés du projet.  
   
-2.  Dans l’onglet **Sécurité**, sélectionnez l’option **This is a full trust application** (Ceci est une application de confiance totale).  
+2. Dans l’onglet **Sécurité**, sélectionnez l’option **This is a full trust application** (Ceci est une application de confiance totale).  
   
  Ce paramètre apporte les modifications suivantes :  
   

@@ -2,12 +2,12 @@
 title: Point de terminaison de métadonnées sécurisé personnalisée
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: f025f76289705899e45db6f693f3678df3ed6b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325967"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Point de terminaison de métadonnées sécurisé personnalisée
 Cet exemple montre comment implémenter un service avec un point de terminaison de métadonnées sécurisé qui utilise l’une des liaisons d’échange non-métadonnées et comment configurer [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clients pour extraire le métadonnées à partir de tel un point de terminaison de métadonnées. Il existe deux liaisons fournies par le système pour exposer des points de terminaison de métadonnées : mexHttpBinding et mexHttpsBinding. mexHttpBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTP de façon non sécurisée. mexHttpsBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTPS de façon sécurisée. Cet exemple montre comment exposer un point de terminaison de métadonnées sécurisé à l'aide du <xref:System.ServiceModel.WSHttpBinding>. Cette opération peut être utile lorsque vous souhaitez modifier les paramètres de sécurité de la liaison sans devoir utiliser HTTPS. Si vous utilisez mexHttpsBinding, votre point de terminaison de métadonnées sera sécurisé, mais il n'existe aucun moyen de modifier les paramètres de la liaison.  
@@ -132,37 +132,37 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple  
   
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Pour exécuter l'exemple sur le même ordinateur  
   
-1.  Exécutez Setup.bat à partir du dossier d'installation de l'exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés. Remarque : Setup.bat utilise l’outil FindPrivateKey.exe, qui est installé par l’exécution de setupCertTool.bat depuis [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Exécutez Setup.bat à partir du dossier d'installation de l'exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés. Remarque : Setup.bat utilise l’outil FindPrivateKey.exe, qui est installé par l’exécution de setupCertTool.bat depuis [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Exécutez l'application cliente à partir du dossier \MetadataResolverClient\bin ou du dossier \SvcutilClient\bin. L'activité du client s'affiche sur son application de console.  
+2. Exécutez l'application cliente à partir du dossier \MetadataResolverClient\bin ou du dossier \SvcutilClient\bin. L'activité du client s'affiche sur son application de console.  
   
-3.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-4.  Supprimez les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
+4. Supprimez les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
   
 #### <a name="to-run-the-sample-across-machines"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
-1.  Sur le serveur, exécutez `setup.bat service`. En cours d’exécution `setup.bat` avec la `service` argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé Service.cer.  
+1. Sur le serveur, exécutez `setup.bat service`. En cours d’exécution `setup.bat` avec la `service` argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé Service.cer.  
   
-2.  Sur le serveur, modifiez Web.config en fonction du nouveau nom de ce certificat. Autrement dit, modifiez le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) élément au nom de domaine complet de l’ordinateur.  
+2. Sur le serveur, modifiez Web.config en fonction du nouveau nom de ce certificat. Autrement dit, modifiez le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) élément au nom de domaine complet de l’ordinateur.  
   
-3.  Copiez le fichier Service.cer du répertoire de service dans le répertoire client sur l'ordinateur client.  
+3. Copiez le fichier Service.cer du répertoire de service dans le répertoire client sur l'ordinateur client.  
   
-4.  Sur le client, exécutez `setup.bat client`. En cours d’exécution `setup.bat` avec la `client` argument crée un certificat client appelé Client.com et exporte le certificat client vers un fichier nommé Client.cer.  
+4. Sur le client, exécutez `setup.bat client`. En cours d’exécution `setup.bat` avec la `client` argument crée un certificat client appelé Client.com et exporte le certificat client vers un fichier nommé Client.cer.  
   
-5.  Dans le fichier App.config du `MetadataResolverClient` de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison mex en fonction de la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur. Remplacez également l'occurrence de « localhost » dans le fichier metadataResolverClient.cs par le nouveau nom du certificat de service (c'est-à-dire par le nom de domaine complet du serveur). Effectuez la même opération pour l'App.config du projet SvcutilClient.  
+5. Dans le fichier App.config du `MetadataResolverClient` de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison mex en fonction de la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur. Remplacez également l'occurrence de « localhost » dans le fichier metadataResolverClient.cs par le nouveau nom du certificat de service (c'est-à-dire par le nom de domaine complet du serveur). Effectuez la même opération pour l'App.config du projet SvcutilClient.  
   
-6.  Copiez le fichier Client.cer du répertoire client dans le répertoire de service sur le serveur.  
+6. Copiez le fichier Client.cer du répertoire client dans le répertoire de service sur le serveur.  
   
-7.  Sur le client, exécutez `ImportServiceCert.bat`. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
+7. Sur le client, exécutez `ImportServiceCert.bat`. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
   
-8.  Sur le serveur, exécutez `ImportClientCert.bat`. Cette opération importe le certificat client du fichier Client.cer dans le magasin LocalMachine - TrustedPeople.  
+8. Sur le serveur, exécutez `ImportClientCert.bat`. Cette opération importe le certificat client du fichier Client.cer dans le magasin LocalMachine - TrustedPeople.  
   
 9. Sur l'ordinateur de service, générez le projet de service à l'aide de Visual Studio, puis sélectionnez la page d'aide d'un navigateur Web afin de vous assurer que ce projet s'exécute.  
   

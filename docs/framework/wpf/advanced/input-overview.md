@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320013"
 ---
 # <a name="input-overview"></a>Vue d'ensemble des entrées
 <a name="introduction"></a> Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sous-système fournit un puissant [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] pour obtenir des entrées à partir d’une variété de périphériques, y compris la souris, clavier, tactile et stylet. Cette rubrique décrit les services fournis par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et explique l’architecture des systèmes d’entrée.
@@ -217,15 +217,15 @@ ms.locfileid: "59090021"
 
  La liste suivante décrit la séquence des événements dans l’illustration précédente.
 
-1.  Le <xref:System.Windows.UIElement.TouchEnter> événement se produit une fois lorsque l’utilisateur place un doigt sur l’élément.
+1. Le <xref:System.Windows.UIElement.TouchEnter> événement se produit une fois lorsque l’utilisateur place un doigt sur l’élément.
 
-2.  Le <xref:System.Windows.UIElement.TouchDown> événement se produit une seule fois.
+2. Le <xref:System.Windows.UIElement.TouchDown> événement se produit une seule fois.
 
-3.  Le <xref:System.Windows.UIElement.TouchMove> événement se produit plusieurs fois quand l’utilisateur déplace son doigt dans l’élément.
+3. Le <xref:System.Windows.UIElement.TouchMove> événement se produit plusieurs fois quand l’utilisateur déplace son doigt dans l’élément.
 
-4.  Le <xref:System.Windows.UIElement.TouchUp> événement se produit une fois lorsque l’utilisateur retire son doigt de l’élément.
+4. Le <xref:System.Windows.UIElement.TouchUp> événement se produit une fois lorsque l’utilisateur retire son doigt de l’élément.
 
-5.  Le <xref:System.Windows.UIElement.TouchLeave> événement se produit une seule fois.
+5. Le <xref:System.Windows.UIElement.TouchLeave> événement se produit une seule fois.
 
  Quand plusieurs doigts sont utilisés, les événements se produisent pour chaque doigt.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090021"
 
  La liste suivante décrit la séquence des événements dans l’illustration précédente.
 
-1.  Le <xref:System.Windows.UIElement.ManipulationStarting> événement se produit lorsque l’utilisateur place un doigt sur l’objet. Entre autres choses, cet événement vous permet de définir le <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propriété. Dans les événements suivants, la position de la manipulation sera relative le <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. Dans les autres événements que <xref:System.Windows.UIElement.ManipulationStarting>, cette propriété est en lecture seule, par conséquent, le <xref:System.Windows.UIElement.ManipulationStarting> événement est le seul moment où vous pouvez définir cette propriété.
+1. Le <xref:System.Windows.UIElement.ManipulationStarting> événement se produit lorsque l’utilisateur place un doigt sur l’objet. Entre autres choses, cet événement vous permet de définir le <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propriété. Dans les événements suivants, la position de la manipulation sera relative le <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. Dans les autres événements que <xref:System.Windows.UIElement.ManipulationStarting>, cette propriété est en lecture seule, par conséquent, le <xref:System.Windows.UIElement.ManipulationStarting> événement est le seul moment où vous pouvez définir cette propriété.
 
-2.  Le <xref:System.Windows.UIElement.ManipulationStarted> événement se produit ensuite. Cet événement signale l’origine de la manipulation.
+2. Le <xref:System.Windows.UIElement.ManipulationStarted> événement se produit ensuite. Cet événement signale l’origine de la manipulation.
 
-3.  Le <xref:System.Windows.UIElement.ManipulationDelta> événement se produit plusieurs fois au déplacement des doigts d’un utilisateur sur un écran tactile. Le <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> propriété de la <xref:System.Windows.Input.ManipulationDeltaEventArgs> classe signale si la manipulation est interprétée comme un mouvement, expansion ou traduction. C’est là que vous effectuez la plupart du travail de manipulation d’un objet.
+3. Le <xref:System.Windows.UIElement.ManipulationDelta> événement se produit plusieurs fois au déplacement des doigts d’un utilisateur sur un écran tactile. Le <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> propriété de la <xref:System.Windows.Input.ManipulationDeltaEventArgs> classe signale si la manipulation est interprétée comme un mouvement, expansion ou traduction. C’est là que vous effectuez la plupart du travail de manipulation d’un objet.
 
-4.  Le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement se produit lorsque les doigts de l’utilisateur perdent le contact avec l’objet. Cet événement vous permet de spécifier la décélération des manipulations pendant l’inertie, ceci afin que votre objet puisse émuler différents attributs ou espaces physiques si vous le souhaitez. Par exemple, supposez que votre application a deux objets qui représentent des éléments dans le monde physique, et que l’un d’eux a un poids supérieur à l’autre. Vous pouvez faire en sorte que l’objet le plus lourd décélère plus rapidement que l’objet plus léger.
+4. Le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement se produit lorsque les doigts de l’utilisateur perdent le contact avec l’objet. Cet événement vous permet de spécifier la décélération des manipulations pendant l’inertie, ceci afin que votre objet puisse émuler différents attributs ou espaces physiques si vous le souhaitez. Par exemple, supposez que votre application a deux objets qui représentent des éléments dans le monde physique, et que l’un d’eux a un poids supérieur à l’autre. Vous pouvez faire en sorte que l’objet le plus lourd décélère plus rapidement que l’objet plus léger.
 
-5.  Le <xref:System.Windows.UIElement.ManipulationDelta> événement se produit plusieurs fois comme l’inertie se produit. Notez que cet événement se produit quand les doigts de l’utilisateur se déplacent sur l’écran tactile et quand [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] simule l’inertie. En d’autres termes, <xref:System.Windows.UIElement.ManipulationDelta> se produit avant et après le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement. Le <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> propriété rapports si le <xref:System.Windows.UIElement.ManipulationDelta> événement ne se produit pendant l’inertie, vous pouvez vérifier cette propriété et exécuter différentes actions, en fonction de sa valeur.
+5. Le <xref:System.Windows.UIElement.ManipulationDelta> événement se produit plusieurs fois comme l’inertie se produit. Notez que cet événement se produit quand les doigts de l’utilisateur se déplacent sur l’écran tactile et quand [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] simule l’inertie. En d’autres termes, <xref:System.Windows.UIElement.ManipulationDelta> se produit avant et après le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement. Le <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> propriété rapports si le <xref:System.Windows.UIElement.ManipulationDelta> événement ne se produit pendant l’inertie, vous pouvez vérifier cette propriété et exécuter différentes actions, en fonction de sa valeur.
 
-6.  Le <xref:System.Windows.UIElement.ManipulationCompleted> événement se produit lorsque la manipulation et toute inertie se termine. Autrement dit, après que tous les <xref:System.Windows.UIElement.ManipulationDelta> événements se produisent, le <xref:System.Windows.UIElement.ManipulationCompleted> événement se produit pour signaler que la manipulation est terminée.
+6. Le <xref:System.Windows.UIElement.ManipulationCompleted> événement se produit lorsque la manipulation et toute inertie se termine. Autrement dit, après que tous les <xref:System.Windows.UIElement.ManipulationDelta> événements se produisent, le <xref:System.Windows.UIElement.ManipulationCompleted> événement se produit pour signaler que la manipulation est terminée.
 
  Le <xref:System.Windows.UIElement> définit également le <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> événement. Cet événement se produit lorsque le <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> méthode est appelée dans le <xref:System.Windows.UIElement.ManipulationDelta> événement. Le <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> événement permet aux applications ou aux composants de fournir une rétroaction visuelle lorsqu’un objet atteint une limite. Par exemple, le <xref:System.Windows.Window> classe gère le <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> événement pour provoquer la fenêtre se déplace légèrement quand son bord est rencontré.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325707"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procédure : Créer, initialiser et configurer les commutateurs de trace
 Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie de traçage, et de la filtrer.  
@@ -31,9 +31,9 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Pour créer et initialiser un commutateur de trace  
   
-1.  Définissez un commutateur de type <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> ou de type <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, puis indiquez le nom et la description du commutateur.  
+1. Définissez un commutateur de type <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> ou de type <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, puis indiquez le nom et la description du commutateur.  
   
-2.  Configurez votre commutateur de trace. Pour plus d’informations, consultez [Configuration des commutateurs de suivi](#configure).  
+2. Configurez votre commutateur de trace. Pour plus d’informations, consultez [Configuration des commutateurs de suivi](#configure).  
   
      Le code suivant crée deux commutateurs, un de chaque type :  
   
@@ -71,9 +71,9 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
 #### <a name="to-configure-trace-switches"></a>Pour configurer les commutateurs de trace  
   
-1.  Pour utiliser les commutateurs de suivi, vous devez d’abord les créer et les placer dans votre code, comme décrit dans la section [Création et initialisation d’un commutateur de suivi](#create).  
+1. Pour utiliser les commutateurs de suivi, vous devez d’abord les créer et les placer dans votre code, comme décrit dans la section [Création et initialisation d’un commutateur de suivi](#create).  
   
-2.  Si votre projet ne contient pas de fichier de configuration (app.config ou Web.config), dans le menu **Projet**, sélectionnez **Ajouter un nouvel élément**.  
+2. Si votre projet ne contient pas de fichier de configuration (app.config ou Web.config), dans le menu **Projet**, sélectionnez **Ajouter un nouvel élément**.  
   
     -   **Visual Basic :** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier de Configuration d’Application**.  
   
@@ -88,7 +88,7 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
          Au moment de la compilation de votre projet, le fichier app.config est copié dans le dossier de sortie du projet et renommé *nom_application*.exe.config.  
   
-3.  Entre la balise `<configuration>` et la balise `</configuration>`, ajoutez le code XML approprié pour configurer vos commutateurs. Les exemples suivants montrent un commutateur **BooleanSwitch** dont la propriété **DisplayName** a la valeur `DataMessageSwitch` et un commutateur **TraceSwitch** dont la propriété **DisplayName** a la valeur `TraceLevelSwitch`.  
+3. Entre la balise `<configuration>` et la balise `</configuration>`, ajoutez le code XML approprié pour configurer vos commutateurs. Les exemples suivants montrent un commutateur **BooleanSwitch** dont la propriété **DisplayName** a la valeur `DataMessageSwitch` et un commutateur **TraceSwitch** dont la propriété **DisplayName** a la valeur `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
      Dans cette configuration, les deux commutateurs sont désactivés.  
   
-4.  Si vous avez besoin d’activer un commutateur **BooleanSwitch**, tel que le commutateur `DataMessagesSwitch` montré dans l’exemple précédent, remplacez **Value** par un nombre entier différent de zéro (0).  
+4. Si vous avez besoin d’activer un commutateur **BooleanSwitch**, tel que le commutateur `DataMessagesSwitch` montré dans l’exemple précédent, remplacez **Value** par un nombre entier différent de zéro (0).  
   
-5.  Si vous avez besoin d’activer un commutateur **TraceSwitch**, tel que le commutateur `TraceLevelSwitch` montré dans l’exemple précédent, remplacez **Value** par le paramètre correspondant au niveau approprié (1 à 4).  
+5. Si vous avez besoin d’activer un commutateur **TraceSwitch**, tel que le commutateur `TraceLevelSwitch` montré dans l’exemple précédent, remplacez **Value** par le paramètre correspondant au niveau approprié (1 à 4).  
   
-6.  Ajoutez des commentaires dans le fichier .config pour expliquer clairement à l'utilisateur quelles valeurs il doit modifier pour configurer les commutateurs de manière appropriée.  
+6. Ajoutez des commentaires dans le fichier .config pour expliquer clairement à l'utilisateur quelles valeurs il doit modifier pour configurer les commutateurs de manière appropriée.  
   
      L'exemple suivant montre à quoi le code final, commentaires inclus, peut ressembler :  
   

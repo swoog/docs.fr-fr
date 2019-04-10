@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322639"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procédure : utiliser les modificateurs et les propriétés GenerateMember
 Lorsque vous placez un composant sur un formulaire Windows, les deux propriétés sont fournies par l’environnement de conception : `GenerateMember` et `Modifiers`. Le `GenerateMember` propriété spécifie quand le Concepteur de formulaires Windows génère une variable membre pour un composant. Le `Modifiers` propriété est le modificateur d’accès assigné à cette variable de membre. Si la valeur de la `GenerateMember` propriété est `false`, la valeur de la `Modifiers` propriété n’a aucun effet.  
@@ -30,11 +30,11 @@ Lorsque vous placez un composant sur un formulaire Windows, les deux propriété
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Pour spécifier si un composant est un membre du formulaire  
   
-1.  Dans le Concepteur de formulaires Windows, ouvrez votre formulaire.  
+1. Dans le Concepteur de formulaires Windows, ouvrez votre formulaire.  
   
-2.  Ouvrez le **boîte à outils**et sur le formulaire, placez trois <xref:System.Windows.Forms.Button> contrôles.  
+2. Ouvrez le **boîte à outils**et sur le formulaire, placez trois <xref:System.Windows.Forms.Button> contrôles.  
   
-3.  Définir le `GenerateMember` et `Modifiers` propriétés pour chaque <xref:System.Windows.Forms.Button> contrôle conformément au tableau suivant.  
+3. Définir le `GenerateMember` et `Modifiers` propriétés pour chaque <xref:System.Windows.Forms.Button> contrôle conformément au tableau suivant.  
   
     |Nom du bouton|Valeur de GenerateMember|Valeur de modificateurs|  
     |-----------------|--------------------------|---------------------|  
@@ -42,13 +42,13 @@ Lorsque vous placez un composant sur un formulaire Windows, les deux propriété
     |`button2`|`true`|`protected`|  
     |`button3`|`false`|Aucune modification|  
   
-4.  Générez la solution.  
+4. Générez la solution.  
   
-5.  Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
+5. Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
   
-6.  Ouvrez le **Form1** nœud, puis, dans le **éditeur de Code**, ouvrez le **Form1.Designer.vb** ou **Form1.Designer.cs** fichier. Ce fichier contient le code émis par le Concepteur de formulaires Windows.  
+6. Ouvrez le **Form1** nœud, puis, dans le **éditeur de Code**, ouvrez le **Form1.Designer.vb** ou **Form1.Designer.cs** fichier. Ce fichier contient le code émis par le Concepteur de formulaires Windows.  
   
-7.  Trouver les déclarations pour les trois boutons. L’exemple de code suivant montre les différences spécifiées par le `GenerateMember` et `Modifiers` propriétés.  
+7. Trouver les déclarations pour les trois boutons. L’exemple de code suivant montre les différences spécifiées par le `GenerateMember` et `Modifiers` propriétés.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  

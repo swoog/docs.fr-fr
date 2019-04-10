@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322730"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou vérifié la zone de liste de plusieurs façons, étant donné que ces contrôles peuvent être liés à une variété de sources de données. Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données. Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé. Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).  
   
 ### <a name="to-add-items"></a>Pour ajouter des éléments  
   
-1.  Ajouter la chaîne ou l’objet à la liste à l’aide de la `Add` méthode de la `ObjectCollection` classe. La collection est référencée à l’aide de la `Items` propriété :  
+1. Ajouter la chaîne ou l’objet à la liste à l’aide de la `Add` méthode de la `ObjectCollection` classe. La collection est référencée à l’aide de la `Items` propriété :  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
   
      - ou  
   
-2.  Insérer la chaîne ou l’objet à l’endroit souhaité dans la liste avec la `Insert` méthode :  
+2. Insérer la chaîne ou l’objet à l’endroit souhaité dans la liste avec la `Insert` méthode :  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
   
      - ou  
   
-3.  Assignez tout un tableau à la `Items` collection :  
+3. Assignez tout un tableau à la `Items` collection :  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
   
 ### <a name="to-remove-an-item"></a>Pour supprimer un élément  
   
-1.  Appelez le `Remove` ou `RemoveAt` méthode pour supprimer des éléments.  
+1. Appelez le `Remove` ou `RemoveAt` méthode pour supprimer des éléments.  
   
      `Remove` possède un argument qui spécifie l’élément à supprimer.`RemoveAt` Supprime l’élément avec le numéro d’index spécifié.  
   
@@ -122,7 +122,7 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
   
 ### <a name="to-remove-all-items"></a>Pour supprimer tous les éléments  
   
-1.  Appelez le `Clear` méthode pour supprimer tous les éléments de la collection :  
+1. Appelez le `Clear` méthode pour supprimer tous les éléments de la collection :  
   
     ```vb  
     ListBox1.Items.Clear()  

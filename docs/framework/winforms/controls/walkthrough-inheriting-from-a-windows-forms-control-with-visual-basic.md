@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: c7e4f49fa5bd4de1e15e8f3cf39b95779c33ef94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087064"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320637"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Procédure pas à pas : héritage d’un contrôle Windows Forms avec Visual Basic
 Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants via *héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton héritera des fonctionnalités des formulaires Windows standard <xref:System.Windows.Forms.Button> contrôler et exposera une propriété personnalisée nommée `ButtonValue`.  
@@ -28,23 +28,23 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 #### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Pour créer la bibliothèque de contrôles ValueButtonLib et le contrôle ValueButton  
   
-1.  Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.  
+1. Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.  
   
-2.  Sélectionnez le **bibliothèque de contrôles Windows Forms** modèle de projet à partir de la liste des projets Visual Basic et le type `ValueButtonLib` dans le **nom** boîte.  
+2. Sélectionnez le **bibliothèque de contrôles Windows Forms** modèle de projet à partir de la liste des projets Visual Basic et le type `ValueButtonLib` dans le **nom** boîte.  
   
      Le nom du projet, `ValueButtonLib`, est également assigné à l’espace de noms racine par défaut. L’espace de noms racine est utilisé pour qualifier les noms des composants dans l’assembly. Par exemple, si deux assemblies contiennent des composants nommés `ValueButton`, vous pouvez spécifier votre composant `ValueButton` à l’aide de `ValueButtonLib.ValueButton`. Pour plus d’informations, consultez l’article [Espaces de noms dans Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
-3.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **UserControl1.vb**, puis sélectionnez **Renommer** dans le menu contextuel. Remplacez le nom de fichier par `ValueButton.vb`. Cliquez sur le bouton **Oui** lorsque l’on vous demande si vous souhaitez renommer toutes les références à l’élément de code « UserControl1 ».  
+3. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **UserControl1.vb**, puis sélectionnez **Renommer** dans le menu contextuel. Remplacez le nom de fichier par `ValueButton.vb`. Cliquez sur le bouton **Oui** lorsque l’on vous demande si vous souhaitez renommer toutes les références à l’élément de code « UserControl1 ».  
   
-4.  Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
+4. Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
   
-5.  Ouvrez le nœud **ValueButton.vb** pour afficher le fichier de code généré par le concepteur, **ValueButton.Designer.vb**. Ouvrez ce fichier dans **l’éditeur de code**.  
+5. Ouvrez le nœud **ValueButton.vb** pour afficher le fichier de code généré par le concepteur, **ValueButton.Designer.vb**. Ouvrez ce fichier dans **l’éditeur de code**.  
   
-6.  Recherchez le `Class` instruction, `Partial Public Class ValueButton`et modifier le type à partir duquel ce contrôle hérite de <xref:System.Windows.Forms.UserControl> à <xref:System.Windows.Forms.Button>. Cela permet à votre contrôle hérité peut hériter de toutes les fonctionnalités de la <xref:System.Windows.Forms.Button> contrôle.  
+6. Recherchez le `Class` instruction, `Partial Public Class ValueButton`et modifier le type à partir duquel ce contrôle hérite de <xref:System.Windows.Forms.UserControl> à <xref:System.Windows.Forms.Button>. Cela permet à votre contrôle hérité peut hériter de toutes les fonctionnalités de la <xref:System.Windows.Forms.Button> contrôle.  
   
-7.  Recherchez le `InitializeComponent` (méthode) et supprimez la ligne qui assigne la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriété. Cette propriété n’existe pas dans le <xref:System.Windows.Forms.Button> contrôle.  
+7. Recherchez le `InitializeComponent` (méthode) et supprimez la ligne qui assigne la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriété. Cette propriété n’existe pas dans le <xref:System.Windows.Forms.Button> contrôle.  
   
-8.  Dans le menu **Fichier**, sélectionnez **Enregistrer tout** pour enregistrer le projet.  
+8. Dans le menu **Fichier**, sélectionnez **Enregistrer tout** pour enregistrer le projet.  
   
      Notez que plus aucun concepteur visuel n’est disponible. Étant donné que le <xref:System.Windows.Forms.Button> contrôle effectue sa propre peinture, vous ne pouvez pas modifier son apparence dans le concepteur. Sa représentation visuelle sera exactement la même que celle de la classe, il hérite (autrement dit, <xref:System.Windows.Forms.Button>), sauf si la modification du code.  
   
@@ -56,9 +56,9 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 #### <a name="to-add-the-value-property"></a>Pour ajouter la propriété Valeur  
   
-1.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **ValueButton.vb**, puis cliquez sur **Afficher le code** dans le menu contextuel.  
+1. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **ValueButton.vb**, puis cliquez sur **Afficher le code** dans le menu contextuel.  
   
-2.  Recherchez l’instruction `Public Class ValueButton`. Juste en dessous de cette instruction, saisissez le code suivant :  
+2. Recherchez l’instruction `Public Class ValueButton`. Juste en dessous de cette instruction, saisissez le code suivant :  
   
     ```vb  
     ' Creates the private variable that will store the value of your   
@@ -79,54 +79,54 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
      Ce code définit les méthodes utilisées pour stocker et récupérer la propriété `ButtonValue`. L’instruction `Get` définit la valeur retournée à la valeur stockée dans la variable privée `varValue`et l’instruction `Set` définit la valeur de la variable privée à l’aide du mot clé `Value`.  
   
-3.  Dans le menu **Fichier**, sélectionnez **Enregistrer tout** pour enregistrer le projet.  
+3. Dans le menu **Fichier**, sélectionnez **Enregistrer tout** pour enregistrer le projet.  
   
 ## <a name="testing-your-control"></a>Test de votre contrôle  
  Les contrôles ne sont pas des projets autonomes ; ils doivent être hébergés dans un conteneur. Pour tester votre contrôle, vous devez fournir un projet de test dans lequel il sera exécuté. Vous devez également rendre votre contrôle accessible au projet de test en le générant (compilant). Dans cette section, vous allez générer votre contrôle et le tester dans un environnement Windows Form.  
   
 #### <a name="to-build-your-control"></a>Pour générer votre contrôle  
   
-1.  Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+1. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
      L’opération doit s’exécuter sans aucun avertissement ou erreur de compilation.  
   
 #### <a name="to-create-a-test-project"></a>Pour créer un projet de test  
   
-1.  Dans le menu **Fichier**, pointez vers**Ajouter**, puis cliquez sur **Nouveau projet** pour ouvrir la boîte de dialogue **Ajouter un nouveau projet**.  
+1. Dans le menu **Fichier**, pointez vers**Ajouter**, puis cliquez sur **Nouveau projet** pour ouvrir la boîte de dialogue **Ajouter un nouveau projet**.  
   
-2.  Sélectionnez le nœud de projets Visual Basic, puis cliquez sur **Windows Forms Application**.  
+2. Sélectionnez le nœud de projets Visual Basic, puis cliquez sur **Windows Forms Application**.  
   
-3.  Dans la zone **Nom** , tapez `Test`.  
+3. Dans la zone **Nom** , tapez `Test`.  
   
-4.  Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
+4. Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
   
-5.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références** de votre projet de test, puis sélectionnez **Ajouter une référence** dans le menu contextuel pour afficher la boîte de dialogue **Ajouter une référence**.  
+5. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références** de votre projet de test, puis sélectionnez **Ajouter une référence** dans le menu contextuel pour afficher la boîte de dialogue **Ajouter une référence**.  
   
-6.  Cliquez sur l’onglet **Projets**.  
+6. Cliquez sur l’onglet **Projets**.  
   
-7.  Cliquez sur l’onglet intitulé **Projets**. Votre projet `ValueButtonLib` s’affiche sous **Nom du projet**. Double-cliquez sur le projet pour ajouter la référence au projet de test.  
+7. Cliquez sur l’onglet intitulé **Projets**. Votre projet `ValueButtonLib` s’affiche sous **Nom du projet**. Double-cliquez sur le projet pour ajouter la référence au projet de test.  
   
-8.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Test**, puis sélectionnez **Générer**.  
+8. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Test**, puis sélectionnez **Générer**.  
   
 #### <a name="to-add-your-control-to-the-form"></a>Pour ajouter votre contrôle au formulaire  
   
-1.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Form1.vb** et sélectionnez **Concepteur de vues** dans le menu contextuel.  
+1. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Form1.vb** et sélectionnez **Concepteur de vues** dans le menu contextuel.  
   
-2.  Dans la **boîte à outils**, cliquez sur **Composants ValueButtonLib**. Double-cliquez sur **ValueButton**.  
+2. Dans la **boîte à outils**, cliquez sur **Composants ValueButtonLib**. Double-cliquez sur **ValueButton**.  
   
      Un élément **ValueButton** apparaît sur le formulaire.  
   
-3.  Cliquez avec le bouton droit sur l’élément **ValueButton** et sélectionnez **Propriétés** dans le menu contextuel.  
+3. Cliquez avec le bouton droit sur l’élément **ValueButton** et sélectionnez **Propriétés** dans le menu contextuel.  
   
-4.  Dans la fenêtre **Propriété**, examinez les propriétés de ce contrôle. Notez qu’elles sont identiques aux propriétés exposées par un bouton standard, à la différence près qu’il y a une propriété en plus, `ButtonValue`.  
+4. Dans la fenêtre **Propriété**, examinez les propriétés de ce contrôle. Notez qu’elles sont identiques aux propriétés exposées par un bouton standard, à la différence près qu’il y a une propriété en plus, `ButtonValue`.  
   
-5.  Affectez à la propriété `ButtonValue` la valeur `5`.  
+5. Affectez à la propriété `ButtonValue` la valeur `5`.  
   
-6.  Sur le **tous les Windows Forms** onglet de la **boîte à outils**, double-cliquez sur **étiquette** pour ajouter un <xref:System.Windows.Forms.Label> à votre formulaire.  
+6. Sur le **tous les Windows Forms** onglet de la **boîte à outils**, double-cliquez sur **étiquette** pour ajouter un <xref:System.Windows.Forms.Label> à votre formulaire.  
   
-7.  Déplacez l’étiquette au centre du formulaire.  
+7. Déplacez l’étiquette au centre du formulaire.  
   
-8.  Double-cliquez sur `ValueButton1`.  
+8. Double-cliquez sur `ValueButton1`.  
   
      **L’éditeur de code** s’ouvre à l’événement `ValueButton1_Click`.  
   

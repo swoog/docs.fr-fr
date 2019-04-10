@@ -1,16 +1,16 @@
 ---
-title: 'Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification Windows'
+title: 'Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification Windows'
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323666"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification Windows
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification Windows
 ## <a name="applies-to"></a>S'applique à  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,13 +58,13 @@ ms.locfileid: "47198526"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Pour créer une application ASP.NET simple  
   
-1.  Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
+1. Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.  
   
-2.  Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
+2. Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.  
   
-3.  Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
+3. Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.  
   
-4.  Une fois le projet **TestApp** créé, cliquez dessus dans l’**Explorateur de solutions**. Les propriétés du projet s’affichent dans le volet **Propriétés** sous l’**Explorateur de solutions**. Affectez à la propriété **Authentification Windows** la valeur **Enabled** (Activée).  
+4. Une fois le projet **TestApp** créé, cliquez dessus dans l’**Explorateur de solutions**. Les propriétés du projet s’affichent dans le volet **Propriétés** sous l’**Explorateur de solutions**. Affectez à la propriété **Authentification Windows** la valeur **Enabled** (Activée).  
   
     > [!WARNING]
     >  L’authentification Windows étant désactivée par défaut dans les nouvelles applications ASP.NET, vous devez l’activer manuellement.  
@@ -74,7 +74,7 @@ ms.locfileid: "47198526"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Pour configurer une application ASP.NET pour les revendications à l’aide de l’authentification Windows  
   
-1.  Dans le fichier *Default.aspx* du projet **TestApp**, remplacez le balisage existant par le suivant :  
+1. Dans le fichier *Default.aspx* du projet **TestApp**, remplacez le balisage existant par le suivant :  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198526"
   
      Cette étape ajoute un contrôle GridView à votre page *Default.aspx* qui sera remplie avec les revendications récupérées à partir de l’authentification Windows.  
   
-2.  Enregistrez le fichier *Default.aspx*, puis ouvrez son fichier code-behind nommé *Default.aspx.cs*. Remplacez le code existant par le code ci-dessous :  
+2. Enregistrez le fichier *Default.aspx*, puis ouvrez son fichier code-behind nommé *Default.aspx.cs*. Remplacez le code existant par le code ci-dessous :  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198526"
   
      Le code ci-dessus affiche les revendications relatives à un utilisateur authentifié.  
   
-3.  Pour modifier le type d’authentification de l’application, modifiez le bloc **\<authentication>** dans la section **\<system.web>** du fichier *Web.config* de la racine du projet afin d’inclure uniquement l’entrée de configuration suivante :  
+3. Pour modifier le type d’authentification de l’application, modifiez le bloc **\<authentication>** dans la section **\<system.web>** du fichier *Web.config* de la racine du projet afin d’inclure uniquement l’entrée de configuration suivante :  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Enfin, modifiez le bloc **\<authorization>** dans la section **\<system.web>** du même fichier *Web.config* pour forcer l’authentification :  
+4. Enfin, modifiez le bloc **\<authorization>** dans la section **\<system.web>** du même fichier *Web.config* pour forcer l’authentification :  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198526"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Pour tester votre application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
   
-1.  Appuyez sur **F5** pour générer et exécuter l’application. La page *Default.aspx* doit s’afficher, avec le nom de votre compte Windows (dont le nom de domaine) comme utilisateur authentifié dans la partie supérieure droite de la page. Le contenu de la page doit inclure un tableau rempli avec les revendications récupérées à partir de votre compte Windows.
+1. Appuyez sur **F5** pour générer et exécuter l’application. La page *Default.aspx* doit s’afficher, avec le nom de votre compte Windows (dont le nom de domaine) comme utilisateur authentifié dans la partie supérieure droite de la page. Le contenu de la page doit inclure un tableau rempli avec les revendications récupérées à partir de votre compte Windows.

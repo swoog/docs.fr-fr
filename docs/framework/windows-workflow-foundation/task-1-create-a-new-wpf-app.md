@@ -2,33 +2,33 @@
 title: 'Tâche 1 : créer une application Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: dae523714862ed36d36e65b51be62acff9b17f51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320377"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tâche 1 : créer une application Windows Presentation Foundation
 Dans cette tâche, vous créez une application Windows Presentation Foundation (WPF) vide à l’aide du modèle Application WPF Visual Studio et ajoutez des références appropriés [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] assemblys de workflow.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Pour créer le projet d'application WPF  
   
-1.  Ouvrez Visual Studio et sur le **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
+1. Ouvrez Visual Studio et sur le **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
   
-2.  Dans le **nouveau projet** boîte de dialogue, sélectionnez soit **Visual C#**  ou **Visual Basic** à partir de la **modèles installés** volet de gauche côté de la zone. Si la langue de votre choix n’apparaît pas, regardez sous **autres langages**.  
+2. Dans le **nouveau projet** boîte de dialogue, sélectionnez soit **Visual C#**  ou **Visual Basic** à partir de la **modèles installés** volet de gauche côté de la zone. Si la langue de votre choix n’apparaît pas, regardez sous **autres langages**.  
   
-3.  Sélectionnez **Windows** dans le **modèles installés** volet.  
+3. Sélectionnez **Windows** dans le **modèles installés** volet.  
   
-4.  Dans le volet supérieur, vérifiez que (la valeur par défaut) **.NET Framework 4** a été sélectionné dans la zone de liste déroulante, puis sélectionnez **Application WPF**.  
+4. Dans le volet supérieur, vérifiez que (la valeur par défaut) **.NET Framework 4** a été sélectionné dans la zone de liste déroulante, puis sélectionnez **Application WPF**.  
   
-5.  Définissez le nom du projet à **HostingApplication** en bas de la fenêtre.  
+5. Définissez le nom du projet à **HostingApplication** en bas de la fenêtre.  
   
-6.  La valeur est le nom de la solution **RehostingTheDesigner**.  
+6. La valeur est le nom de la solution **RehostingTheDesigner**.  
   
-7.  Cliquez sur **OK** pour créer le projet d’application. Visual Studio crée une base UI WPF pour votre application et inclut les fichiers code-behind XAML appropriée.  
+7. Cliquez sur **OK** pour créer le projet d’application. Visual Studio crée une base UI WPF pour votre application et inclut les fichiers code-behind XAML appropriée.  
   
-8.  Ajouter des références aux **WorkflowModel** assemblys. Pour ce faire, dans **l’Explorateur de solutions**, avec le bouton droit le **HostingApplication** de projet et sélectionnez **ajouter une référence**.  
+8. Ajouter des références aux **WorkflowModel** assemblys. Pour ce faire, dans **l’Explorateur de solutions**, avec le bouton droit le **HostingApplication** de projet et sélectionnez **ajouter une référence**.  
   
 9. Dans le **ajouter une référence** boîte de dialogue, cliquez sur le **.NET** onglet, maintenez la touche CTRL enfoncée, sélectionnez les assemblys suivants, puis cliquez sur **OK**:  
   

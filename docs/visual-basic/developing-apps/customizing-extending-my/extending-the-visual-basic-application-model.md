@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834710"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320143"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Extension du modèle d'application Visual Basic
 Vous pouvez ajouter des fonctionnalités pour le modèle d’application en substituant le `Overridable` membres de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Cette technique vous permet de personnaliser le comportement du modèle d’application et ajouter des appels à vos propres méthodes lorsque l’application démarre et s’arrête.  
@@ -32,7 +32,7 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
  Si l’application est une application normale (plusieurs instances d’application) ou la première instance d’une application à instance unique, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> méthode s’exécute le `Overridable` méthodes dans l’ordre suivant :  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Par défaut, cette méthode définit les styles visuels, les styles d’affichage de texte et les principal actuel pour le thread d’application principal (si l’application utilise l’authentification Windows) et les appels `ShowSplashScreen` si ni `/nosplash` ni `-nosplash` est utilisé comme un argument de ligne de commande.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Par défaut, cette méthode définit les styles visuels, les styles d’affichage de texte et les principal actuel pour le thread d’application principal (si l’application utilise l’authentification Windows) et les appels `ShowSplashScreen` si ni `/nosplash` ni `-nosplash` est utilisé comme un argument de ligne de commande.  
   
      La séquence de démarrage d’application est annulée si cette fonction retourne `False`. Cela peut être utile si les circonstances dans lesquelles l’application ne doit pas exécutée.  
   
@@ -46,11 +46,11 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
          Par défaut, cette méthode ne fait rien. Si vous sélectionnez un écran de démarrage pour votre application dans Visual Basic **Concepteur de projets**, le concepteur substitue le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriété à une nouvelle instance de la forme d’écran de démarrage .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fournit un point d’extensibilité pour déclencher le `Startup` événement. La séquence de démarrage d’application s’arrête si cette fonction retourne `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fournit un point d’extensibilité pour déclencher le `Startup` événement. La séquence de démarrage d’application s’arrête si cette fonction retourne `False`.  
   
      Par défaut, cette méthode déclenche la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> événement. Si le Gestionnaire d’événements définit la <xref:System.ComponentModel.CancelEventArgs.Cancel> propriété de l’argument d’événement à `True`, la méthode retourne `False` pour annuler le démarrage de l’application.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fournit le point de départ lorsque l’application principale est prête à commencer son exécution, une fois que l’initialisation est terminée.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fournit le point de départ lorsque l’application principale est prête à commencer son exécution, une fois que l’initialisation est terminée.  
   
      Par défaut, avant d’entrer dans la boucle de message Windows Forms, cette méthode appelle la `OnCreateMainForm` (pour créer le formulaire principal de l’application) et `HideSplashScreen` (pour fermer l’écran de démarrage) méthodes :  
   
@@ -62,15 +62,15 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
          Par défaut, cette méthode ferme l’écran de démarrage.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fournit un moyen de personnaliser le comportement d’une application à instance unique lorsqu’une autre instance de l’application démarre.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fournit un moyen de personnaliser le comportement d’une application à instance unique lorsqu’une autre instance de l’application démarre.  
   
      Par défaut, cette méthode déclenche la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> événement.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fournit un point d’extensibilité pour déclencher le `Shutdown` événement. Cette méthode n’exécute pas si une exception non gérée se produit dans l’application principale.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fournit un point d’extensibilité pour déclencher le `Shutdown` événement. Cette méthode n’exécute pas si une exception non gérée se produit dans l’application principale.  
   
      Par défaut, cette méthode déclenche la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> événement.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Exécuté si une exception non gérée se produit dans une des méthodes répertoriées ci-dessus.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Exécuté si une exception non gérée se produit dans une des méthodes répertoriées ci-dessus.  
   
      Par défaut, cette méthode déclenche la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> événement tant qu’un débogueur n’est pas attaché et que l’application gère le `UnhandledException` événement.  
   
@@ -99,5 +99,5 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
-- [Vue d’ensemble du modèle d’application Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Vue d'ensemble du modèle d'application Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Page Application, Concepteur de projet (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

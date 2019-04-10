@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: e0255cca5c614f07bbc4a7dfc9a908612e8867a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: aa81eb7470b818fa2b65200503e5ce65b467c0f2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122380"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324446"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : masquer des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur
 Parfois, vous souhaiterez afficher uniquement quelques-unes des colonnes qui sont disponibles dans un contrôle <xref:System.Windows.Forms.DataGridView> Windows Forms. Par exemple, vous souhaitez afficher un employé colonne salaire aux utilisateurs avec les informations d’identification de gestion tout en la masquant d’autres utilisateurs. Ou bien, vous souhaiterez lier le contrôle à une source de données qui contient de nombreuses colonnes, que seuls certains d'entre eux vous souhaitez afficher. Dans ce cas, vous supprimerez en général les colonnes que vous n’êtes pas intéressé à afficher plutôt que de les masquer. Pour plus d'informations, voir [Procédure : Ajouter et supprimer des colonnes dans les Windows Forms DataGridView Control à l’aide du concepteur](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
@@ -24,11 +24,11 @@ Parfois, vous souhaiterez afficher uniquement quelques-unes des colonnes qui son
   
 ### <a name="to-hide-a-column-using-the-designer"></a>Pour masquer une colonne à l’aide du Concepteur  
   
-1.  Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **modifier les colonnes**.  
+1. Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **modifier les colonnes**.  
   
-2.  Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
+2. Sélectionnez une colonne dans la **colonnes sélectionnées** liste.  
   
-3.  Dans le **propriétés de la colonne** grille, définissez la <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> propriété `false`.  
+3. Dans le **propriétés de la colonne** grille, définissez la <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> propriété `false`.  
   
     > [!NOTE]
     >  Vous pouvez également masquer une colonne lors de son ajout en désactivant le **Visible** case à cocher dans la **ajouter une colonne** boîte de dialogue.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320884"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procédure : lier le contrôle DataGrid Windows Forms à une source de données à l’aide du concepteur
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115724"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Lier aux données du contrôle DataGrid à une seule table dans le Concepteur  
   
-1.  Définir le contrôle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété à l’objet qui contient les éléments de données que vous souhaitez établir une liaison.  
+1. Définir le contrôle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété à l’objet qui contient les éléments de données que vous souhaitez établir une liaison.  
   
-2.  Si la source de données est un jeu de données, définissez la <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété le nom de la table à lier.  
+2. Si la source de données est un jeu de données, définissez la <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété le nom de la table à lier.  
   
-3.  Si la source de données est un jeu de données ou une vue de données basée sur une table de dataset, ajoutez le code au formulaire pour remplir le dataset.  
+3. Si la source de données est un jeu de données ou une vue de données basée sur une table de dataset, ajoutez le code au formulaire pour remplir le dataset.  
   
      Le code exact que vous utilisez dépend où le jeu de données est l’obtention de données. Si le jeu de données est rempli directement à partir d’une base de données, vous appelez généralement la `Fill` méthode d’un adaptateur de données, comme dans l’exemple de code suivant, qui remplit un dataset nommé `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115724"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Facultatif) Ajouter les styles de table approprié et les styles de colonne à la grille.  
+4. (Facultatif) Ajouter les styles de table approprié et les styles de colonne à la grille.  
   
      S’il n’y a aucun style de tableau, vous verrez la table, mais avec la mise en forme minimale et toutes les colonnes visibles.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Lier aux données du contrôle DataGrid à plusieurs tables dans un jeu de données dans le Concepteur  
   
-1.  Définir le contrôle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété à l’objet qui contient les éléments de données que vous souhaitez établir une liaison.  
+1. Définir le contrôle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété à l’objet qui contient les éléments de données que vous souhaitez établir une liaison.  
   
-2.  Si le jeu de données contient des tables connexes (autrement dit, si elle contient un objet de relation), définissez le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété le nom de la table parente.  
+2. Si le jeu de données contient des tables connexes (autrement dit, si elle contient un objet de relation), définissez le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété le nom de la table parente.  
   
-3.  Écrire du code pour remplir le dataset.  
+3. Écrire du code pour remplir le dataset.  
   
 ## <a name="see-also"></a>Voir aussi
 

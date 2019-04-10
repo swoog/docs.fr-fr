@@ -2,12 +2,12 @@
 title: WS 2007 Federation HTTP Binding
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 07becd0fc5cbbd9a8b90de2d20654a63b62e3085
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324940"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation HTTP Binding
 Cet exemple montre l’utilisation de <xref:System.ServiceModel.WS2007FederationHttpBinding>, une liaison standard vous permettant de générer des scénarios fédérés qui prennent en charge la version 1.3 de la spécification WS-Trust.  
@@ -110,15 +110,15 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Ouvrez une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et exécutez le fichier Setup.bat pour créer les certificats requis.  
+2. Ouvrez une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et exécutez le fichier Setup.bat pour créer les certificats requis.  
   
  Ce fichier batch utilise Certmgr.exe et Makecert.exe, qui sont fournis avec le Kit de développement Windows SDK. Toutefois, vous devez exécuter Setup.bat à partir d'une invite de commandes de Visual Studio Tools pour permettre au script d'identifier ces outils.  
   
-1.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Si vous utilisez [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], vous devez exécuter Service.exe, Client.exe et SecurityTokenService.exe avec des privilèges élevés (cliquez sur les fichiers, puis sur **exécuter en tant qu’administrateur**).  
+2. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Si vous utilisez [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], vous devez exécuter Service.exe, Client.exe et SecurityTokenService.exe avec des privilèges élevés (cliquez sur les fichiers, puis sur **exécuter en tant qu’administrateur**).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

@@ -2,21 +2,21 @@
 title: Génération de code dans LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321586"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Génération de code dans LINQ to SQL
 Vous pouvez générer de code pour représenter une base de données à l'aide de [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ou de l'outil de ligne de commande SQLMetal. Dans l'un et l'autre cas, la génération du code de bout en bout s'effectue en trois étapes :  
   
-1.  Le *Extracteur DBML* extrait les informations de schéma de la base de données et réassemble ces informations dans un fichier DBML au format XML.  
+1. Le *Extracteur DBML* extrait les informations de schéma de la base de données et réassemble ces informations dans un fichier DBML au format XML.  
   
-2.  Le fichier DBML est analysé par le *validateur DBML* pour les erreurs.  
+2. Le fichier DBML est analysé par le *validateur DBML* pour les erreurs.  
   
-3.  Si aucune erreur de validation n’apparaît, le fichier est passé au Générateur de code.  
+3. Si aucune erreur de validation n’apparaît, le fichier est passé au Générateur de code.  
   
  Pour plus d’informations, consultez [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Les développeurs à l’aide de Visual Studio peuvent également utiliser le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] pour générer le code. Consultez [outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   

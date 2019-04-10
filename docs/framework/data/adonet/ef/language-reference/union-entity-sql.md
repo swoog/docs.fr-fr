@@ -2,12 +2,12 @@
 title: UNION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
-ms.openlocfilehash: ea74cb77df059556876364237887d6dfa21e5609
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 736b92f7aac89c309b37a8ac61a295c8d1495d6b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323289"
 ---
 # <a name="union-entity-sql"></a>UNION (Entity SQL)
 Combine les résultats de deux requêtes, ou plus, en une collection unique.  
@@ -39,9 +39,9 @@ expression
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur UNION ALL pour combiner les résultats de deux requêtes en une collection unique. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  
   
-1.  Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :  
+2. Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :  
   
  [!code-csharp[DP EntityServices Concepts 2#UNION](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#union)]  
   

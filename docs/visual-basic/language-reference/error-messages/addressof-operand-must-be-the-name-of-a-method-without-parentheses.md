@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323822"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>L'opérande 'AddressOf' doit être le nom d'une méthode (sans parenthèses)
 L’opérateur `AddressOf` crée une instance de délégué de procédure qui fait référence à une procédure spécifique. La syntaxe est la suivante.  
@@ -25,11 +25,11 @@ L’opérateur `AddressOf` crée une instance de délégué de procédure qui fa
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Supprimez les parenthèses autour de l’argument qui suit `AddressOf`.  
+1. Supprimez les parenthèses autour de l’argument qui suit `AddressOf`.  
   
-2.  Assurez-vous que l’argument est un nom de méthode.  
+2. Assurez-vous que l’argument est un nom de méthode.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [AddressOf, opérateur](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)

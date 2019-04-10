@@ -2,12 +2,12 @@
 title: Programmation de l'arborescence des éléments de modèle
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321131"
 ---
 # <a name="programming-model-item-tree"></a>Programmation de l'arborescence des éléments de modèle
 Cet exemple montre comment parcourir le <xref:System.Activities.Presentation.Model.ModelItem> arborescence à l’aide de la liaison de données déclarative à partir de l’arborescence de Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 
-1.  Ouvrez la solution ProgrammingModelItemTree.sln dans Visual Studio 2010.
+1. Ouvrez la solution ProgrammingModelItemTree.sln dans Visual Studio 2010.
 
-2.  Générez la solution en sélectionnant **générer la Solution** à partir de la **Build** menu.
+2. Générez la solution en sélectionnant **générer la Solution** à partir de la **Build** menu.
 
-3.  Appuyez sur F5 pour exécuter l'application. Le formulaire [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] s'affiche alors.
+3. Appuyez sur F5 pour exécuter l'application. Le formulaire [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] s'affiche alors.
 
-4.  Cliquez sur le **charger WF** bouton Charger le <xref:System.Activities.Presentation.Model.ModelItem> et liez-le à l’arborescence.
+4. Cliquez sur le **charger WF** bouton Charger le <xref:System.Activities.Presentation.Model.ModelItem> et liez-le à l’arborescence.
 
-5.  En cliquant sur le **arborescence d’éléments de modèle de modification** bouton exécute le code précédent pour ajouter un élément dans l’arborescence et définir une propriété.
+5. En cliquant sur le **arborescence d’éléments de modèle de modification** bouton exécute le code précédent pour ajouter un élément dans l’arborescence et définir une propriété.
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

@@ -2,12 +2,12 @@
 title: 'Procédure : créer des informations d’identification de prise en charge'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326045"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procédure : créer des informations d’identification de prise en charge
 Il est possible d'avoir un modèle de sécurité personnalisé qui requiert plusieurs informations d'identification. Par exemple, un service peut exiger du client non seulement un nom d'utilisateur et un mot de passe, mais également une information d'identification qui prouve que le client a plus de 18 ans. La deuxième information d’identification est un *prenant en charge les informations d’identification*. Cette rubrique explique comment implémenter ces informations d’identification dans un client Windows Communication Foundation (WCF).  
@@ -68,9 +68,9 @@ Il est possible d'avoir un modèle de sécurité personnalisé qui requiert plus
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Pour créer une liaison personnalisée qui inclut des informations d’identification de prise en charge  
   
-1.  Créez un élément de liaison de sécurité. L'exemple suivant crée un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> avec le mode d'authentification `UserNameForCertificate`. Utilisez la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Créez un élément de liaison de sécurité. L'exemple suivant crée un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> avec le mode d'authentification `UserNameForCertificate`. Utilisez la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2.  Ajoutez le paramètre de prise en charge à la collection de types retournée par la propriété appropriée (`Endorsing`, `Signed`, `SignedEncrypted` ou `SignedEndorsed`). Les types dans l'espace de noms <xref:System.ServiceModel.Security.Tokens> incluent des types couramment utilisés, tels que <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Ajoutez le paramètre de prise en charge à la collection de types retournée par la propriété appropriée (`Endorsing`, `Signed`, `SignedEncrypted` ou `SignedEndorsed`). Les types dans l'espace de noms <xref:System.ServiceModel.Security.Tokens> incluent des types couramment utilisés, tels que <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Exemple  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: 9ddff31e4d66ffef2600a1246b35c0a66154c341
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 48fd223c8e770e64513d79ef9d24f93321c98332
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190417"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322093"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Procédure : ajouter des colonnes au contrôle ListView Windows Forms à l’aide du concepteur
 Les formulaires Windows <xref:System.Windows.Forms.ListView> contrôle peut afficher plusieurs colonnes pour chaque liste d’éléments dans le **détails** vue. Vous pouvez utiliser les colonnes pour afficher plusieurs types d’informations sur chaque élément de liste. Par exemple, une liste de fichiers peut afficher le nom de fichier, type de fichier, taille et date de que dernière modification du fichier. Pour plus d’informations sur le remplissage des colonnes une fois qu’ils sont créés, consultez [Comment : Afficher des sous-éléments en colonnes avec les Windows Forms ListView contrôle](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
@@ -22,13 +22,13 @@ Les formulaires Windows <xref:System.Windows.Forms.ListView> contrôle peut affi
   
 ### <a name="to-add-columns-in-the-designer"></a>Pour ajouter des colonnes dans le Concepteur  
   
-1.  Dans le **propriétés** fenêtre, définissez le contrôle <xref:System.Windows.Forms.ListView.View%2A> propriété <xref:System.Windows.Forms.View.Details>.  
+1. Dans le **propriétés** fenêtre, définissez le contrôle <xref:System.Windows.Forms.ListView.View%2A> propriété <xref:System.Windows.Forms.View.Details>.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté le <xref:System.Windows.Forms.ListView.Columns%2A> propriété.  
+2. Dans le **propriétés** fenêtre, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté le <xref:System.Windows.Forms.ListView.Columns%2A> propriété.  
   
      Le **éditeur de collections ColumnHeader** s’affiche.  
   
-3.  Utilisez le **ajouter** pour ajouter de nouvelles colonnes. Vous pouvez ensuite sélectionner l’en-tête de colonne et définir son texte (la légende de la colonne), alignement du texte et la largeur.  
+3. Utilisez le **ajouter** pour ajouter de nouvelles colonnes. Vous pouvez ensuite sélectionner l’en-tête de colonne et définir son texte (la légende de la colonne), alignement du texte et la largeur.  
   
 ## <a name="see-also"></a>Voir aussi
 

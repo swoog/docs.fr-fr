@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322652"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Impossible de connecter cette application à instance unique à l’instance d’origine
 Impossible de connecter cette application à instance unique à l'instance d'origine. Ce problème peut avoir les causes suivantes :  
@@ -22,15 +22,15 @@ Impossible de connecter cette application à instance unique à l'instance d'ori
   
 ## <a name="to-correct-this-error-when-developing-the-application"></a>Pour corriger cette erreur lors du développement d’une application  
   
-1.  Vérifiez que l’application continue de répondre.  
+1. Vérifiez que l’application continue de répondre.  
   
-2.  Vérifiez que l’application dispose d’autorisations suffisantes pour créer des objets noyaux.  
+2. Vérifiez que l’application dispose d’autorisations suffisantes pour créer des objets noyaux.  
   
-3.  Redémarrez l’instance d’origine de l’application.  
+3. Redémarrez l’instance d’origine de l’application.  
   
-4.  Redémarrez l’ordinateur pour annuler tout processus susceptible d’utiliser la ressource permettant de se connecter à l’application de l’instance d’origine.  
+4. Redémarrez l’ordinateur pour annuler tout processus susceptible d’utiliser la ressource permettant de se connecter à l’application de l’instance d’origine.  
   
-5.  Notez les circonstances dans lesquelles l’erreur s’est produite, puis contactez les services de support technique Microsoft.  
+5. Notez les circonstances dans lesquelles l’erreur s’est produite, puis contactez les services de support technique Microsoft.  
   
 ## <a name="see-also"></a>Voir aussi
 

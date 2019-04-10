@@ -2,12 +2,12 @@
 title: Annuler une tâche asynchrone ou une liste de tâches (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324758"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annuler une tâche asynchrone ou une liste de tâches (Visual Basic)
 Vous pouvez créer un bouton permettant d’annuler une application asynchrone que vous souhaitez interrompre avant la fin de son exécution. Les exemples de cette rubrique vous montrent comment ajouter un bouton d’annulation à une application qui télécharge du contenu d’un site web ou une liste de sites web.  
@@ -23,15 +23,15 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
 ### <a name="downloading-the-example"></a>Téléchargement de l'exemple  
  Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
-1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
+1. Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
-2.  Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
+2. Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
   
-3.  Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningVB.  
+3. Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningVB.  
   
-4.  Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelATask**, puis choisissez **Définir comme projet de démarrage**.  
+4. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelATask**, puis choisissez **Définir comme projet de démarrage**.  
   
-5.  Appuyez sur la touche F5 pour exécuter le projet.  
+5. Appuyez sur la touche F5 pour exécuter le projet.  
   
      Appuyez sur les touches Ctrl+F5 pour exécuter le projet sans le déboguer.  
   
@@ -44,7 +44,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
   
  Ajoutez ensuite les modifications suivantes au fichier MainWindow.xaml.vb de ce projet.  
   
-1.  Déclarez une variable `CancellationTokenSource`, `cts`, qui se trouve dans la portée de toutes les méthodes qui y accèdent.  
+1. Déclarez une variable `CancellationTokenSource`, `cts`, qui se trouve dans la portée de toutes les méthodes qui y accèdent.  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Ajoutez le gestionnaire d’événements suivant pour le bouton **Annuler**. Le gestionnaire d’événements utilise la méthode <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> pour notifier à `cts` la demande d’annulation de l’utilisateur.  
+2. Ajoutez le gestionnaire d’événements suivant pour le bouton **Annuler**. Le gestionnaire d’événements utilise la méthode <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> pour notifier à `cts` la demande d’annulation de l’utilisateur.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     End Sub  
     ```  
   
-3.  Effectuez les modifications suivantes dans le gestionnaire d’événements pour le bouton **Démarrer**, `startButton_Click`.  
+3. Effectuez les modifications suivantes dans le gestionnaire d’événements pour le bouton **Démarrer**, `startButton_Click`.  
   
     -   Instanciez le `CancellationTokenSource`, `cts`.  
   
@@ -93,7 +93,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
         End Try  
         ```  
   
-4.  Dans `AccessTheWebAsync`, utilisez la surcharge <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> de la méthode `GetAsync` dans le type <xref:System.Net.Http.HttpClient> pour télécharger le contenu d’un site web. Passez `ct`, le paramètre <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, comme deuxième argument. Le jeton transmet le message si l’utilisateur choisit le bouton **Annuler**.  
+4. Dans `AccessTheWebAsync`, utilisez la surcharge <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> de la méthode `GetAsync` dans le type <xref:System.Net.Http.HttpClient> pour télécharger le contenu d’un site web. Passez `ct`, le paramètre <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, comme deuxième argument. Le jeton transmet le message si l’utilisateur choisit le bouton **Annuler**.  
   
      Le code suivant illustre les modifications dans `AccessTheWebAsync`.  
   
@@ -121,7 +121,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     End Function  
     ```  
   
-5.  Si vous n’annulez pas le programme, il génère le résultat suivant.  
+5. Si vous n’annulez pas le programme, il génère le résultat suivant.  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
 ### <a name="downloading-the-example"></a>Téléchargement de l'exemple  
  Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
-1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
+1. Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
-2.  Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
+2. Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
   
-3.  Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningVB.  
+3. Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningVB.  
   
-4.  Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelAListOfTasks**, puis choisissez **Définir comme projet de démarrage**.  
+4. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelAListOfTasks**, puis choisissez **Définir comme projet de démarrage**.  
   
-5.  Appuyez sur la touche F5 pour exécuter le projet.  
+5. Appuyez sur la touche F5 pour exécuter le projet.  
   
      Appuyez sur les touches Ctrl+F5 pour exécuter le projet sans le déboguer.  
   
@@ -158,7 +158,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
 ### <a name="building-the-example"></a>Génération de l’exemple  
  Pour étendre l’exemple vous-même, pas à pas, suivez les instructions de la section « Téléchargement de l’exemple », mais choisissez **CancelATask** comme **Projet de démarrage**. Apportez les modifications suivantes au projet. Les astérisques signalent les modifications effectuées dans le programme.  
   
-1.  Ajoutez une méthode pour créer une liste des adresses web.  
+1. Ajoutez une méthode pour créer une liste des adresses web.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     End Function  
     ```  
   
-2.  Appelez la méthode dans `AccessTheWebAsync`.  
+2. Appelez la méthode dans `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  Ajoutez la boucle suivante dans `AccessTheWebAsync` pour traiter chaque adresse web dans la liste.  
+3. Ajoutez la boucle suivante dans `AccessTheWebAsync` pour traiter chaque adresse web dans la liste.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     Next  
     ```  
   
-4.  Comme `AccessTheWebAsync` affiche les longueurs, la méthode n’a pas besoin de retourner une valeur. Supprimez l’instruction return et changez le type de retour de la méthode de <xref:System.Threading.Tasks.Task> en <xref:System.Threading.Tasks.Task%601>.  
+4. Comme `AccessTheWebAsync` affiche les longueurs, la méthode n’a pas besoin de retourner une valeur. Supprimez l’instruction return et changez le type de retour de la méthode de <xref:System.Threading.Tasks.Task> en <xref:System.Threading.Tasks.Task%601>.  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Si vous n’annulez pas le programme, il génère le résultat suivant.  
+5. Si vous n’annulez pas le programme, il génère le résultat suivant.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -459,5 +459,5 @@ End Class
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Exemple Async : Réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Réglage de votre Application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Exemple Async : Réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

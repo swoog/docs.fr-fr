@@ -2,12 +2,12 @@
 title: One-Way
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320990"
 ---
 # <a name="one-way"></a>One-Way
 Cet exemple présente un contact de service avec des opérations de service monodirectionnelles. Le client n'attend pas que les opérations de service se terminent comme c'est le cas avec les opérations de service bidirectionnelles. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et utilise le `wsHttpBinding` liaison. Le service dans cet exemple est une application console auto-hébergée vous permettant d'observer le service qui reçoit et traite des demandes. Le client est également une application console.  
@@ -88,11 +88,11 @@ Processing Divide(22,7) - result: 3.14285714285714
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Exécutez le service avant le client et arrêtez le client avant le service. Cela évite au client de lever une exception lorsqu'il ne parvient pas à fermer la session de sécurité correctement du fait que le service a été arrêté.  

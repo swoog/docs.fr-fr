@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a5a8d4d0d41efb7a255080994c8e18302d302447
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321690"
 ---
 # <a name="workflow-security"></a>Sécurité de workflow
 Windows Workflow Foundation (WF) est intégré à plusieurs technologies différentes, telles que Microsoft SQL Server et Windows Communication Foundation (WCF). L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.
 
 ## <a name="persistence-security-concerns"></a>Problèmes de sécurité de la persistance
 
-1.  Les flux de travail qui utilisent une activité <xref:System.Activities.Statements.Delay> et la persistance doivent être réactivés par un service. Windows AppFabric utilise le service de gestion de flux de travail (WMS) pour réactiver les flux de travail dont les minuteurs ont expiré. WMS crée un <xref:System.ServiceModel.WorkflowServiceHost> pour héberger le flux de travail réactivé. Si le service WMS est arrêté, les workflows persistants ne seront pas réactivés à l'expiration de leurs minuteurs.
+1. Les flux de travail qui utilisent une activité <xref:System.Activities.Statements.Delay> et la persistance doivent être réactivés par un service. Windows AppFabric utilise le service de gestion de flux de travail (WMS) pour réactiver les flux de travail dont les minuteurs ont expiré. WMS crée un <xref:System.ServiceModel.WorkflowServiceHost> pour héberger le flux de travail réactivé. Si le service WMS est arrêté, les workflows persistants ne seront pas réactivés à l'expiration de leurs minuteurs.
 
-2.  L'accès à l'instanciation durable doit être protégé contre les entités malveillantes externes au domaine d'application. En outre, les développeurs doivent veiller à ce qu'il soit impossible d'exécuter du code malveillant dans le même domaine d'application que celui du code d'instanciation durable.
+2. L'accès à l'instanciation durable doit être protégé contre les entités malveillantes externes au domaine d'application. En outre, les développeurs doivent veiller à ce qu'il soit impossible d'exécuter du code malveillant dans le même domaine d'application que celui du code d'instanciation durable.
 
-3.  L'instanciation durable ne doit pas être exécutée avec des autorisations élevées (administrateur).
+3. L'instanciation durable ne doit pas être exécutée avec des autorisations élevées (administrateur).
 
-4.  Les données traitées en dehors du domaine d'application doivent être protégées.
+4. Les données traitées en dehors du domaine d'application doivent être protégées.
 
-5.  Les applications qui requièrent l'isolation de sécurité ne doivent pas partager la même instance d'abstraction de schéma. De telles applications doivent utiliser des fournisseurs de magasins différents, ou enregistrer les fournisseurs configurés pour utiliser des instanciations différentes du magasin.
+5. Les applications qui requièrent l'isolation de sécurité ne doivent pas partager la même instance d'abstraction de schéma. De telles applications doivent utiliser des fournisseurs de magasins différents, ou enregistrer les fournisseurs configurés pour utiliser des instanciations différentes du magasin.
 
 ## <a name="sql-server-security-concerns"></a>Problèmes de sécurité SQL Server
 
@@ -47,12 +47,12 @@ Windows Workflow Foundation (WF) est intégré à plusieurs technologies différ
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
  Microsoft WF Security Pack CTP 1 est la première version community technology preview (CTP) d’un ensemble d’activités et de leur implémentation basée sur [Windows Workflow Foundation](index.md) dans [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) et [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF Security Pack CTP 1 contient les deux activités et leurs concepteurs qui expliquent comment vérifier facilement plusieurs scénarios liés à la sécurité en utilisant un workflow, notamment :
 
-1.  Emprunter l'identité d'un client dans le workflow
+1. Emprunter l'identité d'un client dans le workflow
 
-2.  Autorisation dans-le workflow, telle que PrincipalPermission et validation des revendications
+2. Autorisation dans-le workflow, telle que PrincipalPermission et validation des revendications
 
-3.  Messagerie authentifiée en utilisant les ClientCredentials spécifiés dans le workflow, tels que le nom d'utilisateur/mot de passe ou un jeton extrait d'un service d'émission de jeton de sécurité (STS)
+3. Messagerie authentifiée en utilisant les ClientCredentials spécifiés dans le workflow, tels que le nom d'utilisateur/mot de passe ou un jeton extrait d'un service d'émission de jeton de sécurité (STS)
 
-4.  Transfert d'un jeton de sécurité client vers un service principal (délégation basée sur les revendications) à l'aide de WS-Trust ActAs
+4. Transfert d'un jeton de sécurité client vers un service principal (délégation basée sur les revendications) à l'aide de WS-Trust ActAs
 
 Pour plus d’informations et pour télécharger WF Security Pack CTP, consultez : [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

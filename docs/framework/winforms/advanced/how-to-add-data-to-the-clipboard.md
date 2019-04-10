@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325681"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Procédure : ajouter des données au Presse-papiers
 Le <xref:System.Windows.Forms.Clipboard> classe fournit des méthodes que vous pouvez utiliser pour interagir avec la fonctionnalité de Presse-papiers du système d’exploitation Windows. De nombreuses applications utilisent le Presse-papiers comme référentiel temporaire pour les données. Par exemple, les traitements de texte utiliser le Presse-papiers lors des opérations de couper-coller. Le Presse-papiers est également utile pour transférer des données d’une application vers un autre.  
@@ -35,14 +35,14 @@ Le <xref:System.Windows.Forms.Clipboard> classe fournit des méthodes que vous p
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Pour ajouter des données dans le Presse-papiers dans un format commun unique  
   
-1.  Utilisez le <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.SetText%2A> (méthode). Ces méthodes sont disponibles uniquement dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Utilisez le <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.SetText%2A> (méthode). Ces méthodes sont disponibles uniquement dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Pour ajouter des données dans le Presse-papiers dans un format personnalisé  
   
-1.  Utilisez le <xref:System.Windows.Forms.Clipboard.SetData%2A> méthode avec un nom de format personnalisé. Cette méthode est uniquement disponible dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Utilisez le <xref:System.Windows.Forms.Clipboard.SetData%2A> méthode avec un nom de format personnalisé. Cette méthode est uniquement disponible dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      Vous pouvez également utiliser des noms de formats prédéfinis avec la <xref:System.Windows.Forms.Clipboard.SetData%2A> (méthode). Pour plus d'informations, consultez <xref:System.Windows.Forms.DataFormats>.  
   
@@ -53,7 +53,7 @@ Le <xref:System.Windows.Forms.Clipboard> classe fournit des méthodes que vous p
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Pour ajouter des données dans le Presse-papiers dans plusieurs formats  
   
-1.  Utilisez le <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> (méthode) et passez un <xref:System.Windows.Forms.DataObject> qui contient vos données. Vous devez utiliser cette méthode pour ajouter des données dans le Presse-papiers sur les versions antérieures à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Utilisez le <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> (méthode) et passez un <xref:System.Windows.Forms.DataObject> qui contient vos données. Vous devez utiliser cette méthode pour ajouter des données dans le Presse-papiers sur les versions antérieures à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

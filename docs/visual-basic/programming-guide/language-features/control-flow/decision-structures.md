@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318934"
 ---
 # <a name="decision-structures-visual-basic"></a>Structures de décision (Visual Basic)
 Visual Basic vous permet de tester des conditions et d’effectuer des opérations différentes en fonction des résultats de ce test. Vous pouvez tester une condition vraie ou fausse, pour différentes valeurs d’une expression ou plusieurs exceptions générées lorsque vous exécutez une série d’instructions.  
   
  L’illustration suivante montre une structure de décision qui teste une condition est true et effectue des actions différentes selon qu’il est true ou false.  
   
- ![Organigramme d’une instruction If... Then... Construction Else](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-En prenant des mesures différentes lorsqu’une condition est true et false  
+ ![Un diagramme de flux d’une instruction If... Then... Construction de l’autre.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If... Then... Construction Else  
  `If...Then...Else` constructions vous permettent de tester pour une ou plusieurs conditions et d’exécuter une ou plusieurs instructions selon chaque condition. Vous pouvez tester des conditions et prendre des mesures de plusieurs manières :  
@@ -52,4 +51,4 @@ En prenant des mesures différentes lorsqu’une condition est true et false
 - [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Autres structures de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Structures de contrôle imbriquées](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [If (opérateur)](../../../../visual-basic/language-reference/operators/if-operator.md)
+- [If, opérateur](../../../../visual-basic/language-reference/operators/if-operator.md)

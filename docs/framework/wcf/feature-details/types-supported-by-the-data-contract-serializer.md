@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072543"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Types pris en charge par le sérialiseur de contrat de données
 Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serialization.DataContractSerializer> en tant que son moteur de sérialisation par défaut pour convertir des données XML et reconvertir XML en données. <xref:System.Runtime.Serialization.DataContractSerializer> est conçu pour sérialiser des types de *contrat de données* . Toutefois, il prend en charge de nombreux autres types qui peuvent être considérés comme ayant un contrat de données implicite. Voici une liste complète des types qui peuvent être sérialisés :  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serializa
   
 -   Types marqués avec l'attribut <xref:System.SerializableAttribute> . De nombreux types inclus dans la bibliothèque de la classe de base du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] font partie de cette catégorie. <xref:System.Runtime.Serialization.DataContractSerializer> prend totalement en charge ce modèle de programmation de sérialisation, utilisé par .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, incluant la prise en charge de l'interface <xref:System.Runtime.Serialization.ISerializable> .  
   
--   Types qui représentent un XML brut ou types qui représentent les données relationnelles de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . <xref:System.Xml.XmlElement> et le tableau des types <xref:System.Xml.XmlNode> sont pris en charge en tant que solution de représentation directe de XML. En outre, les types qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable> sont pris en charge, y compris l'attribut <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> connexe et les types <xref:System.Xml.Linq.XDocument> et <xref:System.Xml.Linq.XElement> . L'attribut [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> et le type <xref:System.Data.DataSet> (ainsi que ses classes dérivées typées) implémentent tous l’interface <xref:System.Xml.Serialization.IXmlSerializable> et font par conséquent partie de cette catégorie. Pour plus d’informations, consultez [Types XML et ADO.NET dans les contrats de données](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Types qui représentent un XML brut ou types qui représentent les données relationnelles de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . <xref:System.Xml.XmlElement> et le tableau des types <xref:System.Xml.XmlNode> sont pris en charge en tant que solution de représentation directe de XML. En outre, les types qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable> sont pris en charge, y compris l'attribut <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> connexe et les types <xref:System.Xml.Linq.XDocument> et <xref:System.Xml.Linq.XElement> . Le [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> type et le <xref:System.Data.DataSet> type (ainsi que ses classes dérivées typées) implémentent tous le <xref:System.Xml.Serialization.IXmlSerializable> interface et par conséquent entrent dans cette catégorie. Pour plus d’informations, consultez [Types XML et ADO.NET dans les contrats de données](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Limitations d'utilisation de certains types en mode de confiance partielle  
  Voici une liste de limitations qui s'appliquent en cas d'utilisation de certains types dans les scénarios en mode de confiance partielle :  
@@ -68,6 +68,7 @@ Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serializa
 -   Le type <xref:System.DBNull> est traité d'une façon spéciale. C'est un type singleton et, sur la désérialisation, le désérialiseur respecte la contrainte singleton et pointe toutes les références `DBNull` à l'instance singleton. Parce que `DBNull` est un type sérialisable, il demande l'autorisation <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Types XML et ADO.NET dans les contrats de données](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
 - [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)

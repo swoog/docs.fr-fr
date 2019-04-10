@@ -2,12 +2,12 @@
 title: Programmation asynchrone avec Async et Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324719"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programmation asynchrone avec Async et Await (Visual Basic)
 Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone. Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.  
@@ -87,9 +87,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   Le type de retour est l'un des types suivants :  
   
-    -   <xref:System.Threading.Tasks.Task%601> si votre méthode a une instruction de retour dans laquelle l'opérande a le type TResult.  
+    -   <xref:System.Threading.Tasks.Task%601> Si votre méthode a une instruction return dans laquelle l’opérande a le type TResult.  
   
-    -   <xref:System.Threading.Tasks.Task> si votre méthode n'a aucune instruction de retour, ou si elle a une instruction de retour sans opérande.  
+    -   <xref:System.Threading.Tasks.Task> Si votre méthode n’a aucune instruction return ou une instruction de retournée sans opérande.  
   
     -   [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) si vous écrivez un gestionnaire d’événements async.  
   
@@ -104,34 +104,34 @@ Dim urlContents As String = Await client.GetStringAsync()
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Ce qui se produit dans une méthode Async  
  La chose la plus importante à comprendre en programmation asynchrone est le déplacement du flux de contrôle d'une méthode à l'autre. Le diagramme suivant vous guide à travers le processus.  
   
- ![Diagramme illustrant le suivi d’un programme async.](./media/index/navigation-trace-async-program.png)  
+ ![Diagramme illustrant le suivi d’un programme asynchrone.](./media/index/navigation-trace-async-program.png)  
   
  Les numéros du diagramme correspondent aux étapes suivantes.  
   
-1.  Un gestionnaire d'événements appelle et attend la méthode async `AccessTheWebAsync`.  
+1. Un gestionnaire d'événements appelle et attend la méthode async `AccessTheWebAsync`.  
   
-2.  `AccessTheWebAsync` crée une instance <xref:System.Net.Http.HttpClient> et appelle la méthode asynchrone <xref:System.Net.Http.HttpClient.GetStringAsync%2A> pour télécharger le contenu d'un site Web comme une chaîne.  
+2. `AccessTheWebAsync` Crée un <xref:System.Net.Http.HttpClient> instance et appelle le <xref:System.Net.Http.HttpClient.GetStringAsync%2A> méthode asynchrone pour télécharger le contenu d’un site Web sous forme de chaîne.  
   
-3.  Quelque chose se produit dans `GetStringAsync` et suspend sa progression. Elle peut être obligée d'attendre la fin d'un téléchargement sur un site Web ou de toute autre activité bloquante. Pour éviter de bloquer les ressources, `GetStringAsync` cède le contrôle à son appelant, `AccessTheWebAsync`.  
+3. Quelque chose se produit dans `GetStringAsync` et suspend sa progression. Elle peut être obligée d'attendre la fin d'un téléchargement sur un site Web ou de toute autre activité bloquante. Pour éviter de bloquer les ressources, `GetStringAsync` cède le contrôle à son appelant, `AccessTheWebAsync`.  
   
-     `GetStringAsync` retourne un <xref:System.Threading.Tasks.Task%601> où TResult est une chaîne et `AccessTheWebAsync` assigne la tâche à la variable `getStringTask`. La tâche représente le processus en cours de l'appel de `GetStringAsync`, avec l'engagement de produire une valeur de chaîne réelle lorsque le travail est terminé.  
+     `GetStringAsync` Retourne un <xref:System.Threading.Tasks.Task%601> où TResult est une chaîne, et `AccessTheWebAsync` affecte la tâche à la `getStringTask` variable. La tâche représente le processus en cours de l'appel de `GetStringAsync`, avec l'engagement de produire une valeur de chaîne réelle lorsque le travail est terminé.  
   
-4.  Étant donné que `getStringTask` n'a pas encore été attendu, `AccessTheWebAsync` peut continuer avec un autre travail qui ne dépend pas du résultat final issu de `GetStringAsync`. Cette opération est représentée par un appel à la méthode synchrone `DoIndependentWork`.  
+4. Étant donné que `getStringTask` n'a pas encore été attendu, `AccessTheWebAsync` peut continuer avec un autre travail qui ne dépend pas du résultat final issu de `GetStringAsync`. Cette opération est représentée par un appel à la méthode synchrone `DoIndependentWork`.  
   
-5.  `DoIndependentWork` est une méthode synchrone qui effectue son travail et retourne à son appelant.  
+5. `DoIndependentWork` est une méthode synchrone qui effectue son travail et retourne à son appelant.  
   
-6.  `AccessTheWebAsync` n'a plus de travail à exécuter sans un résultat de `getStringTask`. `AccessTheWebAsync` veut ensuite calculer et retourner la longueur de la chaîne téléchargée, mais la méthode ne peut pas calculer cette valeur avant d'avoir la chaîne.  
+6. `AccessTheWebAsync` n’a plus de travail qu’il peut effectuer sans un résultat à partir de `getStringTask`. `AccessTheWebAsync` veut ensuite calculer et retourner la longueur de la chaîne téléchargée, mais la méthode ne peut pas calculer cette valeur jusqu'à ce que la méthode a la chaîne.  
   
-     Par conséquent, `AccessTheWebAsync` utilise un opérateur await pour interrompre sa progression et pour céder le contrôle à la méthode ayant appelé `AccessTheWebAsync`. `AccessTheWebAsync`Retourne un `Task<int>` (`Task(Of Integer)` en Visual Basic) à l’appelant. La tâche représente la promesse de produire un résultat entier qui est la longueur de la chaîne téléchargée.  
+     Par conséquent, `AccessTheWebAsync` utilise un opérateur await pour interrompre sa progression et pour céder le contrôle à la méthode ayant appelé `AccessTheWebAsync`. `AccessTheWebAsync` Retourne un `Task<int>` (`Task(Of Integer)` en Visual Basic) à l’appelant. La tâche représente la promesse de produire un résultat entier qui est la longueur de la chaîne téléchargée.  
   
     > [!NOTE]
     >  Si `GetStringAsync` (et donc `getStringTask`) est terminé avant que `AccessTheWebAsync` ne l'attende, le contrôle reste dans `AccessTheWebAsync`. Le fait de suspendre, puis de retourner à `AccessTheWebAsync` ne sert à rien si le processus asynchrone appelé (`getStringTask`) s'est déjà effectué et si AccessTheWebSync n'a pas à attendre le résultat final.  
   
      Dans l'appelant (le gestionnaire d'événements dans cet exemple), le modèle de traitement continue. L'appelant peut effectuer d'autres tâches qui ne dépendent pas du résultat de `AccessTheWebAsync` avant d'attendre ce résultat, ou l'appelant peut attendre immédiatement.   Le gestionnaire d'événements attend `AccessTheWebAsync`, et `AccessTheWebAsync` attend `GetStringAsync`.  
   
-7.  `GetStringAsync` se termine et génère un résultat de chaîne. Le résultat de chaîne n'est pas retourné par l'appel de `GetStringAsync` de la façon à laquelle vous pourriez vous attendre. N’oubliez pas que la méthode a déjà retourné une tâche à l’étape 3. Au lieu de cela, la chaîne résultante est stockée dans la tâche qui représente l’achèvement de la méthode, `getStringTask`. L'opérateur await récupère le résultat de `getStringTask`. L'instruction d'assignation assigne le résultat récupéré à `urlContents`.  
+7. `GetStringAsync` se termine et génère un résultat de chaîne. Le résultat de chaîne n'est pas retourné par l'appel de `GetStringAsync` de la façon à laquelle vous pourriez vous attendre. N’oubliez pas que la méthode a déjà retourné une tâche à l’étape 3. Au lieu de cela, la chaîne résultante est stockée dans la tâche qui représente l’achèvement de la méthode, `getStringTask`. L'opérateur await récupère le résultat de `getStringTask`. L'instruction d'assignation assigne le résultat récupéré à `urlContents`.  
   
-8.  Lorsque `AccessTheWebAsync` a le résultat de chaîne, la méthode peut calculer la longueur de la chaîne. Puis, le travail d'`AccessTheWebAsync` est également interrompu, et le gestionnaire d'événements en attente peut reprendre. Dans l'exemple complet à la fin de la rubrique, vous pouvez vérifier que le gestionnaire d'événements récupère et imprime la valeur du résultat de la longueur.  
+8. Lorsque `AccessTheWebAsync` a le résultat de chaîne, la méthode peut calculer la longueur de la chaîne. Puis, le travail d'`AccessTheWebAsync` est également interrompu, et le gestionnaire d'événements en attente peut reprendre. Dans l'exemple complet à la fin de la rubrique, vous pouvez vérifier que le gestionnaire d'événements récupère et imprime la valeur du résultat de la longueur.  
   
  Si vous débutez en programmation asynchrone, prenez une minute pour déterminer la différence entre le comportement synchrone et le comportement asynchrone. Une méthode synchrone retourne une fois son travail terminé (étape 5), mais une méthode asynchrone retourne une valeur de tâche lorsque son travail est interrompu (étapes 3 et 6). Lorsque la méthode async termine finalement son travail, la tâche est marquée comme terminée et le résultat, le cas échéant, est stocké dans la tâche.  
   
@@ -164,7 +164,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
--   [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)  
+-   [Await, opérateur](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
 ## <a name="BKMK_ReturnTypesandParameters"></a> Paramètres et types de retour  
  Dans la programmation .NET Framework, une méthode async retourne généralement un <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Dans une méthode async, un opérateur `Await` est appliqué à une tâche retournée à partir d’un appel à une autre méthode async.  
@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- Pour plus d’informations et un exemple, consultez [appeler les API asynchrones en C# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
+ Pour plus d’informations et un exemple, consultez [appeler les API asynchrones en c# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).  
   
 ## <a name="BKMK_NamingConvention"></a> Convention d’affectation de noms  
  Par convention, on ajoute « Async » aux noms des méthodes qui possèdent un modificateur `Async`.  
@@ -236,16 +236,16 @@ Await Task_MethodAsync()
   
 |Titre|Description|Exemple|  
 |-----------|-----------------|------------|  
-|[Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Montre comment convertir une solution WPF synchrone en une solution WPF asynchrone. L’application télécharge une série de sites web.|[Exemple Async : Accès à la procédure web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
-|[Guide pratique pour Étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Ajoute <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> à la procédure précédente. L'utilisation de `WhenAll` démarre tous les téléchargements en même temps.||  
-|[Guide pratique pour Effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Explique comment démarrer plusieurs tâches en même temps.|[Exemple Async : Effectuer plusieurs requêtes web en parallèle](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
+|[Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Montre comment convertir une solution WPF synchrone en une solution WPF asynchrone. L’application télécharge une série de sites web.|[Exemple Async : Accès à la procédure Web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
+|[Procédure : Étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Ajoute <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> à la procédure précédente. L'utilisation de `WhenAll` démarre tous les téléchargements en même temps.||  
+|[Procédure : Effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Explique comment démarrer plusieurs tâches en même temps.|[Exemple Async : Effectuer plusieurs requêtes Web en parallèle](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
 |[Types de retour Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|Décrit les types que les méthodes async peuvent retourner et explique quand chaque type est approprié.||  
 |[Flux de contrôle dans les programmes Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|Effectue le suivi en détail du flux de contrôle via une série d'expressions await dans un programme asynchrone.|[Exemple Async : Flux de contrôle dans les programmes Async](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
-|[Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Indique comment ajouter les fonctionnalités suivantes à votre solution async :<br /><br /> -   [Annuler une tâche Asynch ou une liste de tâches (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Annuler des tâches Asynch après une période spécifique (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Annuler les tâches Asynch restantes lorsque l’une d’elles est terminée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Exemple Async : Réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
+|[Réglage de votre Application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Indique comment ajouter les fonctionnalités suivantes à votre solution async :<br /><br /> -   [Annuler une tâche Asynch ou une liste de tâches (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Annuler des tâches Asynch après une période spécifique (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Annuler les tâches Asynch restantes lorsque l’une d’elles est terminée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Exemple Async : Réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
 |[Gérer la réentrance dans Async Apps (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|Montre comment traiter les cas où une opération asynchrone active redémarre pendant son exécution.||  
-|[WhenAny : transition entre .NET Framework et Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.Tasks.Task.WhenAny%2A> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : transition entre .NET et Windows Runtime (AsTask et WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
-|Annulation Async : transition entre .NET Framework et Windows Runtime|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.CancellationTokenSource> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : transition entre .NET et Windows Runtime (AsTask & Annulation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
-|[Utiliser async pour l’accès aux fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Répertorie et explique les avantages de l'utilisation d'async et d'await pour accéder aux fichiers.||  
+|[WhenAny : transition entre .NET Framework et Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.Tasks.Task.WhenAny%2A> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : Combler l’écart entre .NET et Windows Runtime (AsTask et WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
+|Annulation Async : transition entre .NET Framework et Windows Runtime|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.CancellationTokenSource> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : Combler l’écart entre .NET et Windows Runtime (AsTask & annulation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
+|[Utilisation d’async pour l’accès aux fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Répertorie et explique les avantages de l'utilisation d'async et d'await pour accéder aux fichiers.||  
 |[Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Décrit un nouveau modèle pour le comportement asynchrone dans le .NET Framework. Le modèle est basé sur les types <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601>.||  
 |[Vidéos Async sur Channel 9](https://channel9.msdn.com/search?term=async+&type=All)|Fournit des liens vers diverses vidéos sur la programmation asynchrone.||  
   
@@ -315,5 +315,5 @@ End Class
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await, opérateur](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)

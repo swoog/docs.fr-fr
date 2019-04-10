@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325512"
 ---
 # <a name="drawing-objects-overview"></a>Vue d'ensemble des objets Drawing
 Cette rubrique présente <xref:System.Windows.Media.Drawing> objets et explique comment les utiliser pour dessiner efficacement des formes, bitmaps, texte et média. Utilisez <xref:System.Windows.Media.Drawing> objets lorsque vous créez des images clipart, dessinez avec un <xref:System.Windows.Media.DrawingBrush>, ou utilisez <xref:System.Windows.Media.Visual> objets.  
@@ -94,27 +94,27 @@ ImageDrawing 100 par 100
   
  Pour lire un média sans créer votre propre <xref:System.Windows.Media.MediaTimeline>, vous procédez comme suit.  
   
-1.  Créez un objet <xref:System.Windows.Media.MediaPlayer>.  
+1. Créez un objet <xref:System.Windows.Media.MediaPlayer>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  Utilisez le <xref:System.Windows.Media.MediaPlayer.Open%2A> méthode pour charger le fichier multimédia.  
+2. Utilisez le <xref:System.Windows.Media.MediaPlayer.Open%2A> méthode pour charger le fichier multimédia.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  Créer un <xref:System.Windows.Media.VideoDrawing>.  
+3. Créer un <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  Spécifiez la taille et l’emplacement où dessiner le média en définissant le <xref:System.Windows.Media.VideoDrawing.Rect%2A> propriété de la <xref:System.Windows.Media.VideoDrawing>.  
+4. Spécifiez la taille et l’emplacement où dessiner le média en définissant le <xref:System.Windows.Media.VideoDrawing.Rect%2A> propriété de la <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  Définir le <xref:System.Windows.Media.VideoDrawing.Player%2A> propriété de la <xref:System.Windows.Media.VideoDrawing> avec la <xref:System.Windows.Media.MediaPlayer> que vous avez créé.  
+5. Définir le <xref:System.Windows.Media.VideoDrawing.Player%2A> propriété de la <xref:System.Windows.Media.VideoDrawing> avec la <xref:System.Windows.Media.MediaPlayer> que vous avez créé.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  Utilisez le <xref:System.Windows.Media.MediaPlayer.Play%2A> méthode de la <xref:System.Windows.Media.MediaPlayer> pour démarrer la lecture du média.  
+6. Utilisez le <xref:System.Windows.Media.MediaPlayer.Play%2A> méthode de la <xref:System.Windows.Media.MediaPlayer> pour démarrer la lecture du média.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -124,19 +124,19 @@ ImageDrawing 100 par 100
   
  Pour optimiser le contrôle du minutage du média, utilisez un <xref:System.Windows.Media.MediaTimeline> avec la <xref:System.Windows.Media.MediaPlayer> et <xref:System.Windows.Media.VideoDrawing> objets. Le <xref:System.Windows.Media.MediaTimeline> vous permet de spécifier si la vidéo doit se répéter. Pour utiliser un <xref:System.Windows.Media.MediaTimeline> avec un <xref:System.Windows.Media.VideoDrawing>, vous procédez comme suit :  
   
-1.  Déclarez le <xref:System.Windows.Media.MediaTimeline> et définissez ses comportements de minutage.  
+1. Déclarez le <xref:System.Windows.Media.MediaTimeline> et définissez ses comportements de minutage.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  Créer un <xref:System.Windows.Media.MediaClock> à partir de la <xref:System.Windows.Media.MediaTimeline>.  
+2. Créer un <xref:System.Windows.Media.MediaClock> à partir de la <xref:System.Windows.Media.MediaTimeline>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  Créer un <xref:System.Windows.Media.MediaPlayer> et utiliser le <xref:System.Windows.Media.MediaClock> pour définir son <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriété.  
+3. Créer un <xref:System.Windows.Media.MediaPlayer> et utiliser le <xref:System.Windows.Media.MediaClock> pour définir son <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriété.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  Créer un <xref:System.Windows.Media.VideoDrawing> et affecter le <xref:System.Windows.Media.MediaPlayer> à la <xref:System.Windows.Media.VideoDrawing.Player%2A> propriété de la <xref:System.Windows.Media.VideoDrawing>.  
+4. Créer un <xref:System.Windows.Media.VideoDrawing> et affecter le <xref:System.Windows.Media.MediaPlayer> à la <xref:System.Windows.Media.VideoDrawing.Player%2A> propriété de la <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   

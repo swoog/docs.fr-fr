@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Store les clés asymétriques dans un conteneur de clé'
+title: 'Procédure : stocker des clés asymétriques dans un conteneur de clé'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326188"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procédure : Store les clés asymétriques dans un conteneur de clé
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procédure : stocker des clés asymétriques dans un conteneur de clé
 Les clés privées asymétriques ne doivent jamais être stockées textuellement ou en texte brut sur l'ordinateur local. Si vous avez besoin de stocker une clé privée, vous devez utiliser un conteneur de clé. Pour plus d’informations sur les conteneurs de clé, consultez [Présentation des conteneurs de clé RSA ordinateur et utilisateur](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Pour créer une clé asymétrique et l'enregistrer dans un conteneur de clés  
   
-1.  Créer une nouvelle instance d’un <xref:System.Security.Cryptography.CspParameters> classe et passez le nom que vous souhaitez donner au conteneur de clé dans le <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> champ.  
+1. Créer une nouvelle instance d’un <xref:System.Security.Cryptography.CspParameters> classe et passez le nom que vous souhaitez donner au conteneur de clé dans le <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> champ.  
   
-2.  Créer une nouvelle instance d’une classe qui dérive de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (généralement **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) et passer l’élément précédemment créé  **CspParameters** objet à son constructeur.  
+2. Créer une nouvelle instance d’une classe qui dérive de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (généralement **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) et passer l’élément précédemment créé  **CspParameters** objet à son constructeur.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Pour supprimer la clé dans un conteneur de clés  
   
-1.  Créez une nouvelle instance d’une classe **CspParameters** et passez le nom que vous souhaitez donner au conteneur de clé dans le champ **CspParameters.KeyContainerName**.  
+1. Créez une nouvelle instance d’une classe **CspParameters** et passez le nom que vous souhaitez donner au conteneur de clé dans le champ **CspParameters.KeyContainerName**.  
   
-2.  Créez une nouvelle instance d’une classe qui dérive de la classe **AsymmetricAlgorithm** (habituellement **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) et passez l’objet **CspParameters** créé précédemment à son constructeur.  
+2. Créez une nouvelle instance d’une classe qui dérive de la classe **AsymmetricAlgorithm** (habituellement **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) et passez l’objet **CspParameters** créé précédemment à son constructeur.  
   
-3.  Affectez à la propriété **PersistKeyInCSP** de la classe qui dérive d’**AsymmetricAlgorithm** la valeur **false** (**False** dans Visual Basic).  
+3. Affectez à la propriété **PersistKeyInCSP** de la classe qui dérive d’**AsymmetricAlgorithm** la valeur **false** (**False** dans Visual Basic).  
   
-4.  Appelez la méthode **Clear** de la classe qui dérive d’**AsymmetricAlgorithm**. Cette méthode libère toutes les ressources de la classe et efface le conteneur de clés.  
+4. Appelez la méthode **Clear** de la classe qui dérive d’**AsymmetricAlgorithm**. Cette méthode libère toutes les ressources de la classe et efface le conteneur de clés.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre comment créer une clé asymétrique, l'enregistrer dans un conteneur de clés, récupérer la clé ultérieurement et supprimer la clé du conteneur.  
@@ -228,4 +228,4 @@ Key deleted.
 - [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)
 - [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [services de chiffrement](../../../docs/standard/security/cryptographic-services.md)

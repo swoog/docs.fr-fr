@@ -2,12 +2,12 @@
 title: Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324160"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
 Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit de nombreuses nouvelles fonctionnalités, notamment plusieurs améliorations à l’expérience de Concepteur de flux de travail. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.
@@ -124,13 +124,13 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
 ### <a name="state-machine-workflows"></a>Workflows de machine à états  
  Workflows de machine à états ont été introduits dans le cadre du .NET Framework 4.0.1 dans le [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Cette mise à jour inclut plusieurs nouvelles classes et activités qui permettent aux développeurs de créer des workflow de machine à états. Ces classes et activités ont été mises à jour pour le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Les mises à jour comprennent :  
   
-1.  Possibilité de définir des points d'arrêt sur des états  
+1. Possibilité de définir des points d'arrêt sur des états  
   
-2.  Possibilité de copier et coller des transitions dans le concepteur de workflow  
+2. Possibilité de copier et coller des transitions dans le concepteur de workflow  
   
-3.  Prise en charge du concepteur pour la création de transition de déclencheur partagée  
+3. Prise en charge du concepteur pour la création de transition de déclencheur partagée  
   
-4.  Les activités utilisées pour créer des workflows Machine à états, notamment : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> et <xref:System.Activities.Statements.Transition>  
+4. Activités utilisées pour créer des workflows Machine à états, y compris : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, et <xref:System.Activities.Statements.Transition>  
   
  La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md).  
   

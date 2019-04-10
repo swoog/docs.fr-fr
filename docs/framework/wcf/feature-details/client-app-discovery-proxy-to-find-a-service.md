@@ -2,32 +2,32 @@
 title: 'Procédure : implémenter une application cliente qui utilise le proxy de détection pour rechercher un service'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320994"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procédure : implémenter une application cliente qui utilise le proxy de détection pour rechercher un service
 Cette rubrique est la troisième d'une série de trois qui expliquent comment implémenter un proxy de découverte. Dans la rubrique précédente, [Comment : Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), vous avez implémenté un service WCF qui s’inscrit lui-même auprès du proxy de découverte. Dans cette rubrique, vous créez un client WCF qui utilise le proxy de découverte pour trouver le service WCF.  
   
 ### <a name="implement-the-client"></a>Implémenter le client  
   
-1.  Ajoutez à la solution `DiscoveryProxyExample` un nouveau projet d'application console nommé `Client`.  
+1. Ajoutez à la solution `DiscoveryProxyExample` un nouveau projet d'application console nommé `Client`.  
   
-2.  Ajoutez des références aux assemblys suivants :  
+2. Ajoutez des références aux assemblys suivants :  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  Ajoutez au projet le fichier GeneratedClient.cs qui se trouve en bas de cette rubrique.  
+3. Ajoutez au projet le fichier GeneratedClient.cs qui se trouve en bas de cette rubrique.  
   
     > [!NOTE]
     >  Ce fichier est habituellement généré à l'aide d'un outil tel que Svcutil.exe. Il est fourni dans cette rubrique pour simplifier la tâche.  
   
-4.  Ouvrez le fichier Program.cs et ajoutez la méthode suivante. Cette méthode prend une adresse de point de terminaison et l'utilise pour initialiser le client du service (proxy).  
+4. Ouvrez le fichier Program.cs et ajoutez la méthode suivante. Cette méthode prend une adresse de point de terminaison et l'utilise pour initialiser le client du service (proxy).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Cette rubrique est la troisième d'une série de trois qui expliquent comment im
     }  
     ```  
   
-5.  Ajoutez le code suivant à la méthode `Main` .  
+5. Ajoutez le code suivant à la méthode `Main` .  
   
     ```csharp  
     public static void Main()  
