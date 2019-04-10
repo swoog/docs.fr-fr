@@ -5,21 +5,21 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 03a10e95362b1d49e4929c07ab6193f53898d34f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 95e613cb280813cd75d887d3cf147d7c897bc2e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142855"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318887"
 ---
-# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="16d6d-102">Procédure : modifier la valeur d’un paramètre entre des sessions d’application</span><span class="sxs-lookup"><span data-stu-id="16d6d-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
-<span data-ttu-id="16d6d-103">Dans certains cas, vous souhaiterez modifier la valeur d’un paramètre entre des sessions d’application une fois que l’application a été compilée et déployée.</span><span class="sxs-lookup"><span data-stu-id="16d6d-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="16d6d-104">Par exemple, vous souhaiterez peut-être modifier une chaîne de connexion pour pointer vers l’emplacement de la base de données correcte.</span><span class="sxs-lookup"><span data-stu-id="16d6d-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="16d6d-105">Dans la mesure où les outils de conception ne sont pas disponibles une fois que l’application a été compilée et déployée, vous devez modifier la valeur du paramètre manuellement dans le fichier.</span><span class="sxs-lookup"><span data-stu-id="16d6d-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
+# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="bdf5c-102">Procédure : modifier la valeur d’un paramètre entre des sessions d’application</span><span class="sxs-lookup"><span data-stu-id="bdf5c-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
+<span data-ttu-id="bdf5c-103">Dans certains cas, vous souhaiterez modifier la valeur d’un paramètre entre des sessions d’application une fois que l’application a été compilée et déployée.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="bdf5c-104">Par exemple, vous souhaiterez peut-être modifier une chaîne de connexion pour pointer vers l’emplacement de la base de données correcte.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="bdf5c-105">Dans la mesure où les outils de conception ne sont pas disponibles une fois que l’application a été compilée et déployée, vous devez modifier la valeur du paramètre manuellement dans le fichier.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
   
-### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="16d6d-106">Pour modifier la valeur d’un paramètre entre des Sessions d’Application</span><span class="sxs-lookup"><span data-stu-id="16d6d-106">To Change the Value of a Setting Between Application Sessions</span></span>  
+### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="bdf5c-106">Pour modifier la valeur d’un paramètre entre des Sessions d’Application</span><span class="sxs-lookup"><span data-stu-id="bdf5c-106">To Change the Value of a Setting Between Application Sessions</span></span>  
   
-1.  <span data-ttu-id="16d6d-107">À l’aide de Microsoft Notepad ou un autre texte ou éditeur XML, ouvrez le fichier .config associé à votre application.</span><span class="sxs-lookup"><span data-stu-id="16d6d-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
+1. <span data-ttu-id="bdf5c-107">À l’aide de Microsoft Notepad ou un autre texte ou éditeur XML, ouvrez le fichier .config associé à votre application.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
   
-2.  <span data-ttu-id="16d6d-108">Recherchez l’entrée pour le paramètre que vous souhaitez modifier.</span><span class="sxs-lookup"><span data-stu-id="16d6d-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="16d6d-109">Il doit ressembler à l’exemple présenté ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="16d6d-109">It should look similar to the example presented below.</span></span>  
+2. <span data-ttu-id="bdf5c-108">Recherchez l’entrée pour le paramètre que vous souhaitez modifier.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="bdf5c-109">Il doit ressembler à l’exemple présenté ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-109">It should look similar to the example presented below.</span></span>  
   
     ```xml  
     <setting name="Setting1" serializeAs="String" >  
@@ -27,9 +27,9 @@ ms.locfileid: "59142855"
     </setting>  
     ```  
   
-3.  <span data-ttu-id="16d6d-110">Tapez une nouvelle valeur pour votre paramètre et enregistrez le fichier.</span><span class="sxs-lookup"><span data-stu-id="16d6d-110">Type a new value for your setting and save the file.</span></span>  
+3. <span data-ttu-id="bdf5c-110">Tapez une nouvelle valeur pour votre paramètre et enregistrez le fichier.</span><span class="sxs-lookup"><span data-stu-id="bdf5c-110">Type a new value for your setting and save the file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16d6d-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="16d6d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdf5c-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bdf5c-111">See also</span></span>
 
-- [<span data-ttu-id="16d6d-112">Utilisation de paramètres d'application et de paramètres utilisateur</span><span class="sxs-lookup"><span data-stu-id="16d6d-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
-- [<span data-ttu-id="16d6d-113">Vue d'ensemble des paramètres d'application</span><span class="sxs-lookup"><span data-stu-id="16d6d-113">Application Settings Overview</span></span>](application-settings-overview.md)
+- [<span data-ttu-id="bdf5c-112">Utilisation de paramètres d'application et de paramètres utilisateur</span><span class="sxs-lookup"><span data-stu-id="bdf5c-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="bdf5c-113">Vue d'ensemble des paramètres d'application</span><span class="sxs-lookup"><span data-stu-id="bdf5c-113">Application Settings Overview</span></span>](application-settings-overview.md)
