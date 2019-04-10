@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25fa942d329ebcafb48585fb68a13f36743f18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b203c9414a500116f2f3622fb7fb4a71afb9ce2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224973"
 ---
-# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="8f2c7-102">ITypeNameBuilder::AddArray, méthode</span><span class="sxs-lookup"><span data-stu-id="8f2c7-102">ITypeNameBuilder::AddArray Method</span></span>
-<span data-ttu-id="8f2c7-103">Cette m&#233;thode prend en charge l'infrastructure .NET Framework et n'est pas destin&#233;e &#224; &#234;tre utilis&#233;e directement &#224; partir de votre code.</span><span class="sxs-lookup"><span data-stu-id="8f2c7-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="422cf-102">ITypeNameBuilder::AddArray, méthode</span><span class="sxs-lookup"><span data-stu-id="422cf-102">ITypeNameBuilder::AddArray Method</span></span>
+<span data-ttu-id="422cf-103">Cette m&#233;thode prend en charge l'infrastructure .NET Framework et n'est pas destin&#233;e &#224; &#234;tre utilis&#233;e directement &#224; partir de votre code.</span><span class="sxs-lookup"><span data-stu-id="422cf-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f2c7-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8f2c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="422cf-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="422cf-104">Syntax</span></span>  
   
 ```  
 HRESULT AddArray (  
@@ -35,14 +35,15 @@ HRESULT AddArray (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8f2c7-105">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8f2c7-105">Requirements</span></span>  
- <span data-ttu-id="8f2c7-106">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f2c7-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="422cf-105">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="422cf-105">Requirements</span></span>  
+ <span data-ttu-id="422cf-106">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="422cf-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f2c7-107">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8f2c7-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="422cf-107">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="422cf-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8f2c7-108">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8f2c7-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="422cf-108">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="422cf-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8f2c7-109">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f2c7-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="422cf-109">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="422cf-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8f2c7-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8f2c7-110">See also</span></span>
-- [<span data-ttu-id="8f2c7-111">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="8f2c7-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="422cf-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="422cf-110">See also</span></span>
+
+- [<span data-ttu-id="422cf-111">Interfaces d'hébergement</span><span class="sxs-lookup"><span data-stu-id="422cf-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

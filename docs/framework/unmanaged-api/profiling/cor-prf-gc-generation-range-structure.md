@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646c4e37a7fab503a26557f9fdfc926b1186b17b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216702"
 ---
-# <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="82c37-102">COR_PRF_GC_GENERATION_RANGE, structure</span><span class="sxs-lookup"><span data-stu-id="82c37-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
-<span data-ttu-id="82c37-103">Décrit une plage (un bloc) de mémoire qui va faire l’objet d’un garbage collection.</span><span class="sxs-lookup"><span data-stu-id="82c37-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
+# <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="1a6a3-102">COR_PRF_GC_GENERATION_RANGE, structure</span><span class="sxs-lookup"><span data-stu-id="1a6a3-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
+<span data-ttu-id="1a6a3-103">Décrit une plage (un bloc) de mémoire qui va faire l'objet d'une récupération de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1a6a3-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82c37-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="82c37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a6a3-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1a6a3-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_PRF_GC_GENERATION_RANGE {  
@@ -37,26 +37,27 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 } COR_PRF_GC_GENERATION_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="82c37-105">Membres</span><span class="sxs-lookup"><span data-stu-id="82c37-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1a6a3-105">Membres</span><span class="sxs-lookup"><span data-stu-id="1a6a3-105">Members</span></span>  
   
-|<span data-ttu-id="82c37-106">Membre</span><span class="sxs-lookup"><span data-stu-id="82c37-106">Member</span></span>|<span data-ttu-id="82c37-107">Description</span><span class="sxs-lookup"><span data-stu-id="82c37-107">Description</span></span>|  
+|<span data-ttu-id="1a6a3-106">Membre</span><span class="sxs-lookup"><span data-stu-id="1a6a3-106">Member</span></span>|<span data-ttu-id="1a6a3-107">Description</span><span class="sxs-lookup"><span data-stu-id="1a6a3-107">Description</span></span>|  
 |------------|-----------------|  
-|`generation`|<span data-ttu-id="82c37-108">Une valeur de la [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) appartient d’énumération qui spécifie la génération à laquelle le bloc de mémoire.</span><span class="sxs-lookup"><span data-stu-id="82c37-108">A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.</span></span>|  
-|`rangeStart`|<span data-ttu-id="82c37-109">L’ID d’un objet qui spécifie l’emplacement de départ du bloc de mémoire.</span><span class="sxs-lookup"><span data-stu-id="82c37-109">The ID of an object that specifies the starting location of the block of memory.</span></span>|  
-|`rangeLength`|<span data-ttu-id="82c37-110">Pointeur vers un entier qui spécifie la taille de la partie utilisée du bloc de mémoire (autrement dit, la quantité de mémoire utilisée dans le bloc).</span><span class="sxs-lookup"><span data-stu-id="82c37-110">A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).</span></span>|  
-|`rangeLengthReserved`|<span data-ttu-id="82c37-111">Pointeur vers un entier qui spécifie la taille du bloc de mémoire (autrement dit, la quantité de mémoire réservée pour le bloc).</span><span class="sxs-lookup"><span data-stu-id="82c37-111">A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).</span></span>|  
+|`generation`|<span data-ttu-id="1a6a3-108">Une valeur de la [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) appartient d’énumération qui spécifie la génération à laquelle le bloc de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1a6a3-108">A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.</span></span>|  
+|`rangeStart`|<span data-ttu-id="1a6a3-109">L’ID d’un objet qui spécifie l’emplacement de départ du bloc de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1a6a3-109">The ID of an object that specifies the starting location of the block of memory.</span></span>|  
+|`rangeLength`|<span data-ttu-id="1a6a3-110">Pointeur vers un entier qui spécifie la taille de la partie utilisée du bloc de mémoire (autrement dit, la quantité de mémoire utilisée dans le bloc).</span><span class="sxs-lookup"><span data-stu-id="1a6a3-110">A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).</span></span>|  
+|`rangeLengthReserved`|<span data-ttu-id="1a6a3-111">Pointeur vers un entier qui spécifie la taille du bloc de mémoire (autrement dit, la quantité de mémoire réservée pour le bloc).</span><span class="sxs-lookup"><span data-stu-id="1a6a3-111">A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="82c37-112">Notes</span><span class="sxs-lookup"><span data-stu-id="82c37-112">Remarks</span></span>  
- <span data-ttu-id="82c37-113">Le `rangeLength` valeur est garantie exacte uniquement si [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) ou [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), tous deux utilisent le `COR_PRF_GC_GENERATION_RANGE` structure, est appelée à partir de la [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) ou [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="82c37-113">The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a6a3-112">Notes</span><span class="sxs-lookup"><span data-stu-id="1a6a3-112">Remarks</span></span>  
+ <span data-ttu-id="1a6a3-113">Le `rangeLength` valeur est garantie exacte uniquement si [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) ou [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), tous deux utilisent le `COR_PRF_GC_GENERATION_RANGE` structure, est appelée à partir de la [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) ou [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="1a6a3-113">The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82c37-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="82c37-114">Requirements</span></span>  
- <span data-ttu-id="82c37-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82c37-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a6a3-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1a6a3-114">Requirements</span></span>  
+ <span data-ttu-id="1a6a3-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a6a3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82c37-116">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="82c37-116">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="1a6a3-116">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="1a6a3-116">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="82c37-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82c37-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1a6a3-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1a6a3-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="82c37-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82c37-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1a6a3-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="1a6a3-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="82c37-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="82c37-119">See also</span></span>
-- [<span data-ttu-id="82c37-120">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="82c37-120">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="1a6a3-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1a6a3-119">See also</span></span>
+
+- [<span data-ttu-id="1a6a3-120">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="1a6a3-120">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

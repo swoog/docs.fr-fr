@@ -16,37 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75dc379baf8d92b9b27bdb58ccab930c2d4f91e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213635"
 ---
-# <a name="icordebugprocess3-interface"></a><span data-ttu-id="2b346-102">ICorDebugProcess3, interface</span><span class="sxs-lookup"><span data-stu-id="2b346-102">ICorDebugProcess3 Interface</span></span>
-<span data-ttu-id="2b346-103">Contrôle les notifications de débogueur personnalisées.</span><span class="sxs-lookup"><span data-stu-id="2b346-103">Controls custom debugger notifications.</span></span>  
+# <a name="icordebugprocess3-interface"></a><span data-ttu-id="b608e-102">ICorDebugProcess3, interface</span><span class="sxs-lookup"><span data-stu-id="b608e-102">ICorDebugProcess3 Interface</span></span>
+<span data-ttu-id="b608e-103">Contrôle les notifications de débogueur personnalisées.</span><span class="sxs-lookup"><span data-stu-id="b608e-103">Controls custom debugger notifications.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2b346-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="2b346-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b608e-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="b608e-104">Methods</span></span>  
   
-|<span data-ttu-id="2b346-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="2b346-105">Method</span></span>|<span data-ttu-id="2b346-106">Description</span><span class="sxs-lookup"><span data-stu-id="2b346-106">Description</span></span>|  
+|<span data-ttu-id="b608e-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="b608e-105">Method</span></span>|<span data-ttu-id="b608e-106">Description</span><span class="sxs-lookup"><span data-stu-id="b608e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2b346-107">SetEnableCustomNotification, méthode</span><span class="sxs-lookup"><span data-stu-id="2b346-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="2b346-108">Active et désactive les notifications de débogueur personnalisées du type spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b346-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
+|[<span data-ttu-id="b608e-107">SetEnableCustomNotification, méthode</span><span class="sxs-lookup"><span data-stu-id="b608e-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="b608e-108">Active et désactive les notifications de débogueur personnalisées du type spécifié.</span><span class="sxs-lookup"><span data-stu-id="b608e-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b346-109">Notes</span><span class="sxs-lookup"><span data-stu-id="2b346-109">Remarks</span></span>  
- <span data-ttu-id="2b346-110">Cette interface étend logiquement les interfaces ICorDebugProcess et ICorDebugProcess2.</span><span class="sxs-lookup"><span data-stu-id="2b346-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b608e-109">Notes</span><span class="sxs-lookup"><span data-stu-id="b608e-109">Remarks</span></span>  
+ <span data-ttu-id="b608e-110">Cette interface étend logiquement les interfaces ICorDebugProcess et ICorDebugProcess2.</span><span class="sxs-lookup"><span data-stu-id="b608e-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2b346-111">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="2b346-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b608e-111">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="b608e-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b346-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="2b346-112">Requirements</span></span>  
- <span data-ttu-id="2b346-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b346-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b608e-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b608e-112">Requirements</span></span>  
+ <span data-ttu-id="b608e-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b608e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b346-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b346-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b608e-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b608e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2b346-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b346-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b608e-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b608e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2b346-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b346-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="b608e-116">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b608e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2b346-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2b346-117">See also</span></span>
-- [<span data-ttu-id="2b346-118">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="2b346-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="2b346-119">Débogage</span><span class="sxs-lookup"><span data-stu-id="2b346-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="b608e-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b608e-117">See also</span></span>
+
+- [<span data-ttu-id="b608e-118">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b608e-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b608e-119">Débogage</span><span class="sxs-lookup"><span data-stu-id="b608e-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

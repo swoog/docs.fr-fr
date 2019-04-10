@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97aded59f880412a6a26e7e3d664c50ff1c2f103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211944"
 ---
-# <a name="malloctype-enumeration"></a><span data-ttu-id="d50eb-102">MALLOC_TYPE (énumération)</span><span class="sxs-lookup"><span data-stu-id="d50eb-102">MALLOC_TYPE Enumeration</span></span>
-<span data-ttu-id="d50eb-103">Contient des valeurs qui spécifient les caractéristiques de la mémoire est allouée.</span><span class="sxs-lookup"><span data-stu-id="d50eb-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
+# <a name="malloctype-enumeration"></a><span data-ttu-id="87068-102">MALLOC_TYPE (énumération)</span><span class="sxs-lookup"><span data-stu-id="87068-102">MALLOC_TYPE Enumeration</span></span>
+<span data-ttu-id="87068-103">Contient des valeurs qui spécifient les caractéristiques de la mémoire est allouée.</span><span class="sxs-lookup"><span data-stu-id="87068-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d50eb-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d50eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87068-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="87068-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,21 +35,22 @@ typedef enum {
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d50eb-105">Membres</span><span class="sxs-lookup"><span data-stu-id="d50eb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="87068-105">Membres</span><span class="sxs-lookup"><span data-stu-id="87068-105">Members</span></span>  
   
-|<span data-ttu-id="d50eb-106">Membre</span><span class="sxs-lookup"><span data-stu-id="d50eb-106">Member</span></span>|<span data-ttu-id="d50eb-107">Description</span><span class="sxs-lookup"><span data-stu-id="d50eb-107">Description</span></span>|  
+|<span data-ttu-id="87068-106">Membre</span><span class="sxs-lookup"><span data-stu-id="87068-106">Member</span></span>|<span data-ttu-id="87068-107">Description</span><span class="sxs-lookup"><span data-stu-id="87068-107">Description</span></span>|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|<span data-ttu-id="d50eb-108">La mémoire allouée peut contenir un fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="d50eb-108">The allocated memory can contain an executable file.</span></span>|  
-|`MALLOC_THREADSAFE`|<span data-ttu-id="d50eb-109">La mémoire allouée est thread-safe.</span><span class="sxs-lookup"><span data-stu-id="d50eb-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="d50eb-110">Autrement dit, la mémoire est accessible par plusieurs threads sans synchronisation.</span><span class="sxs-lookup"><span data-stu-id="d50eb-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="d50eb-111">Si cet indicateur n’est pas défini, les appels sur l’objet doivent être sérialisés.</span><span class="sxs-lookup"><span data-stu-id="d50eb-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
+|`MALLOC_EXECUTABLE`|<span data-ttu-id="87068-108">La mémoire allouée peut contenir un fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="87068-108">The allocated memory can contain an executable file.</span></span>|  
+|`MALLOC_THREADSAFE`|<span data-ttu-id="87068-109">La mémoire allouée est thread-safe.</span><span class="sxs-lookup"><span data-stu-id="87068-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="87068-110">Autrement dit, la mémoire est accessible par plusieurs threads sans synchronisation.</span><span class="sxs-lookup"><span data-stu-id="87068-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="87068-111">Si cet indicateur n’est pas défini, les appels sur l’objet doivent être sérialisés.</span><span class="sxs-lookup"><span data-stu-id="87068-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d50eb-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="d50eb-112">Requirements</span></span>  
- <span data-ttu-id="d50eb-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d50eb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87068-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="87068-112">Requirements</span></span>  
+ <span data-ttu-id="87068-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87068-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d50eb-114">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d50eb-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="87068-114">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="87068-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d50eb-115">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d50eb-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="87068-115">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="87068-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d50eb-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d50eb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="87068-116">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="87068-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d50eb-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d50eb-117">See also</span></span>
-- [<span data-ttu-id="d50eb-118">Énumérations d’hébergement</span><span class="sxs-lookup"><span data-stu-id="d50eb-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="87068-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="87068-117">See also</span></span>
+
+- [<span data-ttu-id="87068-118">Énumérations d'hébergement</span><span class="sxs-lookup"><span data-stu-id="87068-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

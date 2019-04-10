@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 365261883f0b81884bb7cf70614628c05f9067c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221005"
 ---
-# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="30824-102">IGCHost::SetGCStartupLimits, méthode</span><span class="sxs-lookup"><span data-stu-id="30824-102">IGCHost::SetGCStartupLimits Method</span></span>
-<span data-ttu-id="30824-103">Définit la taille du segment et la taille maximale pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="30824-103">Sets the segment size and the maximum size for generation 0.</span></span>  
+# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="dbcb6-102">IGCHost::SetGCStartupLimits, méthode</span><span class="sxs-lookup"><span data-stu-id="dbcb6-102">IGCHost::SetGCStartupLimits Method</span></span>
+<span data-ttu-id="dbcb6-103">Définit la taille du segment et la taille maximale pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="dbcb6-103">Sets the segment size and the maximum size for generation 0.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="30824-104">En commençant par le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], vous pouvez définir la taille des segments de taille maximale de génération 0 aux valeurs et supérieur à `DWORD` à l’aide de la [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="30824-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
+>  <span data-ttu-id="dbcb6-104">En commençant par le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], vous pouvez définir la taille des segments de taille maximale de génération 0 aux valeurs et supérieur à `DWORD` à l’aide de la [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="dbcb6-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30824-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="30824-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbcb6-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="dbcb6-105">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimits (  
@@ -39,24 +39,25 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30824-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="30824-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbcb6-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="dbcb6-106">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="30824-107">[in] La taille du segment utilisé par le système de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="30824-107">[in] The size of the segment used by the garbage collection system.</span></span>  
+ <span data-ttu-id="dbcb6-107">[in] La taille du segment utilisé par le système de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="dbcb6-107">[in] The size of the segment used by the garbage collection system.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="30824-108">[in] La taille maximale pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="30824-108">[in] The maximum size for generation 0.</span></span>  
+ <span data-ttu-id="dbcb6-108">[in] La taille maximale pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="dbcb6-108">[in] The maximum size for generation 0.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30824-109">Notes</span><span class="sxs-lookup"><span data-stu-id="30824-109">Remarks</span></span>  
- <span data-ttu-id="30824-110">Le `SetGCStartupLimits` méthode peut être appelée qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="30824-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="30824-111">Ces valeurs ne peuvent pas être modifiées ultérieurement.</span><span class="sxs-lookup"><span data-stu-id="30824-111">These values cannot be changed later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbcb6-109">Notes</span><span class="sxs-lookup"><span data-stu-id="dbcb6-109">Remarks</span></span>  
+ <span data-ttu-id="dbcb6-110">Le `SetGCStartupLimits` méthode peut être appelée qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="dbcb6-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="dbcb6-111">Ces valeurs ne peuvent pas être modifiées ultérieurement.</span><span class="sxs-lookup"><span data-stu-id="dbcb6-111">These values cannot be changed later.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30824-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="30824-112">Requirements</span></span>  
- <span data-ttu-id="30824-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30824-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbcb6-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="dbcb6-112">Requirements</span></span>  
+ <span data-ttu-id="dbcb6-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbcb6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30824-114">**En-tête :** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="30824-114">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="dbcb6-114">**En-tête :** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="dbcb6-114">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="30824-115">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="30824-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dbcb6-115">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dbcb6-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="30824-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30824-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="dbcb6-116">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="dbcb6-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="30824-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="30824-117">See also</span></span>
-- [<span data-ttu-id="30824-118">IGCHost, interface</span><span class="sxs-lookup"><span data-stu-id="30824-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dbcb6-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="dbcb6-117">See also</span></span>
+
+- [<span data-ttu-id="dbcb6-118">IGCHost, interface</span><span class="sxs-lookup"><span data-stu-id="dbcb6-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

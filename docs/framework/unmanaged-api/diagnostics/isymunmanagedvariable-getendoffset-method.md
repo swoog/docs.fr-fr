@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68e3074252786d0339184ad3e1586337db9f368a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 325db05cc322d85e836ca9ba62b6a169e8965241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220953"
 ---
-# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="11e35-102">ISymUnmanagedVariable::GetEndOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="11e35-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
-<span data-ttu-id="11e35-103">Obtient l’offset de fin de cette variable dans son parent.</span><span class="sxs-lookup"><span data-stu-id="11e35-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="11e35-104">S’il s’agit d’une variable locale dans une portée, l’offset de fin est compris dans les offsets définis pour la portée.</span><span class="sxs-lookup"><span data-stu-id="11e35-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="57974-102">ISymUnmanagedVariable::GetEndOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="57974-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
+<span data-ttu-id="57974-103">Obtient l’offset de fin de cette variable dans son parent.</span><span class="sxs-lookup"><span data-stu-id="57974-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="57974-104">S’il s’agit d’une variable locale dans une portée, l’offset de fin est compris dans les offsets définis pour la portée.</span><span class="sxs-lookup"><span data-stu-id="57974-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11e35-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="11e35-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57974-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="57974-105">Syntax</span></span>  
   
 ```  
 HRESULT GetEndOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="11e35-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="11e35-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57974-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="57974-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="11e35-107">[out] Un pointeur vers un `ULONG32` qui reçoit l’offset de fin.</span><span class="sxs-lookup"><span data-stu-id="11e35-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
+ <span data-ttu-id="57974-107">[out] Un pointeur vers un `ULONG32` qui reçoit l’offset de fin.</span><span class="sxs-lookup"><span data-stu-id="57974-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="11e35-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="11e35-108">Return Value</span></span>  
- <span data-ttu-id="11e35-109">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="11e35-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="57974-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="57974-108">Return Value</span></span>  
+ <span data-ttu-id="57974-109">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="57974-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="11e35-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="11e35-110">Requirements</span></span>  
- <span data-ttu-id="11e35-111">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="11e35-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57974-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="57974-110">Requirements</span></span>  
+ <span data-ttu-id="57974-111">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57974-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11e35-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="11e35-112">See also</span></span>
-- [<span data-ttu-id="11e35-113">ISymUnmanagedVariable, interface</span><span class="sxs-lookup"><span data-stu-id="11e35-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="11e35-114">GetStartOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="11e35-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+## <a name="see-also"></a><span data-ttu-id="57974-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="57974-112">See also</span></span>
+
+- [<span data-ttu-id="57974-113">ISymUnmanagedVariable, interface</span><span class="sxs-lookup"><span data-stu-id="57974-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="57974-114">GetStartOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="57974-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
