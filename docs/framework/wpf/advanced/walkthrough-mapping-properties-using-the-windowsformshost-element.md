@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Propriétés de mappage à l’aide de l’élément WindowsFormsHost'
+title: 'Procédure pas à pas : mappage de propriétés à l’aide de l’élément WindowsFormsHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 86a7a8a937b9407690d7f1981b91857d1b44ded1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296522"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procédure pas à pas : Propriétés de mappage à l’aide de l’élément WindowsFormsHost
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procédure pas à pas : mappage de propriétés à l’aide de l’élément WindowsFormsHost
 
 Cette procédure pas à pas vous montre comment utiliser le <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> propriété à mapper [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propriétés aux propriétés correspondantes dans un hébergé [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle.
 
@@ -45,11 +45,11 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 ## <a name="create-and-set-up-the-project"></a>Créer et configurer le projet
 
-1.  Créer un **application WPF** projet nommé `PropertyMappingWithWfhSample`.
+1. Créer un **application WPF** projet nommé `PropertyMappingWithWfhSample`.
 
-2.  Dans **l’Explorateur de solutions**, ajoutez une référence à l’assembly WindowsFormsIntegration, nommé WindowsFormsIntegration.dll.
+2. Dans **l’Explorateur de solutions**, ajoutez une référence à l’assembly WindowsFormsIntegration, nommé WindowsFormsIntegration.dll.
 
-3.  Dans **l’Explorateur de solutions**, ajoutez des références aux assemblys System.Drawing et System.Windows.Forms.
+3. Dans **l’Explorateur de solutions**, ajoutez des références aux assemblys System.Drawing et System.Windows.Forms.
 
 ## <a name="defining-the-application-layout"></a>Définition de la disposition de l’application
 
@@ -57,15 +57,15 @@ Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
 
 ### <a name="to-define-the-application-layout"></a>Pour définir la disposition de l’application
 
-1.  Ouvrez Window1.xaml dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+1. Ouvrez Window1.xaml dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-2.  Remplacez le code existant par le code ci-dessous.
+2. Remplacez le code existant par le code ci-dessous.
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3.  Ouvrez Window1.xaml.cs dans l’éditeur de code.
+3. Ouvrez Window1.xaml.cs dans l’éditeur de code.
 
-4.  En haut du fichier, importez les espaces de noms suivants.
+4. En haut du fichier, importez les espaces de noms suivants.
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
@@ -83,7 +83,7 @@ Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément fournit pa
 
      Le `AddClipMapping` méthode ajoute un nouveau mappage pour le <xref:System.Windows.UIElement.Clip%2A> propriété.
 
-     Le `OnClipChange` méthode se traduit par la <xref:System.Windows.UIElement.Clip%2A> propriété le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> propriété.
+     Le `OnClipChange` méthode se traduit par la <xref:System.Windows.UIElement.Clip%2A> propriété le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> propriété.
 
      Le `Window1_SizeChanged` méthode gère la fenêtre <xref:System.Windows.FrameworkElement.SizeChanged> événements et de la taille de la zone de découpage pour s’ajuster à la fenêtre d’application.
 
@@ -113,7 +113,7 @@ Remplacez un mappage de propriété par défaut en supprimant le mappage par dé
 
      Le `ReplaceFlowDirectionMapping` méthode remplace le mappage par défaut pour le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété.
 
-     Le `OnFlowDirectionChange` méthode se traduit par la <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> propriété.
+     Le `OnFlowDirectionChange` méthode se traduit par la <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> propriété.
 
      Le `cb_CheckedChanged` méthode gère le <xref:System.Windows.Forms.CheckBox.CheckedChanged> événement sur le <xref:System.Windows.Forms.CheckBox> contrôle. Il assigne le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété basée sur la valeur de la <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriété
 
@@ -138,20 +138,20 @@ Définissez vos mappages de propriété en appelant les méthodes décrites pré
 
 ### <a name="to-initialize-your-property-mappings"></a>Pour initialiser vos mappages de propriétés
 
-1.  Copiez le code suivant dans la définition de la `Window1` classe.
+1. Copiez le code suivant dans la définition de la `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
      Le `WindowLoaded` méthode gère le <xref:System.Windows.FrameworkElement.Loaded> événement et effectue l’initialisation suivante.
 
-    -   Crée un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> contrôle.
+    -   Crée un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> contrôle.
 
     -   Appelle les méthodes que vous avez définies précédemment dans la procédure pas à pas pour configurer les mappages de propriétés.
 
     -   Assigne les valeurs initiales aux propriétés mappées.
 
-2.  Appuyez sur **F5** pour générer et exécuter l’application. Cliquez sur la case à cocher pour voir l’effet de la <xref:System.Windows.FrameworkElement.FlowDirection%2A> mappage. Quand vous cliquez sur la case à cocher, la disposition inverse son orientation de gauche à droite.
+2. Appuyez sur **F5** pour générer et exécuter l’application. Cliquez sur la case à cocher pour voir l’effet de la <xref:System.Windows.FrameworkElement.FlowDirection%2A> mappage. Quand vous cliquez sur la case à cocher, la disposition inverse son orientation de gauche à droite.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -160,4 +160,4 @@ Définissez vos mappages de propriété en appelant les méthodes décrites pré
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mappage de propriétés Windows Forms et WPF](windows-forms-and-wpf-property-mapping.md)
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Procédure pas à pas : Hébergement d’un contrôle de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Procédure pas à pas : hébergement d’un contrôle Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
