@@ -3,12 +3,12 @@ title: Visite guidée du langage C# - Guide du langage C#
 description: Novice en matière de langage C# ? Découvrez les principes de base du langage.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152059"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481091"
 ---
 # <a name="a-tour-of-the-c-language"></a>Présentation rapide du langage C#
 
@@ -52,27 +52,27 @@ La sortie du programme est générée par la méthode `WriteLine` de la classe `
 Il y a beaucoup d’autres choses à apprendre sur C#.  Les rubriques suivantes fournissent une vue d’ensemble des éléments du langage C#. Ces vues d’ensemble fournissent des informations de base sur l’ensemble des éléments du langage et vous donnent les informations nécessaires pour explorer plus en détails les éléments du langage C# :
 
 * [Structure du programme](program-structure.md)
-    - Découvrez les concepts clés d’organisation du langage C# : ***programmes***, ***espaces de noms***, ***types***, ***membres*** et ***assemblys***.
+  - Découvrez les concepts clés d’organisation du langage C# : ***programmes***, ***espaces de noms***, ***types***, ***membres*** et ***assemblys***.
 * [Types et variables](types-and-variables.md)
-    - Découvrez les ***types valeur***, les ***types référence*** et les ***variables*** en langage C#.
+  - Découvrez les ***types valeur***, les ***types référence*** et les ***variables*** en langage C#.
 * [Expressions](expressions.md)
-    - Les ***expressions*** sont construites à partir de ***d’opérandes*** et ***d’opérateurs***. Les expressions produisent une valeur.
+  - Les ***expressions*** sont construites à partir de ***d’opérandes*** et ***d’opérateurs***. Les expressions produisent une valeur.
 * [Instructions](statements.md)
-    - On utilise des ***instructions*** pour exprimer les actions d’un programme.
+  - On utilise des ***instructions*** pour exprimer les actions d’un programme.
 * [Classes et objets](classes-and-objects.md)
-    - Les ***classes*** représentent le type le plus fondamental de C#. Les ***objets*** sont des instances d’une classe. Les classes sont générées à l’aide de ***membres***, qui sont également traités dans cette rubrique.
+  - Les ***classes*** représentent le type le plus fondamental de C#. Les ***objets*** sont des instances d’une classe. Les classes sont générées à l’aide de ***membres***, qui sont également traités dans cette rubrique.
 * [Structs](structs.md)
-    - Les ***structures*** sont des structures de données qui, contrairement aux classes, sont des types valeur.
+  - Les ***structures*** sont des structures de données qui, contrairement aux classes, sont des types valeur.
 * [Tableaux](arrays.md)
-    - Un ***tableau*** est une structure de données qui contient un certain nombre de variables qui sont accessibles par des indices calculés.
+  - Un ***tableau*** est une structure de données qui contient un certain nombre de variables qui sont accessibles par des indices calculés.
 * [Interfaces](interfaces.md)
-    - Une ***interface*** définit un contrat qui peut être implémenté par des classes et structures. Une interface peut contenir des méthodes, des propriétés, des événements et des indexeurs. Une interface ne fournit pas les implémentations des membres qu’elle définit, elle indique simplement les membres qui doivent être fournis par les classes ou les structs qui implémentent l’interface.
+  - Une ***interface*** définit un contrat qui peut être implémenté par des classes et structures. Une interface peut contenir des méthodes, des propriétés, des événements et des indexeurs. Une interface ne fournit pas les implémentations des membres qu’elle définit, elle indique simplement les membres qui doivent être fournis par les classes ou les structs qui implémentent l’interface.
 * [Enums](enums.md)
-    - Un ***type enum*** est un type valeur distinct avec un ensemble de constantes nommées.
+  - Un ***type enum*** est un type valeur distinct avec un ensemble de constantes nommées.
 * [Délégués](delegates.md)
-    - Un ***type délégué*** représente des références aux méthodes avec une liste de paramètres et un type de retour particuliers. Les délégués permettent de traiter les méthodes en tant qu’entités qui peuvent être affectées à des variables et passées comme paramètres. Les délégués sont similaires au concept de pointeurs de fonction dans d’autres langages, mais contrairement aux pointeurs de fonction, les délégués sont orientés objet et de type sécurisé.
+  - Un ***type délégué*** représente des références aux méthodes avec une liste de paramètres et un type de retour particuliers. Les délégués permettent de traiter les méthodes en tant qu’entités qui peuvent être affectées à des variables et passées comme paramètres. Les délégués sont similaires au concept de pointeurs de fonction dans d’autres langages, mais contrairement aux pointeurs de fonction, les délégués sont orientés objet et de type sécurisé.
 * [Attributs](attributes.md)
-     * Les ***attributs*** permettent aux programmes de spécifier des informations déclaratives supplémentaires sur les types, les membres et d’autres entités.
+  * Les ***attributs*** permettent aux programmes de spécifier des informations déclaratives supplémentaires sur les types, les membres et d’autres entités.
 
 > [!div class="step-by-step"]
 > [Suivant](program-structure.md)
