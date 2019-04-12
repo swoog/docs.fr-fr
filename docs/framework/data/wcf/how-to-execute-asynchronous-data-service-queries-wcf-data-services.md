@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 4aef253ebb54fb92a0c3b2b661404ac373979e56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163551"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518160"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Procédure : Exécuter des requêtes de Service de données asynchrones (WCF Data Services)
 En utilisant les bibliothèques clientes [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez effectuer de façon asynchrone des opérations client-serveur, telles que l'exécution de requêtes et l'enregistrement de modifications. Pour plus d’informations, consultez [opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
@@ -26,9 +26,9 @@ En utilisant les bibliothèques clientes [!INCLUDE[ssAstoria](../../../../includ
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment exécuter une requête asynchrone en appelant la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> pour démarrer la requête. Le délégué inline delegate appelle la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> pour afficher les résultats de la requête.  
   
- [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#executequeryasync)]
- [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#executequeryasync)]  
+ [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
+ [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

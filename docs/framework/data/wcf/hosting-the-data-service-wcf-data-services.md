@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 1464880e92753d2774b1ca60d55c71a88d8e9b15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519379"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517939"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hébergement du service de données (services de données WCF)
 À l’aide de WCF Data Services, vous pouvez créer un service qui expose des données sous un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Ce service de données est défini comme une classe qui hérite de <xref:System.Data.Services.DataService%601>. Cette classe fournit les fonctionnalités requises pour traiter les messages de demande, d’effectuer des mises à jour par rapport à la source de données et de générer des messages de réponses, comme requis par OData. Toutefois, un service de données ne peut pas lier à et écouter sur un socket réseau pour les requêtes HTTP entrantes. Pour ces fonctionnalités requises, le service de données s'appuie sur un composant d'hébergement.
 
- L'hôte du service de données effectue les tâches suivantes pour le compte du service de données :
+ L’hôte du service de données effectue les tâches suivantes pour le compte du service de données :
 
 -   Écoute les demandes et les transmet au service de données.
 
@@ -52,20 +52,20 @@ Lorsque vous utilisez le **ajouter un nouvel élément** boîte de dialogue dans
 
  La page code-behind du fichier `.svc` contient la classe constituant l'implémentation du service de données lui-même, défini comme suit dans le cas de l'exemple de service de données Northwind :
 
- [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
- [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+ [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+ [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
  Puisqu'un service de données se comporte comme un service WCF, le service de données s'intègre avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et suit le modèle de programmation Web WCF. Pour plus d’informations, consultez [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) et [modèle de programmation WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Services WCF auto-hébergés
  Puisqu’il intègre une implémentation WCF, WCF Data Services auto-héberger un service de données comme un service WCF. Un service peut être auto-hébergé dans une application [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], par exemple une application console. La classe <xref:System.Data.Services.DataServiceHost>, qui hérite de <xref:System.ServiceModel.Web.WebServiceHost>, est utilisée pour instancier le service de données à une adresse spécifique.
 
- L'auto-hébergement peut être utilisé pour le développement et les tests parce qu'elle permet de simplifier le déploiement et le dépannage du service. Toutefois, ce type d’hébergement ne fournit pas les fonctionnalités avancées d’hébergement et de gestion offertes par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou par les services Internet (IIS). Pour plus d’informations, consultez [hébergement dans une Application gérée par](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+ L'auto-hébergement peut être utilisé pour le développement et les tests parce qu'elle permet de simplifier le déploiement et le dépannage du service. Toutefois, ce type d'hébergement ne fournit pas les fonctionnalités avancées d'hébergement et de gestion offertes par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou par les services Internet (IIS). Pour plus d’informations, consultez [hébergement dans une Application gérée par](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Définition d'un hôte de service de données personnalisé
  Dans les cas où l'implémentation hôte de WCF est trop restrictive, vous pouvez également définir un hôte personnalisé pour un service de données. Toute classe qui implémente l'interface <xref:System.Data.Services.IDataServiceHost> peut être utilisée comme hôte de réseau pour un service de données. Un hôte personnalisé doit implémenter l'interface <xref:System.Data.Services.IDataServiceHost> et pouvoir gérer les responsabilités de base suivantes de l'hôte de service de données :
 
--   Fournir le service de données avec le chemin d'accès racine du service.
+-   Fournir le service de données avec le chemin d’accès racine du service.
 
 -   Traiter les informations d'en-tête de demande et de réponse à l'implémentation appropriée du membre <xref:System.Data.Services.IDataServiceHost>.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : développer un WCF Data Service qui fonctionne sur IIS'
+title: 'Procédure : Développer un WCF Data Service qui fonctionne sur IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201065"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517834"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Comment : développer un service de données WCF en cours d’exécution sur IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procédure : Développer un service de données WCF en cours d’exécution sur IIS
 
 Cette rubrique montre comment utiliser WCF Data Services pour créer un service de données qui est basé sur la base de données Northwind qui est hébergé par une application Web ASP.NET qui s’exécute sur Internet Information Services (IIS). Pour obtenir un exemple montrant comment créer le même service de données Northwind en tant qu’une application Web ASP.NET qui s’exécute sur le serveur de développement ASP.NET, consultez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 
 > [!NOTE]
-> Pour créer le service de données Northwind, vous avez dû installer l'exemple de base de données Northwind sur l'ordinateur local. Pour télécharger cette base de données exemple, consultez la page de téléchargement [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+> Pour créer le service de données Northwind, vous avez dû installer l'exemple de base de données Northwind sur l'ordinateur local. Pour télécharger cet exemple de base de données, consultez la page de téléchargement, [Exemples de bases de données pour SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
- Cette rubrique indique comment créer un service de données à l’aide du fournisseur Entity Framework. Il existe d'autres fournisseurs de services de données. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+ Cette rubrique indique comment créer un service de données à l'aide du fournisseur Entity Framework. Il existe d'autres fournisseurs de services de données. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Après avoir créé le service, vous devez explicitement fournir un accès aux ressources du service de données. Pour plus d’informations, consultez [Comment : activer l’accès au Service de données](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+ Après avoir créé le service, vous devez explicitement fournir un accès aux ressources du service de données. Pour plus d'informations, voir [Procédure : Activer l’accès au Service de données](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Créer l’application web ASP.NET qui s’exécute sur IIS
 
 1. Dans Visual Studio, sur le **fichier** menu, sélectionnez **New** > **projet**.
 
-2. Dans le **nouveau projet** boîte de dialogue, sélectionnez le **installé** > [**Visual C#** ou **Visual Basic**] > **Web** catégorie.
+2. Dans le **nouveau projet** boîte de dialogue, sélectionnez le **installé** > [**Visual C#**  ou **Visual Basic**] > **Web**  catégorie.
 
 3. Sélectionnez le **Application Web ASP.NET** modèle.
 
@@ -132,7 +132,7 @@ Cette rubrique montre comment utiliser WCF Data Services pour créer un service 
 
 5. Connectez le modèle de données à la base de données en effectuant l’une des étapes suivantes, puis cliquez sur **suivant**:
 
-    -   Si vous n’avez pas déjà configuré une connexion de base de données, cliquez sur **nouvelle connexion** et créer une nouvelle connexion. Pour plus d’informations, consultez [Comment : créer des connexions aux bases de données SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Cette instance SQL Server doit avoir l'exemple de base de données Northwind joint.
+    -   Si vous n’avez pas déjà configuré une connexion de base de données, cliquez sur **nouvelle connexion** et créer une nouvelle connexion. Pour plus d'informations, voir [Procédure : Créer des connexions aux bases de données SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Cette instance SQL Server doit avoir l'exemple de base de données Northwind joint.
 
          \- ou -
 
@@ -159,8 +159,8 @@ Cette rubrique montre comment utiliser WCF Data Services pour créer un service 
 
 4. Dans le code du service de données, remplacez le commentaire `/* TODO: put your data source class name here */` dans la définition de la classe qui définit le service de données par le type qui est le conteneur d'entités du modèle de données, dans ce cas `NorthwindEntities`. La définition de classe doit ressembler aux éléments suivants:
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>Voir aussi
 

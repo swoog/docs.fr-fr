@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: a05b2ce89d17b8de61ba78f925370aa22f463655
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365150"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517172"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projections de requête (services de données WCF)
 
@@ -52,14 +52,14 @@ Lorsqu'une ou plusieurs propriétés d'un type d'entité défini dans le service
 
 L'exemple suivant utilise une requête LINQ anonyme qui projette les propriétés associées à l'adresse du type `Customers` dans un nouveau type `CustomerAddress`, qui est défini sur le client et est attribué comme un type d'entité :
 
-[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
-[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]
+[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
+[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
-Dans cet exemple, le modèle de l'initialiseur d'objet est utilisé pour créer une nouvelle instance de type `CustomerAddress` au lieu d'appeler un constructeur. Les constructeurs ne sont pas pris en charge lors de la projection dans des types d'entité, mais ils peuvent être utilisés pour les projections dans des types de non-entité et anonymes. Étant donné que `CustomerAddress` est un type d'entité, les modifications peuvent être apportées et renvoyées au service de données.
+Dans cet exemple, le modèle de l’initialiseur d’objet est utilisé pour créer une nouvelle instance de type `CustomerAddress` au lieu d’appeler un constructeur. Les constructeurs ne sont pas pris en charge lors de la projection dans des types d'entité, mais ils peuvent être utilisés pour les projections dans des types de non-entité et anonymes. Étant donné que `CustomerAddress` est un type d'entité, les modifications peuvent être apportées et renvoyées au service de données.
 
 De même, les données de type `Customer` sont projetées dans une instance du type d'entité `CustomerAddress` au lieu d'un type anonyme. La projection dans des types anonymes est prise en charge, mais les données sont en lecture seule parce que les types anonymes sont traités comme des types de non-entité.
 
-Les paramètres de <xref:System.Data.Services.Client.MergeOption> de <xref:System.Data.Services.Client.DataServiceContext> sont utilisés pour la résolution de l'identité pendant la projection de la requête. Cela signifie que si une instance de type `Customer` existe déjà dans <xref:System.Data.Services.Client.DataServiceContext>, une instance `CustomerAddress` avec la même identité suit les règles de résolution de l'identité définies par <xref:System.Data.Services.Client.MergeOption>
+Les paramètres de <xref:System.Data.Services.Client.MergeOption> de <xref:System.Data.Services.Client.DataServiceContext> sont utilisés pour la résolution de l’identité pendant la projection de la requête. Cela signifie que si une instance de type `Customer` existe déjà dans <xref:System.Data.Services.Client.DataServiceContext>, une instance `CustomerAddress` avec la même identité suit les règles de résolution de l'identité définies par <xref:System.Data.Services.Client.MergeOption>
 
 La section suivante décrit les comportements lors de la projection des résultats dans des types d’entité et non à une entité :
 
@@ -67,8 +67,8 @@ La section suivante décrit les comportements lors de la projection des résulta
 
 - Exemple :
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
-   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
 - Type d’entité : Prise en charge
 
@@ -78,11 +78,10 @@ La section suivante décrit les comportements lors de la projection des résulta
 
 - Exemple :
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
-   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- Type d’entité : 
-  <xref:System.NotSupportedException> est levée.
+- Type d’entité : <xref:System.NotSupportedException> est levée.
 
 - Type d’entité : Prise en charge
 
@@ -90,11 +89,10 @@ La section suivante décrit les comportements lors de la projection des résulta
 
 - Exemple :
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
-   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- Type d’entité : Cette transformation n'est pas prise en charge pour les types d'entité car cela peut engendrer une confusion et remplacer les données de la source de données qui appartient à une autre entité. 
-  <xref:System.NotSupportedException> est levée.
+- Type d’entité : Cette transformation n'est pas prise en charge pour les types d'entité car cela peut engendrer une confusion et remplacer les données de la source de données qui appartient à une autre entité. <xref:System.NotSupportedException> est levée.
 
 - Type d’entité : Prise en charge
 

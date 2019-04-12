@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 7687378ae2a6c7d8021acc53b19544206ee0cc84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092628"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517510"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Procédure : Charger des entités connexes (WCF Data Services)
 Lorsque vous devez charger des entités connexes dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez utiliser la méthode <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sur la classe <xref:System.Data.Services.Client.DataServiceContext>. Vous pouvez également utiliser le <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> méthode sur le <xref:System.Data.Services.Client.DataServiceQuery%601> pour exiger que connexes chargement anticipé des entités dans la même réponse de requête.  
@@ -23,14 +23,14 @@ Lorsque vous devez charger des entités connexes dans [!INCLUDE[ssAstoria](../..
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment charger explicitement le `Customer` associé à chaque instance `Orders` retournée.  
   
- [!code-csharp[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedordercustomer)]
- [!code-vb[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedordercustomer)]  
+ [!code-csharp[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedordercustomer)]
+ [!code-vb[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedordercustomer)]  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous montre comment utiliser la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> pour retourner `Order Details` qui appartient au `Orders` retourné par la requête.  
   
- [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetails)]
- [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
+ [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetails)]
+ [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>Voir aussi
 

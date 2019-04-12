@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 3c97e943d5516f879dda973bc008800032df5eb5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134848"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518134"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Procédure : Spécifiez les informations d’identification du Client pour un Service de données demandent (WCF Data Services)
 Par défaut, la bibliothèque cliente ne fournit aucune information d'identification lors de l'envoi d'une demande à un service [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Toutefois, vous pouvez spécifier que les informations d'identification soient transmises aux demandes authentifiées sur le service de données en fournissant un <xref:System.Net.NetworkCredential> pour la propriété <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> du <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d'informations, consultez [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). L'exemple de cette rubrique décrit comment fournir explicitement des informations d'identification utilisées par le client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] lors d'une demande de données au service de données.  
@@ -22,24 +22,24 @@ Par défaut, la bibliothèque cliente ne fournit aucune information d'identifica
 ## <a name="example"></a>Exemple  
  L’exemple suivant provient de la page code-behind pour un fichier d’Extensible Application Markup Language (XAML) qui est la page principale de l’application Windows Presentation Framework. Cet exemple affiche une instance `LoginWindow` pour collecter les informations d'authentification de l'utilisateur, puis les utilise pour la création d'une demande au service de données.  
   
- [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
- [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]
+ [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
+ [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
   
 ## <a name="example"></a>Exemple  
  Vous trouverez ci-après le code XAML qui définit la page principale de l'application WPF.  
   
- [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
+ [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant provient de la page code-behind de la fenêtre utilisée pour collecter les informations d'authentification de l'utilisateur avant une demande au service de données.  
   
- [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
- [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
+ [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
+ [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
   
 ## <a name="example"></a>Exemple  
  Vous trouverez ci-après le code XAML qui définit la connexion de l'application WPF.  
   
- [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
+ [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Les considérations sur la sécurité suivantes s'appliquent à l'exemple de cette rubrique :  
@@ -55,4 +55,4 @@ Par défaut, la bibliothèque cliente ne fournit aucune information d'identifica
 ## <a name="see-also"></a>Voir aussi
 
 - [Sécurisation de WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
