@@ -2,12 +2,12 @@
 title: F#directives de mise en forme du code
 description: Découvrez des instructions pour la mise en forme F# code.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093617"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553860"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#directives de mise en forme du code
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Pour n’importe quel opérateur personnalisé qui commence par `*`, vous devrez ajouter un espace blanc au début de la définition afin d’éviter une ambiguïté du compilateur. Pour cette raison, il est recommandé que vous devez simplement placer les définitions de tous les opérateurs avec un seul caractère espace blanc.
+Pour n’importe quel opérateur personnalisé qui commence par `*` et qui a plusieurs caractères, vous devez ajouter un espace blanc au début de la définition afin d’éviter une ambiguïté du compilateur. Pour cette raison, nous recommandons que vous devez simplement placer les définitions de tous les opérateurs avec un seul caractère espace blanc.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>Entourez les flèches de paramètre de fonction avec un espace blanc
 
