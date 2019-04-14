@@ -4,12 +4,12 @@ description: Découvrez la terminologie des packages, des métapackages et des i
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090496"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Packages, métapackages et frameworks
 
@@ -97,7 +97,6 @@ Le framework `.NETFramework,Version=4.6` représente les API disponibles dans le
 Il existe une relation réciproque entre les frameworks et les packages. La première partie consiste à définir les API accessibles à un framework donné, par exemple `netstandard1.3`. Les packages qui ciblent `netstandard1.3` (ou des frameworks compatibles tels que `netstandard1.0`) définissent les API disponibles pour `netstandard1.3`. On pourrait croire à première vue qu’il s’agit d’une définition circulaire, mais il n’en est rien. Étant « basée sur des packages », la définition d’API pour le framework est issue de packages. Le framework lui-même ne définit pas d’API.
 
 La deuxième partie de la relation est la sélection de ressource. Les packages peuvent contenir des ressources pour plusieurs frameworks. Le framework est nécessaire pour déterminer quelle ressource sélectionner, par exemple `net46` ou `netstandard1.3`, pour une référence donnée à un ensemble de packages et/ou de métapackages. Il est important de sélectionner la ressource adéquate. Par exemple, il est peu probable qu’une ressource `net46` soit compatible avec le .NET Framework 4.0 ou .NET Core 1.0.
-
 
 Cette relation est illustrée dans l’image suivante. L’*API* cible et définit le *framework*. Le *framework* est utilisé pour la *sélection de ressource*. La *ressource* vous fournit l’API.
 

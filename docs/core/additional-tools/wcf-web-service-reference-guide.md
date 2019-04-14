@@ -4,12 +4,12 @@ description: Vue d’ensemble de l’outil Microsoft WCF Web Service Reference P
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197072"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Utiliser l’outil WCF Web Service Reference Provider
 
@@ -54,7 +54,6 @@ La page **Services connectés** s’affiche, comme illustré ci-dessous :
     
     3c. Cliquez sur le bouton **Suivant** pour ouvrir les pages **Options du type de données** et **Options du client**. Vous pouvez aussi cliquer sur le bouton **Terminer** pour utiliser les options par défaut.
 
-
 4. Le formulaire **Options du type de données** vous permet d’affiner les paramètres de configuration de référence de service générés :
 
 ![Onglet Options du type de données Visual Studio pour .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ La page **Services connectés** s’affiche, comme illustré ci-dessous :
 Il peut y avoir un délai pendant le chargement des informations de type, en fonction du nombre de dépendances du projet et d’autres facteurs de performances système. Le bouton **Terminer** est désactivé pendant le chargement, sauf si la case **Réutiliser les types dans les assemblys référencés** est cochée.
 
 5. Cliquez sur **Terminer** quand vous avez terminé.
-
 
 Lors de l’affichage de la progression, l’outil :
 
