@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660175"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328697"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (Options du compilateur C#)
 L’option **-filealign** permet de spécifier la taille des sections de votre fichier de sortie.  
@@ -36,7 +36,7 @@ L’option **-filealign** permet de spécifier la taille des sections de votre f
  `number`  
  Valeur qui spécifie la taille des sections dans le fichier de sortie. Les valeurs valides sont 512, 1024, 2048, 4096 et 8192. Ces valeurs sont exprimées en octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque section est alignée sur une limite qui est un multiple de la valeur **-filealign**. Il n’existe aucune valeur fixe par défaut. Si la valeur **-filealign** n’est pas spécifiée, le Common Language Runtime choisit une valeur par défaut au moment de la compilation.  
   
  En spécifiant la taille de la section, vous affectez la taille du fichier de sortie. Il peut être utile de modifier la taille de la section pour les programmes qui sont exécutés sur des appareils de petite taille.  
@@ -45,13 +45,13 @@ L’option **-filealign** permet de spécifier la taille des sections de votre f
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Générer**.  
+2. Cliquez sur la page de propriétés **Générer**.  
   
-3.  Cliquez sur le bouton **Avancées** .  
+3. Cliquez sur le bouton **Avancées** .  
   
-4.  Modifiez la propriété **Alignement des fichiers**.  
+4. Modifiez la propriété **Alignement des fichiers**.  
   
  Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321729"
 ---
 # <a name="accessing-custom-attributes"></a>Accès aux attributs personnalisés
 Une fois que des attributs associés aux éléments de programme, la réflexion peut être utilisée pour interroger leur existence et leurs valeurs. Dans le .NET Framework version 1.0 et 1.1, les attributs personnalisés sont examinés dans le contexte d’exécution. Le .NET Framework version 2.0 fournit un nouveau contexte de chargement, le contexte de réflexion uniquement, qui peut être utilisé pour examiner le code qui ne peut pas être chargé pour l’exécution.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  Si le runtime tente de récupérer les attributs personnalisés pour le type d’attribut personnalisé public <xref:System.ComponentModel.DescriptionAttribute> attaché à la méthode **GetLanguage**, il effectue les actions suivantes :  
   
-1.  Le runtime vérifie que l’argument de type **DescriptionAttribute** pour **Type.GetCustomAttributes**(Type *type*) est public, et est par conséquent visible et accessible.  
+1. Le runtime vérifie que l’argument de type **DescriptionAttribute** pour **Type.GetCustomAttributes**(Type *type*) est public, et est par conséquent visible et accessible.  
   
-2.  Le runtime vérifie que le type défini par l’utilisateur **MyDescriptionAttribute** qui est dérivé de **DescriptionAttribute** est visible et accessible dans l’assembly **System.Web.DLL**, où il est attaché à la méthode **GetLanguage**().  
+2. Le runtime vérifie que le type défini par l’utilisateur **MyDescriptionAttribute** qui est dérivé de **DescriptionAttribute** est visible et accessible dans l’assembly **System.Web.DLL**, où il est attaché à la méthode **GetLanguage**().  
   
-3.  Le runtime vérifie que le constructeur de **MyDescriptionAttribute** est visible et accessible dans l’assembly **System.Web.DLL**.  
+3. Le runtime vérifie que le constructeur de **MyDescriptionAttribute** est visible et accessible dans l’assembly **System.Web.DLL**.  
   
-4.  Le runtime appelle le constructeur de **MyDescriptionAttribute** avec les paramètres de l’attribut personnalisé et retourne le nouvel objet à l’appelant.  
+4. Le runtime appelle le constructeur de **MyDescriptionAttribute** avec les paramètres de l’attribut personnalisé et retourne le nouvel objet à l’appelant.  
   
  Le modèle de réflexion d’attribut personnalisé peut laisser fuiter des instances de types définis par l’utilisateur en dehors de l’assembly dans lequel le type est défini. Cela ne diffère pas des membres de la bibliothèque système du runtime qui retournent des instances de types définis par l’utilisateur, comme <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>, qui retourne un tableau d’objets **RuntimeMethodInfo**. Pour empêcher un client de découvrir des informations relatives à un type d’attribut personnalisé défini par l’utilisateur, définissez les membres du type comme étant non publics.  
   
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Affichage des informations de type](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

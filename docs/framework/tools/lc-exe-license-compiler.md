@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298966"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler)
 L'outil License Compiler lit les fichiers texte comportant des informations sur les licences et génère un fichier binaire pouvant être incorporé dans un exécutable du Common Language Runtime en tant que ressource.  
@@ -52,19 +52,19 @@ L'outil License Compiler lit les fichiers texte comportant des informations sur 
   
 ## <a name="example"></a>Exemple  
   
-1.  Si vous utilisez un contrôle sous licence `MyCompany.Samples.LicControl1` contenu dans `Samples.DLL`, dans une application appelée `HostApp.exe`*,* vous pouvez créer le fichier `HostAppLic.txt` contenant ce qui suit.  
+1. Si vous utilisez un contrôle sous licence `MyCompany.Samples.LicControl1` contenu dans `Samples.DLL`, dans une application appelée `HostApp.exe`*,* vous pouvez créer le fichier `HostAppLic.txt` contenant ce qui suit.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Créez le fichier .licenses appelé `HostApp.exe.licenses` à l'aide de la commande suivante.  
+2. Créez le fichier .licenses appelé `HostApp.exe.licenses` à l'aide de la commande suivante.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Générez `HostApp.exe` y compris le fichier .licenses en tant que ressource. Si vous étiez en train de générer une application C#, vous utiliseriez alors la commande suivante pour générer votre application.  
+3. Générez `HostApp.exe` y compris le fichier .licenses en tant que ressource. Si vous étiez en train de générer une application C#, vous utiliseriez alors la commande suivante pour générer votre application.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

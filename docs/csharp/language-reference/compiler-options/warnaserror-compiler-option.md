@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329101"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (Options du compilateur C#)
 L’option **-warnaserror+** considère tous les avertissements comme des erreurs.  
@@ -24,7 +24,7 @@ L’option **-warnaserror+** considère tous les avertissements comme des erreur
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les messages qui d’ordinaire auraient été signalés comme des avertissements s’affichent en tant qu’erreurs, et le processus de génération est arrêté (aucun fichier de sortie n’est généré).  
   
  Comme **-warnaserror** est activé par défaut, les avertissements n’empêchent pas la génération d’un fichier de sortie. Du fait de **-warnaserror**, qui est identique à **-warnaserror+**, les avertissements sont considérés comme des erreurs.  
@@ -35,11 +35,11 @@ L’option **-warnaserror+** considère tous les avertissements comme des erreur
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Générer**.  
+2. Cliquez sur la page de propriétés **Générer**.  
   
-3.  Modifiez la propriété **Considérer les avertissements comme des erreurs**.  
+3. Modifiez la propriété **Considérer les avertissements comme des erreurs**.  
   
  Pour définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745465"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334287"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procédure : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements
 Si vous écrivez une classe qui comporte certaines opérations pouvant entraîner d’importants ralentissements, pensez à lui affecter des fonctionnalités asynchrones en implémentant la [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -62,22 +62,22 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Pour définir des événements asynchrones pour les clients de votre composant :  
   
-1.  Importer les espaces de noms <xref:System.Threading?displayProperty=nameWithType> et <xref:System.Collections.Specialized?displayProperty=nameWithType> en haut de votre fichier.  
+1. Importer les espaces de noms <xref:System.Threading?displayProperty=nameWithType> et <xref:System.Collections.Specialized?displayProperty=nameWithType> en haut de votre fichier.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
   
-2.  Avant la définition de la classe `PrimeNumberCalculator`, déclarez des délégués pour les événements de progression et d’achèvement.  
+2. Avant la définition de la classe `PrimeNumberCalculator`, déclarez des délégués pour les événements de progression et d’achèvement.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#7)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#7)]  
   
-3.  Dans la définition de la classe `PrimeNumberCalculator`, déclarez des événements signalant la progression et l’achèvement aux clients.  
+3. Dans la définition de la classe `PrimeNumberCalculator`, déclarez des événements signalant la progression et l’achèvement aux clients.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#8)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#8)]  
   
-4.  Après la définition de la classe `PrimeNumberCalculator`, dérivez la classe `CalculatePrimeCompletedEventArgs` pour signaler le résultat de chaque calcul au gestionnaire d’événements du client pour l’événement `CalculatePrimeCompleted`. Outre les propriétés `AsyncCompletedEventArgs`, cette classe permet au client déterminer quel nombre a été testé, s’il est premier et, si ce n’est pas le cas, quel est le premier diviseur.  
+4. Après la définition de la classe `PrimeNumberCalculator`, dérivez la classe `CalculatePrimeCompletedEventArgs` pour signaler le résultat de chaque calcul au gestionnaire d’événements du client pour l’événement `CalculatePrimeCompleted`. Outre les propriétés `AsyncCompletedEventArgs`, cette classe permet au client déterminer quel nombre a été testé, s’il est premier et, si ce n’est pas le cas, quel est le premier diviseur.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
@@ -103,7 +103,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Pour implémenter le comportement asynchrone interne du composant :  
   
-1.  Déclarez et créez le délégué <xref:System.Threading.SendOrPostCallback> dans la classe `PrimeNumberCalculator`. Créez les objets <xref:System.Threading.SendOrPostCallback> dans une méthode utilitaire nommée `InitializeDelegates`.  
+1. Déclarez et créez le délégué <xref:System.Threading.SendOrPostCallback> dans la classe `PrimeNumberCalculator`. Créez les objets <xref:System.Threading.SendOrPostCallback> dans une méthode utilitaire nommée `InitializeDelegates`.  
   
      Vous aurez besoin de deux délégués : un pour signaler la progression au client, l’autre pour lui signaler l’achèvement.  
   
@@ -112,17 +112,17 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
     [!code-csharp[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#20)]
     [!code-vb[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#20)]  
   
-2.  Appelez la méthode `InitializeDelegates` dans le constructeur de votre composant.  
+2. Appelez la méthode `InitializeDelegates` dans le constructeur de votre composant.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#21)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#21)]  
   
-3.  Déclarez un délégué dans la classe `PrimeNumberCalculator` qui gère concrètement le travail à faire de façon asynchrone. Il inclut dans un wrapper la méthode de travail qui teste si un nombre est premier. Le délégué prend un paramètre <xref:System.ComponentModel.AsyncOperation>, qui sera utilisé pour effectuer le suivi de la durée de vie de l’opération asynchrone.  
+3. Déclarez un délégué dans la classe `PrimeNumberCalculator` qui gère concrètement le travail à faire de façon asynchrone. Il inclut dans un wrapper la méthode de travail qui teste si un nombre est premier. Le délégué prend un paramètre <xref:System.ComponentModel.AsyncOperation>, qui sera utilisé pour effectuer le suivi de la durée de vie de l’opération asynchrone.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#22)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#22)]  
   
-4.  Créez une collection pour gérer la durée de vie des opérations asynchrones en attente. Le client a besoin d’un moyen d’effectuer le suivi des opérations à l’exécution et à l’achèvement, en transmettant un ID de tâche ou un jeton unique lorsqu’il effectue l’appel à la méthode asynchrone. Le composant `PrimeNumberCalculator` doit garder la trace de chaque appel en associant l’ID de tâche à l’appel correspondant. Si le client transmet un ID de tâche non unique, le composant `PrimeNumberCalculator` doit lever une exception.  
+4. Créez une collection pour gérer la durée de vie des opérations asynchrones en attente. Le client a besoin d’un moyen d’effectuer le suivi des opérations à l’exécution et à l’achèvement, en transmettant un ID de tâche ou un jeton unique lorsqu’il effectue l’appel à la méthode asynchrone. Le composant `PrimeNumberCalculator` doit garder la trace de chaque appel en associant l’ID de tâche à l’appel correspondant. Si le client transmet un ID de tâche non unique, le composant `PrimeNumberCalculator` doit lever une exception.  
   
      Le composant `PrimeNumberCalculator` garde la trace de l’ID de tâche à l’aide d’une classe de collection spéciale appelée <xref:System.Collections.Specialized.HybridDictionary>. Dans la définition de classe, créez un <xref:System.Collections.Specialized.HybridDictionary> nommé `userTokenToLifetime`.  
   
@@ -134,7 +134,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-raise-events-to-your-components-clients"></a>Pour déclencher des événements sur les clients du composant :  
   
-1.  Implémentez des événements publics permettant d’informer les clients. Vous aurez besoin d’un événement pour signaler la progression et d’un autre pour signaler l’achèvement.  
+1. Implémentez des événements publics permettant d’informer les clients. Vous aurez besoin d’un événement pour signaler la progression et d’un autre pour signaler l’achèvement.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#24)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#24)]  
@@ -180,29 +180,29 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Pour exécuter de façon asynchrone le calcul de nombres premiers :  
   
-1.  Implémentez la méthode utilitaire `TaskCanceled`. Elle recherche la collection de durée de vie de la tâche pour l’ID de tâche donné, et retourne `true` si l’ID de tâche est introuvable.  
+1. Implémentez la méthode utilitaire `TaskCanceled`. Elle recherche la collection de durée de vie de la tâche pour l’ID de tâche donné, et retourne `true` si l’ID de tâche est introuvable.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#32)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#32)]  
   
-2.  Implémentez la méthode `CalculateWorker`. Elle prend deux paramètres : un nombre à tester et une <xref:System.ComponentModel.AsyncOperation>.  
+2. Implémentez la méthode `CalculateWorker`. Elle prend deux paramètres : un nombre à tester et une <xref:System.ComponentModel.AsyncOperation>.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3.  Implémentez `BuildPrimeNumberList`. Elle prend deux paramètres : le nombre à tester et une <xref:System.ComponentModel.AsyncOperation>. Elle utilise la <xref:System.ComponentModel.AsyncOperation> pour signaler la progression et les résultats incrémentiels. Cela garantit que les gestionnaires d’événements du client sont appelés sur le thread ou le contexte adapté au modèle d’application. Lorsque `BuildPrimeNumberList` trouve un nombre premier, elle le signale comme un résultat incrémentiel au gestionnaire d’événements du client pour l’événement `ProgressChanged`. Cela requiert une classe dérivée de <xref:System.ComponentModel.ProgressChangedEventArgs>, appelée `CalculatePrimeProgressChangedEventArgs`, possédant une propriété supplémentaire nommée `LatestPrimeNumber`.  
+3. Implémentez `BuildPrimeNumberList`. Elle prend deux paramètres : le nombre à tester et une <xref:System.ComponentModel.AsyncOperation>. Elle utilise la <xref:System.ComponentModel.AsyncOperation> pour signaler la progression et les résultats incrémentiels. Cela garantit que les gestionnaires d’événements du client sont appelés sur le thread ou le contexte adapté au modèle d’application. Lorsque `BuildPrimeNumberList` trouve un nombre premier, elle le signale comme un résultat incrémentiel au gestionnaire d’événements du client pour l’événement `ProgressChanged`. Cela requiert une classe dérivée de <xref:System.ComponentModel.ProgressChangedEventArgs>, appelée `CalculatePrimeProgressChangedEventArgs`, possédant une propriété supplémentaire nommée `LatestPrimeNumber`.  
   
      Par ailleurs, la méthode `BuildPrimeNumberList` appelle périodiquement la méthode `TaskCanceled` et s’arrête si celle-ci retourne `true`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4.  Implémentez `IsPrime`. Elle prend trois paramètres : une liste de nombres premiers connus, le nombre à tester et un paramètre de sortie pour le premier diviseur trouvé. Étant donné la liste de nombres premiers, elle détermine si le nombre testé est premier.  
+4. Implémentez `IsPrime`. Elle prend trois paramètres : une liste de nombres premiers connus, le nombre à tester et un paramètre de sortie pour le premier diviseur trouvé. Étant donné la liste de nombres premiers, elle détermine si le nombre testé est premier.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
   
-5.  Dérivez `CalculatePrimeProgressChangedEventArgs` de <xref:System.ComponentModel.ProgressChangedEventArgs>. Cette classe est nécessaire pour signaler des résultats incrémentiels au gestionnaire d’événements du client pour l’événement `ProgressChanged`. Elle possède une propriété supplémentaire nommée `LatestPrimeNumber`.  
+5. Dérivez `CalculatePrimeProgressChangedEventArgs` de <xref:System.ComponentModel.ProgressChangedEventArgs>. Cette classe est nécessaire pour signaler des résultats incrémentiels au gestionnaire d’événements du client pour l’événement `ProgressChanged`. Elle possède une propriété supplémentaire nommée `LatestPrimeNumber`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
@@ -223,12 +223,12 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-implement-start-and-cancel-functionality"></a>Pour implémenter les fonctionnalités de démarrage et d’annulation :  
   
-1.  Implémentez la méthode `CalculatePrimeAsync`. Vérifiez que le jeton fourni par le client (ID de tâche) est unique parmi tous les jetons représentant des tâches actuellement en attente. Si le client transmet un jeton non unique, `CalculatePrimeAsync` lève une exception. Sinon, le jeton est ajouté à la collection d’ID de tâche.  
+1. Implémentez la méthode `CalculatePrimeAsync`. Vérifiez que le jeton fourni par le client (ID de tâche) est unique parmi tous les jetons représentant des tâches actuellement en attente. Si le client transmet un jeton non unique, `CalculatePrimeAsync` lève une exception. Sinon, le jeton est ajouté à la collection d’ID de tâche.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
   
-2.  Implémentez la méthode `CancelAsync`. Si le paramètre `taskId` existe dans la collection de jetons, il est supprimé. Cela empêche l’exécution des tâches annulées qui n’ont pas démarré. Si la tâche est en cours d’exécution, la méthode `BuildPrimeNumberList` se termine lorsqu’elle détecte que l’ID de tâche a été supprimé de la collection de durées de vie.  
+2. Implémentez la méthode `CancelAsync`. Si le paramètre `taskId` existe dans la collection de jetons, il est supprimé. Cela empêche l’exécution des tâches annulées qui n’ont pas démarré. Si la tâche est en cours d’exécution, la méthode `BuildPrimeNumberList` se termine lorsqu’elle détecte que l’ID de tâche a été supprimé de la collection de durées de vie.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
@@ -253,6 +253,6 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procédure : exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Vue d’ensemble du modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316022"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Procédure : Utiliser l'espace de noms My (Guide de programmation C#)
 L’espace de noms <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic) permet d’accéder de manière simple et intuitive à un certain nombre de classes .NET Framework, ce qui vous permet d’écrire du code qui interagit avec l’ordinateur, l’application, les paramètres, les ressources, etc. Bien que conçu à l’origine pour une utilisation avec Visual Basic, l’espace de noms `MyServices` peut être utilisé dans les applications C#.  
@@ -22,9 +22,9 @@ L’espace de noms <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Pour ajouter une référence à la bibliothèque Visual Basic  
   
-1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références**, puis sélectionnez **Ajouter une référence**.  
+1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Références**, puis sélectionnez **Ajouter une référence**.  
   
-2.  Une fois la boîte de dialogue **Références** affichée, faites défiler la liste et sélectionnez Microsoft.VisualBasic.dll.  
+2. Une fois la boîte de dialogue **Références** affichée, faites défiler la liste et sélectionnez Microsoft.VisualBasic.dll.  
   
      Vous pouvez aussi inclure la ligne suivante de la section `using` au début de votre programme.  
   
@@ -43,4 +43,4 @@ L’espace de noms <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic
 
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)
-- [Utilisation d’espaces de noms](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Utilisation des espaces de noms](../../../csharp/programming-guide/namespaces/using-namespaces.md)

@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296158"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procédure : convertir des entrées d’utilisateur numériques figurant dans des contrôles web en nombres
 Étant donné qu’une page web peut être affichée n’importe où dans le monde, les utilisateurs peuvent entrer des données numériques dans un contrôle <xref:System.Web.UI.WebControls.TextBox> dans un nombre de formats pratiquement illimité. Il est par conséquent très important de déterminer les paramètres régionaux et la culture de l’utilisateur d’une page web. Après avoir analysé une entrée d’utilisateur, vous pouvez appliquer les conventions de mise en forme définies par les paramètres régionaux et la culture de l’utilisateur.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Pour convertir une entrée numérique d’un contrôle Web TextBox en nombre  
   
-1.  Déterminez si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est rempli. Si ce n’est pas le cas, passez à l’étape 6.  
+1. Déterminez si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est rempli. Si ce n’est pas le cas, passez à l’étape 6.  
   
-2.  Si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A> est rempli, récupérez son premier élément. Le premier élément indique la langue et la région par défaut ou préférées de l’utilisateur.  
+2. Si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A> est rempli, récupérez son premier élément. Le premier élément indique la langue et la région par défaut ou préférées de l’utilisateur.  
   
-3.  Instanciez un objet <xref:System.Globalization.CultureInfo> représentant la culture préférée de l’utilisateur en appelant le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Instanciez un objet <xref:System.Globalization.CultureInfo> représentant la culture préférée de l’utilisateur en appelant le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Appelez la méthode `TryParse` ou `Parse` du type numérique dans lequel vous souhaitez convertir l’entrée de l’utilisateur. Utilisez une surcharge de la méthode `TryParse` ou `Parse` avec un paramètre `provider` et transférez-y l’un des éléments suivants :  
+4. Appelez la méthode `TryParse` ou `Parse` du type numérique dans lequel vous souhaitez convertir l’entrée de l’utilisateur. Utilisez une surcharge de la méthode `TryParse` ou `Parse` avec un paramètre `provider` et transférez-y l’un des éléments suivants :  
   
     -   L’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3  
   
     -   L’objet <xref:System.Globalization.NumberFormatInfo> retourné par la propriété <xref:System.Globalization.CultureInfo.NumberFormat%2A> de l’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3  
   
-5.  Si la conversion échoue, répétez les étapes 2 à 4 pour chaque élément restant dans le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Si la conversion échoue, répétez les étapes 2 à 4 pour chaque élément restant dans le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Si la conversion échoue toujours ou si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A> est vide, analysez la chaîne à l’aide de la culture invariante retournée par la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Si la conversion échoue toujours ou si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A> est vide, analysez la chaîne à l’aide de la culture invariante retournée par la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre la page code-behind complète d’un formulaire Web qui invite l’utilisateur à entrer une valeur numérique dans un contrôle <xref:System.Web.UI.WebControls.TextBox> et la convertit en nombre. Ce nombre est ensuite doublé et affiché en appliquant les mêmes règles de mise en forme que l’entrée d’origine.  
@@ -73,5 +73,5 @@ ms.locfileid: "54722359"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Analyse de chaînes numériques](../../../docs/standard/base-types/parsing-numeric.md)

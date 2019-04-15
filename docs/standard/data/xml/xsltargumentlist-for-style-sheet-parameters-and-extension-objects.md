@@ -1,5 +1,5 @@
 ---
-title: XsltArgumentList pour les paramètres de feuille de style et les objets d’extension
+title: XsltArgumentList pour les paramètres de feuille de style et les objets d'extension
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,20 +8,20 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322405"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList pour les paramètres de feuille de style et les objets d’extension
-La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (Extensible Stylesheet Language for Transformations) et des objets d'extension XSLT. Lorsqu'ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d'extension peuvent être appelés à partir des feuilles de style.  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList pour les paramètres de feuille de style et les objets d'extension
+La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (Extensible Stylesheet Language for Transformations) et des objets d'extension XSLT. Lorsqu’ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d’extension peuvent être appelés à partir des feuilles de style.  
   
 > [!NOTE]
 >  Les classes <xref:System.Xml.Xsl.XslTransform> et <xref:System.Xml.Xsl.XsltArgumentList> sont obsolètes dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez [Utilisation de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
- La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT et des objets d'extension XSLT. Lorsqu'ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d'extension peuvent être appelés à partir des feuilles de style.  
+ La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT et des objets d’extension XSLT. Lorsqu’ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d’extension peuvent être appelés à partir des feuilles de style.  
   
  La transmission d'un objet plutôt que l'utilisation d'un script incorporé présente les avantages suivants :  
   
@@ -36,25 +36,25 @@ La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (
 ## <a name="xslt-style-sheet-parameters"></a>Paramètres de feuille de style XSLT  
  Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet paramètre à ce stade.  
   
- L'objet paramètre doit correspondre à un type World Wide Web Consortium (W3C). Le tableau suivant présente les types W3C correspondants, les classes [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] équivalentes (type) et indique si le type W3C est un type XML Path Language (XPath) ou XSLT.  
+ L’objet paramètre doit correspondre à un type World Wide Web Consortium (W3C). Le tableau suivant présente les types W3C correspondants, les classes [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] équivalentes (type) et indique si le type W3C est un type XML Path Language (XPath) ou XSLT.  
   
 |Type W3C|Classe .NET Framework équivalente (type)|Type XPath ou type XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
 |Chaîne|System.String|XPath|  
 |Booléen|System.Boolean|XPath|  
 |nombre|System.Double|XPath|  
-|Fragment d'arborescence résultat|System.Xml.XPath.XPathNavigator|XSLT|  
+|Fragment d’arborescence résultat|System.Xml.XPath.XPathNavigator|XSLT|  
 |Collection de nœuds|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Si l'objet paramètre ne fait pas partie des classes ci-avant, il devient un type Double ou String, selon le cas. Les types Int16, UInt16, Int32, UInt32, Int64, UInt64, Single et Decimal deviennent un type Double. Tous les autres types deviennent un type String à l'aide de la méthode `ToString`.  
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Pour utiliser le paramètre XSLT, vous devez procéder comme suit :  
   
-1.  Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez les objets à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez les objets à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Appelez les paramètres à partir de la feuille de style.  
+2. Appelez les paramètres à partir de la feuille de style.  
   
-3.  Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant utilise la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> pour créer un paramètre destiné à contenir une date de remise calculée. La date de la remise correspond à 20 jours à partir de la date de la commande.  
@@ -181,21 +181,21 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>Objets d'extension XSLT  
- Des objets d'extension XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet d'extension à ce stade.  
+ Des objets d’extension XSLT sont ajoutés à l’objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet d'extension à ce stade.  
   
  Lors de l'ajout d'un objet, l'appelant de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> doit être d'un niveau de confiance suffisant dans la stratégie de sécurité. Si l'appelant est d'un niveau de confiance partiel, l'ajout n'aboutira pas.  
   
- L'ajout correct d'un objet ne garantit pas le succès de l'exécution. Lorsque la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A> est appelée, les autorisations sont calculées par rapport aux preuves fournies lors de la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A>, et ce jeu d'autorisations est attribué à l'ensemble du processus de transformation. Si un objet d'extension tente d'initier une action qui nécessite des autorisations qui ne se trouvent pas dans le jeu, une exception est levée.  
+ L'ajout correct d'un objet ne garantit pas le succès de l'exécution. Lorsque la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A> est appelée, les autorisations sont calculées par rapport aux preuves fournies lors de la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A>, et ce jeu d'autorisations est attribué à l'ensemble du processus de transformation. Si un objet d’extension tente d’initier une action qui nécessite des autorisations qui ne se trouvent pas dans le jeu, une exception est levée.  
   
- Les types de données retournés par les objets d'extension correspondent à l'un des quatre types de données de base XPath : nombre, chaîne, booléen et collection de nœuds.  
+ Les types de données retournés par les objets d’extension correspondent à l’un des quatre types de données de base XPath : nombre, chaîne, booléen et collection de nœuds.  
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Pour utiliser l’objet d’extension XSLT, vous devez procéder comme suit :  
   
-1.  Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez l'objet extension à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez l’objet extension à l’aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Appelez l’objet d’extension à partir de la feuille de style.  
+2. Appelez l'objet d'extension à partir de la feuille de style.  
   
-3.  Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant calcule la circonférence d'un cercle en fonction de son rayon.  
@@ -366,4 +366,4 @@ public class Sample
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

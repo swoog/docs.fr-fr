@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319870"
 ---
 # <a name="enhanced-strong-naming"></a>Amélioration de l'utilisation de noms forts
 Une signature de nom fort est un mécanisme d’identité dans le .NET Framework permettant d’identifier des assemblys. Il s’agit d’une signature numérique de clé publique qui sert généralement à vérifier l’intégrité des données transmises d’un expéditeur (signataire) vers un destinataire (vérificateur). Cette signature est utilisée comme identité unique pour un assembly, et garantit que les références à l’assembly ne sont pas ambiguës. L’assembly est signé dans le cadre du processus de génération, puis vérifié quand il est chargé.  
@@ -41,25 +41,25 @@ Une signature de nom fort est un mécanisme d’identité dans le .NET Framework
 ### <a name="signing-with-sha-2-without-key-migration"></a>Signature avec SHA-2, sans migration de clé  
  Exécutez les commandes suivantes à partir d’une fenêtre d’invite de commandes pour signer un assembly sans migrer une signature de nom fort :  
   
-1.  Générez la nouvelle clé d’identité (si nécessaire).  
+1. Générez la nouvelle clé d’identité (si nécessaire).  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Extrayez la clé publique d’identité et indiquez qu’un algorithme SHA-2 doit être utilisé lors de la signature avec cette clé.  
+2. Extrayez la clé publique d’identité et indiquez qu’un algorithme SHA-2 doit être utilisé lors de la signature avec cette clé.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Signez en différé l’assembly avec le fichier de clé publique d’identité.  
+3. Signez en différé l’assembly avec le fichier de clé publique d’identité.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Resignez l’assembly avec la paire de clés d’identité complète.  
+4. Resignez l’assembly avec la paire de clés d’identité complète.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Une signature de nom fort est un mécanisme d’identité dans le .NET Framework
 ### <a name="signing-with-sha-2-with-key-migration"></a>Signature avec SHA-2, avec migration de clé  
  Exécutez les commandes suivantes à partir d’une fenêtre d’invite de commandes pour signer un assembly avec une signature de nom fort migrée.  
   
-1.  Générez une paire de clés d’identité et de signature (si nécessaire).  
+1. Générez une paire de clés d’identité et de signature (si nécessaire).  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Extrayez la clé publique de signature et indiquez qu’un algorithme SHA-2 doit être utilisé lors de la signature avec cette clé.  
+2. Extrayez la clé publique de signature et indiquez qu’un algorithme SHA-2 doit être utilisé lors de la signature avec cette clé.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Extrayez la clé publique d’identité, qui détermine l’algorithme de hachage qui génère une contre-signature.  
+3. Extrayez la clé publique d’identité, qui détermine l’algorithme de hachage qui génère une contre-signature.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Générez les paramètres pour un attribut <xref:System.Reflection.AssemblySignatureKeyAttribute> et attachez l’attribut à l’assembly.  
+4. Générez les paramètres pour un attribut <xref:System.Reflection.AssemblySignatureKeyAttribute> et attachez l’attribut à l’assembly.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ Une signature de nom fort est un mécanisme d’identité dans le .NET Framework
     )]
     ```
   
-5.  Signez en différé l’assembly avec la clé publique d’identité.  
+5. Signez en différé l’assembly avec la clé publique d’identité.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Signez complètement l’assembly avec la paire de clés de signature.  
+6. Signez complètement l’assembly avec la paire de clés de signature.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création et utilisation d’assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+
+- [Création et utilisation d'assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

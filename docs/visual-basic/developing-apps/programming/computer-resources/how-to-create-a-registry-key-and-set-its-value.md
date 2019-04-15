@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835451"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312609"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procédure : créer une clé de Registre et définir sa valeur en Visual Basic
 Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Registry` pour créer une clé de Registre.  
@@ -31,11 +31,11 @@ Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Regist
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Pour créer une clé de Registre et définir sa valeur  
   
-1.  Utilisez la méthode `CreateSubkey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
+1. Utilisez la méthode `CreateSubkey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Définissez la valeur avec la méthode `SetValue`. Cet exemple définit « This is a test value » comme valeur de chaîne « MyTestKeyValue ».  
+2. Définissez la valeur avec la méthode `SetValue`. Cet exemple définit « This is a test value » comme valeur de chaîne « MyTestKeyValue ».  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
@@ -76,4 +76,4 @@ Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Regist
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Lecture et écriture dans le Registre](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Notions fondamentales de la sécurité d’accès du code](../../../../framework/misc/code-access-security-basics.md)
+- [Notions fondamentales de la sécurité d'accès du code](../../../../framework/misc/code-access-security-basics.md)

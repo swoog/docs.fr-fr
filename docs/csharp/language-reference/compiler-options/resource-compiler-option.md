@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302567"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (Options du compilateur C#)
 Incorpore la ressource spécifiée dans le fichier de sortie.  
@@ -37,7 +37,7 @@ Incorpore la ressource spécifiée dans le fichier de sortie.
  `accessibility-modifier` (facultatif)  
  Accessibilité de la ressource : publique ou privée. La valeur par défaut est « public ».  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) pour lier une ressource à un assembly sans ajouter le fichier de ressources au fichier de sortie.  
   
  Par défaut, les ressources sont publiques dans l’assembly quand elles sont créées à l’aide du compilateur C#. Pour rendre les ressources privées, spécifiez le modificateur d’accessibilité `private`. Aucune accessibilité autre `public` ou `private` n’est autorisée.  
@@ -50,13 +50,13 @@ Incorpore la ressource spécifiée dans le fichier de sortie.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ajoutez un fichier de ressources à votre projet.  
+1. Ajoutez un fichier de ressources à votre projet.  
   
-2.  Sélectionnez le fichier que vous souhaitez incorporer dans l’**Explorateur de solutions**.  
+2. Sélectionnez le fichier que vous souhaitez incorporer dans l’**Explorateur de solutions**.  
   
-3.  Sélectionnez **Action de génération** pour le fichier dans la fenêtre **Propriétés**.  
+3. Sélectionnez **Action de génération** pour le fichier dans la fenêtre **Propriétés**.  
   
-4.  Définissez **Action de génération**  sur **Ressource incorporée**.  
+4. Définissez **Action de génération**  sur **Ressource incorporée**.  
   
  Pour plus d'informations sur la façon de définir cette option du compilateur par programme, consultez <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   

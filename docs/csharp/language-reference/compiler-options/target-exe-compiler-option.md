@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331310"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (Options du compilateur C#)
 L’option **-target:exe** indique au compilateur de créer une application console exécutable (EXE).  
@@ -24,7 +24,7 @@ L’option **-target:exe** indique au compilateur de créer une application cons
 -target:exe  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’option **-target:exe** est activée par défaut. Le fichier exécutable est créé avec l’extension .exe.  
   
  Utilisez [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) pour créer un programme exécutable Windows.  
@@ -37,11 +37,11 @@ L’option **-target:exe** indique au compilateur de créer une application cons
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Application**.  
+2. Cliquez sur la page de propriétés **Application**.  
   
-3.  Modifiez la propriété **Type de sortie**.  
+3. Modifiez la propriété **Type de sortie**.  
   
  Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -55,5 +55,5 @@ csc in.cs
   
 ## <a name="see-also"></a>Voir aussi
 
-- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

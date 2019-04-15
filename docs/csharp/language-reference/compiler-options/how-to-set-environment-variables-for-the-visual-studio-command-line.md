@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322119"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Procédure : Définir des variables d’environnement pour la ligne de commande Visual Studio
 
@@ -33,11 +33,11 @@ Si la version actuelle de Visual Studio est installée sur un ordinateur qui ex�
   
 ### <a name="to-run-vsdevcmdbat"></a>Pour exécuter VsDevCmd.BAT  
   
-1.  Dans le menu **Démarrer**, ouvrez **l’invite de commandes développeur pour VS2017**.  Elle se trouve dans le dossier **Visual Studio 2017**.
+1. Dans le menu **Démarrer**, ouvrez **l’invite de commandes développeur pour VS2017**.  Elle se trouve dans le dossier **Visual Studio 2017**.
   
-2.  Accédez au sous-répertoire \Program Files\Microsoft Visual Studio\\*Version*\\*Offre*\Common7\Tools ou \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offre*\Common7\Tools de votre installation.  (*Version* correspond à *2017* pour la version actuelle. *Offre* correspond à *Enterprise*, *Professional* ou *Community*.)
+2. Accédez au sous-répertoire \Program Files\Microsoft Visual Studio\\*Version*\\*Offre*\Common7\Tools ou \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offre*\Common7\Tools de votre installation.  (*Version* correspond à *2017* pour la version actuelle. *Offre* correspond à *Enterprise*, *Professional* ou *Community*.)
   
-3.  Exécutez VsDevCmd.bat en tapant **VsDevCmd**.  
+3. Exécutez VsDevCmd.bat en tapant **VsDevCmd**.  
   
     > [!CAUTION]
     >  VsDevCmd.bat peut varier d’un ordinateur à l’autre. Ne remplacez pas un fichier VsDevCmd.bat manquant ou endommagé par un fichier VsDevCmd.bat d’un autre ordinateur. À la place, réexécutez le programme d'installation pour remplacer le fichier manquant.  

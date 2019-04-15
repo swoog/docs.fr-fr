@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226043"
 ---
 # <a name="deriving-from-webresponse"></a>Dérivation à partir de WebResponse
 La classe <xref:System.Net.WebResponse> est une classe de base abstraite qui fournit les méthodes et les propriétés de base pour la création d’une réponse propre au protocole qui correspond au modèle de protocole enfichable .NET Framework. Les applications qui utilisent la classe <xref:System.Net.WebRequest> pour demander des données à des ressources reçoivent les réponses dans un **WebResponse**. Les descendants **WebResponse** propres au protocole doivent implémenter les membres abstraits de la classe **WebResponse**.  
@@ -39,8 +39,9 @@ La classe <xref:System.Net.WebResponse> est une classe de base abstraite qui fou
  L’instance de flux retournée par la méthode **GetResponseStream** appartient à l’application et peut être fermée sans fermer le **WebResponse**. Par convention, l’appel de la méthode **WebResponse.Close** ferme également le flux retourné par **GetResponse**.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Dérivation de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [dérivation de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)

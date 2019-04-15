@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322372"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (Options du compilateur C#)
 L’option **-win32res** insère une ressource Win32 dans le fichier de sortie.  
@@ -29,7 +29,7 @@ L’option **-win32res** insère une ressource Win32 dans le fichier de sortie.
  `filename`  
  Fichier de ressources que vous voulez ajouter à votre fichier de sortie.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un fichier de ressources Win32 peut être créé avec le [compilateur de ressources](../../language-reference/compiler-options/resource-compiler-option.md). Le compilateur de ressources est appelé lorsque vous compilez un programme Visual C++ ; un fichier .res est alors créé à partir du fichier .rc.  
   
  Une ressource Win32 peut contenir des informations sur la version ou le fichier bitmap (icône) qui permettent d’identifier votre application dans l’Explorateur de fichiers. Si vous ne spécifiez pas l’option **-win32res**, le compilateur génère des informations de version en fonction de la version de l’assembly.  
@@ -38,11 +38,11 @@ L’option **-win32res** insère une ressource Win32 dans le fichier de sortie.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Application**.  
+2. Cliquez sur la page de propriétés **Application**.  
   
-3.  Cliquez sur le bouton **Fichier de ressources** et choisissez un fichier à l’aide de la zone de liste modifiable.  
+3. Cliquez sur le bouton **Fichier de ressources** et choisissez un fichier à l’aide de la zone de liste modifiable.  
   
 ## <a name="example"></a>Exemple  
  Compilez `in.cs` et attachez un fichier de ressources Win32 `rf.res` afin de générer le fichier `in.exe` :  

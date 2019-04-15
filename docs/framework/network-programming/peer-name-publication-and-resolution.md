@@ -2,12 +2,12 @@
 title: Résolution et publication de nom de pair
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309093"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Résolution et publication de nom de pair
 
@@ -25,9 +25,9 @@ Les nœuds PNRP version 2 ne publient pas les ID PNRP s’ils résolvent uniq
 
  Le processus de localisation d’autres pairs sur un réseau PNRP ou dans le cloud comprend deux phases :  
   
-1.  Détermination du point de terminaison  
+1. Détermination du point de terminaison  
   
-2.  Résolution de l’ID PNRP  
+2. Résolution de l’ID PNRP  
   
  Durant la phase de détermination du point de terminaison, un pair qui tenterait de résoudre l’ID PNRP d’un service sur un autre ordinateur va déterminer l’adresse IPv6 de ce pair distant.  Le pair distant est celui qui a publié l’ID PNRP de l’ordinateur ou du service, ou qui est associé à cet ID.  
   
@@ -48,4 +48,5 @@ Le pair demandeur continue ce processus avec des itérations successives dans le
  Dans l’espace de noms <xref:System.Net.PeerToPeer>, il existe une relation plusieurs-à-plusieurs entre les enregistrements <xref:System.Net.PeerToPeer.PeerName> qui contiennent les points de terminaison, et les clouds PNRP ou les mailles avec lesquels ils communiquent. Lorsqu’il y a des entrées obsolètes ou en double, ou plusieurs nœuds portant le même nom de pair, les nœuds PNRP peuvent obtenir des informations actuelles à l’aide de la classe <xref:System.Net.PeerToPeer.PeerNameResolver>. Les méthodes <xref:System.Net.PeerToPeer.PeerNameResolver> utilisent un seul nom de pair pour simplifier les enregistrements de noms de pairs : de un à plusieurs pairs et d’un pair à plusieurs clouds. Ceci est similaire à une requête effectuée à l’aide d’une jointure de table relationnelle. Lorsque vous avez terminé, l’objet Resolver retourne un <xref:System.Net.PeerToPeer.PeerNameRecordCollection> pour le nom de pair spécifié.  Par exemple, un nom de pair peut apparaître dans tous les enregistrements de noms de pairs de la collection, qui sont classés par cloud. Il s’agit là des instances du nom de pair dont les données prises en charge peuvent être demandées par une application PNRP.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.PeerToPeer>

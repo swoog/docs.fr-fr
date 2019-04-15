@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330442"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Versions finales hors plage de .NET Framework
 
@@ -23,26 +23,26 @@ ms.locfileid: "58654560"
 ## <a name="how-oob-packages-are-distributed"></a>Mode de distribution des packages OOB
 Les versions OOB des principaux composants du Common Langage Runtime (CLR) sont fournies via le [NuGet](https://www.nuget.org/), qui est un gestionnaire de package pour .NET. NuGet vous permet de parcourir et d’ajouter facilement des bibliothèques à vos projets .NET Framework à partir de l’Explorateur de solutions de Visual Studio. NuGet est inclus avec toutes les éditions Visual Studio à partir de Visual Studio 2012. Pour savoir si NuGet est installé, recherchez **Gestionnaire de package NuGet** dans le menu **Outils** de Visual Studio. S'il n'est pas installé :
 
-1.  Dans la barre de menus de Visual Studio, choisissez **Outils**, **Extensions et mises à jour** (dans Visual Studio 2010, choisissez **Gestionnaire d’extensions**).
+1. Dans la barre de menus de Visual Studio, choisissez **Outils**, **Extensions et mises à jour** (dans Visual Studio 2010, choisissez **Gestionnaire d’extensions**).
 
      La boîte de dialogue **Extensions et mises à jour** s’ouvre.
 
-2.  Sélectionnez **En ligne**, **Gestionnaire de package NuGet**, puis choisissez **Télécharger**.
+2. Sélectionnez **En ligne**, **Gestionnaire de package NuGet**, puis choisissez **Télécharger**.
 
-3.  Une fois le téléchargement terminé, redémarrez Visual Studio.
+3. Une fois le téléchargement terminé, redémarrez Visual Studio.
 
  Pour obtenir des instructions d'installation complètes, consultez [Installation NuGet](/nuget/install-nuget-client-tools) sur le site Web de la documentation NuGet. Pour plus d'informations sur NuGet, consultez la [documentation NuGet](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Utilisation d’un package OOB NuGet
  Après avoir installé NuGet, vous pouvez parcourir et ajouter des références aux packages de NuGet à l’aide de l’Explorateur de solutions dans Visual Studio :
 
-1.  Ouvrez le menu contextuel de votre projet dans Visual Studio, puis choisissez **Gérer les packages NuGet**. (Cette option est également disponible dans le menu **Projet**.)
+1. Ouvrez le menu contextuel de votre projet dans Visual Studio, puis choisissez **Gérer les packages NuGet**. (Cette option est également disponible dans le menu **Projet**.)
 
-2.  Dans le volet gauche, cliquez sur **En ligne**.
+2. Dans le volet gauche, cliquez sur **En ligne**.
 
-3.  Si vous souhaitez utiliser des packages de version préliminaire, dans la zone de liste déroulante du volet central, sélectionnez l’option **Inclure la version préliminaire** au lieu de **Stable uniquement**.
+3. Si vous souhaitez utiliser des packages de version préliminaire, dans la zone de liste déroulante du volet central, sélectionnez l’option **Inclure la version préliminaire** au lieu de **Stable uniquement**.
 
-4.  Dans le volet droit, utilisez la zone **Rechercher** pour localiser le package que vous souhaitez utiliser. Certains packages Microsoft sont identifiés par le logo Microsoft .NET Framework, et tous identifient Microsoft en tant qu'éditeur.
+4. Dans le volet droit, utilisez la zone **Rechercher** pour localiser le package que vous souhaitez utiliser. Certains packages Microsoft sont identifiés par le logo Microsoft .NET Framework, et tous identifient Microsoft en tant qu'éditeur.
 
  ![Capture d’écran qui montre le gestionnaire de package NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

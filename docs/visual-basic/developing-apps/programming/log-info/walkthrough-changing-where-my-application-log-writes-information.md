@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ed7f88b20e4d519e67c8ef7b9f74909a38ea9c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327644"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procédure pas à pas : Modification de l’emplacement des informations My.Application.Log (Visual Basic)
 Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application. Cette procédure pas à pas montre comment remplacer les paramètres par défaut et faire en sorte que l’objet `Log` écrive dans d’autres écouteurs de journalisation.  
@@ -22,7 +22,7 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
 ### <a name="to-add-listeners"></a>Pour ajouter des écouteurs  
   
-1.  Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.  
+1. Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.  
   
      \- ou -  
   
@@ -34,9 +34,9 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
     3.  Cliquez sur **Ajouter**.  
   
-2.  Recherchez la section `<listeners>` , sous la section `<source>` avec l’attribut `name` « DefaultSource » dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
+2. Recherchez la section `<listeners>` , sous la section `<source>` avec l’attribut `name` « DefaultSource » dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
-3.  Ajoutez ces éléments à cette section `<listeners>` .  
+3. Ajoutez ces éléments à cette section `<listeners>` .  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  Supprimez les marques de commentaire pour les écouteurs de journalisation qui doivent recevoir les messages `Log` .  
+4. Supprimez les marques de commentaire pour les écouteurs de journalisation qui doivent recevoir les messages `Log` .  
   
-5.  Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
+5. Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
-6.  Ajoutez ces éléments à cette section `<sharedListeners>` .  
+6. Ajoutez ces éléments à cette section `<sharedListeners>` .  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
          initializeData="true" />  
     ```  
   
-7.  Le contenu du fichier app.config doit être similaire au code XML suivant :  
+7. Le contenu du fichier app.config doit être similaire au code XML suivant :  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -147,9 +147,9 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
 ### <a name="to-reconfigure-a-listener"></a>Pour reconfigurer un écouteur  
   
-1.  Recherchez l’élément `<add>` de l’écouteur dans la section `<sharedListeners>` .  
+1. Recherchez l’élément `<add>` de l’écouteur dans la section `<sharedListeners>` .  
   
-2.  L’attribut `type` donne le nom du type d’écouteur. Ce type doit être hérité de la classe <xref:System.Diagnostics.TraceListener> . Utilisez le nom de type avec un nom fort pour être sûr que le type correct est utilisé. Pour plus d’informations, consultez la section « Pour référencer un type avec un nom fort » ci-dessous.  
+2. L’attribut `type` donne le nom du type d’écouteur. Ce type doit être hérité de la classe <xref:System.Diagnostics.TraceListener> . Utilisez le nom de type avec un nom fort pour être sûr que le type correct est utilisé. Pour plus d’informations, consultez la section « Pour référencer un type avec un nom fort » ci-dessous.  
   
      Voici quelques-uns des types que vous pouvez utiliser :  
   
@@ -163,17 +163,17 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
      Pour plus d’informations sur les emplacements où d’autres types d’écouteurs de journalisation écrivent les informations, consultez la documentation de ce type.  
   
-3.  Quand l’application crée l’objet d’écouteur de journalisation, il passe l’attribut `initializeData` comme paramètre de constructeur. La signification de l’attribut `initializeData` dépend de l’écouteur de suivi.  
+3. Quand l’application crée l’objet d’écouteur de journalisation, il passe l’attribut `initializeData` comme paramètre de constructeur. La signification de l’attribut `initializeData` dépend de l’écouteur de suivi.  
   
-4.  Après avoir créé l’écouteur de journalisation, l’application définit les propriétés de l’écouteur. Ces propriétés sont définies par les autres attributs dans l’élément `<add>` . Pour plus d’informations sur les propriétés d’un écouteur particulier, consultez la documentation de ce type d’écouteur.  
+4. Après avoir créé l’écouteur de journalisation, l’application définit les propriétés de l’écouteur. Ces propriétés sont définies par les autres attributs dans l’élément `<add>` . Pour plus d’informations sur les propriétés d’un écouteur particulier, consultez la documentation de ce type d’écouteur.  
   
 ### <a name="to-reference-a-strongly-named-type"></a>Pour référencer un type avec un nom fort  
   
-1.  Pour être sûr que type correct est utilisé pour votre écouteur de journalisation, vérifiez que vous utilisez le nom de type qualifié complet et le nom d’assembly avec nom fort. La syntaxe d’un type avec nom fort est la suivante :  
+1. Pour être sûr que type correct est utilisé pour votre écouteur de journalisation, vérifiez que vous utilisez le nom de type qualifié complet et le nom d’assembly avec nom fort. La syntaxe d’un type avec nom fort est la suivante :  
   
      \<*nom de type*>, \<*nom d’assembly*>, \<*numéro de version*>, \<*culture*>, \<*nom fort*>  
   
-2.  Cet exemple de code montre comment déterminer le nom de type avec nom fort pour un type qualifié complet, dans ce cas « System.Diagnostics.FileLogTraceListener ».  
+2. Cet exemple de code montre comment déterminer le nom de type avec nom fort pour un type qualifié complet, dans ce cas « System.Diagnostics.FileLogTraceListener ».  
   
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
@@ -187,5 +187,5 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Guide pratique pour écrire des informations sur les événements dans un fichier texte](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Guide pratique pour écrire dans le journal des événements de l’application](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Procédure : écrire des informations sur les événements dans un fichier texte](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [Procédure : écrire dans le journal des événements de l’application](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

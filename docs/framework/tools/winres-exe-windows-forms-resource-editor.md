@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296652"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -106,9 +106,9 @@ Vous devez utiliser la version de Winres.exe publiée avec le .NET Framework que
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Pour localiser un fichier .resx ou .resources associé à un formulaire
 
-1.  Tapez `winres` à l'invite de commandes développeur pour exécuter Winres.exe.
+1. Tapez `winres` à l'invite de commandes développeur pour exécuter Winres.exe.
 
-2.  Pour ouvrir les ressources par défaut d’un formulaire à localiser, cliquez sur la commande **Ouvrir** dans le menu **Fichier** et accédez au fichier pour l’ouvrir.
+2. Pour ouvrir les ressources par défaut d’un formulaire à localiser, cliquez sur la commande **Ouvrir** dans le menu **Fichier** et accédez au fichier pour l’ouvrir.
 
      - ou -
 
@@ -129,11 +129,11 @@ Vous devez utiliser la version de Winres.exe publiée avec le .NET Framework que
     > [!NOTE]
     > Si le formulaire dont vous modifiez les ressources est un formulaire hérité, à la fois l'assembly qui contient le formulaire hérité et l'assembly qui contient le formulaire héritant (dérivé) doivent être enregistrés dans le Global Assembly Cache (GAC) ou résider dans le même répertoire que WinRes.exe. Pour plus d’informations sur l’installation des composants du .NET Framework dans le GAC, consultez [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).
 
-3.  Sélectionnez les contrôles sur le formulaire et modifiez leurs propriétés <xref:System.Windows.Forms.Control.Text%2A> et autres propriétés pour refléter la culture localisée et sa langue. Si nécessaire, déplacez ou redimensionnez les contrôles pour tenir compte du texte localisé.
+3. Sélectionnez les contrôles sur le formulaire et modifiez leurs propriétés <xref:System.Windows.Forms.Control.Text%2A> et autres propriétés pour refléter la culture localisée et sa langue. Si nécessaire, déplacez ou redimensionnez les contrôles pour tenir compte du texte localisé.
 
-4.  Pour enregistrer la version localisée du fichier .resx ou .resources, cliquez sur l’icône **Enregistrer** ou sur la même commande dans le menu **Fichier**. L’outil affiche la fenêtre **Choisir la culture**.
+4. Pour enregistrer la version localisée du fichier .resx ou .resources, cliquez sur l’icône **Enregistrer** ou sur la même commande dans le menu **Fichier**. L’outil affiche la fenêtre **Choisir la culture**.
 
-5.  Sélectionnez la culture appropriée et le mode de fichier, puis cliquez sur **OK**.
+5. Sélectionnez la culture appropriée et le mode de fichier, puis cliquez sur **OK**.
 
    L’outil enregistre le fichier à l’aide de la convention de nommage que le runtime attend pour les fichiers de ressources localisés. Par exemple, si vous localisez `TestApp.resources` en allemand, l'outil enregistre le fichier sous `TestApp.de-DE.resources`. Si vous localisez `TestApp.resx` en allemand, l'outil enregistre le fichier sous `TestApp.de-DE.resx`. Pour plus d’informations sur les conventions de nommage des ressources, consultez [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Pour obtenir la liste des noms de cultures prédéfinis utilisés au moment de l’exécution, consultez la classe <xref:System.Globalization.CultureInfo>.
 

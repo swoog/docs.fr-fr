@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294975"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Procédure : Guide pratique pour substituer la méthode ToString (Guide de programmation C#)
 En C#, chaque classe ou struct hérite implicitement de la classe <xref:System.Object>. Ainsi, chaque objet en C# obtient la méthode <xref:System.Object.ToString%2A>, qui retourne une représentation sous forme de chaîne de cet objet. Par exemple, toutes les variables de type `int` ont une méthode `ToString`, ce qui leur permet de retourner leur contenu sous forme de chaîne :  
@@ -27,13 +27,13 @@ En C#, chaque classe ou struct hérite implicitement de la classe <xref:System.O
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Pour substituer la méthode ToString dans votre classe ou struct  
   
-1.  Déclarez une méthode `ToString` avec les modificateurs et le type de retour suivants :  
+1. Déclarez une méthode `ToString` avec les modificateurs et le type de retour suivants :  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Implémentez la méthode pour qu’elle retourne une chaîne.  
+2. Implémentez la méthode pour qu’elle retourne une chaîne.  
   
      L’exemple suivant retourne le nom de la classe en plus des données propres à une instance particulière de la classe.  
   

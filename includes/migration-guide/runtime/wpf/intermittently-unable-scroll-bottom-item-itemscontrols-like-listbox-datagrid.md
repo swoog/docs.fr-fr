@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235401"
+---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Impossibilité intermittente de faire défiler jusqu’à l’élément du bas dans les ItemsControls (comme ListBox et DataGrid) lors de l’utilisation de DataTemplates personnalisés
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Mineur|
 |Version|4.5|
 |Type|Runtime|
-

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 462da68313fea19e5b89a9e2f5221f6659338e98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309535"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Procédure : Fournir une boîte de dialogue de progression pour les opérations sur les fichiers (Guide de programmation C#)
 Vous pouvez fournir une boîte de dialogue standard qui montre la progression des opérations sur les fichiers dans Windows si vous utilisez la méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> de l’espace de noms <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
@@ -19,13 +19,13 @@ Vous pouvez fournir une boîte de dialogue standard qui montre la progression de
   
 ### <a name="to-add-a-reference-in-visual-studio"></a>Pour ajouter une référence dans Visual Studio  
   
-1.  Dans la barre de menus, choisissez **Projet**, **Ajouter une référence**.  
+1. Dans la barre de menus, choisissez **Projet**, **Ajouter une référence**.  
   
      La boîte de dialogue **Gestionnaire de références** s’affiche.  
   
-2.  Dans la zone **Assemblys**, choisissez **Framework** s’il n’est pas déjà sélectionné.  
+2. Dans la zone **Assemblys**, choisissez **Framework** s’il n’est pas déjà sélectionné.  
   
-3.  Dans la liste des noms, cochez la case **Microsoft.VisualBasic**, puis choisissez le bouton **OK** pour fermer la boîte de dialogue.  
+3. Dans la liste des noms, cochez la case **Microsoft.VisualBasic**, puis choisissez le bouton **OK** pour fermer la boîte de dialogue.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant copie le répertoire spécifié par `sourcePath` dans le répertoire spécifié par `destinationPath`. Ce code fournit également une boîte de dialogue standard qui affiche une estimation du temps restant avant la fin de l’opération.  

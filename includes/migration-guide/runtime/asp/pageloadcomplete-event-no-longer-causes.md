@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 02a3c1b5a9693535feeab56d9b0f7c9d360749ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235371"
+---
 ### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>L’événement Page.LoadComplete n’entraîne plus l’appel d’une liaison de données par le contrôle System.Web.UI.WebControls.EntityDataSource
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Microsoft Edge|
 |Version|4.5|
 |Type|Runtime|
-

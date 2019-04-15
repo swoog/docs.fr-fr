@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319402"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (Options du compilateur C#)
 L’option **-lib** spécifie l’emplacement des assemblys référencés au moyen de l’option [-reference (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -31,16 +31,16 @@ L’option **-lib** spécifie l’emplacement des assemblys référencés au moy
  `dir2`  
  Un ou plusieurs répertoires supplémentaires où rechercher des références d’assembly. Séparez les noms des répertoires supplémentaires par une virgule, sans espace.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le compilateur recherche les références d’assembly qui ne sont pas complètes dans l’ordre suivant :  
   
-1.  Répertoire de travail actuel. Il s’agit du répertoire à partir duquel le compilateur est appelé.  
+1. Répertoire de travail actuel. Il s’agit du répertoire à partir duquel le compilateur est appelé.  
   
-2.  Répertoire système du common language runtime.  
+2. Répertoire système du common language runtime.  
   
-3.  Répertoires spécifiés par **-lib**.  
+3. Répertoires spécifiés par **-lib**.  
   
-4.  Répertoires spécifiés par la variable d’environnement LIB.  
+4. Répertoires spécifiés par la variable d’environnement LIB.  
   
  Utilisez **-reference** pour spécifier une référence d’assembly.  
   
@@ -52,11 +52,11 @@ L’option **-lib** spécifie l’emplacement des assemblys référencés au moy
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet.  
   
-2.  Cliquez sur la page de propriétés **Chemin aux références**.  
+2. Cliquez sur la page de propriétés **Chemin aux références**.  
   
-3.  Modifiez le contenu de la zone de liste.  
+3. Modifiez le contenu de la zone de liste.  
   
  Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295456"
 ---
 # <a name="internet-authentication"></a>Authentification Internet
 Les classes <xref:System.Net> prennent en charge divers mécanismes d’authentification client, parmi lesquels les méthodes d’authentification Internet standard (de base, Digest, Negotiate, NTLM et Kerberos) et les méthodes personnalisées que vous pouvez créer.  
@@ -33,13 +33,14 @@ Les classes <xref:System.Net> prennent en charge divers mécanismes d’authenti
   
  Quand une ressource Internet fait une demande d’authentification, la méthode <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> envoie <xref:System.Net.WebRequest> à **AuthenticationManager** en même temps que la demande des informations d’identification. La demande est ensuite authentifiée selon le processus suivant :  
   
-1.  **AuthenticationManager** appelle la méthode <xref:System.Net.IAuthenticationModule.Authenticate%2A> sur chacun des modules d’authentification inscrits, dans l’ordre de leur inscription. **AuthenticationManager** utilise le premier module qui ne retourne pas la valeur **Null** pour effectuer le processus d’authentification. Ce processus peut varier en fonction du type de module d’authentification utilisé.  
+1. **AuthenticationManager** appelle la méthode <xref:System.Net.IAuthenticationModule.Authenticate%2A> sur chacun des modules d’authentification inscrits, dans l’ordre de leur inscription. **AuthenticationManager** utilise le premier module qui ne retourne pas la valeur **Null** pour effectuer le processus d’authentification. Ce processus peut varier en fonction du type de module d’authentification utilisé.  
   
-2.  À la fin du processus d’authentification, le module d’authentification retourne <xref:System.Net.Authorization> à la classe **WebRequest** qui contient les informations nécessaires pour accéder à la ressource Internet.  
+2. À la fin du processus d’authentification, le module d’authentification retourne <xref:System.Net.Authorization> à la classe **WebRequest** qui contient les informations nécessaires pour accéder à la ressource Internet.  
   
  Certains schémas d’authentification authentifient un utilisateur sans faire de demande de ressource au préalable. Une application peut gagner du temps en effectuant une pré-authentification de la ressource, ce qui évite au moins un aller-retour avec le serveur. Elle peut aussi effectuer l’authentification au démarrage du programme pour être plus réactive avec l’utilisateur ultérieurement. Les schémas d’authentification qui peuvent utiliser la pré-authentification ont leur propriété <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> définie sur **true**.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Authentification de base et authentification Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [Authentification NTLM et Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)

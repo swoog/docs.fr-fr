@@ -2,21 +2,21 @@
 title: 'Procédure : Créer des assemblys friend non signés (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365059"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318232"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procédure : Créer des assemblys friend non signés (C#)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Pour créer un assembly et un assembly friend  
   
-1.  Ouvrez une invite de commandes.  
+1. Ouvrez une invite de commandes.  
   
-2.  Créez un fichier C# nommé `friend_unsigned_A.` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_unsigned_B comme assembly friend.  
+2. Créez un fichier C# nommé `friend_unsigned_A.` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_unsigned_B comme assembly friend.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
     }  
     ```  
   
-3.  Compilez et signez friend_unsigned_A à l’aide de la commande suivante.  
+3. Compilez et signez friend_unsigned_A à l’aide de la commande suivante.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  Créez un fichier C# nommé `friend_unsigned_B` qui contient le code suivant. Étant donné que friend_unsigned_A spécifie friend_unsigned_B comme assembly friend, le code de friend_unsigned_B peut accéder aux membres et aux types `internal` de friend_unsigned_A.  
+4. Créez un fichier C# nommé `friend_unsigned_B` qui contient le code suivant. Étant donné que friend_unsigned_A spécifie friend_unsigned_B comme assembly friend, le code de friend_unsigned_B peut accéder aux membres et aux types `internal` de friend_unsigned_A.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
     }  
     ```  
   
-5.  Compilez friend_unsigned_B à l’aide de la commande suivante.  
+5. Compilez friend_unsigned_B à l’aide de la commande suivante.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
   
      Le nom de l’assembly qui est généré par le compilateur doit correspondre au nom de l’assembly friend qui est passé à l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Vous devez spécifier explicitement le nom de l’assembly de sortie (.exe ou .dll) à l’aide de l’option du compilateur `/out`. Pour plus d’informations, consultez l’article [/out (C# Compiler Options) (/out [Options du compilateur C#])](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Exécutez le fichier friend_unsigned_B.exe.  
+6. Exécutez le fichier friend_unsigned_B.exe.  
   
      Le programme imprime deux chaînes : « Class1.Test » et « Class2.Test ».  
   
@@ -95,5 +95,5 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblys dans .NET](../../../../standard/assembly/index.md)
 - [Assemblys friend](../../../../standard/assembly/friend-assemblies.md)
-- [Guide pratique pour créer des assemblys friend signés (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Procédure : Créer des assemblys friend signés (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Guide de programmation C#](../../../../csharp/programming-guide/index.md)

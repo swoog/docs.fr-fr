@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307455"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
 
@@ -63,7 +63,7 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identité|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Négation|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Négation logique|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Négation logique|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Négation d'opération de bits|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Pré-incrémentation|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pré-décrémentation|  
@@ -102,12 +102,12 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |x [is](../../../csharp/language-reference/keywords/is.md) T|Retourne la valeur true si x est de type T, false dans les autres cas|  
 |x [as](../../../csharp/language-reference/keywords/as.md) T|Retourne x s'il a le type T ou null si x n'est pas de type T|  
   
- **Opérateurs d’égalité**  
+ **Opérateurs d'égalité**  
   
 |Expression|Description|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Égal|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Différence|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Non égal à|  
   
  **Opérateurs logiques, conditionnels et Null**  
   
@@ -116,12 +116,12 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |AND logique|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Opération de bits entière AND, Boolean logique AND|  
 |XOR logique|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR d’entiers au niveau du bit, XOR logique booléen|  
 |OR logique|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR d’entiers au niveau du bit, OR logique booléen|  
-|AND conditionnel|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Évalue y uniquement si x est vrai|  
-|OR conditionnel|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Évalue y uniquement si x est false|  
+|AND conditionnel|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Évalue y uniquement si x est vrai|  
+|OR conditionnel|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Évalue y uniquement si x est false|  
 |Fusion de Null|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) o|Prend la valeur y si x est null, sinon prend la valeur x|  
 |Conditionnel|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Prend la valeur de y si x est vrai, de z si x est false|  
   
- **Opérateurs anonymes et d’assignation**  
+ **Opérateurs anonymes et d'assignation**  
   
 |Expression|Description|  
 |----------------|-----------------|  

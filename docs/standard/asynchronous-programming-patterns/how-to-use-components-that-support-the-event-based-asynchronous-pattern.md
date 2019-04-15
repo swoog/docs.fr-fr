@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330881"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procédure : utiliser des composants qui prennent en charge le modèle asynchrone basé sur des événements
 De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les composants <xref:System.Media.SoundPlayer> et <xref:System.Windows.Forms.PictureBox>, par exemple, permettent de charger des sons et des images « en arrière-plan » pendant que le thread principal continue de s’exécuter sans interruption.  
@@ -36,9 +36,9 @@ De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les 
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Autoriser un contrôle PictureBox à charger une image de façon asynchrone  
   
-1.  Créez une instance du composant <xref:System.Windows.Forms.PictureBox> dans votre formulaire.  
+1. Créez une instance du composant <xref:System.Windows.Forms.PictureBox> dans votre formulaire.  
   
-2.  Affectez un gestionnaire d'événements à l'événement <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
+2. Affectez un gestionnaire d'événements à l'événement <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
      Regardez si des erreurs s’y sont produites pendant le téléchargement asynchrone. C’est également ici qu’il faut vérifier si une annulation est survenue.  
   
@@ -48,7 +48,7 @@ De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les 
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Ajoutez deux boutons, nommés `loadButton` et `cancelLoadButton`, à votre formulaire. Ajoutez des gestionnaires d’événements <xref:System.Windows.Forms.Control.Click> pour démarrer et annuler le téléchargement.  
+3. Ajoutez deux boutons, nommés `loadButton` et `cancelLoadButton`, à votre formulaire. Ajoutez des gestionnaires d’événements <xref:System.Windows.Forms.Control.Click> pour démarrer et annuler le téléchargement.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,11 +56,11 @@ De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les 
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  Exécutez l'application.  
+4. Exécutez l'application.  
   
      Pendant le téléchargement de l’image, vous pourrez déplacer librement le formulaire, le réduire et l’agrandir.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procédure : exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Vue d’ensemble du modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

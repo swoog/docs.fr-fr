@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305336"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procédure : annuler une requête PLINQ
 Les exemples suivants montrent deux façons de modifier une requête PLINQ. Le premier exemple montre comment annuler une requête principalement composée de parcours de données. Le deuxième exemple montre comment annuler une requête contenant une fonction d’utilisateur dont les calculs sont onéreux.  
@@ -34,9 +34,9 @@ Les exemples suivants montrent deux façons de modifier une requête PLINQ. Le p
   
  Les recommandations générales pour l’annulation sont les suivantes :  
   
-1.  Si vous exécutez une annulation de délégué utilisateur, vous devez informer PLINQ du <xref:System.Threading.CancellationToken> externe et lever une <xref:System.OperationCanceledException>(externalCT).  
+1. Si vous exécutez une annulation de délégué utilisateur, vous devez informer PLINQ du <xref:System.Threading.CancellationToken> externe et lever une <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Si l’annulation se produit et qu’aucune autre exception n’est levée, vous devez gérer un <xref:System.OperationCanceledException> plutôt qu’un <xref:System.AggregateException>.  
+2. Si l’annulation se produit et qu’aucune autre exception n’est levée, vous devez gérer un <xref:System.OperationCanceledException> plutôt qu’un <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment gérer l’annulation lorsque vous avez une fonction de calcul onéreux dans le code utilisateur.  

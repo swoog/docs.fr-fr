@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327865"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installer le .NET Framework pour les développeurs
 
@@ -107,7 +107,7 @@ Deux types de programmes d’installation redistribuables sont disponibles :
 
 Les deux programmes d’installation web et hors connexion sont conçus pour les ordinateurs x86 et x64 (consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md)), mais ils ne prennent pas en charge les ordinateurs Itanium.
 
-1.  Ouvrez la page de téléchargement pour la version du .NET Framework que vous souhaitez installer :
+1. Ouvrez la page de téléchargement pour la version du .NET Framework que vous souhaitez installer :
 
     - .NET Framework 4.7.2 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=863262) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Les modules linguistiques sont des exécutables contenant les ressources localis
 > [!IMPORTANT]
 > Les modules linguistiques ne contiennent pas les composants .NET Framework requis pour exécuter une application. Par conséquent, vous devez exécuter le programme d'installation web ou hors connexion avant d'installer un module linguistique. Si vous avez déjà installé un module linguistique, désinstallez-le, installez le .NET Framework, puis réinstallez le module linguistique.
 
-1.  Ouvrez la page de téléchargement du module linguistique de la version .NET Framework que vous avez installée :
+1. Ouvrez la page de téléchargement du module linguistique de la version .NET Framework que vous avez installée :
 
     - [Modules linguistiques de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Les modules linguistiques sont des exécutables contenant les ressources localis
 
     - [Modules linguistiques de .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  Dans la liste des langues, choisissez la langue que vous souhaitez télécharger, et attendez quelques secondes que la page se recharge dans cette langue.
+2. Dans la liste des langues, choisissez la langue que vous souhaitez télécharger, et attendez quelques secondes que la page se recharge dans cette langue.
 
-3.  Choisissez **Télécharger**.
+3. Choisissez **Télécharger**.
 
 Le tableau suivant répertorie les langues prises en charge.
 

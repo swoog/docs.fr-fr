@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 92d5faa870623b5b7d7d1bad16ad0f1ba3f1bf76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320030"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (Options du compilateur C#)
 L’option **-optimize** active ou désactive les optimisations effectuées par le compilateur pour réduire la taille de votre fichier de sortie et le rendre plus rapide et plus efficace.  
@@ -28,7 +28,7 @@ L’option **-optimize** active ou désactive les optimisations effectuées par 
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **-optimize** indique aussi au Common Language Runtime d’optimiser le code au moment de l’exécution.  
   
  Par défaut, les optimisations sont désactivées. Pour activer les optimisations, spécifiez **-optimize+**.  
@@ -41,11 +41,11 @@ L’option **-optimize** active ou désactive les optimisations effectuées par 
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Générer**.  
+2. Cliquez sur la page de propriétés **Générer**.  
   
-3.  Modifiez la propriété **Optimiser le code**.  
+3. Modifiez la propriété **Optimiser le code**.  
   
  Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
   

@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324472"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procédure : annuler une tâche et ses enfants
 Ces exemples montrent comment effectuer les tâches suivantes :  
   
-1.  Créer et lancer une tâche annulable  
+1. Créer et lancer une tâche annulable  
   
-2.  Passer un jeton d’annulation à votre délégué d’utilisateur et éventuellement à l’instance de tâche  
+2. Passer un jeton d’annulation à votre délégué d’utilisateur et éventuellement à l’instance de tâche  
   
-3.  Notifier et répondre à la demande d’annulation dans votre délégué d’utilisateur  
+3. Notifier et répondre à la demande d’annulation dans votre délégué d’utilisateur  
   
-4.  Éventuellement notifier sur le thread appelant que la tâche a été annulée  
+4. Éventuellement notifier sur le thread appelant que la tâche a été annulée  
   
  Le thread appelant ne force pas l’arrêt de la tâche. Il signale seulement que son annulation a été demandée. Si la tâche est déjà en cours d’exécution, il incombe au délégué d’utilisateur de notifier la demande et d’y répondre de façon appropriée. Si l’annulation a été demandée avant l’exécution de la tâche, le délégué d’utilisateur n’est jamais exécuté et l’objet de tâche passe à l’état Canceled.  
   

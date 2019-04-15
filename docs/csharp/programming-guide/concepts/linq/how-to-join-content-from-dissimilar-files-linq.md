@@ -2,12 +2,12 @@
 title: 'Procédure : Joindre du contenu issu de fichiers non similaires (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698412"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328814"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procédure : Joindre du contenu issu de fichiers non similaires (LINQ) (C#)
 
@@ -15,7 +15,7 @@ Cet exemple montre comment joindre des données de deux fichiers CSV qui partage
   
 ## <a name="to-create-the-data-files"></a>Pour créer les fichiers de données
   
-1.  Copiez les lignes suivantes dans un fichier nommé *scores.csv*, puis enregistrez-le dans votre dossier de projet. Le fichier représente les données de feuille de calcul. La colonne 1 est l’ID de l’étudiant et les colonnes 2 à 5 correspondent à des résultats d’examens.  
+1. Copiez les lignes suivantes dans un fichier nommé *scores.csv*, puis enregistrez-le dans votre dossier de projet. Le fichier représente les données de feuille de calcul. La colonne 1 est l’ID de l’étudiant et les colonnes 2 à 5 correspondent à des résultats d’examens.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ Cet exemple montre comment joindre des données de deux fichiers CSV qui partage
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copiez les lignes suivantes dans un fichier nommé *names.csv*, puis enregistrez-le dans votre dossier de projet. Le fichier représente une feuille de calcul qui contient le nom, le prénom et l’ID de l’étudiant.  
+2. Copiez les lignes suivantes dans un fichier nommé *names.csv*, puis enregistrez-le dans votre dossier de projet. Le fichier représente une feuille de calcul qui contient le nom, le prénom et l’ID de l’étudiant.  
   
     ```  
     Omelchenko,Svetlana,111  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324124"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procédure : créer des wrappers COM
 
@@ -28,13 +28,13 @@ Dans Visual Studio 2005, vous pouvez ajouter le wrapper COM à votre projet en t
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Pour créer un wrapper RCW à l’aide de Visual Studio
 
-1.  Ouvrez le projet pour votre application managée.
+1. Ouvrez le projet pour votre application managée.
 
-2.  Dans le menu **Projet**, cliquez sur **Afficher tous les fichiers**.
+2. Dans le menu **Projet**, cliquez sur **Afficher tous les fichiers**.
 
-3.  Dans le menu **Projet**, cliquez sur **Ajouter une référence**.
+3. Dans le menu **Projet**, cliquez sur **Ajouter une référence**.
 
-4.  Dans la boîte de dialogue Ajouter une référence, cliquez sur l’onglet **COM**, sélectionnez le composant que vous souhaitez utiliser et cliquez sur **OK**.
+4. Dans la boîte de dialogue Ajouter une référence, cliquez sur l’onglet **COM**, sélectionnez le composant que vous souhaitez utiliser et cliquez sur **OK**.
 
      Dans l’**Explorateur de solutions**, notez que le composant COM est ajouté au dossier Références dans votre projet.
 
@@ -53,15 +53,15 @@ Vous pouvez maintenant écrire le code pour accéder à l’objet COM. Vous pouv
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Pour créer un wrapper CCW à l’aide de Visual Studio  
   
-1.  Créez un projet de bibliothèque de classes pour la classe managée que vous souhaitez exécuter en code natif. La classe doit avoir un constructeur par défaut.  
+1. Créez un projet de bibliothèque de classes pour la classe managée que vous souhaitez exécuter en code natif. La classe doit avoir un constructeur par défaut.  
   
      Vérifiez que vous disposez d’un numéro de version à quatre parties complet pour votre assembly dans le fichier AssemblyInfo. Ce numéro est requis pour assurer le contrôle de version dans le Registre Windows. Pour plus d’informations sur les numéros de version, consultez [Contrôle de version des assemblys](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  Dans le menu **Projet**, cliquez sur **Propriétés**.  
+2. Dans le menu **Projet**, cliquez sur **Propriétés**.  
   
-3.  Cliquez sur l’onglet **Compiler**.  
+3. Cliquez sur l’onglet **Compiler**.  
   
-4.  Cochez la case **Inscrire pour COM Interop**.  
+4. Cochez la case **Inscrire pour COM Interop**.  
   
  Quand vous générez le projet, l’assembly est automatiquement inscrit pour COM Interop. Si vous générez une application native dans Visual Studio 2005, vous pouvez utiliser l’assembly en cliquant sur **Ajouter une référence** dans le menu **Projet**.  
   
@@ -76,4 +76,4 @@ Vous pouvez exécuter Regasm.exe sur un assembly situé dans n’importe quel r�
 ## <a name="see-also"></a>Voir aussi
 
 - [Wrapper pouvant être appelé par le runtime](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [Wrapper CCW (COM Callable Wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Wrapper pouvant être appelé par COM](../../../docs/framework/interop/com-callable-wrapper.md)

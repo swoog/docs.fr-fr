@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329516"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visionneuse du journal de liaison d’assembly)
 La Visionneuse du journal de liaison d’assembly affiche des détails sur les liaisons d’assemblys. Ces informations vous permettent d'identifier les raisons pour lesquelles le .NET Framework ne parvient pas à trouver un assembly au moment de l'exécution. Ces échecs résultent généralement d'un assembly déployé au mauvais emplacement, d'une image native qui n'est plus valide ou d'une incompatibilité entre les numéros de version ou les cultures. L'échec de la localisation d'un assembly par le Common Language Runtime s'affiche d'ordinaire sous la forme de <xref:System.TypeLoadException> dans votre application.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Pour modifier l'affichage de l'emplacement du journal  
   
-1.  Activez la case d’option **Par défaut** pour afficher les échecs de liaison pour tous les types d’applications. Par défaut, les entrées de journal sont stockées dans des répertoires par utilisateur sur le disque dans le cache WinInet.  
+1. Activez la case d’option **Par défaut** pour afficher les échecs de liaison pour tous les types d’applications. Par défaut, les entrées de journal sont stockées dans des répertoires par utilisateur sur le disque dans le cache WinInet.  
   
-2.  Sélectionnez la case d’option **Personnalisé** pour afficher les échecs de liaison dans un répertoire personnalisé que vous spécifiez. Vous devez spécifier l’emplacement personnalisé dans lequel vous souhaitez que l’exécution stocke les journaux en affectant un nom de répertoire valide comme emplacement du journal personnalisé dans la boîte de dialogue **Paramètres du journal**. Ce répertoire doit être propre et contenir uniquement les fichiers générés par le runtime. S'il contient un exécutable qui génère un échec devant être enregistré dans le journal, ce dernier ne sera pas enregistré, car l'outil tente de créer un répertoire portant le même nom que l'exécutable. En outre, toute tentative d'exécution d'un exécutable à partir de l'emplacement du journal échouera.  
+2. Sélectionnez la case d’option **Personnalisé** pour afficher les échecs de liaison dans un répertoire personnalisé que vous spécifiez. Vous devez spécifier l’emplacement personnalisé dans lequel vous souhaitez que l’exécution stocke les journaux en affectant un nom de répertoire valide comme emplacement du journal personnalisé dans la boîte de dialogue **Paramètres du journal**. Ce répertoire doit être propre et contenir uniquement les fichiers générés par le runtime. S'il contient un exécutable qui génère un échec devant être enregistré dans le journal, ce dernier ne sera pas enregistré, car l'outil tente de créer un répertoire portant le même nom que l'exécutable. En outre, toute tentative d'exécution d'un exécutable à partir de l'emplacement du journal échouera.  
   
     > [!NOTE]
     >  L'emplacement des liaisons par défaut est préférable à l'emplacement des liaisons personnalisé. Le runtime stocke l'emplacement des liaisons par défaut dans le cache WinInet et le vide par conséquent automatiquement. Si vous spécifiez un emplacement des liaisons personnalisé, vous devez vous-même le vider.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Pour afficher des détails sur un échec spécifique  
   
-1.  Sélectionnez le nom de l'application de l'entrée souhaitée dans la visionneuse.  
+1. Sélectionnez le nom de l'application de l'entrée souhaitée dans la visionneuse.  
   
-2.  Cliquez sur le bouton **Afficher le journal**. Vous pouvez également double-cliquer sur l'entrée sélectionnée.  
+2. Cliquez sur le bouton **Afficher le journal**. Vous pouvez également double-cliquer sur l'entrée sélectionnée.  
   
      L'outil affiche les détails suivants sur l'échec de la liaison sélectionné :  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Pour supprimer une seule entrée du journal  
   
-1.  Sélectionnez une entrée dans la visionneuse.  
+1. Sélectionnez une entrée dans la visionneuse.  
   
-2.  Cliquez sur le bouton **Supprimer l’entrée**.  
+2. Cliquez sur le bouton **Supprimer l’entrée**.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Pour supprimer toutes les entrées du journal  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Pour activer un chemin de journal personnalisé  
   
-1.  Activez la case d’option **Activer le chemin de journal personnalisé**.  
+1. Activez la case d’option **Activer le chemin de journal personnalisé**.  
   
-2.  Entrez le chemin dans la zone de texte **Chemin du journal personnalisé**.  
+2. Entrez le chemin dans la zone de texte **Chemin du journal personnalisé**.  
   
 > [!NOTE]
 >  La [visionneuse du journal de liaison d’assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) utilise le cache Internet Explorer (IE) pour stocker son journal de liaison. En raison de la perte d’intégrité occasionnelle du cache IE, la [visionneuse du journal de liaison d’assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) peut parfois cesser d’afficher les nouveaux journaux de liaison dans la fenêtre d’affichage. Suite à cette perte d’intégrité, l’infrastructure de liaison .NET (fusion) ne peut pas écrire ou lire dans le journal de liaison. (Ce problème ne se pose pas si vous utilisez un chemin d'accès de journal personnalisé.)  Pour résoudre le problème de perte d'intégrité et permettre à la fusion d'afficher à nouveau les journaux de liaison, videz le cache IE en supprimant les fichiers Internet temporaires à partir de la boîte de dialogue Options Internet d'Internet Explorer.  
@@ -221,14 +221,15 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Pour activer la journalisation pour les applications qui s'exécutent dans le conteneur d'application Windows  
   
-1.  Activez un chemin du journal personnalisé, comme décrit dans la procédure précédente. Par défaut, les applications qui s'exécutent dans le conteneur d'application Windows ont un accès limité au disque dur. Le répertoire spécifié dispose d'un accès en lecture/écriture pour toutes les applications du conteneur d'application.  
+1. Activez un chemin du journal personnalisé, comme décrit dans la procédure précédente. Par défaut, les applications qui s'exécutent dans le conteneur d'application Windows ont un accès limité au disque dur. Le répertoire spécifié dispose d'un accès en lecture/écriture pour toutes les applications du conteneur d'application.  
   
-2.  Cochez la case **Activer la journalisation immersive**.  
+2. Cochez la case **Activer la journalisation immersive**.  
   
     > [!NOTE]
     >  Cette zone est activée uniquement sur Windows 8 ou version ultérieure.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.TypeLoadException>
 - [Outils](../../../docs/framework/tools/index.md)
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)

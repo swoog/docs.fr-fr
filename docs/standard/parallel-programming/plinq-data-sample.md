@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298907"
 ---
 # <a name="plinq-data-sample"></a>Données PLINQ, exemple
 Cet exemple contient des exemples de données au format .csv ainsi que des méthodes qui les transforment en collections en mémoires de clients, de produits, de commandes et de détails des commandes. Pour expérimenter davantage avec PLINQ, vous pouvez coller des exemples de code d’autres rubriques dans le code de cette rubrique et l’appeler à partir de la méthode `Main`. Vous pouvez également utiliser ces données avec vos propres requêtes PLINQ.  
@@ -27,13 +27,13 @@ Cet exemple contient des exemples de données au format .csv ainsi que des méth
   
 ### <a name="to-set-up-this-sample"></a>Pour installer cet exemple  
   
-1.  Créez un projet d'application console Visual Basic ou Visual C#.  
+1. Créez un projet d'application console Visual Basic ou Visual C#.  
   
-2.  Remplacez les contenu de Module1.vb ou de Program.cs en utilisant le code qui suit ces étapes.  
+2. Remplacez les contenu de Module1.vb ou de Program.cs en utilisant le code qui suit ces étapes.  
   
-3.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez **Fichier texte**, puis cliquez sur **OK**. Copiez les données dans cette rubrique et collez-les dans le nouveau fichier texte. Sur le menu **Fichier**, cliquez sur **Enregistrer**, nommez le fichier Plinqdata.csv, puis enregistrez-le dans le dossier qui contient vos fichiers de code source.  
+3. Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez **Fichier texte**, puis cliquez sur **OK**. Copiez les données dans cette rubrique et collez-les dans le nouveau fichier texte. Sur le menu **Fichier**, cliquez sur **Enregistrer**, nommez le fichier Plinqdata.csv, puis enregistrez-le dans le dossier qui contient vos fichiers de code source.  
   
-4.  Appuyez sur F5 pour vérifier que le projet est créé et exécuté correctement. La sortie mentionnée plus bas devrait s’afficher dans la fenêtre de console.  
+4. Appuyez sur F5 pour vérifier que le projet est créé et exécuté correctement. La sortie mentionnée plus bas devrait s’afficher dans la fenêtre de console.  
   
     ```  
     Customer count: 50  
