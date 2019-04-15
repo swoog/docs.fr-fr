@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096262"
 ---
 # <a name="common-type-system"></a>Système de type commun
 Le système de type commun (CTS, Common Type System) définit la façon dont les types sont déclarés, utilisés et managés dans le Common Language Runtime ; il constitue également une partie importante de la prise en charge, par le runtime, de l'intégration interlangage. Le système de type commun met en œuvre les fonctions suivantes :  
@@ -41,7 +41,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
 -   [Types dans .NET](#types_in_the_net_framework)  
   
--   [Définitions de type](#type_definitions)  
+-   [Définitions de types](#type_definitions)  
   
 -   [Membres de type](#type_members)  
   
@@ -165,9 +165,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
 > [!NOTE]
 >  Il n'est pas nécessaire d'utiliser ces méthodes pour les délégués de gestionnaires d'événements en C#, C++ et Visual Basic, car ces langages fournissent une syntaxe pour l'ajout et la suppression des gestionnaires d'événements.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Définitions de types  
  Une définition de type inclut les éléments suivants :  
@@ -226,9 +224,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
  Un type peut hériter des valeurs et des comportements d'un autre type. Le système de type commun (CTS, Common Type System) ne permet pas à des types d'hériter de plusieurs types de base.  
   
  Un type peut implémenter n'importe quel nombre d'interfaces. Pour implémenter une interface, un type doit implémenter tous les membres virtuels de cette interface. Une méthode virtuelle peut être implémentée par un type dérivé et peut être appelée de manière statique ou dynamique.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Membres de type  
  Le runtime vous permet de définir les membres de votre type, ce qui spécifie le comportement et l'état d'un type. Les membres de type incluent les éléments suivants :  
@@ -290,9 +286,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
  Un type imbriqué est un type qui est un membre d'un autre type. Un type imbriqué doit être fortement couplé avec le type qui le contient et ne doit pas être utilisé en tant que type à usage général. Ceux-ci sont utiles lorsque le type de déclaration utilise et crée des instances du type imbriqué et que l'utilisation du type imbriqué n'est pas exposée dans des membres publics.  
   
  Certains développeurs éprouvent des difficultés à appréhender correctement les types imbriqués. Il faut savoir qu'ils ne doivent pas être publiquement visibles sauf s'il existe une bonne raison à cela. Dans une bibliothèque bien conçue, les développeurs doivent rarement avoir à utiliser des types imbriqués pour instancier des objets ou déclarer des variables.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Caractéristiques des membres de type  
  Le système de type commun (CTS, Common Type System) permet aux membres de type d'avoir diverses caractéristiques ; toutefois, les langages ne doivent pas obligatoirement prendre en charge toutes ces caractéristiques. Le tableau suivant décrit les caractéristiques des membres.  
@@ -326,4 +320,4 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 
 - [Navigateur d’API .NET](/dotnet/api)
 - [Common Language Runtime](../../../docs/standard/clr.md)
-- [Conversion de type dans .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Conversion de types dans .NET](../../../docs/standard/base-types/type-conversion.md)

@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197645"
 ---
 # <a name="the-net-framework-analyzer"></a>L’analyseur .NET Framework
 
@@ -114,7 +114,6 @@ Si vous utilisez des instances de <xref:System.Xml.XmlReaderSettings.DtdProcessi
 
 Informations complémentaires : [A3075 : Traitement DTD non sécurisé dans le code XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350 : N’utilisez pas d’algorithmes de chiffrement faibles
 
 Les algorithmes de chiffrement se dégradent au fil du temps, car les attaques deviennent plus sophistiquées. Selon le type et l’application de cet algorithme de chiffrement, une dégradation progressive de sa force de chiffrement peut permettre aux attaquants de lire des messages chiffrés, de falsifier des messages chiffrés, de falsifier des signatures numériques, de falsifier du contenu haché ou de compromettre les systèmes de chiffrement basés sur cet algorithme. Pour le chiffrement, utilisez un algorithme AES (AES-256, AES-192 et AES-128 sont acceptables) avec une longueur de clé supérieure ou égale à 128 bits. Pour le hachage, utilisez une fonction de hachage de la famille SHA-2, comme SHA-2 512, SHA-2 384 ou SHA-2 256.
@@ -134,5 +133,3 @@ Il existe une attaque qui permet de casser cet algorithme par voie informatique.
 **Gravité :** Warning
 
 Informations supplémentaires : [CA5351 : N’utilisez pas les algorithmes de chiffrement cassés](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

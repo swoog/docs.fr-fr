@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: d8bcf20831a806694ab40ed7584365d8109e1460
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2179e767a0556f5223f2f4c1cc91708133120a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103699"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Procédure : activer un WebRequest pour utiliser un proxy pour communiquer avec Internet
 Cet exemple crée une instance proxy globale qui permet à tout <xref:System.Net.WebRequest> d’utiliser un proxy pour communiquer avec Internet. L’exemple suppose que le serveur proxy est nommé `webproxy` et qu’il communique sur le port 80, le port HTTP standard.  
@@ -33,5 +33,6 @@ GlobalProxySelection.Select = proxyObject
 -   Une [directive `using`](../../csharp/language-reference/keywords/using-directive.md) pour l’espace de noms **System.Net**.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de protocoles d’application](../../../docs/framework/network-programming/using-application-protocols.md)
 - [Accès à Internet via un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

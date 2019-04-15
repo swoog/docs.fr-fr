@@ -2,12 +2,12 @@
 title: Nuages PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110043"
 ---
 # <a name="pnrp-clouds"></a>Nuages PNRP
 Un « cloud » PNRP représente un ensemble de nœuds qui peuvent communiquer entre eux via le réseau. Le terme « cloud » est un synonyme de « maille d’homologue ».  
@@ -32,5 +32,6 @@ Un « cloud » PNRP représente un ensemble de nœuds qui peuvent communiquer
  Une fois qu’une instance Cloud est créée ou obtenue, les noms de pairs peuvent y être inscrits pour créer une maille d’homologues connus.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Peer Name Resolution Protocol](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [protocole PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

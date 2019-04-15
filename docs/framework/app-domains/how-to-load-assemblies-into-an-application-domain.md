@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188524"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Procédure : charger des assemblys dans un domaine d’application
 Il existe plusieurs façons de charger un assembly dans un domaine d’application. La procédure recommandée consiste à utiliser la méthode `static` (`Shared` en Visual Basic) <xref:System.Reflection.Assembly.Load%2A> de la classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Vous pouvez aussi adopter les approches suivantes :  
@@ -47,9 +47,10 @@ Il existe plusieurs façons de charger un assembly dans un domaine d’applicati
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)
+- [Programmation avec des domaines d'application](application-domains.md#programming-with-application-domains)
 - [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)
-- [Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).
+- [Utilisation des domaines d'application](../../../docs/framework/app-domains/use.md)
+- [Procédure : charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domaines d’application et assemblys](application-domains.md#application-domains-and-assemblies)

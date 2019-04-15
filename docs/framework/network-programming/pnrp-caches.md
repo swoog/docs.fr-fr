@@ -2,12 +2,12 @@
 title: Caches PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182479"
 ---
 # <a name="pnrp-caches"></a>Caches PNRP
 Les caches PNRP sont des collections locales de points de terminaison sélectionnés par algorithme et conservés dans un pair.  
@@ -36,4 +36,5 @@ Les caches PNRP sont des collections locales de points de terminaison sélectio
  Les pairs peuvent s’inscrire pour recevoir des objets provenant d’autres pairs. Lorsqu’un objet est mis à jour, l’application de collaboration en est informée et le nouvel objet est passé à tous les abonnés de l’application. Par exemple, un pair d’une application de discussion de groupe peut s’inscrire pour recevoir les informations de l’application. Il va alors recevoir tous les enregistrements de discussions sous forme de données d’application,  ce qui lui permettra de surveiller l’activité de discussion dans le cloud.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.PeerToPeer>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185425"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membres obsolètes dans le .NET Framework
 
@@ -800,5 +800,6 @@ Les tableaux de cet article listent les membres de type obsolètes dans le .NET 
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La clé de Registre `DynData` fonctionne uniquement sur Win9x, qui n’est pas pris en charge par cette version de .NET Framework. Utilisez plutôt la clé de Registre `PerformanceData`. Cette propriété sera supprimée dans une prochaine version du .NET Framework.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Éléments obsolètes dans la bibliothèque de classes](whats-obsolete.md)
 - [Types obsolètes](obsolete-types.md)

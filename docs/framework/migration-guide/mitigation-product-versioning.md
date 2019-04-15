@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7b435c6050cbb73abab3cb5980632be55dd08d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118012"
 ---
 # <a name="mitigation-product-versioning"></a>Atténuation : gestion de versions de produit
 Dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et ultérieur, la gestion de versions de produit a changé par rapport aux versions précédentes du .NET Framework (.NET Framework 4, 4.5, 4.5.1 et 4.5.2).  
@@ -40,5 +40,5 @@ Dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et ultérieur, la g
 -   Pour obtenir la version du CLR, appelez la méthode <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>.   Pour le .NET Framework 4 et ses versions intermédiaires (.NET Framework 4.5, 4.5.1, 4.5.2, ainsi que le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 et 4.7), elle retourne la chaîne `v4.0.30319`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Modifications du runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
+- [Modifications du runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

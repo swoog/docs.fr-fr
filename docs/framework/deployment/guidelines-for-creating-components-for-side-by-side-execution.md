@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf7e1b0c3ef3c1e1c26e4dd308ae2326777b38da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151032"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Indications pour la création de composants pour l'exécution côte à côte
 Suivez ces recommandations générales pour créer des applications managées ou des composants conçus pour l'exécution côte à côte :  
@@ -63,5 +63,6 @@ Suivez ces recommandations générales pour créer des applications managées ou
  L’[outil Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) vous permet de remplacer un assembly quand seul le numéro de version de fichier est plus récent. Le programme d'installation ne remplace généralement pas un assembly, sauf si le numéro de version d'assembly est supérieur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exécution côte à côte](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Guide pratique pour Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Procédure : Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

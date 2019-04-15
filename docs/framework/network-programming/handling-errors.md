@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097159"
 ---
 # <a name="handling-errors"></a>Gestion des erreurs
 Les classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> lèvent à la fois les exceptions système (comme <xref:System.ArgumentException>) et les exceptions spécifiques au web (qui sont des <xref:System.Net.WebException> levées par la méthode <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -58,7 +58,7 @@ Les classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> lèven
 |SendFailure|Une demande complète n’a pas pu être envoyée au serveur distant.|  
 |ServerProtocolViolation|La réponse du serveur n’était pas une réponse HTTP valide.|  
 |Opération réussie|Aucune erreur n’a été rencontrée.|  
-|Délai d'expiration|Aucune réponse n’a été reçue pendant le délai défini pour la demande.|  
+|Délai|Aucune réponse n’a été reçue pendant le délai défini pour la demande.|  
 |TrustFailure|Un certificat de serveur n’a pas pu être validé.|  
 |MessageLengthLimitExceeded|Un message a été reçu qui dépassait la limite spécifiée lors de l’envoi d’une demande ou de la réception d’une réponse du serveur.|  
 |En attente|Une demande asynchrone interne est en attente.|  
@@ -168,5 +168,6 @@ End Try
  Quand une **SocketException** est levée, la classe **SocketException** affecte à la propriété <xref:System.Net.Sockets.SocketException.ErrorCode%2A> la dernière erreur de socket du système d’exploitation s’étant produite. Pour plus d’informations sur les codes d’erreur de socket, consultez la documentation relative aux codes d’erreur des API Winsock 2.0 dans MSDN.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Notions de base de la gestion des exceptions](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [Demande de données](../../../docs/framework/network-programming/requesting-data.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195824"
 ---
 # <a name="assembly-names"></a>Noms d'assemblys
 Le nom d’un assembly est stocké dans des métadonnées, et il a un impact significatif sur l’étendue de l’assembly et sur son utilisation dans une application. Un assembly avec nom fort a un nom qualifié complet qui inclut le nom, la culture, la clé publique et le numéro de version de l’assembly. Ceci est fréquemment appelé le nom d’affichage et, pour les assemblys chargés, il peut être obtenu avec la propriété <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -58,9 +58,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Si vous placez un assembly avec nom fort dans le Global Assembly Cache, le nom de fichier de l’assembly doit correspondre au nom de l’assembly (sans l’extension de nom de fichier, comme .exe ou .dll). Par exemple, si le nom de fichier d’un assembly est monAssembly.dll, le nom de l’assembly doit être monAssembly. Les assemblys privés déployés uniquement dans le répertoire racine de l’application peuvent avoir un nom d’assembly différent du nom du fichier.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour déterminer le nom qualifié complet d’un assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
-- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+
+- [Procédure : déterminer le nom qualifié complet d’un assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

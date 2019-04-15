@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212178"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Procédure : décharger un domaine d’application
 Quand vous avez fini d’utiliser un domaine d’application, déchargez-le à l’aide de la méthode <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. La méthode **Unload** arrête de façon correcte le domaine d’application spécifié. Au cours du processus de déchargement, aucun nouveau thread ne peut accéder au domaine d’application, et toutes les structures de données spécifiques au domaine d’application sont libérées.  
@@ -32,6 +32,7 @@ Quand vous avez fini d’utiliser un domaine d’application, déchargez-le à l
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)
-- [Guide pratique pour créer un domaine d’application](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)
+
+- [Programmation avec des domaines d'application](application-domains.md#programming-with-application-domains)
+- [Procédure : créer un domaine d’application](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
+- [Utilisation des domaines d'application](../../../docs/framework/app-domains/use.md)

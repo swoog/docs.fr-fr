@@ -4,12 +4,12 @@ description: Meilleures pratiques recommandées pour l’empaquetage avec des bi
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198177"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ L’inconvénient des fichiers de symboles incorporés est qu’ils augmentent l
 > Les packages de symboles (`*.snupkg`) permettent aux développeurs d’effectuer un débogage à la demande sans gonfler inutilement la taille du package principal ni impacter les performances de restauration pour les utilisateurs qui ne comptent pas déboguer le package NuGet.
 >
 > L’inconvénient est qu’ils devront rechercher et configurer le serveur de symboles NuGet dans leur IDE (configuration unique) afin d’obtenir les fichiers de symboles. Visual Studio 2019 prévoit de fournir le serveur de symboles NuGet.org sous la forme d’une option prête à l’emploi. 
-
 
 >[!div class="step-by-step"]
 >[Précédent](strong-naming.md)

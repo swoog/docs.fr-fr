@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef3fbb7af3097a67cb39f0c3b2ee294b86f0600e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f9d01715a9635b276ca87d94082bb4d3820084e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138877"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Procédure : obtenir des informations relatives au type et aux membres à partir d’un assembly
 L’espace de noms <xref:System.Reflection> contient de nombreuses méthodes pour obtenir des informations à partir d’un assembly. Cette section illustre l’une de ces méthodes. Pour plus d’informations, consultez [Vue d’ensemble de la réflexion](../../../docs/framework/reflection-and-codedom/reflection.md).  
@@ -29,6 +29,7 @@ L’espace de noms <xref:System.Reflection> contient de nombreuses méthodes pou
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Programmation avec des domaines d’application](./application-domains.md#programming-with-application-domains)
+
+- [Programmation avec des domaines d'application](./application-domains.md#programming-with-application-domains)
 - [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)
+- [Utilisation des domaines d'application](../../../docs/framework/app-domains/use.md)

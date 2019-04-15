@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169921"
 ---
 # <a name="as-c-reference"></a>as (référence C#)
 Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conversions entre des types référence ou des [types Nullable](../../../csharp/programming-guide/nullable-types/index.md) compatibles. Le code suivant fournit un exemple.  
@@ -23,7 +23,7 @@ Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conver
 
 Comme le montre l’exemple, vous devez comparer le résultat de l’expression `as` avec `null` pour vérifier si la conversion a réussi. À partir de C# 7.0, vous pouvez utiliser l’expression [is](is.md) pour effectuer ce test et affecter une variable de manière conditionnelle en cas de réussite. Dans de nombreux scénarios, elle est plus concise que l’opérateur `as`. Pour plus d’informations, voir la section [Modèle de type](is.md#type) de l’article [Opérateur `is`](is.md).
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’opérateur `as` est semblable à une opération de cast. Toutefois, si la conversion n’est pas possible, `as` retourne `null` au lieu de lever une exception. Prenons l'exemple suivant :  
   
 ```csharp  
@@ -47,9 +47,10 @@ expression is type ? (type)expression : (type)null
 Pour plus d’informations, consultez [Opérateur as](~/_csharplang/spec/expressions.md#the-as-operator) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
  
 ## <a name="see-also"></a>Voir aussi
+
 - [Référence C#](../../../csharp/language-reference/index.md)
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
+- [est](../../../csharp/language-reference/keywords/is.md)
 - [?: Opérateur](../../../csharp/language-reference/operators/conditional-operator.md)
 - [Mots clés des opérateurs](../../../csharp/language-reference/keywords/operator-keywords.md)

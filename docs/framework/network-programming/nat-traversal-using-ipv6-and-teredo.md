@@ -2,12 +2,12 @@
 title: Parcours NAT avec IPv6 et Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: 896c3f9036e76c37f5f6bf2950d3d2d2864b3f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170758"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Parcours NAT avec IPv6 et Teredo
 Des améliorations ont été apportées à la prise en charge du parcours NAT. Ces changements prévoient l’utilisation d’IPv6 et de Teredo. Toutefois, d’autres technologies de tunneling IP peuvent être utilisées. Ces améliorations affectent les classes de <xref:System.Net> et les espaces de noms qui leur sont associés.  
@@ -45,6 +45,7 @@ Des améliorations ont été apportées à la prise en charge du parcours NAT. 
  Pour les applications qui utilisent <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> et les classes associées, les méthodes <xref:System.Net.Sockets.Socket.GetSocketOption%2A> et <xref:System.Net.Sockets.Socket.SetSocketOption%2A> peuvent être utilisées avec l’option de socket <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> pour interroger, activer ou désactiver le parcours NAT.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>

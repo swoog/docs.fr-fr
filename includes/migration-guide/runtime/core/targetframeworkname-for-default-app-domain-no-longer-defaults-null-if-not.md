@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234157"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>Dans le domaine d’application par défaut, TargetFrameworkName ne prend plus la valeur Null par défaut quand il n’est pas défini
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761297"
 |Version|4.6|
 |Type|Runtime|
 |API affectées|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
-

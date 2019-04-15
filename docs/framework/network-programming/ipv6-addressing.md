@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121951"
 ---
 # <a name="ipv6-addressing"></a>Adressage IPv6
 Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle taille d’espace d’adressage permet de subdiviser les adresses disponibles en une hiérarchie de domaines de routage qui reflète la topologie d’Internet. Elle permet également de mapper les adresses des cartes réseau (ou des interfaces) qui connectent les appareils au réseau. IPv6 contient une fonctionnalité inhérente permettant de résoudre les adresses au niveau le plus bas, c’est-à-dire au niveau de l’interface réseau, et contient également des fonctionnalités de configuration automatique.  
@@ -73,5 +73,6 @@ Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle t
  En général, un nœud a toujours une adresse link-local. Il peut avoir une adresse site-local, et une ou plusieurs adresses globales.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+
+- [Protocole Internet version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [sockets](../../../docs/framework/network-programming/sockets.md)

@@ -2,12 +2,12 @@
 title: Routage IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f0fbce84caf096770e49ab47fb1de5b23b44b33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136680"
 ---
 # <a name="ipv6-routing"></a>Routage IPv6
 Le protocole IPv6 comprend un mécanisme de routage souple. En raison de la façon dont les ID réseau IPv4 sont alloués, les tables de routage volumineuses doivent être gérées par les routeurs Internet principaux. Ces routeurs doivent connaître tous les itinéraires afin de transmettre les paquets qui sont susceptibles d’être dirigés vers des nœuds Internet. Grâce à sa capacité de regrouper des adresses, IPv6 permet un adressage souple et réduit considérablement la taille des tables de routage. Dans cette nouvelle architecture d’adressage, les routeurs intermédiaires doivent uniquement effectuer le suivi de la partie locale de leur réseau afin de transmettre les messages de manière appropriée.  
@@ -34,5 +34,6 @@ Le protocole IPv6 comprend un mécanisme de routage souple. En raison de la fa�
 -   Redirections. Envoyées par les routeurs pour indiquer une meilleure adresse de tronçon suivant à une destination particulière pour un nœud expéditeur.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+
+- [Protocole Internet version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [sockets](../../../docs/framework/network-programming/sockets.md)
