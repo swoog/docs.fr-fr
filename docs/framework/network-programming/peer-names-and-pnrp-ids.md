@@ -2,12 +2,12 @@
 title: Noms d’homologues et ID PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173106"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Noms d’homologues et ID PNRP
 Un nom de pair représente un point de terminaison pour la communication. Il peut s’agir d’un ordinateur, d’un utilisateur, d’un groupe, d’un service ou de tout autre élément associé à un pair pouvant être résolu en une adresse IPv6. Le protocole PNRP utilise le nom de pair statistiquement unique pour la création d’un ID PNRP, qui est utilisé pour identifier les membres du cloud.  
@@ -31,5 +31,6 @@ Un nom de pair représente un point de terminaison pour la communication. Il peu
  Cette combinaison d’ID P2P et de l’emplacement du service permet à plusieurs ID PNRP d’être inscrits à partir d’un même ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>
