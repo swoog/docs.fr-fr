@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340033"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consommation de fonctions DLL non managées
 L’appel de code non managé est un service qui permet au code managé d’appeler des fonctions non managées implémentées dans des bibliothèques de liens dynamiques (DLL), telles que celles de l’API Windows. Il localise et appelle une fonction exportée, puis marshale ses arguments (entiers, chaînes, tableaux, structures, etc) au-delà des limites d’interopérabilité, selon les besoins.  
@@ -29,15 +29,15 @@ L’appel de code non managé est un service qui permet au code managé d’appe
   
 #### <a name="to-consume-exported-dll-functions"></a>Pour consommer des fonctions DLL exportées  
   
-1.  [Identifiez les fonctions dans les DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identifiez les fonctions dans les DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
   
      Vous devez au minimum spécifier le nom de la fonction et le nom de la DLL qui la contient.  
   
-2.  [Créez une classe censée contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Créez une classe censée contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
   
      Vous pouvez utiliser une classe existante, créer une classe pour chaque fonction non managée ou bien créer une classe contenant un ensemble de fonctions non managées associées.  
   
-3.  [Créez des prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Créez des prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Utilisez l’instruction **Declare** avec les mots clés **Function** et **Lib**. Dans certains cas rares, vous pouvez utiliser **DllImportAttribute** avec les mots clés **Shared Function**. Ces cas sont expliqués plus loin dans cette section.  
   
@@ -45,7 +45,7 @@ L’appel de code non managé est un service qui permet au code managé d’appe
   
      [C++] Utilisez **DllImportAttribute** pour identifier la DLL et la fonction. Marquez la méthode ou la fonction wrapper avec **extern "C"**.  
   
-4.  [Appelez une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Appelez une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
      Appelez la méthode sur votre classe managée comme vous le feriez pour toute autre méthode managée. Le [passage de structures](../../../docs/framework/interop/passing-structures.md) et l’[implémentation de fonctions de rappel](../../../docs/framework/interop/callback-functions.md) sont des cas spéciaux.  
   
@@ -58,20 +58,21 @@ L’appel de code non managé est un service qui permet au code managé d’appe
   
  Quand un appel de code non managé appelle une fonction non managée, il exécute les actions suivantes :  
   
-1.  Il recherche la DLL contenant la fonction.  
+1. Il recherche la DLL contenant la fonction.  
   
-2.  Il charge la DLL dans la mémoire.  
+2. Il charge la DLL dans la mémoire.  
   
-3.  Il localise l'adresse de la fonction dans la mémoire et transmet ses arguments sur la pile, en marshalant les données selon les besoins.  
+3. Il localise l'adresse de la fonction dans la mémoire et transmet ses arguments sur la pile, en marshalant les données selon les besoins.  
   
     > [!NOTE]
     >  La localisation et le chargement de la DLL, et la localisation de l'adresse de la fonction dans la mémoire, se produisent uniquement lors du premier appel à la fonction.  
   
-4.  Il cède le contrôle à la fonction non managée.  
+4. Il cède le contrôle à la fonction non managée.  
   
  L'appel de code non managé lève des exceptions générées par la fonction non managée pour l'appelant managé.
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Interopération avec du code non managé](../../../docs/framework/interop/index.md)
 - [Exemples d'appel de code non managé](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

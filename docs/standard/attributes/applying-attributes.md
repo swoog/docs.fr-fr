@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337693"
 ---
 # <a name="applying-attributes"></a>Application des attributs
 Effectuez la procédure suivante pour appliquer un attribut à un élément de votre code.  
   
-1.  Définissez un nouvel attribut ou utilisez un attribut existant en important son espace de noms à partir de .NET Framework.  
+1. Définissez un nouvel attribut ou utilisez un attribut existant en important son espace de noms à partir de .NET Framework.  
   
-2.  Appliquez l’attribut à l’élément de code en le plaçant immédiatement avant l’élément.  
+2. Appliquez l’attribut à l’élément de code en le plaçant immédiatement avant l’élément.  
   
      Chaque langage possède sa propre syntaxe d’attribut. Dans C++ et C#, l’attribut est entouré par des crochets et séparé de l’élément par un espace blanc, qui peut inclure un saut de ligne. Dans Visual Basic, l’attribut est entouré par des crochets angulaires et doit se trouver sur la même ligne logique. Le caractère de continuation de ligne peut être utilisé si vous souhaitez un saut de ligne.
   
-3.  Spécifiez des paramètres positionnels et des paramètres nommés pour l’attribut.  
+3. Spécifiez des paramètres positionnels et des paramètres nommés pour l’attribut.  
   
      Les paramètres positionnels sont requis et doivent précéder les paramètres nommés. Ils correspondent aux paramètres d’un des constructeurs de l’attribut. Les paramètres nommés sont facultatifs et correspondent aux propriétés de lecture/écriture de l’attribut. En C++ et C#, spécifiez `name`=`value` pour chaque paramètre facultatif, où `name` est le nom de la propriété. Dans Visual Basic, spécifiez `name`:=`value`.  
   

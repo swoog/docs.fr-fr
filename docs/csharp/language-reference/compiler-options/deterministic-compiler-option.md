@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499844"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480662"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Indique au compilateur de générer un assembly dont la sortie octet-pour-octet est identique dans les compilations pour les entrées identiques. 
+Indique au compilateur de générer un assembly dont la sortie octet-pour-octet est identique dans les compilations pour les entrées identiques.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Indique au compilateur de générer un assembly dont la sortie octet-pour-octet 
 -deterministic
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Par défaut, le résultat de la compilation d’un ensemble défini d’entrées est unique, étant donné que le compilateur ajoute un horodatage et un GUID qui est généré à partir de nombres aléatoires. Utilisez l’option `-deterministic` pour générer un *assembly déterministe*, dont le contenu binaire sera identique dans les compilations tant que l’entrée restera la même.
 
@@ -37,22 +37,22 @@ Le compilateur considère les entrées suivantes à des fins déterministes :
 - La version précise du compilateur utilisée et ses assemblys référencés.
 - Le chemin de répertoire actif.
 - Le contenu binaire de tous les fichiers explicitement passés au compilateur directement ou indirectement, notamment :
-    - Fichiers sources
-    - Assemblys référencés
-    - Modules référencés
-    - Ressources
-    - Fichier de clé de nom fort
-    - Fichiers réponse @
-    - Analyseurs
-    - Ensembles de règles
-    - Autres fichiers susceptibles d’être utilisés par les analyseurs
+  - Fichiers sources
+  - Assemblys référencés
+  - Modules référencés
+  - Ressources
+  - Fichier de clé de nom fort
+  - Fichiers réponse @
+  - Analyseurs
+  - Ensembles de règles
+  - Autres fichiers susceptibles d’être utilisés par les analyseurs
 - La culture actuelle (pour le langage dans lequel les diagnostics et les messages d’exception sont produits).
 - L’encodage par défaut (ou la page de codes active) si l’encodage n’est pas spécifié.
 - L’existence, la non-existence et le contenu des fichiers sur les chemins de recherche du compilateur (spécifiés, par exemple, par `/lib` ou `/recurse`).
 - La plateforme CLR sur laquelle est exécuté le compilateur.
 - La valeur de `%LIBPATH%`, qui peut affecter le chargement des dépendances de l’analyseur.
 
-Quand les sources sont accessibles à tous, la compilation déterministe peut servir à établir si un fichier binaire est compilé à partir d’une source approuvée. Il peut aussi être utile dans un système de génération en continu pour déterminer si les étapes de génération qui sont dépendantes des changements apportés à un binaire doivent être exécutées. 
+Quand les sources sont accessibles à tous, la compilation déterministe peut servir à établir si un fichier binaire est compilé à partir d’une source approuvée. Il peut aussi être utile dans un système de génération en continu pour déterminer si les étapes de génération qui sont dépendantes des changements apportés à un binaire doivent être exécutées.
 
 ## <a name="see-also"></a>Voir aussi
 

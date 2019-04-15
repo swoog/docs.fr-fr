@@ -1,5 +1,5 @@
 ---
-title: "Procédure : transformation d'un fragment de nœud"
+title: 'Procédure : transformer un fragment de nœud'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345168"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Procédure : transformation d'un fragment de nœud
+# <a name="how-to-transform-a-node-fragment"></a>Procédure : transformer un fragment de nœud
 Lorsque vous transformez des données contenues dans un objet <xref:System.Xml.XmlDocument> ou <xref:System.Xml.XPath.XPathDocument>, les transformations XSLT s'appliquent à l'ensemble du document. En d'autres termes, si vous passez dans un autre nœud que le nœud racine du document, cela n'empêche pas le processus de transformation d'accéder à tous les nœuds dans le document chargé. Pour transformer un fragment de nœud, vous devez créer un objet séparé contenant uniquement le fragment de nœud et transmettre cet objet à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Procédures  
   
 #### <a name="to-transform-a-node-fragment"></a>Pour transformer un fragment de nœud  
   
-1.  Créez un objet contenant le document source.  
+1. Créez un objet contenant le document source.  
   
-2.  Localisez le fragment de nœud que vous souhaitez transformer.  
+2. Localisez le fragment de nœud que vous souhaitez transformer.  
   
-3.  Créez un objet distinct contenant uniquement le fragment de nœud.  
+3. Créez un objet distinct contenant uniquement le fragment de nœud.  
   
-4.  Transmettez le fragment de nœud à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+4. Transmettez le fragment de nœud à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant transforme un fragment de nœud et affiche les résultats sur la console.  

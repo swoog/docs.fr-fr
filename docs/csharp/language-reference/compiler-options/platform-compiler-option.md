@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341502"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Options du compilateur C#)
 Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’assembly.  
@@ -60,11 +60,11 @@ Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’ass
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Générer**.  
+2. Cliquez sur la page de propriétés **Générer**.  
   
-3.  Modifiez la propriété **Plateforme cible** puis, pour les projets qui ciblent le .NET Framework 4.5, cochez ou décochez la case **Préférer 32 bits**.  
+3. Modifiez la propriété **Plateforme cible** puis, pour les projets qui ciblent le .NET Framework 4.5, cochez ou décochez la case **Préférer 32 bits**.  
   
  **Notez que -platform** n’est pas disponible dans l’environnement de développement de Visual C# Express.  
   

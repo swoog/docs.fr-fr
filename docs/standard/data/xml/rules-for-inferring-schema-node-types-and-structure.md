@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338707"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Règles pour l'inférence de types et de structure de nœud de schéma
 Cette rubrique décrit comment le processus d'inférence de schéma convertit les types de nœuds d'un document XML en une structure en langage XSD (XML Schema Definition).  
@@ -18,21 +18,21 @@ Cette rubrique décrit comment le processus d'inférence de schéma convertit le
 ## <a name="element-inference-rules"></a>Règles d'inférence d'élément  
  Cette section décrit les règles d'inférence pour les déclarations d'élément. Huit structures de déclaration d'élément seront déduites :  
   
-1.  élément de type simple ;  
+1. élément de type simple ;  
   
-2.  élément vide ;  
+2. élément vide ;  
   
-3.  élément vide avec attributs ;  
+3. élément vide avec attributs ;  
   
-4.  élément avec attributs et contenu simple ;  
+4. élément avec attributs et contenu simple ;  
   
-5.  élément avec une séquence d'éléments enfants ;  
+5. élément avec une séquence d'éléments enfants ;  
   
-6.  élément avec une séquence d'éléments enfants et d'attributs ;  
+6. élément avec une séquence d'éléments enfants et d'attributs ;  
   
-7.  élément avec une séquence de choix d'éléments enfants ;  
+7. élément avec une séquence de choix d'éléments enfants ;  
   
-8.  élément avec une séquence de choix d'éléments enfants et d'attributs.  
+8. élément avec une séquence de choix d'éléments enfants et d'attributs.  
   
 > [!NOTE]
 >  Toutes les déclarations `complexType` sont déduites comme des types anonymes. Le seul élément global déduit est l'élément racine ; tous les autres éléments sont locaux.  
@@ -139,7 +139,7 @@ Cette rubrique décrit comment le processus d'inférence de schéma convertit le
 |---------------|-----------------|  
 |Instruction de traitement|Ignoré.|  
 |Commentaire|Ignoré.|  
-|Référence d'entité|La classe <xref:System.Xml.Schema.XmlSchemaInference> ne gère pas les références d'entité. Si un document XML contient des références d’entité, vous devez utiliser un lecteur qui développe les entités. Par exemple, vous pouvez passer un objet <xref:System.Xml.XmlTextReader> avec la propriété <xref:System.Xml.XmlTextReader.EntityHandling%2A> définie à <xref:System.Xml.EntityHandling.ExpandEntities> comme paramètre. Si des références d’entité sont rencontrées et que le lecteur ne développe pas les entités, une exception est levée.|  
+|Référence d'entité|La classe <xref:System.Xml.Schema.XmlSchemaInference> ne gère pas les références d'entité. Si un document XML contient des références d’entité, vous devez utiliser un lecteur qui développe les entités. Par exemple, vous pouvez passer un objet <xref:System.Xml.XmlTextReader> avec la propriété <xref:System.Xml.XmlTextReader.EntityHandling%2A> définie à <xref:System.Xml.EntityHandling.ExpandEntities> comme paramètre. Si des références d'entité sont rencontrées et que le lecteur n'étend pas les entités, une exception est levée.|  
 |CDATA|Toute section `<![CDATA[ … ]]` dans un document XML sera déduite en tant que `xs:string`.|  
 |Type de document|Ignoré.|  
 |Espaces de noms|Ignoré.|  
@@ -150,6 +150,6 @@ Cette rubrique décrit comment le processus d'inférence de schéma convertit le
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Inférence d’un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [Inférence d'un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
 - [Inférence de schémas à partir de documents XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Règles pour l’inférence de types simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [Règles relatives à l'inférence de types simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342443"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procédure pas à pas : Création d’écouteurs de journalisation personnalisés (Visual Basic)
 Cette procédure pas à pas illustre comment créer un écouteur de journalisation personnalisé et le configurer pour écouter la sortie de l’objet `My.Application.Log`.  
@@ -37,23 +37,23 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Pour attribuer un nom fort à l’assembly de l’écouteur de journalisation  
   
-1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet** , choisissez **Propriétés**.   
+1. Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet** , choisissez **Propriétés**.   
   
-2.  Cliquez sur l’onglet **Signature**.  
+2. Cliquez sur l’onglet **Signature**.  
   
-3.  Sélectionnez la zone **Signer l’assembly**.  
+3. Sélectionnez la zone **Signer l’assembly**.  
   
-4.  Sélectionnez **\<Nouveau** dans la liste déroulante **Choisir un fichier de clé de nom fort**.  
+4. Sélectionnez **\<Nouveau** dans la liste déroulante **Choisir un fichier de clé de nom fort**.  
   
      La boîte de dialogue **Créer une clé de nom fort** s’ouvre.  
   
-5.  Fournissez un nom pour le fichier de clé dans la zone **Nom du fichier de clé**.  
+5. Fournissez un nom pour le fichier de clé dans la zone **Nom du fichier de clé**.  
   
-6.  Entrez un mot de passe dans les zones **Entrer le mot de passe** et **Confirmer le mot de passe**.  
+6. Entrez un mot de passe dans les zones **Entrer le mot de passe** et **Confirmer le mot de passe**.  
   
-7.  Cliquez sur **OK**.  
+7. Cliquez sur **OK**.  
   
-8.  Régénérez l’application.  
+8. Régénérez l’application.  
   
 ## <a name="adding-the-listener"></a>Ajout de l’écouteur  
  Maintenant que l’assembly a un nom fort, vous devez déterminer le nom fort de l’écouteur afin que `My.Application.Log` utilise votre écouteur de journalisation.  
@@ -74,7 +74,7 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Pour ajouter l’écouteur à My.Application.Log  
   
-1.  Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
+1. Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
   
      - ou -  
   
@@ -86,17 +86,17 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
     3.  Cliquez sur **Ajouter**.  
   
-2.  Recherchez la section `<listeners>` dans la section `<source>` avec l’attribut `name` « DefaultSource », qui se trouve dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
+2. Recherchez la section `<listeners>` dans la section `<source>` avec l’attribut `name` « DefaultSource », qui se trouve dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
-3.  Ajoutez cet élément à la section `<listeners>` :  
+3. Ajoutez cet élément à la section `<listeners>` :  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
+4. Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
-5.  Ajoutez cet élément à cette section `<sharedListeners>` :  
+5. Ajoutez cet élément à cette section `<sharedListeners>` :  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -108,6 +108,6 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Utilisation des journaux des applications](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Guide pratique pour journaliser des exception](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Guide pratique pour écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procédure pas à pas : Modification de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procédure : journaliser des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Procédure pas à pas : modification de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

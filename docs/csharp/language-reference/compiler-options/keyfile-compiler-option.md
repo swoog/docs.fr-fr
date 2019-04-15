@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344648"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (Options du compilateur C#)
 Spécifie le nom du fichier contenant la clé de chiffrement.  
@@ -30,7 +30,7 @@ Spécifie le nom du fichier contenant la clé de chiffrement.
 |----------|----------------|  
 |`file`|Nom du fichier contenant la clé de nom fort.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand cette option est utilisée, le compilateur insère la clé publique du fichier spécifié dans le manifeste d'assembly, puis signe l'assembly final avec la clé privée. Pour générer un fichier de clé, tapez sn -k `file` sur la ligne de commande.  
   
  Si vous compilez avec **-target:module**, le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly créé quand vous compilez un assembly avec [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
@@ -45,11 +45,11 @@ Spécifie le nom du fichier contenant la clé de chiffrement.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet.  
+1. Ouvrez la page **Propriétés** du projet.  
   
-2.  Cliquez sur la page de propriétés **Signature**.  
+2. Cliquez sur la page de propriétés **Signature**.  
   
-3.  Modifiez la propriété **Choisir un fichier de clé de nom fort**.  
+3. Modifiez la propriété **Choisir un fichier de clé de nom fort**.  
   
  Vous pouvez accéder par programmation à cette option de compilateur avec <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   

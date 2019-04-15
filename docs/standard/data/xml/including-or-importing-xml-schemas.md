@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343569"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusion ou importation de schémas XML
 Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`. Ces éléments de schéma réfèrent à d'autres schémas XML qui peuvent être utilisés pour compléter la structure du schéma où ils sont inclus ou importés. Les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine> sont mappées à ces éléments dans l'API SOM (Schema Object Model).  
@@ -26,15 +26,15 @@ Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` e
   
  L'exemple de code inclut le schéma d'adresse en plusieurs étapes comme suit.  
   
-1.  Il ajoute le schéma utilisateur et le schéma d'adresse à un nouvel objet <xref:System.Xml.Schema.XmlSchemaSet> puis les compile. Les avertissements et erreurs de validation de schéma éventuellement rencontrés pendant la lecture ou la compilation des schémas sont traités par le délégué <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Il ajoute le schéma utilisateur et le schéma d'adresse à un nouvel objet <xref:System.Xml.Schema.XmlSchemaSet> puis les compile. Les avertissements et erreurs de validation de schéma éventuellement rencontrés pendant la lecture ou la compilation des schémas sont traités par le délégué <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Il extrait les objets <xref:System.Xml.Schema.XmlSchema> compilés, tant pour le schéma utilisateur que pour le schéma d'adresse, de l'objet <xref:System.Xml.Schema.XmlSchemaSet> en effectuant une itération sur la propriété <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Les schémas étant compilés, les propriétés PSCI (Post-Schema-Compilation-Infoset) sont accessibles.  
+2. Il extrait les objets <xref:System.Xml.Schema.XmlSchema> compilés, tant pour le schéma utilisateur que pour le schéma d'adresse, de l'objet <xref:System.Xml.Schema.XmlSchemaSet> en effectuant une itération sur la propriété <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Les schémas étant compilés, les propriétés PSCI (Post-Schema-Compilation-Infoset) sont accessibles.  
   
-3.  Il crée un objet <xref:System.Xml.Schema.XmlSchemaImport>, définit la propriété <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> de l'importation comme étant l'espace de noms du schéma d'adresse, définit la propriété <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> de l'importation comme étant l'objet <xref:System.Xml.Schema.XmlSchema> du schéma d'adresse et ajoute l'importation à la propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> du schéma utilisateur.  
+3. Il crée un objet <xref:System.Xml.Schema.XmlSchemaImport>, définit la propriété <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> de l'importation comme étant l'espace de noms du schéma d'adresse, définit la propriété <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> de l'importation comme étant l'objet <xref:System.Xml.Schema.XmlSchema> du schéma d'adresse et ajoute l'importation à la propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> du schéma utilisateur.  
   
-4.  Il retraite et compile l'objet <xref:System.Xml.Schema.XmlSchema> modifié du schéma utilisateur à l'aide des méthodes <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> et <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la classe <xref:System.Xml.Schema.XmlSchemaSet> et écrit le résultat à la console.  
+4. Il retraite et compile l'objet <xref:System.Xml.Schema.XmlSchema> modifié du schéma utilisateur à l'aide des méthodes <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> et <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de la classe <xref:System.Xml.Schema.XmlSchemaSet> et écrit le résultat à la console.  
   
-5.  Enfin, de manière récursive, il écrit à la console tous les schémas importés dans le schéma utilisateur en utilisant la propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> du schéma utilisateur. La propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> fournit l'accès à toutes les inclusions, importations ou redéfinitions ajoutées à un schéma.  
+5. Enfin, de manière récursive, il écrit à la console tous les schémas importés dans le schéma utilisateur en utilisant la propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> du schéma utilisateur. La propriété <xref:System.Xml.Schema.XmlSchema.Includes%2A> fournit l'accès à toutes les inclusions, importations ou redéfinitions ajoutées à un schéma.  
   
  Voici l'exemple de code complet et les schémas utilisateur et d'adresse écrits à la console.  
   
@@ -101,9 +101,9 @@ Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` e
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Vue d'ensemble du Modèle Objet du schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Traversée de schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
