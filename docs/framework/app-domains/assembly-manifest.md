@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58676067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087532"
 ---
 # <a name="assembly-manifest"></a>Manifeste d'assembly
 Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de données qui décrit comment les éléments de l'assembly sont reliés les uns aux autres. Le manifeste d'assembly contient les métadonnées de l'assembly. Un manifeste d'assembly comprend toutes les métadonnées nécessaires pour spécifier la version requise et l'identité de sécurité de l'assembly, ainsi que toutes les métadonnées nécessaires pour définir la portée de l'assembly et résoudre les références aux ressources et aux classes. Le manifeste d'assembly peut être stocké soit dans un fichier exécutable portable (PE, portable executable) (.exe ou .dll) avec le code MILS (Microsoft Intermediate Language), soit dans un fichier PE autonome qui ne contient que des informations sur le manifeste de l'assembly.  
@@ -54,7 +54,8 @@ Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de do
  Vous pouvez ajouter ou modifier certaines informations dans le manifeste d'assembly en utilisant des attributs d'assembly dans votre code. Vous pouvez modifier les informations sur la version et les attributs d'informations, y compris la Marque, le Copyright, le Produit, la Société et la Version d'informations. Pour obtenir la liste complète des attributs d’assembly, consultez [Définition des attributs d’assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contenu d’un assembly](../../../docs/framework/app-domains/assembly-contents.md)
-- [Contrôle de version des assemblys](../../../docs/framework/app-domains/assembly-versioning.md)
+
+- [Contenu d'un assembly](../../../docs/framework/app-domains/assembly-contents.md)
+- [Versioning des assemblys](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086063"
 ---
 # <a name="specifying-an-entry-point"></a>Spécification d'un point d'entrée
 Un point d’entrée identifie l’emplacement d’une fonction dans une DLL. Dans un projet managé, le nom d’origine ou le point d’entrée ordinal d’une fonction cible identifie cette fonction dans les limites d’interopérabilité. De plus, vous pouvez mapper le point d’entrée à un autre nom pour renommer la fonction de façon plus appropriée.  
@@ -95,6 +95,7 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Exemples d'appel de code non managé](../../../docs/framework/interop/platform-invoke-examples.md)

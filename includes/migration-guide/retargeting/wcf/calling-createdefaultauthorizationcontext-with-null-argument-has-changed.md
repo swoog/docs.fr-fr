@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234369"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>L’appel de CreateDefaultAuthorizationContext avec un argument null a été modifié
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761032"
 |Version|4.6|
 |Type|Reciblage|
 |API affectées|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
-

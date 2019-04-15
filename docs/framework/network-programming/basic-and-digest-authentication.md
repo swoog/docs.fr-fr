@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 2c764909514eac74cb930df055cdb846bab7b249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089820"
 ---
 # <a name="basic-and-digest-authentication"></a>Authentification de base et authentification Digest
 L’implémentation <xref:System.Net> de l’authentification de base et Digest est conforme à RFC2617 – Authentification HTTP : authentification de base et authentification Digest (disponible sur le site web du [World Wide Web Consortium](https://www.w3.org)).  
@@ -47,5 +47,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  Les données transmises avec une authentification de base et Digest ne sont pas chiffrées, par conséquent les données sont visibles par tous. De plus, les informations d'authentification de base (nom d'utilisateur et mot de passe) sont envoyées en texte clair et peuvent être interceptées.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Authentification NTLM et Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Authentification Internet](../../../docs/framework/network-programming/internet-authentication.md)
