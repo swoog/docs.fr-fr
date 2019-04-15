@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e2bca42daebd25667ab2f312d5e59089b986503c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234692"
+---
 ### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>L’espacement de la zone de texte multiligne ASP.NET a été modifié pour l’utilisation d’AntiXSSEncoder
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Mineur|
 |Version|4.5|
 |Type|Reciblage|
-

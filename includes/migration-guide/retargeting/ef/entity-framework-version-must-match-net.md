@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4c6a89f9753989a5ad061e847dff70d2af0b3cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234725"
+---
 ### <a name="entity-framework-version-must-match-the-net-framework-version"></a>La version d’Entity Framework doit correspondre à la version du .NET Framework
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Majeur|
 |Version|4.5|
 |Type|Reciblage|
-

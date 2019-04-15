@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ef0381dc2ce4373b2a62e8ebefa44152059ca332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234695"
+---
 ### <a name="xml-schema-validation-is-stricter"></a>La validation du schéma XML est plus stricte
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Mineur|
 |Version|4.5|
 |Type|Reciblage|
-

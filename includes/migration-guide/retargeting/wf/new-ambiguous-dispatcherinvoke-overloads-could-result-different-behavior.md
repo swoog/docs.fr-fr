@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4529d8040fc08b5290ac46abd1ef752086ea3aeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234738"
+---
 ### <a name="new-ambiguous-dispatcherinvoke-overloads-could-result-in-different-behavior"></a>Les nouvelles surcharges (ambiguës) Dispatcher.Invoke peuvent entraîner un comportement différent
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Type|Reciblage|
 |API affectées|<ul><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Windows.Threading.DispatcherPriority,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Windows.Threading.DispatcherPriority,System.Object[])?displayProperty=nameWithType></li></ul>|
-

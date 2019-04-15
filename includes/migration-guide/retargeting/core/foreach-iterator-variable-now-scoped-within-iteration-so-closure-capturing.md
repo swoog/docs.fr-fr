@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234757"
+---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>La variable d’itérateur foreach est désormais délimitée au sein de l’itération. La sémantique de capture de clôture est donc différente (en C# 5)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Portée|Majeur|
 |Version|4.5|
 |Type|Reciblage|
-
