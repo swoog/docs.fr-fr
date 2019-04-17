@@ -1,21 +1,21 @@
 ---
-title: Références d'objets interopérables
-ms.date: 03/30/2017
+title: Références d’objets interopérables
+ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222703"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610637"
 ---
-# <a name="interoperable-object-references"></a><span data-ttu-id="54814-102">Références d'objets interopérables</span><span class="sxs-lookup"><span data-stu-id="54814-102">Interoperable Object References</span></span>
-<span data-ttu-id="54814-103">Par défaut, le <xref:System.Runtime.Serialization.DataContractSerializer> sérialise les objets par valeur.</span><span class="sxs-lookup"><span data-stu-id="54814-103">By default the <xref:System.Runtime.Serialization.DataContractSerializer> serializes objects by value.</span></span> <span data-ttu-id="54814-104">Vous pouvez utiliser la propriété <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> pour indiquer au sérialiseur de contrat de données qu'il conserve les références d'objet lors de la sérialisation des objets du type.</span><span class="sxs-lookup"><span data-stu-id="54814-104">You can use the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> property to instruct the Data Contract Serializer to preserve object references when serializing objects of the type.</span></span>  
+# <a name="interoperable-object-references"></a><span data-ttu-id="502b6-102">Références d’objets interopérables</span><span class="sxs-lookup"><span data-stu-id="502b6-102">Interoperable object references</span></span>
+<span data-ttu-id="502b6-103">Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sérialise les objets par valeur.</span><span class="sxs-lookup"><span data-stu-id="502b6-103">By default, <xref:System.Runtime.Serialization.DataContractSerializer> serializes objects by value.</span></span> <span data-ttu-id="502b6-104">Vous pouvez utiliser le <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> propriété pour indiquer le sérialiseur de contrat de données pour conserver les références d’objet lors de la sérialisation d’objets.</span><span class="sxs-lookup"><span data-stu-id="502b6-104">You can use the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> property to instruct the data contract serializer to preserve object references when serializing objects.</span></span>  
   
-## <a name="generated-xml"></a><span data-ttu-id="54814-105">XML généré</span><span class="sxs-lookup"><span data-stu-id="54814-105">Generated XML</span></span>  
- <span data-ttu-id="54814-106">À titre d'exemple, considérez l'objet suivant :</span><span class="sxs-lookup"><span data-stu-id="54814-106">As an example, consider the following object:</span></span>  
+## <a name="generated-xml"></a><span data-ttu-id="502b6-105">XML généré</span><span class="sxs-lookup"><span data-stu-id="502b6-105">Generated XML</span></span>  
+ <span data-ttu-id="502b6-106">À titre d'exemple, considérez l'objet suivant :</span><span class="sxs-lookup"><span data-stu-id="502b6-106">As an example, consider the following object:</span></span>  
   
-```  
+```csharp  
 [DataContract]  
 public class X  
 {  
@@ -31,7 +31,7 @@ public class SomeClass
 }  
 ```  
   
- <span data-ttu-id="54814-107">Lorsque <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> a la valeur `false` (valeur par défaut), le code XML suivant est généré :</span><span class="sxs-lookup"><span data-stu-id="54814-107">With <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> set to `false` (the default), the following XML is generated:</span></span>  
+ <span data-ttu-id="502b6-107">Lorsque <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> a la valeur `false` (valeur par défaut), le code XML suivant est généré :</span><span class="sxs-lookup"><span data-stu-id="502b6-107">With <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> set to `false` (the default), the following XML is generated:</span></span>  
   
 ```xml  
 <X>  
@@ -40,63 +40,52 @@ public class SomeClass
 </X>  
 ```  
   
- <span data-ttu-id="54814-108">Lorsque <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> a la valeur `true`, le code XML suivant est généré :</span><span class="sxs-lookup"><span data-stu-id="54814-108">With <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> set to `true`, the following XML is generated:</span></span>  
+ <span data-ttu-id="502b6-108">Lorsque <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> a la valeur `true`, le code XML suivant est généré :</span><span class="sxs-lookup"><span data-stu-id="502b6-108">With <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> set to `true`, the following XML is generated:</span></span>  
   
 ```xml  
 <X>  
    <A id="1">contents of someInstance</A>  
-   <B ref="1" />  
+   <B ref="1"></B>  
 </X>  
 ```  
   
- <span data-ttu-id="54814-109">Toutefois, <xref:System.Runtime.Serialization.XsdDataContractExporter> ne décrit pas les attributs `id` et `ref` dans son schéma, y compris quand la propriété `preserveObjectReferences` a la valeur `true`.</span><span class="sxs-lookup"><span data-stu-id="54814-109">However, <xref:System.Runtime.Serialization.XsdDataContractExporter> does not describe the `id` and `ref` attributes in its schema, even when the `preserveObjectReferences` property is set to `true`.</span></span>  
+ <span data-ttu-id="502b6-109">Toutefois, <xref:System.Runtime.Serialization.XsdDataContractExporter> ne décrit pas le `id` et `ref` attributs dans son schéma, même lorsque le `preserveObjectReferences` propriété est définie sur `true`.</span><span class="sxs-lookup"><span data-stu-id="502b6-109">However, <xref:System.Runtime.Serialization.XsdDataContractExporter> doesn't describe the `id` and `ref` attributes in its schema, even when the `preserveObjectReferences` property is set to `true`.</span></span>  
   
-## <a name="using-isreference"></a><span data-ttu-id="54814-110">Utilisation d'IsReference</span><span class="sxs-lookup"><span data-stu-id="54814-110">Using IsReference</span></span>  
- <span data-ttu-id="54814-111">Pour générer des informations de référence d'objet valides d'après le schéma qui les décrit, appliquez l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> à un type et attribuez à l'indicateur <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> la valeur `true`.</span><span class="sxs-lookup"><span data-stu-id="54814-111">To generate object reference information that is valid according to the schema that describes it, apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to a type, and set the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> flag to `true`.</span></span> <span data-ttu-id="54814-112">En utilisant `IsReference` dans la classe illustrée dans l'exemple `X` précédent :</span><span class="sxs-lookup"><span data-stu-id="54814-112">Using `IsReference` in the previous example class `X`:</span></span>  
+## <a name="using-isreference"></a><span data-ttu-id="502b6-110">Utilisation d'IsReference</span><span class="sxs-lookup"><span data-stu-id="502b6-110">Using IsReference</span></span>  
+ <span data-ttu-id="502b6-111">Pour générer des informations de référence d’objet sont valides selon le schéma qui le décrit, appliquez le <xref:System.Runtime.Serialization.DataContractAttribute> à un type d’attribut, puis définissez le <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> indicateur `true`.</span><span class="sxs-lookup"><span data-stu-id="502b6-111">To generate object reference information that's valid according to the schema that describes it, apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to a type, and set the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> flag to `true`.</span></span> <span data-ttu-id="502b6-112">L’exemple suivant modifie la classe `X` dans l’exemple précédent en ajoutant `IsReference`:</span><span class="sxs-lookup"><span data-stu-id="502b6-112">The following example modifies class `X` in the previous example by adding `IsReference`:</span></span>  
   
- `[DataContract(IsReference=true)] public class X`  
+```csharp
+[DataContract(IsReference=true)]
+public class X   
+{  
+     SomeClass someInstance = new SomeClass(); 
+     [DataMember]
+     public SomeClass A = someInstance;
+     [DataMember] 
+     public SomeClass B = someInstance;
+}
   
- `{`  
+public class SomeClass 
+{   
+}  
+````
+
+ <span data-ttu-id="502b6-113">Le XML généré est le suivant :</span><span class="sxs-lookup"><span data-stu-id="502b6-113">The generated XML is as follows:</span></span>  
+
+```xml
+<X>  
+    <A id="1">
+        <Value>contents of A</Value>  
+    </A> 
+    <B ref="1"></B>  
+</X>
+```  
   
- `SomeClass someInstance = new SomeClass();`  
+ <span data-ttu-id="502b6-114">L'utilisation d'`IsReference` garantit la conformité dans l'aller-retour du message.</span><span class="sxs-lookup"><span data-stu-id="502b6-114">Using `IsReference` ensures compliance on message round-tripping.</span></span> <span data-ttu-id="502b6-115">Sans lui, lorsqu’un type est généré à partir du schéma, la sortie XML pour type n’est pas forcément compatible avec le schéma supposé initialement.</span><span class="sxs-lookup"><span data-stu-id="502b6-115">Without it, when a type is generated from schema, the XML output for that type isn't necessarily compatible with the schema originally assumed.</span></span> <span data-ttu-id="502b6-116">En d'autres termes, bien que les attributs `id` et `ref` aient été sérialisés, le schéma d'origine aurait pu empêcher ces attributs (ou tous les attributs) d'apparaître dans le XML.</span><span class="sxs-lookup"><span data-stu-id="502b6-116">In other words, although the `id` and `ref` attributes were serialized, the original schema could have barred these attributes (or all attributes) from occurring in the XML.</span></span> <span data-ttu-id="502b6-117">Avec `IsReference` appliqué à un membre de données, le membre continue à être reconnu en tant que *référençable* quand effectuer un aller-retour.</span><span class="sxs-lookup"><span data-stu-id="502b6-117">With `IsReference` applied to a data member, the member continues to be recognized as *referenceable* when round-tripped.</span></span>  
   
- `[DataMember]`  
-  
- `public SomeClass A = someInstance;`  
-  
- `[DataMember]`  
-  
- `public SomeClass B = someInstance;`  
-  
- `}`  
-  
- `public class SomeClass`  
-  
- `{`  
-  
- `}`  
-  
- <span data-ttu-id="54814-113">Le XML généré est le suivant :</span><span class="sxs-lookup"><span data-stu-id="54814-113">The generated XML is as follows:</span></span>  
-  
- `<X>`  
-  
- `<A id="1">`  
-  
- `<Value>contents of A</Value>`  
-  
- `</A>`  
-  
- `<B ref="1">`  
-  
- `</B>`  
-  
- `</X>`  
-  
- <span data-ttu-id="54814-114">L'utilisation d'`IsReference` garantit la conformité dans l'aller-retour du message.</span><span class="sxs-lookup"><span data-stu-id="54814-114">Using `IsReference` ensures compliance on message round-tripping.</span></span> <span data-ttu-id="54814-115">Sans lui, lorsqu'un type est généré à partir du schéma, les données renvoyées comme XML pour ce type ne sont pas forcément compatibles avec le schéma supposé initialement.</span><span class="sxs-lookup"><span data-stu-id="54814-115">Without it, when a type is generated from schema, what is sent back as XML for that type is not necessarily compatible with the schema originally assumed.</span></span> <span data-ttu-id="54814-116">En d'autres termes, bien que les attributs `id` et `ref` aient été sérialisés, le schéma d'origine aurait pu empêcher ces attributs (ou tous les attributs) d'apparaître dans le XML.</span><span class="sxs-lookup"><span data-stu-id="54814-116">In other words, although the `id` and `ref` attributes were serialized, the original schema could have barred these attributes (or all attributes) from occurring in the XML.</span></span> <span data-ttu-id="54814-117">Lorsqu'`IsReference` est appliqué à un membre de données, ce dernier continue à être reconnu comme étant « référençable » lorsqu'il fait l'aller-retour.</span><span class="sxs-lookup"><span data-stu-id="54814-117">With `IsReference` applied to a data member, the member continues to be recognized as "referenceable" when roundtripped.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="54814-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="54814-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="502b6-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="502b6-118">See also</span></span>
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
-- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
-- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference?displayProperty=nameWithType>
