@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122146"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611903"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
@@ -39,7 +39,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 -   Applications WSE (Web Service Enhancements).  
   
--   Basic Profile tel que défini dans l’interopérabilité de Services Web (WS-I) spécification ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Basic Profile tel que défini dans l’interopérabilité de Services Web (WS-I) spécification (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Profil de sécurité de base tel que défini dans WS-I.  
   
@@ -205,8 +205,8 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |Type|Description|  
 |----------|-----------------|  
 |Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
-|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
 |Windows|Authentification Windows.|  
 |Certificat|Authentification effectuée à l'aide d'un certificat.|  
@@ -225,9 +225,9 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sélection d'un type d'informations d'identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

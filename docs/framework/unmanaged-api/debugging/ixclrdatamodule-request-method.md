@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a02a60668ae6caaad1940395822758331b93f550
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 755063ca6da29a2e4733dd653306192ac0434ec0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119793"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610598"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request (méthode)
 
@@ -29,7 +29,8 @@ Demandes pour remplir la mémoire tampon spécifiée avec les données du module
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Syntaxe
-```
+
+```cpp
 HRESULT Request([in] ULONG32 reqCode,
     [in] ULONG32 inBufferSize,
     [in, size_is(inBufferSize)] BYTE* inBuffer,
@@ -60,12 +61,10 @@ La méthode fournie fait partie de la `IXCLRDataModule` interface et correspond 
 
 ## <a name="requirements"></a>Configuration requise
 
-**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-**En-tête :** Aucun.   
-**Bibliothèque :** Aucun.  
-**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+**En-tête :** Aucun **bibliothèque :** Aucun **Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Débogage](index.md)
-- [IXCLRDataModule, interface](ixclrdatamodule-interface.md)
+- [Interface de IXCLRDataModule](ixclrdatamodule-interface.md)

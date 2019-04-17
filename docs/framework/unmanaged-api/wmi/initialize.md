@@ -16,40 +16,45 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8e87157a7adf45f35608aeba1067f2d66c8972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081604"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611079"
 ---
 # <a name="initialize-function"></a>Initialiser (fonction)
-Effectue l’initialisation WMI.  
-  
+
+Effectue l’initialisation WMI.
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Syntaxe 
-```  
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
-); 
-```  
+);
+```
+
 ## <a name="parameters"></a>Paramètres
 
-`bAllowIManagementObjectQI`   
+`bAllowIManagementObjectQI`
+
 [in] `true` pour indiquer que les appels à destination de QueryInterface sur les objets WMI sont autorisées ; `false` dans le cas contraire.
 
 ## <a name="return-value"></a>Valeur de retour
 
 La fonction retourne toujours `S_OK` (0).
-  
-## <a name="requirements"></a>Configuration requise  
- **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **En-tête :** WMINet_Utils.def  
-  
- **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>Configuration requise
+
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+
+**En-tête :** WMINet_Utils.def
+
+**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Voir aussi
 
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

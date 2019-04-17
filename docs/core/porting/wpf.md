@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342204"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Procédure : Porter une application de bureau WPF sur .NET Core
 
@@ -27,7 +27,7 @@ Dans cet article, différents noms sont utilisés pour identifier les types de f
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core) pour tout le travail de conception.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) pour tout le travail de conception.
 
   Installez les charges de travail Visual Studio suivantes :
   - Développement .NET Desktop
@@ -37,9 +37,8 @@ Dans cet article, différents noms sont utilisés pour identifier les types de f
 - Le projet doit être codé en C#. 
 - Installez la dernière préversion de [.NET Core 3.0](https://aka.ms/netcore3download).
 
-
 >[!NOTE]
->**Visual Studio 2017** ne prend pas en charge les projets .NET Core 3.0. **Visual Studio 2019 Preview/RC** est compatible avec les projets .NET Core 3.0, mais ne gère pas encore le concepteur visuel pour les projets WPF .NET Core 3.0. Pour utiliser le concepteur visuel, la solution doit comporter un projet WPF .NET qui partage ses fichiers avec le projet .NET Core.
+>**Visual Studio 2017** ne prend pas en charge les projets .NET Core 3.0. **Visual Studio 2019** est compatible avec les projets .NET Core 3.0, mais ne gère pas encore le concepteur visuel pour les projets WPF .NET Core 3.0. Pour utiliser le concepteur visuel, la solution doit comporter un projet WPF .NET qui partage ses fichiers avec le projet .NET Core.
 
 ### <a name="consider"></a>Consider
 
@@ -61,7 +60,7 @@ Voici les points à prendre en compte pour porter une application WPF .NET Frame
 
     Il est toujours préférable d’utiliser les dernières versions des packages NuGet avant toute migration. Si votre application fait référence à des packages NuGet, passez à la dernière version. Vérifiez que votre application se génère correctement. En cas d’erreurs de package après la mise à niveau, passez à la dernière version du package qui ne casse pas votre code.
 
-01. Visual Studio 2019 Preview/RC ne gère pas encore le Concepteur WPF pour .NET Core 3.0.
+01. Visual Studio 2019 ne gère pas encore le Concepteur WPF pour .NET Core 3.0.
 
     Pour le moment, vous devez conserver le fichier projet WPF actuel du .NET Framework pour pouvoir utiliser le Concepteur WPF dans Visual Studio.
 
@@ -216,7 +215,7 @@ La commande précédente ajoute le code suivant au projet **MyWPFCore.csproj** 
 
 ## <a name="wpf-designer"></a>Concepteur WPF
 
-Comme nous l’avons indiqué dans cet article, Visual Studio 2019 Preview/RC ne prend en charge le Concepteur WPF que dans les projets .NET Framework. En créant un projet .NET Core côte à côte, vous pouvez tester votre projet avec .NET Core tout en utilisant le projet .NET Framework pour concevoir des formulaires. Le fichier de solution comporte à la fois les projets .NET Framework et .NET Core. Ajoutez et concevez vos formulaires et vos contrôles dans le projet .NET Framework ; à partir des modèles Glob de fichier que nous avons ajoutés aux projets .NET Core, les nouveaux fichiers et les fichiers modifiés sont automatiquement intégrés au projet .NET Core.
+Comme nous l’avons indiqué dans cet article, Visual Studio 2019 ne prend en charge le Concepteur WPF que dans les projets .NET Framework. En créant un projet .NET Core côte à côte, vous pouvez tester votre projet avec .NET Core tout en utilisant le projet .NET Framework pour concevoir des formulaires. Le fichier de solution comporte à la fois les projets .NET Framework et .NET Core. Ajoutez et concevez vos formulaires et vos contrôles dans le projet .NET Framework ; à partir des modèles Glob de fichier que nous avons ajoutés aux projets .NET Core, les nouveaux fichiers et les fichiers modifiés sont automatiquement intégrés au projet .NET Core.
 
 Dès que Visual Studio 2019 prendra en charge le Concepteur WPF, vous pourrez copier/coller le contenu de votre fichier projet .NET Core dans le fichier projet .NET Framework, puis supprimer les modèles Glob de fichier ajoutés avec les éléments `<Source>` et `<EmbeddedResource>`. Résolvez le chemin d’accès des références de projet utilisées par votre application. Le projet .NET Framework est ainsi mis à niveau en un projet .NET Core.
  

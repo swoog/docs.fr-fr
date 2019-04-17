@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306064"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publier des applications .NET Core avec l’interface CLI
 
@@ -33,8 +33,7 @@ Vous recherchez une aide rapide sur l’utilisation de l’interface CLI ? Le t
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*Quand vous utilisez un déploiement dépendant du framework avec la version 3.0 du SDK, il s’agit du mode de publication par défaut lors de l’exécution de la commande `dotnet publish` de base. Cela s’applique uniquement aux projets qui ciblent **.NET Core 2.1** ou **.NET Core 3.0**.
+\*Quand vous utilisez un déploiement dépendant du framework avec la version 3.0 du SDK, il s’agit du mode de publication par défaut lors de l’exécution de la commande `dotnet publish` de base. Cela s’applique uniquement à un projet qui cible **.NET Core 2.1** ou **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Principes de base de la publication
 
@@ -129,7 +128,8 @@ La publication d’un exécutable dépendant du framework crée une application 
 
 Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` pour publier un exécutable dépendant du framework (sauf pour .NET Core 3.x quand vous ciblez la plateforme actuelle) :
 
-- `-r <RID>` Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
+- `-r <RID>`
+  Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
 
 - `--self-contained false` Ce commutateur indique au kit SDK .NET Core qu’il doit créer un exécutable dépendant du framework.
 
@@ -148,15 +148,15 @@ La publication d’un déploiement autonome crée une application qui n’extrap
 
 Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` pour publier un déploiement autonome :
 
-- `-r <RID>` Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
+- `-r <RID>`
+  Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
 
 - `--self-contained true` Ce commutateur indique au kit SDK .NET Core qu’il doit créer un exécutable sous forme de déploiement autonome.
 
 > [!NOTE]
 > Vous pouvez réduire la taille totale de votre déploiement en activant le **mode invariant de globalisation**. Ce mode est utile pour les applications qui ne sont pas globalement compatibles et qui peuvent utiliser les conventions de mise en forme, les conventions de casse et la comparaison de chaînes, ainsi que l’ordre de tri de la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture). Pour plus d’informations sur le **mode invariant de globalisation** et sur la façon de l’activer, consultez [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
-
 ## <a name="see-also"></a>Voir aussi
 
-- [Déploiement d’applications .NET Core](index.md)
+- [Vue d’ensemble du déploiement d’applications .NET Core](index.md)
 - [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)

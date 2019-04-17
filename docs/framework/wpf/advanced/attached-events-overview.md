@@ -12,15 +12,15 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140853"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613588"
 ---
 # <a name="attached-events-overview"></a>Vue d'ensemble des événements attachés
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et le type d’événement appelé un *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
+Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et un type d’événement appelé *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
@@ -64,9 +64,9 @@ ms.locfileid: "59140853"
   
  Le modèle est le suivant :  
   
--   Une méthode **ajouter*EventName*gestionnaire** avec deux paramètres. Le premier paramètre doit identifier l’événement, et l’événement identifié doit correspondre aux noms ayant le ***EventName*** dans le nom de la méthode. Le second paramètre est le gestionnaire à ajouter. La méthode doit être `public` et `static`, sans valeur de retour.  
+-   Une méthode **ajouter*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à laquelle le Gestionnaire d’événements est ajouté. Le deuxième paramètre est le Gestionnaire d’événements à ajouter. La méthode doit être `public` et `static`, sans valeur de retour.  
   
--   Une méthode **supprimer*EventName*gestionnaire** avec deux paramètres. Le premier paramètre doit identifier l’événement, et l’événement identifié doit correspondre aux noms ayant le ***EventName*** dans le nom de la méthode. Le second paramètre est le gestionnaire à supprimer. La méthode doit être `public` et `static`, sans valeur de retour.  
+-   Une méthode **supprimer*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à partir de laquelle le Gestionnaire d’événements est supprimé. Le deuxième paramètre est le Gestionnaire d’événements à supprimer. La méthode doit être `public` et `static`, sans valeur de retour.  
   
  Le **ajouter*EventName*gestionnaire** facilite la méthode d’accesseur le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] traitement lorsque attaché de gestionnaire d’événements sont les attributs déclarés sur un élément. Le **ajouter*EventName*gestionnaire** et **supprimer*EventName*gestionnaire** méthodes permettent également d’accès du code dans le magasin de gestionnaire d’événements pour le événement attaché.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "59140853"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
 - [Syntaxe XAML en détail](xaml-syntax-in-detail.md)
 - [XAML et classes personnalisées pour WPF](xaml-and-custom-classes-for-wpf.md)

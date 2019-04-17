@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341723"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Nouveautés de .NET Core 3.0 (Preview 2)
 
@@ -34,7 +34,6 @@ Pour plus d’informations sur les caractéristiques de chaque version, consulte
 - [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
 - [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
 - [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
 
 ### <a name="ranges-and-indices"></a>Plages et index
 
@@ -71,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 Outre la possibilité d’effectuer une opération `await foreach`, vous pouvez également créer des itérateurs asynchrones, par exemple un itérateur qui retourne un objet `IAsyncEnumerable/IAsyncEnumerator` auquel vous pouvez à la fois appliquer des opérations `await` et `yield`. Pour les objets qui doivent être supprimés, vous pouvez utiliser `IAsyncDisposable`, qui implémentent différents types BCL, notamment `Stream` et `Timer`.
 
->[!NOTE]
->Vous avez besoin de .NET Core 3.0 Preview 2 pour utiliser des flux asynchrones si vous voulez développer avec Visual Studio 2019 Preview 2 ou avec la dernière préversion de l’[extension C# pour Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Si vous utilisez .NET Core 3.0 Preview 2 sur la ligne de commande, tout fonctionnera comme prévu.
+> [!NOTE]
+> Vous avez besoin de .NET Core 3.0 Preview 2 pour utiliser des flux asynchrones si vous voulez développer avec Visual Studio 2019 ou avec la dernière préversion de l’[extension C# pour Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Si vous utilisez .NET Core 3.0 Preview 2 sur la ligne de commande, tout fonctionnera comme prévu.
 
 ### <a name="using-declarations"></a>Déclarations using
 
@@ -102,7 +101,7 @@ static string Display(object o) => o switch
 };
 ```
 
-Deux modèles sont mis en œuvre dans cet exemple. `o` correspond d’abord au *modèle de type* `Point`, puis au *modèle de propriété* à l’intérieur des *{accolades}*. Le `_` décrit le `discard pattern`, qui est identique à `default` pour les *instructions switch*.
+Deux modèles sont mis en œuvre dans cet exemple. `o` correspond d’abord au `Point` *modèle de type*, puis au *modèle de propriété* à l’intérieur des *{accolades}*. Le `_` décrit le `discard pattern`, qui est identique à `default` pour les *instructions switch*.
 
 Les modèles vous permettent d’écrire du code déclaratif qui capture votre intention, au lieu d’un code procédural qui implémente des tests de celle-ci. Le compilateur devient responsable de l’implémentation de ce code procédural fastidieux, et il est garanti qu’il le fait toujours correctement.
 
@@ -171,13 +170,12 @@ Lors de l’étape `dotnet build` ou `dotnet publish`, un exécutable est créé
 
 Certaines opérations, par exemple la liaison et la publication d’une page de type Razor, nécessiteront toujours une publication.
 
-
 ## <a name="local-dotnet-tools"></a>Outils dotnet locaux
 
 >[!WARNING]
 >Il y a eu un changement dans les outils .NET Core locaux entre .NET Core 3.0 Preview 1 et .NET Core 3.0 Preview 2.  Si vous avez essayé les outils locaux dans la version Preview 1 en exécutant une commande comme `dotnet tool restore` ou `dotnet tool install`, vous devez supprimer votre dossier de cache des outils locaux pour que ces outils fonctionnent correctement dans la version Preview 2. Ce dossier se trouve à ces emplacements :
 >
->Sur mac, Linux : `rm -r $HOME/.dotnet/toolResolverCache`
+>Sur Mac, Linux : `rm -r $HOME/.dotnet/toolResolverCache`
 >
 >Sur Windows : `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
@@ -269,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 Preview 2 ajoute des modèles **Nouveau projet** pour Windows Forms et WPF .NET Core 3.0. Les concepteurs ne sont pas encore pris en charge. Vous pouvez ouvrir, lancer et déboguer ces projets dans Visual Studio 2019.
+Visual Studio 2019 ajoute des modèles **Nouveau projet** pour Windows Forms et WPF .NET Core 3.0. Les concepteurs ne sont pas encore pris en charge. Vous pouvez ouvrir, lancer et déboguer ces projets dans Visual Studio 2019.
 
 Visual Studio 2017 15.9 ajoute la possibilité d’[activer les préversions de .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), mais vous devez activer cette fonctionnalité, et il ne s’agit pas d’un scénario pris en charge.
 
@@ -309,7 +307,7 @@ Partagez vos commentaires sur les référentiels [dotnet/winforms](https://githu
 
 [MSIX](https://docs.microsoft.com/windows/msix/) est un nouveau format de package d’application Windows. Il peut être utilisé pour déployer des applications de poste de travail .NET Core 3.0 pour Windows 10.
 
-Le [projet de package d’application Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible dans Visual Studio 2019 Preview 2, vous permet de créer des packages MSIX avec des applications .NET Core [autonomes](../deploying/index.md#self-contained-deployments-scd).
+Le [projet de package d’application Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible dans Visual Studio 2019, vous permet de créer des packages MSIX avec des applications .NET Core [autonomes](../deploying/index.md#self-contained-deployments-scd).
 
 >Remarque : Le fichier projet .NET Core doit spécifier les runtimes pris en charge dans la propriété `<RuntimeIdentifiers>` :
 ```xml
@@ -381,7 +379,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` fournit un moyen d’écrire du texte JSON encodé en UTF-8 partir de types .NET courants, comme `String`, `Int32`, et `DateTime`, avec des hautes performances, sans mise en cache et vers l’avant uniquement. Comme le lecteur, l’enregistreur (writer) est un type fondamental de bas niveau, permettant de générer des sérialiseurs personnalisés. L’écriture d’une charge utile JSON avec le nouveau `Utf8JsonWriter` est de 30 à 80 % plus rapide qu’avec l’enregistreur (writer) de **Json.NET** et il n’effectue pas d’allocation.
+`System.Text.Json.Utf8JsonWriter` fournit un moyen d’écrire du texte JSON encodé en UTF-8 partir de types .NET courants, comme `String`, `Int32`, et `DateTime`, avec de hautes performances, sans mise en cache et vers l’avant uniquement. Comme le lecteur, l’enregistreur (writer) est un type fondamental de bas niveau, permettant de générer des sérialiseurs personnalisés. L’écriture d’une charge utile JSON avec le nouveau `Utf8JsonWriter` est de 30 à 80 % plus rapide qu’avec l’enregistreur (writer) de **Json.NET** et il n’effectue pas d’allocation.
 
 Voici un exemple d’utilisation de `Utf8JsonWriter`, qui peut être utilisé comme point de départ :
 
@@ -484,7 +482,6 @@ Windows offre une API native riche, sous la forme d’API C plates, de COM et de
 
 Vous pouvez voir un exemple d’utilisation de COM avec le [code de source de la démonstration Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
-
 ## <a name="type-sequencereader"></a>Type : SequenceReader
 
 Dans .NET Core 3.0, `System.Buffers.SequenceReader` a été ajouté et peut servir de lecteur pour `ReadOnlySequence<T>`. Cela permet une analyse facile, hautes performances et à faible allocation des données `System.IO.Pipelines`, capable de couvrir plusieurs mémoires tampon de stockage. 
@@ -524,7 +521,7 @@ Le type `MetadataLoadContext` a été ajouté et permet la lecture des métadonn
 
 `MetdataLoadContext` est disponible dans le [package System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext). Il s’agit d’un package .NET Standard 2.0.
 
-`MetadataLoadContext` expose les API semblables au type <xref:System.Runtime.Loader.AssemblyLoadContext>, mais il n’est pas basé sur ce type. Tout comme <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` permet le chargement d’assemblys dans un univers de chargement d’assemblys isolé. Les API `MetdataLoadContext` retournent des objets <xref:System.Reflection.Assembly>, permettant l’utilisation des API de réflexion courantes. Les API orientées exécution, par exemple [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), ne sont pas autorisées et renverront une exception InvalidOperationException.
+`MetadataLoadContext` expose les API semblables au type <xref:System.Runtime.Loader.AssemblyLoadContext>, mais il n’est pas basé sur ce type. Tout comme <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` permet le chargement d’assemblys dans un univers de chargement d’assemblys isolé. `MetdataLoadContext` Les API retournent des objets <xref:System.Reflection.Assembly>, permettant l’utilisation des API de réflexion courantes. Les API orientées exécution, par exemple [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), ne sont pas autorisées et renverront une exception InvalidOperationException.
 
 L’exemple suivant montre comment rechercher des types concrets dans un assembly qui implémente une interface donnée :
 
@@ -773,7 +770,6 @@ Deux nouveaux packages ont été publiés sur NuGet, que vous pouvez utiliser po
 Les packages GPIO incluent des API pour les appareils GPIO, SPI, I2C et PWM. Le package de liaisons IoT inclut [des liaisons d’appareil](https://github.com/dotnet/iot/blob/master/src/devices/README.md) pour différents circuits intégrés et capteurs, les mêmes que ceux qui sont disponibles dans [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices).
 
 Les API de port série mis à jour qui ont été annoncés dans le cadre de .NET Core 3.0 Preview 1 ne font pas partie de ces packages, mais elles sont disponibles dans le cadre de la plateforme .NET Core.
-
 
 ## <a name="platform-support"></a>Prise en charge de plateforme
 

@@ -1,17 +1,17 @@
 ---
-title: Moderniser vos applications avec la surveillance et télémétrie
+title: Moderniser vos applications avec la surveillance et la télémétrie
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Moderniser vos applications avec la surveillance et télémétrie
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147474"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613874"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Moderniser vos applications avec la surveillance et télémétrie
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Moderniser vos applications avec la surveillance et la télémétrie
 
 Lorsque vous exécutez une application en production, il est essentiel que vous avez des informations sur les performances de votre application. Il effectue un haut niveau ? Les utilisateurs bénéficient d’erreurs ou est l’application stable et fiable ? Vous avez besoin d’analyse des performances enrichie, puissantes alertes et des tableaux de bord pour vous assurer que votre application est disponible et fonctionnent comme prévu. Vous devez également être en mesure de voir rapidement s’il existe un problème, déterminez combien de clients est affectés et effectuer une analyse des causes racines pour rechercher et corriger le problème.
 
@@ -69,31 +69,31 @@ Vous pouvez utiliser la solution d’analyse de journal Analytique conteneur pou
 
 -   **Vue d’ensemble de l’analyse dans Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Nouveautés d’Application Insights ?**
+-   **Présentation d’Application Insights**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Nouveautés d’Analytique de journal ?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Solution Container Monitoring d’Analytique de journal**
+-   **Solution Container Monitoring dans Azure Monitor**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Vue d’ensemble d’Azure Monitor**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Nouveautés d’Operations Management Suite (OMS) ?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Surveillance des conteneurs Windows Server dans Service Fabric avec OMS**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Précédent](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
