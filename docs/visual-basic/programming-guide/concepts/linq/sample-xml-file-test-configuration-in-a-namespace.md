@@ -3,16 +3,16 @@ title: 'Exemple de fichier XML : Configuration de test dans un espace de noms3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821312"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="6cc83-102">Exemple de fichier XML : Configuration de test dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="6cc83-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="6cc83-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6cc83-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="6cc83-104">Il s'agit d'un fichier de configuration test.</span><span class="sxs-lookup"><span data-stu-id="6cc83-104">This is a test configuration file.</span></span> <span data-ttu-id="6cc83-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="6cc83-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="59e39-102">Exemple de fichier XML : Configuration de test dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="59e39-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="59e39-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59e39-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="59e39-104">Il s'agit d'un fichier de configuration test.</span><span class="sxs-lookup"><span data-stu-id="59e39-104">This is a test configuration file.</span></span> <span data-ttu-id="59e39-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="59e39-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="6cc83-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="6cc83-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="59e39-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="59e39-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "58821312"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6cc83-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6cc83-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59e39-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="59e39-107">See also</span></span>
 
-- [<span data-ttu-id="6cc83-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6cc83-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="59e39-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="59e39-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

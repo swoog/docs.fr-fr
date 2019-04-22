@@ -10,54 +10,54 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827274"
 ---
-# <a name="xml-comment-literal-visual-basic"></a><span data-ttu-id="52d6a-102">Littéraux de commentaires XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52d6a-102">XML Comment Literal (Visual Basic)</span></span>
-<span data-ttu-id="52d6a-103">Littéral représentant un <xref:System.Xml.Linq.XComment> objet.</span><span class="sxs-lookup"><span data-stu-id="52d6a-103">A literal representing an <xref:System.Xml.Linq.XComment> object.</span></span>  
+# <a name="xml-comment-literal-visual-basic"></a><span data-ttu-id="916f8-102">Littéraux de commentaires XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="916f8-102">XML Comment Literal (Visual Basic)</span></span>
+<span data-ttu-id="916f8-103">Littéral représentant un <xref:System.Xml.Linq.XComment> objet.</span><span class="sxs-lookup"><span data-stu-id="916f8-103">A literal representing an <xref:System.Xml.Linq.XComment> object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52d6a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="52d6a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="916f8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="916f8-104">Syntax</span></span>  
   
 ```xml  
 <!-- content -->  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="52d6a-105">Composants</span><span class="sxs-lookup"><span data-stu-id="52d6a-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="916f8-105">Composants</span><span class="sxs-lookup"><span data-stu-id="916f8-105">Parts</span></span>  
   
-|<span data-ttu-id="52d6a-106">Terme</span><span class="sxs-lookup"><span data-stu-id="52d6a-106">Term</span></span>|<span data-ttu-id="52d6a-107">Définition</span><span class="sxs-lookup"><span data-stu-id="52d6a-107">Definition</span></span>|  
+|<span data-ttu-id="916f8-106">Terme</span><span class="sxs-lookup"><span data-stu-id="916f8-106">Term</span></span>|<span data-ttu-id="916f8-107">Définition</span><span class="sxs-lookup"><span data-stu-id="916f8-107">Definition</span></span>|  
 |---|---|  
-|`<!--`|<span data-ttu-id="52d6a-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52d6a-108">Required.</span></span> <span data-ttu-id="52d6a-109">Indique le début du commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="52d6a-109">Denotes the start of the XML comment.</span></span>|  
-|`content`|<span data-ttu-id="52d6a-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52d6a-110">Required.</span></span> <span data-ttu-id="52d6a-111">Texte à afficher dans le commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="52d6a-111">Text to appear in the XML comment.</span></span> <span data-ttu-id="52d6a-112">Ne peut pas contenir une série de deux traits d’union (-) ou se terminer par un trait d’union adjacent à la balise de fermeture.</span><span class="sxs-lookup"><span data-stu-id="52d6a-112">Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.</span></span>|  
-|`-->`|<span data-ttu-id="52d6a-113">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52d6a-113">Required.</span></span> <span data-ttu-id="52d6a-114">Indique la fin du commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="52d6a-114">Denotes the end of the XML comment.</span></span>|  
+|`<!--`|<span data-ttu-id="916f8-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="916f8-108">Required.</span></span> <span data-ttu-id="916f8-109">Indique le début du commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="916f8-109">Denotes the start of the XML comment.</span></span>|  
+|`content`|<span data-ttu-id="916f8-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="916f8-110">Required.</span></span> <span data-ttu-id="916f8-111">Texte à afficher dans le commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="916f8-111">Text to appear in the XML comment.</span></span> <span data-ttu-id="916f8-112">Ne peut pas contenir une série de deux traits d’union (-) ou se terminer par un trait d’union adjacent à la balise de fermeture.</span><span class="sxs-lookup"><span data-stu-id="916f8-112">Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.</span></span>|  
+|`-->`|<span data-ttu-id="916f8-113">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="916f8-113">Required.</span></span> <span data-ttu-id="916f8-114">Indique la fin du commentaire XML.</span><span class="sxs-lookup"><span data-stu-id="916f8-114">Denotes the end of the XML comment.</span></span>|  
   
-## <a name="return-value"></a><span data-ttu-id="52d6a-115">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="52d6a-115">Return Value</span></span>  
- <span data-ttu-id="52d6a-116">Objet <xref:System.Xml.Linq.XComment>.</span><span class="sxs-lookup"><span data-stu-id="52d6a-116">An <xref:System.Xml.Linq.XComment> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="916f8-115">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="916f8-115">Return Value</span></span>  
+ <span data-ttu-id="916f8-116">Objet <xref:System.Xml.Linq.XComment>.</span><span class="sxs-lookup"><span data-stu-id="916f8-116">An <xref:System.Xml.Linq.XComment> object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="52d6a-117">Notes</span><span class="sxs-lookup"><span data-stu-id="52d6a-117">Remarks</span></span>  
- <span data-ttu-id="52d6a-118">Littéraux de commentaire XML ne contiennent pas de contenu de document ; ils contiennent des informations sur le document.</span><span class="sxs-lookup"><span data-stu-id="52d6a-118">XML comment literals do not contain document content; they contain information about the document.</span></span> <span data-ttu-id="52d6a-119">La section de commentaire XML se termine par la séquence «--> ».</span><span class="sxs-lookup"><span data-stu-id="52d6a-119">The XML comment section ends with the sequence "-->".</span></span> <span data-ttu-id="52d6a-120">Cela implique les points suivants :</span><span class="sxs-lookup"><span data-stu-id="52d6a-120">This implies the following points:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="916f8-117">Notes</span><span class="sxs-lookup"><span data-stu-id="916f8-117">Remarks</span></span>  
+ <span data-ttu-id="916f8-118">Littéraux de commentaire XML ne contiennent pas de contenu de document ; ils contiennent des informations sur le document.</span><span class="sxs-lookup"><span data-stu-id="916f8-118">XML comment literals do not contain document content; they contain information about the document.</span></span> <span data-ttu-id="916f8-119">La section de commentaire XML se termine par la séquence «--> ».</span><span class="sxs-lookup"><span data-stu-id="916f8-119">The XML comment section ends with the sequence "-->".</span></span> <span data-ttu-id="916f8-120">Cela implique les points suivants :</span><span class="sxs-lookup"><span data-stu-id="916f8-120">This implies the following points:</span></span>  
   
--   <span data-ttu-id="52d6a-121">Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML, car les délimiteurs d’expression sont le contenu du commentaire XML valide.</span><span class="sxs-lookup"><span data-stu-id="52d6a-121">You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.</span></span>  
+-   <span data-ttu-id="916f8-121">Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML, car les délimiteurs d’expression sont le contenu du commentaire XML valide.</span><span class="sxs-lookup"><span data-stu-id="916f8-121">You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.</span></span>  
   
--   <span data-ttu-id="52d6a-122">Sections de commentaire XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur de «--> ».</span><span class="sxs-lookup"><span data-stu-id="52d6a-122">XML comment sections cannot be nested, because `content` cannot contain the value "-->".</span></span>  
+-   <span data-ttu-id="916f8-122">Sections de commentaire XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur de «--> ».</span><span class="sxs-lookup"><span data-stu-id="916f8-122">XML comment sections cannot be nested, because `content` cannot contain the value "-->".</span></span>  
   
- <span data-ttu-id="52d6a-123">Vous pouvez assigner un littéral de commentaire XML à une variable, ou vous pouvez l’inclure dans un littéral d’élément XML.</span><span class="sxs-lookup"><span data-stu-id="52d6a-123">You can assign an XML comment literal to a variable, or you can include it in an XML element literal.</span></span>  
+ <span data-ttu-id="916f8-123">Vous pouvez assigner un littéral de commentaire XML à une variable, ou vous pouvez l’inclure dans un littéral d’élément XML.</span><span class="sxs-lookup"><span data-stu-id="916f8-123">You can assign an XML comment literal to a variable, or you can include it in an XML element literal.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="52d6a-124">Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne.</span><span class="sxs-lookup"><span data-stu-id="52d6a-124">An XML literal can span multiple lines without using line continuation characters.</span></span> <span data-ttu-id="52d6a-125">Cette fonctionnalité vous permet de copier le contenu d’un document XML et la coller directement dans un programme Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="52d6a-125">This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+>  <span data-ttu-id="916f8-124">Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne.</span><span class="sxs-lookup"><span data-stu-id="916f8-124">An XML literal can span multiple lines without using line continuation characters.</span></span> <span data-ttu-id="916f8-125">Cette fonctionnalité vous permet de copier le contenu d’un document XML et la coller directement dans un programme Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="916f8-125">This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
   
- <span data-ttu-id="52d6a-126">Le compilateur Visual Basic convertit le littéral de commentaire XML en un appel à la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructeur.</span><span class="sxs-lookup"><span data-stu-id="52d6a-126">The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.</span></span>  
+ <span data-ttu-id="916f8-126">Le compilateur Visual Basic convertit le littéral de commentaire XML en un appel à la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructeur.</span><span class="sxs-lookup"><span data-stu-id="916f8-126">The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="52d6a-127">Exemple</span><span class="sxs-lookup"><span data-stu-id="52d6a-127">Example</span></span>  
- <span data-ttu-id="52d6a-128">L’exemple suivant crée un commentaire XML qui contient le texte « Il s’agit d’un commentaire ».</span><span class="sxs-lookup"><span data-stu-id="52d6a-128">The following example creates an XML comment that contains the text "This is a comment".</span></span>  
+## <a name="example"></a><span data-ttu-id="916f8-127">Exemple</span><span class="sxs-lookup"><span data-stu-id="916f8-127">Example</span></span>  
+ <span data-ttu-id="916f8-128">L’exemple suivant crée un commentaire XML qui contient le texte « Il s’agit d’un commentaire ».</span><span class="sxs-lookup"><span data-stu-id="916f8-128">The following example creates an XML comment that contains the text "This is a comment".</span></span>  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="52d6a-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="52d6a-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="916f8-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="916f8-129">See also</span></span>
 
 - <xref:System.Xml.Linq.XComment>
-- [<span data-ttu-id="52d6a-130">Littéral d’élément XML</span><span class="sxs-lookup"><span data-stu-id="52d6a-130">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="52d6a-131">Littéraux XML</span><span class="sxs-lookup"><span data-stu-id="52d6a-131">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="52d6a-132">Création de code XML dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="52d6a-132">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="916f8-130">Littéral d’élément XML</span><span class="sxs-lookup"><span data-stu-id="916f8-130">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="916f8-131">Littéraux XML</span><span class="sxs-lookup"><span data-stu-id="916f8-131">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="916f8-132">Création de code XML dans Visual Basic</span><span class="sxs-lookup"><span data-stu-id="916f8-132">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

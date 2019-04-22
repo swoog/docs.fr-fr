@@ -8,21 +8,21 @@ helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
 ms.openlocfilehash: b4a5cb5ec0d1d4b3ad72ad6ccbced44fbef3f8d7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816731"
 ---
-# <a name="overflow-visual-basic-error"></a><span data-ttu-id="f8606-102">Dépassement de capacité (erreur Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8606-102">Overflow (Visual Basic Error)</span></span>
-<span data-ttu-id="f8606-103">Un littéral représente une valeur en dehors des limites du type de données auquel elle est assignée.</span><span class="sxs-lookup"><span data-stu-id="f8606-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  
+# <a name="overflow-visual-basic-error"></a><span data-ttu-id="af038-102">Dépassement de capacité (erreur Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af038-102">Overflow (Visual Basic Error)</span></span>
+<span data-ttu-id="af038-103">Un littéral représente une valeur en dehors des limites du type de données auquel elle est assignée.</span><span class="sxs-lookup"><span data-stu-id="af038-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  
   
- <span data-ttu-id="f8606-104">**ID d’erreur :** BC30036</span><span class="sxs-lookup"><span data-stu-id="f8606-104">**Error ID:** BC30036</span></span>  
+ <span data-ttu-id="af038-104">**ID d’erreur :** BC30036</span><span class="sxs-lookup"><span data-stu-id="af038-104">**Error ID:** BC30036</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f8606-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="f8606-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="af038-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="af038-105">To correct this error</span></span>  
   
--   <span data-ttu-id="f8606-106">Consultez la plage de valeurs pour la cible de type de données et réécrire le littéral pour se conformer à cette plage.</span><span class="sxs-lookup"><span data-stu-id="f8606-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>  
+-   <span data-ttu-id="af038-106">Consultez la plage de valeurs pour la cible de type de données et réécrire le littéral pour se conformer à cette plage.</span><span class="sxs-lookup"><span data-stu-id="af038-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8606-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f8606-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af038-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="af038-107">See also</span></span>
 
-- [<span data-ttu-id="f8606-108">Types de données</span><span class="sxs-lookup"><span data-stu-id="f8606-108">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="af038-108">Types de données</span><span class="sxs-lookup"><span data-stu-id="af038-108">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
