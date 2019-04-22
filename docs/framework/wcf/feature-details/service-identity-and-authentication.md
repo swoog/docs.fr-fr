@@ -8,10 +8,10 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145624"
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
@@ -106,11 +106,11 @@ D’un service *identité de point de terminaison* est une valeur générée à 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Procédure : créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Procédure : créer un vérificateur d’identité du client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Sélection d'un type d'informations d'identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Guide pratique pour Créer un vérificateur d’identité Client personnalisés](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Outil Service Model Metadata Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Création de liaisons définies par l’utilisateur](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Procédure : récupérer l’empreinte d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

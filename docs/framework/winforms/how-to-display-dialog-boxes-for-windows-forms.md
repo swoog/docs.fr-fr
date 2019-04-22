@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311082"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773816"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Procédure : afficher des boîtes de dialogue pour Windows Forms
 Afficher une boîte de dialogue de la même façon que vous affichez toute autre forme dans une application. Le formulaire de démarrage est chargé automatiquement lors de l’application est exécutée. Pour rendre un deuxième formulaire ou la boîte de dialogue s’affichent dans l’application, écrire du code pour charger et l’afficher. De même, pour rendre le formulaire ou la boîte de dialogue zone disparaissent, écrire du code pour décharger ou le masquer.  

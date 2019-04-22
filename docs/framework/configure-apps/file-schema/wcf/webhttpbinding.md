@@ -3,10 +3,10 @@ title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
 ms.openlocfilehash: 71b8255b9feda9854b0257528dcad85f6cf08d6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086024"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
@@ -94,7 +94,7 @@ Définit un élément de liaison qui est utilisé pour configurer des points de 
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
-- [Modèle de programmation HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modèle de programmation HTTP web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

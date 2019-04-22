@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734446"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59189155"
 ---
 # <a name="understanding-generated-client-code"></a>Fonctionnement du code client généré
 L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) génère du code client et un fichier de configuration d'application cliente à des fins de création d’applications clientes. Cette rubrique présente des exemples de code généré pour des scénarios de contrat de service standard. Pour plus d’informations sur la création d’une application cliente utilisant le code généré, consultez [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -31,7 +31,7 @@ L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
 -   Identification de l'interface de canal de contrat de service d'assistance.  
   
 ### <a name="finding-service-contract-interfaces"></a>Recherche d'interfaces de contrat de service  
- Pour trouver les interfaces qui modèlent des contrats de service, recherchez les interfaces marquées avec l'attribut <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. Cet attribut est souvent difficile à trouver avec une lecture rapide en raison de la présence d'autres attributs et des propriétés explicites définies sur l'attribut lui-même. N'oubliez pas que l'interface de contrat de service et l'interface de contrat client sont deux types différents. L'exemple de code suivant illustre le contrat de service d'origine.  
+ Pour trouver les interfaces qui modèlent des contrats de service, recherchez les interfaces marquées avec l'attribut <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> . Cet attribut est souvent difficile à trouver avec une lecture rapide en raison de la présence d'autres attributs et des propriétés explicites définies sur l'attribut lui-même. N'oubliez pas que l'interface de contrat de service et l'interface de contrat client sont deux types différents. L'exemple de code suivant illustre le contrat de service d'origine.  
   
  [!code-csharp[C_GeneratedCodeFiles#22](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#22)]  
   
@@ -63,7 +63,7 @@ L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
  Dans ce cas, le type de données est le type de détail levé par une exception spécifique sur le client, un <xref:System.ServiceModel.FaultException%601> où le paramètre de type de détail est `microsoft.wcf.documentation.SampleFault`. Pour plus d’informations sur les types de données, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Pour plus d’informations sur la gestion des exceptions dans les clients, consultez [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Recherche de contrats de rappel pour les services duplex  
- Si vous trouvez un contrat de service pour lequel l'interface de contrat spécifie une valeur pour la propriété <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, ce contrat spécifie un contrat duplex. Les contrats duplex requièrent que l'application cliente crée une classe de rappel qui implémente le contrat de rappel et passe une instance de cette classe au <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> ou <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> utilisé pour communiquer avec le service. Pour plus d’informations sur les clients duplex, consultez [Comment : Accéder aux Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Si vous trouvez un contrat de service pour lequel l'interface de contrat spécifie une valeur pour la propriété <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> , ce contrat spécifie un contrat duplex. Les contrats duplex requièrent que l'application cliente crée une classe de rappel qui implémente le contrat de rappel et passe une instance de cette classe au <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> ou <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> utilisé pour communiquer avec le service. Pour plus d’informations sur les clients duplex, consultez [Comment : Accéder aux Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Le contrat suivant spécifie un contrat de rappel de type `SampleDuplexHelloCallback`.  
   
@@ -81,4 +81,5 @@ L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Vue d’ensemble d’un client WCF](../../../../docs/framework/wcf/wcf-client-overview.md)

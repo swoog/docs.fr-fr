@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233973"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774072"
 ---
 ### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Les traces obtenues durant l’utilisation de fichiers PDB portables incluent désormais les informations sur les lignes et les fichiers sources, si elles sont demandées
 

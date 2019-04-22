@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463343"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611274"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
 
@@ -48,10 +48,10 @@ L’exécution de SQL Server en tant que conteneur n’est pas seulement utile �
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Exécuter l’image SQL Server Docker sur Linux, Mac ou Windows** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Se connecter à SQL Server et y effectuer des requêtes sur Linux avec sqlcmd** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Alimentation à l’aide de données de test au démarrage de l’application web
 
@@ -165,7 +165,7 @@ Toutefois, quand vous utilisez Redis en production, il est préférable de reche
 
 Redis fournit une image Docker. Cette image est accessible à partir de Docker Hub à l’URL suivante :
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 Vous pouvez exécuter directement un conteneur Docker Redis en utilisant la commande Docker CLI suivante à l’invite de commandes :
 

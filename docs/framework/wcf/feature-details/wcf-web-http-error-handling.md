@@ -3,10 +3,10 @@ title: Gestion des erreurs HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152696"
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- L'exemple suivant montre comment retourner un code d'état HTTP et une information supplémentaire dans un type défini par l'utilisateur. `MyErrorDetail` est un type défini par l’utilisateur qui contient des informations supplémentaires sur l’erreur qui s’est produite.  
+ L'exemple suivant montre comment retourner un code d'état HTTP et une information supplémentaire dans un type défini par l'utilisateur. `MyErrorDetail` est un type défini par l'utilisateur qui contient des informations supplémentaires à propos de l'erreur qui s'est produite.  
   
 ```  
 Public string Operation2()  
@@ -47,11 +47,11 @@ Public string Operation2()
   
  Pour plus d’informations sur la façon dont ces valeurs affectent la mise en forme de l’opération, consultez [mise en forme de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et peut par conséquent être utilisé en tant que le modèle de programmation d’exception d’erreur pour les services qui exposent des points de terminaison SOAP, ainsi que pour les points de terminaison HTTP web.  
+ <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et par conséquent peut être utilisé comme le modèle de programmation d'exception d'erreur pour les services qui exposent des points de terminaison SOAP, ainsi que des points de terminaison HTTP Web.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Mise en forme HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [Définition et spécification des erreurs](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
 - [Gestion des exceptions et des erreurs](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)

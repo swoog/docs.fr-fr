@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
 ms.openlocfilehash: 0552fc005a25e83065bb44e425770f9cef84f71b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082579"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>Résolution des problèmes : débogage de services Windows
@@ -26,5 +26,5 @@ Quand vous déboguez une application de service Windows, votre service et le **G
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : déboguer les applications de service Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Guide pratique pour déboguer les applications de service Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

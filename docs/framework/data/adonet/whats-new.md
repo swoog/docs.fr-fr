@@ -3,10 +3,10 @@ title: Nouveautés dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191442"
 ---
 # <a name="whats-new-in-adonet"></a>Nouveautés dans ADO.NET
@@ -41,7 +41,7 @@ Les fonctionnalités suivantes sont nouvelles dans [!INCLUDE[vstecado](../../../
   
 -   SqlClient prend en charge les connexions aux bases de données LocalDB. Pour plus d’informations, consultez [prise en charge de SqlClient pour LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` est la nouvelle valeur à passer à la `Type System Version` propriété de connexion. La valeur `Type System Version=Latest;` est désormais obsolète et a été rendue équivalente à `Type System Version=SQL Server 2008;`. Pour plus d'informations, consultez <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` est une nouvelle valeur à passer à la propriété de connexion `Type System Version`. La valeur `Type System Version=Latest;` est désormais obsolète et a été rendue équivalente à `Type System Version=SQL Server 2008;`. Pour plus d'informations, consultez <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 -   SqlClient fournit la prise en charge supplémentaire des colonnes éparses, une fonctionnalité ajoutée dans SQL Server 2008. Si votre application accède déjà aux données dans un table qui utilise des colonnes éparses, vous devez constater une augmentation des performances. La colonne IsColumnSet de <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indique si une colonne est une colonne éparse qui est membre d'un jeu de colonnes. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Indique si une colonne est une colonne éparse (consultez [Collections de schémas SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) pour plus d’informations). Pour plus d’informations sur les colonnes éparses, consultez [à l’aide des colonnes éparses](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
@@ -53,7 +53,7 @@ Les fonctionnalités suivantes sont nouvelles dans [!INCLUDE[vstecado](../../../
 ## <a name="see-also"></a>Voir aussi
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Quelles sont les nouveautés dans WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

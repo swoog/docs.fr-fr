@@ -9,10 +9,10 @@ helpviewer_keywords:
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
 ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150499"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>Procédure : utiliser le test de positionnement avec une région
@@ -31,4 +31,4 @@ L’objectif du test de positionnement consiste à déterminer si le curseur se 
 
 - <xref:System.Drawing.Region>
 - [Régions dans GDI+](regions-in-gdi.md)
-- [Procédure : utiliser le détourage avec une région](how-to-use-clipping-with-a-region.md)
+- [Guide pratique pour Utiliser le découpage avec une région](how-to-use-clipping-with-a-region.md)

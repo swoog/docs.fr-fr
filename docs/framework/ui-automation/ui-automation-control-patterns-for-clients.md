@@ -6,10 +6,10 @@ helpviewer_keywords:
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159833"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Modèles de contrôle UI Automation pour les clients
@@ -48,8 +48,8 @@ ms.locfileid: "59159833"
 
 - [Modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
 - [Modèle de texte UI Automation](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
-- [Appeler un contrôle à l'aide d'UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Obtenir l'état bascule d'une case à cocher à l'aide d'UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Appeler un contrôle à l’aide d’UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Obtenir l’état bascule d’une case à cocher à l’aide d’UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Mappage de modèle de contrôle pour les clients UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [Exemple de texte TextPattern Insert](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Recherche de TextPattern et exemple de sélection](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

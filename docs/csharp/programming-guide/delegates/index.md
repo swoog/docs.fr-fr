@@ -7,10 +7,10 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088741"
 ---
 # <a name="delegates-c-programming-guide"></a>Délégués (Guide de programmation C#)
@@ -44,19 +44,19 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utilisation des délégués](../../../csharp/programming-guide/delegates/using-delegates.md)  
+-   [Utilisation de délégués](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
 -   [Quand utiliser des délégués à la place d’interfaces (Guide de programmation C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [Délégués avec méthodes nommées et Méthodes anonymes](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [Délégués avec méthodes nommées et méthodes anonymes](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [Méthodes anonymes](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
 -   [Utilisation de la variance dans les délégués](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [Procédure : Combiner des délégués (délégués multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+-   [Guide pratique pour combiner des délégués (délégués multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [Procédure : Déclarer, instancier et utiliser un délégué](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+-   [Guide pratique pour déclarer, instancier et utiliser un délégué](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
 
 ## <a name="c-language-specification"></a>Spécification du langage C#  
 

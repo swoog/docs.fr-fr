@@ -10,10 +10,10 @@ helpviewer_keywords:
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834307"
 ---
 # <a name="-define-visual-basic"></a>-définir (Visual Basic)
@@ -32,7 +32,7 @@ Définit des constantes conditionnelles du compilateur.
 |Terme|Définition|  
 |---|---|  
 |`symbol`|Obligatoire. Symbole à définir.|  
-|`value`|Facultatif. Valeur à affecter au `symbol`. Si `value` est une chaîne, elle doit être entourée par des séquences de barre oblique inverse/guillemets (\\») au lieu des guillemets. Si aucune valeur n'est spécifiée, il prend la valeur True.|  
+|`value`|Optionnel. Valeur à affecter au `symbol`. Si `value` est une chaîne, elle doit être entourée par des séquences de barre oblique inverse/guillemets (\\») au lieu des guillemets. Si aucune valeur n'est spécifiée, il prend la valeur True.|  
   
 ## <a name="remarks"></a>Notes  
  L'option `-define` revient à utiliser la directive de préprocesseur `#Const` dans votre fichier source, excepté que les constantes définies avec `-define` sont publiques et s'appliquent à tous les fichiers du projet.  

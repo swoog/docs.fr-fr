@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097549"
 ---
 # <a name="data-templating-overview"></a>Vue d'ensemble des modèles de données
@@ -197,6 +197,6 @@ Ainsi se conclut notre étude de cet exemple. Vous trouverez l’exemple complet
 
 - [Liaison de données](../advanced/optimizing-performance-data-binding.md)
 - [Rechercher des éléments générés par DataTemplate](how-to-find-datatemplate-generated-elements.md)
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d'ensemble des modèles et styles d'en-tête de colonne GridView](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [Vue d’ensemble des modèles et styles d’en-tête de colonne GridView](../controls/gridview-column-header-styles-and-templates-overview.md)

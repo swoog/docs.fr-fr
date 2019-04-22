@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166242"
 ---
 # <a name="sorting-and-filtering-data"></a>Tri et filtre de données
@@ -31,12 +31,12 @@ L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtr
     |------------------------------|-----------------|  
     |**CurrentRows**|Le **actuel** version de ligne de tous les **Unchanged**, **Added**, et **Modified** lignes. Il s'agit de la valeur par défaut.|  
     |**Added**|Le **actuel** version de ligne de tous les **Added** lignes.|  
-    |**Supprimé**|Le **d’origine** version de ligne de tous les **Deleted** lignes.|  
+    |**Deleted**|Le **d’origine** version de ligne de tous les **Deleted** lignes.|  
     |**ModifiedCurrent**|Le **actuel** version de ligne de tous les **Modified** lignes.|  
     |**ModifiedOriginal**|Le **d’origine** version de ligne de tous les **Modified** lignes.|  
-    |**Aucun.**|Aucune ligne.|  
+    |**Aucun**|Aucune ligne.|  
     |**OriginalRows**|Le **d’origine** version de ligne de tous les **Unchanged**, **Modified**, et **Deleted** lignes.|  
-    |**Inchangé**|Le **actuel** version de ligne de tous les **Unchanged** lignes.|  
+    |**inchangé**|Le **actuel** version de ligne de tous les **Unchanged** lignes.|  
   
  Pour plus d’informations sur les États et les versions de ligne, consultez [États des lignes et des Versions de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   

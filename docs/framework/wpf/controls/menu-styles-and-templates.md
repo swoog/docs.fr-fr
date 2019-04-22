@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
 ms.openlocfilehash: 6818be4ac92dbdd7de0c6c6fa65109e21eadc2f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094201"
 ---
 # <a name="menu-styles-and-templates"></a>Styles et modèles Menu
@@ -76,5 +76,5 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

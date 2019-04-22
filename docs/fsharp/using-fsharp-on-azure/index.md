@@ -4,10 +4,10 @@ description: Guide d’utilisation des services Azure avecF#
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211736"
 ---
 # <a name="using-f-on-azure"></a>Utilisation de F# dans Azure
@@ -41,10 +41,10 @@ Autres ressources relatives à l’utilisation d’Azure Functions et de F# :
 
 Stockage Azure est une couche de base de services de stockage pour les applications modernes qui s’appuient sur la durabilité, la disponibilité et la scalabilité afin de répondre aux besoins de leurs clients. F#programmes peuvent interagir directement avec les services de stockage Azure, à l’aide des techniques décrites dans les articles suivants.
 
-* [Prise en main stockage Blob Azure à l’aideF#](blob-storage.md)
-* [Prise en main à l’aide du stockage de fichiers AzureF#](file-storage.md)
-* [Prise en main stockage file d’attente Azure à l’aideF#](queue-storage.md)
-* [Prise en main à l’aide du stockage Table AzureF#](table-storage.md)
+* [Bien démarrer avec le stockage Blob Azure en F#](blob-storage.md)
+* [Bien démarrer avec le stockage Fichier Azure en F#](file-storage.md)
+* [Bien démarrer avec le stockage File d’attente Azure en F#](queue-storage.md)
+* [Bien démarrer avec le stockage Table Azure en F#](table-storage.md)
 
 Vous pouvez aussi utiliser Stockage Azure conjointement avec Azure Functions en remplaçant les appels d’API explicites par une configuration déclarative. Pour obtenir des exemples d’utilisation de F#, consultez [Déclencheurs et liaisons Azure Functions pour Stockage Azure](/azure/azure-functions/functions-bindings-storage).
 
@@ -52,15 +52,15 @@ Vous pouvez aussi utiliser Stockage Azure conjointement avec Azure Functions en 
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) est une plateforme cloud qui permet de générer des applications web et mobiles performantes qui se connectent aux données en tout lieu, dans le cloud ou localement.
 
-* [F#Exemple d’API Web Azure](https://github.com/fsprojects/azure-webapi-example)
-* [Hébergement F# dans une application web sur Azure](https://github.com/isaacabraham/fsharp-demonstrator)
+* [Exemple d’API web Azure F#](https://github.com/fsprojects/azure-webapi-example)
+* [Hébergement de F# dans une application web sur Azure](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Utilisation d’Apache Spark avec F# avec Azure HDInsight
 
 [Apache Spark pour Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) est une infrastructure de traitement open source qui exécute des applications d’analytique des données à grande échelle. Azure vous permet de déployer Apache Spark de manière simple et rentable. Développez votre application Spark en F# à l’aide de [Mobius](https://github.com/Microsoft/Mobius), API .NET pour Spark.
 
-* [Implémentation des applications Spark dans F# à l’aide de Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Exemple F# applications Spark à l’aide de Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Implémentation d’applications Spark en F# à l’aide de Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [Exemples d’applications Spark F# à l’aide de Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>À l’aide d’Azure Cosmos DB avec F\#
 
@@ -99,7 +99,7 @@ Vous pouvez implémenter des Webhooks en F# et les héberger sur Azure par le b
 
 Les [Webjobs](/azure/app-service-web/web-sites-create-web-jobs) sont des programmes que vous pouvez exécuter dans votre application web App Service de trois façons : à la demande, en continu ou selon une planification.
 
-[Exemple F# tâche Web](https://github.com/jrr/webjob-project-examples)
+[Exemple de Webjob en F# ](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>Implémentation de minuteries sur Azure avec F\#
 

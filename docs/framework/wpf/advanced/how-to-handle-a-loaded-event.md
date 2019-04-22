@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
 ms.openlocfilehash: b8cd2f5e9d848cebb712e7b4930ca39efe48ecc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122549"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>Procédure : Gérer un événement chargé
@@ -30,6 +30,6 @@ Cet exemple montre comment gérer les <xref:System.Windows.FrameworkElement.Load
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.FrameworkElement>
-- [Événements de la durée de vie d'un objet](object-lifetime-events.md)
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
-- [Rubriques Comment](base-elements-how-to-topics.md)
+- [Événements de la durée de vie d’un objet](object-lifetime-events.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
+- [Rubriques de guide pratique](base-elements-how-to-topics.md)

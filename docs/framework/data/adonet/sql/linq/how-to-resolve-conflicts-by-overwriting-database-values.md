@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
 ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189116"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procédure : Résoudre des conflits en remplaçant des valeurs de bases de données
@@ -42,4 +42,4 @@ Pour harmoniser des différences entre des valeurs de base de données attendues
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

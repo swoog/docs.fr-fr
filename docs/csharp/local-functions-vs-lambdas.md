@@ -3,12 +3,12 @@ title: Fonctions locales et expressions lambda
 description: Découvrez pourquoi des fonctions locales peuvent être un meilleur choix que les expressions lambda.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125770"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611443"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Fonctions locales comparées aux expressions lambda
 
@@ -59,7 +59,7 @@ Les fonctions locales n’entraînent pas cette charge supplémentaire. Dans l�
 > [!NOTE]
 > L’équivalent de cette méthode avec une fonction locale fait aussi appel à une classe pour la fermeture. Le fait que la fermeture d’une fonction locale soit implémentée en tant que `class` ou `struct` est un détail d’implémentation. Une fonction locale peut utiliser un type `struct` contrairement à une expression lambda qui utilise toujours un type `class`.
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 Ultime avantage non décrit dans cet exemple : les fonctions locales peuvent être implémentées en tant qu’itérateurs, en utilisant la syntaxe `yield return` pour produire une séquence de valeurs. L’instruction `yield return` n’est pas autorisée dans les expressions lambda.
 

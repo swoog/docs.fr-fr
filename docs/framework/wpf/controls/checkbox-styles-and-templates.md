@@ -10,10 +10,10 @@ helpviewer_keywords:
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
 ms.openlocfilehash: b3f417a676b141a4a6dbccfe51bf5b7abe669198
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120053"
 ---
 # <a name="checkbox-styles-and-templates"></a>Styles et modèles CheckBox
@@ -33,8 +33,8 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Désactivé|CommonStates|Le contrôle est désactivé.|  
 |Avec focus|FocusStates|Le contrôle a le focus.|  
 |Sans focus|FocusStates|Le contrôle n’a pas le focus.|  
-|Activé|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `true`.|  
-|Elle est désactivée|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `false`.|  
+|Activé|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> a la valeur `true`.|  
+|Elle est désactivée|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> a la valeur `false`.|  
 |Indeterminate|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> est `true`, et <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> est `null`.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
@@ -57,5 +57,5 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

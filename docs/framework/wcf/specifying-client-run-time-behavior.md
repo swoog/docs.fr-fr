@@ -8,10 +8,10 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164370"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Spécification du comportement du client au moment de l'exécution
@@ -45,4 +45,4 @@ Windows Communication Foundation (WCF) clients, tels que les services Windows Co
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Spécification du comportement du service au moment de l'exécution](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Spécification du comportement du service au moment de l’exécution](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

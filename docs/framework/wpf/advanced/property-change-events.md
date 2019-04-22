@@ -14,14 +14,14 @@ helpviewer_keywords:
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
 ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166203"
 ---
 # <a name="property-change-events"></a>Événements de changement de propriété
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] définit plusieurs événements sont déclenchés en réponse à une modification de la valeur d’une propriété. Souvent, la propriété est une propriété de dépendance. L’événement lui-même est parfois un événement routé et parfois un événement [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La définition de l’événement varie selon le scénario, car certains changements de propriété sont routés de façon plus appropriée à travers une arborescence d’éléments, tandis que d’autres changements de propriété ne concernent en général que l’objet sur lequel la propriété a changé.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] définit plusieurs événements déclenchés en réponse au changement de la valeur d’une propriété. Souvent, la propriété est une propriété de dépendance. L’événement lui-même est parfois un événement routé et parfois un événement [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La définition de l’événement varie selon le scénario, car certains changements de propriété sont routés de façon plus appropriée à travers une arborescence d’éléments, tandis que d’autres changements de propriété ne concernent en général que l’objet sur lequel la propriété a changé.  
   
 ## <a name="identifying-a-property-change-event"></a>Identification d’un événement de changement de propriété  
  Les événements qui signalent un changement de propriété ne sont pas tous explicitement identifiés comme événement de changement de propriété, selon le modèle de signature ou le modèle de renommage. En règle générale, la description de l’événement dans la documentation du [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indique si l’événement est directement lié à un changement de valeur de propriété et fournit des références croisées entre la propriété et l’événement.  
@@ -63,5 +63,5 @@ ms.locfileid: "59166203"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
 - [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)

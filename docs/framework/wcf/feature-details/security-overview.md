@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136953"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
@@ -108,9 +108,9 @@ Windows Communication Foundation (WCF) est une plateforme SOAP de la programmati
 - [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Aide sur la sécurité et meilleures pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Configuration des services à l'aide de fichiers de configuration](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Aide sur la sécurité et bonnes pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Configuration des services à l’aide de fichiers de configuration](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vue d'ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Extension de la sécurité](../../../../docs/framework/wcf/extending/extending-security.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

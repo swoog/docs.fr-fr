@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088403"
 ---
 # <a name="data-transfer-and-serialization"></a>Transfert de données et sérialisation
@@ -31,19 +31,19 @@ Dans un système connecté, les services et les clients se reposent sur l'échan
  [Utilisation de contrats de message](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  Décrit comment les contrats de message autorisent un contrôle pointu sur les messages SOAP.  
   
- [Utilisation de la classe Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
+ [Utilisation de la classe de message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
  Décrit comment utiliser les fonctionnalités de la classe Message.  
   
  [Filtrage](../../../../docs/framework/wcf/feature-details/filtering.md)  
  Décrit le filtrage qui permet le pré-traitement d'un message selon différents critères.  
   
- [Données volumineuses et diffusion en continu](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Données volumineuses et streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Décrit comment envoyer un grand bloc de données, tel qu'un fichier binaire.  
   
  [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  Décrit des éléments à connaître lors de la programmation du transfert de données et de la sérialisation.  
   
- [Vue d'ensemble de l'architecture de transfert de données](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
+ [Vue d’ensemble de l’architecture de transfert de données](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
  Décrit une vue de la conception globale de transfert de données dans WCF.  
   
 ## <a name="reference"></a>Référence  
@@ -62,5 +62,5 @@ Dans un système connecté, les services et les clients se reposent sur l'échan
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Bonnes pratiques : Contrôle de version des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Contrôle des versions du service](../../../../docs/framework/wcf/service-versioning.md)
+- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Gestion des versions des services](../../../../docs/framework/wcf/service-versioning.md)

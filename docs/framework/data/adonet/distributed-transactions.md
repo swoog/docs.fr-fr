@@ -3,10 +3,10 @@ title: Transactions distribuées
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150200"
 ---
 # <a name="distributed-transactions"></a>Transactions distribuées
@@ -39,7 +39,7 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
 >  Une fois qu’une connexion est explicitement inscrite sur une transaction, il n’est plus possible de la désinscrire ou de l’inscrire dans une autre transaction tant que la première transaction n’est pas terminée.  
   
 > [!CAUTION]
->  `EnlistTransaction` lève une exception si la connexion a déjà commencé une transaction à l’aide de la connexion <xref:System.Data.Common.DbConnection.BeginTransaction%2A> (méthode). Toutefois, si la transaction est une transaction locale démarrée dans la source de données (par exemple, l'exécution explicite de l'instruction BEGIN TRANSACTION à l'aide d'un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` annule la transaction locale et s'inscrit dans la transaction distribuée existante comme requis. Vous ne recevrez pas de notification indiquant que la transaction locale a été annulée et que vous devez gérer les transactions locales non lancées à l’aide de <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si vous utilisez le fournisseur de données .NET Framework pour SQL Server (`SqlClient`) avec SQL Server, toute tentative d'inscription lève une exception. Les autres cas ne sont pas détectés.  
+>  `EnlistTransaction` lève une exception si la connexion a déjà entamé une transaction à l'aide de la méthode <xref:System.Data.Common.DbConnection.BeginTransaction%2A> de la connexion. Toutefois, si la transaction est une transaction locale démarrée dans la source de données (par exemple, l'exécution explicite de l'instruction BEGIN TRANSACTION à l'aide d'un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` annule la transaction locale et s'inscrit dans la transaction distribuée existante comme requis. Vous ne recevrez pas de notification indiquant que la transaction locale a été annulée et que vous devez gérer les transactions locales non lancées à l’aide de <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si vous utilisez le fournisseur de données .NET Framework pour SQL Server (`SqlClient`) avec SQL Server, toute tentative d'inscription lève une exception. Les autres cas ne sont pas détectés.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transactions pouvant être promues dans SQL Server  
  SQL Server prend en charge les transactions pouvant être promues dans lesquelles une transaction légère locale peut être automatiquement promue en transaction distribuée uniquement si c’est requis. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Pour plus d’informations et un exemple de code, consultez [intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -49,6 +49,6 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Transactions et accès simultané](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
