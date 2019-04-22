@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144142"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="a4e80-102">ICorDebugErrorInfoEnum, interface</span><span class="sxs-lookup"><span data-stu-id="a4e80-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="7a94b-102">ICorDebugErrorInfoEnum, interface</span><span class="sxs-lookup"><span data-stu-id="7a94b-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-`ICorDebugErrorInfoEnum` <span data-ttu-id="a4e80-103">est obsolète.</span><span class="sxs-lookup"><span data-stu-id="a4e80-103">is obsolete.</span></span> <span data-ttu-id="a4e80-104">N'utilisez pas cette interface.</span><span class="sxs-lookup"><span data-stu-id="a4e80-104">Do not use this interface.</span></span>  
+<span data-ttu-id="7a94b-103">`ICorDebugErrorInfoEnum` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="7a94b-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="7a94b-104">N'utilisez pas cette interface.</span><span class="sxs-lookup"><span data-stu-id="7a94b-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4e80-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a4e80-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a94b-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7a94b-105">See also</span></span>
 
-- [<span data-ttu-id="a4e80-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="a4e80-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7a94b-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="7a94b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
