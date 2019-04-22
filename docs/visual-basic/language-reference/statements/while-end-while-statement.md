@@ -10,10 +10,10 @@ helpviewer_keywords:
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
 ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843706"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While, instruction (Visual Basic)
@@ -37,7 +37,7 @@ End While
 |---|---|  
 |`condition`|Obligatoire. `Boolean` expression. Si `condition` est `Nothing`, Visual Basic traite en tant que `False`.|  
 |`statements`|Optionnel. Une ou plusieurs instructions qui suivent `While`, qui exécutera chaque fois `condition` est `True`.|  
-|`Continue While`|Facultatif. Transfère le contrôle à l’itération suivante de la `While` bloc.|  
+|`Continue While`|Optionnel. Transfère le contrôle à l’itération suivante de la `While` bloc.|  
 |`Exit While`|Optionnel. Transfère le contrôle de la `While` bloc.|  
 |`End While`|Obligatoire. Met fin à la définition du bloc `While`.|  
   

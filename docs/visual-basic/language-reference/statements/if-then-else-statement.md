@@ -22,10 +22,10 @@ helpviewer_keywords:
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
 ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842692"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else, instruction (Visual Basic)
@@ -65,7 +65,7 @@ Cet article inclut plusieurs exemples qui illustrent des utilisations de la `If`
  Requis dans la syntaxe de ligne ; facultatif dans la syntaxe multiligne.  
   
  `statements`  
- Facultatif. Une ou plusieurs instructions qui suivent `If`... `Then` qui sont exécutées si `condition` prend la valeur `True`.  
+ Optionnel. Une ou plusieurs instructions qui suivent `If`... `Then` qui sont exécutées si `condition` prend la valeur `True`.  
   
  `elseifcondition`  
  Obligatoire si `ElseIf` est présent. expression. Doit correspondre à `True` ou `False`, ou à un type de données qui est implicitement convertible en `Boolean`.  
@@ -74,7 +74,7 @@ Cet article inclut plusieurs exemples qui illustrent des utilisations de la `If`
  Optionnel. Une ou plusieurs instructions qui suivent `ElseIf`... `Then` qui sont exécutées si `elseifcondition` prend la valeur `True`.  
   
  `elsestatements`  
- Optionnel. Une ou plusieurs instructions sont exécutées si aucune `condition` ou `elseifcondition` expression prend la valeur `True`.  
+ Facultatif. Une ou plusieurs instructions sont exécutées si aucune `condition` ou `elseifcondition` expression prend la valeur `True`.  
   
  `End If`  
  Met fin à la version multiligne de `If`... `Then`... `Else` bloc.  

@@ -3,10 +3,10 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920673"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
@@ -106,7 +106,7 @@ Les règles de l’opérateur `?.` garantissent que la partie gauche de l’op�
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Le fait de vérifier que le côté gauche n’est évalué qu’une seule fois permet également d’utiliser n’importe quelle expression, notamment des appels de méthode, à gauche de `?.`
+Le fait de vérifier que le côté gauche n’est évalué qu’une seule fois vous permet également d’utiliser n’importe quelle expression, notamment des appels de méthode, à gauche du `?.`
 
 ## <a name="string-interpolation"></a>Interpolation de chaîne
 

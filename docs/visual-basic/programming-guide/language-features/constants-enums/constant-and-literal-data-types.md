@@ -10,10 +10,10 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833501"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Constantes et types de données littérales (Visual Basic)
@@ -49,17 +49,17 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
 |Type de données|Caractère englobant|Caractère de type ajouté|  
 |---|---|---|  
-|`Boolean`|(aucune)|(aucune)|  
-|`Byte`|(aucune)|(aucune)|  
+|`Boolean`|(aucun)|(aucun)|  
+|`Byte`|(aucun)|(aucun)|  
 |`Char`|"|C|  
-|`Date`|#|(aucune)|  
-|`Decimal`|(aucune)|D ou @|  
-|`Double`|(aucune)|R ou #|  
-|`Integer`|(aucune)|I ou %|  
-|`Long`|(aucune)|L ou &|  
-|`Short`|(aucune)|S|  
-|`Single`|(aucune)|F ou !|  
-|`String`|"|(aucune)|  
+|`Date`|#|(aucun)|  
+|`Decimal`|(aucun)|D ou @|  
+|`Double`|(aucun)|R ou #|  
+|`Integer`|(aucun)|I ou %|  
+|`Long`|(aucun)|L ou &|  
+|`Short`|(aucun)|S|  
+|`Single`|(aucun)|F ou !|  
+|`String`|"|(aucun)|  
   
 ## <a name="see-also"></a>Voir aussi
 

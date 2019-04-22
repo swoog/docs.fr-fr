@@ -30,10 +30,10 @@ helpviewer_keywords:
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
 ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836556"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
@@ -50,11 +50,11 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
+     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -80,7 +80,7 @@ Dim [ WithEvents ] variablelist
   
 -   `Static`  
   
-     Facultatif. Consultez [statique](../../../visual-basic/language-reference/modifiers/static.md).  
+     Optionnel. Consultez [statique](../../../visual-basic/language-reference/modifiers/static.md).  
   
 -   `ReadOnly`  
   
@@ -103,9 +103,9 @@ Dim [ WithEvents ] variablelist
     |Élément|Description|  
     |---|---|  
     |`variablename`|Obligatoire. Nom de la variable. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-    |`boundslist`|Facultatif. Liste des limites de chaque dimension d’une variable tableau.|  
+    |`boundslist`|Optionnel. Liste des limites de chaque dimension d’une variable tableau.|  
     |`New`|Facultatif. Crée une nouvelle instance de la classe lors de la `Dim` instruction s’exécute.|  
-    |`datatype`|Optionnel. Type de données de la variable.|  
+    |`datatype`|Facultatif. Type de données de la variable.|  
     |`With`|Facultatif. Présente la liste d’initialiseurs objet.|  
     |`propertyname`|Optionnel. Le nom d’une propriété dans la classe, vous effectuez une instance de.|  
     |`propinitializer`|Requis après `propertyname` =. L’expression qui est évaluée et assignée au nom de propriété.|  

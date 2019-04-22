@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
 ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842250"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Littéral d'élément XML (Visual Basic)
@@ -58,9 +58,9 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
   
         |Élément|Description|  
         |---|---|  
-        |`aPrefix`|Optionnel. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
+        |`aPrefix`|Facultatif. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global qui est défini avec un `Imports` instruction ou un espace de noms XML local qui est défini dans cet élément ou un élément parent.|  
         |`aName`|Obligatoire. Nom de l'attribut. Le format est une des opérations suivantes :<br /><br /> -Texte littéral. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Incorporé expression sous la forme `<%= aNameExp %>`. Le type de `aNameExp` doit être `String` ou un type qui est implicitement convertible en <xref:System.Xml.Linq.XName>.|  
-        |`aValue`|Facultatif. Valeur de l’attribut. Le format est une des opérations suivantes :<br /><br /> -Texte littéral, entourée de guillemets.<br />-Incorporé expression sous la forme `<%= aValueExp %>`. N’importe quel type est autorisé.|  
+        |`aValue`|Optionnel. Valeur de l’attribut. Le format est une des opérations suivantes :<br /><br /> -Texte littéral, entourée de guillemets.<br />-Incorporé expression sous la forme `<%= aValueExp %>`. N’importe quel type est autorisé.|  
   
     -   Expression sous la forme incorporée `<%= aExp %>`.  
   

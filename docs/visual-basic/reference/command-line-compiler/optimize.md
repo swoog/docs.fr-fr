@@ -8,10 +8,10 @@ helpviewer_keywords:
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842159"
 ---
 # <a name="-optimize"></a>-optimize
@@ -27,7 +27,7 @@ Active ou désactive les optimisations du compilateur.
   
 |Terme|Définition|  
 |---|---|  
-|`+` &#124; `-`|Facultatif. Le `-optimize-` option désactive les optimisations du compilateur. Le `-optimize+` option active les optimisations. Par défaut, les optimisations sont désactivées.|  
+|`+` &#124; `-`|Optionnel. Le `-optimize-` option désactive les optimisations du compilateur. Le `-optimize+` option active les optimisations. Par défaut, les optimisations sont désactivées.|  
   
 ## <a name="remarks"></a>Notes  
  Les optimisations du compilateur diminuent la taille du fichier de sortie, le rendent plus rapide et plus efficace. Toutefois, étant donné que les optimisations entraînent une réorganisation du code dans le fichier de sortie, `-optimize+` peut compliquer le débogage.  

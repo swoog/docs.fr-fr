@@ -9,10 +9,10 @@ helpviewer_keywords:
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
 ms.openlocfilehash: 757ca54e5ba370bf2cc48bc70499e7b43ec96ef6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834749"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>Opérateur GetXmlNamespace (Visual Basic)
@@ -26,7 +26,7 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>Composants  
  `xmlNamespacePrefix`  
- Facultatif. Chaîne qui identifie le préfixe d’espace de noms XML. S’il est fourni, cette chaîne doit être un identificateur XML valide. Pour plus d’informations, consultez [les attributs et les noms d’éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Si aucun préfixe n’est spécifié, l’espace de noms par défaut est retourné. Si aucun espace de noms par défaut n’est spécifié, l’espace de noms vide est retournée.  
+ Optionnel. Chaîne qui identifie le préfixe d’espace de noms XML. S’il est fourni, cette chaîne doit être un identificateur XML valide. Pour plus d’informations, consultez [les attributs et les noms d’éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Si aucun préfixe n’est spécifié, l’espace de noms par défaut est retourné. Si aucun espace de noms par défaut n’est spécifié, l’espace de noms vide est retournée.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le <xref:System.Xml.Linq.XNamespace> objet qui correspond au préfixe d’espace de noms XML.  

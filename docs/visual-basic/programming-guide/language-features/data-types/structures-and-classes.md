@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
 ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841613"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Structures et classes (Visual Basic)
@@ -53,7 +53,7 @@ Visual Basic unifie la syntaxe des structures et des classes, avec le résultat 
   
 -   Éléments de structure ne peuvent pas être déclarés en tant que `Protected`; les membres de classe peuvent.  
   
--   Une procédure de structure peut gérer des événements uniquement s’il est un [partagé](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procédure et uniquement par le biais de la [AddHandler, instruction](../../../../visual-basic/language-reference/statements/addhandler-statement.md); toute procédure de classe peut gérer des événements, en utilisant soit le [ Gère](../../../../visual-basic/language-reference/statements/handles-clause.md) mot clé ou le `AddHandler` instruction. Pour plus d’informations, consultez [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+-   Une procédure de structure peut gérer des événements uniquement s’il est un [partagé](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procédure et uniquement par le biais de la [AddHandler, instruction](../../../../visual-basic/language-reference/statements/addhandler-statement.md); toute procédure de classe peut gérer des événements, en utilisant soit le [ Gère](../../../../visual-basic/language-reference/statements/handles-clause.md) mot clé ou le `AddHandler` instruction. Pour plus d'informations, consultez [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
 -   Les déclarations de variable de structure ne peut pas spécifier initialiseurs ou tailles initiales des tableaux ; les déclarations de variable de classe peuvent.  
   

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828800"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propriété d'axe d'attribut XML (Visual Basic)
@@ -36,14 +36,14 @@ object.@<attribute>
  Obligatoire. Indique le début de la propriété d’axe d’attribut.  
   
  <  
- Optionnel. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
+ Facultatif. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
   
  `attribute`  
  Obligatoire. Nom de l’attribut d’accès, sous la forme [`prefix`:]`name`.  
   
 |Élément|Description|  
 |----------|-----------------|  
-|`prefix`|Facultatif. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global défini avec une instruction `Imports`.|  
+|`prefix`|Optionnel. Préfixe d’espace de noms XML pour l’attribut. Doit être un espace de noms XML global défini avec une instruction `Imports`.|  
 |`name`|Obligatoire. Nom de l’attribut local. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
