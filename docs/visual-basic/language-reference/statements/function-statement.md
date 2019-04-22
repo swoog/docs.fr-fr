@@ -29,10 +29,10 @@ helpviewer_keywords:
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58818460"
 ---
 # <a name="function-statement-visual-basic"></a>Function, instruction (Visual Basic)
@@ -75,7 +75,7 @@ End Function
   
 -   `proceduremodifiers`  
   
-     Facultatif. Il peut s'agir d'une des valeurs suivantes :  
+     Optionnel. Il peut s'agir d'une des valeurs suivantes :  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,7 +93,7 @@ End Function
   
 -   `Shared`  
   
-     Facultatif. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Optionnel. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
@@ -105,7 +105,7 @@ End Function
   
 -   `Iterator`  
   
-     Facultatif. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Optionnel. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
@@ -113,7 +113,7 @@ End Function
   
 -   `typeparamlist`  
   
-     Facultatif. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).  
+     Optionnel. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).  
   
 -   `parameterlist`  
   
@@ -144,7 +144,7 @@ End Function
   
 -   `Handles`  
   
-     Facultatif. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).  
+     Optionnel. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -163,7 +163,7 @@ End Function
   
 -   `statements`  
   
-     Facultatif. Bloc d’instructions à exécuter dans cette procédure.  
+     Optionnel. Bloc d’instructions à exécuter dans cette procédure.  
   
 -   `End Function`  
   

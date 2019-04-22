@@ -3,10 +3,10 @@ title: Opérations ensemblistes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825779"
 ---
 # <a name="set-operations-visual-basic"></a>Opérations ensemblistes (Visual Basic)
@@ -38,11 +38,11 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
 ### <a name="intersect"></a>Définir une intersection  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La séquence retournée contient les éléments qui sont communs aux deux séquences d’entrée.  
   
- ![Graphique illustrant l'intersection de deux séquences.](./media/set-operations/intersection-two-sequences.png)    
+ ![Graphique illustrant l’intersection de deux séquences.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Union  
  L’illustration suivante représente une opération d’union sur deux séquences de caractères. La séquence retournée contient les éléments uniques des deux séquences d’entrée.  
   
- ![Graphique illustrant l'union de deux séquences.](./media/set-operations/union-operation-two-sequences.png)    
+ ![Graphique illustrant l’union de deux séquences.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Exemple de syntaxe d’expression de requête  
  L’exemple suivant utilise le `Distinct` clause dans une requête LINQ pour retourner les nombres uniques d’une liste d’entiers.  
   

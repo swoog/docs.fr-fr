@@ -24,10 +24,10 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826325"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
@@ -56,7 +56,7 @@ Next [ counter ]
 |`step`|Facultatif. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
 |`statements`|Optionnel. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
 |`Continue For`|Facultatif. Transfère le contrôle à la prochaine itération de boucle.|  
-|`Exit For`|Optionnel. Transfère le contrôle de la `For` boucle.|  
+|`Exit For`|Facultatif. Transfère le contrôle de la `For` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For` boucle.|  
   
 > [!NOTE]

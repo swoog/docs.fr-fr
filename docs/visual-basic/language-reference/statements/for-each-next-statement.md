@@ -23,10 +23,10 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824337"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next, instruction (Visual Basic)
@@ -51,8 +51,8 @@ Next [ element ]
 |`element`|Requis dans le `For Each` instruction. Facultatif dans la `Next` instruction. variable. Utilisé pour itérer sur les éléments de la collection.|  
 |`datatype`|Obligatoire si `element` n’est pas déjà déclaré. Type de données de `element`.|  
 |`group`|Obligatoire. Une variable avec un type qui est un type de collection ou un objet. Fait référence à la collection sur laquelle le `statements` doivent être répétées.|  
-|`statements`|Facultatif. Une ou plusieurs instructions entre `For Each` et `Next` qui s’exécutent sur chaque élément dans `group`.|  
-|`Continue For`|Facultatif. Transfère le contrôle au début de la `For Each` boucle.|  
+|`statements`|Optionnel. Une ou plusieurs instructions entre `For Each` et `Next` qui s’exécutent sur chaque élément dans `group`.|  
+|`Continue For`|Optionnel. Transfère le contrôle au début de la `For Each` boucle.|  
 |`Exit For`|Optionnel. Transfère le contrôle de la `For Each` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For Each` boucle.|  
   

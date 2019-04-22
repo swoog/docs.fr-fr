@@ -7,10 +7,10 @@ helpviewer_keywords:
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 ms.openlocfilehash: 2fe1834c3e92c3eff016ffd7857a0473eb2e8b3a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816419"
 ---
 # <a name="-recurse"></a>-recurse
@@ -24,7 +24,7 @@ Compile les fichiers de code source dans tous les répertoires enfants du réper
   
 ## <a name="arguments"></a>Arguments  
  `dir`  
- Optionnel. Répertoire dans lequel vous voulez commencer la recherche. Si non spécifié, la recherche commence dans le répertoire du projet.  
+ Facultatif. Répertoire dans lequel vous voulez commencer la recherche. Si non spécifié, la recherche commence dans le répertoire du projet.  
   
  `file`  
  Obligatoire. Le ou les fichiers à rechercher. Les caractères génériques sont autorisés.  
