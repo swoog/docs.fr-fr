@@ -14,10 +14,10 @@ helpviewer_keywords:
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
 ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090848"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a>Procédure : Encoder et décoder une image PNG
@@ -39,4 +39,4 @@ Les exemples suivants montrent comment décoder et encoder une [!INCLUDE[TLA#tla
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création d'images](imaging-overview.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)

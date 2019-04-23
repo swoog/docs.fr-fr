@@ -3,10 +3,10 @@ title: Authentification dans SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084035"
 ---
 # <a name="authentication-in-sql-server"></a>Authentification dans SQL Server
@@ -76,7 +76,7 @@ SQL Server prend en charge deux modes d'authentification, le mode d'authentifica
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Entités de sécurité](/sql/relational-databases/security/authentication-access/principals-database-engine)|Décrit les connexions et autres entités de sécurité dans SQL Server.|  
+|[Principaux](/sql/relational-databases/security/authentication-access/principals-database-engine)|Décrit les connexions et autres entités de sécurité dans SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi
 

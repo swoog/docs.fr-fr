@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
 ms.openlocfilehash: d7129d6a48bdf31dc4953bb450267ad3b38fdd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083879"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Procédure : Spécifier HandoffBehavior entre des animations de table de montage séquentiel
@@ -24,5 +24,5 @@ Cet exemple montre comment spécifier le comportement de transfert entre des ani
 
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Rubriques "Comment" relatives à l'animation et au minutage](animation-and-timing-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)

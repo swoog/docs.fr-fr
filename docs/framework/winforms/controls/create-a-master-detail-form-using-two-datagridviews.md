@@ -10,10 +10,10 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
 ms.openlocfilehash: ccd9354d623cf1b452bc3890b7fd9a5248cb69c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088793"
 ---
 # <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procédure : créer un formulaire maître/détails qui utilise deux contrôles DataGridView Windows Forms
@@ -41,6 +41,6 @@ L'exemple de code suivant crée un formulaire maître/détail avec deux contrôl
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Procédure pas à pas : création d’un formulaire maître/détails qui utilise deux contrôles DataGridView Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)
+- [Procédure pas à pas : Création d’un formulaire maître/détail utilisant deux contrôles de DataGridView Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Protection des informations de connexion](../../data/adonet/protecting-connection-information.md)

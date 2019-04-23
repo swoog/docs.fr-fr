@@ -1,5 +1,5 @@
 ---
-title: <GCCpuGroup> Élément
+title: Élément <GCCpuGroup>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -8,10 +8,10 @@ ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090340"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > élément
@@ -74,7 +74,7 @@ Indique si le garbage collection prend en charge plusieurs groupes de processeur
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Pour désactiver le garbage collection simultané](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Garbage collection de station de travail et de serveur](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

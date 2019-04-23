@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088819"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mappage de propriétés Windows Forms et WPF
@@ -140,5 +140,5 @@ Le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interopérabilité WPF et Win32](wpf-and-win32-interoperation.md)
 - [Interopérabilité WPF et Windows Forms](wpf-and-windows-forms-interoperation.md)
-- [Procédure pas à pas : mappage de propriétés à l’aide de l’élément WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Procédure pas à pas : mappage de propriétés à l’aide du contrôle ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Procédure pas à pas : Propriétés de mappage à l’aide de l’élément WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Procédure pas à pas : Mappage de propriétés à l’aide du contrôle ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

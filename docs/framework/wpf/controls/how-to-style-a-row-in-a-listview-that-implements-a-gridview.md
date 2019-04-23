@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
 ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091458"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Procédure : Appliquer un style à une ligne dans un ListView implémentant un GridView
-Cet exemple montre comment appliquer un style une ligne dans un <xref:System.Windows.Controls.ListView> contrôle qui implémente un <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> mode.  
+Cet exemple montre comment appliquer un style une ligne dans un <xref:System.Windows.Controls.ListView> contrôle qui implémente un <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> mode.  
   
 ## <a name="example"></a>Exemple  
  Vous pouvez appliquer un style une ligne dans un <xref:System.Windows.Controls.ListView> contrôle en définissant une <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> sur la <xref:System.Windows.Controls.ListView> contrôle. Définir le style pour ses éléments sont représentés en tant que <xref:System.Windows.Controls.ListViewItem> objets. Le <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> références le <xref:System.Windows.Controls.ControlTemplate> objets qui sont utilisés pour afficher le contenu de la ligne.  
@@ -37,6 +37,6 @@ Cet exemple montre comment appliquer un style une ligne dans un <xref:System.Win
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Rubriques Comment](listview-how-to-topics.md)
-- [Vue d'ensemble de ListView](listview-overview.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)

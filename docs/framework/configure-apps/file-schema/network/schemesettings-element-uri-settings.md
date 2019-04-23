@@ -1,12 +1,12 @@
 ---
-title: <schemeSettings> Élément (paramètres d’Uri)
+title: <schemeSettings>, élément (paramètres d’URI)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094229"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings >, élément (paramètres d’Uri)
@@ -34,7 +34,7 @@ Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas sp�
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Ajoute un paramètre de schéma pour un nom de schéma.|  
-|[effacer](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Efface tous les paramètres existants de schéma.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Efface tous les paramètres existants de schéma.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Supprime un paramètre de schéma pour un nom de schéma.|  
   
 ### <a name="parent-elements"></a>Éléments parents  

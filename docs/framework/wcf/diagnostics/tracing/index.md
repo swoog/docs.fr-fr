@@ -3,10 +3,10 @@ title: Traçage
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093395"
 ---
 # <a name="tracing"></a>Traçage
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) fournit une instrumentation de l’applic
 -   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Configuration du traçage](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  Cette rubrique décrit comment configurer le suivi à différents niveaux en fonction de vos besoins spécifiques.  
   
@@ -35,10 +35,10 @@ Windows Communication Foundation (WCF) fournit une instrumentation de l’applic
   
  Cette rubrique décrit comment empêcher l'exposition des informations sensibles et fournit également des conseils utiles en cas d'utilisation de WebHost.  
   
- [Référence des suivis](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [Informations de référence sur les suivis](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
  Cette rubrique répertorie tous les suivis générés par WCF.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

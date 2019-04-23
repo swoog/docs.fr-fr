@@ -7,10 +7,10 @@ helpviewer_keywords:
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
 ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083243"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Procédure : Conserver les proportions d’une image utilisée comme arrière-plan
@@ -42,4 +42,4 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.TileBrush.Stre
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.TileBrush>
-- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
+- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)

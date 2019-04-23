@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
 ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091406"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource, extension de balisage
@@ -60,7 +60,7 @@ Fournit une valeur pour tout [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2s
   
  `DynamicResource` peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> propriété est requise.  
   
- `DynamicResource` peut également être utilisé dans une utilisation d’attributs en clair qui spécifie la <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> propriété en tant que propriété = paire valeur :  
+ `DynamicResource` peut également être utilisé dans une utilisation d'attributs en clair qui spécifie la propriété <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> en tant que paire propriété=valeur :  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  

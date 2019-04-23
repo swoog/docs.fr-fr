@@ -8,10 +8,10 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091432"
 ---
 # <a name="inline-styles-and-templates"></a>Modèles et styles intralignes
@@ -20,15 +20,15 @@ ms.locfileid: "59091432"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Limitations des modèles et Styles intralignes  
  Dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], pouvant techniquement définir les propriétés de style et de modèle de deux façons. Vous pouvez utiliser la syntaxe d’attribut pour référencer un style qui a été défini dans une ressource, par exemple `<` *objet*`Style="{StaticResource`*myResourceKey*`}" .../>`. Ou vous pouvez utiliser la syntaxe d’élément de propriété pour définir un style intraligne, par exemple :  
   
- `<` *objet* `>`  
+ `<` *object* `>`  
   
- `<` *objet* `.Style>`  
+ `<` *object* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *objet* `.Style>`  
+ `</` *object* `.Style>`  
   
- `</` *objet* `>`  
+ `</` *object* `>`  
   
  L’utilisation de l’attribut est beaucoup plus courante. Un style qui est défini en ligne et les ressources non définis dans est nécessairement limité à l’élément conteneur uniquement et ne peut pas être réutilisé aussi facilement, car il n’a aucune clé de ressource. En général un style défini par la ressource est plus souple et utile et est plus conforme générales [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] principe de séparer la logique de programme dans le code de conception dans le balisage modèle de programmation.  
   
@@ -38,4 +38,4 @@ ms.locfileid: "59091432"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)

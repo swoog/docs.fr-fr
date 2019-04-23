@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
 ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085608"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procédure : créer du texte de taille variable dans un contrôle ComboBox
@@ -72,6 +72,6 @@ End Sub
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [Contrôles avec prise en charge intégrée des dessins owner-drawn](controls-with-built-in-owner-drawing-support.md)
+- [Contrôles avec prise en charge intégrée du dessin owner-drawn](controls-with-built-in-owner-drawing-support.md)
 - [ListBox, contrôle](listbox-control-windows-forms.md)
 - [ComboBox, contrôle](combobox-control-windows-forms.md)

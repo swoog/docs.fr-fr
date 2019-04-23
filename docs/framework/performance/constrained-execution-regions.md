@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097172"
 ---
 # <a name="constrained-execution-regions"></a>régions d'exécution limitée
@@ -70,7 +70,7 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Dans des conditions exceptionnelles, il est garanti que la méthode limite l’altération de l’état à l’instance actuelle.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Dans des conditions exceptionnelles, le CLR n’offre aucune garantie quant à la cohérence de l’état ; Autrement dit, ces conditions peuvent altérer le processus.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. Dans des conditions exceptionnelles, le CLR n’offre aucune garantie quant à la cohérence de l’état. Autrement dit, la condition peut endommager le processus.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Dans des conditions exceptionnelles, il est garanti que la méthode n’altère pas l’état.  
   
@@ -106,7 +106,7 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
   
 -   Vérifications de sécurité N’effectuez pas de demande, mais uniquement des demandes de liaison.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> et <xref:System.Reflection.Emit.OpCodes.Castclass> pour des objets COM et les proxys  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> et <xref:System.Reflection.Emit.OpCodes.Castclass> pour les proxys et les objets COM  
   
 -   Obtention ou définition de champs sur un proxy transparent.  
   
@@ -116,4 +116,4 @@ Une région d’exécution limitée (CER, Constrained Execution Region) fait par
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Meilleures pratiques pour la fiabilité](../../../docs/framework/performance/reliability-best-practices.md)
+- [Bonnes pratiques relatives à la fiabilité](../../../docs/framework/performance/reliability-best-practices.md)

@@ -3,10 +3,10 @@ title: Serveur et rôles de base de données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087974"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serveur et rôles de base de données dans SQL Server
@@ -16,7 +16,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
  Les rôles serveur fixes disposent d'un ensemble fixe d'autorisations et d'une portée à l'échelle du serveur. Ils sont destinés à être utilisés pour administrer SQL Server et les autorisations qui leur sont attribuées ne peuvent pas être modifiées. Des connexions peuvent être attribuées aux rôles serveur fixes sans qu'un compte d'utilisateur figure dans une base de données.  
   
 > [!IMPORTANT]
->  Le rôle serveur fixe `sysadmin` englobe tous les autres rôles et a une portée illimitée. N'ajoutez pas de principaux à ce rôle à moins qu'ils soient dotés d'une confiance très élevée. `sysadmin` les membres du rôle ont des privilèges d’administrateur irrévocables sur toutes les bases de données de serveur et les ressources.  
+>  Le rôle serveur fixe `sysadmin` englobe tous les autres rôles et a une portée illimitée. N'ajoutez pas de principaux à ce rôle à moins qu'ils soient dotés d'une confiance très élevée. Les membres du rôle `sysadmin` possèdent des privilèges d'administrateur irrévocables sur toutes les bases de données et ressources de serveur.  
   
  Soyez sélectif lors de l'ajout d'utilisateurs à des rôles serveur fixes. Par exemple, le rôle `bulkadmin` permet aux utilisateurs d'insérer le contenu d'un fichier local quelconque dans une table, ce qui peut mettre en danger l'intégrité des données. Pour obtenir la liste complète des rôles serveur fixes et des autorisations, consultez la documentation en ligne de SQL Server.  
   
@@ -27,8 +27,8 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Rôles au niveau serveur](/sql/relational-databases/security/authentication-access/server-level-roles)|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
-|[Rôles au niveau base de données](/sql/relational-databases/security/authentication-access/database-level-roles)|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
+|[Rôles au niveau du serveur](/sql/relational-databases/security/authentication-access/server-level-roles)|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
+|[Rôles au niveau de la base de données](/sql/relational-databases/security/authentication-access/database-level-roles)|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
   
 ## <a name="database-roles-and-users"></a>Rôles de base de données et utilisateurs  
  Les connexions doivent être mappées sur des comptes d'utilisateur de base de données afin de fonctionner avec des objets de base de données. Les utilisateurs de base de données peuvent alors être ajoutés à des rôles de base de données et héritent de tous les jeux d'autorisations associés à ces rôles. Toutes les autorisations peuvent être accordées.  
@@ -59,7 +59,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Mise en route avec les autorisations du moteur de base de données](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
-|[Entités de sécurité](/sql/relational-databases/security/authentication-access/principals-database-engine)|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
+|[Principaux](/sql/relational-databases/security/authentication-access/principals-database-engine)|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi
 

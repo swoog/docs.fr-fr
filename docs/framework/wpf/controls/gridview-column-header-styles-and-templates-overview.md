@@ -9,10 +9,10 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090302"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Vue d'ensemble des modèles et styles d'en-tête de colonne GridView
@@ -29,14 +29,14 @@ Cette présentation traite de l’ordre de priorité des propriétés que vous u
 |-|-|-|-|  
 |**Classes**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
 |**Propriétés du Menu contextuel**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|Non applicable|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**Info-bulle**<br /><br /> **Properties**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|Non applicable|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
-|**Modèle d’en-tête**<br /><br /> **Properties**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
+|**ToolTip**<br /><br /> **Propriétés**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|Non applicable|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|**Modèle d’en-tête**<br /><br /> **Propriétés**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Propriétés de style**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
  <sup>1</sup>pour **propriétés de modèle d’en-tête**, si vous affectez à la fois le modèle et les propriétés du sélecteur de modèle, la propriété de modèle est prioritaire. Par exemple, si vous définissez à la fois le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> et <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriétés, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriété est prioritaire.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Rubriques Comment](listview-how-to-topics.md)
-- [Vue d'ensemble de ListView](listview-overview.md)
-- [Vue d'ensemble de GridView](gridview-overview.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de GridView](gridview-overview.md)

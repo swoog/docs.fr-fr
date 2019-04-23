@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087987"
 ---
 # <a name="3-d-graphics-overview"></a>Vue d'ensemble des graphiques 3D
-<a name="introduction"></a>La fonctionnalité [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permet aux développeurs de dessiner, transformer et animer des graphiques 3D avec du balisage et du code procédural. Les développeurs peuvent combiner les graphiques [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] et [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] pour créer des contrôles riches, fournir des illustrations complexes de données ou améliorer l’expérience utilisateur pour l’interface de l’application. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] prise en charge dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’est pas conçu pour fournir une plateforme de développement de jeu complète. Cette rubrique fournit une vue d’ensemble de la fonctionnalité [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dans le système graphique [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+<a name="introduction"></a>La fonctionnalité [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permet aux développeurs de dessiner, transformer et animer des graphiques 3D avec du balisage et du code procédural. Les développeurs peuvent combiner les graphiques [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] et [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] pour créer des contrôles riches, fournir des illustrations complexes de données ou améliorer l’expérience utilisateur pour l’interface de l’application. La prise en charge de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’est pas conçue pour fournir une plateforme de développement de jeu complète. Cette rubrique fournit une vue d’ensemble de la fonctionnalité [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dans le système graphique [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>3D dans un conteneur 2D  
@@ -174,8 +174,8 @@ Projections en perspective et orthographiques
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Vue d'ensemble des transformations 3D](3-d-transformations-overview.md)
-- [Optimiser les performances 3D de WPF](maximize-wpf-3d-performance.md)
-- [Rubriques Comment](3-d-graphics-how-to-topics.md)
-- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
+- [Vue d’ensemble des transformations 3D](3-d-transformations-overview.md)
+- [Optimiser les performances 3D WPF](maximize-wpf-3d-performance.md)
+- [Rubriques de guide pratique](3-d-graphics-how-to-topics.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)

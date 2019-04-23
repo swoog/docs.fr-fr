@@ -10,10 +10,10 @@ helpviewer_keywords:
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
 ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089164"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procédure : dessiner une image bitmap existante à l’écran
@@ -34,5 +34,5 @@ Vous pouvez facilement dessiner une image existante sur l’écran. Vous devez d
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

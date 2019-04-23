@@ -7,29 +7,29 @@ helpviewer_keywords:
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
 ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090704"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Saisie de données dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle fournit plusieurs fonctionnalités qui permettent de vous changer la façon dont les utilisateurs ajouter ou modifient des données dans le contrôle. Par exemple, vous pouvez rendre saisie de données plus efficaces en fournissant des valeurs par défaut pour les nouvelles lignes et en avertissant les utilisateurs lorsque des erreurs se produisent.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : spécifier le mode d’édition pour le contrôle DataGridView Windows Forms](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ [Guide pratique pour Spécifier le Mode édition pour le contrôle de DataGridView Windows Forms](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Décrit comment modifier la façon dont les utilisateurs démarrent la modification des cellules.  
   
- [Procédure : spécifier les valeurs par défaut des nouvelles lignes dans le contrôle DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ [Guide pratique pour Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
  Décrit comment préremplir la ligne pour les nouveaux enregistrements gagner du temps de saisie de données.  
   
  [Utilisation de la ligne pour les nouveaux enregistrements dans le contrôle DataGridView Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
  Décrit la ligne pour les nouveaux enregistrements en détail, y compris des informations sur son masquage, sur la personnalisation de son apparence et sur sa relation avec la <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.  
   
- [Procédure pas à pas : validation des données dans le contrôle DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ [Procédure pas à pas : Validation des données dans le contrôle DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
  Décrit comment valider l’entrée utilisateur pour éviter les erreurs de mise en forme de saisie de données.  
   
- [Procédure pas à pas : gestion des erreurs qui se produisent lors de l’entrée de données dans le contrôle DataGridView Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [Procédure pas à pas : Gestion des erreurs qui se produisent lors de la saisie de données dans le contrôle de DataGridView Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Décrit comment gérer les erreurs de saisie de données qui proviennent de la source de données lorsque l’utilisateur tente de valider une nouvelle valeur.  
   
 ## <a name="reference"></a>Référence  

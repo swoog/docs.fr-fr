@@ -10,10 +10,10 @@ helpviewer_keywords:
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
 ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091146"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Procédure : Détecter la modification du texte figurant dans un TextBox
@@ -45,5 +45,5 @@ Cet exemple montre une manière d’utiliser le <xref:System.Windows.Controls.Pr
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [Vue d'ensemble de TextBox](textbox-overview.md)
-- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)
+- [Vue d’ensemble de TextBox](textbox-overview.md)
+- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091939"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportation et importation de métadonnées
@@ -48,19 +48,19 @@ Dans Windows Communication Foundation (WCF), l’exportation de métadonnées es
  Le type <xref:System.ServiceModel.Description.WsdlExporter> lève à nouveau toutes les exceptions détectées pendant le processus d'exportation. Ces exceptions ne sont pas capturées en tant qu'erreurs dans la propriété `Errors`. Une fois que <xref:System.ServiceModel.Description.WsdlExporter> lève une exception, celle-ci se trouve dans un état de faute et ne peut pas être réutilisée. <xref:System.ServiceModel.Description.WsdlExporter> ajoute des avertissements à sa propriété `Errors` lorsqu'une opération ne peut pas être exportée parce qu'elle utilise des actions génériques et lorsque des noms de liaison dupliqués sont rencontrés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : importer des métadonnées dans des points de terminaison de service](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Guide pratique pour Importer des métadonnées dans les points de terminaison de Service](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Décrit comment importer les métadonnées téléchargées dans des objets description.  
   
- [Procédure : exporter des métadonnées à partir de points de terminaison de service](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Guide pratique pour Exporter les métadonnées à partir de points de terminaison de Service](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Décrit comment exporter des objets description dans des métadonnées.  
   
- [Référence pour ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [Informations de référence sur ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Décrit le mappage entre les objets description et WSDL.  
   
- [Procédure : utiliser Svcutil.exe pour exporter des métadonnées de code de service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Guide pratique pour Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Décrit l'utilisation de Svcutil.exe pour exporter les métadonnées pour les services, les contrats et les types de données dans les assemblys compilés.  
   
- [Référence des schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  Décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
   
 ## <a name="reference"></a>Référence  

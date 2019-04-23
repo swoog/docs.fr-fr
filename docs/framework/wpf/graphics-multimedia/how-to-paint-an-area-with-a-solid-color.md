@@ -7,10 +7,10 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086843"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>Procédure : Peindre une zone avec une couleur unie
@@ -19,7 +19,7 @@ Pour peindre une zone avec une couleur unie, vous pouvez utiliser un pinceau sys
  Les exemples suivants utilisent chacune de ces techniques pour peindre un <xref:System.Windows.Shapes.Rectangle> bleu.  
   
 ## <a name="example"></a>Exemple  
- **À l’aide d’un pinceau prédéfini**  
+ **Utilisation d’un pinceau prédéfini**  
   
  Dans l’exemple suivant utilise le pinceau prédéfini <xref:System.Windows.Media.Brushes.Blue%2A> pour peindre un rectangle en bleu.  
   
@@ -27,7 +27,7 @@ Pour peindre une zone avec une couleur unie, vous pouvez utiliser un pinceau sys
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **À l’aide de la Notation hexadécimale**  
+ **Utilisation de la notation hexadécimale**  
   
  L’exemple suivant utilise une notation hexadécimale à 8 chiffres pour peindre un rectangle en bleu.  
   

@@ -3,10 +3,10 @@ title: Modèle objet de programmation Web HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096008"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modèle objet de programmation Web HTTP WCF
@@ -22,13 +22,13 @@ Le modèle de programmation WCF WEB HTTP permet aux développeurs d’exposer de
   
 -   <xref:System.ServiceModel.Web.WebServiceHost>  
   
- **Infrastructure de canaux et de répartiteur :**  
+ **Canaux et l’Infrastructure de répartiteur :**  
   
 -   <xref:System.ServiceModel.WebHttpBinding>  
   
 -   <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
- **Points d'extensibilité et classes d'utilitaire :**  
+ **Points d’extensibilité et les Classes d’utilitaire :**  
   
 -   <xref:System.UriTemplate>  
   
@@ -74,7 +74,7 @@ Le modèle de programmation WCF WEB HTTP permet aux développeurs d’exposer de
  La classe <xref:System.UriTemplateTable> représente un jeu associatif d'objets <xref:System.UriTemplate> liés à un objet choisi par le développeur. Elle vous permet de faire correspondre les URI (Uniform Resource Identifiers) des candidats par rapport aux modèles du jeu et de récupérer les données associées aux modèles correspondants. <xref:System.UriTemplateTable> est utilisé en interne par le modèle de programmation WCF WEB HTTP pour mapper des URI spécifiques ou des groupes d’URI aux opérations de service.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> étend la <xref:System.ServiceModel.ServiceHost> pour le rendre plus facile héberger un service de style Web non-SOAP. Si <xref:System.ServiceModel.Web.WebServiceHost> ne trouve aucun point de terminaison dans la description du service, il crée automatiquement un point de terminaison par défaut au niveau de l'adresse de base du service. Lors de la création d'un point de terminaison HTTP par défaut, <xref:System.ServiceModel.Web.WebServiceHost> désactive également la page d'aide HTTP et la fonctionnalité WSDL (Web Services Description Language) GET afin que le point de terminaison des métadonnées n'interfère pas avec le point de terminaison HTTP par défaut.  <xref:System.ServiceModel.Web.WebServiceHost> garantit également que tous les points de terminaison qui utilisent <xref:System.ServiceModel.WebHttpBinding> requis <xref:System.ServiceModel.Description.WebHttpBehavior> attaché. Enfin, <xref:System.ServiceModel.Web.WebServiceHost> configure automatiquement la liaison du point de terminaison afin qu’il puisse profiter des paramètres de sécurité IIS (Internet Information Services) en cas d’utilisation dans un répertoire virtuel sécurisé.  
+ <xref:System.ServiceModel.Web.WebServiceHost> étend le <xref:System.ServiceModel.ServiceHost> de manière à faciliter l'hébergement d'un service de style Web non-SOAP. Si <xref:System.ServiceModel.Web.WebServiceHost> ne trouve aucun point de terminaison dans la description du service, il crée automatiquement un point de terminaison par défaut au niveau de l'adresse de base du service. Lors de la création d'un point de terminaison HTTP par défaut, <xref:System.ServiceModel.Web.WebServiceHost> désactive également la page d'aide HTTP et la fonctionnalité WSDL (Web Services Description Language) GET afin que le point de terminaison des métadonnées n'interfère pas avec le point de terminaison HTTP par défaut.  <xref:System.ServiceModel.Web.WebServiceHost> garantit également que le <xref:System.ServiceModel.WebHttpBinding> requis soit attaché à tous les points de terminaison qui utilisent <xref:System.ServiceModel.Description.WebHttpBehavior>. Enfin, <xref:System.ServiceModel.Web.WebServiceHost> configure automatiquement la liaison du point de terminaison afin qu’il puisse profiter des paramètres de sécurité IIS (Internet Information Services) en cas d’utilisation dans un répertoire virtuel sécurisé.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  La classe <xref:System.ServiceModel.Activation.WebServiceHostFactory> est utilisée pour créer dynamiquement un <xref:System.ServiceModel.Web.WebServiceHost> lorsqu'un service est hébergé dans les services IIS (Internet Information Services) ou WAS (Windows Process Activation Service). À la différence d'un service auto-hébergé où l'application d'hébergement instancie le <xref:System.ServiceModel.Web.WebServiceHost>, les services hébergés dans les services IIS ou WAS utilisent cette classe pour créer le <xref:System.ServiceModel.Web.WebServiceHost> pour ces services. La méthode <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> est appelée lorsqu'une demande entrante pour le service est reçue.  
@@ -83,7 +83,7 @@ Le modèle de programmation WCF WEB HTTP permet aux développeurs d’exposer de
  La classe <xref:System.ServiceModel.Description.WebHttpBehavior> fournit les formateurs, sélecteurs d'opération, etc. requis pour la prise en charge de service de style Web au niveau de la couche de modèle de service. Il est implémenté en tant que comportement de point de terminaison (utilisé en conjonction avec <xref:System.ServiceModel.WebHttpBinding>) et autorise la spécification de formateurs et de sélecteurs d'opération pour chaque point de terminaison, ce qui permet à une même implémentation de service d'exposer à la fois des points de terminaison SOAP et POX.  
   
 ### <a name="extending-webhttpbehavior"></a>Extension de WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> est extensible à l’aide d’un nombre de méthodes virtuelles : <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, et <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Les développeurs peuvent dériver une classe de <xref:System.ServiceModel.Description.WebHttpBehavior> et substituer ces méthodes de manière à personnaliser le comportement par défaut.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> peut être étendu à l'aide de différentes méthodes virtuelles : <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> et <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Les développeurs peuvent dériver une classe de <xref:System.ServiceModel.Description.WebHttpBehavior> et substituer ces méthodes de manière à personnaliser le comportement par défaut.  
   
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> est un exemple d'extension de <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> permet de recevoir des requêtes HTTP à partir d’un client ASP.NET AJAX basé sur navigateur des points de terminaison Windows Communication Foundation (WCF). Le [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) est un exemple d’utilisation de ce point d’extensibilité.  
   
@@ -106,4 +106,4 @@ Le modèle de programmation WCF WEB HTTP permet aux développeurs d’exposer de
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
 - <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
-- [Vue d'ensemble du modèle de programmation Web HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Vue d’ensemble du modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

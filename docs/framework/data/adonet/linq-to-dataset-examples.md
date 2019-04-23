@@ -3,10 +3,10 @@ title: Exemples de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091692"
 ---
 # <a name="linq-to-dataset-examples"></a>Exemples de LINQ to DataSet
@@ -39,9 +39,9 @@ Cette section fournit un LINQ vers des exemples de programmation de jeu de donn�
   
 -   [Classement](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Opérateurs de jeu](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [Opérateurs d’ensembles](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [Conversion, opérateurs](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [Opérateurs de conversion](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
 -   [Opérateurs d’élément](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   

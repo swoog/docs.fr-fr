@@ -3,10 +3,10 @@ title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089859"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
@@ -66,8 +66,8 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Sécurité d'accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
-|[Sécurité d'accès du code](../../../../docs/framework/misc/code-access-security.md)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
+|[Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
+|[Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
   
 ## <a name="database-security"></a>Sécurité de base de données  
  Le principe des privilèges minimum s'applique également à votre source de données. Ci-dessous figurent quelques-unes des instructions générales concernant la sécurité de la base de données :  

@@ -3,10 +3,10 @@ title: Syntaxe des chaînes de connexion
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084953"
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
@@ -43,7 +43,7 @@ Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérit
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` lève une exception lorsqu’il est utilisé avec le `OleDb` fournisseur.  
+>  `Integrated Security=true` lève une exception lors de son utilisation avec le fournisseur `OleDb`.  
   
 ## <a name="sqlclient-connection-strings"></a>Chaînes de connexion SqlClient  
 La syntaxe pour une chaîne de connexion <xref:System.Data.SqlClient.SqlConnection> est documentée dans la propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. La propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> vous permet d'obtenir ou de définir une chaîne de connexion pour une base de données SQL Server. Si vous devez vous connecter à une version antérieure de SQL Server, utilisez le fournisseur de données .NET Framework pour OleDb (<xref:System.Data.OleDb>). La plupart des mots clés de chaîne connexion sont aussi mappés à des propriétés dans le <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Il est possible de fournir des informations de connexion pour un **OleDbConnection** dans un fichier lien UDL (Universal Data) ; toutefois vous devez éviter cela. Les fichiers UDL n'étant pas chiffrés, ils exposent les informations de chaîne de connexion en texte brut. Comme un fichier UDL est une ressource basée sur un fichier externe pour votre application, il n'est pas possible de le sécuriser à l'aide du .NET Framework. Fichiers UDL ne sont pas pris en charge pour **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Utilisation de DataDirectory pour se connecter à Access/Jet  
- `DataDirectory` n’est pas exclusif à `SqlClient`. Il peut être aussi utilisé avec les fournisseurs de données .NET <xref:System.Data.OleDb> et <xref:System.Data.Odbc>. L’exemple de chaîne <xref:System.Data.OleDb.OleDbConnection> suivant illustre la syntaxe nécessaire pour se connecter au fichier Northwind.mdb situé dans le dossier app_data de l’application. La base de données système (System.mdw) est également stockée à cet emplacement.  
+ `DataDirectory` n'est pas exclusif à `SqlClient`. Il peut être aussi utilisé avec les fournisseurs de données .NET <xref:System.Data.OleDb> et <xref:System.Data.Odbc>. L’exemple de chaîne <xref:System.Data.OleDb.OleDbConnection> suivant illustre la syntaxe nécessaire pour se connecter au fichier Northwind.mdb situé dans le dossier app_data de l’application. La base de données système (System.mdw) est également stockée à cet emplacement.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  

@@ -3,10 +3,10 @@ title: Connexion à une source de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083710"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connexion à une source de données dans ADO.NET
@@ -27,5 +27,5 @@ Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une sour
 - [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Transactions et accès simultané](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

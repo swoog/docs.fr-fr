@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088832"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Chaînes de connexion et fichiers de configuration
@@ -67,7 +67,7 @@ L'incorporation de chaînes de connexion dans le code de votre application peut 
 >  Le fichier **machine.config** contient également une section **connectionStrings**, qui contient les chaînes de connexion utilisées par Visual Studio. Lors de l’extraction de chaînes de connexion à l’aide du nom du fournisseur à partir du fichier **app.config** dans une application Windows, les chaînes de connexion figurant dans **machine.config** sont chargées les premières, avant les entrées figurant dans **app.config**. L’ajout de **clear** immédiatement après l’élément **connectionStrings** supprime toutes les références héritées de la structure de données en mémoire, de sorte que seules les chaînes de connexion définies dans le fichier **app.config** local sont prises en compte.  
   
 ### <a name="working-with-the-configuration-classes"></a>Utilisation des classes de configuration  
- À partir du .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager>est utilisé lors de l'utilisation de fichiers de configuration sur l'ordinateur local, pour remplacer la <xref:System.Configuration.ConfigurationSettings> déconseillée. <xref:System.Web.Configuration.WebConfigurationManager> est utilisé pour travailler avec des fichiers de configuration ASP.NET. Il est conçu pour fonctionner avec les fichiers de configuration sur un serveur web et il permet un accès par programmation à des sections des fichiers de configuration telles que **system.web**.  
+ À partir du .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager>est utilisé lors de l'utilisation de fichiers de configuration sur l'ordinateur local, pour remplacer la <xref:System.Configuration.ConfigurationSettings> déconseillée. <xref:System.Web.Configuration.WebConfigurationManager> permet d'utiliser des fichiers de configuration ASP.NET. Il est conçu pour fonctionner avec les fichiers de configuration sur un serveur web et il permet un accès par programmation à des sections des fichiers de configuration telles que **system.web**.  
   
 > [!NOTE]
 >  L'accès aux fichiers de configuration au moment de l'exécution exige d'accorder des autorisations à l'appelant ; les autorisations requises dépendent du type d'application, du fichier de configuration et de l'emplacement. Pour plus d’informations, consultez [Utilisation des classes de configuration](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) et <xref:System.Web.Configuration.WebConfigurationManager> pour les applications ASP.NET, et <xref:System.Configuration.ConfigurationManager> pour les applications Windows.  
@@ -171,9 +171,9 @@ L'incorporation de chaînes de connexion dans le code de votre application peut 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Builders de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Utilisation des classes de configuration](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuration d’applications](../../../../docs/framework/configure-apps/index.md)
-- [Administration de Site Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [Configuration d'applications](../../../../docs/framework/configure-apps/index.md)
+- [Administration de site web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

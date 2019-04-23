@@ -3,14 +3,14 @@ title: Activités d'organigramme dans WF
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
 ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084139"
 ---
 # <a name="flowchart-activities-in-wf"></a>Activités d'organigramme dans WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fournit plusieurs activités fournies par le système de contrôle de l’exécution et la création de branche dans un organigramme.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre plusieurs activités fournies par le système pour le contrôle de l'exécution et la notion de branches dans un organigramme.  
   
 |||  
 |-|-|  
@@ -20,4 +20,4 @@ ms.locfileid: "59084139"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Didacticiel de mise en route](getting-started-tutorial.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)

@@ -11,10 +11,10 @@ ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087532"
 ---
 # <a name="assembly-manifest"></a>Manifeste d'assembly
@@ -55,7 +55,7 @@ Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de do
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Contenu d'un assembly](../../../docs/framework/app-domains/assembly-contents.md)
-- [Versioning des assemblys](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Contenu d’un assembly](../../../docs/framework/app-domains/assembly-contents.md)
+- [Contrôle de version des assemblys](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)

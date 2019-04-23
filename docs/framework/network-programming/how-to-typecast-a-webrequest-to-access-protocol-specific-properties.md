@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
 ms.openlocfilehash: a9488e484aad7ba3df23c33b2cb5b79f234b758e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088364"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Procédure : caster une classe WebRequest en vue d’accéder aux propriétés spécifiques au protocole
@@ -29,4 +29,4 @@ Dim httpreq As HttpWebRequest = _
   
 ## <a name="see-also"></a>Voir aussi
 
-- [programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)

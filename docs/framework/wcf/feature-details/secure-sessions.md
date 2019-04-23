@@ -3,10 +3,10 @@ title: Sessions sécurisées
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 ms.openlocfilehash: 8f5cf9a965951bcc1049c2e96ae6cfa80b0113ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084955"
 ---
 # <a name="secure-sessions"></a>Sessions sécurisées
@@ -20,8 +20,8 @@ Une fonctionnalité de Windows Communication Foundation (WCF) est les sessions f
 |||  
 |-|-|  
 |[Conversations sécurisées et sessions sécurisées](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|Les termes « conversations sécurisées » et « sessions sécurisées » sont synonymes. Cette rubrique explique le fonctionnement d’une conversation sécurisée et quand et pourquoi utiliser le modèle.|  
-|[Procédure : créer une session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|Présente les étapes essentielles de la création d'une session sécurisée.|  
-|[Procédure : créer un jeton de contexte de sécurité pour une session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|Présente les étapes nécessaires à la création d'une batterie de serveurs Web qui maintiendra l'état et les sessions avec les clients.|  
+|[Guide pratique pour Créer une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|Présente les étapes essentielles de la création d'une session sécurisée.|  
+|[Guide pratique pour Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|Présente les étapes nécessaires à la création d'une batterie de serveurs Web qui maintiendra l'état et les sessions avec les clients.|  
 |[Considérations sur la sécurité pour les sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|Décrit des considérations spéciales relatives aux sessions sécurisées.|  
   
 ## <a name="reference"></a>Référence  
@@ -36,6 +36,6 @@ Une fonctionnalité de Windows Communication Foundation (WCF) est les sessions f
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : activer la détection de réexécution des messages](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
+- [Guide pratique pour Activer la détection de relecture de messages](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
 - [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Procédure : créer un service qui exige des sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Guide pratique pour Créer un Service qui requiert des Sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

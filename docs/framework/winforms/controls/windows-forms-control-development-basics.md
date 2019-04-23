@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086440"
 ---
 # <a name="windows-forms-control-development-basics"></a>Concepts de base du développement de contrôles Windows Forms
@@ -32,7 +32,7 @@ Un contrôle Windows Forms est une classe qui dérive directement ou indirecteme
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : développer un contrôle Windows Forms simple](how-to-develop-a-simple-windows-forms-control.md)
-- [Développement d'un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md)
-- [Procédure : créer un contrôle Windows Forms qui indique une progression](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Guide pratique pour Développer un contrôle de formulaires Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
+- [Développement d’un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md)
+- [Guide pratique pour Créer un contrôle Windows Forms affiche la progression](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)

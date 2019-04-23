@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095891"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contrats de données à compatibilité ascendante
@@ -45,5 +45,5 @@ Une fonctionnalité de la Windows Communication Foundation (WCF) système de con
 
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
-- [Contrôle de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Bonnes pratiques : Contrôle de version des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

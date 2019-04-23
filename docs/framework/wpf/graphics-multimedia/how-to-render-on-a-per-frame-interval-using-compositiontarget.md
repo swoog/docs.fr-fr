@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089410"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procédure : Effectuer une restitution par intervalle de trame à l’aide de CompositionTarget
@@ -43,4 +43,4 @@ Le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2s
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.CompositionTarget>
-- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

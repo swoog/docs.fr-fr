@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085972"
 ---
 # <a name="retrieving-binary-data"></a>Extraction de données binaires
@@ -155,5 +155,5 @@ connection.Close();
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Données binaires et à valeurs élevées SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Données binaires et de valeur élevée SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
 ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089169"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Procédure : Rechercher des éléments générés par DataTemplate
@@ -39,9 +39,9 @@ Cet exemple montre comment rechercher des éléments qui sont générés par un 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : rechercher des éléments générés par ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
+- [Guide pratique pour Rechercher des éléments générés par ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
 - [Portées de nom XAML WPF](../advanced/wpf-xaml-namescopes.md)
 - [Arborescences dans WPF](../advanced/trees-in-wpf.md)

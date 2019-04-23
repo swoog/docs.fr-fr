@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091380"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Personnalisation du contrôle DataGridView Windows Forms
@@ -18,19 +18,19 @@ Le `DataGridView` contrôle fournit plusieurs propriétés que vous pouvez utili
  Pour peindre des cellules et des lignes vous-même, vous pouvez gérer différents `DataGridView` événements de peinture. Pour modifier des fonctionnalités existantes ou fournir de nouvelles fonctionnalités, vous pouvez créer vos propres types dérivés d’existant `DataGridViewCell`, `DataGridViewColumn`, et `DataGridViewRow` types. Vous pouvez également fournir les nouvelles fonctionnalités de modification en créant des types dérivés qui affichent un contrôle de votre choix lorsqu’une cellule est en mode édition.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : personnaliser l’aspect des cellules dans le contrôle DataGridView Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+ [Guide pratique pour Personnaliser l’apparence des cellules dans le contrôle de DataGridView Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
  Décrit comment gérer les <xref:System.Windows.Forms.DataGridView.CellPainting> événement pour peindre les cellules manuellement.  
   
- [Procédure : personnaliser l’aspect des lignes dans le contrôle DataGridView Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+ [Guide pratique pour Personnaliser l’apparence des lignes dans le contrôle de DataGridView Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
  Décrit comment gérer les <xref:System.Windows.Forms.DataGridView.RowPrePaint> et <xref:System.Windows.Forms.DataGridView.RowPostPaint> événements afin de peindre les lignes avec un arrière-plan dégradé personnalisé et un contenu qui s’étend sur plusieurs colonnes.  
   
- [Procédure : personnaliser des cellules et des colonnes dans le contrôle DataGridView Windows Forms en développant leur comportement et leur aspect](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ [Guide pratique pour Personnaliser des cellules et des colonnes dans le contrôle de DataGridView Windows Forms en étendant leur comportement et leur apparence](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
  Décrit comment créer des types personnalisés dérivés de `DataGridViewCell` et `DataGridViewColumn` afin de mettre en surbrillance les cellules lorsque le pointeur de la souris est placé dessus.  
   
- [Procédure : désactiver des boutons dans une colonne de boutons dans le contrôle DataGridView Windows Forms](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ [Guide pratique pour Désactiver les boutons d’une colonne de boutons dans le contrôle de DataGridView Windows Forms](disable-buttons-in-a-button-column-in-the-datagrid.md)  
  Décrit comment créer des types personnalisés dérivés de <xref:System.Windows.Forms.DataGridViewButtonCell> et <xref:System.Windows.Forms.DataGridViewButtonColumn> afin d’afficher les boutons désactivés dans une colonne de boutons.  
   
- [Procédure : héberger des contrôles dans des cellules DataGridView Windows Forms](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ [Guide pratique pour Contrôles hôtes dans des cellules DataGridView Windows Forms](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  Décrit comment implémenter le `IDataGridViewEditingControl` interface et créer des types personnalisés dérivés de `DataGridViewCell` et `DataGridViewColumn` afin d’afficher un <xref:System.Windows.Forms.DateTimePicker> contrôler lorsqu’une cellule est en mode édition.  
   
 ## <a name="reference"></a>Référence  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
 ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094383"
 ---
 # <a name="how-to-create-a-simple-binding"></a>Procédure : Créer une liaison simple
@@ -28,4 +28,4 @@ Cet exemple vous montre comment créer un simple <xref:System.Windows.Data.Bindi
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

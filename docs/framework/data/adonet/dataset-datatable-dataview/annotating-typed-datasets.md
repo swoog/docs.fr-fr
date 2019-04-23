@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085127"
 ---
 # <a name="annotating-typed-datasets"></a>Annotation de DataSet typés
@@ -55,7 +55,7 @@ Les annotations vous permettent de modifier le nom des éléments de votre objet
   
 |Valeur nullValue|Description|  
 |---------------------|-----------------|  
-|*Replacement Value*|Spécifier une valeur à retourner. La valeur retournée doit correspondre au type de l'élément. Par exemple, utilisez `nullValue="0"` pour retourner 0 pour les champs de type null integer (entier nul).|  
+|*Valeur de remplacement*|Spécifier une valeur à retourner. La valeur retournée doit correspondre au type de l'élément. Par exemple, utilisez `nullValue="0"` pour retourner 0 pour les champs de type null integer (entier nul).|  
 |**_throw**|Levée d'une exception. Il s'agit de la valeur par défaut.|  
 |**_null**|Retourner une référence null ou lever une exception si un type primitif est rencontré.|  
 |**_empty**|Pour les chaînes, retourner **String.Empty**, sinon retourne un objet créé à partir d’un constructeur vide. Si un type primitif est rencontré, lever une exception.|  
@@ -69,7 +69,7 @@ Les annotations vous permettent de modifier le nom des éléments de votre objet
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Propriété**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Enfant** accesseur|GetChildTableNameRows|typedChildren|  
 |**Parent** accesseur|TableNameRow|typedParent|  
 |**Jeu de données** événements|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  

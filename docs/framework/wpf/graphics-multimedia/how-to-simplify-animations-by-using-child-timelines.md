@@ -7,10 +7,10 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096392"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Procédure : Simplifier des animations à l’aide de chronologies enfants
@@ -27,5 +27,5 @@ Cet exemple montre comment simplifier des animations à l’aide des enfants <xr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Spécifier HandoffBehavior entre des animations de table de montage séquentiel](how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Spécifier HandoffBehavior entre des animations de storyboard](how-to-specify-handoffbehavior-between-storyboard-animations.md)
