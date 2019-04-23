@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
 ms.openlocfilehash: 6c144bddff4e485673dbdc7e218e82808c20aa61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305232"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768863"
 ---
 # <a name="default-service-behavior"></a>Default Service Behavior
 Cet exemple montre comment les paramètres de comportement du service peuvent être configurés. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit explicitement des comportements de service et des comportements d'opération à l'aide des attributs <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute>. Vous pouvez configurer les comportements dans les fichiers de configuration ou impérativement dans le code (comme le montre cet exemple).  

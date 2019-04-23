@@ -3,11 +3,11 @@ title: Known Types
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
 ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327735"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768694"
 ---
 # <a name="known-types"></a>Known Types
 Cet exemple montre comment spécifier des informations sur les types dérivés d'un contrat de données. Les contrats de données vous permettent de transférer des données structurées vers des services et à partir de ceux-ci. Dans la programmation orientée objet, un type qui hérite d'un autre peut être utilisé à la place de celui d'origine. Dans la  programmation orientée service, ce sont les schémas et non pas les types qui sont communiqués et par conséquent, la relation entre les types n'est pas conservée. L'attribut <xref:System.Runtime.Serialization.KnownTypeAttribute> permet d'inclure les informations sur les types dérivés dans le contrat de données. Si ce mécanisme n'est pas utilisé, un type dérivé ne peut pas être envoyé ou reçu là où un type de base est attendu.  

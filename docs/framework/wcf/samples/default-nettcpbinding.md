@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
 ms.openlocfilehash: 6a546a982b7c000e7fb5304daf7eac95d6da7e92
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313682"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768960"
 ---
 # <a name="default-nettcpbinding"></a>Default NetTcpBinding
 Cet exemple illustre l’utilisation de la liaison <xref:System.ServiceModel.NetTcpBinding>. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console.  

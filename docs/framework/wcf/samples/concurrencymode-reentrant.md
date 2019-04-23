@@ -3,11 +3,11 @@ title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299817"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769686"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 Cet exemple illustre la nécessité d'utiliser ConcurrencyMode.Reentrant sur une implémentation de service et les conséquences d'une telle utilisation. ConcurrencyMode.Reentrant implique que le service (plus exactement l'interface de rappel) traite un seul message à la fois à un instant donné (traitement similaire à celui proposé par le mode `ConcurencyMode.Single`). Pour garantir la sécurité des threads, Windows Communication Foundation (WCF) verrouille le `InstanceContext` traitement d’un message afin qu’aucun autre message ne puisse être traité. En mode ConcurrencyMode.Reentrant, le contexte `InstanceContext` est déverrouillé juste avant que le service n'effectue un appel externe, autorisant ainsi le prochain appel (lequel peut être réentrant tel qu'illustré dans l'exemple) et l'obtention du verrouillage lorsque le service reçoit la réponse à son appel. L'exemple illustre ce comportement en montrant comment un client et un service peuvent s'envoyer des messages en utilisant un contrat duplex.  

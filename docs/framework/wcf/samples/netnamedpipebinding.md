@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
 ms.openlocfilehash: cd7e97559458a4415399488b0fdb96a850033c44
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294832"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769331"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Cet exemple illustre l’utilisation de la liaison `netNamedPipeBinding`, laquelle permet la communication interprocessus sur le même ordinateur. Les canaux nommés ne fonctionnent pas sur plusieurs ordinateurs. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) service de calculatrice.  

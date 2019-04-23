@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
 ms.openlocfilehash: 5da14c7a28ecdcd023fc6439cb6ed64444c1183b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342776"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768551"
 ---
 # <a name="input-past-end-of-file"></a>L'entrée dépasse la fin du fichier
 Soit un `Input` instruction lit à partir d’un fichier qui est vide ou une dans laquelle toutes les données est utilisé, ou vous avez utilisé le `EOF` fonction avec un fichier ouvert pour un accès binaire.  

@@ -3,11 +3,11 @@ title: Retrieve Metadata
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
 ms.openlocfilehash: 48cac2b4b5a625546ab0c8ac9662fde01c7074b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329672"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768733"
 ---
 # <a name="retrieve-metadata"></a>Retrieve Metadata
 Cet exemple montre comment implémenter un client qui récupère dynamiquement les métadonnées d'un service afin de choisir un point de terminaison avec lequel communiquer. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Le service a été modifié pour exposer deux points de terminaison, un point de terminaison à l’adresse de base en utilisant le `basicHttpBinding` liaison et un point de terminaison sécurisé à {*baseaddress*} / sécuriser à l’aide la `wsHttpBinding` liaison. Au lieu de configurer le client avec les adresses et liaisons du point de terminaison, le client récupère dynamiquement les métadonnées du service à l'aide de la classe <xref:System.ServiceModel.Description.MetadataExchangeClient> puis importe ces métadonnées en tant que classe <xref:System.ServiceModel.Description.ServiceEndpointCollection> à l'aide de la classe <xref:System.ServiceModel.Description.WsdlImporter>.  

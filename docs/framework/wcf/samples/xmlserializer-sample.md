@@ -3,11 +3,11 @@ title: XMLSerializer, exemple
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
 ms.openlocfilehash: 70c6eb07780296672d663c7d5b9259192b189aad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330543"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769643"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer, exemple
 Cet exemple montre comment sérialiser et désérialiser des types compatibles avec <xref:System.Xml.Serialization.XmlSerializer>. Le formateur de Windows Communication Foundation (WCF) par défaut est le <xref:System.Runtime.Serialization.DataContractSerializer> classe. La classe <xref:System.Xml.Serialization.XmlSerializer> permet de sérialiser et de désérialiser des types lorsque la classe <xref:System.Runtime.Serialization.DataContractSerializer> ne peut pas être utilisée. C'est souvent le cas lorsqu'un contrôle précis sur le XML est requis (par exemple, si une donnée doit être un attribut XML et non pas un élément XML). En outre, le <xref:System.Xml.Serialization.XmlSerializer> est souvent sélectionné automatiquement lors de la création de clients pour les services non-WCF.  

@@ -3,11 +3,11 @@ title: Utilisation de la portée d'édition
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308625"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769422"
 ---
 # <a name="using-editing-scope"></a>Utilisation de la portée d'édition
 Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'elles puissent être annulées dans une unité atomique unique. Par défaut, les actions effectuées par un auteur de concepteur d'activités sont automatiquement intégrées dans le système d'annulation/de rétablissement.  
