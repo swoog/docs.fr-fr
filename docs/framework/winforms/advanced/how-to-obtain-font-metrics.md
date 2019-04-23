@@ -9,10 +9,10 @@ helpviewer_keywords:
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
 ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119052"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Procédure : obtenir des métriques de polices
@@ -57,5 +57,5 @@ Le <xref:System.Drawing.FontFamily> classe fournit les méthodes suivantes qui r
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)

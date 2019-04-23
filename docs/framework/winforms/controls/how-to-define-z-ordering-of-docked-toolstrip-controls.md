@@ -11,10 +11,10 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129166"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procédure : définir l’ordre de plan de contrôles ToolStrip ancrés
@@ -26,7 +26,7 @@ Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- L’ordre de plan est déterminé par l’ordre dans lequel le <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.MenuStrip>  
+ L'ordre de plan est déterminé par l'ordre dans lequel les contrôles <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.MenuStrip>  
   
  sont ajoutés à la collection <xref:System.Windows.Forms.Control.Controls%2A> du formulaire.  
   
@@ -49,4 +49,4 @@ Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement
 - <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>
 - <xref:System.Windows.Forms.Control.Controls%2A>
 - <xref:System.Windows.Forms.Control.Dock%2A>
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)

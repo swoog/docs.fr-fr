@@ -12,10 +12,10 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126436"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Procédure : Appliquer une transformation à un élément lorsqu’un événement se produit
@@ -39,6 +39,6 @@ Cet exemple montre comment appliquer un <xref:System.Windows.Media.ScaleTransfor
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
-- [Vue d'ensemble des transformations](transforms-overview.md)
-- [Rubriques Comment](transformations-how-to-topics.md)
-- [Vue d'ensemble des événements routés](../advanced/routed-events-overview.md)
+- [Vue d’ensemble des transformations](transforms-overview.md)
+- [Rubriques de guide pratique](transformations-how-to-topics.md)
+- [Vue d’ensemble des événements routés](../advanced/routed-events-overview.md)

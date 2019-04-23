@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129114"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Vue d'ensemble du contrôle RadioButton (Windows Forms)
@@ -29,8 +29,8 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> contrôle présente un ens
 - <xref:System.Windows.Forms.RadioButton>
 - [Vue d’ensemble du contrôle Panel](panel-control-overview-windows-forms.md)
 - [Vue d’ensemble du contrôle GroupBox](groupbox-control-overview-windows-forms.md)
-- [Vue d’ensemble du contrôle CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procédure : créer des clés d’accès pour les contrôles Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procédure : définir le texte affiché par un contrôle Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Procédure : regrouper des contrôles RadioButton Windows Forms dans un ensemble](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Vue d'ensemble du contrôle CheckBox](checkbox-control-overview-windows-forms.md)
+- [Guide pratique pour Créer des clés d’accès pour les contrôles Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Guide pratique pour Définir le texte affiché par un Windows Forms de contrôle](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Guide pratique pour Groupe Windows Forms contrôles RadioButton en tant qu’ensemble](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton, contrôle](radiobutton-control-windows-forms.md)

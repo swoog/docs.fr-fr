@@ -11,10 +11,10 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121964"
 ---
 # <a name="how-to-print-a-windows-form"></a>Procédure : imprimer un formulaire Windows
@@ -40,5 +40,5 @@ Dans le cadre du processus de développement, vous généralement intérêt à i
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Procédure : afficher des images avec GDI+](how-to-render-images-with-gdi.md)
-- [Procédure : imprimer des graphismes dans Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)
+- [Guide pratique pour Imprimer des graphiques dans les Windows Forms](how-to-print-graphics-in-windows-forms.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122913"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath, syntaxe XAML
@@ -47,7 +47,7 @@ Le <xref:System.Windows.PropertyPath> objet prend en charge un ligne de complex 
 <Binding Path="[key]" .../>  
 ```  
   
- `key` doit être à l’index typé vers un dictionnaire ou une table de hachage, ou l’index entier d’un tableau. Par ailleurs, la valeur de la clé doit être un type pouvant être directement lié à la propriété sur laquelle il est appliqué. Par exemple, une table de hachage qui contient des clés et valeurs de chaîne peut servir de cette façon à lier au texte pour un <xref:System.Windows.Controls.TextBox>. Si la clé pointe vers une collection ou un sous-index, vous pouvez utiliser cette syntaxe pour effectuer une liaison à une propriété de collection cible. Sinon, vous devez référencer une propriété spécifique par le biais d’une syntaxe de type `<Binding Path="[key].propertyName" .../>`.  
+ `key` doit être l’index typé vers un dictionnaire ou une table de hachage, ou l’index entier d’un tableau. Par ailleurs, la valeur de la clé doit être un type pouvant être directement lié à la propriété sur laquelle il est appliqué. Par exemple, une table de hachage qui contient des clés et valeurs de chaîne peut servir de cette façon à lier au texte pour un <xref:System.Windows.Controls.TextBox>. Si la clé pointe vers une collection ou un sous-index, vous pouvez utiliser cette syntaxe pour effectuer une liaison à une propriété de collection cible. Sinon, vous devez référencer une propriété spécifique par le biais d’une syntaxe de type `<Binding Path="[key].propertyName" .../>`.  
   
  Vous pouvez spécifier le type de l’index si nécessaire. Pour plus d’informations sur cet aspect d’un chemin de propriété indexée, consultez <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.  
   
@@ -67,7 +67,7 @@ Le <xref:System.Windows.PropertyPath> objet prend en charge un ligne de complex 
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- Les parenthèses indiquent que cette propriété dans un <xref:System.Windows.PropertyPath> doit être construite à l’aide d’une qualification partielle. Elle peut utiliser un espace de noms XML pour rechercher le type avec un mappage approprié. Le `ownerType` recherche des types auxquels un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur peut accéder, via le <xref:System.Windows.Markup.XmlnsDefinitionAttribute> déclarations dans chaque assembly. Dans la plupart des applications, l’espace de noms XML par défaut est mappé à l’espace de noms [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Un préfixe est donc généralement nécessaire uniquement pour les types personnalisés ou les types en dehors de cet espace de noms.  `propertyName` doit correspondre au nom d’une propriété existante sur le `ownerType`. Cette syntaxe est généralement utilisée pour l’un des cas suivants :  
+ Les parenthèses indiquent que cette propriété dans un <xref:System.Windows.PropertyPath> doit être construite à l’aide d’une qualification partielle. Elle peut utiliser un espace de noms XML pour rechercher le type avec un mappage approprié. Le `ownerType` recherche des types auxquels un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur peut accéder, via le <xref:System.Windows.Markup.XmlnsDefinitionAttribute> déclarations dans chaque assembly. Dans la plupart des applications, l’espace de noms XML par défaut est mappé à l’espace de noms [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Un préfixe est donc généralement nécessaire uniquement pour les types personnalisés ou les types en dehors de cet espace de noms.  `propertyName` doit correspondre au nom d’une propriété existant sur le `ownerType`. Cette syntaxe est généralement utilisée pour l’un des cas suivants :  
   
 -   Le chemin est spécifié dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], qui se trouve dans un style ou un modèle qui n’est pas un type de cible spécifié. Une utilisation qualifiée n’est généralement pas valide pour les autres cas, car dans les cas sans style ni modèle, la propriété existe sur une instance et non un type.  
   
@@ -178,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- Les parenthèses indiquent que cette propriété dans un <xref:System.Windows.PropertyPath> doit être construite à l’aide d’une qualification partielle. Elle peut utiliser un espace de noms XML pour rechercher le type. Le `ownerType` recherche des types auxquels un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur peut accéder, via le <xref:System.Windows.Markup.XmlnsDefinitionAttribute> déclarations dans chaque assembly. Dans la plupart des applications, l’espace de noms XML par défaut est mappé à l’espace de noms [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Un préfixe est donc généralement nécessaire uniquement pour les types personnalisés ou les types en dehors de cet espace de noms. `propertyName` doit correspondre au nom d’une propriété existante sur le `ownerType`. La propriété spécifiée en tant que `propertyName` doit être un <xref:System.Windows.DependencyProperty>. (Toutes les propriétés jointes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont implémentées sous forme de propriétés de dépendance, ce problème ne concerne donc que les propriétés jointes personnalisées.)  
+ Les parenthèses indiquent que cette propriété dans un <xref:System.Windows.PropertyPath> doit être construite à l’aide d’une qualification partielle. Elle peut utiliser un espace de noms XML pour rechercher le type. Le `ownerType` recherche des types auxquels un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur peut accéder, via le <xref:System.Windows.Markup.XmlnsDefinitionAttribute> déclarations dans chaque assembly. Dans la plupart des applications, l’espace de noms XML par défaut est mappé à l’espace de noms [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Un préfixe est donc généralement nécessaire uniquement pour les types personnalisés ou les types en dehors de cet espace de noms. `propertyName` doit correspondre au nom d’une propriété existant sur le `ownerType`. La propriété spécifiée en tant que `propertyName` doit être un <xref:System.Windows.DependencyProperty>. (Toutes les propriétés jointes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont implémentées sous forme de propriétés de dépendance, ce problème ne concerne donc que les propriétés jointes personnalisées.)  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>Indexeurs  
@@ -199,4 +199,4 @@ or
 
 - <xref:System.Windows.PropertyPath>
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
-- [Vue d'ensemble des storyboards](../graphics-multimedia/storyboards-overview.md)
+- [Vue d'ensemble des plans conceptuels](../graphics-multimedia/storyboards-overview.md)

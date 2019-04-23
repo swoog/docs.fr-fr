@@ -9,10 +9,10 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125144"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource, extension de balisage
@@ -55,7 +55,7 @@ Fournit une valeur pour tout [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2s
   
  `StaticResource` peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriété est requise.  
   
- `StaticResource` peut également être utilisé dans une utilisation d’attributs en clair qui spécifie la <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriété en tant que propriété = paire valeur :  
+ `StaticResource` peut également être utilisé dans une utilisation d'attributs en clair qui spécifie la propriété <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> en tant que paire propriété=valeur :  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -69,7 +69,7 @@ Fournit une valeur pour tout [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2s
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Ressources XAML](xaml-resources.md)

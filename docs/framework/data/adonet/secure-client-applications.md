@@ -3,10 +3,10 @@ title: Applications clientes sécurisées
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119611"
 ---
 # <a name="secure-client-applications"></a>Applications clientes sécurisées
@@ -18,25 +18,25 @@ Les applications se composent généralement de nombreuses parties qui doivent t
 > [!IMPORTANT]
 >  Vous devez également valider l'entrée d'utilisateur au niveau de la source de données, ainsi que dans l'application cliente. Un attaquant peut choisir de contourner votre application et d'attaquer la source de données directement.  
   
- [Sécurité et entrées d'utilisateur](../../../../docs/standard/security/security-and-user-input.md)  
+ [Sécurité et entrées d’utilisateur](../../../../docs/standard/security/security-and-user-input.md)  
  Explique comment gérer des bogues subtils et potentiellement dangereux qui impliquent une entrée d'utilisateur.  
   
  [Validation des entrées d’utilisateur dans les Pages Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Vue d’ensemble de la validation d’une entrée d’utilisateur à l’aide des contrôles de validation ASP.NET.  
   
- [Entrées d'utilisateur dans les Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Entrées d’utilisateur dans les Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Fournit des liens et des informations relatifs à la validation des entrées de la souris et au clavier dans une application Windows Forms.  
   
- [Expressions régulières du .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
+ [.NET Framework (expressions régulières)](../../../../docs/standard/base-types/regular-expressions.md)  
  Explique comment utiliser la classe <xref:System.Text.RegularExpressions.Regex> pour vérifier la validité des entrées d'utilisateur.  
   
 ## <a name="windows-applications"></a>Applications Windows  
  Auparavant, les applications Windows s'exécutaient généralement avec toutes les autorisations. Le .NET Framework fournit l'infrastructure permettant de restreindre l'exécution du code dans une application Windows en utilisant la sécurité d'accès du code. Toutefois, la sécurité d'accès du code seule n'est pas suffisante pour protéger votre application.  
   
- [Sécurité des Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Sécurité de Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Explique comment sécuriser des applications Windows Forms et fournit des liens vers des rubriques connexes.  
   
- [Applications Windows Forms et non managées](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Explique comment interagir avec des applications non managées dans une application Windows Forms.  
   
  [Déploiement ClickOnce pour les Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -52,7 +52,7 @@ Les applications se composent généralement de nombreuses parties qui doivent t
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Sécurisation des Sites Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Explique comment sécuriser des applications ASP.NET.|  
-|[Sécurisation des services Web XML créés à l'aide d'ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Explique comment implémenter la sécurité pour un service Web ASP.NET.|  
+|[Sécurisation des Services Web XML créés à l’aide d’ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Explique comment implémenter la sécurité pour un service Web ASP.NET.|  
 |[Vue d’ensemble des attaques de script](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Explique comment se protéger d’une attaque de script, qui tente d’insérer des caractères nuisibles dans une page web.|  
 |[Pratiques de sécurité de base pour les Applications Web](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Informations générales sur la sécurité et liens vers une présentation additionnelle.|  
   
@@ -61,9 +61,9 @@ Les applications se composent généralement de nombreuses parties qui doivent t
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Configuration d'applications de communication à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Explique comment configurer les applications de communication à distance pour éviter les problèmes courants.|  
-|[Sécurité dans la communication à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Décrit l'authentification et le chiffrement, ainsi que des rubriques de sécurité supplémentaires relatives à la communication à distance.|  
-|[Considérations sur la sécurité et la communication à distance](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Décrit les problèmes de sécurité liés aux objets protégés et au franchissement de domaine d'application.|  
+|[Configuration des Applications à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Explique comment configurer les applications de communication à distance pour éviter les problèmes courants.|  
+|[Sécurité de communication à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Décrit l'authentification et le chiffrement, ainsi que des rubriques de sécurité supplémentaires relatives à la communication à distance.|  
+|[Sécurité et considérations relatives à la communication à distance](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Décrit les problèmes de sécurité liés aux objets protégés et au franchissement de domaine d'application.|  
   
 ## <a name="see-also"></a>Voir aussi
 

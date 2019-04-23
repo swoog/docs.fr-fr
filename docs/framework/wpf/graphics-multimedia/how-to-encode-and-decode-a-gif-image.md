@@ -14,10 +14,10 @@ helpviewer_keywords:
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
 ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124734"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Procédure : Encoder et décoder une image GIF
@@ -39,4 +39,4 @@ Les exemples suivants montrent comment décoder et encoder une [!INCLUDE[TLA#tla
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création d'images](imaging-overview.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)

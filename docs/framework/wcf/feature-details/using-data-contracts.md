@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129933"
 ---
 # <a name="using-data-contracts"></a>Utilisation de contrats de données
@@ -72,12 +72,12 @@ Un *contrat de données* est un accord en bonne et due forme entre un service et
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 - [Noms de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Équivalence de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Contrats de données à compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Contrôle de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Rappels de sérialisation avec tolérance de version](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Valeurs par défaut des membres de données](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Procédure : créer un contrat de données de base pour une classe ou structure](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Guide pratique pour Créer un contrat de données de base pour une classe ou Structure](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

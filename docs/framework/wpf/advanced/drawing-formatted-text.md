@@ -11,10 +11,10 @@ helpviewer_keywords:
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
 ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129088"
 ---
 # <a name="drawing-formatted-text"></a>Dessin du texte mis en forme
@@ -121,4 +121,4 @@ Sphère suivant la géométrie de tracé du texte
 - [Documents dans WPF](documents-in-wpf.md)
 - [Typographie dans WPF](typography-in-wpf.md)
 - [Créer du texte avec contour](how-to-create-outlined-text.md)
-- [Procédure : Créer une Animation PathGeometry pour du texte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))
+- [Guide pratique pour Créer une Animation PathGeometry pour du texte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

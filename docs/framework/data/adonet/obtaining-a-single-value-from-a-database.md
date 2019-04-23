@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120677"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Obtention d'une valeur unique à partir d'une base de données
@@ -23,6 +23,6 @@ Vous aurez peut-être besoin de retourner des informations de base de données q
 ## <a name="see-also"></a>Voir aussi
 
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Exécution d'une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

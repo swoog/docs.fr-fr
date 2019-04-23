@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127385"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Comment le modèle objet Syndication WCF est mappé à Atom et RSS
@@ -37,12 +37,12 @@ Lorsque vous développez un service de syndication de Windows Communication Foun
   
  Les exemples de code dans cette rubrique utilisent une des deux méthodes définies dans cette section pour effectuer la sérialisation à proprement dite.  
   
- `SerializeFeed` Sérialise un flux de syndication.  
+ `SerializeFeed` sérialise un flux de syndication.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem` Sérialise un élément de syndication.  
+ `SerializeItem` sérialise un élément de syndication.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
@@ -399,8 +399,8 @@ Lorsque vous développez un service de syndication de Windows Communication Foun
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la syndication WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Vue d’ensemble de la syndication WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Architecture de syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [Procédure : créer un flux RSS de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [Procédure : créer un flux Atom de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Procédure : exposer un flux en tant que flux Atom et RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Guide pratique pour Créer un flux RSS de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Guide pratique pour Créer un flux Atom de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [Guide pratique pour Exposer un flux en tant qu’Atom et RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

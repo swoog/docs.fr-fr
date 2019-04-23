@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125930"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset, méthode
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  La fonction retourne le `HRESULT` valeurs indiquées dans le tableau suivant.  
   
-|`HRESULT` valeur|Description|  
+|Valeur`HRESULT` |Description|  
 |---------------------|-----------------|  
 |`S_OK`|Opération réussie.|  
 |`CORDBG_E_INVALID_OPCODE`|Le site offset IL donné n’est pas une instruction d’appel, ou la fonction retourne `void`.|  
@@ -76,7 +76,7 @@ HRESULT GetReturnValueLiveOffset(
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

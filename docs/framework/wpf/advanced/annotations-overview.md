@@ -10,10 +10,10 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122445"
 ---
 # <a name="annotations-overview"></a>Vue d'ensemble des annotations
@@ -72,7 +72,7 @@ ms.locfileid: "59122445"
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Schéma d'annotations](annotations-schema.md)
-- [Vue d'ensemble de ContextMenu](../controls/contextmenu-overview.md)
-- [Vue d'ensemble des commandes](commanding-overview.md)
-- [Vue d'ensemble des documents dynamiques](flow-document-overview.md)
-- [Procédure : Ajouter une commande à un MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Vue d’ensemble de ContextMenu](../controls/contextmenu-overview.md)
+- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
+- [Guide pratique pour Ajouter une commande à un MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

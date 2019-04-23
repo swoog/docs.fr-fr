@@ -11,10 +11,10 @@ helpviewer_keywords:
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
 ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125019"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procédure : créer un pinceau dégradé linéaire
@@ -80,4 +80,4 @@ ms.locfileid: "59125019"
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation d'un pinceau à dégradé pour remplir des formes](using-a-gradient-brush-to-fill-shapes.md)
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

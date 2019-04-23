@@ -14,10 +14,10 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
 ms.openlocfilehash: 71fb0a09387c77dbc792180dac1b8594d11b3642
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119507"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Procédure : générer des notifications de modification à l’aide de BindingSource et de l’interface INotifyPropertyChanged
@@ -44,5 +44,5 @@ Le composant <xref:System.Windows.Forms.BindingSource> détecte automatiquement 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ComponentModel.INotifyPropertyChanged>
-- [Composant BindingSource](bindingsource-component.md)
-- [Procédure : générer des notifications de modification à l’aide de la méthode ResetItem de BindingSource](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)
+- [BindingSource, composant](bindingsource-component.md)
+- [Guide pratique pour Déclencher des Notifications de modification à l’aide de la méthode ResetItem de BindingSource](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)

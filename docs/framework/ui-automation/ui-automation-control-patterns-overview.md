@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126358"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Vue d'ensemble des modèles de contrôle UI Automation
@@ -18,7 +18,7 @@ ms.locfileid: "59126358"
   
  Cette vue d’ensemble présente les modèles de contrôle [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Les modèles de contrôle permettent de catégoriser et d'exposer les fonctionnalités d'un contrôle, indépendamment du type de contrôle ou de l'apparence du contrôle.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] utilise des modèles pour représenter les comportements de contrôle communs de contrôle. Par exemple, vous utilisez le modèle de contrôle Invoke pour les contrôles qui peuvent être appelés (tels que les boutons) et le modèle de contrôle Scroll pour les contrôles qui disposent de barres de défilement (tels que les zones de liste, les affichages de liste ou les zones de liste modifiables). Étant donné que chaque modèle de contrôle représente une fonctionnalité distincte, il est possible de les combiner pour décrire l’ensemble complet de fonctionnalités prises en charge par un contrôle particulier.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] utilise des modèles de contrôle pour représenter les comportements de contrôle courants. Par exemple, vous utilisez le modèle de contrôle Invoke pour les contrôles qui peuvent être appelés (tels que les boutons) et le modèle de contrôle Scroll pour les contrôles qui disposent de barres de défilement (tels que les zones de liste, les affichages de liste ou les zones de liste modifiables). Étant donné que chaque modèle de contrôle représente une fonctionnalité distincte, il est possible de les combiner pour décrire l’ensemble complet de fonctionnalités prises en charge par un contrôle particulier.  
   
 > [!NOTE]
 >  Les contrôles d’agrégat (générés avec des contrôles enfants qui fournissent l’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] pour les fonctionnalités exposées par le parent) doivent implémenter tous les modèles de contrôle normalement associés à chaque contrôle enfant. Il n’est pas nécessaire que ces mêmes modèles de contrôle soient, à leur tour, implémentés par les contrôles enfants.  
@@ -76,6 +76,6 @@ ms.locfileid: "59126358"
 
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Mappage de modèle de contrôle pour les clients UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
 - [Propriétés UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
 - [Événements UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

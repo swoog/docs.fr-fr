@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
 ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129504"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Accès aux membres non exposés sur le modèle objet de document HTML managé
@@ -73,4 +73,4 @@ Le DOM HTML managé Document objet Model () contient une classe appelée <xref:S
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation du modèle objet de document HTML managé](using-the-managed-html-document-object-model.md)
+- [Utilisation du modèle DOM HTML managé](using-the-managed-html-document-object-model.md)

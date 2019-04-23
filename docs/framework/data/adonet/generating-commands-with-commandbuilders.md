@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120027"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Génération de commandes avec CommandBuilders
@@ -30,7 +30,7 @@ Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au 
 ## <a name="rules-for-automatically-generated-commands"></a>Règles pour les commandes générées automatiquement  
  Le tableau suivant présente les règles de génération des commandes générées automatiquement.  
   
-|Command|Règle|  
+|Commande|Règle|  
 |-------------|----------|  
 |`InsertCommand`|Insère une ligne dans la source de données pour toutes les lignes de la table dont la propriété <xref:System.Data.DataRow.RowState%2A> a la valeur <xref:System.Data.DataRowState.Added>. Insère des valeurs pour toutes les colonnes qui peuvent être mises à jour (mais pas les colonnes comme les identités, les expressions ou les horodatages).|  
 |`UpdateCommand`|Met à jour les lignes dans la source de données pour toutes les lignes de la table dont la propriété `RowState` a la valeur <xref:System.Data.DataRowState.Modified>. Met à jour les valeurs de toutes les colonnes à l'exception de celles qui ne peuvent pas être mises à jour, telles que les identités ou les expressions. Met à jour toutes les lignes où les valeurs de colonne au niveau de la source de données correspondent aux valeurs de colonne de clé primaire de la ligne et où les colonnes restantes correspondent aux valeurs d'origine de la ligne. Pour plus d'informations, voir « Modèle d'accès simultané optimiste pour les mises à jour et les suppressions », plus loin dans cette rubrique.|  
@@ -115,6 +115,6 @@ adapter.Fill(custDS, "Customers");
 ## <a name="see-also"></a>Voir aussi
 
 - [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Exécution d'une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

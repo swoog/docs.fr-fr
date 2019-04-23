@@ -3,10 +3,10 @@ title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
 ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119832"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>Éléments de clause FROM  
- Chaque élément de clause `FROM` fait référence à une collection source dans la requête [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge les classes suivantes de `FROM` éléments de clause : simple `FROM` éléments de clause `JOIN FROM` éléments de clause et `APPLY FROM` éléments de clause. Chacun de ces éléments de clause `FROM` est décrite en détail dans les sections suivantes.  
+ Chaque élément de clause `FROM` fait référence à une collection source dans la requête [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge les classes d'éléments de clause `FROM` suivantes : éléments de clause `FROM` simples, éléments de clause `JOIN FROM` et éléments de clause `APPLY FROM`. Chacun de ces éléments de clause `FROM` est décrite en détail dans les sections suivantes.  
   
 ### <a name="simple-from-clause-item"></a>Élément de clause FROM simple  
  L'élément de clause `FROM` le plus simple est une expression unique qui identifie une collection et un alias. L’expression peut être simplement un jeu d’entités, une sous-requête ou toute autre expression qui est un type collection. Voici un exemple :  
@@ -46,7 +46,7 @@ LOB.Customers
  Si aucun alias n'est spécifié, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tente d'en générer un basé sur l'expression de collection.  
   
 ### <a name="join-from-clause-item"></a>Élément de clause JOIN FROM  
- Un élément de clause `JOIN FROM` représente une jointure entre deux éléments de clause `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge croisées jointures, les jointures internes, les jointures externes gauches et droites et les jointures externes entières. Toutes ces jointures sont prises en charge de la même manière qu'elles le sont dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], les deux éléments de clause `FROM` impliqués dans la jointure `JOIN` doivent être indépendants. Autrement dit, ils ne peuvent pas être corrélés. Un `CROSS APPLY` ou un `OUTER APPLY` peut être utilisé pour ces cas.  
+ Un élément de clause `JOIN FROM` représente une jointure entre deux éléments de clause `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge les jointures croisées, les jointures internes, les jointures externes gauches et droites, ainsi que les jointures externes entières. Toutes ces jointures sont prises en charge de la même manière qu'elles le sont dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], les deux éléments de clause `FROM` impliqués dans la jointure `JOIN` doivent être indépendants. Autrement dit, ils ne peuvent pas être corrélés. Un `CROSS APPLY` ou un `OUTER APPLY` peut être utilisé pour ces cas.  
   
 #### <a name="cross-joins"></a>Jointures croisées  
  Une expression de requête `CROSS JOIN` génère le produit cartésien des deux collections, comme illustré dans l’exemple suivant :  
@@ -80,7 +80,7 @@ LOB.Customers
 >  Pour préserver la compatibilité avec SQL-92, dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], le mot clé OUTER est facultatif. Par conséquent, `LEFT JOIN`, `RIGHT JOIN` et `FULL JOIN` sont synonymes de `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` et `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Élément de clause APPLY  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge deux types de `APPLY`: `CROSS APPLY` et `OUTER APPLY`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge deux sortes de clauses `APPLY` : `CROSS APPLY` et `OUTER APPLY`.  
   
  Un `CROSS APPLY` produit un appariement unique de chaque élément de la collection située à gauche avec un élément de la collection produite en évaluant l’expression située à droite. Avec un `CROSS APPLY`, l’expression à droite dépend fonctionnellement de l’élément à gauche, comme illustré dans l’exemple de collection associé suivant :  
   
@@ -96,7 +96,7 @@ LOB.Customers
 >  Contrairement à dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], aucune étape UNEST explicite n'est nécessaire dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` et `OUTER APPLY` opérateurs ont été introduits dans [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Dans certains cas, le pipeline de requête peut produire une instruction Transact-SQL qui contient des opérateurs `CROSS APPLY` et/ou `OUTER APPLY`. Étant donné que certains fournisseurs principaux, y compris les versions de SQL Server antérieure à [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], ne prennent pas en charge ces opérateurs, les requêtes de ce type ne peut pas être exécutées sur ces fournisseurs.  
+>  Les opérateurs `CROSS` et `OUTER APPLY` ont été introduits dans [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Dans certains cas, le pipeline de requête peut produire une instruction Transact-SQL qui contient des opérateurs `CROSS APPLY` et/ou `OUTER APPLY`. Étant donné que certains fournisseurs principaux, y compris les versions de SQL Server antérieure à [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], ne prennent pas en charge ces opérateurs, les requêtes de ce type ne peut pas être exécutées sur ces fournisseurs.  
 >   
 >  Voici certains scénarios classiques susceptibles d’aboutir à la présence d’opérateurs `CROSS APPLY` et/ou `OUTER APPLY` dans la requête de sortie : une sous-requête corrélée avec la pagination, AnyElement sur une sous-requête corrélée ou sur une collection produite par navigation, requêtes LINQ qui utilisent des méthodes de regroupement acceptant un sélecteur d’élément, une requête dans laquelle un `CROSS APPLY` ou un `OUTER APPLY` sont spécifiés explicitement, une requête qui a une construction `DEREF` sur une construction `REF`.  
   
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  La clause `FROM` produit logiquement un multiensemble de lignes de type Row(c, d, e) où les champs c, d et e sont supposés être du type d'élément `C`, `D` et `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduit un alias pour chaque simple `FROM` élément de clause dans la portée. Par exemple, dans l'extrait de clause FROM suivant, les noms introduits dans l'étendue sont c, d et e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduit un alias pour chaque élément de clause `FROM` simple de l'étendue. Par exemple, dans l'extrait de clause FROM suivant, les noms introduits dans l'étendue sont c, d et e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
@@ -156,4 +156,4 @@ select {1} from {2, 3}
 
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Expressions de requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Types structurés Nullable](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [Types structurés autorisant la valeur null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
