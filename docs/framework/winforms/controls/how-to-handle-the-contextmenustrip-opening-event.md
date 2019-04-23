@@ -12,26 +12,26 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
 ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170712"
 ---
-# <a name="how-to-handle-the-contextmenustrip-opening-event"></a><span data-ttu-id="32a99-102">Procédure : gérer l’événement d’ouverture ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="32a99-102">How to: Handle the ContextMenuStrip Opening Event</span></span>
-<span data-ttu-id="32a99-103">Vous pouvez personnaliser le comportement de votre <xref:System.Windows.Forms.ContextMenuStrip> contrôle en gérant la <xref:System.Windows.Forms.ToolStripDropDown.Opening> événement.</span><span class="sxs-lookup"><span data-stu-id="32a99-103">You can customize the behavior of your <xref:System.Windows.Forms.ContextMenuStrip> control by handling the <xref:System.Windows.Forms.ToolStripDropDown.Opening> event.</span></span>  
+# <a name="how-to-handle-the-contextmenustrip-opening-event"></a><span data-ttu-id="e1987-102">Procédure : gérer l’événement d’ouverture ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="e1987-102">How to: Handle the ContextMenuStrip Opening Event</span></span>
+<span data-ttu-id="e1987-103">Vous pouvez personnaliser le comportement de votre <xref:System.Windows.Forms.ContextMenuStrip> contrôle en gérant la <xref:System.Windows.Forms.ToolStripDropDown.Opening> événement.</span><span class="sxs-lookup"><span data-stu-id="e1987-103">You can customize the behavior of your <xref:System.Windows.Forms.ContextMenuStrip> control by handling the <xref:System.Windows.Forms.ToolStripDropDown.Opening> event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32a99-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="32a99-104">Example</span></span>  
- <span data-ttu-id="32a99-105">L’exemple de code suivant montre comment gérer les <xref:System.Windows.Forms.ToolStripDropDown.Opening> événement.</span><span class="sxs-lookup"><span data-stu-id="32a99-105">The following code example demonstrates how to handle the <xref:System.Windows.Forms.ToolStripDropDown.Opening> event.</span></span> <span data-ttu-id="32a99-106">Le Gestionnaire d’événements ajoute des éléments dynamiquement à un <xref:System.Windows.Forms.ContextMenuStrip> contrôle.</span><span class="sxs-lookup"><span data-stu-id="32a99-106">The event handler adds items dynamically to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="32a99-107">Pour l’exemple de code complet, consultez [Comment : Ajouter dynamiquement des éléments ToolStrip](how-to-add-toolstrip-items-dynamically.md).</span><span class="sxs-lookup"><span data-stu-id="32a99-107">For the complete code example, see [How to: Add ToolStrip Items Dynamically](how-to-add-toolstrip-items-dynamically.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="e1987-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="e1987-104">Example</span></span>  
+ <span data-ttu-id="e1987-105">L’exemple de code suivant montre comment gérer les <xref:System.Windows.Forms.ToolStripDropDown.Opening> événement.</span><span class="sxs-lookup"><span data-stu-id="e1987-105">The following code example demonstrates how to handle the <xref:System.Windows.Forms.ToolStripDropDown.Opening> event.</span></span> <span data-ttu-id="e1987-106">Le Gestionnaire d’événements ajoute des éléments dynamiquement à un <xref:System.Windows.Forms.ContextMenuStrip> contrôle.</span><span class="sxs-lookup"><span data-stu-id="e1987-106">The event handler adds items dynamically to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="e1987-107">Pour l’exemple de code complet, consultez [Comment : Ajouter dynamiquement des éléments ToolStrip](how-to-add-toolstrip-items-dynamically.md).</span><span class="sxs-lookup"><span data-stu-id="e1987-107">For the complete code example, see [How to: Add ToolStrip Items Dynamically](how-to-add-toolstrip-items-dynamically.md).</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#42)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#42)]  
   
- <span data-ttu-id="32a99-108">Définir le <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> propriété `true` pour empêcher l’ouverture du menu.</span><span class="sxs-lookup"><span data-stu-id="32a99-108">Set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> property to `true` to prevent the menu from opening.</span></span>  
+ <span data-ttu-id="e1987-108">Définir le <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> propriété `true` pour empêcher l’ouverture du menu.</span><span class="sxs-lookup"><span data-stu-id="e1987-108">Set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> property to `true` to prevent the menu from opening.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32a99-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="32a99-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1987-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e1987-109">See also</span></span>
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [<span data-ttu-id="32a99-110">ToolStrip, contrôle</span><span class="sxs-lookup"><span data-stu-id="32a99-110">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="e1987-110">Contrôle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e1987-110">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)

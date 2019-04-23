@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 602abdce11188bc2f2f3f3c02d3a73ba6f6b52e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170415"
 ---
-# <a name="ecustomdumpitemkind-enumeration"></a><span data-ttu-id="4cf29-102">ECustomDumpItemKind, énumération</span><span class="sxs-lookup"><span data-stu-id="4cf29-102">ECustomDumpItemKind Enumeration</span></span>
-<span data-ttu-id="4cf29-103">Réservé pour une extension future de la [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span><span class="sxs-lookup"><span data-stu-id="4cf29-103">Reserved for future extension of the [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
+# <a name="ecustomdumpitemkind-enumeration"></a><span data-ttu-id="f9651-102">ECustomDumpItemKind, énumération</span><span class="sxs-lookup"><span data-stu-id="f9651-102">ECustomDumpItemKind Enumeration</span></span>
+<span data-ttu-id="f9651-103">Réservé pour une extension future de la [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span><span class="sxs-lookup"><span data-stu-id="f9651-103">Reserved for future extension of the [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cf29-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4cf29-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9651-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f9651-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,22 +34,22 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4cf29-105">Membres</span><span class="sxs-lookup"><span data-stu-id="4cf29-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f9651-105">Membres</span><span class="sxs-lookup"><span data-stu-id="f9651-105">Members</span></span>  
   
-|<span data-ttu-id="4cf29-106">Membre</span><span class="sxs-lookup"><span data-stu-id="4cf29-106">Member</span></span>|<span data-ttu-id="4cf29-107">Description</span><span class="sxs-lookup"><span data-stu-id="4cf29-107">Description</span></span>|  
+|<span data-ttu-id="f9651-106">Membre</span><span class="sxs-lookup"><span data-stu-id="f9651-106">Member</span></span>|<span data-ttu-id="f9651-107">Description</span><span class="sxs-lookup"><span data-stu-id="f9651-107">Description</span></span>|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|<span data-ttu-id="4cf29-108">Réservé à un usage ultérieur.</span><span class="sxs-lookup"><span data-stu-id="4cf29-108">Reserved for future use.</span></span>|  
+|`DUMP_ITEM_None`|<span data-ttu-id="f9651-108">Réservé à un usage ultérieur.</span><span class="sxs-lookup"><span data-stu-id="f9651-108">Reserved for future use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4cf29-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="4cf29-109">Requirements</span></span>  
- <span data-ttu-id="4cf29-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cf29-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9651-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f9651-109">Requirements</span></span>  
+ <span data-ttu-id="f9651-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9651-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cf29-111">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4cf29-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f9651-111">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f9651-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4cf29-112">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4cf29-112">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="f9651-112">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f9651-112">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="4cf29-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="4cf29-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="f9651-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9651-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cf29-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4cf29-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9651-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f9651-114">See also</span></span>
 
-- [<span data-ttu-id="4cf29-115">ICLRErrorReportingManager, interface</span><span class="sxs-lookup"><span data-stu-id="4cf29-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="4cf29-116">Énumérations d'hébergement</span><span class="sxs-lookup"><span data-stu-id="4cf29-116">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="f9651-115">ICLRErrorReportingManager, interface</span><span class="sxs-lookup"><span data-stu-id="f9651-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="f9651-116">Énumérations d’hébergement</span><span class="sxs-lookup"><span data-stu-id="f9651-116">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
