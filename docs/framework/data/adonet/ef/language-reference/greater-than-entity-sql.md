@@ -3,10 +3,10 @@ title: '> (Supérieur à) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328554"
 ---
 # <a name="-greater-than-entity-sql"></a>> (Supérieur à) (Entity SQL)
@@ -23,7 +23,7 @@ expression > expression
  Toute expression valide. Les deux expressions doivent posséder des types de données implicitement convertibles.  
   
 ## <a name="result-types"></a>Types de résultats  
- `true` Si l’expression de gauche a une valeur supérieure à l’expression de droite ; Sinon, `false`.  
+ `true` si la valeur de l'expression de gauche est supérieure à celle de l'expression de droite ; sinon, `false`.  
   
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur de comparaison > pour comparer deux expressions afin de déterminer si la valeur de l'expression de gauche est supérieure à celle de l'expression de droite. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  

@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329451"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procédure : héberger plusieurs versions d’un workflow côte à côte
-`WorkflowIdentity` fournit un moyen pour les développeurs d’applications de flux de travail associer un nom et une version à une définition de workflow et pour obtenir ces informations à associer à une instance de workflow persistantes. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette étape du didacticiel explique comment utiliser `WorkflowIdentity` pour héberger plusieurs versions de workflow en même temps.
+`WorkflowIdentity` permet aux développeurs d'applications de workflow d'associer un nom et une version à une définition de workflow, et d'associer ces informations à une instance persistante de workflow. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette étape du didacticiel explique comment utiliser `WorkflowIdentity` pour héberger plusieurs versions de workflow en même temps.
 
 > [!NOTE]
 >  Pour télécharger une version complète ou consulter une procédure pas à pas vidéo du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -23,17 +23,17 @@ ms.locfileid: "59329451"
   
 -   [Pour effectuer une copie du projet NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Pour mettre à jour les workflows](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Pour mettre à jour les flux de travail](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [Pour mettre à jour le workflow StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [Pour mettre à jour le flux de travail StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Pour mettre à jour le workflow Flowchart](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Pour mettre à jour le workflow d’organigramme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
     -   [Pour mettre à jour le workflow séquentiel](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Pour mettre à jour WorkflowVersionMap de façon à inclure les versions précédentes de workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Pour mettre à jour workflowversionmap de façon à inclure les versions précédentes de flux de travail](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Pour générer et exécuter l'application](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Pour générer et exécuter l’application](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
 >  Avant de suivre les étapes de cette rubrique, exécutez l'application, démarrez plusieurs workflows de chaque type et effectuez une ou deux propositions pour chacun. Ces workflows persistants sont utilisés dans cette étape et l’étape suivante, [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](how-to-update-the-definition-of-a-running-workflow-instance.md).
@@ -555,14 +555,14 @@ ms.locfileid: "59329451"
 
 2. Démarrer un nouveau flux de travail en cliquant sur **nouvelle partie**. La version du workflow s'affiche dans la fenêtre d'état et reflète la version mise à jour du `WorkflowIdentity` associé. Notez `InstanceId` de façon à afficher le fichier de suivi du workflow lorsqu'il se termine, puis entrez des propositions jusqu'à ce que le jeu soit terminé. Notez comment la proposition de l'utilisateur est affichée dans les informations affichées dans la fenêtre d'état basée sur les mises à jour dans les activités `WriteLine`.
 
- **Please enter a number between 1 and 10**  
-**5 est trop élevé.**  
-**Please enter a number between 1 and 10**  
-**3 est trop élevé.**  
-**Please enter a number between 1 and 10**  
-**1 est trop bas.**  
-**Please enter a number between 1 and 10**  
-**Félicitations, vous avez deviné le nombre en 4 tours.**  
+ **Entrez un nombre compris entre 1 et 10**  
+**5 est trop élevée.**  
+**Entrez un nombre compris entre 1 et 10**  
+**3 est trop élevée.**  
+**Entrez un nombre compris entre 1 et 10**  
+**1 est trop faible.**  
+**Entrez un nombre compris entre 1 et 10**  
+**Félicitations, vous avez deviné le nombre en 4 tours.**  
 
     > [!NOTE]
     >  Le texte mis à jour à partir des activités `WriteLine` s'affiche, mais la sortie de l'activité finale `WriteLine` ajoutée dans cette rubrique ne s'affiche pas. Cela est dû au fait que la fenêtre d'état est mise à jour par le gestionnaire `PersistableIdle`. Étant donné que le workflow se termine et n'est pas inactif après l'activité finale, le gestionnaire `PersistableIdle` n'est pas appelé. Toutefois, un message similaire est affiché dans la fenêtre d'état par le gestionnaire `Completed`. Si vous le souhaitez, le code peut être ajouté au gestionnaire `Completed` pour extraire le texte de `StringWriter` et pour l'afficher dans la fenêtre d'état.

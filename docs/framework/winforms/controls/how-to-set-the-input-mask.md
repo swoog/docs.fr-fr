@@ -7,10 +7,10 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331466"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procédure : définir le masque d’entrée
@@ -65,4 +65,4 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure pas à pas : utilisation du contrôle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Procédure pas à pas : Utilisation du contrôle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329295"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Procédure pas à pas : localisation d’une application hybride
@@ -46,7 +46,7 @@ La première étape consiste à créer le [!INCLUDE[TLA#tla_winforms](../../../.
 
 1. Créer un **application WPF** projet nommé `LocalizingWpfInWf`.  (**Fichier** > **nouveau** > **projet** > **Visual C#** ou **Visual Basic**   >  **Bureau classique** > **Application WPF**).
 
-2. Ajouter un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> élément appelé `SimpleControl` au projet.
+2. Ajouter un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> élément appelé `SimpleControl` au projet.
 
 3. Utilisez le <xref:System.Windows.Forms.Integration.ElementHost> contrôle se place un `SimpleControl` élément sur le formulaire. Pour plus d’informations, consultez [Procédure pas à pas : Hébergement d’un contrôle Composite 3-d WPF dans les Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 

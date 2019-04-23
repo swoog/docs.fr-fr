@@ -3,10 +3,10 @@ title: Réhébergement du concepteur
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328164"
 ---
 # <a name="designer-rehosting"></a>Réhébergement du concepteur
@@ -40,7 +40,7 @@ Le réhébergement du concepteur est un scénario courant qui fait référence �
 </Grid>  
 ```  
   
- Ensuite, l'exemple crée le concepteur et associe son <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> primaire et <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> au conteneur approprié dans l'interface utilisateur. Quelques lignes supplémentaires de code dans l'exemple suivant méritent une explication. L'appel de <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> est nécessaire pour associer les concepteurs d'activités par défaut pour les activités fournies avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> est appelé pour passer l’élément WF à modifier. Enfin, le <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (zone de dessin primaire) et le <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (grille des propriétés) sont placés sur la surface d'interface utilisateur.  
+ Ensuite, l'exemple crée le concepteur et associe son <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> primaire et <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> au conteneur approprié dans l'interface utilisateur. Quelques lignes supplémentaires de code dans l'exemple suivant méritent une explication. L'appel de <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> est nécessaire pour associer les concepteurs d'activités par défaut pour les activités fournies avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> est appelé pour passer l'élément WF à modifier. Enfin, le <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (zone de dessin primaire) et le <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (grille des propriétés) sont placés sur la surface d'interface utilisateur.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

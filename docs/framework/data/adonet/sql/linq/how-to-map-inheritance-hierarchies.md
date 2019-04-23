@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 6f437b7f7ae6a414971edb497bc2c84c03674fe8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331830"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Procédure : Mapper des hiérarchies d’héritage
@@ -52,5 +52,5 @@ Pour implémenter un mappage d'héritage dans [!INCLUDE[vbteclinq](../../../../.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge de l'héritage](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Procédure : Personnaliser des classes d’entité à l’aide de l’éditeur de code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Prise en charge de l’héritage](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
+- [Guide pratique pour Personnaliser des Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

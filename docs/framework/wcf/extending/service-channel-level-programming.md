@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329128"
 ---
 # <a name="service-channel-level-programming"></a>Programmation de service au niveau du canal
@@ -36,7 +36,7 @@ Cette rubrique décrit comment écrire une application de service Windows Commun
 #### <a name="building-a-channellistener"></a>Génération d'un ChannelListener  
  Après avoir créé une liaison, nous appelons <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> pour générer l'écouteur de canal où le paramètre de type est la forme de canal à créer. Dans cet exemple, nous utilisons <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> car nous souhaitons écouter les messages entrants dans un modèle d'échange de messages demande/réponse.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> est utilisé pour recevoir des messages et renvoyer des messages de réponse de demande. <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> retourne un <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, qui peut être utilisé pour recevoir le message de demande et renvoyer un message de réponse.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> est utilisé pour recevoir des messages de demande et renvoyer des messages de réponse. <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> retourne un <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, qui peut être utilisé pour recevoir le message de demande et renvoyer un message de réponse.  
   
  Lors de la création de l'écouteur, nous passons l'adresse réseau sur laquelle il écoute, en l'occurrence `http://localhost:8080/channelapp`. En général, chaque canal de transport prend en charge un ou plusieurs schémas d'adressage ; le transport HTTP, par exemple, prend en charge les schémas http et https.  
   

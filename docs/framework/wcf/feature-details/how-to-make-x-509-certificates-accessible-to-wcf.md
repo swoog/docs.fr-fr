@@ -10,10 +10,10 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331076"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procédure : rendre des certificats X.509 accessibles à WCF
@@ -73,5 +73,5 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
 ## <a name="see-also"></a>Voir aussi
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Procédure : récupérer l’empreinte d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

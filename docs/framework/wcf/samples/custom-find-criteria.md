@@ -3,10 +3,10 @@ title: Custom Find Criteria
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332532"
 ---
 # <a name="custom-find-criteria"></a>Custom Find Criteria
@@ -45,7 +45,7 @@ Cet exemple montre comment créer une correspondance de portée personnalisée �
   
      Cette logique personnalisée parcourt toutes les portées sur chacun des points de terminaison dont le service dispose. Si l'une des portées du point de terminaison correspond à l'une des portées fournies par le client, le service de découverte ajoute ce point de terminaison à la réponse renvoyée au client.  
   
-3. **CustomDiscoveryExtension.cs**: La dernière étape pour implémenter le service de découverte consiste à connecter cette implémentation de la personnalisation détection du service de l’hôte de service. La classe d'assistance utilisée ici est la classe `CustomDiscoveryExtension`. Cette classe étend la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. L'utilisateur doit substituer la méthode <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. Dans ce cas, la méthode retourne une instance du service de découverte personnalisé créé auparavant. `PublishedEndpoints` est un <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> qui contient tous les points de terminaison d’application qui sont ajoutés à la <xref:System.ServiceModel.ServiceHost>. Le service de découverte personnalisé l'utilise pour remplir sa liste interne. Un utilisateur peut aussi ajouter d'autres métadonnées de points de terminaison.  
+3. **CustomDiscoveryExtension.cs**: La dernière étape pour implémenter le service de découverte consiste à connecter cette implémentation de la personnalisation détection du service de l’hôte de service. La classe d'assistance utilisée ici est la classe `CustomDiscoveryExtension`. Cette classe étend la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. L'utilisateur doit substituer la méthode <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. Dans ce cas, la méthode retourne une instance du service de découverte personnalisé créé auparavant. `PublishedEndpoints` est un <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> qui contient tous les points de terminaison d'application qui sont ajoutés à <xref:System.ServiceModel.ServiceHost>. Le service de découverte personnalisé l'utilise pour remplir sa liste interne. Un utilisateur peut aussi ajouter d'autres métadonnées de points de terminaison.  
   
  Enfin, ouvrez Program.cs. Notez que <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> et `CustomDiscoveryExtension` sont tous deux ajoutés à l'hôte. Lorsque cette opération a été effectuée et que l'hôte dispose d'un point de terminaison sur lequel recevoir des messages de découverte, l'application peut utiliser le service de découverte personnalisé.  
   

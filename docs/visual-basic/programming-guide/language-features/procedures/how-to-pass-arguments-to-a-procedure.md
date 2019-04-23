@@ -12,10 +12,10 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333905"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procédure : Passer des Arguments à une procédure (Visual Basic)
@@ -49,10 +49,10 @@ Lorsque vous appelez une procédure, vous suivez le nom de la procédure avec un
 
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures Function](./function-procedures.md)
-- [Procédures Property](./property-procedures.md)
-- [Procédures d'opérateur](./operator-procedures.md)
-- [Procédure : définir un paramètre pour une procédure](./how-to-define-a-parameter-for-a-procedure.md)
-- [Passage des arguments par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Procédures de propriété](./property-procedures.md)
+- [Procédures d’opérateur](./operator-procedures.md)
+- [Guide pratique pour Définir un paramètre pour une procédure](./how-to-define-a-parameter-for-a-procedure.md)
+- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
 - [Procédures récursives](./recursive-procedures.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333832"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procédure : Définir un paramètre pour une procédure (Visual Basic)
@@ -57,8 +57,8 @@ Un *paramètre* permet au code appelant de passer une valeur à la procédure lo
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures Function](./function-procedures.md)
-- [Procédure : passer des arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
-- [Passage des arguments par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
+- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
 - [Procédures récursives](./recursive-procedures.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

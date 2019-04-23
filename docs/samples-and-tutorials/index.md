@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330816"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemples et tutoriels .NET
@@ -19,7 +19,7 @@ La documentation .NET contient un ensemble d’exemples et de didacticiels qui v
 
 ### <a name="samples"></a>Exemples
 
-**[Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test](../core/testing/unit-testing-with-dotnet-test.md)**
+**[Tests unitaires dans .NET Core à l’aide de dotnet test](../core/testing/unit-testing-with-dotnet-test.md)**
 
 Ce guide montre comment créer une application web ASP.NET Core et les tests unitaires associés. Il commence par créer une application de service web simple, puis il ajoute des tests. Ensuite, il crée d’autres tests pour guider l’implémentation de nouvelles fonctionnalités. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) est disponible dans le référentiel dotnet/samples sur GitHub.
 
@@ -41,7 +41,7 @@ Consultez les [didacticiels ASP.NET Core](/aspnet/core/tutorials/). De nombreux 
 
 ### <a name="samples"></a>Exemples
 
-**[Iterators](../csharp/iterators.md)**
+**[Itérateurs](../csharp/iterators.md)**
 
 Cet exemple illustre la syntaxe et les fonctionnalités permettant de créer et d’utiliser des itérateurs C#. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/iterators) est disponible dans le référentiel dotnet/samples sur GitHub.
 
@@ -53,7 +53,7 @@ Cet exemple illustre la syntaxe et les fonctionnalités liées aux indexeurs C#.
 
 Cet exemple illustre la syntaxe et les fonctionnalités liées aux délégués et événements C#. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) est disponible dans le référentiel dotnet/samples sur GitHub. Un [deuxième exemple](https://github.com/dotnet/samples/tree/master/csharp/events), axé sur les événements, est également disponible dans le même dépôt.
 
-**[Arborescences de l’expression](../csharp/expression-trees.md)**
+**[Arborescences d’expression](../csharp/expression-trees.md)**
 
 Cet exemple illustre de nombreux problèmes pouvant être résolus à l’aide des arborescences d’expression. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) est disponible dans le référentiel dotnet/samples sur GitHub.
 

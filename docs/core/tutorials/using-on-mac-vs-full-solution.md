@@ -5,10 +5,10 @@ author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
 ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327748"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac
@@ -164,7 +164,7 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Pour exécuter l’application dans une fenêtre de console au lieu de l’IDE, cliquez avec le bouton droit sur le projet `WordCounterApp`, sélectionnez **Options**, puis ouvrez le nœud **Par défaut** sous **Configurations**. Cochez la case **Exécuter dans une console externe**. Laissez la case **Suspendre la sortie de la console** cochée. Avec ce paramètre, l’application est générée dynamiquement dans une fenêtre de console, ce qui vous permet de saisir des informations pour les instructions `Console.ReadLine`. Si vous laissez l’application s’exécuter dans l’IDE, vous ne verrez que le résultat des instructions `Console.WriteLine`. `Console.ReadLine` Les instructions ne fonctionnent pas dans le panneau **Sortie de l’application** de l’IDE.
+1. Pour exécuter l’application dans une fenêtre de console au lieu de l’IDE, cliquez avec le bouton droit sur le projet `WordCounterApp`, sélectionnez **Options**, puis ouvrez le nœud **Par défaut** sous **Configurations**. Cochez la case **Exécuter dans une console externe**. Laissez la case **Suspendre la sortie de la console** cochée. Avec ce paramètre, l’application est générée dynamiquement dans une fenêtre de console, ce qui vous permet de saisir des informations pour les instructions `Console.ReadLine`. Si vous laissez l’application s’exécuter dans l’IDE, vous ne verrez que le résultat des instructions `Console.WriteLine`. Les instructions `Console.ReadLine` ne fonctionnent pas dans le panneau **Sortie de l’application** de l’IDE.
 
    ![Fenêtre des options du projet dans Visual Studio pour Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 

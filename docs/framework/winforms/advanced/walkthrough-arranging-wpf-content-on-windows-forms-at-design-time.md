@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327306"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : organiser le contenu WPF dans Windows Forms au moment du design
@@ -151,9 +151,9 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Procédure : aligner un contrôle sur les bords des formulaires au moment du design](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide de lignes d’alignement](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Guide pratique pour Aligner un contrôle sur les bords des formulaires au moment du Design](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migration et interopérabilité](../../wpf/advanced/migration-and-interoperability.md)
 - [Utilisation de contrôles WPF](using-wpf-controls.md)
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

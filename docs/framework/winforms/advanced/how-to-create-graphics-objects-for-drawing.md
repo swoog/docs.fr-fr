@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324199"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procédure : créer des objets de graphismes pour le dessin
@@ -165,14 +165,14 @@ Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher 
   
     |Pour effectuer le rendu|Voir|  
     |---------------|---------|  
-    |Lignes|[Procédure : dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formes|[Procédure : dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)|  
-    |Texte|[Procédure : dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Images|[Procédure : afficher des images avec GDI+](how-to-render-images-with-gdi.md)|  
+    |Lignes|[Guide pratique pour Dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formes|[Guide pratique pour Dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)|  
+    |Texte|[Guide pratique pour Dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Images|[Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Procédure : afficher des images avec GDI+](how-to-render-images-with-gdi.md)
+- [Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)

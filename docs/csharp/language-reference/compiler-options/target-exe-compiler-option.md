@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331310"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (Options du compilateur C#)
@@ -55,5 +55,5 @@ csc in.cs
   
 ## <a name="see-also"></a>Voir aussi
 
-- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

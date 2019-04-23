@@ -5,10 +5,10 @@ helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
 ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332480"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Procédure : Obtenir un certificat (WCF)
@@ -20,7 +20,7 @@ Pour utiliser une de Windows Communication Foundation (WCF) fonctionnalités de 
   
     -   Achetez un certificat auprès d'une autorité de certification, telle que VeriSign, Inc.  
   
-    -   Installez votre propre service de certificats et faites en sorte qu'une autorité de certification signe les certificats. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter et Windows 2000 Datacenter Server incluent les services de certificats qui prennent en charge d’infrastructure à clé publique (PKI). Dans Windows Server 2008, utilisez le [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483) rôle pour gérer une autorité de certification.  
+    -   Installez votre propre service de certificats et faites en sorte qu'une autorité de certification signe les certificats. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter et Windows 2000 Datacenter Server incluent tous des services de certificat qui prennent en charge l'infrastructure à clé publique. Dans Windows Server 2008, utilisez le [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483) rôle pour gérer une autorité de certification.  
   
     -   Installez votre propre service de certificats et ne faites pas signer les certificats.  
   
@@ -30,4 +30,4 @@ Pour utiliser une de Windows Communication Foundation (WCF) fonctionnalités de 
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Procédure : créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

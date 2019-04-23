@@ -3,10 +3,10 @@ title: Exemple Discovery with Scopes
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328086"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemple Discovery with Scopes
@@ -20,7 +20,7 @@ Cet exemple montre comment utiliser des portées pour catégoriser des points de
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1. Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Consultez [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Voulez-vous remplacer votre domaine et le nom d’utilisateur pour les arguments suivants si la commande ne fonctionne pas telle quelle : `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Consultez [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d'utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle : `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Générez la solution.  
   

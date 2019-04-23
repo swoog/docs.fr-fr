@@ -18,10 +18,10 @@ ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326188"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procédure : stocker des clés asymétriques dans un conteneur de clé
@@ -228,4 +228,4 @@ Key deleted.
 - [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)
 - [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)
-- [services de chiffrement](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

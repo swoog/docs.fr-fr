@@ -10,10 +10,10 @@ helpviewer_keywords:
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
 ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334521"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Procédure : sérialiser un objet en tant que flux XML encodé selon le protocole SOAP
@@ -74,7 +74,7 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
 
 - [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Sérialisation XML avec les services Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [Procédure : sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procédure : désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Procédure : substituer la sérialisation XML encodée selon le protocole SOAP](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [Sérialisation XML avec les services web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Guide pratique pour Substituer la sérialisation du XML SOAP encodé](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

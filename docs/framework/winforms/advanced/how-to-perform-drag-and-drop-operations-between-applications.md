@@ -5,10 +5,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327527"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procédure : exécuter des opérations glisser-déplacer entre des applications
@@ -40,6 +40,6 @@ L’exécution d’opérations de glisser-déposer entre applications revient à
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : ajouter des données au Presse-papiers](how-to-add-data-to-the-clipboard.md)
-- [Procédure : récupérer des données dans le Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)
+- [Guide pratique pour Ajouter des données dans le Presse-papiers](how-to-add-data-to-the-clipboard.md)
+- [Guide pratique pour Récupérer des données à partir du Presse-papiers](how-to-retrieve-data-from-the-clipboard.md)
 - [Opérations glisser-déposer et prise en charge du Presse-papiers](drag-and-drop-operations-and-clipboard-support.md)

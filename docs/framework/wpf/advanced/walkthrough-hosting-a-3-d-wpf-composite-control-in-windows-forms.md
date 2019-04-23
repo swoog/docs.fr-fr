@@ -9,10 +9,10 @@ helpviewer_keywords:
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
 ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330166"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Procédure pas à pas : hébergement d’un contrôle composite WPF 3D dans Windows Forms
@@ -90,6 +90,6 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Procédure pas à pas : hébergement d’un contrôle composite Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Hébergement d’un contrôle Composite WPF dans Windows Forms, exemple](https://go.microsoft.com/fwlink/?LinkID=160001)

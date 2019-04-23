@@ -3,10 +3,10 @@ title: AJAX Service Without Configuration
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331609"
 ---
 # <a name="ajax-service-without-configuration"></a>AJAX Service Without Configuration
@@ -52,4 +52,4 @@ Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Basic AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+- [Service AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

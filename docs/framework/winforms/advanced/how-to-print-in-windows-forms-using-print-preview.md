@@ -10,10 +10,10 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: db9269978f3a77920778ab120a6ace11d6dd111c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325759"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procédure : imprimer dans Windows Forms à l’aide de l’aperçu avant impression
@@ -66,6 +66,6 @@ Il est très courant, dans la programmation Windows Forms, d'offrir un aperçu a
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : imprimer un fichier texte de plusieurs pages dans Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Prise en charge de l'impression dans les Windows Forms](windows-forms-print-support.md)
+- [Guide pratique pour Imprimer un fichier texte de plusieurs pages dans les Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)
 - [Impression plus sécurisée dans les Windows Forms](../more-secure-printing-in-windows-forms.md)

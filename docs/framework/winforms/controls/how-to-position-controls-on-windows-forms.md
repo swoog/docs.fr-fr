@@ -16,10 +16,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334001"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Procédure : positionner des contrôles dans des Windows Forms
@@ -97,12 +97,12 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
   
 ## <a name="see-also"></a>Voir aussi
 
-- [contrôles Windows Forms](index.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide de lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Contrôles Windows Forms](index.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
 - [Création d'étiquettes et de raccourcis pour les contrôles Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)
 - [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md)
-- [Procédure : Définir l’emplacement de l’écran des Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))
+- [Guide pratique pour Définir l’emplacement de l’écran des Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

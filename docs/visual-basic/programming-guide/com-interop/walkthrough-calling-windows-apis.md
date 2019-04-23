@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
 ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332324"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procédure pas à pas : Appel d’API Windows (Visual Basic)
@@ -151,9 +151,9 @@ Les API Windows sont des bibliothèques de liens dynamiques (DLL) qui font parti
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Création de prototypes dans du code managé](../../../framework/interop/creating-prototypes-in-managed-code.md)
-- [Marshaling d'un délégué comme méthode de rappel](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+- [Marshaling d’un délégué comme méthode de rappel](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

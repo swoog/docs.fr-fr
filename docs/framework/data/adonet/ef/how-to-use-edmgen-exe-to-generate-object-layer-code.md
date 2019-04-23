@@ -3,10 +3,10 @@ title: 'Procédure : Utiliser EdmGen.exe pour générer le code de couche objet
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
 ms.openlocfilehash: 8a39027ee6a5647bbd645f5a38e35d61f7ebbd8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333403"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Procédure : Utiliser EdmGen.exe pour générer le code de couche objet
@@ -41,7 +41,7 @@ Cette rubrique montre comment utiliser le [EDM Generator (EdmGen.exe)](../../../
 ## <a name="see-also"></a>Voir aussi
 
 - [Modélisation et mappage](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Procédure : Configurer manuellement un projet Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Procédure : Prégénérer des vues pour améliorer les performances de requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Procédure : Utiliser EdmGen.exe pour générer des fichiers de modèle et des fichiers de mappage](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [Guide pratique pour Configurer manuellement un projet Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [Outils ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Guide pratique pour Prégénérer des vues pour améliorer les performances de requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Guide pratique pour Utiliser EdmGen.exe pour générer des fichiers de modèle et mappage](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
 ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329971"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Procédure : aligner un contrôle sur les bords des formulaires
@@ -54,6 +54,6 @@ Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant 
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
-- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Vue d'ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)

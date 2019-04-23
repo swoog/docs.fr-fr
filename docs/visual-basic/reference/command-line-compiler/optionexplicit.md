@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332389"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
@@ -27,7 +27,7 @@ Indique au compilateur de signaler des erreurs si les variables ne sont pas déc
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Facultatif. Spécifiez `-optionexplicit+` pour exiger la déclaration explicite des variables. Le `-optionexplicit+` option est la valeur par défaut et est identique à `-optionexplicit`. Le `-optionexplicit-` option permet la déclaration implicite de variables.  
+ Optionnel. Spécifiez `-optionexplicit+` pour exiger la déclaration explicite des variables. Le `-optionexplicit+` option est la valeur par défaut et est identique à `-optionexplicit`. Le `-optionexplicit-` option permet la déclaration implicite de variables.  
   
 ## <a name="remarks"></a>Notes  
  Si le fichier de code source contient un [instruction Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), l’instruction remplace le `-optionexplicit` paramètre du compilateur de ligne de commande.  
@@ -52,5 +52,5 @@ Indique au compilateur de signaler des erreurs si les variables ne sont pas déc
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Explicit, instruction](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Valeurs par défaut VB, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Option Explicit (instruction)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Valeurs par défaut Visual Basic, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

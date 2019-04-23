@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323848"
 ---
 # <a name="creating-an-ink-input-control"></a>Création d'un contrôle d'entrée d'encre
@@ -26,9 +26,9 @@ Vous pouvez créer un contrôle personnalisé qui dynamiquement et restitue l’
   
  Cette rubrique contient les sous-sections suivantes :  
   
--   [Procédure : Collecter des données de Point de stylet et créer des traits d’encre](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Guide pratique pour Collecter des données de Point de stylet et créer des traits d’encre](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Procédure : Activer votre contrôle d’accepter l’entrée à partir de la souris](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Guide pratique pour Activer votre contrôle d’accepter l’entrée à partir de la souris](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Assemblage](#PuttingItTogether)  
   
@@ -100,5 +100,5 @@ Vous pouvez créer un contrôle personnalisé qui dynamiquement et restitue l’
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Gestion avancée de l'encre](advanced-ink-handling.md)
+- [Gestion avancée de l’encre](advanced-ink-handling.md)
 - [Accéder et manipuler l’entrée du stylet](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

@@ -3,10 +3,10 @@ title: Gérer la réentrance dans Async Apps (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324784"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gérer la réentrance dans Async Apps (Visual Basic)
@@ -20,14 +20,14 @@ Quand vous incluez du code asynchrone dans votre application, vous devez prendre
   
     -   [Désactiver le bouton Démarrer](#BKMK_DisableTheStartButton)  
   
-    -   [Annuler et redémarrer l'opération](#BKMK_CancelAndRestart)  
+    -   [Annuler et redémarrer l’opération](#BKMK_CancelAndRestart)  
   
-    -   [Exécuter plusieurs opérations et mettre la sortie en file d'attente](#BKMK_RunMultipleOperations)  
+    -   [Exécuter plusieurs opérations et mettre la sortie en file d’attente](#BKMK_RunMultipleOperations)  
   
--   [Revue et exécution de l’exemple d’application](#BKMD_SettingUpTheExample)  
+-   [Examen et exécution de l’exemple d’application](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
->  Pour exécuter l’exemple, Visual Studio version 2012 ou ultérieure et .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.  
+>  Pour exécuter l’exemple, Visual Studio version 2012, ou une version ultérieure, et .NET Framework version 4.5, ou une version ultérieure, doivent être installés sur votre ordinateur.  
   
 ## <a name="BKMK_RecognizingReentrancy"></a> Identification de la réentrance  
  Dans l’exemple de cette rubrique, les utilisateurs choisissent un bouton **Démarrer** pour lancer une application asynchrone qui télécharge une série de sites web et calcule le nombre total d’octets téléchargés. Une version synchrone de l’exemple répondrait de la même façon quel que soit le nombre de fois où un utilisateur clique sur le bouton car, après la première fois, le thread d’interface utilisateur ignore ces événements jusqu’à ce que l’application arrête de s’exécuter. Dans une application asynchrone, en revanche, le thread d'interface utilisateur continue de répondre et vous pouvez entrer à nouveau l'opération asynchrone avant qu'elle soit terminée.  
@@ -93,11 +93,11 @@ TOTAL bytes returned:  890591
   
      Désactivez le bouton **Démarrer** pendant que l’opération est en cours d’exécution afin que l’utilisateur ne puisse pas l’interrompre.  
   
--   [Annuler et redémarrer l'opération](#BKMK_CancelAndRestart)  
+-   [Annuler et redémarrer l’opération](#BKMK_CancelAndRestart)  
   
      Annulez toute opération encore en cours d’exécution quand l’utilisateur choisit le bouton **Démarrer** à nouveau, puis laissez l’opération demandée le plus récemment continuer.  
   
--   [Exécuter plusieurs opérations et mettre la sortie en file d'attente](#BKMK_RunMultipleOperations)  
+-   [Exécuter plusieurs opérations et mettre la sortie en file d’attente](#BKMK_RunMultipleOperations)  
   
      Autorisez toutes les opérations demandées à s'exécuter de façon asynchrone, mais coordonnez l'affichage de la sortie de sorte que les résultats de chaque opération apparaissent ensemble et dans l'ordre.  
   
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Méthode AccessTheWebAsync  
  Cet exemple fractionne `AccessTheWebAsync` en deux méthodes. La première méthode, `AccessTheWebAsync`, démarre toutes les tâches de téléchargement d'un groupe et configure `pendingWork` pour contrôler le processus d'affichage. La méthode utilise une requête LINQ (Language Integrated Query) et <xref:System.Linq.Enumerable.ToArray%2A> pour démarrer toutes les tâches de téléchargement en même temps.  
   
- `AccessTheWebAsync` appelle ensuite `FinishOneGroupAsync` pour attendre la fin de chaque téléchargement et afficher sa longueur.  
+ `AccessTheWebAsync` appelle ensuite `FinishOneGroupAsync` pour attendre la fin de chaque téléchargement et en afficher la longueur.  
   
- `FinishOneGroupAsync` Retourne une tâche qui est affectée à `pendingWork` dans `AccessTheWebAsync`. Cette valeur empêche toute interruption par une autre opération avant que la tâche ne soit terminée.  
+ `FinishOneGroupAsync` retourne une tâche assignée à `pendingWork` dans `AccessTheWebAsync`. Cette valeur empêche toute interruption par une autre opération avant que la tâche ne soit terminée.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332129"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Procédure : créer un contrat duplex
@@ -71,8 +71,8 @@ Cette rubrique décrit les étapes de base pour créer des méthodes qui utilise
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Procédure : accéder aux services avec un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Guide pratique pour Access Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
 - [Conception et implémentation de services](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Procédure : Définir un contrat de service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Guide pratique pour Définir un contrat de Service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Session](../../../../docs/framework/wcf/samples/session.md)

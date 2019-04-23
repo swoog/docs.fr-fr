@@ -12,10 +12,10 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324186"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procédure : voir plusieurs lignes dans le contrôle TextBox Windows Forms
@@ -50,9 +50,9 @@ Par défaut, les formulaires Windows <xref:System.Windows.Forms.TextBox> contrô
 
 - <xref:System.Windows.Forms.TextBox>
 - [Vue d’ensemble du contrôle TextBox](textbox-control-overview-windows-forms.md)
-- [Procédure : contrôler le point d’insertion dans un contrôle TextBox Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Procédure : créer une zone de texte pour un mot de passe avec le contrôle TextBox Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Procédure : créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Procédure : mettre des guillemets dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procédure : sélectionner du texte dans le contrôle TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Guide pratique pour Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Guide pratique pour Créer une zone de texte en lecture seule](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Guide pratique pour Placez des guillemets doubles dans une chaîne](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Guide pratique pour Sélectionner du texte dans le contrôle de zone de texte Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox, contrôle](textbox-control-windows-forms.md)

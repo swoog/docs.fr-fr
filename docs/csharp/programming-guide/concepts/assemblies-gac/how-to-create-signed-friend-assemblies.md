@@ -3,10 +3,10 @@ title: 'Procédure : Créer des assemblys friend signés (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325200"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procédure : Créer des assemblys friend signés (C#)
@@ -93,8 +93,8 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblys dans .NET](../../../../standard/assembly/index.md)
 - [Assemblys friend](../../../../standard/assembly/friend-assemblies.md)
-- [Procédure : Créer des assemblys friend non signés (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Guide pratique pour créer des assemblys friend non signés (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [Sn.exe (outil Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Création et utilisation d'assemblys avec nom fort](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Sn.exe (outil Strong Name)](../../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Création et utilisation d’assemblys avec nom fort](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Guide de programmation C#](../../../../csharp/programming-guide/index.md)

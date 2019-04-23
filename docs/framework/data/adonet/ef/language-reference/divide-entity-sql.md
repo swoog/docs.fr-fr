@@ -3,10 +3,10 @@ title: '- (Diviser) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330855"
 ---
 # <a name="-divide-entity-sql"></a>/ (Divide) (Entity SQL)
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>Arguments  
  `dividend`  
- Expression numérique à diviser. `dividend` est toute expression valide de l’un des types de données numériques.  
+ Expression numérique à diviser. `dividend` correspond à toute expression valide de l'un des types de données numériques.  
   
  `divisor`  
- Expression numérique par laquelle diviser le dividende. `divisor` est toute expression valide de l’un des types de données numériques.  
+ Expression numérique par laquelle diviser le dividende. `divisor` correspond à toute expression valide de l'un des types de données numériques.  
   
 ## <a name="result-types"></a>Types de résultats  
  Type de données qui résulte de la promotion de type implicite de deux arguments. Pour plus d’informations sur la promotion de type implicite, consultez [système de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  

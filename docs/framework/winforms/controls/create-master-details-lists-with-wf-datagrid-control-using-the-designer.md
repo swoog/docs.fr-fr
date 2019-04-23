@@ -7,10 +7,10 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332077"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l’aide du concepteur
@@ -56,5 +56,5 @@ ms.locfileid: "59332077"
 
 - [DataGrid, contrôle](datagrid-control-windows-forms.md)
 - [Vue d’ensemble du contrôle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procédure : lier le contrôle DataGrid Windows Forms à une source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Guide pratique pour Lier le contrôle DataGrid Windows Forms à une Source de données](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

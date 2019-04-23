@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330491"
 ---
 # <a name="layout"></a>Mise en page
@@ -152,6 +152,6 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
 
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Vue d'ensemble de Panel](../controls/panels-overview.md)
+- [Vue d’ensemble de Panel](../controls/panels-overview.md)
 - [Vue d'ensemble de l'alignement, des marges et du remplissage](alignment-margins-and-padding-overview.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)

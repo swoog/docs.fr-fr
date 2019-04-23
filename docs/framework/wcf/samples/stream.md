@@ -3,10 +3,10 @@ title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330218"
 ---
 # <a name="stream"></a>Stream
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- L'opération `GetStream` reçoit des données d'entrée sous forme d'une chaîne, qui est mise en mémoire tampon, et retourne `Stream` qui est diffusé en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` accepte et retourne `Stream` et est un exemple d’une opération dont l’entrée et les messages de sortie sont transmis en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
+ L'opération `GetStream` reçoit des données d'entrée sous forme d'une chaîne, qui est mise en mémoire tampon, et retourne `Stream` qui est diffusé en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` prend et retourne `Stream` et constitue un exemple d'opération dont les messages d'entrée et de sortie sont tous deux diffusés en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
   
 ## <a name="enabling-streamed-transfers"></a>Activation des transferts avec diffusion en continu  
  La définition de contrats d'opération telle qu'elle est décrite précédemment fournit la diffusion en continu au niveau du modèle de programmation. Si vous vous arrêtez là, le transport met toujours en mémoire tampon l'ensemble du contenu du message. Pour activer la diffusion en continu du transport, sélectionnez un mode de transfert sur l'élément de liaison du transport. La propriété `TransferMode` de l'élément de liaison peut avoir la valeur `Buffered`, `Streamed`, `StreamedRequest` ou `StreamedResponse`. L'affectation de `Streamed` au mode de transfert permet d'assurer la communication en mode de diffusion en continu dans les deux sens. Si vous affectez `StreamedRequest` ou `StreamedResponse` au mode de transfert, la communication en mode de diffusion en continu s'active uniquement dans la demande ou la réponse, respectivement.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Traitement des données lorsqu'elles sont diffusées en continu  
  Les opérations `GetStream`, `UploadStream` et `EchoStream` concernent toutes l'envoi de données directement à partir d'un fichier ou l'enregistrement des données reçues directement dans un fichier. Dans certains cas cependant, il peut s'avérer nécessaire d'envoyer ou de recevoir de grandes quantités de données et d'effectuer des traitements sur des segments de celles-ci lors de leur envoi ou de leur réception. L'une des méthodes utilisées résoudre les scénarios de ce type consiste à écrire un flux personnalisé (une classe dérivant de <xref:System.IO.Stream>) qui traite les données lors de leur lecture ou de leur écriture. L'opération `GetReversedStream` et la classe `ReverseStream` en sont un exemple.  
   
- `GetReversedStream` Crée et retourne une nouvelle instance de `ReverseStream`. Le traitement se produit lorsque le système lit l'objet `ReverseStream`. L'implémentation `ReverseStream.Read` lit un segment d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette opération n'inverse pas l'ensemble du contenu du fichier, mais uniquement un segment d'octets à la fois. Cet exemple vous montre comment procéder au traitement du flux lors sa lecture ou de son écriture.  
+ `GetReversedStream` crée et retourne une nouvelle instance de `ReverseStream`. Le traitement se produit lorsque le système lit l'objet `ReverseStream`. L'implémentation `ReverseStream.Read` lit un segment d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette opération n'inverse pas l'ensemble du contenu du fichier, mais uniquement un segment d'octets à la fois. Cet exemple vous montre comment procéder au traitement du flux lors sa lecture ou de son écriture.  
   
 ```csharp
 class ReverseStream : Stream  

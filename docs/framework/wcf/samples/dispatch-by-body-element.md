@@ -3,10 +3,10 @@ title: Dispatch by Body Element
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330193"
 ---
 # <a name="dispatch-by-body-element"></a>Dispatch by Body Element
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> les implémentations sont très simples à générer puisqu’il n'est qu’une seule méthode sur l’interface : <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Le rôle de cette méthode consiste à inspecter un message entrant et à retourner une chaîne égale au nom d'une méthode sur le contrat de service pour le point de terminaison actuel.  
+ Les implémentations d'<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> sont très simples à générer puisqu'une seule méthode est présente sur l'interface : <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Le rôle de cette méthode consiste à inspecter un message entrant et à retourner une chaîne égale au nom d'une méthode sur le contrat de service pour le point de terminaison actuel.  
   
  Dans cet exemple, le sélecteur d'opération acquiert une classe <xref:System.Xml.XmlDictionaryReader> pour le corps du message entrant à l'aide de <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Cette méthode positionne déjà le lecteur sur le premier enfant du corps du message afin que ce soit suffisant pour obtenir le nom de l'élément actuel et l'URI d'espace de noms, et les mixer dans un `XmlQualifiedName` utilisé ensuite pour voir l'opération correspondante du dictionnaire tenu par le sélecteur d'opération.  
   

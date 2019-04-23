@@ -15,10 +15,10 @@ ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330114"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procédure : gérer plusieurs événements à l’aide de propriétés d’événements
@@ -55,4 +55,4 @@ Pour utiliser des propriétés d'événements, définissez les propriétés d'é
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Événements](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A>
-- [Procédure : déclarer des événements personnalisés pour économiser la mémoire](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Guide pratique pour déclarer des événements personnalisés pour économiser la mémoire](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

@@ -3,10 +3,10 @@ title: 'Procédure : Utiliser EdmGen.exe pour valider les fichiers de modèle e
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
 ms.openlocfilehash: ac278123e9b0927ba6b2ce07059561e7fbb3a898
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329269"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Procédure : Utiliser EdmGen.exe pour valider les fichiers de modèle et les fichiers de mappage
@@ -26,7 +26,7 @@ Cette rubrique montre comment utiliser le [EDM Generator (EdmGen.exe)](../../../
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Configurer manuellement un projet Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [Outils ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Procédure : Prégénérer des vues pour améliorer les performances de requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Procédure : Utiliser EdmGen.exe pour générer le code de couche objet](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+- [Guide pratique pour Configurer manuellement un projet Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Guide pratique pour Prégénérer des vues pour améliorer les performances de requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Guide pratique pour Utiliser EdmGen.exe pour générer le Code de couche objet](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)

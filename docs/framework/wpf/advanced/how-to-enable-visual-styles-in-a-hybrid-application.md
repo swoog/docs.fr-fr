@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
 ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323601"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Procédure : activer des styles visuels dans une application hybride
@@ -72,4 +72,4 @@ Cette rubrique montre comment activer [!INCLUDE[TLA#tla_winxp](../../../../inclu
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Rendu des contrôles avec les styles visuels](../../winforms/controls/rendering-controls-with-visual-styles.md)
-- [Procédure pas à pas : hébergement d’un contrôle Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Procédure pas à pas : Hébergement d’un contrôle de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

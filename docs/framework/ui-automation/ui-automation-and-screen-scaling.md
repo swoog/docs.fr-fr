@@ -11,17 +11,17 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332681"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Mise à l'échelle de l'écran et UI Automation
 > [!NOTE]
 >  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permet aux utilisateurs de modifier le [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] définition afin que la plupart des [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] éléments à l’écran apparaissent plus grands. Cette fonctionnalité est disponible depuis longtemps dans [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], mais la mise à l’échelle devait être implémentée par les applications dans les versions précédentes. Dans [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], le Gestionnaire de fenêtrage effectue une mise à l’échelle par défaut pour toutes les applications qui ne gèrent pas leur propre mise à l’échelle. Les applications clientes UI Automation doivent prendre en compte cette fonctionnalité.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permet aux utilisateurs de modifier le paramètre [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] afin que la plupart des éléments [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] apparaissent plus grands à l’écran. Cette fonctionnalité est disponible depuis longtemps dans [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], mais la mise à l’échelle devait être implémentée par les applications dans les versions précédentes. Dans [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], le Gestionnaire de fenêtrage effectue une mise à l’échelle par défaut pour toutes les applications qui ne gèrent pas leur propre mise à l’échelle. Les applications clientes UI Automation doivent prendre en compte cette fonctionnalité.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Mise à l’échelle dans Windows Vista  

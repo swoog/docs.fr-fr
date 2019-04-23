@@ -3,10 +3,10 @@ title: Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 da
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324160"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
@@ -130,7 +130,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
 3. Prise en charge du concepteur pour la création de transition de déclencheur partagée  
   
-4. Activités utilisées pour créer des workflows Machine à états, y compris : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, et <xref:System.Activities.Statements.Transition>  
+4. Les activités utilisées pour créer des workflows Machine à états, notamment : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> et <xref:System.Activities.Statements.Transition>  
   
  La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md).  
   

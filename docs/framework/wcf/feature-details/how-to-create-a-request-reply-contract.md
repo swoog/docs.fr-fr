@@ -3,10 +3,10 @@ title: 'Procédure : créer un contrat de demande-réponse'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327475"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procédure : créer un contrat de demande-réponse
@@ -20,7 +20,7 @@ Un contrat demande-réponse spécifie une méthode qui retourne une réponse. La
   
 3. Appliquez l'attribut <xref:System.ServiceModel.OperationContractAttribute> à chaque méthode que les clients peuvent appeler.  
   
-4. Facultatif. Affectez à la propriété <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> la valeur `true` pour empêcher l'envoi d'un message de réponse vide. Par défaut, toutes les opérations sont des contrats demande-réponse.  
+4. Optionnel. Affectez à la propriété <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> la valeur `true` pour empêcher l'envoi d'un message de réponse vide. Par défaut, toutes les opérations sont des contrats demande-réponse.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant définit un contrat pour un service de calculatrice qui fournit des méthodes `Add` et `Subtract`. La méthode `Multiply` ne fait pas partie du contrat car elle n'est pas marquée par la classe <xref:System.ServiceModel.OperationContractAttribute> et n'est pas, par conséquent, accessible aux clients.  
@@ -45,10 +45,10 @@ public interface ICalculator
   
 -   Pour plus d’informations sur la façon de spécifier des contrats d’opération, consultez le <xref:System.ServiceModel.OperationContractAttribute> classe et le <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriété.  
   
--   Appliquer les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> entraîne la génération automatique de définitions de contrat de service dans un document WSDL (Web Services Description Language) une fois le service déployé. Le document est téléchargé en ajoutant `?wsdl` à l'adresse de base HTTP du service. Par exemple : `http://microsoft/CalculatorService?wsdl`  
+-   Appliquer les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> entraîne la génération automatique de définitions de contrat de service dans un document WSDL (Web Services Description Language) une fois le service déployé. Le document est téléchargé en ajoutant `?wsdl` à l'adresse de base HTTP du service. Par exemple, `http://microsoft/CalculatorService?wsdl`.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Conception de contrats de service](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Procédure : créer un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

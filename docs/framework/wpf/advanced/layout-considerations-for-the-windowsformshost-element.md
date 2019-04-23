@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327852"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considérations sur la disposition de l'élément WindowsFormsHost
@@ -40,7 +40,7 @@ Cette rubrique décrit comment la <xref:System.Windows.Forms.Integration.Windows
   
 -   Dans certains cas, les contrôles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ne peuvent pas être redimensionnés, ou peuvent l’être uniquement à des dimensions particulières. Par exemple, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> contrôle prend en charge la seule hauteur définie par la taille de police du contrôle. Dans un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] disposition dynamique où éléments peuvent être étirés verticalement, hébergé <xref:System.Windows.Forms.ComboBox> contrôle s’étirera pas comme prévu.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles ne peut pas faire pivoter ou décalées. Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> l’élément qui déclenche le <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> événement si vous appliquez une transformation d’inclinaison ou une rotation. Si vous ne gérez pas la <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> événement, un <xref:System.InvalidOperationException> est déclenché.  
+-   Les contrôles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ne peuvent pas faire l’objet d’une rotation ou d’une inclinaison. Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> l’élément qui déclenche le <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> événement si vous appliquez une transformation d’inclinaison ou une rotation. Si vous ne gérez pas la <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> événement, un <xref:System.InvalidOperationException> est déclenché.  
   
 -   Dans la plupart des cas, les contrôles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ne prennent pas en charge la mise à l’échelle proportionnelle. Les dimensions globales du contrôle sont mises à l’échelle, mais les contrôles enfants et les composants du contrôle risquent de ne pas être redimensionnés comme prévu. Cette limitation dépend de la prise en charge de la mise à l’échelle de chaque contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. En outre, vous ne pouvez pas mettre à l’échelle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles à une taille de 0 pixels.  
   
@@ -102,7 +102,7 @@ Cette rubrique décrit comment la <xref:System.Windows.Forms.Integration.Windows
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Procédure pas à pas : organisation des contrôles Windows Forms dans WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Procédure pas à pas : Organisation des Windows Forms contrôles dans WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Organisation des Windows Forms contrôles dans WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Mappage de propriétés Windows Forms et WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migration et interopérabilité](migration-and-interoperability.md)

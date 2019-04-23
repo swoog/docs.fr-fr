@@ -4,10 +4,10 @@ description: Alimentez un modèle Machine Learning d’analyse des sentiments ML
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330634"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Guide pratique : Utiliser un modèle ML.NET dans Azure Functions
@@ -22,7 +22,7 @@ Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET versio
 ## <a name="prerequisites"></a>Prérequis
 
 - [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .NET Core » et « Développement Azure » ; 
-- [Azure Functions Tools](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- [Azure Functions Tools](/azure/azure-functions/functions-develop-vs#check-your-tools-version) ;
 - PowerShell ;
 - un modèle préentraîné : 
     - Suivez le [tutoriel Analyse des sentiments ML.NET](../tutorials/sentiment-analysis.md) pour créer votre propre modèle.

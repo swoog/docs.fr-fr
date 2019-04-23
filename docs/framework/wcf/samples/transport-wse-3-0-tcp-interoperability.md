@@ -3,10 +3,10 @@ title: 'Transport : Interopérabilité TCP WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324212"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport : Interopérabilité TCP WSE 3.0
@@ -23,7 +23,7 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
 5. Ajoutez un élément de liaison qui ajoute le transport personnalisé à une pile de canaux. Pour plus d’informations, consultez [Ajout d’un élément de liaison].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Création de IDuplexSessionChannel  
- La première étape de l'écriture du transport WSE 3.0 TCP Interoperability consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> sur <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Dérive de <xref:System.ServiceModel.Channels.ChannelBase>. La logique de l’envoi d’un message se compose de deux parties principales : (1) encodage du message en octets et (2) tramage ces octets et les envoyer sur le câble.  
+ La première étape de l'écriture du transport WSE 3.0 TCP Interoperability consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> sur <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` dérive de <xref:System.ServiceModel.Channels.ChannelBase>. La logique de l’envoi d’un message se compose de deux parties principales : (1) encodage du message en octets et (2) tramage ces octets et les envoyer sur le câble.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  En outre, un verrou est utilisé afin que les appels Send() conservent la garantie de l'ordre IDuplexSessionChannel et afin que les appels du socket sous-jacent soient correctement synchronisés.  
   
- `WseTcpDuplexSessionChannel` utilise un <xref:System.ServiceModel.Channels.MessageEncoder> pour traduire un <xref:System.ServiceModel.Channels.Message> vers et à partir de byte []. Dans la mesure où il s'agit d'un transport, `WseTcpDuplexSessionChannel` est également chargé d'appliquer l'adresse distante avec laquelle le canal a été configuré. `EncodeMessage` encapsule la logique pour cette conversion.  
+ `WseTcpDuplexSessionChannel` utilise <xref:System.ServiceModel.Channels.MessageEncoder> pour traduire <xref:System.ServiceModel.Channels.Message> vers et à partir de byte[]. Dans la mesure où il s'agit d'un transport, `WseTcpDuplexSessionChannel` est également chargé d'appliquer l'adresse distante avec laquelle le canal a été configuré. `EncodeMessage` encapsule la logique de cette conversion.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Une fois que <xref:System.ServiceModel.Channels.Message> est encodé en octets, il doit être transmis sur le câble. Pour cela, un système permettant de définir des limites de message est nécessaire. WSE 3.0 utilise une version de [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) comme protocole de tramage. `WriteData` encapsule la logique de tramage afin d’encapsuler byte [] dans un jeu d’enregistrements DIME.  
+ Une fois que <xref:System.ServiceModel.Channels.Message> est encodé en octets, il doit être transmis sur le câble. Pour cela, un système permettant de définir des limites de message est nécessaire. WSE 3.0 utilise une version de [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) comme protocole de tramage. `WriteData` encapsule la logique de tramage afin d'encapsuler byte[] dans un ensemble d'enregistrements DIME.  
   
  La logique de réception des messages est très similaire. La principale difficulté consiste à gérer le fait qu'une lecture de socket peut retourner un nombre d'octets inférieur à celui demandé. Pour recevoir un message, `WseTcpDuplexSessionChannel` lit des octets du câble, décode le tramage DIME, puis utilise <xref:System.ServiceModel.Channels.MessageEncoder> pour transformer byte[] en <xref:System.ServiceModel.Channels.Message>.  
   

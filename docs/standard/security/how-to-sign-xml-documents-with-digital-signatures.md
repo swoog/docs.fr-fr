@@ -17,10 +17,10 @@ ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 39e053ea9ca0b2fdc548a4b9447d34e852816a61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324498"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procédure : signer des documents XML avec des signatures numériques
@@ -121,4 +121,4 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Security.Cryptography.Xml>
-- [Procédure : vérifier les signatures numériques de documents XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Guide pratique pour Vérifier les Signatures numériques de Documents XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323718"
 ---
 # <a name="custom-rendering-ink"></a>Encre de rendu personnalisé
@@ -93,4 +93,4 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Gestion avancée de l'encre](advanced-ink-handling.md)
+- [Gestion avancée de l’encre](advanced-ink-handling.md)

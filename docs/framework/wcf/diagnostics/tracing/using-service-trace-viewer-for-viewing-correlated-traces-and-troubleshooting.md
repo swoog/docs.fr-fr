@@ -3,10 +3,10 @@ title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés e
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329048"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
@@ -207,5 +207,5 @@ Pour commencer le dépannage, vous pouvez également choisir une trace de messag
 ## <a name="see-also"></a>Voir aussi
 
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Traçage](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

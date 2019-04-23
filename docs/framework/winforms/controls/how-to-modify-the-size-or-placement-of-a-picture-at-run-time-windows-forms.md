@@ -12,10 +12,10 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328333"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procédure : Modifier la taille ou l’emplacement d’une image au moment de l’exécution (Windows Forms)
@@ -85,7 +85,7 @@ Si vous utilisez les formulaires Windows <xref:System.Windows.Forms.PictureBox> 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Procédure : charger une image à l’aide du concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Guide pratique pour Charger une image à l’aide du Concepteur](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Vue d’ensemble du contrôle PictureBox](picturebox-control-overview-windows-forms.md)
-- [Procédure : définir des images au moment de l’exécution](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Guide pratique pour Définir des images au moment de l’exécution](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox, contrôle](picturebox-control-windows-forms.md)

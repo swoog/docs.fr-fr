@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329776"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Procédure : ancrer des contrôles dans des Windows Forms
@@ -55,10 +55,10 @@ Si vous concevez un formulaire que l’utilisateur peut redimensionner en cours 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [contrôles Windows Forms](index.md)
+- [Contrôles Windows Forms](index.md)
 - [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
-- [Vue d'ensemble de la propriété AutoSize](autosize-property-overview.md)
-- [Procédure : arrimer des contrôles dans des Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : disposition des contrôles Windows Forms avec le remplissage, les marges et la propriété AutoSize](windows-forms-controls-padding-autosize.md)
+- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Guide pratique pour Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : Disposition des Windows Forms contrôles avec la propriété AutoSize, des marges et remplissage](windows-forms-controls-padding-autosize.md)

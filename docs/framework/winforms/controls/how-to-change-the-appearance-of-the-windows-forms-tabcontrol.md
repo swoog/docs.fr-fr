@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331336"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Procédure : modifier l’aspect du contrôle TabControl Windows Forms
@@ -69,6 +69,6 @@ Vous pouvez modifier l’apparence des onglets dans les Windows Forms à l’aid
 
 - [TabControl, contrôle](tabcontrol-control-windows-forms.md)
 - [Vue d’ensemble du contrôle TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procédure : ajouter un contrôle à un onglet](how-to-add-a-control-to-a-tab-page.md)
-- [Procédure : désactiver des onglets](how-to-disable-tab-pages.md)
-- [Procédure : ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Guide pratique pour Ajouter un contrôle à une Page d’onglets](how-to-add-a-control-to-a-tab-page.md)
+- [Guide pratique pour Désactiver les Pages d’onglets](how-to-disable-tab-pages.md)
+- [Guide pratique pour Ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

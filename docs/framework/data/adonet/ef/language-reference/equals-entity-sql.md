@@ -3,10 +3,10 @@ title: = (égal à) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333156"
 ---
 # <a name="-equals-entity-sql"></a>= (égal à) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  Toute expression valide. Les deux expressions doivent posséder des types de données implicitement convertibles.  
   
 ## <a name="result-types"></a>Types de résultats  
- `true` Si l’expression de gauche est égale à l’expression de droite ; Sinon, `false`.  
+ `true` si l'expression de gauche est égale à l'expression de droite ; sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  L'opérateur « = = » est équivalent à « = ».  

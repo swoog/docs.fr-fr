@@ -3,10 +3,10 @@ title: Instructions d'installation du répertoire virtuel
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325343"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instructions d'installation du répertoire virtuel
@@ -59,9 +59,9 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 7. Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **Lecture**  
+    -   **Read**  
   
-    -   **Exécuter les scripts (tels que ASP)**  
+    -   **Exécuter des scripts (tels que ASP)**  
   
 8. Cliquez sur **suivant**, puis cliquez sur **Terminer** pour terminer l’Assistant.  
   
@@ -84,7 +84,7 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 2. Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **Lecture**  
+    -   **Read**  
   
     -   **Accès au journal**  
   
@@ -192,4 +192,4 @@ Les exemples Windows Communication Foundation (WCF) sont destinées à partager 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions relatives à l'hébergement dans les Services Internet (IIS)](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

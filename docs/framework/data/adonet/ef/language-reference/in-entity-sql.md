@@ -3,10 +3,10 @@ title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331271"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  Toute expression valide qui retourne la collection dans laquelle rechercher une correspondance. Toutes les expressions doivent être du même type que le `value`ou d'un type de base commun ou dérivé de celui-ci.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si la valeur est trouvée dans la collection ; null si la valeur est null ou la collection est null. Sinon, `false`. L'utilisation de NOT IN inverse les résultats de IN.  
+ `true` si la valeur est trouvée dans la collection ; null si la valeur ou la collection est Null ; sinon, `false`. L'utilisation de NOT IN inverse les résultats de IN.  
   
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur IN pour déterminer si une valeur correspond à une valeur contenue dans une collection. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  

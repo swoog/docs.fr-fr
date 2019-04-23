@@ -3,10 +3,10 @@ title: InstallerF#
 description: Découvrez comment installer F# en fonction de votre environnement.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331973"
 ---
 # <a name="install-f"></a>Installer F\#
@@ -31,7 +31,7 @@ Une fois l’installation terminée, cliquez sur « Démarrer Visual Studio »
 
 Vous devez avoir [git installé](https://git-scm.com/download) et disponible sur votre chemin d’accès s’utiliser des modèles de projet. Vous pouvez vérifier qu’il est correctement installé en tapant `git --version` à l’invite de commandes et en appuyant sur **entrée**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) est utilisé pour [ F# Interactive](../tutorials/fsharp-interactive/index.md) prennent en charge. Le moyen le plus simple pour installer Mono sur macOS est via Homebrew. Tapez simplement la commande suivante dans votre terminal :
 
@@ -41,7 +41,7 @@ brew install mono
 
 Installez également le [du SDK .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) est utilisé pour [ F# Interactive](../tutorials/fsharp-interactive/index.md) prennent en charge. Si vous êtes sur Debian ou Ubuntu, vous pouvez utiliser les éléments suivants :
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Installez également le [du SDK .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Installer [Visual Studio avec F# prennent en charge](#install-f-with-visual-studio). Cette opération installe tous les composants nécessaires pour écrire, compiler et exécuter F# code.
 

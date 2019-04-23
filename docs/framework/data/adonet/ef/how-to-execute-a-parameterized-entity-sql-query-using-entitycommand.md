@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
 ms.openlocfilehash: 9f87ff28c4da864df8004f3baa1a8339503fb351
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324737"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Procédure : Exécuter une requête paramétrable Entity SQL avec EntityCommand
@@ -32,5 +32,5 @@ Cette rubrique montre comment exécuter un [!INCLUDE[esql](../../../../../includ
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Exécuter une requête paramétrable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
-- [Langage d'Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Guide pratique pour Exécuter une requête paramétrable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
+- [Langage Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
 ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332181"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procédure : ajouter et supprimer des éléments de menu avec le composant ContextMenu de Windows Forms
@@ -78,4 +78,4 @@ Explique comment ajouter et supprimer des éléments de menu contextuel dans les
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu, composant](contextmenu-component-windows-forms.md)
-- [Vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md)
+- [Vue d'ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md)

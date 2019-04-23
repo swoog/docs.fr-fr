@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 ms.openlocfilehash: fe248c6fcb9db80b0ab8f62cc78a480e70803633
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331492"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
@@ -237,4 +237,4 @@ Press <ENTER> to terminate client.
 -   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
   
 > [!NOTE]
->  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+>  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

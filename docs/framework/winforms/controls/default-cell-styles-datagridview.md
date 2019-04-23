@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333611"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : définir des styles de cellules par défaut et des formats de données pour le contrôle DataGridView Windows Forms à l’aide du concepteur
@@ -68,6 +68,6 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle vous permet de spécifier 
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Procédure : définir des styles de ligne alternée pour le contrôle DataGridView Windows Forms à l’aide du concepteur](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [Procédure : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procédure : ajouter des contrôles à des Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Guide pratique pour Définir les Styles de ligne en alternance pour le contrôle de DataGridView Windows Forms à l’aide du Concepteur](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Guide pratique pour Créer un projet Application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Guide pratique pour Ajouter des contrôles aux Windows Forms](how-to-add-controls-to-windows-forms.md)

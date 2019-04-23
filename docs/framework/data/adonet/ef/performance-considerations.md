@@ -3,10 +3,10 @@ title: Remarques sur les performances (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324043"
 ---
 # <a name="performance-considerations-entity-framework"></a>Remarques sur les performances (Entity Framework)
@@ -147,11 +147,11 @@ Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Fra
 ## <a name="performance-data"></a>Données de performance  
  Certaines données de performances pour Entity Framework sont publiées dans les publications suivantes sur le [blog de l’équipe ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Exploration des performances d'ADO.NET Entity Framework – partie 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Exploration des performances d’ADO.NET Entity Framework - partie 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Exploration des performances d'ADO.NET Entity Framework – partie 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Exploration des performances d’ADO.NET Entity Framework – partie 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Comparaison des performances d'ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [Comparaison des performances ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Voir aussi
 

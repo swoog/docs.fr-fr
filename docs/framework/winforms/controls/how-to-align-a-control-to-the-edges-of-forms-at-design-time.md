@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
 ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331860"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Procédure : aligner un contrôle sur les bords des formulaires au moment du design
@@ -45,11 +45,11 @@ Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant 
 
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [Procédure : aligner un contrôle sur les bords des formulaires](how-to-align-a-control-to-the-edges-of-forms.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide de lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Procédure : ancrer des contrôles dans des Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Procédure : ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Guide pratique pour Aligner un contrôle sur les bords des formulaires](how-to-align-a-control-to-the-edges-of-forms.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Guide pratique pour Ancrer les contrôles aux Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Développement de contrôles Windows Forms au moment du design](developing-windows-forms-controls-at-design-time.md)

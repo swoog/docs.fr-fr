@@ -3,10 +3,10 @@ title: 'Procédure : configurer un service WCF hébergé par IIS avec SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
 ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326448"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procédure : configurer un service WCF hébergé par IIS avec SSL
@@ -147,6 +147,6 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
 ## <a name="see-also"></a>Voir aussi
 
 - [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Instructions relatives à l'hébergement dans les Services Internet (IIS)](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [Meilleures pratiques pour l'hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [IIS Hosting Using Inline Code](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Hébergement IIS à l’aide de code en ligne](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

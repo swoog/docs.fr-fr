@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
 ms.openlocfilehash: c59af175a6ee23395e19247efd8fa15e6d19ae66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334339"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Procédure : copier des ToolStripMenuItems
@@ -46,4 +46,4 @@ Au moment du design, vous pouvez copier la totalité des menus du plus haut nive
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328671"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procédure : définir le comportement de redimensionnement et de positionnement dans une fenêtre fractionnée
@@ -23,9 +23,9 @@ Les panneaux de la <xref:System.Windows.Forms.SplitContainer> contrôle se prêt
   
 |Nom|Description|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété|Détermine si le séparateur est mobile au moyen du clavier ou la souris.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriété|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriété|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Détermine si le séparateur est mobile au moyen du clavier ou la souris.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
   
  L’exemple suivant modifie le <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriété pour créer un effet « séparateur d’alignement » ; lorsque l’utilisateur fait glisser le séparateur, il incrémente en unités de 10 pixels plutôt que la valeur par défaut 1.  
   

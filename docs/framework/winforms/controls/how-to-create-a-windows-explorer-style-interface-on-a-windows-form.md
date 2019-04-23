@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327371"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procédure : créer une interface de style Explorateur Windows dans un formulaire Windows
@@ -52,7 +52,7 @@ L’Explorateur Windows est un choix d’interface utilisateur commune pour les 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Procédure : créer une interface utilisateur à plusieurs volets avec Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Procédure : définir le comportement de redimensionnement et de positionnement dans une fenêtre fractionnée](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Procédure : fractionner une fenêtre horizontalement](how-to-split-a-window-horizontally.md)
+- [Guide pratique pour Créer une Interface utilisateur à plusieurs volets avec des Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Guide pratique pour Définir le redimensionnement et le positionnement du comportement dans une fenêtre fractionnée](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Guide pratique pour Fractionner une fenêtre horizontalement](how-to-split-a-window-horizontally.md)
 - [SplitContainer, contrôle](splitcontainer-control-windows-forms.md)
