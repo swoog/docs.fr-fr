@@ -5,29 +5,29 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337966"
 ---
-# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="f90cc-102">Ce tableau est prédéfini ou est temporairement verrouillé (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f90cc-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
-<span data-ttu-id="f90cc-103">Cette erreur a les causes possibles suivantes :</span><span class="sxs-lookup"><span data-stu-id="f90cc-103">This error has the following possible causes:</span></span>  
+# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="c3c80-102">Ce tableau est prédéfini ou est temporairement verrouillé (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3c80-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
+<span data-ttu-id="c3c80-103">Cette erreur a les causes possibles suivantes :</span><span class="sxs-lookup"><span data-stu-id="c3c80-103">This error has the following possible causes:</span></span>  
   
--   <span data-ttu-id="f90cc-104">À l’aide de `ReDim` pour modifier le nombre d’éléments d’un tableau de taille fixe.</span><span class="sxs-lookup"><span data-stu-id="f90cc-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
+-   <span data-ttu-id="c3c80-104">À l’aide de `ReDim` pour modifier le nombre d’éléments d’un tableau de taille fixe.</span><span class="sxs-lookup"><span data-stu-id="c3c80-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
   
--   <span data-ttu-id="f90cc-105">Redimensionnement d’un tableau dynamique au niveau du module, dans lequel un élément a été passé en tant qu’argument à une procédure.</span><span class="sxs-lookup"><span data-stu-id="f90cc-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="f90cc-106">Si un élément est passé, le tableau est verrouillé pour empêcher la désallocation de mémoire pour le paramètre de référence dans la procédure.</span><span class="sxs-lookup"><span data-stu-id="f90cc-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
+-   <span data-ttu-id="c3c80-105">Redimensionnement d’un tableau dynamique au niveau du module, dans lequel un élément a été passé en tant qu’argument à une procédure.</span><span class="sxs-lookup"><span data-stu-id="c3c80-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="c3c80-106">Si un élément est passé, le tableau est verrouillé pour empêcher la désallocation de mémoire pour le paramètre de référence dans la procédure.</span><span class="sxs-lookup"><span data-stu-id="c3c80-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
   
--   <span data-ttu-id="f90cc-107">Tentative d’assigner une valeur à un `Variant` variable contenant un tableau, mais la `Variant` est actuellement verrouillé.</span><span class="sxs-lookup"><span data-stu-id="f90cc-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
+-   <span data-ttu-id="c3c80-107">Tentative d’assigner une valeur à un `Variant` variable contenant un tableau, mais la `Variant` est actuellement verrouillé.</span><span class="sxs-lookup"><span data-stu-id="c3c80-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f90cc-108">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="f90cc-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c3c80-108">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="c3c80-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="f90cc-109">Rendre le tableau d’origine dynamique non fixe en le déclarant avec `ReDim` (si le tableau est déclaré dans une procédure), ou en le déclarant sans spécifier le nombre d’éléments (si le tableau est déclaré au niveau du module.</span><span class="sxs-lookup"><span data-stu-id="f90cc-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
+1. <span data-ttu-id="c3c80-109">Rendre le tableau d’origine dynamique non fixe en le déclarant avec `ReDim` (si le tableau est déclaré dans une procédure), ou en le déclarant sans spécifier le nombre d’éléments (si le tableau est déclaré au niveau du module.</span><span class="sxs-lookup"><span data-stu-id="c3c80-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
   
-2. <span data-ttu-id="f90cc-110">Déterminer s’il faut vraiment transmettre l’élément, dans la mesure où il est visible dans toutes les procédures dans le module.</span><span class="sxs-lookup"><span data-stu-id="f90cc-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
+2. <span data-ttu-id="c3c80-110">Déterminer s’il faut vraiment transmettre l’élément, dans la mesure où il est visible dans toutes les procédures dans le module.</span><span class="sxs-lookup"><span data-stu-id="c3c80-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
   
-3. <span data-ttu-id="f90cc-111">Déterminez ce qui verrouille le `Variant` et y remédier.</span><span class="sxs-lookup"><span data-stu-id="f90cc-111">Determine what is locking the `Variant` and remedy it.</span></span>  
+3. <span data-ttu-id="c3c80-111">Déterminez ce qui verrouille le `Variant` et y remédier.</span><span class="sxs-lookup"><span data-stu-id="c3c80-111">Determine what is locking the `Variant` and remedy it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f90cc-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f90cc-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3c80-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c3c80-112">See also</span></span>
 
-- [<span data-ttu-id="f90cc-113">Tableaux</span><span class="sxs-lookup"><span data-stu-id="f90cc-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="c3c80-113">Tableaux</span><span class="sxs-lookup"><span data-stu-id="c3c80-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51d29fed3d53611daa0042251ce09638399f7ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195798"
 ---
-# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="993e1-102">ICorDebugMDA::GetOSThreadId, méthode</span><span class="sxs-lookup"><span data-stu-id="993e1-102">ICorDebugMDA::GetOSThreadId Method</span></span>
-<span data-ttu-id="993e1-103">Obtient l’identificateur de thread de système d’exploitation (se) sur lequel l’assistant débogage managé (MDA) représenté par [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) s’exécute.</span><span class="sxs-lookup"><span data-stu-id="993e1-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
+# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="78a5d-102">ICorDebugMDA::GetOSThreadId, méthode</span><span class="sxs-lookup"><span data-stu-id="78a5d-102">ICorDebugMDA::GetOSThreadId Method</span></span>
+<span data-ttu-id="78a5d-103">Obtient l’identificateur de thread de système d’exploitation (se) sur lequel l’assistant débogage managé (MDA) représenté par [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) s’exécute.</span><span class="sxs-lookup"><span data-stu-id="78a5d-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="993e1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="993e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78a5d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="78a5d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOSThreadId (  
@@ -35,23 +35,23 @@ HRESULT GetOSThreadId (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="993e1-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="993e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="78a5d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="78a5d-105">Parameters</span></span>  
  `pOsTid`  
- <span data-ttu-id="993e1-106">[out] Pointeur vers l’identificateur du thread du système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="993e1-106">[out] A pointer to the OS thread identifier.</span></span>  
+ <span data-ttu-id="78a5d-106">[out] Pointeur vers l’identificateur du thread du système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="78a5d-106">[out] A pointer to the OS thread identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="993e1-107">Notes</span><span class="sxs-lookup"><span data-stu-id="993e1-107">Remarks</span></span>  
- <span data-ttu-id="993e1-108">Le thread de système d’exploitation est utilisé au lieu d’un ICorDebugThread pour les situations dans lesquelles un MDA est déclenché sur un thread natif ou sur un thread managé qui n’a pas encore entré le code managé.</span><span class="sxs-lookup"><span data-stu-id="993e1-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78a5d-107">Notes</span><span class="sxs-lookup"><span data-stu-id="78a5d-107">Remarks</span></span>  
+ <span data-ttu-id="78a5d-108">Le thread de système d’exploitation est utilisé au lieu d’un ICorDebugThread pour les situations dans lesquelles un MDA est déclenché sur un thread natif ou sur un thread managé qui n’a pas encore entré le code managé.</span><span class="sxs-lookup"><span data-stu-id="78a5d-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="993e1-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="993e1-109">Requirements</span></span>  
- <span data-ttu-id="993e1-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="993e1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78a5d-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="78a5d-109">Requirements</span></span>  
+ <span data-ttu-id="78a5d-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78a5d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="993e1-111">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="993e1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="78a5d-111">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78a5d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="993e1-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="993e1-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="78a5d-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78a5d-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="993e1-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="993e1-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="78a5d-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78a5d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="993e1-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="993e1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78a5d-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="78a5d-114">See also</span></span>
 
-- [<span data-ttu-id="993e1-115">ICorDebugMDA, interface</span><span class="sxs-lookup"><span data-stu-id="993e1-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="993e1-116">Diagnostic d'erreurs avec les Assistants de débogage managés</span><span class="sxs-lookup"><span data-stu-id="993e1-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="78a5d-115">ICorDebugMDA, interface</span><span class="sxs-lookup"><span data-stu-id="78a5d-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="78a5d-116">Diagnostic d’erreurs avec les Assistants Débogage managé</span><span class="sxs-lookup"><span data-stu-id="78a5d-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

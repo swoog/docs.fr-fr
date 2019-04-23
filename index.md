@@ -7,10 +7,10 @@ description: Découvrez comment utiliser .NET pour créer diverses applications 
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427485"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,7 +77,7 @@ ms.locfileid: "59427485"
         <h1>Documentation .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Documents</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Bien démarrer</a>
@@ -135,7 +135,7 @@ ms.locfileid: "59427485"
                                                 <h3><a href="/dotnet/framework/">Guide du .NET Framework</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">Bien démarrer</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Guide de développement</a></p>
-                                                <p><a href="/dotnet/framework/develop-client-apps">Développement client</a></p>
+                                                <p><a href="/dotnet/framework/develop-client-apps">Développement d’applications clientes</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
@@ -175,8 +175,8 @@ ms.locfileid: "59427485"
                                                 <h3><a href="/dotnet/csharp">Guide C#</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">Bien démarrer</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Présentation de C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">Nouveautés dans C#</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">Référence du langage C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Nouveautés de C#</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">Informations de référence sur le langage C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@ ms.locfileid: "59427485"
                                                 <h3><a href="/dotnet/fsharp">Guide F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/tutorials/getting-started">Bien démarrer</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Présentation de F#</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">Informations de référence sur le langage F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">Informations de référence du langage F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +212,7 @@ ms.locfileid: "59427485"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/visual-basic">Guide Visual Basic</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">Pour commencer</a></p>
+                                                <p><a href="/dotnet/visual-basic/getting-started">Bien démarrer</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Présentation de Visual Basic</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Informations de référence sur le langage Visual Basic</a></p>
                                             </div>
@@ -234,7 +234,7 @@ ms.locfileid: "59427485"
                                                 <p><a href="/dotnet/machine-learning/tutorials">Didacticiels</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">Ressources</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossaire</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">Informations de référence sur l’API ML.NET</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">Informations de référence sur l'API ML.NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -242,8 +242,8 @@ ms.locfileid: "59427485"
                             </li>
                             <li class="fullSpan">
                                 <div class="container footer">
-                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribuer à la documentation et aux exemples .NET</a></p>
-                                    <p><a href="/dotnet/project-json">Rechercher la version Visual Studio 2015/project.json de la documentation</a></p>
+                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Collaboration aux docs .NET et exemples</a></p>
+                                    <p><a href="/dotnet/project-json">Recherche de la version Visual Studio 2015/project.json de la documentation</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -496,7 +496,7 @@ ms.locfileid: "59427485"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Bureau</a>
+                        <a href="#desktop">Poste de travail</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
