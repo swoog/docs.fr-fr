@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ada9a3131ea3063239ab7897d0096f0accbd0f94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137733"
 ---
-# <a name="ihostsyncmanagercreatemanualevent-method"></a><span data-ttu-id="ff4c8-102">IHostSyncManager::CreateManualEvent, méthode</span><span class="sxs-lookup"><span data-stu-id="ff4c8-102">IHostSyncManager::CreateManualEvent Method</span></span>
-<span data-ttu-id="ff4c8-103">Crée un objet d’événement de réinitialisation manuelle.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-103">Creates a manual-reset event object.</span></span>  
+# <a name="ihostsyncmanagercreatemanualevent-method"></a><span data-ttu-id="b35f6-102">IHostSyncManager::CreateManualEvent, méthode</span><span class="sxs-lookup"><span data-stu-id="b35f6-102">IHostSyncManager::CreateManualEvent Method</span></span>
+<span data-ttu-id="b35f6-103">Crée un objet d’événement de réinitialisation manuelle.</span><span class="sxs-lookup"><span data-stu-id="b35f6-103">Creates a manual-reset event object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff4c8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ff4c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b35f6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b35f6-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateManualEvent (  
@@ -36,39 +36,39 @@ HRESULT CreateManualEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff4c8-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ff4c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b35f6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b35f6-105">Parameters</span></span>  
  `bInitialState`  
- <span data-ttu-id="ff4c8-106">[in] `true`, si l’objet est signalé ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-106">[in] `true`, if the object is signaled; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b35f6-106">[in] `true`, si l’objet est signalé ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="b35f6-106">[in] `true`, if the object is signaled; otherwise, `false`.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="ff4c8-107">[out] Un pointeur vers l’adresse d’un [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) d’instance, ou null si l’événement n’a pas pu être créé.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-107">[out] A pointer to the address of an [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance, or null if the event could not be created.</span></span>  
+ <span data-ttu-id="b35f6-107">[out] Un pointeur vers l’adresse d’un [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) d’instance, ou null si l’événement n’a pas pu être créé.</span><span class="sxs-lookup"><span data-stu-id="b35f6-107">[out] A pointer to the address of an [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance, or null if the event could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ff4c8-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ff4c8-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b35f6-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="b35f6-108">Return Value</span></span>  
   
-|<span data-ttu-id="ff4c8-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ff4c8-109">HRESULT</span></span>|<span data-ttu-id="ff4c8-110">Description</span><span class="sxs-lookup"><span data-stu-id="ff4c8-110">Description</span></span>|  
+|<span data-ttu-id="b35f6-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b35f6-109">HRESULT</span></span>|<span data-ttu-id="b35f6-110">Description</span><span class="sxs-lookup"><span data-stu-id="b35f6-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ff4c8-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="ff4c8-111">S_OK</span></span>|`CreateManualEvent` <span data-ttu-id="ff4c8-112">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-112">returned successfully.</span></span>|  
-|<span data-ttu-id="ff4c8-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ff4c8-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ff4c8-114">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ff4c8-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ff4c8-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ff4c8-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-116">The call timed out.</span></span>|  
-|<span data-ttu-id="ff4c8-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ff4c8-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ff4c8-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ff4c8-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ff4c8-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ff4c8-120">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ff4c8-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ff4c8-121">E_FAIL</span></span>|<span data-ttu-id="ff4c8-122">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ff4c8-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ff4c8-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="ff4c8-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="ff4c8-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="ff4c8-126">Pas assez de mémoire n’était disponible pour créer l’objet événement demandé.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-126">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="b35f6-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b35f6-111">S_OK</span></span>|<span data-ttu-id="b35f6-112">`CreateManualEvent` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="b35f6-112">`CreateManualEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="b35f6-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b35f6-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b35f6-114">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="b35f6-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b35f6-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b35f6-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b35f6-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="b35f6-116">The call timed out.</span></span>|  
+|<span data-ttu-id="b35f6-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b35f6-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b35f6-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="b35f6-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b35f6-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b35f6-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b35f6-120">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="b35f6-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b35f6-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b35f6-121">E_FAIL</span></span>|<span data-ttu-id="b35f6-122">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="b35f6-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b35f6-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="b35f6-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b35f6-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="b35f6-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b35f6-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="b35f6-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="b35f6-126">Pas assez de mémoire n’était disponible pour créer l’objet événement demandé.</span><span class="sxs-lookup"><span data-stu-id="b35f6-126">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ff4c8-127">Notes</span><span class="sxs-lookup"><span data-stu-id="ff4c8-127">Remarks</span></span>  
- `CreateManualEvent` <span data-ttu-id="ff4c8-128">Crée un `IHostManualEvent`, un objet d’événement de réinitialisation manuelle qui nécessite un appel à la [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) méthode pour définir un état non signalé.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-128">creates an `IHostManualEvent`, a manual-reset event object that requires a call to the [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) method to set it to a non-signaled state.</span></span> `CreateManualEvent` <span data-ttu-id="ff4c8-129">reflète Win32 `CreateEvent` fonction avec la valeur `true` spécifié pour le `bManualReset` paramètre.</span><span class="sxs-lookup"><span data-stu-id="ff4c8-129">mirrors the Win32 `CreateEvent` function with a value of `true` specified for the `bManualReset` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b35f6-127">Notes</span><span class="sxs-lookup"><span data-stu-id="b35f6-127">Remarks</span></span>  
+ <span data-ttu-id="b35f6-128">`CreateManualEvent` Crée un `IHostManualEvent`, un objet d’événement de réinitialisation manuelle qui nécessite un appel à la [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) méthode pour définir un état non signalé.</span><span class="sxs-lookup"><span data-stu-id="b35f6-128">`CreateManualEvent` creates an `IHostManualEvent`, a manual-reset event object that requires a call to the [IHostManualEvent::Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) method to set it to a non-signaled state.</span></span> <span data-ttu-id="b35f6-129">`CreateManualEvent` reflète Win32 `CreateEvent` fonction avec la valeur `true` spécifié pour le `bManualReset` paramètre.</span><span class="sxs-lookup"><span data-stu-id="b35f6-129">`CreateManualEvent` mirrors the Win32 `CreateEvent` function with a value of `true` specified for the `bManualReset` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff4c8-130">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ff4c8-130">Requirements</span></span>  
- <span data-ttu-id="ff4c8-131">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff4c8-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b35f6-130">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b35f6-130">Requirements</span></span>  
+ <span data-ttu-id="b35f6-131">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b35f6-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff4c8-132">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ff4c8-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b35f6-132">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b35f6-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ff4c8-133">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ff4c8-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b35f6-133">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b35f6-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="ff4c8-134">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="ff4c8-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b35f6-134">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b35f6-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff4c8-135">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ff4c8-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b35f6-135">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b35f6-135">See also</span></span>
 
-- [<span data-ttu-id="ff4c8-136">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="ff4c8-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="ff4c8-137">IHostManualEvent, interface</span><span class="sxs-lookup"><span data-stu-id="ff4c8-137">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="ff4c8-138">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="ff4c8-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="b35f6-136">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="b35f6-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="b35f6-137">IHostManualEvent, interface</span><span class="sxs-lookup"><span data-stu-id="b35f6-137">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="b35f6-138">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="b35f6-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
