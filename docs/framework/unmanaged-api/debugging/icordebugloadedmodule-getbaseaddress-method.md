@@ -5,16 +5,16 @@ ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e84d6deca0cd09cc547636007208c70ab91c1ab1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223535"
 ---
-# <a name="icordebugloadedmodulegetbaseaddress-method"></a><span data-ttu-id="879b9-102">ICorDebugLoadedModule::GetBaseAddress (méthode)</span><span class="sxs-lookup"><span data-stu-id="879b9-102">ICorDebugLoadedModule::GetBaseAddress Method</span></span>
-<span data-ttu-id="879b9-103">Obtient l'adresse de base du module chargé.</span><span class="sxs-lookup"><span data-stu-id="879b9-103">Gets the base address of the loaded module.</span></span>  
+# <a name="icordebugloadedmodulegetbaseaddress-method"></a><span data-ttu-id="e5ca0-102">ICorDebugLoadedModule::GetBaseAddress (méthode)</span><span class="sxs-lookup"><span data-stu-id="e5ca0-102">ICorDebugLoadedModule::GetBaseAddress Method</span></span>
+<span data-ttu-id="e5ca0-103">Obtient l'adresse de base du module chargé.</span><span class="sxs-lookup"><span data-stu-id="e5ca0-103">Gets the base address of the loaded module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="879b9-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="879b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5ca0-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e5ca0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBaseAddress(  
@@ -22,25 +22,25 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="879b9-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="879b9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5ca0-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e5ca0-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="879b9-106">[out] Pointeur vers l'adresse de base du module chargé.</span><span class="sxs-lookup"><span data-stu-id="879b9-106">[out] A pointer to the base address of the loaded module.</span></span>  
+ <span data-ttu-id="e5ca0-106">[out] Pointeur vers l'adresse de base du module chargé.</span><span class="sxs-lookup"><span data-stu-id="e5ca0-106">[out] A pointer to the base address of the loaded module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="879b9-107">Notes</span><span class="sxs-lookup"><span data-stu-id="879b9-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5ca0-107">Notes</span><span class="sxs-lookup"><span data-stu-id="e5ca0-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="879b9-108">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="879b9-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="e5ca0-108">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="e5ca0-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="879b9-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="879b9-109">Requirements</span></span>  
- <span data-ttu-id="879b9-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="879b9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5ca0-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e5ca0-109">Requirements</span></span>  
+ <span data-ttu-id="e5ca0-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5ca0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="879b9-111">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="879b9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e5ca0-111">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5ca0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="879b9-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="879b9-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5ca0-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5ca0-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="879b9-113">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="879b9-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ <span data-ttu-id="e5ca0-113">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5ca0-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="879b9-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="879b9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5ca0-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e5ca0-114">See also</span></span>
 
-- [<span data-ttu-id="879b9-115">ICorDebugLoadedModule (interface)</span><span class="sxs-lookup"><span data-stu-id="879b9-115">ICorDebugLoadedModule Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [<span data-ttu-id="879b9-116">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="879b9-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e5ca0-115">ICorDebugLoadedModule, interface</span><span class="sxs-lookup"><span data-stu-id="e5ca0-115">ICorDebugLoadedModule Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
+- [<span data-ttu-id="e5ca0-116">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="e5ca0-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

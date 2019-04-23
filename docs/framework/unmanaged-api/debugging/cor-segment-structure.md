@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223067"
 ---
-# <a name="corsegment-structure"></a><span data-ttu-id="b6675-102">COR_SEGMENT, structure</span><span class="sxs-lookup"><span data-stu-id="b6675-102">COR_SEGMENT Structure</span></span>
-<span data-ttu-id="b6675-103">Contient des informations sur une région de la mémoire dans le tas managé.</span><span class="sxs-lookup"><span data-stu-id="b6675-103">Contains information about a region of memory in the managed heap.</span></span>  
+# <a name="corsegment-structure"></a><span data-ttu-id="1aee1-102">COR_SEGMENT, structure</span><span class="sxs-lookup"><span data-stu-id="1aee1-102">COR_SEGMENT Structure</span></span>
+<span data-ttu-id="1aee1-103">Contient des informations sur une région de la mémoire dans le tas managé.</span><span class="sxs-lookup"><span data-stu-id="1aee1-103">Contains information about a region of memory in the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6675-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b6675-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1aee1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1aee1-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_SEGMENT {  
@@ -37,30 +37,30 @@ typedef struct _COR_SEGMENT {
 } COR_SEGMENT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b6675-105">Membres</span><span class="sxs-lookup"><span data-stu-id="b6675-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1aee1-105">Membres</span><span class="sxs-lookup"><span data-stu-id="1aee1-105">Members</span></span>  
   
-|<span data-ttu-id="b6675-106">Membre</span><span class="sxs-lookup"><span data-stu-id="b6675-106">Member</span></span>|<span data-ttu-id="b6675-107">Description</span><span class="sxs-lookup"><span data-stu-id="b6675-107">Description</span></span>|  
+|<span data-ttu-id="1aee1-106">Membre</span><span class="sxs-lookup"><span data-stu-id="1aee1-106">Member</span></span>|<span data-ttu-id="1aee1-107">Description</span><span class="sxs-lookup"><span data-stu-id="1aee1-107">Description</span></span>|  
 |------------|-----------------|  
-|`start`|<span data-ttu-id="b6675-108">Adresse de départ de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="b6675-108">The starting address of the memory region.</span></span>|  
-|`end`|<span data-ttu-id="b6675-109">Adresse de fin de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="b6675-109">The ending address of the memory region.</span></span>|  
-|`gen`|<span data-ttu-id="b6675-110">Membre d’énumération [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) qui indique la génération de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="b6675-110">A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) enumeration member that indicates the generation of the memory region.</span></span>|  
-|`heap`|<span data-ttu-id="b6675-111">Numéro du tas dans lequel réside la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="b6675-111">The heap number in which the memory region resides.</span></span> <span data-ttu-id="b6675-112">Pour plus d'informations, consultez la section Notes.</span><span class="sxs-lookup"><span data-stu-id="b6675-112">See the Remarks section for more information.</span></span>|  
+|`start`|<span data-ttu-id="1aee1-108">Adresse de départ de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1aee1-108">The starting address of the memory region.</span></span>|  
+|`end`|<span data-ttu-id="1aee1-109">Adresse de fin de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1aee1-109">The ending address of the memory region.</span></span>|  
+|`gen`|<span data-ttu-id="1aee1-110">Membre d’énumération [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) qui indique la génération de la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1aee1-110">A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) enumeration member that indicates the generation of the memory region.</span></span>|  
+|`heap`|<span data-ttu-id="1aee1-111">Numéro du tas dans lequel réside la zone de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1aee1-111">The heap number in which the memory region resides.</span></span> <span data-ttu-id="1aee1-112">Pour plus d'informations, consultez la section Notes.</span><span class="sxs-lookup"><span data-stu-id="1aee1-112">See the Remarks section for more information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b6675-113">Notes</span><span class="sxs-lookup"><span data-stu-id="b6675-113">Remarks</span></span>  
- <span data-ttu-id="b6675-114">La structure `COR_SEGMENTS` représente une zone de mémoire dans le tas managé.</span><span class="sxs-lookup"><span data-stu-id="b6675-114">The `COR_SEGMENTS` structure represents a region of memory in the managed heap.</span></span>  `COR_SEGMENTS` <span data-ttu-id="b6675-115">les objets sont membres de la [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objet de collection, qui est rempli en appelant le [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="b6675-115">objects are members of the [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) collection object, which is populated by calling the [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1aee1-113">Notes</span><span class="sxs-lookup"><span data-stu-id="1aee1-113">Remarks</span></span>  
+ <span data-ttu-id="1aee1-114">La structure `COR_SEGMENTS` représente une zone de mémoire dans le tas managé.</span><span class="sxs-lookup"><span data-stu-id="1aee1-114">The `COR_SEGMENTS` structure represents a region of memory in the managed heap.</span></span>  <span data-ttu-id="1aee1-115">Les objets `COR_SEGMENTS` sont des membres de l’objet de collection [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), qui est rempli en appelant la méthode [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md).</span><span class="sxs-lookup"><span data-stu-id="1aee1-115">`COR_SEGMENTS` objects are members of the [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) collection object, which is populated by calling the [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) method.</span></span>  
   
- <span data-ttu-id="b6675-116">Le champ `heap` est le numéro de processeur, qui correspond au tas signalé.</span><span class="sxs-lookup"><span data-stu-id="b6675-116">The `heap` field is the processor number, which corresponds to the heap being reported.</span></span> <span data-ttu-id="b6675-117">Pour les récupérateurs de mémoire de station de travail, sa valeur est toujours égale à zéro, car les stations de travail n’ont qu’un seul tas de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="b6675-117">For workstation garbage collectors, its value is always zero, because workstations have only one garbage collection heap.</span></span> <span data-ttu-id="b6675-118">Pour les récupérateurs de mémoire de serveur, sa valeur correspond au processeur auquel le tas est attaché.</span><span class="sxs-lookup"><span data-stu-id="b6675-118">For server garbage collectors, its value corresponds to the processor the heap is attached to.</span></span> <span data-ttu-id="b6675-119">Notez qu’il peut y avoir plus ou moins de tas de garbage collection que de processeurs, en raison des détails d’implémentation du récupérateur de mémoire.</span><span class="sxs-lookup"><span data-stu-id="b6675-119">Note that there may be more or fewer garbage collection heaps than there are actual processors due to the implementation details of the garbage collector.</span></span>  
+ <span data-ttu-id="1aee1-116">Le champ `heap` est le numéro de processeur, qui correspond au tas signalé.</span><span class="sxs-lookup"><span data-stu-id="1aee1-116">The `heap` field is the processor number, which corresponds to the heap being reported.</span></span> <span data-ttu-id="1aee1-117">Pour les récupérateurs de mémoire de station de travail, sa valeur est toujours égale à zéro, car les stations de travail n’ont qu’un seul tas de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="1aee1-117">For workstation garbage collectors, its value is always zero, because workstations have only one garbage collection heap.</span></span> <span data-ttu-id="1aee1-118">Pour les récupérateurs de mémoire de serveur, sa valeur correspond au processeur auquel le tas est attaché.</span><span class="sxs-lookup"><span data-stu-id="1aee1-118">For server garbage collectors, its value corresponds to the processor the heap is attached to.</span></span> <span data-ttu-id="1aee1-119">Notez qu’il peut y avoir plus ou moins de tas de garbage collection que de processeurs, en raison des détails d’implémentation du récupérateur de mémoire.</span><span class="sxs-lookup"><span data-stu-id="1aee1-119">Note that there may be more or fewer garbage collection heaps than there are actual processors due to the implementation details of the garbage collector.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6675-120">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b6675-120">Requirements</span></span>  
- <span data-ttu-id="b6675-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6675-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1aee1-120">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1aee1-120">Requirements</span></span>  
+ <span data-ttu-id="1aee1-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1aee1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6675-122">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b6675-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1aee1-122">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1aee1-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b6675-123">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6675-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1aee1-123">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1aee1-123">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b6675-124">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b6675-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="1aee1-124">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1aee1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6675-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b6675-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1aee1-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1aee1-125">See also</span></span>
 
-- [<span data-ttu-id="b6675-126">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="b6675-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="b6675-127">Débogage</span><span class="sxs-lookup"><span data-stu-id="b6675-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="1aee1-126">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="1aee1-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="1aee1-127">Débogage</span><span class="sxs-lookup"><span data-stu-id="1aee1-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
