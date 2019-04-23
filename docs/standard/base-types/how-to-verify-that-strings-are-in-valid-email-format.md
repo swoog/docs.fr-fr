@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890499"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procédure : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
@@ -55,12 +55,12 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commence la recherche de correspondance au début de la chaîne.|  
-|`(?(")`|Détermine si le premier caractère est un guillemet. `(?(")` est le début d’une construction d’alternative.|  
-|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d’une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
+|`(?(")`|Détermine si le premier caractère est un guillemet. `(?(")` est le début d'une construction d'alternative.|  
+|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d'une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
 |<code>&#124;(([0-9a-z]</code>|Si le premier caractère n'est pas un guillemet, établit une correspondance avec un caractère alphabétique de a à z ou de A à Z (la comparaison ne respecte pas la casse) ou un chiffre (de 0 à 9).|  
-|`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche que deux points consécutifs apparaissent dans la partie locale d’une adresse de messagerie.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou l’un des caractères suivants : -!#$%’*+=?^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Établit une correspondance avec le modèle d’alternative (un point suivi d’autre chose qu’un point ou l’un des caractères numériques) zéro, une ou plusieurs fois.|  
+|`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche deux points consécutifs de s'afficher dans la partie locale d'une adresse de messagerie.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou un des caractères suivants : -!#$%’*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Établit une correspondance avec le modèle d’alternative (un point suivi d’autre chose qu’un point ou un des caractères numériques) zéro, une ou plusieurs fois.|  
 |`@`|Correspond à l'arobase (@).|  
 |`(?<=[0-9a-z])`|Continue la recherche de correspondances si le caractère qui précède le caractère @ est compris entre A et Z, a et z, ou 0 et 9. La construction `(?<=[0-9a-z])` définit une assertion de postanalyse positive de largeur nulle.|  
 |`(?(\[)`|Vérifie si le caractère qui suit @ est un crochet ouvrant.|  
@@ -105,4 +105,4 @@ vbc /t:library RegexUtilities.vb
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Expressions régulières du .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Framework (expressions régulières)](../../../docs/standard/base-types/regular-expressions.md)

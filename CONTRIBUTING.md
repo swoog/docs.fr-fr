@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610806"
+---
 # <a name="contributing"></a>Contribuer
 
 Nous vous remercions de l’intérêt que vous portez à la documentation .NET à travers vos contributions.
@@ -24,7 +32,7 @@ Le suivi des problèmes et des tâches de ces référentiels se trouve ici.
 
 Vous devez avoir une connaissance élémentaire de [Git et GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Étape 1 :** ignorez cette étape pour les modifications mineures. Si vous souhaitez écrire un nouveau contenu ou examiner en détail un contenu existant, ouvrez un [problème](https://github.com/dotnet/docs/issues) en décrivant ce que vous voulez faire.
+**Étape 1 :** Ignorez cette étape pour les petites modifications (par exemple si vous corrigez une faute de frappe ou si vous ouvrez immédiatement une demande de tirage pour résoudre un problème que vous trouvez dans les documents). Si vous souhaitez écrire un nouveau contenu ou examiner en détail un contenu existant, ouvrez un [problème](https://github.com/dotnet/docs/issues) en décrivant ce que vous voulez faire.
 Le contenu situé dans le dossier **docs** est organisé en sections que l’on retrouve dans la table des matières. Définissez l’emplacement de la rubrique dans la table des matières. Obtenez des commentaires sur votre proposition.
 
 - ou -

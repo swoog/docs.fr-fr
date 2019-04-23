@@ -12,10 +12,10 @@ ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124811"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling d'un délégué comme méthode de rappel
@@ -26,13 +26,13 @@ Cet exemple montre comment passer des délégués à une fonction non managée q
 
 L’exemple de rappel utilise les fonctions non managées suivantes, qui sont montrées avec leur déclaration de fonction d’origine :
 
--   `TestCallBack` exportée à partir de PinvokeLib.dll.
+-   `TestCallBack` exportée depuis PinvokeLib.dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` exportée à partir de PinvokeLib.dll.
+-   `TestCallBack2` exportée depuis PinvokeLib.dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -55,5 +55,5 @@ Dans cet exemple, la classe `LibWrap` contient des prototypes managés pour les 
 ## <a name="see-also"></a>Voir aussi
 
 - [Exemples divers de marshaling](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
-- [Types de données d’appel de code non managé](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Types de données d’appel de plateforme](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Création de prototypes dans du code managé](creating-prototypes-in-managed-code.md)

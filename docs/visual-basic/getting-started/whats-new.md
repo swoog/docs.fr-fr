@@ -8,56 +8,44 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 7a676981a090d0ac02c1a1af4b0824d914d1e8fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814014"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611794"
 ---
 # <a name="whats-new-for-visual-basic"></a>Nouveautés de Visual Basic
 
 Cette rubrique liste les noms des principales fonctionnalités de chaque version de Visual Basic et décrit en détail les fonctionnalités nouvelles et améliorées des dernières versions du langage.
-  
+
 ## <a name="current-version"></a>Version actuelle
 
-Visual Basic 15.8/Visual Studio 2017 version 15.8  
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15.8 / Visual Studio 2017 version 15.8. Pour les nouvelles fonctionnalités, consultez [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Versions antérieures
 
-Visual Basic 15.5 / Visual Studio 2017 Version 15.5  
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.5 / Visual Studio 2017 version 15.5. Pour les nouvelles fonctionnalités, consultez [Visual Basic 15.5](#visual-basic-155)
 
-Visual Basic 15.3 / Visual Studio 2017 Version 15.3  
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15.3 / Visual Studio 2017 version 15.3. Pour les nouvelles fonctionnalités, consultez [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017 / Visual Studio 2017  
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017 / Visual Studio 2017. Pour les nouvelles fonctionnalités, consultez [Visual Basic 2017](#visual-basic-2017)
 
-Visual Basic / Visual Studio 2015   
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 14](#visual-basic-14)
+Visual Basic / Visual Studio 2015. Pour les nouvelles fonctionnalités, consultez [Visual Basic 14](#visual-basic-14)
 
-Visual Basic / Visual Studio 2013  
-Aperçus des technologies de la plateforme des compilateurs .NET (« Roslyn »)
+Visual Basic / Visual Studio 2013. Aperçus des technologies de la plateforme de compilateur .NET (« Roslyn »)
 
-Visual Basic / Visual Studio 2012   
-Mots clés `Async` et `await`, itérateurs, attributs des informations de l’appelant
+Visual Basic / Visual Studio 2012. Mots clés `Async` et `await`, itérateurs, attributs des informations de l’appelant
 
-Visual Basic, Visual Studio 2010   
-Propriétés implémentées automatiquement, initialiseurs de collection, continuation de ligne implicite, variance co/contra générique, dynamique, accès de l’espace de noms global
+Visual Basic, Visual Studio 2010. Propriétés implémentées automatiquement, initialiseurs de collection, continuation de ligne implicite, variance co/contra générique, dynamique, accès à l’espace de noms global
 
-Visual Basic / Visual Studio 2008   
-LINQ (Language Integrated Query), littéraux XML, inférence de type local, initialiseurs d’objet, types anonymes, méthodes d’extension, inférence de type `var` local, expressions lambda, opérateur `if`, méthodes partielles, types de valeur nullable  
+Visual Basic / Visual Studio 2008. LINQ (Language Integrated Query), littéraux XML, inférence de type local, initialiseurs d’objet, types anonymes, méthodes d’extension, inférence de type `var` local, expressions lambda, opérateur `if`, méthodes partielles, types de valeur nullable
 
-Visual Basic / Visual Studio 2005   
-Type `My` et types d’assistance (accès à l’application, ordinateur, système de fichiers, réseau)
+Visual Basic / Visual Studio 2005. Type `My` et types helper (accès à l’application, ordinateur, système de fichiers, réseau)
 
-Visual Basic / Visual Studio .NET 2003   
-Opérateurs de décalage de bits, déclaration de variable de boucle
+Visual Basic / Visual Studio .NET 2003. Opérateurs de décalage de bits, déclaration de variable de boucle
 
-Visual Basic / Visual Studio .NET 2002   
-Première version de Visual Basic .NET
+Visual Basic / Visual Studio .NET 2002. Première version de Visual Basic .NET
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 
@@ -80,7 +68,7 @@ Cette optimisation permet au code de s’exécuter plus rapidement (jusqu’à d
 
 ```vb
 Dim s As Single = 173.7619
-Dim d As Double = s 
+Dim d As Double = s
 
 Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
 Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
@@ -114,7 +102,8 @@ Dans Visual Basic 2017, la prise en charge du caractère de soulignement (`_`) 
 
 ```vb
 Dim number As Integer = &H_C305_F860
-``` 
+```
+
 Pour utiliser le trait de soulignement comme séparateur de début, vous devez ajouter l’élément suivant à votre fichier projet Visual Basic (\*.vbproj) :
 
 ```xml
@@ -131,7 +120,7 @@ Lorsque vous affectez la valeur des éléments de tuple à partir de variables, 
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-**Commutateurs de compilation supplémentaires**  
+**Commutateurs de compilation supplémentaires**
 
 Le compilateur de ligne de commande de Visual Basic prend à présent en charge les options de compilation [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) et [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) pour contrôler la sortie des assemblys de référence. **-refout** définit le répertoire de sortie de l’assembly de référence, tandis que **-refonly** spécifie que la compilation doit générer uniquement un assembly de référence.
 
@@ -144,14 +133,14 @@ Les tuples sont une structure de données légère qui est le plus souvent utili
 - Définir un type personnalisé (`Class` ou `Structure`). Il s’agit d’une solution lourde.
 
 - Définir un ou plusieurs paramètres `ByRef`, en plus de retourner une valeur à partir de la méthode.
- 
+
 La prise en charge des tuples par Visual Basic vous permet de définir rapidement un tuple, d’affecter éventuellement des noms de sémantique à ses valeurs et de récupérer rapidement ses valeurs. L’exemple suivant encapsule un appel à la méthode <xref:System.Int32.TryParse%2A> et retourne un tuple.
 
 [!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
 Vous pouvez ensuite appeler la méthode et gérer le tuple retourné avec du code comme celui-ci.
 
-[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)] 
+[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
 **Littéraux binaires et séparateurs numériques**
 
@@ -185,73 +174,89 @@ Pour plus d’informations, consultez [Valeurs de retour de référence](../prog
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)  
- Vous pouvez obtenir le nom de chaîne non qualifié d’un type ou membre et l’utiliser dans un message d’erreur sans effectuer de codage irréversible de chaîne.  Votre code reste alors correct lors de la refactorisation.  Cette fonctionnalité est également utile pour placer des liens MVC modèle-vue-contrôleur et activer des événements de modification de propriété.  
-  
-[Interpolation de chaîne](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
- Vous pouvez utiliser des expressions d’interpolation de chaîne pour construire des chaînes.  Une expression de chaîne interpolée s’apparente à une chaîne de modèle contenant des expressions.  Les arguments d’une chaîne interpolée sont plus compréhensibles que dans une [Mise en forme composite](../../standard/base-types/composite-format.md).  
-  
-[Indexation et accès aux membres conditionnels Null](../language-reference/operators/null-conditional-operators.md)  
-Vous pouvez rechercher les valeurs Null à l’aide d’une syntaxe très légère avant d’effectuer une opération d’accès aux membres (`?.`) ou d’indexation (`?[]`).  Ces opérateurs permettent d’écrire moins de code pour gérer les vérifications Null, notamment pour l’exploration des structures de données.  Si la référence objet ou l’opérande gauche est Null, l’opération retourne la valeur Null.  
-  
-[Littéraux de chaîne multiligne](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Les littéraux de chaîne peuvent contenir des séquences de saut de ligne.  Il n’est plus nécessaire de passer par la méthode `<xml><![CDATA[...text with newlines...]]></xml>.Value`.  
-  
-**Commentaires**  
-Vous pouvez placer des commentaires après les continuations de lignes implicites, dans les expressions d’initialiseur et dans les termes d’expression LINQ.  
-  
-**Résolution de nom qualifié complet plus intelligente**  
- En présence de code tel que `Threading.Thread.Sleep(1000)`, Visual Basic recherchait l’espace de noms « Threading », détectait l’ambiguïté entre System.Threading et System.Windows.Threading, et signalait une erreur.  Visual Basic prend désormais en compte les deux espaces de noms possibles.  Lorsque vous affichez la liste de saisie semi-automatique, les membres de ces deux types y sont recensés par l’éditeur Visual Studio.  
-  
- **Littéraux de date avec année en premier**  
- Vous pouvez avoir des littéraux de date au format aaaa-mm-jj, `#2015-03-17 16:10 PM#`.  
-  
- **Propriétés d’interface en lecture seule**  
- Vous pouvez implémenter des propriétés d’interface en lecture seule à l’aide d’une propriété readwrite.  L’interface garantit les fonctionnalités minimales et n’empêche pas une classe d’implémentation d’autoriser la définition de la propriété.  
-  
- [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
- Pour une meilleure lisibilité du code, vous pouvez maintenant utiliser `TypeOf` avec `IsNot`.  
-  
- [#Disable Warning \<ID> et #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)  
- Vous pouvez désactiver et activer des avertissements spécifiques pour les zones d’un fichier source.  
-  
- **Améliorations de la fonctionnalité de commentaires de document XML**  
- Lorsque vous écrivez des commentaires de document, vous bénéficiez d’un éditeur intelligent et de la prise en charge de version pour la validation des noms de paramètres, le gestion appropriée des `crefs` (génériques, opérateurs, etc.), la colorisation et la refactorisation.  
-  
- [Définitions d’interface et de module partielles](../../visual-basic/language-reference/modifiers/partial.md)  
- En plus des classes et structures, vous pouvez déclarer des interfaces et des modules partiels.  
-  
- [Directives #Region dans le corps de la méthode](../../visual-basic/language-reference/directives/region-directive.md)  
- Vous pouvez placer des délimiteurs #Region…#End Region n’importe où dans un fichier, dans des fonctions, ou encore répartis à différents endroits du corps d’une fonction.  
-  
- [Les définitions de substitutions sont implicitement des surcharges](../../visual-basic/language-reference/modifiers/overrides.md)  
- Si vous ajoutez le modificateur `Overrides` à une définition, le compilateur ajoute `Overloads` de manière implicite, de sorte que vous pouvez taper moins de code dans les situations courantes.  
-  
- **CObj autorisé dans les arguments d’attributs**  
- Le compilateur signalait l’erreur indiquant que CObj(...) n’est pas une constante lorsqu’il est utilisé dans les constructions d’attribut.  
-  
- **Déclaration et utilisation de méthodes ambiguës issues d’interfaces différentes**  
- Auparavant, le code suivant générait des erreurs qui vous empêchaient de déclarer `IMock` ou d’appeler `GetDetails` (s’ils avaient été déclarés en C#) :  
-  
-```vb  
-Interface ICustomer  
-  Sub GetDetails(x As Integer)  
-End Interface  
-  
-Interface ITime  
-  Sub GetDetails(x As String)  
-End Interface  
-  
-Interface IMock : Inherits ICustomer, ITime  
-  Overloads Sub GetDetails(x As Char)  
-End Interface  
-  
-Interface IMock2 : Inherits ICustomer, ITime  
-End Interface  
-```  
-  
- À présent, le compilateur utilise les règles de résolution de surcharge normales pour choisir le `GetDetails` à appeler le plus approprié, et vous pouvez déclarer des relations d’interface dans Visual Basic comme indiqué dans l’exemple.  
-  
+[Nameof](../../csharp/language-reference/keywords/nameof.md)
+
+Vous pouvez obtenir le nom de chaîne non qualifié d’un type ou membre et l’utiliser dans un message d’erreur sans effectuer de codage irréversible de chaîne.  Votre code reste alors correct lors de la refactorisation.  Cette fonctionnalité est également utile pour placer des liens MVC modèle-vue-contrôleur et activer des événements de modification de propriété.
+
+[Interpolation de chaîne](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+
+Vous pouvez utiliser des expressions d’interpolation de chaîne pour construire des chaînes.  Une expression de chaîne interpolée s’apparente à une chaîne de modèle contenant des expressions.  Les arguments d’une chaîne interpolée sont plus compréhensibles que dans une [Mise en forme composite](../../standard/base-types/composite-format.md).
+
+[Indexation et accès aux membres conditionnels Null](../language-reference/operators/null-conditional-operators.md)
+
+Vous pouvez rechercher les valeurs Null à l’aide d’une syntaxe très légère avant d’effectuer une opération d’accès aux membres (`?.`) ou d’indexation (`?[]`).  Ces opérateurs permettent d’écrire moins de code pour gérer les vérifications Null, notamment pour l’exploration des structures de données.  Si la référence objet ou l’opérande gauche est Null, l’opération retourne la valeur Null.
+
+[Littéraux de chaîne multiligne](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+
+Les littéraux de chaîne peuvent contenir des séquences de saut de ligne.  Il n’est plus nécessaire de passer par la méthode `<xml><![CDATA[...text with newlines...]]></xml>.Value`.
+
+**Commentaires**
+
+Vous pouvez placer des commentaires après les continuations de lignes implicites, dans les expressions d’initialiseur et dans les termes d’expression LINQ.
+
+**Résolution de nom qualifié complet plus intelligente**
+
+En présence de code tel que `Threading.Thread.Sleep(1000)`, Visual Basic recherchait l’espace de noms « Threading », détectait l’ambiguïté entre System.Threading et System.Windows.Threading, et signalait une erreur.  Visual Basic prend désormais en compte les deux espaces de noms possibles.  Lorsque vous affichez la liste de saisie semi-automatique, les membres de ces deux types y sont recensés par l’éditeur Visual Studio.
+
+**Littéraux de date avec année en premier**
+
+Vous pouvez avoir des littéraux de date au format aaaa-mm-jj, `#2015-03-17 16:10 PM#`.
+
+**Propriétés d’interface en lecture seule**
+
+Vous pouvez implémenter des propriétés d’interface en lecture seule à l’aide d’une propriété readwrite.  L’interface garantit les fonctionnalités minimales et n’empêche pas une classe d’implémentation d’autoriser la définition de la propriété.
+
+[TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
+
+Pour une meilleure lisibilité du code, vous pouvez maintenant utiliser `TypeOf` avec `IsNot`.
+
+[#Disable Warning \<ID> et #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)
+
+Vous pouvez désactiver et activer des avertissements spécifiques pour les zones d’un fichier source.
+
+**Améliorations de la fonctionnalité de commentaires de document XML**
+
+Lorsque vous écrivez des commentaires de document, vous bénéficiez d’un éditeur intelligent et de la prise en charge de version pour la validation des noms de paramètres, le gestion appropriée des `crefs` (génériques, opérateurs, etc.), la colorisation et la refactorisation.
+
+[Définitions d’interface et de module partielles](../../visual-basic/language-reference/modifiers/partial.md)
+
+En plus des classes et structures, vous pouvez déclarer des interfaces et des modules partiels.
+
+[Directives #Region dans le corps de la méthode](../../visual-basic/language-reference/directives/region-directive.md)
+
+Vous pouvez placer des délimiteurs #Region…#End Region n’importe où dans un fichier, dans des fonctions, ou encore répartis à différents endroits du corps d’une fonction.
+
+[Les définitions de substitutions sont implicitement des surcharges](../../visual-basic/language-reference/modifiers/overrides.md)
+
+Si vous ajoutez le modificateur `Overrides` à une définition, le compilateur ajoute `Overloads` de manière implicite, de sorte que vous pouvez taper moins de code dans les situations courantes.
+
+**CObj autorisé dans les arguments d’attributs**
+
+Le compilateur signalait l’erreur indiquant que CObj(...) n’est pas une constante lorsqu’il est utilisé dans les constructions d’attribut.
+
+**Déclaration et utilisation de méthodes ambiguës issues d’interfaces différentes**
+
+Auparavant, le code suivant générait des erreurs qui vous empêchaient de déclarer `IMock` ou d’appeler `GetDetails` (s’ils avaient été déclarés en C#) :
+
+```vb
+Interface ICustomer
+  Sub GetDetails(x As Integer)
+End Interface
+
+Interface ITime
+  Sub GetDetails(x As String)
+End Interface
+
+Interface IMock : Inherits ICustomer, ITime
+  Overloads Sub GetDetails(x As Char)
+End Interface
+
+Interface IMock2 : Inherits ICustomer, ITime
+End Interface
+```
+
+À présent, le compilateur utilise les règles de résolution de surcharge normales pour choisir le `GetDetails` à appeler le plus approprié, et vous pouvez déclarer des relations d’interface dans Visual Basic comme indiqué dans l’exemple.
+
 ## <a name="see-also"></a>Voir aussi
 
 - [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
