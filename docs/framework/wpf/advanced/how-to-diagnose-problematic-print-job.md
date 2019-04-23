@@ -11,10 +11,10 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338473"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d’impression problématique
@@ -87,6 +87,6 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [&, opérateur (référence C#)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d'ensemble de l'impression](printing-overview.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)

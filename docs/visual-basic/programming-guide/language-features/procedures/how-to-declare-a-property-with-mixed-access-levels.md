@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339812"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procédure : Déclarer une propriété avec des niveaux d’accès mixtes (Visual Basic)
@@ -37,12 +37,12 @@ Si vous souhaitez que le `Get` et `Set` procédures sur une propriété d’avoi
 ## <a name="see-also"></a>Voir aussi
 
 - [Procédures](./index.md)
-- [Procédures Property](./property-procedures.md)
+- [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Différences entre les propriétés et les variables en Visual Basic](./differences-between-properties-and-variables.md)
-- [Procédure : créer une propriété](./how-to-create-a-property.md)
-- [Procédure : appeler une procédure Property](./how-to-call-a-property-procedure.md)
-- [Procédure : Déclarer et appeler une propriété par défaut en Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Procédure : placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)
-- [Procédure : obtenir une valeur à partir d’une propriété](./how-to-get-a-value-from-a-property.md)
+- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Différences entre les propriétés et les Variables en Visual Basic](./differences-between-properties-and-variables.md)
+- [Guide pratique pour Créer une propriété](./how-to-create-a-property.md)
+- [Guide pratique pour Appeler une procédure de propriété](./how-to-call-a-property-procedure.md)
+- [Guide pratique pour Déclarer et appeler une propriété par défaut en Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Guide pratique pour Placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)
+- [Guide pratique pour Obtenir une valeur d’une propriété](./how-to-get-a-value-from-a-property.md)

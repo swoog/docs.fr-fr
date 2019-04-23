@@ -5,10 +5,10 @@ f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338629"
 ---
 # <a name="path-pathname-not-found"></a>Chemin d’accès '\<pathname >' introuvable
@@ -21,4 +21,4 @@ Le système d’exploitation n’a pas trouvé le chemin spécifié pendant une 
 ## <a name="see-also"></a>Voir aussi
 
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [Procédure : analyser des chemins de fichiers](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Guide pratique pour analyser des chemins](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
