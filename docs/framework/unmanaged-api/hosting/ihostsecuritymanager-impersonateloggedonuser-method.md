@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ebf9ad72f7a1b0dd7ac54afa104089182f122ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109887"
 ---
-# <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a><span data-ttu-id="cd71e-102">IHostSecurityManager::ImpersonateLoggedOnUser, méthode</span><span class="sxs-lookup"><span data-stu-id="cd71e-102">IHostSecurityManager::ImpersonateLoggedOnUser Method</span></span>
-<span data-ttu-id="cd71e-103">Les demandes qui code être exécutée en utilisant les informations d’identification de l’utilisateur actuel.</span><span class="sxs-lookup"><span data-stu-id="cd71e-103">Requests that code be executed using the credentials of the current user identity.</span></span>  
+# <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a><span data-ttu-id="5786a-102">IHostSecurityManager::ImpersonateLoggedOnUser, méthode</span><span class="sxs-lookup"><span data-stu-id="5786a-102">IHostSecurityManager::ImpersonateLoggedOnUser Method</span></span>
+<span data-ttu-id="5786a-103">Les demandes qui code être exécutée en utilisant les informations d’identification de l’utilisateur actuel.</span><span class="sxs-lookup"><span data-stu-id="5786a-103">Requests that code be executed using the credentials of the current user identity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd71e-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cd71e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5786a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5786a-104">Syntax</span></span>  
   
 ```  
 HRESULT ImpersonateLoggedOnUser (  
@@ -35,37 +35,37 @@ HRESULT ImpersonateLoggedOnUser (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cd71e-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="cd71e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5786a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5786a-105">Parameters</span></span>  
  `hToken`  
- <span data-ttu-id="cd71e-106">[in] Un jeton représentant les informations d’identification de l’utilisateur doit être empruntée.</span><span class="sxs-lookup"><span data-stu-id="cd71e-106">[in] A token representing the credentials of the user to be impersonated.</span></span>  
+ <span data-ttu-id="5786a-106">[in] Un jeton représentant les informations d’identification de l’utilisateur doit être empruntée.</span><span class="sxs-lookup"><span data-stu-id="5786a-106">[in] A token representing the credentials of the user to be impersonated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cd71e-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="cd71e-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5786a-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5786a-107">Return Value</span></span>  
   
-|<span data-ttu-id="cd71e-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cd71e-108">HRESULT</span></span>|<span data-ttu-id="cd71e-109">Description</span><span class="sxs-lookup"><span data-stu-id="cd71e-109">Description</span></span>|  
+|<span data-ttu-id="5786a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5786a-108">HRESULT</span></span>|<span data-ttu-id="5786a-109">Description</span><span class="sxs-lookup"><span data-stu-id="5786a-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cd71e-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="cd71e-110">S_OK</span></span>|`ImpersonateLoggedOnUser` <span data-ttu-id="cd71e-111">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="cd71e-111">returned successfully.</span></span>|  
-|<span data-ttu-id="cd71e-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cd71e-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cd71e-113">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="cd71e-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="cd71e-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cd71e-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cd71e-115">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="cd71e-115">The call timed out.</span></span>|  
-|<span data-ttu-id="cd71e-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cd71e-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cd71e-117">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="cd71e-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="cd71e-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cd71e-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cd71e-119">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="cd71e-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="cd71e-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cd71e-120">E_FAIL</span></span>|<span data-ttu-id="cd71e-121">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="cd71e-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cd71e-122">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="cd71e-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cd71e-123">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="cd71e-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5786a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5786a-110">S_OK</span></span>|<span data-ttu-id="5786a-111">`ImpersonateLoggedOnUser` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="5786a-111">`ImpersonateLoggedOnUser` returned successfully.</span></span>|  
+|<span data-ttu-id="5786a-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5786a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5786a-113">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="5786a-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5786a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5786a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5786a-115">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="5786a-115">The call timed out.</span></span>|  
+|<span data-ttu-id="5786a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5786a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5786a-117">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="5786a-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5786a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5786a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5786a-119">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="5786a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5786a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5786a-120">E_FAIL</span></span>|<span data-ttu-id="5786a-121">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="5786a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5786a-122">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="5786a-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5786a-123">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5786a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cd71e-124">Notes</span><span class="sxs-lookup"><span data-stu-id="cd71e-124">Remarks</span></span>  
- <span data-ttu-id="cd71e-125">Appelez `LogonUser` ou une fonction Win32 associée pour obtenir un handle pour les informations d’identification de l’utilisateur actuel.</span><span class="sxs-lookup"><span data-stu-id="cd71e-125">Call `LogonUser` or a related Win32 function to get a handle to the credentials of the current user identity.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5786a-124">Notes</span><span class="sxs-lookup"><span data-stu-id="5786a-124">Remarks</span></span>  
+ <span data-ttu-id="5786a-125">Appelez `LogonUser` ou une fonction Win32 associée pour obtenir un handle pour les informations d’identification de l’utilisateur actuel.</span><span class="sxs-lookup"><span data-stu-id="5786a-125">Call `LogonUser` or a related Win32 function to get a handle to the credentials of the current user identity.</span></span>  
   
- <span data-ttu-id="cd71e-126">Le `HANDLE` type n’est pas conforme à COM, autrement dit, sa taille est spécifique à un système d’exploitation et il requiert le marshaling personnalisé.</span><span class="sxs-lookup"><span data-stu-id="cd71e-126">The `HANDLE` type is not COM-compliant, that is, its size is specific to an operating system, and it requires custom marshaling.</span></span> <span data-ttu-id="cd71e-127">Par conséquent, ce jeton est utilisé que dans le processus, entre le CLR et l’hôte.</span><span class="sxs-lookup"><span data-stu-id="cd71e-127">Thus, this token is for use only within the process, between the CLR and the host.</span></span>  
+ <span data-ttu-id="5786a-126">Le `HANDLE` type n’est pas conforme à COM, autrement dit, sa taille est spécifique à un système d’exploitation et il requiert le marshaling personnalisé.</span><span class="sxs-lookup"><span data-stu-id="5786a-126">The `HANDLE` type is not COM-compliant, that is, its size is specific to an operating system, and it requires custom marshaling.</span></span> <span data-ttu-id="5786a-127">Par conséquent, ce jeton est utilisé que dans le processus, entre le CLR et l’hôte.</span><span class="sxs-lookup"><span data-stu-id="5786a-127">Thus, this token is for use only within the process, between the CLR and the host.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd71e-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="cd71e-128">Requirements</span></span>  
- <span data-ttu-id="cd71e-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd71e-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5786a-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="5786a-128">Requirements</span></span>  
+ <span data-ttu-id="5786a-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5786a-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd71e-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cd71e-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5786a-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5786a-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cd71e-131">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cd71e-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5786a-131">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5786a-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="cd71e-132">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="cd71e-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="5786a-132">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5786a-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd71e-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cd71e-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5786a-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5786a-133">See also</span></span>
 
-- [<span data-ttu-id="cd71e-134">IHostSecurityContext, interface</span><span class="sxs-lookup"><span data-stu-id="cd71e-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="cd71e-135">IHostSecurityManager, interface</span><span class="sxs-lookup"><span data-stu-id="cd71e-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="cd71e-136">RevertToSelf, méthode</span><span class="sxs-lookup"><span data-stu-id="cd71e-136">RevertToSelf Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)
+- [<span data-ttu-id="5786a-134">IHostSecurityContext, interface</span><span class="sxs-lookup"><span data-stu-id="5786a-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="5786a-135">IHostSecurityManager, interface</span><span class="sxs-lookup"><span data-stu-id="5786a-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="5786a-136">RevertToSelf, méthode</span><span class="sxs-lookup"><span data-stu-id="5786a-136">RevertToSelf Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115685"
 ---
-# <a name="cordebugsetcontextflag-enumeration"></a><span data-ttu-id="e30c2-102">CorDebugSetContextFlag, énumération</span><span class="sxs-lookup"><span data-stu-id="e30c2-102">CorDebugSetContextFlag Enumeration</span></span>
-<span data-ttu-id="e30c2-103">Indique si le contexte provient du frame (ou feuille) actif ou s'il a été calculé par déroulement à partir d'un autre frame.</span><span class="sxs-lookup"><span data-stu-id="e30c2-103">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
+# <a name="cordebugsetcontextflag-enumeration"></a><span data-ttu-id="2b9dc-102">CorDebugSetContextFlag, énumération</span><span class="sxs-lookup"><span data-stu-id="2b9dc-102">CorDebugSetContextFlag Enumeration</span></span>
+<span data-ttu-id="2b9dc-103">Indique si le contexte provient du frame (ou feuille) actif ou s'il a été calculé par déroulement à partir d'un autre frame.</span><span class="sxs-lookup"><span data-stu-id="2b9dc-103">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e30c2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e30c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b9dc-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2b9dc-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugSetContextFlag  
@@ -36,26 +36,26 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e30c2-105">Membres</span><span class="sxs-lookup"><span data-stu-id="e30c2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2b9dc-105">Membres</span><span class="sxs-lookup"><span data-stu-id="2b9dc-105">Members</span></span>  
   
-|<span data-ttu-id="e30c2-106">Membre</span><span class="sxs-lookup"><span data-stu-id="e30c2-106">Member</span></span>|<span data-ttu-id="e30c2-107">Description</span><span class="sxs-lookup"><span data-stu-id="e30c2-107">Description</span></span>|  
+|<span data-ttu-id="2b9dc-106">Membre</span><span class="sxs-lookup"><span data-stu-id="2b9dc-106">Member</span></span>|<span data-ttu-id="2b9dc-107">Description</span><span class="sxs-lookup"><span data-stu-id="2b9dc-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="e30c2-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span><span class="sxs-lookup"><span data-stu-id="e30c2-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span></span>|<span data-ttu-id="e30c2-109">Le contexte est le contexte du thread actif.</span><span class="sxs-lookup"><span data-stu-id="e30c2-109">The context is the thread’s active context.</span></span>|  
-|<span data-ttu-id="e30c2-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span><span class="sxs-lookup"><span data-stu-id="e30c2-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span></span>|<span data-ttu-id="e30c2-111">Le contexte a été calculé par déroulement à partir d’un autre frame.</span><span class="sxs-lookup"><span data-stu-id="e30c2-111">The context has been computed by unwinding from another frame.</span></span>|  
+|<span data-ttu-id="2b9dc-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span><span class="sxs-lookup"><span data-stu-id="2b9dc-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span></span>|<span data-ttu-id="2b9dc-109">Le contexte est le contexte du thread actif.</span><span class="sxs-lookup"><span data-stu-id="2b9dc-109">The context is the thread’s active context.</span></span>|  
+|<span data-ttu-id="2b9dc-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span><span class="sxs-lookup"><span data-stu-id="2b9dc-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span></span>|<span data-ttu-id="2b9dc-111">Le contexte a été calculé par déroulement à partir d’un autre frame.</span><span class="sxs-lookup"><span data-stu-id="2b9dc-111">The context has been computed by unwinding from another frame.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e30c2-112">Notes</span><span class="sxs-lookup"><span data-stu-id="e30c2-112">Remarks</span></span>  
- `CorDebugSetContextFlag` <span data-ttu-id="e30c2-113">Fournit des valeurs qui sont utilisées par le [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="e30c2-113">provides values that are used by the [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b9dc-112">Notes</span><span class="sxs-lookup"><span data-stu-id="2b9dc-112">Remarks</span></span>  
+ <span data-ttu-id="2b9dc-113">`CorDebugSetContextFlag` Fournit des valeurs qui sont utilisées par le [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="2b9dc-113">`CorDebugSetContextFlag` provides values that are used by the [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e30c2-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e30c2-114">Requirements</span></span>  
- <span data-ttu-id="e30c2-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e30c2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b9dc-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2b9dc-114">Requirements</span></span>  
+ <span data-ttu-id="2b9dc-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b9dc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e30c2-116">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e30c2-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2b9dc-116">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b9dc-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e30c2-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e30c2-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b9dc-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b9dc-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e30c2-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="e30c2-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="2b9dc-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b9dc-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e30c2-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e30c2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b9dc-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2b9dc-119">See also</span></span>
 
-- [<span data-ttu-id="e30c2-120">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="e30c2-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="e30c2-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="e30c2-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="2b9dc-120">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="2b9dc-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="2b9dc-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="2b9dc-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -3,18 +3,18 @@ title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
 ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113033"
 ---
-# <a name="bindingextensions"></a><span data-ttu-id="f14ae-101">\<bindingExtensions></span><span class="sxs-lookup"><span data-stu-id="f14ae-101">\<bindingExtensions></span></span>
-<span data-ttu-id="f14ae-102">Cette section active l’utilisation d’une liaison définie par l’utilisateur à partir d’un ordinateur ou d’un fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="f14ae-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="f14ae-103">Vous pouvez ajouter une liaison définie par l'utilisateur à cette collection en utilisant le mot clé `add` et affecter à l'attribut `type` de l'élément une liaison définie par l'utilisateur, aussi bien que l'attribut `name` au nom de la liaison définie par l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="f14ae-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
+# <a name="bindingextensions"></a><span data-ttu-id="3e5bc-101">\<bindingExtensions></span><span class="sxs-lookup"><span data-stu-id="3e5bc-101">\<bindingExtensions></span></span>
+<span data-ttu-id="3e5bc-102">Cette section active l’utilisation d’une liaison définie par l’utilisateur à partir d’un ordinateur ou d’un fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="3e5bc-103">Vous pouvez ajouter une liaison définie par l'utilisateur à cette collection en utilisant le mot clé `add` et affecter à l'attribut `type` de l'élément une liaison définie par l'utilisateur, aussi bien que l'attribut `name` au nom de la liaison définie par l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
   
- <span data-ttu-id="f14ae-104">Les extensions de liaison permettent à l'utilisateur de créer des liaisons qu'il définit lui-même pour les utiliser dans le cadre d'une configuration de point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="f14ae-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="f14ae-105">Par programme, une extension de liaison est un type qui implémente la classe abstraite <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="f14ae-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
+ <span data-ttu-id="3e5bc-104">Les extensions de liaison permettent à l'utilisateur de créer des liaisons qu'il définit lui-même pour les utiliser dans le cadre d'une configuration de point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="3e5bc-105">Par programme, une extension de liaison est un type qui implémente la classe abstraite <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
   
- <span data-ttu-id="f14ae-106">L'exemple suivant utilise l'élément `add` ainsi que l'attribut `name` pour ajouter une extension de liaison à la section `bindingElementExtensions` du fichier de configuration.</span><span class="sxs-lookup"><span data-stu-id="f14ae-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
+ <span data-ttu-id="3e5bc-106">L'exemple suivant utilise l'élément `add` ainsi que l'attribut `name` pour ajouter une extension de liaison à la section `bindingElementExtensions` du fichier de configuration.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ ms.locfileid: "59113033"
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="f14ae-107">Pour ajouter des capacités de configuration à l'élément, l'utilisateur doit écrire et enregistrer un élément `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="f14ae-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="f14ae-108">Pour plus d'informations, consultez la documentation <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="f14ae-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="3e5bc-107">Pour ajouter des capacités de configuration à l'élément, l'utilisateur doit écrire et enregistrer un élément `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="3e5bc-108">Pour plus d'informations, consultez la documentation <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="f14ae-109">Après la définition de l’élément et de son type de configuration, l’extension peut être utilisée comme une partie du point de terminaison comme présenté dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="f14ae-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+ <span data-ttu-id="3e5bc-109">Après la définition de l’élément et de son type de configuration, l’extension peut être utilisée comme une partie du point de terminaison comme présenté dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="3e5bc-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
   
 ```xml  
 <services>
@@ -41,6 +41,6 @@ ms.locfileid: "59113033"
 </services>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f14ae-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f14ae-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e5bc-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3e5bc-110">See also</span></span>
 
-- [<span data-ttu-id="f14ae-111">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="f14ae-111">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="3e5bc-111">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="3e5bc-111">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
