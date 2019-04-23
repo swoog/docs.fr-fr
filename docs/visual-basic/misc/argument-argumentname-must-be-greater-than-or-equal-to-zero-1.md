@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
 ms.openlocfilehash: e161ee7d7bbdb009c5d257715779ed28786867dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312863"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>Argument \<nom_argument > doit être supérieure ou égale à zéro
@@ -22,4 +22,4 @@ Une valeur d’argument est inférieure à zéro. Les valeurs d’argument doive
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Passage des arguments par valeur et par référence](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passage d’un argument par valeur et par référence](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314388"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procédure : Effectuer une liaison à une collection et afficher des informations basées sur la sélection
@@ -50,5 +50,5 @@ Dans un scénario maître / détail simple, vous avez lié aux données <xref:Sy
 - [Utiliser le modèle maître/détail avec des données hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Utiliser le modèle maître/détail avec des données XML hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d'ensemble des modèles de données](data-templating-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Vue d’ensemble des modèles de données](data-templating-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

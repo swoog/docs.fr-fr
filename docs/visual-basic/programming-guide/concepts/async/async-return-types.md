@@ -3,10 +3,10 @@ title: Types de retour Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313279"
 ---
 # <a name="async-return-types-visual-basic"></a>Types de retour Async (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` est appelé et attendu à l’aide d’une instruction await au lieu d’une expression await, similaire à l’instruction d’appel d’une commande synchrone `Sub` ou méthode retournant void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
+ `Task_MethodAsync` est appelé et attendu à l’aide d’une instruction await et non d’une expression await, à l’instar de l’instruction d’appel d’une méthode `Sub` synchrone ou d’une méthode qui retourne une valeur void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
   
  Le code suivant appelle et attend la méthode `Task_MethodAsync`.  
   
@@ -298,4 +298,4 @@ End Sub
 - [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Flux de contrôle dans les programmes Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await, opérateur](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)

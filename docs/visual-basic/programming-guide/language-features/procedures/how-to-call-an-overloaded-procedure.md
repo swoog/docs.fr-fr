@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317804"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procédure : Appeler une procédure surchargée (Visual Basic)
@@ -38,9 +38,9 @@ L’avantage de la surcharge d’une procédure est la flexibilité de l’appel
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Procédure : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Procédure : surcharger une procédure qui accepte des paramètres facultatifs](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Procédure : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considérations liées à la surcharge des procédures](./considerations-in-overloading-procedures.md)
+- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)
 - [Résolution de surcharge](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

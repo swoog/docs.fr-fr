@@ -11,18 +11,18 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313955"
 ---
 # <a name="documents-in-wpf"></a>Documents dans WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un large éventail de fonctionnalités de document qui permettent la création de contenu de haute fidélité est conçu pour être plus facilement accessible et lu que sur les générations précédentes de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit également des services intégrés pour l’affichage, le packaging et la sécurité des documents. Cette rubrique fournit une introduction aux types et au packaging des documents [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre une large gamme de fonctionnalités liées aux documents qui permettent de créer du contenu haute fidélité conçu pour être accessible et lu plus facilement que sur les générations précédentes de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit également des services intégrés pour l’affichage, le packaging et la sécurité des documents. Cette rubrique fournit une introduction aux types et au packaging des documents [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Types de documents  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] divise les documents en deux grandes catégories basées sur leur utilisation prévue ; Ces catégories de document sont appelées « documents fixes » et « documents dynamiques ».  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] divise les documents en deux grandes catégories basées sur leur utilisation prévue. Ces catégories de documents sont appelées "documents fixes" et "documents dynamiques".  
   
  Les documents fixes sont prévus pour les applications qui requièrent une présentation [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] précise, indépendamment du matériel d’affichage ou d’impression utilisé. Les documents fixes sont principalement utilisés pour la PAO (Publication Assistée par Ordinateur), le traitement de texte et la présentation d’un formulaire, où le respect de la conception de la page d’origine est essentiel. Dans le cadre de sa disposition, un document fixe conserve l’emplacement précis des éléments de contenu, indépendamment de l’écran d’affichage ou de l’appareil d’impression utilisé. Par exemple, une page de document fixe affichée en 96 ppp (points par pouce) apparaît de la même manière que lorsqu’elle est imprimée sur une imprimante laser 600 ppp ou une photocomposeuse 4800 ppp. Dans tous les cas, la disposition de la page reste la même, tandis que la qualité du document s’optimise selon les capacités de chaque appareil.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59313955"
   
  L’architecture de package [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sert de base à de nombreuses technologies clés :  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] documents conformes à la [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+-   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]Documents XPS conformes au type [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
 -   Documents au format Microsoft Office "12" Open XML (.docx).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59313955"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>Documents XPS  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] document est un package qui contient un ou plusieurs documents fixes, ainsi que toutes les ressources et les informations requises pour le rendu.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] est également natif [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] format de fichier de spoule d’impression.  Un <xref:System.Windows.Xps.Packaging.XpsDocument> est stocké dans le dataset ZIP standard et peut inclure une combinaison de composants XML et binaires, tels que les fichiers image et de police. Des [PackageRelationships](#PackageRelationships) sont utilisés pour définir les dépendances entre le contenu et les ressources nécessaires pour afficher le document.  Le <xref:System.Windows.Xps.Packaging.XpsDocument> conception fournit une solution de haute fidélité de document unique prenant en charge plusieurs utilisations :  
+ Un document [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] est un package qui contient un ou plusieurs documents fixes, ainsi que toutes les ressources et informations nécessaires pour le rendu.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] est également le format de fichier de spool d’impression [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] natif.  Un <xref:System.Windows.Xps.Packaging.XpsDocument> est stocké dans le dataset ZIP standard et peut inclure une combinaison de composants XML et binaires, tels que les fichiers image et de police. Des [PackageRelationships](#PackageRelationships) sont utilisés pour définir les dépendances entre le contenu et les ressources nécessaires pour afficher le document.  Le <xref:System.Windows.Xps.Packaging.XpsDocument> conception fournit une solution de haute fidélité de document unique prenant en charge plusieurs utilisations :  
   
 -   Lecture, écriture et stockage de ressources et de contenu de document fixe sous la forme d’un fichier unique, portable et facile à distribuer.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59313955"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Texte](optimizing-performance-text.md)
-- [Vue d'ensemble des documents dynamiques](flow-document-overview.md)
-- [Vue d'ensemble de l'impression](printing-overview.md)
+- [Text](optimizing-performance-text.md)
+- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)
 - [Sérialisation et stockage de documents](document-serialization-and-storage.md)

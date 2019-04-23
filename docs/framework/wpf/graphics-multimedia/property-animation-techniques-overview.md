@@ -10,10 +10,10 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317907"
 ---
 # <a name="property-animation-techniques-overview"></a>Vue d'ensemble des techniques d'animation de propriétés
@@ -31,7 +31,7 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
 |Technique d’animation|Scénarios|XAML pris en charge|Contrôlable de manière interactive|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Animation de table de montage séquentiel|Par instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
+|Animation de table de montage séquentiel|Per-instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
 |Animation locale|Par instance|Non|Non|  
 |Animation horloge|Par instance|Non|Oui|  
 |Animation par image|Par instance|Non|N/A|  
@@ -58,8 +58,8 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> et une <xref:System.Windows.EventTrigger>|Oui|Oui|Oui|Oui|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Non|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Non|Oui|Oui|Oui|[Procédure : Déclencher une Animation lors de la modification des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> méthode|Oui|Non|Non|Non|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Non|Oui|Oui|Oui|[Guide pratique pour Déclencher une Animation lors de la modification des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Non|[Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Pour plus d’informations sur <xref:System.Windows.Media.Animation.Storyboard> , voir la [vue d’ensemble des Storyboards](storyboards-overview.md).  
   
@@ -123,7 +123,7 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des storyboards](storyboards-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
 - [Vue d’ensemble des propriétés de dépendance](../advanced/dependency-properties-overview.md)

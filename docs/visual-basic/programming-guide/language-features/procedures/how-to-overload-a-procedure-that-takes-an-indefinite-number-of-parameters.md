@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316451"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procédure : Surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)
@@ -58,10 +58,10 @@ Si une procédure possède un [ParamArray](../../../../visual-basic/language-ref
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Paramètres facultatifs](./optional-parameters.md)
-- [Tableaux de paramètres](./parameter-arrays.md)
+- [tableaux de paramètres](./parameter-arrays.md)
 - [Surcharge de procédure](./procedure-overloading.md)
 - [Procédures de dépannage](./troubleshooting-procedures.md)
-- [Procédure : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Procédure : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
-- [Procédure : surcharger une procédure qui accepte des paramètres facultatifs](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Résolution de surcharge](./overload-resolution.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316620"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procédure : Modifiez la valeur d’un Argument de procédure (Visual Basic)
@@ -81,11 +81,11 @@ Lorsque vous appelez une procédure, chaque argument que vous fournissez corresp
 
 - [Procédures](./index.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Procédure : passer des arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
-- [Passage des arguments par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
+- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
 - [Différences entre les arguments modifiables et non modifiables](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Différences entre le passage d’un argument par valeur et par référence](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Procédure : protéger un argument de procédure contre les modifications de valeur](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Procédure : forcer le passage par valeur d’un argument](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Guide pratique pour Protéger un Argument de procédure contre les modifications de valeur](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Guide pratique pour Forcer un Argument d’être passés par valeur](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passage des arguments par position et par nom](./passing-arguments-by-position-and-by-name.md)
-- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

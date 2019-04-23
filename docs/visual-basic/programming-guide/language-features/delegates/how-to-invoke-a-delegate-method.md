@@ -3,10 +3,10 @@ title: 'Procédure : Appeler une méthode déléguée (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319610"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Procédure : Appeler une méthode déléguée (Visual Basic)
@@ -44,7 +44,7 @@ Cet exemple montre comment associer une méthode à un délégué, puis appelez 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Delegate, instruction](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Délégués](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Applications multithread](../../../../standard/threading/using-threads-and-threading.md)

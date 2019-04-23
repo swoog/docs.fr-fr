@@ -3,10 +3,10 @@ title: Signature de procédures stockées dans SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313916"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signature de procédures stockées dans SQL Server
@@ -57,10 +57,10 @@ Si le module a besoin des autorisations supplémentaires au niveau du serveur :
 ## <a name="see-also"></a>Voir aussi
 
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Vue d'ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Gestion des autorisations avec les procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Écriture de Dynamic SQL sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
 - [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

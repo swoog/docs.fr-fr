@@ -20,10 +20,10 @@ ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318024"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procédure : chiffrer des éléments XML avec des clés asymétriques
@@ -145,4 +145,4 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Security.Cryptography.Xml>
-- [Procédure : déchiffrer des éléments XML avec des clés asymétriques](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [Guide pratique pour Déchiffrer des éléments XML avec des clés asymétriques](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

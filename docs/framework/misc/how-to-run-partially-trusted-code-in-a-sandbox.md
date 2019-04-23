@@ -11,10 +11,10 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316529"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procédure : Exécuter le Code de confiance partiel dans un bac à sable
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     En fonction de la zone dans la preuve, la méthode <xref:System.Security.SecurityManager.GetStandardSandbox%2A> retourne un jeu d'autorisations `Internet` ou un jeu d'autorisations `LocalIntranet`. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> construit également des autorisations d’identité pour certains objets de preuve passés comme références.  
+     En fonction de la zone dans la preuve, la méthode <xref:System.Security.SecurityManager.GetStandardSandbox%2A> retourne un jeu d'autorisations `Internet` ou un jeu d'autorisations `LocalIntranet`. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> construit également des autorisations d'identité pour certains objets de preuve passés comme références.  
   
 2. Signez l'assembly qui contient la classe d'hébergement (appelée `Sandboxer` dans cet exemple) qui appelle le code non fiable. Ajouter le <xref:System.Security.Policy.StrongName> utilisé pour signer l'assembly au tableau <xref:System.Security.Policy.StrongName> du paramètre `fullTrustAssemblies` paramètre de l'appel <xref:System.AppDomain.CreateDomain%2A>. La classe d'hébergement doit être exécutée avec un niveau de confiance totale pour permettre l'exécution du code de confiance partielle ou offrir des services à l'application de confiance partielle. Voici comment lire le <xref:System.Security.Policy.StrongName> d'un assembly :  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> est utilisé pour obtenir un handle d’une méthode dans l’assembly partiellement approuvé. Le handle permet d'exécuter du code d'une façon sécurisée avec les autorisations minimales.  
+     <xref:System.Reflection> est utilisé pour obtenir le handle d'une méthode dans l'assembly de niveau de confiance partielle. Le handle permet d'exécuter du code d'une façon sécurisée avec les autorisations minimales.  
   
      Dans le code précédent, notez <xref:System.Security.PermissionSet.Assert%2A> pour l'autorisation de confiance totale avant l'affichage de <xref:System.Security.SecurityException>.  
   

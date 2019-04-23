@@ -8,17 +8,17 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316802"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement
 Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui peuvent être configurés mais ne fournissent pas une flexibilité totale lors de la configuration de toutes les options de sécurité WCF prend en charge. Cette rubrique montre comment créer une liaison personnalisée directement à partir d'éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d'une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> ne prend pas en charge la <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forme, qui est l’utilisation de forme de canal par défaut par le protocole TCP de canal de transport lorsque <xref:System.ServiceModel.TransferMode> est défini sur <xref:System.ServiceModel.TransferMode.Buffered>. Vous devez définir <xref:System.ServiceModel.TransferMode> à <xref:System.ServiceModel.TransferMode.Streamed> pour utiliser <xref:System.ServiceModel.Channels.SecurityBindingElement> dans ce scénario.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> ne prend pas en charge la forme de canal <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, qui est la forme de canal par défaut utilisée par le transport TCP lorsque <xref:System.ServiceModel.TransferMode> a la valeur <xref:System.ServiceModel.TransferMode.Buffered>. Vous devez définir <xref:System.ServiceModel.TransferMode> à <xref:System.ServiceModel.TransferMode.Streamed> pour utiliser <xref:System.ServiceModel.Channels.SecurityBindingElement> dans ce scénario.  
   
 ## <a name="creating-a-custom-binding"></a>Création d’une liaison personnalisée  
  Dans WCF toutes les liaisons sont constituées de *éléments de liaison*. Chaque élément de liaison dérive de la classe <xref:System.ServiceModel.Channels.BindingElement>. Pour les liaisons fournies par le système standard, les éléments de liaison sont créés et configurés automatiquement, bien que vous puissiez personnaliser quelques paramètres de propriétés.  

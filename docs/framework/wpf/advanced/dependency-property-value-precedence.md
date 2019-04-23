@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315684"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorité de la valeur de propriété de dépendance
@@ -39,7 +39,7 @@ ms.locfileid: "59315684"
 ## <a name="dependency-property-setting-precedence-list"></a>Liste de priorité de définition de propriété de dépendance  
  Voici l’ordre définitif suivi par le système de propriétés lors de l’affectation des valeurs d’exécution des propriétés de dépendance. La priorité la plus élevée est répertoriée en premier. Cette liste étend certaines des généralisations présentées dans la [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md).  
   
-1. **Forçage du système de propriété.** Pour plus d’informations sur le forçage, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
+1. **Forçage du système de propriétés.** Pour plus d’informations sur le forçage, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
   
 2. **Animations actives ou animations avec un comportement de blocage.** Pour avoir un effet pratique, une animation d’une propriété doit pouvoir être prioritaire par rapport à la valeur de base (non animée), même si cette valeur a été définie localement. Pour plus d’informations, consultez [Forçage, animation et valeur de base](#animations) plus loin dans cette rubrique.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "59315684"
   
 5. **Style implicite.** S’applique uniquement à la propriété `Style`. La propriété `Style` est renseignée par toute ressource de style avec une clé qui correspond au type de cet élément. Cette ressource de style doit exister dans la page ou dans l’application ; la recherche d’une ressource de style implicite ne se poursuit pas dans les thèmes.  
   
-6. **Déclencheurs de style.** Déclencheurs dans les styles de page ou d’application (ces styles peuvent être explicites ou implicites, mais pas issus des styles par défaut, qui ont une priorité inférieure).  
+6. **Déclencheurs de styles.** Déclencheurs dans les styles de page ou d’application (ces styles peuvent être explicites ou implicites, mais pas issus des styles par défaut, qui ont une priorité inférieure).  
   
-7. **Déclencheurs de modèle.** Tout déclencheur d’un modèle dans un style, ou un modèle appliqué directement.  
+7. **Déclencheurs de modèles.** Tout déclencheur d’un modèle dans un style, ou un modèle appliqué directement.  
   
-8. **Accesseurs Set de style.** Valeurs à partir d’un <xref:System.Windows.Setter> dans les styles de page ou application.  
+8. **Style Setters.** Valeurs à partir d’un <xref:System.Windows.Setter> dans les styles de page ou application.  
   
-9. **Style par défaut (thème).** Pour plus d’informations sur les cas où ceci est applicable, et sur la relation entre les styles de thème et les modèles dans les styles de thème, consultez [Style (de thème) par défaut](#themestyles) plus loin dans cette rubrique. Dans un style par défaut, l’ordre de priorité suivant s’applique :  
+9. **Style (de thème) par défaut.** Pour plus d’informations sur les cas où ceci est applicable, et sur la relation entre les styles de thème et les modèles dans les styles de thème, consultez [Style (de thème) par défaut](#themestyles) plus loin dans cette rubrique. Dans un style par défaut, l’ordre de priorité suivant s’applique :  
   
     1.  Déclencheurs actifs dans le style de thème.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59315684"
   
 10. **Héritage.** Quelques propriétés de dépendance héritent de leurs valeurs d’élément parent à éléments enfants, et n’ont donc pas besoin d’être définies spécifiquement sur chaque élément dans une application. Pour plus d’informations, consultez [Héritage de la valeur de propriété](property-value-inheritance.md).  
   
-11. **Valeur par défaut à partir des métadonnées de propriété de dépendance.** Toute propriété de dépendance peut avoir une valeur par défaut établie par l’inscription de cette propriété particulière dans le système de propriétés. En outre, les classes dérivées qui héritent d’une propriété de dépendance peuvent substituer ces métadonnées (notamment la valeur par défaut) pour chaque type. Pour plus d’informations, consultez [Métadonnées de propriété de dépendance](dependency-property-metadata.md). Étant donné que l’héritage est vérifié avant la valeur par défaut, pour une propriété héritée une valeur par défaut d’élément parent est prioritaire par rapport à un élément enfant.  Par conséquent, si une propriété pouvant être héritée n’est définie nulle part, la valeur par défaut spécifiée pour la racine ou le parent est utilisée au lieu de la valeur par défaut de l’élément enfant.  
+11. **Valeur par défaut issue des métadonnées de propriété de dépendance.** Toute propriété de dépendance peut avoir une valeur par défaut établie par l’inscription de cette propriété particulière dans le système de propriétés. En outre, les classes dérivées qui héritent d’une propriété de dépendance peuvent substituer ces métadonnées (notamment la valeur par défaut) pour chaque type. Pour plus d’informations, consultez [Métadonnées de propriété de dépendance](dependency-property-metadata.md). Étant donné que l’héritage est vérifié avant la valeur par défaut, pour une propriété héritée une valeur par défaut d’élément parent est prioritaire par rapport à un élément enfant.  Par conséquent, si une propriété pouvant être héritée n’est définie nulle part, la valeur par défaut spécifiée pour la racine ou le parent est utilisée au lieu de la valeur par défaut de l’élément enfant.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317440"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Procédure : Appeler des opérations de Service WCF de façon asynchrone
@@ -65,4 +65,4 @@ Cette rubrique présente comment un client peut accéder de façon asynchrone à
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : implémenter une opération de service asynchrone](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+- [Guide pratique pour Implémenter une opération de Service asynchrone](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

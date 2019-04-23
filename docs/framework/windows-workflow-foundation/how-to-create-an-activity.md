@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315138"
 ---
 # <a name="how-to-create-an-activity"></a>Procédure : créer une activité
@@ -46,7 +46,7 @@ Les activités sont l'unité principale de comportement dans [!INCLUDE[wf1](../.
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > L'activité `ReadInt` dérive de <xref:System.Activities.NativeActivity%601> au lieu de <xref:System.Activities.CodeActivity>, qui est la valeur par défaut pour le modèle d'activité de code. <xref:System.Activities.CodeActivity%601> peut être utilisée si l’activité fournit un résultat unique, ce qui est exposé via la <xref:System.Activities.Activity%601.Result%2A> argument, mais <xref:System.Activities.CodeActivity%601> ne prend pas en charge l’utilisation de signets, par conséquent, <xref:System.Activities.NativeActivity%601> est utilisé.
+    > L'activité `ReadInt` dérive de <xref:System.Activities.NativeActivity%601> au lieu de <xref:System.Activities.CodeActivity>, qui est la valeur par défaut pour le modèle d'activité de code. <xref:System.Activities.CodeActivity%601> peut être utilisé si l'activité fournit un résultat unique, exposé via l'argument <xref:System.Activities.Activity%601.Result%2A>, mais <xref:System.Activities.CodeActivity%601> ne prenant pas en charge l'utilisation de signets, <xref:System.Activities.NativeActivity%601> est utilisé.
 
 ## <a name="create-the-prompt-activity"></a>Créer l’activité Prompt
 
@@ -106,7 +106,7 @@ Pour obtenir des instructions sur la création d’un flux de travail à l’aid
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Conception et implémentation d'activités personnalisées](designing-and-implementing-custom-activities.md)
-- [Didacticiel de mise en route](getting-started-tutorial.md)
-- [Procédure : créer un workflow](how-to-create-a-workflow.md)
-- [Utilisation d'ExpressionTextBox dans un concepteur d'activités personnalisées](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Conception et implémentation d’activités personnalisées](designing-and-implementing-custom-activities.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)
+- [Guide pratique pour Créer un flux de travail](how-to-create-a-workflow.md)
+- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

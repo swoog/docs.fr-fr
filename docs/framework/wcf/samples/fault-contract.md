@@ -3,10 +3,10 @@ title: Contrat d'erreur
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317127"
 ---
 # <a name="fault-contract"></a>Contrat d'erreur
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Par défaut, les informations relatives aux exceptions non escomptées ne sont pas envoyées au client afin d'éviter que les informations relatives à l'implémentation du service ne franchissent les frontières de la zone sécurisée de ce dernier. `FaultContract` fournit un moyen de décrire des erreurs dans un contrat et de baliser certains types d’exceptions comme il convient pour la transmission au client. `FaultException<T>` fournit le mécanisme d’exécution pour l’envoi d’erreurs aux consommateurs.  
+ Par défaut, les informations relatives aux exceptions non escomptées ne sont pas envoyées au client afin d'éviter que les informations relatives à l'implémentation du service ne franchissent les frontières de la zone sécurisée de ce dernier. `FaultContract` permet de décrire des erreurs dans un contrat et de baliser certains types d'exceptions comme requis pour permettre leur transmission au client. `FaultException<T>` fournit le mécanisme d'exécution nécessaire à l'envoi des erreurs aux consommateurs.  
   
  Toutefois, en cas de débogage, il est utile de consulter les détails internes relatifs aux éventuelles défaillances d'un service. Pour désactiver le comportement sécurisé précédemment décrit, vous pouvez définir la spécification suivante : inclusion des détails relatifs à toutes les exceptions non prises en charge sur le serveur dans les erreurs envoyées au client. Pour ce faire, il vous suffit d'affecter à <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> la valeur `true`. Ce paramétrage peut être effectué dans le code ou la configuration, tel qu'illustré dans l'exemple suivant.  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312712"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : fournir de l’aide dans une application Windows
@@ -57,7 +57,7 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : afficher l’aide contextuelle](how-to-display-pop-up-help.md)
-- [Affichage sous forme d'info-bulles de l'aide relative aux contrôles](control-help-using-tooltips.md)
-- [Intégration de l'aide d'utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Guide pratique pour Afficher l’aide contextuelle](how-to-display-pop-up-help.md)
+- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](control-help-using-tooltips.md)
+- [Intégration de l’aide d’utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

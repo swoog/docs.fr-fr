@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317335"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
@@ -144,6 +144,6 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
 - [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Sérialisation binaire](binary-serialization.md)
-- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Sérialisation XML et SOAP](xml-and-soap-serialization.md)
 - [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)

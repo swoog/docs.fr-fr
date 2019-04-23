@@ -7,10 +7,10 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317673"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Procédure : masquer des ToolStripMenuItems à l’aide du concepteur
@@ -41,5 +41,5 @@ Masquage d’éléments de menu est un moyen de contrôler l’interface utilisa
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
-- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Procédure : désactiver des ToolStripMenuItems à l’aide du concepteur](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Guide pratique pour Désactiver des ToolStripMenuItems à l’aide du Concepteur](how-to-disable-toolstripmenuitems-using-the-designer.md)

@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318778"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification multiclasse pour classifier les problèmes GitHub
@@ -53,12 +53,12 @@ Les phases du flux de travail sont les suivantes :
 1. **Comprendre le problème**
 2. **Préparer vos données**
    * **Charger les données**
-   * **Extraire des caractéristiques (transformation des données)**
-3. **Générer et entraîner** 
+   * **Extraire des caractéristiques (transformer vos données)**
+3. **Générer et former** 
    * **Effectuer l’apprentissage du modèle**
    * **Évaluer le modèle**
 4. **Déployer le modèle**
-   * **Utiliser le modèle à des fins de prédiction**
+   * **Utiliser le modèle pour prédire**
 
 ### <a name="understand-the-problem"></a>Comprendre le problème
 
@@ -144,13 +144,13 @@ Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *
 
 Créez trois champs globaux pour accueillir les chemins des fichiers récemment téléchargés, puis des variables globales pour `MLContext`, `DataView`, `PredictionEngine` et `TextLoader` :
 
-* `_trainDataPath` contient le chemin du jeu de données servant à l’apprentissage du modèle.
-* `_testDataPath` contient le chemin du jeu de données servant à l’évaluation du modèle.
-* `_modelPath` contient le chemin où le modèle entraîné est enregistré.
+* `_trainDataPath` contient le chemin d’accès au jeu de données utilisé pour l’apprentissage du modèle.
+* `_testDataPath` contient le chemin d’accès au jeu de données utilisé pour évaluer le modèle.
+* `_modelPath` contient le chemin d’accès où le modèle formé est enregistré.
 * `_mlContext` est le <xref:Microsoft.ML.MLContext> qui fournit le contexte de traitement.
-* `_trainingDataView` est le <xref:Microsoft.Data.DataView.IDataView> servant à traiter le jeu de données d’apprentissage.
-* `_predEngine` est le <xref:Microsoft.ML.PredictionEngine%602> servant aux prédictions uniques.
-* `_reader` est le <xref:Microsoft.ML.Data.TextLoader> servant à charger et à transformer les jeux de données.
+* `_trainingDataView` est le <xref:Microsoft.Data.DataView.IDataView> utilisé pour traiter le jeu de données d’entraînement.
+* `_predEngine` est le <xref:Microsoft.ML.PredictionEngine%602> utilisé pour des prédictions uniques.
+* `_reader` est l’élément <xref:Microsoft.ML.Data.TextLoader> utilisé pour charger et transformer les jeux de données.
 
 Ajoutez le code suivant à la ligne juste au-dessus de la méthode `Main` pour spécifier ces chemins et les autres variables :
 
@@ -170,16 +170,16 @@ Supprimez la définition de classe existante et ajoutez le code suivant, lequel 
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-`GitHubIssue` est la classe de jeu de données d’entrée. Elle comprend les champs <xref:System.String> suivants :
+`GitHubIssue`, la classe de jeu de données d’entrée, comprend les champs <xref:System.String> suivants :
 
-* `ID` contient la valeur de l’ID du problème GitHub.
-* `Area` contient la valeur de l’étiquette `Area`.
+* `ID` contient une valeur pour l’ID du problème GitHub.
+* `Area` contient une valeur pour l’étiquette `Area`.
 * `Title` contient le titre du problème GitHub.
 * `Description` contient la description du problème GitHub.
 
-`IssuePrediction` est la classe servant à la prédiction une fois le modèle entraîné. Il comporte une valeur `string` unique (`Area`) et un attribut `ColumnName` `PredictedLabel`. L’attribut `Label` sert à créer et à effectuer l’apprentissage du modèle et il est utilisé avec un second jeu de données pour évaluer le modèle. L’attribut `PredictedLabel` est utilisé pendant la prédiction et l’évaluation. L’évaluation utilise une entrée avec les données d’apprentissage, les valeurs prédites et le modèle.
+`IssuePrediction` représente la classe utilisée pour la prédiction, une fois le modèle formé. Il comporte une valeur `string` unique (`Area`) et un attribut `ColumnName` `PredictedLabel`. L’attribut `Label` sert à créer et à effectuer l’apprentissage du modèle et il est utilisé avec un second jeu de données pour évaluer le modèle. L’attribut `PredictedLabel` est utilisé pendant la prédiction et l’évaluation. L’évaluation utilise une entrée avec les données d’apprentissage, les valeurs prédites et le modèle.
 
-Lors de la création d’un modèle avec ML.NET, vous commencez par créer un <xref:Microsoft.ML.MLContext>. `MLContext` est conceptuellement comparable à `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche d’apprentissage automatique et qui peut être utilisé pour le suivi des exceptions et la journalisation.
+Lors de la création d’un modèle avec ML.NET, vous commencez par créer un <xref:Microsoft.ML.MLContext>. D’un point de vue conceptuel, `MLContext` est comparable à `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche d’apprentissage automatique et qui peut être utilisé pour le suivi des exceptions et la journalisation.
 
 ### <a name="initialize-variables-in-main"></a>Initialiser les variables dans Principal
 
@@ -203,8 +203,8 @@ Vous avez défini précédemment le schéma de données quand vous avez créé l
 
 * La première colonne `ID` est l’ID du problème GitHub.
 * La deuxième colonne `Area` est la prédiction pour l’entraînement.
-* La troisième colonne `Title` (titre du problème GitHub) est la première [caractéristique](../resources/glossary.md##feature) utilisée pour prédire `Area`
-* La quatrième colonne `Description` est la deuxième caractéristique utilisée pour prédire `Area`
+* La troisième colonne `Title` (titre du problème GitHub) est la première [caractéristique](../resources/glossary.md##feature) utilisée pour prédire `Area`.
+* La quatrième colonne `Description` est la deuxième caractéristique utilisée pour prédire `Area`.
 
 Pour initialiser et charger la variable globale `_trainingDataView` afin de l’utiliser pour le pipeline, ajoutez le code suivant après l’initialisation de `mlContext` :
 
@@ -299,7 +299,7 @@ Pour ajouter l’algorithme d’apprentissage, appelez la méthode de wrapper `m
 
 ### <a name="train-the-model"></a>Effectuer l’apprentissage du modèle
 
-Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimation définie, vous formez votre modèle à l’aide du <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `trainingPipeline.Fit()` entraîne le pipeline et retourne un `Transformer` selon le `DataView` transmis. L’expérience n’est pas exécutée tant que la méthode `.Fit()` s’exécute.
+Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimation définie, vous formez votre modèle à l’aide du <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `trainingPipeline.Fit()` forme le pipeline et renvoie un `Transformer` selon l’élément `DataView` transmis. L’expérience n’est pas exécutée tant que la méthode `.Fit()` s’exécute.
 
 Ajoutez le code suivant à la méthode `BuildAndTrainModel` :
 

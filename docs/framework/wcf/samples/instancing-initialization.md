@@ -3,10 +3,10 @@ title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322184"
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Cet exemple utilise un attribut personnalisé. Lorsque <xref:System.ServiceModel.ServiceHost> est généré, il examine les attributs utilisés dans la définition de type du service et ajoute les comportements disponibles à la collection de comportements de la description de service.  
   
- Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; Il permet au service à inspecter des incohérences. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; Cette méthode est requise uniquement dans les scénarios très avancés. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier et est responsable de la configuration de l’exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
+ Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. l'<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; elle autorise l'inspection du service pour retrouver les éventuelles incohérences. l'<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; cette méthode est requise uniquement dans les scénarios très avancés. l'<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier ; elle est responsable de la configuration de l'exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
   
 -   `Description`: Ce paramètre fournit la description de service pour l’ensemble du service. Il permet d’inspecter les données de description des points de terminaison, des contrats et des liaisons, et les autres données associées au service.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Activation et désactivation du raccordement  
  L'objectif principal de la mise en mise en pool d’objets est d'optimiser la création et l'initialisation relativement coûteuses des objets éphémères. Par conséquent, elle peut singulièrement améliorer les performances d'une application si elle est utilisée correctement. Étant donné que l'objet est retourné depuis le pool, le constructeur est appelé une seule fois. Toutefois, certaines applications requièrent un certain niveau de contrôle afin de pouvoir initialiser et nettoyer les ressources utilisées dans un contexte unique. Par exemple, un objet utilisé pour un ensemble de calculs peut réinitialiser ses champs privés avant de traiter le calcul suivant. Les Enterprise Services ont activé ce type d'initialisation spécifique au contexte en laissant le développeur d'objets substituer les méthodes `Activate` et `Deactivate` de la classe <xref:System.EnterpriseServices.ServicedComponent> de base.  
   
- Le pool d'objets appelle la méthode `Activate` juste avant de retourner l'objet depuis le pool. `Deactivate` est appelé lorsque l’objet est retournée au pool. La classe <xref:System.EnterpriseServices.ServicedComponent> de base a également une propriété `boolean` appelée `CanBePooled`, qui peut être utilisée pour notifier au pool que l'objet peut être davantage regroupé.  
+ Le pool d'objets appelle la méthode `Activate` juste avant de retourner l'objet depuis le pool. `Deactivate` est appelé lorsque l'objet est retourné au pool. La classe <xref:System.EnterpriseServices.ServicedComponent> de base a également une propriété `boolean` appelée `CanBePooled`, qui peut être utilisée pour notifier au pool que l'objet peut être davantage regroupé.  
   
  Pour reproduire ces fonctionnalités, l'exemple déclare une interface publique (`IObjectControl`) avec les membres susmentionnés. Puis cette interface est implémentée par les classes de service conçues pour assurer l'initialisation spécifique au contexte. L’implémentation <xref:System.ServiceModel.Dispatcher.IInstanceProvider> doit être modifiée pour satisfaire ces exigences. Désormais, chaque fois que vous obtenez un objet en appelant le `GetInstance` (méthode), vous devez vérifier si l’objet implémente `IObjectControl.` le cas échéant, vous devez appeler la `Activate` méthode correctement.  
   

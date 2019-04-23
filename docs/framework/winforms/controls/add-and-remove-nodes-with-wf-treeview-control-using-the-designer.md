@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322626"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Procédure : ajouter et supprimer des nœuds avec le contrôle TreeView Windows Forms à l’aide du concepteur
@@ -38,7 +38,7 @@ ms.locfileid: "59322626"
 
 - [TreeView, contrôle](treeview-control-windows-forms.md)
 - [Vue d’ensemble du contrôle TreeView](treeview-control-overview-windows-forms.md)
-- [Procédure : définir des icônes pour le contrôle TreeView Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Procédure : itérer au sein de tous les nœuds d’un contrôle TreeView Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Procédure : déterminer sur quel TreeView l’utilisateur a cliqué](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Procédure : ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Guide pratique pour Définir des icônes pour le contrôle TreeView Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [Guide pratique pour Effectuer une itération dans tous les nœuds d’un contrôle de TreeView Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Guide pratique pour Déterminer l’utilisateur a cliqué sur le nœud de TreeView](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

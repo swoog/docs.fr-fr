@@ -4,10 +4,10 @@ description: Découvrez les dépendances nécessaires sur votre machine Windows 
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
 ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313708"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
@@ -39,7 +39,7 @@ Les articles suivants dressent la liste complète des systèmes d’exploitation
 * [.NET Core 3.0 (préversion)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
+* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 Pour obtenir des liens de téléchargement et plus d’informations, consultez [Téléchargements .NET](https://dotnet.microsoft.com/download) afin de télécharger la version la plus récente ou [Archive des téléchargements .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) pour les versions antérieures.
 
@@ -73,7 +73,7 @@ Vous pouvez utiliser l’éditeur de votre choix pour développer des applicatio
 
 Vous trouverez plus d’informations sur les modifications apportées à Visual Studio 2017 dans les [notes de publication](/visualstudio/releasenotes/vs2017-relnotes).
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Pour développer des applications .NET Core dans Visual Studio 2017 à l’aide du SDK .NET Core 2.2 :
 
@@ -101,7 +101,7 @@ Une fois que vous avez configuré Visual Studio avec le SDK .NET Core 2.2, vous 
 * Recibler les projets .NET Core 1.x et 2.x vers .NET Core 2.2, les générer et les exécuter.
 * Créer des projets .NET Core 2.2.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Pur développer des applications .NET Core 1.x dans Visual Studio, [téléchargez et installez Visual Studio 2017](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
 

@@ -3,10 +3,10 @@ title: 'Procédure : Réorganiser les champs d’un fichier délimité (LINQ) (
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: ff8782571bccabe17e9c01331339cf729ff6620a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314982"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procédure : Réorganiser les champs d’un fichier délimité (LINQ) (C#)
@@ -82,4 +82,4 @@ class CSVFiles
 
 - [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [Procédure : Générer du code XML à partir de fichiers CSV (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [Guide pratique pour générer du code XML à partir de fichiers CSV (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

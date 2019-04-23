@@ -3,10 +3,10 @@ title: 'Procédure : tester le proxy de détection'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316391"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Procédure : tester le proxy de détection
@@ -52,7 +52,7 @@ Cette rubrique est la quatrième d'une série quatre qui expliquent comment impl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Procédure : implémenter un proxy de détection](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Procédure : implémenter un service détectable qui s’enregistre auprès du proxy de détection](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Procédure : implémenter une application cliente qui utilise le proxy de détection pour rechercher un service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Guide pratique pour Implémenter un Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Guide pratique pour Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Guide pratique pour Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

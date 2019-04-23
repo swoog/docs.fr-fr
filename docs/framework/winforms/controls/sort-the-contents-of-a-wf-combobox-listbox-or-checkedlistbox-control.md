@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
 ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312577"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : trier le contenu d’un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
@@ -31,7 +31,7 @@ Contrôles Windows Forms ne pas trier lorsqu’ils sont liés aux données. Pour
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
-- [Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
+- [Guide pratique pour Ajouter et supprimer des éléments d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](add-and-remove-items-from-a-wf-combobox.md)
 - [Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Contrôles Windows Forms utilisés pour l'affichage de listes d'options](windows-forms-controls-used-to-list-options.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313942"
 ---
 # <a name="custom-animations-overview"></a>Vue d'ensemble des animations personnalisées
@@ -127,10 +127,10 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
 
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
-- [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
 - [Vue d'ensemble des animations de tracés](path-animations-overview.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
-- [Exemple d’Animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Exemple d’animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)

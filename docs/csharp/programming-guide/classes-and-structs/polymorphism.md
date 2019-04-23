@@ -7,10 +7,10 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322080"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphisme (Guide de programmation C#)
@@ -89,11 +89,11 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Gestion des versions avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
 -   [Savoir quand utiliser les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Procédure : Substituer la méthode ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Guide pratique pour substituer la méthode ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

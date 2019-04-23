@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319363"
 ---
 # <a name="trusted-subsystem"></a>Sous-système approuvé
@@ -38,7 +38,7 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
 |Intégrité|Oui|  
 |Confidentialité|Oui|  
 |Transport|HTTP entre client et le service du sous-système approuvé.<br /><br /> NET.TCP entre le service du sous-système approuvé et la ressource (service principal).|  
-|Liaison|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Liaison|<xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (service principal)  
   
@@ -212,5 +212,5 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

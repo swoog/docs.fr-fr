@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314969"
 ---
 # <a name="get-started-with-the-net-framework"></a>Bien démarrer avec le .NET Framework
@@ -79,11 +79,11 @@ Pour plus d’informations sur le développement d’applications qui ciblent le
 
 | Titre | Description |
 | ----- |------------ |
-| [Vue d'ensemble](overview.md) | Fournit des informations détaillées pour les développeurs qui créent des applications ciblant le .NET Framework. |
+| [Vue d’ensemble](overview.md) | Fournit des informations détaillées pour les développeurs qui créent des applications ciblant le .NET Framework. |
 | [Guide d’installation](../install/index.md) | Fournit des informations sur l'installation du .NET Framework. |  
-| [Versions finales hors plage de .NET Framework](the-net-framework-and-out-of-band-releases.md) | Décrit les versions release hors bande du .NET Framework et leur utilisation dans votre application. |
+| [Versions finales hors plage de .NET Framework](the-net-framework-and-out-of-band-releases.md) | Décrit les versions release hors bande du .NET Framework et leur utilisation dans votre application. |
 | [Configuration système requise](system-requirements.md) | Répertorie les configurations matérielle et logicielle requises pour exécuter le .NET Framework. |
-| [.NET Core et Open-Source](net-core-and-open-source.md) | Décrit le .NET Core en rapport avec le .NET Framework et comment accéder aux projets .NET Core open source. |
+| [.NET Core et Open-Source](net-core-and-open-source.md) | Décrit le .NET Core en rapport avec le .NET Framework et comment accéder aux projets .NET Core open source. |
 | [Documentation .NET Core](../../core/index.md) | Fournit la documentation de référence sur les concepts et les API de .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Traite de .NET Standard, une spécification avec version prise en charge par les implémentations .NET individuelles afin de garantir la disponibilité d’un ensemble cohérent d’API sur plusieurs plateformes.
 

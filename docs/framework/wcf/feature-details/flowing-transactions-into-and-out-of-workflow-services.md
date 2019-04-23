@@ -3,10 +3,10 @@ title: Flux de transactions vers et depuis des services de workflow
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315112"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flux de transactions vers et depuis des services de workflow
@@ -171,7 +171,7 @@ Les services et clients de workflow peuvent participer aux transactions.  Pour q
   
 5. Faites glisser et déposez une activité <xref:System.Activities.Statements.Sequence> dans le corps de l’activité <xref:System.Activities.Statements.TransactionScope>.  
   
-6. Faites glisser et déposez un `PrintTransactionInfo` activité dans le <xref:System.Activities.Statements.Sequence>  
+6. Faites glisser une activité `PrintTransactionInfo` dans <xref:System.Activities.Statements.Sequence>.  
   
 7. Glisser- déposer un <xref:System.Activities.Statements.WriteLine> activité après la `PrintTransactionInfo` activité et définissez son <xref:System.Activities.Statements.WriteLine.Text%2A> propriété » Client : Début d’envoi ». Le workflow doit maintenant ressembler à ceci :  
   

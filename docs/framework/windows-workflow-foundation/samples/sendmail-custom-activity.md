@@ -3,10 +3,10 @@ title: Activité personnalisée SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321859"
 ---
 # <a name="sendmail-custom-activity"></a>Activité personnalisée SendMail
@@ -107,13 +107,13 @@ new SendMail
   
  Pour plus d’informations sur la configuration d’un serveur SMTP, consultez les liens suivants.  
   
--   [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configuration du service SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [Configuration du Service SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
 -   [IIS 7.0 : Configurer la messagerie électronique SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Procédure : installer le service SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [Comment installer le Service SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Les émulateurs SMTP fournis par des tiers ne sont pas disponibles pour le téléchargement.  
   

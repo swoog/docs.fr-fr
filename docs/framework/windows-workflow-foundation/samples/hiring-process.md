@@ -3,10 +3,10 @@ title: Processus d'embauche
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313149"
 ---
 # <a name="hiring-process"></a>Processus d'embauche
@@ -18,7 +18,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
  Cet exemple illustre les fonctionnalités suivantes de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] :  
   
--   <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Sequence> des flux de travail pour la modélisation des processus d’entreprise.  
+-   Workflows <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Sequence> pour la modélisation des processus d'entreprise.  
   
 -   Services de workflow.  
   
@@ -38,9 +38,9 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
 -   Composition des activités  
   
--   <xref:System.Activities.Statements.Parallel> activités.  
+-   Activités <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.CancellationScope> activité.  
+-   Activité <xref:System.Activities.Statements.CancellationScope>  
   
 -   Minuteurs durables (activité <xref:System.Activities.Statements.Delay>)  
   
@@ -121,10 +121,10 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 |Composition des activités|La définition de processus utilise la composition libre de <xref:System.Activities.Activity>. L'Organigramme contient plusieurs activités de séquence et parallèles qui contiennent simultanément d'autres activités (et ainsi de suite).|HiringRequestService|  
 |Activités parallèles|-   <xref:System.Activities.Statements.ParallelForEach%601> sert à inscrire dans la boîte de réception du CEO et des responsables des ressources humaines en parallèle (en attente pour l’étape d’approbation responsables des ressources humaines deux).<br />-   <xref:System.Activities.Statements.Parallel> est utilisé pour effectuer certaines tâches de nettoyage dans les étapes terminé et refusé|HiringRequestService|  
 |Annulation de modèle|L'organigramme utilise <xref:System.Activities.Statements.CancellationScope> pour créer le comportement d'annulation (dans ce cas, pour procéder à un nettoyage).|HiringRequestService|  
-|Participant de persistance client|`HiringRequestPersistenceParticipant` enregistre les données à partir d’une variable de workflow dans une table stockée dans la base de données ressources humaines de Contoso.|HiringRequestService|  
-|Services de workflow|`ResumeRequestService` est implémenté à l’aide des services de workflow. La définition du workflow et les informations sur les services se trouvent dans le fichier ResumeRequestService.xamlx. Le service est configuré pour utiliser la persistance et le suivi.|ResumeRequestService|  
-|Minuteurs durables|`ResumeRequestService` utilise des minuteurs durables pour définir la durée d’une offre d’emploi (une fois qu’un délai d’attente expire, l’offre d’emploi est fermée).|ResumeRequestService|  
-|Transactions|<xref:System.Activities.Statements.TransactionScope> est utilisé pour garantir la cohérence des données au sein de l’exécution de plusieurs activités (lors de la réception d’un nouveau CV).|ResumeRequestService|  
+|Participant de persistance client|`HiringRequestPersistenceParticipant` enregistre les données d'une variable de workflow dans une table stockée dans la base de données des Ressources Humaines de Contoso.|HiringRequestService|  
+|Services de workflow|`ResumeRequestService` est implémenté à l'aide de services de workflow. La définition du workflow et les informations sur les services se trouvent dans le fichier ResumeRequestService.xamlx. Le service est configuré pour utiliser la persistance et le suivi.|ResumeRequestService|  
+|Minuteurs durables|`ResumeRequestService` utilise des minuteurs durables pour définir la durée de validité d'une offre d'emploi (une fois le délai arrivé à expiration, l'offre d'emploi est fermée).|ResumeRequestService|  
+|Transactions|<xref:System.Activities.Statements.TransactionScope> est utilisé pour garantir la cohérence des données lors de l'exécution de plusieurs activités (lors de la réception d'un nouveau CV).|ResumeRequestService|  
 |Transactions|Le participant de persistance personnalisé (`HiringRequestPersistenceParticipant`) et le participant de suivi personnalisé (`HistoryFileTrackingParticipant`) utilisent la même transaction.|HiringRequestService|  
 |Utilisation de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] dans les applications [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|Les workflows sont accessibles à partir de deux applications [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
   

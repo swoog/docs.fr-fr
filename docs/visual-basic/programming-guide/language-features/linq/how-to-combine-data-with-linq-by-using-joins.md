@@ -10,10 +10,10 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
 ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319597"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Procédure : Combiner des données avec LINQ à l’aide de jointures (Visual Basic)
@@ -82,10 +82,10 @@ Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de co
 ## <a name="see-also"></a>Voir aussi
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introduction à LINQ dans Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join, clause](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join, clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From, clause](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where, clause](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join (clause)](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join (clause)](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From (clause)](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (clause)](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
 - [Transformations de données avec LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

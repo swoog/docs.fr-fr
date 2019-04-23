@@ -5,14 +5,14 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322834"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un environnement riche pour la création d’applications. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace d’étendre votre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plutôt que de réécrire de zéro. Un scénario courant est lorsque vous souhaitez incorporer un ou plusieurs contrôles implémentés avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] au sein de votre application Windows Forms. Pour plus d’informations sur la personnalisation des contrôles WPF, consultez [personnalisation des contrôles](../controls/control-customization.md).  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace d’étendre votre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plutôt que de réécrire de zéro. Un scénario courant est lorsque vous souhaitez incorporer un ou plusieurs contrôles implémentés avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] au sein de votre application Windows Forms. Pour plus d’informations sur la personnalisation des contrôles WPF, consultez [personnalisation des contrôles](../controls/control-customization.md).  
   
  Cette procédure vous guide dans une application qui héberge un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle composite pour effectuer la saisie de données dans une application Windows Forms. Le contrôle composite est empaqueté dans une DLL. Cette procédure générale peut être étendue à des applications et des contrôles plus complexes. Cette procédure pas à pas est conçu pour être quasiment identique au niveau d’apparence et les fonctionnalités à [procédure pas à pas : Hébergement d’un Windows Forms contrôle Composite dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). La principale différence est que le scénario d’hébergement est inversé.  
   
@@ -327,5 +327,5 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Procédure pas à pas : hébergement d’un contrôle composite Windows Forms dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Procédure pas à pas : hébergement d’un contrôle composite WPF 3D dans Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite 3-d WPF dans les Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

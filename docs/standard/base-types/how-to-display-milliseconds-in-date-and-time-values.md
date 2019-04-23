@@ -15,10 +15,10 @@ ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314930"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procédure : afficher les millisecondes dans les valeurs de date et d’heure
@@ -57,4 +57,4 @@ Les méthodes de mise en forme de date et d’heure par défaut, telles que <xre
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317203"
 ---
 # <a name="optimizing-performance-text"></a>Optimisation des performances : Texte
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut la prise en charge pour la présentation de contenu de texte via l’utilisation de riches en fonctionnalités [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] contrôles. En général, vous pouvez diviser le rendu du texte en trois couches :  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge la présentation de contenu de texte par le biais de l’utilisation de contrôles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] avec de nombreuses fonctionnalités. En général, vous pouvez diviser le rendu du texte en trois couches :  
   
 1. À l’aide de la <xref:System.Windows.Documents.Glyphs> et <xref:System.Windows.Media.GlyphRun> objets directement.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59317203"
   
 -   Scénarios d’impression.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en tant que langage d’imprimante.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] comme langage d’imprimante.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59317203"
   
  Le tableau suivant montre le coût de l’affichage de 1000 <xref:System.Windows.Controls.TextBlock> objets avec et sans explicite <xref:System.Windows.Documents.Run>.  
   
-|**Type de TextBlock**|**Heure de création (ms)**|**Durée (ms) de rendu**|  
+|**Type de TextBlock**|**Durée de création (ms)**|**Durée d’affichage (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Utilisation de Run pour définir des propriétés de texte|146|540|  
 |Utilisation de TextBlock pour définir des propriétés de texte|43|453|  
@@ -107,7 +107,7 @@ ms.locfileid: "59317203"
   
  La solution à ce problème est simple. Si le <xref:System.Windows.Controls.Label> n’est pas défini sur un personnalisé <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> , remplacez le <xref:System.Windows.Controls.Label> avec un <xref:System.Windows.Controls.TextBlock> et lier les données son <xref:System.Windows.Controls.TextBlock.Text%2A> propriété à la chaîne source.  
   
-|**Propriété liée aux données**|**Heure de mise à jour (ms)**|  
+|**Propriété liée aux données**|**Durée de la mise à jour (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -142,14 +142,14 @@ ms.locfileid: "59317203"
   
  Le tableau suivant montre le coût de performances de l’affichage de 1000 <xref:System.Windows.Documents.Hyperlink> éléments avec et sans soulignement.  
   
-|**Lien hypertexte**|**Heure de création (ms)**|**Durée (ms) de rendu**|  
+|**Lien hypertexte**|**Durée de création (ms)**|**Durée d’affichage (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Avec soulignement|289|1130|  
 |Sans soulignement|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Fonctionnalités de mise en forme du texte  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit des services, tels que la coupure de mots automatique de mise en forme. Ces services peuvent affecter les performances de l’application et doivent être utilisés uniquement si nécessaire.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit des services de mise en forme de texte enrichi, comme la coupure de mots automatique. Ces services peuvent affecter les performances de l’application et doivent être utilisés uniquement si nécessaire.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Éviter l’utilisation inutile de la coupure de mots  
  Coupure de mots automatique recherche des points d’arrêt de trait d’union pour des lignes de texte et autorise des positions d’arrêt supplémentaires pour les lignes de <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets. Par défaut, la fonctionnalité de coupure de mots automatique est désactivée dans ces objets. Vous pouvez activer cette fonctionnalité en définissant la propriété IsHyphenationEnabled de l’objet sur `true`. Toutefois, si vous activez cette fonctionnalité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lance l’interopérabilité [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], ce qui peut affecter les performances de l’application. Nous vous recommandons de ne pas utiliser la coupure de mots automatique, sauf si vous en avez besoin.  
@@ -166,8 +166,8 @@ ms.locfileid: "59317203"
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d’application](optimizing-performance-application-resources.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

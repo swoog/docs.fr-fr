@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
 ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322730"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
@@ -141,6 +141,6 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Procédure : trier le contenu d’un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Guide pratique pour Trier le contenu d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Contrôles Windows Forms utilisés pour l'affichage de listes d'options](windows-forms-controls-used-to-list-options.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)

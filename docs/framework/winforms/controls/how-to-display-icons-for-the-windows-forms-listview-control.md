@@ -12,10 +12,10 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318609"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Procédure : afficher des icônes pour le contrôle ListView Windows Forms
@@ -40,7 +40,7 @@ Les formulaires Windows <xref:System.Windows.Forms.ListView> contrôle peut affi
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble du contrôle ListView](listview-control-overview-windows-forms.md)
-- [Procédure : ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Procédure : ajouter des colonnes au contrôle ListView Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Procédure : ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Guide pratique pour Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Guide pratique pour Ajouter des colonnes au contrôle ListView Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [ImageList, composant](imagelist-component-windows-forms.md)

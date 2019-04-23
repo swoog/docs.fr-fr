@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314553"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Création de ma première application web ASP.NET prenant en charge les revendications
@@ -41,11 +41,11 @@ ms.locfileid: "59314553"
   
  Pour créer votre première application ASP.NET. NET prenant en charge les revendications à l'aide de WIF, suivez les instructions de l'une des opérations suivantes :  
   
--   [Procédure : Générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Guide pratique pour Création d’Application de Web prenant en charge les revendications ASP.NET MVC à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Procédure : Générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Guide pratique pour Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

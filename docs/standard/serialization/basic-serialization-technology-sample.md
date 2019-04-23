@@ -3,14 +3,14 @@ title: Sérialisation de base, exemple de technologie
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315008"
 ---
 # <a name="basic-serialization-technology-sample"></a>Sérialisation de base, exemple de technologie
-[Télécharger l'exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Télécharger l’exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  Cet exemple montre la capacité du Common Language Runtime à sérialiser un graphique d'objets en mémoire dans un flux. Cet exemple peut utiliser <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> ou <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> pour la sérialisation. Une liste liée, remplie de données, est sérialisée ou désérialisée dans un flux de fichiers ou à partir de celui-ci. Dans les deux cas, la liste est affichée afin que vous puissiez consulter les résultats. Il s'agit d'une liste liée de type `LinkedList`, un type défini par cet exemple.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "59315008"
   
  Par exemple :  
   
- **Serialize.exe - sx Test.xml 10**  
+ **Serialize.exe -sx Test.xml 10**  
   
  Pour désérialiser le fichier **Test.xml** de l’exemple précédent, utilisez les paramètres **dx Test.xml**.  
   
  Par exemple :  
   
- **Serialize.exe - dx Test.xml**  
+ **Serialize.exe -dx Test.xml**  
   
  Dans les deux exemples précités, la lettre "x" dans le commutateur de ligne de commande indique que vous souhaitez effectuer une sérialisation SOAP XML. Vous pouvez utiliser à la place la lettre "b" pour effectuer une sérialisation binaire. Si vous souhaitez effectuer une sérialisation avec un très grand nombre de nœuds, il peut être intéressant de rediriger la sortie de console vers un fichier.  
   
  Par exemple :  
   
- **Serialize.exe -sb Test.bin 10000 >un_fichier.txt**  
+ **Serialize.exe -sb Test.bin 10000 >fichier_quelconque.txt**  
   
  Les éléments de la liste suivante décrivent brièvement les classes et les technologies utilisées par cet exemple.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59315008"
   
 -   E/S de flux  
   
-    -   <xref:System.IO.Stream> Utilisé pour sérialiser et désérialiser. Le flux spécifique utilisé dans cet exemple est de type <xref:System.IO.FileStream>. Toutefois, la sérialisation peut être utilisée avec n'importe quel type dérivé de <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream> Utilisé pour effectuer la sérialisation et la désérialisation. Le flux spécifique utilisé dans cet exemple est de type <xref:System.IO.FileStream>. Toutefois, la sérialisation peut être utilisée avec n'importe quel type dérivé de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Permet de créer <xref:System.IO.FileStream> objets pour la lecture et la création de fichiers sur le disque.  
+    -   <xref:System.IO.File> Utilisé pour créer des objets <xref:System.IO.FileStream> afin de lire et de créer des fichiers sur le disque.  
   
     -   <xref:System.IO.FileStream> Utilisé pour sérialiser et désérialiser des listes liées.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "59315008"
 - <xref:System.Xml.Serialization>
 - [Sérialisation de base](../../../docs/standard/serialization/basic-serialization.md)
 - [Sérialisation binaire](../../../docs/standard/serialization/binary-serialization.md)
-- [Contrôle de la sérialisation XML à l'aide d'attributs](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [Contrôle de la sérialisation XML à l’aide d’attributs](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Introduction à la sérialisation XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Sérialisation](../../../docs/standard/serialization/index.md)
 - [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

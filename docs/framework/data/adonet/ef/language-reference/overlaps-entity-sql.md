@@ -3,10 +3,10 @@ title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319636"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  Toute expression de requête valide qui retourne une collection à comparer avec la collection retournée par une autre expression de requête. Toutes les expressions doivent être du même type que le `expression`ou d'un type de base commun ou dérivé de celui-ci.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si les deux collections ont des éléments en commun ; Sinon, `false`.  
+ `true` si les deux collections ont des éléments en commun ; sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  OVERLAPS est fonctionnellement équivalent à ce qui suit :  

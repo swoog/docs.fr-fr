@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315814"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Procédure : configurer une confirmation de signature
@@ -42,7 +42,7 @@ ms.locfileid: "59315814"
   
 4. Ajoutez un élément enfant `<security>` et affectez `requireSignatureConfirmation` à l'attribut `true`.  
   
-5. Facultatif. Pour activer la confirmation de signature pendant le démarrage, ajoutez un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) élément enfant et définissez le `equireSignatureConfirmation` attribut `true`.  
+5. Optionnel. Pour activer la confirmation de signature pendant le démarrage, ajoutez un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) élément enfant et définissez le `equireSignatureConfirmation` attribut `true`.  
   
 6. Ajoutez un élément de transport approprié. L’exemple suivant ajoute un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
@@ -71,5 +71,5 @@ ms.locfileid: "59315814"
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Procédure : créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

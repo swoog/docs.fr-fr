@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
 ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317231"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Procédure : organiser les formulaires enfants MDI
@@ -49,8 +49,8 @@ Les applications comportent souvent des commandes de menu qui permettent de disp
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Applications d'interface multidocument (MDI, Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
-- [Procédure : créer des formulaires parents MDI](how-to-create-mdi-parent-forms.md)
-- [Procédure : créer des formulaires enfants MDI](how-to-create-mdi-child-forms.md)
-- [Procédure : déterminer l’enfant MDI actif](how-to-determine-the-active-mdi-child.md)
-- [Procédure : envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)
+- [Applications d’interface multidocument (MDI, Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Guide pratique pour Créer des formulaires MDI parents](how-to-create-mdi-parent-forms.md)
+- [Guide pratique pour Créer des formulaires MDI enfants](how-to-create-mdi-child-forms.md)
+- [Guide pratique pour Déterminer l’enfant MDI actif](how-to-determine-the-active-mdi-child.md)
+- [Guide pratique pour Envoyer des données à l’enfant MDI actif](how-to-send-data-to-the-active-mdi-child.md)

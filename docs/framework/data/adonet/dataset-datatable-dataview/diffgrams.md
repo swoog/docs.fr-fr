@@ -3,10 +3,10 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313513"
 ---
 # <a name="diffgrams"></a>DiffGrams
@@ -134,7 +134,7 @@ Un DiffGram est un format XML qui identifie la version actuelle et la version d'
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Chargement d'un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Écriture du contenu d'un DataSet comme données XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Écriture du contenu d’un DataSet comme données XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

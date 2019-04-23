@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316737"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
@@ -290,7 +290,7 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Exemple de l’Animation d’image clé](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des storyboards](storyboards-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
 - [Guides pratiques relatifs aux images clés](key-frame-animation-how-to-topics.md)
-- [Vue d'ensemble des comportements de minutage](timing-behaviors-overview.md)
+- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)

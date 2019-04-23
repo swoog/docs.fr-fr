@@ -11,10 +11,10 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
 ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319857"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Procédure : ajouter des panneaux à un contrôle StatusBar
@@ -124,8 +124,8 @@ ms.locfileid: "59319857"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Boîte de dialogue Éditeur de collection](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [Procédure : définir la taille des panneaux de barre d’état](how-to-set-the-size-of-status-bar-panels.md)
-- [Procédure pas à pas : mise à jour des informations de barre d’état au moment de l’exécution](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Procédure : déterminer sur quel panneau l’utilisateur a cliqué dans le contrôle StatusBar Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Boîte de dialogue de l’éditeur de collections](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [Guide pratique pour Définir la taille des panneaux de barre d’état](how-to-set-the-size-of-status-bar-panels.md)
+- [Procédure pas à pas : La mise à jour des informations de barre d’état en cours d’exécution](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Guide pratique pour Déterminer l’utilisateur a cliqué sur le panneau du contrôle StatusBar Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Vue d’ensemble du contrôle StatusBar](statusbar-control-overview-windows-forms.md)

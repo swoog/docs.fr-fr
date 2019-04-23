@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317010"
 ---
 # <a name="how-to-author-composite-controls"></a>Procédure : créer des contrôles composites
@@ -80,10 +80,10 @@ Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pou
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure pas à pas : création d’un contrôle composite avec Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Procédure pas à pas : Création d'un contrôle composite à l'aide de Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Procédure pas à pas : héritage d’un contrôle Windows Forms avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Procédure pas à pas : Héritage d'un contrôle Windows Forms à l'aide de Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [Recommandations relatives au type du contrôle](control-type-recommendations.md)
-- [Procédure : créer des contrôles pour Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procédure pas à pas : Création d’un contrôle Composite avec VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Recommandations relatives au type de contrôle](control-type-recommendations.md)
+- [Guide pratique pour Créer des contrôles pour les Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)

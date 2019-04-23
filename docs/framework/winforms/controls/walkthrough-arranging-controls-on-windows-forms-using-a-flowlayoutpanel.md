@@ -8,10 +8,10 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321885"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel
@@ -191,10 +191,10 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide de lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Expérience utilisateur Microsoft Windows, Recommandations officielles à destination des développeurs et des concepteurs d’interfaces utilisateur. Redmond, Washington : Microsoft Press, 1999. (USBN : 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Vue d'ensemble de la propriété AutoSize](autosize-property-overview.md)
-- [Procédure : arrimer des contrôles dans des Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procédure : ancrer des contrôles dans des Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Procédure pas à pas : disposition des contrôles Windows Forms avec le remplissage, les marges et la propriété AutoSize](windows-forms-controls-padding-autosize.md)
+- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Guide pratique pour Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Guide pratique pour Ancrer les contrôles aux Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Procédure pas à pas : Disposition des Windows Forms contrôles avec la propriété AutoSize, des marges et remplissage](windows-forms-controls-padding-autosize.md)

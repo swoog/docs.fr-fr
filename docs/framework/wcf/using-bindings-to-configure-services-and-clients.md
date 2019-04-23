@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323146"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilisation de liaisons pour configurer des services et des clients
@@ -58,8 +58,8 @@ Les liaisons sont des objets qui spécifient les détails de communication requi
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Procédure : spécifier une liaison de service dans la configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procédure : spécifier une liaison de service dans le code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [Procédure : spécifier une liaison de client dans la configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Procédure : spécifier une liaison de client dans le code](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Guide pratique pour Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Guide pratique pour Spécifier une liaison de Service dans le Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Guide pratique pour Spécifier une liaison Client dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Guide pratique pour Spécifier une liaison Client dans le Code](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

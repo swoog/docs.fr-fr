@@ -3,10 +3,10 @@ title: Poison Message Handling in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316464"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4,0
@@ -23,7 +23,7 @@ Cet exemple montre comment assurer la gestion des messages incohérents dans un 
 ## <a name="msmq-v40-poison-handling-sample"></a>Exemple de gestion de message incohérent dans MSMQ v4.0
  Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fournit une fonctionnalité de sous-file d'attente de messages incohérents qui peut être utilisée pour stocker des messages incohérents. Cet exemple montre la meilleure pratique de traitement des messages incohérents à l'aide de [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- La détection de messages incohérents dans [!INCLUDE[wv](../../../../includes/wv-md.md)] est sophistiquée. Il existe 3 propriétés qui aident à la détection. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est nombre de fois qu'un message donné est relu à partir de la file d'attente et est distribué à l'application pour traitement. Un message est relu à partir de la file d'attente lorsqu'il est remis dans celle-ci parce qu'il ne peut pas être distribué à l'application ou l'application restaure la transaction dans l'opération de service. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> est le nombre de fois où que le message est déplacé vers la file d’attente de nouvelle tentative. Lorsque <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est atteint, le message est déplacé dans la file d'attente des nouvelles tentatives. La propriété <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> correspond à l'intervalle après lequel le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale. La propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est réinitialisée à 0. Le message est réessayé. Si toutes les tentatives de lecture du message ont échoué, le message est alors marqué comme étant incohérent.
+ La détection de messages incohérents dans [!INCLUDE[wv](../../../../includes/wv-md.md)] est sophistiquée. Il existe 3 propriétés qui aident à la détection. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est nombre de fois qu'un message donné est relu à partir de la file d'attente et est distribué à l'application pour traitement. Un message est relu à partir de la file d'attente lorsqu'il est remis dans celle-ci parce qu'il ne peut pas être distribué à l'application ou l'application restaure la transaction dans l'opération de service. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> est le nombre de fois où le message est déplacé vers la file d'attente des nouvelles tentatives. Lorsque <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est atteint, le message est déplacé dans la file d'attente des nouvelles tentatives. La propriété <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> correspond à l'intervalle après lequel le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale. La propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> est réinitialisée à 0. Le message est réessayé. Si toutes les tentatives de lecture du message ont échoué, le message est alors marqué comme étant incohérent.
 
  Une fois que le message est marqué comme étant incohérent, il est traité en fonction des paramètres dans l'énumération <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Pour rappeler les valeurs possibles :
 
@@ -35,7 +35,7 @@ Cet exemple montre comment assurer la gestion des messages incohérents dans un 
 
 -   Reject : Pour rejeter le message, envoyer le message en file d’attente de lettres mortes de l’expéditeur. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` provoque le message à déplacer vers la sous-file d’attente.
+ L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` permet de déplacer le message vers la sous-file d'attente de messages incohérents.
 
  Le contrat de service est `IOrderProcessor`, qui définit un service monodirectionnel qui peut être utilisé avec des files d'attente.
 

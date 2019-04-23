@@ -3,10 +3,10 @@ title: Informations de l’appelant
 description: Décrit comment utiliser les attributs d’Argument appelant informations pour obtenir des informations de l’appelant à partir d’une méthode.
 ms.date: 04/25/2017
 ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316152"
 ---
 # <a name="caller-information"></a>Informations de l’appelant
@@ -72,4 +72,4 @@ Le graphique suivant montre le membre de noms qui sont retournés lorsque vous u
 
 - [Attributs](attributes.md)
 - [Arguments nommés](parameters-and-arguments.md#named-arguments)
-- [Paramètres optionnels](parameters-and-arguments.md#optional-parameters)
+- [Paramètres facultatifs](parameters-and-arguments.md#optional-parameters)

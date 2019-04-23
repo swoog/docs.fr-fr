@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
 ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323263"
 ---
 # <a name="how-to-align-drawn-text"></a>Procédure : aligner du texte dessiné
@@ -33,10 +33,10 @@ Lorsque vous effectuez un dessin personnalisé, vous souhaiterez souvent centrer
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Les exemples de code précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ Les exemples de code précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Procédure : construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
+- [Guide pratique pour Construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)

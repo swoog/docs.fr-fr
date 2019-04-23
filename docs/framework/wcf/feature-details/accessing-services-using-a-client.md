@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314878"
 ---
 # <a name="accessing-services-using-a-client"></a>Accès aux services à l'aide d'un client
@@ -96,9 +96,9 @@ Les applications clientes doivent créer, configurer et utiliser des objets de c
 ## <a name="see-also"></a>Voir aussi
 
 - [Services duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Procédure : accéder aux services avec des contrats demande-réponse unidirectionnels](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Procédure : accéder aux services avec un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Procédure : accéder à un service WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Procédure : utiliser ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [Procédure : appeler des opérations de service de façon asynchrone](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Guide pratique pour Accéder aux Services avec unidirectionnel et contrats demande-réponse](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Guide pratique pour Access Services avec un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Guide pratique pour Accéder à un service WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Guide pratique pour Utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Guide pratique pour Appeler des opérations de Service de façon asynchrone](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Applications clientes de niveau intermédiaire](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

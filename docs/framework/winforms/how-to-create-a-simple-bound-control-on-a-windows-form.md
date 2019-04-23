@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322171"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : créer un contrôle à liaison simple dans un formulaire Windows
@@ -48,5 +48,5 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.Binding>
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)

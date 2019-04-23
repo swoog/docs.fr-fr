@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313605"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Une erreur inattendue s'est produite parce qu'une ressource de système d'exploitation requise pour le démarrage de l'instance unique ne peut pas être acquise
@@ -32,6 +32,6 @@ L'application n'a pas pu obtenir une ressource nécessaire du système d'exploit
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Page Application, Concepteur de projet (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Principes de base du débogueur](/visualstudio/debugger/debugger-basics)
 - [Nous contacter](/visualstudio/ide/talk-to-us)

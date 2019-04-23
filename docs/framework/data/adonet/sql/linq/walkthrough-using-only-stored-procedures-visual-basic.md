@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314826"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procédure pas à pas : Utilisation de procédures stockées uniquement (Visual Basic)
@@ -105,7 +105,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 1. Dans **l’Explorateur de solutions**, avec le bouton droit **Form1.vb**, puis cliquez sur **afficher le Code**.  
   
-     `Class Form1` s’affiche dans l’éditeur de code.  
+     `Class Form1` apparaît dans l'éditeur de code.  
   
 2. Tapez le code suivant dans le bloc de code `Form1` :  
   
