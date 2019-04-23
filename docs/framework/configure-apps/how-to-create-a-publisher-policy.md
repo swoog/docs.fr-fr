@@ -8,10 +8,10 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344661"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procédure : Créer une stratégie d’éditeur
@@ -61,7 +61,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
     -   Le *publisherPolicyAssemblyFile* argument est le nom de l’assembly de stratégie d’éditeur qui résulte de cette commande. Le nom de fichier d’assembly doit respecter le format :  
   
-         **stratégie.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   Le *keyPairFile* argument est le nom du fichier contenant la paire de clés. Vous devez signer l’assembly et l’assembly de stratégie d’éditeur avec la même paire de clés.  
   
@@ -102,9 +102,9 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configuration des applications à l'aide de fichiers de configuration](../../../docs/framework/configure-apps/index.md)
-- [Schéma des paramètres d'exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Configuration d’applications à l’aide de fichiers de Configuration](../../../docs/framework/configure-apps/index.md)
+- [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

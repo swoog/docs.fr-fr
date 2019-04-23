@@ -15,10 +15,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
 ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344102"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : créer une table de choix pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
@@ -73,7 +73,7 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
 ## <a name="see-also"></a>Voir aussi
 
 - [Liaison de données et Windows Forms](../data-binding-and-windows-forms.md)
-- [Vue d’ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
-- [Vue d’ensemble du contrôle ComboBox](combobox-control-overview-windows-forms.md)
-- [Vue d’ensemble du contrôle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
-- [Contrôles Windows Forms utilisés pour l'affichage de listes d'options](windows-forms-controls-used-to-list-options.md)
+- [Vue d'ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle ComboBox](combobox-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)

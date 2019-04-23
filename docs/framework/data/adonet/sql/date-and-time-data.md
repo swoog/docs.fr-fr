@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344171"
 ---
 # <a name="date-and-time-data"></a>Données de date et d'heure
@@ -21,7 +21,7 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
   
  **Documentation en ligne de SQL Server**  
   
-1. [Utilisation des données de date et d'heure](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [À l’aide des données de Date et heure](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Types de données de date et d'heure introduits dans SQL Server 2008  
  Le tableau suivant décrit les nouveaux types de données de date et d'heure.  
@@ -99,7 +99,7 @@ Vous pouvez spécifier le type de données d’un <xref:System.Data.SqlClient.Sq
 >  Les valeurs d'heure inférieures à zéro ou égales ou supérieures à 24 heures lèvent une exception <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Création de paramètres  
- Vous pouvez créer un <xref:System.Data.SqlClient.SqlParameter> objet à l’aide de son constructeur, ou en l’ajoutant à un <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> collection en appelant le `Add` méthode de la <xref:System.Data.SqlClient.SqlParameterCollection>. La méthode `Add` prendra comme entrée les arguments de constructeur ou un objet paramètre existant.  
+ Vous pouvez créer un objet <xref:System.Data.SqlClient.SqlParameter> à l’aide de son constructeur ou en l’ajoutant à une collection <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> en appelant la méthode `Add` de <xref:System.Data.SqlClient.SqlParameterCollection>. La méthode `Add` prendra comme entrée les arguments de constructeur ou un objet paramètre existant.  
   
  Les sections suivantes présentées dans cette rubrique fournissent des exemples montrant comment spécifier des paramètres de date et d'heure. Pour obtenir des exemples supplémentaires d’utilisation de paramètres, consultez [configuration des paramètres et Types de données de paramètre](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) et [paramètres DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,8 +235,8 @@ command.Parameters.AddWithValue( _
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Types de données et fonctions de date et d'heure (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Fournit une vue d'ensemble des tous les types de données et fonctions de date et d'heure Transact-SQL.|  
-|[Utilisation des données de date et d'heure](https://go.microsoft.com/fwlink/?LinkId=98361)|Fournit des informations sur les types de données et les fonctions de date et d'heure, ainsi que des exemples sur leur utilisation.|  
+|[Données de date et heure Types et fonctions (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Fournit une vue d'ensemble des tous les types de données et fonctions de date et d'heure Transact-SQL.|  
+|[À l’aide des données de Date et heure](https://go.microsoft.com/fwlink/?LinkId=98361)|Fournit des informations sur les types de données et les fonctions de date et d'heure, ainsi que des exemples sur leur utilisation.|  
 |[Types de données (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Décrit les types de données système dans SQL Server 2008.|  
   
 ## <a name="see-also"></a>Voir aussi

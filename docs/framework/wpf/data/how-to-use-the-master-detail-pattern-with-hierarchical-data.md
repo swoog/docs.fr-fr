@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
 ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346182"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procédure : Utiliser le modèle maître/détail avec des données hiérarchiques
@@ -38,5 +38,5 @@ Cet exemple montre comment implémenter le scénario maître / détail.
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Effectuer une liaison à une collection et afficher des informations basées sur la sélection](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Vue d'ensemble des modèles de données](data-templating-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Vue d’ensemble des modèles de données](data-templating-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

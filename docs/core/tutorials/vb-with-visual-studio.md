@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57846283"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612678"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Générer une application Visual Basic Hello World avec le SDK .NET Core dans Visual Studio 2017
 
@@ -31,7 +31,7 @@ Commencez par créer une application console « Hello World » simple. Procéd
 1. Lancez Visual Studio 2017. Sélectionnez **Fichier** > **Nouveau** > **Projet** dans la barre de menus. Dans la boîte de dialogue *Nouveau projet*\*, sélectionnez le nœud **Visual Basic** suivi du nœud **.NET Core**. Ensuite, sélectionnez le modèle de projet **Application console (.NET Core)**. Dans la zone de texte **Nom**, tapez « HelloWorld ». Sélectionnez le bouton **OK**.
 
    ![Boîte de dialogue Nouveau projet avec Application console sélectionné](./media/vb-with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio utilise le modèle pour créer votre projet. Le modèle d’application console Visual Basic pour .NET Core définit automatiquement une classe, `Program`, avec une méthode unique, `Main`, qui accepte un tableau de <xref:System.String> comme argument. `Main` est le point d’entrée de l’application. Cette méthode est appelée automatiquement par le runtime lors du lancement de l’application. Tous les arguments de ligne de commande fournis au lancement de l’application sont disponibles dans le tableau *args*.
 
    ![Visual Studio et le nouveau projet HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
@@ -44,6 +44,7 @@ Commencez par créer une application console « Hello World » simple. Procéd
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
+
    Ce code invite l’utilisateur à appuyer sur une touche. Le programme s'arrête lorsque l’utilisateur appuie sur une touche.
 
 1. Dans la barre de menus, sélectionnez **Générer** > **Générer la solution**. Ceci compile votre programme en un langage intermédiaire, qui est ensuite converti en code binaire par un compilateur juste-à-temps (JIT).

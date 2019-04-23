@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303113"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612093"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -33,7 +33,7 @@ Dans ce didacticiel, vous apprendrez à :
 
 ## <a name="sentiment-analysis-sample-overview"></a>Vue d’ensemble d’un exemple d’analyse des sentiments
 
-L’exemple est une application console qui utilise ML.NET pour effectuer l’apprentissage d’un modèle qui classifie et prédit un sentiment positif ou négatif. Le jeu de données de sentiments Yelp, qui provient de l’université de Californie à Irvine (UCI), se divise en un jeu de données d’apprentissage et un jeu de données de test. L’exemple évalue le modèle avec le jeu de données de test à des fins d’analyse de la qualité. 
+L’exemple est une application console qui utilise ML.NET pour effectuer l’apprentissage d’un modèle qui classifie et prédit un sentiment positif ou négatif. Le jeu de données de sentiments Yelp, qui provient de l’université de Californie à Irvine (UCI), se divise en un jeu de données d’apprentissage et un jeu de données de test. L’exemple évalue le modèle avec le jeu de données de test à des fins d’analyse de la qualité.
 
 Vous trouverez le code source de ce tutoriel dans le référentiel [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
@@ -52,12 +52,12 @@ Les phases du flux de travail sont les suivantes :
 1. **Comprendre le problème**
 2. **Préparer vos données**
    * **Charger les données**
-   * **Extraire des caractéristiques (transformation des données)**
-3. **Générer et entraîner** 
+   * **Extraire des caractéristiques (transformer vos données)**
+3. **Générer et former**
    * **Effectuer l’apprentissage du modèle**
    * **Évaluer le modèle**
 4. **Déployer le modèle**
-   * **Utiliser le modèle à des fins de prédiction**
+   * **Utiliser le modèle pour prédire**
 
 ### <a name="understand-the-problem"></a>Comprendre le problème
 
@@ -96,7 +96,7 @@ Les algorithmes de classification sont souvent de l’un des types suivants :
 * Binaire : A ou B.
 * Multiclasse : plusieurs catégories pouvant être prédites à l’aide d’un modèle unique.
 
-Dans la mesure où les commentaires du site web doivent être classés comme positifs ou négatifs, on utilise l’algorithme de classification binaire. 
+Dans la mesure où les commentaires du site web doivent être classés comme positifs ou négatifs, on utilise l’algorithme de classification binaire.
 
 ## <a name="create-a-console-application"></a>Créer une application console
 
@@ -129,8 +129,8 @@ Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *
 
 Il faut créer deux champs globaux pour le chemin d’accès du fichier de jeu de données téléchargé et celui du fichier de modèle enregistré :
 
-* `_dataPath` contient le chemin du jeu de données servant à l’apprentissage du modèle.
-* `_modelPath` contient le chemin où le modèle entraîné est enregistré.
+* `_dataPath` contient le chemin d’accès au jeu de données utilisé pour l’apprentissage du modèle.
+* `_modelPath` contient le chemin d’accès où le modèle formé est enregistré.
 
 Ajoutez le code suivant à la ligne juste au-dessus de la méthode `Main` pour spécifier ces chemins :
 
@@ -150,9 +150,9 @@ Supprimez la définition de classe existante et ajoutez le code suivant, qui con
 
 [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
-La classe du jeu de données d’entrée, `SentimentData`, contient une `string` pour le commentaire (`SentimentText`) et un `bool` (`Sentiment`) qui a une valeur de sentiment positive ou négative. Les deux champs sont associés à des attributs <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Cet attribut décrit l’ordre des champs dans le fichier de données.  Par ailleurs, la propriété `Sentiment` comporte un <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A> qui la désigne comme le champ `Label`. `SentimentPrediction` est la classe servant à la prédiction une fois le modèle entraîné. Il comporte une valeur booléenne unique (`Sentiment`) et un attribut `PredictedLabel` `ColumnName`. L’attribut `Label` sert à créer le modèle et à effectuer son apprentissage, mais il est aussi utilisé avec le jeu de données de test fractionné pour évaluer le modèle. L’attribut `PredictedLabel` est utilisé pendant la prédiction et l’évaluation. L’évaluation utilise une entrée avec les données d’apprentissage, les valeurs prédites et le modèle.
+La classe du jeu de données d’entrée, `SentimentData`, contient une `string` pour le commentaire (`SentimentText`) et un `bool` (`Sentiment`) qui a une valeur de sentiment positive ou négative. Les deux champs sont associés à des attributs <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Cet attribut décrit l’ordre des champs dans le fichier de données.  Par ailleurs, la propriété `Sentiment` comporte un <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A> qui la désigne comme le champ `Label`. `SentimentPrediction` représente la classe utilisée pour la prédiction, une fois le modèle formé. Il comporte une valeur booléenne unique (`Sentiment`) et un attribut `PredictedLabel` `ColumnName`. L’attribut `Label` sert à créer le modèle et à effectuer son apprentissage, mais il est aussi utilisé avec le jeu de données de test fractionné pour évaluer le modèle. L’attribut `PredictedLabel` est utilisé pendant la prédiction et l’évaluation. L’évaluation utilise une entrée avec les données d’apprentissage, les valeurs prédites et le modèle.
 
-Lors de la création d’un modèle avec ML .NET, vous commencez par créer un <xref:Microsoft.ML.MLContext>. `MLContext` est conceptuellement comparable à `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche d’apprentissage automatique et qui peut être utilisé pour le suivi des exceptions et la journalisation.
+Lors de la création d’un modèle avec ML .NET, vous commencez par créer un <xref:Microsoft.ML.MLContext>. D’un point de vue conceptuel, `MLContext` est comparable à `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche d’apprentissage automatique et qui peut être utilisé pour le suivi des exceptions et la journalisation.
 
 ### <a name="initialize-variables-in-main"></a>Initialiser les variables dans Principal
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>Charger les données
 
-Comme le type de modèle de données `SentimentData` créé précédemment correspond au schéma du jeu de données, il est possible de combiner l’initialisation, le mappage et le chargement du jeu de données en une seule ligne de code avec le wrapper `MLContext.Data.LoadFromTextFile` de la [méthode LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. 
+Comme le type de modèle de données `SentimentData` créé précédemment correspond au schéma du jeu de données, il est possible de combiner l’initialisation, le mappage et le chargement du jeu de données en une seule ligne de code avec le wrapper `MLContext.Data.LoadFromTextFile` de la [méthode LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>.
 
- En tant qu’entrée et sortie de `Transforms`, un `DataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
+En tant qu’entrée et sortie de `Transforms`, un `DataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
 
 Dans ML.NET, les données sont semblables à une vue SQL. Elles sont évaluées tardivement, schématisées et hétérogènes. L’objet est la première partie du pipeline, et charge les données. Pour ce tutoriel, il charge un jeu de données avec des commentaires et les sentiments positifs ou négatifs correspondants. Cette méthode permet de créer puis de former le modèle.
 
- Ajoutez le code suivant comme première ligne de la méthode `LoadData` :
+Ajoutez le code suivant comme première ligne de la méthode `LoadData` :
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Fractionner le jeu de données pour l’apprentissage et le test du modèle
 
-Deux jeux de données sont maintenant nécessaires : un jeu de données d’apprentissage pour entraîner le modèle et un jeu de données de test pour l’évaluer. Utilisez `MLContext.BinaryClassification.TrainTestSplit`, qui inclut <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> dans un wrapper, pour fractionner le jeu de données chargé en jeux de données d’apprentissage et de test et les retourner dans <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Pour spécifier la fraction de données réservée au jeu de test, utilisez le paramètre `testFraction`. La valeur par défaut est 10 %, mais on choisira dans ce cas 20 % pour consacrer davantage de données à l’évaluation.  
+Deux jeux de données sont maintenant nécessaires : un jeu de données d’apprentissage pour entraîner le modèle et un jeu de données de test pour l’évaluer. Utilisez `MLContext.BinaryClassification.TrainTestSplit`, qui inclut <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> dans un wrapper, pour fractionner le jeu de données chargé en jeux de données d’apprentissage et de test et les retourner dans <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Pour spécifier la fraction de données réservée au jeu de test, utilisez le paramètre `testFraction`. La valeur par défaut est 10 %, mais on choisira dans ce cas 20 % pour consacrer davantage de données à l’évaluation.
 
 Pour fractionner les données chargées dans les jeux de données nécessaires, ajoutez le code suivant sur la ligne suivant la méthode `LoadData` :
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Deux paramètres sont passés à la méthode Train : `MLContext` pour le contexte (`mlContext`) et `IDataView` pour le jeu de données d’apprentissage (`splitTrainSet`). 
+Deux paramètres sont passés à la méthode Train : `MLContext` pour le contexte (`mlContext`) et `IDataView` pour le jeu de données d’apprentissage (`splitTrainSet`).
 
 ## <a name="extract-and-transform-the-data"></a>Extraire et transformer les données
 
@@ -251,7 +252,7 @@ Ajoutez le code suivant à la méthode `BuildAndTrainModel` :
 
 ## <a name="train-the-model"></a>Effectuer l’apprentissage du modèle
 
-Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimateur défini, effectuez l’apprentissage de votre modèle avec la méthode <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `pipeline.Fit()` entraîne le pipeline et retourne un `Transformer` selon le `DataView` transmis. L’expérience n’est pas exécutée tant que la méthode `.Fit()` s’exécute.
+Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimateur défini, effectuez l’apprentissage de votre modèle avec la méthode <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `pipeline.Fit()` forme le pipeline et renvoie un `Transformer` selon l’élément `DataView` transmis. L’expérience n’est pas exécutée tant que la méthode `.Fit()` s’exécute.
 
 Ajoutez le code suivant à la méthode `BuildAndTrainModel` :
 
@@ -353,7 +354,7 @@ Ajoutez un appel à la nouvelle méthode à partir de la méthode `Main`, juste 
 Bien que le `model` est un `transformer` qui fonctionne sur plusieurs lignes de données, un scénario de production très courant est nécessaire pour les prédictions sur des exemples individuels. Le <xref:Microsoft.ML.PredictionEngine%602> est un wrapper retourné par la méthode `CreatePredictionEngine`. Nous allons ajouter le code suivant pour créer le `PredictionEngine` comme première ligne dans la méthode `Predict` :
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 Ajoutez un commentaire pour tester la prédiction du modèle formé dans la méthode `Predict` en créant une instance de `SentimentData` :
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-Félicitations ! Vous venez de créer un modèle d’apprentissage automatique pour la classification et la prédiction des sentiments de messages. 
+Félicitations ! Vous venez de créer un modèle d’apprentissage automatique pour la classification et la prédiction des sentiments de messages.
 
 La création de modèles efficaces est un processus itératif. Celui-ci présente une qualité initiale médiocre, car le tutoriel utilise de petits jeux de données pour permettre un apprentissage rapide du modèle. Si vous n’êtes pas satisfait de la qualité du modèle, vous pouvez essayer de l’améliorer en fournissant de plus gros jeux de données d’apprentissage ou en choisissant d’autres algorithmes d’apprentissage avec différents hyperparamètres pour chacun.
 
@@ -459,6 +460,7 @@ Vous trouverez le code source de ce tutoriel dans le référentiel [dotnet/sampl
 ## <a name="next-steps"></a>Étapes suivantes
 
 Dans ce didacticiel, vous avez appris à :
+
 > [!div class="checklist"]
 > * Comprendre le problème
 > * Sélectionner l’algorithme de machine learning approprié
@@ -470,5 +472,6 @@ Dans ce didacticiel, vous avez appris à :
 > * Déployer et prédire avec un modèle chargé
 
 Passer au tutoriel suivant pour en savoir plus
+
 > [!div class="nextstepaction"]
 > [Classification des problèmes](github-issue-classification.md)

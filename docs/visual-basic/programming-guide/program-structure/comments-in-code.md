@@ -15,10 +15,10 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343010"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commentaires dans le code (Visual Basic)
@@ -62,7 +62,7 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
 ## <a name="see-also"></a>Voir aussi
 
 - [Instincts primaires : documentation de votre Code avec des commentaires XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Procédure : créer une documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Guide pratique pour Créer une Documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Structure de programme et conventions de codage](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM, instruction](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [REM (instruction)](../../../visual-basic/language-reference/statements/rem-statement.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344739"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
@@ -25,7 +25,7 @@ Spécifie le format de sortie du compilateur.
 ## <a name="remarks"></a>Notes  
  Le tableau suivant résume l’effet de la `-target` option.  
   
-|**Option**|**Comportement**|  
+|**Option**|**Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|Indique au compilateur de créer une application console exécutable.<br /><br /> Cette option est la valeur par défaut quand aucun `-target` option est spécifiée. Le fichier exécutable est créé avec une extension .exe.<br /><br /> Sauf spécification contraire avec le `/out` option, le nom de fichier de sortie prend le nom du fichier d’entrée qui contient le `Sub Main` procédure.<br /><br /> Seul `Sub Main` procédure est requise dans les fichiers de code source qui sont compilés dans un fichier .exe. Utilisez le `-main` option du compilateur pour spécifier la classe contenant la `Sub Main` procédure.|  
 |`-target:library`|Indique au compilateur de créer une bibliothèque de liens dynamiques (DLL).<br /><br /> Le fichier de bibliothèque de liens dynamiques est créé avec l’extension .dll.<br /><br /> Sauf spécification contraire avec le `-out` option, le nom de fichier de sortie prend le nom du premier fichier d’entrée.<br /><br /> Lors de la création d’une DLL, un `Sub Main` procédure n’est pas nécessaire.|  

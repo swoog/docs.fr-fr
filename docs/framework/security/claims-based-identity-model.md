@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345870"
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
@@ -27,9 +27,9 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
   
  Cette rubrique fournit les informations suivantes :  
   
--   [Présentation de l'identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+-   [Présentation de l’identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Scénario de base pour un modèle d'identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+-   [Scénario de base pour un modèle d’identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Présentation de l'identité basée sur les revendications  

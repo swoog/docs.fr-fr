@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6c5f42309970f14aa9a0cda3c48efa59b620bdb5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464162"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612704"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Concevoir des validations dans la couche du modèle de domaine
 
@@ -88,25 +88,25 @@ En utilisant la validation de champ avec des annotations de données, par exempl
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Rachel Appel. Introduction to model validation in ASP.NET Core MVC** \
-  [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson. Adding validation** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 - **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \
-  [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **Specification and Notification Patterns** \
-  [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
 - **Lev Gorodinski. Validation in Domain-Driven Design (DDD)** \
-  [http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colin Jack. Domain Model Validation** \
-  [https://colinjack.blogspot.com/2008/03/domain-model-validation.html](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard. Validation in a DDD world** \
-  [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
 > [Précédent](enumeration-classes-over-enum-types.md)

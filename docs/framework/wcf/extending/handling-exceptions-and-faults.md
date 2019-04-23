@@ -3,10 +3,10 @@ title: Gestion des exceptions et des erreurs
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343426"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestion des exceptions et des erreurs
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` Retourne `true` si l’erreur est un `mustUnderstand` pannes. `WasHeaderNotUnderstood` Retourne `true` si l’en-tête avec le nom spécifié et l’espace de noms est inclus dans l’erreur en tant qu’en-tête NotUnderstood.  Sinon, il retourne `false`.  
+ `IsMustUnderstandFault` retourne `true` si l'erreur est une erreur `mustUnderstand`. `WasHeaderNotUnderstood` retourne la valeur `true` si l'en-tête avec le nom et l'espace de noms spécifiés est inclus dans l'erreur en tant qu'en-tête NotUnderstood.  Sinon, il retourne `false`.  
   
  Si un canal émet un en-tête marqué MustUnderstand = true, puis cette couche doit également implémenter le modèle de l'API de la génération de l'exception et doit convertir les erreurs `mustUnderstand` provoquées par cet en-tête en une exception plus utile comme décrit précédemment.  
   
 ## <a name="tracing"></a>Traçage  
  .NET Framework fournit un mécanisme pour suivre l'exécution des programmes afin de faciliter le diagnostic des applications de production ou des problèmes intermittents lorsqu'il n'est pas possible de joindre juste un débogueur et de parcourir le code. Les composants principaux de ce mécanisme sont dans l'espace de noms <xref:System.Diagnostics?displayProperty=nameWithType> et se composent de :  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, qui est la source d’informations de trace à écrire, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, qui est une classe de base abstraite pour les écouteurs concrets qui reçoivent les informations d’être suivie à partir de la <xref:System.Diagnostics.TraceSource> et les résultats dans une destination spécifique à l’écouteur. Par exemple, <xref:System.Diagnostics.XmlWriterTraceListener> transmet les informations de suivi à un fichier XML. Enfin, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, qui permet à l'utilisateur de l'application de contrôler les commentaires de suivi et qui est en général spécifié dans la configuration.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, qui est la source d'informations de suivi à écrire, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, qui est une classe de base abstraite pour les écouteurs concrets qui reçoivent les informations à suivre à partir de <xref:System.Diagnostics.TraceSource> et qui les transmettent à une destination spécifique à l'écouteur. Par exemple, <xref:System.Diagnostics.XmlWriterTraceListener> transmet les informations de suivi à un fichier XML. Enfin, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, qui permet à l'utilisateur de l'application de contrôler les commentaires de suivi et qui est en général spécifié dans la configuration.  
   
 -   Outre les composants principaux, vous pouvez utiliser la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) d’afficher et rechercher WCF effectue le suivi. L’outil est conçu spécifiquement pour les fichiers de trace généré par WCF et écrits à l’aide de <xref:System.Diagnostics.XmlWriterTraceListener>. La figure suivante montre les divers composants impliqués dans le suivi.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Suivi de données structurées  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> a un <xref:System.Diagnostics.TraceSource.TraceData%2A> méthode qui accepte un ou plusieurs objets qui doivent être incluses dans l’entrée de suivi. En général, la méthode <xref:System.Object.ToString%2A?displayProperty=nameWithType> est appelée sur chaque objet et la chaîne obtenue est écrite dans le cadre de l'entrée de suivi. Lorsque vous utilisez <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> pour générer des suivis, vous pouvez passer <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> en tant qu'objet de données à <xref:System.Diagnostics.TraceSource.TraceData%2A>. L'entrée de suivi obtenue inclut le XML fourni par <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Voici un exemple d'entrée avec des données d'application XML :  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> possède une méthode <xref:System.Diagnostics.TraceSource.TraceData%2A> qui prend un ou plusieurs objets à inclure dans l'entrée de suivi. En général, la méthode <xref:System.Object.ToString%2A?displayProperty=nameWithType> est appelée sur chaque objet et la chaîne obtenue est écrite dans le cadre de l'entrée de suivi. Lorsque vous utilisez <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> pour générer des suivis, vous pouvez passer <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> en tant qu'objet de données à <xref:System.Diagnostics.TraceSource.TraceData%2A>. L'entrée de suivi obtenue inclut le XML fourni par <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Voici un exemple d'entrée avec des données d'application XML :  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480948"
 ---
 # <a name="bindingfailure-mda"></a>Assistant Débogage managé bindingFailure
@@ -52,7 +52,7 @@ La première étape consiste à déterminer pourquoi le CLR n’a pas pu établi
 
 - Résolvez le problème en fonction de la détermination précédente. Les options de résolution possibles sont les suivantes :
 
-  - Installez l’assembly demandé dans le global assembly cache et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> méthode pour charger l’assembly par identité.
+  - Installez l’assembly demandé dans le global assembly cache et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> pour charger l’assembly par identité.
 
   - Copiez l’assembly demandé dans le répertoire de l’application et appelez la méthode <xref:System.Reflection.Assembly.Load%2A> pour charger l’assembly par identité.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

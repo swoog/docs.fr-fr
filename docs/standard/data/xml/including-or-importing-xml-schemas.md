@@ -10,10 +10,10 @@ ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343569"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusion ou importation de schémas XML
@@ -101,9 +101,9 @@ Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` e
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble du Modèle Objet du schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Traversée de schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

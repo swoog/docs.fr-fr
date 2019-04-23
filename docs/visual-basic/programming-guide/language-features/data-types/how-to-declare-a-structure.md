@@ -8,10 +8,10 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343556"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Procédure : Déclarer une Structure (Visual Basic)
@@ -60,10 +60,10 @@ Vous commencez une déclaration de structure par le [Structure (instruction)](..
 - [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Variables de structure](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Structures et autres éléments de programmation](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Structures et classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Type de données défini par l'utilisateur](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+- [Type de données défini par l’utilisateur](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

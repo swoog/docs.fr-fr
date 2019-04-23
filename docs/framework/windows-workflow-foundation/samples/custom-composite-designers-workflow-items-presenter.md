@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344869"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Concepteurs composites personnalisés - Présentateur d'éléments de workflow
@@ -32,11 +32,11 @@ ms.locfileid: "59344869"
 ## <a name="sample-highlights"></a>Points clés de l'exemple
  Le code de cet exemple illustre les points suivants :
 
--   L’activité un concepteur est conçue pour :  `Parallel`
+-   L'activité pour laquelle un concepteur est conçu : `Parallel`
 
 -   La création d'un concepteur d'activités personnalisées avec un <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Quelques points à noter :
 
-    -   Notez l'utilisation de la liaison de données WPF pour lier à `ModelItem.Branches`. `ModelItem` est la propriété sur `WorkflowElementDesigner` qui fait référence à l’objet sous-jacent, le concepteur est utilisé, dans ce cas, notre `Parallel`.
+    -   Notez l'utilisation de la liaison de données WPF pour lier à `ModelItem.Branches`. `ModelItem` est la propriété sur `WorkflowElementDesigner` qui fait référence à l'objet sous-jacent pour lequel le concepteur est utilisé, dans ce cas, `Parallel`.
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> peut être utilisé pour placer un visuel à afficher entre les éléments individuels de la collection.
 
@@ -160,4 +160,4 @@ End Sub
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [Développement d'applications avec Workflow Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Développement d’applications avec le Concepteur de flux de travail](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

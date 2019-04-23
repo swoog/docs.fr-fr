@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357857"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611391"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Packager et déployer des ressources dans des applications .NET
 
@@ -226,6 +226,7 @@ Quand vous exécutez l’exemple à partir d’un système dont la langue est au
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>Autre empaquetage suggéré
 
 Des contraintes de temps ou de budget peuvent vous empêcher de créer un ensemble de ressources pour chaque sous-culture que votre application prend en charge. À la place, vous pouvez créer un seul assembly satellite pour une culture parente qui peut être utilisé par toutes les sous-cultures apparentées. Par exemple, vous pouvez fournir un seul assembly satellite anglais (en) qui est récupéré par les utilisateurs qui demandent des ressources anglaises spécifiques à une région et un seul assembly satellite allemand (de) pour les utilisateurs qui demandent des ressources allemandes spécifiques à une région. Par exemple, les demandes pour l’allemand tel qu’il est parlé en Allemagne (de-DE), en Autriche (de-AT) et en Suisse (de-CH) reviennent à l’assembly satellite allemand (de). Comme les ressources par défaut représentent les ressources de secours final et doivent dont être les ressources qui seront demandées par la majorité des utilisateurs de votre application, choisissez-les avec précaution. Cette solution déploie des ressources qui sont moins spécifiques à une culture, mais peut réduire de manière significative les coûts de localisation de votre application.

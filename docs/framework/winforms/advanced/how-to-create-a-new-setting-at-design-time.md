@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344960"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procédure : créer un paramètre au moment du design
@@ -35,4 +35,4 @@ Vous pouvez créer un nouveau paramètre au moment du design à l’aide du Conc
 
 - [Utilisation de paramètres d'application et de paramètres utilisateur](using-application-settings-and-user-settings.md)
 - [Vue d'ensemble des paramètres d'application](application-settings-overview.md)
-- [Procédure : modifier la valeur d’un paramètre existant au moment du design](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Guide pratique pour Modifiez la valeur d’un paramètre existant au moment du Design](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

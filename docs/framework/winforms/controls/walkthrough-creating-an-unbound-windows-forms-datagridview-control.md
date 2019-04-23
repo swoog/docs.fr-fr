@@ -12,10 +12,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343466"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié
@@ -96,5 +96,5 @@ Fréquemment, vous souhaiterez afficher des données tabulaires qui ne provient 
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Procédure : créer un contrôle DataGridView Windows Forms non lié](how-to-create-an-unbound-windows-forms-datagridview-control.md)
-- [Modes d'affichage des données dans le contrôle DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Créer un contrôle de DataGridView indépendant Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Modes d’affichage des données dans le contrôle DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

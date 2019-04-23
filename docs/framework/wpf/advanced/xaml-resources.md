@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344921"
 ---
 # <a name="xaml-resources"></a>Ressources XAML
@@ -128,7 +128,7 @@ Une ressource est un objet pouvant être réutilisé à plusieurs endroits de vo
   
 -   La propriété définie doit être une propriété sur un <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Que la propriété doit être stockée par un <xref:System.Windows.DependencyProperty>.  
   
--   La référence est une valeur d’un <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   La référence est une valeur d’un <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   La propriété définie doit être une propriété sur un <xref:System.Windows.Freezable> qui est fourni en tant que valeur de l’un <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> propriété, ou un <xref:System.Windows.Setter> valeur.  
   
@@ -144,7 +144,7 @@ Une ressource est un objet pouvant être réutilisé à plusieurs endroits de vo
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Que style a vraiment une clé : la clé implicite `typeof(`<xref:System.Windows.Controls.Button>`)`. Dans le balisage, vous pouvez spécifier un <xref:System.Windows.Style.TargetType%2A> directement en tant que le type de nom (ou vous pouvez éventuellement utiliser [{x : Type...}](../../xaml-services/x-type-markup-extension.md) pour retourner un <xref:System.Type>.  
+ Que style a vraiment une clé : la clé implicite `typeof(` <xref:System.Windows.Controls.Button> `)`. Dans le balisage, vous pouvez spécifier un <xref:System.Windows.Style.TargetType%2A> directement en tant que le type de nom (ou vous pouvez éventuellement utiliser [{x : Type...}](../../xaml-services/x-type-markup-extension.md) pour retourner un <xref:System.Type>.  
   
  Par le biais des mécanismes de style de thème par défaut utilisés par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ce style est appliqué en tant que style d’exécution d’un <xref:System.Windows.Controls.Button> sur la page, même si le <xref:System.Windows.Controls.Button> lui-même ne tente pas de spécifier son <xref:System.Windows.FrameworkElement.Style%2A> propriété ou une ressource spécifique faire référence au style. Votre style défini dans la page est située plus haut dans la séquence de recherche que le style de dictionnaire de thème, à l’aide de la même clé que celle qui a le style de dictionnaire du thème. Vous pouvez simplement spécifier `<Button>Hello</Button>` n’importe où dans la page et le style que vous avez défini avec <xref:System.Windows.Style.TargetType%2A> de `Button` s’appliquera à ce bouton. Si vous le souhaitez, vous pouvez toujours indexer explicitement le style avec la même valeur de type en tant que <xref:System.Windows.Style.TargetType%2A>pour plus de clarté dans votre balisage, mais qui est facultatif.  
   
@@ -155,10 +155,10 @@ Une ressource est un objet pouvant être réutilisé à plusieurs endroits de vo
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.ResourceDictionary>
-- [Ressources d’application](optimizing-performance-application-resources.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
 - [Ressources et code](resources-and-code.md)
 - [Définir et référencer une ressource](how-to-define-and-reference-a-resource.md)
-- [Vue d'ensemble de la gestion d'applications](../app-development/application-management-overview.md)
+- [Vue d’ensemble de la gestion d’applications](../app-development/application-management-overview.md)
 - [x:Type, extension de balisage](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource, extension de balisage](staticresource-markup-extension.md)
-- [DynamicResource, extension de balisage](dynamicresource-markup-extension.md)
+- [Extension de balisage DynamicResource](dynamicresource-markup-extension.md)
