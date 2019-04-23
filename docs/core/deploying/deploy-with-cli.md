@@ -9,10 +9,10 @@ dev_langs:
 - vb
 ms.custom: seodec18
 ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306064"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publier des applications .NET Core avec l’interface CLI
@@ -128,8 +128,7 @@ La publication d’un exécutable dépendant du framework crée une application 
 
 Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` pour publier un exécutable dépendant du framework (sauf pour .NET Core 3.x quand vous ciblez la plateforme actuelle) :
 
-- `-r <RID>`
-  Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
+- `-r <RID>` Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
 
 - `--self-contained false` Ce commutateur indique au kit SDK .NET Core qu’il doit créer un exécutable dépendant du framework.
 
@@ -148,8 +147,7 @@ La publication d’un déploiement autonome crée une application qui n’extrap
 
 Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` pour publier un déploiement autonome :
 
-- `-r <RID>`
-  Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
+- `-r <RID>` Ce commutateur utilise un identificateur (RID) pour spécifier la plateforme cible. Pour obtenir une liste des identificateurs de runtime, consultez [Catalogue d’identificateurs de runtime (RID)](../rid-catalog.md).
 
 - `--self-contained true` Ce commutateur indique au kit SDK .NET Core qu’il doit créer un exécutable sous forme de déploiement autonome.
 
@@ -158,5 +156,5 @@ Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble du déploiement d’applications .NET Core](index.md)
+- [Déploiement d’applications .NET Core](index.md)
 - [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)

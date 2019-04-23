@@ -3,10 +3,10 @@ title: 'Procédure : remplacer la réservation d’URL WCF par une réservation
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: f9cfda1d4ca14dd380dd01f944d4c900f9832096
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307559"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procédure : remplacer la réservation d’URL WCF par une réservation restreinte
@@ -32,7 +32,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. Tapez dans **netsh http delete urlacl url =http://+:80/Temporary_Listen_Addresses/**  dans la fenêtre d’invite de commandes.  
   
-3. Si la réservation est supprimée avec succès, le message suivant s'affiche. **Suppression réussie de la réservation d'URL**  
+3. Si la réservation est supprimée avec succès, le message suivant s'affiche. **Réservation d’URL a été supprimée**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Création d'un nouveau groupe de sécurité et d'une nouvelle réservation d'URL restreinte  
  Pour remplacer la réservation d’URL WCF par une réservation restreinte, vous devez tout d’abord créer un nouveau groupe de sécurité. Pour ce faire, deux méthodes s'offrent à vous : à partir d'une invite de commandes ou de la console de gestion de l'ordinateur. L'utilisation d'une seule de ces méthodes suffit.  
@@ -43,7 +43,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. Tapez dans **net localgroup «\<nom de groupe de sécurité > « / commentaire : «\<description du groupe de sécurité > « / ajouter** à l’invite de commandes. En remplaçant  **\<nom de groupe de sécurité >** avec le nom du groupe de sécurité que vous souhaitez créer et  **\<description du groupe de sécurité >** avec une description appropriée de la groupe de sécurité.  
   
-3. Si le groupe de sécurité est créé avec succès, le message suivant s'affiche. **La commande s'est exécutée correctement.**  
+3. Si le groupe de sécurité est créé avec succès, le message suivant s'affiche. **La commande s’est terminée correctement.**  
   
 #### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>Pour créer un groupe de sécurité à partir de la console de gestion de l'ordinateur  
   

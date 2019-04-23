@@ -11,10 +11,10 @@ ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305193"
 ---
 # <a name="assembly-versioning"></a>Versioning des assemblys
@@ -72,6 +72,6 @@ Tout le versioning des assemblys qui utilisent le Common Language Runtime est ef
 ## <a name="see-also"></a>Voir aussi
 
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configuration d’applications](../../../docs/framework/configure-apps/index.md)
-- [Définition des attributs d'assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)
+- [Configuration d'applications](../../../docs/framework/configure-apps/index.md)
+- [Définition des attributs d’assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)
 - [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307455"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
@@ -102,12 +102,12 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |x [is](../../../csharp/language-reference/keywords/is.md) T|Retourne la valeur true si x est de type T, false dans les autres cas|  
 |x [as](../../../csharp/language-reference/keywords/as.md) T|Retourne x s'il a le type T ou null si x n'est pas de type T|  
   
- **Opérateurs d'égalité**  
+ **Opérateurs d’égalité**  
   
 |Expression|Description|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Égal|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Non égal à|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Différence|  
   
  **Opérateurs logiques, conditionnels et Null**  
   
@@ -121,7 +121,7 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |Fusion de Null|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) o|Prend la valeur y si x est null, sinon prend la valeur x|  
 |Conditionnel|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Prend la valeur de y si x est vrai, de z si x est false|  
   
- **Opérateurs anonymes et d'assignation**  
+ **Opérateurs anonymes et d’assignation**  
   
 |Expression|Description|  
 |----------------|-----------------|  

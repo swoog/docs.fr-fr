@@ -3,10 +3,10 @@ title: Prise en charge de SqlClient pour la haute disponibilité et la récupér
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307594"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
@@ -63,7 +63,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
 2. Si une application utilise `ApplicationIntent=ReadWrite` (voir ci-dessous) et l'emplacement de réplica secondaire est configuré pour l'accès en lecture seule.  
   
- <xref:System.Data.SqlClient.SqlDependency> n’est pas pris en charge sur les réplicas secondaires en lecture seule.  
+ <xref:System.Data.SqlClient.SqlDependency> n'est pas pris en charge sur des réplicas secondaires en lecture seule.  
   
  Une connexion échoue si un réplica principal est configuré pour rejeter les charges de travail en lecture seule et la chaîne de connexion contient `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Le mot clé `ApplicationIntent` ne fonctionne pas avec les bases de données en lecture seule héritées.  
   
- Une base de données peut autoriser ou interdire les charges de travail de lecture sur la base de données ciblée AlwaysOn. (Cette opération est effectuée avec la `ALLOW_CONNECTIONS` clause de le `PRIMARY_ROLE` et `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instructions.)  
+ Une base de données peut autoriser ou interdire les charges de travail de lecture sur la base de données ciblée AlwaysOn. (Faites ceci avec la clause `ALLOW_CONNECTIONS` des instructions `PRIMARY_ROLE` et `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
   
  Le mot clé `ApplicationIntent` est utilisé pour permettre le routage en lecture seule.  
   

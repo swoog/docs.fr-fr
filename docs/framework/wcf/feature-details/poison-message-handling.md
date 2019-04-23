@@ -3,10 +3,10 @@ title: Gestion des messages incohérents
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305024"
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
@@ -23,7 +23,7 @@ Un *message incohérent* est un message qui a dépassé le nombre maximal de ten
   
 -   `MaxRetryCycles`. Valeur entière qui indique le nombre maximal de cycles de nouvelle tentative. Un cycle de nouvelle tentative implique le transfert d'un message de la file d'attente d'application vers la sous-file d'attente de nouvel essai et, après un délai configurable, de la sous-file d'attente de nouvel essai vers la file d'attente d'application afin de retenter la remise. La valeur par défaut est 2. Sur [!INCLUDE[wv](../../../../includes/wv-md.md)], le nombre maximal de tentatives de remise de message est de (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) fois. `MaxRetryCycles` est ignoré sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Délai entre les cycles de nouvelle tentative. La valeur par défaut est de 30 minutes. `MaxRetryCycles` et `RetryCycleDelay` fournissent ensemble un mécanisme pour résoudre le problème où une nouvelle tentative après un délai périodique résout le problème. Par exemple, cela permet de gérer le verrouillage d’un ensemble de lignes dans la validation de transaction en attente SQL Server.  
+-   `RetryCycleDelay`. Délai entre les cycles de nouvelle tentative. La valeur par défaut est de 30 minutes. `MaxRetryCycles` et `RetryCycleDelay` fournissent ensemble un mécanisme permettant de gérer un problème qui peut être résolu en cas de nouvelle tentative après un délai périodique. Par exemple, cela permet de gérer le verrouillage d’un ensemble de lignes dans la validation de transaction en attente SQL Server.  
   
 -   `ReceiveErrorHandling`. Énumération qui indique l'action à effectuer pour un message qui n'a pas pu être remis une fois le nombre maximal de tentatives effectué. Les valeurs peuvent être Fault, Drop, Reject et Move. L'option par défaut est Fault.  
   
@@ -92,7 +92,7 @@ Un *message incohérent* est un message qui a dépassé le nombre maximal de ten
  Si un message faisant partie d'un lot devient un message incohérent, le lot entier est annulé et le canal recommence à lire un message à la fois. Pour plus d’informations sur le traitement par lots, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Gestion des messages incohérents pour les messages dans une file d'attente de messages incohérents  
- La gestion des messages incohérents ne se termine pas lorsqu'un message est placé dans la file d'attente de messages incohérents. Les messages dans la file d'attente de messages incohérents doivent encore être lus et gérés. Vous pouvez utiliser un sous-ensemble des paramètres de gestion de messages incohérents lors de la lecture des messages à partir de l'ultime sous-file d'attente de messages incohérents. Les paramètres applicables sont `ReceiveRetryCount` et `ReceiveErrorHandling`. Vous pouvez affecter la valeur Drop, Reject ou Fault à `ReceiveErrorHandling`. `MaxRetryCycles` est ignoré et une exception est levée si `ReceiveErrorHandling` est la valeur Move.  
+ La gestion des messages incohérents ne se termine pas lorsqu'un message est placé dans la file d'attente de messages incohérents. Les messages dans la file d'attente de messages incohérents doivent encore être lus et gérés. Vous pouvez utiliser un sous-ensemble des paramètres de gestion de messages incohérents lors de la lecture des messages à partir de l'ultime sous-file d'attente de messages incohérents. Les paramètres applicables sont `ReceiveRetryCount` et `ReceiveErrorHandling`. Vous pouvez affecter la valeur Drop, Reject ou Fault à `ReceiveErrorHandling`. `MaxRetryCycles` est ignoré et une exception est levée si `ReceiveErrorHandling` a la valeur Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Différences entre Windows Vista, Windows Server 2003 et Windows XP  
  Comme noté précédemment, tous les paramètres de gestion de messages incohérents ne s'appliquent pas à [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Les différences clés suivantes entre Message Queuing sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] concernent la gestion des messages incohérents :  
@@ -105,6 +105,6 @@ Un *message incohérent* est un message qui a dépassé le nombre maximal de ten
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des files d'attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

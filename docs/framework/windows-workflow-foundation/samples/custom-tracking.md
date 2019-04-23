@@ -3,10 +3,10 @@ title: Suivi personnalisé
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307616"
 ---
 # <a name="custom-tracking"></a>Suivi personnalisé
@@ -18,7 +18,7 @@ Cet exemple montre comment créer un participant de suivi personnalisé et écri
 |Composant|Description|
 |---------------|-----------------|
 |Runtime de suivi|Fournit l'infrastructure permettant d'émettre des enregistrements de suivi.|
-|Participants de suivi|Consomme les enregistrements de suivi. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] est fourni avec un participant de suivi qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW).|
+|Participants de suivi|Consomme les enregistrements de suivi. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] est fourni avec un participant de suivi qui écrit les enregistrements de suivi sous la forme d'événements Suivi d'événements pour Windows (ETW, Event Tracing for Windows).|
 |Modèle de suivi|Mécanisme de filtrage qui permet à un participant de suivi de s'abonner à un sous-ensemble des enregistrements de suivi émis à partir d'une instance de workflow.|
 
  Le tableau suivant détaille les enregistrements de suivi que l'exécution de workflow émet.
@@ -150,4 +150,4 @@ context.Track(customRecord);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

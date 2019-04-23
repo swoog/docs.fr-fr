@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307597"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : démonstration de l’héritage visuel
@@ -165,6 +165,6 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : hériter de Windows Forms](how-to-inherit-windows-forms.md)
+- [Guide pratique pour Hériter des Windows Forms](how-to-inherit-windows-forms.md)
 - [Héritage visuel des Windows Forms](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)
