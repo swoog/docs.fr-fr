@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155088"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestion des revendications et autorisation avec le modèle d'identité
@@ -172,11 +172,11 @@ Une autorisation correspond au processus permettant d'identifier les entités au
 - <xref:System.IdentityModel.Tokens>
 - <xref:System.IdentityModel.Selectors>
 - [Revendications et jetons](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [Revendications et refus de l'accès aux ressources](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Revendications et refus de l’accès aux ressources](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Création de revendications et valeurs de ressource](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Procédure : créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Procédure : comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Procédure : créer une stratégie d’autorisation personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Procédure : créer un gestionnaire d’autorisations personnalisé pour un service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Guide pratique pour Créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Guide pratique pour Comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Guide pratique pour Créer une stratégie d’autorisation personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Guide pratique pour Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Énumérer les polices installées'
+title: 'Procédure : énumérer les polices installées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653741"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59155010"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>Procédure : Énumérer les polices installées
+# <a name="how-to-enumerate-installed-fonts"></a>Procédure : énumérer les polices installées
 Le <xref:System.Drawing.Text.InstalledFontCollection> classe hérite de la <xref:System.Drawing.Text.FontCollection> classe de base abstraite. Vous pouvez utiliser un <xref:System.Drawing.Text.InstalledFontCollection> objet à énumérer les polices installées sur l’ordinateur. Le <xref:System.Drawing.Text.FontCollection.Families%2A> propriété d’un <xref:System.Drawing.Text.InstalledFontCollection> objet est un tableau de <xref:System.Drawing.FontFamily> objets.  
   
 ## <a name="example"></a>Exemple  
@@ -32,4 +32,5 @@ Le <xref:System.Drawing.Text.InstalledFontCollection> classe hérite de la <xref
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>. En outre, vous devez importer le <xref:System.Drawing.Text> espace de noms.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
